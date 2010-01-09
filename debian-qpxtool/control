@@ -1,0 +1,28 @@
+Source: qpxtool
+Section: utils
+Priority: extra
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7), autotools-dev, libqt4-dev, libpng12-dev
+Standards-Version: 3.8.3
+Homepage: http://sourceforge.net/projects/qpxtool/
+
+Package: qpxtool
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Utility for testing CD/DVD quality
+ QPxTool gives you access to all available Quality Checks (Q-Checks) on written
+ and blank media, that are available for your drive. This will help you to find
+ the right media and the optimized writing speed for your hardware, which will
+ increase the change for a long data lifetime.
+ .
+ QPxTool depends on the used drive, not all drives are able to read the Q-Checks
+ and not all of them are supported by QPxTool. Currently, most newer drives of
+ LiteOn, NEC, Pioneer and Plextor are supported.
+
+Package: qpxtool-dev
+Architecture: any
+Depends: qpxtool (>= ${source:Version})
+Description: Development files for qpxtool
+ This package contains qpxtool include files you need if you
+ want to develop plugins for qpxtool.
+

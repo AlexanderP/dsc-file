@@ -1,0 +1,21 @@
+Source: smplayer
+Section: video
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7), libqt4-dev, zlib1g-dev
+Standards-Version: 3.8.3
+Homepage: <insert the upstream URL, if relevant>
+
+Package: smplayer
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, mplayer | mplayer-nogui | mplayer-mt
+Homepage: http://smplayer.sourceforge.net/
+Description: complete front-end for MPlayer
+ Qt Mplayer front-end, with basic features like playing
+ videos, DVDs, and VCDs to more advanced features like support
+ for MPlayer filters and more. One of the most interesting features
+ of SMPlayer: it remembers the settings of all files you play.
+ So you start to watch a movie but you have to leave... don't
+ worry, when you open that movie again it will resume at the same
+ point you left it, and with the same settings: audio track,
+ subtitles, volume...

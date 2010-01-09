@@ -1,0 +1,24 @@
+Source: cuneiform-linux
+Section: non-free/graphics
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7), cmake, make, g++, gcc, libmagick++-dev | libmagick++9-dev
+Standards-Version: 3.8.3
+Homepage: https://launchpad.net/cuneiform-linux
+
+Package: cuneiform-linux
+Architecture: any
+Depends: cuneiform-common, ${shlibs:Depends}, ${misc:Depends}
+Replaces: cuneiform-common
+Description: multi-language OCR system
+ Cuneiform is an multi-language OCR system originally 
+ developed and open sourced by Cognitive Technologies. Cuneiform was
+ originally a Windows program, which was ported to Linux by Jussi Pakkanen
+
+Package: cuneiform-common
+Architecture: all
+Suggests: cuneiform-linux
+Description: Data files for cuneiform-linux
+ Cuneiform is an multi-language OCR system originally 
+ developed and open sourced by Cognitive Technologies. Cuneiform was
+ originally a Windows program, which was ported to Linux by Jussi Pakkanen

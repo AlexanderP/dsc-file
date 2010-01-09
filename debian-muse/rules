@@ -1,0 +1,69 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+export QTDIR=/usr/share/qt3
+confflags = --disable-qttest --disable-suid-build --enable-lash --prefix=/usr --with-qt-libraries=/usr/lib/qt3 --with-qt-includes=/usr/include/qt3
+
+# These are used for cross-compiling and for saving the configure script
+# from having to guess our platform (since we know it already)
+DEB_HOST_GNU_TYPE   ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DEB_BUILD_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+ifeq ($(DEB_BUILD_GNU_TYPE), $(DEB_HOST_GNU_TYPE))
+	confflags += --build $(DEB_HOST_GNU_TYPE)
+else
+	confflags += --build $(DEB_BUILD_GNU_TYPE) --host $(DEB_HOST_GNU_TYPE)
+endif
+
+configure: configure-stamp
+configure-stamp:
+	dh_testdir
+	./autogen.sh
+	CFLAGS="$(CFLAGS)" CXXFLAGS="$(CFLAGS)" ./configure $(confflags)
+	touch $@
+build: configure build-stamp
+build-stamp:
+	dh_testdir
+	$(MAKE) LASH_LIBS=-llash
+	touch $@
+clean: do-clean
+do-clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp .muse.bin.bak muse/.muse.bin.bak
+	test ! -f Makefile || $(MAKE) distclean
+	dh_clean
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/muse
+binary-indep: build install
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installdebconf	
+	dh_installdocs
+	mv $(CURDIR)/debian/muse/usr/share/muse/html \
+	   $(CURDIR)/debian/muse/usr/share/doc/muse
+	dh_link usr/share/doc/muse/html usr/share/muse/html
+	
+	dh_install debian/muse.desktop usr/share/applications
+	dh_install debian/muse.xpm usr/share/pixmaps
+	dh_installman debian/grepmidi.1 debian/muse.1
+	
+	dh_installinfo
+	dh_installchangelogs ChangeLog
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure patch unpatch do-clean
+
+

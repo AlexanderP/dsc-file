@@ -1,0 +1,42 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+#export DH_VERBOSE=1
+
+
+
+
+build: build-stamp
+build-stamp:
+	dh_testdir
+	$(MAKE) QMAKE_OPTS=DEFINES+=NO_DEBUG_ON_CONSOLE PREFIX=/usr DOC_PATH="\\\"/usr/share/doc/smplayer\\\""
+	touch $@
+clean: do-clean
+do-clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	(test ! -f Makefile || $(MAKE) clean)
+	dh_clean
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+	$(MAKE) install PREFIX=/usr DESTDIR=$(CURDIR)/debian/smplayer DOC_PATH=/usr/share/doc/smplayer
+binary-indep: build install
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	rm -f debian/smplayer/usr/share/doc/smplayer/Copying.txt	
+	dh_installdocs
+	dh_installchangelogs Changelog
+	dh_strip
+	dh_compress
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install patch unpatch do-clean

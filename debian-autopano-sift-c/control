@@ -1,0 +1,16 @@
+Source: autopano-sift-c
+Section: graphics
+Priority: optional
+Maintainer: Alexander Pozdnykov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7), cmake, make, g++, gcc, libpano13-dev, libxml2-dev, libtiff4-dev, libpng12-dev
+Standards-Version: 3.8.3
+Homepage: http://hugin.sourceforge.net/
+
+Package: autopano-sift-c
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Panorama images are wide-angle images that amaze people: 
+ you often feel being inside the  scene when watching a good panorama
+ image.  Creating such images is easy and everybody with a digital 
+ camera and a bit of patience can do it. Autopano-SIFT is there to 
+ make the creation of panorama images more fun.

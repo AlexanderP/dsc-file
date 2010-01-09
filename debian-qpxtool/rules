@@ -1,0 +1,51 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+confflags = --prefix=/usr
+
+configure: configure-stamp
+configure-stamp:
+	dh_testdir
+	./configure $(confflags)
+	touch $@
+build: configure build-stamp
+build-stamp:
+	dh_testdir
+	$(MAKE) 
+	touch $@
+clean: do-clean
+do-clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+	test ! -f Makefile || $(MAKE) clean
+	dh_clean
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
+binary-indep: build install
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	cd debian/tmp/usr/share/man && find . -type f -exec gzip -d {} \;
+	cd debian/tmp/usr/lib* && find . -type f -exec chmod 644 {} \;
+	cd debian/tmp/usr/bin && find . -type f -exec chmod 755 {} \;
+	dh_install	
+	dh_installdocs
+	dh_installman
+	dh_installdebconf
+	install -m644 debian/shlibs debian/qpxtool/DEBIAN
+	dh_installchangelogs ChangeLog
+	dh_strip
+	dh_compress
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure patch unpatch do-clean
