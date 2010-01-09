@@ -1,0 +1,13 @@
+Source: plasma-stasks
+Section: kde
+Priority: extra
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7), cmake, libqt4-dev, libplasma-dev, kdebase-workspace-dev, libx11-dev, x11proto-core-dev
+Standards-Version: 3.8.3
+Homepage: http://kde-look.org/content/show.php/STasks?content=99739
+
+Package: plasma-stasks
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Another taskbar
+ An alternative taskbar
