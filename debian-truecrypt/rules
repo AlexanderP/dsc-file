@@ -1,0 +1,49 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+#export DH_VERBOSE=1
+
+build: build-stamp
+build-stamp:
+	dh_testdir
+	#ln /usr/include/pkcs11.h $(CURDIR)/pkcs11.h
+	#ln /usr/include/pkcs11f.h $(CURDIR)/pkcs11f.h
+	#ln /usr/include/pkcs11t.h $(CURDIR)/pkcs11t.h
+	wget ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-11/v2-20/pkcs11.h
+	wget ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-11/v2-20/pkcs11f.h
+	wget ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-11/v2-20/pkcs11t.h
+	$(MAKE)
+	touch $@
+clean: do-clean
+do-clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	(test ! -f Makefile || $(MAKE) clean)
+	dh_clean
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+	mkdir -p debian/truecrypt/usr/bin/
+	install -m755 Main/truecrypt debian/truecrypt/usr/bin/
+binary-indep: build install
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installdocs
+	dh_installchangelogs
+	dh_installdebconf
+	dh_install debian/truecrypt.desktop usr/share/applications
+	dh_install debian/truecrypt.xpm usr/share/pixmap
+	dh_installdocs "Release/Setup Files/TrueCrypt User Guide.pdf" 
+	dh_strip
+	dh_compress
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install patch unpatch do-clean
