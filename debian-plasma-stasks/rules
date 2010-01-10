@@ -8,6 +8,8 @@
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
+include /usr/share/dpatch/dpatch.make
+
 CMAKEOPTS = -DCMAKE_INSTALL_PREFIX=`kde4-config --prefix` ..
 configure: configure-stamp
 configure-stamp:
@@ -15,12 +17,12 @@ configure-stamp:
 	mkdir applet/build
 	cd applet/build && cmake $(CMAKEOPTS)
 	touch $@
-build: configure build-stamp
+build: patch-stamp configure build-stamp
 build-stamp:
 	dh_testdir
 	cd applet/build && $(MAKE)
 	touch $@
-clean: do-clean
+clean: do-clean unpatch
 do-clean:
 	dh_testdir
 	dh_testroot
