@@ -27,7 +27,7 @@ build-stamp:
 	dh_testdir
 	$(MAKE) LASH_LIBS=-llash
 	touch $@
-clean: do-clean 
+clean: do-clean unpatch
 do-clean:
 	dh_testdir
 	dh_testroot
