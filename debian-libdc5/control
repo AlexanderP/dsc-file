@@ -1,0 +1,26 @@
+Source: libdc5
+Section: net
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7), gettext, libssl-dev, libxml2-dev, autotools-dev, autoconf, automake, libtool, libbz2-dev, libltdl-dev
+Standards-Version: 3.8.3
+Homepage: http://wxdcgui.sourceforge.net/
+
+Package: libdc5
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description:  Runtime libraries for Valknut
+ Valknut is a graphical client for popular peer to 
+ peer network called Direct Connect.
+ .
+ Valknut has many features, such as searching on all public servers without
+ connecting, downloading a file from multible locations, connecting to
+ multiple servers, and support for multiple languages.
+
+Package: libdc5-dev
+Section: devel
+Architecture: any
+Depends: libdc5 (>= ${source:Version})
+Description: Development files for libdc5
+ This package contains libdc5 libraries and include files you need if you
+ want to develop plugins for libdc5.
