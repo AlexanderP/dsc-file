@@ -1,0 +1,19 @@
+Source: eiskaltdc
+Section: net
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7), cmake, libqt4-dev, libssl-dev, libxml2-dev, libbz2-dev
+Standards-Version: 3.8.3
+Homepage: http://sourceforge.net/projects/eiskaltdc/
+
+Package: eiskaltdc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: graphical client for Direct Connect
+ EiskaltDC is a graphical client for popular peer to peer network called Direct
+ Connect. EiskaltDC was earlier known as dcgui-qt.
+ .
+ EiskaltDC has many features, such as searching on all public servers without
+ connecting, downloading a file from multiple locations, connecting to
+ multiple servers, and support for multiple languages.
+ .
