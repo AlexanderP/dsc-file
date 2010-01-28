@@ -24,7 +24,6 @@ CMAKEOPTS = -DCMAKE_INSTALL_PREFIX='/usr' .
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
-	mkdir kvirc-build
 	cmake $(CMAKEOPTS)
 	touch $@
 build: configure build-stamp
