@@ -48,8 +48,10 @@ binary-arch: build install
 	dh_link usr/share/man/man1/screen.1 usr/share/man/man1/screen-4.1.0.1
 	dh_strip
 	dh_compress
+	dh_fixperms
 	dh_installdeb
 	dh_shlibdeps
+	dh_installdebconf
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb

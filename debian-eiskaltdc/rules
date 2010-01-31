@@ -56,10 +56,11 @@ binary-arch: build install
 	dh_installchangelogs ChangeLog
 	dh_strip
 	dh_compress
-	#dh_fixperms
+	dh_fixperms
 	dh_installdeb
 	dh_makeshlibs
 	dh_shlibdeps
+	dh_installdebconf
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb

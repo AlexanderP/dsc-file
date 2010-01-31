@@ -44,7 +44,6 @@ binary-indep: build install
 binary-arch: build install
 	dh_testdir
 	dh_testroot
-	dh_installdebconf	
 	dh_installdocs
 	mv $(CURDIR)/debian/muse/usr/share/muse/html \
 	   $(CURDIR)/debian/muse/usr/share/doc/muse
@@ -61,6 +60,7 @@ binary-arch: build install
 	dh_fixperms
 	dh_installdeb
 	dh_shlibdeps
+	dh_installdebconf
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb

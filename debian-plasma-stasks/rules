@@ -40,10 +40,9 @@ binary-arch: build install
 	dh_testroot
 	#dh_install
 	#dh_link
-	#dh_installdebconf
 	dh_installdocs
-	cd debian/plasma-stasks/usr/share && find . -type f -exec chmod 644 {} \;
-	cd debian/plasma-stasks/usr/share && find . -type f -exec chmod -x {} \;
+	#cd debian/plasma-stasks/usr/share && find . -type f -exec chmod 644 {} \;
+	#cd debian/plasma-stasks/usr/share && find . -type f -exec chmod -x {} \;
 	#dh_installinfo
 	dh_installchangelogs
 	dh_strip
@@ -51,6 +50,7 @@ binary-arch: build install
 	dh_fixperms
 	dh_installdeb
 	dh_shlibdeps
+	dh_installdebconf
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb

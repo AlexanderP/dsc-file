@@ -38,16 +38,14 @@ binary-arch: build install
 	rm debian/autopano-sift-c/usr/bin/*.sh
 	#dh_install
 	#dh_link
-	#dh_installdebconf
 	dh_installdocs
-	#dh_installinfo
 	dh_installchangelogs ChangeLog
-	#dh_installman debian/man.1
 	dh_strip
 	dh_compress
-	#dh_fixperms
-	dh_installdeb
+	dh_fixperms
 	dh_shlibdeps
+	dh_installdeb
+	dh_installdebconf
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb

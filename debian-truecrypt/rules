@@ -33,14 +33,15 @@ binary-arch: build install
 	dh_testroot
 	dh_installdocs
 	dh_installchangelogs
-	dh_installdebconf
 	dh_install debian/truecrypt.desktop usr/share/applications
 	dh_install debian/truecrypt.xpm usr/share/pixmap
 	dh_installdocs "Release/Setup Files/TrueCrypt User Guide.pdf" 
 	dh_strip
 	dh_compress
+	dh_fixperms
 	dh_installdeb
 	dh_shlibdeps
+	dh_installdebconf
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb

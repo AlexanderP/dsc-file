@@ -27,13 +27,15 @@ binary-indep: build install
 binary-arch: build install
 	dh_testdir
 	dh_testroot
-	rm -f debian/smplayer/usr/share/doc/smplayer/Copying.txt	
+	rm -f debian/smplayer/usr/share/doc/smplayer/Copying.txt
 	dh_installdocs
 	dh_installchangelogs Changelog
 	dh_strip
 	dh_compress
+	dh_fixperms
 	dh_installdeb
 	dh_shlibdeps
+	dh_installdebconf
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb

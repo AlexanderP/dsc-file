@@ -37,15 +37,15 @@ binary-arch: build install
 	dh_installman data/linuxdcpp.1
 	rm -f debian/linuxdcpp/usr/share/doc/linuxdcpp/License.txt
 	#dh_link
-	#dh_installdebconf
 	dh_installdocs
 	#dh_installinfo
 	dh_installchangelogs Changelog.txt
 	dh_strip
 	dh_compress
-	#dh_fixperms
+	dh_fixperms
 	dh_installdeb
 	dh_shlibdeps
+	dh_installdebconf
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb

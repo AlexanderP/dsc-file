@@ -56,12 +56,14 @@ binary-arch: build install
 	dh_installdebconf
 	dh_installchangelogs CHANGELOG
 	dh_installman debian/vacuum.1
-	chmod 644 $(CURDIR)/debian/vacuum/usr/lib/libvacuumutils.so.1.0.0
+	#chmod 644 $(CURDIR)/debian/vacuum/usr/lib/libvacuumutils.so.1.0.0
 	dh_strip
 	dh_compress
+	dh_fixperms
 	dh_installdeb
 	dh_makeshlibs
 	dh_shlibdeps
+	dh_installdebconf
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb
