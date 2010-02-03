@@ -1,0 +1,51 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Sample debian/rules that uses debhelper.
+# This file was originally written by Joey Hess and Craig Small.
+# As a special exception, when this file is copied by dh-make into a
+# dh-make output file, you may use that output file without restriction.
+# This special exception was added by Craig Small in version 0.37 of dh-make.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+build: build-stamp
+build-stamp:
+	dh_testdir
+	$(MAKE)
+	touch $@
+clean: do-clean
+do-clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	(test ! -f Makefile || $(MAKE) clean)
+	dh_clean
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/notecase
+binary-indep: build install
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installdocs
+	dh_installchangelogs
+	dh_strip
+	dh_desktop
+	dh_installman debian/notecase.1
+	dh_installmime
+	dh_installmenu debian/menu
+	dh_compress -X.ncd
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_installdebconf
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install patch unpatch do-clean
