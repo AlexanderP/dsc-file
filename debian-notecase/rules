@@ -8,13 +8,14 @@
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
+include /usr/share/dpatch/dpatch.make
 
-build: build-stamp
+build: patch-stamp build-stamp
 build-stamp:
 	dh_testdir
 	$(MAKE)
 	touch $@
-clean: do-clean
+clean: do-clean unpatch
 do-clean:
 	dh_testdir
 	dh_testroot
