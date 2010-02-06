@@ -1,0 +1,13 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+
+diff -Naur notecase-1.9.8.orig/src/lib/IniFile.h notecase-1.9.8/src/lib/IniFile.h
+--- notecase-1.9.8.orig/src/lib/IniFile.h	2010-02-05 23:51:26.000000000 +0300
++++ notecase-1.9.8/src/lib/IniFile.h	2010-02-03 19:39:08.000000000 +0300
+@@ -21,6 +21,7 @@
+ #include <vector>
+ #include <string>
+ #include <string.h>
++#include <stdio.h>
+ 
+ //TOFIX? use some kind od map<> to speedup searches ?
+ 
