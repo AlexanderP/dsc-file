@@ -43,7 +43,7 @@ binary-arch: build install
 	dh_installman debian/bmpanel2cfg.1
 	dh_strip
 	dh_compress
-	#dh_fixperms
+	dh_fixperms
 	dh_shlibdeps
 	dh_pycentral
 	dh_pysupport -i
