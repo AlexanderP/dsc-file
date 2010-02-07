@@ -39,12 +39,12 @@ binary-arch: build install
 	dh_installman debian/pytyle.1
 	dh_strip
 	dh_compress
-	#dh_fixperms
+	dh_fixperms
 	dh_shlibdeps
+	rm -f debian/$(PACKAGE)/usr/share/pyshared/PyTyle/LICENSE
 	dh_pycentral
 	dh_pysupport debian/pytyle/usr/lib/$(PYTHON)/site-packages/PyTyle
 	dh_install pytylerc /usr/lib/$(PYTHON)/site-packages/PyTyle/
-	rm -f debian/$(PACKAGE)/usr/share/pyshared/PyTyle/LICENSE
 	dh_installdeb
 	dh_installdebconf
 	dh_gencontrol
