@@ -41,6 +41,7 @@ binary-arch: build install
 	#dh_installinfo
 	dh_installchangelogs
 	dh_installman debian/bmpanel2cfg.1
+	dh_install debian/bmpanel2cfg.desktop usr/share/applications
 	dh_strip
 	dh_compress
 	dh_fixperms
