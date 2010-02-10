@@ -1,0 +1,19 @@
+Source: obkey
+Section: x11
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7), python-support, python-central, python2.6-dev, python-dev
+Standards-Version: 3.8.4
+XS-Python-Version: 2.6
+Homepage: http://code.google.com/p/obkey/
+
+Package: obkey
+Architecture: all
+XB-Python-Version: ${python:Versions}
+Depends: ${python:Depends}, openbox
+Description: A graphical key editor for openbox
+ Obkey is a graphical key editor for the Openbox window manager.
+ Openbox uses XML to store its key preferences, and editing these
+ by hand can quickly become tedious. This utility provides a 
+ convenient method of editing the key in a graphical interface, 
+ while not losing the powerful features of Openbox.
