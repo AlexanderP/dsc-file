@@ -52,11 +52,13 @@ binary-arch: build install
 	done
 	find $(CURDIR)/debian/vacuum -depth -type d -name .svn -exec rm -rf \{\} \;
 	rm -f $(CURDIR)/debian/vacuum/usr/share/vacuum/resources/adiummessagestyles/yMous/Contents/Resources/license.txt
+	rm -f $(CURDIR)/debian/vacuum/usr/share/doc/vacuum/COPYING
 	dh_installdocs
 	dh_installdebconf
 	dh_installchangelogs CHANGELOG
 	dh_installman debian/vacuum.1
 	#chmod 644 $(CURDIR)/debian/vacuum/usr/lib/libvacuumutils.so.1.0.0
+	
 	dh_strip
 	dh_compress
 	dh_fixperms
