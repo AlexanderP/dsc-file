@@ -8,14 +8,15 @@
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
+include /usr/share/dpatch/dpatch.make
 PYTHON=python2.5
 PACKAGE=pytyle
-build: build-stamp
+build: patch-stamp build-stamp
 build-stamp:
 	dh_testdir
 	$(PYTHON) setup.py build
 	touch $@
-clean: do-clean
+clean: do-clean unpatch
 do-clean:
 	dh_testdir
 	dh_testroot
@@ -44,7 +45,7 @@ binary-arch: build install
 	rm -f debian/$(PACKAGE)/usr/share/pyshared/PyTyle/LICENSE
 	dh_pycentral
 	dh_pysupport debian/pytyle/usr/lib/$(PYTHON)/site-packages/PyTyle
-	dh_install pytylerc /usr/lib/$(PYTHON)/site-packages/PyTyle/
+	dh_install pytylerc /usr/share/pytyle/
 	dh_installdeb
 	dh_installdebconf
 	dh_gencontrol
