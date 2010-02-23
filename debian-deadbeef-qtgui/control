@@ -1,0 +1,19 @@
+Source: deadbeef-qtgui
+Section: sound
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7), cmake, libqt4-dev, deadbeef-dev
+Standards-Version: 3.8.4
+Homepage: http://bitbucket.org/tonn/qtgui/wiki/Home
+
+Package: deadbeef-qtgui
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, deadbeef
+Description: Qt4 interface to DeaDBeeF
+ DeaDBeeF is an audio player for GNU/Linux systems with 
+ X11 written in C and C++. Features: minimal depends; 
+ native GTK2 GUI; cuesheet support; mp3, ogg, flac, ape; 
+ chiptune formats with subtunes, song-length databases, etc; 
+ small memory footprint.
+ .
+ This is the qt4 interface for the DeaDBeeF package.   
