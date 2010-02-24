@@ -11,6 +11,7 @@ Architecture: any
 Recommends: libavformat52, libsndfile1, libflac8, libogg0, libavutil49, libavcodec52, libvorbis0a, libwavpack1, libcddb2, libvorbisfile3, libmad0, libcdio7 | libcdio10,
 Suggests: libcurl3-gnutls
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: deadbeef-devel
 Description: Music player for GNU/Linux systems
  DeaDBeeF is an audio player for GNU/Linux systems with 
  X11 written in C and C++. Features: minimal depends; 
@@ -21,6 +22,7 @@ Description: Music player for GNU/Linux systems
 Package: deadbeef-dev
 Architecture: all
 Depends: deadbeef
+Conflicts: deadbeef-devel-dev
 Description: Development files for DeaDBeeF
  This package contains DeaDBeeF include files you need if you
  want to develop plugins for DeaDBeeF.
