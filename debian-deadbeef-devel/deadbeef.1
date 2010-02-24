@@ -1,0 +1,64 @@
+.TH deadbeef 1 "29 January 2010"
+.SH NAME
+deadbeef \- music player for GNU\\Linux systems.
+.SH DESCRIPTION
+Deadbeef is an audio player for GNU/Linux systems with  X11 written in C and C++. Features: minimal depends;  native GTK2 GUI; cuesheet support; mp3, ogg, flac, ape;  chiptune formats with subtunes, song-length databases, etc;  small memory footprint.
+.SH SYNOPSIS
+.B deadbeef
+[\fIoptions\fR] [\fIfile(s)\fR]
+.SH OPTIONS
+.TP
+\fB\-h\fR, \fB\-\-help\fR 
+Show help about options
+.TP
+\fB\-\-play\fR 
+Start playback
+.TP
+\fB\-\-stop\fR 
+Stop playback
+.TP
+\fB\-\-pause\fR 
+Pause playback
+.TP
+\fB\-\-next\fR 
+Next song in playlist
+.TP
+\fB\-\-prev\fR 
+Previous song in playlist
+.TP
+\fB\-\-random\fR 
+Random song in playlist
+.TP
+\fB\-\-queue\fR 
+Append file(s) to existing playlist
+.TP
+\fB\-\-version\fR 
+Print version info and exit
+.TP
+\fB\-\-nowplaying\fR \fIFMT\fR 
+Print formatted track name to stdout FMT: 
+
+		%a	-	artist
+
+		%t  	- 	title 
+
+		%b 	-	album
+
+		%l 	-	length
+
+		%n 	-	tracknumber
+
+		%y 	- 	year		
+
+		%c	- 	comment
+
+		%r 	- 	copyright
+
+		%e 	- 	elapsed
+
+e.g.: --nowplaying "%a - %t" should print "artist - title"
+
+.SH "AUTHOR"
+DeaDBeeF was written by Alexey Yakovenko <waker@users.sourceforge.net>
+
+This manual page was written by Alexander Pozdnyakov <almipo@mail.ru>,
