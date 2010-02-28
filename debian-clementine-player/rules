@@ -46,7 +46,11 @@ install: build
 	dh_testroot
 	dh_prep
 	dh_installdirs
-	$(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
+	install -d $(CURDIR)/debian/tmp/usr/bin
+	install -d $(CURDIR)/debian/tmp/usr/share/applications
+	install -d $(CURDIR)/debian/tmp/usr/share/icons/hicolor/64x64/apps
+	#$(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
+	install -m 0755 $(CURDIR)/src/clementine $(CURDIR)/debian/tmp/usr/bin/clementine
 	for size in 16 32 64 ; do \
 	mkdir -p $(CURDIR)/debian/tmp/usr/share/icons/hicolor/$${size}x$${size}/apps/ && install -Dm644 $(CURDIR)/dist/clementine_$${size}.png $(CURDIR)/debian/tmp/usr/share/icons/hicolor/$${size}x$${size}/apps/application-x-clementine.png ; \
 	done
