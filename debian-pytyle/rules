@@ -43,9 +43,9 @@ binary-arch: build install
 	dh_fixperms
 	dh_shlibdeps
 	dh_pycentral
+	#rm -f debian/$(PACKAGE)/usr/share/pyshared/PyTyle/LICENSE
 	dh_pysupport debian/pytyle/usr/lib/$(PYTHON)/site-packages/PyTyle
 	dh_install pytylerc /usr/share/pytyle/
-	rm -f debian/$(PACKAGE)/usr/share/pyshared/PyTyle/LICENSE
 	dh_installdeb
 	dh_installdebconf
 	dh_gencontrol
