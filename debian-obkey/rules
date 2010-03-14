@@ -28,7 +28,7 @@ install: build
 	dh_testroot
 	dh_prep
 	dh_installdirs
-	$(PYTHON) setup.py install --root=$(CURDIR)/debian/$(PACKAGE) --no-compile
+	$(PYTHON) setup.py install --root=$(CURDIR)/debian/$(PACKAGE) --no-compile --prefix=/usr
 binary-indep: build install
 binary-arch: build install
 	dh_testdir
