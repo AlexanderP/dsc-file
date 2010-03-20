@@ -2,7 +2,19 @@ Source: eiskaltdcpp
 Section: net
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), cmake, libqt4-dev, libssl-dev, libxml2-dev, libbz2-dev, subversion, libupnp3-dev, libboost-dev, libboost-date-time-dev, libboost-filesystem-dev, libboost-system-dev, pkg-config
+Build-Depends:  debhelper (>= 7), 
+                cmake, 
+                libqt4-dev, 
+                libssl-dev, 
+                libxml2-dev, 
+                libbz2-dev, 
+                subversion, 
+                libupnp3-dev, 
+                libboost-dev | libboost1.37-dev, 
+                libboost-date-time-dev | libboost-date-time1.37-dev, 
+                libboost-filesystem-dev | libboost-filesystem1.37-dev, 
+                libboost-system-dev | libboost-system1.37-dev, 
+                pkg-config
 Standards-Version: 3.8.3
 Homepage: http://code.google.com/p/eiskaltdc/
 
