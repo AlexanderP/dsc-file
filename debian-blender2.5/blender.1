@@ -1,0 +1,121 @@
+.TH BLENDER 1 "July 25, 2006"
+.SH NAME
+blender \- a 3D modelling and rendering package
+.SH SYNOPSIS
+.B blender [options...] [file]
+
+
+.br
+.SH DESCRIPTION
+.PP
+.B blender
+is a 3D modelling and rendering package. It is the in-house software of a high quality animation studio, Blender has proven to be an extremely fast and versatile design instrument. The software has a personal touch, offering a unique approach to the world of Three Dimensions.
+
+Use Blender to create TV commercials, to make technical visualizations, business graphics, to do some morphing, or design user interfaces. You can easy build and manage complex environments. The renderer is versatile and extremely fast. All basic animation principles (curves & keys) are well implemented.
+
+http://www.blender3d.org
+.SH OPTIONS
+.SS "Render options:"
+.TP
+.B \-b <file>
+Render <file> in background
+.TP
+.B \-S <name>
+Set scene <name>
+.TP
+.B \-f <frame>
+Render frame <frame> and save it
+.TP
+.B \-s <frame>
+Set start to frame <frame> (can also be used with \-a)
+.TP
+.B \-e <frame>
+Set end to frame <frame> (can also be used with \-a)
+.TP
+.B \-o <path>
+Set the render path and file name.
+.IP
+Use // at the start of the path to render relative to the blend file.
+.IP
+Use # in the filename to be replaced with the frame number
+.IP
+Example: blender \-b foobar.blender \-o //render_# \-F PNG \-x 1
+.HP
+.B \-F <format>
+Set the render format, valid options are...
+.IP
+TGA IRIS HAMX FTYPE JPEG MOVIE IRIZ RAWTGA
+AVIRAW AVIJPEG PNG BMP FRAMESERVER
+.IP
+(formats that can be compiled into blender, not available on all systems)
+.IP
+HDR TIFF EXR MPEG AVICODEC QUICKTIME CINEON DPX
+.TP
+.B \-x <bool>
+Set option to add the file extension to the end of the file.
+.SS "Animation options:"
+.TP
+.B \-a <file(s)>
+Playback <file(s)>
+.TP
+.B \-p <sx> <sy>
+Open with lower left corner at <sx>, <sy>
+.TP
+.B \-m
+Read from disk (Don't buffer)
+.SS "Window options:"
+.TP
+.B \-w
+Force opening with borders
+.TP
+.B \-p <sx> <sy> <w> <h>
+Open with lower left corner at <sx>, <sy> and width and height <w>, <h>
+
+.SS "Game Engine specific options:"
+.TP
+.B \-g fixedtime
+Run on 50 hertz without dropping frames
+.TP
+.B \-g vertexarrays
+Use Vertex Arrays for rendering (usually faster)
+.TP
+.B \-g noaudio
+No audio in Game Engine
+.TP
+.B \-g nomipmap
+No Texture Mipmapping
+.TP
+.B \-g linearmipmap
+Linear Texture Mipmapping instead of Nearest (default)
+.SS "Misc options:"
+.TP
+.B \-d
+Turn debugging on
+.TP
+.B \-noaudio
+Disable audio on systems that support audio
+.TP
+.B \-H
+Patch for versions with hardware accelerated Mesa
+.TP
+.B \-y
+Disable script links, use \-Y to find out why its \-y
+.HP
+.B \-P <filename>
+Run the given Python script (filename or Blender Text)
+.TP
+.B \-h, \-\-help 
+Show a summary of options.
+.TP
+.B \-f
+Prevent forking in foreground mode
+
+.br
+.SH SEE ALSO
+.B yafray(1)
+
+.br
+.SH AUTHORS
+This manpage was written for a Debian GNU/Linux system by Daniel Mester
+<mester@uni-bremen.de> and updated by Cyril Brulebois
+<cyril.brulebois@enst-bretagne.fr>.
