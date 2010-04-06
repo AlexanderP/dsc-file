@@ -19,7 +19,7 @@ ifeq ($(NCPUS),0)
 	NCPUS:=1
 endif
 
-CMAKEOPTS = -D WITH_OPENCOLLADA=OFF -DPYTHON_INC=/usr/include/python3.1 -DCMAKE_INSTALL_PREFIX='/usr' ..
+CMAKEOPTS = -D WITH_OPENCOLLADA=OFF -D WITH_FFTW3=ON -D WITH_JACK=ON -D WITH_SNDFILE=ON -D WITH_FFMPEG=ON -DPYTHON_INC=/usr/include/python3.1 -DCMAKE_INSTALL_PREFIX='/usr' ..
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
