@@ -1,0 +1,63 @@
+Source: libgegl
+Section: graphics
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7), autotools-dev, cdbs, automake, libtool, libbabl-0.1-0-dev, libjpeg62-dev, libpng12-dev, libcairo2-dev, libgtk2.0-dev, ruby-dev, ruby-full
+Standards-Version: 3.8.4
+Homepage: http://www.gimp.org/
+
+Package: gegl-0.1
+Conflicts: gegl
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Generic Graphics Library Test Program
+ GEGL (Generic Graphics Library) is a graph based image processing
+ framework.
+ .
+ GEGLs original design was made to scratch GIMPs itches for a new
+ compositing and processing core. This core is being designed to have
+ minimal dependencies. and a simple well defined API
+ .
+ This package contains an test program.
+
+Package: libgegl-0.1-0
+Conflicts: libgegl-0.0-0
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Generic Graphics Library
+ GEGL (Generic Graphics Library) is a graph based image processing
+ framework.
+ .
+ GEGLs original design was made to scratch GIMPs itches for a new
+ compositing and processing core. This core is being designed to have
+ minimal dependencies. and a simple well defined API
+
+Package: libgegl-0.1-dev
+Conflicts: libgegl-0.0-dev
+Section: libdevel
+Architecture: all
+Depends: libgegl-0.1-0, libbabl-0.1-0-dev
+Description: Generic Graphics Library (development files)
+ GEGL (Generic Graphics Library) is a graph based image processing
+ framework.
+ .
+ GEGLs original design was made to scratch GIMPs itches for a new
+ compositing and processing core. This core is being designed to have
+ minimal dependencies. and a simple well defined API
+ .
+ This package contains the development files.
+
+Package: libgegl-0.1-doc
+Conflicts: libgegl-0.0-doc
+Section: doc
+Architecture: all
+Description: Generic Graphics Library (documentation)
+ GEGL (Generic Graphics Library) is a graph based image processing
+ framework.
+ .
+ GEGLs original design was made to scratch GIMPs itches for a new
+ compositing and processing core. This core is being designed to have
+ minimal dependencies. and a simple well defined API
+ .
+ This package contains the documentation.
