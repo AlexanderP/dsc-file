@@ -57,7 +57,7 @@ binary-arch: build install
 	dh_installman debian/blender.1
 	dh_strip --dbg-package=blender2.5-dbg
 	dh_install debian/*.desktop usr/share/applications
-	dh_install debian/*.xpm usr/share/pixmap
+	dh_install debian/*.xpm usr/share/pixmaps
 	dh_compress
 	dh_fixperms
 	dh_installdeb
