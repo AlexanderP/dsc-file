@@ -20,7 +20,7 @@ ifeq ($(NCPUS),0)
 	NCPUS:=1
 endif
 
-confflags = --prefix=/usr --enable-python --enable-default-binary
+confflags = --prefix=/usr --enable-python --enable-default-binary --sysconfdir=/etc
 
 configure: configure-stamp
 configure-stamp:
