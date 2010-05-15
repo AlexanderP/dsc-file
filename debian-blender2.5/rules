@@ -24,7 +24,7 @@ configure: configure-stamp
 configure-stamp:
 	dh_testdir
 	mkdir blender-build
-	cd blender-build && cmake -G "Unix Makefiles" $(CMAKEOPTS)
+	cd blender-build && CXXFLAGS="$(CXXFLAGS) -D__STDC_CONSTANT_MACROS" cmake -G "Unix Makefiles" $(CMAKEOPTS)
 	touch $@
 build: configure build-stamp
 build-stamp:
