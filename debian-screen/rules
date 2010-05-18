@@ -9,16 +9,6 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-NCPUS := $(shell getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
-
-ifeq ($(NCPUS),-1)
-	NCPUS:=1
-endif
-
-ifeq ($(NCPUS),0)
-	NCPUS:=1
-endif
-
 confflags = --prefix=/usr
 
 configure: configure-stamp
@@ -30,7 +20,7 @@ configure-stamp:
 build: configure build-stamp
 build-stamp:
 	dh_testdir
-	cd src && $(MAKE) -j$(NCPUS)
+	cd src && $(MAKE)
 	touch $@
 clean: do-clean
 do-clean:
