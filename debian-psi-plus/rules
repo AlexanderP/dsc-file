@@ -27,6 +27,7 @@ configure: configure-stamp
 configure-stamp:
 	dh_testdir
 	./configure $(confflags)
+	echo "CONFIG += webkit" >> conf.pri
 	touch $@
 build: configure build-stamp
 build-stamp:
