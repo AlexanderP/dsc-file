@@ -9,7 +9,17 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-SCONSOPT = release=1 PREFIX=/usr FAKE_ROOT=debian/linuxdcpp
+NCPUS := $(shell getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
+
+ifeq ($(NCPUS),-1)
+	NCPUS:=1
+endif
+
+ifeq ($(NCPUS),0)
+	NCPUS:=1
+endif
+
+SCONSOPT = -j$(NCPUS) release=1 PREFIX=/usr FAKE_ROOT=debian/linuxdcpp 
 
 build: build-stamp
 build-stamp:
