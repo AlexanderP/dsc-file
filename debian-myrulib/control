@@ -1,0 +1,18 @@
+Source: myrulib
+Section: x11
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7), 
+                libwxgtk2.8-dev,
+                libexpat-dev, 
+                libsqlite3-dev
+Standards-Version: 3.8.4
+Homepage: http://myrulib.lintest.ru
+
+Package: myrulib
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Create your own collection of e-books
+ myRuLib - free (free of charge and with an open source) 
+ program which organizes a home library (collection) of 
+ an e-books in .fb2 format. 
