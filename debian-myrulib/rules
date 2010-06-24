@@ -12,7 +12,15 @@ ifeq ($(NCPUS),0)
 	NCPUS:=1
 endif
 
-build: build-stamp
+confflags = --prefix=/usr
+
+configure: configure-stamp
+configure-stamp:
+	dh_testdir
+	chmod +x configure
+	./configure $(confflags)
+	touch $@
+build: configure build-stamp
 build-stamp:
 	dh_testdir
 	$(MAKE) -j$(NCPUS)
