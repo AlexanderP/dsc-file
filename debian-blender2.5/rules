@@ -43,7 +43,7 @@ install: build
 	dh_prep
 	dh_installdirs
 	cd blender-build && $(MAKE) install DESTDIR=../debian/blender2.5
-	rm -r debian/blender2.5/usr/share/blender/*/python/
+	#rm -r debian/blender2.5/usr/share/blender/*/python/
 	rm debian/blender2.5/usr/share/blender/*/.bfont.ttf
 	rm debian/blender2.5/usr/share/blender/*/.Blanguages
 binary-indep: build install
