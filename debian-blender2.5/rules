@@ -46,6 +46,9 @@ install: build
 	#rm -r debian/blender2.5/usr/share/blender/*/python/
 	#rm debian/blender2.5/usr/share/blender/*/.bfont.ttf
 	#rm debian/blender2.5/usr/share/blender/*/.Blanguages
+	rm debian/blender2.5/usr/share/doc/blender/GPL-license.txt*
+	rm debian/blender2.5/usr/share/doc/blender/Python-license.txt
+	rm -r debian/blender2.5/usr/man
 binary-indep: build install
 binary-arch: build install
 	dh_testdir
@@ -54,7 +57,7 @@ binary-arch: build install
 	dh_link
 	dh_installdocs
 	dh_installchangelogs
-	dh_installman debian/blender.1
+	dh_installman doc/blender.1
 	dh_strip --dbg-package=blender2.5-dbg
 	dh_install debian/*.desktop usr/share/applications
 	dh_install debian/*.xpm usr/share/pixmaps
