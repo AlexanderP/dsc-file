@@ -48,6 +48,8 @@ install: build
 	#rm debian/blender2.5/usr/share/blender/*/.Blanguages
 	rm debian/blender2.5/usr/share/doc/blender/GPL-license.txt*
 	rm debian/blender2.5/usr/share/doc/blender/Python-license.txt
+	mv debian/blender2.5/usr/bin/blender-thumbnailer.py debian/blender2.5/usr/bin/blender-thumbnailer
+	sed "s/blender-thumbnailer.py/blender-thumbnailer/g" -i debian/blender2.5/usr/bin/blender-thumbnailer
 binary-indep: build install
 binary-arch: build install
 	dh_testdir
