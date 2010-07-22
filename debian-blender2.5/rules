@@ -48,7 +48,6 @@ install: build
 	#rm debian/blender2.5/usr/share/blender/*/.Blanguages
 	rm debian/blender2.5/usr/share/doc/blender/GPL-license.txt*
 	rm debian/blender2.5/usr/share/doc/blender/Python-license.txt
-	rm -r debian/blender2.5/usr/man
 binary-indep: build install
 binary-arch: build install
 	dh_testdir
