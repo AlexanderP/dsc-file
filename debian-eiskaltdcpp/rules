@@ -10,47 +10,95 @@ ifeq ($(NCPUS),0)
 	NCPUS:=1
 endif
 
+CONTROL=control.wt
+EISKALTDCPP_QT_FILES=eiskaltdcpp-qt.files.js
+CMAKEOPTS =	-DUSE_QT=ON -DUSE_WT=ON -DUSE_JS=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DCMAKE_INSTALL_PREFIX=/usr ..
 PKG_NAME = eiskaltdcpp
 
-CMAKEOPTS = -DFREE_SPACE_BAR_C:BOOL=1 -DCMAKE_INSTALL_PREFIX=/usr ./
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME := $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+
+ifeq "$(DEBIAN_CODENAME)" "jaunty"
+	CONTROL=control.nowt
+	CMAKEOPTS =	-DUSE_QT=ON -DUSE_JS=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DCMAKE_INSTALL_PREFIX=/usr ..
+else
+ifeq "$(DEBIAN_CODENAME)" "karmic"
+	CONTROL=control.nowt
+	CMAKEOPTS =	-DUSE_QT=ON -DUSE_JS=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DCMAKE_INSTALL_PREFIX=/usr ..
+else
+ifeq "$(DEBIAN_CODENAME)" "jaunty"
+	CONTROL=control.nowt
+	CMAKEOPTS =	-DUSE_QT=ON -DUSE_JS=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DCMAKE_INSTALL_PREFIX=/usr ..
+else
+ifeq "$(DEBIAN_CODENAME)" "lenny"
+	CONTROL=control.nowt
+	CMAKEOPTS =	-DUSE_QT=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DCMAKE_INSTALL_PREFIX=/usr ..
+	EISKALTDCPP_QT_FILES=eiskaltdcpp-qt.files.nojs
+endif
+endif
+endif
+endif
+
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
-	cmake $(CMAKEOPTS)
+	cp debian/$(CONTROL) debian/control
+	cp debian/$(EISKALTDCPP_QT_FILES) debian/eiskaltdcpp-qt.files
+	mkdir $(PKG_NAME)-build
+	cd $(PKG_NAME)-build && cmake $(CMAKEOPTS)
 	touch $@
 build: configure build-stamp
 build-stamp:
 	dh_testdir
-	$(MAKE) -j$(NCPUS)
+	cd $(PKG_NAME)-build && $(MAKE) -j$(NCPUS)
 	touch $@
 clean: do-clean
 do-clean:
+	cp debian/$(CONTROL) debian/control
+	cp debian/$(EISKALTDCPP_QT_FILES) debian/eiskaltdcpp-qt.files
 	dh_testdir
 	dh_testroot
-	test ! -f Makefile || $(MAKE) clean
+	test ! -d $(PKG_NAME)-build || rm -r $(PKG_NAME)-build
 	dh_clean
 install: build
 	dh_testdir
 	dh_testroot
 	dh_prep
 	dh_installdirs
-	$(MAKE) install DESTDIR=debian/$(PKG_NAME)
+	cd $(PKG_NAME)-build && $(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
+	rm -f debian/tmp/usr/share/eiskaltdcpp/wt/ext/LICENSE.txt
 binary-indep: build install
+	dh_testdir -i
+	dh_testroot -i
+	dh_movefiles -i
+	dh_installdocs -i
+	dh_installchangelogs -i ChangeLog.txt
+	dh_compress -i
+	dh_fixperms -i
+	dh_installdeb -i
+	dh_gencontrol -i
+	dh_md5sums -i
+	dh_builddeb -i
 binary-arch: build install
-	dh_testdir
-	dh_testroot
-	dh_installdocs
-	dh_installchangelogs ChangeLog.txt
-	dh_strip
-	dh_compress
-	dh_fixperms
-	dh_installdeb
-	dh_makeshlibs
-	dh_shlibdeps
-	dh_installdebconf
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
+	dh_testdir -a
+	dh_testroot -a
+	dh_movefiles -a
+	dh_installchangelogs -a ChangeLog.txt
+	dh_installdocs -a
+	dh_installman -a
+	dh_link -a
+	dh_strip -a
+	dh_compress -a
+	dh_fixperms -a
+	dh_makeshlibs -plibdcpp2.0.x
+	dh_installdeb -a
+	dh_shlibdeps -a -ldebian/libdcpp2.0.x/usr/lib
+	dh_installdebconf -a
+	dh_gencontrol -a
+	dh_md5sums -a
+	dh_builddeb -a
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install configure patch unpatch do-clean
 		
