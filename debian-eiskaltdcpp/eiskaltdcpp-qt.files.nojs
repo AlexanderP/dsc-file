@@ -1,5 +1,3 @@
-usr/share/icons
-usr/share/pixmaps
 usr/bin/eiskaltdcpp-qt
 usr/share/applications/eiskaltdcpp-qt.desktop
 usr/share/man/man1/eiskaltdcpp-qt.1.gz
