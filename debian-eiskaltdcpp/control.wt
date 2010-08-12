@@ -43,6 +43,7 @@ Description: EiskaltDC++ meta-package
 Package: eiskaltdcpp-common
 Architecture: all
 Depends: ${misc:Depends}
+Suggests: php5-cli
 Description: common files for EiskaltDC++
  This package contains the common files for the different EiskaltDC++ versions.
  .
@@ -51,8 +52,10 @@ Description: common files for EiskaltDC++
  DC from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with
  all common DC hub software.
 
-Package: libdcpp2.0.x
+Package: libdcpp2.1.x
 Architecture: any
+Replaces: libdcpp2.0.x
+Conflicts: libdcpp2.0.x
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: DC++ kernel from EiskaltDC++
  This package installs only DC++ kernel which required EiskaltDC++.
@@ -64,7 +67,7 @@ Description: DC++ kernel from EiskaltDC++
 
 Package: eiskaltdcpp-qt
 Architecture: any
-Depends: libdcpp2.0.x (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, eiskaltdcpp-common (= ${source:Version})
+Depends: libdcpp2.1.x (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, eiskaltdcpp-common (= ${source:Version})
 Recommends: libqtscript4-core, libqtscript4-gui, libqtscript4-network, libqtscript4-xml
 Suggests: php5-cli
 Replaces: eiskaltdcpp-qt-unstable
@@ -79,7 +82,7 @@ Description: EiskaltDC++ GUI on Qt
 
 Package: eiskaltdcpp-wt
 Architecture: any
-Depends: libdcpp2.0.x (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, eiskaltdcpp-common (= ${source:Version})
+Depends: libdcpp2.1.x (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, eiskaltdcpp-common (= ${source:Version})
 Replaces: eiskaltdcpp-wt-unstable
 Conflicts: eiskaltdcpp-wt-unstable
 Description: EiskaltDC++ GUI on Wt (Web Toolkit)
@@ -92,7 +95,7 @@ Description: EiskaltDC++ GUI on Wt (Web Toolkit)
 
 Package: eiskaltdcpp-gtk
 Architecture: any
-Depends: libdcpp2.0.x (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, eiskaltdcpp-common (= ${source:Version})
+Depends: libdcpp2.1.x (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, eiskaltdcpp-common (= ${source:Version})
 Replaces: eiskaltdcpp-gtk-unstable
 Conflicts: eiskaltdcpp-gtk-unstable
 Description: EiskaltDC++ GUI on Gtk

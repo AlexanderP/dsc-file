@@ -19,7 +19,11 @@ Build-Depends: debhelper (>= 7),
                libwtext-dev, 
                libwtfcgi-dev, 
                libwthttp-dev,
-               libaspell-dev
+               libaspell-dev,
+               libgtk2.0-dev, 
+               libglade2-dev, 
+               libnotify-dev,
+               gettext
 Homepage: http://code.google.com/p/eiskaltdc/
 Standards-Version: 3.8.4
 
@@ -36,7 +40,19 @@ Description: EiskaltDC++ meta-package
  DC from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with
  all common DC hub software.
 
-Package: libdcpp2.0.x
+Package: eiskaltdcpp-common
+Architecture: all
+Depends: ${misc:Depends}
+Suggests: php5-cli
+Description: common files for EiskaltDC++
+ This package contains the common files for the different EiskaltDC++ versions.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect
+ and ADC protocol. It is compatible with other DC clients, such as the original
+ DC from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with
+ all common DC hub software.
+
+Package: libdcpp2.1.x
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: DC++ kernel from EiskaltDC++
@@ -49,7 +65,7 @@ Description: DC++ kernel from EiskaltDC++
 
 Package: eiskaltdcpp-qt
 Architecture: any
-Depends: libdcpp2.0.x (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Depends: libdcpp2.1.x (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, eiskaltdcpp-common (= ${source:Version})
 Recommends: libqtscript4-core, libqtscript4-gui, libqtscript4-network, libqtscript4-xml
 Suggests: php5-cli
 Replaces: eiskaltdcpp-qt-unstable
@@ -64,11 +80,25 @@ Description: EiskaltDC++ GUI on Qt
 
 Package: eiskaltdcpp-wt
 Architecture: any
-Depends: libdcpp2.0.x (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Depends: libdcpp2.1.x (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, eiskaltdcpp-common (= ${source:Version})
 Replaces: eiskaltdcpp-wt-unstable
 Conflicts: eiskaltdcpp-wt-unstable
 Description: EiskaltDC++ GUI on Wt (Web Toolkit)
  This package installs only EiskaltDC++ with GUI based on Wt (Web Toolkit).
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect
+ and ADC protocol. It is compatible with other DC clients, such as the original
+ DC from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with
+ all common DC hub software.
+
+Package: eiskaltdcpp-gtk
+Architecture: any
+Depends: libdcpp2.1.x (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}, eiskaltdcpp-common (= ${source:Version})
+Replaces: eiskaltdcpp-gtk-unstable
+Conflicts: eiskaltdcpp-gtk-unstable
+Description: EiskaltDC++ GUI on Gtk
+ This package installs only EiskaltDC++ with GUI based on Gtk
+ (based on FreeDC++ and LinuxDC++).
  .
  EiskaltDC++ is a cross-platform program that uses the Direct Connect
  and ADC protocol. It is compatible with other DC clients, such as the original

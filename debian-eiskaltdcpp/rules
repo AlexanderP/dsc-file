@@ -12,9 +12,8 @@ endif
 
 CONTROL=control.wt
 EISKALTDCPP_QT_FILES=eiskaltdcpp-qt.files.js
-CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release -DUSE_GTK=ON -DUSE_QT=ON -DUSE_WT=ON -DUSE_JS=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DCMAKE_INSTALL_PREFIX=/usr ..
+CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release -DUSE_GTK=ON -DUSE_QT=ON -DUSE_WT=ON -DUSE_JS=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DUSE_LIBGNOME2=OFF -DCMAKE_INSTALL_PREFIX=/usr ..
 PKG_NAME = eiskaltdcpp
-
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME := $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
@@ -22,24 +21,27 @@ endif
 
 ifeq "$(DEBIAN_CODENAME)" "lucid"
 	CONTROL=control.nowt
-	CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release -DUSE_GTK=ON -DUSE_WT=OFF -DUSE_QT=ON -DUSE_JS=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DCMAKE_INSTALL_PREFIX=/usr ..
+	CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release -DUSE_GTK=ON -DUSE_WT=OFF -DUSE_QT=ON -DUSE_JS=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DUSE_LIBGNOME2=OFF -DCMAKE_INSTALL_PREFIX=/usr ..
 else
 ifeq "$(DEBIAN_CODENAME)" "karmic"
 	CONTROL=control.nowt
-	CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release -DUSE_GTK=ON -DUSE_WT=OFF -DUSE_QT=ON -DUSE_JS=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DCMAKE_INSTALL_PREFIX=/usr ..
+	CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release -DUSE_GTK=ON -DUSE_WT=OFF -DUSE_QT=ON -DUSE_JS=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DUSE_LIBGNOME2=OFF -DCMAKE_INSTALL_PREFIX=/usr ..
 else
 ifeq "$(DEBIAN_CODENAME)" "jaunty"
 	CONTROL=control.nowt
-	CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release -DUSE_GTK=ON -DUSE_WT=OFF -DUSE_QT=ON -DUSE_JS=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DCMAKE_INSTALL_PREFIX=/usr ..
+	CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release -DUSE_GTK=ON -DUSE_WT=OFF -DUSE_QT=ON -DUSE_JS=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DUSE_LIBGNOME2=OFF -DCMAKE_INSTALL_PREFIX=/usr ..
 else
 ifeq "$(DEBIAN_CODENAME)" "lenny"
 	CONTROL=control.nowt
-	CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release -DUSE_GTK=ON -DUSE_JS=OFF -DUSE_WT=OFF -DUSE_QT=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DCMAKE_INSTALL_PREFIX=/usr ..
+	CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release -DUSE_GTK=ON -DUSE_JS=OFF -DUSE_WT=OFF -DUSE_QT=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DUSE_LIBGNOME2=OFF -DCMAKE_INSTALL_PREFIX=/usr ..
 	EISKALTDCPP_QT_FILES=eiskaltdcpp-qt.files.nojs
 endif
 endif
 endif
 endif
+
+REVISION = $(shell /bin/sh -c "dpkg-parsechangelog | awk '/^Version: / {print $$2}' | sed -e 's/^.*svn//' -e 's/-.*//'")
+CMAKEOPTS += -DDCPP_REVISION="(r$(REVISION))"
 
 configure: configure-stamp
 configure-stamp:
@@ -92,9 +94,9 @@ binary-arch: build install
 	dh_strip -a
 	dh_compress -a
 	dh_fixperms -a
-	dh_makeshlibs -plibdcpp2.0.x
+	dh_makeshlibs -plibdcpp2.1.x
 	dh_installdeb -a
-	dh_shlibdeps -a -ldebian/libdcpp2.0.x/usr/lib
+	dh_shlibdeps -a -ldebian/libdcpp2.1.x/usr/lib
 	dh_installdebconf -a
 	dh_gencontrol -a
 	dh_md5sums -a
