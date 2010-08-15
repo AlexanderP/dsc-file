@@ -1,0 +1,16 @@
+Source: znotes
+Section: editors
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7.0), libqt4-dev
+Standards-Version: 3.8.4
+Homepage: http://znotes.sourceforge.net/
+
+Package: znotes
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Simple lightweight application for notes
+ provides you a simple text editor in a little 
+ window for the desktop. Notes are especially useful for 
+ temporary stuff. Written in the C++ programming language 
+ using Qt framework.
