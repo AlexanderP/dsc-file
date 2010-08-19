@@ -33,7 +33,7 @@ CMAKEOPTS_WITHOUT_JS =	-DUSE_WT=OFF -DUSE_JS=OFF
 
 WITHOUT_JS = false
 
-REVISION = $(shell /bin/sh -c "head -n 1 debian/changelog | sed -e 's/^.*~svn//' -e 's/-0ppa.*$$//'")
+REVISION = $(shell /bin/sh -c "dpkg-parsechangelog | awk '/^Version: / {print $2}' | sed -e 's/^.*svn//' -e 's/-.*//'")
 CMAKEOPTS += -DDCPP_REVISION=$(REVISION)
 
 
