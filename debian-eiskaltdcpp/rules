@@ -1,75 +1,102 @@
 #!/usr/bin/make -f
 
-NCPUS := $(shell getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
-
-ifeq ($(NCPUS),-1)
-	NCPUS:=1
+ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 endif
 
-ifeq ($(NCPUS),0)
-	NCPUS:=1
+ifeq (,$(NUMJOBS))
+	NUMJOBS := $(shell getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
 endif
 
-CONTROL=control.wt
-EISKALTDCPP_QT_FILES=eiskaltdcpp-qt.files.js
-CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release -DUSE_GTK=ON -DUSE_QT=ON -DUSE_WT=ON -DUSE_JS=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DUSE_LIBGNOME2=OFF -DCMAKE_INSTALL_PREFIX=/usr ..
-PKG_NAME = eiskaltdcpp
+ifeq ($(NUMJOBS),-1)
+	NUMJOBS:=1
+endif
+
+ifeq ($(NUMJOBS),0)
+	NUMJOBS:=1
+endif
+
+BUILDDIR = builddir
+
+CMAKEOPTS =	-DCMAKE_BUILD_TYPE=Release \
+			-DCMAKE_INSTALL_PREFIX=/usr \
+			-DUSE_GTK=ON -DUSE_QT=ON \
+			-DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON \
+			-DUSE_LIBGNOME2=OFF -DLUA_SCRIPT=ON \
+			..
+
+CMAKEOPTS_FULL =		-DUSE_WT=ON  -DUSE_JS=ON
+
+CMAKEOPTS_WITHOUT_WT =	-DUSE_WT=OFF -DUSE_JS=ON
+
+CMAKEOPTS_WITHOUT_JS =	-DUSE_WT=OFF -DUSE_JS=OFF
+
+WITHOUT_JS = false
+
+REVISION = $(shell /bin/sh -c "head -n 1 debian/changelog | sed -e 's/^.*~svn//' -e 's/-0ppa.*$$//'")
+CMAKEOPTS += -DDCPP_REVISION=$(REVISION)
+
+
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
-	DEBIAN_CODENAME := $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
 
 ifeq "$(DEBIAN_CODENAME)" "lucid"
-	CONTROL=control.nowt
-	CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release -DUSE_GTK=ON -DUSE_WT=OFF -DUSE_QT=ON -DUSE_JS=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DUSE_LIBGNOME2=OFF -DCMAKE_INSTALL_PREFIX=/usr ..
+	CONTROL = control.without_wt
+	CMAKEOPTS += $(CMAKEOPTS_WITHOUT_WT)
 else
 ifeq "$(DEBIAN_CODENAME)" "karmic"
-	CONTROL=control.nowt
-	CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release -DUSE_GTK=ON -DUSE_WT=OFF -DUSE_QT=ON -DUSE_JS=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DUSE_LIBGNOME2=OFF -DCMAKE_INSTALL_PREFIX=/usr ..
+	CONTROL = control.without_wt
+	CMAKEOPTS += $(CMAKEOPTS_WITHOUT_WT)
 else
 ifeq "$(DEBIAN_CODENAME)" "jaunty"
-	CONTROL=control.nowt
-	CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release -DUSE_GTK=ON -DUSE_WT=OFF -DUSE_QT=ON -DUSE_JS=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DUSE_LIBGNOME2=OFF -DCMAKE_INSTALL_PREFIX=/usr ..
+	CONTROL = control.without_wt
+	CMAKEOPTS += $(CMAKEOPTS_WITHOUT_WT)
+else
+ifeq "$(DEBIAN_CODENAME)" "intrepid"
+	CONTROL = control.without_wt
+	CMAKEOPTS += $(CMAKEOPTS_WITHOUT_JS)
+	WITHOUT_JS = true
 else
 ifeq "$(DEBIAN_CODENAME)" "lenny"
-	CONTROL=control.nowt
-	CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release -DUSE_GTK=ON -DUSE_JS=OFF -DUSE_WT=OFF -DUSE_QT=ON -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DUSE_LIBGNOME2=OFF -DCMAKE_INSTALL_PREFIX=/usr ..
-	EISKALTDCPP_QT_FILES=eiskaltdcpp-qt.files.nojs
+	CONTROL = control.without_wt
+	CMAKEOPTS += $(CMAKEOPTS_WITHOUT_JS)
+	WITHOUT_JS = true
+else # basic options
+	CONTROL = control.full
+	CMAKEOPTS += $(CMAKEOPTS_FULL)
 endif
 endif
 endif
 endif
-
-REVISION = $(shell /bin/sh -c "dpkg-parsechangelog | awk '/^Version: / {print $$2}' | sed -e 's/^.*svn//' -e 's/-.*//'")
-CMAKEOPTS += -DDCPP_REVISION="(r$(REVISION))"
+endif
 
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
 	cp debian/$(CONTROL) debian/control
-	cp debian/$(EISKALTDCPP_QT_FILES) debian/eiskaltdcpp-qt.files
-	mkdir $(PKG_NAME)-build
-	cd $(PKG_NAME)-build && cmake $(CMAKEOPTS)
+	mkdir -p $(BUILDDIR) && cd $(BUILDDIR) && cmake $(CMAKEOPTS)
 	touch $@
 build: configure build-stamp
 build-stamp:
 	dh_testdir
-	cd $(PKG_NAME)-build && $(MAKE) -j$(NCPUS)
+	cd $(BUILDDIR) && $(MAKE) -j$(NUMJOBS)
 	touch $@
 clean: do-clean
 do-clean:
-	cp debian/$(CONTROL) debian/control
-	cp debian/$(EISKALTDCPP_QT_FILES) debian/eiskaltdcpp-qt.files
 	dh_testdir
 	dh_testroot
-	test ! -d $(PKG_NAME)-build || rm -r $(PKG_NAME)-build
+	cp debian/$(CONTROL) debian/control
+	[ ! -f Makefile ] || ( cd $(BUILDDIR) && $(MAKE) clean )
+	test ! -d $(BUILDDIR) || rm -r $(BUILDDIR)
 	dh_clean
 install: build
 	dh_testdir
 	dh_testroot
 	dh_prep
 	dh_installdirs
-	cd $(PKG_NAME)-build && $(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
+	cd $(BUILDDIR) && $(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
 	rm -f debian/tmp/usr/share/eiskaltdcpp/wt/ext/LICENSE.txt
 binary-indep: build install
 	dh_testdir -i
@@ -77,6 +104,9 @@ binary-indep: build install
 	dh_movefiles -i
 	dh_installdocs -i
 	dh_installchangelogs -i ChangeLog.txt
+ifeq "$(WITHOUT_JS)" "true"
+	rm -fr debian/eiskaltdcpp-qt-data/usr/share/eiskaltdcpp/qt/qtscripts/
+endif
 	dh_compress -i
 	dh_fixperms -i
 	dh_installdeb -i
@@ -103,5 +133,3 @@ binary-arch: build install
 	dh_builddeb -a
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install configure patch unpatch do-clean
-		
-
