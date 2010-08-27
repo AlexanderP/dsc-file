@@ -43,6 +43,7 @@ binary-arch: build install
 	cp -r $(CURDIR)/debian/launchy/usr/lib/launchy/plugins/icons/ $(CURDIR)/debian/launchy/usr/share/launchy/plugins/icons
 	rm -rf $(CURDIR)/debian/launchy/usr/lib/launchy/plugins/icons/
 	cd $(CURDIR)/debian/launchy/usr/lib/launchy/plugins/ && ln -s ../../../share/launchy/plugins/icons
+	find $(CURDIR)/debian/launchy -depth -type d -name .svn -exec rm -rf \{\} \;
 	dh_strip
 	dh_compress
 	dh_fixperms
