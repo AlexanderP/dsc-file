@@ -16,6 +16,18 @@ ifeq ($(NUMJOBS),0)
 	NUMJOBS:=1
 endif
 
+ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
+	CFLAGS += -O0
+endif
+
+ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zlzma -z9
+endif
+
+ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zxz -z9
+endif
+
 BUILDDIR = builddir
 
 CMAKEOPTS =	-DCMAKE_BUILD_TYPE=Release \
@@ -116,7 +128,7 @@ endif
 	dh_installdeb -i
 	dh_gencontrol -i
 	dh_md5sums -i
-	dh_builddeb -i
+	dh_builddeb -i $(BUILDDEBFLAGS)
 binary-arch: build install
 	dh_testdir -a
 	dh_testroot -a
@@ -125,7 +137,9 @@ binary-arch: build install
 	dh_installdocs -a
 	dh_installman -a
 	dh_link -a
+ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
 	dh_strip -a
+endif
 	dh_compress -a
 	dh_fixperms -a
 	dh_makeshlibs -plibdcpp2.1.x
@@ -134,6 +148,6 @@ binary-arch: build install
 	dh_installdebconf -a
 	dh_gencontrol -a
 	dh_md5sums -a
-	dh_builddeb -a
+	dh_builddeb -a $(BUILDDEBFLAGS)
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install configure patch unpatch do-clean
