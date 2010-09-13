@@ -1,7 +1,13 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
-NCPUS := $(shell getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
+ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+endif
+
+ifeq (,$(NCPUS))
+	NCPUS := $(shell getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
+endif
 
 ifeq ($(NCPUS),-1)
 	NCPUS:=1
@@ -9,6 +15,18 @@ endif
 
 ifeq ($(NCPUS),0)
 	NCPUS:=1
+endif
+
+ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
+	CFLAGS += -O0
+endif
+
+ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zlzma -z9
+endif
+
+ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
 CMAKEOPTS = -DCMAKE_INSTALL_PREFIX='/usr' ..
@@ -45,7 +63,9 @@ binary-arch: build install
 	dh_installmime
 	dh_installman
 	dh_installchangelogs
+ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
 	dh_strip
+endif
 	dh_compress
 	dh_fixperms
 	dh_installdeb
@@ -54,6 +74,6 @@ binary-arch: build install
 	dh_installdebconf
 	dh_gencontrol
 	dh_md5sums
-	dh_builddeb
+	dh_builddeb $(BUILDDEBFLAGS)
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install configure patch unpatch do-clean
