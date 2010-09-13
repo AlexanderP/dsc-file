@@ -1,0 +1,11 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+
+diff -Naur qwit-1.1~svn353.orig/qwit.desktop qwit-1.1~svn353/qwit.desktop
+--- qwit-1.1~svn353.orig/qwit.desktop	2010-09-12 21:16:41.000000000 +0400
++++ qwit-1.1~svn353/qwit.desktop	2010-09-12 23:44:12.282618739 +0400
+@@ -9,4 +9,4 @@
+ Exec=qwit
+ Icon=qwit
+ Terminal=false
+-Categories=Qt;Network;Internet
++Categories=Qt;Network
