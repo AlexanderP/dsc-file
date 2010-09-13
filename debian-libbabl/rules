@@ -9,7 +9,13 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-NCPUS := $(shell getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
+ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+endif
+
+ifeq (,$(NCPUS))
+	NCPUS := $(shell getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
+endif
 
 ifeq ($(NCPUS),-1)
 	NCPUS:=1
@@ -17,6 +23,18 @@ endif
 
 ifeq ($(NCPUS),0)
 	NCPUS:=1
+endif
+
+ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
+	CFLAGS += -O0
+endif
+
+ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zlzma -z9
+endif
+
+ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
 
@@ -52,7 +70,9 @@ binary-arch: build install
 	dh_install
 	dh_installdocs
 	dh_installchangelogs ChangeLog*
+ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
 	dh_strip
+endif
 	dh_compress
 	dh_fixperms
 	dh_makeshlibs
@@ -62,7 +82,7 @@ binary-arch: build install
 	find $(CURDIR)/debian/ -depth -name ".git*" -exec rm -rf \{\} \;
 	dh_gencontrol
 	dh_md5sums
-	dh_builddeb
+	dh_builddeb $(BUILDDEBFLAGS)
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install configure patch unpatch do-clean
