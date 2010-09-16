@@ -37,7 +37,27 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-CMAKEOPTS = -DCMAKE_INSTALL_PREFIX=/usr -DWITH_EVERYTHING=ON -DCMAKE_EXE_LINKER_FLAGS="-Wl,--as-needed" .
+CMAKEOPTS = -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_EXE_LINKER_FLAGS="-Wl,--as-needed" 
+CMAKEOPTS += -DWITH_NLS=ON
+CMAKEOPTS += -DWITH_CURL=ON
+CMAKEOPTS += -DWITH_JABBER=ON
+CMAKEOPTS += -DWITH_DOCUMENTATION=ON
+CMAKEOPTS += -DWITH_WEBINTERFACE=ON
+
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+
+ifeq "$(DEBIAN_CODENAME)" "maverick"
+	CMAKEOPTS += -DWITH_BITTORRENT=ON
+else
+	#libtorrent-Rasterbar >= 0.15  
+	CMAKEOPTS += -DWITH_BITTORRENT=OFF
+endif
+
+
+CMAKEOPTS += .
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
