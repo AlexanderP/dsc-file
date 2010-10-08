@@ -81,13 +81,13 @@ Description: sound files for EiskaltDC++
  all common DC hub software.
  .
 
-Package: libdcpp2.1.x
+Package: libeiskaltdcpp2.1.x
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Replaces: libdcpp2.0.x
-Conflicts: libdcpp2.0.x
-Description: DC++ kernel from EiskaltDC++
- This package installs only DC++ kernel which required EiskaltDC++.
+Replaces: libdcpp2.0.x, libdcpp2.1.x
+Conflicts: libdcpp2.0.x, libdcpp2.1.x
+Description: DC++ kernel library from EiskaltDC++
+ This package installs only DC++ kernel library which required EiskaltDC++.
  .
  EiskaltDC++ is a cross-platform program that uses the Direct Connect
  and ADC protocol. It is compatible with other DC clients, such as the original
@@ -97,7 +97,7 @@ Description: DC++ kernel from EiskaltDC++
 Package: eiskaltdcpp-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
- libdcpp2.1.x (= ${binary:Version}),
+ libeiskaltdcpp2.1.x (= ${binary:Version}),
  eiskaltdcpp-qt-data (= ${source:Version}),
  eiskaltdcpp-common
 Recommends: libqtscript4-core, libqtscript4-gui, libqtscript4-network, libqtscript4-xml
@@ -126,7 +126,7 @@ Description: data files for EiskaltDC++ Qt
 Package: eiskaltdcpp-wt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
- libdcpp2.1.x (= ${binary:Version}),
+ libeiskaltdcpp2.1.x (= ${binary:Version}),
  eiskaltdcpp-wt-data (= ${source:Version}),
  eiskaltdcpp-common
 Replaces: eiskaltdcpp-wt-unstable
@@ -153,7 +153,7 @@ Description: data files for EiskaltDC++ Wt
 Package: eiskaltdcpp-gtk
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
- libdcpp2.1.x (= ${binary:Version}),
+ libeiskaltdcpp2.1.x (= ${binary:Version}),
  eiskaltdcpp-gtk-data (= ${source:Version}),
  eiskaltdcpp-common
 Replaces: eiskaltdcpp-gtk-unstable
