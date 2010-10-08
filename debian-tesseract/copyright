@@ -1,0 +1,232 @@
+This work was packaged for Debian by:
+
+    Alexander Pozdnyakov <almipo@mail.ru> on Mon, 04 Oct 2010 19:11:15 +0400
+
+This package based by:
+    Copyright (C) 2007-2010 Jeffrey Ratcliffe <Jeffrey.Ratcliffe@gmail.com>
+
+It was downloaded from:
+
+    http://code.google.com/p/tesseract-ocr/
+
+Upstream Author(s):
+	Ray Smith (lead developer) <theraysmith@users.sourceforge.net>
+	Phil Cheatle
+	Simon Crouch
+	Dan Johnson
+	Mark Seaman
+	Sheelagh Huddleston
+	Chris Newton
+	... and several others.
+
+Copyright:
+
+    Copyright 2007-2010 Google Inc.
+    Copyright 1989-2005 Hewlett-Packard Ltd.
+
+License:
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you
+    may not use this file except in compliance with the License. You may
+    obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+On a Debian system the complete text of the Apache-2.0 license can be found in
+/usr/share/common-licenses/Apache-2.0
+
+The Debian packaging is copyright 2007--2009,
+Jeffrey Ratcliffe <Jeffrey.Ratcliffe@gmail.com> and is licensed under the
+Apache-2.0 licence.
+
+
+The files below have different copyright notices:
+
+Files:     cutil/listio.cpp cutil/listio.h cutil/oldlist.cpp cutil/tessarray.cpp
+           dict/lookdawg.cpp dict/lookdawg.h dict/makedawg.cpp dict/makedawg.h
+           dict/reduce.cpp dict/reduce.h classify/baseline.cpp
+	   classify/baseline.h classify/hideedge.cpp classify/hideedge.h
+	   classify/protos.cpp classify/protos.h cutil/cutil.cpp cutil/cutil.h
+	   cutil/oldlist.h cutil/tessarray.h dict/choicearr.h dict/dawg.cpp
+	   dict/dawg.h dict/hyphen.cpp dict/hyphen.h dict/permdawg.cpp
+	   dict/permdawg.h dict/permnum.cpp dict/permnum.h dict/trie.cpp
+	   dict/trie.h wordrec/chop.cpp wordrec/chop.h wordrec/chopper.cpp
+	   wordrec/chopper.h wordrec/closed.cpp wordrec/closed.h
+	   wordrec/findseam.cpp wordrec/findseam.h wordrec/gradechop.cpp
+	   wordrec/gradechop.h wordrec/heuristic.cpp wordrec/heuristic.h
+	   wordrec/makechop.cpp wordrec/makechop.h wordrec/measure.h
+	   wordrec/metrics.cpp wordrec/metrics.h wordrec/olutil.cpp
+	   wordrec/olutil.h wordrec/pieces.cpp wordrec/pieces.h
+	   wordrec/plotseg.cpp wordrec/plotseg.h wordrec/seam.cpp
+	   wordrec/seam.h wordrec/split.cpp wordrec/split.h wordrec/tally.cpp
+	   wordrec/tally.h
+Copyright: Copyright 1987, Hewlett-Packard Company
+License:   Apache-2.0
+
+Files:     classify/adaptive.cpp classify/adaptive.h classify/adaptmatch.cpp
+	   classify/adaptmatch.h classify/blobclass.cpp classify/blobclass.h
+	   classify/cluster.cpp classify/cluster.h classify/clusttool.cpp
+	   classify/clusttool.h classify/cutoffs.cpp classify/cutoffs.h
+	   classify/extract.cpp classify/extract.h classify/featdefs.cpp
+	   classify/featdefs.h classify/flexfx.cpp classify/flexfx.h
+	   classify/float2int.cpp classify/float2int.h classify/fpoint.cpp
+	   classify/fpoint.h classify/fxdefs.cpp classify/fxdefs.h
+	   classify/intfx.cpp classify/intfx.h classify/intmatcher.cpp
+	   classify/intmatcher.h classify/intproto.cpp classify/intproto.h
+	   classify/kdtree.cpp classify/kdtree.h classify/mf.cpp
+	   classify/mfdefs.cpp classify/mfdefs.h classify/mf.h
+	   classify/mfoutline.cpp classify/mfoutline.h classify/mfx.cpp
+	   classify/mfx.h classify/normfeat.cpp classify/normfeat.h
+	   lassify/normmatch.cpp classify/normmatch.h classify/ocrfeatures.cpp
+	   classify/ocrfeatures.h classify/outfeat.cpp classify/outfeat.h
+	   classify/picofeat.cpp classify/picofeat.h classify/sigmenu.cpp
+	   classify/sigmenu.h classify/speckle.cpp classify/speckle.h
+	   classify/xform2d.cpp classify/xform2d.h cutil/bitvec.cpp
+	   cutil/bitvec.h cutil/danerror.cpp cutil/danerror.h cutil/efio.cpp
+	   cutil/efio.h cutil/emalloc.h cutil/funcdefs.h cutil/general.h
+	   cutil/minmax.h cutil/oldheap.cpp cutil/oldheap.h dict/matchdefs.h
+	   dict/stopper.cpp dict/stopper.h training/cnTraining.cpp
+	   training/mergenf.cpp training/mergenf.h training/mfTraining.cpp
+	   training/name2char.h wordrec/badwords.cpp wordrec/badwords.h
+	   wordrec/mfvars.cpp wordrec/mfvars.h
+Copyright: Copyright Hewlett-Packard Company, 1988
+License:   Apache-2.0
+
+Files:     ccutil/host.h
+Copyright: Copyright Hewlett-Packard Company, 1988-1996
+License:   Apache-2.0
+
+Files:     cutil/globals.cpp ccstruct/blobs.cpp ccstruct/blobs.h
+	   ccstruct/vecfuncs.cpp ccstruct/vecfuncs.h classify/fxid.h
+	   cutil/debug.cpp cutil/debug.h cutil/globals.h cutil/tordvars.h
+	   cutil/variables.cpp cutil/variables.h dict/choices.cpp dict/choices.h
+	   dict/permute.cpp dict/permute.h wordrec/djmenus.cpp
+	   wordrec/msmenus.cpp wordrec/outlines.cpp wordrec/outlines.h
+	   wordrec/plotedges.cpp wordrec/plotedges.h wordrec/render.cpp
+	   wordrec/render.h ccmain/expandblob.cpp ccutil/errcode.cpp ccutil/globaloc.cpp
+Copyright: Copyright 1989, Hewlett-Packard Company
+License:   Apache-2.0
+
+Files:     classify/extern.h cutil/freelist.h cutil/structures.cpp
+	   cutil/structures.h cutil/tordvars.cpp dict/context.cpp dict/context.h
+	   dict/states.cpp dict/states.h wordrec/associate.cpp
+	   wordrec/associate.h wordrec/bestfirst.cpp wordrec/bestfirst.h
+	   wordrec/djmenus.h wordrec/matchtab.cpp wordrec/matchtab.h
+	   wordrec/matrix.cpp wordrec/matrix.h wordrec/msmenus.h
+	   wordrec/wordclass.cpp wordrec/wordclass.h ccutil/basedir.cpp
+	   ccutil/basedir.h ccutil/errcode.h ccutil/fileerr.h ccutil/globaloc.h
+	   ccutil/lsterr.h ccutil/memryerr.h ccutil/memry.h ccutil/serialis.cpp
+	   ccutil/serialis.h ccutil/stderr.h image/imgerrs.h image/img.h
+	   image/imgio.cpp image/imgio.h image/imgs.cpp image/imgs.h
+	   image/imgtiff.cpp image/imgtiff.h image/imgunpk.h
+Copyright: Copyright 1990, Hewlett-Packard Company
+License:   Apache-2.0
+
+Files:     ccmain/pgedit.cpp textord/blkocc.cpp textord/blkocc.h
+	   ccmain/charcut.h ccmain/pagewalk.cpp ccmain/pagewalk.h
+	   ccmain/tessio.h ccstruct/blckerr.h ccstruct/blread.cpp
+	   ccstruct/blread.h ccstruct/coutln.cpp ccstruct/coutln.h
+	   ccstruct/crakedge.h ccstruct/genblob.cpp ccstruct/genblob.h
+	   ccstruct/ipoints.h ccstruct/linlsq.cpp ccstruct/linlsq.h
+	   ccstruct/mod128.cpp ccstruct/mod128.h ccstruct/ocrblock.cpp
+	   ccstruct/ocrblock.h ccstruct/ocrrow.cpp ccstruct/ocrrow.h
+	   ccstruct/pdblock.cpp ccstruct/pdblock.h ccstruct/points.cpp
+	   ccstruct/points.h ccstruct/polyblob.cpp ccstruct/polyblob.h
+	   ccstruct/polyvert.cpp ccstruct/polyvert.h ccstruct/poutline.cpp
+	   ccstruct/poutline.h ccstruct/quadratc.cpp ccstruct/quadratc.h
+	   ccstruct/quspline.cpp ccstruct/quspline.h ccstruct/rect.cpp
+	   ccstruct/rect.h ccstruct/statistc.cpp ccstruct/statistc.h
+	   ccstruct/stepblob.cpp ccstruct/stepblob.h ccstruct/werd.cpp
+	   ccstruct/werd.h ccutil/bits16.cpp ccutil/bits16.h ccutil/clst.cpp
+	   ccutil/clst.h ccutil/elst2.cpp ccutil/elst2.h ccutil/elst.cpp
+	   ccutil/elst.h ccutil/mainblk.cpp ccutil/mainblk.h ccutil/ndminx.h
+	   ccutil/strngs.cpp ccutil/strngs.h ccutil/varable.cpp ccutil/varable.h
+	   image/bitstrm.cpp image/bitstrm.h textord/drawedg.cpp
+	   textord/drawedg.h textord/edgblob.cpp textord/edgblob.h
+	   textord/edgloop.cpp textord/edgloop.h textord/scanedg.cpp
+	   textord/scanedg.h textord/tessout.h
+Copyright: Copyright 1991, Hewlett-Packard Ltd
+License:   Apache-2.0
+
+Files:     ccmain/adaptions.h ccmain/callnet.cpp ccmain/callnet.h
+	   ccmain/charcut.cpp ccmain/control.cpp ccmain/control.h
+	   ccmain/fixxht.cpp ccmain/fixxht.h ccmain/imgscale.cpp
+	   ccmain/imgscale.h ccmain/reject.cpp ccmain/reject.h
+	   ccmain/scaleimg.cpp ccmain/scaleimg.h ccmain/tessbox.cpp
+	   ccmain/tessbox.h ccmain/tessedit.cpp ccmain/tessedit.h
+	   ccmain/tessembedded.cpp ccmain/tessembedded.h
+	   ccmain/tesseractmain.cpp ccmain/tesseractmain.h ccmain/tessvars.cpp
+	   ccmain/tessvars.h ccmain/tfacep.h ccmain/tfacepp.cpp ccmain/tfacepp.h
+	   ccmain/tstruct.cpp ccmain/tstruct.h ccmain/werdit.cpp ccmain/werdit.h
+	   ccstruct/blobbox.cpp ccstruct/blobbox.h ccstruct/lmedsq.cpp
+	   ccstruct/lmedsq.h ccstruct/normalis.cpp ccstruct/normalis.h
+	   ccstruct/pageres.cpp ccstruct/pageres.h ccstruct/pdclass.h
+	   ccstruct/ratngs.cpp ccstruct/ratngs.h ccutil/hashfn.cpp
+	   ccutil/hashfn.h ccutil/memblk.cpp ccutil/memblk.h ccutil/memry.cpp
+	   cmain/adaptions.cpp textord/drawtord.cpp textord/drawtord.h
+	   textord/makerow.cpp textord/makerow.h textord/pithsync.cpp
+	   textord/pithsync.h textord/pitsync1.cpp textord/pitsync1.h
+	   textord/tordmain.cpp textord/tordmain.h textord/wordseg.cpp
+	   textord/wordseg.h wordrec/drawfx.cpp wordrec/drawfx.h
+	   wordrec/tessinit.cpp wordrec/tessinit.h wordrec/tface.cpp
+Copyright: Copyright 1992, Hewlett-Packard Ltd
+License:   Apache-2.0
+
+Files:     ccmain/applybox.cpp ccmain/applybox.h ccmain/blobcmp.cpp
+	   ccmain/blobcmp.h ccmain/charsample.cpp ccmain/matmatch.cpp
+	   ccmain/matmatch.h ccmain/paircmp.cpp ccmain/paircmp.h
+	   ccstruct/labls.cpp ccstruct/labls.h ccstruct/polyaprx.cpp
+	   ccstruct/polyaprx.h ccstruct/polyblk.cpp ccstruct/polyblk.h
+	   ccstruct/quadlsq.cpp ccstruct/quadlsq.h ccstruct/rwpoly.cpp
+	   ccstruct/rwpoly.h ccstruct/txtregn.cpp ccstruct/txtregn.h
+	   textord/blobcmpl.h textord/fpchop.cpp textord/fpchop.h
+	   textord/oldbasel.cpp textord/oldbasel.h textord/sortflts.cpp
+	   textord/sortflts.h textord/topitch.cpp textord/topitch.h
+	   textord/tovars.cpp textord/tovars.h wordrec/charsample.h
+	   ccmain/fixspace.cpp ccmain/fixspace.h
+Copyright: Copyright 1993, Hewlett-Packard Ltd
+License:   Apache-2.0
+
+Files:     ccmain/docqual.cpp ccmain/docqual.h ccmain/output.cpp ccmain/output.h
+	   ccstruct/rejctmap.cpp ccstruct/rejctmap.h textord/underlin.cpp
+	   textord/underlin.h
+Copyright: Copyright 1994, Hewlett-Packard Ltd
+License:   Apache-2.0
+
+Files:     ccutil/nwmain.h ccutil/tessopt.cpp ccutil/tessopt.h ccutil/tprintf.cpp
+	   ccutil/tprintf.h
+Copyright: Copyright 1995, Hewlett-Packard Co
+License:   Apache-2.0
+
+Files:     ccstruct/callcpp.cpp ccstruct/hpddef.h ccutil/debugwin.cpp
+	   ccutil/debugwin.h ccutil/notdll.h ccutil/ocrclass.h
+	   ccutil/ocrshell.cpp ccutil/ocrshell.h cutil/callcpp.h
+Copyright: Copyright 1996, Hewlett-Packard Co
+License:   Apache-2.0
+
+Files:     image/imgbmp.cpp image/imgbmp.h
+Copyright: Copyright 1998, Ray Smith
+License:   Apache-2.0
+
+Files:     ccmain/baseapi.cpp ccutil/scanutils.cpp ccutil/scanutils.h
+	   image/svshowim.cpp image/svshowim.h ccutil/unichar.cpp
+	   ccutil/unichar.h ccutil/unicharmap.cpp ccutil/unicharmap.h
+	   ccutil/unicharset.cpp ccutil/unicharset.h
+	   training/unicharset_extractor.cpp training/wordlist2dawg.cpp
+Copyright: Copyright 2006, Google Inc
+License:   Apache-2.0
+
+Files:     tessdll.cpp tessdll.h
+Copyright: Copyright 2007, Jetsoftdev
+License:   Apache-2.0
+
+The Debian packaging is:
+
+    Copyright (C) 2010 Alexander Pozdnyakov <almipo@mail.ru>
+
+and is licensed under the GPL version 3,
+see "/usr/share/common-licenses/GPL-3".

@@ -1,0 +1,44 @@
+.TH TESSERACT 1 "December 16, 2009"
+.SH NAME
+tesseract \- command line OCR tool
+.SH SYNOPSIS
+.B tesseract
+.RI "imagename outputbase [configfile] [-l <langid>]"
+.SH DESCRIPTION
+This manual page documents briefly the
+.B tesseract
+command.
+.PP
+\fBtesseract\fP is a commercial quality OCR engine originally developed at
+HP between 1985 and 1995. In 1995, this engine was among the top 3 evaluated
+by UNLV. It was open-sourced by HP and UNLV in 2005.
+.SH OPTIONS
+.RI imagename
+must be a TIF image with a .tif extension.
+.P
+.RI outputbase
+is the text file created with the OCR output
+.P
+.RI configfile
+is a file of control parameters used for debugging or modifying tesseract's behaviour.
+They are stored in
+.RI /usr/share/tesseract-ocr/tessdata/configs/
+.P
+The
+.RI "-l <langid>"
+option must come last. At the time of writing, there are language packages available for
+English (eng), German (deu), German fraktur (deu-f), French (fra), Italian (ita), Dutch
+(nld), Portuguese (por), Spanish (spa), and Vietnamese (vie).
+.SH SEE ALSO
+.BR feh (1),
+.BR convert (1),
+.BR mftraining (1),
+.BR cntraining (1),
+.BR unicharset_extractor (1),
+.BR wordlist2dawg (1).
+.br
+.SH AUTHOR
+tesseract was written by Ray Smith.
+.PP
+This manual page was written by Jeffrey Ratcliffe <Jeffrey.Ratcliffe@gmail.com>,
+for the Debian project (but may be used by others).
