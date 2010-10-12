@@ -1,0 +1,65 @@
+Source: fatrat
+Section: net
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends:  debhelper (>= 7), 
+		cmake,
+		libtorrent-rasterbar-dev,
+		libboost-date-time-dev,
+		libqt4-dev,
+		qt4-dev-tools,
+		libgloox-dev,
+		libcurl4-gnutls-dev | libcurl-dev
+Standards-Version: 3.8.4
+Homepage: http://fatrat.dolezel.info/
+
+Package: fatrat
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+         fatrat-data (= ${source:Version}),
+         libqt4-sql-sqlite,
+         xdg-utils
+Description: multi-protocol download manager, feature rich and extensible via plugin
+ FatRat is a feature rich download manager written in C++ and built on top of
+ Qt4 library. It supports a lot of download and file exchange protocols and is
+ continuously extended. It also includes a plugin system.
+ Most relevant features are:
+ .
+  * HTTP(S)/FTP downloads
+  * FTP uploads
+  * RSS feed support + special functions for TV shows and podcasts
+  * BitTorrent support (including torrent creating, DHT, UPnP,
+    encryption etc.)
+  * Torrent search
+  * Support for SOCKS5 and HTTP proxies
+  * RapidShare.com FREE downloads
+  * RapidShare.com uploads
+  * RapidShare.com link verification and folder extraction
+  * RapidSafe link decoding
+  * MD4/MD5/SHA1 hash computing
+  * Remote control via Jabber
+  * Remote control via a web interface
+  * YouTube video downloading
+
+Package: fatrat-data
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: fatrat
+Description: data files for fatrat
+ FatRat is a feature rich download manager written in C++ and built on top of
+ Qt4 library. It supports a lot of download and file exchange protocols and is
+ continuously extended. It also includes a plugin system.
+ .
+ This package contains data files for FatRat such as images, help and locales.
+
+Package: fatrat-dev
+Architecture: all
+Section: devel
+Depends: ${misc:Depends}, libqt4-dev (>= 4.4.0), libcurl4-gnutls-dev
+Description: development files for fatrat
+ FatRat is a feature rich download manager written in C++ and built on top of
+ Qt4 library. It supports a lot of download and file exchange protocols and is
+ continuously extended. It also includes a plugin system.
+ .
+ This package contains FatRat source header files used to compile a plugin or
+ to develop your own one.
