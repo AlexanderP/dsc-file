@@ -37,10 +37,22 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+
+ifeq "$(DEBIAN_CODENAME)" "maverick"
+	CONTROL = control.lqtweb
+else
+	CONTROL = control.nolqtweb
+endif
+
 QMAKEOPTS = INSTALL_PREFIX=/usr -recursive vacuum.pro
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
+	cp debian/$(CONTROL) debian/control
 	qmake $(QMAKEOPTS)
 	touch $@
 build: configure build-stamp
@@ -52,6 +64,7 @@ clean: do-clean
 do-clean:
 	dh_testdir
 	dh_testroot
+	cp debian/$(CONTROL) debian/control
 	test ! -f Makefile || $(MAKE) clean
 	dh_clean
 install: build
