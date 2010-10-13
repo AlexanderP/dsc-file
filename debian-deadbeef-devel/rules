@@ -78,7 +78,7 @@ binary-arch: build install
 ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
 	dh_strip
 endif
-	dh_compress
+	dh_compress -Xusr/share/doc/deadbeef/about.txt
 	dh_fixperms
 	dh_installdeb
 	dh_shlibdeps
