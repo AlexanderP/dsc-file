@@ -37,6 +37,17 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+
+ifeq "$(DEBIAN_CODENAME)" "maverick"
+	CONTROL = control.lqtweb
+else
+	CONTROL = control.nolqtweb
+endif
+
 confflags = --prefix=/usr --release --disable-bundled-qca --disable-growl
 MAKEOPT = -j$(NCPUS)
 QMAKE=qmake-qt4
@@ -44,6 +55,7 @@ QMAKE=qmake-qt4
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
+	cp debian/$(CONTROL) debian/control
 	./configure $(confflags)
 	echo "CONFIG += webkit" >> conf.pri
 	touch $@
@@ -69,6 +81,7 @@ clean: do-clean
 do-clean:
 	dh_testdir
 	dh_testroot
+	cp debian/$(CONTROL) debian/control
 	rm -f build-stamp configure-stamp
 	(test ! -f Makefile || $(MAKE) clean)
 	dh_clean

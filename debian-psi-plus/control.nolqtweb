@@ -1,0 +1,96 @@
+Source: psi-plus
+Section: net
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7), 
+                autotools-dev,
+                libqt4-dev, 
+                libqca2-dev, 
+                libxss-dev, 
+                libaspell-dev, 
+                zlib1g-dev, 
+                libsm-dev
+Standards-Version: 3.8.4
+Homepage: http://psi-dev.googlecode.com/
+
+Package: psi-plus
+Architecture: any
+Recommends: sox, libqca2-plugin-ossl, psi-plus-plugins, psi-plus-icons, psi-plus-skins
+Conflicts: libqca2 (<< 2.0.0), psi, psi-translations
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: libqca2-plugin-gnupg, xdg-utils
+Provides: psi, psi-translations
+Replaces: psi, psi-translations
+Description: Jabber client using Qt
+ Psi+ is a fork of free instant messaging Psi
+ It has some features that Psi does not have
+ .
+ Conference:
+  - Specifying the reasons for the kick / ban
+  - Easy to edit and view the topic
+  - Quick change rank and roles from the context menu in roster / chat
+  - Insert nick by click
+  - Context menu for nick in the message window
+  - User count in the conference roster
+  - Lock autologin in selected conference (at home / in the various autologin)
+  - When highlighted - pop up with text message notification
+  - Collapsing conference roster
+  - Recognition of hyperlinks in the topic of the conference log
+  - Constant nick color in conference, is set to hash nickname
+  - Turn off horizontal scrollbar in conference roster
+  - Login / autologin in the conference in background
+  - Voice / video calls, conference participants
+ .
+ System:
+  - Support delivery notification (XEP-0184: Message Receipts)
+  - Time on Issuance iq request (XEP-0090: Entity Time, XEP-0202: Entity Time)
+  - Support for jabber: iq: version (XEP-0092: Software Version)
+  - Ability to set the "class" (XEP-0108: User Activity)
+  - Support for the broadcast stream from the Audacious
+  - Added command "idle" in the console (jabber: iq: last)
+  - Making a separate status of a specific contact / conference
+  - Improved initial setup
+  - Improved and expanded the definition of operating systems
+  - Contact Manager
+  - Locate plugins directory
+  - The option to exit the application when closure roster
+  - Revised plugins subsystem
+  - Show plugin version
+  - Improved action when moving to jabber-links
+  - Fixed display of messages in the IRC (Nick say:)
+
+Package: psi-plus-plugins
+Architecture: any
+Depends: psi-plus, ${shlibs:Depends}, ${misc:Depends}
+Description: Plugins for Psi+
+ Psi+ Plugins:
+  - Autoreply Plugin
+  - Birthday Reminder Plugin
+  - Chess Plugin
+  - Cleaner Plugin
+  - Conference Logger Plugin
+  - Extended Options Plugin
+  - Gmailnotify Plugin
+  - History Keeper Plugin
+  - ICQ Must Die Plugin
+  - Image Plugin
+  - Juick Plugin
+  - Qip X-statuses Plugin
+  - Screenshot Plugin
+  - Skins Plugin
+  - Stop Spam Plugin
+  - Storage Notes Plugin
+  - Translate Plugin
+  - Watcher Plugin
+
+Package: psi-plus-icons
+Architecture: all
+Depends: psi-plus
+Description: Icons for Psi+
+ Psi+ icons from psi+ svn
+
+Package: psi-plus-skins
+Architecture: all
+Depends: psi-plus
+Description: Skins for Psi+
+ Psi+ skins from psi+ svn
