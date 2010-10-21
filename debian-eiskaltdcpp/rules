@@ -30,68 +30,21 @@ endif
 
 BUILDDIR = builddir
 
-CMAKEOPTS =	-DCMAKE_BUILD_TYPE=Release \
+CMAKEOPTS =	-DCMAKE_BUILD_TYPE=RelWithDebInfo \
 			-DCMAKE_INSTALL_PREFIX=/usr \
-			-DUSE_GTK=ON -DUSE_QT=ON \
             -DUSE_MINIUPNP=ON -DLOCAL_MINIUPNP=ON \
-			-DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON \
-            -DUSE_LIBGNOME2=OFF \
-            -DCREATE_MO=ON -DUPDATE_PO=OFF \
             -DLUA_SCRIPT=ON -DWITH_LUASCRIPTS=ON \
             -DWITH_SOUNDS=ON \
+            -DUSE_QT=ON \
+			-DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DUSE_JS=ON \
+            -DUSE_GTK=ON \
+            -DUSE_LIBGNOME2=OFF -DUSE_LIBNOTIFY=ON \
+            -DCREATE_MO=ON -DUPDATE_PO=OFF \
 			..
-
-CMAKEOPTS_FULL =		-DUSE_WT=ON  -DUSE_JS=ON
-
-CMAKEOPTS_WITHOUT_WT =	-DUSE_WT=OFF -DUSE_JS=ON
-
-CMAKEOPTS_WITHOUT_JS =	-DUSE_WT=OFF -DUSE_JS=OFF
-
-WITHOUT_JS = false
-
-REVISION = $(shell /bin/sh -c "dpkg-parsechangelog | awk '/^Version: / {print $2}' | sed -e 's/^.*svn//' -e 's/-.*//'")
-CMAKEOPTS += -DDCPP_REVISION=$(REVISION)
-
-
-DEBIAN_CODENAME = $(shell echo $$DIST)
-ifeq "$(DEBIAN_CODENAME)" ""
-	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
-endif
-
-ifeq "$(DEBIAN_CODENAME)" "lucid"
-	CONTROL = control.without_wt
-	CMAKEOPTS += $(CMAKEOPTS_WITHOUT_WT)
-else
-ifeq "$(DEBIAN_CODENAME)" "karmic"
-	CONTROL = control.without_wt
-	CMAKEOPTS += $(CMAKEOPTS_WITHOUT_WT)
-else
-ifeq "$(DEBIAN_CODENAME)" "jaunty"
-	CONTROL = control.without_wt
-	CMAKEOPTS += $(CMAKEOPTS_WITHOUT_WT)
-else
-ifeq "$(DEBIAN_CODENAME)" "intrepid"
-	CONTROL = control.without_wt
-	CMAKEOPTS += $(CMAKEOPTS_WITHOUT_JS)
-	WITHOUT_JS = true
-else
-ifeq "$(DEBIAN_CODENAME)" "lenny"
-	CONTROL = control.without_wt
-	CMAKEOPTS += $(CMAKEOPTS_WITHOUT_JS)
-	WITHOUT_JS = true
-else # basic options
-	CONTROL = control.full
-	CMAKEOPTS += $(CMAKEOPTS_FULL)
-endif
-endif
-endif
-endif
-endif
 
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
-	cp debian/$(CONTROL) debian/control
 	mkdir -p $(BUILDDIR) && cd $(BUILDDIR) && cmake $(CMAKEOPTS)
 	touch $@
 build: configure build-stamp
@@ -103,7 +56,6 @@ clean: do-clean
 do-clean:
 	dh_testdir
 	dh_testroot
-	cp debian/$(CONTROL) debian/control
 	[ ! -f Makefile ] || ( cd $(BUILDDIR) && $(MAKE) clean )
 	test ! -d $(BUILDDIR) || rm -r $(BUILDDIR)
 	dh_clean
@@ -113,13 +65,12 @@ install: build
 	dh_prep
 	dh_installdirs
 	cd $(BUILDDIR) && $(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
-	rm -f debian/tmp/usr/share/eiskaltdcpp/wt/ext/LICENSE.txt
 binary-indep: build install
 	dh_testdir -i
 	dh_testroot -i
 	dh_movefiles -i
 	dh_installdocs -i
-	dh_installchangelogs -i ChangeLog.txt
+	dh_installchangelogs -i ChangeLog.txt ChangeLog_ru.txt ChangeLog_uk.txt
 ifeq "$(WITHOUT_JS)" "true"
 	rm -fr debian/eiskaltdcpp-qt-data/usr/share/eiskaltdcpp/qt/qtscripts/
 endif

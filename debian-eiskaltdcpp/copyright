@@ -46,7 +46,6 @@ License:
 
 Files:
  cmake/*
- eiskaltdcpp-wt/cmake/*
 Copyright:
  Copyright 2006-2009 Kitware, Inc.
  Copyright 2008-2009 Philip Lowman <philip@yhbt.com>
@@ -87,14 +86,15 @@ Files:
  dcpp/*.cpp
  dht/*.h
  dht/*.cpp
- miniupnp/upnpc.h
- miniupnp/upnpc.cpp
+ extra/upnpc.h
+ extra/upnpc.cpp
 Copyright:
  Copyright 2001-2010 Jacek Sieka <arnetheduck@gmail.com>
  Copyright 2008-2009 Big Muscle (http://strongdc.sf.net)
  Copyright 1996-2002 Florian Schintke
- Copyright 1997 Makoto Matsumoto and Takuji Nishimura
+ Copyright 1997 Makoto Matsumoto and Takuji Nishimura <matumoto@math.keio.ac.jp>
  Copyright 2010 cologic <ne5@parsoma.net>
+ Copyright 2010 ggrundik (http://code.google.com/u/ggrundik/)
 License:
  GPL-2 or later
  .
@@ -141,8 +141,8 @@ License:
  Public Domain
 
 Files:
- fsusage/fsusage.c
- fsusage/fsusage.h
+ extra/fsusage.c
+ extra/fsusage.h
 Copyright:
  Copyright 1991-2006 Free Software Foundation, Inc.
 License:
@@ -178,6 +178,7 @@ License:
 Files:
  eiskaltdcpp-qt/src/FlowLayout.cpp
  eiskaltdcpp-qt/src/FlowLayout.h
+ eiskaltdcpp-qt/qtscripts/tic-tac-toe/*
 Copyright:
  Copyright 2010 Nokia Corporation and/or its subsidiary(-ies).
 License:
@@ -220,53 +221,11 @@ Copyright:
  Copyright 2009-2010 freedcpp (http://code.google.com/p/freedcpp)
  Copyright 2009-2010 Leliksan Floyd <leliksan@Quadrafon2>
  Copyright 2003 Bastien Nocera <hadess@hadess.net>
- Copyright 2010 Irene (http://sourceforge.net/projects/freedcppmv/)
 License:
  GPL-2 or later
  .
  On Debian systems, the complete text of the GNU General
  Public License can be found in `/usr/share/common-licenses/GPL-2'.
-
-Files:
- eiskaltdcpp-wt/ext/*
- eiskaltdcpp-wt/resources/*
-Copyright:
- Copyright 2006-2007, Ext JS, LLC <licensing@extjs.com>
-License:
- LGPL-3
- .
- License of CSS and Graphics ("Assets")
- .
- The Assets distributed with Ext are licensed for use ONLY
- with their associated Ext JavaScript component ("Component"). Use of the Assets in
- any way that does not also include the Component is prohibited without explicit
- permission from Ext JS, LLC.  Deriving images and CSS from the Assets in an effort
- to bypass this license is also prohibited.
- .
- Open Source License
- .
- Ext is also licensed under the terms of the Open Source LGPL 3.0 license. You may use
- our open source license if you:
- * Want to use Ext in an open source project that precludes using non-open source software
- * Plan to use Ext in a personal, educational or non-profit manner
- * Are using Ext in a commercial application that is not a software development library
- or toolkit, you will meet LGPL requirements and you do not wish to support the project
- .
- http://www.gnu.org/licenses/lgpl.html
- .
- Commercial License
- .
- If you are using this library for commercial purposes, we encourage you to purchase
- a commercial license. Please visit http://extjs.com/license for more details.
- .
- OEM / Reseller License
- .
- If you plan to distribute Ext in a product that will be packaged or sold as a software
- development library, toolkit or plug-in-based framework ("LIBRARY"), we require that you
- work with us to establish a specific license that is appropriate. Use of the open source
- license in a LIBRARY is not permitted without explicit permission from Ext JS, LLC.
- .
- For more details, please visit: http://extjs.com/license.
 
 The Debian packaging is:
 
