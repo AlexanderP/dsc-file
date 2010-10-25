@@ -2,8 +2,7 @@ Source: vacuum
 Section: net
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), openssl, libqt4-dev, libx11-dev, nas, zlib1g-dev,
-		libqtwebkit-dev
+Build-Depends: cmake, debhelper (>= 7), openssl, libqt4-dev, libx11-dev, nas, zlib1g-dev, libqtwebkit-dev
 Standards-Version: 3.8.3
 Homepage: http://code.google.com/p/vacuum-im/
 
@@ -14,4 +13,11 @@ Description: Jabber client using Qt
  Vacuum is a free instant messaging application designed for the Jabber
  (XMPP) IM network (including Google Talk). It has full Unicode support, 
  and supports most important XMPP features.
+
+Package: vacuum-dev
+Architecture: all
+Depends: ${misc:Depends}, vacuum
+Description: Development files for Vacuum
+ This package contains Vacuum include files you need if you
+ want to develop plugins for Vacuum.
 

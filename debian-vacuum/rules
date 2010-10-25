@@ -47,32 +47,32 @@ ifeq "$(DEBIAN_CODENAME)" "maverick"
 else
 	CONTROL = control.nolqtweb
 endif
-
-QMAKEOPTS = INSTALL_PREFIX=/usr -recursive vacuum.pro
+CMAKEOPTS = -DCMAKE_INSTALL_PREFIX=/usr DCMAKE_BUILD_TYPE=Release ..
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
 	cp debian/$(CONTROL) debian/control
-	qmake $(QMAKEOPTS)
+	mkdir build
+	cd build && cmake $(CMAKEOPTS)
 	touch $@
 build: configure build-stamp
 build-stamp:
 	dh_testdir
-	$(MAKE) -j$(NCPUS)
+	cd build && $(MAKE) -j$(NCPUS)
 	touch $@
 clean: do-clean
 do-clean:
 	dh_testdir
 	dh_testroot
 	cp debian/$(CONTROL) debian/control
-	test ! -f Makefile || $(MAKE) clean
+	test ! -d build || rm -r build
 	dh_clean
 install: build
 	dh_testdir
 	dh_testroot
 	dh_prep
 	dh_installdirs
-	$(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
+	cd build && $(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
 binary-indep: build install
 binary-arch: build install
 	dh_testdir
@@ -88,7 +88,6 @@ binary-arch: build install
 	dh_installdebconf
 	dh_installchangelogs CHANGELOG
 	dh_installman debian/vacuum.1
-	#chmod 644 $(CURDIR)/debian/vacuum/usr/lib/libvacuumutils.so.1.0.0
 ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
 	dh_strip
 endif
