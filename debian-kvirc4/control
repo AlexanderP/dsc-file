@@ -2,8 +2,8 @@ Source: kvirc
 Section: net
 Priority: optional
 Maintainer: Alexander Pozdnykov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), cmake, g++, gcc, zlib1g-dev, libqt4-dev, gettext, libssl-dev, libperl-dev, libaudiofile-dev, graphviz, libxrender-dev, dpkg-dev, x11proto-scrnsaver-dev, subversion
-Standards-Version: 3.8.3
+Build-Depends: debhelper (>= 7), cmake, zlib1g-dev, libqt4-dev, gettext, libssl-dev, libperl-dev, libaudiofile-dev, graphviz, libxrender-dev, x11proto-scrnsaver-dev, subversion
+Standards-Version: 3.9.1
 Homepage: http://kvirc.net/
 
 Package: kvirc
@@ -19,7 +19,8 @@ Description: KDE based next generation IRC client with module support
 
 Package: kvirc-data
 Architecture: all
-Suggests: kvirc (>= ${source:Version})
+Depends: ${misc:Depends}
+Suggests: kvirc
 Conflicts: kvirc-doc, kvirc (<< 2:3.0.0)
 Replaces: kvirc-doc
 Description: Data files for KVIrc
@@ -33,7 +34,8 @@ Description: Data files for KVIrc
 Package: kvirc-dev
 Section: devel
 Architecture: any
-Depends: kvirc (>= ${source:Version})
+Depends: ${misc:Depends}
+Suggests: kvirc
 Description: Development files for KVIrc
  This package contains KVIrc libraries and include files you need if you
  want to develop plugins for KVIrc.
