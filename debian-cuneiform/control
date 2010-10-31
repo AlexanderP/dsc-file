@@ -2,8 +2,8 @@ Source: cuneiform-linux
 Section: non-free/graphics
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), cmake, make, g++, gcc, libmagick++-dev | libmagick++9-dev
-Standards-Version: 3.8.3
+Build-Depends: debhelper (>= 7), cmake, libmagick++-dev | libmagick++9-dev
+Standards-Version: 3.9.1
 Homepage: https://launchpad.net/cuneiform-linux
 
 Package: cuneiform-linux
@@ -17,6 +17,7 @@ Description: multi-language OCR system
 
 Package: cuneiform-common
 Architecture: all
+Depends: ${misc:Depends}
 Suggests: cuneiform-linux
 Description: Data files for cuneiform-linux
  Cuneiform is an multi-language OCR system originally 
