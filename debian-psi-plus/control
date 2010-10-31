@@ -10,7 +10,7 @@ Build-Depends: debhelper (>= 7),
                 libaspell-dev, 
                 zlib1g-dev, 
                 libsm-dev
-Standards-Version: 3.8.4
+Standards-Version: 3.9.1
 Homepage: http://psi-dev.googlecode.com/
 
 Package: psi-plus
@@ -85,12 +85,12 @@ Description: Plugins for Psi+
 
 Package: psi-plus-icons
 Architecture: all
-Depends: psi-plus
+Depends: psi-plus, ${misc:Depends}
 Description: Icons for Psi+
  Psi+ icons from psi+ svn
 
 Package: psi-plus-skins
 Architecture: all
-Depends: psi-plus
+Depends: psi-plus, ${misc:Depends}
 Description: Skins for Psi+
  Psi+ skins from psi+ svn
