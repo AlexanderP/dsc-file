@@ -61,29 +61,23 @@ install: build
 	dh_installdirs
 	$(MAKE) install DESTDIR=debian/tmp
 binary-indep: build install
-binary-arch: build install
-	dh_testdir
-	dh_testroot
-	dh_install
-	#dh_link
-	dh_installdocs
-	#dh_installinfo
-	dh_installchangelogs
-	dh_installman debian/bmpanel2cfg.1
-	dh_install debian/bmpanel2cfg.desktop usr/share/applications
-ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
-	dh_strip
-endif
-	dh_compress
-	dh_fixperms
-	dh_shlibdeps
-	dh_pycentral
+	dh_testdir -i
+	dh_testroot -i
+	dh_install -i
+	dh_installdocs -i
+	dh_installchangelogs -i
+	dh_installman -i debian/bmpanel2cfg.1
+	dh_install -i debian/bmpanel2cfg.desktop usr/share/applications
+	dh_compress -i
+	dh_fixperms -i
+	dh_pycentral -i
 	dh_pysupport -i
-	dh_installdeb
-	dh_installdebconf
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb $(BUILDDEBFLAGS)
+	dh_installdeb -i
+	dh_installdebconf -i
+	dh_gencontrol -i
+	dh_md5sums -i
+	dh_builddeb -i $(BUILDDEBFLAGS)
+binary-arch: build install
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install configure patch unpatch do-clean
 	
