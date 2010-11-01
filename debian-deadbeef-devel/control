@@ -1,4 +1,4 @@
-Source: deadbeef
+Source: deadbeef-devel
 Section: sound
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
@@ -30,7 +30,7 @@ Build-Depends: debhelper (>= 7),
                 libmpcdec-dev, 
                 libmms-dev, 
                 libfaad-dev, 
-Standards-Version: 3.8.3
+Standards-Version: 3.9.1
 Homepage: http://deadbeef.sourceforge.net/
 
 Package: deadbeef-devel
@@ -50,7 +50,7 @@ Description: Music player for GNU/Linux systems
 
 Package: deadbeef-devel-dev
 Architecture: all
-Depends: deadbeef-devel
+Depends: deadbeef-devel, ${misc:Depends}
 Conflicts: deadbeef-dev
 Description: Development files for DeaDBeeF
  This package contains DeaDBeeF include files you need if you
