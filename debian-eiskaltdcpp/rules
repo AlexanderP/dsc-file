@@ -70,10 +70,7 @@ binary-indep: build install
 	dh_testroot -i
 	dh_movefiles -i
 	dh_installdocs -i
-	dh_installchangelogs -i ChangeLog.txt ChangeLog_ru.txt ChangeLog_uk.txt
-ifeq "$(WITHOUT_JS)" "true"
-	rm -fr debian/eiskaltdcpp-qt-data/usr/share/eiskaltdcpp/qt/qtscripts/
-endif
+	dh_installchangelogs -i ChangeLog.txt
 	dh_compress -i
 	dh_fixperms -i
 	dh_installdeb -i
