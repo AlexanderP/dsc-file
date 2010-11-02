@@ -58,29 +58,23 @@ install: build
 	dh_installdirs
 	$(PYTHON) setup.py install --root=$(CURDIR)/debian/$(PACKAGE) --no-compile --prefix=/usr
 binary-indep: build install
+	dh_testdir -i
+	dh_testroot -i
+	dh_installdocs -i
+	dh_installchangelogs -i
+	dh_installman -i debian/obkey.1
+	dh_install -i debian/obkey.xpm usr/share/pixmaps
+	dh_install -i debian/obkey.desktop usr/share/applications
+	dh_compress -i
+	dh_fixperms -i
+	dh_pycentral -i
+	dh_pysupport -i
+	dh_installdeb -i
+	dh_installdebconf -i
+	dh_gencontrol -i
+	dh_md5sums -i
+	dh_builddeb -i $(BUILDDEBFLAGS)
 binary-arch: build install
-	dh_testdir
-	dh_testroot
-	#dh_link
-	dh_installdocs
-	#dh_installinfo
-	dh_installchangelogs
-	dh_installman debian/obkey.1
-	dh_install debian/obkey.xpm usr/share/pixmaps
-	dh_install debian/obkey.desktop usr/share/applications
-ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
-	dh_strip
-endif
-	dh_compress
-	dh_fixperms
-	dh_shlibdeps
-	dh_pycentral
-	dh_pysupport
-	dh_installdeb
-	dh_installdebconf
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb $(BUILDDEBFLAGS)
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install configure patch unpatch do-clean
 
