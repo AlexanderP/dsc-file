@@ -69,7 +69,7 @@ binary-indep: build install
 	dh_installdocs -i
 	dh_installman -i debian/rrip_cli.1
 	dh_installman -i debian/rrip_gui.1
-	dh_install -ichangelogs
+	dh_install -i changelogs
 	dh_compress -i
 	dh_fixperms -i
 	dh_installdeb -i
