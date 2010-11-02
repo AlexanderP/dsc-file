@@ -75,9 +75,9 @@ ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
 endif
 	dh_compress
 	dh_fixperms
-	dh_installdeb
 	dh_makeshlibs
 	dh_shlibdeps
+	dh_installdeb
 	dh_installdebconf
 	dh_gencontrol
 	dh_md5sums
