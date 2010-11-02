@@ -57,30 +57,26 @@ install: build
 	dh_testroot
 	dh_prep
 	dh_installdirs
+	chmod -x TODO INSTALL README CHANGELOG pytylerc LICENSE
 	$(PYTHON) setup.py install --root=$(CURDIR)/debian/$(PACKAGE) --prefix=/usr --no-compile --install-layout=deb
 binary-indep: build install
+	dh_testdir -i
+	dh_testroot -i
+	dh_installdocs -i
+	dh_installchangelogs -i CHANGELOG
+	dh_installman -i debian/pytyle.1
+	rm -f $(CURDIR)/debian/pytyle/usr/lib/python2.6/dist-packages/PyTyle/LICENSE
+	dh_compress -i
+	dh_fixperms -i
+	dh_shlibdeps -i
+	dh_pycentral -i
+	dh_pysupport -i debian/pytyle/usr/lib/$(PYTHON)/site-packages/PyTyle
+	dh_install -i pytylerc /usr/share/pytyle/
+	dh_installdeb -i
+	dh_installdebconf -i
+	dh_gencontrol -i
+	dh_md5sums -i
+	dh_builddeb -i $(BUILDDEBFLAGS)
 binary-arch: build install
-	dh_testdir
-	dh_testroot
-	#dh_link
-	dh_installdocs
-	#dh_installinfo
-	dh_installchangelogs CHANGELOG
-	dh_installman debian/pytyle.1
-ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
-	dh_strip
-endif
-	dh_compress
-	dh_fixperms
-	dh_shlibdeps
-	dh_pycentral
-	#rm -f debian/$(PACKAGE)/usr/share/pyshared/PyTyle/LICENSE
-	dh_pysupport debian/pytyle/usr/lib/$(PYTHON)/site-packages/PyTyle
-	dh_install pytylerc /usr/share/pytyle/
-	dh_installdeb
-	dh_installdebconf
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb $(BUILDDEBFLAGS)
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install configure patch unpatch do-clean
