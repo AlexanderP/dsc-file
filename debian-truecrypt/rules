@@ -2,6 +2,8 @@
 # -*- makefile -*-
 #export DH_VERBOSE=1
 
+include /usr/share/dpatch/dpatch.make
+
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 endif
@@ -30,23 +32,20 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-build: build-stamp
+build: patch-stamp build-stamp
 build-stamp:
 	dh_testdir
-	#ln /usr/include/pkcs11.h $(CURDIR)/pkcs11.h
-	#ln /usr/include/pkcs11f.h $(CURDIR)/pkcs11f.h
-	#ln /usr/include/pkcs11t.h $(CURDIR)/pkcs11t.h
-	wget ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-11/v2-20/pkcs11.h
-	wget ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-11/v2-20/pkcs11f.h
-	wget ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-11/v2-20/pkcs11t.h
 	$(MAKE) -j$(NCPUS)
 	touch $@
-clean: do-clean
-do-clean:
+clean: do-clean unpatch
+do-clean: 
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp
 	(test ! -f Makefile || $(MAKE) clean)
+	test -f pkcs11.h || wget ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-11/v2-20/pkcs11.h
+	test -f pkcs11f.h || wget ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-11/v2-20/pkcs11f.h
+	test -f pkcs11t.h || wget ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-11/v2-20/pkcs11t.h
 	dh_clean
 install: build
 	dh_testdir
