@@ -51,6 +51,7 @@ do-clean:
 	dh_testroot
 	rm -f build-stamp
 	$(PYTHON) setup.py clean
+	find . -depth -depth -type f -iname "*.pyc" -exec rm -rf \{\} \;
 	dh_clean
 install: build
 	dh_testdir
