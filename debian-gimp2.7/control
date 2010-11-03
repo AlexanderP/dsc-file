@@ -42,14 +42,14 @@ Build-Depends: debhelper (>= 7),
 		libbabl-0.1-0-dev,
 		xsltproc,
 		gtk-doc-tools
-Standards-Version: 3.8.4
+Standards-Version: 3.9.1
 Homepage: http://www.gimp.org
 
 Package: gimp2.7
 Architecture: any
 Section: graphics
 Provides: gimp-helpbrowser, gimp-python
-Depends: libgimp-2.0-0 (>= ${source:Upstream-Version}), libgimp-2.0-0 (<= ${source:Upstream-Version}-z), gimp2.7-data (>= ${source:Upstream-Version}), gimp2.7-data (<= ${source:Upstream-Version}-z), python-gtk2 (>= 2.8.0), ${shlibs:Depends}, ${python:Depends}
+Depends: libgimp-2.0-0 (>= ${source:Upstream-Version}), libgimp-2.0-0 (<= ${source:Upstream-Version}-z), gimp2.7-data (>= ${source:Upstream-Version}), gimp2.7-data (<= ${source:Upstream-Version}-z), python-gtk2 (>= 2.8.0), ${shlibs:Depends}, ${python:Depends}, ${misc:Depends}
 Conflicts: gimp-data, gimp
 Description: The GNU Image Manipulation Program
  GIMP lets you draw, paint, edit images, and much more! GIMP
@@ -68,7 +68,7 @@ Description: The GNU Image Manipulation Program
 Package: libgimp-2.0-0
 Architecture: any
 Section: libs
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Recommends: gimp2.7, gimp2.7-data
 Description: Libraries for the GNU Image Manipulation Program
  This package includes the libgimp libraries, which are
@@ -79,6 +79,7 @@ Architecture: all
 Section: graphics
 Recommends: gimp2.7
 Conflicts: gimp
+Depends: ${misc:Depends}
 Description: Data files for GIMP
  This package contains architecture-independent supporting data files
  for use with GIMP.
@@ -86,7 +87,7 @@ Description: Data files for GIMP
 Package: libgimp-2.0-0-dev
 Architecture: any
 Section: libdevel
-Depends: ${shlibs:Depends}, libgimp-2.0-0 (= ${binary:Version}), libgtk2.0-dev (>= 2.12.5), pkg-config
+Depends: ${shlibs:Depends}, libgimp-2.0-0 (= ${binary:Version}), libgtk2.0-dev (>= 2.12.5), pkg-config, ${misc:Depends}
 Description: Headers and other files for compiling plugins for GIMP
  This package contains the header files for the GNU Image Manipulation
  Program, along with the static versions of libgimp.
