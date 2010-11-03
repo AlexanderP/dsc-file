@@ -3,7 +3,7 @@ Section: graphics
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: debhelper (>= 7), autotools-dev, cdbs, automake, libtool, libbabl-0.1-0-dev, libjpeg62-dev, libpng12-dev, libcairo2-dev, libgtk2.0-dev, ruby-dev, ruby-full, gobject-introspection
-Standards-Version: 3.8.4
+Standards-Version: 3.9.1
 Homepage: http://www.gimp.org/
 
 Package: gegl-0.1
@@ -37,7 +37,8 @@ Package: libgegl-0.1-dev
 Conflicts: libgegl-0.0-dev
 Section: libdevel
 Architecture: all
-Depends: libgegl-0.1-0, libbabl-0.1-0-dev
+Suggests: libgegl-0.1-0,
+Depends: libbabl-0.1-0-dev, ${misc:Depends}
 Description: Generic Graphics Library (development files)
  GEGL (Generic Graphics Library) is a graph based image processing
  framework.
@@ -52,6 +53,7 @@ Package: libgegl-0.1-doc
 Conflicts: libgegl-0.0-doc
 Section: doc
 Architecture: all
+Depends: ${misc:Depends}
 Description: Generic Graphics Library (documentation)
  GEGL (Generic Graphics Library) is a graph based image processing
  framework.
