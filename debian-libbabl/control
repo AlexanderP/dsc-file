@@ -3,7 +3,7 @@ Section: libs
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: debhelper (>= 7), autotools-dev, cdbs, automake, libtool, gobject-introspection
-Standards-Version: 3.8.4
+Standards-Version: 3.9.1
 Homepage: http://www.gimp.org/
 
 Package: libbabl-0.1-0
@@ -33,7 +33,8 @@ Package: libbabl-0.1-doc
 Conflicts: libbabl-0.0-doc
 Architecture: all
 Section: doc
-Depends: ${misc:Depends}, libbabl-0.1-0 (= ${binary:Version})
+Suggests: libbabl-0.1-0 (= ${binary:Version})
+Depends: ${misc:Depends}, 
 Description: Dynamic, any to any, pixel format conversion library (documentation)
  Babl is a dynamic, any to any, pixel format conversion library. It
  provides conversions between the myriad of buffer types images can be
