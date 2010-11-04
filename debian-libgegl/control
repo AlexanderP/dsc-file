@@ -36,9 +36,8 @@ Description: Generic Graphics Library
 Package: libgegl-0.1-dev
 Conflicts: libgegl-0.0-dev
 Section: libdevel
-Architecture: all
-Suggests: libgegl-0.1-0,
-Depends: libbabl-0.1-0-dev, ${misc:Depends}
+Architecture: any
+Depends: libbabl-0.1-0-dev, ${misc:Depends}, libgegl-0.1-0 (= ${binary:Version})
 Description: Generic Graphics Library (development files)
  GEGL (Generic Graphics Library) is a graph based image processing
  framework.
@@ -53,6 +52,7 @@ Package: libgegl-0.1-doc
 Conflicts: libgegl-0.0-doc
 Section: doc
 Architecture: all
+Suggests: libgegl-0.1-0,
 Depends: ${misc:Depends}
 Description: Generic Graphics Library (documentation)
  GEGL (Generic Graphics Library) is a graph based image processing
