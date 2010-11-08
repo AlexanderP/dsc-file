@@ -34,6 +34,7 @@ Architecture: all
 Depends: ${misc:Depends}
 Replaces: eiskaltdcpp-common-unstable
 Conflicts: eiskaltdcpp-common-unstable
+Breaks: eiskaltdcpp (<< 2.1.0)
 Description: common files for EiskaltDC++
  This package contains the common files for the different EiskaltDC++ versions.
  .
@@ -64,6 +65,7 @@ Depends: ${misc:Depends}
 Suggests: php5-cli
 Replaces: eiskaltdcpp-scripts-unstable
 Conflicts: eiskaltdcpp-scripts-unstable
+Breaks: eiskaltdcpp (<< 2.1.0)
 Description: scripts examples for EiskaltDC++
  This package contains the scripts examples for EiskaltDC++.
  It used by /sh and /alias chat commands (see man-page or /help in chat).
@@ -106,8 +108,9 @@ Depends: ${shlibs:Depends}, ${misc:Depends},
  eiskaltdcpp-qt-data (= ${source:Version}),
  eiskaltdcpp-common
 Recommends: libqtscript4-core, libqtscript4-gui, libqtscript4-network, libqtscript4-xml
-Replaces: eiskaltdcpp-qt-unstable
+Replaces: eiskaltdcpp (<< 2.1.0), eiskaltdcpp-qt-unstable
 Conflicts: eiskaltdcpp-qt-unstable
+Breaks: eiskaltdcpp (<< 2.1.0)
 Description: EiskaltDC++ GUI on Qt
  This package installs only EiskaltDC++ with GUI based on Qt.
  .
@@ -121,6 +124,7 @@ Architecture: all
 Depends: ${misc:Depends}
 Replaces: eiskaltdcpp-qt-data-unstable
 Conflicts: eiskaltdcpp-qt-data-unstable
+Breaks: eiskaltdcpp (<< 2.1.0)
 Suggests: php5-cli,
  eiskaltdcpp-emoticons,
  eiskaltdcpp-scripts,
