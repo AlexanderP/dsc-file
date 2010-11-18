@@ -48,34 +48,25 @@ else
 	CONTROL = control.nolqtweb
 endif
 
-confflags = --prefix=/usr --release --disable-bundled-qca --disable-growl
+confflags = --enable-plugins --disable-bundled-qca --debug --no-separate-debug-info
 MAKEOPT = -j$(NCPUS)
 QMAKE=qmake-qt4
+QCONF=qt-qconf
+plugs = $(notdir $(wildcard $(CURDIR)/src/plugins/generic/*plugin ) )
 
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
 	cp debian/$(CONTROL) debian/control
-	./configure $(confflags)
-	echo "CONFIG += webkit" >> conf.pri
+	- QUILT_PC=.pc_psi quilt push -a --quiltrc /dev/null
+	$(QCONF)
+	./configure --prefix=/usr $(confflags)
 	touch $@
 build: configure build-stamp
 build-stamp:
 	dh_testdir
 	$(MAKE) $(MAKEOPT)
-	rm -rf src/plugins/generic/testoptplugin
-	for i in $(CURDIR)/src/plugins/generic/* ; do \
-		file=`basename $$i`; \
-		cd $$i; \
-		case "$$file" in \
-			screenshot) \
-				$(QMAKE) screenshotplugin.pro && $(MAKE) $(MAKEOPT) \
-			;; \
-			*) \
-				$(QMAKE) && $(MAKE) $(MAKEOPT) \
-			;; \
-		esac; \
-	done 
+	$(foreach plug,$(plugs), cd $(CURDIR)/src/plugins/generic/$(plug) && $(QMAKE) && $(MAKE); )
 	touch $@
 clean: do-clean
 do-clean:
@@ -83,27 +74,48 @@ do-clean:
 	dh_testroot
 	cp debian/$(CONTROL) debian/control
 	rm -f build-stamp configure-stamp
-	(test ! -f Makefile || $(MAKE) clean)
-	dh_clean
-	rm -f config.sub config.guess src/Makefile Makefile libpsi/psiwidgets/Makefile src/psi conf.pri extra.pri conf.log src/config.h src/.qmake.internal.cache psi configure.exe src/plugins/generic/psimedia/conf.pri
-	rm -rf iris/lib iris/conf.pri src/.moc src/.obj src/.rcc src/.ui .qconftemp src/plugins/generic/psimedia/gstprovider/gstelements/static/lib
-	for i in $(CURDIR)/src/plugins/generic/* ; do \
-		file=`basename $$i`; \
-		cd $$i; \
-		[ ! -f Makefile ] || $(MAKE) distclean; \
-	done
+	[ ! -f Makefile ] || $(MAKE) distclean
+	rm -f config.sub config.guess configure
+	rm -f psi src/psi src/config.h
+	rm -f Makefile src/Makefile libpsi/psiwidgets/Makefile
+	rm -f conf.pri extra.pri conf.log
+	rm -f src/.qmake.internal.cache
+	rm -rf iris/lib iris/conf.pri
+	rm -rf .qconftemp
+	$(foreach plug,$(plugs), cd $(CURDIR)/src/plugins/generic/$(plug) && [ ! -f Makefile ] || $(MAKE) distclean; )
+	- QUILT_PC=.pc_psi quilt pop -af --quiltrc /dev/null
+	rm -rf .pc_psi
 install: build
 	dh_testdir
 	dh_testroot
 	dh_prep
 	dh_installdirs
-	$(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/tmp
-	rm -f $(CURDIR)/debian/tmp/usr/share/psi/COPYING
+	$(MAKE) INSTALL_ROOT=$(CURDIR)/debian/psi-plus install
+	rm -f $(CURDIR)/debian/psi-plus/usr/bin/psi.debug #remove static debug file
+	$(MAKE) clean
+	./configure --prefix=/usr $(confflags) --enable-webkit
+	$(MAKE) $(MAKEOPT)
+	$(MAKE) INSTALL_ROOT=$(CURDIR)/debian/psi-plus-webkit install
+	rm $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi
+	rm $(CURDIR)/debian/psi-plus-webkit/usr/share/applications/psi.desktop
+	cp $(CURDIR)/src/psi $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-webkit
+	cp $(CURDIR)/debian/psi-webkit.desktop $(CURDIR)/debian/psi-plus-webkit/usr/share/applications/
+	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi.debug #remove static debug file
+	rm -f $(CURDIR)/debian/psi-plus/usr/share/psi/COPYING
+	rm -f $(CURDIR)/debian/psi-plus/usr/share/psi/README
+	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/share/psi/COPYING
+	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/share/psi/README
 binary-indep: build install
 binary-arch: build install
 	dh_testdir
 	dh_testroot
 	dh_install
+	rm -f $(CURDIR)/debian/psi-plus-plugins/usr/lib/psi/plugins/libcontentdownloaderplugin.so
+	rm -f $(CURDIR)/debian/psi-plus-plugins/usr/lib/psi/plugins/libskinsplugin.so
+	#rm -rf $(CURDIR)/debian/psi-plus-icons/usr/share/psi/iconsets/roster
+	#rm -rf $(CURDIR)/debian/psi-plus-icons/usr/share/psi/iconsets/clients
+	#rm -rf $(CURDIR)/debian/psi-plus-icons/usr/share/psi/iconsets/emoticons
+	bash debian/mergedups.sh
 	dh_installdocs
 	dh_installman
 	dh_installchangelogs
@@ -113,7 +125,7 @@ ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
 endif
 	dh_compress
 	dh_fixperms
-	chmod -x $(CURDIR)/debian/psi-plus-skins/usr/share/psi/psi-skins/universal/orange/*
+	chmod -x $(CURDIR)/debian/psi-plus-skins/usr/share/psi/skins/universal/orange/*
 	dh_installdeb
 	dh_shlibdeps
 	dh_installdebconf
