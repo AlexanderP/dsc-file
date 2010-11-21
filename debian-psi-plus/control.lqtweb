@@ -72,6 +72,72 @@ Description: skins for Psi+
 
 Package: psi-plus-icons
 Architecture: all
-Depends: ${misc:Depends}
-Description: Icons for Psi+
+Depends: psi-plus-common, ${misc:Depends}
+Recommends: psi-plus-activities, psi-plus-affiliations, psi-plus-clients, psi-plus-emoticons, psi-plus-moods, psi-plus-roster, psi-plus-system
+Conflicts: psi-plus (<< 0.15~svn2289)
+Replaces: psi-plus (<< 0.15~svn2289)
+Description: icons for Psi+
  Psi+ icons from psi+ svn
+
+Package: psi-plus-activities
+Architecture: all
+Depends: psi-plus-common, ${misc:Depends}
+Conflicts: psi-plus (<< 0.15~svn2289)
+Replaces: psi-plus (<< 0.15~svn2289)
+Description: activities icons for Psi+
+ Psi+ activities icons from psi+ svn
+ separate from icons
+
+Package: psi-plus-affiliations
+Architecture: all
+Depends: psi-plus-common, ${misc:Depends}
+Conflicts: psi-plus (<< 0.15~svn2289)
+Replaces: psi-plus (<< 0.15~svn2289)
+Description: affiliations icons for Psi+
+ Psi+ affiliations icons from psi+ svn
+ separate from icons
+
+Package: psi-plus-clients
+Architecture: all
+Depends: psi-plus-common, ${misc:Depends}
+Conflicts: psi-plus (<< 0.15~svn2289)
+Replaces: psi-plus (<< 0.15~svn2289)
+Description: clients icons for Psi+
+ Psi+ clients icons from psi+ svn
+ separate from icons
+
+Package: psi-plus-emoticons
+Architecture: all
+Depends: psi-plus-common, ${misc:Depends}
+Conflicts: psi-plus (<< 0.15~svn2289)
+Replaces: psi-plus (<< 0.15~svn2289)
+Description: emoticons icons for Psi+
+ Psi+ emoticons icons from psi+ svn
+ separate from icons
+
+Package: psi-plus-moods
+Architecture: all
+Depends: psi-plus-common, ${misc:Depends}
+Conflicts: psi-plus (<< 0.15~svn2289)
+Replaces: psi-plus (<< 0.15~svn2289)
+Description: moods icons for Psi+
+ Psi+ moods icons from psi+ svn
+ separate from icons
+
+Package: psi-plus-roster
+Architecture: all
+Depends: psi-plus-common, ${misc:Depends}
+Conflicts: psi-plus (<< 0.15~svn2289)
+Replaces: psi-plus (<< 0.15~svn2289)
+Description: roster icons for Psi+
+ Psi+ roster icons from psi+ svn
+ separate from icons
+
+Package: psi-plus-system
+Architecture: all
+Depends: psi-plus-common, ${misc:Depends}
+Conflicts: psi-plus (<< 0.15~svn2289)
+Replaces: psi-plus (<< 0.15~svn2289)
+Description: system icons for Psi+
+ Psi+ system icons from psi+ svn
+ separate from icons
