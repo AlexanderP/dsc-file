@@ -30,17 +30,18 @@ endif
 
 BUILDDIR = builddir
 
-CMAKEOPTS =	-DCMAKE_BUILD_TYPE=RelWithDebInfo \
-			-DCMAKE_INSTALL_PREFIX=/usr \
+CMAKEOPTS = -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+            -DCMAKE_INSTALL_PREFIX=/usr \
             -DUSE_MINIUPNP=ON -DLOCAL_MINIUPNP=ON \
             -DLUA_SCRIPT=ON -DWITH_LUASCRIPTS=ON \
+            -DPERL_REGEX=ON \
             -DWITH_SOUNDS=ON \
             -DUSE_QT=ON \
-			-DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DUSE_JS=ON \
+            -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DUSE_JS=ON \
             -DUSE_GTK=ON \
             -DUSE_LIBGNOME2=OFF -DUSE_LIBNOTIFY=ON \
             -DCREATE_MO=ON -DUPDATE_PO=OFF \
-			..
+            ..
 
 configure: configure-stamp
 configure-stamp:
