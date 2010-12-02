@@ -1,0 +1,35 @@
+Source: gscan2pdf
+Section: utils
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7.0.50~)
+Build-Depends-Indep: perl (>= 5.8.0-7), gettext, libtest-pod-perl
+Standards-Version: 3.9.1
+Homepage: http://gscan2pdf.sourceforge.net/
+
+Package: gscan2pdf
+Architecture: all
+Depends: libgtk2-imageview-perl, libgtk2-ex-simple-list-perl, libsane-perl,
+ liblocale-gettext-perl (>= 1.05), sane-utils (>= 1.0.17), libtiff-tools,
+ libpdf-api2-perl, libconfig-general-perl (>= 2.40), perlmagick, imagemagick,
+ librsvg2-common, libarchive-tar-perl, libset-intspan-perl (>= 1.10),
+ libforks-perl (>= 0.33), libhtml-parser-perl, libgoo-canvas-perl,
+ libproc-processtable-perl, libreadonly-perl, ${misc:Depends}
+Recommends: libgtk2-ex-podviewer-perl, sane, xdg-utils, djvulibre-bin,
+ unpaper, gocr, tesseract-ocr, cuneiform
+Description: A GUI to produce PDFs or DjVus from scanned documents
+ Only two clicks are required to scan several pages and then save all or a
+ selection as a PDF or DjVu file, including metadata if required.
+ .
+ gscan2pdf can control regular or sheet-fed (ADF) scanners with SANE via
+ scanimage or scanadf, and can scan multiple pages at once. It presents a
+ thumbnail view of scanned pages, and permits simple operations such as
+ cropping, rotating and deleting pages.
+ .
+ OCR can be used to recognise text in the scans, and the output
+ embedded in the PDF or DjVu.
+ .
+ PDF conversion is done by PDF::API2.
+ .
+ The resulting document may be saved as a PDF, DjVu, multipage TIFF file, or
+ single page image file.
