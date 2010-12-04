@@ -66,7 +66,7 @@ build: configure build-stamp
 build-stamp:
 	dh_testdir
 	$(MAKE) $(MAKEOPT)
-	$(foreach plug,$(plugs), cd $(CURDIR)/src/plugins/generic/$(plug) && $(QMAKE) && $(MAKE); )
+	$(foreach plug,$(plugs), cd $(CURDIR)/src/plugins/generic/$(plug) && $(QMAKE) && $(MAKE) $(MAKEOPT); )
 	touch $@
 clean: do-clean
 do-clean:
