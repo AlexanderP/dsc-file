@@ -9,6 +9,8 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+confflags = --prefix=/usr
+
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 endif
@@ -37,7 +39,14 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-confflags = --prefix=/usr
+
+PULSEAUDIOVER = $(shell ls /usr/lib/libpulsecommon-*.so | sed 's/.*-//g'| sed 's/\.so//g' | sed 's/\.//g' 2>/dev/null || echo 1)
+
+
+ifneq ($(shell test $(PULSEAUDIOVER) -ge 0922 && echo 1),1)
+	confflags += --disable-pulse
+endif
+
 
 configure: configure-stamp
 configure-stamp:
