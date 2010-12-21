@@ -92,6 +92,7 @@ install: build
 	dh_installdirs
 	$(MAKE) INSTALL_ROOT=$(CURDIR)/debian/psi-plus install
 	rm -f $(CURDIR)/debian/psi-plus/usr/bin/psi.debug #remove static debug file
+	#Making the same, but using webkit
 	$(MAKE) clean
 	./configure --prefix=/usr $(confflags) --enable-webkit
 	$(MAKE) $(MAKEOPT)
@@ -112,9 +113,6 @@ binary-arch: build install
 	dh_install
 	rm -f $(CURDIR)/debian/psi-plus-plugins/usr/lib/psi/plugins/libcontentdownloaderplugin.so
 	rm -f $(CURDIR)/debian/psi-plus-plugins/usr/lib/psi/plugins/libskinsplugin.so
-	#rm -rf $(CURDIR)/debian/psi-plus-icons/usr/share/psi/iconsets/roster
-	#rm -rf $(CURDIR)/debian/psi-plus-icons/usr/share/psi/iconsets/clients
-	#rm -rf $(CURDIR)/debian/psi-plus-icons/usr/share/psi/iconsets/emoticons
 	bash debian/mergedups.sh
 	dh_installdocs
 	dh_installman

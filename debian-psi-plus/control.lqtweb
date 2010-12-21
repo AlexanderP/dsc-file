@@ -21,54 +21,114 @@ Architecture: any
 Conflicts: psi
 Depends: psi-plus-common, ${shlibs:Depends}, ${misc:Depends}
 Replaces: psi
-Description: jabber client using Qt
- Psi+ is a fork of free instant messaging Psi
- It has some features that Psi does not have
+Description: Psi+ (basic version)
+ This package contains basic version of Psi+.
+ .
+ Psi is a cross-platform powerful Jabber client (Qt, C++) designed for the
+ Jabber power users. Psi+ is a development branch of Psi IM Jabber client by
+ psi-dev@conference.jabber.ru team.
+ .
+ Project Purpose: collection, refinement and writing new patches for transfer
+ them to Psi upstream developers.
+ .
+ Full list of features you can found at:
+ http://psi-plus.com/wiki/doku.php/en:features
 
 Package: psi-plus-webkit
 Architecture: any
 Conflicts: psi
 Depends: psi-plus-common, ${shlibs:Depends}, ${misc:Depends}
-Replaces: psi, psi-plus (<< 0.15~svn3057)
-Description: jabber client using Qt webkit
- Psi+ is a fork of free instant messaging Psi
- It has some features that Psi does not have
+Replaces: psi
+Description: Psi+ (WebKit version)
+ This package contains WebKit version of Psi+.
+ .
+ Psi is a cross-platform powerful Jabber client (Qt, C++) designed for the
+ Jabber power users. Psi+ is a development branch of Psi IM Jabber client by
+ psi-dev@conference.jabber.ru team.
+ .
+ Project Purpose: collection, refinement and writing new patches for transfer
+ them to Psi upstream developers.
+ .
+ Full list of features you can found at:
+ http://psi-plus.com/wiki/doku.php/en:features
  .
  This package contents webkit version
 
 Package: psi-plus-common
-Architecture: any
+Architecture: all
 Recommends: sox, libqca2-plugin-ossl, psi-plus-plugins, psi-plus-icons, psi-plus-skins
-Conflicts: psi-translations, psi-plus (<< 0.15~svn3057)
+Conflicts: psi-translations
+Breaks: psi-plus (<< 0.15~svn3057)
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Suggests: libqca2-plugin-gnupg, xdg-utils
 Replaces: psi, psi-plus (<< 0.15~svn3057)
-Description: common files for psi plus
- Common files for psi+ and psi+webkit
+Description: common files for Psi+
+ This package contains common files for Psi+.
+ .
+ Psi is a cross-platform powerful Jabber client (Qt, C++) designed for the
+ Jabber power users. Psi+ is a development branch of Psi IM Jabber client by
+ psi-dev@conference.jabber.ru team.
+ .
+ Project Purpose: collection, refinement and writing new patches for transfer
+ them to Psi upstream developers.
+ .
+ Full list of features you can found at:
+ http://psi-plus.com/wiki/doku.php/en:features
 
 Package: psi-plus-plugins
 Architecture: any
 Depends: psi-plus-common, ${shlibs:Depends}, ${misc:Depends}
 Description: plugins for Psi+
- Psi+ Plugins
+ This package contains plugins for Psi+.
+ .
+ Psi is a cross-platform powerful Jabber client (Qt, C++) designed for the
+ Jabber power users. Psi+ is a development branch of Psi IM Jabber client by
+ psi-dev@conference.jabber.ru team.
+ .
+ Project Purpose: collection, refinement and writing new patches for transfer
+ them to Psi upstream developers.
+ .
+ Full list of features you can found at:
+ http://psi-plus.com/wiki/doku.php/en:features
+
 
 Package: psi-plus-content-download
 Architecture: any
-Conflicts: psi-plus-plugins (<< 0.15~svn3047)
+Breaks: psi-plus-plugins (<< 0.15~svn3047)
 Replaces: psi-plus-plugins (<< 0.15~svn3047)
 Depends: psi-plus-common, ${shlibs:Depends}, ${misc:Depends}
-Description: Content download plugins for Psi+
- Download content frompsi-plus site
- all content in packages - this only for fanatics of RMS
- normal peoples - install psi-plus-icons and other
+Description: content download plugins for Psi+
+ This package contains special plugins for Psi+ which allow you download
+ some content (like non-free icons) from oficial Psi+ site. And you don't need
+ this package if psi-plus-icons package is instaled in your system.
+ .
+ Psi is a cross-platform powerful Jabber client (Qt, C++) designed for the
+ Jabber power users. Psi+ is a development branch of Psi IM Jabber client by
+ psi-dev@conference.jabber.ru team.
+ .
+ Project Purpose: collection, refinement and writing new patches for transfer
+ them to Psi upstream developers.
+ .
+ Full list of features you can found at:
+ http://psi-plus.com/wiki/doku.php/en:features
 
 Package: psi-plus-skins
 Architecture: any
-Depends: psi-plus-common, ${shlibs:Depends}, ${misc:Depends}
-Conflicts: psi-plus-plugins (<< 0.15~svn3047)
+Depends: psi-plus-common, psi-plus-plugins, ${shlibs:Depends}, ${misc:Depends}
+Breaks: psi-plus-plugins (<< 0.15~svn3047)
 Replaces: psi-plus-plugins (<< 0.15~svn3047)
 Description: skins for Psi+
- Psi+ skins from psi+ svn and skin plugin
+ This package contains skins for Psi+.
+ .
+ Psi is a cross-platform powerful Jabber client (Qt, C++) designed for the
+ Jabber power users. Psi+ is a development branch of Psi IM Jabber client by
+ psi-dev@conference.jabber.ru team.
+ .
+ Project Purpose: collection, refinement and writing new patches for transfer
+ them to Psi upstream developers.
+ .
+ Full list of features you can found at:
+ http://psi-plus.com/wiki/doku.php/en:features
 
 Package: psi-plus-icons
 Architecture: all
