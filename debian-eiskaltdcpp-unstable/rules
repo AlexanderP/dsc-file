@@ -33,7 +33,7 @@ BUILDDIR = builddir
 CMAKEOPTS = -DCMAKE_BUILD_TYPE=RelWithDebInfo \
             -DCMAKE_INSTALL_PREFIX=/usr \
             -DUSE_MINIUPNP=ON -DLOCAL_MINIUPNP=ON \
-            -DLUA_SCRIPT=ON -DWITH_LUASCRIPTS=ON \
+            -DLUA_SCRIPT=OFF -DWITH_LUASCRIPTS=OFF \
             -DPERL_REGEX=ON \
             -DWITH_SOUNDS=ON \
             -DUSE_QT=ON \
@@ -91,9 +91,9 @@ ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
 endif
 	dh_compress -a
 	dh_fixperms -a
-	dh_makeshlibs -plibeiskaltdcpp2.1.x-unstable
+	dh_makeshlibs -plibeiskaltdcpp2.2-unstable
 	dh_installdeb -a
-	dh_shlibdeps -a -ldebian/libeiskaltdcpp2.1.x-unstable/usr/lib
+	dh_shlibdeps -a -ldebian/libeiskaltdcpp2.2-unstable/usr/lib
 	dh_installdebconf -a
 	dh_gencontrol -a
 	dh_md5sums -a
