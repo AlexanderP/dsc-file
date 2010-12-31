@@ -70,6 +70,7 @@ binary-arch: build install
 	dh_install
 	dh_installchangelogs ChangeLog
 	dh_installdocs
+	dh_installexamples
 	dh_installman
 	dh_link
 ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
