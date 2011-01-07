@@ -37,20 +37,27 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
+confflags = --prefix=/usr
+
 PYTHON=python2.6
 PACKAGE=ocrfeeder
-build: build-stamp
+configure: configure-stamp
+configure-stamp:
+	dh_testdir
+	./autogen.sh
+	./configure $(confflags)
+	touch $@
+build: configure build-stamp
 build-stamp:
 	dh_testdir
-	$(MAKE) i18n
-	$(PYTHON) setup.py build
+	$(MAKE)
 	touch $@
 clean: do-clean
 do-clean:
 	dh_testdir
 	dh_testroot
-	rm -f build-stamp
-	$(PYTHON) setup.py clean
+	rm -f build-stamp configure-stamp
+	(test ! -f Makefile || $(MAKE) clean)
 	find . -depth -depth -type f -iname "*.pyc" -exec rm -rf \{\} \;
 	dh_clean
 install: build
@@ -58,7 +65,7 @@ install: build
 	dh_testroot
 	dh_prep
 	dh_installdirs
-	$(PYTHON) setup.py install --root=$(CURDIR)/debian/$(PACKAGE) --no-compile --prefix=/usr
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/$(PACKAGE)
 binary-indep: build install
 	dh_testdir -i
 	dh_testroot -i
