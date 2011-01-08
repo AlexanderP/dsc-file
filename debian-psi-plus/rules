@@ -9,6 +9,8 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+include /usr/share/quilt/quilt.make 
+
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 endif
@@ -37,17 +39,6 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-DEBIAN_CODENAME = $(shell echo $$DIST)
-ifeq "$(DEBIAN_CODENAME)" ""
-	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
-endif
-
-ifeq "$(DEBIAN_CODENAME)" "maverick"
-	CONTROL = control.lqtweb
-else
-	CONTROL = control.nolqtweb
-endif
-
 confflags = --enable-plugins --disable-bundled-qca --debug --no-separate-debug-info
 MAKEOPT = -j$(NCPUS)
 QMAKE=qmake-qt4
@@ -57,22 +48,20 @@ plugs = $(notdir $(wildcard $(CURDIR)/src/plugins/generic/*plugin ) )
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
-	cp debian/$(CONTROL) debian/control
 	- QUILT_PC=.pc_psi quilt push -a --quiltrc /dev/null
 	$(QCONF)
 	./configure --prefix=/usr $(confflags)
 	touch $@
-build: configure build-stamp
+build: patch configure build-stamp
 build-stamp:
 	dh_testdir
 	$(MAKE) $(MAKEOPT)
 	$(foreach plug,$(plugs), cd $(CURDIR)/src/plugins/generic/$(plug) && $(QMAKE) && $(MAKE) $(MAKEOPT); )
 	touch $@
-clean: do-clean
+clean: do-clean unpatch
 do-clean:
 	dh_testdir
 	dh_testroot
-	cp debian/$(CONTROL) debian/control
 	rm -f build-stamp configure-stamp
 	[ ! -f Makefile ] || $(MAKE) distclean
 	rm -f config.sub config.guess configure

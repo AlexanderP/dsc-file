@@ -3,7 +3,7 @@ Section: net
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends:  debhelper (>= 7.0.50~), 
-		libqt4-dev (>= 4.6.0), 
+		libqtwebkit-dev | libqt4-dev (>= 4.6.0), 
 		libqca2-dev(>= 2.0.0), 
 		libxss-dev,
 		libaspell-dev, 
@@ -11,7 +11,7 @@ Build-Depends:  debhelper (>= 7.0.50~),
 		libsm-dev, 
 		quilt, 
 		qconf, 
-		libproxy-dev, 
+		libproxy-dev 
 Standards-Version: 3.9.1
 Homepage: http://psi-dev.googlecode.com/
 
@@ -20,7 +20,7 @@ Architecture: any
 Conflicts: psi
 Depends: psi-plus-common, ${shlibs:Depends}, ${misc:Depends}
 Replaces: psi
-Description: Psi+ (basic version)
+Description: Qt-based jabber client (basic version)
  This package contains basic version of Psi+.
  .
  Psi is a cross-platform powerful Jabber client (Qt, C++) designed for the
@@ -38,7 +38,7 @@ Architecture: any
 Conflicts: psi
 Depends: psi-plus-common, ${shlibs:Depends}, ${misc:Depends}
 Replaces: psi
-Description: Psi+ (WebKit version)
+Description: Qt-based jabber client (WebKit version)
  This package contains WebKit version of Psi+.
  .
  Psi is a cross-platform powerful Jabber client (Qt, C++) designed for the
@@ -132,71 +132,71 @@ Description: skins for Psi+
 Package: psi-plus-icons
 Architecture: all
 Depends: psi-plus-common, ${misc:Depends}
-Recommends: psi-plus-activities, psi-plus-affiliations, psi-plus-clients, psi-plus-emoticons, psi-plus-moods, psi-plus-roster, psi-plus-system
-Conflicts: psi-plus (<< 0.15~svn2289)
-Replaces: psi-plus (<< 0.15~svn2289)
+Recommends: psi-plus-icons-activities, psi-plus-icons-affiliations, psi-plus-icons-clients, psi-plus-icons-emoticons, psi-plus-icons-moods, psi-plus-icons-roster, psi-plus-icons-system
+Conflicts: psi-plus (<< 0.15~svn2289), psi-plus-activities, psi-plus-affiliations, psi-plus-clients, psi-plus-emoticons, psi-plus-moods, psi-plus-roster, psi-plus-system
+Replaces: psi-plus (<< 0.15~svn2289), psi-plus-activities, psi-plus-affiliations, psi-plus-clients, psi-plus-emoticons, psi-plus-moods, psi-plus-roster, psi-plus-system
 Description: icons for Psi+
  Psi+ icons from psi+ svn
 
-Package: psi-plus-activities
+Package: psi-plus-icons-activities
 Architecture: all
 Depends: psi-plus-common, ${misc:Depends}
-Conflicts: psi-plus (<< 0.15~svn2289)
-Replaces: psi-plus (<< 0.15~svn2289)
+Conflicts: psi-plus (<< 0.15~svn2289), psi-plus-activities
+Replaces: psi-plus (<< 0.15~svn2289), psi-plus-activities
 Description: activities icons for Psi+
  Psi+ activities icons from psi+ svn
  separate from icons
 
-Package: psi-plus-affiliations
+Package: psi-plus-icons-affiliations
 Architecture: all
 Depends: psi-plus-common, ${misc:Depends}
-Conflicts: psi-plus (<< 0.15~svn2289)
-Replaces: psi-plus (<< 0.15~svn2289)
+Conflicts: psi-plus (<< 0.15~svn2289), psi-plus-affiliations
+Replaces: psi-plus (<< 0.15~svn2289), psi-plus-affiliations
 Description: affiliations icons for Psi+
  Psi+ affiliations icons from psi+ svn
  separate from icons
 
-Package: psi-plus-clients
+Package: psi-plus-icons-clients
 Architecture: all
 Depends: psi-plus-common, ${misc:Depends}
-Conflicts: psi-plus (<< 0.15~svn2289)
-Replaces: psi-plus (<< 0.15~svn2289)
+Conflicts: psi-plus (<< 0.15~svn2289), psi-plus-clients
+Replaces: psi-plus (<< 0.15~svn2289), psi-plus-clients
 Description: clients icons for Psi+
  Psi+ clients icons from psi+ svn
  separate from icons
 
-Package: psi-plus-emoticons
+Package: psi-plus-icons-emoticons
 Architecture: all
 Depends: psi-plus-common, ${misc:Depends}
-Conflicts: psi-plus (<< 0.15~svn2289)
-Replaces: psi-plus (<< 0.15~svn2289)
+Conflicts: psi-plus (<< 0.15~svn2289), psi-plus-emoticons
+Replaces: psi-plus (<< 0.15~svn2289), psi-plus-emoticons
 Description: emoticons icons for Psi+
  Psi+ emoticons icons from psi+ svn
  separate from icons
 
-Package: psi-plus-moods
+Package: psi-plus-icons-moods
 Architecture: all
 Depends: psi-plus-common, ${misc:Depends}
-Conflicts: psi-plus (<< 0.15~svn2289)
-Replaces: psi-plus (<< 0.15~svn2289)
+Conflicts: psi-plus (<< 0.15~svn2289), psi-plus-moods
+Replaces: psi-plus (<< 0.15~svn2289), psi-plus-moods
 Description: moods icons for Psi+
  Psi+ moods icons from psi+ svn
  separate from icons
 
-Package: psi-plus-roster
+Package: psi-plus-icons-roster
 Architecture: all
 Depends: psi-plus-common, ${misc:Depends}
-Conflicts: psi-plus (<< 0.15~svn2289)
-Replaces: psi-plus (<< 0.15~svn2289)
+Conflicts: psi-plus (<< 0.15~svn2289), psi-plus-roster
+Replaces: psi-plus (<< 0.15~svn2289), psi-plus-roster
 Description: roster icons for Psi+
  Psi+ roster icons from psi+ svn
  separate from icons
 
-Package: psi-plus-system
+Package: psi-plus-icons-system
 Architecture: all
 Depends: psi-plus-common, ${misc:Depends}
-Conflicts: psi-plus (<< 0.15~svn2289)
-Replaces: psi-plus (<< 0.15~svn2289)
+Conflicts: psi-plus (<< 0.15~svn2289), psi-plus-system
+Replaces: psi-plus (<< 0.15~svn2289), psi-plus-system
 Description: system icons for Psi+
  Psi+ system icons from psi+ svn
  separate from icons
