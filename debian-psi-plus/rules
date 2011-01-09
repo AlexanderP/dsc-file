@@ -9,8 +9,6 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-include /usr/share/quilt/quilt.make 
-
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 endif
@@ -52,13 +50,13 @@ configure-stamp:
 	$(QCONF)
 	./configure --prefix=/usr $(confflags)
 	touch $@
-build: patch configure build-stamp
+build: configure build-stamp
 build-stamp:
 	dh_testdir
 	$(MAKE) $(MAKEOPT)
 	$(foreach plug,$(plugs), cd $(CURDIR)/src/plugins/generic/$(plug) && $(QMAKE) && $(MAKE) $(MAKEOPT); )
 	touch $@
-clean: do-clean unpatch
+clean: do-clean
 do-clean:
 	dh_testdir
 	dh_testroot
