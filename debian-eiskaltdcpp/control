@@ -2,7 +2,7 @@ Source: eiskaltdcpp
 Section: net
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), cmake (>= 2.6.0), autotools-dev, fakeroot,
+Build-Depends: debhelper (>= 7), cmake (>= 2.6.0), po-debconf, autotools-dev, fakeroot,
  libqt4-dev (>=4.4.0), qt4-dev-tools (>=4.4.0), qt4-qtconfig (>=4.4.0),
  libgtk2.0-dev, libglade2-dev, libnotify-dev, liblua5.1-0-dev, libpcre3-dev,
  libboost-dev | libboost1.42-dev | libboost1.40-dev | libboost1.39-dev | libboost1.38-dev | libboost1.37-dev | libboost1.35-dev,
@@ -15,9 +15,11 @@ Architecture: all
 Depends: ${misc:Depends},
  eiskaltdcpp-qt (>= ${binary:Version}),
  eiskaltdcpp-gtk (>= ${binary:Version}),
+ eiskaltdcpp-daemon (>= ${binary:Version}),
  eiskaltdcpp-emoticons,
  eiskaltdcpp-scripts,
  eiskaltdcpp-sounds
+Suggests: eiskaltdcpp-geoip
 Replaces: eiskaltdcpp-unstable
 Conflicts: eiskaltdcpp-unstable
 Description: EiskaltDC++ meta-package
@@ -27,7 +29,6 @@ Description: EiskaltDC++ meta-package
  and ADC protocol. It is compatible with other DC clients, such as the original
  DC from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with
  all common DC hub software.
-
 
 Package: eiskaltdcpp-common
 Architecture: all
@@ -56,8 +57,6 @@ Description: emoticons for EiskaltDC++
  and ADC protocol. It is compatible with other DC clients, such as the original
  DC from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with
  all common DC hub software.
- .
- (This is daily builds of the EiskaltDC++ packages)
 
 Package: eiskaltdcpp-scripts
 Architecture: all
@@ -88,11 +87,33 @@ Description: sound files for EiskaltDC++
  DC from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with
  all common DC hub software.
 
-Package: libeiskaltdcpp2.1.x
+Package: eiskaltdcpp-geoip
+Architecture: all
+Depends: ${misc:Depends},
+ unzip, curl,
+ eiskaltdcpp-qt | eiskaltdcpp-gtk
+Replaces: eiskaltdcpp-geoip-unstable
+Conflicts: eiskaltdcpp-geoip-unstable
+Description: Geo IP Database for EiskaltDC++
+ This package contains script for updating the Geo IP database for EiskaltDC++.
+ .
+ Database in text format (GeoIPCountryWhois.csv) will be downloaded from
+ official site (http://maxmind.com/) if it's required.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect
+ and ADC protocol. It is compatible with other DC clients, such as the original
+ DC from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with
+ all common DC hub software.
+
+Package: libeiskaltdcpp2.2
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Replaces: libdcpp2.0.x, libdcpp2.1.x, libeiskaltdcpp2.1.x-unstable
-Conflicts: libdcpp2.0.x, libdcpp2.1.x, libeiskaltdcpp2.1.x-unstable
+Replaces: libdcpp2.0.x, libdcpp2.1.x,
+ libeiskaltdcpp2.1.x-unstable, libeiskaltdcpp2.2-unstable,
+ libeiskaltdcpp2.1.x,
+Conflicts: libdcpp2.0.x, libdcpp2.1.x,
+ libeiskaltdcpp2.1.x-unstable, libeiskaltdcpp2.2-unstable,
+ libeiskaltdcpp2.1.x,
 Description: DC++ kernel library from EiskaltDC++
  This package installs only DC++ kernel library which required EiskaltDC++.
  .
@@ -104,7 +125,7 @@ Description: DC++ kernel library from EiskaltDC++
 Package: eiskaltdcpp-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
- libeiskaltdcpp2.1.x (= ${binary:Version}),
+ libeiskaltdcpp2.2 (= ${binary:Version}),
  eiskaltdcpp-qt-data (= ${source:Version}),
  eiskaltdcpp-common
 Recommends: libqtscript4-core, libqtscript4-gui, libqtscript4-network, libqtscript4-xml
@@ -128,7 +149,8 @@ Breaks: eiskaltdcpp (<< 2.1.0)
 Suggests: php5-cli,
  eiskaltdcpp-emoticons,
  eiskaltdcpp-scripts,
- eiskaltdcpp-sounds
+ eiskaltdcpp-sounds,
+ eiskaltdcpp-geoip
 Description: data files for EiskaltDC++ Qt
  This package contains the data files for EiskaltDC++ Qt.
  .
@@ -140,7 +162,7 @@ Description: data files for EiskaltDC++ Qt
 Package: eiskaltdcpp-gtk
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
- libeiskaltdcpp2.1.x (= ${binary:Version}),
+ libeiskaltdcpp2.2 (= ${binary:Version}),
  eiskaltdcpp-gtk-data (= ${source:Version}),
  eiskaltdcpp-common
 Replaces: eiskaltdcpp-gtk-unstable
@@ -162,7 +184,8 @@ Conflicts: eiskaltdcpp-gtk-data-unstable
 Suggests: php5-cli,
  eiskaltdcpp-emoticons,
  eiskaltdcpp-scripts,
- eiskaltdcpp-sounds
+ eiskaltdcpp-sounds,
+ eiskaltdcpp-geoip
 Description: data files for EiskaltDC++ Gtk
  This package contains the data files for EiskaltDC++ Gtk.
  .
@@ -171,3 +194,16 @@ Description: data files for EiskaltDC++ Gtk
  DC from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with
  all common DC hub software.
 
+Package: eiskaltdcpp-daemon
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libeiskaltdcpp2.2 (= ${binary:Version})
+Replaces: eiskaltdcpp-daemon-unstable
+Conflicts: eiskaltdcpp-daemon-unstable
+Description: EiskaltDC++ daemon
+ This package installs only EiskaltDC++ daemon (without any GUI).
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect
+ and ADC protocol. It is compatible with other DC clients, such as the original
+ DC from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with
+ all common DC hub software.
