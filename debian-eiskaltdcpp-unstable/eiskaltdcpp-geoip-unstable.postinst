@@ -1,0 +1,27 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    configure)
+
+        . /usr/share/debconf/confmodule
+        db_get eiskaltdcpp-geoip/dowload-now
+        if [ "${RET}" = "true" ]; then
+            /usr/share/eiskaltdcpp/update_geoip
+        fi
+
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0
