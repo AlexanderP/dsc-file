@@ -1,0 +1,54 @@
+Source: qapt
+Section: kde
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 8.0.0~), pkg-kde-tools (>= 0.5.0), cmake, pkg-config,
+ kdelibs5-dev, libapt-pkg-dev (>= 0.8.0), libxapian-dev, libpolkit-qt-1-dev, libgstreamer0.10-dev
+Standards-Version: 3.9.1
+Homepage: https://launchpad.net/qapt
+
+Package: libqapt1
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: QApt library package
+ LibQApt is a Qt wrapper around the libapt-pkg library as well as an APT
+ implementation using libapt-pkg. The aim is to provide a sane API for
+ package management to ease the development of package managers written in Qt
+ and C++
+ .
+ This package contains the QApt library
+
+Package: libqapt-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, libqapt1 (= ${binary:Version}), libapt-pkg-dev
+Description: Development headers for the QApt library
+ LibQApt is a Qt wrapper around the libapt-pkg library as well as an APT
+ implementation using libapt-pkg. The aim is to provide a sane API for
+ package management to ease the development of package managers written in Qt
+ and C++
+ .
+ This package contains the development headers for the QApt library
+
+Package: libqapt-runtime
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Runtime components for the QApt library
+ LibQApt is a Qt wrapper around the libapt-pkg library as well as an APT
+ implementation using libapt-pkg. The aim is to provide a sane API for
+ package management to ease the development of package managers written in Qt
+ and C++
+ .
+ This package contains the runtime components necessary for applications using
+ the QApt library to run.
+
+Package: qapt-batch
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqapt-runtime
+Description: Batch package manager for KDE
+ QApt Batch is a simple GUI for doing batch package management operations.
+ It can install and remove packages, as well as update the package cache via a
+ command line interface. It also has an attach function invokable via the
+ command line. QApt Batch is a drop-in replacement for the "install-package"
+ batch package management tool.
+
