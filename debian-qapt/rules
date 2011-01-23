@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
 
+#export DH_VERBOSE=1
+
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 endif
@@ -38,3 +40,6 @@ override_dh_strip:
 ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
 	dh_strip
 endif
+
+override_dh_makeshlibs:
+	dh_makeshlibs -Xusr/lib/kde4/ -O--parallel -- -v1.1.0
