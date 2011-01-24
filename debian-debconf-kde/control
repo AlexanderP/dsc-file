@@ -1,0 +1,52 @@
+Source: debconf-kde
+Section: kde
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 8),
+               pkg-kde-tools (>= 0.5.0),
+               cmake,
+               kdelibs5-dev
+Standards-Version: 3.9.1
+Homepage: http://projects.kde.org/projects/extragear/sysadmin/libdebconf-kde
+
+Package: libdebconf-kde0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Debconf KDE GUI library
+ Debconf KDE is a GUI library for including Debconf frontends in Qt-based
+ applications.
+ Debconf is a configuration management system for debian packages, which
+ is used to ask questions when they are installed.
+ This library is written in C++ and used by KPackageKit and Muon to
+ embed Debconf dialogs.
+ .
+ This package contains the Debconf KDE library
+
+Package: libdebconf-kde-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, libdebconf-kde0 (= ${binary:Version})
+Description: Development headers for the Debconf KDE library
+ Debconf KDE is a GUI library for including Debconf frontends in Qt-based
+ applications.
+ Debconf is a configuration management system for debian packages, which
+ is used to ask questions when they are installed.
+ This library is written in C++ and used by KPackageKit and Muon to
+ embed Debconf dialogs.
+ .
+ This package contains the development headers for the Debconf KDE library
+
+Package: debconf-kde-helper
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Debconf KDE GUI frontend tool
+ Debconf KDE is a GUI library for including Debconf frontends in Qt-based
+ applications.
+ Debconf is a configuration management system for debian packages, which
+ is used to ask questions when they are installed.
+ This library is written in C++ and used by KPackageKit and Muon to
+ embed Debconf dialogs.
+ .
+ This package contains a small standalone tool to display a KDE Debconf
+ dialog without linking against the Debconf KDE library.
+
