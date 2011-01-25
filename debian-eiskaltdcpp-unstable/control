@@ -19,6 +19,7 @@ Depends: ${misc:Depends},
  eiskaltdcpp-emoticons-unstable,
  eiskaltdcpp-scripts-unstable,
  eiskaltdcpp-sounds-unstable
+Suggests: eiskaltdcpp-geoip-unstable
 Replaces: eiskaltdcpp
 Conflicts: eiskaltdcpp
 Description: EiskaltDC++ meta-package
@@ -90,6 +91,26 @@ Description: sound files for EiskaltDC++
  .
  (This is daily builds of the EiskaltDC++ packages)
 
+Package: eiskaltdcpp-geoip-unstable
+Architecture: all
+Depends: ${misc:Depends},
+ unzip, curl,
+ eiskaltdcpp-qt-unstable | eiskaltdcpp-gtk-unstable
+Replaces: eiskaltdcpp-geoip
+Conflicts: eiskaltdcpp-geoip
+Description: Geo IP Database for EiskaltDC++
+ This package contains script for updating the Geo IP database for EiskaltDC++.
+ .
+ Database in text format (GeoIPCountryWhois.csv) will be downloaded from
+ official site (http://maxmind.com/) if it's required.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect
+ and ADC protocol. It is compatible with other DC clients, such as the original
+ DC from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with
+ all common DC hub software.
+ .
+ (This is daily builds of the EiskaltDC++ packages)
+
 Package: libeiskaltdcpp2.2-unstable
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
@@ -135,6 +156,7 @@ Suggests: php5-cli,
  eiskaltdcpp-emoticons-unstable,
  eiskaltdcpp-scripts-unstable,
  eiskaltdcpp-sounds-unstable,
+ eiskaltdcpp-geoip-unstable
 Description: data files for EiskaltDC++ Qt
  This package contains the data files for EiskaltDC++ Qt.
  .
@@ -169,6 +191,7 @@ Suggests: php5-cli,
  eiskaltdcpp-emoticons-unstable,
  eiskaltdcpp-scripts-unstable,
  eiskaltdcpp-sounds-unstable,
+ eiskaltdcpp-geoip-unstable
 Description: data files for EiskaltDC++ Gtk
  This package contains the data files for EiskaltDC++ Gtk.
  .
