@@ -19,6 +19,7 @@ Depends: ${misc:Depends},
  eiskaltdcpp-emoticons,
  eiskaltdcpp-scripts,
  eiskaltdcpp-sounds
+Suggests: eiskaltdcpp-geoip
 Replaces: eiskaltdcpp-unstable
 Conflicts: eiskaltdcpp-unstable
 Description: EiskaltDC++ meta-package
@@ -80,6 +81,24 @@ Replaces: eiskaltdcpp-sounds-unstable
 Conflicts: eiskaltdcpp-sounds-unstable
 Description: sound files for EiskaltDC++
  This package contains the sound files for EiskaltDC++.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect
+ and ADC protocol. It is compatible with other DC clients, such as the original
+ DC from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with
+ all common DC hub software.
+
+Package: eiskaltdcpp-geoip
+Architecture: all
+Depends: ${misc:Depends},
+ unzip, curl,
+ eiskaltdcpp-qt | eiskaltdcpp-gtk
+Replaces: eiskaltdcpp-geoip-unstable
+Conflicts: eiskaltdcpp-geoip-unstable
+Description: Geo IP Database for EiskaltDC++
+ This package contains script for updating the Geo IP database for EiskaltDC++.
+ .
+ Database in text format (GeoIPCountryWhois.csv) will be downloaded from
+ official site (http://maxmind.com/) if it's required.
  .
  EiskaltDC++ is a cross-platform program that uses the Direct Connect
  and ADC protocol. It is compatible with other DC clients, such as the original
