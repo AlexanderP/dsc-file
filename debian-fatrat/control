@@ -6,12 +6,13 @@ Build-Depends:  debhelper (>= 7),
 		cmake,
 		libtorrent-rasterbar-dev,
 		libboost-date-time-dev,
-		libqt4-dev,
+		libqtwebkit-dev | libqt4-dev,
 		qt4-dev-tools,
 		libgloox-dev,
 		libcurl4-gnutls-dev | libcurl-dev,
-		libpion-net-dev
-Standards-Version: 3.8.4
+        	libpion-net-dev,
+		libboost-regex-dev
+Standards-Version: 3.9.1
 Homepage: http://fatrat.dolezel.info/
 
 Package: fatrat
