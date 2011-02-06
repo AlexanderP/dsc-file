@@ -1,0 +1,76 @@
+Source: muon
+Section: kde
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 8.0.0~), pkg-kde-tools (>= 0.5.0), cmake,
+ kdelibs5-dev, libqapt-dev (>= 1.0.90), libdebconf-kde-dev
+Standards-Version: 3.9.1
+Homepage: https://launchpad.net/muon
+
+Package: muon
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqapt-runtime,
+ apt-xapian-index
+Recommends: muon-updater
+Description: package manager for KDE
+ Muon is a graphical package manager for KDE.
+ .
+ Features of note include:
+  * A powerful, yet intuitive interface
+  * Fast, accurate package search using the apt-xapian index and the Synaptic
+    search algorithm
+  * Support for filtering packages by status and category
+  * Media change support
+  * Support for configuring packages through the debconf system
+  * Warn about/disallow the installation of untrusted packages, depending on
+    APT settings
+  * Uses Polkit for running privileged actions for enhanced security,
+    convenience, and desktop integration
+  * Power management suspension during package downloads, installations and
+    removals
+  * Support for download the latest changelog of a package
+  * Package screenshots
+
+Package: muon-installer
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqapt-runtime,
+ app-install-data
+Recommends: app-install-data-partner
+Description: Utility for browsing, installing, and removing applications
+ The Muon Software Center lets you browse and install thousands of
+ applications available for Ubuntu. You can view available
+ applications by category, or search quickly by name or description.
+ You can also examine the applications already installed, and remove
+ those you no longer need.
+ .
+ To install or remove software using the Center, you need administrator
+ access on the computer.
+
+Package: muon-updater
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqapt-runtime
+Recommends: muon-notifier
+Description: update manager for KDE
+ Muon Updater is a graphical update manager for KDE. It is part of the Muon
+ family of software and provides an interface similar to that of Muon.
+
+Package: muon-notifier
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, muon-updater, update-manager-kde,
+ update-notifier-common
+Description: update notifier for KDE
+ The Muon Notifier is an update notification daemon for KDE. It uses the KDE
+ Daemon frame (KDED) framework to present the user with update notifications,
+ providing an opportunity to launch the Muon Updater to deal with these
+ updates.
+
+Package: libmuonprivate1
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, kdesudo, software-properties-kde
+Breaks: muon (<< 1.0.95-0ubuntu1)
+Replaces: muon (<< 1.0.95-0ubuntu1)
+Description: Runtime files for the Muon package management suite
+ The Muon package management suite is a collection of package management
+ applications built on the KDE platform.
+ .
+ This package contains runtime libraries
