@@ -6,8 +6,9 @@ Build-Depends: debhelper (>= 7), openssl, libqt4-dev, libx11-dev, nas, zlib1g-de
 Standards-Version: 3.9.1
 Homepage: http://code.google.com/p/vacuum-plugins/
 
-Package: vacuum-plugins-otre2e
+Package: vacuum-otre2e
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: vacuum-plugins-otre2e
 Description: Plungin for Vacuum-IM
  It's port of Psi Off-the-Record plugin to Vacuum-IM
