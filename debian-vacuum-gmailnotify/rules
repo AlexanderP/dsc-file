@@ -69,7 +69,7 @@ binary-arch: build install
 	dh_installdebconf
 	dh_installchangelogs
 	find $(CURDIR)/debian -depth -type d -name .hg -exec rm -rf \{\} \;
-	rm $(CURDIR)/debian/vacuum-plugins-gmailnotify/usr/share/doc/vacuum/gmailnotify/COPYING
+	rm $(CURDIR)/debian/vacuum-gmailnotify/usr/share/doc/vacuum/gmailnotify/COPYING
 ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
 	dh_strip
 endif
