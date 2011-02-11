@@ -59,7 +59,7 @@ install: build
 	dh_testroot
 	dh_prep
 	dh_installdirs
-	$(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/vacuum-plugins-gmailnotify
+	$(MAKE) install INSTALL_ROOT=$(CURDIR)/debian/vacuum-gmailnotify
 binary-indep: build install
 binary-arch: build install
 	dh_testdir
