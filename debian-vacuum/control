@@ -2,7 +2,7 @@ Source: vacuum
 Section: net
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: cmake, debhelper (>= 7), openssl, libqt4-dev, libx11-dev, nas, zlib1g-dev
+Build-Depends: cmake, debhelper (>= 7), openssl, libqtwebkit-dev | libqt4-dev, libx11-dev, nas, zlib1g-dev
 Standards-Version: 3.9.1
 Homepage: http://code.google.com/p/vacuum-im/
 
@@ -20,3 +20,4 @@ Depends: ${misc:Depends}, vacuum
 Description: Development files for Vacuum
  This package contains Vacuum include files you need if you
  want to develop plugins for Vacuum.
+

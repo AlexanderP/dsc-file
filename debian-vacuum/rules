@@ -37,21 +37,12 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-DEBIAN_CODENAME = $(shell echo $$DIST)
-ifeq "$(DEBIAN_CODENAME)" ""
-	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
-endif
+REV=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | sed 's/.*svn//' | sed 's/-.*//')
+CMAKEOPTS = -DCMAKE_INSTALL_PREFIX=/usr -DVER_STRING=$(REV) -DCMAKE_BUILD_TYPE=Release ..
 
-ifeq "$(DEBIAN_CODENAME)" "maverick"
-	CONTROL = control.lqtweb
-else
-	CONTROL = control.nolqtweb
-endif
-CMAKEOPTS = -DCMAKE_INSTALL_PREFIX=/usr DCMAKE_BUILD_TYPE=Release ..
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
-	cp debian/$(CONTROL) debian/control
 	mkdir build
 	cd build && cmake $(CMAKEOPTS)
 	touch $@
@@ -64,7 +55,6 @@ clean: do-clean
 do-clean:
 	dh_testdir
 	dh_testroot
-	cp debian/$(CONTROL) debian/control
 	test ! -d build || rm -r build
 	dh_clean
 install: build
