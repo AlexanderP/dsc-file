@@ -2,6 +2,18 @@
 #
 REV=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | sed 's/.*svn//' | sed 's/-.*//')
 
+ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
+	CFLAGS += -O0
+endif
+
+ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zlzma -z9
+endif
+
+ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zxz -z9
+endif
+
 override_dh_auto_configure:
 	dh_auto_configure -Skde -- -DWANT_COEXISTANCE=OFF \
 			-DWANT_ESD=OFF -DWANT_OSS=OFF \
@@ -13,6 +25,9 @@ override_dh_auto_configure:
 
 override_dh_install:
 	dh_install --list-missing -XCOPYING
+
+override_dh_builddeb:
+	dh_builddeb $(BUILDDEBFLAGS)
 
 %:
 	dh $@ --parallel --with kde
