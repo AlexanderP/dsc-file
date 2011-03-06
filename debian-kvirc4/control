@@ -2,40 +2,33 @@ Source: kvirc
 Section: net
 Priority: optional
 Maintainer: Alexander Pozdnykov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), cmake, zlib1g-dev, libqt4-dev, gettext, libssl-dev, libperl-dev, libaudiofile-dev, graphviz, libxrender-dev, x11proto-scrnsaver-dev, subversion
+Build-Depends: debhelper (>= 8), cmake, kdelibs5-dev, libperl-dev,
+ pkg-kde-tools (>= 0.9), zlib1g-dev, libx11-dev, libxrender-dev, libssl-dev,
+ libqt4-dev (>= 4.5.0), libcrypto++-dev, pkg-config, libxss-dev, python-dev
 Standards-Version: 3.9.1
-Homepage: http://kvirc.net/
+Homepage: http://www.kvirc.de/
 
 Package: kvirc
 Architecture: any
 Depends: kvirc-data (= ${source:Version}), ${shlibs:Depends}, ${misc:Depends}
-Replaces: kvirc-data (<< ${source:Version})
-Description: KDE based next generation IRC client with module support
+Description: KDE-based next generation IRC client with module support
  A highly configurable graphical IRC client with an MDI interface,
  built-in scripting language, support for IRC DCC, drag & drop file
  browsing, and much more. KVIrc uses the KDE widget set, can be extended
  using its own scripting language, integrates with KDE, and supports
  custom plugins.
+ .
+ If you're looking for a simple and plain IRC client, KVIrc is probably the
+ wrong choice as it is rather big. But if you want a highly customizable client
+ you won't regret the installation.
 
 Package: kvirc-data
 Architecture: all
 Depends: ${misc:Depends}
-Suggests: kvirc
-Conflicts: kvirc-doc, kvirc (<< 2:3.0.0)
-Replaces: kvirc-doc
+Recommends: kvirc (>= ${source:Version})
 Description: Data files for KVIrc
  This package contains the architecture-independent data needed by KVIrc in
  order to run, such as icons and images, language files, and shell scripts.
  It also contains complete reference guides on scripting and functions
- within KVIrc in its internal help format. Unless you want to use KVIrc only
- as a very simple IRC client you are likely to want to write scripts to
- tailor KVIrc to your needs.
+ within KVIrc in its internal help format.
 
-Package: kvirc-dev
-Section: devel
-Architecture: any
-Depends: ${misc:Depends}
-Suggests: kvirc
-Description: Development files for KVIrc
- This package contains KVIrc libraries and include files you need if you
- want to develop plugins for KVIrc.
