@@ -5,7 +5,7 @@ Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: debhelper (>= 7), cmake (>= 2.6.0), po-debconf, autotools-dev, fakeroot,
  libqt4-dev (>=4.4.0), qt4-dev-tools (>=4.4.0), qt4-qtconfig (>=4.4.0),
  libgtk2.0-dev, libglade2-dev, libnotify-dev, liblua5.1-0-dev, libpcre3-dev,
- libboost-dev | libboost1.42-dev | libboost1.40-dev | libboost1.39-dev | libboost1.38-dev | libboost1.37-dev | libboost1.35-dev,
+ libboost-dev,
  libbz2-dev, zlib1g-dev, pkg-config, libssl-dev, libaspell-dev
 Homepage: http://code.google.com/p/eiskaltdc/
 Standards-Version: 3.9.1
@@ -19,7 +19,6 @@ Depends: ${misc:Depends},
  eiskaltdcpp-emoticons-unstable,
  eiskaltdcpp-scripts-unstable,
  eiskaltdcpp-sounds-unstable
-Suggests: eiskaltdcpp-geoip-unstable
 Replaces: eiskaltdcpp
 Conflicts: eiskaltdcpp
 Description: EiskaltDC++ meta-package
@@ -88,28 +87,6 @@ Description: sound files for EiskaltDC++
  and ADC protocol. It is compatible with other DC clients, such as the original
  DC from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with
  all common DC hub software.
- .
- (This is daily builds of the EiskaltDC++ packages)
-
-Package: eiskaltdcpp-geoip-unstable
-Architecture: all
-Depends: ${misc:Depends},
- unzip, curl,
- eiskaltdcpp-qt-unstable | eiskaltdcpp-gtk-unstable
-Replaces: eiskaltdcpp-geoip
-Conflicts: eiskaltdcpp-geoip
-Description: Geo IP Database for EiskaltDC++
- This package contains script for updating the Geo IP database for EiskaltDC++.
- .
- Database in text format (GeoIPCountryWhois.csv) will be downloaded from
- official site (http://maxmind.com/) if it's required.
- .
- EiskaltDC++ is a cross-platform program that uses the Direct Connect
- and ADC protocol. It is compatible with other DC clients, such as the original
- DC from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with
- all common DC hub software.
- .
- (This is daily builds of the EiskaltDC++ packages)
 
 Package: libeiskaltdcpp2.2-unstable
 Architecture: any
@@ -155,8 +132,7 @@ Breaks: eiskaltdcpp (<< 2.1.0)
 Suggests: php5-cli,
  eiskaltdcpp-emoticons-unstable,
  eiskaltdcpp-scripts-unstable,
- eiskaltdcpp-sounds-unstable,
- eiskaltdcpp-geoip-unstable
+ eiskaltdcpp-sounds-unstable
 Description: data files for EiskaltDC++ Qt
  This package contains the data files for EiskaltDC++ Qt.
  .
@@ -190,8 +166,7 @@ Conflicts: eiskaltdcpp-gtk-data
 Suggests: php5-cli,
  eiskaltdcpp-emoticons-unstable,
  eiskaltdcpp-scripts-unstable,
- eiskaltdcpp-sounds-unstable,
- eiskaltdcpp-geoip-unstable
+ eiskaltdcpp-sounds-unstable
 Description: data files for EiskaltDC++ Gtk
  This package contains the data files for EiskaltDC++ Gtk.
  .

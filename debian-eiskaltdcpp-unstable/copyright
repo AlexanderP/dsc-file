@@ -54,6 +54,7 @@ Copyright:
  Copyright 2007 Alban Browaeys <prahal@yahoo.com>
  Copyright 2010 Pau Garcia i Quiles, <pgquiles@elpauer.org>
  Copyright 2006 Tristan Carel
+ Copyright 2006 Alexander Neundorf <neundorf@kde.org>
 License:
  BSD License
  .
@@ -90,6 +91,7 @@ Files:
  extra/upnpc.cpp
  extra/freespace.h
  extra/freespace.cpp
+ extra/stacktrace.h
 Copyright:
  Copyright 2001-2010 Jacek Sieka <arnetheduck@gmail.com>
  Copyright 2008-2010 Big Muscle (http://strongdc.sf.net)
@@ -97,6 +99,7 @@ Copyright:
  Copyright 1997 Makoto Matsumoto and Takuji Nishimura <matumoto@math.keio.ac.jp>
  Copyright 2010 cologic <ne5@parsoma.net>
  Copyright 2010 ggrundik (http://code.google.com/u/ggrundik/)
+ Copyright 2010 Gennady Proskurin (https://launchpad.net/~gpr)
 License:
  GPL-2 or later
  .
@@ -130,19 +133,33 @@ License:
  Public License can be found in `/usr/share/common-licenses/GPL-2'.
 
 Files:
+ update_geoip
  examples/amr.en_US.sh
  examples/mpris_now_playing.en_US.sh
  examples/audacious.en_US.sh
  examples/mpc.en_US.sh
  examples/rhythmbox.en_US.sh
  examples/qmmp.ru_RU.UTF-8.sh
- qtscripts/amarok_nowplay/amarok.sh
+ eiskaltdcpp-qt/qtscripts/amarok_nowplay/amarok.sh
+ eiskaltdcpp-qt/qtscripts/clementine_nowplay/clementine.sh
 Copyright:
  Copyright 2010 Uladzimir Bely (WiseLord) <wiselord1983@gmail.com>
  Copyright 2010 Vovochka404 <vovochka13@gmail.com>
+ Copyright 2011 Mark Lutring
+ Copyright 2011 Boris Pek
  Copyright 2010 none
 License:
  Public Domain
+
+Files:
+ luascripts/*
+Copyright:
+ Copyright 2008-2011 BCDC++ team (https://launchpad.net/~bcdcpp-team)
+License:
+ GPL-2 or later
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-2'.
 
 Files:
  extra/fsusage.c
@@ -270,6 +287,36 @@ License:
  .
  On Debian systems, the complete text of the GNU General
  Public License can be found in `/usr/share/common-licenses/GPL-2'.
+
+Files:
+ miniupnpc/*
+Copyright:
+ Copyright (c) 1991, 1993 The Regents of the University of California
+ Copyright (c) 2005-2010 Thomas Bernard (http://miniupnp.free.fr/)
+License:
+ BSD License
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ 1. Redistributions of source code must retain the above copyright notice,
+    this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+ 3. The name of the author may not be used to endorse or promote products
+    derived from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+ LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
 
 The Debian packaging is:
 
