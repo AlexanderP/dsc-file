@@ -1,29 +1,7 @@
 #!/usr/bin/make -f
-# -*- makefile -*-
-# Sample debian/rules that uses debhelper.
-# This file was originally written by Joey Hess and Craig Small.
-# As a special exception, when this file is copied by dh-make into a
-# dh-make output file, you may use that output file without restriction.
-# This special exception was added by Craig Small in version 0.37 of dh-make.
-
-# Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-endif
-
-ifeq (,$(NCPUS))
-	NCPUS := $(shell getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
-endif
-
-ifeq ($(NCPUS),-1)
-	NCPUS:=1
-endif
-
-ifeq ($(NCPUS),0)
-	NCPUS:=1
-endif
+CMAKEOPTS = -D WITH_OPENCOLLADA=OFF -D WITH_FFTW3=ON -D WITH_JACK=ON -D WITH_SNDFILE=ON -D WITH_FFMPEG=ON -DPYTHON_INC=/usr/include/python3.2 -DCMAKE_INSTALL_PREFIX='/usr' ..
 
 ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
 	CFLAGS += -O0
@@ -37,62 +15,11 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-CMAKEOPTS = -D WITH_OPENCOLLADA=OFF -D WITH_FFTW3=ON -D WITH_JACK=ON -D WITH_SNDFILE=ON -D WITH_FFMPEG=ON -DPYTHON_INC=/usr/include/python3.1 -DCMAKE_INSTALL_PREFIX='/usr' ..
-configure: configure-stamp
-configure-stamp:
-	dh_testdir
-	mkdir blender-build
-	cd blender-build && CXXFLAGS="$(CXXFLAGS) -D__STDC_CONSTANT_MACROS" cmake -G "Unix Makefiles" $(CMAKEOPTS)
-	touch $@
-build: configure build-stamp
-build-stamp:
-	dh_testdir
-	cd blender-build && $(MAKE) -j$(NCPUS)
-	touch $@
-clean: do-clean
-do-clean:
-	dh_testdir
-	dh_testroot
-	test ! -d blender-build || rm -r blender-build
-	dh_clean
-install: build
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
-	cd blender-build && $(MAKE) install DESTDIR=../debian/blender2.5
-	#rm -r debian/blender2.5/usr/share/blender/*/python/
-	#rm debian/blender2.5/usr/share/blender/*/.bfont.ttf
-	#rm debian/blender2.5/usr/share/blender/*/.Blanguages
-	#rm debian/blender2.5/usr/share/doc/blender/GPL-license.txt*
-	#rm debian/blender2.5/usr/share/doc/blender/Python-license.txt
-	mv debian/blender2.5/usr/bin/blender-thumbnailer.py debian/blender2.5/usr/bin/blender-thumbnailer
-	sed "s/blender-thumbnailer.py/blender-thumbnailer/g" -i debian/blender2.5/usr/bin/blender-thumbnailer
-binary-indep: build install
-binary-arch: build install
-	dh_testdir
-	dh_testroot
-	dh_install
-	dh_link
-	dh_installdocs
-	dh_installchangelogs
-	dh_installman doc/manpage/blender.1
-ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
-	dh_strip
-endif
-	dh_install debian/*.desktop usr/share/applications
-	dh_install debian/*.xpm usr/share/pixmaps
-	dh_compress
-	dh_fixperms
-	dh_makeshlibs
-	dh_shlibdeps
-	#dh_pysupport
-	dh_installdeb
-	dh_installdebconf
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb $(BUILDDEBFLAGS)
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install configure patch unpatch do-clean
-		
+override_dh_auto_configure:
+	dh_auto_configure -- $(CMAKEOPTS)
 
+override_dh_builddeb:
+	dh_builddeb $(BUILDDEBFLAGS)
+
+%:
+	dh $@ --parallel
