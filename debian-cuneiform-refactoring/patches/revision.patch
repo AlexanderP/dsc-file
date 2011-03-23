@@ -1,0 +1,18 @@
+diff -Naur cuneiform-0.8.9.orig/cmake/update_build.cmake cuneiform-0.8.9/cmake/update_build.cmake
+--- cuneiform-0.8.9.orig/cmake/update_build.cmake	2011-03-19 15:24:42.000000000 +0300
++++ cuneiform-0.8.9/cmake/update_build.cmake	2011-03-22 22:51:13.000000000 +0300
+@@ -1,4 +1,5 @@
+-set(CF_BUILD_NUMBER -1)
++#set(CF_BUILD_NUMBER -1)
++if (CF_BUILD_NUMBER STREQUAL "")
+ find_program(BZR_CMD NAMES bzr)
+ execute_process(
+     COMMAND ${BZR_CMD} revno ${CMAKE_SOURCE_DIR}
+@@ -6,6 +7,7 @@
+     OUTPUT_VARIABLE CF_BUILD_NUMBER
+     OUTPUT_STRIP_TRAILING_WHITESPACE
+ )
++endif (CF_BUILD_NUMBER STREQUAL "")
+ 
+ message(STATUS "Build number is: ${CF_BUILD_NUMBER}")
+ 

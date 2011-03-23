@@ -1,0 +1,40 @@
+Source: cuneiform-refactoring
+Section: non-free/graphics
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7), cmake, libmagick++-dev | libmagick++9-dev, libboost-dev, qt4-dev-tools, qt4-qmake, libqt4-dev, bzr
+Standards-Version: 3.9.1
+Homepage: https://launchpad.net/cuneiform-linux
+
+Package: cuneiform-refactoring
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, cuneiform-refactoring-common
+Description: multi-language OCR system
+ Cuneiform is an multi-language OCR system originally 
+ developed and open sourced by Cognitive Technologies. Cuneiform was
+ originally a Windows program, which was ported to Linux by Jussi Pakkanen
+
+Package: cuneiform-refactoring-common
+Architecture: all
+Depends: ${misc:Depends}
+Suggests: cuneiform-refactoring
+Description: Data files for cuneiform-linux
+ Cuneiform is an multi-language OCR system originally 
+ developed and open sourced by Cognitive Technologies. Cuneiform was
+ originally a Windows program, which was ported to Linux by Jussi Pakkanen
+
+Package: cuneiform-refactoring-dev
+Architecture: all
+Depends: ${misc:Depends}
+Suggests: cuneiform-refactoring
+Description: Development files for cuneiform
+ Cuneiform is an multi-language OCR system originally 
+ developed and open sourced by Cognitive Technologies. Cuneiform was
+ originally a Windows program, which was ported to Linux by Jussi Pakkanen
+
+Package: quneiform
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, cuneiform-refactoring
+Description: graphical front-end for cuneiform
+ Quneiform is a graphical interface for the cuneiform text recognition
+ program on the  Linux platform. 
