@@ -9,6 +9,7 @@ Homepage: https://launchpad.net/cuneiform-linux
 Package: cuneiform-refactoring
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, cuneiform-refactoring-common
+Conflicts: cuneiform
 Description: multi-language OCR system
  Cuneiform is an multi-language OCR system originally 
  developed and open sourced by Cognitive Technologies. Cuneiform was
@@ -18,6 +19,7 @@ Package: cuneiform-refactoring-common
 Architecture: all
 Depends: ${misc:Depends}
 Suggests: cuneiform-refactoring
+Conflicts: cuneiform-common
 Description: Data files for cuneiform-linux
  Cuneiform is an multi-language OCR system originally 
  developed and open sourced by Cognitive Technologies. Cuneiform was
