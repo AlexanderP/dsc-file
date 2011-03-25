@@ -24,7 +24,7 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 endif
 
 %:
-	dh $@
+	dh $@ --parallel
 
 override_dh_auto_configure:
 	dh_auto_configure -- -DCMAKE_BUILD_TYPE=Release -DCF_OCRTK=Yes \
