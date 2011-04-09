@@ -35,9 +35,6 @@ override_dh_auto_configure:
 	bash autogen.sh
 	dh_auto_configure
 
-override_dh_auto_install:
-	dh_auto_install -- DESTDIR=$(CURDIR)/debian/uget
-
 override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
 
