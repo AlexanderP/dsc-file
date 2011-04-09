@@ -1,0 +1,13 @@
+Source: vacuum-spellchecker
+Section: net
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7), cmake, openssl, libqtwebkit-dev | libqt4-dev, libx11-dev, nas, zlib1g-dev, vacuum-dev, libenchant-dev, libaspell-dev
+Standards-Version: 3.9.1
+Homepage: http://code.google.com/p/vacuum-plugins/
+
+Package: vacuum-spellchecker
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Plungin for Vacuum-IM
+ DBus popup notifications  

@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+export DH_VERBOSE=1
+
+REV=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | sed 's/.*svn//' | sed 's/-.*//')
+
+ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
+	CFLAGS += -O0
+endif
+
+ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zlzma -z9
+endif
+
+ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zxz -z9
+endif
+
+override_dh_builddeb:
+	dh_builddeb $(BUILDDEBFLAGS)
+
+%:
+	dh $@ --parallel
