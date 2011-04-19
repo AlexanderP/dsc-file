@@ -1,11 +1,4 @@
 #!/usr/bin/make -f
-# -*- makefile -*-
-# Sample debian/rules that uses debhelper.
-# This file was originally written by Joey Hess and Craig Small.
-# As a special exception, when this file is copied by dh-make into a
-# dh-make output file, you may use that output file without restriction.
-# This special exception was added by Craig Small in version 0.37 of dh-make.
-
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
@@ -25,10 +18,6 @@ ifeq ($(NCPUS),0)
 	NCPUS:=1
 endif
 
-ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
-	CFLAGS += -O0
-endif
-
 ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zlzma -z9
 endif
@@ -37,86 +26,70 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-confflags = --enable-plugins --disable-bundled-qca --debug --no-separate-debug-info
 MAKEOPT = -j$(NCPUS)
 QMAKE=qmake-qt4
 QCONF=qt-qconf
+CONF=--enable-plugins --enable-whiteboarding --disable-bundled-qca --debug --no-separate-debug-info
+#select all plugins
 plugs = $(notdir $(wildcard $(CURDIR)/src/plugins/generic/*plugin ) )
 
-configure: configure-stamp
-configure-stamp:
-	dh_testdir
-	- QUILT_PC=.pc_psi quilt push -a --quiltrc /dev/null
+%:
+	dh $@
+
+override_dh_auto_configure:
+	QUILT_PC=.pc_psi quilt push -a --quiltrc /dev/null
 	$(QCONF)
-	./configure --prefix=/usr $(confflags)
-	touch $@
-build: configure build-stamp
-build-stamp:
-	dh_testdir
+	./configure --prefix=/usr $(CONF)
+
+override_dh_auto_build:
 	$(MAKE) $(MAKEOPT)
-	$(foreach plug,$(plugs), cd $(CURDIR)/src/plugins/generic/$(plug) && $(QMAKE) && $(MAKE) $(MAKEOPT); )
-	touch $@
-clean: do-clean
-do-clean:
-	dh_testdir
-	dh_testroot
-	rm -f build-stamp configure-stamp
+	$(foreach plug,$(plugs), cd $(CURDIR)/src/plugins/generic/$(plug) && $(QMAKE) && $(MAKE); )
+
+override_dh_auto_install:
+	$(MAKE) INSTALL_ROOT=$(CURDIR)/debian/psi-plus install
+	rm -f $(CURDIR)/debian/psi-plus/usr/bin/psi-plus.debug #remove static debug file
+	#Making the same, but using webkit
+	$(MAKE) clean
+	./configure --prefix=/usr $(CONF) --enable-webkit
+	$(MAKE) $(MAKEOPT)
+	$(MAKE) INSTALL_ROOT=$(CURDIR)/debian/psi-plus-webkit install
+	rm $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-plus
+	rm $(CURDIR)/debian/psi-plus-webkit/usr/share/applications/psi-plus.desktop
+	cp $(CURDIR)/src/psi-plus $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-plus-webkit
+	cp $(CURDIR)/debian/psi-plus-webkit.desktop $(CURDIR)/debian/psi-plus-webkit/usr/share/applications/
+	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-plus.debug #remove static debug file
+	#Deleting temporary files
+	rm -f $(CURDIR)/debian/psi-plus/usr/share/psi-plus/COPYING
+	rm -f $(CURDIR)/debian/psi-plus/usr/share/psi-plus/README
+	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/share/psi-plus/COPYING
+	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/share/psi-plus/README
+
+override_dh_install:
+	dh_install
+	#Deleting exported plugins
+	rm -f $(CURDIR)/debian/psi-plus-plugins/usr/lib/psi-plus/plugins/libcontentdownloaderplugin.so
+	rm -f $(CURDIR)/debian/psi-plus-plugins/usr/lib/psi-plus/plugins/libskinsplugin.so
+	#Deleting exported icons
+	#rm -rf $(CURDIR)/debian/psi-plus-icons/usr/share/psi/iconsets/roster
+	#rm -rf $(CURDIR)/debian/psi-plus-icons/usr/share/psi/iconsets/clients
+	#rm -rf $(CURDIR)/debian/psi-plus-icons/usr/share/psi/iconsets/emoticons
+	#Exporting all from psi-plus-common
+	bash debian/mergedups.sh
+
+override_dh_auto_clean:
+	dh_clean
 	[ ! -f Makefile ] || $(MAKE) distclean
 	rm -f config.sub config.guess configure
-	rm -f psi src/psi src/config.h
+
+	rm -f psi-plus src/psi-plus src/config.h
 	rm -f Makefile src/Makefile libpsi/psiwidgets/Makefile
 	rm -f conf.pri extra.pri conf.log
 	rm -f src/.qmake.internal.cache
+
 	rm -rf iris/lib iris/conf.pri
 	rm -rf .qconftemp
+
 	$(foreach plug,$(plugs), cd $(CURDIR)/src/plugins/generic/$(plug) && [ ! -f Makefile ] || $(MAKE) distclean; )
+
 	- QUILT_PC=.pc_psi quilt pop -af --quiltrc /dev/null
 	rm -rf .pc_psi
-install: build
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
-	$(MAKE) INSTALL_ROOT=$(CURDIR)/debian/psi-plus install
-	rm -f $(CURDIR)/debian/psi-plus/usr/bin/psi.debug #remove static debug file
-	#Making the same, but using webkit
-	$(MAKE) clean
-	./configure --prefix=/usr $(confflags) --enable-webkit
-	$(MAKE) $(MAKEOPT)
-	$(MAKE) INSTALL_ROOT=$(CURDIR)/debian/psi-plus-webkit install
-	rm $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi
-	rm $(CURDIR)/debian/psi-plus-webkit/usr/share/applications/psi.desktop
-	cp $(CURDIR)/src/psi $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-webkit
-	cp $(CURDIR)/debian/psi-webkit.desktop $(CURDIR)/debian/psi-plus-webkit/usr/share/applications/
-	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi.debug #remove static debug file
-	rm -f $(CURDIR)/debian/psi-plus/usr/share/psi/COPYING
-	rm -f $(CURDIR)/debian/psi-plus/usr/share/psi/README
-	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/share/psi/COPYING
-	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/share/psi/README
-binary-indep: build install
-binary-arch: build install
-	dh_testdir
-	dh_testroot
-	dh_install
-	rm -f $(CURDIR)/debian/psi-plus-plugins/usr/lib/psi/plugins/libcontentdownloaderplugin.so
-	rm -f $(CURDIR)/debian/psi-plus-plugins/usr/lib/psi/plugins/libskinsplugin.so
-	bash debian/mergedups.sh
-	dh_installdocs
-	dh_installman
-	dh_installchangelogs
-	dh_link 
-ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
-	dh_strip
-endif
-	dh_compress
-	dh_fixperms
-	chmod -x $(CURDIR)/debian/psi-plus-skins/usr/share/psi/skins/universal/orange/*
-	dh_installdeb
-	dh_shlibdeps
-	dh_installdebconf
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb $(BUILDDEBFLAGS)
-
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install configure patch unpatch do-clean
