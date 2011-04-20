@@ -1,0 +1,15 @@
+Source: qt-box-editor
+Section: graphics
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7.0.50~), libqt4-dev
+Standards-Version: 3.9.1
+Homepage: https://github.com/zdenop/qt-box-editor
+
+Package: qt-box-editor
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Tool for adjusting tesseract-ocr box files
+ QT Box Editor is tool for adjusting tesseract-ocr
+ box files. Aim of this project is to provide easy 
+ and efficient way for editing regardles file size.
