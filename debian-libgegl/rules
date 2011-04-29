@@ -37,7 +37,7 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-confflags = --prefix=/usr
+confflags = --prefix=/usr --disable-gtk-doc --disable-gtk-doc-pdf --disable-gtk-doc-html --enable-workshop --with-libavformat --with-jasper --enable-introspection=no
 
 configure: configure-stamp
 configure-stamp:
