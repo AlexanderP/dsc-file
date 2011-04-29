@@ -38,7 +38,7 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 endif
 
 
-confflags = --prefix=/usr
+confflags = --prefix=/usr --enable-introspection=no
 
 configure: configure-stamp
 configure-stamp:

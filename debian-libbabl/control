@@ -2,7 +2,16 @@ Source: libbabl
 Section: libs
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), autotools-dev, cdbs, automake, libtool, libgirepository1.0-dev, gobject-introspection
+Build-Depends: debhelper (>= 7), 
+                autotools-dev, 
+                cdbs, 
+                automake, 
+                libtool, 
+                libgirepository1.0-dev, 
+                gobject-introspection,
+                librsvg2-dev,
+                gawk,
+                libltdl-dev
 Standards-Version: 3.9.1
 Homepage: http://www.gimp.org/
 
