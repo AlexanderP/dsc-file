@@ -1,103 +1,36 @@
 #!/usr/bin/make -f
-# -*- makefile -*-
-# Sample debian/rules that uses debhelper.
-# This file was originally written by Joey Hess and Craig Small.
-# As a special exception, when this file is copied by dh-make into a
-# dh-make output file, you may use that output file without restriction.
-# This special exception was added by Craig Small in version 0.37 of dh-make.
+export DH_VERBOSE=1
 
-# Uncomment this to turn on verbose mode.
-#export DH_VERBOSE=1
-
-confflags = --prefix=/usr
-
-ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-endif
-
-ifeq (,$(NCPUS))
-	NCPUS := $(shell getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
-endif
-
-ifeq ($(NCPUS),-1)
-	NCPUS:=1
-endif
-
-ifeq ($(NCPUS),0)
-	NCPUS:=1
-endif
-
-ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
-	CFLAGS += -O0
-endif
+export DH_ALWAYS_EXCLUDE := COPYING:COPYING.GPLv2:COPYING.LGPLv2.1
 
 ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zlzma -z9
 endif
 
-ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
-	BUILDDEBFLAGS= -- -Zxz -z9
-endif
-
-
-PULSEAUDIOVER = $(shell ls /usr/lib/libpulsecommon-*.so | sed 's/.*-//g'| sed 's/\.so//g' | sed 's/\.//g' 2>/dev/null || echo 1)
-
-
-ifneq ($(shell test $(PULSEAUDIOVER) -ge 0922 && echo 1),1)
-	confflags += --disable-pulse
-endif
-
-
-configure: configure-stamp
-configure-stamp:
-	dh_testdir
+%:
+	dh --parallel --with quilt $@
+override_dh_auto_configure:
 	./autogen.sh
-	./configure $(confflags)
-	touch $@
-build: configure build-stamp
-build-stamp:
-	dh_testdir
-	$(MAKE) -j$(NCPUS)
-	touch $@
-clean: do-clean
-do-clean:
-	dh_testdir
-	dh_testroot
-	rm -f build-stamp configure-stamp
-	(test ! -f Makefile || $(MAKE) clean)
-	dh_clean
-install: build
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
-	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
-binary-indep: build install
-binary-arch: build install
-	dh_testdir
-	dh_testroot
+	dh_auto_configure
+
+override_dh_makeshlibs:
+	dh_makeshlibs -n
+
+override_dh_shlibdeps:
+	dh_shlibdeps -Xflac.so -Xlastfm.so -Xmpgmad.so -Xffmpeg.so \
+		-Xvorbis.so -Xsndfile.so -Xwavpack.so -Xcdda.so \
+		-Xvfs_curl.so -Xvfs_zip.so -Xartwork.so -Xdsp_libsrc.so \
+		-Xnotify.so -Xpulse.so -Xmms.so -Xao.so -Xaac.so -Xdca.so
+
+override_dh_install:
 	dh_install
-	dh_installdocs
-	dh_installman debian/deadbeef.1
-	dh_installchangelogs ChangeLog
-	rm -f debian/deadbeef/usr/share/doc/deadbeef/COPYING.GPLv2
-	rm -f debian/deadbeef/usr/share/doc/deadbeef/COPYING.LGPLv2.1
-	dh_link /usr/share/common-licenses/LGPL-2.1 usr/share/doc/deadbeef/COPYING.LGPLv2.1
-	dh_link /usr/share/common-licenses/GPL-2 usr/share/doc/deadbeef/COPYING.GPLv2
-ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
-	dh_strip
-endif
-	dh_compress -Xusr/share/doc/deadbeef/about.txt
-	dh_fixperms
-	dh_installdeb
-	dh_shlibdeps
-	dh_installdebconf
-	dh_gencontrol
-	dh_md5sums
+	@cp ChangeLog debian/deadbeef/usr/share/doc/deadbeef/changelog.deadbeef
+
+override_dh_installchangelogs:
+	dh_installchangelogs -k ChangeLog
+
+override_dh_compress:
+	dh_compress -Xchangelog.deadbeef -Xabout.txt
+
+override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
-
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install configure patch unpatch do-clean
-
-
-
