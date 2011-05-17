@@ -17,7 +17,7 @@ Homepage: http://psi-dev.googlecode.com/
 
 Package: psi-plus
 Architecture: any
-Depends: psi-plus-common, ${shlibs:Depends}, ${misc:Depends}
+Depends: psi-plus-common (= ${source:Version}), ${shlibs:Depends}, ${misc:Depends}
 Description: Qt-based jabber client (basic version)
  This package contains basic version of Psi+.
  .
@@ -33,7 +33,7 @@ Description: Qt-based jabber client (basic version)
 
 Package: psi-plus-webkit
 Architecture: any
-Depends: psi-plus-common, ${shlibs:Depends}, ${misc:Depends}
+Depends: psi-plus-common (= ${source:Version}), ${shlibs:Depends}, ${misc:Depends}
 Description: Qt-based jabber client (WebKit version)
  This package contains WebKit version of Psi+.
  .
@@ -71,7 +71,7 @@ Description: common files for Psi+
 
 Package: psi-plus-plugins
 Architecture: any
-Depends: psi-plus-common, ${shlibs:Depends}, ${misc:Depends}
+Depends: psi-plus-common (= ${source:Version}), ${shlibs:Depends}, ${misc:Depends}
 Description: plugins for Psi+
  This package contains plugins for Psi+.
  .
