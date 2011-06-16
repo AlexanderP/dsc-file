@@ -69,10 +69,6 @@ override_dh_install:
 	#Deleting exported plugins
 	rm -f $(CURDIR)/debian/psi-plus-plugins/usr/lib/psi-plus/plugins/libcontentdownloaderplugin.so
 	rm -f $(CURDIR)/debian/psi-plus-plugins/usr/lib/psi-plus/plugins/libskinsplugin.so
-	#Deleting exported icons
-	#rm -rf $(CURDIR)/debian/psi-plus-icons/usr/share/psi/iconsets/roster
-	#rm -rf $(CURDIR)/debian/psi-plus-icons/usr/share/psi/iconsets/clients
-	#rm -rf $(CURDIR)/debian/psi-plus-icons/usr/share/psi/iconsets/emoticons
 	#Exporting all from psi-plus-common
 	bash debian/mergedups.sh
 
