@@ -34,7 +34,7 @@ CMAKEOPTS = -DCMAKE_BUILD_TYPE=RelWithDebInfo \
             -DCMAKE_INSTALL_PREFIX=/usr \
             -DUSE_MINIUPNP=ON -DLOCAL_MINIUPNP=ON \
             -DLUA_SCRIPT=ON -DWITH_LUASCRIPTS=ON \
-            -DPERL_REGEX=ON -DWITH_DHT=ON \
+            -DPERL_REGEX=ON -DWITH_DHT=OFF \
             -DWITH_SOUNDS=ON \
             -DUSE_QT=ON \
             -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DUSE_JS=ON \
