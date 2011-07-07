@@ -376,3 +376,26 @@ Description: tesseract-ocr language files for Vietnamese text
  and 1995. In 1995, this engine was among the top 3 evaluated by UNLV. It
  was open-sourced by HP and UNLV in 2005. This package contains the data
  needed for processing images in Vietnamese.
+
+Package: tesseract-ocr-chi-sim
+Architecture: all
+Provides: tesseract-ocr-language, tesseract-ocr-lang
+Depends: ${misc:Depends}
+Recommends: tesseract-ocr (>= 3.00)
+Description: tesseract-ocr language files for Chinese text
+ A commercial quality OCR engine originally developed at HP between 1985
+ and 1995. In 1995, this engine was among the top 3 evaluated by UNLV. It
+ was open-sourced by HP and UNLV in 2005. This package contains the data
+ needed for processing images in Chinese (Simplified).
+
+Package: tesseract-ocr-chi-tra
+Architecture: all
+Provides: tesseract-ocr-language, tesseract-ocr-lang
+Depends: ${misc:Depends}
+Recommends: tesseract-ocr (>= 3.00)
+Description: tesseract-ocr language files for Chinese text
+ A commercial quality OCR engine originally developed at HP between 1985
+ and 1995. In 1995, this engine was among the top 3 evaluated by UNLV. It
+ was open-sourced by HP and UNLV in 2005. This package contains the data
+ needed for processing images in Chinese (Traditional).
+ 
