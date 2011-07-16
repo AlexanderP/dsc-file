@@ -37,6 +37,17 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+
+ifeq "$(DEBIAN_CODENAME)" "sid"
+	CONTROL = control.jpeg8
+else
+	CONTROL = control.jpeg62
+endif
+
 CFLAGS += -DTESSDATA_PREFIX=/usr/share/tesseract-ocr/
 
 #confflags = --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info CFLAGS="$(CFLAGS)" CXXFLAGS="$(CFLAGS)" LDFLAGS="-Wl,-z,defs"
@@ -45,6 +56,7 @@ confflags = --prefix=/usr --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TY
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
+	cp debian/$(CONTROL) debian/control
 	./runautoconf
 	./configure $(confflags)
 	touch $@
@@ -57,6 +69,7 @@ clean: do-clean
 do-clean:
 	dh_testdir
 	dh_testroot
+	cp debian/$(CONTROL) debian/control
 	rm -f build-stamp configure-stamp
 	(test ! -f Makefile || $(MAKE) clean)
 	dh_clean
