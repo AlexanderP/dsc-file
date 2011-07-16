@@ -39,11 +39,25 @@ endif
 
 confflags = --prefix=/usr
 
-PYTHON=python2.6
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+
+ifeq "$(DEBIAN_CODENAME)" "sid"
+	CONTROL = control.p2.7
+	PYTHON=python2.7
+else
+	CONTROL = control.p2.6
+	PYTHON=python2.6
+endif
+
+
 PACKAGE=ocrfeeder
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
+	cp debian/$(CONTROL) debian/control
 	./autogen.sh
 	./configure $(confflags)
 	touch $@
@@ -56,6 +70,7 @@ clean: do-clean
 do-clean:
 	dh_testdir
 	dh_testroot
+	cp debian/$(CONTROL) debian/control
 	rm -f build-stamp configure-stamp
 	(test ! -f Makefile || $(MAKE) clean)
 	find . -depth -depth -type f -iname "*.pyc" -exec rm -rf \{\} \;
