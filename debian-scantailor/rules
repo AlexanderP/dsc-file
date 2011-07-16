@@ -29,10 +29,21 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+ifeq "$(DEBIAN_CODENAME)" "sid"
+	CONTROL = control.jpeg8
+else
+	CONTROL = control.jpeg62
+endif
+
 CMAKEOPTS = -DCMAKE_INSTALL_PREFIX='/usr' ..
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
+	cp debian/$(CONTROL) debian/control
 	mkdir scantailor-build
 	cd scantailor-build && cmake $(CMAKEOPTS)
 	touch $@
@@ -45,6 +56,7 @@ clean: do-clean
 do-clean:
 	dh_testdir
 	dh_testroot
+	cp debian/$(CONTROL) debian/control
 	test ! -d scantailor-build || rm -r kvirc-build
 	dh_clean
 install: build
