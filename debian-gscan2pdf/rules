@@ -1,4 +1,5 @@
 #!/usr/bin/make -f
+#export DH_VERBOSE=1
 
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
@@ -44,6 +45,7 @@ override_dh_clean:
 
 override_dh_installchangelogs:
 	dh_installchangelogs History
+override_dh_auto_test:
 	
 override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
