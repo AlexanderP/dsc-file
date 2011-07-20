@@ -1,0 +1,19 @@
+Source: tangogis
+Section: comm
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends:
+ debhelper (>= 7.0.50~), autotools-dev, libexif-dev, libcurl4-gnutls-dev,
+ libgconf2-dev, libgtk2.0-dev, libsqlite3-dev, libxml2-dev, quilt (>= 0.46-7)
+Standards-Version: 3.9.2
+Homepage: http://www.tangogps.org/
+
+Package: tangogis
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Recommends: gpsd
+Suggests: python
+Conflicts: tangogps
+Description: GTK+ mapping and GPS application
+ tangogis is a map and GPS application. By default, it uses maps from
+ Openstreetmap.

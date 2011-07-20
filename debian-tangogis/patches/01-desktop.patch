@@ -1,0 +1,21 @@
+Author: Daniel Baumann <daniel@debian.org>
+Description: Correcting desktop file entries (Closes: #532369).
+
+diff -Naurp tangogps.orig/data/tangogps.desktop tangogps/data/tangogps.desktop
+--- tangogps.orig/data/tangogps.desktop	2009-06-08 17:53:00.000000000 +0200
++++ tangogps/data/tangogps.desktop	2009-06-09 06:16:51.000000000 +0200
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=GPS & Map
++Name=tangoGPS
+ Comment=Display map and GPS position
+ Encoding=UTF-8
+ Version=1.0
+@@ -7,6 +7,5 @@ Type=Application
+ Exec=tangogps
+ Icon=tangogps
+ Terminal=false
+-Categories=GTK;Application;PIM
+-SingleInstance=true
++Categories=GTK;Utility;Geography;
+ StartupNotify=true

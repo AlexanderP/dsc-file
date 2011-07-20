@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+
+%:
+	dh --with quilt ${@}
+
+override_dh_auto_clean:
+	dh_auto_clean
+
+	rm -f config.guess config.sub
+
+override_dh_auto_configure:
+	cp -f /usr/share/misc/config.guess .
+	cp -f /usr/share/misc/config.sub .
+
+	dh_auto_configure
+
+override_dh_auto_install:
+	dh_auto_install
+
+	# Removing useless files
+	rm -rf debian/tangogis/usr/doc
