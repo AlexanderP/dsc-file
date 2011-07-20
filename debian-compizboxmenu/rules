@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+
+ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zlzma -z9
+endif
+
+ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zxz -z9
+endif
+
+override_dh_builddeb:
+	dh_builddeb $(BUILDDEBFLAGS)
+
+%:
+	dh $@ --parallel
+
+override_dh_install:
+	dh_install
+	cd $(CURDIR)/debian/compizboxmenu && chmod -x usr/share/dbus-1/services/org.compiz_fusion.boxmenu.service etc/xdg/compiz/boxmenu/precache.ini etc/xdg/compiz/boxmenu/menu.xml 
