@@ -1,0 +1,38 @@
+Source: sz81
+Section: otherosfs
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 8.0.0), libsdl1.2-dev
+Standards-Version: 3.9.2
+Homepage: http://sz81.sourceforge.net/
+
+Package: sz81
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Sinclair ZX80/ZX81 emulator
+ sz81 is a Sinclair ZX80/ZX81 emulator very much based 
+ upon the work of Ian Collier's xz80 and Russell Marks's 
+ z81 but employing the highly portable SDL and including 
+ additional functionality and features for desktop 
+ computers and portable devices.
+ .
+ Features:
+ .
+  * Virtual keyboard with several adjustable properties
+  * Control bar with icons for regularly used features
+  * Load anytime file dialog (no need to use LOAD)
+  * Save state system with 9 slots for each program
+  * Runtime options including a joystick configurator
+  * RAM configurations of 1 to 4, 16, 32, 48 and 56K
+  * Quicksilva, BI-PAK ZON X-81 and VSYNC-based sound
+  * Screenshot saving using the bitmap image format
+  * Joystick control remapping within the emulator
+  * Full keyboard, mouse and joystick support throughout
+  * 3x runtime switchable scaling on supported platforms
+  * Window and fullscreen toggling on supported platforms
+  * Portrait orientated resolutions such as 240x320
+  * The ability to run centred within any resolution
+  * Source code support for *nix, AmigaOS4 and Win32
+  * Maximum porting potential since it only requires SDL
+
+
