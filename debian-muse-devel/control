@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 7.0.50~),
                libjack-dev, 
                libfluidsynth-dev, 
                libsamplerate0-dev, 
-               liblash-dev,
+               liblash-dev | liblash-compat-dev,
                dssi-dev,
                liblo-dev
 Standards-Version: 3.9.1
