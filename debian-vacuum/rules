@@ -1,7 +1,6 @@
 #!/usr/bin/make -f
-export DH_VERBOSE=1
 
-REV=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | sed 's/.*svn//' | sed 's/-.*//')
+export DH_VERBOSE=1
 
 ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
 	CFLAGS += -O0
@@ -15,8 +14,15 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
+CMAKEOPT= -DCMAKE_BUILD_TYPE=Release
+VERSION=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | grep svn | wc -l)
+ifneq (,$(filter 1,$(VERSION)))
+	REV=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | sed 's/.*svn//' | sed 's/-.*//')
+	CMAKEOPT+= -DVER_STRING=$(REV)
+endif
+
 override_dh_auto_configure:
-	dh_auto_configure -- -DVER_STRING=$(REV) -DCMAKE_BUILD_TYPE=Release
+	dh_auto_configure -- $(CMAKEOPT)
 
 override_dh_install:
 	dh_install --list-missing -XCOPYING -Xlicense.txt
