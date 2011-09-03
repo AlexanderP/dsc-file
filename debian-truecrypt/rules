@@ -34,6 +34,7 @@ endif
 
 build: patch-stamp build-stamp
 build-stamp:
+	cp debian/patches/*.h .
 	dh_testdir
 	$(MAKE) -j$(NCPUS)
 	touch $@
@@ -43,9 +44,7 @@ do-clean:
 	dh_testroot
 	rm -f build-stamp
 	(test ! -f Makefile || $(MAKE) clean)
-	test -f pkcs11.h || wget ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-11/v2-20/pkcs11.h
-	test -f pkcs11f.h || wget ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-11/v2-20/pkcs11f.h
-	test -f pkcs11t.h || wget ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-11/v2-20/pkcs11t.h
+	cd debian/patches/ && ( test -f pkcs11.h || wget ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-11/v2-20/pkcs11.h; test -f pkcs11f.h || wget ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-11/v2-20/pkcs11f.h; test -f pkcs11t.h || wget ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-11/v2-20/pkcs11t.h)
 	dh_clean
 install: build
 	dh_testdir
