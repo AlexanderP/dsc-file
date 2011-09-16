@@ -1,8 +1,19 @@
-Source: cuneiform-refactoring
+Source: quneiform
 Section: non-free/graphics
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), cmake, libmagick++-dev | libmagick++9-dev, libboost-dev, qt4-dev-tools, qt4-qmake, libqt4-dev, bzr
+Build-Depends: debhelper (>= 7), 
+				cmake, 
+				libmagick++-dev | libmagick++9-dev, 
+				libboost-dev, 
+				qt4-dev-tools, 
+				qt4-qmake, 
+				libqt4-dev, 
+				libboost-filesystem-dev, 
+				python-dev, 
+				libaspell-dev, 
+				doxygen, 
+				libboost-serialization-dev
 Standards-Version: 3.9.1
 Homepage: https://launchpad.net/cuneiform-linux
 

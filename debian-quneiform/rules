@@ -7,9 +7,7 @@
 # This special exception was added by Craig Small in version 0.37 of dh-make.
 
 # Uncomment this to turn on verbose mode.
-#export DH_VERBOSE=1
-
-REV=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | sed 's/.*bzr//' | sed 's/-.*//')
+export DH_VERBOSE=1 
 
 ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
 	CFLAGS += -O0
@@ -27,9 +25,7 @@ endif
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	dh_auto_configure -- -DCMAKE_BUILD_TYPE=Release -DCF_OCRTK=Yes \
-			-DCMAKE_EXE_LINKER_FLAGS:STRING=-Wl,--as-needed \
-			-DCF_BUILD_NUMBER=$(REV)
+	dh_auto_configure -- -DTESTS=No -DCMAKE_BUILD_TYPE=Debug
 
 override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
