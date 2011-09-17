@@ -69,7 +69,6 @@ override_dh_install:
 	dh_install
 	#Deleting exported plugins
 	rm -f $(CURDIR)/debian/psi-plus-plugins/usr/lib/psi-plus/plugins/libcontentdownloaderplugin.so
-	rm -f $(CURDIR)/debian/psi-plus-plugins/usr/lib/psi-plus/plugins/libskinsplugin.so
 	#Exporting all from psi-plus-common
 	bash debian/mergedups.sh
 
@@ -82,6 +81,7 @@ override_dh_auto_clean:
 	rm -f Makefile src/Makefile libpsi/psiwidgets/Makefile
 	rm -f conf.pri extra.pri conf.log
 	rm -f src/.qmake.internal.cache
+	rm -f lang/ru/psi_ru.qm
 
 	rm -rf iris/lib iris/conf.pri
 	rm -rf .qconftemp
