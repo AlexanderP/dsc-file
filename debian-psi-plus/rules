@@ -34,7 +34,7 @@ CONF=--enable-plugins --enable-whiteboarding --disable-bundled-qca --debug --no-
 plugs = $(notdir $(wildcard $(CURDIR)/src/plugins/generic/*plugin ) )
 
 %:
-	dh $@
+	dh $@ --parallel
 
 override_dh_auto_configure:
 	QUILT_PC=.pc_psi quilt push -a --quiltrc /dev/null
