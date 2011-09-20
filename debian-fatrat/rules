@@ -49,11 +49,14 @@ ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
 
-ifeq "$(DEBIAN_CODENAME)" "maverick"
-	CMAKEOPTS += -DWITH_BITTORRENT=ON
-else
-	#libtorrent-Rasterbar >= 0.15  
+ifeq "$(DEBIAN_CODENAME)" "lucid"
 	CMAKEOPTS += -DWITH_BITTORRENT=OFF
+else
+	ifeq "$(DEBIAN_CODENAME)" "squeeze"
+		CMAKEOPTS += -DWITH_BITTORRENT=OFF
+	else
+		CMAKEOPTS += -DWITH_BITTORRENT=ON
+	endif
 endif
 
 CMAKEOPTS += .
