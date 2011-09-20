@@ -44,12 +44,17 @@ ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
 
-ifeq "$(DEBIAN_CODENAME)" "sid"
+ifeq "$(DEBIAN_CODENAME)" "natty"
 	CONTROL = control.p2.7
 	PYTHON=python2.7
 else
-	CONTROL = control.p2.6
-	PYTHON=python2.6
+	ifeq "$(DEBIAN_CODENAME)" "oneiric"
+		CONTROL = control.p2.7
+		PYTHON=python2.7
+	else
+		CONTROL = control.p2.6
+		PYTHON=python2.6
+	endif
 endif
 
 
