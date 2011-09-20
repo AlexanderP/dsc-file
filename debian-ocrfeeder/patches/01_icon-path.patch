@@ -1,0 +1,13 @@
+Set full path of the ocrfeeder icon
+Index: ocrfeeder/resources/ocrfeeder.desktop.in
+===================================================================
+--- ocrfeeder.orig/resources/ocrfeeder.desktop.in
++++ ocrfeeder/resources/ocrfeeder.desktop.in
+@@ -5,6 +5,6 @@ _Name=OCRFeeder
+ _Comment=The complete OCR suite.
+ TryExec=ocrfeeder
+ Exec=ocrfeeder
+-Icon=ocrfeeder
++Icon=/usr/share/ocrfeeder/icons/ocrfeeder.svg
+ MimeType=image/bmp;image/gif;image/jpeg;image/jpg;image/pjpeg;image/png;image/tiff;
+ Categories=Application;Office;
