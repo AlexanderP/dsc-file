@@ -58,6 +58,7 @@ override_dh_auto_install:
 	cp $(CURDIR)/src/psi-plus $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-plus-webkit
 	cp $(CURDIR)/debian/psi-plus-webkit.desktop $(CURDIR)/debian/psi-plus-webkit/usr/share/applications/
 	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-plus.debug #remove static debug file
+	rm -rf $(CURDIR)/debian/psi-plus-webkit/usr/share/psi-plus/themes
 	#Deleting temporary files
 	rm -f $(CURDIR)/debian/psi-plus/usr/share/psi-plus/COPYING
 	rm -f $(CURDIR)/debian/psi-plus/usr/share/psi-plus/README
