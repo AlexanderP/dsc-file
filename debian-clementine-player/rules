@@ -37,7 +37,7 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-CMAKEOPTS = -DCMAKE_INSTALL_PREFIX='/usr' ..
+CMAKEOPTS = -DCMAKE_INSTALL_PREFIX='/usr' -DBUNDLE_PROJECTM_PRESETS=OFF ..
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
