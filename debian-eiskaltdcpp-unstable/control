@@ -8,6 +8,8 @@ Build-Depends: debhelper (>= 7), cmake (>= 2.6.0), po-debconf, autotools-dev, fa
  libboost-dev,
  libbz2-dev, zlib1g-dev, pkg-config, libssl-dev, libaspell-dev, libidn11-dev
 Homepage: http://code.google.com/p/eiskaltdc/
+Vcs-Git: git://github.com/negativ/eiskaltdcpp.git
+Vcs-Browser: https://github.com/negativ/eiskaltdcpp
 Standards-Version: 3.9.2
 
 Package: eiskaltdcpp-unstable
@@ -108,6 +110,7 @@ Description: DC++ kernel library from EiskaltDC++
 Package: eiskaltdcpp-qt-unstable
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
+ libqt4-sql-sqlite,
  libeiskaltdcpp2.2-unstable (= ${binary:Version}),
  eiskaltdcpp-qt-data-unstable (= ${source:Version}),
  eiskaltdcpp-common-unstable
