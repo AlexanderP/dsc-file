@@ -34,12 +34,13 @@ CMAKEOPTS = -DCMAKE_BUILD_TYPE=RelWithDebInfo \
             -DCMAKE_INSTALL_PREFIX=/usr \
             -DUSE_MINIUPNP=ON -DLOCAL_MINIUPNP=ON \
             -DLUA_SCRIPT=ON -DWITH_LUASCRIPTS=ON \
-            -DPERL_REGEX=ON -DWITH_DHT=OFF \
+            -DPERL_REGEX=ON -DWITH_DHT=ON \
             -DWITH_SOUNDS=ON \
             -DUSE_QT=ON \
             -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DUSE_JS=ON \
             -DUSE_QT_SQLITE=ON \
             -DUSE_GTK=ON \
+            -DCHECK_GTK3=ON \
             -DUSE_LIBGNOME2=OFF -DUSE_LIBNOTIFY=ON \
             -DCREATE_MO=ON -DUPDATE_PO=OFF \
             -DNO_UI_DAEMON=ON \
@@ -51,7 +52,9 @@ configure-stamp:
 	dh_testdir
 	mkdir -p $(BUILDDIR) && cd $(BUILDDIR) && cmake $(CMAKEOPTS)
 	touch $@
-build: configure build-stamp
+build: configure build-arch build-indep
+build-arch: build-stamp
+build-indep: build-stamp
 build-stamp:
 	dh_testdir
 	cd $(BUILDDIR) && $(MAKE) -j$(NUMJOBS)

@@ -8,6 +8,8 @@ Build-Depends: debhelper (>= 7), cmake (>= 2.6.0), po-debconf, autotools-dev, fa
  libboost-dev,
  libbz2-dev, zlib1g-dev, pkg-config, libssl-dev, libaspell-dev, libidn11-dev
 Homepage: http://code.google.com/p/eiskaltdc/
+Vcs-Git: git://github.com/negativ/eiskaltdcpp.git
+Vcs-Browser: https://github.com/negativ/eiskaltdcpp
 Standards-Version: 3.9.2
 
 Package: eiskaltdcpp
@@ -131,7 +133,7 @@ Breaks: eiskaltdcpp (<< 2.1.0)
 Suggests: php5-cli,
  eiskaltdcpp-emoticons,
  eiskaltdcpp-scripts,
- eiskaltdcpp-sounds,
+ eiskaltdcpp-sounds
 Description: data files for EiskaltDC++ Qt
  This package contains the data files for EiskaltDC++ Qt.
  .
