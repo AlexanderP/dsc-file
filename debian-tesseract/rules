@@ -61,7 +61,7 @@ configure: configure-stamp
 configure-stamp:
 	dh_testdir
 	cp debian/$(CONTROL) debian/control
-	./runautoconf
+	./autogen.sh
 	./configure $(confflags)
 	touch $@
 build: configure build-stamp
