@@ -1,0 +1,27 @@
+From: Kevin Roy <kiniou@gmail.com>
+Date: Thu, 14 Apr 2011 14:51:22 +0200
+Subject: use_systemwide_libraries
+
+Don't try and use extern/libopenjpeg nor extern/glew
+---
+ CMakeLists.txt |    6 ++++++
+ 1 files changed, 6 insertions(+), 0 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index b752421..f5c5613 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -522,6 +522,12 @@ if(UNIX AND NOT APPLE)
+ 		set(PLATFORM_LINKFLAGS "${PLATFORM_LINKFLAGS} -static-intel")
+ 	endif()
+ 
++	# Use system-wide GLEW & OpenJPEG:
++	#SET(LLIBS "${LLIBS} -lGLEW")
++	#SET(LLIBS "${LLIBS} -lopenjpeg")
++
++	#ADD_DEFINITIONS(-DWITH_OPENJPEG)
++
+ elseif(WIN32)
+ 
+ 	# this file is included anyway when building under Windows with cl.exe
+-- 

@@ -1,0 +1,23 @@
+From: Kevin Roy <kiniou@gmail.com>
+Date: Tue, 28 Sep 2010 15:00:26 +0200
+Subject: filter_docs_to_install
+
+Install relevant documentation
+---
+ source/creator/CMakeLists.txt |    2 --
+ 1 files changed, 0 insertions(+), 2 deletions(-)
+
+diff --git a/source/creator/CMakeLists.txt b/source/creator/CMakeLists.txt
+index b7b0a65..41db602 100644
+--- a/source/creator/CMakeLists.txt
++++ b/source/creator/CMakeLists.txt
+@@ -236,8 +236,6 @@ endif()
+ # Install Targets
+ 
+ set(BLENDER_TEXT_FILES
+-	${CMAKE_SOURCE_DIR}/release/text/GPL-license.txt
+-	${CMAKE_SOURCE_DIR}/release/text/Python-license.txt
+ 	${CMAKE_SOURCE_DIR}/release/text/copyright.txt
+ 	${CMAKE_SOURCE_DIR}/release/text/readme.html
+ )
+-- 

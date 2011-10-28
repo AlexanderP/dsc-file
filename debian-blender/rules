@@ -1,0 +1,46 @@
+#!/usr/bin/make -f
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+INSTDIR = debian/blender
+
+ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zlzma -z9
+endif
+
+ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zxz -z9
+endif
+
+override_dh_auto_configure:
+	dh_auto_configure --\
+		-DCMAKE_INSTALL_PREFIX=/usr\
+		-DCMAKE_SKIP_RPATH=ON\
+		-DCMAKE_VERBOSE_MAKEFILE=ON  \
+		-DWITH_IMAGE_OPENJPEG=ON\
+		-DWITH_FFTW3=ON\
+		-DWITH_JACK=ON \
+		-DWITH_PLAYER=ON\
+		-DWITH_INSTALL_PORTABLE=OFF\
+		-DWITH_PYTHON_INSTALL=OFF\
+		-DWITH_CODEC_FFMPEG=ON\
+		-DWITH_CODEC_SNDFILE=ON\
+		-DWITH_BUILTIN_GLEW=OFF
+
+override_dh_auto_install:
+	dh_auto_install --buildsystem=cmake
+	find $(INSTDIR)/usr/lib/blender/ -type d -empty -delete
+	
+
+override_dh_install:
+	dh_install --fail-missing --list-missing
+
+override_dh_pysupport:
+	# Not supported yet: dh_pysupport -V 3.1
+	#dh_pysupport -V 3.1
+
+override_dh_builddeb:
+	dh_builddeb $(BUILDDEBFLAGS) 
+
+%:
+	dh --buildsystem=cmake --parallel $@
