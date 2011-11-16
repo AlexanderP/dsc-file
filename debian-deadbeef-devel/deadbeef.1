@@ -1,64 +1,65 @@
-.TH deadbeef 1 "29 January 2010"
+.TH DEADBEEF 1 "16 May 2011" "0.5.0" "deadbeef manual page"
 .SH NAME
-deadbeef \- music player for GNU\\Linux systems.
-.SH DESCRIPTION
-Deadbeef is an audio player for GNU/Linux systems with  X11 written in C and C++. Features: minimal depends;  native GTK2 GUI; cuesheet support; mp3, ogg, flac, ape;  chiptune formats with subtunes, song-length databases, etc;  small memory footprint.
+deadbeef \- ultimate music player for X.
 .SH SYNOPSIS
 .B deadbeef
-[\fIoptions\fR] [\fIfile(s)\fR]
+[\fIOptions\fR] [\fIFiles\fR]
+.SH DESCRIPTION
+\fIDeadbeef\fP DeaDBeeF (as in 0xDEADBEEF) is an audio player for GNU/Linux
+systems with X11.
 .SH OPTIONS
+.SS "Arguments:"
 .TP
-\fB\-h\fR, \fB\-\-help\fR 
+File(s)
+file(s) to open
+.SS "Options:"
+.TP
+.BI \-h,\-\-help
 Show help about options
 .TP
-\fB\-\-play\fR 
+.BI \-\-play
 Start playback
 .TP
-\fB\-\-stop\fR 
+.BI \-\-stop
 Stop playback
 .TP
-\fB\-\-pause\fR 
+.BI \-\-pause
 Pause playback
 .TP
-\fB\-\-next\fR 
+.BI \-\-toggle-pause
+Toggle pause
+.TP
+.BI \-\-play-pause
+Start playback if stopped, toggle pause otherwise
+.TP
+.BI \-\-next
 Next song in playlist
 .TP
-\fB\-\-prev\fR 
+.BI \-\-prev
 Previous song in playlist
 .TP
-\fB\-\-random\fR 
+.BI \-\-random
 Random song in playlist
 .TP
-\fB\-\-queue\fR 
+.BI \-\-queue
 Append file(s) to existing playlist
 .TP
-\fB\-\-version\fR 
+.BI \-\-version
 Print version info and exit
 .TP
-\fB\-\-nowplaying\fR \fIFMT\fR 
-Print formatted track name to stdout FMT: 
-
-		%a	-	artist
-
-		%t  	- 	title 
-
-		%b 	-	album
-
-		%l 	-	length
-
-		%n 	-	tracknumber
-
-		%y 	- 	year		
-
-		%c	- 	comment
-
-		%r 	- 	copyright
-
-		%e 	- 	elapsed
-
-e.g.: --nowplaying "%a - %t" should print "artist - title"
-
+.BI \-\-nowplaying\ \fIFMT\fR
+Print formatted track name to stdout FMT %-syntax: [a]rtist, [t]itle, al[b]um,
+[l]ength, track[n]umber, [y]ear, [c]omment, copy[r]ight, [e]lapsed
 .SH "AUTHOR"
-DeaDBeeF was written by Alexey Yakovenko <waker@users.sourceforge.net>
-
-This manual page was written by Alexander Pozdnyakov <almipo@mail.ru>,
+DeaDBeeF was written by
+.nh
+.ad l
+Alexey Yakovenko <waker@users.sourceforge.net>
+.hy
+.br
+This manual page was prepared by
+.nh
+.ad l
+Alexey Smirnov <alexey.smirnov@gmx.com>
+.hy
+for the Debian GNU/Linux system (but may be used by others).

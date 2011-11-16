@@ -1,0 +1,15 @@
+# How build and install?
+
+* unpack deadbeef source tarball
+
+* `cd deadbeef-X.Y.Z/`
+
+* `git clone git://github.com/asv/deadbeef-debian.git debian`
+
+* `dpkg-buildpackage -rfakeroot -us -uc -i -I".git"`
+
+* ...
+
+* `sudo dpkg -i ../deadbeef_X.Y.Z-R_yourarch.deb`
+
+* Enjoying DeaDBeeF! :)

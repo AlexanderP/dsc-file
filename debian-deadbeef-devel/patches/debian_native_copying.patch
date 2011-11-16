@@ -1,0 +1,20 @@
+--- a/plugins/gtkui/callbacks.c
++++ b/plugins/gtkui/callbacks.c
+@@ -756,7 +756,7 @@
+                                         gpointer         user_data)
+ {
+     char fname[PATH_MAX];
+-    snprintf (fname, sizeof (fname), "%s/%s", deadbeef->get_doc_dir (), "COPYING.GPLv2");
++    snprintf (fname, sizeof (fname), "/usr/share/common-licenses/%s","GPL-2");
+     show_info_window (fname, "GNU GENERAL PUBLIC LICENSE Version 2", &gplwindow);
+ }
+ 
+@@ -767,7 +767,7 @@
+                                         gpointer         user_data)
+ {
+     char fname[PATH_MAX];
+-    snprintf (fname, sizeof (fname), "%s/%s", deadbeef->get_doc_dir (), "COPYING.LGPLv2.1");
++    snprintf (fname, sizeof (fname), "/usr/share/common-licenses/%s", "LGPL-2.1");
+     show_info_window (fname, "GNU LESSER GENERAL PUBLIC LICENSE Version 2.1", &lgplwindow);
+ }
+ 
