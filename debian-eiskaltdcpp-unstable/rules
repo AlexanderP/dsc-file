@@ -28,7 +28,8 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-BUILDDIR = builddir
+BUILDDIR1 = builddir1
+BUILDDIR2 = builddir2
 
 CMAKEOPTS = -DCMAKE_BUILD_TYPE=RelWithDebInfo \
             -DCMAKE_INSTALL_PREFIX=/usr \
@@ -37,16 +38,24 @@ CMAKEOPTS = -DCMAKE_BUILD_TYPE=RelWithDebInfo \
             -DPERL_REGEX=ON -DWITH_DHT=ON \
             -DWITH_SOUNDS=ON \
             -DUSE_QT=ON \
-            -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON -DUSE_JS=ON \
-            -DUSE_QT_SQLITE=ON \
-            -DUSE_GTK=ON \
-            -DCHECK_GTK3=ON \
+            -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON \
+            -DCHECK_GTK_DEPRECATED=ON \
             -DUSE_LIBGNOME2=OFF -DUSE_LIBNOTIFY=ON \
             -DCREATE_MO=ON -DUPDATE_PO=OFF \
             -DNO_UI_DAEMON=ON \
-            -DXMLRPC_DAEMON=OFF \
+            -DXMLRPC_DAEMON=OFF -DJSONRPC_DAEMON=ON \
             ..
 
+OPTSSTEP1 = -DUSE_QT_SQLITE=ON \
+            -DUSE_JS=ON -DUSE_QT_QML=ON \
+            -DUSE_GTK=ON -DUSE_GTK3=OFF
+
+OPTSSTEP2 = -DUSE_QT_SQLITE=OFF \
+            -DUSE_JS=OFF -DUSE_QT_QML=OFF \
+            -DUSE_GTK=OFF -DUSE_GTK3=ON
+
+# This option is for daily builds of the EiskaltDC++ packages on Launchpad
+# See https://launchpad.net/~tehnick/+archive/tehnick for more information
 REVISION = $(shell /bin/sh -c "head -n 1 debian/changelog | sed -e 's/^.*-[0-9]\{6,6\}-//' -e 's/-0ppa.*$$//'")
 CMAKEOPTS += -DDCPP_REVISION="$(REVISION)"
 
@@ -54,28 +63,48 @@ CMAKEOPTS += -DDCPP_REVISION="$(REVISION)"
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
-	mkdir -p $(BUILDDIR) && cd $(BUILDDIR) && cmake $(CMAKEOPTS)
+	mkdir -p $(BUILDDIR1) && cd $(BUILDDIR1) && cmake $(CMAKEOPTS) $(OPTSSTEP1)
 	touch $@
 build: configure build-arch build-indep
 build-arch: build-stamp
 build-indep: build-stamp
 build-stamp:
 	dh_testdir
-	cd $(BUILDDIR) && $(MAKE) -j$(NUMJOBS)
+	cd $(BUILDDIR1) && $(MAKE) -j$(NUMJOBS)
+	cp -ra $(BUILDDIR1) $(BUILDDIR2)
+	cd $(BUILDDIR2) && find . -type f -iname '*make*' -exec sed -i "s|$(BUILDDIR1)|$(BUILDDIR2)|" {} \;
+	cd $(BUILDDIR2) && cmake $(CMAKEOPTS) $(OPTSSTEP2)
+	cd $(BUILDDIR2) && $(MAKE) -j$(NUMJOBS)
 	touch $@
 clean: do-clean
 do-clean:
 	dh_testdir
 	dh_testroot
-	[ ! -f Makefile ] || ( cd $(BUILDDIR) && $(MAKE) clean )
-	test ! -d $(BUILDDIR) || rm -r $(BUILDDIR)
+	[ ! -f Makefile ] || ( cd $(BUILDDIR1) && $(MAKE) clean )
+	[ ! -f Makefile ] || ( cd $(BUILDDIR2) && $(MAKE) clean )
+	test ! -d $(BUILDDIR1) || rm -r $(BUILDDIR1)
+	test ! -d $(BUILDDIR2) || rm -r $(BUILDDIR2)
 	dh_clean
 install: build
 	dh_testdir
 	dh_testroot
 	dh_prep
 	dh_installdirs
-	cd $(BUILDDIR) && $(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
+	cd $(BUILDDIR1) && $(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
+	cp $(CURDIR)/debian/eiskaltdcpp-qt-mini.desktop \
+			$(CURDIR)/debian/tmp/usr/share/applications/eiskaltdcpp-qt-mini.desktop
+	cp $(BUILDDIR2)/eiskaltdcpp-qt/eiskaltdcpp-qt \
+			$(CURDIR)/debian/tmp/usr/bin/eiskaltdcpp-qt-mini
+	chrpath -d $(CURDIR)/debian/tmp/usr/bin/eiskaltdcpp-qt-mini
+	cp $(BUILDDIR2)/eiskaltdcpp-qt/eiskaltdcpp-qt.1.gz \
+			$(CURDIR)/debian/tmp/usr/share/man/man1/eiskaltdcpp-qt-mini.1.gz
+	cp $(CURDIR)/debian/eiskaltdcpp-gtk3.desktop \
+			$(CURDIR)/debian/tmp/usr/share/applications/eiskaltdcpp-gtk3.desktop
+	cp $(BUILDDIR2)/eiskaltdcpp-gtk/eiskaltdcpp-gtk \
+			$(CURDIR)/debian/tmp/usr/bin/eiskaltdcpp-gtk3
+	chrpath -d $(CURDIR)/debian/tmp/usr/bin/eiskaltdcpp-gtk3
+	cp $(BUILDDIR2)/eiskaltdcpp-gtk/eiskaltdcpp-gtk.1.gz \
+			$(CURDIR)/debian/tmp/usr/share/man/man1/eiskaltdcpp-gtk3.1.gz
 binary-indep: build install
 	dh_testdir -i
 	dh_testroot -i
@@ -100,9 +129,10 @@ binary-arch: build install
 ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
 	dh_strip -a
 endif
+	dh_lintian -a
 	dh_compress -a
 	dh_fixperms -a
-	dh_makeshlibs -plibeiskaltdcpp2.2-unstable
+	dh_makeshlibs -V -plibeiskaltdcpp2.2-unstable
 	dh_installdeb -a
 	dh_shlibdeps -a -ldebian/libeiskaltdcpp2.2-unstable/usr/lib
 	dh_installdebconf -a
