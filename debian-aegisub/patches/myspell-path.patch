@@ -1,0 +1,15 @@
+Adjust path to myspell dictionaries to what is used in Ubuntu
+
+Index: aegisub-2.1.8/src/options.cpp
+===================================================================
+--- aegisub-2.1.8.orig/src/options.cpp	2010-01-12 13:57:21.000000000 +0100
++++ aegisub-2.1.8/src/options.cpp	2010-04-10 09:14:12.276613521 +0200
+@@ -122,7 +122,7 @@
+ #if defined(__WINDOWS__) || defined(__APPLE__)
+ 	SetText(_T("Dictionaries path"),_T("?data/dictionaries"));
+ #else
+-	SetText(_T("Dictionaries path"),wxString::Format(_T("%s/%s"), _T(INSTALL_PREFIX),_T("/share/myspell")));
++	SetText(_T("Dictionaries path"),wxString::Format(_T("%s/%s"), _T(INSTALL_PREFIX),_T("/share/myspell/dicts")));
+ #endif
+ 	SetText(_T("Spell Checker"),_T("hunspell"));
+ 	SetModificationType(MOD_AUTOMATIC);

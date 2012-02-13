@@ -3,23 +3,10 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-#CXXFLAGS=-D__STDC_CONSTANT_MACROS
-#LDFLAGS=-Wl,--as-needed
-
-#CXXFLAGS=-D__STDC_CONSTANT_MACROS
 LDFLAGS=-lz
 
 %:
-	dh --with quilt $@
-
-#override_dh_auto_configure:
-#	autoreconf
-#	dh_auto_configure -- \
-#		CXXFLAGS="$(CXXFLAGS)" LDFLAGS="$(LDFLAGS)" \
-#		--with-external-libass \
-#		--with-alsa --with-pulseaudio --with-player-audio=oss \
-#		--without-portaudio --without-openal \
-#		--without-ruby --without-perl
+	dh --with quilt --parallel $@
 
 override_dh_auto_configure:
 	autoreconf -fiv
