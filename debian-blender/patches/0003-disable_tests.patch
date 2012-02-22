@@ -8,10 +8,10 @@ added WITH_TESTS condition to implicitly disable
  1 files changed, 3 insertions(+), 1 deletions(-)
 
 diff --git a/source/CMakeLists.txt b/source/CMakeLists.txt
-index 1047c41..85f74d1 100644
+index 529aaac..eb1f32a 100644
 --- a/source/CMakeLists.txt
 +++ b/source/CMakeLists.txt
-@@ -34,4 +34,6 @@ if(WINDOWS)
+@@ -33,4 +33,6 @@ if(WINDOWS)
  	add_subdirectory(icons)
  endif()
  

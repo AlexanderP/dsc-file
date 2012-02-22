@@ -2,49 +2,52 @@ Source: blender
 Section: graphics
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7.0.50~),
- libftgl-dev,
- gettext,
- libgettextpo-dev,
- freeglut3-dev,
- libjpeg-dev,
- libpng-dev,
- libsdl-dev,
- libz-dev,
- python3.2-dev,
- python-support,
- cmake,
- libtiff4-dev,
- libopenexr-dev,
- libavformat-dev,
- libxi-dev,
- autotools-dev,
- pkg-config,
- libswscale-dev,
- libopenal-dev,
- libalut-dev,
- libvorbis-dev,
- libgsm1-dev,
- libopenjpeg-dev,
- libsndfile-dev,
- libjack-dev,
- libsamplerate0-dev,
- libfftw3-dev,
- libglew1.6-dev,
- liblzma-dev,
- liblzo2-dev,
- libavdevice-dev,
- libavformat-dev,
- libavutil-dev,
- libavcodec-dev,
+Build-Depends: autotools-dev,
+               cmake,
+               debhelper (>= 7.0.50~),
+               freeglut3-dev,
+               gettext,
+               libalut-dev,
+               libavdevice-dev,
+               libavformat-dev,
+               libfftw3-dev,
+               libgettextpo-dev,
+               libglew1.6-dev,
+               libgsm1-dev,
+               libjack-dev,
+               libjpeg-dev,
+               liblzma-dev,
+               liblzo2-dev,
+               libopenal-dev,
+               libopenexr-dev,
+               libopenjpeg-dev,
+               libpng-dev,
+               libsdl-dev,
+               libsndfile-dev,
+               libswscale-dev,
+               libtiff4-dev,
+               libvorbis-dev,
+               libxi-dev,
+               libz-dev,
+               libfontconfig-dev,
+               pkg-config,
+               python-support,
+               python3.2-dev,
+               spacenavd,
+               libboost1.48-dev | libboost1.46-dev | libboost1.42-dev,
+               libavcodec-dev            
 Build-Conflicts: nvidia-glx
 Standards-Version: 3.9.2
 Homepage: http://blender.org/
 
 Package: blender
 Architecture: any
-Depends: ${shlibs:Depends}, python3.2, ${misc:Depends}, ttf-dejavu
-Suggests: yafaray, libtiff4
+Depends: python3.2,
+         fonts-droid,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Suggests: libtiff4,
+          yafaray
 Description: Very fast and versatile 3D modeller/renderer
  Blender is an integrated 3d suite for modelling, animation, rendering,
  post-production, interactive creation and playback (games). Blender has its
@@ -53,4 +56,16 @@ Description: Very fast and versatile 3D modeller/renderer
  import/export features for popular file formats like 3D Studio and Wavefront
  Obj are implemented as scripts by the community. Stills, animations, models
  for games or other third party engines and interactive content in the form of
- a standalone binary and/or a web plug-in are common products of Blender use.
+ a standalone binary are common products of Blender use.
+
+Package: blender-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: blender (= ${binary:Version}),
+         ${misc:Depends}
+Description: debug symbols for Blender
+ Blender is an integrated 3d suite for modelling, animation, rendering,
+ post-production, interactive creation and playback (games).
+ .
+ This package contains debug symbols to produce useful backtraces.
