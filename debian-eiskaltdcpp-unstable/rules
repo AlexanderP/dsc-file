@@ -44,6 +44,8 @@ CMAKEOPTS = -DCMAKE_BUILD_TYPE=RelWithDebInfo \
             -DCREATE_MO=ON -DUPDATE_PO=OFF \
             -DNO_UI_DAEMON=ON \
             -DXMLRPC_DAEMON=OFF -DJSONRPC_DAEMON=ON \
+            -DUSE_CLI_JSONRPC=ON \
+            -DWITH_DEV_FILES=ON \
             ..
 
 OPTSSTEP1 = -DUSE_QT_SQLITE=ON \
@@ -84,6 +86,7 @@ do-clean:
 	[ ! -f Makefile ] || ( cd $(BUILDDIR2) && $(MAKE) clean )
 	test ! -d $(BUILDDIR1) || rm -r $(BUILDDIR1)
 	test ! -d $(BUILDDIR2) || rm -r $(BUILDDIR2)
+	rm -f configure-stamp build-stamp
 	dh_clean
 install: build
 	dh_testdir
