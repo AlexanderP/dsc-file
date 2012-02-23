@@ -1,0 +1,242 @@
+muon (1.2.3-1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Compile
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 23 Feb 2012 18:31:24 +0400
+
+muon (1.2.3-0ubuntu1~oneric1~ppa1) oneiric; urgency=low
+
+  * New upstream bugfix release
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Sun, 05 Feb 2012 11:31:09 -0500
+
+muon (1.2.2-0ubuntu2) precise; urgency=low
+
+  * Add fix_qjson_link_target.diff to adapt to Debian's changes to qjson's
+    CMake stuff. (Macro QJSON_LIBRARIES -> qjson_LIBRARIES)
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Sun, 23 Oct 2011 22:05:14 -0400
+
+muon (1.2.2-0ubuntu1) precise; urgency=low
+
+  * New upstream bugfix release
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Sun, 23 Oct 2011 17:14:04 -0400
+
+muon (1.2.1-0ubuntu1) oneiric; urgency=low
+
+  * New upstream bugfix release (LP: #837389, #841323, #836967, #838961)
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Sun, 18 Sep 2011 13:34:06 -0400
+
+muon (1.2.0-0ubuntu3) oneiric; urgency=low
+
+  * No-change rebuild to stop desktop file stripping (LP: #851953)
+
+ -- Harald Sitter <apachelogger@ubuntu.com>  Fri, 16 Sep 2011 17:40:00 +0200
+
+muon (1.2.0-0ubuntu2) oneiric; urgency=low
+
+  * Re-add ubuntu packaging revisions I accidentally overwrote with the last
+    upload.
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Fri, 12 Aug 2011 00:29:25 -0400
+
+muon (1.2.0-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Thu, 11 Aug 2011 19:29:11 -0400
+
+muon (1.1.90-0ubuntu3) oneiric; urgency=low
+
+  * Default to not allow installation of untrusted packages (LP: #820638)
+
+ -- Scott Kitterman <scott@kitterman.com>  Thu, 04 Aug 2011 15:10:49 -0400
+
+muon (1.1.90-0ubuntu2) oneiric; urgency=low
+
+  * Re-apply changes from 1.1.80-0ubuntu3 that have been accidentally dropped.
+
+ -- Felix Geyer <debfx-pkg@fobos.de>  Mon, 01 Aug 2011 17:25:34 +0200
+
+muon (1.1.90-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release candidate
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Sun, 24 Jul 2011 15:03:56 -0400
+
+muon (1.1.85-0ubuntu1) oneiric; urgency=low
+
+  * New upstream beta release
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Sun, 26 Jun 2011 12:00:21 -0400
+
+muon (1.1.80-0ubuntu3) oneiric; urgency=low
+
+  * Drop zeitgeist-core from Recommends since the zeitgeist integration
+    is disabled.
+  * Add apt-xapian-index to muon-installer dependencies.
+  * Make muon-dbg recommend qapt-dbg.
+  * Enable parallel building.
+  * Bump Standards-Version to 3.9.2, no changes needed.
+
+ -- Felix Geyer <debfx-pkg@fobos.de>  Sun, 05 Jun 2011 00:46:45 +0200
+
+muon (1.1.80-0ubuntu2) oneiric; urgency=low
+
+  * Remove the build-dependency against libqzeitgeist-dev. There is not really
+    any meaningful zeitgeist integration in KDE for Muon to take advantage of
+    at this point. (At least not enough to justify filing an MIR/it taking up
+    180 KiB of CD space)
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Tue, 24 May 2011 12:12:31 -0400
+
+muon (1.1.80-0ubuntu1) oneiric; urgency=low
+
+  * New upstream beta:
+    - Add build-depend on libqzeitgeist-dev for new Zeitgeist support
+    - Add build-depend on libqjson-dev for review/rating support
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Wed, 16 Mar 2011 13:52:48 -0400
+
+muon (1.1.1-0ubuntu1) natty; urgency=low
+
+  * New upstream bugfix release
+  * Update the Homepage field in debian/control to the new projects.kde.org
+    home page.
+  * Update the upstream name field in debian/copyright to "Muon Package
+    Management Suite" to reflect branding changes.
+  * Update the Source field in debian/copyright to the new KDE Git repository
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Thu, 17 Feb 2011 13:14:28 -0500
+
+muon (1.1.0-0ubuntu1) natty; urgency=low
+
+  * New upstream release
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Sun, 16 Jan 2011 13:54:10 -0500
+
+muon (1.0.95-0ubuntu5) natty; urgency=low
+
+  * debian/copyright:
+    - Fix syntax
+    - Provide more info about origin of moo.ogg
+  * debian/watch:
+    - Add watch file
+
+ -- Michael Terry <mterry@ubuntu.com>  Fri, 14 Jan 2011 16:22:45 -0600
+
+muon (1.0.95-0ubuntu4) natty; urgency=low
+
+  * Add missing depenencies on kdesudo and software-properties-kde to the
+    libmuonprivate1 package, as these programs are required for running the
+    Software Sources editor.
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Tue, 11 Jan 2011 10:44:31 -0500
+
+muon (1.0.95-0ubuntu3) natty; urgency=low
+
+  * Remove manual depenencies against libdebconf-kde0 from various binary
+    packages, since libdebconf-kde is now fixed so that dh_shlibs can pick it
+    up as a dependency
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Mon, 10 Jan 2011 13:04:31 -0500
+
+muon (1.0.95-0ubuntu2) natty; urgency=low
+
+  * Try to fix the breaks/replaces relationship between libmuonprivate1 and
+    older muon packages.
+  * Update debian/copyright for new copyright holders
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Tue, 04 Jan 2011 16:57:21 -0500
+
+muon (1.0.95-0ubuntu1~maverick1) maverick; urgency=low
+
+  * New upstream release candidate:
+    - Add a new libmuonprivate1 package for the new libmuonprivate library
+      which was formerly a static library
+    - Create debian/not-installed and place the development symlink for
+      libmuonprivate in it, since it is a private library
+  * Port the packaging to the debhelper 8 standard:
+    - Bump debian/compat to 8
+    - Bump the build-depend version on debhelper to 8.0.0~
+    - Place the debhelper options after the sequence in debian/rules
+  * Add a homepage field to debian/control with Muon's homepage
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Mon, 03 Jan 2011 14:28:31 -0500
+
+muon (1.0.90-0ubuntu1) natty; urgency=low
+
+  * New upstream release:
+    - Remove linker fix patch, applied upstream
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Mon, 20 Dec 2010 21:25:02 -0500
+
+muon (1.0.80-0ubuntu2) natty; urgency=low
+
+  * Backport a patch from trunk to support linking with ld when the
+    --as-needed link flag is passed.
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Sun, 05 Dec 2010 21:53:32 -0500
+
+muon (1.0.80-0ubuntu1) natty; urgency=low
+
+  * New upstream beta release:
+    - Added a new muon-installer package for the Muon Software Center
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Sun, 05 Dec 2010 13:02:27 -0500
+
+muon (1.0.60-0ubuntu1) natty; urgency=low
+
+  * New upstream alpha release: (LP: #632457, #633235, #633295)
+    - Bump build-depend version on libqapt-dev to 1.0.60 or greater
+    - Add new packages muon-updater and muon-notifier
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Thu, 04 Nov 2010 00:31:49 -0400
+
+muon (1.0.3-0ubuntu1) maverick; urgency=low
+
+  * New upstream release
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Mon, 01 Nov 2010 23:25:09 -0400
+
+muon (1.0.2-0ubuntu1) maverick; urgency=low
+
+  * New upstream bugfix release
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Mon, 13 Sep 2010 18:15:58 -0400
+
+muon (1.0.1-0ubuntu3) maverick; urgency=low
+
+  * Add a manpage (LP: #617465)
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Tue, 31 Aug 2010 13:56:24 -0400
+
+muon (1.0.1-0ubuntu2) maverick; urgency=low
+
+  * Add a build-depend on apt-xapian-index since we now call it in the
+    postinst script
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Thu, 26 Aug 2010 20:50:00 -0400
+
+muon (1.0.1-0ubuntu1) maverick; urgency=low
+
+  * New upstream bugfix release
+  * Add debian/muon.postinst to run update-apt-xapian-index -u to ensure the
+    xapian index is there
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Thu, 26 Aug 2010 12:53:00 -0400
+
+muon (1.0-0ubuntu1) maverick; urgency=low
+
+  * New upstream release
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Wed, 11 Aug 2010 11:09:20 -0400
+
+muon (0.5.0-0ubuntu1) maverick; urgency=low
+
+  * Initial release
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Thu, 05 Aug 2010 15:24:13 -0400

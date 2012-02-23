@@ -1,0 +1,4 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --dbg-package=muon-dbg --with kde --with quilt --parallel

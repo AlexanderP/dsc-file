@@ -1,0 +1,32 @@
+diff -Naur muon-1.2.3.orig/installer/CMakeLists.txt muon-1.2.3/installer/CMakeLists.txt
+--- muon-1.2.3.orig/installer/CMakeLists.txt	2012-02-05 20:52:13.000000000 +0400
++++ muon-1.2.3/installer/CMakeLists.txt	2012-02-23 19:17:19.000000000 +0400
+@@ -54,7 +54,7 @@
+                                      ${QAPT_LIBRARY}
+                                      ${DEBCONF_KDE_LIB}
+                                      ${QZEITGEIST_LIBRARY}
+-                                     ${QJSON_LIBRARIES})
++                                     ${qjson_LIBRARIES})
+ 
+ if (ENABLE_QZEITGEIST)
+     target_link_libraries(muon-installer ${QZEITGEIST_LIBRARY})
+diff -Naur muon-1.2.3.orig/libmuon/PackageModel/PackageWidget.cpp muon-1.2.3/libmuon/PackageModel/PackageWidget.cpp
+--- muon-1.2.3.orig/libmuon/PackageModel/PackageWidget.cpp	2012-02-05 20:52:13.000000000 +0400
++++ muon-1.2.3/libmuon/PackageModel/PackageWidget.cpp	2012-02-23 19:06:10.000000000 +0400
+@@ -371,15 +371,7 @@
+     result = KMessageBox::warningContinueCancel(this, text, title, KStandardGuiItem::cont(),
+              KStandardGuiItem::cancel(), QString(), KMessageBox::Dangerous);
+ 
+-    switch (result) {
+-    case KMessageBox::Continue:
+-        return true;
+-        break;
+-    case KMessageBox::Cancel:
+-    default:
+-        return false;
+-        break;
+-    }
++	return (result == KMessageBox::Continue) ? true : false;
+ }
+ 
+ void PackageWidget::saveState()
