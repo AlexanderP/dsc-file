@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@  --with kde --with quilt --parallel
+
+override_dh_install:
+	dh_install --fail-missing
+
+override_dh_strip:
+	dh_strip --dbg-package=qapt-dbg

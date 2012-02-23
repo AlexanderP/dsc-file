@@ -1,0 +1,109 @@
+Source: qapt
+Section: kde
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Jonathan Thomas <echidnaman@kubuntu.org>
+Build-Depends: debhelper (>= 8.0.0~), pkg-kde-tools (>= 0.5.0), cmake, pkg-config,
+ kdelibs5-dev, libapt-pkg-dev (>= 0.8.0), libxapian-dev, libpolkit-qt-1-dev,
+ libqtgstreamer-dev, libdebconf-kde-dev, quilt
+Standards-Version: 3.9.2
+Homepage: https://projects.kde.org/projects/extragear/sysadmin/libqapt/
+
+Package: libqapt1
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: QApt library package
+ LibQApt is a Qt wrapper around the libapt-pkg library as well as an APT
+ implementation using libapt-pkg. The aim is to provide a sane API for
+ package management to ease the development of package managers written in Qt
+ and C++
+ .
+ This package contains the QApt library
+
+Package: libqapt-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, libqapt1 (= ${binary:Version}), libapt-pkg-dev
+Description: Development headers for the QApt library
+ LibQApt is a Qt wrapper around the libapt-pkg library as well as an APT
+ implementation using libapt-pkg. The aim is to provide a sane API for
+ package management to ease the development of package managers written in Qt
+ and C++
+ .
+ This package contains the development headers for the QApt library
+
+Package: libqapt-runtime
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, polkit-kde-1 | policykit-1-gnome
+Description: Runtime components for the QApt library
+ LibQApt is a Qt wrapper around the libapt-pkg library as well as an APT
+ implementation using libapt-pkg. The aim is to provide a sane API for
+ package management to ease the development of package managers written in Qt
+ and C++
+ .
+ This package contains the runtime components necessary for applications using
+ the QApt library to run.
+
+Package: qapt-utils
+Architecture: any
+Depends: ${misc:Depends}, qapt-batch, qapt-deb-installer,
+ plasma-runner-installer, kde-thumbnailer-deb
+Recommends: gstreamer0.10-qapt
+Description: complete collection of QApt package management utilities
+ This is a metapackage depending on all of QApt's extra package management
+ utilities.
+
+Package: qapt-batch
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqapt-runtime
+Description: Batch package manager for KDE
+ QApt Batch is a simple GUI for doing batch package management operations.
+ It can install and remove packages, as well as update the package cache via a
+ command line interface. It also has an attach function invokable via the
+ command line. QApt Batch is a drop-in replacement for the "install-package"
+ batch package management tool.
+
+Package: qapt-deb-installer
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqapt-runtime
+Description: tool for installing deb files
+ The QApt deb installer allows you to install local .deb files. The QApt Deb
+ Installer resolves and downloads dependencies. The APT package manager does
+ the same, but only for remote packages.
+
+Package: plasma-runner-installer
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, command-not-found, qapt-batch
+Description: KRunner plugin for installing packages
+ This KRunner plugin offers the option to install an application if its
+ command is typed in to KRunner and the application is not already
+ installed.
+
+Package: kde-thumbnailer-deb
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Enhances: dolphin, konqueror
+Description: KDE plugin to show thumbnails of Debian package files
+ A plugin for KDE file managers (Dolphin and Konqueror) to preview Debian
+ packages (.deb files) as thumbnails.
+
+Package: gstreamer0.10-qapt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqapt-runtime
+Description: GStreamer plugin to install codecs using QApt
+ This package provides a plugin for the GStreamer multimedia framework
+ to search and to install audio and video codecs.
+
+Package: qapt-dbg
+Section: debug
+Architecture: any
+Priority: extra
+Depends: ${misc:Depends}, libqapt1 (= ${binary:Version})
+Recommends: kdelibs5-dbg
+Description: QApt debugging symbols
+ This package contains debugging symbols for QApt.
+ When QApt crashes, in most cases this package is
+ needed to get a backtrace that is useful for developers. If you have
+ experienced a QApt crash without this package
+ installed, please install it, try to reproduce the problem and fill a bug
+ report with a new backtrace attached.

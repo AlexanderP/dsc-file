@@ -1,0 +1,261 @@
+qapt (1.2.3-1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Compile
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 23 Feb 2012 14:14:07 +0400
+
+qapt (1.2.3-0ubuntu1~oneiric1~ppa1) oneiric; urgency=low
+
+  * 
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Sun, 05 Feb 2012 10:33:21 -0500
+
+qapt (1.2.2-0ubuntu1) oneiric; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Sun, 23 Oct 2011 15:18:46 -0400
+
+qapt (1.2.1-0ubuntu2) oneiric; urgency=low
+
+  * Add changes not present in the previous upload due to me not re-source-
+    building after making them... Fixes FTBFS.
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Mon, 19 Sep 2011 00:01:31 -0400
+
+qapt (1.2.1-0ubuntu1) oneiric; urgency=low
+
+  * New upstream bugfix release: (LP: #830786, 847748, 839411)
+    - Update libqapt1.install
+    - Update libqapt1.symbols
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Sun, 18 Sep 2011 12:48:47 -0400
+
+qapt (1.2.0-0ubuntu3) oneiric; urgency=low
+
+  * Fix the qtgstreamer build-dep. The natty build-dep accidentally snuck in.
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Fri, 26 Aug 2011 17:38:51 -0400
+
+qapt (1.2.0-0ubuntu2) oneiric; urgency=low
+
+  * Add an or dependency between polkit-kde-1 and policykit-1-gnome to ensure
+    we have a policykit frontend installed. (LP: #833058)
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Thu, 25 Aug 2011 21:40:33 -0400
+
+qapt (1.2.0-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release (LP: #822623, #823087)
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Thu, 11 Aug 2011 19:08:39 -0400
+
+qapt (1.1.90-0ubuntu2) oneiric; urgency=low
+
+  * rebuild against latest libapt
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Mon, 08 Aug 2011 14:28:53 +0200
+
+qapt (1.1.90-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release candidate
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Sun, 24 Jul 2011 14:40:16 -0400
+
+qapt (1.1.85-0ubuntu2) oneiric; urgency=low
+
+  * Fix update-alternatives usage in gstreamer0.10-qapt (LP: #807483)
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Thu, 14 Jul 2011 00:21:20 -0400
+
+qapt (1.1.85-0ubuntu1) oneiric; urgency=low
+
+  * New upstream beta release
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Sun, 26 Jun 2011 11:30:57 -0400
+
+qapt (1.1.80-0ubuntu2) oneiric; urgency=low
+
+  * Build-depend on libqtgstreamer-dev instead of qtgstreamer-dev.
+  * Increase priority for gstreamer-codec-install alternative to 85.
+  * Enable parallel building.
+  * Fix symbols file on amd64.
+  * Move .mo files from qapt-batch to the respective packages.
+  * Call dh_install with --fail-missing.
+  * Bump Standards-Version to 3.9.2, no changes needed.
+  * Fix lintian warning description-synopsis-starts-with-article.
+
+ -- Felix Geyer <debfx-pkg@fobos.de>  Mon, 23 May 2011 19:33:00 +0200
+
+qapt (1.1.80-0ubuntu1) oneiric; urgency=low
+
+  * New upstream beta release:
+    - Update various .install files
+    - Update libqapt1.symbols
+    - Add several new binary packages for new QApt utilities
+    - Add a qapt-utils metapackage to install all QApt utilities
+    - Add build-depend on qtgstreamer-dev for qapt-gstreamer-helper
+    - Add a build-depend on libdebconf-kde-dev for qapt-deb-installer
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Wed, 16 Mar 2011 10:37:54 -0400
+
+qapt (1.1.1-0ubuntu1) natty; urgency=low
+
+  * New upstream bugfix release:
+    - Drop kubuntu_01_dont_close_stdout.diff, present upstream
+  * Update Homepage field to the new projects.kde.org home page
+  * Update the Source field in debian/copyright for the switch to the new KDE
+    Git repository
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Wed, 16 Feb 2011 19:19:57 -0500
+
+qapt (1.1.0-0ubuntu2) natty; urgency=low
+
+  * Add kubuntu_01_dont_close_stdout.diff from upstream to fix the failure
+    of postinst scripts needing stdout. (LP: #680328)
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Wed, 26 Jan 2011 21:27:09 -0500
+
+qapt (1.1.0-0ubuntu1) natty; urgency=low
+
+  * New upstream release:
+    - Update libqapt1.symbols
+  * Fix debian/copyright syntax
+  * Update debian/copyright for new copyright holders
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Tue, 04 Jan 2011 16:40:10 -0500
+
+qapt (1.0.95-0ubuntu1) natty; urgency=low
+
+  * New upstream release candidate:
+    - Update libqapt1.install
+    - Update libqapt1.symbols
+  * Port packaging to the debhelper 8 standard:
+    - Bump compat to 8
+    - Bump build-depend on debhelper to 8.0.0~
+    - Place options after the dh sequence in debian/rules
+  * Add a homepage field with the project homepage
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Tue, 28 Dec 2010 21:26:41 -0500
+
+qapt (1.0.90-0ubuntu1) natty; urgency=low
+
+  * New upstream beta:
+    - Update libqapt1.install
+    - Update libqapt1.symbols for new symbols
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Mon, 20 Dec 2010 12:17:39 -0500
+
+qapt (1.0.80-0ubuntu2) natty; urgency=low
+
+  * Rebuild for polkit-qt-1 ABI break
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Fri, 10 Dec 2010 13:16:42 -0500
+
+qapt (1.0.80-0ubuntu1) natty; urgency=low
+
+  * New upstream beta release:
+    - Update various .install files
+    - Update libqapt1.symbols
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Sun, 05 Dec 2010 12:16:50 -0500
+
+qapt (1.0.60-0ubuntu2) natty; urgency=low
+
+  * Somehow the libqapt1.symbols changes didn't make it in to the last upload
+    Reupload to fix FTBFS
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Thu, 04 Nov 2010 08:32:06 -0400
+
+qapt (1.0.60-0ubuntu1) natty; urgency=low
+
+  * New upstream release: (LP: #490353, #668297, #670294)
+    - Bump build-depend version on libapt-pkg-dev to 0.8.0 or higher
+    - Update libqapt1.symbols
+  * Bump Standards-Version to 3.9.1, no changes
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Mon, 01 Nov 2010 22:46:18 -0400
+
+qapt (1.0.3-0ubuntu2) maverick; urgency=low
+
+  * Fix libqapt1.symbols. Since we aren't building with fvisibility=hidden,
+    dpkg-gensymbols is picking up some libapt-pkg symbols as libqapt's. And
+    since libapt-pkg's symbols are different between i386 and amd64, FTBFS
+    occurs on amd64. I've set these symbols to !amd64, but this isn't really
+    a problem since they aren't our symbols.
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Thu, 30 Sep 2010 15:58:24 -0400
+
+qapt (1.0.3-0ubuntu1) maverick; urgency=low
+
+  * New upstream bugfix-only release, fixing a silent error when encountering
+    total-system APT locks. 
+    (http://websvn.kde.org/?view=revision&revision=1180714)
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Tue, 28 Sep 2010 17:30:05 -0400
+
+qapt (1.0.2-0ubuntu2) maverick; urgency=low
+
+  * Re-add libqapt1.symbols, which was inadvertantly dropped last upload.
+    I had forgotten to re-add it after I removed it for backporting to lucid.
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Tue, 14 Sep 2010 08:41:29 -0400
+
+qapt (1.0.2-0ubuntu1) maverick; urgency=low
+
+  * New upstream bugfix release
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Mon, 13 Sep 2010 17:50:50 -0400
+
+qapt (1.0.1-0ubuntu1) maverick; urgency=low
+
+  * New upstream bugfix release
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Thu, 26 Aug 2010 12:26:49 -0400
+
+qapt (1.0-0ubuntu2) maverick; urgency=low
+
+  * Remove erroneous patches that arose due to source format 3.0 and me
+    leaving files around
+  * Remove some mysterious symbols from the symbols file that don't look like
+    they belong to libqapt and cause FTBFS on amd64
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Thu, 12 Aug 2010 11:30:33 -0400
+
+qapt (1.0-0ubuntu1) maverick; urgency=low
+
+  * New upstream release:
+    - Rename libqapt0 to libqapt1 for .so versioning bump
+    - Replace appropriate depends with libqapt1 in debian/control
+    - Update libqapt0.symbols for the bump, renaming it to libqapt1.symbols
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Wed, 11 Aug 2010 10:23:53 -0400
+
+qapt (0.5.0-0ubuntu1) maverick; urgency=low
+
+  * New upstream release candidate
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Wed, 04 Aug 2010 10:03:43 -0400
+
+qapt (0.4.0-0ubuntu1) maverick; urgency=low
+
+  * New upstream beta release:
+    - Update libqapt0.symbols for a new function
+  * Bump Standards-Version to 3.9.1, no changes required
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Wed, 28 Jul 2010 09:12:16 -0400
+
+qapt (0.3.0-0ubuntu2) maverick; urgency=low
+
+  * Add a symbols file for libqapt0
+  * Give libqapt-dev the section of libdevel
+  * Bump Standards-Version to 3.9.0, no changes required
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Fri, 23 Jul 2010 10:26:47 -0400
+
+qapt (0.3.0-0ubuntu1) maverick; urgency=low
+
+  * Initial release
+
+ -- Jonathan Thomas <echidnaman@kubuntu.org>  Wed, 02 Jun 2010 14:47:35 -0500

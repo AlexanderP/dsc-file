@@ -1,0 +1,12 @@
+diff -Naur libqapt-1.2.3.orig/cmake/modules/FindPolkitQt-1.cmake qapt-1.2.3/cmake/modules/FindPolkitQt-1.cmake
+--- libqapt-1.2.3.orig/cmake/modules/FindPolkitQt-1.cmake	2012-02-05 19:21:11.000000000 +0400
++++ qapt-1.2.3/cmake/modules/FindPolkitQt-1.cmake	2012-02-23 18:13:46.000000000 +0400
+@@ -19,7 +19,7 @@
+ endif (POLKITQT-1_INCLUDE_DIR AND POLKITQT-1_LIB)
+ 
+ if (NOT POLKITQT-1_MIN_VERSION)
+-  set(POLKITQT-1_MIN_VERSION "0.95.1")
++  set(POLKITQT-1_MIN_VERSION "0.100.1")
+ endif (NOT POLKITQT-1_MIN_VERSION)
+ 
+ if (NOT WIN32)
