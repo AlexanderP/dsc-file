@@ -30,7 +30,9 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-build: build-stamp
+build: build-arch build-indep
+build-arch: build-stamp
+build-indep: build-stamp
 build-stamp:
 	dh_testdir
 	$(MAKE) -j$(NCPUS) QMAKE_OPTS=DEFINES+=NO_DEBUG_ON_CONSOLE PREFIX=/usr DOC_PATH="\\\"/usr/share/doc/smplayer\\\""

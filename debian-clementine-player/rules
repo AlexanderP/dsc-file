@@ -44,7 +44,9 @@ configure-stamp:
 	mkdir clementine-build
 	cd clementine-build && cmake $(CMAKEOPTS)
 	touch configure-stamp
-build: build-stamp
+build: configure build-arch build-indep
+build-arch: build-stamp
+build-indep: build-stamp
 build-stamp: configure-stamp  
 	dh_testdir
 	cd clementine-build && $(MAKE) -j$(NCPUS)

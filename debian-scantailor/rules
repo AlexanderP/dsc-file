@@ -51,7 +51,9 @@ configure-stamp:
 	mkdir scantailor-build
 	cd scantailor-build && cmake $(CMAKEOPTS)
 	touch $@
-build: configure build-stamp
+build: configure build-arch build-indep
+build-arch: build-stamp
+build-indep: build-stamp
 build-stamp:
 	dh_testdir
 	cd scantailor-build && $(MAKE) -j$(NCPUS)

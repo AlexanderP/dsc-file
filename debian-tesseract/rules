@@ -64,7 +64,9 @@ configure-stamp:
 	./autogen.sh
 	./configure $(confflags)
 	touch $@
-build: configure build-stamp
+build: configure build-arch build-indep
+build-arch: build-stamp
+build-indep: build-stamp
 build-stamp:
 	dh_testdir
 	$(MAKE) -j$(NCPUS)
