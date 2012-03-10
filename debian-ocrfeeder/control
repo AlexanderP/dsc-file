@@ -8,7 +8,7 @@ Homepage: http://live.gnome.org/OCRFeeder
 
 Package: ocrfeeder
 Architecture: all
-Depends: python-gtk2, python-gnome2, python-imaging-sane, python-enchant, python-gtkspell, python-pygoocanvas, ghostscript, ${misc:Depends}, ${python:Depends}, tesseract-ocr | ocrad | gocr | cuneiform | cuneiform-linux | cuneiform-refactoring
+Depends: python-gtk2, python-gnome2, python-imaging-sane, python-enchant, python-gtkspell, python-pygoocanvas, python-reportlab, ghostscript, ${misc:Depends}, ${python:Depends}, tesseract-ocr | ocrad | gocr | cuneiform | cuneiform-linux | cuneiform-refactoring
 Recommends: unpaper, yelp
 Description: Document layout analysis and optical character recognition system
  OCRFeeder is a document layout analysis and optical character
