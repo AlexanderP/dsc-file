@@ -1,16 +1,29 @@
-This work was packaged for Debian by:
-
-    Alexander Pozdnyakov <almipo@mail.ru> on Sun, 02 May 2010 19:27:04 +0400
+This package was debianized by    Alexander Pozdnyakov <almipo@mail.ru>
+Sun, 02 May 2010 19:27:04 +0400
 
 This package based by:
     
     Copyright (C) 2009-2010 Ivan Borzenkov <ivan1986@list.ru>
     Copyright (C) 2001-2010 Jan Niehusmann <jan@debian.org>
+	Copyright (C) 2011 		Boris Pek <tehnick-8@mail.ru>
 
-It was downloaded from:
+The orig.tar.gz is generated from a few upstream source trees:
+ git://github.com/psi-im/psi.git
+ git://github.com/psi-im/iris.git
+ git://github.com/psi-im/libpsi.git
+ http://psi-dev.googlecode.com/svn/trunk/
 
-    git://github.com/psi-im/psi.git
-    http://psi-dev.googlecode.com/svn/trunk/
+Following files and directories were ignored:
+ https://github.com/psi-im/psi/blob/master/configure.exe
+ https://github.com/psi-im/psi/tree/master/win32/
+ https://github.com/psi-im/libpsi/tree/master/tools/zip/minizip/win32/
+ https://github.com/psi-im/libpsi/tree/master/tools/idle/win32/
+ http://psi-dev.googlecode.com/svn/trunk/.svg
+ http://psi-dev.googlecode.com/svn/trunk/iconsets/
+ http://psi-dev.googlecode.com/svn/trunk/img.jpg
+ http://psi-dev.googlecode.com/svn/trunk/resources/
+ http://psi-dev.googlecode.com/svn/trunk/scripts/win32/
+ http://psi-dev.googlecode.com/svn/trunk/version.txt
 
 Psi+ Project Authors:
  Copyright 2008-2011 zet <vladimir.shelukhin@gmail.com>,
@@ -505,9 +518,6 @@ Small patches in Psi+ Project:
  Vladimir Shelukhin, <vladimir.shelukhin@gmail.com>,
  Maksim Maj <maksim.maj@gmail.com>,
 
-The Debian packaging is:
 
-    Copyright (C) 2010 Alexander Pozdnyakov <almipo@mail.ru>
-
-and is licensed under the GPL version 2,
-see "/usr/share/common-licenses/GPL-2".
+The Debian packaging is copyright 2010 Alexander Pozdnyakov <almipo@mail.ru> and
+is licensed under the GPL, see `/usr/share/common-licenses/GPL-2'.

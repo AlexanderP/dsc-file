@@ -3,14 +3,16 @@ Section: net
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends:  debhelper (>= 7.0.50~), 
-		libqtwebkit-dev | libqt4-dev (>= 4.6.0), 
-		libqca2-dev(>= 2.0.0), 
-		libxss-dev,
+ 		quilt, 
+		qconf,
+		libqtwebkit-dev | libqt4-dev (>=4.5.2),
+ 		libqca2-dev (>= 2.0.0), 
+		libxss-dev, 
 		libaspell-dev, 
 		zlib1g-dev, 
 		libsm-dev, 
-		quilt, 
-		qconf, 
+		libotr2-dev, 
+		libtidy-dev,
 		libproxy-dev 
 Standards-Version: 3.9.2
 Homepage: http://psi-dev.googlecode.com/
