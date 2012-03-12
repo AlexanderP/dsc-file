@@ -2,7 +2,7 @@ Source: deadbeef
 Section: sound
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), 
+Build-Depends: debhelper (>= 7.0.50~), 
                 libltdl-dev | libltdl7-dev, 
                 libtool, 
                 libasound2-dev, 
@@ -30,20 +30,19 @@ Build-Depends: debhelper (>= 7),
                 libmpcdec-dev, 
                 libmms-dev, 
                 libfaad-dev, 
-		bison,
-		libzip-dev,
-		libc6-dev,
-		libavformat-dev,
-		libimlib2-dev,
-		quilt,
-		yasm
+			    bison,
+		        libzip-dev,
+		        libavformat-dev,
+		        libimlib2-dev,
+		        quilt,
+		        yasm
 Standards-Version: 3.9.2
 Homepage: http://deadbeef.sourceforge.net/
 
 Package: deadbeef-dev
 Section: libdevel
 Architecture: all
-Depends: deadbeef (= ${source:Version}), ${misc:Depends}
+Depends: deadbeef (>= ${source:Version}), ${misc:Depends}
 Description: DeaDBeeF plugins development files
  DeaDBeeF (as in 0xDEADBEEF) is an audio player for GNU/Linux systems with X11.
  .
