@@ -39,7 +39,11 @@ else
 	ifeq "$(DEBIAN_CODENAME)" "wheezy"
 		CONTROL = control.jpeg8
 	else
-		CONTROL = control.jpeg62
+		ifeq "$(DEBIAN_CODENAME)" "precise"
+			CONTROL = control.jpeg8
+		else
+			CONTROL = control.jpeg62
+		endif
 	endif
 endif
 
