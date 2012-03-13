@@ -2,7 +2,7 @@ Source: clementine-player
 Section: sound  
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7),
+Build-Depends: debhelper (>= 7.0.50~),
                liblastfm-dev,
                libtag1-dev,
                libboost1.38-dev |
@@ -32,7 +32,7 @@ Build-Depends: debhelper (>= 7),
                libprotobuf-dev,
                libqca2-dev,
                libchromaprint-dev | libfftw3-dev
-Standards-Version: 3.9.2
+Standards-Version: 3.9.3
 Homepage: http://www.clementine-player.org/
 
 Package: clementine-player
