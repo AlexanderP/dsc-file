@@ -8,8 +8,6 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-INSTDIR=$(CURDIR)/debian/tmp
-
 %:
 	dh $@ --parallel
 
