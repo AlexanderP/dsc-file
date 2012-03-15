@@ -2,8 +2,9 @@ Source: cuneiform-linux
 Section: non-free/graphics
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), cmake, libmagick++-dev | libmagick++9-dev
-Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 7.4.10~), dpkg-dev (>= 1.16), cmake (>= 2.8.2),
+  libgraphicsmagick++1-dev, pkg-config, quilt
+Standards-Version: 3.9.3
 Homepage: https://launchpad.net/cuneiform-linux
 
 Package: cuneiform-linux
