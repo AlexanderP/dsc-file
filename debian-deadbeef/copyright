@@ -1,131 +1,216 @@
-This work was packaged for Debian by:
+Format: http://anonscm.debian.org/viewvc/dep/web/deps/dep5.mdwn?revision=240
+Upstream-Name: deadbeef
+Upstream-Author: Alexey Yakovenko <waker@users.sourceforge.net>
+Source: http://sourceforge.net/projects/deadbeef
 
-    Alexander Pozdnyakov <almipo@mail.ru> on Mon, 01 Feb 2010 20:34:36 +0300
+Files: *
+Copyright: 	2009-2012, Alexey Yakovenko <waker@users.sourceforge.net>
+			2010, Viktor Semykin <thesame.ml@gmail.com>
+			2010, Stas Akimushkin <uncle.lag@gmail.com>
+License: GPL-2
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-2'.
 
-This package based by:
-    
-     Copyright (C) 2009-2011 Alexey Smirnov <alexey.smirnov@gmx.com>
+Files: debian/*
+Copyright: 	2010-2012, Alexander Pozdnyakov <almipo@mail.ru>
+			2009-2011, Alexey Smirnov <alexey.smirnov@gmx.com>
+License: GPL-2
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-2'.
 
-It was downloaded from http://sourceforge.net/projects/deadbeef
+Files: plugins/gme/Game_Music_Emu-0.5.2/*: Game Music Emulators
+Copyright: (c) 2003-2006 Shay Green <gblargg@gmail.com>
+License: LGPL-2.1
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/LGPL-2.1'
 
-Upstream Author(s):
-
-    Alexey Yakovenko <waker@users.sourceforge.net>
-
-Copyright:
-
-    This package contains various pieces of software copyrighted
-    by their respective authors, including:
-
-    Copyright (C) 2009-2010 by Alexey Yakovenko <waker@users.sourceforge.net>
-    Copyright (C) by Viktor Semykin <thesame.ml@gmail.com>
-    Copyright (C) Stas Akimushkin <uncle.lag@gmail.com>
-
+Files: plugins/dumb/*: DUMB - Dynamic Universal Music Bibliotheque
+Copyright: 2001-2005, Ben Davis, Robert J Ohannessian and Julien Cugniere.
 License:
+ This software is provided 'as-is', without any express or implied warranty.
+ In no event shall the authors be held liable for any damages arising from the
+ use of this software.
+ .
+ Permission is granted to anyone to use this software for any purpose,
+ including commercial applications, and to alter it and redistribute it
+ freely, subject to the following restrictions:
+ .
+ 1. The origin of this software must not be misrepresented; you must not claim
+    that you wrote the original software. If you use this software in a
+    product, you are requested to acknowledge its use in the product
+    documentation, along with details on where to get an unmodified version of
+    this software, but this is not a strict requirement.
+ .
+    [Note that the above point asks for a link to DUMB, not just a mention.
+    Googling for DUMB doesn't help much! The URL is "http://dumb.sf.net/".] 
+ .
+    [The only reason why the link is not strictly required is that such a
+    requirement prevents DUMB from being used in projects with certain other
+    licences, notably the GPL. See http://www.gnu.org/philosophy/bsd.html .] 
+ .
+ 2. Altered source versions must be plainly marked as such, and must not be
+    misrepresented as being the original software.
+ .
+ 3. This notice may not be removed from or altered in any source distribution.
+ .
+ 4. If you are using the Program in someone else's bedroom at any Monday
+    3:05 PM, you are not allowed to modify the Program for ten minutes. [This
+    clause provided by Inphernic; every licence should contain at least one
+    clause, the reasoning behind which is far from obvious.]
+ .
+ [Note: clause 4 was resigned after a quick IRC talk with the author]
+ .
+ [Note 2: if I did not mention /usr/share/common-licenses here, lintian
+ 		 would complain because he found the words "GPL" above, but this
+ 		 software is not GPL. It is GPL-compatible, though.]
 
-    This package is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
+Files: md5/*: Functions to compute MD5 message digest of files or memory blocks
+Copyright:	1995, Ulrich Drepper <drepper@gnu.ai.mit.edu>
+			1998, Gray Watson <http://256.com/gray/>
+License: GPL-2
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-2'.
 
-    This package is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+Files: plugins/sid/sidplay-libs-2.1.0/*: commodore 64 SID emulation library
+Copyright:	2000-2004, Simon White <sidplay2@email.com>
+License: GPL-2
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-2'.
 
-    You should have received a copy of the GNU General Public License
-    along with this package; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+Files: plugins/adplug/adplug/*: Replayer for many OPL2/OPL3 audio file formats.
+Copyright:	1999 - 2006 Simon Peter <dn.tlp@gmx.net>
+License: LGPL-2.1
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/LGPL-2.1'
+ 
+Files: plugins/adplug/libbinio/*: binary I/O stream class library
+Copyright: 2002-2004, Simon Peter <dn.tlp@gmx.net>
+License: LGPL-2.1
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/LGPL-2.1'
+ 
+Files: plugins/vtx/ay8912.c, plugins/vtx/ayemu.h, plugins/vtx/ayemu_8912.h, plugins/vtx/auemu_vtxfile.h: AY/YM sound chip emulator and music file loader
+Copyright: 2003-2004 Sashnov Alexander <sashnov@ngs.ru>
+License: LGPL-2.1
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/LGPL-2.1'
+ 
+Files: plugins/ao: Audio Overload SDK
+ Different parts of this software are covered by the following free software
+Copyright: 2007-2009, R. Belmont and Richard Bannister.
+License: BSD
 
-On Debian systems, the complete text of the GNU General
-Public License can be found in `/usr/share/common-licenses/GPL'.
+Files: plugins/ao: Audio Overload SDK
+ Different parts of this software are covered by the following free software
+ licenses:
+Copyright: 	1997-2008, Nicola Salmoria and the MAME team.
+License: MAME
+ Redistribution and use of the MAME code or any derivative works are 
+ permitted provided that the following conditions are met:
+ .
+ Redistributions may not be sold, nor may they be used in a commercial 
+ product or activity.
+ .
+ Redistributions that are modified from the original source must include 
+ the complete source code, including the source code for all components 
+ used by a binary built from the modified sources. However, as a special 
+ exception, the source code distributed need not include anything that is 
+ normally distributed (in either source or binary form) with the major 
+ components (compiler, kernel, and so on) of the operating system on 
+ which the executable runs, unless that component itself accompanies the 
+ executable.
+ .
+ Redistributions must reproduce the above copyright notice, this list of 
+ conditions and the following disclaimer in the documentation and/or 
+ other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS 
+ IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED 
+ TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A 
+ PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT 
+ OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+ TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+ PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+ LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+      
+Files: plugins/ao: Audio Overload SDK
+ Different parts of this software are covered by the following free software
+ licenses:
+Copyright: 	2002-2003, Pete Bernert.
+License: GPL-2
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-2'.
 
-Some parts of the code have other copyright holders or licenses:
+Files: plugins/dca: library for decoding DTS Coherent Acoustics streams
+Copyright: 	2004, Gildas Bazin <gbazin@videolan.org>
+			2000-2003, Michel Lespinasse <walken@zoy.org>
+			1999-2000, Aaron Holtzman <aholtzma@ess.engr.uvic.ca>
+License: GPL-2
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-2'.
 
-gme/Game_Music_Emu-0.5.2/*: Game Music Emulators
-    Copyright (c) 2003-2006 Shay Green <gblargg@gmail.com>
-    Licensed under LGPL license.
+Files: plugins/tta/ttadec.[hc],filter.h: TTA Hardware Players Library
+Copyright: 	2004, Alexander Djourik
+License: BSD
 
-dumb/*: DUMB - Dynamic Universal Music Bibliotheque
-    Copyright (c) 2001-2005 Ben Davis, Robert J Ohannessian and Julien Cugniere.
 
-    License:
+License: GPL-2
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-2'.
 
-    This software is provided 'as-is', without any express or implied warranty.
-    In no event shall the authors be held liable for any damages arising from the
-    use of this software.
 
-    Permission is granted to anyone to use this software for any purpose,
-    including commercial applications, and to alter it and redistribute it
-    freely, subject to the following restrictions:
+License: BSD
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ 1. Redistributions of source code must retain the above copyright notice,
+    this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright 
+    notice, this list of conditions and the following disclaimer in the 
+    documentation and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+ LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
 
-    1. The origin of this software must not be misrepresented; you must not claim
-       that you wrote the original software. If you use this software in a
-       product, you are requested to acknowledge its use in the product
-       documentation, along with details on where to get an unmodified version of
-       this software, but this is not a strict requirement.
 
-       [Note that the above point asks for a link to DUMB, not just a mention.
-       Googling for DUMB doesn't help much! The URL is "http://dumb.sf.net/".]
+License: LGPL-2.1
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.
 
-       [The only reason why the link is not strictly required is that such a
-       requirement prevents DUMB from being used in projects with certain other
-       licences, notably the GPL. See http://www.gnu.org/philosophy/bsd.html .]
-
-    2. Altered source versions must be plainly marked as such, and must not be
-       misrepresented as being the original software.
-
-    3. This notice may not be removed from or altered in any source distribution.
-
-    4. If you are using the Program in someone else's bedroom at any Monday
-       3:05 PM, you are not allowed to modify the Program for ten minutes. [This
-       clause provided by Inphernic; every licence should contain at least one
-       clause, the reasoning behind which is far from obvious.]
-
-    [Note: clause 4 was resigned after a quick IRC talk with the author]
-
-    [Note 2: if I did not mention /usr/share/common-licenses here, lintian
-             would complain because he found the words "GPL" above, but this
-             software is not GPL. It is GPL-compatible, though.]
-
-md5/*: Functions to compute MD5 message digest of files or memory blocks
-    Written by Ulrich Drepper <drepper@gnu.ai.mit.edu>, 1995.
-    Modified by Gray Watson <http://256.com/gray/>, 1997.
-    Licensed under GPL license.
-
-sid/sidplay-libs-2.1.0/*: commodore 64 SID emulation library
-    Copyright (c) 2000-2004 Simon White <sidplay2@email.com>
-    Licensed under GPL license.
-
-plugins/adplug/adplug/*: Replayer for many OPL2/OPL3 audio file formats.
-    Copyright © 1999 - 2006 Simon Peter <dn.tlp@gmx.net>, et al.
-    Licensed under LGPL license.
-
-plugins/adplug/libbinio/*: binary I/O stream class library
-    Copyright (C) 2002-2004 Simon Peter <dn.tlp@gmx.net>
-    Licensed under LGPL license.
-
-plugins/vtx/ay8912.c, plugins/vtx/ayemu.h, plugins/vtx/ayemu_8912.h,
-plugins/vtx/auemu_vtxfile.h: AY/YM sound chip emulator and music file loader
-    Copyright (C) 2003-2004 Sashnov Alexander <sashnov@ngs.ru>
-    Licensed under LGPL license.
-
-plugins/ao: Audio Overload SDK
-    Different parts of this software are covered by the following free software
-    licenses:
-      BSD license: Copyright (c) 2007-2009, R. Belmont and Richard Bannister.
-      MAME license: Copyright (c) 1997-2008, Nicola Salmoria and the MAME team.
-      GPL license: Copyright (c) 2002-2003, 2002 by Pete Bernert.
-
-plugins/dca: library for decoding DTS Coherent Acoustics streams
-    Copyright (C) 2004 Gildas Bazin <gbazin@videolan.org>
-    Copyright (C) 2000-2003 Michel Lespinasse <walken@zoy.org>
-    Copyright (C) 1999-2000 Aaron Holtzman <aholtzma@ess.engr.uvic.ca>
-    Is distributed under the terms of GPL license.
-
-plugins/tta/ttadec.[hc],filter.h: TTA Hardware Players Library
-    Copyright (C) 2004 Alexander Djourik.
-    Is distributed under the terms of BSD license.
-
-The Debian packaging is (C) 2010-2011 Alexander Pozdnyakov <almipo@mail.ru> and
-is licensed under the GPL, see above.
