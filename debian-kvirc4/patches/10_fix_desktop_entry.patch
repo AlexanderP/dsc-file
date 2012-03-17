@@ -5,8 +5,8 @@ Description: Corrected the place to show up for the desktop entry.
   .
   This patch can be studied to be forwarded upstream.
 Author: Roderick B. Greening <roderick.greening@gmail.com>
-Last-Update: 2011-02-23
-Origin: vendor, http://hg.debian.org/hg/pkg-kde/kde-extras/kvirc/raw-file/tip/debian/patches/10_fix_desktop_entry.patch
+Last-Update: 2011-05-07
+Origin: vendor, http://git.debian.org/?p=pkg-kde/kde-extras/kvirc.git;a=blob_plain;f=debian/patches/10_fix_desktop_entry.patch;hb=HEAD
 Forwarded: no
 ---
  cmake/kvirc4.desktop.cmake |    2 +-
@@ -14,7 +14,7 @@ Forwarded: no
 
 --- a/cmake/kvirc4.desktop.cmake
 +++ b/cmake/kvirc4.desktop.cmake
-@@ -14,4 +14,4 @@ Exec=${KVIRC_BINARYNAME} -m %u
+@@ -16,4 +16,4 @@ Exec=${KVIRC_BINARYNAME} -m %u
  Icon=kvirc
  Type=Application
  MimeType=application/x-kva;application/x-kvt;
