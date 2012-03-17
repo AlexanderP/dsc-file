@@ -2,7 +2,7 @@ Source: fatrat
 Section: net
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends:  debhelper (>= 7), 
+Build-Depends:  debhelper (>= 7.0.50~), 
 		cmake,
 		libtorrent-rasterbar-dev,
 		libboost-date-time-dev,
@@ -10,13 +10,13 @@ Build-Depends:  debhelper (>= 7),
 		qt4-dev-tools,
 		libgloox-dev,
 		libcurl4-gnutls-dev | libcurl-dev,
-        	libpion-net-dev, libpion-common-dev,
+		libpion-net-dev, libpion-common-dev,
 		libboost-regex-dev,
 		libboost-signals-dev,
  		libboost-iostreams-dev,
 		libbz2-dev,
 		liblog4cpp5-dev
-Standards-Version: 3.9.2
+Standards-Version: 3.9.3
 Homepage: http://fatrat.dolezel.info/
 
 Package: fatrat
