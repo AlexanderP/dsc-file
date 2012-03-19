@@ -1,0 +1,11 @@
+--- libgegl-0.1.6+git20120317.orig/docs/Makefile.am
++++ libgegl-0.1.6+git20120317/docs/Makefile.am
+@@ -15,7 +15,7 @@ HTML_FILES = \
+ GTKDOC_FILES = \
+ 	operations.html		\
+ 	gegl.css			\
+-	gegl.devhelp
++	devhelp.css
+ 
+ if HAVE_RUBY
+ HTML_FILES += api.html images/inheritance.png

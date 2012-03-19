@@ -1,104 +1,90 @@
 Source: libgegl
-Section: graphics
+Section: libs
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: asciidoc,
-                automake,
-                autotools-dev,
-                cdbs,
-                enscript,
-                freeglut3-dev,
-                gawk,
-                gobject-introspection,
-                graphviz-dev,
-                gtk-doc-tools,
-                intltool,
-                libbabl-0.1-0-dev,
-                libcairo2-dev,
-                libexiv2-dev,
-                libgirepository1.0-dev,
-                libglib2.0-dev,
-                libgtk2.0-dev,
-                libilmbase-dev,
-                libjasper-dev,
-                libjpeg8-dev,
-                libltdl-dev,
-                liblua5.1-0-dev,
-                libopenexr-dev,
-                libopenraw-dev,
-                libopenrawgnome-dev,
-                libpango1.0-dev,
-                libpng12-dev,
-                libpostproc-dev,
-                librsvg2-dev,
-                libsdl1.2-dev,
-                libspiro-dev,
-                libsuitesparse-dev,
-                libswscale-dev,
-                libtool,
-                libv4l-dev,
-                ocaml-base-nox,
-                pkg-config,
-                ruby-dev,
-                ruby-full,
-                w3m,
-Standards-Version: 3.9.2
-Homepage: http://www.gimp.org/
+Build-Depends: autotools-dev,
+               cdbs (>= 0.4.93~),
+               debhelper (>= 8.1.3),
+               gnome-pkg-tools,
+               gtk-doc-tools (>= 1.0),
+               libbabl-dev (>= 0.1.6),
+               libcairo2-dev,
+               libglib2.0-dev (>= 2.16.1),
+               libgraphviz-dev,
+               libgtk2.0-dev (>= 2.8.6),
+               libjpeg-dev,
+               libopenexr-dev,
+               libopenraw-dev (>= 0.0.5),
+               libpango1.0-dev,
+               libpng-dev,
+               librsvg2-dev (>= 2.14.0),
+               libspiro-dev,
+               pkg-config
+Standards-Version: 3.9.3
+Homepage: http://gegl.org/
 
-Package: gegl-0.1
-Conflicts: gegl
+Package: gegl
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
 Description: Generic Graphics Library Test Program
  GEGL (Generic Graphics Library) is a graph based image processing
  framework.
  .
  GEGLs original design was made to scratch GIMPs itches for a new
  compositing and processing core. This core is being designed to have
- minimal dependencies. and a simple well defined API
+ minimal dependencies and a simple well defined API.
  .
- This package contains an test program.
+ This package contains a test program.
 
 Package: libgegl-0.1-0
-Conflicts: libgegl-0.0-0
-Section: libs
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
 Description: Generic Graphics Library
  GEGL (Generic Graphics Library) is a graph based image processing
  framework.
  .
  GEGLs original design was made to scratch GIMPs itches for a new
  compositing and processing core. This core is being designed to have
- minimal dependencies. and a simple well defined API
+ minimal dependencies and a simple well defined API.
 
-Package: libgegl-0.1-dev
-Conflicts: libgegl-0.0-dev
+Package: libgegl-dev
 Section: libdevel
 Architecture: any
-Depends: libbabl-0.1-0-dev, ${misc:Depends}, libgegl-0.1-0 (= ${binary:Version})
+Multi-Arch: same
+Depends: libbabl-dev (>= 0.1.6),
+         libgegl-0.1-0 (= ${binary:Version}),
+         libglib2.0-dev (>= 2.16.1),
+         ${misc:Depends}
+Breaks: libgegl-0.0-dev, libgegl-0.1-dev
+Replaces: libgegl-0.0-dev, libgegl-0.1-dev
+Provides: libgegl-0.0-dev, libgegl-0.1-dev
 Description: Generic Graphics Library (development files)
  GEGL (Generic Graphics Library) is a graph based image processing
  framework.
  .
  GEGLs original design was made to scratch GIMPs itches for a new
  compositing and processing core. This core is being designed to have
- minimal dependencies. and a simple well defined API
+ minimal dependencies and a simple well defined API.
  .
  This package contains the development files.
 
-Package: libgegl-0.1-doc
-Conflicts: libgegl-0.0-doc
+Package: libgegl-doc
 Section: doc
 Architecture: all
-Suggests: libgegl-0.1-0,
+Multi-Arch: foreign
 Depends: ${misc:Depends}
+Breaks: libgegl-0.0-doc, libgegl-0.1-doc
+Replaces: libgegl-0.0-doc, libgegl-0.1-doc
 Description: Generic Graphics Library (documentation)
  GEGL (Generic Graphics Library) is a graph based image processing
  framework.
  .
  GEGLs original design was made to scratch GIMPs itches for a new
  compositing and processing core. This core is being designed to have
- minimal dependencies. and a simple well defined API
+ minimal dependencies and a simple well defined API.
  .
  This package contains the documentation.
