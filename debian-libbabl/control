@@ -2,34 +2,40 @@ Source: libbabl
 Section: libs
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), 
-                autotools-dev, 
-                cdbs, 
-                automake, 
-                libtool, 
-                libgirepository1.0-dev, 
-                gobject-introspection,
-                librsvg2-dev,
-                gawk,
-                libltdl-dev
-Standards-Version: 3.9.2
-Homepage: http://www.gimp.org/
+Build-Depends: autotools-dev, automake,
+               cdbs (>= 0.4.93~),
+               debhelper (>= 8.1.3),
+               gobject-introspection,
+               libgirepository1.0-dev,
+               pkg-config,
+               librsvg2-dev,
+               gawk,
+               libltdl-dev,
+               libtool
+Standards-Version: 3.9.3
+Homepage: http://gegl.org/babl/
 
 Package: libbabl-0.1-0
-Conflicts: libbabl-0.0-0
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
 Description: Dynamic, any to any, pixel format conversion library
  Babl is a dynamic, any to any, pixel format conversion library. It
  provides conversions between the myriad of buffer types images can be
  stored in. Babl doesn't only help with existing pixel formats, but
  also facilitates creation of new and uncommon ones.
 
-Package: libbabl-0.1-0-dev
-Conflicts: libbabl-0.0-0-dev
+Package: libbabl-dev
 Architecture: any
+Multi-Arch: same
 Section: libdevel
-Depends: ${misc:Depends}, libbabl-0.1-0 (= ${binary:Version})
+Depends: libbabl-0.1-0 (= ${binary:Version}),
+         ${misc:Depends}
+Breaks: libbabl-0.0-0-dev, libbabl-0.1-0-dev
+Replaces: libbabl-0.0-0-dev, libbabl-0.1-0-dev
+Provides: libbabl-0.0-0-dev, libbabl-0.1-0-dev
 Description: Dynamic, any to any, pixel format conversion library (development files)
  Babl is a dynamic, any to any, pixel format conversion library. It
  provides conversions between the myriad of buffer types images can be
@@ -37,13 +43,14 @@ Description: Dynamic, any to any, pixel format conversion library (development f
  also facilitates creation of new and uncommon ones.
  .
  This package contains the development files.
- 
-Package: libbabl-0.1-doc
-Conflicts: libbabl-0.0-doc
+
+Package: libbabl-doc
 Architecture: all
+Multi-Arch: foreign
 Section: doc
-Suggests: libbabl-0.1-0 (= ${binary:Version})
-Depends: ${misc:Depends}, 
+Depends: ${misc:Depends}
+Breaks: libbabl-0.0-doc, libbabl-0.1-doc
+Replaces: libbabl-0.0-doc, libbabl-0.1-doc
 Description: Dynamic, any to any, pixel format conversion library (documentation)
  Babl is a dynamic, any to any, pixel format conversion library. It
  provides conversions between the myriad of buffer types images can be
@@ -51,3 +58,4 @@ Description: Dynamic, any to any, pixel format conversion library (documentation
  also facilitates creation of new and uncommon ones.
  .
  This package contains the API documentation.
+
