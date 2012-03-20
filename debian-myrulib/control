@@ -2,11 +2,13 @@ Source: myrulib
 Section: x11
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), 
+Build-Depends: debhelper (>= 7.0.50~), 
                 libwxgtk2.8-dev,
                 libexpat-dev, 
-                libsqlite3-dev
-Standards-Version: 3.9.2
+                libsqlite3-dev,
+                libicu-dev, 
+                libbz2-dev
+Standards-Version: 3.9.3
 Homepage: http://myrulib.lintest.ru
 
 Package: myrulib
