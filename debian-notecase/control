@@ -2,14 +2,17 @@ Source: notecase
 Section: editors
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), libgtk2.0-dev, libgnomevfs2-dev, libgtksourceview2.0-dev, dpatch
-Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 7.0.50~),,
+ libgtk2.0-dev,
+ libgnomevfs2-dev,
+ libgtksourceview2.0-dev
+Standards-Version: 3.9.3
 Homepage: http://notecase.sourceforge.net/
 
 Package: notecase
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description:  A hierarchical text notes manager
+Description: Hierarchical text notes manager
  NoteCase is a hierarchical text notes manager (outliner).
  It helps you organize your everyday text notes into a single document
  with individual notes placed into a tree-like structure.
