@@ -1,0 +1,47 @@
+.\" muse-song-convert -- conversion utility between MusE songfile formats
+.\" Copyright (c) 2005 Daniel Kobras
+.\"
+.\" This manual page is free software; you can redistribute it and/or modify
+.\" it under the terms of the GNU General Public License as published by
+.\" the Free Software Foundation; either version 2 of the License, or
+.\" (at your option) any later version.
+.\" 
+.\" This program is distributed in the hope that it will be useful,
+.\" but WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\" GNU General Public License for more details.
+.\" 
+.\" You should have received a copy of the GNU General Public License
+.\" along with this program; if not, write to the Free Software
+.\" Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+.\"
+.\" This manual page was written especially for Debian GNU/Linux.
+.\"
+.TH MUSE-SONG-CONVERT 1 "August 2005"
+.SH NAME
+muse-song-convert \- convert between MusE songfile formats
+.SH SYNOPSIS
+.B muse-song-convert \fIsongfile\fR
+.SH DESCRIPTION
+The MIDI Music Editor MusE uses a custom file format to store its song files.
+This format has changed between MusE versions 0.6 and 0.7 in incompatible ways.
+The utility
+.B muse-song-convert
+is able to convert songfiles from 0.6 to the new 0.7 format, so old songs
+can be loaded into new versions of MusE. It is not possible to convert a
+new song back to the old format. To prevent data loss,
+.B muse-song-convert
+does not modify the original
+.IR songfile .
+Instead, it copies and converts the original
+.I songfile
+as
+.IR songfile .converted.
+The process is meant to retain all information in the converted songfile, but
+may not be perfect in all cases.
+.SH AUTHORS
+.B muse-song-convert
+was written by Robert Jonsson <rj@spamatica.se>.
+.PP
+This manual page was written by Daniel Kobras <kobras@debian.org> for the
+Debian GNU/Linux system (but may be used by others).

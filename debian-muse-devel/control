@@ -2,46 +2,49 @@ Source: muse-devel
 Section: sound
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7.0.50~), 
-               cmake, 
-               libqt4-dev, 
-               libsndfile1-dev, 
-               libjack-dev, 
-               libfluidsynth-dev, 
-               libsamplerate0-dev, 
-               liblash-dev | liblash-compat-dev,
-               dssi-dev,
-               liblo-dev
-Standards-Version: 3.9.2
-Homepage: http://muse-sequencer.org
+Build-Depends:
+ cmake,
+ debhelper (>= 7.4.10~),
+ dssi-dev,
+ libasound2-dev,
+ libdssialsacompat-dev [!linux-any],
+ libfluidsynth-dev,
+ libjack-dev,
+ liblo-dev,
+ libqt4-dev,
+ libsamplerate0-dev,
+ libsndfile1-dev,
+ uuid-dev
+Standards-Version: 3.9.3
+Homepage: http://www.muse-sequencer.org/
 
 Package: muse-devel
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, python
-Recommends: jackd
+Depends: ${shlibs:Depends},
+ python,
+ ${misc:Depends}
+Suggests: jackd
 Conflicts: muse
-Description: Qt4-based midi/audio sequencer
+Description: Qt4-based audio/MIDI sequencer
  MusE is a MIDI/audio sequencer with recording and editing capabilities.
  Some Highlights:
- . 
-  - standard midifile (smf) import-/export 
-  - organizes songs in tracks and parts which you can arrange with 
-    the part editor 
-  - midi editors: pianoroll, drum, list, controller 
-  - score editor with high quality postscript printer output 
-  - realtime: editing while playing 
-  - unlimited number of open editors 
-  - unlimited undo/redo 
-  - realtime and step-recording 
-  - multiple midi devices 
-  - unlimited number of tracks 
-  - Sync to external devices:
-    MTC/MMC, Midi Clock, Master/Slave (currently only partially implemented) 
-  - audio tracks, LADSPA host for master effects 
-  - multithreaded 
-  - uses raw midi devices (ALSA & serial ports..., OSS was dropped) 
-  - XML project file 
-  - project file contains complete app state (session data) 
-  - Application spanning Cut/Paste Drag/Drop 
- Developer version of muse
+ .
+  * Standard midifile (smf) import-/export.
+  * Organizes songs in tracks and parts which you can arrange with
+    the part editor.
+  * MIDI editors: pianoroll, drum, list, controller.
+  * Score editor with high quality postscript printer output.
+  * Realtime: editing while playing.
+  * Unlimited number of open editors.
+  * Unlimited undo/redo.
+  * Realtime and step-recording.
+  * Multiple MIDI devices.
+  * Unlimited number of tracks.
+  * Sync to external devices: MTC/MMC, Midi Clock, Master/Slave.
+  * Audio tracks, LADSPA host for master effects.
+  * Multithreaded.
+  * Uses raw MIDI devices.
+  * XML project file.
+  * Project file contains complete app state (session data).
+  * Application spanning Cut/Paste Drag/Drop.
 

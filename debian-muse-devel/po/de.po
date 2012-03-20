@@ -1,0 +1,71 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: muse 0.8.1a-1\n"
+"Report-Msgid-Bugs-To: muse@packages.debian.org\n"
+"POT-Creation-Date: 2008-10-07 18:27+0200\n"
+"PO-Revision-Date: 2006-07-03 21:37+0200\n"
+"Last-Translator: Daniel Kobras <kobras@debian.org>\n"
+"Language-Team: German <debian-l10n-german@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid "Do you want MusE to run with superuser rights?"
+msgstr "Soll MusE mit Administratorrechten laufen?"
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"For good timing, MusE needs to set the real time clock (/dev/rtc) to a "
+"higher clock rate, and raise its scheduling priority. Usually, only the root "
+"user is allowed to do so. MusE can be installed \"suid-root\", so that it "
+"always runs with superuser capabilities. This is convenient, but programming "
+"errors in MusE likely present a hazard for system security in this setup."
+msgstr ""
+"Für bestes Timing muss MusE einige Systemeinstellungen verändern, die für "
+"gewöhnlich nur dem Administrator zugänglich sind. MusE kann \"suid-root\" "
+"installiert werden und läuft dann stets mit Administratorrechten. Das ist "
+"bequem, aber Programmierfehler in MusE gefährden dann die Sicherheit des "
+"gesamten Systems."
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"File /usr/share/doc/muse/README.Debian summarizes several more secure "
+"methods to meet the timing requirements, but they all require manual "
+"configuration."
+msgstr ""
+"Es gibt auch mehrere sichere Methoden, um die Timinganforderungen zu "
+"erfüllen. Sie sind in der Datei /usr/share/doc/muse/README.Debian "
+"zusammengefasst, müssen jedoch alle noch von Hand konfiguriert werden."
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"If you intend to use MusE for timing-sensitive recordings, and security is "
+"of no concern on this computer, opt for the suid-root installation by giving "
+"an affirmative answer to this question. Deny if unsure."
+msgstr ""
+"Wenn Sie MusE für Timing-kritische Aufnahmen einsetzen wollen und "
+"Sicherheitsbedenken auf diesem Computer keine Rolle spielen, dann sollten "
+"Sie die suid-root-Installation wählen, indem Sie diese Frage bejahen. Nein "
+"ist die sichere Antwort."

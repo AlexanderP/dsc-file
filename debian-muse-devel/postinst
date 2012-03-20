@@ -1,0 +1,37 @@
+#!/bin/sh
+
+set -e
+
+. /usr/share/debconf/confmodule
+
+case "$1" in
+    configure)
+        # Set muse setuid root?
+        db_get muse/muse-setuid || RET="false"
+        if [ "$RET" = "true" ]; then
+	    dpkg-statoverride --add --update root root 4755 /usr/bin/muse2 \
+	    	2> /dev/null || :
+	else
+	    dpkg-statoverride --remove /usr/bin/muse2 2> /dev/null || :
+	    chmod u-s /usr/bin/muse2
+        fi
+
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+
+exit 0
+
+
+

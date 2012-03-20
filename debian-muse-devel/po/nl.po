@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: muse\n"
+"Report-Msgid-Bugs-To: muse@packages.debian.org\n"
+"POT-Creation-Date: 2008-10-07 18:27+0200\n"
+"PO-Revision-Date: 2007-03-13 22:13+0100\n"
+"Last-Translator: Bart Cornelis <cobaco@skolelinux.no>\n"
+"Language-Team: debian-l10n-dutch <debian-l10n-dutch@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Dutch\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid "Do you want MusE to run with superuser rights?"
+msgstr "Wilt u MusE uitvoeren met beheerdersrechten?"
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"For good timing, MusE needs to set the real time clock (/dev/rtc) to a "
+"higher clock rate, and raise its scheduling priority. Usually, only the root "
+"user is allowed to do so. MusE can be installed \"suid-root\", so that it "
+"always runs with superuser capabilities. This is convenient, but programming "
+"errors in MusE likely present a hazard for system security in this setup."
+msgstr ""
+"Voor goede timing dient MusE de 'real time'-klok (/etc/rtc) in te stellen op "
+"een hogere kloksnelheid, en zijn planningsprioriteit te verhogen. Meestal "
+"mag enkel de gebruiker root dit. MusE kan geïnstalleerd worden met de SUID-"
+"bit ingesteld voor root, waardoor het altijd met beheerdersrechten draait. "
+"Dit is handig maar betekent wel dat eventuele programmeerfouten in MusE een "
+"veiligheidsrisico voor uw systeembeveiliging opleveren. "
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"File /usr/share/doc/muse/README.Debian summarizes several more secure "
+"methods to meet the timing requirements, but they all require manual "
+"configuration."
+msgstr ""
+"In /usr/share/doc/myse/README.Debian worden verschillende veiliger methodes "
+"samengevat om de timing-vereisten te bereiken. Deze vereisen echter allemaal "
+"handmatige aanpassingen."
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"If you intend to use MusE for timing-sensitive recordings, and security is "
+"of no concern on this computer, opt for the suid-root installation by giving "
+"an affirmative answer to this question. Deny if unsure."
+msgstr ""
+"Als u van plan bent om MusE te gebruiken voor timing-gevoelige opnames, en "
+"als beveiliging op deze computer niet van belang is, kies dan voor de "
+"installatie met de suid-bit ingesteld. Als u twijfelt sla dit dan af."

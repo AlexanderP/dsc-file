@@ -1,0 +1,18 @@
+Template: muse/muse-setuid
+Type: boolean
+Default: false
+_Description: Do you want MusE to run with superuser rights?
+ For good timing, MusE needs to set the real time clock (/dev/rtc) to a
+ higher clock rate, and raise its scheduling priority. Usually, only the
+ root user is allowed to do so. MusE can be installed "suid-root", so
+ that it always runs with superuser capabilities. This is convenient, but
+ programming errors in MusE likely present a hazard for system security in
+ this setup.
+ .
+ File /usr/share/doc/muse/README.Debian summarizes several more secure
+ methods to meet the timing requirements, but they all require manual
+ configuration.
+ .
+ If you intend to use MusE for timing-sensitive recordings, and security
+ is of no concern on this computer, opt for the suid-root installation
+ by giving an affirmative answer to this question. Deny if unsure.

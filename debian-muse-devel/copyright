@@ -1,46 +1,78 @@
-This work was packaged for Debian by:
+Format: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=174
+Upstream-Name: MusE
+Upstream-Contact: Werner Schweer <ws@seh.de>
+Source: http://sourceforge.net/projects/lmuse/files/muse-2.0/
+Copyright: 1999-2010 Werner Schweer <ws@seh.de> and others
+License: GPL-2+
 
-    Alexander Pozdnyakov <almipo@mail.ru> on Mon, 10 Jan 2011 21:28:32 +0300
-
-This package based by:
-    
-     Copyright (C) 2002-2010 Daniel Kobras <kobras@debian.org>
-     Copyright (C) 2002 Olaf Stetzer <stetzer@debian.org>
-
-It was downloaded from:
-
-    http://prdownloads.sourceforge.net/lmuse/
-
-Upstream Author(s):
-
-    Werner Schweer <ws@seh.de>
-
+Files: *
 Copyright:
+ 2011 Florian Jung <flo93@users.sourceforge.net>
+ 1999-2010 Werner Schweer <ws@seh.de>
+ 2009 Mathias Gyllengahm <lunar_shuttle@users.sf.net>
+ 2004, 2005, 2011 Robert Jonsson <rj@spamatica.se>
+ 2004-2006 Nil Geisweiller
+ 2003-2004 Mathias Lundgren
+ 2002 Paul Davis
+ 2002 Josef Lindman Hörnlund <jotsif@linux.nu>
+ 2002 Robert Ham
+ 2001 Tommi Ilmonen <Tommi.Ilmonen@hut.fi>
+ 2001 Peter Hanappe
+ 1999, 2000 David A. Bartold
+ 1999-2000 Josh Green
+ 1997 Josef Wilgen
+ 1996-1999 Takashi Iwai
+ 1994-2000 Andreas Voss and Per Sigmond
+License: GPL-2+
 
-    Copyright (C) 2003-2011 Werner Schweer
+Files: plugins/freeverb/*
+Copyright: No copyright owners
+License: 
+ public-domain
+Comment: Originally written by Jezar
 
-License:
+Files: muse/ladspa.h
+Copyright: 2000-2002 Richard W.E. Furse, Paul
+License: LGPL-2.1+
 
-    This library is free software; you can redistribute it and/or
-    modify it under the terms of the GNU Library General Public
-    License as published by the Free Software Foundation; either
-    version 2 of the License, or (at your option) any later version.
+Files: debian/*
+Copyright:
+ 2011 Alessio Treglia <alessio@debian.org>
+ 2003-2009 Daniel Kobras <kobras@debian.org>
+ 2002 Olaf Stetzer <stetzer@debian.org>
+ 2009-2012 2009 Alexander Pozdnyakov <almipo@mail.ru>
+License: GPL-2+
 
-    This library is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-    Library General Public License for more details.
+License: GPL-2+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+Comment: You should have received a copy of the GNU General Public License
+ along with this package; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-2'.
 
-    You should have received a copy of the GNU Library General Public
-    License along with this library; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston MA  02110-1301 USA
-
-On Debian systems, the complete text of the GNU General Public License
-version 2 can be found in `/usr/share/common-licenses/GPL-2'.
-
-The Debian packaging is:
-
-    Copyright (C) 2011 Alexander Pozdnyakov <almipo@mail.ru>
-
-and is licensed under the GPL version 2,
-see "/usr/share/common-licenses/GPL-2".
+License: LGPL-2.1+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+Comment: You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.

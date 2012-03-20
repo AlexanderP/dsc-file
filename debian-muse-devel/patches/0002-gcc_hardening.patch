@@ -1,0 +1,18 @@
+Description: Prevent FTBFS with -Werror=format-security.
+Author: Alessio Treglia <alessio@debian.org>
+Forwarded: no
+---
+ synti/deicsonze/deicsonze.cpp |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- muse.orig/synti/deicsonze/deicsonze.cpp
++++ muse/synti/deicsonze/deicsonze.cpp
+@@ -1318,7 +1318,7 @@ void DeicsOnze::loadSutulaPresets()
+     file = fopen (presetPath.toLatin1().constData(), "rt");
+     if (file == NULL) {
+ 	printf("can't open ");
+-	printf(presetPath.toLatin1().constData());
++	printf("%s", presetPath.toLatin1().constData());
+ 	printf("\n");
+     }
+     else

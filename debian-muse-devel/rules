@@ -1,9 +1,4 @@
 #!/usr/bin/make -f
-
-ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
-	CFLAGS += -O0
-endif
-
 ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zlzma -z9
 endif
@@ -15,14 +10,14 @@ endif
 %:
 	dh $@ --parallel
 
+override_dh_auto_configure:
+	dh_auto_configure -- -DCMAKE_BUILD_TYPE=release
+
 override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
 
 override_dh_install:
 	dh_install
-	find $(CURDIR)/debian -depth -type f -name COPYING -exec rm -rf \{\} \;
-
-override_dh_strip:
-ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
-	dh_strip
-endif
+	find $(CURDIR)/debian/muse-devel/ -name "COPYING*" -delete
+	find $(CURDIR)/debian/muse-devel/ -name "LICENSE" -delete
+	find $(CURDIR)/debian/muse-devel/ -name "ChangeLog*" -delete
