@@ -1,0 +1,97 @@
+Notes on the MusE package in Debian
+===================================
+
+In order to achieve accurate timing, MusE makes use of system resources that
+are usually restricted to the system superuser (root). In particular, it
+requires access to the high-precision real-time clock, and some of its threads
+need to be scheduled in real-time. There's a way to always grant MusE with
+superuser privileges, no matter which user starts the program: the so-called
+"suid-root" installation. You can opt for this method when you initially
+install the MusE package, or later on running the following command (as root):
+
+	dpkg-reconfigure muse
+
+However, while this method is convenient to set up, it is generally considered
+a bad idea to run large applications like MusE with superuser privileges. 
+Programming errors might allow a local user to obtain elevated privileges
+and undermine system security. While care has been taken in MusE to drop
+as many privileges as early as possible to decrease the likelihood and impact
+of potential security holes, errors happen nevertheless. Therefore, the
+suid-root installation is only recommended on systems where local security is
+of no concern, eg. a home computer, ideally not even connected to the internet.
+
+The following sections describe methods that are considered more secure, but
+require significantly more effort to set up.
+
+1. Realtime scheduling
+----------------------
+
+There are several ways to obtain real-time scheduling priority without
+root privileges.
+
+a) libpam-modules
+
+Configuration of the standard PAM module pam_limits can be extended to allow
+certain users to schedule applications with real-time priority. This method
+requires a small patch to the sources of pam_limits, though. It has been
+applied to the Debian version of libpam-modules from 0.79-4 onwards.
+
+For example, to grant all users in group audio to run muse with its
+default real-time priorities of 80 for audio threads, and 81 for the
+watchdog thread, add the lines
+
+	@audio	hard	rtprio	81
+	@audio	soft	rtprio	81
+
+to /etc/security/limits.conf. You can also choose higher limits up to 99, or
+use command line option -P to alter muse's priority settings. Note that -P <n>
+assign priority <n> to the audio threads, while the watchdog thread always
+tries to obtain priority <n+1>. Finally, make sure that pam_limits.so is a
+required session module in your PAM configuration (which it is by default on
+Debian systems).
+
+b) set_rlimits
+
+This is a small utility that is installed suid-root and can be configured to
+grant real-time priority to individual applications. At the time of writing,
+set_rlimits has not been packaged for Debian, yet. The sources are available
+from http://www.physics.adelaide.edu.au/~jwoithe/, though.
+
+c) realtime-lsm
+
+This third-party module for the Linux kernel is also available as a Debian
+package and used to be the preferred method of granting real-time scheduling to
+ordinary users. However, the kernel developers have rejected realtime-lsm in
+favour of the methods described below. Therefore, it will likely be
+discontinued in the near future.
+
+2. Access to real-time clock
+----------------------------
+
+The real-time clock is accessed through /dev/rtc. In a standard Debian
+installation, this device node is owned by group 'audio', so any user in
+this group should also be able to run MusE in principle. But for high-precision
+timing, MusE not only needs to access the clock, it also needs to increase
+clock frequency. By default, an ordinary user may only increase it up to
+64 Hz while MusE requires 1024 Hz. The kernel-enforced upper limit can be
+configured, however. There's the one-time method using the command (as root)
+
+	echo 1024 > /proc/sys/dev/rtc/max-user-freq
+
+To make the setting permanent, add
+
+	dev.rtc.max-user-freq=1024
+
+to /etc/sysctl.conf.
+
+In general, MusE tries to grab as many of those resources as possible, and
+fall back to less reliable settings upon error. In other words, it may be
+possible to run MusE without the tweaks described above, but then you're
+likely to face excessive jitter, drop-outs, or similar timing problems. Don't
+use this configuration if you're serious about it.
+
+-- 
+Matthias Koenig (original German version of this document)
+Daniel Kobras (English version)
+
+Last changed: Wed, 25 Oct 2006 16:45:48 +0200

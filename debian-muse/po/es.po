@@ -1,0 +1,90 @@
+# MusE translation to spanish
+# Copyright (C) 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the package.
+#
+# Changes:
+# - Initial translation
+#     Javier Ruano Ruano , 2007
+#
+#
+#  Traductores, si no conoce el formato PO, merece la pena leer la
+#  documentación de gettext, especialmente las secciones dedicadas a este
+#  formato, por ejemplo ejecutando:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+# Equipo de traducción al español, por favor lean antes de traducir
+# los siguientes documentos:
+#
+# - El proyecto de traducción de Debian al español
+#   http://www.debian.org/intl/spanish/
+#   especialmente las notas y normas de traducción en
+#   http://www.debian.org/intl/spanish/notas
+#
+# - La guía de traducción de po's de debconf:
+#   /usr/share/doc/po-debconf/README-trans
+#   o http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+# Si tiene dudas o consultas sobre esta traducción consulte con el último
+# traductor (campo Last-Translator) y ponga en copia a la lista de
+# traducción de Debian al español (<debian-l10n-spanish@lists.debian.org>)
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: MusE\n"
+"Report-Msgid-Bugs-To: muse@packages.debian.org\n"
+"POT-Creation-Date: 2008-10-07 18:27+0200\n"
+"PO-Revision-Date: 2007-01-25 18:00+0100\n"
+"Last-Translator: Javier Ruano Ruano <adrakoa@es.gnu.org>\n"
+"Language-Team: Debian L10n Spanish <debian-l10n-spanish@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid "Do you want MusE to run with superuser rights?"
+msgstr "¿Desea ejecutar MusE con permisos de superusuario?"
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"For good timing, MusE needs to set the real time clock (/dev/rtc) to a "
+"higher clock rate, and raise its scheduling priority. Usually, only the root "
+"user is allowed to do so. MusE can be installed \"suid-root\", so that it "
+"always runs with superuser capabilities. This is convenient, but programming "
+"errors in MusE likely present a hazard for system security in this setup."
+msgstr ""
+"Para una buena temporización, MusE necesita que el reloj de tiempo real (/"
+"dev/rtc) tenga una frecuencia superior, y una prioridad de planificación más "
+"alta. Normalmente, sólo a «root» se le permite hacerlo. MusE se puede "
+"instalar con capacidades de superusuario, así siempre puede ejecutarse con "
+"funciones de superusuario. Esto es aconsejable, pero con esta configuración, "
+"los errores de programación de MusE son un riesgo de seguridad para el "
+"sistema."
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"File /usr/share/doc/muse/README.Debian summarizes several more secure "
+"methods to meet the timing requirements, but they all require manual "
+"configuration."
+msgstr ""
+"El fichero «/usr/share/doc/muse/README.Debian» expone varios métodos más "
+"seguros para cumplir con los requisitos de temporización, aunque necesitan "
+"configuración manual."
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"If you intend to use MusE for timing-sensitive recordings, and security is "
+"of no concern on this computer, opt for the suid-root installation by giving "
+"an affirmative answer to this question. Deny if unsure."
+msgstr ""
+"Si piensa usar MusE para registros sensibles al tiempo, y la seguridad no le "
+"preocupa en este ordenador, seleccione la instalación «suid-root» "
+"respondiendo afirmativamente. Rechace si no está seguro."

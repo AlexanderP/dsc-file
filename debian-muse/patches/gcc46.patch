@@ -1,0 +1,18 @@
+Description: Fix FTBFS with GCC4.6.
+Author: Alessio Treglia <alessio@debian.org>
+Bug-Ubuntu: https://launchpad.net/bugs/770801
+Forwarded: no
+---
+ muse/memory.h |    1 +
+ 1 file changed, 1 insertion(+)
+
+--- muse-1.1.orig/muse/memory.h
++++ muse-1.1/muse/memory.h
+@@ -11,6 +11,7 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <cstddef>
+ #include <map>
+ 
+ // most of the following code is based on examples

@@ -1,0 +1,70 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: muse\n"
+"Report-Msgid-Bugs-To: muse@packages.debian.org\n"
+"POT-Creation-Date: 2008-10-07 18:27+0200\n"
+"PO-Revision-Date: 2006-09-26 21:46+0200\n"
+"Last-Translator: Miroslav Kure <kurem@debian.cz>\n"
+"Language-Team: Czech <debian-l10n-czech@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid "Do you want MusE to run with superuser rights?"
+msgstr "Chcete spouštět MusE se superuživatelskými právy?"
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"For good timing, MusE needs to set the real time clock (/dev/rtc) to a "
+"higher clock rate, and raise its scheduling priority. Usually, only the root "
+"user is allowed to do so. MusE can be installed \"suid-root\", so that it "
+"always runs with superuser capabilities. This is convenient, but programming "
+"errors in MusE likely present a hazard for system security in this setup."
+msgstr ""
+"Pro lepší časování potřebuje MusE nastavit hodiny reálného času (/dev/rtc) "
+"na vyšší frekvenci a zvýšit jejich prioritu v plánovači. To může obvykle "
+"provést pouze uživatel root. MusE může být instalováno jako suid-root, takže "
+"bude vždy spouštěno s uživatelskými právy. To je sice pohodlné, ale protože "
+"MusE zajisté obsahuje programátorské chyby, může to z pohledu bezpečnosti "
+"systému představovat značné riziko."
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"File /usr/share/doc/muse/README.Debian summarizes several more secure "
+"methods to meet the timing requirements, but they all require manual "
+"configuration."
+msgstr ""
+"Soubor /usr/share/doc/muse/README.Debian popisuje několik bezpečnějších "
+"způsobů, jak dostát požadavkům na časování, ale ty vyžadují ruční nastavení."
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"If you intend to use MusE for timing-sensitive recordings, and security is "
+"of no concern on this computer, opt for the suid-root installation by giving "
+"an affirmative answer to this question. Deny if unsure."
+msgstr ""
+"Plánujete-li použít MusE pro nahrávky, u kterých je přesné časování nezbytné "
+"a bezpečnost tohoto počítače vás nezajímá, odpovězte kladně, což povolí "
+"instalaci jako suid-root. Pokud si nejste jisti, otázku zamítněte."

@@ -1,0 +1,1952 @@
+Description: Use UTF8 encoding for Spanish localization file.
+Author: Daniel Kobras <kobras@debian.org>
+
+--- muse-1.1.orig/share/locale/muse_es.ts
++++ muse-1.1/share/locale/muse_es.ts
+@@ -3,15 +3,15 @@
+     <name></name>
+     <message>
+         <source>Click this button to enable recording</source>
+-        <translation type="unfinished">Pulsa este bot� para habilitar la grabaci�</translation>
++        <translation type="unfinished">Pulsa este botï¿½ para habilitar la grabaciï¿½</translation>
+     </message>
+     <message>
+         <source>sets amount of quantization:
+ 0   - no quantization
+ 100 - full quantization</source>
+-        <translation type="unfinished">selecciona la cantidad de cuantizaci�:
++        <translation type="unfinished">selecciona la cantidad de cuantizaciï¿½:
+ 0   - sin cuantizar
+-100 - cuantizaci� completa</translation>
++100 - cuantizaciï¿½ completa</translation>
+     </message>
+     <message>
+         <source>select Pointer Tool:
+@@ -30,45 +30,45 @@ con la herramienta de puntero puedes:
+     <name>@default</name>
+     <message>
+         <source>Click this button to open a &lt;em&gt;new song&lt;/em&gt;.&lt;br&gt;You can also select the &lt;b&gt;Open command&lt;/b&gt; from the File menu.</source>
+-        <translation type="unfinished">Pulsa este bot� para abrir una &lt;em&gt;nueva canci�&lt;/em&gt;Puedes usar tambi� el comando &lt;b&gt;Abrir&lt;/b&gt; del me de archivo</translation>
++        <translation type="unfinished">Pulsa este botï¿½ para abrir una &lt;em&gt;nueva canciï¿½&lt;/em&gt;Puedes usar tambiï¿½ el comando &lt;b&gt;Abrir&lt;/b&gt; del me de archivo</translation>
+     </message>
+     <message>
+         <source>Click this button to save the song you are editing.  You will be prompted for a file name.
+ You can also select the Save command from the File menu.</source>
+-        <translation type="unfinished">Pulsa este bot� para guardar la canci� que est� editando. Se te preguntar�por un nombre de archivo.
+-Puedes seleccionar tambi� el comando Guardar del men de Archivo</translation>
++        <translation type="unfinished">Pulsa este botï¿½ para guardar la canciï¿½ que estï¿½ editando. Se te preguntarï¿½por un nombre de archivo.
++Puedes seleccionar tambiï¿½ el comando Guardar del men de Archivo</translation>
+     </message>
+     <message>
+         <source>Create New Song</source>
+-        <translation type="unfinished">Crea una nueva Canci�</translation>
++        <translation type="unfinished">Crea una nueva Canciï¿½</translation>
+     </message>
+     <message>
+         <source>Click this button to stop playback</source>
+-        <translation type="unfinished">Pulsa este bot� para parar la reproducci�</translation>
++        <translation type="unfinished">Pulsa este botï¿½ para parar la reproducciï¿½</translation>
+     </message>
+     <message>
+         <source>Click this button to start playback</source>
+-        <translation type="unfinished">Pulsa este bot� para iniciar la reproducci�</translation>
++        <translation type="unfinished">Pulsa este botï¿½ para iniciar la reproducciï¿½</translation>
+     </message>
+     <message>
+         <source>Click this button to rewind to start position</source>
+-        <translation type="unfinished">Pulsa este bot� para regresar al principio</translation>
++        <translation type="unfinished">Pulsa este botï¿½ para regresar al principio</translation>
+     </message>
+     <message>
+         <source>Click this button to rewind</source>
+-        <translation type="unfinished">Pulsa este bot� para ir hacia atr�</translation>
++        <translation type="unfinished">Pulsa este botï¿½ para ir hacia atrï¿½</translation>
+     </message>
+     <message>
+         <source>Click this button to forward current play position</source>
+-        <translation type="unfinished">Pulsa este bot� para adelantar la posici� de reproducci�</translation>
++        <translation type="unfinished">Pulsa este botï¿½ para adelantar la posiciï¿½ de reproducciï¿½</translation>
+     </message>
+     <message>
+         <source>don&apos;t quantize notes above this tick limit</source>
+-        <translation type="unfinished">no cuantices notas por encima de este l�ite de tick</translation>
++        <translation type="unfinished">no cuantices notas por encima de este lï¿½ite de tick</translation>
+     </message>
+     <message>
+         <source>quantize also note len as default</source>
+-        <translation type="unfinished">cuantiza tambi� la longitud de la nota al valor por defecto</translation>
++        <translation type="unfinished">cuantiza tambiï¿½ la longitud de la nota al valor por defecto</translation>
+     </message>
+     <message>
+         <source>loop between left mark and right mark</source>
+@@ -76,23 +76,23 @@ Puedes seleccionar tambi� el comando G
+     </message>
+     <message>
+         <source>record starts at left mark</source>
+-        <translation type="unfinished">la grabaci� comienza en la marca izquierda</translation>
++        <translation type="unfinished">la grabaciï¿½ comienza en la marca izquierda</translation>
+     </message>
+     <message>
+         <source>record stops at right mark</source>
+-        <translation type="unfinished">la grabaci� termina en la merca derecha</translation>
++        <translation type="unfinished">la grabaciï¿½ termina en la merca derecha</translation>
+     </message>
+     <message>
+         <source>rewind to start position</source>
+-        <translation type="unfinished">retrocede a la posici� de inicio</translation>
++        <translation type="unfinished">retrocede a la posiciï¿½ de inicio</translation>
+     </message>
+     <message>
+         <source>rewind current position</source>
+-        <translation type="unfinished">retrasa la posici� actual</translation>
++        <translation type="unfinished">retrasa la posiciï¿½ actual</translation>
+     </message>
+     <message>
+         <source>move current position</source>
+-        <translation type="unfinished">mueve la posici� actual</translation>
++        <translation type="unfinished">mueve la posiciï¿½ actual</translation>
+     </message>
+     <message>
+         <source>stop sequencer</source>
+@@ -104,7 +104,7 @@ Puedes seleccionar tambi� el comando G
+     </message>
+     <message>
+         <source>to record press record and then play</source>
+-        <translation type="unfinished">para grabar pulsa grabar y despu� reproducir</translation>
++        <translation type="unfinished">para grabar pulsa grabar y despuï¿½ reproducir</translation>
+     </message>
+     <message>
+         <source>send note off to all midi channels</source>
+@@ -115,8 +115,8 @@ Puedes seleccionar tambi� el comando G
+ with the pencil tool you can:
+   create new parts
+   modify length of parts</source>
+-        <translation type="unfinished">selecciona la Herramienta de L�iz:
+-con la herramienta de l�iz puedes:
++        <translation type="unfinished">selecciona la Herramienta de Lï¿½iz:
++con la herramienta de lï¿½iz puedes:
+   crear nuevas partes
+   modificar la longitud de las partes</translation>
+     </message>
+@@ -147,8 +147,8 @@ con la herramienta de pegado puedes unir
+     <message>
+         <source>select Quantize Tool:
+ insert display quantize event</source>
+-        <translation type="unfinished">selecciona la Herramianta de Cuantizaci�:
+-inserta un evento de cuantizaci� de visualizaci�</translation>
++        <translation type="unfinished">selecciona la Herramianta de Cuantizaciï¿½:
++inserta un evento de cuantizaciï¿½ de visualizaciï¿½</translation>
+     </message>
+     <message>
+         <source>select Drawing Tool</source>
+@@ -166,7 +166,7 @@ haz click en una parte para silenciar/de
+     </message>
+     <message>
+         <source>pencil</source>
+-        <translation type="unfinished">l�iz</translation>
++        <translation type="unfinished">lï¿½iz</translation>
+     </message>
+     <message>
+         <source>rubber</source>
+@@ -286,14 +286,14 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>waveedit background color</source>
+-        <translation type="obsolete">color de fondo de edici� de onda</translation>
++        <translation type="obsolete">color de fondo de ediciï¿½ de onda</translation>
+     </message>
+ </context>
+ <context>
+     <name>AppearanceDialogBase</name>
+     <message>
+         <source>MusE: Appearance settings</source>
+-        <translation type="unfinished">MusE: Configuraci� de apariencia</translation>
++        <translation type="unfinished">MusE: Configuraciï¿½ de apariencia</translation>
+     </message>
+     <message>
+         <source>Apply</source>
+@@ -341,7 +341,7 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>poly pressure</source>
+-        <translation type="unfinished">presi� polif�ica</translation>
++        <translation type="unfinished">presiï¿½ polifï¿½ica</translation>
+     </message>
+     <message>
+         <source>controller</source>
+@@ -401,7 +401,7 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>dynamic colors for track activity in arranger</source>
+-        <translation type="obsolete">colores din�icos para actividad en el arreglador</translation>
++        <translation type="obsolete">colores dinï¿½icos para actividad en el arreglador</translation>
+     </message>
+     <message>
+         <source>Style/Fonts</source>
+@@ -453,7 +453,7 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>Size</source>
+-        <translation type="unfinished">Tama�</translation>
++        <translation type="unfinished">Tamaï¿½</translation>
+     </message>
+     <message>
+         <source>Font 1</source>
+@@ -544,7 +544,7 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>TrackInfo</source>
+-        <translation>Informaci� de pista</translation>
++        <translation>Informaciï¿½ de pista</translation>
+     </message>
+     <message>
+         <source>Track</source>
+@@ -556,7 +556,7 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>midi song type</source>
+-        <translation type="unfinished">tipo de canci� midi</translation>
++        <translation type="unfinished">tipo de canciï¿½ midi</translation>
+     </message>
+     <message>
+         <source>Pitch</source>
+@@ -592,7 +592,7 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>Bar</source>
+-        <translation type="unfinished">comp�</translation>
++        <translation type="unfinished">compï¿½</translation>
+     </message>
+     <message>
+         <source>GM</source>
+@@ -663,7 +663,7 @@ Published under the GNU Public License</
+     <name>AudioConfBase</name>
+     <message>
+         <source>MusE: Audio Configuration</source>
+-        <translation type="obsolete">MusE: Configuraci� de Audio</translation>
++        <translation type="obsolete">MusE: Configuraciï¿½ de Audio</translation>
+     </message>
+     <message>
+         <source>&amp;Apply</source>
+@@ -679,7 +679,7 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>Audio Parameters</source>
+-        <translation type="obsolete">Par�etros de Audio</translation>
++        <translation type="obsolete">Parï¿½etros de Audio</translation>
+     </message>
+     <message>
+         <source>32</source>
+@@ -715,7 +715,7 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>Frame Size:</source>
+-        <translation type="obsolete">Tama� de ventana:</translation>
++        <translation type="obsolete">Tamaï¿½ de ventana:</translation>
+     </message>
+     <message>
+         <source>Delay:</source>
+@@ -786,7 +786,7 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>record downmix</source>
+-        <translation type="obsolete">downmix de grabaci�</translation>
++        <translation type="obsolete">downmix de grabaciï¿½</translation>
+     </message>
+     <message>
+         <source>off</source>
+@@ -798,11 +798,11 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>&amp;Config</source>
+-        <translation type="obsolete">&amp;Configuraci�</translation>
++        <translation type="obsolete">&amp;Configuraciï¿½</translation>
+     </message>
+     <message>
+         <source>Add Input Strip</source>
+-        <translation type="obsolete">A�dir canal de entrada</translation>
++        <translation type="obsolete">Aï¿½dir canal de entrada</translation>
+     </message>
+     <message>
+         <source>S</source>
+@@ -921,7 +921,7 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>record downmix</source>
+-        <translation type="unfinished">downmix de grabaci�</translation>
++        <translation type="unfinished">downmix de grabaciï¿½</translation>
+     </message>
+     <message>
+         <source>solo mode (monitor)</source>
+@@ -1018,7 +1018,7 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>Pos:</source>
+-        <translation type="unfinished">Posici�:</translation>
++        <translation type="unfinished">Posiciï¿½:</translation>
+     </message>
+     <message>
+         <source>Len:</source>
+@@ -1182,7 +1182,7 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>Step Record</source>
+-        <translation type="unfinished">Parar Grabaci�</translation>
++        <translation type="unfinished">Parar Grabaciï¿½</translation>
+     </message>
+     <message>
+         <source>Midi Input</source>
+@@ -1190,7 +1190,7 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>Add Controller View</source>
+-        <translation type="unfinished">A�dir Controlador</translation>
++        <translation type="unfinished">Aï¿½dir Controlador</translation>
+     </message>
+     <message>
+         <source>M</source>
+@@ -1246,11 +1246,11 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>Load Drummap</source>
+-        <translation type="unfinished">Cargar mapa de percusi�</translation>
++        <translation type="unfinished">Cargar mapa de percusiï¿½</translation>
+     </message>
+     <message>
+         <source>Store Drummap</source>
+-        <translation type="unfinished">Guardar mapa de percusi�</translation>
++        <translation type="unfinished">Guardar mapa de percusiï¿½</translation>
+     </message>
+     <message>
+         <source>ctrl</source>
+@@ -1258,15 +1258,15 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>drummaps</source>
+-        <translation type="unfinished">mapas de percusi�</translation>
++        <translation type="unfinished">mapas de percusiï¿½</translation>
+     </message>
+     <message>
+         <source>Muse: Load Drum Map</source>
+-        <translation type="unfinished">MusE: Cargar mapa de percusi�</translation>
++        <translation type="unfinished">MusE: Cargar mapa de percusiï¿½</translation>
+     </message>
+     <message>
+         <source>MusE: Store Drum Map</source>
+-        <translation type="unfinished">MusE: Guardar mapa de percusi�</translation>
++        <translation type="unfinished">MusE: Guardar mapa de percusiï¿½</translation>
+     </message>
+     <message>
+         <source>Set fixed length</source>
+@@ -1285,11 +1285,11 @@ Published under the GNU Public License</
+     <name>EditCAfterDialog</name>
+     <message>
+         <source>Time Position</source>
+-        <translation type="unfinished">Posici� de tiempo</translation>
++        <translation type="unfinished">Posiciï¿½ de tiempo</translation>
+     </message>
+     <message>
+         <source>Pressure</source>
+-        <translation type="unfinished">Presi�</translation>
++        <translation type="unfinished">Presiï¿½</translation>
+     </message>
+     <message>
+         <source>MusE: Enter Channel Aftertouch</source>
+@@ -1300,7 +1300,7 @@ Published under the GNU Public License</
+     <name>EditCtrl14Dialog</name>
+     <message>
+         <source>Time Position</source>
+-        <translation type="obsolete">Posici� de tiempo</translation>
++        <translation type="obsolete">Posiciï¿½ de tiempo</translation>
+     </message>
+     <message>
+         <source>Controller-H</source>
+@@ -1323,7 +1323,7 @@ Published under the GNU Public License</
+     <name>EditCtrl7Dialog</name>
+     <message>
+         <source>Time Position</source>
+-        <translation type="obsolete">Posici� de tiempo</translation>
++        <translation type="obsolete">Posiciï¿½ de tiempo</translation>
+     </message>
+     <message>
+         <source>Controller</source>
+@@ -1350,7 +1350,7 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>Time Position:</source>
+-        <translation type="unfinished">Posici� de tiempo:</translation>
++        <translation type="unfinished">Posiciï¿½ de tiempo:</translation>
+     </message>
+     <message>
+         <source>Value:</source>
+@@ -1377,7 +1377,7 @@ Published under the GNU Public License</
+     </message>
+     <message>
+         <source>Time Position</source>
+-        <translation type="unfinished">Posici� de tiempo</translation>
++        <translation type="unfinished">Posiciï¿½ de tiempo</translation>
+     </message>
+     <message>
+         <source>Available Controller:</source>
+@@ -1701,7 +1701,7 @@ handled like normal controllers.</source
+     <name>EditMetaDialog</name>
+     <message>
+         <source>Time Position</source>
+-        <translation type="unfinished">Posici� de tiempo</translation>
++        <translation type="unfinished">Posiciï¿½ de tiempo</translation>
+     </message>
+     <message>
+         <source>Meta Type</source>
+@@ -1736,7 +1736,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Time Position:</source>
+-        <translation type="unfinished">Posici� de tiempo</translation>
++        <translation type="unfinished">Posiciï¿½ de tiempo</translation>
+     </message>
+     <message>
+         <source>Meta Type:</source>
+@@ -1767,7 +1767,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Time Position:</source>
+-        <translation type="unfinished">Posici� de tiempo</translation>
++        <translation type="unfinished">Posiciï¿½ de tiempo</translation>
+     </message>
+     <message>
+         <source>Pitch:</source>
+@@ -1786,7 +1786,7 @@ handled like normal controllers.</source
+     <name>EditPAfterDialog</name>
+     <message>
+         <source>Time Position</source>
+-        <translation type="unfinished">Posici� de tiempo</translation>
++        <translation type="unfinished">Posiciï¿½ de tiempo</translation>
+     </message>
+     <message>
+         <source>Pitch</source>
+@@ -1794,18 +1794,18 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Pressure</source>
+-        <translation type="unfinished">Presi�</translation>
++        <translation type="unfinished">Presiï¿½</translation>
+     </message>
+     <message>
+         <source>MusE: Enter Poly Aftertouch</source>
+-        <translation type="unfinished">Muse: Escribe el aftertouch polif�ico</translation>
++        <translation type="unfinished">Muse: Escribe el aftertouch polifï¿½ico</translation>
+     </message>
+ </context>
+ <context>
+     <name>EditPitchDialog</name>
+     <message>
+         <source>Time Position</source>
+-        <translation type="obsolete">Posici� de tiempo</translation>
++        <translation type="obsolete">Posiciï¿½ de tiempo</translation>
+     </message>
+     <message>
+         <source>Pitch</source>
+@@ -1824,7 +1824,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>TimePosition:</source>
+-        <translation type="unfinished">Posici� de tiempo:</translation>
++        <translation type="unfinished">Posiciï¿½ de tiempo:</translation>
+     </message>
+     <message>
+         <source>Comment:</source>
+@@ -1918,7 +1918,7 @@ Songdata</source>
+     <name>FontSel</name>
+     <message>
+         <source>Size:</source>
+-        <translation type="unfinished">Tama�:</translation>
++        <translation type="unfinished">Tamaï¿½:</translation>
+     </message>
+ </context>
+ <context>
+@@ -1992,11 +1992,11 @@ Songdata</source>
+     </message>
+     <message>
+         <source>min. Meter Value</source>
+-        <translation type="unfinished">valor m�imo del vumeter</translation>
++        <translation type="unfinished">valor mï¿½imo del vumeter</translation>
+     </message>
+     <message>
+         <source>min.Slider Val</source>
+-        <translation type="unfinished">valor m�imo del desplazador</translation>
++        <translation type="unfinished">valor mï¿½imo del desplazador</translation>
+     </message>
+     <message>
+         <source>Midi</source>
+@@ -2025,7 +2025,7 @@ Songdata</source>
+     <message>
+         <source>Displayed Resolution
+ (Ticks/Quarternote)</source>
+-        <translation type="unfinished">Resoluci� mostrada
++        <translation type="unfinished">Resoluciï¿½ mostrada
+ (ticks/negra)</translation>
+     </message>
+     <message>
+@@ -2067,7 +2067,7 @@ Songdata</source>
+     <message>
+         <source>RTC Resolution
+ (Ticks/Sec)</source>
+-        <translation type="unfinished">Resoluci� del reloj
++        <translation type="unfinished">Resoluciï¿½ del reloj
+ (Ticks/segundo)</translation>
+     </message>
+     <message>
+@@ -2198,7 +2198,7 @@ Songdata</source>
+     </message>
+     <message>
+         <source>Room Size</source>
+-        <translation type="obsolete">Tama� estancia</translation>
++        <translation type="obsolete">Tamaï¿½ estancia</translation>
+     </message>
+     <message>
+         <source>Damping</source>
+@@ -2234,11 +2234,11 @@ Songdata</source>
+     </message>
+     <message>
+         <source>Triangle</source>
+-        <translation type="obsolete">Tri�gulo</translation>
++        <translation type="obsolete">Triï¿½gulo</translation>
+     </message>
+     <message>
+         <source>Reverb</source>
+-        <translation type="obsolete">Reverberaci�</translation>
++        <translation type="obsolete">Reverberaciï¿½</translation>
+     </message>
+     <message>
+         <source>Chorus</source>
+@@ -2277,11 +2277,11 @@ Songdata</source>
+     </message>
+     <message>
+         <source>new signature</source>
+-        <translation type="unfinished">nuevo comp�</translation>
++        <translation type="unfinished">nuevo compï¿½</translation>
+     </message>
+     <message>
+         <source>Meter</source>
+-        <translation type="unfinished">Metr�omo</translation>
++        <translation type="unfinished">Metrï¿½omo</translation>
+     </message>
+     <message>
+         <source>Time</source>
+@@ -2305,7 +2305,7 @@ Songdata</source>
+     </message>
+     <message>
+         <source>Timesig</source>
+-        <translation type="unfinished">comp�</translation>
++        <translation type="unfinished">compï¿½</translation>
+     </message>
+ </context>
+ <context>
+@@ -2392,7 +2392,7 @@ Songdata</source>
+     </message>
+     <message>
+         <source>insert Poly Aftertouch</source>
+-        <translation type="unfinished">insertar AfterTouch Polif�ico</translation>
++        <translation type="unfinished">insertar AfterTouch Polifï¿½ico</translation>
+     </message>
+     <message>
+         <source>Tick</source>
+@@ -2400,7 +2400,7 @@ Songdata</source>
+     </message>
+     <message>
+         <source>Bar</source>
+-        <translation type="unfinished">Comp�</translation>
++        <translation type="unfinished">Compï¿½</translation>
+     </message>
+     <message>
+         <source>Typ</source>
+@@ -2435,7 +2435,7 @@ Songdata</source>
+     <name>MITTransposeBase</name>
+     <message>
+         <source>MusE: Midi Input Plugin: Transpose</source>
+-        <translation type="unfinished">MusE: Plugin de entrada MIDI : Transposici�</translation>
++        <translation type="unfinished">MusE: Plugin de entrada MIDI : Transposiciï¿½</translation>
+     </message>
+     <message>
+         <source>On</source>
+@@ -2575,11 +2575,11 @@ Songdata</source>
+     </message>
+     <message>
+         <source>add marker</source>
+-        <translation type="unfinished">a�dir marcador</translation>
++        <translation type="unfinished">aï¿½dir marcador</translation>
+     </message>
+     <message>
+         <source>Add Marker</source>
+-        <translation type="unfinished">A�dir marcador</translation>
++        <translation type="unfinished">Aï¿½dir marcador</translation>
+     </message>
+     <message>
+         <source>delete marker</source>
+@@ -2610,23 +2610,23 @@ Songdata</source>
+     </message>
+     <message>
+         <source>time at cursor position</source>
+-        <translation type="unfinished">tiempo en la posici� del cursor</translation>
++        <translation type="unfinished">tiempo en la posiciï¿½ del cursor</translation>
+     </message>
+     <message>
+         <source>tempo at cursor position</source>
+-        <translation type="unfinished">tempo en la posici� del cursor</translation>
++        <translation type="unfinished">tempo en la posiciï¿½ del cursor</translation>
+     </message>
+     <message>
+         <source>CurPos </source>
+-        <translation type="unfinished">Posici� del cursor </translation>
++        <translation type="unfinished">Posiciï¿½ del cursor </translation>
+     </message>
+     <message>
+         <source>tempo at current position</source>
+-        <translation type="unfinished">tempo en la posici� actual</translation>
++        <translation type="unfinished">tempo en la posiciï¿½ actual</translation>
+     </message>
+     <message>
+         <source>time signature at current position</source>
+-        <translation type="unfinished">comp� en la posici� actual</translation>
++        <translation type="unfinished">compï¿½ en la posiciï¿½ actual</translation>
+     </message>
+     <message>
+         <source>Master</source>
+@@ -2669,11 +2669,11 @@ Songdata</source>
+     <name>MetronomeConfigBase</name>
+     <message>
+         <source>MusE: Metronome Config</source>
+-        <translation type="unfinished">MusE: Configuraci� del metr�omo</translation>
++        <translation type="unfinished">MusE: Configuraciï¿½ del metrï¿½omo</translation>
+     </message>
+     <message>
+         <source>Metronome</source>
+-        <translation type="unfinished">Metr�omo</translation>
++        <translation type="unfinished">Metrï¿½omo</translation>
+     </message>
+     <message>
+         <source>Audio Beep</source>
+@@ -2689,11 +2689,11 @@ Songdata</source>
+     </message>
+     <message>
+         <source>Measure Note</source>
+-        <translation type="unfinished">Nota de comp�</translation>
++        <translation type="unfinished">Nota de compï¿½</translation>
+     </message>
+     <message>
+         <source>Measure Velocity</source>
+-        <translation type="unfinished">Velocidad de comp�</translation>
++        <translation type="unfinished">Velocidad de compï¿½</translation>
+     </message>
+     <message>
+         <source>Beat Velocity</source>
+@@ -2709,7 +2709,7 @@ Songdata</source>
+     </message>
+     <message>
+         <source>Precount</source>
+-        <translation type="unfinished">Cuenta atr�</translation>
++        <translation type="unfinished">Cuenta atrï¿½</translation>
+     </message>
+     <message>
+         <source>enable</source>
+@@ -2729,11 +2729,11 @@ Songdata</source>
+     </message>
+     <message>
+         <source>Signature</source>
+-        <translation type="unfinished">comp�</translation>
++        <translation type="unfinished">compï¿½</translation>
+     </message>
+     <message>
+         <source>Prerecord</source>
+-        <translation type="unfinished">pre-grabaci�</translation>
++        <translation type="unfinished">pre-grabaciï¿½</translation>
+     </message>
+     <message>
+         <source>Preroll</source>
+@@ -2806,11 +2806,11 @@ Songdata</source>
+     </message>
+     <message>
+         <source>Min Val</source>
+-        <translation type="unfinished">Valor m�imo</translation>
++        <translation type="unfinished">Valor mï¿½imo</translation>
+     </message>
+     <message>
+         <source>Max Val</source>
+-        <translation type="unfinished">Valor m�imo</translation>
++        <translation type="unfinished">Valor mï¿½imo</translation>
+     </message>
+     <message>
+         <source>list of defined controllers</source>
+@@ -2830,11 +2830,11 @@ Songdata</source>
+     </message>
+     <message>
+         <source>Max Value</source>
+-        <translation type="unfinished">Valor m�imo</translation>
++        <translation type="unfinished">Valor mï¿½imo</translation>
+     </message>
+     <message>
+         <source>Min Value</source>
+-        <translation type="unfinished">Valor m�imo</translation>
++        <translation type="unfinished">Valor mï¿½imo</translation>
+     </message>
+     <message>
+         <source>Control7</source>
+@@ -2875,7 +2875,7 @@ Songdata</source>
+     <message>
+         <source>pressing the New button you create a new entry
+ in the MusE list of defined controllers</source>
+-        <translation type="unfinished">pulsando el bot� se crear�una nueva
++        <translation type="unfinished">pulsando el botï¿½ se crearï¿½una nueva
+ clase de controladores en la lista de MusE.</translation>
+     </message>
+     <message>
+@@ -2949,7 +2949,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Division</source>
+-        <translation type="obsolete">Divisi�</translation>
++        <translation type="obsolete">Divisiï¿½</translation>
+     </message>
+     <message>
+         <source>Copyright</source>
+@@ -2972,7 +2972,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Record Filter</source>
+-        <translation type="unfinished">Filtro de grabaci�</translation>
++        <translation type="unfinished">Filtro de grabaciï¿½</translation>
+     </message>
+     <message>
+         <source>Note On</source>
+@@ -2980,7 +2980,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Poly Pressure</source>
+-        <translation type="unfinished">Presi� polif�ica</translation>
++        <translation type="unfinished">Presiï¿½ polifï¿½ica</translation>
+     </message>
+     <message>
+         <source>Controller</source>
+@@ -3114,7 +3114,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Poly Pressure</source>
+-        <translation type="unfinished">Presi� poif�ica</translation>
++        <translation type="unfinished">Presiï¿½ poifï¿½ica</translation>
+     </message>
+     <message>
+         <source>Control Change</source>
+@@ -3126,7 +3126,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Pitch Bend</source>
+-        <translation type="unfinished">Rueda de modulaci�</translation>
++        <translation type="unfinished">Rueda de modulaciï¿½</translation>
+     </message>
+     <message>
+         <source>NRPN</source>
+@@ -3190,7 +3190,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Plus</source>
+-        <translation type="unfinished">M�</translation>
++        <translation type="unfinished">Mï¿½</translation>
+     </message>
+     <message>
+         <source>Minus</source>
+@@ -3218,7 +3218,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Dyn</source>
+-        <translation type="unfinished">Din�ico</translation>
++        <translation type="unfinished">Dinï¿½ico</translation>
+     </message>
+     <message>
+         <source>Random</source>
+@@ -3226,7 +3226,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Modules</source>
+-        <translation type="unfinished">M�ulos</translation>
++        <translation type="unfinished">Mï¿½ulos</translation>
+     </message>
+     <message>
+         <source>1</source>
+@@ -3246,23 +3246,23 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>enable modul 1</source>
+-        <translation type="unfinished">habilitar m�ulo 1</translation>
++        <translation type="unfinished">habilitar mï¿½ulo 1</translation>
+     </message>
+     <message>
+         <source>enable modul 2</source>
+-        <translation type="unfinished">habilitar m�ulo 2</translation>
++        <translation type="unfinished">habilitar mï¿½ulo 2</translation>
+     </message>
+     <message>
+         <source>enable modul 3</source>
+-        <translation type="unfinished">habilitar m�ulo 3</translation>
++        <translation type="unfinished">habilitar mï¿½ulo 3</translation>
+     </message>
+     <message>
+         <source>enable modul 4</source>
+-        <translation type="unfinished">habilitar m�ulo 4</translation>
++        <translation type="unfinished">habilitar mï¿½ulo 4</translation>
+     </message>
+     <message>
+         <source>Preset</source>
+-        <translation type="unfinished">Preselecci�</translation>
++        <translation type="unfinished">Preselecciï¿½</translation>
+     </message>
+     <message>
+         <source>Name:</source>
+@@ -3274,7 +3274,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Function</source>
+-        <translation type="unfinished">Funci�</translation>
++        <translation type="unfinished">Funciï¿½</translation>
+     </message>
+     <message>
+         <source>&amp;New</source>
+@@ -3282,7 +3282,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>create new preset</source>
+-        <translation type="unfinished">crea nueva preselecci�</translation>
++        <translation type="unfinished">crea nueva preselecciï¿½</translation>
+     </message>
+     <message>
+         <source>&amp;Delete</source>
+@@ -3290,7 +3290,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>delete preset</source>
+-        <translation type="unfinished">borra la preselecci�</translation>
++        <translation type="unfinished">borra la preselecciï¿½</translation>
+     </message>
+     <message>
+         <source>&amp;Dismiss</source>
+@@ -3324,7 +3324,7 @@ handled like normal controllers.</source
+     <name>MidiRawDeviceDialogBase</name>
+     <message>
+         <source>MusE: raw midi device configuration</source>
+-        <translation type="obsolete">NusE: Condifuraci� de dispositivo MIDI directo</translation>
++        <translation type="obsolete">NusE: Condifuraciï¿½ de dispositivo MIDI directo</translation>
+     </message>
+     <message>
+         <source>Name</source>
+@@ -3364,7 +3364,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Serial Port</source>
+-        <translation type="obsolete">Puerto s�ie</translation>
++        <translation type="obsolete">Puerto sï¿½ie</translation>
+     </message>
+     <message>
+         <source>Pipe</source>
+@@ -3372,7 +3372,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Device Path</source>
+-        <translation type="obsolete">Direcci� del dispositivo</translation>
++        <translation type="obsolete">Direcciï¿½ del dispositivo</translation>
+     </message>
+     <message>
+         <source>9600</source>
+@@ -3502,7 +3502,7 @@ handled like normal controllers.</source
+     <name>MidiSyncConfigBase</name>
+     <message>
+         <source>MusE: Midi Sync</source>
+-        <translation type="unfinished">MusE: Sincronizaci� MIDI</translation>
++        <translation type="unfinished">MusE: Sincronizaciï¿½ MIDI</translation>
+     </message>
+     <message>
+         <source>Apply</source>
+@@ -3586,7 +3586,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Sync Source</source>
+-        <translation type="unfinished">Fuente de Sincronizaci�</translation>
++        <translation type="unfinished">Fuente de Sincronizaciï¿½</translation>
+     </message>
+     <message>
+         <source>accept MTC</source>
+@@ -3606,7 +3606,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Midi Time Code (MTC)</source>
+-        <translation type="unfinished">C�igo de Tiempo Midi (MTC)</translation>
++        <translation type="unfinished">Cï¿½igo de Tiempo Midi (MTC)</translation>
+     </message>
+     <message>
+         <source>Midi Clock</source>
+@@ -3614,11 +3614,11 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Midi Machine Control (MMC)</source>
+-        <translation type="unfinished">Control de m�uina MIDI (MMC)</translation>
++        <translation type="unfinished">Control de mï¿½uina MIDI (MMC)</translation>
+     </message>
+     <message>
+         <source>Sync Mode</source>
+-        <translation type="unfinished">Modo de sincronizaci�</translation>
++        <translation type="unfinished">Modo de sincronizaciï¿½</translation>
+     </message>
+     <message>
+         <source>Master</source>
+@@ -3649,7 +3649,7 @@ handled like normal controllers.</source
+     <name>MidiTrackInfoBase</name>
+     <message>
+         <source>MusE: TrackInfo</source>
+-        <translation type="unfinished">MusE: Informaci� de pista</translation>
++        <translation type="unfinished">MusE: Informaciï¿½ de pista</translation>
+     </message>
+     <message>
+         <source>output channel</source>
+@@ -3657,11 +3657,11 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>all midi events are send to this output channel</source>
+-        <translation type="unfinished">todos los eventos MIDI se envian a �te canal de salida</translation>
++        <translation type="unfinished">todos los eventos MIDI se envian a ï¿½te canal de salida</translation>
+     </message>
+     <message>
+         <source>Track Info</source>
+-        <translation type="unfinished">Informaci� de Pista</translation>
++        <translation type="unfinished">Informaciï¿½ de Pista</translation>
+     </message>
+     <message>
+         <source>%</source>
+@@ -3681,7 +3681,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>change stereo position</source>
+-        <translation type="unfinished">cambiar posici� estereof�ica</translation>
++        <translation type="unfinished">cambiar posiciï¿½ estereofï¿½ica</translation>
+     </message>
+     <message>
+         <source>OCh.</source>
+@@ -3701,7 +3701,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Transp.</source>
+-        <translation type="unfinished">Transposici�</translation>
++        <translation type="unfinished">Transposiciï¿½</translation>
+     </message>
+     <message>
+         <source>Volume</source>
+@@ -3709,7 +3709,7 @@ handled like normal controllers.</source
+     </message>
+     <message>
+         <source>Channel Info</source>
+-        <translation type="unfinished">Informaci� de Canal</translation>
++        <translation type="unfinished">Informaciï¿½ de Canal</translation>
+     </message>
+     <message>
+         <source>Pan</source>
+@@ -3765,7 +3765,7 @@ recording:
+    1-3 5<byte value="x9"/>     record from channel 1 2 3 and 5</source>
+         <translation type="unfinished">Los eventos de todos los canales configurados
+ se graban en esta pista.
+-Puedes especificar m� de un canal para grabar:
++Puedes especificar mï¿½ de un canal para grabar:
+    1 2 3<byte value="x9"/>Graba desde los canales 1, 2 y 3
+    1-3<byte value="x9"/><byte value="x9"/>Lo mismo
+    1-3 5<byte value="x9"/>Graba desde los canales 1, 2, 3 y 5</translation>
+@@ -3843,7 +3843,7 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>Poly Pressure</source>
+-        <translation type="unfinished">Presi� polif�ica</translation>
++        <translation type="unfinished">Presiï¿½ polifï¿½ica</translation>
+     </message>
+     <message>
+         <source>Control Change</source>
+@@ -3855,7 +3855,7 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>Pitch Bend</source>
+-        <translation type="unfinished">Rueda de modulaci�</translation>
++        <translation type="unfinished">Rueda de modulaciï¿½</translation>
+     </message>
+     <message>
+         <source>NRPN</source>
+@@ -3867,7 +3867,7 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>Plus</source>
+-        <translation type="unfinished">M�</translation>
++        <translation type="unfinished">Mï¿½</translation>
+     </message>
+     <message>
+         <source>Minus</source>
+@@ -3915,7 +3915,7 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>Position</source>
+-        <translation type="unfinished">Posici�</translation>
++        <translation type="unfinished">Posiciï¿½</translation>
+     </message>
+     <message>
+         <source>Filter</source>
+@@ -3959,7 +3959,7 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>Preset</source>
+-        <translation type="unfinished">Preselecci�</translation>
++        <translation type="unfinished">Preselecciï¿½</translation>
+     </message>
+     <message>
+         <source>Name:</source>
+@@ -3987,7 +3987,7 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>Function</source>
+-        <translation type="unfinished">Funci�</translation>
++        <translation type="unfinished">Funciï¿½</translation>
+     </message>
+     <message>
+         <source>Select</source>
+@@ -4040,7 +4040,7 @@ Puedes especificar m� de un canal para
+     <name>MixdownFileDialogBase</name>
+     <message>
+         <source>MusE: Set Mixdown Wavefile</source>
+-        <translation type="unfinished">MusE: Selecciona el archivo de Masterizaci�</translation>
++        <translation type="unfinished">MusE: Selecciona el archivo de Masterizaciï¿½</translation>
+     </message>
+     <message>
+         <source>&amp;OK</source>
+@@ -4060,7 +4060,7 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>Stereo</source>
+-        <translation type="unfinished">Est�eo</translation>
++        <translation type="unfinished">Estï¿½eo</translation>
+     </message>
+     <message>
+         <source>Mono</source>
+@@ -4138,7 +4138,7 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>Config &amp;Printer</source>
+-        <translation type="obsolete">Configurar &amp;Impresi�</translation>
++        <translation type="obsolete">Configurar &amp;Impresiï¿½</translation>
+     </message>
+     <message>
+         <source>Import Midifile</source>
+@@ -4178,7 +4178,7 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>Add Track</source>
+-        <translation type="unfinished">A�dir Pista</translation>
++        <translation type="unfinished">Aï¿½dir Pista</translation>
+     </message>
+     <message>
+         <source>Select &amp;All</source>
+@@ -4190,7 +4190,7 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>Invert &amp;Selection</source>
+-        <translation type="unfinished">Invertir &amp;Selecci�</translation>
++        <translation type="unfinished">Invertir &amp;Selecciï¿½</translation>
+     </message>
+     <message>
+         <source>&amp;Inside Loop</source>
+@@ -4210,7 +4210,7 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>Drums</source>
+-        <translation type="unfinished">Percusi�</translation>
++        <translation type="unfinished">Percusiï¿½</translation>
+     </message>
+     <message>
+         <source>List</source>
+@@ -4218,7 +4218,7 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>Graphic</source>
+-        <translation type="unfinished">Gr�ico</translation>
++        <translation type="unfinished">Grï¿½ico</translation>
+     </message>
+     <message>
+         <source>Mastertrack</source>
+@@ -4226,7 +4226,7 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>Midi &amp;Transform</source>
+-        <translation type="unfinished">&amp;Transformaci� MIDI</translation>
++        <translation type="unfinished">&amp;Transformaciï¿½ MIDI</translation>
+     </message>
+     <message>
+         <source>Modify Gate Time</source>
+@@ -4262,19 +4262,19 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>Copy Measure</source>
+-        <translation type="unfinished">Copiar comp�</translation>
++        <translation type="unfinished">Copiar compï¿½</translation>
+     </message>
+     <message>
+         <source>Erase Measure</source>
+-        <translation type="unfinished">Vaciar comp�</translation>
++        <translation type="unfinished">Vaciar compï¿½</translation>
+     </message>
+     <message>
+         <source>Delete Measure</source>
+-        <translation type="unfinished">Borrar comp�</translation>
++        <translation type="unfinished">Borrar compï¿½</translation>
+     </message>
+     <message>
+         <source>Create Measure</source>
+-        <translation type="unfinished">Crear comp�</translation>
++        <translation type="unfinished">Crear compï¿½</translation>
+     </message>
+     <message>
+         <source>Mix Track</source>
+@@ -4294,11 +4294,11 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>Global Insert</source>
+-        <translation type="unfinished">Inserci� Global</translation>
++        <translation type="unfinished">Inserciï¿½ Global</translation>
+     </message>
+     <message>
+         <source>Global Split</source>
+-        <translation type="unfinished">Partici� Global</translation>
++        <translation type="unfinished">Particiï¿½ Global</translation>
+     </message>
+     <message>
+         <source>Copy Range</source>
+@@ -4322,19 +4322,19 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>dont follow Song</source>
+-        <translation type="unfinished">no sigas la canci�</translation>
++        <translation type="unfinished">no sigas la canciï¿½</translation>
+     </message>
+     <message>
+         <source>follow page</source>
+-        <translation type="unfinished">sigue la p�ina</translation>
++        <translation type="unfinished">sigue la pï¿½ina</translation>
+     </message>
+     <message>
+         <source>follow continuous</source>
+-        <translation type="unfinished">sigue cont�uamente</translation>
++        <translation type="unfinished">sigue contï¿½uamente</translation>
+     </message>
+     <message>
+         <source>&amp;Config</source>
+-        <translation type="obsolete">&amp;Configuraci�</translation>
++        <translation type="obsolete">&amp;Configuraciï¿½</translation>
+     </message>
+     <message>
+         <source>Global Settings</source>
+@@ -4342,19 +4342,19 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>follow song</source>
+-        <translation type="unfinished">seguir canci�</translation>
++        <translation type="unfinished">seguir canciï¿½</translation>
+     </message>
+     <message>
+         <source>Metronome</source>
+-        <translation type="unfinished">Metr�omo</translation>
++        <translation type="unfinished">Metrï¿½omo</translation>
+     </message>
+     <message>
+         <source>Midi Sync</source>
+-        <translation type="unfinished">Sincronizaci� MIDI</translation>
++        <translation type="unfinished">Sincronizaciï¿½ MIDI</translation>
+     </message>
+     <message>
+         <source>Midi File Config</source>
+-        <translation type="obsolete">Configuraci� de archivos MIDI</translation>
++        <translation type="obsolete">Configuraciï¿½ de archivos MIDI</translation>
+     </message>
+     <message>
+         <source>Appearance settings</source>
+@@ -4374,11 +4374,11 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>Save Configuration</source>
+-        <translation type="obsolete">Guardar configuraci�</translation>
++        <translation type="obsolete">Guardar configuraciï¿½</translation>
+     </message>
+     <message>
+         <source>Midi Input Transform</source>
+-        <translation type="unfinished">Transformaci� de entrada MIDI</translation>
++        <translation type="unfinished">Transformaciï¿½ de entrada MIDI</translation>
+     </message>
+     <message>
+         <source>Midi Input Filter</source>
+@@ -4462,7 +4462,7 @@ Puedes especificar m� de un canal para
+     </message>
+     <message>
+         <source>What&apos;s &amp;This</source>
+-        <translation type="obsolete">Qu�es esto</translation>
++        <translation type="obsolete">Quï¿½es esto</translation>
+     </message>
+     <message>
+         <source>MusE: load project</source>
+@@ -4548,7 +4548,7 @@ Guardar el proyecto actual?</translation
+     </message>
+     <message>
+         <source>undo last change to song</source>
+-        <translation type="unfinished">deshace el ltimo cambio en la canci�</translation>
++        <translation type="unfinished">deshace el ltimo cambio en la canciï¿½</translation>
+     </message>
+     <message>
+         <source>redo last undo</source>
+@@ -4632,11 +4632,11 @@ Guardar el proyecto actual?</translation
+     </message>
+     <message>
+         <source>panic</source>
+-        <translation type="unfinished">p�ico</translation>
++        <translation type="unfinished">pï¿½ico</translation>
+     </message>
+     <message>
+         <source>Panic</source>
+-        <translation type="unfinished">P�ico</translation>
++        <translation type="unfinished">Pï¿½ico</translation>
+     </message>
+     <message>
+         <source>new</source>
+@@ -4696,7 +4696,7 @@ Guardar el proyecto actual?</translation
+     </message>
+     <message>
+         <source>MusE: Write File failed</source>
+-        <translation type="unfinished">MusE: La grabaci� del archivo ha fallado</translation>
++        <translation type="unfinished">MusE: La grabaciï¿½ del archivo ha fallado</translation>
+     </message>
+     <message>
+         <source>MusE: About</source>
+@@ -4704,7 +4704,7 @@ Guardar el proyecto actual?</translation
+     </message>
+     <message>
+         <source>MusE: Song: </source>
+-        <translation type="unfinished">MusE: Canci�: </translation>
++        <translation type="unfinished">MusE: Canciï¿½: </translation>
+     </message>
+     <message>
+         <source>reading midifile
+@@ -4716,7 +4716,7 @@ Guardar el proyecto actual?</translation
+         <source>
+ failed</source>
+         <translation type="obsolete">
+-fall�</translation>
++fallï¿½</translation>
+     </message>
+     <message>
+         <source>MusE: Copy Range</source>
+@@ -4736,12 +4736,12 @@ fall�</translation>
+     </message>
+     <message>
+         <source>more than one target track selected</source>
+-        <translation type="unfinished">m� de una pista de destino seleccionada</translation>
++        <translation type="unfinished">mï¿½ de una pista de destino seleccionada</translation>
+     </message>
+     <message>
+         <source>wrong target track type,
+ select wave track as target</source>
+-        <translation type="unfinished">tipo de pista err�ea,
++        <translation type="unfinished">tipo de pista errï¿½ea,
+ selecciona una pista de audio como destino</translation>
+     </message>
+     <message>
+@@ -4895,14 +4895,14 @@ failed: </source>
+     </message>
+     <message>
+         <source>Note Info</source>
+-        <translation type="unfinished">Informaci� de nota</translation>
++        <translation type="unfinished">Informaciï¿½ de nota</translation>
+     </message>
+ </context>
+ <context>
+     <name>OrganGuiBase</name>
+     <message>
+         <source>MusE: Organ</source>
+-        <translation type="obsolete">MusE: �gano</translation>
++        <translation type="obsolete">MusE: ï¿½gano</translation>
+     </message>
+     <message>
+         <source>Presets</source>
+@@ -4986,7 +4986,7 @@ failed: </source>
+     </message>
+     <message>
+         <source>Release(ms)</source>
+-        <translation type="obsolete">Relajaci� (ms)</translation>
++        <translation type="obsolete">Relajaciï¿½ (ms)</translation>
+     </message>
+     <message>
+         <source>Envelope Hi</source>
+@@ -4997,7 +4997,7 @@ failed: </source>
+     <name>PageSettings</name>
+     <message>
+         <source>Paper Size</source>
+-        <translation type="obsolete">Tama� del papel</translation>
++        <translation type="obsolete">Tamaï¿½ del papel</translation>
+     </message>
+     <message>
+         <source>user</source>
+@@ -5005,7 +5005,7 @@ failed: </source>
+     </message>
+     <message>
+         <source>Margins</source>
+-        <translation type="obsolete">M�genes</translation>
++        <translation type="obsolete">Mï¿½genes</translation>
+     </message>
+     <message>
+         <source>Header</source>
+@@ -5013,7 +5013,7 @@ failed: </source>
+     </message>
+     <message>
+         <source>Title</source>
+-        <translation type="obsolete">T�ulo</translation>
++        <translation type="obsolete">Tï¿½ulo</translation>
+     </message>
+     <message>
+         <source>Author</source>
+@@ -5025,11 +5025,11 @@ failed: </source>
+     </message>
+     <message>
+         <source>Page No.</source>
+-        <translation type="obsolete">P�ina n</translation>
++        <translation type="obsolete">Pï¿½ina n</translation>
+     </message>
+     <message>
+         <source>Measure No</source>
+-        <translation type="obsolete">Comp� n</translation>
++        <translation type="obsolete">Compï¿½ n</translation>
+     </message>
+     <message>
+         <source>Track Name</source>
+@@ -5041,7 +5041,7 @@ failed: </source>
+     </message>
+     <message>
+         <source>Layout</source>
+-        <translation type="obsolete">Disposici�</translation>
++        <translation type="obsolete">Disposiciï¿½</translation>
+     </message>
+     <message>
+         <source>Scale</source>
+@@ -5049,15 +5049,15 @@ failed: </source>
+     </message>
+     <message>
+         <source>Flags</source>
+-        <translation type="obsolete">Se�lizadores</translation>
++        <translation type="obsolete">Seï¿½lizadores</translation>
+     </message>
+     <message>
+         <source>show page no.</source>
+-        <translation type="obsolete">muestra el nmero de p�ina</translation>
++        <translation type="obsolete">muestra el nmero de pï¿½ina</translation>
+     </message>
+     <message>
+         <source>show measure no.</source>
+-        <translation type="obsolete">muestra el nmero de comp�</translation>
++        <translation type="obsolete">muestra el nmero de compï¿½</translation>
+     </message>
+     <message>
+         <source>show track name</source>
+@@ -5093,7 +5093,7 @@ failed: </source>
+     </message>
+     <message>
+         <source>Bars across the Page</source>
+-        <translation type="obsolete">Barras a trav� de la p�ina</translation>
++        <translation type="obsolete">Barras a travï¿½ de la pï¿½ina</translation>
+     </message>
+ </context>
+ <context>
+@@ -5136,7 +5136,7 @@ failed: </source>
+     </message>
+     <message>
+         <source>drums</source>
+-        <translation type="unfinished">percusi�</translation>
++        <translation type="unfinished">percusiï¿½</translation>
+     </message>
+     <message>
+         <source>Cannot copy/move/clone to different Track-Type</source>
+@@ -5281,7 +5281,7 @@ failed: </source>
+     </message>
+     <message>
+         <source>Iterative Quantize</source>
+-        <translation type="unfinished">Cuantizaci� iterativa</translation>
++        <translation type="unfinished">Cuantizaciï¿½ iterativa</translation>
+     </message>
+     <message>
+         <source>Pianoroll Tools</source>
+@@ -5289,7 +5289,7 @@ failed: </source>
+     </message>
+     <message>
+         <source>Step Record</source>
+-        <translation type="unfinished">Grabaci� por pasos</translation>
++        <translation type="unfinished">Grabaciï¿½ por pasos</translation>
+     </message>
+     <message>
+         <source>Midi Input</source>
+@@ -5301,11 +5301,11 @@ failed: </source>
+     </message>
+     <message>
+         <source>Add Controller View</source>
+-        <translation type="unfinished">A�de vista de controladores</translation>
++        <translation type="unfinished">Aï¿½de vista de controladores</translation>
+     </message>
+     <message>
+         <source>Config Quant...</source>
+-        <translation type="unfinished">Configura cuantizaci�...</translation>
++        <translation type="unfinished">Configura cuantizaciï¿½...</translation>
+     </message>
+     <message>
+         <source>Modify Gate Time</source>
+@@ -5341,19 +5341,19 @@ failed: </source>
+     </message>
+     <message>
+         <source>Copy Measure</source>
+-        <translation type="unfinished">Copiar comp�</translation>
++        <translation type="unfinished">Copiar compï¿½</translation>
+     </message>
+     <message>
+         <source>Erase Measure</source>
+-        <translation type="unfinished">Vaciar comp�</translation>
++        <translation type="unfinished">Vaciar compï¿½</translation>
+     </message>
+     <message>
+         <source>Delete Measure</source>
+-        <translation type="unfinished">Borrar comp�</translation>
++        <translation type="unfinished">Borrar compï¿½</translation>
+     </message>
+     <message>
+         <source>Create Measure</source>
+-        <translation type="unfinished">Crear comp�</translation>
++        <translation type="unfinished">Crear compï¿½</translation>
+     </message>
+     <message>
+         <source>ctrl</source>
+@@ -5470,7 +5470,7 @@ failed: </source>
+     <name>PrinterConfig</name>
+     <message>
+         <source>MusE: Config Printer</source>
+-        <translation type="obsolete">MusE: Configuraci� de impresora</translation>
++        <translation type="obsolete">MusE: Configuraciï¿½ de impresora</translation>
+     </message>
+     <message>
+         <source>Print to file</source>
+@@ -5478,11 +5478,11 @@ failed: </source>
+     </message>
+     <message>
+         <source>Print Command</source>
+-        <translation type="obsolete">Comando de impresi�</translation>
++        <translation type="obsolete">Comando de impresiï¿½</translation>
+     </message>
+     <message>
+         <source>Preview Command</source>
+-        <translation type="obsolete">Comando de previsualizaci�</translation>
++        <translation type="obsolete">Comando de previsualizaciï¿½</translation>
+     </message>
+     <message>
+         <source>OK</source>
+@@ -5505,7 +5505,7 @@ failed: </source>
+     </message>
+     <message>
+         <source>enables recording from the device</source>
+-        <translation type="obsolete">habilita la grabaci� para el dispositivo</translation>
++        <translation type="obsolete">habilita la grabaciï¿½ para el dispositivo</translation>
+     </message>
+     <message>
+         <source>Instrument connected to port</source>
+@@ -5526,7 +5526,7 @@ failed: </source>
+     <message>
+         <source>quantisation
+ currently not used</source>
+-        <translation type="unfinished">cuantizaci�
++        <translation type="unfinished">cuantizaciï¿½
+ actualmente sin usar</translation>
+     </message>
+     <message>
+@@ -5571,7 +5571,7 @@ actualmente sin uso</translation>
+     </message>
+     <message>
+         <source>quantisation</source>
+-        <translation type="unfinished">cuantizaci�</translation>
++        <translation type="unfinished">cuantizaciï¿½</translation>
+     </message>
+     <message>
+         <source>output channel</source>
+@@ -5583,7 +5583,7 @@ actualmente sin uso</translation>
+     </message>
+     <message>
+         <source>Enable Recording</source>
+-        <translation type="unfinished">Habilita grabaci�</translation>
++        <translation type="unfinished">Habilita grabaciï¿½</translation>
+     </message>
+     <message>
+         <source>Track Activity</source>
+@@ -5619,7 +5619,7 @@ actualmente sin uso</translation>
+     </message>
+     <message>
+         <source>Solo/Pre Fader Listening</source>
+-        <translation type="unfinished">Escucha de S�o/pre-fader</translation>
++        <translation type="unfinished">Escucha de Sï¿½o/pre-fader</translation>
+     </message>
+     <message>
+         <source>Name of the midi device associated with this port number</source>
+@@ -5638,7 +5638,7 @@ actualmente sin uso</translation>
+     <name>QWidget</name>
+     <message>
+         <source>Cannot transform non empty track</source>
+-        <translation type="obsolete">No puedo transformar una pista que no est�vacia</translation>
++        <translation type="obsolete">No puedo transformar una pista que no estï¿½vacia</translation>
+     </message>
+     <message>
+         <source>Velocity</source>
+@@ -5650,11 +5650,11 @@ actualmente sin uso</translation>
+     </message>
+     <message>
+         <source>Hex String too long (2048 bytes limit)</source>
+-        <translation type="unfinished">Cadena hexadecimal demasiado larga (l�ite de 2048 bytes)</translation>
++        <translation type="unfinished">Cadena hexadecimal demasiado larga (lï¿½ite de 2048 bytes)</translation>
+     </message>
+     <message>
+         <source>generic midi</source>
+-        <translation type="unfinished">midi gen�ico</translation>
++        <translation type="unfinished">midi genï¿½ico</translation>
+     </message>
+     <message>
+         <source>new</source>
+@@ -5696,7 +5696,7 @@ no existe
+     </message>
+     <message>
+         <source>creating dir failed</source>
+-        <translation type="unfinished">fall�la creaci� de directorio</translation>
++        <translation type="unfinished">fallï¿½la creaciï¿½ de directorio</translation>
+     </message>
+     <message>
+         <source>File
+@@ -5731,7 +5731,7 @@ existe</translation>
+         <source>
+ failed: </source>
+         <translation type="unfinished">
+-fall� </translation>
++fallï¿½ </translation>
+     </message>
+     <message>
+         <source>MusE: Open File</source>
+@@ -5762,7 +5762,7 @@ fall� </translation>
+     <name>QuantConfig</name>
+     <message>
+         <source>Config Quantize</source>
+-        <translation type="unfinished">Configurar Cuantizaci�</translation>
++        <translation type="unfinished">Configurar Cuantizaciï¿½</translation>
+     </message>
+     <message>
+         <source>Strength</source>
+@@ -5778,18 +5778,18 @@ fall� </translation>
+     </message>
+     <message>
+         <source>MusE: Config Quantize</source>
+-        <translation type="unfinished">MusE: Configurar Cuantizaci�</translation>
++        <translation type="unfinished">MusE: Configurar Cuantizaciï¿½</translation>
+     </message>
+ </context>
+ <context>
+     <name>QuantDialog</name>
+     <message>
+         <source>Display Quantize</source>
+-        <translation type="obsolete">Mostrar la cuantizaci�</translation>
++        <translation type="obsolete">Mostrar la cuantizaciï¿½</translation>
+     </message>
+     <message>
+         <source>Position</source>
+-        <translation type="obsolete">Posici�</translation>
++        <translation type="obsolete">Posiciï¿½</translation>
+     </message>
+     <message>
+         <source>Note Quantize</source>
+@@ -5812,7 +5812,7 @@ fall� </translation>
+     <name>RhythmBase</name>
+     <message>
+         <source>MusE: Random Rhythm Generator</source>
+-        <translation type="unfinished">MusE: Generador de r�mo aleatorio</translation>
++        <translation type="unfinished">MusE: Generador de rï¿½mo aleatorio</translation>
+     </message>
+     <message>
+         <source>Instrument Properties</source>
+@@ -5885,7 +5885,7 @@ fall� </translation>
+     <message>
+         <source>pressing the New button you create a new entry
+ in the MusE list of defined controllers</source>
+-        <translation type="unfinished">pulsando el bot� Nuevo creas una entrada nueva
++        <translation type="unfinished">pulsando el botï¿½ Nuevo creas una entrada nueva
+ en la lista de controles definidos por MusE</translation>
+     </message>
+     <message>
+@@ -6038,7 +6038,7 @@ en la lista de controles definidos por M
+     </message>
+     <message>
+         <source>Index</source>
+-        <translation type="unfinished">�dice</translation>
++        <translation type="unfinished">ï¿½dice</translation>
+     </message>
+     <message>
+         <source>&amp;Index...</source>
+@@ -6106,7 +6106,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>Instrument Settings:</source>
+-        <translation type="obsolete">Configuraci� de instrumento:</translation>
++        <translation type="obsolete">Configuraciï¿½ de instrumento:</translation>
+     </message>
+     <message>
+         <source>Instrument</source>
+@@ -6118,7 +6118,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>add</source>
+-        <translation type="obsolete">a�dir</translation>
++        <translation type="obsolete">aï¿½dir</translation>
+     </message>
+     <message>
+         <source>delete</source>
+@@ -6130,7 +6130,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>count/bar</source>
+-        <translation type="obsolete">cuentas/comp�</translation>
++        <translation type="obsolete">cuentas/compï¿½</translation>
+     </message>
+     <message>
+         <source># bars</source>
+@@ -6138,7 +6138,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>Group Settings:</source>
+-        <translation type="obsolete">Configuraci� de grupo:</translation>
++        <translation type="obsolete">Configuraciï¿½ de grupo:</translation>
+     </message>
+     <message>
+         <source>Group</source>
+@@ -6182,7 +6182,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>Clear</source>
+-        <translation type="obsolete">L�pio</translation>
++        <translation type="obsolete">Lï¿½pio</translation>
+     </message>
+     <message>
+         <source>Open...</source>
+@@ -6260,15 +6260,15 @@ Random Rhythm Generator is not enabled y
+     <name>Score</name>
+     <message>
+         <source>&amp;Config</source>
+-        <translation type="obsolete">&amp;Configuraci�</translation>
++        <translation type="obsolete">&amp;Configuraciï¿½</translation>
+     </message>
+     <message>
+         <source>Page Settings</source>
+-        <translation type="obsolete">Configuraci� de p�ina</translation>
++        <translation type="obsolete">Configuraciï¿½ de pï¿½ina</translation>
+     </message>
+     <message>
+         <source>Staff Settings</source>
+-        <translation type="obsolete">Configuraci� de pentagrama</translation>
++        <translation type="obsolete">Configuraciï¿½ de pentagrama</translation>
+     </message>
+     <message>
+         <source>Background Pixmap</source>
+@@ -6280,7 +6280,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>Dynamics</source>
+-        <translation type="obsolete">Din�icos</translation>
++        <translation type="obsolete">Dinï¿½icos</translation>
+     </message>
+     <message>
+         <source>Print</source>
+@@ -6288,7 +6288,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>Preview Print</source>
+-        <translation type="obsolete">Previsualizar la impresi�</translation>
++        <translation type="obsolete">Previsualizar la impresiï¿½</translation>
+     </message>
+     <message>
+         <source>Lyrics</source>
+@@ -6312,7 +6312,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>enter chord symbol</source>
+-        <translation type="obsolete">escribe el s�bolo del acorde</translation>
++        <translation type="obsolete">escribe el sï¿½bolo del acorde</translation>
+     </message>
+     <message>
+         <source>to previous voice</source>
+@@ -6324,7 +6324,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>flip stem direction</source>
+-        <translation type="obsolete">intercambia la direcci� de la armadura</translation>
++        <translation type="obsolete">intercambia la direcciï¿½ de la armadura</translation>
+     </message>
+     <message>
+         <source>move marked notes to previous voice or to upper stave in a split system</source>
+@@ -6336,11 +6336,11 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>flip stem direction of selected notes</source>
+-        <translation type="obsolete">intercambia la direcci� de la armadura de las notas seleccionadas</translation>
++        <translation type="obsolete">intercambia la direcciï¿½ de la armadura de las notas seleccionadas</translation>
+     </message>
+     <message>
+         <source>StaffSettings</source>
+-        <translation type="obsolete">Configuraci� de pentagrama</translation>
++        <translation type="obsolete">Configuraciï¿½ de pentagrama</translation>
+     </message>
+     <message>
+         <source>MusE: config wallpaper</source>
+@@ -6355,7 +6355,7 @@ Random Rhythm Generator is not enabled y
+     <name>ScoreConfig</name>
+     <message>
+         <source>Staff Settings: </source>
+-        <translation type="obsolete">Configuraci� de Pentagrama: </translation>
++        <translation type="obsolete">Configuraciï¿½ de Pentagrama: </translation>
+     </message>
+     <message>
+         <source>Track List</source>
+@@ -6371,11 +6371,11 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>Note Quantize</source>
+-        <translation type="obsolete">Cuantizaci� de nota</translation>
++        <translation type="obsolete">Cuantizaciï¿½ de nota</translation>
+     </message>
+     <message>
+         <source>Rest Quantize</source>
+-        <translation type="obsolete">Restaurar cuantizaci�</translation>
++        <translation type="obsolete">Restaurar cuantizaciï¿½</translation>
+     </message>
+     <message>
+         <source>Mode</source>
+@@ -6387,7 +6387,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>Splitpoint</source>
+-        <translation type="obsolete">punto de separaci�</translation>
++        <translation type="obsolete">punto de separaciï¿½</translation>
+     </message>
+     <message>
+         <source>Ok</source>
+@@ -6414,15 +6414,15 @@ Random Rhythm Generator is not enabled y
+     <name>ScrollScale</name>
+     <message>
+         <source>next page</source>
+-        <translation type="unfinished">p�ina siguiente</translation>
++        <translation type="unfinished">pï¿½ina siguiente</translation>
+     </message>
+     <message>
+         <source>previous page</source>
+-        <translation type="unfinished">p�ina anterior</translation>
++        <translation type="unfinished">pï¿½ina anterior</translation>
+     </message>
+     <message>
+         <source>current page number</source>
+-        <translation type="unfinished">numero de p�ina actual</translation>
++        <translation type="unfinished">numero de pï¿½ina actual</translation>
+     </message>
+ </context>
+ <context>
+@@ -6525,7 +6525,7 @@ Random Rhythm Generator is not enabled y
+     <name>SynthConfigBase</name>
+     <message>
+         <source>MusE: Synth Configuration</source>
+-        <translation type="unfinished">MusE: Configuraci� del Sintetizador virtual</translation>
++        <translation type="unfinished">MusE: Configuraciï¿½ del Sintetizador virtual</translation>
+     </message>
+     <message>
+         <source>Soft Synthesizer</source>
+@@ -6549,7 +6549,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>Add Instance</source>
+-        <translation type="unfinished">A�dir copia</translation>
++        <translation type="unfinished">Aï¿½dir copia</translation>
+     </message>
+     <message>
+         <source>Alsa Port</source>
+@@ -6588,7 +6588,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>Drum</source>
+-        <translation type="unfinished">Percusi�</translation>
++        <translation type="unfinished">Percusiï¿½</translation>
+     </message>
+     <message>
+         <source>Wave</source>
+@@ -6608,15 +6608,15 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>Add Midi Track</source>
+-        <translation type="unfinished">A�dir pista MIDI</translation>
++        <translation type="unfinished">Aï¿½dir pista MIDI</translation>
+     </message>
+     <message>
+         <source>Add Drum Track</source>
+-        <translation type="unfinished">A�dir pista de percusi�</translation>
++        <translation type="unfinished">Aï¿½dir pista de percusiï¿½</translation>
+     </message>
+     <message>
+         <source>Add Wave Track</source>
+-        <translation type="unfinished">A�dir pista de audio</translation>
++        <translation type="unfinished">Aï¿½dir pista de audio</translation>
+     </message>
+     <message>
+         <source>MusE: bad trackname</source>
+@@ -6702,7 +6702,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>Looped+Sel.</source>
+-        <translation type="unfinished">Bucle + Selecci�</translation>
++        <translation type="unfinished">Bucle + Selecciï¿½</translation>
+     </message>
+     <message>
+         <source>Cursor</source>
+@@ -6744,7 +6744,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>Overdub</source>
+-        <translation type="unfinished">A�dir</translation>
++        <translation type="unfinished">Aï¿½dir</translation>
+     </message>
+     <message>
+         <source>Replace</source>
+@@ -6752,7 +6752,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>Rec Mode</source>
+-        <translation type="unfinished">Modo de grabaci�</translation>
++        <translation type="unfinished">Modo de grabaciï¿½</translation>
+     </message>
+     <message>
+         <source>Normal</source>
+@@ -6764,7 +6764,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>Cycle Rec</source>
+-        <translation type="unfinished">Ciclar Grabaci�</translation>
++        <translation type="unfinished">Ciclar Grabaciï¿½</translation>
+     </message>
+     <message>
+         <source>punchin</source>
+@@ -6808,7 +6808,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>quantize during record</source>
+-        <translation type="unfinished">cuantizar durante la grabaci�</translation>
++        <translation type="unfinished">cuantizar durante la grabaciï¿½</translation>
+     </message>
+     <message>
+         <source>Click</source>
+@@ -6816,15 +6816,15 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>metronom click on/off</source>
+-        <translation type="unfinished">Click del metr�omo encendido/apagado</translation>
++        <translation type="unfinished">Click del metrï¿½omo encendido/apagado</translation>
+     </message>
+     <message>
+         <source>Sync</source>
+-        <translation type="unfinished">Sinconizaci�</translation>
++        <translation type="unfinished">Sinconizaciï¿½</translation>
+     </message>
+     <message>
+         <source>external sync on/off</source>
+-        <translation type="unfinished">Sincronizaci� externa encedida/apagada</translation>
++        <translation type="unfinished">Sincronizaciï¿½ externa encedida/apagada</translation>
+     </message>
+     <message>
+         <source>Master</source>
+@@ -6839,7 +6839,7 @@ Random Rhythm Generator is not enabled y
+     <name>TransposeDialogBase</name>
+     <message>
+         <source>MusE: Midi Transpose</source>
+-        <translation type="unfinished">MusE: Transposici� MIDI</translation>
++        <translation type="unfinished">MusE: Transposiciï¿½ MIDI</translation>
+     </message>
+     <message>
+         <source>Value</source>
+@@ -6910,7 +6910,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>Triangle</source>
+-        <translation type="obsolete">Tri�gulo</translation>
++        <translation type="obsolete">Triï¿½gulo</translation>
+     </message>
+     <message>
+         <source>Filter</source>
+@@ -6918,7 +6918,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>EnvMod</source>
+-        <translation type="obsolete">Modulaci� de envolvente</translation>
++        <translation type="obsolete">Modulaciï¿½ de envolvente</translation>
+     </message>
+     <message>
+         <source>Attack</source>
+@@ -6934,7 +6934,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>Release</source>
+-        <translation type="obsolete">Relajaci�</translation>
++        <translation type="obsolete">Relajaciï¿½</translation>
+     </message>
+     <message>
+         <source>Cutoff</source>
+@@ -6986,7 +6986,7 @@ Random Rhythm Generator is not enabled y
+     </message>
+     <message>
+         <source>Detune</source>
+-        <translation type="obsolete">Desafinaci�</translation>
++        <translation type="obsolete">Desafinaciï¿½</translation>
+     </message>
+     <message>
+         <source>PWM</source>
+@@ -7013,13 +7013,13 @@ Random Rhythm Generator is not enabled y
+ Virtual Analog for MusE
+ Released under GPL.
+ Copyright(C) 2002
+-Jotsif Lindman Hörnlund
++Jotsif Lindman HÃ¶rnlund
+ ( jotsif@linux.nu )</source>
+         <translation type="obsolete">VAM 1.0beta2
+ Virtual Analog for MusE
+ Released under GPL.
+ Copyright(C) 2002
+-Jotsif Lindman Hörnlund
++Jotsif Lindman HÃ¶rnlund
+ ( jotsif@linux.nu )</translation>
+     </message>
+ </context>
+@@ -7112,11 +7112,11 @@ Jotsif Lindman Hörnlund
+     <name>WaveTrackInfoBase</name>
+     <message>
+         <source>MusE: TrackInfo</source>
+-        <translation type="unfinished">MusE: Informaci� de pista</translation>
++        <translation type="unfinished">MusE: Informaciï¿½ de pista</translation>
+     </message>
+     <message>
+         <source>Track Info</source>
+-        <translation type="unfinished">Informaci� de pista</translation>
++        <translation type="unfinished">Informaciï¿½ de pista</translation>
+     </message>
+     <message>
+         <source>Track Name</source>
+@@ -7140,7 +7140,7 @@ Jotsif Lindman Hörnlund
+     </message>
+     <message>
+         <source>Stereo</source>
+-        <translation type="unfinished">Est�eo</translation>
++        <translation type="unfinished">Estï¿½eo</translation>
+     </message>
+ </context>
+ </TS>

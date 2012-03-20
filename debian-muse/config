@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+# Debconf library
+. /usr/share/debconf/confmodule
+
+db_input low muse/muse-setuid || true
+db_go

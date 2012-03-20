@@ -1,0 +1,63 @@
+# Copyright (C) 2008-2009 Daniel Kobras <kobras@debian.org>
+# This file is distributed under the same license as the muse package.
+# Hideki Yamane (Debian-JP) <henrich@debian.or.jp>, 2009.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: muse 0.8.1a-6.1\n"
+"Report-Msgid-Bugs-To: muse@packages.debian.org\n"
+"POT-Creation-Date: 2008-10-07 18:27+0200\n"
+"PO-Revision-Date: 2009-01-06 06:26+0900\n"
+"Last-Translator: Hideki Yamane (Debian-JP) <henrich@debian.or.jp>\n"
+"Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid "Do you want MusE to run with superuser rights?"
+msgstr "MusE を管理者権限で動作させますか?"
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"For good timing, MusE needs to set the real time clock (/dev/rtc) to a "
+"higher clock rate, and raise its scheduling priority. Usually, only the root "
+"user is allowed to do so. MusE can be installed \"suid-root\", so that it "
+"always runs with superuser capabilities. This is convenient, but programming "
+"errors in MusE likely present a hazard for system security in this setup."
+msgstr ""
+"タイミングをキッチリ合わせるには、MusE はリアルタイムクロック (/dev/rtc) をよ"
+"り高いクロックレートに設定し、MusE のスケジューリングの優先度を高める必要があ"
+"ります。大抵、root ユーザのみがこのような操作を許されています。MusE は "
+"\"suid-root\" に設定してインストールできるので、常に管理者権限で動作させるこ"
+"とができます。この設定は楽ではありますが、MusE にプログラムエラーがあった場合"
+"はシステムのセキュリティに重大な問題を引き起こします。"
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"File /usr/share/doc/muse/README.Debian summarizes several more secure "
+"methods to meet the timing requirements, but they all require manual "
+"configuration."
+msgstr ""
+"/usr/share/doc/muse/README.Debian ファイルには、タイミングを合わせるためのよ"
+"りセキュアな方法がいくつかまとめられていますが、これらは全て手動での設定が必"
+"要になります。"
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"If you intend to use MusE for timing-sensitive recordings, and security is "
+"of no concern on this computer, opt for the suid-root installation by giving "
+"an affirmative answer to this question. Deny if unsure."
+msgstr ""
+"タイミングが重要なレコーディングに MusE を使いたい場合で、このコンピュータ上"
+"ではセキュリティのことを気にしなくても良いのであれば、この質問に「はい」と答"
+"えて root に suid してインストールしてください。そうでなければ拒否してくださ"
+"い。"

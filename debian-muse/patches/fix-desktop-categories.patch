@@ -1,0 +1,13 @@
+Description: Fix the Categories tag in the desktop file to adjust it to what
+ Ubuntu expects.
+Author: Fabrice Coutadeur <fabricesp@ubuntu.com>
+Index: muse-1.1/packaging/muse.desktop
+===================================================================
+--- muse-1.1.orig/packaging/muse.desktop	2010-10-30 07:46:42.837021119 +0200
++++ muse-1.1/packaging/muse.desktop	2010-10-30 07:46:30.537020831 +0200
+@@ -6,4 +6,4 @@
+ Type=Application
+ Exec=muse
+ Terminal=false
+-Categories=Sequencer;Midi;X-Jack;X-Sequencers;X-MIDI;Audio;
++Categories=AudioVideo;Audio;

@@ -1,0 +1,49 @@
+#! /bin/sh -e
+. /usr/share/debconf/confmodule
+
+case "$1" in
+    configure)
+        # Set muse setuid root?
+        db_get muse/muse-setuid || RET="false"
+        if [ "$RET" = "true" ]; then
+	    dpkg-statoverride --add --update root root 4755 /usr/bin/muse \
+	    	2> /dev/null || :
+	else
+	    dpkg-statoverride --remove /usr/bin/muse 2> /dev/null || :
+	    chmod u-s /usr/bin/muse
+        fi
+
+	# Fixup dir -> symlink transition that dpkg doesn't handle for us.
+	if ! test -L /usr/share/muse/html && test -d /usr/share/muse/html; then
+		if rmdir /usr/share/muse/html; then
+			ln -s ../doc/muse/html /usr/share/muse/html
+		else
+			cat >&2 << EOF
+Warning! Could not replace directory /usr/share/muse/html with appropriate
+symlink to /usr/share/doc/muse/html. (Directory not empty?) Please check and
+remove the offending files.
+EOF
+			# That's a should-never-happen condition, so bailing
+			# out is justified, I think.
+			exit 1
+		fi
+	fi
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+
+exit 0
+
+
+

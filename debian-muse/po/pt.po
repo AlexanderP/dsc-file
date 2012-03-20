@@ -1,0 +1,65 @@
+# Portuguese translation of muse debconf messages.
+# Copyright (C) 2007 Carlos Lisboa
+# This file is distributed under the same license as the muse package.
+# Carlos Lisboa <carloslisboa@gmail.com>, 2007
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: muse\n"
+"Report-Msgid-Bugs-To: muse@packages.debian.org\n"
+"POT-Creation-Date: 2008-10-07 18:27+0200\n"
+"PO-Revision-Date: 2007-02-04 12:30+0000\n"
+"Last-Translator: Carlos Lisboa <carloslisboa@gmail.com>\n"
+"Language-Team: Portuguese <traduz@debianpt.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid "Do you want MusE to run with superuser rights?"
+msgstr "Deseja que MusE corra com privilégios de super-utilizador?"
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"For good timing, MusE needs to set the real time clock (/dev/rtc) to a "
+"higher clock rate, and raise its scheduling priority. Usually, only the root "
+"user is allowed to do so. MusE can be installed \"suid-root\", so that it "
+"always runs with superuser capabilities. This is convenient, but programming "
+"errors in MusE likely present a hazard for system security in this setup."
+msgstr ""
+"Para uma boa sincronização, MusE necessita de colocar o relógio de tempo "
+"real (/dev/rtc) para uma taxa de pulso mais elevada, e aumentar a sua "
+"prioridade. Normalmente apenas o utilizador root possui permissões para o "
+"fazer. MusE pode ser instalado com \"suid-root\", para que corra sempre com "
+"capacidades de super-utilizador. É conveniente que o faça, mas erros de "
+"programação no MusE poderão apresentar um risco de segurança para o sistema "
+"com esta configuração."
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"File /usr/share/doc/muse/README.Debian summarizes several more secure "
+"methods to meet the timing requirements, but they all require manual "
+"configuration."
+msgstr ""
+"O ficheiro /usr/share/doc/muse/README.Debian sumariza diversos métodos mais "
+"seguros para preencher os requisitos de temporização, mas todos necessitam "
+"de uma configuração manual."
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"If you intend to use MusE for timing-sensitive recordings, and security is "
+"of no concern on this computer, opt for the suid-root installation by giving "
+"an affirmative answer to this question. Deny if unsure."
+msgstr ""
+"Se possui o intuito de utilizar MusE para gravações temporizadas, e se a "
+"segurança não for uma preocupação para este computador, opte pela instalação "
+"com suid-root ao dar uma resposta afirmativa a esta questão. Negue se não "
+"tem a certeza."

@@ -1,0 +1,59 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: muse\n"
+"Report-Msgid-Bugs-To: muse@packages.debian.org\n"
+"POT-Creation-Date: 2008-10-07 18:27+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Esko Arajärvi <edu@iki.fi>\n"
+"Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Finnish\n"
+"X-Poedit-Country: FINLAND\n"
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid "Do you want MusE to run with superuser rights?"
+msgstr "Tulisiko MusE ajaa pääkäyttäjäoikeuksilla?"
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"For good timing, MusE needs to set the real time clock (/dev/rtc) to a "
+"higher clock rate, and raise its scheduling priority. Usually, only the root "
+"user is allowed to do so. MusE can be installed \"suid-root\", so that it "
+"always runs with superuser capabilities. This is convenient, but programming "
+"errors in MusE likely present a hazard for system security in this setup."
+msgstr ""
+"Hyvää ajastusta varten MusEn täytyy asettaa järjestelmän kello (/dev/rtc) "
+"käyttämään suurempaa taajuutta ja nostaa sen vuorotusprioriteettia. Yleensä "
+"vain pääkäyttäjä voi tehdä tämän. MusE voidaan asentaa asetuksella ”suid-"
+"root”, jolloin se ajetaan aina pääkäyttäjäoikeuksilla. Tämä on kätevää, "
+"mutta MusEn ohjelmointivirheet voivat vaarantaa järjestelmän tietoturvan."
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"File /usr/share/doc/muse/README.Debian summarizes several more secure "
+"methods to meet the timing requirements, but they all require manual "
+"configuration."
+msgstr ""
+"Tiedostossa /usr/share/doc/muse/README.Debian on esitetty muutamia "
+"turvallisempia keinoja ajastusvaatimusten täyttämiseksi, mutta ne kaikki "
+"vaativat asetusten muokkaamista käsin."
+
+#. Type: boolean
+#. Description
+#: ../templates:1001
+msgid ""
+"If you intend to use MusE for timing-sensitive recordings, and security is "
+"of no concern on this computer, opt for the suid-root installation by giving "
+"an affirmative answer to this question. Deny if unsure."
+msgstr ""
+"Jos MusEa aiotaan käyttää ajastusherkkiin nauhoituksiin, eikä tietoturva ole "
+"tärkeää tällä koneella, käytä suid-root-asennusta valitsemalla tämä "
+"vaihtoehto. Jos olet epävarma, älä valitse tätä."
