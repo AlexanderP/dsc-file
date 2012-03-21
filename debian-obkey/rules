@@ -1,33 +1,5 @@
 #!/usr/bin/make -f
-# -*- makefile -*-
-# Sample debian/rules that uses debhelper.
-# This file was originally written by Joey Hess and Craig Small.
-# As a special exception, when this file is copied by dh-make into a
-# dh-make output file, you may use that output file without restriction.
-# This special exception was added by Craig Small in version 0.37 of dh-make.
-
-# Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
-
-ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-endif
-
-ifeq (,$(NCPUS))
-	NCPUS := $(shell getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
-endif
-
-ifeq ($(NCPUS),-1)
-	NCPUS:=1
-endif
-
-ifeq ($(NCPUS),0)
-	NCPUS:=1
-endif
-
-ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
-	CFLAGS += -O0
-endif
 
 ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zlzma -z9
@@ -37,44 +9,9 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-PYTHON=python2.6
-PACKAGE=obkey
-build: build-stamp
-build-stamp:
-	dh_testdir
-	$(PYTHON) setup.py build
-	touch $@
-clean: do-clean
-do-clean:
-	dh_testdir
-	dh_testroot
-	rm -f build-stamp
-	$(PYTHON) setup.py clean --all
-	dh_clean
-install: build
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
-	$(PYTHON) setup.py install --root=$(CURDIR)/debian/$(PACKAGE) --no-compile --prefix=/usr
-binary-indep: build install
-	dh_testdir -i
-	dh_testroot -i
-	dh_installdocs -i
-	dh_installchangelogs -i
-	dh_installman -i debian/obkey.1
-	dh_install -i debian/obkey.xpm usr/share/pixmaps
-	dh_install -i debian/obkey.desktop usr/share/applications
-	dh_compress -i
-	dh_fixperms -i
-	dh_pycentral -i
-	dh_pysupport -i
-	dh_installdeb -i
-	dh_installdebconf -i
-	dh_gencontrol -i
-	dh_md5sums -i
-	dh_builddeb -i $(BUILDDEBFLAGS)
-binary-arch: build install
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install configure patch unpatch do-clean
+%:
+	dh $@ --with python2
+
+override_dh_builddeb:
+	dh_builddeb $(BUILDDEBFLAGS)
 
