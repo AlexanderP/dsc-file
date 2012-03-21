@@ -14,7 +14,7 @@ Build-Depends:  debhelper (>= 7.0.50~),
 		libotr2-dev, 
 		libtidy-dev,
 		libproxy-dev 
-Standards-Version: 3.9.2
+Standards-Version: 3.9.3
 Homepage: http://psi-dev.googlecode.com/
 
 Package: psi-plus
@@ -48,8 +48,6 @@ Description: Qt-based jabber client (WebKit version)
  .
  Full list of features you can found at:
  http://psi-plus.com/wiki/doku.php/en:features
- .
- This package contents webkit version
 
 Package: psi-plus-common
 Architecture: all
@@ -87,7 +85,6 @@ Description: plugins for Psi+
  Full list of features you can found at:
  http://psi-plus.com/wiki/doku.php/en:features
 
-
 Package: psi-plus-content-download
 Architecture: any
 Breaks: psi-plus-plugins (<< 0.15~svn3047)
@@ -110,12 +107,13 @@ Description: content download plugins for Psi+
 
 Package: psi-plus-resources
 Architecture: all
+Section: metapackages
 Depends: psi-plus-common, ${misc:Depends}
 Recommends: psi-plus-skins, psi-plus-icons, psi-plus-sound
 Conflicts: psi-plus (<< 0.15~svn2289)
 Replaces: psi-plus (<< 0.15~svn2289)
-Description: icons for Psi+
- Psi+ icons from psi+ svn
+Description: resources for Psi+ meta-package
+ Psi+ resources from psi+ svn
 
 Package: psi-plus-skins
 Architecture: all
@@ -153,7 +151,7 @@ Description: sound for Psi+
 
 Package: psi-plus-themes
 Architecture: all
-Depends: psi-plus-webkit, ${misc:Depends}
+Depends: ${misc:Depends}
 Description: themes for Psi+ Webkit
  This package contains themes for Psi+ Webkit.
  .
@@ -169,11 +167,12 @@ Description: themes for Psi+ Webkit
 
 Package: psi-plus-icons
 Architecture: all
+Section: metapackages
 Depends: psi-plus-common, ${misc:Depends}
 Recommends: psi-plus-icons-activities, psi-plus-icons-affiliations, psi-plus-icons-clients, psi-plus-icons-emoticons, psi-plus-icons-moods, psi-plus-icons-roster, psi-plus-icons-system
 Conflicts: psi-plus (<< 0.15~svn2289), psi-plus-activities, psi-plus-affiliations, psi-plus-clients, psi-plus-emoticons, psi-plus-moods, psi-plus-roster, psi-plus-system
 Replaces: psi-plus (<< 0.15~svn2289), psi-plus-activities, psi-plus-affiliations, psi-plus-clients, psi-plus-emoticons, psi-plus-moods, psi-plus-roster, psi-plus-system
-Description: icons for Psi+
+Description: icons for Psi+ meta-package
  Psi+ icons from psi+ svn
 
 Package: psi-plus-icons-activities
