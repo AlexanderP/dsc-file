@@ -1,10 +1,23 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
+#export DH_VERBOSE=1
+
+ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zlzma -z9
+endif
+
+ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zxz -z9
+endif
+
+
 %:
-	dh $@
-	
+	dh $@ --with python2
+
 override_dh_auto_configure:
 	./autogen.sh
 	dh_auto_configure
 
+override_dh_builddeb:
+	dh_builddeb $(BUILDDEBFLAGS)
