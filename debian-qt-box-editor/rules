@@ -1,6 +1,14 @@
 #!/usr/bin/make -f
 export DH_VERBOSE=1
 
+ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zlzma -z9
+endif
+
+ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zxz -z9
+endif
+
 %:
 	dh $@ 
 	
@@ -8,3 +16,6 @@ override_dh_install:
 	cp qt-box-editor-* qt-box-editor
 	dh_install
 	rm qt-box-editor
+
+override_dh_builddeb:
+	dh_builddeb $(BUILDDEBFLAGS)
