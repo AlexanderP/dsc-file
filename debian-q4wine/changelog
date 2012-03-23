@@ -1,5 +1,118 @@
-q4wine (0.119-1) unstable; urgency=low
+q4wine (0.121-2+nmu1) unstable; urgency=low
 
-  * Initial release (Closes: #123456)
+  * Non-maintainer upload.
+  * Backports from oneric
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 15 Aug 2010 19:35:09 +0400
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 18 Jun 2011 13:19:19 +0400
+
+q4wine (0.121-0ppa1~oneiric1) oneiric; urgency=low
+
+  * Update to stable release 0.121.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 13 Jun 2011 22:22:36 +0300
+
+q4wine (0.120-r1-3ppa2~natty1) natty; urgency=low
+
+  * Edited debian/control:
+    - section with dependencies of binary package was updated:
+      + Ubuntu users now need to have wine, wine1.0, wine1.2 or wine1.3
+        (Closes: #614357)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 21 Feb 2011 22:30:33 +0200
+
+q4wine (0.120-r1-3ppa1~natty1) natty; urgency=low
+
+  * Package on Launchpad was sync with package in Debian.
+  * Changelog was cleaned.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 21 Feb 2011 00:19:56 +0200
+
+q4wine (0.120-r1-3ppa0) unstable; urgency=low
+
+  * Updated debian/patches/
+    - added fix for cmake option SKIP_RPATH (it makes program unusable)
+    - updated fix for Debian GNU/kFreeBSD
+  * Edited debian/control:
+    - section with long description was updated
+    - section with dependencies of binary package was updated:
+      + Debian users need to have wine-bin or wine-bin-unstable
+      + Ubuntu users need to have wine1.0 or wine1.2
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 20 Feb 2011 21:35:38 +0200
+
+q4wine (0.120-r1-2) unstable; urgency=low
+
+  * Edited debian/rules to fix libq4wine-core.so destination
+    from /usr/lib64/q4wine/ to /usr/lib/q4wine/ (Closes: #612027)
+  * Added debian/patches/
+    - possible fix for Debian GNU/kFreeBSD
+    - possible fix for Debian GNU/Hurd
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 14 Feb 2011 23:34:32 +0200
+
+q4wine (0.120-r1-1) unstable; urgency=low
+
+  * Update to stable release 0.120-r1.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 09 Jan 2011 00:25:06 +0200
+
+q4wine (0.120-2) unstable; urgency=low
+
+  * Upload to unstable branch.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 21 Nov 2010 02:26:21 +0200
+
+q4wine (0.120-1) experimental; urgency=low
+
+  * Update to stable release 0.120.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 03 Oct 2010 16:42:29 +0300
+
+q4wine (0.119-r1-1) experimental; urgency=low
+
+  * Update to bug fix release 0.119-r1.
+  * Updated file debian/copyright.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Thu, 19 Aug 2010 17:30:37 +0300
+
+q4wine (0.119-1) experimental; urgency=low
+
+  * Update to stable release 0.119.
+  * Fixed file debian/rules.
+    (parallel=<n> from DEB_BUILD_OPTIONS is now using)
+  * Fixed file debian/copyright.
+    (lintian warning `copyright-with-old-dh-make-debian-copyright' is fixed)
+  * Added debian/watch file.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Thu, 12 Aug 2010 00:05:43 +0300
+
+q4wine (0.118-4) unstable; urgency=low
+
+  * Fixed `Depends' and `Build-Depends' in debian/control.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Fri, 28 May 2010 02:58:02 +0400
+
+q4wine (0.118-3) unstable; urgency=low
+
+  * Fixed `Depends' in debian/control.
+    (wine for amd64, hurd-i386, i386, kfreebsd-i386, powerpc and sparc
+    is now available only in experimental branch of Debian)
+  * Fixed `Build-Depends' for hurd-i386 in debian/control.
+    (wine for hurd-i386 is now available in experimental branch of Debian)
+  * Removed xdg-utils dependency from debian/control.
+    (It's unnecessary in Q4Wine since version 0.118)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Wed, 26 May 2010 15:16:23 +0400
+
+q4wine (0.118-2) unstable; urgency=low
+
+  * Added kfreebsd-i386 and kfreebsd-amd64 specific dependencies
+    to debian/control.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Thu, 13 May 2010 22:45:50 +0400
+
+q4wine (0.118-1) unstable; urgency=low
+
+  * Initial release (closes: #550148).
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 25 Apr 2010 02:06:31 +0400

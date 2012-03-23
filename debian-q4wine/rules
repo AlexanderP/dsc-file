@@ -1,92 +1,67 @@
 #!/usr/bin/make -f
-# -*- makefile -*-
-# Sample debian/rules that uses debhelper.
-# This file was originally written by Joey Hess and Craig Small.
-# As a special exception, when this file is copied by dh-make into a
-# dh-make output file, you may use that output file without restriction.
-# This special exception was added by Craig Small in version 0.37 of dh-make.
-
-# Uncomment this to turn on verbose mode.
-#export DH_VERBOSE=1
 
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 endif
 
-ifeq (,$(NCPUS))
-	NCPUS := $(shell getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
+ifeq (,$(NUMJOBS))
+	NUMJOBS = 1
 endif
 
-ifeq ($(NCPUS),-1)
-	NCPUS:=1
-endif
+BUILDDIR = builddir
 
-ifeq ($(NCPUS),0)
-	NCPUS:=1
-endif
+CMAKEOPTS =	-DCMAKE_BUILD_TYPE=Release \
+			-DWITH_WINETRIKS=ON \
+			-USE_GZIP=ON \
+			-DCMAKE_INSTALL_PREFIX=/usr \
+			-DLIBS_ENTRY_PATH=/usr/lib/q4wine/ \
+			..
 
-ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
-	CFLAGS += -O0
-endif
-
-ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
-	BUILDDEBFLAGS= -- -Zlzma -z9
-endif
-
-ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
-	BUILDDEBFLAGS= -- -Zxz -z9
-endif
-
-CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release -DWITH_WINETRIKS=ON -USE_GZIP=ON -DCMAKE_INSTALL_PREFIX=/usr PKG_NAME = q4wine ..
-PKG_NAME=q4wine
-
-configure: configure-stamp
-configure-stamp:
+config.status:
 	dh_testdir
-	mkdir $(PKG_NAME)-build
-	cd $(PKG_NAME)-build && cmake $(CMAKEOPTS)
-	touch $@
-build: configure build-stamp
-build-stamp:
+	mkdir -p $(BUILDDIR) && cd $(BUILDDIR) && cmake $(CMAKEOPTS)
+build: build-arch build-indep
+build-arch: build-stamp
+build-indep: build-stamp
+build-stamp:  config.status
 	dh_testdir
-	cd $(PKG_NAME)-build && $(MAKE) -j$(NCPUS)
+	cd $(BUILDDIR) && $(MAKE) -j$(NUMJOBS)
 	touch $@
-clean: do-clean
-do-clean:
+
+clean:
 	dh_testdir
 	dh_testroot
-	test ! -d $(PKG_NAME)-build || rm -r $(PKG_NAME)-build
+	rm -f build-stamp
+	[ ! -f Makefile ] || ( cd $(BUILDDIR) && $(MAKE) clean )
+	test ! -d $(BUILDDIR) || rm -r $(BUILDDIR)
+	rm -f config.sub config.guess
 	dh_clean
+
 install: build
 	dh_testdir
 	dh_testroot
 	dh_prep
 	dh_installdirs
-	cd $(PKG_NAME)-build && $(MAKE) install DESTDIR=$(CURDIR)/debian/$(PKG_NAME)
+	cd $(BUILDDIR) && $(MAKE) install DESTDIR=$(CURDIR)/debian/q4wine
+
 binary-indep: build install
+
 binary-arch: build install
 	dh_testdir
 	dh_testroot
-	dh_install
 	dh_installchangelogs ChangeLog
 	dh_installdocs
 	dh_installexamples
 	dh_installman
 	dh_link
-ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
 	dh_strip
-endif
 	dh_compress
 	dh_fixperms
-	#dh_makeshlibs
 	dh_installdeb
 	dh_shlibdeps
-	dh_installdebconf
 	dh_gencontrol
 	dh_md5sums
-	dh_builddeb $(BUILDDEBFLAGS)
+	dh_builddeb
+
 binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install configure patch unpatch do-clean
-		
-
-
+.PHONY: build clean binary-indep binary-arch binary install

@@ -1,25 +1,15 @@
 Source: q4wine
 Section: otherosfs
 Priority: optional
-Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), 
-               cmake, 
-               autotools-dev, 
-               fakeroot, 
-               libqt4-dev (>=4.4.0), 
-               qt4-dev-tools (>=4.4.0), 
-               qt4-qtconfig (>=4.4.0), 
-               icoutils (>=0.26.0), 
-               xdg-utils, 
-               libfuse2, 
-               libfuse-dev,
-Standards-Version: 3.9.2
+Maintainer: Boris Pek <tehnick-8@mail.ru>
+Build-Depends: debhelper (>= 7), cmake, autotools-dev, fakeroot, libqt4-dev (>=4.4.0), qt4-dev-tools (>=4.4.0), qt4-qtconfig (>=4.4.0), icoutils (>=0.26.0), libfuse2 [!hurd-i386], libfuse-dev [!hurd-i386], libkvm-dev [kfreebsd-i386 kfreebsd-amd64]
 Homepage: http://q4wine.brezblock.org.ua/
+Standards-Version: 3.9.3
 
 Package: q4wine
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libqt4-sql-sqlite, sqlite3 (>=3.5.6), icoutils (>=0.26.0), wget, xdg-utils, sudo, wine | wine-unstable | wine1.2
-Suggests: fuseiso
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt4-sql-sqlite, sqlite3 (>=3.5.6), icoutils (>=0.26.0), wget, sudo, wine-bin [amd64 i386] | wine-bin-unstable [amd64 i386] | wine [amd64 i386] | wine1.0 [amd64 i386] | wine1.2 [amd64 i386] | wine1.3 [amd64 i386]
+Suggests: fuseiso [!hurd-i386 !kfreebsd-i386 !kfreebsd-amd64]
 Replaces: q4wine-unstable
 Conflicts: q4wine-unstable
 Description: Qt4 GUI for wine (W.I.N.E)
@@ -30,11 +20,10 @@ Description: Qt4 GUI for wine (W.I.N.E)
   - Can easy work with different wine versions at same time;
   - Easy creating, deleting and managing prefixes (WINEPREFIX);
   - Easy controlling for wine process;
-  - Easy installer wizard for wine applications; (Not yet. Wait for v. 0.120)
-  - autostart icons support;
+  - Easy installer wizard for wine applications;
+  - Autostart icons support;
   - Easy cd-image use;
-  - FuseISO\Embedded FuseISO mount profiles;
   - You can extract icons from PE files (.exe .dll);
   - Easy backup and restore for managed prefixes.
   - Winetriks support.
-  - and more...
+  - And more...
