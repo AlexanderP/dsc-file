@@ -1,0 +1,17 @@
+Author: Alessio Treglia <quadrispro@ubuntu.com>
+Description: Remove QTDIR which seems to be not respected,
+ set QMAKE4 properly.
+---
+ gui/Makefile |    4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+--- qpxtool.orig/gui/Makefile
++++ qpxtool/gui/Makefile
+@@ -1,6 +1,4 @@
+-QTDIR=/opt/qt4/lib
+-QMAKE4= qmake4
+-export QTDIR QMAKE4
++QMAKE4= qmake-qt4
+ 
+ all: Makefile.qmake
+ 	$(MAKE) -f Makefile.qmake 

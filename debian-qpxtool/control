@@ -1,28 +1,71 @@
 Source: qpxtool
-Section: utils
-Priority: extra
+Section: otherosfs
+Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), autotools-dev, libqt4-dev, libpng12-dev
-Standards-Version: 3.8.3
-Homepage: http://sourceforge.net/projects/qpxtool/
+Build-Depends: debhelper (>= 7.0.50~),
+ libcam-dev [kfreebsd-i386 kfreebsd-amd64],
+ libpng12-dev,
+ qt4-qmake,
+ libqt4-dev
+Standards-Version: 3.9.3
+Homepage: http://qpxtool.sourceforge.net/
 
 Package: qpxtool
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Utility for testing CD/DVD quality
+Depends: ${shlibs:Depends},
+ libqpx0 (= ${binary:Version}),
+ ${misc:Depends}
+Suggests: pxfw
+Description: CD/DVD quality checker
  QPxTool gives you access to all available Quality Checks (Q-Checks) on written
  and blank media, that are available for your drive. This will help you to find
  the right media and the optimized writing speed for your hardware, which will
- increase the change for a long data lifetime.
+ increase the chance for a long data lifetime.
  .
  QPxTool depends on the used drive, not all drives are able to read the Q-Checks
  and not all of them are supported by QPxTool. Currently, most newer drives of
  LiteOn, NEC, Pioneer and Plextor are supported.
 
-Package: qpxtool-dev
+Package: pxfw
 Architecture: any
-Depends: qpxtool (>= ${source:Version})
-Description: Development files for qpxtool
- This package contains qpxtool include files you need if you
- want to develop plugins for qpxtool.
+Depends: ${shlibs:Depends},
+ libqpx0 (= ${binary:Version}),
+ qpxtool,
+ ${misc:Depends}
+Description: Plextor firmware updater
+ QPxTool gives you access to all available Quality Checks (Q-Checks) on written
+ and blank media, that are available for your drive. This will help you to find
+ the right media and the optimized writing speed for your hardware, which will
+ increase the chance for a long data lifetime.
+ .
+ This package contains pxfw, a firmware flash program for Plextor optical
+ drives.
 
+Package: libqpx0
+Breaks: qpxtool (<< 0.7.1.002-1)
+Replaces: qpxtool (<< 0.7.1.002-1)
+Architecture: any
+Depends: ${shlibs:Depends},
+ ${misc:Depends}
+Description: CD/DVD quality checker (shared libraries)
+ QPxTool gives you access to all available Quality Checks (Q-Checks) on written
+ and blank media, that are available for your drive. This will help you to find
+ the right media and the optimized writing speed for your hardware, which will
+ increase the chance for a long data lifetime.
+ .
+ This package contains the shared libraries for QPxTool.
+
+Package: libqpx-dev
+Breaks: qpxtool (<< 0.7.1.002-1)
+Replaces: qpxtool (<< 0.7.1.002-1)
+Architecture: any
+Section: libdevel
+Depends: libqpx0 (= ${binary:Version}),
+ ${misc:Depends}
+Description: CD/DVD quality checker (development files)
+ QPxTool gives you access to all available Quality Checks (Q-Checks) on written
+ and blank media, that are available for your drive. This will help you to find
+ the right media and the optimized writing speed for your hardware, which will
+ increase the chance for a long data lifetime.
+ .
+ This package contains the headers and development files.

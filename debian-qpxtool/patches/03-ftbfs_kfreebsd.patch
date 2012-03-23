@@ -1,0 +1,16 @@
+Description: Link against libcam to fix FTBFS on kfreebsd.
+Author: Alessio Treglia <alessio@debian.org>
+---
+ lib/qpxtransport/Makefile |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- qpxtool.orig/lib/qpxtransport/Makefile
++++ qpxtool/lib/qpxtransport/Makefile
+@@ -19,6 +19,6 @@ VER_MAJOR  = 0
+ VER_MINOR  = 7
+ VER_MICRO  = 0
+ 
+-LDLIBS += $(LIBS_HW) $(LIBS_THREAD) $(LIBS_INET)
++LDLIBS += $(LIBS_HW) $(LIBS_THREAD) $(LIBS_INET) $(QPXTRANSPORT_EXTRA_LIBS)
+ 
+ include ../Makefile.lib

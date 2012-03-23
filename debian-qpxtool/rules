@@ -1,24 +1,9 @@
 #!/usr/bin/make -f
-# -*- makefile -*-
 
-ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-endif
+DEB_HOST_ARCH_OS	?= $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
 
-ifeq (,$(NCPUS))
-	NCPUS := $(shell getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
-endif
-
-ifeq ($(NCPUS),-1)
-	NCPUS:=1
-endif
-
-ifeq ($(NCPUS),0)
-	NCPUS:=1
-endif
-
-ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
-	CFLAGS += -O0
+ifeq (kfreebsd,$(DEB_HOST_ARCH_OS))
+export QPXTRANSPORT_EXTRA_LIBS="-lcam"
 endif
 
 ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
@@ -29,54 +14,18 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-confflags = --prefix=/usr
-
-configure: configure-stamp
-configure-stamp:
-	dh_testdir
-	./configure $(confflags)
-	touch $@
-build: configure build-stamp
-build-stamp:
-	dh_testdir
-	$(MAKE) -j$(NCPUS)
-	touch $@
-clean: do-clean
-do-clean:
-	dh_testdir
-	dh_testroot
-	rm -f build-stamp configure-stamp
-	test ! -f Makefile || $(MAKE) clean
-	dh_clean
-install: build
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
-	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
-binary-indep: build install
-binary-arch: build install
-	dh_testdir
-	dh_testroot
-	cd debian/tmp/usr/share/man && find . -type f -exec gzip -d {} \;
-	#cd debian/tmp/usr/lib* && find . -type f -exec chmod 644 {} \;
-	#cd debian/tmp/usr/bin && find . -type f -exec chmod 755 {} \;
-	dh_install
-	dh_installdocs
-	dh_installman
-	dh_installchangelogs ChangeLog
-ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
-	dh_strip
-endif
-	dh_compress
-	dh_fixperms
-	dh_installdeb
-	dh_makeshlibs
-	dh_shlibdeps
-	dh_installdebconf
-	dh_gencontrol
-	dh_md5sums
+override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
 
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install configure patch unpatch do-clean
+%:
+	dh $@
+
+override_dh_auto_clean:
+	[ ! -f Makefile ] || $(MAKE) QMAKE4=qmake-qt4 clean
+
+override_dh_auto_install:
+	dh_auto_install
+	install -D -m 0644 debian/pixmap/qpxtool.xpm debian/qpxtool/usr/share/pixmaps/qpxtool.xpm
+	# Uncompress manpages (they are not max compressed)
+	gunzip debian/tmp/usr/share/man/man*/*.gz
+
