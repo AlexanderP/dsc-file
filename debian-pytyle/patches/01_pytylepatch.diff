@@ -13,3 +13,15 @@ diff -Naur pytyle-0.7.5.orig/pytyle pytyle-0.7.5/pytyle
  
      if os.access(config_file, os.F_OK | os.R_OK):
          execfile(config_file)
+
+--- pytyle-0.7.5.orig/setup.py
++++ pytyle-0.7.5/setup.py
+@@ -44,7 +44,7 @@ setup(
+       packages = ['PyTyle', 'PyTyle.Tilers'],
+       data_files = [
+                     (sysconfig.get_python_lib() + '/PyTyle',
+-                     ['./pytylerc', './INSTALL', './LICENSE', './README', './TODO', './CHANGELOG'])
++                     ['./pytylerc', './INSTALL', './README', './TODO', './CHANGELOG'])
+                     ],
+       scripts = ['pytyle','pytyle-client']
+       )
