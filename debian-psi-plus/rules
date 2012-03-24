@@ -66,11 +66,11 @@ override_dh_auto_install:
 	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/share/psi-plus/README
 
 override_dh_install:
+	chmod a-x $(CURDIR)/skins/mac/native_mac/images/qcombobox.png
 	lrelease psi-ru/psi_ru.ts -qm psi-ru/psi_ru.qm
 	dh_install
 	#Deleting exported plugins
 	rm -f $(CURDIR)/debian/psi-plus-plugins/usr/lib/psi-plus/plugins/libcontentdownloaderplugin.so
-	chmod a-x $(CURDIR)/debian/psi-plus-skins/usr/share/psi-plus/skins/mac/native_mac/images/qcombobox.png
 	#Exporting all from psi-plus-common
 	bash debian/mergedups.sh
 
