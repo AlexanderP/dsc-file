@@ -17,6 +17,6 @@ override_dh_builddeb:
 
 override_dh_install:
 	dh_install
-	cd $(CURDIR)/debian/pytyle/usr/lib/python2.7/dist-packages/PyTyle && \
+	cd $(CURDIR)/debian/pytyle/usr/lib/python2.*/dist-packages/PyTyle && \
 		chmod a-x  INSTALL TODO README pytylerc CHANGELOG
 	chmod a-x $(CURDIR)/debian/pytyle/usr/share/pytyle/pytylerc
