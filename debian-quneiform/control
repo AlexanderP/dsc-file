@@ -1,5 +1,5 @@
 Source: quneiform
-Section: non-free/graphics
+Section: graphics
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: debhelper (>= 7.0.50~), 
@@ -14,12 +14,12 @@ Build-Depends: debhelper (>= 7.0.50~),
 				libaspell-dev, 
 				doxygen, 
 				libboost-serialization-dev
-Standards-Version: 3.9.2
+Standards-Version: 3.9.3
 Homepage: https://launchpad.net/cuneiform-linux
 
 Package: cuneiform-refactoring
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cuneiform-refactoring-common
+Depends: ${shlibs:Depends}, ${misc:Depends}, cuneiform-refactoring-common, libcuneiform0.2
 Conflicts: cuneiform, cuneiform-linux
 Description: multi-language OCR system
  Cuneiform is an multi-language OCR system originally 
@@ -36,8 +36,19 @@ Description: Data files for cuneiform-linux
  developed and open sourced by Cognitive Technologies. Cuneiform was
  originally a Windows program, which was ported to Linux by Jussi Pakkanen
 
-Package: cuneiform-refactoring-dev
+Package: libcuneiform0.2
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: cuneiform, cuneiform-linux
+Description: multi-language OCR system (shared library)
+ Cuneiform is an multi-language OCR system originally 
+ developed and open sourced by Cognitive Technologies. Cuneiform was
+ originally a Windows program, which was ported to Linux by Jussi Pakkanen
+
+
+Package: libcuneiform0.2-dev
 Architecture: all
+Section: libdevel
 Depends: ${misc:Depends}
 Suggests: cuneiform-refactoring
 Description: Development files for cuneiform
