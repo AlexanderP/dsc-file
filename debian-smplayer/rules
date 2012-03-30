@@ -1,26 +1,7 @@
 #!/usr/bin/make -f
-# -*- makefile -*-
-#export DH_VERBOSE=1
 
-ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-endif
-
-ifeq (,$(NCPUS))
-	NCPUS := $(shell getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
-endif
-
-ifeq ($(NCPUS),-1)
-	NCPUS:=1
-endif
-
-ifeq ($(NCPUS),0)
-	NCPUS:=1
-endif
-
-ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
-	CFLAGS += -O0
-endif
+QMAKE_OPTS = DEFINES+=NO_DEBUG_ON_CONSOLE
+MAKE_OPTS  = PREFIX=/usr QMAKE=qmake-qt4 LRELEASE=lrelease-qt4 QMAKE_OPTS="$(QMAKE_OPTS)"
 
 ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zlzma -z9
@@ -30,43 +11,18 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-build: build-arch build-indep
-build-arch: build-stamp
-build-indep: build-stamp
-build-stamp:
-	dh_testdir
-	$(MAKE) -j$(NCPUS) QMAKE_OPTS=DEFINES+=NO_DEBUG_ON_CONSOLE PREFIX=/usr DOC_PATH="\\\"/usr/share/doc/smplayer\\\""
-	touch $@
-clean: do-clean
-do-clean:
-	dh_testdir
-	dh_testroot
-	rm -f build-stamp
-	(test ! -f Makefile || $(MAKE) clean)
-	dh_clean
-install: build
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
-	$(MAKE) install PREFIX=/usr DESTDIR=$(CURDIR)/debian/smplayer DOC_PATH=/usr/share/doc/smplayer
-binary-indep: build install
-binary-arch: build install
-	dh_testdir
-	dh_testroot
-	rm -f debian/smplayer/usr/share/doc/smplayer/Copying.txt
-	dh_installdocs
-	dh_installchangelogs Changelog
-ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
-	dh_strip
-endif
-	dh_compress
-	dh_fixperms
-	dh_installdeb
-	dh_shlibdeps
-	dh_installdebconf
-	dh_gencontrol
-	dh_md5sums
+override_dh_auto_clean:
+	[ ! -f src/Makefile ] || dh_auto_clean
+
+override_dh_auto_build:
+	dh_auto_build -- $(MAKE_OPTS) DOC_PATH=\\\"/usr/share/doc/smplayer\\\"
+
+override_dh_auto_install:
+	dh_auto_install -- $(MAKE_OPTS) DOC_PATH=/usr/share/doc/smplayer
+	rm -f debian/tmp/usr/share/doc/smplayer/Copying.txt
+
+override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install patch unpatch do-clean
+
+%:
+	dh --parallel $@

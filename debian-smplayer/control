@@ -2,17 +2,17 @@ Source: smplayer
 Section: video
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), libqt4-dev, zlib1g-dev, subversion
-Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 7.0.50~), libqt4-dev, zlib1g-dev, subversion
+Standards-Version: 3.9.3
 Homepage: http://smplayer.sourceforge.net/
 
 Package: smplayer
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, mplayer | mplayer-nogui | mplayer-mt
-Recommends: smplayer-themes, alsa-utils, x11-utils
-Replaces: smplayer-translations
-Provides: smplayer-translations
-Homepage: http://smplayer.sourceforge.net/
+Depends: mplayer,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Recommends: smplayer-themes,
+            smplayer-translations
 Description: complete front-end for MPlayer
  Qt Mplayer front-end, with basic features like playing
  videos, DVDs, and VCDs to more advanced features like support
@@ -22,3 +22,20 @@ Description: complete front-end for MPlayer
  worry, when you open that movie again it will resume at the same
  point you left it, and with the same settings: audio track,
  subtitles, volume...
+
+Package: smplayer-translations
+Architecture: all
+Depends: smplayer (>= ${source:Version}),
+         ${misc:Depends}
+Replaces: smplayer (<< 0.5.62)
+Description: complete front-end for MPlayer - translation files
+ Qt Mplayer front-end, with basic features like playing
+ videos, DVDs, and VCDs to more advanced features like support
+ for MPlayer filters and more. One of the most interesting features
+ of SMPlayer: it remembers the settings of all files you play.
+ So you start to watch a movie but you have to leave... don't
+ worry, when you open that movie again it will resume at the same
+ point you left it, and with the same settings: audio track,
+ subtitles, volume...
+ .
+ This package contains translation files.
