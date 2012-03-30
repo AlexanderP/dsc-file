@@ -2,13 +2,14 @@ Source: screen
 Section: misc
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), autotools-dev, autoconf, automake, libncursesw5-dev, texinfo, libpam0g-dev, dpatch
-Standards-Version: 3.9.2
+Build-Depends: libncursesw5-dev, texinfo, libpam0g-dev, debhelper (>> 7), dh-autoreconf, dpkg-dev (>= 1.16.1~)
+Standards-Version: 3.9.3
 Homepage: http://savannah.gnu.org/projects/screen
 
 Package: screen
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: iselect (>= 1.4.0-1) | screenie | byobu
 Description: terminal multiplexor with VT100/ANSI terminal emulation
  screen is a terminal multiplexor that runs several separate "screens" on a
  single physical character-based terminal.  Each virtual terminal emulates a
@@ -17,4 +18,4 @@ Description: terminal multiplexor with VT100/ANSI terminal emulation
  .
  Screen also supports a whole slew of other features.  Some of these are:
  configurable input and output translation, serial port support, configurable
- logging, multi-user support, and utf8 charset support
+ logging, multi-user support, and utf8 charset support.
