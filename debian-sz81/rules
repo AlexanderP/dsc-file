@@ -10,11 +10,12 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 endif
 
 %:
-	dh $@ 
+	dh $@ --parallel
 
 override_dh_install:
 	dh_install
 	find $(CURDIR)/debian -depth -type f -name COPYING -exec rm -rf \{\} \;
+	find $(CURDIR)/debian -depth -type f -name ChangeLog -exec rm -rf \{\} \;
 
 override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
