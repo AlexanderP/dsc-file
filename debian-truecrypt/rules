@@ -2,8 +2,6 @@
 # -*- makefile -*-
 #export DH_VERBOSE=1
 
-include /usr/share/dpatch/dpatch.make
-
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 endif
