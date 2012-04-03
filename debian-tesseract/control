@@ -3,50 +3,58 @@ Section: graphics
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: debhelper (>= 7.0.50~), 
-                libtiff4-dev, 
-                quilt (>= 0.40), 
-                autotools-dev, 
                 libtool, 
                 automake, 
-                autoconf, 
-                libpng12-dev, 
-                libjpeg62-dev,
-                libtiff-dev,
-                zlib1g-dev,
-		libleptonica-dev,
-		libgif-dev
-Standards-Version: 3.9.2
+                libleptonica-dev,
+Standards-Version: 3.9.3
 Homepage: http://code.google.com/p/tesseract-ocr/
+
+Package: tesseract-ocr-dev
+Depends: libtesseract-dev, ${misc:Depends}
+Architecture: all
+Section: oldlibs
+Description: transitional dummy package
+ This is a transitional dummy package.
+
+Package: libtesseract-dev
+Section: libdevel
+Architecture: any
+Depends: libtesseract3 (= ${binary:Version}), ${misc:Depends}
+Replaces: tesseract-ocr-dev (<< 3.0.1-1~)
+Breaks: tesseract-ocr-dev (<< 3.0.1-1~)
+Description: Development files for the tesseract command line OCR tool
+ The Tesseract OCR engine was one of the top 3 engines in the 1995
+ UNLV Accuracy test. Between 1995 and 2006 it had little work done on
+ it, but since then it has been improved extensively by Google and is
+ probably one of the most accurate open source OCR engines
+ available. It can read a wide variety of image formats and convert
+ them to text in over 40 languages.
+
+Package: libtesseract3
+Breaks: tesseract-ocr (<< 3.01~), ocropus (<< 0.4.0~)
+Replaces: tesseract-ocr (<< 3.01~)
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Command line OCR tool
+ The Tesseract OCR engine was one of the top 3 engines in the 1995
+ UNLV Accuracy test. Between 1995 and 2006 it had little work done on
+ it, but since then it has been improved extensively by Google and is
+ probably one of the most accurate open source OCR engines
+ available. It can read a wide variety of image formats and convert
+ them to text in over 40 languages.
 
 Package: tesseract-ocr
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, tesseract-ocr-eng | tesseract-ocr-lang 
+Depends: ${shlibs:Depends}, ${misc:Depends}, tesseract-ocr-eng, libtesseract3
 Replaces: tesseract-ocr-data
 Description: Command line OCR tool
- The Tesseract OCR engine was originally developed at HP between 1985 and 1995.
- It was open-sourced by HP and UNLV in 2005 and Google has lead further
- development.
- .
- The Tesseract OCR engine was one of the top 3 engines in the 1995 UNLV
- Accuracy test.  Between 1995 and 2006 it had little work done on it, but it
- is probably one of the most accurate open source OCR engines available.  It
- will read a binary, grey or color image and output text.
+ The Tesseract OCR engine was one of the top 3 engines in the 1995
+ UNLV Accuracy test. Between 1995 and 2006 it had little work done on
+ it, but since then it has been improved extensively by Google and is
+ probably one of the most accurate open source OCR engines
+ available. It can read a wide variety of image formats and convert
+ them to text in over 40 languages.
 
-Package: tesseract-ocr-dev
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, tesseract-ocr
-Description: Development files for the tesseract command line OCR tool
- The Tesseract OCR engine was originally developed at HP between 1985 and 1995.
- It was open-sourced by HP and UNLV in 2005 and Google has lead further
- development.
- .
- The Tesseract OCR engine was one of the top 3 engines in the 1995 UNLV
- Accuracy test.  Between 1995 and 2006 it had little work done on it, but it
- is probably one of the most accurate open source OCR engines available.  It
- will read a binary, grey or color image and output text.
- .
- This package contains the header files
- 
 Package: tesseract-ocr-bul
 Architecture: all
 Provides: tesseract-ocr-language, tesseract-ocr-lang
