@@ -1,0 +1,14 @@
+Description: Add missing file contain translation to the POTFILES.in file
+ Put string "uglib/UgPlugin-aria2.c" in po/POTFILES.in
+
+Forwarded: not-needed
+Author: Elías Alejandro Año Mendoza <ealmdz@gmail.com>
+Last-Update: 2011-06-09
+
+--- uget.orig/po/POTFILES.in	2011-06-09 17:35:17.000000000 -0500
++++ uget/po/POTFILES.in	2011-06-09 17:36:36.000000000 -0500
+@@ -35,3 +35,4 @@
+ uget-gtk/UgSettingForm.c
+ uget-gtk/UgSetting.c
+ uget-gtk/UgSummary.c
++uglib/UgPlugin-aria2.c

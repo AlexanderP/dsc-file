@@ -2,21 +2,21 @@ Source: uget-devel
 Section: net
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends:  debhelper (>= 7.0.50~),
-                intltool,
-                libnotify-dev,
-                libgstreamer0.10-dev,
-                autotools-dev,
-                libgtk2.0-dev,
-                libcurl4-gnutls-dev,
-                quilt
-Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 7.0.50~),
+ intltool,
+ dh-autoreconf,
+ libnotify-dev,
+ libgstreamer0.10-dev,
+ autotools-dev,
+ libgtk2.0-dev,
+ libcurl4-openssl-dev
+Standards-Version: 3.9.3
 Homepage: http://urlget.sourceforge.net/
 
 Package: uget-devel
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: uget-devel
+Conflicts: uget
 Description: easy-to-use download manager written in GTK+2
  Uget (formerly urlgfe) is a simple, lightweight and easy-to-use
  download manager.
