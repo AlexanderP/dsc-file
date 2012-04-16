@@ -1,10 +1,5 @@
 #!/usr/bin/make -f
-
-export DH_VERBOSE=1
-
-ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
-	CFLAGS += -O0
-endif
+#export DH_VERBOSE=1
 
 ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zlzma -z9
@@ -29,6 +24,7 @@ override_dh_install:
 	for size in 16 24 32 48 64 96 128 ; do \
 	mkdir -p $(CURDIR)/debian/vacuum/usr/share/icons/hicolor/$${size}x$${size}/apps/ && install -Dm644 $(CURDIR)/resources/menuicons/shared/mainwindowlogo$${size}.png $(CURDIR)/debian/vacuum/usr/share/icons/hicolor/$${size}x$${size}/apps/vacuum.png ; \
 	done
+	rm $(CURDIR)/debian/vacuum/usr/share/doc/vacuum/CHANGELOG
 
 override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
