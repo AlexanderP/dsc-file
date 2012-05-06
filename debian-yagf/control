@@ -2,17 +2,19 @@ Source: yagf
 Section: graphics
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), cmake, libaspell-dev, libqt4-dev, aspell
-Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 7.0.50~), cmake,
+ libqt4-dev, libaspell-dev, aspell
 Homepage: http://symmetrica.net/cuneiform-linux/yagf-en.html
+Standards-Version: 3.9.3
 
 Package: yagf
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: graphical front-end for cuneiform
- YAGF is a graphical interface for the cuneiform text recognition
- program on the  Linux platform. With YAGF you can scan images via
- XSane, perform images  preprocessing and recognize texts using 
- cuneiform from a single command  centre. YAGF also makes it easy
- to scan and recognize several images sequentially
- .
+Depends: ${misc:Depends}, ${shlibs:Depends},
+ cuneiform | tesseract-ocr | cuneiform-refactoring
+Recommends: xsane
+Description: graphical interface for cuneiform and tesseract
+ YAGF is a graphical interface for cuneiform and tesseract text recognition
+ tools on the Linux platform. With YAGF you can scan images via XSane, import
+ pages from PDF documents, perform images preprocessing and recognize texts
+ using cuneiform from a single command centre. YAGF also makes it easy to scan
+ and recognize several images sequentially.

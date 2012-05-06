@@ -1,10 +1,46 @@
-.\" 20100210
-.TH "Yagf" "1" "February 10, 2010"
+.TH "YAGF" "1" "23 Apr 2012"
 .SH "NAME"
-Yagf \- graphical front-end for cuneiform
-.SH "DESCRIPTION"
-.B Yagf
-is a graphical interface for the cuneiform text recognition  program on the  Linux platform. With YAGF you can scan images via  XSane, perform images  preprocessing and recognize texts using  cuneiform from a single command  centre. YAGF also makes it easy  to scan and recognize several images sequentially
+yagf \- graphical interface for cuneiform and tesseract
+.SH "SYNOPSIS"
 .PP
-.SH "AUTHORS"
-This manual page was written by Alexander Pozdnyakov <almipo@mail.ru>,
+.B yagf
+.br
+.B yagf
+<Key>
+.br
+.B yagf
+<file name> [file name [file name]...]
+.SH "DESCRIPTION"
+.B YAGF
+is a graphical interface for cuneiform and tesseract text recognition tools on
+the Linux platform. With YAGF you can scan images via XSane, import pages from
+PDF documents, perform images preprocessing and recognize texts using cuneiform
+from a single command centre. YAGF also makes it easy to scan and recognize
+several images sequentially.
+.SH "COMMAND LINE OPTIONS"
+.RB "A summary of options is included below."
+.TP
+.BR "\-h,  \-\-help"
+Display help and exit
+.TP
+.BR "\-V,  \-\-version"
+Show version information and exit
+.SH "FILES"
+.TP
+.B "~/.config/yagf/"
+Directory with user configuration files.
+.SH "DOCUMENTATION"
+.TP
+Basic documentation can be found on official web site:
+.br
+\fBhttp://symmetrica.net/cuneiform-linux/yagf-en.html\fR
+.SH AUTHOR
+This program was written by Andrei Borovsky <anb@symmetrica.net>.
+.br
+YAGF homepage: \fBhttp://symmetrica.net/cuneiform-linux/yagf-en.html\fR
+.SH "BUG REPORTS"
+If you find a bug in YAGF please report it here:
+.B http://code.google.com/p/yagf/issues/list
+.PP
+This manual page was written by Boris Pek <tehnick-8@mail.ru> for the Debian
+project (and may be used by others).

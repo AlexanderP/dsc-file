@@ -1,30 +1,4 @@
 #!/usr/bin/make -f
-# -*- makefile -*-
-# Sample debian/rules that uses debhelper.
-# This file was originally written by Joey Hess and Craig Small.
-# As a special exception, when this file is copied by dh-make into a
-# dh-make output file, you may use that output file without restriction.
-# This special exception was added by Craig Small in version 0.37 of dh-make.
-
-ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-endif
-
-ifeq (,$(NCPUS))
-	NCPUS := $(shell getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
-endif
-
-ifeq ($(NCPUS),-1)
-	NCPUS:=1
-endif
-
-ifeq ($(NCPUS),0)
-	NCPUS:=1
-endif
-
-ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
-	CFLAGS += -O0
-endif
 
 ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zlzma -z9
@@ -34,53 +8,8 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-# Uncomment this to turn on verbose mode.
-#export DH_VERBOSE=1
-CMAKEOPTS = -DCMAKE_INSTALL_PREFIX='/usr' .
-configure: configure-stamp
-configure-stamp:
-	dh_testdir
-	cmake $(CMAKEOPTS)
-	touch $@
-build: configure build-arch build-indep
-build-arch: build-stamp
-build-indep: build-stamp
-build-stamp:
-	dh_testdir
-	$(MAKE) -j$(NCPUS)
-	touch $@
-clean: do-clean
-do-clean:
-	dh_testdir
-	dh_testroot
-	test ! -f Makefile || $(MAKE) clean
-	dh_clean
-install: build
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
-	$(MAKE) install DESTDIR=debian/yagf
-	mkdir -p debian/yagf/usr/bin/
-	install -m755 yagf debian/yagf/usr/bin/
-binary-indep: build install
-binary-arch: build install
-	dh_testdir
-	dh_testroot
-	dh_installdocs
-	dh_installchangelogs ChangeLog
-	dh_installman debian/yagf.1
-ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
-	dh_strip
-endif
-	dh_compress
-	dh_fixperms
-	dh_installdeb
-	dh_shlibdeps
-	dh_installdebconf
-	dh_gencontrol
-	dh_md5sums
+override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install configure patch unpatch do-clean
-	
+
+%:
+	dh $@ --parallel

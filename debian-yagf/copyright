@@ -1,36 +1,68 @@
-This work was packaged for Debian by:
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Debianized-By: Boris Pek <tehnick-8@mail.ru>
+Debianized-Date: Mon, 30 Jan 2012 00:00:21 +0200
+Upstream-Name: YAGF
+Upstream-Contact: Andrei Borovsky <anb@symmetrica.net>
+Source: http://symmetrica.net/cuneiform-linux/yagf-en.html
+ The orig.tar.gz is just renamed upstream tarball (without changes).
+ See section get-orig-source in debian/rules file for details.
 
-    Alexander Pozdnyakov <almipo@mail.ru> on Sun, 10 Jan 2010 14:06:14 +0300
+Files: *
+Copyright: 2009-2012 Andrei Borovsky <anb@symmetrica.net>
+License: GPL-3+
 
-It was downloaded from http://symmetrica.net/cuneiform-linux/yagf-en.html
+Files: src/translations/*
+Copyright: 2009-2012 Andrei Borovsky <anb@symmetrica.net>
+ 2009-2012 Stefan Garthe <s.garthe@tu-braunschweig.de>
+ 2009-2012 Andrzej Januszkiewicz <andja@ffp2.pl>
+ 2009-2012 Olexa Stasevych <oleksiy.stasevych@gmail.com>
+ 2012 Donatas Glodenis <dg@lapas.info>
+License: GPL-3+
 
-Copyright:
+Files: src/images/*
+Copyright: 2009-2012 Andrei Borovsky <anb@symmetrica.net>
+ 2005-2012 Oxygen Team (http://www.oxygen-icons.org/)
+ 2006-2007 Everaldo Coelho (http://www.everaldo.com/crystal/)
+ 2008-2009 Schollidesign (http://schollidesign.deviantart.com/)
+License: LGPL-3+
 
-    Copyright (c) 2009 Andrei Borovsky
+Files: debian/*
+Copyright: 2012 Boris Pek <tehnick-8@mail.ru>
+ 2012 Alexander Pozdnyakov <almipo@mail.ru>
+License: GPL-2+
 
-License:
+License: GPL-2+
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-2'.
 
-   This package is free software; you can redistribute it and/or modify
-   it under the terms of the GNU General Public License as published by
-   the Free Software Foundation; version 3 dated June, 2007.
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify it under
+ the terms of the GNU General Public License as published by the Free Software
+ Foundation, either version 3 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along with
+ this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ can be found in `/usr/share/common-licenses/GPL-3'.
 
-   This package is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   GNU General Public License for more details.
-
-   You should have received a copy of the GNU General Public License
-   along with this package; if not, write to the Free Software
-   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
-   02110-1301, USA.
-
-On Debian GNU/Linux systems, the complete text of the GNU General Public 
-License version 3 can be found in `/usr/share/common-licenses/GPL-3'.
-
-The Debian packaging is:
-
-    Copyright (C) 2010 Alexander Pozdnyakov <almipo@mail.ru>
-
-and is licensed under the GPL version 3, 
-see `/usr/share/common-licenses/GPL-3'.
-
+License: LGPL-3+
+ This program is free software: you can redistribute it and/or modify it under
+ the terms of the GNU Lesser General Public License as published by the Free
+ Software Foundation, either version 3 of the License, or (at your option)
+ any later version.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along with
+ this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public License
+ can be found in `/usr/share/common-licenses/LGPL-3'.
