@@ -51,11 +51,11 @@ override_dh_auto_install:
 	#rm $(INSTDIR)/usr/share/doc/blender/GPL-license.txt
 	#rm $(INSTDIR)/usr/share/doc/blender/Python-license.txt
 	#remove locale fonts
-	rm -r $(INSTDIR)/usr/share/locale/fonts/
+	#rm -r $(INSTDIR)/usr/share/locale/fonts/
 
 override_dh_install:
 	dh_install --fail-missing --list-missing
-	rm -r $(CURDIR)/debian/blender/usr/lib/blender/scripts/addons/netrender/css/images
+	#rm -r $(CURDIR)/debian/blender/usr/lib/blender/scripts/addons/netrender/css/images
 	
 override_dh_strip:
 	dh_strip --dbg-package=blender-dbg
