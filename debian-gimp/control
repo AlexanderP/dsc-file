@@ -1,0 +1,107 @@
+Source: gimp
+Section: graphics
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7.0.50~),
+ 		gawk,
+ 		quilt,
+		autotools-dev,
+ 		patchutils,  
+ 		gettext, 
+ 		intltool, 
+ 		libx11-dev, 
+ 		libice-dev, 
+ 		libsm-dev,
+ 		libxmu-dev, 
+ 		libxpm-dev, 
+ 		libxt-dev,
+ 		libaa1-dev, 
+ 		libgtk2.0-dev, 
+ 		libglib2.0-dev,
+ 		libpango1.0-dev, 
+ 		libjpeg8-dev,
+ 		libart-2.0-dev, 
+ 		libpng12-dev | libpng-dev,
+ 		zlib1g-dev, 
+ 		libtiff4-dev,
+ 		python-dev, 
+ 		python-gtk2-dev,
+ 		python-support, 
+ 		libexif-dev, 
+ 		libmng-dev,
+ 		librsvg2-dev, 
+ 		libfontconfig1-dev,
+ 		libwmf-dev, 
+ 		libfreetype6-dev,
+ 		libpoppler-glib-dev,
+ 		libasound2-dev,
+ 		libdbus-glib-1-dev,
+ 		liblcms1-dev | liblcms-dev, 
+ 		libgegl-dev, 
+ 		libbabl-dev,
+ 		gtk-doc-tools, 
+ 		libjasper-dev, 
+ 		iso-codes, 
+ 		libcurl4-openssl-dev, 
+ 		libhal-dev,
+		xvfb,
+		libgdk-pixbuf2.0-dev,
+		libcairo2-dev,
+		libpixman-1-dev,
+Standards-Version: 3.9.3
+Homepage: http://www.gimp.org
+
+Package: gimp
+Architecture: any
+Section: graphics
+Provides: gimp-helpbrowser, gimp-python
+Depends: libgimp-2.0-0 (>= ${source:Upstream-Version}), libgimp-2.0-0 (<= ${source:Upstream-Version}-z), gimp2.7-data (>= ${source:Upstream-Version}), gimp2.7-data (<= ${source:Upstream-Version}-z), python-gtk2 (>= 2.8.0), ${shlibs:Depends}, ${python:Depends}, ${misc:Depends}
+Conflicts: gimp2.7-data, gimp2.7
+Description: GNU Image Manipulation Program
+ GIMP is an advanced picture editor. You can use it to edit, enhance, and
+ retouch photos and scans, create drawings, and make your own images.
+ It has a large collection of professional-level editing tools and
+ filters, similar to the ones you might find in Photoshop. Numerous
+ fine-control settings and features like layers, paths, masks, and
+ scripting give you total control over your images.
+ .
+ Many image file formats are supported, including JPEG, Photoshop (.psd),
+ and Paint Shop Pro (.psp) files. It can also be used to scan and print
+ photos.
+ .
+ To open files remotely (like over HTTP), install the gvfs-backends
+ package.
+ .
+ To use a MIDI device (like a musical keyboard) as an input controller in GIMP,
+ install libasound2 and read the how-to at /usr/share/doc/gimp/README.MIDI
+
+Package: libgimp-2.0-0
+Architecture: any
+Section: libs
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: gimp, gimp-data
+Description: Libraries for the GNU Image Manipulation Program
+ This package includes the libgimp libraries, which are
+ necessary to run GIMP and third-party GIMP plugins.
+
+Package: gimp-data
+Architecture: all
+Section: graphics
+Recommends: gimp
+Conflicts: gimp2.7
+Depends: ${misc:Depends}
+Description: Data files for GIMP
+ This package contains architecture-independent supporting data files
+ for use with GIMP.
+
+Package: libgimp-2.0-0-dev
+Architecture: any
+Section: libdevel
+Depends: ${shlibs:Depends}, libgimp-2.0-0 (= ${binary:Version}), libgtk2.0-dev (>= 2.12.5), pkg-config, ${misc:Depends}
+Description: Headers and other files for compiling plugins for GIMP
+ This package contains the header files for the GNU Image Manipulation
+ Program, along with the static versions of libgimp.
+ It also includes the gimptool-2.0 utility.
+ .
+ Install this package if you wish to compile your own plugins,
+ or if you wish to develop packages that use libgimp. 

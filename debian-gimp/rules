@@ -1,0 +1,40 @@
+#!/usr/bin/make -f
+export DH_VERBOSE=1
+LDFLAGS = -Wl,--as-needed
+
+ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zlzma -z9
+endif
+
+ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zxz -z9
+endif
+
+%:
+	dh --parallel $@
+
+override_dh_auto_configure:
+	./autogen.sh --prefix=/usr --includedir=\$${prefix}/include --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --libexecdir=\$${prefix}/lib/gimp --disable-dependency-tracking --enable-python --enable-default-binary
+
+override_dh_auto_test:
+	
+
+override_dh_makeshlibs:
+	dh_makeshlibs -plibgimp-2.0-0
+
+override_dh_install:
+	rm $(CURDIR)/debian/tmp/usr/lib/gimp/2.0/python/pygimp-logo.png
+	dh_install
+	find $(CURDIR)/debian/ -depth -name ".git*" -delete
+	find $(CURDIR)/debian/ -depth -name "*.py[co]" -delete
+	find $(CURDIR)/debian/ -name "*.la" -delete
+
+override_dh_installchangelogs:
+	dh_installchangelogs -k ChangeLog*git
+
+override_dh_pysupport:
+	dh_pysupport -pgimp /usr/lib/gimp/2.0/python
+
+override_dh_builddeb:
+	dh_builddeb $(BUILDDEBFLAGS)
+
