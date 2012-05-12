@@ -79,6 +79,7 @@ Package: libgimp-2.0-0
 Architecture: any
 Section: libs
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: libgimp2.0
 Recommends: gimp, gimp-data
 Description: Libraries for the GNU Image Manipulation Program
  This package includes the libgimp libraries, which are
