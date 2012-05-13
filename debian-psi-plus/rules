@@ -1,22 +1,16 @@
 #!/usr/bin/make -f
 # Uncomment this to turn on verbose mode.
-#export DH_VERBOSE=1
+#DH_VERBOSE=1
 
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 endif
 
-ifeq (,$(NCPUS))
-	NCPUS := $(shell getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
+ifeq (,$(NUMJOBS))
+	NUMJOBS = 1
 endif
 
-ifeq ($(NCPUS),-1)
-	NCPUS:=1
-endif
-
-ifeq ($(NCPUS),0)
-	NCPUS:=1
-endif
+PACKAGE = psi-plus
 
 ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zlzma -z9
@@ -26,53 +20,56 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-MAKEOPT = -j$(NCPUS)
 QMAKE=qmake-qt4
 QCONF=qt-qconf
 CONF=--enable-plugins --enable-whiteboarding --disable-bundled-qca --debug --no-separate-debug-info
-#select all plugins
-plugs = $(notdir $(wildcard $(CURDIR)/src/plugins/generic/*plugin ) )
+
+# This has to be exported to make some magic below work.
+#export DH_OPTIONS
+
+# Select all plugins
+plugins_generic = $(notdir $(wildcard $(CURDIR)/src/plugins/generic/*plugin ) )
+plugins_unix = $(notdir $(wildcard $(CURDIR)/src/plugins/unix/*plugin ) )
 
 %:
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	QUILT_PC=.pc_psi quilt push -a --quiltrc /dev/null
 	$(QCONF)
 	./configure --prefix=/usr $(CONF)
 
 override_dh_auto_build:
-	$(MAKE) $(MAKEOPT)
-	$(foreach plug,$(plugs), cd $(CURDIR)/src/plugins/generic/$(plug) && $(QMAKE) && $(MAKE); )
+	$(MAKE) -j$(NUMJOBS)
+	$(foreach plug,$(plugins_generic), cd $(CURDIR)/src/plugins/generic/$(plug) && $(QMAKE) && $(MAKE) -j$(NUMJOBS); )
+	$(foreach plug,$(plugins_unix), cd $(CURDIR)/src/plugins/unix/$(plug) && $(QMAKE) && $(MAKE) -j$(NUMJOBS); )
 
 override_dh_auto_install:
 	$(MAKE) INSTALL_ROOT=$(CURDIR)/debian/psi-plus install
-	rm -f $(CURDIR)/debian/psi-plus/usr/bin/psi-plus.debug #remove static debug file
-	#Making the same, but using webkit
+	rm -f $(CURDIR)/debian/psi-plus/usr/bin/psi-plus.debug # Remove static debug file
+	# Make the same, but using webkit
 	$(MAKE) clean
 	./configure --prefix=/usr $(CONF) --enable-webkit
-	$(MAKE) $(MAKEOPT)
+	$(MAKE) -j$(NUMJOBS)
 	$(MAKE) INSTALL_ROOT=$(CURDIR)/debian/psi-plus-webkit install
 	rm $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-plus
 	rm $(CURDIR)/debian/psi-plus-webkit/usr/share/applications/psi-plus.desktop
 	cp $(CURDIR)/src/psi-plus $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-plus-webkit
 	cp $(CURDIR)/debian/psi-plus-webkit.desktop $(CURDIR)/debian/psi-plus-webkit/usr/share/applications/
-	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-plus.debug #remove static debug file
-	rm -rf $(CURDIR)/debian/psi-plus-webkit/usr/share/psi-plus/themes
-	#Deleting temporary files
+	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-plus.debug # Remove static debug file
+	# Deleting temporary files
 	rm -f $(CURDIR)/debian/psi-plus/usr/share/psi-plus/COPYING
-	rm -f $(CURDIR)/debian/psi-plus/usr/share/psi-plus/README
 	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/share/psi-plus/COPYING
-	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/share/psi-plus/README
 
 override_dh_install:
-	chmod a-x $(CURDIR)/skins/mac/native_mac/images/qcombobox.png
-	lrelease psi-ru/psi_ru.ts -qm psi-ru/psi_ru.qm
 	dh_install
-	#Deleting exported plugins
+	# Deleting exported plugins
 	rm -f $(CURDIR)/debian/psi-plus-plugins/usr/lib/psi-plus/plugins/libcontentdownloaderplugin.so
-	#Exporting all from psi-plus-common
-	bash debian/mergedups.sh
+	# Exporting all from psi-plus-common
+	bash ./debian/mergedups.sh
+	# Deleting extra copy of sound files
+	rm -rf $(CURDIR)/debian/psi-plus-common/usr/share/psi-plus/sound/
+	# Fix permissions
+	chmod uog-x $(CURDIR)/debian/psi-plus-skins/usr/share/psi-plus/skins/mac/native_mac/images/qcombobox.png
 
 override_dh_auto_clean:
 	dh_clean
@@ -83,12 +80,12 @@ override_dh_auto_clean:
 	rm -f Makefile src/Makefile libpsi/psiwidgets/Makefile
 	rm -f conf.pri extra.pri conf.log
 	rm -f src/.qmake.internal.cache
-	rm -f lang/ru/psi_ru.qm
 
 	rm -rf iris/lib iris/conf.pri
 	rm -rf .qconftemp
 
-	$(foreach plug,$(plugs), cd $(CURDIR)/src/plugins/generic/$(plug) && [ ! -f Makefile ] || $(MAKE) distclean; )
+	$(foreach plug,$(plugins_generic), cd $(CURDIR)/src/plugins/generic/$(plug) && [ ! -f Makefile ] || $(MAKE) distclean; )
+	$(foreach plug,$(plugins_unix), cd $(CURDIR)/src/plugins/unix/$(plug) && [ ! -f Makefile ] || $(MAKE) distclean; )
 
 	- QUILT_PC=.pc_psi quilt pop -af --quiltrc /dev/null
 	rm -rf .pc_psi

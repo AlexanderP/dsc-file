@@ -1,40 +1,20 @@
-This package was debianized by    Alexander Pozdnyakov <almipo@mail.ru>
-Sun, 02 May 2010 19:27:04 +0400
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Debianized-By: Ivan Borzenkov <ivan1986@list.ru>
+Debianized-Date: Mon, 23 Feb 2009 19:56:49 +0300
+Upstream-Name: Psi+
+Upstream-Contact: zet <vladimir.shelukhin@gmail.com>
+ rion <rion4ik@gmail.com>
+ Dealer_WeARE <wadealer@gmail.com>
+ maj <maksim.maj@gmail.com>
+ diSabler <dsy@dsy.name>
+Source: https://github.com/tehnick/psi-plus/tags
+ The orig.tar.xz is generated from upstream gzipped tarball, except it uses
+ LZMA2 compression. See section get-orig-source in debian/rules file for details.
+ .
+ There is no constant tarball in GitHub: it is generated each time when it is
+ asked. So we do not need to keep original tarball in Debian.
 
-This package based by:
-    
-    Copyright (C) 2009-2010 Ivan Borzenkov <ivan1986@list.ru>
-    Copyright (C) 2001-2010 Jan Niehusmann <jan@debian.org>
-	Copyright (C) 2011 		Boris Pek <tehnick-8@mail.ru>
-
-The orig.tar.gz is generated from a few upstream source trees:
- git://github.com/psi-im/psi.git
- git://github.com/psi-im/iris.git
- git://github.com/psi-im/libpsi.git
- http://psi-dev.googlecode.com/svn/trunk/
-
-Following files and directories were ignored:
- https://github.com/psi-im/psi/blob/master/configure.exe
- https://github.com/psi-im/psi/tree/master/win32/
- https://github.com/psi-im/libpsi/tree/master/tools/zip/minizip/win32/
- https://github.com/psi-im/libpsi/tree/master/tools/idle/win32/
- http://psi-dev.googlecode.com/svn/trunk/.svg
- http://psi-dev.googlecode.com/svn/trunk/iconsets/
- http://psi-dev.googlecode.com/svn/trunk/img.jpg
- http://psi-dev.googlecode.com/svn/trunk/resources/
- http://psi-dev.googlecode.com/svn/trunk/scripts/win32/
- http://psi-dev.googlecode.com/svn/trunk/version.txt
-
-Psi+ Project Authors:
- Copyright 2008-2011 zet <vladimir.shelukhin@gmail.com>,
- Copyright 2008-2009 maj <maksim.maj@gmail.com>
-
-Upstream Authors:
- Kevin Smith <kismith@psi-im.org>,
- Justin Karneges <infiniti@affinix.com>
-
-Files:
- *
+Files: *
  admin/*
  certs/*
  doc/*
@@ -44,349 +24,329 @@ Files:
  qcm/*
  sound/*
  src/*
- third-party/*
  tools/*
-Sources:
- git://github.com/psi-im/psi.git
-Copyright:
- Copyright 2001-2008  Justin Karneges <justin@affinix.com>
- Copyright 2003-2009  Michail Pishchagin <mblsha@users.sourceforge.net>
- Copyright 2001-2008  Remko Troncon
- Copyright 2010-2011  Rion
- Copyright 2006-2007  Kevin Smith
- Copyright 2006-2008  Martin Hostettler
- Copyright 2006-2008  Joonas Govenius
- Copyright 1992-2007  Trolltech ASA.
- Copyright 2005       SilverSoft.Net (Denis Kozadaev) <denis@silversoft.net>
- Copyright 2009       Barracuda Networks, Inc.
- Copyright 2010       Tobias Markmann
- Copyright 2006       Cestonaro Thilo
- Copyright 2007       Maciek Niedzielski
-License:
- GPL-2 or later
+Copyright: 2001-2008 Justin Karneges <justin@affinix.com>
+ 2003-2009 Michail Pishchagin <mblsha@users.sourceforge.net>
+ 2001-2008 Remko Troncon
+ 2010-2011 Rion <rion4ik@gmail.com>
+ 2006-2007 Kevin Smith <kismith@psi-im.org>
+ 2006-2008 Martin Hostettler
+ 2006-2008 Joonas Govenius
+ 1992-2007 Trolltech ASA.
+ 2005 SilverSoft.Net (Denis Kozadaev) <denis@silversoft.net>
+ 2009 Barracuda Networks, Inc.
+ 2010 Tobias Markmann
+ 2006 Cestonaro Thilo
+ 2007 Maciek Niedzielski
+ 2011 Evgeny Khryukin
+ 2011 Artem Izmaylov <artem@aimp.ru>
+License: GPL-2+ with OpenSSL exception
+ This program is free software: you can redistribute it and/or modify it under
+ the terms of the GNU General Public License as published by the Free Software
+ Foundation, either version 2 of the License, or (at your option) any later
+ version.
  .
- This program is free software: you can redistribute it and/or modify it under the
- terms of the GNU General Public License as published by the Free Software Foundation,
- either version 2 of the License, or (at your option) any later version.
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ PARTICULAR PURPOSE. See the GNU General Public License for more details.
  .
- This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
- without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- See the GNU General Public License for more details.
+ You should have received a copy of the GNU General Public License along with
+ this program. If not, see <http://www.gnu.org/licenses/>.
  .
- You should have received a copy of the GNU General Public License along with this program.
- If not, see <http://www.gnu.org/licenses/>.
+ On Debian systems, the complete text of the GNU General Public License
+ can be found in `/usr/share/common-licenses/GPL-2'.
  .
- On Debian systems, the complete text of the GNU General
- Public License can be found in `/usr/share/common-licenses/GPL-2'.
+ As a special exception, Justin Karneges gives permission to link this program
+ with the Qt Library (commercial or non-commercial edition), and distribute the
+ resulting executable, without including the source code for the Qt library
+ in the source distribution.
+ .
+ As a special exception, Justin Karneges gives permission to link this program
+ with the OpenSSL Library (or with modified versions of it that use the same
+ license as the "OpenSSL" library), and distribute the linked executables.
+ You must obey the GNU General Public License in all respects for all of the
+ code used other than "OpenSSL". If you modify this file, you may extend this
+ exception to your version of the file, but you are not obligated to do so. If
+ you do not wish to do so, delete this exception statement from your version.
 
-    As a special exception, Justin Karneges gives permission to link
-    this program with the Qt Library (commercial or non-commercial edition),
-    and distribute the resulting executable, without including the source
-    code for the Qt library in the source distribution.
+Files: iconsets/roster/*
+Copyright: 2003-2007 Michail Pishchagin <mblsha@users.sourceforge.net>
+ 2005-2007 Remko Tronçon (http://el-tramo.be)
+ 2005-2007 Everaldo Coelho (http://www.everaldo.com)
+ 2003 Jason Kim <jmkim@uci.edu>
+License: LGPL-3
 
-    As a special exception, Justin Karneges gives permission to link
-    this program with the OpenSSL Library.
-
-Files:
- iconsets/roster/*
-Sources:
- git://github.com/psi-im/psi.git
-Copyright:
- Copyright 2003-2007  Michail Pishchagin <mblsha@users.sourceforge.net>
- Copyright 2005-2007  Remko Tronçon (http://el-tramo.be)
- Copyright 2005-2007  Everaldo Coelho (http://www.everaldo.com)
- Copyright 2003       Jason Kim <jmkim@uci.edu>
-License:
- LGPL-3
- .
- This data is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 3 of the License.
- .
- This data is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
- .
- You should have received a copy of the GNU Lesser General Public License
- along with this program. If not, see <http://www.gnu.org/licenses/>.
- .
- On Debian systems, the complete text of the GNU Lesser General
- Public License can be found in `/usr/share/common-licenses/LGPL-3'.
-
-Files:
- src/psimedia/*
+Files: src/psimedia/*
  src/tools/advwidget/*
  src/tools/iconset/*
+ src/widgets/*
  third-party/*
-Sources:
- git://github.com/psi-im/psi.git
-Copyright:
- Copyright 2008-2009  Barracuda Networks, Inc.
- Copyright 2003-2007  Michail Pishchagin <mblsha@users.sourceforge.net>
- Copyright 2003-2007  Justin Karneges <justin@affinix.com>
- Copyright 2004-2005  Brad Hards <bradh@frogmouth.net>
- Copyright 1999-2002  Aladdin Enterprises
- Copyright 1999-2000  Tom Tromey
- Copyright 2003       Robert W. Brewer <rbrewer@op.net>
- Copyright 2000       Red Hat, Inc.
-License:
- LGPL-2.1 or later
- .
- This data is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 2.1 of the License, or (at your option) any later version.
- .
- This data is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
- .
- You should have received a copy of the GNU Lesser General Public License
- along with this program. If not, see <http://www.gnu.org/licenses/>.
- .
- On Debian systems, the complete text of the GNU Lesser General
- Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.
+Copyright: 2008-2009 Barracuda Networks, Inc.
+ 2003-2007 Michail Pishchagin <mblsha@users.sourceforge.net>
+ 2003-2007 Justin Karneges <justin@affinix.com>
+ 2004-2005 Brad Hards <bradh@frogmouth.net>
+ 1999-2002 Aladdin Enterprises
+ 1999-2000 Tom Tromey
+ 2003 Robert W. Brewer <rbrewer@op.net>
+ 2000 Red Hat, Inc.
+ 2007 Kevin Smith <kismith@psi-im.org>
+ 2009 Sergey Il'inykh
+ 2009 Maciej Niedzielski
+ 1992-2006 Trolltech AS.
+ 2010 Khryukin Evgeny
+ 2010 Vitaly Tonkacheyev
+License: LGPL-2.1+
 
-Files:
- third-party/qca/qca/src/botantools/botan/*
+Files: third-party/qca/qca/src/botantools/botan/*
  third-party/qca/qca/src/botantools/wrapns.c
  src/tools/crash/crash_sigsegv.h
  src/tools/crash/crash_sigsegv.cpp
-Sources:
- git://github.com/psi-im/psi.git
-Copyright:
- Copyright 2003-2007  Justin Karneges <justin@affinix.com>
- Copyright 1999-2007  The Botan Project
- Copyright 2003       Juan F. Codagnone <juam@users.sourceforge.net>
-License:
- Simplified BSD License
- .
- Redistribution and use in source and binary forms, for any use, with or without
- modification, is permitted provided that the following conditions are met:
- .
- 1. Redistributions of source code must retain the above copyright notice, this
- list of conditions, and the following disclaimer.
- .
- 2. Redistributions in binary form must reproduce the above copyright notice,
- this list of conditions, and the following disclaimer in the documentation
- and/or other materials provided with the distribution.
- .
- THIS SOFTWARE IS PROVIDED BY THE AUTHOR(S) "AS IS" AND ANY EXPRESS OR IMPLIED
- WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
- MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, ARE DISCLAIMED.
- .
- IN NO EVENT SHALL THE AUTHOR(S) OR CONTRIBUTOR(S) BE LIABLE FOR ANY DIRECT,
- INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
- BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
- DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
- OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
- ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Copyright: 2003-2007 Justin Karneges <justin@affinix.com>
+ 1999-2007 The Botan Project
+ 2003 Juan F. Codagnone <juam@users.sourceforge.net>
+License: BSD-2-clause
 
-Files:
- src/tools/tunecontroller/plugins/winamp/third-party/wa_ipc.h
-Sources:
- git://github.com/psi-im/psi.git
-Copyright:
- Copyright 2003       Nullsoft, Inc.
-License:
- zlib License
- .
- This software is provided 'as-is', without any express or implied warranty.
- In no event will the authors be held liable for any damages arising from the
- use of this software.
- .
- Permission is granted to anyone to use this software for any purpose,
- including commercial applications, and to alter it and redistribute it freely,
- subject to the following restrictions:
- .
- 1. The origin of this software must not be misrepresented; you must not claim
- that you wrote the original software. If you use this software in a product,
- an acknowledgment in the product documentation would be appreciated but is
- not required.
- .
- 2. Altered source versions must be plainly marked as such, and must not be
- misrepresented as being the original software.
- .
- 3. This notice may not be removed or altered from any source distribution.
+Files: src/tools/tunecontroller/plugins/winamp/third-party/wa_ipc.h
+Copyright: 2003 Nullsoft, Inc.
+License: zlib-License
 
-Files:
- src/plugins/generic/noughtsandcrosses/tictac.h
+Files: src/plugins/generic/noughtsandcrosses/tictac.h
  src/plugins/generic/noughtsandcrosses/tictac.cpp
-Sources:
- git://github.com/psi-im/psi.git
-Copyright:
- Copyright 1992-2000  Trolltech AS.  All rights reserved.
-License:
- none
- .
- This files are part of an example program for Qt.  This example
- program may be used, distributed and modified without limitation.
+Copyright: 1992-2000 Trolltech AS.  All rights reserved.
+License: public-domain
+ This files are part of an example program for Qt. This example program may be
+ used, distributed and modified without limitation.
 
-Files:
- iris/*
+Files: iris/*
  iris/src/xmpp/*
-Sources:
- git://github.com/psi-im/iris.git
-Copyright:
- Copyright 2001-2008  Justin Karneges <justin@affinix.com>
- Copyright 2008       Remko Troncon
-License:
- LGPL-3
- .
- This data is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 3 of the License.
- .
- This data is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
- .
- You should have received a copy of the GNU Lesser General Public License
- along with this program. If not, see <http://www.gnu.org/licenses/>.
- .
- On Debian systems, the complete text of the GNU Lesser General
- Public License can be found in `/usr/share/common-licenses/LGPL-3'.
+Copyright: 2001-2008 Justin Karneges <justin@affinix.com>
+ 2008 Remko Troncon
+License: LGPL-3
 
-Files:
- iris/tools/icetunnel/*
+Files: iris/tools/icetunnel/*
  iris/tools/nettool/*
  iris/src/irisnet/*
  iris/src/libidn/*
  iris/src/xmpp/xmpp-core/*
  iris/src/xmpp/xmpp-im/*
-Sources:
- git://github.com/psi-im/iris.git
-Copyright:
- Copyright 2008-2010  Barracuda Networks, Inc.
- Copyright 2001-2008  Justin Karneges <justin@affinix.com>
- Copyright 2002-2003  Simon Josefsson
- Copyright 1999-2000  Tom Tromey
- Copyright 2000       Red Hat, Inc.
- Copyright 2006       Remko Troncon
- Copyright 2010       Rion
- Copyright 2006       Maciek Niedzielski
- Copyright 2003-2007  Michail Pishchagin <mblsha@users.sourceforge.net>
-License:
- LGPL-2.1 or later
+Copyright: 2008-2010 Barracuda Networks, Inc.
+ 2001-2008 Justin Karneges <justin@affinix.com>
+ 2002-2003 Simon Josefsson
+ 1999-2000 Tom Tromey
+ 2003-2007 Michail Pishchagin <mblsha@users.sourceforge.net>
+ 2000 Red Hat, Inc.
+ 2006 Remko Troncon
+ 2010 Rion <rion4ik@gmail.com>
+ 2006 Maciek Niedzielski
+License: LGPL-2.1+
+
+Files: iris/src/jdns/*
+Copyright: 2005-2006 Justin Karneges <justin@affinix.com>
+ 2005 Jeremie Miller
+License: MIT
+
+Files: src/libpsi/*
+Copyright: 2003-2009 Michail Pishchagin <mblsha@users.sourceforge.net>
+ 2006-2008 Maciej Niedzielski
+ 2003-2006 Justin Karneges <justin@affinix.com>
+ 2005-2008 James Chaldecott
+ 2006 Cestonaro Thilo
+ 2007 Remko Troncon
+ 2009 Caolán McNamara
+ 2009 Barracuda Networks, Inc.
+License: GPL-2+
+
+Files: src/libpsi/tools/idle/*
+ src/libpsi/tools/zip/zip.*
+Copyright: 2001-2008 Justin Karneges <justin@affinix.com>
+ 2003 Tarkvara Design Inc.
+License: LGPL-2.1+
+
+Files: libpsi/tools/globalshortcut/NDKeyboardLayout.h
+ libpsi/tools/globalshortcut/NDKeyboardLayout.m
+Copyright: 2010 Nathan Day
+License: MIT
+
+Files: src/libpsi/tools/zip/minizip/*
+Copyright: 1998 Gilles Vollant
+License: zlib-License
+
+Files: themes/* skins/*
+ sound/attention.wav
+ sound/chess_finish.wav
+ sound/chess_start.wav
+ sound/pepnotify.wav
+ sound/watcher.wav
+ sound/chess_error.wav
+ sound/chess_move.wav
+ sound/email.wav
+ sound/reminder.wav
+ iconsets/system/default/psiplus/*
+ iconsets/roster/default/typing.png
+ src/plugins/generic/attentionplugin/*
+ src/plugins/generic/extendedoptionsplugin/*
+ src/plugins/generic/qipxstatusesplugin/*
+ src/plugins/generic/autoreplyplugin/*
+ src/plugins/generic/gmailserviceplugin/*
+ src/plugins/generic/screenshotplugin/*
+ src/plugins/generic/birthdayreminderplugin/*
+ src/plugins/generic/gomokugameplugin/*
+ src/plugins/generic/skinsplugin/*
+ src/plugins/generic/captchaformsplugin/*
+ src/plugins/generic/historykeeperplugin/*
+ src/plugins/generic/stopspamplugin/*
+ src/plugins/generic/chessplugin/*
+ src/plugins/generic/icqdieplugin/*
+ src/plugins/generic/storagenotesplugin/*
+ src/plugins/generic/cleanerplugin/*
+ src/plugins/generic/imageplugin/*
+ src/plugins/generic/translateplugin/*
+ src/plugins/generic/clientswitcherplugin/*
+ src/plugins/generic/jabberdiskplugin/*
+ src/plugins/generic/videostatusplugin/*
+ src/plugins/generic/conferenceloggerplugin/*
+ src/plugins/generic/juickplugin/*
+ src/plugins/generic/watcherplugin/*
+ src/plugins/generic/contentdownloaderplugin/*
+ src/plugins/generic/pepchangenotifyplugin/*
+ src/plugins/generic/extendedmenuplugin/*
+ src/plugins/generic/pstoplugin/*
+ src/plugins/generic/yandexnarodplugin/*
+ src/plugins/generic/otrplugin/*
+Copyright: 2009-2010 Rion (Sergey Ilinyh) <rion4ik@gmail.com>
+ 2009-2010 Khryukin Evgeny
+ 2009-2010 Virnik
+ 2006-2007 Maciej Niedzielski
+ 2009-2010 Kravtsov Nikolai
+ 2009-2010 VampiRus
+ 2009-2010 Ivan Borzenkov <ivan1986@list.ru>
+ 2011 Ivan Romanov aka taurus <drizt@land.ru>
+ 2003 Justin Karneges <justin@affinix.com>
+ 2010 senu
+ 2008 Ustyugov Roman <qtdevel@gmail.com>
+ 2010 Michail Pishchagin <mblsha@users.sourceforge.net>
+ 2010 Dmitriy.trt
+ 2008 Armando Jagucki
+ 2010 Vitaly Tonkacheyev
+ 2010 KukuRuzo
+ 2011 Aleksey Andreev
+ 2011 Evgeny Khryukin
+ 2004-2008 Ian Goldberg
+ 2004-2008 Chris Alexander
+ 2004-2008 Nikita Borisov
+ 2007-2010 Timo Engel <timo-e@freenet.de>
+ 2008-2009 Alexander Kazarin <boiler@co.ru>
+ 2010 Ivan Romanov <drizt@land.ru>
+License: GPL-2+
+
+Files: src/plugins/generic/screenshotplugin/qxt/*
+Copyright: 2006-2011 Qxt Foundation <foundation@libqxt.org>
+ 2011 Marcin Jakubowski <mjakubowski@gmail.com>
+License: BSD-3-clause
+
+Files: generate-single-repo.sh
+Copyright: 2012 Boris Pek <tehnick-8@mail.ru>
+License: GPL-2+
+
+Files: debian/*
+Copyright: 2009-2011 Ivan Borzenkov <ivan1986@list.ru>
+ 2011-2012 Boris Pek <tehnick-8@mail.ru>
+License: GPL-2+
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
  .
- This data is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 2.1 of the License, or (at your option) any later version.
- .
- This data is distributed in the hope that it will be useful,
+ This program is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
  .
- You should have received a copy of the GNU Lesser General Public License
+ You should have received a copy of the GNU General Public License
  along with this program. If not, see <http://www.gnu.org/licenses/>.
- .
- On Debian systems, the complete text of the GNU Lesser General
- Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.
-
-Files:
- iris/src/jdns/*
-Sources:
- git://github.com/psi-im/iris.git
-Copyright:
- Copyright 2005-2006  Justin Karneges <justin@affinix.com>
- Copyright 2005       Jeremie Miller
-License:
- MIT license
- .
- Permission is hereby granted, free of charge, to any person obtaining a
- copy of this software and associated documentation files (the
- "Software"), to deal in the Software without restriction, including
- without limitation the rights to use, copy, modify, merge, publish,
- distribute, sublicense, and/or sell copies of the Software, and to
- permit persons to whom the Software is furnished to do so, subject to
- the following conditions:
- .
- The above copyright notice and this permission notice shall be included
- in all copies or substantial portions of the Software.
- .
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
- OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-Files:
- src/libpsi/*
-Sources:
- git://github.com/psi-im/libpsi.git
-Copyright:
- Copyright 2003-2009  Michail Pishchagin <mblsha@users.sourceforge.net>
- Copyright 2006-2008  Maciej Niedzielski
- Copyright 2003-2006  Justin Karneges <justin@affinix.com>
- Copyright 2006       Cestonaro Thilo
- Copyright 2007       Remko Troncon
- Copyright 2009       Caolán McNamara
- Copyright 2005-2008  James Chaldecott
- Copyright 2009       Barracuda Networks, Inc.
-License:
- GPL-2 or later
- .
- This program is free software: you can redistribute it and/or modify it under the
- terms of the GNU General Public License as published by the Free Software Foundation,
- either version 2 of the License, or (at your option) any later version.
- .
- This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
- without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- See the GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License along with this program.
- If not, see <http://www.gnu.org/licenses/>.
  .
  On Debian systems, the complete text of the GNU General
  Public License can be found in `/usr/share/common-licenses/GPL-2'.
 
-Files:
- src/libpsi/tools/idle/*
- src/libpsi/tools/zip/zip.*
-Sources:
- git://github.com/psi-im/iris.git
-Copyright:
- Copyright 2001-2008  Justin Karneges <justin@affinix.com>
- Copyright 2003       Tarkvara Design Inc.
-License:
- LGPL-2.1 or later
+License: LGPL-3
+ This program is free software: you can redistribute it and/or modify it under
+ the terms of the GNU Lesser General Public License as published by the Free
+ Software Foundation, either version 3 of the License.
  .
- This data is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 2.1 of the License, or (at your option) any later version.
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ PARTICULAR PURPOSE. See the GNU General Public License for more details.
  .
- This data is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
+ You should have received a copy of the GNU General Public License along with
+ this program. If not, see <http://www.gnu.org/licenses/>.
  .
- You should have received a copy of the GNU Lesser General Public License
- along with this program. If not, see <http://www.gnu.org/licenses/>.
- .
- On Debian systems, the complete text of the GNU Lesser General
- Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.
+ On Debian systems, the complete text of the GNU Lesser General Public License
+ can be found in `/usr/share/common-licenses/LGPL-3'.
 
-Files:
- libpsi/tools/globalshortcut/NDKeyboardLayout.h
- libpsi/tools/globalshortcut/NDKeyboardLayout.m
-Sources:
- git://github.com/psi-im/libpsi.git
-Copyright:
- Copyright 2010       Nathan Day
-License:
- MIT license
+License: LGPL-2.1+
+ This program is free software: you can redistribute it and/or modify it under
+ the terms of the GNU Lesser General Public License as published by the Free
+ Software Foundation, either version 2.1 of the License, or (at your option)
+ any later version.
  .
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along with
+ this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public License
+ can be found in `/usr/share/common-licenses/LGPL-2.1'.
+
+License: BSD-2-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ 1. Redistributions of source code must retain the above copyright notice,
+    this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright 
+    notice, this list of conditions and the following disclaimer in the 
+    documentation and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+ LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. Neither the name of the LibQxt project nor the
+    names of its contributors may be used to endorse or promote products
+    derived from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+ LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+
+License: MIT
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
  in the Software without restriction, including without limitation the rights
@@ -405,23 +365,14 @@ License:
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
 
-Files:
- src/libpsi/tools/zip/minizip/*
-Sources:
- git://github.com/psi-im/iris.git
-Copyright:
- Copyright 1998       Gilles Vollant
-License:
- zlib License
- .
- This software is provided 'as-is', without any express or implied
- warranty. In no event will the authors be held liable for any damages
- arising from the use of this software.
+License: zlib-License
+ This software is provided 'as-is', without any express or implied warranty.
+ In no event will the authors be held liable for any damages arising from the
+ use of this software.
  .
  Permission is granted to anyone to use this software for any purpose,
- including commercial applications, and to alter it and redistribute it
- freely, subject to the following restrictions:
- .
+ including commercial applications, and to alter it and redistribute it freely,
+ subject to the following restrictions:
  1. The origin of this software must not be misrepresented; you must not
     claim that you wrote the original software. If you use this software
     in a product, an acknowledgment in the product documentation would be
@@ -429,95 +380,3 @@ License:
  2. Altered source versions must be plainly marked as such, and must not be
     misrepresented as being the original software.
  3. This notice may not be removed or altered from any source distribution.
-
-Files:
- changelog*
- certs/rootcert.xml
- iconsets/system/default/psiplus/*
- iconsets/roster/default/typing.png
- lang/ru/*
- patches/*
- plugins/generic/attentionplugin/*
- plugins/generic/extendedoptionsplugin/*
- plugins/generic/qipxstatusesplugin/*
- plugins/generic/autoreplyplugin/*
- plugins/generic/gmailserviceplugin/*
- plugins/generic/screenshotplugin/*
- plugins/generic/birthdayreminderplugin/*
- plugins/generic/gomokugameplugin/*
- plugins/generic/skinsplugin/*
- plugins/generic/captchaformsplugin/*
- plugins/generic/historykeeperplugin/*
- plugins/generic/stopspamplugin/*
- plugins/generic/chessplugin/*
- plugins/generic/icqdieplugin/*
- plugins/generic/storagenotesplugin/*
- plugins/generic/cleanerplugin/*
- plugins/generic/imageplugin/*
- plugins/generic/translateplugin/*
- plugins/generic/clientswitcherplugin/*
- plugins/generic/jabberdiskplugin/*
- plugins/generic/videostatusplugin/*
- plugins/generic/conferenceloggerplugin/*
- plugins/generic/juickplugin/*
- plugins/generic/watcherplugin/*
- plugins/generic/contentdownloaderplugin/*
- plugins/generic/pepchangenotifyplugin/*
- plugins/generic/extendedmenuplugin/*
- plugins/generic/pstoplugin/*
- scripts/*
- skins/*
- sound/attention.wav
- sound/chess_finish.wav
- sound/chess_start.wav
- sound/pepnotify.wav
- sound/watcher.wav
- sound/chess_error.wav
- sound/chess_move.wav
- sound/email.wav
- sound/reminder.wav
- themes/*
-Sources:
- http://psi-dev.googlecode.com/svn/trunk/
-Copyright:
- Copyright 2009-2010  Rion (Sergey Ilinyh)
- Copyright 2009-2010  Khryukin Evgeny
- Copyright 2009-2010  Virnik
- Copyright 2006-2007  Maciej Niedzielski
- Copyright 2009-2010  Kravtsov Nikolai
- Copyright 2009-2010  VampiRus
- Copyright 2009-2010  Ivan Borzenkov <ivan1986@list.ru>
- Copyright 2011       Ivan Romanov aka taurus <drizt@land.ru>
- Copyright 2003       Justin Karneges <justin@affinix.com>
- Copyright 2010       senu
- Copyright 2008       Ustyugov Roman <qtdevel@gmail.com>
- Copyright 2010       Michail Pishchagin <mblsha@users.sourceforge.net>
- Copyright 2010       Dmitriy.trt
- Copyright 2008       Armando Jagucki
- Copyright 2010       Vitaly Tonkacheyev
- Copyright 2010       KukuRuzo
- Copyright 2011       Aleksey Andreev
-License:
- GPL-2 or later
- .
- This program is free software: you can redistribute it and/or modify it under the
- terms of the GNU General Public License as published by the Free Software Foundation,
- either version 2 of the License, or (at your option) any later version.
- .
- This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
- without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- See the GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License along with this program.
- If not, see <http://www.gnu.org/licenses/>.
- .
- On Debian systems, the complete text of the GNU General
- Public License can be found in `/usr/share/common-licenses/GPL-2'.
-
-Small patches in Psi+ Project:
- Vladimir Shelukhin, <vladimir.shelukhin@gmail.com>,
- Maksim Maj <maksim.maj@gmail.com>,
-
-
-The Debian packaging is copyright 2010 Alexander Pozdnyakov <almipo@mail.ru> and
-is licensed under the GPL, see `/usr/share/common-licenses/GPL-2'.

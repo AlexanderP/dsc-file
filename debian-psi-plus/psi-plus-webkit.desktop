@@ -6,8 +6,10 @@ Name=Psi Plus Webkit
 GenericName=Jabber Client
 Comment=Communicate over the Jabber network
 Icon=psi-plus
-Exec=psi-plus-webkit
+Exec=psi-plus-webkit %U
+MimeType=x-scheme-handler/xmpp;
 Terminal=false
+StartupWMClass=psi
 Categories=Network;InstantMessaging;Qt;
 
 # Translations
