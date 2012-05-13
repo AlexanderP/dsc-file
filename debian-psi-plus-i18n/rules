@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+PACKAGE = psi-plus-i18n
+
+%:
+	dh $@ --parallel
+
+override_dh_auto_build:
+	./update-repo.sh make
+
+override_dh_auto_install:
+	mkdir -p $(CURDIR)/debian/$(PACKAGE)/usr/share/psi-plus/translations/
+	cp out/*.qm $(CURDIR)/debian/$(PACKAGE)/usr/share/psi-plus/translations/
+
+override_dh_auto_clean:
+	dh_clean
+	rm -f out/* translations.pro
