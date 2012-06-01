@@ -61,6 +61,8 @@ override_dh_auto_install:
 	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/share/psi-plus/COPYING
 
 override_dh_install:
+	# Fix permissions
+	chmod uog-x $(CURDIR)/skins/mac/native_mac/images/qcombobox.png
 	dh_install
 	# Deleting exported plugins
 	rm -f $(CURDIR)/debian/psi-plus-plugins/usr/lib/psi-plus/plugins/libcontentdownloaderplugin.so
@@ -68,8 +70,6 @@ override_dh_install:
 	bash ./debian/mergedups.sh
 	# Deleting extra copy of sound files
 	rm -rf $(CURDIR)/debian/psi-plus-common/usr/share/psi-plus/sound/
-	# Fix permissions
-	chmod uog-x $(CURDIR)/debian/psi-plus-skins/usr/share/psi-plus/skins/mac/native_mac/images/qcombobox.png
 
 override_dh_auto_clean:
 	dh_clean
