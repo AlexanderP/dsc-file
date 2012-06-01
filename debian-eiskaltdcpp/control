@@ -2,18 +2,20 @@ Source: eiskaltdcpp
 Section: net
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7), po-debconf, autotools-dev,
+Build-Depends: debhelper (>= 7.0.50~), po-debconf, autotools-dev,
  fakeroot, chrpath, pkg-config, cmake (>= 2.6.0),
  libqt4-dev (>=4.4.0), qt4-dev-tools (>=4.4.0), qt4-qtconfig (>=4.4.0),
  libgtk2.0-dev, libglade2-dev, libgtk-3-dev,
  libnotify-dev, liblua5.1-0-dev, libpcre3-dev, libboost-dev,
- libbz2-dev, zlib1g-dev, libssl-dev, libaspell-dev, libidn11-dev
+ libbz2-dev, zlib1g-dev, libssl-dev, libaspell-dev,
+ libidn11-dev, libattr1-dev
 Homepage: http://code.google.com/p/eiskaltdc/
 Vcs-Git: git://github.com/tehnick/eiskaltdcpp-debian.git
 Vcs-Browser: https://github.com/tehnick/eiskaltdcpp-debian
 Standards-Version: 3.9.3
 
 Package: eiskaltdcpp
+Section: metapackages
 Architecture: all
 Depends: ${misc:Depends},
  eiskaltdcpp-qt (>= ${binary:Version}) |
@@ -241,7 +243,7 @@ Description: EiskaltDC++ daemon
 
 Package: eiskaltdcpp-cli
 Architecture: all
-Depends: ${misc:Depends},
+Depends: ${perl:Depends}, ${misc:Depends},
  libgetopt-long-descriptive-perl,
  libdata-dump-perl,
  libjson-rpc-perl,
