@@ -1,63 +1,94 @@
 Source: gimp
-Section: graphics
 Priority: optional
+Section: graphics
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7.0.50~),
- 		gawk,
- 		quilt,
-		autotools-dev,
- 		patchutils,  
- 		gettext, 
- 		intltool, 
- 		libx11-dev, 
- 		libice-dev, 
- 		libsm-dev,
- 		libxmu-dev, 
- 		libxpm-dev, 
- 		libxt-dev,
- 		libaa1-dev, 
- 		libgtk2.0-dev, 
- 		libglib2.0-dev,
- 		libpango1.0-dev, 
- 		libjpeg8-dev,
- 		libart-2.0-dev, 
- 		libpng12-dev | libpng-dev,
- 		zlib1g-dev, 
- 		libtiff4-dev,
- 		python-dev, 
- 		python-gtk2-dev,
- 		python-support, 
- 		libexif-dev, 
- 		libmng-dev,
- 		librsvg2-dev, 
- 		libfontconfig1-dev,
- 		libwmf-dev, 
- 		libfreetype6-dev,
- 		libpoppler-glib-dev,
- 		libasound2-dev,
- 		libdbus-glib-1-dev,
- 		liblcms1-dev | liblcms-dev, 
- 		libgegl-dev, 
- 		libbabl-dev,
- 		gtk-doc-tools, 
- 		libjasper-dev, 
- 		iso-codes, 
- 		libcurl4-openssl-dev, 
- 		libhal-dev,
-		xvfb,
-		libgdk-pixbuf2.0-dev,
-		libcairo2-dev,
-		libpixman-1-dev,
 Standards-Version: 3.9.3
-Homepage: http://www.gimp.org
+Build-Depends: debhelper (>= 8),
+               cdbs (>= 0.4.97),
+               autotools-dev,
+               gettext,
+               gnome-pkg-tools,
+               gtk-doc-tools (>= 1.0),
+               intltool (>= 0.40.1),
+               iso-codes,
+               libaa1-dev,
+               libart-2.0-dev,
+               libasound2-dev (>= 1.0.0) [linux-any],
+               libatk1.0-dev (>= 2.2.0),
+               libbabl-dev (>= 0.1.10),
+               libbz2-dev,
+               libcairo2-dev (>= 1.10.2),
+               libcurl4-gnutls-dev (>= 7.15.1),
+               libdbus-glib-1-dev (>= 0.70),
+               libexif-dev (>= 0.6.15),
+               libfreetype6-dev (>= 2.2),
+               libfontconfig1-dev (>= 2.2.0),
+               libglib2.0-dev (>= 2.30.2),
+               libglib2.0-doc,
+               libgegl-dev (>= 0.2.0),
+               libgtk2.0-dev (>= 2.24.10),
+               libgtk2.0-doc,
+               libgdk-pixbuf2.0-dev (>= 2.24.1),
+               libgdk-pixbuf2.0-doc,
+               libgs-dev,
+               libgudev-1.0-dev (>= 167) [linux-any],
+               libice-dev,
+               libjasper-dev,
+               libjpeg-dev,
+               liblcms1-dev (>= 1.16) | liblcms-dev,
+               libmng-dev,
+               libpango1.0-dev (>= 1.29.4),
+               libpng-dev,
+               libpoppler-glib-dev (>= 0.12.4),
+               librsvg2-dev (>= 2.14.0),
+               libsm-dev,
+               libtiff4-dev,
+               libwebkitgtk-dev (>= 1.6.1),
+               libwmf-dev (>= 0.2.8),
+               libx11-dev,
+               libxcursor-dev,
+               libxmu-dev,
+               libxpm-dev,
+               libxt-dev,
+               zlib1g-dev,
+               patchutils,
+               python-dev (>= 2.6.6-3),
+               python-gtk2-dev (>= 2.10.4),
+               xsltproc
+Homepage: http://www.gimp.org/
+
+Package: libgimp2.0
+Architecture: any
+Section: libs
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Recommends: gimp-data (>= ${source:Upstream-Version}),
+            gimp-data (<= ${source:Upstream-Version}-z)
+Conflicts: libgimp-2.0-0
+Description: Libraries for the GNU Image Manipulation Program
+ This package includes the libgimp libraries, which are
+ necessary to run GIMP and third-party GIMP plugins.
 
 Package: gimp
 Architecture: any
-Section: graphics
 Provides: gimp-helpbrowser, gimp-python
-Depends: libgimp-2.0-0 (>= ${source:Upstream-Version}), libgimp-2.0-0 (<= ${source:Upstream-Version}-z), gimp-data (>= ${source:Upstream-Version}), gimp-data (<= ${source:Upstream-Version}-z), python-gtk2 (>= 2.8.0), ${shlibs:Depends}, ${python:Depends}, ${misc:Depends}
-Conflicts: gimp2.7-data, gimp2.7
-Description: GNU Image Manipulation Program
+Depends: libgimp2.0 (>= ${source:Upstream-Version}),
+         libgimp2.0 (<= ${source:Upstream-Version}-z),
+         gimp-data (>= ${source:Upstream-Version}),
+         gimp-data (<= ${source:Upstream-Version}-z),
+         python-gtk2 (>= 2.8.0),
+         ${shlibs:Depends},
+         ${python:Depends},
+         ${misc:Depends}
+Recommends: ghostscript
+Suggests: gimp-help-en | gimp-help,
+          gimp-data-extras,
+          gvfs-backends,
+          libasound2
+Breaks: gimp-plugin-registry (<< 4.20120506)
+Replaces: gimp-plugin-registry (<< 4.20120506), gimp2.7
+Conflicts: gimp2.7
+Description: The GNU Image Manipulation Program
  GIMP is an advanced picture editor. You can use it to edit, enhance, and
  retouch photos and scans, create drawings, and make your own images.
  It has a large collection of professional-level editing tools and
@@ -75,30 +106,31 @@ Description: GNU Image Manipulation Program
  To use a MIDI device (like a musical keyboard) as an input controller in GIMP,
  install libasound2 and read the how-to at /usr/share/doc/gimp/README.MIDI
 
-Package: libgimp-2.0-0
-Architecture: any
-Section: libs
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: libgimp2.0
-Recommends: gimp, gimp-data
-Description: Libraries for the GNU Image Manipulation Program
- This package includes the libgimp libraries, which are
- necessary to run GIMP and third-party GIMP plugins.
-
 Package: gimp-data
 Architecture: all
-Section: graphics
 Recommends: gimp
-Conflicts: gimp2.7
 Depends: ${misc:Depends}
+Conflicts: gimp (<< 2.4.0~rc2-2),
+           gimp-python (<< 2.6.0),
+		   gimp2.7-data
+Replaces: gimp (<< 2.4.0~rc2-2),
+          gimp-python (<< 2.6.0),
+		  gimp2.7-data
 Description: Data files for GIMP
  This package contains architecture-independent supporting data files
  for use with GIMP.
 
-Package: libgimp-2.0-0-dev
+Package: libgimp2.0-dev
 Architecture: any
 Section: libdevel
-Depends: ${shlibs:Depends}, libgimp-2.0-0 (= ${binary:Version}), libgtk2.0-dev (>= 2.12.5), pkg-config, ${misc:Depends}
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         libgimp2.0 (= ${binary:Version}),
+         libgtk2.0-dev (>= 2.12.5),
+         pkg-config
+Suggests: libgimp2.0-doc
+Conflicts: libgimp-2.0-0-dev
+Replaces: libgimp-2.0-0-dev
 Description: Headers and other files for compiling plugins for GIMP
  This package contains the header files for the GNU Image Manipulation
  Program, along with the static versions of libgimp.
@@ -106,3 +138,12 @@ Description: Headers and other files for compiling plugins for GIMP
  .
  Install this package if you wish to compile your own plugins,
  or if you wish to develop packages that use libgimp. 
+
+Package: libgimp2.0-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends},
+         lynx | www-browser
+Description: Developers' Documentation for the GIMP library
+ This package contains the HTML documentation for the GIMP library in
+ /usr/share/gtk-doc/html/ .

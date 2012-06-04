@@ -1,4 +1,7 @@
-etc/
+# The following line is prefixed as the source contains an etc/ dir, and
+# dh_install will prefer to install its entire contents, instead of the
+# installed debian/tmp/etc directory. Prefixing it works around this.
+debian/tmp/etc/
 usr/share/gimp/
 usr/share/icons/
 usr/share/locale/*/LC_MESSAGES/gimp??.mo
