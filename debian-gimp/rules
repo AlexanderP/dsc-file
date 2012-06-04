@@ -26,6 +26,8 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-static \
 			--enable-gtk-doc PYTHON=/usr/bin/`pyversions -d`
 DEB_BUILDDIR := $(DEB_SRCDIR)/builddir
 
+DEB_CONFIGURE_SCRIPT="./autogen.sh"
+
 DEB_DH_SHLIBDEPS_ARGS_ALL := -Llibgimp2.0 -l$(CURDIR)/debian/libgimp2.0/usr/lib
 # exclude this since we manually add the Recommends in debian/control
 DEB_DH_SHLIBDEPS_ARGS_gimp := -Xlibcontroller-midi.so
