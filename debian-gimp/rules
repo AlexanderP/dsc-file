@@ -24,7 +24,7 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-static \
 			--enable-python \
 			--enable-default-binary \
 			--enable-gtk-doc PYTHON=/usr/bin/`pyversions -d`
-DEB_BUILDDIR := $(DEB_SRCDIR)/builddir
+#DEB_BUILDDIR := $(DEB_SRCDIR)/builddir
 
 DEB_CONFIGURE_SCRIPT="./autogen.sh"
 
@@ -32,10 +32,10 @@ DEB_DH_SHLIBDEPS_ARGS_ALL := -Llibgimp2.0 -l$(CURDIR)/debian/libgimp2.0/usr/lib
 # exclude this since we manually add the Recommends in debian/control
 DEB_DH_SHLIBDEPS_ARGS_gimp := -Xlibcontroller-midi.so
 DEB_DH_MAKESHLIBS_ARGS_gimp := -X/usr/lib/gimp/2.0/modules/
-DEB_DH_MAKESHLIBS_ARGS_libgimp2.0 += -V -- -c4
+#DEB_DH_MAKESHLIBS_ARGS_libgimp2.0 += -V -- -c4
 
-clean::
-	rm -rf $(DEB_BUILDDIR)
+#clean::
+#	rm -rf $(DEB_BUILDDIR)
 
 common-install-impl::
 	# Remove compiled python files from the distribution, they're compiled
