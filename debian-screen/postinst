@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+. /usr/share/debconf/confmodule
+
 if [ "$1" = configure ]; then
   if ! test -d /var/run/screen; then
     install -g utmp -m 0775 -d /var/run/screen

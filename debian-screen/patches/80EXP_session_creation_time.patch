@@ -18,7 +18,7 @@ Index: screen/doc/screen.1
 +strings and creation timestamps identifying your
  .I screen
  sessions.
- Sessions marked `detached' can be resumed with \*Qscreen -r\*U. Those marked
+ Sessions marked `detached' can be resumed with \*Qscreen \-r\*U. Those marked
 @@ -340,7 +340,7 @@
  sessions in another user's directory. This requires setuid-root.
  .TP 5
@@ -30,7 +30,7 @@ Index: screen/doc/screen.1
  If no detached session exists, starts a new session using the specified
 @@ -350,6 +350,8 @@
  .I screen
- is run as a login-shell (actually screen uses \*Q-xRR\*U in that case).
+ is run as a login-shell (actually screen uses \*Q\-xRR\*U in that case).
  For combinations with the \fB\-d\fP/\fB\-D\fP option see there.
 +.B Note:
 +Time-based session selection is a Debian addition.

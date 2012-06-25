@@ -1,0 +1,86 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: screen\n"
+"Report-Msgid-Bugs-To: screen@packages.debian.org\n"
+"POT-Creation-Date: 2012-06-16 15:27+0200\n"
+"PO-Revision-Date: 2012-06-19 11:39+0200\n"
+"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.4\n"
+
+#. Type: error
+#. Description
+#: ../templates:2001
+msgid "Warning: upgrading to screen 4.1.0 with an active 4.0.3 session"
+msgstr "Advarsel: oppgraderer til screen 4.1.0 mens en 4.0.3-økt er aktiv"
+
+#. Type: error
+#. Description
+#. Type: error
+#. Description
+#: ../templates:2001 ../templates:3001
+msgid ""
+"There seems to be at least one GNU Screen session running on this system; "
+"possibly the one you are running this upgrade in. However, GNU Screen 4.1.0 "
+"currently can't communicate with sessions started by Screen 4.0.3."
+msgstr ""
+"Det ser ut til at det kjører minst én GNU Screen-økt på dette systemet; "
+"kanskje den du kjører denne oppgraderingen i. Men GNU Screen 4.1.0 "
+"kan ikke nå samvirke med økter som er startet av Screen 4.0.3."
+
+#. Type: error
+#. Description
+#: ../templates:2001
+msgid ""
+"To reconnect to a running GNU Screen session after the new version has been "
+"unpacked, you'll need to call the old screen binary instead of the new one, "
+"so a copy has been made which can be invoked as \"/tmp/screen-4.0.3 -rd\"."
+msgstr ""
+"Det er blitt laget en kopi av det gamle Screen-programmet, som kan startes "
+"med «/tmp/screen-4.0.3 -rd» slik at du kan kalle på det gamle programmet "
+"etter "
+"at det nye er pakket ut, for å koble til en GNU Screen-økt som var i gang."
+
+#. Type: error
+#. Description
+#: ../templates:2001
+msgid ""
+"If your /tmp/ is a separate mount point mounted with the nosuid or noexec "
+"options, you may need to copy it to somewhere else (such as /root) before "
+"calling it. Its permissions should be 2755 (-rwxr-sr-x) and it should belong "
+"to the user root and group utmp."
+msgstr ""
+"Hvis /tmp hos deg er et eget monteringspunkt montert med nosuid eller "
+"noexec-valgene, må du kanskje kopiere fila et annet sted (f.eks. /root) "
+"før du kaller programmet. Tillatelsene bør være 2755 (-rwr-sr-x) og fila "
+"bør tilhøre bruker root og gruppe utmp."
+
+#. Type: error
+#. Description
+#: ../templates:3001
+msgid "Failed copy of screen binary to /tmp/screen-4.0.3"
+msgstr "Klarte ikke kopiere screen-programmet til /tmp/screen-4.0.3"
+
+#. Type: error
+#. Description
+#: ../templates:3001
+msgid ""
+"To reconnect to a running GNU Screen session after the new version has been "
+"unpacked, you'll need to call the old screen binary instead of the new one. "
+"However, the attempt to copy it to /tmp/screen-4.0.3 has failed."
+msgstr ""
+"Du må bruke det gamle screen-programmet i stedet for det nye for å koble til "
+"en "
+"screen-økt som kjørte under installasjonen, men det lyktes ikke å kopiere "
+"programmet "
+"til /tmp/screen-4.0.3"
+

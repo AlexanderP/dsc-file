@@ -1,0 +1,35 @@
+# These templates have been reviewed by the debian-l10n-english
+# team
+#
+# If modifications/additions/rewording are needed, please ask
+# debian-l10n-english@lists.debian.org for advice.
+#
+# Even minor modifications require translation updates and such
+# changes should be coordinated with translators and reviewers.
+
+Template: screen/410-upgrade
+Type: error
+_Description: Warning: upgrading to screen 4.1.0 with an active 4.0.3 session
+ There seems to be at least one GNU Screen session running on this system;
+ possibly the one you are running this upgrade in. However, GNU Screen 4.1.0
+ currently can't communicate with sessions started by Screen 4.0.3.
+ .
+ To reconnect to a running GNU Screen session after the new version has been
+ unpacked, you'll need to call the old screen binary instead of the new one,
+ so a copy has been made which can be invoked as "/tmp/screen-4.0.3 -rd".
+ .
+ If your /tmp/ is a separate mount point mounted with the nosuid or noexec
+ options, you may need to copy it to somewhere else (such as /root) before
+ calling it. Its permissions should be 2755 (-rwxr-sr-x) and it should belong
+ to the user root and group utmp.
+
+Template: screen/403-copy-failed
+Type: error
+_Description: Failed copy of screen binary to /tmp/screen-4.0.3
+ There seems to be at least one GNU Screen session running on this system;
+ possibly the one you are running this upgrade in. However, GNU Screen 4.1.0
+ currently can't communicate with sessions started by Screen 4.0.3.
+ .
+ To reconnect to a running GNU Screen session after the new version has been
+ unpacked, you'll need to call the old screen binary instead of the new one.
+ However, the attempt to copy it to /tmp/screen-4.0.3 has failed.

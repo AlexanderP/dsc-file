@@ -1,0 +1,83 @@
+# German Translation of screen's debconf messages
+# Copyright (C) 2012 Axel Beckert
+# This file is distributed under the same license as the screen package.
+# Axel Beckert <abe@debian.org>, 2012.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: screen\n"
+"Report-Msgid-Bugs-To: screen@packages.debian.org\n"
+"POT-Creation-Date: 2012-06-17 00:32+0200\n"
+"PO-Revision-Date: 2012-06-17 15:56+0200\n"
+"Last-Translator: Axel Beckert <abe@debian.org>\n"
+"Language-Team: debian-l10n-german@lists.debian.org\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: error
+#. Description
+#: ../templates:2001
+msgid "Warning: upgrading to screen 4.1.0 with an active 4.0.3 session"
+msgstr ""
+
+#. Type: error
+#. Description
+#. Type: error
+#. Description
+#: ../templates:2001 ../templates:3001
+msgid ""
+"There seems to be at least one GNU Screen session running on this system; "
+"possibly the one you are running this upgrade in. However, GNU Screen 4.1.0 "
+"currently can't communicate with sessions started by Screen 4.0.3."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../templates:2001
+msgid ""
+"To reconnect to a running GNU Screen session after the new version has been "
+"unpacked, you'll need to call the old screen binary instead of the new one, "
+"so a copy has been made which can be invoked as \"/tmp/screen-4.0.3 -rd\"."
+msgstr ""
+"Um zu einer laufenden GNU-Screen-Sitzung wieder verbinden zu können, "
+"nachdem die neue Version ausgepackt wurden, muß man das alte "
+"screen-Programm anstatt dem neuen aufgerufen werden. Zu diesem Zwecke "
+"wurde eine Kopie des alten screen-Programmes gemacht, die man z.B. als "
+"\"/tmp/screen-4.0.3 -rd\" aufrufen kann."
+
+#. Type: error
+#. Description
+#: ../templates:2001
+msgid ""
+"If your /tmp/ is a separate mount point mounted with the nosuid or noexec "
+"options, you may need to copy it to somewhere else (such as /root) before "
+"calling it. Its permissions should be 2755 (-rwxr-sr-x) and it should belong "
+"to the user root and group utmp."
+msgstr ""
+"Im Falle, daß /tmp/ ein eigener Einhängepunkt ist, der mit der Option "
+"nosuid oder noexec eingehängt wurde, kann es notwendig sein, das "
+"screen-Programm vor dem Aufrufen woanders zu kopieren, z.B. nach "
+"/root/. Seine Berechtigungen sollten 2755 (-rwxr-sr-x) sein und es "
+"sollte dem Benutzer root und der Gruppe utmp gehören."
+
+#. Type: error
+#. Description
+#: ../templates:3001
+msgid "Failed copy of screen binary to /tmp/screen-4.0.3"
+msgstr "Kopieren des screen-Programms nach /tmp/screen-4.0.3 fehlgeschlagen"
+
+#. Type: error
+#. Description
+#: ../templates:3001
+msgid ""
+"To reconnect to a running GNU Screen session after the new version has been "
+"unpacked, you'll need to call the old screen binary instead of the new one. "
+"However, the attempt to copy it to /tmp/screen-4.0.3 has failed."
+msgstr ""
+"Um zur laufenden GNU-Screen-Sitzung wieder verbinden zu können, "
+"nachdem die neue Version ausgepackt wurden, muß man das alte "
+"screen-Programm anstatt dem neuen aufrufen. Der Versuch, dieses nach "
+"/tmp/screen-4.0.3 zu kopieren ist jedoch fehlgeschlagen."

@@ -1,6 +1,8 @@
 # 01-08: fixes to configure, altering preprocessor macros etc.
 01configure_fix_alpha_vsprintf.patch
+03-fix-terminal-handling-on-kfreebsd.patch
 05fix_osdef_include.patch
+06-fix-parallel-build.patch
 # 10-79: "regular" code and documentation fixes
 10norootpassword.patch
 11replace_doc_paths.patch
@@ -21,6 +23,8 @@
 50increase-max-TERM-length.patch
 51fix-utf8-status-padding-bug.patch
 52fix_screen_utf8_nfd.patch
+53fix-startup-race-condition.patch
 58-show-encoding-hardstatus.patch
+59-fix-manpage-warnings.patch
 # 80-99: experimental patches, new features etc.
 80EXP_session_creation_time.patch

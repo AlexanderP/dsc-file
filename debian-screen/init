@@ -38,7 +38,7 @@ start)
     elif [ "$BINARYPERM" -ge 2000 ]; then
         chmod 0775 $SCREENDIR
     else
-        chmod 0777 $SCREENDIR
+        chmod 1777 $SCREENDIR
     fi
     ;;
 stop|restart|reload|force-reload)

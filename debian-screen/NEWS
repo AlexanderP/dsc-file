@@ -1,0 +1,46 @@
+screen (4.1.0~20120320gitdb59704-4) unstable; urgency=low
+
+  Currently screen 4.1.0 cannot reattach to running screen instances
+  started by screen 4.0.3 like the screen version from Debian Squeeze.
+
+  If a running screen session was detected during upgrade, a copy of the
+  old screen binary has been made at /tmp/screen-4.0.3. In most cases it's
+  sufficient to call "/tmp/screen-4.0.3 -rd" to reattach to a session
+  started before screen was upgraded to 4.1.0.
+
+  In case your /tmp/ is mounted with one of the options nosuid or noexec,
+  the above won't work. You need to copy the screen binary elsewhere
+  instead. If only the root user needs it, /root/ is likely an appropriate
+  place. If also normal users need to resurrect their running screen
+  sessions, copy it to e.g. /usr/local/bin/: "cp -pv /tmp/screen-4.0.3
+  /usr/local/bin/"
+
+  Make sure, owner, group and permissions are preserved. Screen may argue
+  about /var/run/screen/ having the wrong permissions if the group of the
+  binary is not "utmp" and the permissions of the binary are not 2755
+  (rwx-r-sr-x).
+
+  In case the copy hasn't been made or failed, you can download the old
+  package from a Debian mirror close to you. Check
+  http://cdn.debian.net/debian/pool/main/s/screen/ for the latest screen
+  binary package with 4.0.3 in the version number for your architecture.
+
+  For most architectures this is
+  http://cdn.debian.net/debian/pool/main/s/screen/screen_4.0.3-14_<your-architecture>.deb,
+  e.g. for amd64 it is
+  http://cdn.debian.net/debian/pool/main/s/screen/screen_4.0.3-14_amd64.deb
+
+  Full HOWTO for copy and paste (to be used as root user):
+
+    mkdir /root/old-screen/
+    cd /root/old-screen/
+    ARCH=`dpkg --print-architecture`
+    wget http://cdn.debian.net/debian/pool/main/s/screen/screen_4.0.3-14_$ARCH.deb || \
+      wget http://cdn.debian.net/debian/pool/main/s/screen/screen_4.0.3-14+b1_$ARCH.deb
+    dpkg-deb --fsys-tarfile screen_4.0.3-14*.deb | tar xvf - ./usr/bin/screen
+    usr/bin/screen -rd
+
+  See https://lists.gnu.org/archive/html/screen-devel/2011-10/msg00002.html
+  for the discussion of this issue in general.
+
+ -- Axel Beckert <abe@debian.org>  Thu, 21 Jun 2012 01:28:12 +0200

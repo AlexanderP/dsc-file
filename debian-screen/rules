@@ -24,12 +24,11 @@ endif
 clean:
 	dh_testdir
 	dh_testroot
-	rm -f configure-stamp build-stamp install-stamp
 	test ! -s doc/Makefile || $(MAKE) -C doc realclean
 	test ! -s Makefile || ! grep -q clean Makefile || $(MAKE) realclean
-	rm -f config.log config.status Makefile
 	dh_autoreconf_clean
-	dh_clean
+	dh_clean config.log config.status Makefile
+	debconf-updatepo
 
 configure: configure-stamp
 configure-stamp:
@@ -79,9 +78,6 @@ install-stamp: build-stamp
 	# make it setgid utmp
 	chown root:utmp $(ROOT)/usr/bin/screen
 	chmod 2755 $(ROOT)/usr/bin/screen
-	# lintian overrides for the setgid bin etc
-	install -m 755 -d $(ROOT)/usr/share/lintian/overrides
-	install -m 644 debian/screen.lintian.overrides $(ROOT)/usr/share/lintian/overrides/screen
 	touch $@
 
 binary: binary-arch
@@ -94,8 +90,10 @@ binary-arch: install
 	dh_installexamples
 	dh_installman || true
 	dh_installinfo
+	dh_installdebconf
 	dh_installchangelogs -k patchlevel.h
 	dh_installinit --no-start --init-script='screen-cleanup' --update-rcd-params='start 70 S .'
+	dh_lintian
 	dh_strip
 	dh_compress
 	dh_fixperms -X/usr/bin/screen
