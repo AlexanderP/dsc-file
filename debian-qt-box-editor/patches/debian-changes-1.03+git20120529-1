@@ -1,0 +1,11 @@
+--- qt-box-editor-1.03+git20120529.orig/qt-box-editor.pro
++++ qt-box-editor-1.03+git20120529/qt-box-editor.pro
+@@ -71,7 +71,7 @@ win32: {
+ }
+ 
+ unix: {
+-    INCLUDEPATH += /usr/include/leptonica /usr/local/include/tesseract/
++    INCLUDEPATH += /usr/include/leptonica /usr/include/tesseract/
+     LIBS += -llept -ltesseract
+ }
+ 
