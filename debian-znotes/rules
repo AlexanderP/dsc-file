@@ -9,6 +9,8 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
+export CC=/usr/bin/gcc-4.6
+
 %:
 	dh $@ --parallel
 
