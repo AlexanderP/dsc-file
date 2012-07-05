@@ -1,10 +1,14 @@
-Adjust path to myspell dictionaries to what is used in Ubuntu
+Subject: Use correct path for myspell dictionaries
+ This patch fixes the myspell path to the dictionaries
+ installed on the system for Debian.
+Author: Sebastian Reichel <sre@debian.org>
+Forwarded: not-needed
 
-Index: aegisub-2.1.8/src/options.cpp
-===================================================================
---- aegisub-2.1.8.orig/src/options.cpp	2010-01-12 13:57:21.000000000 +0100
-+++ aegisub-2.1.8/src/options.cpp	2010-04-10 09:14:12.276613521 +0200
-@@ -122,7 +122,7 @@
+diff --git a/src/options.cpp b/src/options.cpp
+index a0fd722..5190847 100644
+--- a/src/options.cpp
++++ b/src/options.cpp
+@@ -121,7 +121,7 @@ void OptionsManager::LoadDefaults(bool onlyDefaults,bool doOverride) {
  #if defined(__WINDOWS__) || defined(__APPLE__)
  	SetText(_T("Dictionaries path"),_T("?data/dictionaries"));
  #else

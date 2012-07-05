@@ -1,16 +1,19 @@
 #!/usr/bin/make -f
-
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-LDFLAGS=-lz
+ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zlzma -z9
+endif
 
 %:
 	dh --with quilt --parallel $@
 
-override_dh_auto_configure:
-	autoreconf -fiv
-	dh_auto_configure -- LDFLAGS="$(LDFLAGS)"
+override_dh_installdocs:
+	dh_installdocs --link-doc=aegisub
 
 override_dh_auto_test:
-	:
+	# skip test
+
+override_dh_builddeb:
+	dh_builddeb $(BUILDDEBFLAGS)

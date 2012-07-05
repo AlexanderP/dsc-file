@@ -1,65 +1,57 @@
 Source: aegisub
 Section: video
-Priority: optional
+Priority: extra
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: debhelper (>= 7.0.50~), quilt,
-    autoconf, automake, libtool, intltool,
-    libavutil-dev, libavformat-dev, libavcodec-dev, libffms2-dev,
-    libswscale-dev, libpostproc-dev,
-    libasound2-dev,
-    libass-dev,
-    libfontconfig1-dev,
-    libfreetype6-dev,
-    libgl1-mesa-dev | libgl-dev,
-    libglu1-mesa-dev | libglu-dev,
-    libhunspell-dev,
-    liblua5.1-0-dev,
-    libpulse-dev,
-    wx-common, libwxgtk2.8-dev
-Standards-Version: 3.9.2
+               intltool,
+               libasound2-dev [linux-any],
+               libass-dev,
+               libffms2-dev,
+               libfontconfig1-dev,
+               libfreetype6-dev,
+               libgl1-mesa-dev | libgl-dev,
+               libglu1-mesa-dev | libglu-dev,
+               libhunspell-dev,
+               liblua5.1-0-dev,
+               libpulse-dev,
+               libwxgtk2.8-dev
+Standards-Version: 3.9.3
 Homepage: http://www.aegisub.org/
 
 Package: aegisub
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Recommends: aegisub-scripts
-Suggests: aegisub-l10n, aegisub-doc,
-    hunspell-dictionary | myspell-dictionary
-Description: Advance subtitle editor
- An advanced subtitle editor for Windows, and UNIX-like systems, such as Linux,
- Mac OS X and BSD. It is open source software and free for any use.
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Conflicts: aegisub-doc, aegisub-scripts
+Suggests: aegisub-l10n
+Description: advanced subtitle editor
+ Originally created as tool to make typesetting, particularly in anime
+ fansubs, a less painful experience, Aegisub has grown into a fully
+ fledged, highly customizable subtitle editor.
  .
- Aegisub natively works with the Advanced SubStation Alpha format (abbreviated
- as ASS) which allows for many advanced effects in the subtitles, apart from
- just basic timed text.  Aegisub's goal is to support using these advanced
- functions with ease.
-
-Package: aegisub-scripts
-Architecture: all
-Depends: aegisub (>= ${source:Version}), ${misc:Depends}
-Description: Automation scripts for aegisub
- An advanced subtitle editor for Windows, and UNIX-like systems, such as Linux,
- Mac OS X and BSD. It is open source software and free for any use.
- .
- This package contains script for automated tasks, including generating of
- advanced kaeroke effects.
+ It features a lot of convenient tools to help you with timing, typesetting,
+ editing and translating subtitles, as well as a powerful scripting environment
+ called Automation (originally mostly intended for creating karaoke effects,
+ Automation can now be used much else, including creating macros and various
+ other convenient tools).
 
 Package: aegisub-l10n
+Section: localization
 Architecture: all
-Depends: aegisub (>= ${source:Version}), ${misc:Depends}
-Description: Advance subtitle editor language package
- An advanced subtitle editor for Windows, and UNIX-like systems, such as Linux,
- Mac OS X and BSD. It is open source software and free for any use.
+Depends: ${misc:Depends},
+         aegisub (>= ${source:Version}),
+         aegisub (<< ${source:Version}.1~)
+Description: aegisub language packages
+ Originally created as tool to make typesetting, particularly in anime
+ fansubs, a less painful experience, Aegisub has grown into a fully
+ fledged, highly customizable subtitle editor.
  .
- This package contain language and translation support
-
-Package: aegisub-doc
-Architecture: all
-Section: doc
-Depends: ${misc:Depends}
-Description: API documentation for aegisub automation
- An advanced subtitle editor for Windows, and UNIX-like systems, such as Linux,
- Mac OS X and BSD. It is open source software and free for any use.
+ It features a lot of convenient tools to help you with timing, typesetting,
+ editing and translating subtitles, as well as a powerful scripting environment
+ called Automation (originally mostly intended for creating karaoke effects,
+ Automation can now be used much else, including creating macros and various
+ other convenient tools).
  .
- This package contain additional documentation including API documentation for
- writing automation scripts.
+ This package contains language packages for the following languages:
+ ca, cs, da, de, el, es, fa, fi, fr, hu, id, it, ja, ko, pl, pt_BR, pt_PT, ru,
+ sr_RS, vi, zh_CN, zh_TW
