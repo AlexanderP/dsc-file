@@ -1,0 +1,12 @@
+This package uses git-buildpackage as the packaging VCS. Please install Debian git-buildpackage
+package 0.5.10 or higher and read /usr/share/doc/git-buildpackage/manual-html for more
+information how to checkout, add, remove, modify patches and do other common tasks. 
+
+Branch structure of the repository is as follows:
+
+* upstream   - upstream source code.
+* dfsg_clean - based on upstream branch but without non-dfsg files.
+* master     - the Debianization branch (upstream source and debian directory).
+               This branch also contains exported debian/patches ready for
+               building.
+

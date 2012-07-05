@@ -1,0 +1,38 @@
+#!/usr/bin/make -f
+
+ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zlzma -z9
+endif
+
+ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zxz -z9
+endif
+
+%:
+	dh $@ --buildsystem=cmake
+
+override_dh_builddeb:
+	dh_builddeb $(BUILDDEBFLAGS)
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+	-DBUNDLE_PROJECTM_PRESETS=OFF \
+	-DSTATIC_SQLITE=OFF \
+	-DUSE_SYSTEM_PROJECTM=ON \
+	-DUSE_SYSTEM_QXT=ON \
+	-DCMAKE_CXX_FLAGS="-DQT_NO_DEBUG_OUTPUT -DQT_NO_WARNING_OUTPUT" \
+	-DQXTCORE_INCLUDE_DIRS=/usr/include/qxt/QxtCore/ \
+	-DQXTGUI_INCLUDE_DIRS=/usr/include/qxt/QxtGui/
+
+override_dh_auto_build:
+	docbook-to-man debian/clementine.sgml > debian/clementine.1
+	dh_auto_build
+
+override_dh_auto_clean:
+	rm -f debian/clementine.1
+	dh_auto_clean
+
+override_dh_installchangelogs:
+	dh_installchangelogs Changelog
+
+override_dh_auto_test:

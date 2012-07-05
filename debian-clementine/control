@@ -1,0 +1,65 @@
+Source: clementine
+Section: sound
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: cmake (>= 2.6),
+               debhelper (>= 7.0.50~),
+               docbook-to-man,
+               libboost-dev,
+               libboost-serialization-dev,
+               libcdio-dev,
+               libchromaprint-dev,
+               libechonest-dev,
+               libglew-dev,
+               libgpod-dev,
+               libgstreamer0.10-dev,
+               libgstreamer-plugins-base0.10-dev,
+               libimobiledevice-dev,
+               libindicate-qt-dev (>= 0.2.5.91),
+               liblastfm-dev,
+               libmtp-dev,
+               libplist-dev,
+               libprojectm-dev (>= 2.0.1+dfsg-6),
+               libqjson-dev,
+               libqt4-dev,
+               libqt4-opengl-dev,
+               libqxt-dev,
+               libsqlite3-dev,
+               libtag1-dev (>= 1.6),
+               libusbmuxd-dev,
+               qt4-dev-tools,
+Standards-Version: 3.9.3
+Homepage: http://www.clementine-player.org/
+
+Package: clementine
+Architecture: any
+Replaces: clementine-player
+Conflicts: clementine-player
+Depends: ${shlibs:Depends}, ${misc:Depends},
+         gstreamer0.10-plugins-base,
+         gstreamer0.10-plugins-good,
+         gstreamer0.10-plugins-ugly,
+         libqt4-sql-sqlite,
+         projectm-data (>= 2.0.1+dfsg-6)
+Recommends: gstreamer0.10-alsa | gstreamer0.10-pulseaudio
+Description: modern music player and library organizer
+ Clementine is a multiplatform music player focusing on a fast and
+ easy-to-use interface for searching and playing your music.
+ .
+ Summary of included features :
+  - Search and play your local music library.
+  - Listen to internet radio from Last.fm, SomaFM and Magnatune.
+  - Tabbed playlists, import and export M3U, XSPF, PLS and ASX.
+  - Visualisations from projectM.
+  - Transcode music into MP3, Ogg Vorbis, Ogg Speex, FLAC or AAC
+  - Edit tags on MP3 and OGG files, organise your music.
+  - Download missing album cover art from Last.fm.
+  - Native desktop notifications using libnotify.
+  - Supports MPRIS, or remote control using the command-line.
+  - Remote control using a Wii Remote, MPRIS or the command-line.
+  - Copy music to your iPod, iPhone, MTP or mass-storage USB player.
+  - Queue manager.
+ .
+ It is largely a port of Amarok 1.4, with some features rewritten to take
+ advantage of Qt4.
+ .
