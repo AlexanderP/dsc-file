@@ -8,6 +8,26 @@ ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
+CMAKEOPTS = -DBUNDLE_PROJECTM_PRESETS=OFF \
+	-DSTATIC_SQLITE=OFF \
+	-DCMAKE_CXX_FLAGS="-DQT_NO_DEBUG_OUTPUT -DQT_NO_WARNING_OUTPUT"
+
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+ifneq (,$(filter $(DEBIAN_CODENAME),squeeze lucid karmic maverick natty)) 
+	CMAKEOPTS += 
+	CONTROL = control.squeeze
+else
+	CMAKEOPTS += -DUSE_SYSTEM_PROJECTM=ON \
+	-DUSE_SYSTEM_QXT=ON \
+	-DQXTCORE_INCLUDE_DIRS=/usr/include/qxt/QxtCore/ \
+	-DQXTGUI_INCLUDE_DIRS=/usr/include/qxt/QxtGui/
+	CONTROL = control.sid
+endif
+
+
 %:
 	dh $@ --buildsystem=cmake
 
@@ -15,20 +35,17 @@ override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
 
 override_dh_auto_configure:
-	dh_auto_configure -- \
-	-DBUNDLE_PROJECTM_PRESETS=OFF \
-	-DSTATIC_SQLITE=OFF \
-	-DUSE_SYSTEM_PROJECTM=ON \
-	-DUSE_SYSTEM_QXT=ON \
-	-DCMAKE_CXX_FLAGS="-DQT_NO_DEBUG_OUTPUT -DQT_NO_WARNING_OUTPUT" \
-	-DQXTCORE_INCLUDE_DIRS=/usr/include/qxt/QxtCore/ \
-	-DQXTGUI_INCLUDE_DIRS=/usr/include/qxt/QxtGui/
+	dh_testdir
+	cp debian/$(CONTROL) debian/control
+	dh_auto_configure -- $(CMAKEOPTS)
 
 override_dh_auto_build:
 	docbook-to-man debian/clementine.sgml > debian/clementine.1
 	dh_auto_build
 
 override_dh_auto_clean:
+	dh_testdir
+	cp debian/$(CONTROL) debian/control
 	rm -f debian/clementine.1
 	dh_auto_clean
 
