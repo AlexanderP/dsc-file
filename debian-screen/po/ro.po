@@ -1,0 +1,83 @@
+# Translation of the Debian debconf template for GNU Screen.
+# Copyright (C) 2012 Debian Romanian L10N Team <debian-l10n-romanian@lists.debian.org>
+# This file is distributed under the same license as the screen package.
+# Andrei POPESCU <andreimpopescu@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: screen\n"
+"Report-Msgid-Bugs-To: screen@packages.debian.org\n"
+"POT-Creation-Date: 2012-06-16 15:27+0200\n"
+"PO-Revision-Date: 2012-06-23 20:17+0300\n"
+"Last-Translator: Andrei POPESCU <andreimpopescu@gmail.com>\n"
+"Language-Team: Romanian <debian-l10n-romanian@lists.debian.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: error
+#. Description
+#: ../templates:2001
+msgid "Warning: upgrading to screen 4.1.0 with an active 4.0.3 session"
+msgstr ""
+"Atenție: se actualizează screen la versiunea 4.1.0 cu o sesiune 4.0.3 activă"
+
+#. Type: error
+#. Description
+#. Type: error
+#. Description
+#: ../templates:2001 ../templates:3001
+msgid ""
+"There seems to be at least one GNU Screen session running on this system; "
+"possibly the one you are running this upgrade in. However, GNU Screen 4.1.0 "
+"currently can't communicate with sessions started by Screen 4.0.3."
+msgstr ""
+"A fost detectată cel puțin o sesiune GNU Screen activă pe acest sistem, "
+"posibil chiar cea în care rulează această actualizare, dar GNU Screen 4.1.0 "
+"nu poate comunica cu sesiuni pornite de Screen 4.0.3."
+
+#. Type: error
+#. Description
+#: ../templates:2001
+msgid ""
+"To reconnect to a running GNU Screen session after the new version has been "
+"unpacked, you'll need to call the old screen binary instead of the new one, "
+"so a copy has been made which can be invoked as \"/tmp/screen-4.0.3 -rd\"."
+msgstr ""
+"Pentru a vă reconecta la o sesiune GNU Screen după ce versiunea nouă a fost "
+"despachetată va trebui să rulați programul screen vechi în locul celui nou. "
+"În consecință a fost făcută o copie care poate fi rulată cu comanda „/tmp/"
+"screen-4.0.3 -rd”."
+
+#. Type: error
+#. Description
+#: ../templates:2001
+msgid ""
+"If your /tmp/ is a separate mount point mounted with the nosuid or noexec "
+"options, you may need to copy it to somewhere else (such as /root) before "
+"calling it. Its permissions should be 2755 (-rwxr-sr-x) and it should belong "
+"to the user root and group utmp."
+msgstr ""
+"Dacă /tmp/ este un punct de montare separat care folosește opțiunile nosuid "
+"sau noexec atunci va trebui să copiați programul în altă parte (cum ar fi /"
+"root) înainte să îl rulați. Permisiunile acestuia ar trebui să fie 2755 (-"
+"rwxr-sr-x) și ar trebui să aparțină utilizatorului root și grupului utmp."
+
+#. Type: error
+#. Description
+#: ../templates:3001
+msgid "Failed copy of screen binary to /tmp/screen-4.0.3"
+msgstr "Copierea fișierului screen către /tmp/screen-4.0.3 a eșuat"
+
+#. Type: error
+#. Description
+#: ../templates:3001
+msgid ""
+"To reconnect to a running GNU Screen session after the new version has been "
+"unpacked, you'll need to call the old screen binary instead of the new one. "
+"However, the attempt to copy it to /tmp/screen-4.0.3 has failed."
+msgstr ""
+"Pentru a vă reconecta la o sesiune GNU Screen după ce versiunea nouă a fost "
+"despachetată va trebui să rulați programul screen vechi în locul celui nou, "
+"dar copierea acestuia ca /tmp/screen-4.0.3 a eșuat."

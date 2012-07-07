@@ -1,9 +1,25 @@
-screen (4.1.0~20120320gitdb59704-4+nmu1) unstable; urgency=low
+screen (4.1.0~20120320gitdb59704-5+nmu1) unstable; urgency=low
 
   * Non-maintainer upload.
   * Backports from Sid
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 25 Jun 2012 22:08:00 +0400
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 05 Jul 2012 08:34:06 +0400
+
+screen (4.1.0~20120320gitdb59704-5) unstable; urgency=low
+
+  * Disable patch 52fix_screen_utf8_nfd.patch since it introduced a
+    regression (Closes: #677512, Reopens: #600246)
+  * Fix bug number of Slovak debconf translation in
+    4.1.0~20120320gitdb59704-3 changelog entry
+  * Use GMANE URLs for refering to upstream discussions as lists.gnu.org
+    doesn't support threading over month boundaries. (Thanks Evgeni
+    Golov!)
+  * Add translations of debconf templates:
+    + Romanian (Closes: #679366; Thanks Andrei POPESCU!)
+  * Update translations of debconf templates:
+    + German (Closes: #679452; Thanks Helge Kreutzmann!)
+
+ -- Axel Beckert <abe@debian.org>  Sat, 30 Jun 2012 15:27:26 +0200
 
 screen (4.1.0~20120320gitdb59704-4) unstable; urgency=low
 
@@ -36,7 +52,7 @@ screen (4.1.0~20120320gitdb59704-3) unstable; urgency=low
     + Simplified Chinese (Closes: #677726; Thanks Aron Xu!)
     + Danish (Closes: #677748; Thanks Joe Hansen!)
     + Swedish (Closes: #677752; Thanks Martin Bagge!)
-    + Slovak (Closes: #677838; Thanks Miguel Figueiredo!)
+    + Slovak (Closes: #677848; Thanks Miguel Figueiredo!)
     + Portuguese (Closes: #677838; Thanks Miguel Figueiredo!)
     + Russian (Closes: #678021; Thanks Yuri Kozlov!)
   * Updated German translation

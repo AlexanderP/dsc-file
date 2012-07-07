@@ -1,4 +1,4 @@
-screen (4.1.0~20120320gitdb59704-4) unstable; urgency=low
+screen (4.1.0~20120320gitdb59704-5) unstable; urgency=low
 
   Currently screen 4.1.0 cannot reattach to running screen instances
   started by screen 4.0.3 like the screen version from Debian Squeeze.
@@ -40,7 +40,8 @@ screen (4.1.0~20120320gitdb59704-4) unstable; urgency=low
     dpkg-deb --fsys-tarfile screen_4.0.3-14*.deb | tar xvf - ./usr/bin/screen
     usr/bin/screen -rd
 
-  See https://lists.gnu.org/archive/html/screen-devel/2011-10/msg00002.html
-  for the discussion of this issue in general.
+  See http://thread.gmane.org/gmane.comp.gnu.screen.devel/707 and
+  http://thread.gmane.org/gmane.comp.gnu.screen.devel/761 for the
+  discussion of this issue in general.
 
- -- Axel Beckert <abe@debian.org>  Thu, 21 Jun 2012 01:28:12 +0200
+ -- Axel Beckert <abe@debian.org>  Mon, 25 Jun 2012 14:44:03 +0200
