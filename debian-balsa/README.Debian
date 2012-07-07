@@ -1,0 +1,27 @@
+===============================================================================
+			    README.Debian for Balsa
+===============================================================================
+
+Upgrade Notes:
+
+	As of 2.3.2, the configuration files for Balsa have changed in format
+	and are now located to the ~/.balsa directory.
+
+	Balsa will automatically convert older 2.x settings to the new format,
+	but users of Balsa 1.x (Debian "Woody" and earlier) will have to move
+	their previous configuration files before Balsa will convert them.
+	
+	$ mv ~/.gnome/balsa ~/.gnome2
+	$ mv ~/.gnome_private/balsa ~/.gnome2_private
+
+S/MIME Support:
+	
+	Balsa now supports S/MIME, but unfortunately an alpha version of GnuPG
+	(1.9) which is unavailable in Debian at this time is required. Further
+	instructions on rebuilding Balsa with S/MIME support can be found at:
+
+	<http://home.arcor.de/dralbrecht.dress/balsa/balsa23-secure-mail.html>
+
+===============================================================================
+
+Andrew Lau <netsnipe@users.sourceforge.net>

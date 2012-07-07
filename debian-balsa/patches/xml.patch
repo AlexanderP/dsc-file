@@ -1,0 +1,45 @@
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ balsa (2.4.12+git20120530-1) unstable; urgency=low
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Author: Alexander Pozdnyakov <almipo@mail.ru>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- balsa-2.4.12+git20120530.orig/doc/C/balsa.xml
++++ balsa-2.4.12+git20120530/doc/C/balsa.xml
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" standalone="no"?>
+-<!DOCTYPE article PUBLIC "-//OASIS/DTD DocBookXML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
++<!DOCTYPE article PUBLIC "-//OASIS/DTD DocBookXML V4.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+ <!ENTITY mdash "--">
+ <!-- replace with actual application  version number-->
+ <!ENTITY version "2.2"> 
+--- balsa-2.4.12+git20120530.orig/doc/C/balsa-C.omf
++++ balsa-2.4.12+git20120530/doc/C/balsa-C.omf
+@@ -21,7 +21,7 @@
+         <type>
+             manual
+         </type>
+-        <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
++        <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.2//EN"/>
+         <identifier url="balsa.xml"/>
+         <language code="C"/>
+ 	<relation seriesid="4f1da026-c99e-11d6-95f0-ae2166108028"/>

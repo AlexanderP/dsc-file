@@ -1,0 +1,41 @@
+#!/usr/bin/make -f
+export DH_VERBOSE=1
+
+LDFLAGS += -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
+
+# Compile options
+CONFIGURE_FLAGS = --disable-smime \
+			--with-compface \
+			--with-gpgme \
+			--with-gss \
+			--with-gtkspell \
+			--with-ldap \
+			--with-sqlite \
+			--with-ssl \
+			--with-gtksourceview=2 \
+			--enable-extra-mimeicons \
+			--with-libnotify \
+			--with-rubrica \
+			--with-canberra \
+			--with-unique \
+			--enable-threads \
+			--without-nm
+
+#export DH_ALWAYS_EXCLUDE := COPYING:COPYING.GPLv2:COPYING.LGPLv2.1
+
+ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zlzma -z9
+endif
+
+%:
+	dh --parallel $@
+
+override_dh_auto_configure:
+	./autogen.sh
+	dh_auto_configure -- $(CONFIGURE_FLAGS)
+
+override_dh_builddeb:
+	dh_builddeb $(BUILDDEBFLAGS)
+
+override_dh_auto_test:
+	

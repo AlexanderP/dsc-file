@@ -1,0 +1,68 @@
+Source: balsa
+Section: gnome
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: autotools-dev,
+               debhelper (>= 7.0.50~),
+               dh-autoreconf,
+               gnome-pkg-tools,
+               gnome-icon-theme,
+               rarian-compat,
+               libesmtp-dev,
+               libgmime-2.6-dev | libgmime-2.4-dev,
+               libnm-glib-dev [linux-any],
+               libcompfaceg1-dev,
+               libgpgme11-dev,
+               libgtkhtml3.14-dev,
+               libgtkspell-dev,
+               libkrb5-dev,
+               libldap2-dev,
+               libltdl-dev,
+               libpcre3-dev,
+               libpspell-dev (>= 0.50),
+               libsqlite3-dev,
+               libssl-dev (>= 0.9.8),
+               libxml-parser-perl,
+               libgtksourceview2.0-dev,
+               libgnome2-dev,
+               libgnomeui-dev,
+               libunique-dev,
+               libglib2.0-dev (>= 2.16.0),
+               libgtk2.0-dev (>= 2.18.0),
+               liborbit2-dev,
+               libnotify-dev,
+               libxml2-dev,
+               intltool,
+               libcanberra-gtk-dev,
+               gnome-doc-utils
+Standards-Version: 3.9.3
+Homepage: http://pawsa.fedorapeople.org/balsa/
+
+Package: balsa
+Architecture: any
+Provides: mail-reader, imap-client
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         gnome-icon-theme
+Recommends: aspell | ispell,
+            yelp
+Suggests: ca-certificates,
+          lbdb
+Description: e-mail client for GNOME
+ Balsa is a highly configurable and robust mail client for the GNOME desktop.
+ It supports both POP3 and IMAP servers as well as the mbox, maildir and mh
+ local mailbox formats. Balsa also supports SMTP and/or the use of a local MTA
+ such as Sendmail.
+ .
+ Some of Balsa's other features include:
+   * Allowing nested mailboxes
+   * Printing
+   * Spell Checking
+   * Multi-threaded mail retrieval
+   * MIME support (view images inline, save parts)
+   * GPE Palmtop, LDAP, LDIF and vCard address book support
+   * Multiple character sets for composing and reading messages
+   * File attachments on outgoing messages
+   * GPG/OpenPGP mail signing and encryption
+ .
+ Support for Kerberos and SSL has been enabled in this package.
