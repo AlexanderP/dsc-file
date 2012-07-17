@@ -1,0 +1,122 @@
+Source: remmina
+Section: gnome
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 7.0.50~),
+ cmake (>= 2.6),
+ libgtk-3-dev,
+ libgcrypt11-dev,
+ libssh-dev (>= 0.4),
+ libvte-2.90-dev,
+ libxkbfile-dev,
+ libfreerdp-dev (>= 1.0),
+ libtelepathy-glib-dev,
+ libjpeg-dev,
+ libgnutls-dev,
+ libgnome-keyring-dev,
+ libavahi-ui-gtk3-dev (>= 0.6.0),
+ libvncserver-dev,
+ libfreerdp-dev
+Standards-Version: 3.9.3
+Homepage: http://remmina.sourceforge.net/
+
+Package: remmina
+Architecture: any
+Depends: ${shlibs:Depends},
+ ${misc:Depends},
+ remmina-common (= ${source:Version}),
+ dbus-x11
+Recommends: remmina-plugin-rdp,
+ remmina-plugin-vnc
+Breaks: remmina-plugin-data (<= 0.9)
+Replaces: remmina-gnome, remmina-xfce
+Description: remote desktop client for GNOME desktop environment
+ Remmina is a remote desktop connection client able to display and control a
+ remote desktop session.
+ .
+ It supports multiple network protocols in an integrated and consistant user
+ interface. Currently RDP, VNC, NX, XDMCP and SSH protocols are supported.
+
+Package: remmina-common
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: remmina
+Breaks: remmina (<< 1.0.0),
+ remmina-plugin-data
+Replaces: remmina (<< 1.0.0),
+ remmina-plugin-data
+Description: common files for remmina remote desktop client
+ Remmina is a remote desktop connection client able to display and control a
+ remote desktop session.
+ .
+ This package contains the common files.
+
+Package: remmina-plugin-rdp
+Architecture: any
+Depends: ${shlibs:Depends},
+ ${misc:Depends},
+ remmina (= ${binary:Version}),
+ libfreerdp-plugins-standard
+Description: RDP plugin for remmina remote desktop client
+ Remmina is a remote desktop connection client able to display and control a
+ remote desktop session.
+ .
+ This package contains the RDP plugin for Remmina.
+
+Package: remmina-plugin-vnc
+Architecture: any
+Depends: ${shlibs:Depends},
+ ${misc:Depends},
+ remmina (= ${binary:Version})
+Description: VNC plugin for remmina remote desktop client
+ Remmina is a remote desktop connection client able to display and control a
+ remote desktop session.
+ .
+ This package contains the VNC plugin for Remmina.
+
+Package: remmina-plugin-xdmcp
+Architecture: any
+Depends: ${shlibs:Depends},
+ ${misc:Depends},
+ remmina (= ${binary:Version}),
+ xserver-xephyr
+Description: XDMCP plugin for remmina remote desktop client
+ Remmina is a remote desktop connection client able to display and control a
+ remote desktop session.
+ .
+ This package contains the XDMCP plugin for Remmina.
+
+Package: remmina-plugin-nx
+Architecture: any
+Depends: ${shlibs:Depends},
+ ${misc:Depends},
+ remmina (= ${binary:Version}),
+ nxproxy
+Description: NX plugin for remmina remote desktop client
+ Remmina is a remote desktop connection client able to display and control a
+ remote desktop session.
+ .
+ This package contains the NX plugin for Remmina.
+
+Package: remmina-plugin-telepathy
+Architecture: any
+Depends: ${shlibs:Depends},
+ ${misc:Depends},
+ remmina (= ${binary:Version})
+Description: Telepathy plugin for remmina remote desktop client
+ Remmina is a remote desktop connection client able to display and control a
+ remote desktop session.
+ .
+ This package contains the Telepathy plugin for Remmina.
+
+Package: remmina-plugin-gnome
+Architecture: any
+Depends: ${shlibs:Depends},
+ ${misc:Depends},
+ remmina (= ${binary:Version})
+Description: GNOME plugin for remmina remote desktop client
+ Remmina is a remote desktop connection client able to display and control a
+ remote desktop session.
+ .
+ This package contains the GNOME Keyring plugin for Remmina, which allows one
+ to store and retrieve passwords from GNOME Keyring.

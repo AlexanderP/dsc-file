@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+
+ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zlzma -z9
+endif
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DWITH_APPINDICATOR=OFF
+
+override_dh_install:
+	dh_install
+	[ -d debian/remmina-common ] && \
+		find $(CURDIR)/debian/remmina-common -name "*remmina.desktop" -delete && \
+		find $(CURDIR)/debian/remmina-common -type d -empty -delete || true
+
+override_dh_makeshlibs:
+	for plugin in rdp vnc xdmcp nx telepathy; do \
+		dh_makeshlibs -premmina-plugin-$$plugin -Xremmina-plugin-$$plugin.so; \
+	done
+
+override_dh_builddeb:
+	dh_builddeb $(BUILDDEBFLAGS)
