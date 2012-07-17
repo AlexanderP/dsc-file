@@ -1,0 +1,68 @@
+Source: freerdp
+Section: x11
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends:
+ debhelper (>= 7.0.50~), autotools-dev, cmake, libasound2-dev, libcups2-dev,
+ libpcsclite-dev, libpulse-dev, libssl-dev, libx11-dev, libxcursor-dev,
+ libxdamage-dev, libxext-dev, libxkbfile-dev, libxinerama-dev, libxv-dev,
+ pkg-config, xmlto, libavcodec-dev
+Standards-Version: 3.9.3
+Homepage: http://www.freerdp.com/
+
+Package: freerdp-x11
+Section: x11
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Recommends: libfreerdp-plugins-standard
+Provides: freerdp
+Description: RDP client for Windows Terminal Services
+ FreeRDP is a client for Windows Terminal Services implementing the Remote
+ Desktop Protocol (RDP).
+ .
+ Currently, the following Windows Versions are supported:
+ .
+  * Windows NT Server
+  * Windows 2000 Terminal Server
+  * Windows XP
+  * Windows 2003 Server
+  * Windows Vista
+  * Windows 2008 Server
+  * Windows 7
+ .
+ This package contains the X11 based client.
+
+Package: libfreerdp1
+Architecture: any
+Section: libs
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Suggests: xfreerdp
+Description: RDP client for Windows Terminal Services (library)
+ FreeRDP is a client for Windows Terminal Services implementing the Remote
+ Desktop Protocol (RDP).
+ .
+ This package contains the shared library.
+
+Package: libfreerdp-plugins-standard
+Architecture: any
+Section: libs
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: RDP client for Windows Terminal Services (plugins)
+ FreeRDP is a client for Windows Terminal Services implementing the Remote
+ Desktop Protocol (RDP).
+ .
+ This package contains the plugins available to the Channel Manager extending
+ the RDP core functionality, such as sounds, clipboard synchronisation,
+ disk/printer redirection, etc.
+
+Package: libfreerdp-dev
+Section: libdevel
+Architecture: any
+Depends:
+ ${misc:Depends}, libfreerdp1 (= ${binary:Version}),
+ libfreerdp-plugins-standard (= ${binary:Version})
+Description: RDP client for Windows Terminal Services (development)
+ FreeRDP is a client for Windows Terminal Services implementing the Remote
+ Desktop Protocol (RDP).
+ .
+ This package contains the development files.

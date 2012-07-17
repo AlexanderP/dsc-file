@@ -1,0 +1,105 @@
+freerdp (1.0.1+git20120701-1) unstable; urgency=low
+
+  * Compile 
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 10 Jul 2012 23:00:04 +0400
+
+freerdp (1.0.1-1) unstable; urgency=low
+
+  [ Jeremy Bicha ]
+  * New upstream release. Closes: #659332.
+  * Updated symbols
+
+ -- Otavio Salvador <otavio@debian.org>  Sat, 11 Feb 2012 10:34:05 -0200
+
+freerdp (1.0.0-2) unstable; urgency=low
+
+  [ Jeremy Bicha ]
+  * Don't install the freerdp keymaps; they're provided by xkb   
+
+ -- Otavio Salvador <otavio@debian.org>  Tue, 31 Jan 2012 23:50:40 -0200
+
+freerdp (1.0.0-1) unstable; urgency=low
+
+  [ Jeremy Bicha ]
+  * New upstream release. Closes: #647498.
+  * Updated symbols and bumped soname
+  * debian/control:
+    - Added new build dependencies
+    - Bump Standards-Version to 3.9.2
+  * debian/source/format: Set to 3.0 (quilt)
+  * debian/rules: Turn on strict symbols checking
+  * debian/watch: Watch github
+
+  [ Jean-Louis Dupond ]
+  * debian/control: Updated homepage
+  * debian/copyright: Reflect upstream switch to the Apache license
+
+  [ Martin Pitt ]
+  * debian/libfreerdp0.symbols: Fix version number, should
+    be 1.0~beta5, not 1.0-beta5.
+  * debian/control: Add libavcodec-dev build dependency, upstream build system
+    checks for that. Thanks Jean-Louis Dupond!
+
+ -- Otavio Salvador <otavio@debian.org>  Tue, 31 Jan 2012 11:46:23 -0200
+
+freerdp (0.8.2-2) unstable; urgency=low
+
+  * freerdp-x11: recommends libfreerdp-plugins-standard. Closes:
+    #603462.
+
+ -- Otavio Salvador <otavio@debian.org>  Fri, 19 Nov 2010 19:27:45 -0200
+
+freerdp (0.8.2-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Otavio Salvador <otavio@debian.org>  Sat, 13 Nov 2010 10:58:11 -0200
+
+freerdp (0.8.1-2) unstable; urgency=low
+
+  * Add symbols file to allow for correct depends. Closes: #602218.
+
+ -- Otavio Salvador <otavio@debian.org>  Wed, 03 Nov 2010 09:46:00 -0200
+
+freerdp (0.8.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Otavio Salvador <otavio@debian.org>  Mon, 25 Oct 2010 14:29:02 -0200
+
+freerdp (0.7.4-1) unstable; urgency=low
+
+  * New upstream release.
+    - Fixes connection with VirtualBox RDP server. Closes: #592454.
+  * Bump standards-version; no changes needed.
+
+ -- Otavio Salvador <otavio@debian.org>  Thu, 26 Aug 2010 11:07:49 -0300
+
+freerdp (0.7.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fix section of libfreerdp0 to follow overrides.
+  * Add a watch file so it is easier to track new releases.
+
+ -- Otavio Salvador <otavio@debian.org>  Tue, 27 Jul 2010 01:13:00 -0300
+
+freerdp (0.7.2-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Otavio Salvador <otavio@debian.org>  Mon, 05 Jul 2010 14:05:26 -0300
+
+freerdp (0.7.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/copyright: add missing entries.
+
+ -- Otavio Salvador <otavio@debian.org>  Wed, 23 Jun 2010 21:39:09 -0300
+
+freerdp (0.7.0+debian-1) unstable; urgency=low
+
+  * Initial release.
+  * Rebuild upstream tarball without debian directory.
+
+ -- Otavio Salvador <otavio@debian.org>  Fri, 18 Jun 2010 15:09:19 -0300

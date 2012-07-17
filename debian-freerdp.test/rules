@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+
+ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
+	BUILDDEBFLAGS= -- -Zlzma -z9
+endif
+
+%:
+	dh ${@}
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DCMAKE_INSTALL_LIBDIR=lib
+
+override_dh_install:
+	# Removing unused files
+	rm -f debian/tmp/usr/lib/*.la
+	rm -f debian/tmp/usr/lib/freerdp/*.la
+	rm -rf debian/tmp/usr/share/freerdp/keymaps
+
+	dh_install --fail-missing
+
+override_dh_makeshlibs:
+	dh_makeshlibs -V -- -c4
+
+override_dh_builddeb:
+	dh_builddeb $(BUILDDEBFLAGS)
