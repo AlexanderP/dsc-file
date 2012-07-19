@@ -1,30 +1,32 @@
 #! /usr/bin/make -f
-#
+
+export DH_ALWAYS_EXCLUDE := kvirc-config:LICENSE-GPLV2:LICENSE-GPLV3:LICENSE-OPENSSL:COPYING:kvirc-config
+
 REV=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | sed 's/.*svn//' | sed 's/-.*//')
 
-ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
-	CFLAGS += -O0
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-
-ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
+ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
 	BUILDDEBFLAGS= -- -Zlzma -z9
-endif
-
-ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
+else
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
 override_dh_auto_configure:
-	dh_auto_configure -Skde -- -DWANT_COEXISTANCE=OFF \
+	dh_auto_configure --parallel -Skde -- -DWANT_COEXISTENCE=OFF \
 			-DWANT_ESD=OFF -DWANT_OSS=OFF \
-			-DWANT_CRYPTOPP=YES -DWANT_STRIP=OFF \
+			-DWANT_STRIP=OFF \
 			-DCMAKE_SHARED_LINKER_FLAGS="-Wl,--no-undefined -Wl,--as-needed" \
 			-DCMAKE_MODULE_LINKER_FLAGS="-Wl,--no-undefined -Wl,--as-needed" \
 			-DCMAKE_EXE_LINKER_FLAGS="-Wl,--no-undefined -Wl,--as-needed" \
-			-DMANUAL_REVISION=$(REV)
+			-DMANUAL_REVISION=$(REV) \
+			-DLIB_SUFFIX="/$(DEB_HOST_MULTIARCH)"
 
 override_dh_install:
-	dh_install --list-missing -XCOPYING
+	rm debian/tmp/usr/share/pixmaps/kvirc.png debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/libkvilib.so
+	dh_install
 
 override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
