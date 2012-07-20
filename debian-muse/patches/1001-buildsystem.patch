@@ -1,0 +1,20 @@
+Description: Use a more consistent versioning.
+Author: Alessio Treglia <alessio@debian.org>
+Forwarded: not-needed
+---
+ CMakeLists.txt |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+--- muse.orig/CMakeLists.txt
++++ muse/CMakeLists.txt
+@@ -80,8 +80,8 @@ SET(MusE_VERSION_MINOR 0)
+ SET(MusE_VERSION_PATCH 0)
+ SET(MusE_VERSION       "2.0")
+ SET(MusE_VERSION_FULL  "2.0")
+-SET(MusE_INSTALL_NAME  "muse-2.0")
+-SET(MusE_EXEC_NAME     "muse2")
++SET(MusE_INSTALL_NAME  "muse")
++SET(MusE_EXEC_NAME     "muse")
+ 
+ ## The directory where we will install the shared components:
+ SET(MusE_MODULES_DIR ${LIB_INSTALL_DIR}/${MusE_INSTALL_NAME}/modules)

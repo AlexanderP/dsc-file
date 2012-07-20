@@ -2,28 +2,32 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-muse_confflags = --disable-qttest --disable-suid-build --enable-dssi --enable-osc
-muse_confflags += --prefix=/usr
-
-export QTDIR=/usr/share/qt3
-muse_confflags += --with-qt-libraries=/usr/lib/qt3 --with-qt-includes=/usr/include/qt3
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
+	BUILDDEBFLAGS= -- -Zlzma -z9
+else
+	BUILDDEBFLAGS= -- -Zxz -z9
+endif
 
 %:
-	dh $@
+	dh $@ --parallel
+
+override_dh_clean:
+	dh_clean -Xmuse/widgets/arrangercolumns.cpp~ \
+		-Xmuse/widgets/arrangercolumns.h~
 
 override_dh_auto_configure:
-	dh_auto_configure -- $(muse_confflags)
+	dh_auto_configure -- -DCMAKE_BUILD_TYPE=release
 
 override_dh_install:
-	dh_install
+	dh_install -pmuse
+	find $(CURDIR)/debian/muse/ -name "COPYING*" -delete
+	find $(CURDIR)/debian/muse/ -name "LICENSE" -delete
+	find $(CURDIR)/debian/muse/ -name "ChangeLog*" -delete
+	dh_install --remaining-packages
 
-	# move html documentation to the correct directory
-	mv $(CURDIR)/debian/muse/usr/share/muse/html  $(CURDIR)/debian/muse/usr/share/doc/muse
-	dh_link usr/share/doc/muse/html usr/share/muse/html
-	dh_install debian/muse-song-convert.py usr/bin
-	mv $(CURDIR)/debian/muse/usr/bin/muse-song-convert.py $(CURDIR)/debian/muse/usr/bin/muse-song-convert
-	find $(CURDIR)/debian/muse/usr/lib*/ -name "*.la" -delete
-
-override_dh_installchangelogs:
-	# overriden to install upstream changelog 
-	dh_installchangelogs ChangeLog
+override_dh_builddeb:
+	dh_builddeb $(BUILDDEBFLAGS)

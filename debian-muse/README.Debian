@@ -76,7 +76,7 @@ clock frequency. By default, an ordinary user may only increase it up to
 64 Hz while MusE requires 1024 Hz. The kernel-enforced upper limit can be
 configured, however. There's the one-time method using the command (as root)
 
-	echo 1024 > /proc/sys/dev/rtc/max-user-freq
+	echo 1024 > /sys/class/rtc/rtc0/max-user-freq
 
 To make the setting permanent, add
 

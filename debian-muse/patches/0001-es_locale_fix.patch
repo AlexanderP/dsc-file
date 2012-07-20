@@ -1,10 +1,14 @@
 Description: Use UTF8 encoding for Spanish localization file.
 Author: Daniel Kobras <kobras@debian.org>
+Forwarded: no
+---
+ share/locale/muse_es.ts |  394 ++++++++++++++++++++++++------------------------
+ 1 file changed, 197 insertions(+), 197 deletions(-)
 
---- muse-1.1.orig/share/locale/muse_es.ts
-+++ muse-1.1/share/locale/muse_es.ts
-@@ -3,15 +3,15 @@
-     <name></name>
+--- muse.orig/share/locale/muse_es.ts
++++ muse/share/locale/muse_es.ts
+@@ -5,15 +5,15 @@
+     <name>@default</name>
      <message>
          <source>Click this button to enable recording</source>
 -        <translation type="unfinished">Pulsa este bot� para habilitar la grabaci�</translation>
@@ -22,8 +26,8 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>select Pointer Tool:
-@@ -30,45 +30,45 @@ con la herramienta de puntero puedes:
-     <name>@default</name>
+@@ -29,45 +29,45 @@ con la herramienta de puntero puedes:
+     </message>
      <message>
          <source>Click this button to open a &lt;em&gt;new song&lt;/em&gt;.&lt;br&gt;You can also select the &lt;b&gt;Open command&lt;/b&gt; from the File menu.</source>
 -        <translation type="unfinished">Pulsa este bot� para abrir una &lt;em&gt;nueva canci�&lt;/em&gt;Puedes usar tambi� el comando &lt;b&gt;Abrir&lt;/b&gt; del me de archivo</translation>
@@ -79,7 +83,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>loop between left mark and right mark</source>
-@@ -76,23 +76,23 @@ Puedes seleccionar tambi� el comando G
+@@ -75,23 +75,23 @@ Puedes seleccionar tambi� el comando G
      </message>
      <message>
          <source>record starts at left mark</source>
@@ -108,7 +112,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>stop sequencer</source>
-@@ -104,7 +104,7 @@ Puedes seleccionar tambi� el comando G
+@@ -103,7 +103,7 @@ Puedes seleccionar tambi� el comando G
      </message>
      <message>
          <source>to record press record and then play</source>
@@ -117,7 +121,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>send note off to all midi channels</source>
-@@ -115,8 +115,8 @@ Puedes seleccionar tambi� el comando G
+@@ -114,8 +114,8 @@ Puedes seleccionar tambi� el comando G
  with the pencil tool you can:
    create new parts
    modify length of parts</source>
@@ -128,7 +132,7 @@ Author: Daniel Kobras <kobras@debian.org>
    crear nuevas partes
    modificar la longitud de las partes</translation>
      </message>
-@@ -147,8 +147,8 @@ con la herramienta de pegado puedes unir
+@@ -146,8 +146,8 @@ con la herramienta de pegado puedes unir
      <message>
          <source>select Quantize Tool:
  insert display quantize event</source>
@@ -139,7 +143,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>select Drawing Tool</source>
-@@ -166,7 +166,7 @@ haz click en una parte para silenciar/de
+@@ -165,7 +165,7 @@ haz click en una parte para silenciar/de
      </message>
      <message>
          <source>pencil</source>
@@ -148,24 +152,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>rubber</source>
-@@ -286,14 +286,14 @@ Published under the GNU Public License</
-     </message>
-     <message>
-         <source>waveedit background color</source>
--        <translation type="obsolete">color de fondo de edici� de onda</translation>
-+        <translation type="obsolete">color de fondo de ediciï¿½ de onda</translation>
-     </message>
- </context>
- <context>
-     <name>AppearanceDialogBase</name>
-     <message>
-         <source>MusE: Appearance settings</source>
--        <translation type="unfinished">MusE: Configuraci� de apariencia</translation>
-+        <translation type="unfinished">MusE: Configuraciï¿½ de apariencia</translation>
-     </message>
-     <message>
-         <source>Apply</source>
-@@ -341,7 +341,7 @@ Published under the GNU Public License</
+@@ -495,7 +495,7 @@ Word-breaking but only with spaces.</sou
      </message>
      <message>
          <source>poly pressure</source>
@@ -174,7 +161,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>controller</source>
-@@ -401,7 +401,7 @@ Published under the GNU Public License</
+@@ -555,7 +555,7 @@ Word-breaking but only with spaces.</sou
      </message>
      <message>
          <source>dynamic colors for track activity in arranger</source>
@@ -183,7 +170,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Style/Fonts</source>
-@@ -453,7 +453,7 @@ Published under the GNU Public License</
+@@ -607,7 +607,7 @@ Word-breaking but only with spaces.</sou
      </message>
      <message>
          <source>Size</source>
@@ -192,7 +179,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Font 1</source>
-@@ -544,7 +544,7 @@ Published under the GNU Public License</
+@@ -714,7 +714,7 @@ Word-breaking but only with spaces.</sou
      </message>
      <message>
          <source>TrackInfo</source>
@@ -201,7 +188,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Track</source>
-@@ -556,7 +556,7 @@ Published under the GNU Public License</
+@@ -726,7 +726,7 @@ Word-breaking but only with spaces.</sou
      </message>
      <message>
          <source>midi song type</source>
@@ -210,16 +197,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Pitch</source>
-@@ -592,7 +592,7 @@ Published under the GNU Public License</
-     </message>
-     <message>
-         <source>Bar</source>
--        <translation type="unfinished">comp�</translation>
-+        <translation type="unfinished">compï¿½</translation>
-     </message>
-     <message>
-         <source>GM</source>
-@@ -663,7 +663,7 @@ Published under the GNU Public License</
+@@ -921,7 +921,7 @@ Right-click to show GUI.</source>
      <name>AudioConfBase</name>
      <message>
          <source>MusE: Audio Configuration</source>
@@ -228,7 +206,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>&amp;Apply</source>
-@@ -679,7 +679,7 @@ Published under the GNU Public License</
+@@ -937,7 +937,7 @@ Right-click to show GUI.</source>
      </message>
      <message>
          <source>Audio Parameters</source>
@@ -237,7 +215,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>32</source>
-@@ -715,7 +715,7 @@ Published under the GNU Public License</
+@@ -973,7 +973,7 @@ Right-click to show GUI.</source>
      </message>
      <message>
          <source>Frame Size:</source>
@@ -246,7 +224,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Delay:</source>
-@@ -786,7 +786,7 @@ Published under the GNU Public License</
+@@ -1044,7 +1044,7 @@ Right-click to show GUI.</source>
      </message>
      <message>
          <source>record downmix</source>
@@ -255,7 +233,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>off</source>
-@@ -798,11 +798,11 @@ Published under the GNU Public License</
+@@ -1056,11 +1056,11 @@ Right-click to show GUI.</source>
      </message>
      <message>
          <source>&amp;Config</source>
@@ -269,7 +247,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>S</source>
-@@ -921,7 +921,7 @@ Published under the GNU Public License</
+@@ -1207,7 +1207,7 @@ Right-click to show GUI.</source>
      </message>
      <message>
          <source>record downmix</source>
@@ -277,8 +255,8 @@ Author: Daniel Kobras <kobras@debian.org>
 +        <translation type="unfinished">downmix de grabaciï¿½</translation>
      </message>
      <message>
-         <source>solo mode (monitor)</source>
-@@ -1018,7 +1018,7 @@ Published under the GNU Public License</
+         <source>pre fader listening</source>
+@@ -1354,7 +1354,7 @@ Right-click to show GUI.</source>
      </message>
      <message>
          <source>Pos:</source>
@@ -287,7 +265,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Len:</source>
-@@ -1182,7 +1182,7 @@ Published under the GNU Public License</
+@@ -2784,7 +2784,7 @@ Wave form 8 = &lt;i&gt;if &lt;b&gt;t&lt;
      </message>
      <message>
          <source>Step Record</source>
@@ -296,7 +274,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Midi Input</source>
-@@ -1190,7 +1190,7 @@ Published under the GNU Public License</
+@@ -2792,7 +2792,7 @@ Wave form 8 = &lt;i&gt;if &lt;b&gt;t&lt;
      </message>
      <message>
          <source>Add Controller View</source>
@@ -305,7 +283,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>M</source>
-@@ -1246,11 +1246,11 @@ Published under the GNU Public License</
+@@ -2848,11 +2848,11 @@ Wave form 8 = &lt;i&gt;if &lt;b&gt;t&lt;
      </message>
      <message>
          <source>Load Drummap</source>
@@ -319,26 +297,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>ctrl</source>
-@@ -1258,15 +1258,15 @@ Published under the GNU Public License</
-     </message>
-     <message>
-         <source>drummaps</source>
--        <translation type="unfinished">mapas de percusi�</translation>
-+        <translation type="unfinished">mapas de percusiï¿½</translation>
-     </message>
-     <message>
-         <source>Muse: Load Drum Map</source>
--        <translation type="unfinished">MusE: Cargar mapa de percusi�</translation>
-+        <translation type="unfinished">MusE: Cargar mapa de percusiï¿½</translation>
-     </message>
-     <message>
-         <source>MusE: Store Drum Map</source>
--        <translation type="unfinished">MusE: Guardar mapa de percusi�</translation>
-+        <translation type="unfinished">MusE: Guardar mapa de percusiï¿½</translation>
-     </message>
-     <message>
-         <source>Set fixed length</source>
-@@ -1285,11 +1285,11 @@ Published under the GNU Public License</
+@@ -2983,11 +2983,11 @@ Wave form 8 = &lt;i&gt;if &lt;b&gt;t&lt;
      <name>EditCAfterDialog</name>
      <message>
          <source>Time Position</source>
@@ -352,7 +311,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>MusE: Enter Channel Aftertouch</source>
-@@ -1300,7 +1300,7 @@ Published under the GNU Public License</
+@@ -2998,7 +2998,7 @@ Wave form 8 = &lt;i&gt;if &lt;b&gt;t&lt;
      <name>EditCtrl14Dialog</name>
      <message>
          <source>Time Position</source>
@@ -361,7 +320,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Controller-H</source>
-@@ -1323,7 +1323,7 @@ Published under the GNU Public License</
+@@ -3021,7 +3021,7 @@ Wave form 8 = &lt;i&gt;if &lt;b&gt;t&lt;
      <name>EditCtrl7Dialog</name>
      <message>
          <source>Time Position</source>
@@ -370,16 +329,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Controller</source>
-@@ -1350,7 +1350,7 @@ Published under the GNU Public License</
-     </message>
-     <message>
-         <source>Time Position:</source>
--        <translation type="unfinished">Posici� de tiempo:</translation>
-+        <translation type="unfinished">Posiciï¿½ de tiempo:</translation>
-     </message>
-     <message>
-         <source>Value:</source>
-@@ -1377,7 +1377,7 @@ Published under the GNU Public License</
+@@ -3075,7 +3075,7 @@ Wave form 8 = &lt;i&gt;if &lt;b&gt;t&lt;
      </message>
      <message>
          <source>Time Position</source>
@@ -388,7 +338,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Available Controller:</source>
-@@ -1701,7 +1701,7 @@ handled like normal controllers.</source
+@@ -3861,7 +3861,7 @@ Typically, set to 127/127, or an unused
      <name>EditMetaDialog</name>
      <message>
          <source>Time Position</source>
@@ -397,16 +347,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Meta Type</source>
-@@ -1736,7 +1736,7 @@ handled like normal controllers.</source
-     </message>
-     <message>
-         <source>Time Position:</source>
--        <translation type="unfinished">Posici� de tiempo</translation>
-+        <translation type="unfinished">Posiciï¿½ de tiempo</translation>
-     </message>
-     <message>
-         <source>Meta Type:</source>
-@@ -1767,7 +1767,7 @@ handled like normal controllers.</source
+@@ -3927,7 +3927,7 @@ Typically, set to 127/127, or an unused
      </message>
      <message>
          <source>Time Position:</source>
@@ -415,7 +356,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Pitch:</source>
-@@ -1786,7 +1786,7 @@ handled like normal controllers.</source
+@@ -3946,7 +3946,7 @@ Typically, set to 127/127, or an unused
      <name>EditPAfterDialog</name>
      <message>
          <source>Time Position</source>
@@ -424,7 +365,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Pitch</source>
-@@ -1794,18 +1794,18 @@ handled like normal controllers.</source
+@@ -3954,18 +3954,18 @@ Typically, set to 127/127, or an unused
      </message>
      <message>
          <source>Pressure</source>
@@ -446,7 +387,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Pitch</source>
-@@ -1824,7 +1824,7 @@ handled like normal controllers.</source
+@@ -3984,7 +3984,7 @@ Typically, set to 127/127, or an unused
      </message>
      <message>
          <source>TimePosition:</source>
@@ -455,30 +396,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Comment:</source>
-@@ -1918,7 +1918,7 @@ Songdata</source>
-     <name>FontSel</name>
-     <message>
-         <source>Size:</source>
--        <translation type="unfinished">Tama�:</translation>
-+        <translation type="unfinished">Tamaï¿½:</translation>
-     </message>
- </context>
- <context>
-@@ -1992,11 +1992,11 @@ Songdata</source>
-     </message>
-     <message>
-         <source>min. Meter Value</source>
--        <translation type="unfinished">valor m�imo del vumeter</translation>
-+        <translation type="unfinished">valor mï¿½imo del vumeter</translation>
-     </message>
-     <message>
-         <source>min.Slider Val</source>
--        <translation type="unfinished">valor m�imo del desplazador</translation>
-+        <translation type="unfinished">valor mï¿½imo del desplazador</translation>
-     </message>
-     <message>
-         <source>Midi</source>
-@@ -2025,7 +2025,7 @@ Songdata</source>
+@@ -4333,7 +4333,7 @@ Configuration</source>
      <message>
          <source>Displayed Resolution
  (Ticks/Quarternote)</source>
@@ -487,7 +405,7 @@ Author: Daniel Kobras <kobras@debian.org>
  (ticks/negra)</translation>
      </message>
      <message>
-@@ -2067,7 +2067,7 @@ Songdata</source>
+@@ -4375,7 +4375,7 @@ Configuration</source>
      <message>
          <source>RTC Resolution
  (Ticks/Sec)</source>
@@ -496,7 +414,7 @@ Author: Daniel Kobras <kobras@debian.org>
  (Ticks/segundo)</translation>
      </message>
      <message>
-@@ -2198,7 +2198,7 @@ Songdata</source>
+@@ -4649,7 +4649,7 @@ Shorter periods are desirable.</source>
      </message>
      <message>
          <source>Room Size</source>
@@ -505,7 +423,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Damping</source>
-@@ -2234,11 +2234,11 @@ Songdata</source>
+@@ -4685,11 +4685,11 @@ Shorter periods are desirable.</source>
      </message>
      <message>
          <source>Triangle</source>
@@ -519,7 +437,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Chorus</source>
-@@ -2277,11 +2277,11 @@ Songdata</source>
+@@ -4728,11 +4728,11 @@ Shorter periods are desirable.</source>
      </message>
      <message>
          <source>new signature</source>
@@ -533,16 +451,16 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Time</source>
-@@ -2305,7 +2305,7 @@ Songdata</source>
+@@ -4756,7 +4756,7 @@ Shorter periods are desirable.</source>
      </message>
      <message>
          <source>Timesig</source>
 -        <translation type="unfinished">comp�</translation>
 +        <translation type="unfinished">compï¿½</translation>
      </message>
- </context>
- <context>
-@@ -2392,7 +2392,7 @@ Songdata</source>
+     <message>
+         <source>&amp;Edit</source>
+@@ -4891,7 +4891,7 @@ Shorter periods are desirable.</source>
      </message>
      <message>
          <source>insert Poly Aftertouch</source>
@@ -551,7 +469,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Tick</source>
-@@ -2400,7 +2400,7 @@ Songdata</source>
+@@ -4899,7 +4899,7 @@ Shorter periods are desirable.</source>
      </message>
      <message>
          <source>Bar</source>
@@ -560,7 +478,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Typ</source>
-@@ -2435,7 +2435,7 @@ Songdata</source>
+@@ -4946,7 +4946,7 @@ Shorter periods are desirable.</source>
      <name>MITTransposeBase</name>
      <message>
          <source>MusE: Midi Input Plugin: Transpose</source>
@@ -569,21 +487,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>On</source>
-@@ -2575,11 +2575,11 @@ Songdata</source>
-     </message>
-     <message>
-         <source>add marker</source>
--        <translation type="unfinished">a�dir marcador</translation>
-+        <translation type="unfinished">aï¿½dir marcador</translation>
-     </message>
-     <message>
-         <source>Add Marker</source>
--        <translation type="unfinished">A�dir marcador</translation>
-+        <translation type="unfinished">Aï¿½dir marcador</translation>
-     </message>
-     <message>
-         <source>delete marker</source>
-@@ -2610,23 +2610,23 @@ Songdata</source>
+@@ -5277,23 +5277,23 @@ NOTE: Currently only one output port and
      </message>
      <message>
          <source>time at cursor position</source>
@@ -612,7 +516,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Master</source>
-@@ -2669,11 +2669,11 @@ Songdata</source>
+@@ -5344,11 +5344,11 @@ NOTE: Currently only one output port and
      <name>MetronomeConfigBase</name>
      <message>
          <source>MusE: Metronome Config</source>
@@ -626,7 +530,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Audio Beep</source>
-@@ -2689,11 +2689,11 @@ Songdata</source>
+@@ -5364,11 +5364,11 @@ NOTE: Currently only one output port and
      </message>
      <message>
          <source>Measure Note</source>
@@ -640,7 +544,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Beat Velocity</source>
-@@ -2709,7 +2709,7 @@ Songdata</source>
+@@ -5384,7 +5384,7 @@ NOTE: Currently only one output port and
      </message>
      <message>
          <source>Precount</source>
@@ -649,7 +553,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>enable</source>
-@@ -2729,11 +2729,11 @@ Songdata</source>
+@@ -5404,11 +5404,11 @@ NOTE: Currently only one output port and
      </message>
      <message>
          <source>Signature</source>
@@ -663,44 +567,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Preroll</source>
-@@ -2806,11 +2806,11 @@ Songdata</source>
-     </message>
-     <message>
-         <source>Min Val</source>
--        <translation type="unfinished">Valor m�imo</translation>
-+        <translation type="unfinished">Valor mï¿½imo</translation>
-     </message>
-     <message>
-         <source>Max Val</source>
--        <translation type="unfinished">Valor m�imo</translation>
-+        <translation type="unfinished">Valor mï¿½imo</translation>
-     </message>
-     <message>
-         <source>list of defined controllers</source>
-@@ -2830,11 +2830,11 @@ Songdata</source>
-     </message>
-     <message>
-         <source>Max Value</source>
--        <translation type="unfinished">Valor m�imo</translation>
-+        <translation type="unfinished">Valor mï¿½imo</translation>
-     </message>
-     <message>
-         <source>Min Value</source>
--        <translation type="unfinished">Valor m�imo</translation>
-+        <translation type="unfinished">Valor mï¿½imo</translation>
-     </message>
-     <message>
-         <source>Control7</source>
-@@ -2875,7 +2875,7 @@ Songdata</source>
-     <message>
-         <source>pressing the New button you create a new entry
- in the MusE list of defined controllers</source>
--        <translation type="unfinished">pulsando el bot� se crear�una nueva
-+        <translation type="unfinished">pulsando el botï¿½ se crearï¿½una nueva
- clase de controladores en la lista de MusE.</translation>
-     </message>
-     <message>
-@@ -2949,7 +2949,7 @@ handled like normal controllers.</source
+@@ -5610,7 +5610,7 @@ clase de controladores en la lista de Mu
      </message>
      <message>
          <source>Division</source>
@@ -709,7 +576,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Copyright</source>
-@@ -2972,7 +2972,7 @@ handled like normal controllers.</source
+@@ -5633,7 +5633,7 @@ clase de controladores en la lista de Mu
      </message>
      <message>
          <source>Record Filter</source>
@@ -718,7 +585,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Note On</source>
-@@ -2980,7 +2980,7 @@ handled like normal controllers.</source
+@@ -5641,7 +5641,7 @@ clase de controladores en la lista de Mu
      </message>
      <message>
          <source>Poly Pressure</source>
@@ -727,7 +594,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Controller</source>
-@@ -3114,7 +3114,7 @@ handled like normal controllers.</source
+@@ -5775,7 +5775,7 @@ clase de controladores en la lista de Mu
      </message>
      <message>
          <source>Poly Pressure</source>
@@ -736,7 +603,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Control Change</source>
-@@ -3126,7 +3126,7 @@ handled like normal controllers.</source
+@@ -5787,7 +5787,7 @@ clase de controladores en la lista de Mu
      </message>
      <message>
          <source>Pitch Bend</source>
@@ -745,7 +612,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>NRPN</source>
-@@ -3190,7 +3190,7 @@ handled like normal controllers.</source
+@@ -5851,7 +5851,7 @@ clase de controladores en la lista de Mu
      </message>
      <message>
          <source>Plus</source>
@@ -754,7 +621,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Minus</source>
-@@ -3218,7 +3218,7 @@ handled like normal controllers.</source
+@@ -5879,7 +5879,7 @@ clase de controladores en la lista de Mu
      </message>
      <message>
          <source>Dyn</source>
@@ -763,7 +630,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Random</source>
-@@ -3226,7 +3226,7 @@ handled like normal controllers.</source
+@@ -5887,7 +5887,7 @@ clase de controladores en la lista de Mu
      </message>
      <message>
          <source>Modules</source>
@@ -772,7 +639,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>1</source>
-@@ -3246,23 +3246,23 @@ handled like normal controllers.</source
+@@ -5907,23 +5907,23 @@ clase de controladores en la lista de Mu
      </message>
      <message>
          <source>enable modul 1</source>
@@ -801,7 +668,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Name:</source>
-@@ -3274,7 +3274,7 @@ handled like normal controllers.</source
+@@ -5935,7 +5935,7 @@ clase de controladores en la lista de Mu
      </message>
      <message>
          <source>Function</source>
@@ -810,7 +677,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>&amp;New</source>
-@@ -3282,7 +3282,7 @@ handled like normal controllers.</source
+@@ -5943,7 +5943,7 @@ clase de controladores en la lista de Mu
      </message>
      <message>
          <source>create new preset</source>
@@ -819,7 +686,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>&amp;Delete</source>
-@@ -3290,7 +3290,7 @@ handled like normal controllers.</source
+@@ -5951,7 +5951,7 @@ clase de controladores en la lista de Mu
      </message>
      <message>
          <source>delete preset</source>
@@ -828,7 +695,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>&amp;Dismiss</source>
-@@ -3324,7 +3324,7 @@ handled like normal controllers.</source
+@@ -5973,7 +5973,7 @@ clase de controladores en la lista de Mu
      <name>MidiRawDeviceDialogBase</name>
      <message>
          <source>MusE: raw midi device configuration</source>
@@ -837,7 +704,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Name</source>
-@@ -3364,7 +3364,7 @@ handled like normal controllers.</source
+@@ -6013,7 +6013,7 @@ clase de controladores en la lista de Mu
      </message>
      <message>
          <source>Serial Port</source>
@@ -846,7 +713,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Pipe</source>
-@@ -3372,7 +3372,7 @@ handled like normal controllers.</source
+@@ -6021,7 +6021,7 @@ clase de controladores en la lista de Mu
      </message>
      <message>
          <source>Device Path</source>
@@ -855,7 +722,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>9600</source>
-@@ -3502,7 +3502,7 @@ handled like normal controllers.</source
+@@ -6408,7 +6408,7 @@ Apply sync settings?</source>
      <name>MidiSyncConfigBase</name>
      <message>
          <source>MusE: Midi Sync</source>
@@ -864,39 +731,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Apply</source>
-@@ -3586,7 +3586,7 @@ handled like normal controllers.</source
-     </message>
-     <message>
-         <source>Sync Source</source>
--        <translation type="unfinished">Fuente de Sincronizaci�</translation>
-+        <translation type="unfinished">Fuente de Sincronizaciï¿½</translation>
-     </message>
-     <message>
-         <source>accept MTC</source>
-@@ -3606,7 +3606,7 @@ handled like normal controllers.</source
-     </message>
-     <message>
-         <source>Midi Time Code (MTC)</source>
--        <translation type="unfinished">C�igo de Tiempo Midi (MTC)</translation>
-+        <translation type="unfinished">Cï¿½igo de Tiempo Midi (MTC)</translation>
-     </message>
-     <message>
-         <source>Midi Clock</source>
-@@ -3614,11 +3614,11 @@ handled like normal controllers.</source
-     </message>
-     <message>
-         <source>Midi Machine Control (MMC)</source>
--        <translation type="unfinished">Control de m�uina MIDI (MMC)</translation>
-+        <translation type="unfinished">Control de mï¿½uina MIDI (MMC)</translation>
-     </message>
-     <message>
-         <source>Sync Mode</source>
--        <translation type="unfinished">Modo de sincronizaci�</translation>
-+        <translation type="unfinished">Modo de sincronizaciï¿½</translation>
-     </message>
-     <message>
-         <source>Master</source>
-@@ -3649,7 +3649,7 @@ handled like normal controllers.</source
+@@ -6624,7 +6624,7 @@ Enabled inputs in the list will
      <name>MidiTrackInfoBase</name>
      <message>
          <source>MusE: TrackInfo</source>
@@ -905,30 +740,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>output channel</source>
-@@ -3657,11 +3657,11 @@ handled like normal controllers.</source
-     </message>
-     <message>
-         <source>all midi events are send to this output channel</source>
--        <translation type="unfinished">todos los eventos MIDI se envian a �te canal de salida</translation>
-+        <translation type="unfinished">todos los eventos MIDI se envian a ï¿½te canal de salida</translation>
-     </message>
-     <message>
-         <source>Track Info</source>
--        <translation type="unfinished">Informaci� de Pista</translation>
-+        <translation type="unfinished">Informaciï¿½ de Pista</translation>
-     </message>
-     <message>
-         <source>%</source>
-@@ -3681,7 +3681,7 @@ handled like normal controllers.</source
-     </message>
-     <message>
-         <source>change stereo position</source>
--        <translation type="unfinished">cambiar posici� estereof�ica</translation>
-+        <translation type="unfinished">cambiar posiciï¿½ estereofï¿½ica</translation>
-     </message>
-     <message>
-         <source>OCh.</source>
-@@ -3701,7 +3701,7 @@ handled like normal controllers.</source
+@@ -6676,7 +6676,7 @@ Enabled inputs in the list will
      </message>
      <message>
          <source>Transp.</source>
@@ -937,7 +749,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Volume</source>
-@@ -3709,7 +3709,7 @@ handled like normal controllers.</source
+@@ -6684,7 +6684,7 @@ Enabled inputs in the list will
      </message>
      <message>
          <source>Channel Info</source>
@@ -946,16 +758,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Pan</source>
-@@ -3765,7 +3765,7 @@ recording:
-    1-3 5<byte value="x9"/>     record from channel 1 2 3 and 5</source>
-         <translation type="unfinished">Los eventos de todos los canales configurados
- se graban en esta pista.
--Puedes especificar m� de un canal para grabar:
-+Puedes especificar mï¿½ de un canal para grabar:
-    1 2 3<byte value="x9"/>Graba desde los canales 1, 2 y 3
-    1-3<byte value="x9"/><byte value="x9"/>Lo mismo
-    1-3 5<byte value="x9"/>Graba desde los canales 1, 2, 3 y 5</translation>
-@@ -3843,7 +3843,7 @@ Puedes especificar m� de un canal para
+@@ -6908,7 +6908,7 @@ Puedes especificar m� de un canal para
      </message>
      <message>
          <source>Poly Pressure</source>
@@ -964,7 +767,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Control Change</source>
-@@ -3855,7 +3855,7 @@ Puedes especificar m� de un canal para
+@@ -6920,7 +6920,7 @@ Puedes especificar m� de un canal para
      </message>
      <message>
          <source>Pitch Bend</source>
@@ -973,7 +776,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>NRPN</source>
-@@ -3867,7 +3867,7 @@ Puedes especificar m� de un canal para
+@@ -6932,7 +6932,7 @@ Puedes especificar m� de un canal para
      </message>
      <message>
          <source>Plus</source>
@@ -982,7 +785,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Minus</source>
-@@ -3915,7 +3915,7 @@ Puedes especificar m� de un canal para
+@@ -6980,7 +6980,7 @@ Puedes especificar m� de un canal para
      </message>
      <message>
          <source>Position</source>
@@ -991,7 +794,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Filter</source>
-@@ -3959,7 +3959,7 @@ Puedes especificar m� de un canal para
+@@ -7024,7 +7024,7 @@ Puedes especificar m� de un canal para
      </message>
      <message>
          <source>Preset</source>
@@ -1000,7 +803,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Name:</source>
-@@ -3987,7 +3987,7 @@ Puedes especificar m� de un canal para
+@@ -7052,7 +7052,7 @@ Puedes especificar m� de un canal para
      </message>
      <message>
          <source>Function</source>
@@ -1009,7 +812,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Select</source>
-@@ -4040,7 +4040,7 @@ Puedes especificar m� de un canal para
+@@ -7105,7 +7105,7 @@ Puedes especificar m� de un canal para
      <name>MixdownFileDialogBase</name>
      <message>
          <source>MusE: Set Mixdown Wavefile</source>
@@ -1018,7 +821,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>&amp;OK</source>
-@@ -4060,7 +4060,7 @@ Puedes especificar m� de un canal para
+@@ -7125,7 +7125,7 @@ Puedes especificar m� de un canal para
      </message>
      <message>
          <source>Stereo</source>
@@ -1027,7 +830,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Mono</source>
-@@ -4138,7 +4138,7 @@ Puedes especificar m� de un canal para
+@@ -7203,7 +7203,7 @@ Puedes especificar m� de un canal para
      </message>
      <message>
          <source>Config &amp;Printer</source>
@@ -1036,7 +839,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Import Midifile</source>
-@@ -4178,7 +4178,7 @@ Puedes especificar m� de un canal para
+@@ -7243,7 +7243,7 @@ Puedes especificar m� de un canal para
      </message>
      <message>
          <source>Add Track</source>
@@ -1045,7 +848,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Select &amp;All</source>
-@@ -4190,7 +4190,7 @@ Puedes especificar m� de un canal para
+@@ -7255,7 +7255,7 @@ Puedes especificar m� de un canal para
      </message>
      <message>
          <source>Invert &amp;Selection</source>
@@ -1054,7 +857,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>&amp;Inside Loop</source>
-@@ -4210,7 +4210,7 @@ Puedes especificar m� de un canal para
+@@ -7275,7 +7275,7 @@ Puedes especificar m� de un canal para
      </message>
      <message>
          <source>Drums</source>
@@ -1063,7 +866,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>List</source>
-@@ -4218,7 +4218,7 @@ Puedes especificar m� de un canal para
+@@ -7283,7 +7283,7 @@ Puedes especificar m� de un canal para
      </message>
      <message>
          <source>Graphic</source>
@@ -1072,7 +875,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Mastertrack</source>
-@@ -4226,7 +4226,7 @@ Puedes especificar m� de un canal para
+@@ -7291,7 +7291,7 @@ Puedes especificar m� de un canal para
      </message>
      <message>
          <source>Midi &amp;Transform</source>
@@ -1081,7 +884,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Modify Gate Time</source>
-@@ -4262,19 +4262,19 @@ Puedes especificar m� de un canal para
+@@ -7327,19 +7327,19 @@ Puedes especificar m� de un canal para
      </message>
      <message>
          <source>Copy Measure</source>
@@ -1105,7 +908,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Mix Track</source>
-@@ -4294,11 +4294,11 @@ Puedes especificar m� de un canal para
+@@ -7359,11 +7359,11 @@ Puedes especificar m� de un canal para
      </message>
      <message>
          <source>Global Insert</source>
@@ -1119,55 +922,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Copy Range</source>
-@@ -4322,19 +4322,19 @@ Puedes especificar m� de un canal para
-     </message>
-     <message>
-         <source>dont follow Song</source>
--        <translation type="unfinished">no sigas la canci�</translation>
-+        <translation type="unfinished">no sigas la canciï¿½</translation>
-     </message>
-     <message>
-         <source>follow page</source>
--        <translation type="unfinished">sigue la p�ina</translation>
-+        <translation type="unfinished">sigue la pï¿½ina</translation>
-     </message>
-     <message>
-         <source>follow continuous</source>
--        <translation type="unfinished">sigue cont�uamente</translation>
-+        <translation type="unfinished">sigue contï¿½uamente</translation>
-     </message>
-     <message>
-         <source>&amp;Config</source>
--        <translation type="obsolete">&amp;Configuraci�</translation>
-+        <translation type="obsolete">&amp;Configuraciï¿½</translation>
-     </message>
-     <message>
-         <source>Global Settings</source>
-@@ -4342,19 +4342,19 @@ Puedes especificar m� de un canal para
-     </message>
-     <message>
-         <source>follow song</source>
--        <translation type="unfinished">seguir canci�</translation>
-+        <translation type="unfinished">seguir canciï¿½</translation>
-     </message>
-     <message>
-         <source>Metronome</source>
--        <translation type="unfinished">Metr�omo</translation>
-+        <translation type="unfinished">Metrï¿½omo</translation>
-     </message>
-     <message>
-         <source>Midi Sync</source>
--        <translation type="unfinished">Sincronizaci� MIDI</translation>
-+        <translation type="unfinished">Sincronizaciï¿½ MIDI</translation>
-     </message>
-     <message>
-         <source>Midi File Config</source>
--        <translation type="obsolete">Configuraci� de archivos MIDI</translation>
-+        <translation type="obsolete">Configuraciï¿½ de archivos MIDI</translation>
-     </message>
-     <message>
-         <source>Appearance settings</source>
-@@ -4374,11 +4374,11 @@ Puedes especificar m� de un canal para
+@@ -7439,11 +7439,11 @@ Puedes especificar m� de un canal para
      </message>
      <message>
          <source>Save Configuration</source>
@@ -1181,7 +936,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Midi Input Filter</source>
-@@ -4462,7 +4462,7 @@ Puedes especificar m� de un canal para
+@@ -7527,7 +7527,7 @@ Puedes especificar m� de un canal para
      </message>
      <message>
          <source>What&apos;s &amp;This</source>
@@ -1190,7 +945,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>MusE: load project</source>
-@@ -4548,7 +4548,7 @@ Guardar el proyecto actual?</translation
+@@ -7613,7 +7613,7 @@ Guardar el proyecto actual?</translation
      </message>
      <message>
          <source>undo last change to song</source>
@@ -1199,21 +954,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>redo last undo</source>
-@@ -4632,11 +4632,11 @@ Guardar el proyecto actual?</translation
-     </message>
-     <message>
-         <source>panic</source>
--        <translation type="unfinished">p�ico</translation>
-+        <translation type="unfinished">pï¿½ico</translation>
-     </message>
-     <message>
-         <source>Panic</source>
--        <translation type="unfinished">P�ico</translation>
-+        <translation type="unfinished">Pï¿½ico</translation>
-     </message>
-     <message>
-         <source>new</source>
-@@ -4696,7 +4696,7 @@ Guardar el proyecto actual?</translation
+@@ -7761,7 +7761,7 @@ Guardar el proyecto actual?</translation
      </message>
      <message>
          <source>MusE: Write File failed</source>
@@ -1222,7 +963,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>MusE: About</source>
-@@ -4704,7 +4704,7 @@ Guardar el proyecto actual?</translation
+@@ -7769,7 +7769,7 @@ Guardar el proyecto actual?</translation
      </message>
      <message>
          <source>MusE: Song: </source>
@@ -1231,7 +972,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>reading midifile
-@@ -4716,7 +4716,7 @@ Guardar el proyecto actual?</translation
+@@ -7781,7 +7781,7 @@ Guardar el proyecto actual?</translation
          <source>
  failed</source>
          <translation type="obsolete">
@@ -1240,39 +981,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>MusE: Copy Range</source>
-@@ -4736,12 +4736,12 @@ fall�</translation>
-     </message>
-     <message>
-         <source>more than one target track selected</source>
--        <translation type="unfinished">m� de una pista de destino seleccionada</translation>
-+        <translation type="unfinished">mï¿½ de una pista de destino seleccionada</translation>
-     </message>
-     <message>
-         <source>wrong target track type,
- select wave track as target</source>
--        <translation type="unfinished">tipo de pista err�ea,
-+        <translation type="unfinished">tipo de pista errï¿½ea,
- selecciona una pista de audio como destino</translation>
-     </message>
-     <message>
-@@ -4895,14 +4895,14 @@ failed: </source>
-     </message>
-     <message>
-         <source>Note Info</source>
--        <translation type="unfinished">Informaci� de nota</translation>
-+        <translation type="unfinished">Informaciï¿½ de nota</translation>
-     </message>
- </context>
- <context>
-     <name>OrganGuiBase</name>
-     <message>
-         <source>MusE: Organ</source>
--        <translation type="obsolete">MusE: �gano</translation>
-+        <translation type="obsolete">MusE: ï¿½gano</translation>
-     </message>
-     <message>
-         <source>Presets</source>
-@@ -4986,7 +4986,7 @@ failed: </source>
+@@ -8200,7 +8200,7 @@ browser on your machine.</source>
      </message>
      <message>
          <source>Release(ms)</source>
@@ -1281,7 +990,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Envelope Hi</source>
-@@ -4997,7 +4997,7 @@ failed: </source>
+@@ -8239,7 +8239,7 @@ browser on your machine.</source>
      <name>PageSettings</name>
      <message>
          <source>Paper Size</source>
@@ -1290,7 +999,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>user</source>
-@@ -5005,7 +5005,7 @@ failed: </source>
+@@ -8247,7 +8247,7 @@ browser on your machine.</source>
      </message>
      <message>
          <source>Margins</source>
@@ -1299,7 +1008,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Header</source>
-@@ -5013,7 +5013,7 @@ failed: </source>
+@@ -8255,7 +8255,7 @@ browser on your machine.</source>
      </message>
      <message>
          <source>Title</source>
@@ -1308,7 +1017,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Author</source>
-@@ -5025,11 +5025,11 @@ failed: </source>
+@@ -8267,11 +8267,11 @@ browser on your machine.</source>
      </message>
      <message>
          <source>Page No.</source>
@@ -1322,7 +1031,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Track Name</source>
-@@ -5041,7 +5041,7 @@ failed: </source>
+@@ -8283,7 +8283,7 @@ browser on your machine.</source>
      </message>
      <message>
          <source>Layout</source>
@@ -1331,7 +1040,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Scale</source>
-@@ -5049,15 +5049,15 @@ failed: </source>
+@@ -8291,15 +8291,15 @@ browser on your machine.</source>
      </message>
      <message>
          <source>Flags</source>
@@ -1350,7 +1059,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>show track name</source>
-@@ -5093,7 +5093,7 @@ failed: </source>
+@@ -8335,7 +8335,7 @@ browser on your machine.</source>
      </message>
      <message>
          <source>Bars across the Page</source>
@@ -1359,7 +1068,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
  </context>
  <context>
-@@ -5136,7 +5136,7 @@ failed: </source>
+@@ -8378,7 +8378,7 @@ browser on your machine.</source>
      </message>
      <message>
          <source>drums</source>
@@ -1368,7 +1077,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Cannot copy/move/clone to different Track-Type</source>
-@@ -5281,7 +5281,7 @@ failed: </source>
+@@ -8572,7 +8572,7 @@ Likely the selected track is the wrong t
      </message>
      <message>
          <source>Iterative Quantize</source>
@@ -1377,7 +1086,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Pianoroll Tools</source>
-@@ -5289,7 +5289,7 @@ failed: </source>
+@@ -8580,7 +8580,7 @@ Likely the selected track is the wrong t
      </message>
      <message>
          <source>Step Record</source>
@@ -1386,7 +1095,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Midi Input</source>
-@@ -5301,11 +5301,11 @@ failed: </source>
+@@ -8592,11 +8592,11 @@ Likely the selected track is the wrong t
      </message>
      <message>
          <source>Add Controller View</source>
@@ -1400,7 +1109,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Modify Gate Time</source>
-@@ -5341,19 +5341,19 @@ failed: </source>
+@@ -8632,19 +8632,19 @@ Likely the selected track is the wrong t
      </message>
      <message>
          <source>Copy Measure</source>
@@ -1424,7 +1133,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>ctrl</source>
-@@ -5470,7 +5470,7 @@ failed: </source>
+@@ -8853,7 +8853,7 @@ Likely the selected track is the wrong t
      <name>PrinterConfig</name>
      <message>
          <source>MusE: Config Printer</source>
@@ -1433,7 +1142,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Print to file</source>
-@@ -5478,11 +5478,11 @@ failed: </source>
+@@ -8861,11 +8861,11 @@ Likely the selected track is the wrong t
      </message>
      <message>
          <source>Print Command</source>
@@ -1447,7 +1156,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>OK</source>
-@@ -5505,7 +5505,7 @@ failed: </source>
+@@ -8888,7 +8888,7 @@ Likely the selected track is the wrong t
      </message>
      <message>
          <source>enables recording from the device</source>
@@ -1456,43 +1165,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Instrument connected to port</source>
-@@ -5526,7 +5526,7 @@ failed: </source>
-     <message>
-         <source>quantisation
- currently not used</source>
--        <translation type="unfinished">cuantizaci�
-+        <translation type="unfinished">cuantizaciï¿½
- actualmente sin usar</translation>
-     </message>
-     <message>
-@@ -5571,7 +5571,7 @@ actualmente sin uso</translation>
-     </message>
-     <message>
-         <source>quantisation</source>
--        <translation type="unfinished">cuantizaci�</translation>
-+        <translation type="unfinished">cuantizaciï¿½</translation>
-     </message>
-     <message>
-         <source>output channel</source>
-@@ -5583,7 +5583,7 @@ actualmente sin uso</translation>
-     </message>
-     <message>
-         <source>Enable Recording</source>
--        <translation type="unfinished">Habilita grabaci�</translation>
-+        <translation type="unfinished">Habilita grabaciï¿½</translation>
-     </message>
-     <message>
-         <source>Track Activity</source>
-@@ -5619,7 +5619,7 @@ actualmente sin uso</translation>
-     </message>
-     <message>
-         <source>Solo/Pre Fader Listening</source>
--        <translation type="unfinished">Escucha de S�o/pre-fader</translation>
-+        <translation type="unfinished">Escucha de Sï¿½o/pre-fader</translation>
-     </message>
-     <message>
-         <source>Name of the midi device associated with this port number</source>
-@@ -5638,7 +5638,7 @@ actualmente sin uso</translation>
+@@ -9020,7 +9020,7 @@ actualmente sin uso</translation>
      <name>QWidget</name>
      <message>
          <source>Cannot transform non empty track</source>
@@ -1501,7 +1174,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Velocity</source>
-@@ -5650,11 +5650,11 @@ actualmente sin uso</translation>
+@@ -9032,11 +9032,11 @@ actualmente sin uso</translation>
      </message>
      <message>
          <source>Hex String too long (2048 bytes limit)</source>
@@ -1515,7 +1188,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>new</source>
-@@ -5696,7 +5696,7 @@ no existe
+@@ -9078,7 +9078,7 @@ no existe
      </message>
      <message>
          <source>creating dir failed</source>
@@ -1524,7 +1197,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>File
-@@ -5731,7 +5731,7 @@ existe</translation>
+@@ -9113,7 +9113,7 @@ existe</translation>
          <source>
  failed: </source>
          <translation type="unfinished">
@@ -1533,7 +1206,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>MusE: Open File</source>
-@@ -5762,7 +5762,7 @@ fall� </translation>
+@@ -9164,7 +9164,7 @@ exists. Overwrite?</source>
      <name>QuantConfig</name>
      <message>
          <source>Config Quantize</source>
@@ -1542,7 +1215,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Strength</source>
-@@ -5778,18 +5778,18 @@ fall� </translation>
+@@ -9180,18 +9180,18 @@ exists. Overwrite?</source>
      </message>
      <message>
          <source>MusE: Config Quantize</source>
@@ -1564,34 +1237,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Note Quantize</source>
-@@ -5812,7 +5812,7 @@ fall� </translation>
-     <name>RhythmBase</name>
-     <message>
-         <source>MusE: Random Rhythm Generator</source>
--        <translation type="unfinished">MusE: Generador de r�mo aleatorio</translation>
-+        <translation type="unfinished">MusE: Generador de rï¿½mo aleatorio</translation>
-     </message>
-     <message>
-         <source>Instrument Properties</source>
-@@ -5885,7 +5885,7 @@ fall� </translation>
-     <message>
-         <source>pressing the New button you create a new entry
- in the MusE list of defined controllers</source>
--        <translation type="unfinished">pulsando el bot� Nuevo creas una entrada nueva
-+        <translation type="unfinished">pulsando el botï¿½ Nuevo creas una entrada nueva
- en la lista de controles definidos por MusE</translation>
-     </message>
-     <message>
-@@ -6038,7 +6038,7 @@ en la lista de controles definidos por M
-     </message>
-     <message>
-         <source>Index</source>
--        <translation type="unfinished">�dice</translation>
-+        <translation type="unfinished">ï¿½dice</translation>
-     </message>
-     <message>
-         <source>&amp;Index...</source>
-@@ -6106,7 +6106,7 @@ Random Rhythm Generator is not enabled y
+@@ -9463,7 +9463,7 @@ en la lista de controles definidos por M
      </message>
      <message>
          <source>Instrument Settings:</source>
@@ -1600,7 +1246,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Instrument</source>
-@@ -6118,7 +6118,7 @@ Random Rhythm Generator is not enabled y
+@@ -9475,7 +9475,7 @@ en la lista de controles definidos por M
      </message>
      <message>
          <source>add</source>
@@ -1609,7 +1255,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>delete</source>
-@@ -6130,7 +6130,7 @@ Random Rhythm Generator is not enabled y
+@@ -9487,7 +9487,7 @@ en la lista de controles definidos por M
      </message>
      <message>
          <source>count/bar</source>
@@ -1618,7 +1264,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source># bars</source>
-@@ -6138,7 +6138,7 @@ Random Rhythm Generator is not enabled y
+@@ -9495,7 +9495,7 @@ en la lista de controles definidos por M
      </message>
      <message>
          <source>Group Settings:</source>
@@ -1627,7 +1273,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Group</source>
-@@ -6182,7 +6182,7 @@ Random Rhythm Generator is not enabled y
+@@ -9539,7 +9539,7 @@ en la lista de controles definidos por M
      </message>
      <message>
          <source>Clear</source>
@@ -1636,7 +1282,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Open...</source>
-@@ -6260,15 +6260,15 @@ Random Rhythm Generator is not enabled y
+@@ -9679,15 +9679,15 @@ en la lista de controles definidos por M
      <name>Score</name>
      <message>
          <source>&amp;Config</source>
@@ -1655,7 +1301,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Background Pixmap</source>
-@@ -6280,7 +6280,7 @@ Random Rhythm Generator is not enabled y
+@@ -9699,7 +9699,7 @@ en la lista de controles definidos por M
      </message>
      <message>
          <source>Dynamics</source>
@@ -1664,7 +1310,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Print</source>
-@@ -6288,7 +6288,7 @@ Random Rhythm Generator is not enabled y
+@@ -9707,7 +9707,7 @@ en la lista de controles definidos por M
      </message>
      <message>
          <source>Preview Print</source>
@@ -1673,7 +1319,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Lyrics</source>
-@@ -6312,7 +6312,7 @@ Random Rhythm Generator is not enabled y
+@@ -9731,7 +9731,7 @@ en la lista de controles definidos por M
      </message>
      <message>
          <source>enter chord symbol</source>
@@ -1682,7 +1328,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>to previous voice</source>
-@@ -6324,7 +6324,7 @@ Random Rhythm Generator is not enabled y
+@@ -9743,7 +9743,7 @@ en la lista de controles definidos por M
      </message>
      <message>
          <source>flip stem direction</source>
@@ -1691,7 +1337,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>move marked notes to previous voice or to upper stave in a split system</source>
-@@ -6336,11 +6336,11 @@ Random Rhythm Generator is not enabled y
+@@ -9755,11 +9755,11 @@ en la lista de controles definidos por M
      </message>
      <message>
          <source>flip stem direction of selected notes</source>
@@ -1705,7 +1351,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>MusE: config wallpaper</source>
-@@ -6355,7 +6355,7 @@ Random Rhythm Generator is not enabled y
+@@ -9774,7 +9774,7 @@ en la lista de controles definidos por M
      <name>ScoreConfig</name>
      <message>
          <source>Staff Settings: </source>
@@ -1714,7 +1360,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Track List</source>
-@@ -6371,11 +6371,11 @@ Random Rhythm Generator is not enabled y
+@@ -9790,11 +9790,11 @@ en la lista de controles definidos por M
      </message>
      <message>
          <source>Note Quantize</source>
@@ -1728,7 +1374,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Mode</source>
-@@ -6387,7 +6387,7 @@ Random Rhythm Generator is not enabled y
+@@ -9806,7 +9806,7 @@ en la lista de controles definidos por M
      </message>
      <message>
          <source>Splitpoint</source>
@@ -1737,7 +1383,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Ok</source>
-@@ -6414,15 +6414,15 @@ Random Rhythm Generator is not enabled y
+@@ -9833,15 +9833,15 @@ en la lista de controles definidos por M
      <name>ScrollScale</name>
      <message>
          <source>next page</source>
@@ -1756,16 +1402,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
  </context>
  <context>
-@@ -6525,7 +6525,7 @@ Random Rhythm Generator is not enabled y
-     <name>SynthConfigBase</name>
-     <message>
-         <source>MusE: Synth Configuration</source>
--        <translation type="unfinished">MusE: Configuraci� del Sintetizador virtual</translation>
-+        <translation type="unfinished">MusE: Configuraciï¿½ del Sintetizador virtual</translation>
-     </message>
-     <message>
-         <source>Soft Synthesizer</source>
-@@ -6549,7 +6549,7 @@ Random Rhythm Generator is not enabled y
+@@ -10110,7 +10110,7 @@ click on the Restart button.</source>
      </message>
      <message>
          <source>Add Instance</source>
@@ -1774,7 +1411,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Alsa Port</source>
-@@ -6588,7 +6588,7 @@ Random Rhythm Generator is not enabled y
+@@ -10149,7 +10149,7 @@ click on the Restart button.</source>
      </message>
      <message>
          <source>Drum</source>
@@ -1783,7 +1420,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Wave</source>
-@@ -6608,15 +6608,15 @@ Random Rhythm Generator is not enabled y
+@@ -10169,15 +10169,15 @@ click on the Restart button.</source>
      </message>
      <message>
          <source>Add Midi Track</source>
@@ -1802,7 +1439,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>MusE: bad trackname</source>
-@@ -6702,7 +6702,7 @@ Random Rhythm Generator is not enabled y
+@@ -10267,7 +10267,7 @@ click on the Restart button.</source>
      </message>
      <message>
          <source>Looped+Sel.</source>
@@ -1811,7 +1448,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Cursor</source>
-@@ -6744,7 +6744,7 @@ Random Rhythm Generator is not enabled y
+@@ -10309,7 +10309,7 @@ click on the Restart button.</source>
      </message>
      <message>
          <source>Overdub</source>
@@ -1820,7 +1457,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Replace</source>
-@@ -6752,7 +6752,7 @@ Random Rhythm Generator is not enabled y
+@@ -10317,7 +10317,7 @@ click on the Restart button.</source>
      </message>
      <message>
          <source>Rec Mode</source>
@@ -1829,7 +1466,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Normal</source>
-@@ -6764,7 +6764,7 @@ Random Rhythm Generator is not enabled y
+@@ -10329,7 +10329,7 @@ click on the Restart button.</source>
      </message>
      <message>
          <source>Cycle Rec</source>
@@ -1838,7 +1475,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>punchin</source>
-@@ -6808,7 +6808,7 @@ Random Rhythm Generator is not enabled y
+@@ -10373,7 +10373,7 @@ click on the Restart button.</source>
      </message>
      <message>
          <source>quantize during record</source>
@@ -1847,7 +1484,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Click</source>
-@@ -6816,15 +6816,15 @@ Random Rhythm Generator is not enabled y
+@@ -10381,15 +10381,15 @@ click on the Restart button.</source>
      </message>
      <message>
          <source>metronom click on/off</source>
@@ -1866,7 +1503,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Master</source>
-@@ -6839,7 +6839,7 @@ Random Rhythm Generator is not enabled y
+@@ -10412,7 +10412,7 @@ click on the Restart button.</source>
      <name>TransposeDialogBase</name>
      <message>
          <source>MusE: Midi Transpose</source>
@@ -1875,43 +1512,7 @@ Author: Daniel Kobras <kobras@debian.org>
      </message>
      <message>
          <source>Value</source>
-@@ -6910,7 +6910,7 @@ Random Rhythm Generator is not enabled y
-     </message>
-     <message>
-         <source>Triangle</source>
--        <translation type="obsolete">Tri�gulo</translation>
-+        <translation type="obsolete">Triï¿½gulo</translation>
-     </message>
-     <message>
-         <source>Filter</source>
-@@ -6918,7 +6918,7 @@ Random Rhythm Generator is not enabled y
-     </message>
-     <message>
-         <source>EnvMod</source>
--        <translation type="obsolete">Modulaci� de envolvente</translation>
-+        <translation type="obsolete">Modulaciï¿½ de envolvente</translation>
-     </message>
-     <message>
-         <source>Attack</source>
-@@ -6934,7 +6934,7 @@ Random Rhythm Generator is not enabled y
-     </message>
-     <message>
-         <source>Release</source>
--        <translation type="obsolete">Relajaci�</translation>
-+        <translation type="obsolete">Relajaciï¿½</translation>
-     </message>
-     <message>
-         <source>Cutoff</source>
-@@ -6986,7 +6986,7 @@ Random Rhythm Generator is not enabled y
-     </message>
-     <message>
-         <source>Detune</source>
--        <translation type="obsolete">Desafinaci�</translation>
-+        <translation type="obsolete">Desafinaciï¿½</translation>
-     </message>
-     <message>
-         <source>PWM</source>
-@@ -7013,13 +7013,13 @@ Random Rhythm Generator is not enabled y
+@@ -10597,13 +10597,13 @@ click on the Restart button.</source>
  Virtual Analog for MusE
  Released under GPL.
  Copyright(C) 2002
@@ -1926,27 +1527,4 @@ Author: Daniel Kobras <kobras@debian.org>
 +Jotsif Lindman HÃ¶rnlund
  ( jotsif@linux.nu )</translation>
      </message>
- </context>
-@@ -7112,11 +7112,11 @@ Jotsif Lindman Hörnlund
-     <name>WaveTrackInfoBase</name>
-     <message>
-         <source>MusE: TrackInfo</source>
--        <translation type="unfinished">MusE: Informaci� de pista</translation>
-+        <translation type="unfinished">MusE: Informaciï¿½ de pista</translation>
-     </message>
-     <message>
-         <source>Track Info</source>
--        <translation type="unfinished">Informaci� de pista</translation>
-+        <translation type="unfinished">Informaciï¿½ de pista</translation>
-     </message>
-     <message>
-         <source>Track Name</source>
-@@ -7140,7 +7140,7 @@ Jotsif Lindman Hörnlund
-     </message>
-     <message>
-         <source>Stereo</source>
--        <translation type="unfinished">Est�eo</translation>
-+        <translation type="unfinished">Estï¿½eo</translation>
-     </message>
- </context>
- </TS>
+     <message utf8="true">
