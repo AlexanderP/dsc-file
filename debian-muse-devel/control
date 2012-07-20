@@ -20,10 +20,12 @@ Homepage: http://www.muse-sequencer.org/
 
 Package: muse-devel
 Architecture: any
-Depends: ${shlibs:Depends},
+Depends:
  python,
- ${misc:Depends}
-Suggests: jackd
+ ${misc:Depends},
+ ${shlibs:Depends}
+Suggests:
+ jackd
 Conflicts: muse
 Description: Qt4-based audio/MIDI sequencer
  MusE is a MIDI/audio sequencer with recording and editing capabilities.
@@ -47,4 +49,3 @@ Description: Qt4-based audio/MIDI sequencer
   * XML project file.
   * Project file contains complete app state (session data).
   * Application spanning Cut/Paste Drag/Drop.
-

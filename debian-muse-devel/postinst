@@ -9,11 +9,11 @@ case "$1" in
         # Set muse setuid root?
         db_get muse/muse-setuid || RET="false"
         if [ "$RET" = "true" ]; then
-	    dpkg-statoverride --add --update root root 4755 /usr/bin/muse2 \
+	    dpkg-statoverride --add --update root root 4755 /usr/bin/muse \
 	    	2> /dev/null || :
 	else
-	    dpkg-statoverride --remove /usr/bin/muse2 2> /dev/null || :
-	    chmod u-s /usr/bin/muse2
+	    dpkg-statoverride --remove /usr/bin/muse 2> /dev/null || :
+	    chmod u-s /usr/bin/muse
         fi
 
     ;;
