@@ -1,13 +1,5 @@
 #!/usr/bin/make -f
 
-ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
-	BUILDDEBFLAGS= -- -Zlzma -z9
-endif
-
-ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
-	BUILDDEBFLAGS= -- -Zxz -z9
-endif
-
 CMAKEOPTS = -DBUNDLE_PROJECTM_PRESETS=OFF \
 	-DSTATIC_SQLITE=OFF \
 	-DCMAKE_CXX_FLAGS="-DQT_NO_DEBUG_OUTPUT -DQT_NO_WARNING_OUTPUT"
@@ -26,7 +18,11 @@ else
 	-DQXTGUI_INCLUDE_DIRS=/usr/include/qxt/QxtGui/
 	CONTROL = control.sid
 endif
-
+ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
+	BUILDDEBFLAGS= -- -Zlzma -z9
+else
+	BUILDDEBFLAGS= -- -Zxz -z9
+endif
 
 %:
 	dh $@ --buildsystem=cmake

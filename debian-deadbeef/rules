@@ -3,10 +3,6 @@
 
 export DH_ALWAYS_EXCLUDE := COPYING:COPYING.GPLv2:COPYING.LGPLv2.1
 
-ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
-	BUILDDEBFLAGS= -- -Zlzma -z9
-endif
-
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
@@ -24,6 +20,12 @@ ifneq (,$(filter $(DEBIAN_CODENAME),sid wheezy))
 	DISABLEFFMPEG= --disable-ffmpeg 
 else
 	DISABLEFFMPEG= 
+endif
+
+ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
+	BUILDDEBFLAGS= -- -Zlzma -z9
+else
+	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
 %:

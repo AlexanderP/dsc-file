@@ -1,14 +1,6 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
-ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
-	BUILDDEBFLAGS= -- -Zlzma -z9
-endif
-
-ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
-	BUILDDEBFLAGS= -- -Zxz -z9
-endif
-
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
@@ -18,6 +10,12 @@ ifneq (,$(filter $(DEBIAN_CODENAME),precise wheezy sid))
 else
 	CONTROL = control.jpeg62
 endif
+ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
+	BUILDDEBFLAGS= -- -Zlzma -z9
+else
+	BUILDDEBFLAGS= -- -Zxz -z9
+endif
+
 
 %:
 	dh --parallel $@

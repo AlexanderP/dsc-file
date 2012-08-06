@@ -1,5 +1,15 @@
 #!/usr/bin/make -f
 
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
+	BUILDDEBFLAGS= -- -Zlzma -z9
+else
+	BUILDDEBFLAGS= -- -Zxz -z9
+endif
+
 PACKAGE = psi-plus-i18n
 
 %:
@@ -15,3 +25,6 @@ override_dh_auto_install:
 override_dh_auto_clean:
 	dh_clean
 	rm -f out/* translations.pro
+
+override_dh_builddeb:
+	dh_builddeb $(BUILDDEBFLAGS)

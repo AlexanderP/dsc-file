@@ -3,11 +3,13 @@
 
 CFLAGS = -Wall -g -fPIC -DTESSDATA_PREFIX=/usr/share/tesseract-ocr/
 
-ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
-	BUILDDEBFLAGS= -- -Zlzma -z9
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-
-ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
+ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
+	BUILDDEBFLAGS= -- -Zlzma -z9
+else
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 

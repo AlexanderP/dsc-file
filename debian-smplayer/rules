@@ -3,11 +3,13 @@
 QMAKE_OPTS = DEFINES+=NO_DEBUG_ON_CONSOLE
 MAKE_OPTS  = PREFIX=/usr QMAKE=qmake-qt4 LRELEASE=lrelease-qt4 QMAKE_OPTS="$(QMAKE_OPTS)"
 
-ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
-	BUILDDEBFLAGS= -- -Zlzma -z9
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-
-ifneq (,$(filter xz,$(DEB_BUILD_OPTIONS)))
+ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
+	BUILDDEBFLAGS= -- -Zlzma -z9
+else
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 

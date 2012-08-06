@@ -3,10 +3,6 @@ export DH_VERBOSE=1
 
 #export DH_ALWAYS_EXCLUDE := LICENSE
 
-ifneq (,$(filter lzma,$(DEB_BUILD_OPTIONS)))
-	BUILDDEBFLAGS= -- -Zlzma -z9
-endif
-
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
@@ -17,6 +13,11 @@ else
 	BITTORRENT=yes
 endif
 
+ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
+	BUILDDEBFLAGS= -- -Zlzma -z9
+else
+	BUILDDEBFLAGS= -- -Zxz -z9
+endif
 %:
 	dh --parallel $@
 
