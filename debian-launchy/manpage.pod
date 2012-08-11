@@ -1,0 +1,85 @@
+=pod
+
+=head1 NAME
+
+Launchy - smart search launcher utility
+
+=head1 SYNOPSIS
+
+launchy [options]
+
+=head1 DESCRIPTION
+
+Launchy is a cross-platform utility designed to help you forget
+about your start menu, the icons on your desktop, and even your
+file manager.
+
+Launchy indexes the programs in your start menu and can launch
+your documents, project files, folders, and bookmarks with just
+a few keystrokes.
+
+Once Launchy has been started, it hides in the background. You
+bring it forward by holding the Ctrl and the Space keys. You can
+then type in a few keys of the program you are searching for and
+hit enter once it has been found. You can also make Launchy
+dissappear again by hitting the Escape key or Ctrl+Space.
+
+Launchy allows you to add additional command line parameters to
+the selected launch. Simply hit Tab key once you have found the
+application you are interested in and then enter the parameters.
+
+When the input text area is empty, press the down arrow key and
+Launchy will display a history of the commands entered previously.
+You can scroll up and down the list and press Enter key to repeat
+the command. Pressing Shift+Delete instead will remove the item
+from the history.
+
+=head1 OPTIONS
+
+-exit
+	Attempt to close any running instances of Launchy.
+
+-multiple
+	Allows more than one instance of Launchy to be run.
+
+-options
+	Shows the options dialog.
+
+-rescan
+	Rescan the catalog.
+
+-rescue
+	Resets Launchy’s position to the center of the screen
+	and selects the default skin.
+
+-show
+	Shows Launchy's window (default is to launch hidden in
+	most cases). Can be used as a way to active Launchy from
+	a shortcut.
+
+If -multiple is not used and Launchy is already running, then the
+command will be sent to the running instance of Launchy.
+
+=head1 KNOWN ISSUES
+
+Not all skins will work with Linux builds of Launchy. If you're
+running a compositing manager (compiz or beryl) then the skins
+should look the same as in Windows. Otherwise, you will have to
+settle for the skins that look good without alpha transparency
+(like Default and Black Glass).
+
+If the black area of mask.png is perfectly rectangular then, for
+some reason, compiz won't mask it correctly and you will have a
+strange black section around the skin.
+
+=head1 SEE ALSO
+
+Launchy homepage "L<http://www.launchy.net>"
+
+=head1 AUTHOR
+
+Launchy authors are Josh Karlin, Simon Capewell and others.
+
+This manual page was written by Ricardo Mones for the Debian
+project (and may be used by others).
+
