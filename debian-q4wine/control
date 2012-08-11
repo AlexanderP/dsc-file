@@ -2,28 +2,38 @@ Source: q4wine
 Section: otherosfs
 Priority: optional
 Maintainer: Boris Pek <tehnick-8@mail.ru>
-Build-Depends: debhelper (>= 7), cmake, autotools-dev, fakeroot, libqt4-dev (>=4.4.0), qt4-dev-tools (>=4.4.0), qt4-qtconfig (>=4.4.0), icoutils (>=0.26.0), libfuse2 [!hurd-i386], libfuse-dev [!hurd-i386], libkvm-dev [kfreebsd-i386 kfreebsd-amd64]
+Build-Depends: debhelper (>= 7.0.50~), cmake, autotools-dev, fakeroot,
+ libqt4-dev (>=4.4.0), qt4-dev-tools (>=4.4.0), qt4-qtconfig (>=4.4.0),
+ libfuse2 [!hurd-i386], libfuse-dev [!hurd-i386],
+ icoutils (>=0.26.0), libkvm-dev [kfreebsd-i386 kfreebsd-amd64]
 Homepage: http://q4wine.brezblock.org.ua/
+Vcs-Git: git://github.com/tehnick/q4wine-debian.git
+Vcs-Browser: https://github.com/tehnick/q4wine-debian
 Standards-Version: 3.9.3
+DM-Upload-Allowed: yes
 
 Package: q4wine
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libqt4-sql-sqlite, sqlite3 (>=3.5.6), icoutils (>=0.26.0), wget, sudo, wine-bin [amd64 i386] | wine-bin-unstable [amd64 i386] | wine [amd64 i386] | wine1.0 [amd64 i386] | wine1.2 [amd64 i386] | wine1.3 [amd64 i386]
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ wine-bin [amd64 i386] | wine-bin-unstable [amd64 i386] | wine [amd64 i386] |
+ wine1.2 [amd64 i386] | wine1.3 [amd64 i386] | wine1.4 [amd64 i386] |
+ wine1.5 [amd64 i386],
+ libqt4-sql-sqlite, icoutils (>=0.26.0), wget, sudo
 Suggests: fuseiso [!hurd-i386 !kfreebsd-i386 !kfreebsd-amd64]
 Replaces: q4wine-unstable
 Conflicts: q4wine-unstable
-Description: Qt4 GUI for wine (W.I.N.E)
+Description: Qt4 GUI for wine (WINE)
  Q4Wine will help you manage wine prefixes and installed applications.
  .
  General features:
   - Can export Qt color theme into wine colors settings.
-  - Can easy work with different wine versions at same time;
-  - Easy creating, deleting and managing prefixes (WINEPREFIX);
-  - Easy controlling for wine process;
-  - Easy installer wizard for wine applications;
-  - Autostart icons support;
-  - Easy cd-image use;
-  - You can extract icons from PE files (.exe .dll);
+  - Can easy work with different wine versions at same time.
+  - Easy creating, deleting and managing prefixes (WINEPREFIX).
+  - Easy controlling for wine process.
+  - Easy installer wizard for wine applications.
+  - Autostart icons support.
+  - Easy CD-image use.
+  - You can extract icons from PE files (.exe .dll).
   - Easy backup and restore for managed prefixes.
-  - Winetriks support.
+  - Winetricks support.
   - And more...

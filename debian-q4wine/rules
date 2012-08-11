@@ -8,60 +8,47 @@ ifeq (,$(NUMJOBS))
 	NUMJOBS = 1
 endif
 
+PACKAGE = q4wine
+
 BUILDDIR = builddir
+DEB_DH_INSTALL_SOURCEDIR = $(CURDIR)/debian/$(PACKAGE)
 
-CMAKEOPTS =	-DCMAKE_BUILD_TYPE=Release \
-			-DWITH_WINETRIKS=ON \
-			-USE_GZIP=ON \
-			-DCMAKE_INSTALL_PREFIX=/usr \
-			-DLIBS_ENTRY_PATH=/usr/lib/q4wine/ \
-			..
+CUR_VER = $(shell uscan --dehs | sed -n 's/.*<upstream-version>\(.*\)<\/upstream-version>.*/\1/p')
 
-config.status:
-	dh_testdir
+CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release \
+            -USE_GZIP=ON \
+            -DCMAKE_INSTALL_PREFIX=/usr \
+            -DLIBS_ENTRY_PATH=/usr/lib/q4wine/ \
+            ..
+
+
+%:
+	dh $@ --parallel
+
+override_dh_auto_configure:
 	mkdir -p $(BUILDDIR) && cd $(BUILDDIR) && cmake $(CMAKEOPTS)
-build: build-arch build-indep
-build-arch: build-stamp
-build-indep: build-stamp
-build-stamp:  config.status
-	dh_testdir
+
+override_dh_auto_build:
 	cd $(BUILDDIR) && $(MAKE) -j$(NUMJOBS)
-	touch $@
 
-clean:
-	dh_testdir
+override_dh_auto_clean:
 	dh_testroot
-	rm -f build-stamp
 	[ ! -f Makefile ] || ( cd $(BUILDDIR) && $(MAKE) clean )
-	test ! -d $(BUILDDIR) || rm -r $(BUILDDIR)
-	rm -f config.sub config.guess
-	dh_clean
+	[ ! -d $(BUILDDIR) ] || rm -r $(BUILDDIR)
+	rm -f build-stamp configure-stamp config.sub config.guess
 
-install: build
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
-	cd $(BUILDDIR) && $(MAKE) install DESTDIR=$(CURDIR)/debian/q4wine
+override_dh_auto_install:
+	cd $(BUILDDIR) && $(MAKE) install DESTDIR=$(DEB_DH_INSTALL_SOURCEDIR)
 
-binary-indep: build install
-
-binary-arch: build install
-	dh_testdir
-	dh_testroot
+override_dh_installchangelogs:
 	dh_installchangelogs ChangeLog
-	dh_installdocs
-	dh_installexamples
-	dh_installman
-	dh_link
-	dh_strip
-	dh_compress
-	dh_fixperms
-	dh_installdeb
-	dh_shlibdeps
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
 
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install
+.PHONY: override_dh_strip
+override_dh_strip:
+	dh_strip
+
+get-orig-source:
+	wget -4 -c "http://sourceforge.net/projects/q4wine/files/q4wine/q4wine%20$(CUR_VER)/q4wine-$(CUR_VER).tar.bz2"
+	mv -f "$(PACKAGE)-$(CUR_VER).tar.bz2" ../"$(PACKAGE)_$(CUR_VER).orig.tar.bz2"
+
+.PHONY: override_dh_makeshlibs

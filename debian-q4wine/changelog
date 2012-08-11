@@ -1,33 +1,66 @@
-q4wine (0.121-2+nmu1) unstable; urgency=low
+q4wine (0.121-4) unstable; urgency=low
 
-  * Non-maintainer upload.
-  * Backports from oneric
+  * debian/patches/fix-for-gcc-4.7 was added:
+    (fixes FTBFS with GCC >= 4.7) (Closes: #672073)
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 18 Jun 2011 13:19:19 +0400
+ -- Boris Pek <tehnick-8@mail.ru>  Wed, 09 May 2012 00:44:46 +0300
 
-q4wine (0.121-0ppa1~oneiric1) oneiric; urgency=low
+q4wine (0.121-3) unstable; urgency=low
+
+  * Bumped Standards-Version to 3.9.3.
+  * debian/control was updated:
+    - added string `DM-Upload-Allowed: yes'
+    - updated short and long descriptions of the package
+    - removed extra dependency from sqlite3
+      (libqt4-sql-sqlite depends on it)
+    - removed extra dependency from wine1.0
+      (there is no such package in actual Ubuntu releases)
+    - added optional dependencies from wine1.4 and wine1.5
+      (for Ubuntu users and others who use PPA in Launchpad)
+  * debian/dirs was deleted: it is not required.
+  * debian/copyright was updated:
+    file was rewritten in according to Copyright format 1.0
+  * debian/rules was updated:
+    - added additional section get-orig-source
+    - now dh is used instead of direct dh_* commands.
+      (fixes FTBFS with new build-arch handling) (Closes: #666371)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 09 Apr 2012 01:08:47 +0300
+
+q4wine (0.121-2) unstable; urgency=low
+
+  * Updated debian/copyright:
+    - section about src/fuseiso/src/linux/* was deleted because of
+      subdirectory src/fuseiso was removed from sources tarball in upstream.
+  * Small fix in debian/changelog.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Wed, 22 Jun 2011 22:45:31 +0300
+
+q4wine (0.121-1) unstable; urgency=low
 
   * Update to stable release 0.121.
+  * Updated debian/control:
+    - added additional fields Vcs-Git and Vcs-Browser
+    - fixed misprint in description: Winetriks -> Winetricks (Closes: #631260)
+  * Updated debian/rules:
+    there is no cmake variable 'WITH_WINETRIKS' now (it is always enable).
+  * Removed debian/patches/ (all this changes now available in upstream).
+  * Fixed lintian warning 'debian-rules-missing-recommended-target'.
 
- -- Boris Pek <tehnick-8@mail.ru>  Mon, 13 Jun 2011 22:22:36 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Wed, 22 Jun 2011 20:38:48 +0300
 
-q4wine (0.120-r1-3ppa2~natty1) natty; urgency=low
+q4wine (0.120-r1-4) unstable; urgency=low
 
+  * Updated debian/patches/
+    - additional fix for Debian GNU/Hurd
   * Edited debian/control:
     - section with dependencies of binary package was updated:
       + Ubuntu users now need to have wine, wine1.0, wine1.2 or wine1.3
         (Closes: #614357)
 
- -- Boris Pek <tehnick-8@mail.ru>  Mon, 21 Feb 2011 22:30:33 +0200
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 21 Feb 2011 21:51:45 +0200
 
-q4wine (0.120-r1-3ppa1~natty1) natty; urgency=low
-
-  * Package on Launchpad was sync with package in Debian.
-  * Changelog was cleaned.
-
- -- Boris Pek <tehnick-8@mail.ru>  Mon, 21 Feb 2011 00:19:56 +0200
-
-q4wine (0.120-r1-3ppa0) unstable; urgency=low
+q4wine (0.120-r1-3) unstable; urgency=low
 
   * Updated debian/patches/
     - added fix for cmake option SKIP_RPATH (it makes program unusable)

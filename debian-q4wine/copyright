@@ -1,55 +1,48 @@
-This package was debianized by Boris Pek <tehnick-8@mail.ru>
-Thu, 08 Oct 2009 18:12:41 +0400
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Debianized-By: Boris Pek <tehnick-8@mail.ru>
+Debianized-Date: Thu, 08 Oct 2009 18:12:41 +0400
+Upstream-Name: Q4Wine
+Upstream-Contact: Alexey S. Malakhov (John Brezerk) <brezerk@gmail.com>
+Source: http://sourceforge.net/projects/q4wine/files/
+ The orig.tar.bz2 is is just renamed upstream tarball (without changes).
+ See section get-orig-source in debian/rules file for details.
 
-It was downloaded from http://sourceforge.net/projects/q4wine/files/
- Homepage: http://q4wine.brezblock.org.ua/
+Files: *
+Copyright: 2008-2012 Alexey S. Malakhov (John Brezerk) <brezerk@gmail.com>
+ 2009 Pavel Zinin (pashazz) <pzinin@gmail.com>
+ 2008 Dmitry Marakasov (amdmi3) <amdmi3@amdmi3.ru>
+ 2008 Sergey V. Dyatko <sergey.dyatko@gmail.com>
+ 2005-2006 Dmitry Morozhnikov <dmiceman@mail.ru>
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify it under
+ the terms of the GNU General Public License as published by the Free Software
+ Foundation, either version 3 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along with
+ this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General Public License
+ can be found in `/usr/share/common-licenses/GPL-3'.
 
-Upstream Author:
- Alexey S. Malakhov (John Brezerk) <brezerk@gmail.com>
-
-Files:
- *
-Copyright:
- Copyright 2008-2010 Alexey S. Malakhov (John Brezerk) <brezerk@gmail.com>
- Copyright 2009 Pavel Zinin (pashazz) <pzinin@gmail.com>
- Copyright 2008 Dmitry Marakasov (amdmi3) <amdmi3@amdmi3.ru>
- Copyright 2008 Sergey V. Dyatko <sergey.dyatko@gmail.com>
- Copyright 2005-2006 Dmitry Morozhnikov <dmiceman@mail.ru>
-License:
- GPL-3 or later
- .
- This program is free software: you can redistribute it and/or modify it under the
- terms of the GNU General Public License as published by the Free Software Foundation,
- either version 3 of the License, or(at your option) any later version.
- .
- This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
- without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- See the GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License along with this program.
- If not, see <http://www.gnu.org/licenses/>.
- .
- On Debian systems, the complete text of the GNU General
- Public License can be found in `/usr/share/common-licenses/GPL-3'.
-
-Files:
- src/qtsingleapplication/*
-Copyright:
- Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies) <qt-info@nokia.com>
-License:
- GPL-3
- .
+Files: src/qtsingleapplication/*
+Copyright: 2009 Nokia Corporation and/or its subsidiary(-ies) <qt-info@nokia.com>
+License: GPL-3 or LGPL-2.1 or Qt-Commercial-License
  Commercial Usage
- Licensees holding valid Qt Commercial licenses may use this file in
+ Licensees holding valid Qt Commercial licenses may use these files in
  accordance with the Qt Solutions Commercial License Agreement provided
  with the Software or, alternatively, in accordance with the terms
  contained in a written agreement between you and Nokia.
  .
  GNU Lesser General Public License Usage
- Alternatively, this file may be used under the terms of the GNU Lesser
+ Alternatively, these files may be used under the terms of the GNU Lesser
  General Public License version 2.1 as published by the Free Software
  Foundation and appearing in the file LICENSE.LGPL included in the
- packaging of this file.  Please review the following information to
+ packaging of these files.  Please review the following information to
  ensure the GNU Lesser General Public License version 2.1 requirements
  will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
  .
@@ -59,7 +52,7 @@ License:
  package.
  .
  GNU General Public License Usage
- Alternatively, this file may be used under the terms of the GNU
+ Alternatively, these files may be used under the terms of the GNU
  General Public License version 3.0 as published by the Free Software
  Foundation and appearing in the file LICENSE.GPL included in the
  packaging of this file.  Please review the following information to
@@ -78,13 +71,9 @@ License:
  On Debian systems, the complete text of the GNU General
  Public License can be found in `/usr/share/common-licenses/GPL-3'.
 
-Files:
- src/theme/nuvola/data/*
-Copyright:
- Copyright 2008 David Vignoni <david@icon-king.com>
-License:
- LGPL v.2.1
- .
+Files: src/theme/nuvola/data/*
+Copyright: 2008 David Vignoni <david@icon-king.com>
+License: LGPL-2.1
  This data is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
  License as published by the Free Software Foundation; either
@@ -101,8 +90,21 @@ License:
  On Debian systems, the complete text of the GNU General
  Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.
 
-The Debian packaging is:
- Copyright 2010 Boris Pek <tehnick-8@mail.ru>
-License:
- GPL or later, see `/usr/share/common-licenses/GPL'
-
+Files: debian/*
+Copyright: 2010-2012 Boris Pek <tehnick-8@mail.ru>
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-2'.
