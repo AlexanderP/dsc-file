@@ -1,9 +1,25 @@
-screen (4.1.0~20120320gitdb59704-5+nmu1) unstable; urgency=low
+screen (4.1.0~20120320gitdb59704-6.1) unstable; urgency=low
 
   * Non-maintainer upload.
-  * Backports from Sid
+  * Compile
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 05 Jul 2012 08:34:06 +0400
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 11 Aug 2012 18:00:40 +0400
+
+screen (4.1.0~20120320gitdb59704-6) unstable; urgency=low
+
+  * Apply patch by Julien Cristau <jcristau@debian.org> to add 4.0.3
+    interoperability. (Closes: #683228; fixing the issue properly instead
+    of working around it. Thanks!)
+    + Drop all debconf handling and translations of debconf templates
+      (Closes: #679747, #683227; Thanks Beatrice Torracca and Christian
+      Perrier!)
+    + Drop build-depends on po-debconf and pre-depends on debconf
+    + Drop debian/NEWS (Closes: #678950)
+    + Remove no more necessary lintian override
+  * Screen's info pages are now split over more files than before. Also
+    include the new file doc/screen.info-6 (Closes: #682283)
+
+ -- Axel Beckert <abe@debian.org>  Tue, 07 Aug 2012 08:54:42 +0200
 
 screen (4.1.0~20120320gitdb59704-5) unstable; urgency=low
 

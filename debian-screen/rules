@@ -28,7 +28,6 @@ clean:
 	test ! -s Makefile || ! grep -q clean Makefile || $(MAKE) realclean
 	dh_autoreconf_clean
 	dh_clean config.log config.status Makefile
-	debconf-updatepo
 
 configure: configure-stamp
 configure-stamp:
