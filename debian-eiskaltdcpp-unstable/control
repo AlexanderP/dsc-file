@@ -119,13 +119,13 @@ Description: DC++ kernel library from EiskaltDC++
  .
  (This is daily builds of the EiskaltDC++ packages)
 
-Package: libeiskaltdcpp2.2-dev-unstable
+Package: libeiskaltdcpp-dev-unstable
 Section: libdevel
 Architecture: any
 Depends: ${misc:Depends},
  libeiskaltdcpp2.2-unstable (= ${binary:Version})
-Replaces: libeiskaltdcpp2.2-dev
-Conflicts: libeiskaltdcpp2.2-dev
+Replaces: libeiskaltdcpp-dev
+Conflicts: libeiskaltdcpp-dev
 Description: DC++ kernel from EiskaltDC++ (development files)
  This package contains header files for EiskaltDC++ kernel library.
  .
