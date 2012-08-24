@@ -1,0 +1,19 @@
+Description: Add hardening flags in compiler options
+Author: Boris Pek <tehnick-8@mail.ru>
+Last-Update: 2012-08-17
+
+--- a/src/src.pro
++++ b/src/src.pro
+@@ -140,6 +140,12 @@
+ RESOURCES += ../psi.qrc ../iconsets.qrc
+ 
+ # Platform specifics
++unix:!mac {
++	QMAKE_CXXFLAGS += $(Q_CXXFLAGS)
++	QMAKE_CFLAGS_DEBUG += $(Q_CFLAGS)
++	QMAKE_CFLAGS_RELEASE += $(Q_CFLAGS)
++	QMAKE_LFLAGS += $(Q_LDFLAGS)
++}
+ windows {
+ 	contains(QMAKE_HOST.arch, x86_64):{
+ 		RC_FILE = ../win32/psi_win64.rc

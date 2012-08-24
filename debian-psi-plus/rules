@@ -10,6 +10,17 @@ ifeq (,$(NUMJOBS))
 	NUMJOBS = 1
 endif
 
+Q_CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
+Q_CFLAGS:=$(shell dpkg-buildflags --get CFLAGS) $(Q_CPPFLAGS)
+Q_CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(Q_CPPFLAGS)
+Q_LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
+export Q_CPPFLAGS Q_CFLAGS Q_CXXFLAGS Q_LDFLAGS
+
+Q_OPTS = "QMAKE_CXXFLAGS += $(Q_CXXFLAGS)" \
+         "QMAKE_CFLAGS_DEBUG += $(Q_CFLAGS)" \
+         "QMAKE_CFLAGS_RELEASE += $(Q_CFLAGS)" \
+         "QMAKE_LFLAGS += $(Q_LDFLAGS)"
+
 PACKAGE = psi-plus
 
 DEBIAN_CODENAME = $(shell echo $$DIST)
@@ -24,12 +35,9 @@ endif
 
 QMAKE=qmake-qt4
 QCONF=qt-qconf
-CONF=--enable-plugins --enable-whiteboarding --disable-bundled-qca --debug --no-separate-debug-info
+CONF=--enable-plugins --enable-whiteboarding --debug --no-separate-debug-info
 
-# This has to be exported to make some magic below work.
-#export DH_OPTIONS
-
-# Select all plugins
+# Selecting all plugins
 plugins_generic = $(notdir $(wildcard $(CURDIR)/src/plugins/generic/*plugin ) )
 plugins_unix = $(notdir $(wildcard $(CURDIR)/src/plugins/unix/*plugin ) )
 
@@ -42,22 +50,24 @@ override_dh_auto_configure:
 
 override_dh_auto_build:
 	$(MAKE) -j$(NUMJOBS)
-	$(foreach plug,$(plugins_generic), cd $(CURDIR)/src/plugins/generic/$(plug) && $(QMAKE) && $(MAKE) -j$(NUMJOBS); )
-	$(foreach plug,$(plugins_unix), cd $(CURDIR)/src/plugins/unix/$(plug) && $(QMAKE) && $(MAKE) -j$(NUMJOBS); )
+	$(foreach plug,$(plugins_generic), cd $(CURDIR)/src/plugins/generic/$(plug) && $(QMAKE) $(Q_OPTS) && $(MAKE) -j$(NUMJOBS); )
+	$(foreach plug,$(plugins_unix), cd $(CURDIR)/src/plugins/unix/$(plug) && $(QMAKE) $(Q_OPTS) && $(MAKE) -j$(NUMJOBS); )
 
 override_dh_auto_install:
 	$(MAKE) INSTALL_ROOT=$(CURDIR)/debian/psi-plus install
-	rm -f $(CURDIR)/debian/psi-plus/usr/bin/psi-plus.debug # Remove static debug file
-	# Make the same, but using webkit
+	rm -f $(CURDIR)/debian/psi-plus/usr/bin/psi-plus.debug # Removing static debug file
+	# Making the same, but using webkit
 	$(MAKE) clean
+	sed -i 's| (|-webkit (|' version
 	./configure --prefix=/usr $(CONF) --enable-webkit
 	$(MAKE) -j$(NUMJOBS)
 	$(MAKE) INSTALL_ROOT=$(CURDIR)/debian/psi-plus-webkit install
+	sed -i 's|-webkit||' version
 	rm $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-plus
 	rm $(CURDIR)/debian/psi-plus-webkit/usr/share/applications/psi-plus.desktop
-	cp $(CURDIR)/src/psi-plus $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-plus-webkit
+	cp $(CURDIR)/psi-plus $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-plus-webkit
 	cp $(CURDIR)/debian/psi-plus-webkit.desktop $(CURDIR)/debian/psi-plus-webkit/usr/share/applications/
-	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-plus.debug # Remove static debug file
+	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-plus.debug # Removing static debug file
 	# Deleting temporary files
 	rm -f $(CURDIR)/debian/psi-plus/usr/share/psi-plus/COPYING
 	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/share/psi-plus/COPYING
@@ -89,8 +99,8 @@ override_dh_auto_clean:
 	$(foreach plug,$(plugins_generic), cd $(CURDIR)/src/plugins/generic/$(plug) && [ ! -f Makefile ] || $(MAKE) distclean; )
 	$(foreach plug,$(plugins_unix), cd $(CURDIR)/src/plugins/unix/$(plug) && [ ! -f Makefile ] || $(MAKE) distclean; )
 
-	- QUILT_PC=.pc_psi quilt pop -af --quiltrc /dev/null
 	rm -rf .pc_psi
+	sed -i 's|-webkit||' version
 
 override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
