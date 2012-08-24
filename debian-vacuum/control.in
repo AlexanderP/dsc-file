@@ -9,6 +9,8 @@ Homepage: http://code.google.com/p/vacuum-im/
 Package: vacuum
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libvacuumutilsX.XX (>= ${source:Version})
+Conflicts: vacuum-spellchecker
+Replaces: vacuum-spellchecker
 Description: Jabber client using Qt
  Vacuum is a free instant messaging application designed for the Jabber
  (XMPP) IM network (including Google Talk). It has full Unicode support, 
