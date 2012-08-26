@@ -2,13 +2,13 @@ Source: vacuum
 Section: net
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: cmake, debhelper (>= 7.0.50~), openssl, libqtwebkit-dev | libqt4-dev, libx11-dev, zlib1g-dev, libidn11-dev, libxss-dev, libenchant-dev, libaspell-dev, libhunspell-dev
+Build-Depends: cmake, debhelper (>= 7.0.50~), openssl, libqtwebkit-dev | libqt4-dev, libx11-dev, zlib1g-dev, libidn11-dev, libxss-dev, libenchant-dev, libaspell-dev, libhunspell-dev, bc
 Standards-Version: 3.9.3
 Homepage: http://code.google.com/p/vacuum-im/
 
 Package: vacuum
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libvacuumutilsX.XX (>= ${source:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, libvacuumutils@X.XX@ (>= ${source:Version})
 Conflicts: vacuum-spellchecker
 Replaces: vacuum-spellchecker
 Description: Jabber client using Qt
@@ -16,10 +16,11 @@ Description: Jabber client using Qt
  (XMPP) IM network (including Google Talk). It has full Unicode support, 
  and supports most important XMPP features.
 
-Package: libvacuumutilsX.XX
+Package: libvacuumutils@X.XX@
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: libvacuumutils1.12
+Conflicts: @Y.YY@
+Replaces: @Y.YY@
 Description: Jabber client using Qt (shared library)
  Vacuum is a free instant messaging application designed for the Jabber
  (XMPP) IM network (including Google Talk). It has full Unicode support, 
