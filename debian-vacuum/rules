@@ -11,8 +11,8 @@ else
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-VERSIONUTILS=$(shell cat $(CURDIR)/src/config.inc | grep VERSION_UTILS | sed "s/.*= //g" | sed "s/.0//g")
-OLDVERSIONUTILS=$(shell echo "$(VERSIONUTILS)-0.01" | bc -l | sed "s/1.//")
+VERSIONUTILS=$(shell cat $(CURDIR)/src/sdkconfig.inc | grep VACUUM_UTILS_ABI | sed "s/.*= //g")
+OLDVERSIONUTILS=$(shell echo "$(VERSIONUTILS)-1" | bc -l )
 OLDVERSIONUTILS1=$(shell seq 10 $(OLDVERSIONUTILS))
 OLDVERSIONsUTILS=$(shell for i in $(OLDVERSIONUTILS1) ; do  echo libvacuumutils1.$$i, ; done)
 
@@ -25,8 +25,8 @@ endif
 
 override_dh_clean:
 	cp $(CURDIR)/debian/control.in $(CURDIR)/debian/control
-	cp $(CURDIR)/debian/libvacuumutils.install $(CURDIR)/debian/libvacuumutils$(VERSIONUTILS).install
-	sed "s/@X.XX@/$(VERSIONUTILS)/" -i $(CURDIR)/debian/control
+	cp $(CURDIR)/debian/libvacuumutils.install $(CURDIR)/debian/libvacuumutils1.$(VERSIONUTILS).install
+	sed "s/@X.XX@/1.$(VERSIONUTILS)/" -i $(CURDIR)/debian/control
 	sed "s/@Y.YY@/$(OLDVERSIONsUTILS)/" -i $(CURDIR)/debian/control
 	dh_clean
 
