@@ -1,0 +1,29 @@
+--- ocropus-0.6.0+hg20120907.orig/ocrolib/common.py
++++ ocropus-0.6.0+hg20120907/ocrolib/common.py
+@@ -533,10 +533,10 @@ data_paths = [
+     "./models",
+     "./data",
+     "./gui",
+-    "/usr/local/share/ocropus/models",
+-    "/usr/local/share/ocropus/data",
+-    "/usr/local/share/ocropus/gui",
+-    "/usr/local/share/ocropus",
++    "/usr/share/ocropus/models",
++    "/usr/share/ocropus/data",
++    "/usr/share/ocropus/gui",
++    "/usr/share/ocropus",
+ ]
+ 
+ def ocropus_find_file(fname):
+
+--- ocropus-0.6.0+hg20120907.orig/ocrolib/default.py
++++ ocropus-0.6.0+hg20120907/ocrolib/default.py
+@@ -23,7 +23,7 @@ installable += ["en-mixed-round1.lineest
+ 
+ # these are system paths
+ 
+-modeldir = "/usr/local/share/ocropus/"
++modeldir = "/usr/share/ocropus/"
+ 
+ import os
+ def getlocal():

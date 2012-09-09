@@ -1,0 +1,42 @@
+Source: ocropus
+Section: graphics
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 8.0.0), curl, python-scipy, python-matplotlib, python-tables, imagemagick, python-imaging, python-tk, python-dev
+Standards-Version: 3.9.3
+X-Python-Version: >= 2.7
+Homepage: http://code.google.com/p/ocropus/
+
+Package: ocropus
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}, curl, python-scipy, python-matplotlib, python-tables, imagemagick, python-imaging, python-tk, ocropus-data (>= ${source:Version})
+Description: document analysis and OCR system
+ OCRopy is a state-of-the-art document analysis and Optical
+ Character Recognition (OCR) system, featuring
+ pluggable layout analysis, pluggable character recognition, statistical
+ natural language modeling, and multi-lingual capabilities.
+ .
+ The OCRopus engine is based on two research projects: a high-performance
+ handwriting recognizer developed in the mid-90's and deployed by the US Census
+ bureau, and novel high-performance layout analysis methods.
+ .
+ OCRopus development is sponsored by Google and is initially intended for
+ high-throughput, high-volume document conversion efforts. It
+ will also be an excellent OCR system for many other applications.
+
+Package: ocropus-data
+Architecture: all
+Depends: ${misc:Depends}
+Description: document analysis and OCR system --- data files
+ OCRopy is a state-of-the-art document analysis and Optical
+ Character Recognition (OCR) system, featuring
+ pluggable layout analysis, pluggable character recognition, statistical
+ natural language modeling, and multi-lingual capabilities.
+ .
+ The OCRopus engine is based on two research projects: a high-performance
+ handwriting recognizer developed in the mid-90's and deployed by the US Census
+ bureau, and novel high-performance layout analysis methods.
+ .
+ OCRopus development is sponsored by Google and is initially intended for
+ high-throughput, high-volume document conversion efforts. It
+ will also be an excellent OCR system for many other applications.
