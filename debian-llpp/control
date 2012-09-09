@@ -1,0 +1,13 @@
+Source: llpp
+Section: text
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 8.0.0), ocaml, git, camlp4, mesa-common-dev, libglu1-mesa-dev
+Standards-Version: 3.9.3
+Homepage: http://repo.or.cz/w/llpp.git
+
+Package: llpp
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: lightweight PDF viewer
+ Lightweight but fast and featureful PDF viewer based on MuPDF
