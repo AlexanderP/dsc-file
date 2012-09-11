@@ -2,22 +2,25 @@ Source: vacuum
 Section: net
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: cmake, debhelper (>= 7.0.50~), openssl, libqtwebkit-dev | libqt4-dev, libx11-dev, zlib1g-dev, libidn11-dev, libxss-dev
+Build-Depends: cmake, debhelper (>= 7.0.50~), openssl, libqtwebkit-dev | libqt4-dev, libx11-dev, zlib1g-dev, libidn11-dev, libxss-dev, libenchant-dev, bc
 Standards-Version: 3.9.3
 Homepage: http://code.google.com/p/vacuum-im/
 
 Package: vacuum
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libvacuumutils1.14 (>= ${source:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, libvacuumutils21 (>= ${source:Version})
+Conflicts: vacuum-spellchecker
+Replaces: vacuum-spellchecker
 Description: Jabber client using Qt
  Vacuum is a free instant messaging application designed for the Jabber
  (XMPP) IM network (including Google Talk). It has full Unicode support, 
  and supports most important XMPP features.
 
-Package: libvacuumutils1.14
+Package: libvacuumutils21
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: libvacuumutils1.12
+Conflicts: libvacuumutils1., libvacuumutils1.19, libvacuumutils1.20, libvacuumutils1.21, libvacuumutils20,
+Replaces: libvacuumutils1., libvacuumutils1.19, libvacuumutils1.20, libvacuumutils1.21, libvacuumutils20,
 Description: Jabber client using Qt (shared library)
  Vacuum is a free instant messaging application designed for the Jabber
  (XMPP) IM network (including Google Talk). It has full Unicode support, 
@@ -25,7 +28,7 @@ Description: Jabber client using Qt (shared library)
 
 Package: vacuum-dev
 Architecture: all
-Depends: ${misc:Depends}, vacuum (>= ${source:Version})
+Depends: ${misc:Depends}, libvacuumutils21 (>= ${source:Version})
 Description: Development files for Vacuum
  This package contains Vacuum include files you need if you
  want to develop plugins for Vacuum.

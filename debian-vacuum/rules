@@ -16,8 +16,8 @@ ifeq "$(VERSIONUTILS)" ""
 	exit 1
 endif
 OLDVERSIONUTILS=$(shell echo "$(VERSIONUTILS)-1" | bc -l )
-OLDVERSIONUTILS1=$(shell seq 10 $(OLDVERSIONUTILS))
-OLDVERSIONsUTILS=$(shell for i in $(OLDVERSIONUTILS1) ; do  echo libvacuumutils1.$$i, ; done)
+OLDVERSIONUTILS1=$(shell seq 20 $(OLDVERSIONUTILS))
+OLDVERSIONsUTILS=$(shell for i in $(OLDVERSIONUTILS1) ; do  echo libvacuumutils$$i, ; done)
 
 CMAKEOPT= -DCMAKE_BUILD_TYPE=Release -DUSE_ENCHANT=YES
 VERSION=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | grep svn | wc -l)
@@ -28,8 +28,8 @@ endif
 
 override_dh_clean:
 	cp $(CURDIR)/debian/control.in $(CURDIR)/debian/control
-	cp $(CURDIR)/debian/libvacuumutils.install $(CURDIR)/debian/libvacuumutils1.$(VERSIONUTILS).install
-	sed "s/@X.XX@/1.$(VERSIONUTILS)/" -i $(CURDIR)/debian/control
+	cp $(CURDIR)/debian/libvacuumutils.install $(CURDIR)/debian/libvacuumutils$(VERSIONUTILS).install
+	sed "s/@X.XX@/$(VERSIONUTILS)/" -i $(CURDIR)/debian/control
 	sed "s/@Y.YY@/$(OLDVERSIONsUTILS)/" -i $(CURDIR)/debian/control
 	dh_clean
 

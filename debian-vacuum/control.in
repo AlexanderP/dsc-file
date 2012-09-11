@@ -19,8 +19,8 @@ Description: Jabber client using Qt
 Package: libvacuumutils@X.XX@
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: libvacuumutils1., @Y.YY@
-Replaces: libvacuumutils1., @Y.YY@
+Conflicts: libvacuumutils1., libvacuumutils1.19, libvacuumutils1.20, libvacuumutils1.21, @Y.YY@
+Replaces: libvacuumutils1., libvacuumutils1.19, libvacuumutils1.20, libvacuumutils1.21, @Y.YY@
 Description: Jabber client using Qt (shared library)
  Vacuum is a free instant messaging application designed for the Jabber
  (XMPP) IM network (including Google Talk). It has full Unicode support, 
