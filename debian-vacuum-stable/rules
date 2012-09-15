@@ -1,0 +1,50 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
+	BUILDDEBFLAGS= -- -Zlzma -z9
+else
+	BUILDDEBFLAGS= -- -Zxz -z9
+endif
+
+VERSIONUTILS=$(shell cat $(CURDIR)/src/config.inc | grep VERSION_UTILS | sed "s/.*= //g" | sed "s/.0//g")
+ifeq "$(VERSIONUTILS)" ""
+	exit 1
+endif
+OLDVERSIONUTILS=$(shell echo "$(VERSIONUTILS)-0.01" | bc -l | sed "s/1.//")
+OLDVERSIONUTILS1=$(shell seq 10 $(OLDVERSIONUTILS))
+OLDVERSIONsUTILS=$(shell for i in $(OLDVERSIONUTILS1) ; do  echo libvacuumutils1.$$i, ; done)
+
+CMAKEOPT= -DCMAKE_BUILD_TYPE=Release -DUSE_ENCHANT=YES
+VERSION=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | grep svn | wc -l)
+ifneq (,$(filter 1,$(VERSION)))
+	REV=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | sed 's/.*svn//' | sed 's/-.*//')
+	CMAKEOPT+= -DVER_STRING=$(REV)
+endif
+
+override_dh_clean:
+	cp $(CURDIR)/debian/control.in $(CURDIR)/debian/control
+	cp $(CURDIR)/debian/libvacuumutils.install $(CURDIR)/debian/libvacuumutils$(VERSIONUTILS).install
+	sed "s/@X.XX@/$(VERSIONUTILS)/" -i $(CURDIR)/debian/control
+	sed "s/@Y.YY@/$(OLDVERSIONsUTILS)/" -i $(CURDIR)/debian/control
+	dh_clean
+
+override_dh_auto_configure:
+	dh_auto_configure -- $(CMAKEOPT)
+
+override_dh_install:
+	dh_install --list-missing -XCOPYING -Xlicense.txt
+	for size in 16 24 32 48 64 96 128 ; do \
+	mkdir -p $(CURDIR)/debian/vacuum/usr/share/icons/hicolor/$${size}x$${size}/apps/ && install -Dm644 $(CURDIR)/resources/menuicons/shared/mainwindowlogo$${size}.png $(CURDIR)/debian/vacuum/usr/share/icons/hicolor/$${size}x$${size}/apps/vacuum.png ; \
+	done
+	rm $(CURDIR)/debian/vacuum/usr/share/doc/vacuum/CHANGELOG
+
+override_dh_builddeb:
+	dh_builddeb $(BUILDDEBFLAGS)
+
+%:
+	dh $@ --parallel
