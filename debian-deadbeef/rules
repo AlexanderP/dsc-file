@@ -16,11 +16,11 @@ else
 endif
 
 # Disabled because ffmpeg 0.11 doesn't build
-ifneq (,$(filter $(DEBIAN_CODENAME),sid wheezy)) 
-	DISABLEFFMPEG= --disable-ffmpeg 
-else
-	DISABLEFFMPEG= 
-endif
+#ifneq (,$(filter $(DEBIAN_CODENAME),sid wheezy)) 
+#	DISABLEFFMPEG= --disable-ffmpeg 
+#else
+#	DISABLEFFMPEG= 
+#endif
 
 ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
 	BUILDDEBFLAGS= -- -Zlzma -z9
