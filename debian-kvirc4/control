@@ -28,6 +28,7 @@ Depends: libkvilib4 (= ${binary:Version}),
  ${shlibs:Depends},
  ${misc:Depends}
 Suggests: kvirc-dbg (= ${binary:Version})
+Multi-Arch: foreign
 Description: KDE-based next generation IRC client with module support
  A highly configurable graphical IRC client with an MDI interface,
  built-in scripting language, support for IRC DCC, drag & drop file
