@@ -1,0 +1,32 @@
+Source: psi-plus-l10n
+Section: net
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 8), libqt4-dev
+Homepage: https://github.com/psi-plus/psi-plus-l10n
+Standards-Version: 3.9.3
+
+Package: psi-plus-l10n
+Section: localization
+Architecture: all
+Pre-Depends: dpkg (>= 1.15.6~)
+Depends: ${misc:Depends}, psi-plus | psi-plus-webkit
+Conflicts: psi-plus-i18n
+Replaces: psi-plus-i18n
+Provides: psi-plus-i18n
+Description: localization files for Psi+
+ This package contains localization files for Psi+.
+ .
+ If you want to add new or update any existing translation see:
+ https://github.com/psi-plus/psi-plus-l10n
+ https://www.transifex.net/projects/p/psi-plus/
+ .
+ Psi is a cross-platform powerful XMPP/Jabber client (Qt, C++) designed for the
+ Jabber power users. Psi+ is a development branch of Psi IM XMPP/Jabber client
+ by <psi-dev@conference.jabber.ru> team.
+ .
+ Project Purpose: collection, refinement and writing new patches for transfer
+ them to Psi upstream developers.
+ .
+ Full list of features you can found at:
+ http://psi-plus.com/wiki/doku.php/en:features
