@@ -9,7 +9,7 @@ Homepage: http://code.google.com/p/ocropus/
 
 Package: ocropus
 Architecture: all
-Depends: ${python:Depends}, ${misc:Depends}, curl, python-scipy, python-matplotlib, python-tables, imagemagick, python-imaging, python-tk, ocropus-data (>= ${source:Version})
+Depends: ${python:Depends}, ${misc:Depends}, curl, python-scipy, python-matplotlib, python-tables, imagemagick, python-imaging, python-tk, python-opencv, ocropus-data (>= ${source:Version})
 Description: document analysis and OCR system
  OCRopy is a state-of-the-art document analysis and Optical
  Character Recognition (OCR) system, featuring
