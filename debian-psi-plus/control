@@ -13,6 +13,12 @@ Package: psi-plus
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  psi-plus-common (= ${source:Version})
+Recommends: sox,
+ libqca2-plugin-ossl,
+ psi-plus-plugins,
+ psi-plus-sounds,
+ psi-plus-l10n
+Suggests: libqca2-plugin-gnupg, xdg-utils
 Description: Qt-based XMPP/Jabber client (basic version)
  This package contains basic version of Psi+.
  .
@@ -30,8 +36,13 @@ Package: psi-plus-webkit
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
  psi-plus-common (= ${source:Version})
-Replaces: psi-plus-themes
-Conflicts: psi-plus-themes
+Recommends: sox,
+ libqca2-plugin-ossl,
+ psi-plus-plugins,
+ psi-plus-sounds,
+ psi-plus-skins,
+ psi-plus-l10n
+Suggests: libqca2-plugin-gnupg, xdg-utils
 Description: Qt-based XMPP/Jabber client (WebKit version)
  This package contains WebKit version of Psi+.
  .
@@ -47,14 +58,7 @@ Description: Qt-based XMPP/Jabber client (WebKit version)
 
 Package: psi-plus-common
 Architecture: all
-Recommends: sox,
- libqca2-plugin-ossl,
- psi-plus-plugins,
- psi-plus-sounds,
- psi-plus-skins,
- psi-plus-l10n
 Depends: ${misc:Depends}
-Suggests: libqca2-plugin-gnupg, xdg-utils
 Replaces: psi, psi-plus (<< 0.15~svn3057)
 Breaks: psi-plus (<< 0.15~svn3057)
 Description: common files for Psi+
@@ -73,7 +77,7 @@ Description: common files for Psi+
 Package: psi-plus-plugins
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- psi-plus-common (= ${source:Version})
+ psi-plus (=${binary:Version}) | psi-plus-webkit (=${binary:Version})
 Description: plugins for Psi+
  This package contains plugins for Psi+.
  .
@@ -90,10 +94,11 @@ Description: plugins for Psi+
 Package: psi-plus-content-downloader
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
- psi-plus-common
+ psi-plus (=${binary:Version}) | psi-plus-webkit (=${binary:Version})
 Replaces: psi-plus-plugins (<< 0.15~svn3047), psi-plus-content-download
 Breaks: psi-plus-plugins (<< 0.15~svn3047)
 Conflicts: psi-plus-content-download
+Provides: psi-plus-content-download
 Description: content downloader plugin for Psi+
  This package contains special plugin for Psi+ which allows you download
  some content (like non-free icons) from official Psi+ site. And you don't need
@@ -112,7 +117,7 @@ Description: content downloader plugin for Psi+
 Package: psi-plus-skins
 Architecture: all
 Depends: ${misc:Depends},
- psi-plus-common,
+ psi-plus | psi-plus-webkit,
  psi-plus-plugins
 Replaces: psi-plus-plugins (<< 0.15~svn3047)
 Breaks: psi-plus-plugins (<< 0.15~svn3047)
@@ -132,10 +137,8 @@ Description: skins for Psi+
 Package: psi-plus-sounds
 Architecture: all
 Depends: ${misc:Depends},
- psi-plus-common
+ psi-plus | psi-plus-webkit
 Breaks: psi-plus-common (<< 0.15~svn3910)
-Replaces: psi-plus-sound
-Conflicts: psi-plus-sound
 Description: sound files for Psi+
  This package contains sound files for Psi+.
  .
