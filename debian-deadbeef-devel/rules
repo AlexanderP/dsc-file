@@ -7,6 +7,23 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
+ifneq (,$(filter $(DEBIAN_CODENAME),squeeze lucid karmic maverick)) 
+	CONTROL = control.gtk2
+	ENABLEGTK3=no
+else
+	#CONTROL = control.gtk3
+	CONTROL = control.gtk2
+	#ENABLEGTK3=yes
+	ENABLEGTK3=no
+endif
+
+# Disabled because ffmpeg 0.11 doesn't build
+#ifneq (,$(filter $(DEBIAN_CODENAME),sid wheezy)) 
+#	DISABLEFFMPEG= --disable-ffmpeg 
+#else
+#	DISABLEFFMPEG= 
+#endif
+
 ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
 	BUILDDEBFLAGS= -- -Zlzma -z9
 else
@@ -17,8 +34,10 @@ endif
 	dh --parallel --with quilt $@
 
 override_dh_auto_configure:
+	dh_testdir
+	cp debian/$(CONTROL) debian/control
 	./autogen.sh
-	dh_auto_configure
+	dh_auto_configure -- --enable-gtk3=$(ENABLEGTK3) $(DISABLEFFMPEG)
 
 override_dh_makeshlibs:
 	dh_makeshlibs -n
@@ -29,11 +48,24 @@ override_dh_shlibdeps:
 		-Xvfs_curl.so -Xvfs_zip.so -Xartwork.so -Xdsp_libsrc.so \
 		-Xnotify.so -Xpulse.so -Xmms.so -Xao.so -Xaac.so -Xdca.so 
 
+override_dh_auto_clean:
+	dh_testdir
+	cp debian/$(CONTROL) debian/control
+	dh_auto_clean
+
 override_dh_install:
 	dh_install
-	@cp $(CURDIR)/ChangeLog $(CURDIR)/debian/deadbeef-devel/usr/share/doc/deadbeef/changelog.deadbeef
-	rm $(CURDIR)/debian/deadbeef-devel/usr/share/doc/deadbeef/ChangeLog
-
+	@cp ChangeLog debian/deadbeef-devel/usr/share/doc/deadbeef/changelog.deadbeef
+ifneq (,$(filter $(DEBIAN_CODENAME),squeeze lucid karmic maverick)) 
+	cd  debian/deadbeef-devel/usr/lib* && rm deadbeef/*gtk2* 
+	cd  debian/deadbeef-devel/usr/lib* && rm deadbeef/*GTK2*
+else
+	cd  debian/deadbeef-devel/usr/lib* && rm deadbeef/*gtk2* 
+	#cd  debian/deadbeef-devel/usr/lib* && rm deadbeef/*gtk3* 
+	#cd  debian/deadbeef-devel/usr/lib* && rm deadbeef/*GTK3* 
+	cd  debian/deadbeef-devel/usr/lib* && rm deadbeef/*GTK2*
+endif
+	
 override_dh_installchangelogs:
 	dh_installchangelogs -k ChangeLog
 
