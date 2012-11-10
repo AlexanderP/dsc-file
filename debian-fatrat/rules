@@ -7,10 +7,10 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),squeeze lucid))
-	BITTORRENT=no
-else
+ifneq (,$(filter $(DEBIAN_CODENAME),quantal))
 	BITTORRENT=yes
+else
+	BITTORRENT=no
 endif
 
 ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
