@@ -49,9 +49,9 @@ override_dh_auto_configure:
 	./configure --prefix=/usr $(CONF)
 
 override_dh_auto_build:
-	$(MAKE) -j$(NUMJOBS)
-	$(foreach plug,$(plugins_generic), cd $(CURDIR)/src/plugins/generic/$(plug) && $(QMAKE) $(Q_OPTS) && $(MAKE) -j$(NUMJOBS); )
-	$(foreach plug,$(plugins_unix), cd $(CURDIR)/src/plugins/unix/$(plug) && $(QMAKE) $(Q_OPTS) && $(MAKE) -j$(NUMJOBS); )
+	dh_auto_build
+	$(foreach plug,$(plugins_generic), cd $(CURDIR)/src/plugins/generic/$(plug) && $(QMAKE) $(Q_OPTS) && $(MAKE) || exit 1; )
+	$(foreach plug,$(plugins_unix), cd $(CURDIR)/src/plugins/unix/$(plug) && $(QMAKE) $(Q_OPTS) && $(MAKE) || exit 1; )
 
 override_dh_auto_install:
 	$(MAKE) INSTALL_ROOT=$(CURDIR)/debian/psi-plus install
@@ -60,7 +60,7 @@ override_dh_auto_install:
 	$(MAKE) clean
 	sed -i 's| (|-webkit (|' version
 	./configure --prefix=/usr $(CONF) --enable-webkit
-	$(MAKE) -j$(NUMJOBS)
+	dh_auto_build
 	$(MAKE) INSTALL_ROOT=$(CURDIR)/debian/psi-plus-webkit install
 	sed -i 's|-webkit||' version
 	rm $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-plus
