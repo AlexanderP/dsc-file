@@ -8,13 +8,15 @@ Homepage: http://smplayer.sourceforge.net/
 
 Package: smplayer
 Architecture: any
-Depends: mplayer,
-         ${misc:Depends},
-         ${shlibs:Depends}
-Recommends: smplayer-themes,
-            smplayer-translations
-Description: complete front-end for MPlayer
- Qt Mplayer front-end, with basic features like playing
+Depends:
+ mplayer2 | mplayer,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Recommends:
+ smplayer-themes,
+ smplayer-translations
+Description: complete front-end for MPlayer and MPlayer2
+ Qt4 Mplayer front-end, with basic features like playing
  videos, DVDs, and VCDs to more advanced features like support
  for MPlayer filters and more. One of the most interesting features
  of SMPlayer: it remembers the settings of all files you play.
@@ -25,11 +27,13 @@ Description: complete front-end for MPlayer
 
 Package: smplayer-translations
 Architecture: all
-Depends: smplayer (>= ${source:Version}),
-         ${misc:Depends}
-Replaces: smplayer (<< 0.5.62)
-Description: complete front-end for MPlayer - translation files
- Qt Mplayer front-end, with basic features like playing
+Depends:
+ smplayer (>= ${source:Version}),
+ ${misc:Depends}
+Replaces:
+ smplayer (<< 0.5.62)
+Description: complete front-end for MPlayer and MPlayer2 - translation files
+ Qt4 Mplayer front-end, with basic features like playing
  videos, DVDs, and VCDs to more advanced features like support
  for MPlayer filters and more. One of the most interesting features
  of SMPlayer: it remembers the settings of all files you play.

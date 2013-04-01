@@ -1,50 +1,30 @@
-Format: http://anonscm.debian.org/viewvc/dep/web/deps/dep5.mdwn?revision=202
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: SMPlayer
 Upstream-Contact: Ricardo Villalba <rvm@escomposlinux.org>
-Source: http://www.kde-apps.org/content/show.php?content=54487
+Source: http://smplayer.sf.net
 
 Files: *
-Copyright: 2006-2011, Ricardo Villalba <rvm@escomposlinux.org>
-License: GPL-2
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
- .
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- .
- On Debian GNU/Linux systems, the complete text of the GNU General
- Public License can be found in `/usr/share/common-licenses/GPL-2'.
+License: GPL-2+
+Copyright:
+ 2006-2012, Ricardo Villalba <rvm@escomposlinux.org>
 
-Files: src/myslider.cpp src/myslider.h
-Copyright: 2006-2011, Ricardo Villalba <rvm@escomposlinux.org>
-License: LGPL-2.1
- This library is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 2.1 of the License, or (at your option) version 3, or any
- later version accepted by the membership of KDE e.V. (or its
- successor approved by the membership of KDE e.V.), Trolltech ASA
- (or its successors, if any) and the KDE Free Qt Foundation, which shall
- act as a proxy defined in Section 6 of version 3 of the license.
- .
- This library is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
- .
- You should have received a copy of the GNU Lesser General Public
- License along with this library.  If not, see http://www.gnu.org/licenses/.
- .
- On Debian GNU/Linux systems, the complete text of the GNU Lesser General
- Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.
+Files: debian/*
+License: GPL-2+
+Copyright:
+ 2007, Cyril Breuil <cyrilbport@gmail.com>
+ 2008-2012, Maia Kozheva <sikon@ubuntu.com>
 
+Files:
+ src/myslider.cpp
+ src/myslider.h
+Copyright: 2006-2012, Ricardo Villalba <rvm@escomposlinux.org>
+License: LGPL-2.1+
 
-Files: src/verticaltext.cpp src/verticaltext.h
-Copyright: 2003-2004, Christian Esken  <esken@kde.org>
-License: LGPL-2
+Files:
+ src/verticaltext.cpp
+ src/verticaltext.h
+Copyright: 2003-2004, Christian Esken <esken@kde.org>
+License: LGPL-2+
  This program is free software; you can redistribute it and/or
  modify it under the terms of the GNU Library General Public
  License as published by the Free Software Foundation; either
@@ -59,11 +39,14 @@ License: LGPL-2
  License along with this program; if not, write to the
  Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  Boston, MA 02110-1301, USA.
+ .
+ On Debian GNU/Linux systems, the complete text of the GNU Library General
+ Public License version 2 can be found in the file
+ `/usr/share/common-licenses/LGPL-2'.
 
-
-Files: src/findsubtitles/filedownloader/main.cpp
-Copyright: 2004-2008, Trolltech ASA.
-License:
+Files: src/findsubtitles/filedownloader/main.cpp:
+Copyright: 2004-2008, Trolltech ASA
+License: GPL-2 or GPL-3 or other
  This file is part of the example classes of the Qt Toolkit.
  .
  This file may be used under the terms of the GNU General Public
@@ -101,57 +84,84 @@ License:
  This file is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE
  WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
-
 Files: src/findsubtitles/quazip/crypt.h
 Copyright: 1998-2005, Gilles Vollant
-License:
- This code is a modified version of crypting code in Infozip distribution
- .
- The encryption/decryption parts of this source code (as opposed to the
- non-echoing password parts) were originally written in Europe.  The
- whole source package can be freely distributed, including from the USA.
- (Prior to January 2000, re-export from the US was a violation of US law.)
- .
- This encryption code is a direct transcription of the algorithm from
- Roger Schlafly, described by Phil Katz in the file appnote.txt.  This
- file (appnote.txt) is distributed with the PKZIP program (even in the
- version without encryption capabilities).
- .
- If you don't need crypting in your application, just define symbols
- NOCRYPT and NOUNCRYPT.
- .
- This code support the "Traditional PKWARE Encryption".
- .
- The new AES encryption added on Zip format by Winzip (see the page
- http://www.winzip.com/aes_info.htm ) and PKWare PKZip 5.x Strong
- Encryption is not supported.
-
+License: infozip
 
 Files: src/findsubtitles/quazip/unzip.c
-Copyright: 1990-2000, Info-ZIP.  All rights reserved.
-License:
- See the accompanying file LICENSE, version 2000-Apr-09 or later
- (the contents of which are also included in zip.h) for terms of use.
- If, for some reason, all these files are missing, the Info-ZIP license
- also may be found at:  ftp://ftp.info-zip.org/pub/infozip/license.html
- crypt.c (full version) by Info-ZIP.      Last revised:  [see crypt.h]
- .
- The encryption/decryption parts of this source code (as opposed to the
- non-echoing password parts) were originally written in Europe.  The
- whole source package can be freely distributed, including from the USA.
- (Prior to January 2000, re-export from the US was a violation of US law.)
- .
- This encryption code is a direct transcription of the algorithm from
- Roger Schlafly, described by Phil Katz in the file appnote.txt.  This
- file (appnote.txt) is distributed with the PKZIP program (even in the
- version without encryption capabilities).
+Copyright: 1990-2000 Info-ZIP
+License: infozip
 
-
-Files: src/findsubtitles/quazip/unzip.h src/findsubtitles/quazip/zip.h
+Files:
+ src/findsubtitles/quazip/unzip.h
+ src/findsubtitles/quazip/zip.h
 Copyright: 1998-2005, Gilles Vollant
-License:
+License: Zlib
  Condition of use and distribution are the same than zlib :
  .
+ This software is provided 'as-is', without any express or implied
+ warranty.  In no event will the authors be held liable for any damages
+ arising from the use of this software.
+ .
+ Permission is granted to anyone to use this software for any purpose,
+ including commercial applications, and to alter it and redistribute it
+ freely, subject to the following restrictions:
+ .
+ 1. The origin of this software must not be misrepresented; you must not
+ claim that you wrote the original software. If you use this software
+ in a product, an acknowledgment in the product documentation would be
+ appreciated but is not required.
+ 2. Altered source versions must be plainly marked as such, and must not be
+ misrepresented as being the original software.
+ 3. This notice may not be removed or altered from any source distribution.
+
+Files: src/findsubtitles/quazip/quazip*
+Copyright: 2005-2007, Sergey A. Tachenov
+License: GPL-2+
+
+License: LGPL-2.1+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) version 3, or any
+ later version accepted by the membership of KDE e.V. (or its
+ successor approved by the membership of KDE e.V.), Trolltech ASA
+ (or its successors, if any) and the KDE Free Qt Foundation, which shall
+ act as a proxy defined in Section 6 of version 3 of the license.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library.  If not, see http://www.gnu.org/licenses/.
+ .
+ On Debian GNU/Linux systems, the complete text of the GNU Lesser General
+ Public License version 2.1 can be found in the file
+ `/usr/share/common-licenses/LGPL-2.1'.
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the
+ Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ Boston, MA 02110-1301, USA.
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/GPL-2'.
+
+License: infozip
  This software is provided 'as-is', without any express or implied
  warranty.  In no event will the authors be held liable for any damages
  arising from the use of this software.
@@ -167,48 +177,43 @@ License:
  2. Altered source versions must be plainly marked as such, and must not be
     misrepresented as being the original software.
  3. This notice may not be removed or altered from any source distribution.
-
-
-Files: src/findsubtitles/quazip/quazip*
-Copyright: 2005-2007. Sergey A. Tachenov
-License:
- This program is free software; you can redistribute it and/or modify it
- under the terms of the GNU General Public License as published by the
- Free Software Foundation; either version 2 of the License, or (at your
- option) any later version.
  .
- This program is distributed in the hope that it will be useful, but
- WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
- Public License for more details.
+ This software is provided "as is," without warranty of any kind, express or
+ implied. In no event shall Info-ZIP or its contributors be held liable for any
+ direct, indirect, incidental, special or consequential damages arising out of
+ the use of or inability to use this software.
  .
- You should have received a copy of the GNU General Public License
- along with this program; if not, write to the
- Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
- Boston, MA 02110-1301, USA.
+ Permission is granted to anyone to use this software for any purpose, including
+ commercial applications, and to alter it and redistribute it freely, subject to
+ the above disclaimer and the following restrictions:
  .
- You are also permitted to use QuaZIP under the terms of LGPL (see
- COPYING.LGPL). You are free to choose either license, but please note
- that QuaZIP makes use of Qt, which is not licensed under LGPL. So if
- you are using Open Source edition of Qt, you therefore MUST use GPL for
- your code based on QuaZIP, since it would be also based on Qt in this
- case. If you are Qt commercial license owner, then you are free to use
- QuaZIP as long as you respect either GPL or LGPL for QuaZIP code.
-
-Files: debian/*
-Copyright: 2007, Cyril Breuil <cyrilbport@gmail.com>
- 2008-2009, Maia Kozheva <sikon@ubuntu.com>
- 2010-2012, Alexander Pozdnyakov <almipo@mail.ru>
-License: GPL-2
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
+ Redistributions of source code (in whole or in part) must retain the above
+ copyright notice, definition, disclaimer, and this list of conditions.
  .
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+ Redistributions in binary form (compiled executables and libraries) must
+ reproduce the above copyright notice, definition, disclaimer, and this list of
+ conditions in documentation and/or other materials provided with the
+ distribution. Additional documentation is not needed for executables where a
+ command line license option provides these and a note regarding this option is
+ in the executable's startup banner. The sole exception to this condition is
+ redistribution of a standard UnZipSFX binary (including SFXWiz) as part of a
+ self-extracting archive; that is permitted without inclusion of this license, as
+ long as the normal SFX banner has not been removed from the binary or disabled.
  .
- On Debian GNU/Linux systems, the complete text of the GNU General
- Public License can be found in `/usr/share/common-licenses/GPL-2'.
+ Altered versions--including, but not limited to, ports to new operating systems,
+ existing ports with new graphical interfaces, versions with modified or added
+ functionality, and dynamic, shared, or static library versions not from
+ Info-ZIP--must be plainly marked as such and must not be misrepresented as being
+ the original source or, if binaries, compiled from the original source. Such
+ altered versions also must not be misrepresented as being Info-ZIP
+ releases--including, but not limited to, labeling of the altered versions with
+ the names "Info-ZIP" (or any variation thereof, including, but not limited to,
+ different capitalizations), "Pocket UnZip," "WiZ" or "MacZip" without the
+ explicit permission of Info-ZIP. Such altered versions are further prohibited
+ from misrepresentative use of the Zip-Bugs or Info-ZIP e-mail addresses or the
+ Info-ZIP URL(s), such as to imply Info-ZIP will provide support for the altered
+ versions.
+ .
+ Info-ZIP retains the right to use the names "Info-ZIP," "Zip," "UnZip,"
+ "UnZipSFX," "WiZ," "Pocket UnZip," "Pocket Zip," and "MacZip" for its own source
+ and binary releases.
