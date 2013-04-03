@@ -2,46 +2,17 @@ Source: launchy
 Section: x11
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 9), libqt4-dev, libboost-dev, libx11-dev
+Build-Depends: debhelper (>= 7.0.50~), libqt4-dev, libboost-dev, x11proto-core-dev, libx11-dev, libxrender-dev, libxext-dev
 Standards-Version: 3.9.3
-Homepage: http://www.launchy.net
+Homepage: http://www.launchy.net/
 
 Package: launchy
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Suggests: launchy-plugins, launchy-skins
-Description: smart search launcher for installed programs or files
- Launchy is the most efficient way to open files, folders, websites,
- and programs on your computer. Instead of having to browse the menus
- to find an application, Launchy is a smart search program which tries
- to guess which program or file you are looking for and will launch
- it when you hit the enter key. It runs in background and appears when
- the configured key combination is pressed (Ctrl+Space by default) or
- the tray icon is clicked.
-
-Package: launchy-plugins
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, launchy (= ${binary:Version})
-Enhances: launchy
-Description: plugins for launchy, the smart search launcher
- Launchy is the most efficient way to open files, folders, websites,
- and programs on your computer.
- .
- These are the official plugins included with the main distribution:
- Runner, Calcy, Controly, GCalc, Verby and Weby.
-
-Package: launchy-skins
-Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Recommends: launchy, compiz
-Enhances: launchy
-Description: more skins for launchy, the smart search launcher
- Launchy is the most efficient way to open files, folders, websites,
- and programs on your computer.
- .
- These are the non-default skins included with the main distribution:
- Note, Spotlight Wide, Simple, Black Glass, Black Glass Wide,
- Mercury, Mercury Wide and QuickSilver2.
- .
- You probably need a compositing window manager for these skins to
- work properly.
+Description: Open Source Keystroke Launcher
+ Launchy is a free, cross-platform utility, designed 
+ to help you forget about your start menu, the icons
+ on your desktop, and even your file manager.  Launchy 
+ indexes the programs in your start menu and can launch
+ your documents, project files, folders, and bookmarks
+ with just a few keystrokes!

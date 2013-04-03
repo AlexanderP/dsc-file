@@ -1,0 +1,11 @@
+--- launchy-2.5.0+svn671a.orig/platforms/unix/unix.pro
++++ launchy-2.5.0+svn671a/platforms/unix/unix.pro
+@@ -8,7 +8,7 @@ HEADERS		= platform_base.h platform_unix
+                   platform_x11_hotkey.h
+ CONFIG		-= embed_manifest_dll
+ LIBS += -lX11 -lXext -lXrender
+-
++QMAKE_LIBS += -lX11 -lXext -lXrender
+ 
+ unix {
+  PREFIX = /usr

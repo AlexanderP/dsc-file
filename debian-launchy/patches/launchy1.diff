@@ -1,0 +1,10 @@
+--- launchy-2.5.0+svn671a.orig/src/src.pro
++++ launchy-2.5.0+svn671a/src/src.pro
+@@ -72,6 +72,7 @@ unix:!macx {
+         CONFIG(debug, debug|release):DESTDIR = ../debug/
+         CONFIG(release, debug|release):DESTDIR = ../release/
+     }
++    QMAKE_LIBS += -lX11 -lXext -lXrender
+     SOURCES += 
+     target.path = $$PREFIX/bin/
+     skins.path = $$PREFIX/share/launchy/skins/
