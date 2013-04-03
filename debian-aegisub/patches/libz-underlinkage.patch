@@ -1,0 +1,28 @@
+Author: Daniel T Chen <crimsun@ubuntu.com> 
+
+Index: aegisub-2.1.9/src/Makefile.am
+===================================================================
+--- aegisub-2.1.9.orig/src/Makefile.am	2011-12-12 04:44:37.000000000 -0500
++++ aegisub-2.1.9/src/Makefile.am	2013-04-01 23:39:48.058428654 -0400
+@@ -31,7 +31,7 @@
+ AM_CXXFLAGS += -DAEGISUB -Iinclude @CXXFLAGS_OSX@ @WX_CXXFLAGS@ @OPENMP_CXXFLAGS@ @LIBASS_CFLAGS@
+ 
+ bin_PROGRAMS = aegisub-2.1
+-aegisub_2_1_LDADD = libresrc/libresrc.a $(libosxutil_lib)
++aegisub_2_1_LDADD = libresrc/libresrc.a $(libosxutil_lib) -lz
+ aegisub_2_1_CXXFLAGS = @FREETYPE_CFLAGS@ $(AM_CXXFLAGS)
+ aegisub_2_1_LDFLAGS = @DEBUG_FLAGS@ @PROFILE_FLAGS@ @GL_LIBS@ @PTHREAD_LIBS@ @WX_LIBS@ @ICONV_LIBS@ $(libosxutil_ldflags) @CCMALLOC_LDFLAGS@ @EFENCE_LDFLAGS@
+ LIBS += @FREETYPE_LIBS@ @FONTCONFIG_LIBS@ @CCMALLOC_LIBS@
+Index: aegisub-2.1.9/src/Makefile.in
+===================================================================
+--- aegisub-2.1.9.orig/src/Makefile.in	2012-01-13 06:00:23.000000000 -0500
++++ aegisub-2.1.9/src/Makefile.in	2013-04-01 23:40:40.087633368 -0400
+@@ -724,7 +724,7 @@
+ 	$(am__append_9) $(am__append_11) $(am__append_13) \
+ 	$(am__append_15) libsubtitle_provider.a $(am__append_18) \
+ 	$(am__append_21) $(am__append_24) $(am__append_27) \
+-	$(am__append_28) $(am__append_30) $(am__append_32)
++	$(am__append_28) $(am__append_30) $(am__append_32) -lz
+ aegisub_2_1_CXXFLAGS = @FREETYPE_CFLAGS@ $(AM_CXXFLAGS)
+ aegisub_2_1_LDFLAGS = @DEBUG_FLAGS@ @PROFILE_FLAGS@ @GL_LIBS@ \
+ 	@PTHREAD_LIBS@ @WX_LIBS@ @ICONV_LIBS@ $(libosxutil_ldflags) \
