@@ -1,0 +1,11 @@
+--- notecase-1.9.8.orig/Makefile
++++ notecase-1.9.8/Makefile
+@@ -316,7 +316,7 @@ $(BIN)/notecase$(EXE): $(OBJS)
+ 	$(LD) $(OBJS) -o $(BIN)/notecase$(EXE) $(FLAGS) $(LDFLAGS) $(GTKLIBS)
+ else
+ $(BIN)/notecase$(EXE): updatesrc $(OBJS)
+-	$(LD) $(OBJS) -o $(BIN)/notecase$(EXE) $(FLAGS) $(LDFLAGS) $(GTKLIBS) > /dev/null
++	$(LD) $(OBJS) -o $(BIN)/notecase$(EXE) $(FLAGS) $(LDFLAGS) -lX11 $(GTKLIBS) > /dev/null
+ endif	
+ 
+ #
