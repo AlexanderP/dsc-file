@@ -5,7 +5,7 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),precise wheezy sid quantal raring)) 
+ifneq (,$(filter $(DEBIAN_CODENAME),precise wheezy sid quantal raring jessie)) 
 	CONTROL = control.jpeg8
 else
 	CONTROL = control.jpeg62
