@@ -12,6 +12,8 @@ else
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
 %:
 	dh $@
 
