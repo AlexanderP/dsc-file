@@ -39,7 +39,7 @@ CMAKEOPTS = -DCMAKE_BUILD_TYPE=RelWithDebInfo \
             -DWITH_SOUNDS=ON \
             -DUSE_QT=ON \
             -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON \
-            -DCHECK_GTK_DEPRECATED=ON \
+            -DCHECK_GTK_DEPRECATED=OFF \
             -DUSE_LIBGNOME2=OFF -DUSE_LIBNOTIFY=ON \
             -DCREATE_MO=ON -DUPDATE_PO=OFF \
             -DNO_UI_DAEMON=ON \
