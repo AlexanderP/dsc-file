@@ -1,0 +1,56 @@
+From: Alberto Garcia <berto@igalia.com>
+Subject: Remove deprecated gtkspell code
+Forwarded: not-needed
+Bug-Debian: http://bugs.debian.org/707849
+Index: ocrfeeder/src/ocrfeeder/studio/widgetPresenter.py
+===================================================================
+--- ocrfeeder.orig/src/ocrfeeder/studio/widgetPresenter.py
++++ ocrfeeder/src/ocrfeeder/studio/widgetPresenter.py
+@@ -39,7 +39,6 @@ import sys
+ import threading
+ import Queue
+ import time
+-import gtkspell
+ pygtk.require('2.0')
+ _ = gettext.gettext
+ 
+@@ -159,7 +158,7 @@ class MainWindow:
+                                    menu_items['copy_to_clipboard']),
+                                   ('SpellChecker', None,
+                                    _('Spell_checker'),
+-                                   '<shift>F7',
++                                   None,
+                                    _("Spell Check Recognized Text"),
+                                    menu_items['spell_checker']),
+                                   ])
+@@ -189,6 +188,7 @@ class MainWindow:
+         self.action_group = action_group
+         self.spellchecker_menu = ui_manager.get_widget('/MenuBar/Tools/SpellChecker')
+         self.spellchecker_menu.set_sensitive(False)
++        self.spellchecker_menu.set_visible(False)
+ 
+     def setDestroyEvent(self, function):
+         self.window.connect('delete-event', function)
+@@ -557,10 +557,6 @@ class BoxEditor(gtk.ScrolledWindow, gobj
+         text_properties_notebook.set_tab_pos(gtk.POS_TOP)
+         # Textview widget
+         self.text_widget = gtk.TextView()
+-        try:
+-            gtkspell.Spell(self.text_widget, OCRFEEDER_DEFAULT_LOCALE)
+-        except:
+-            pass # The locale was not found by GTKSpell, ignoring...
+         self.text_widget.set_wrap_mode(gtk.WRAP_WORD)
+         self.text_content = self.text_widget.get_buffer()
+         self.text_content.connect('changed', self.editedByUser)
+Index: ocrfeeder/configure.ac
+===================================================================
+--- ocrfeeder.orig/configure.ac
++++ ocrfeeder/configure.ac
+@@ -18,7 +18,6 @@ AM_PATH_PYTHON(2.5)
+ dnl == Python dependencies ==
+ AX_PYTHON_MODULE([gtk],[needed])
+ AX_PYTHON_MODULE([pygtk],[needed])
+-AX_PYTHON_MODULE([gtkspell],[needed])
+ AX_PYTHON_MODULE([goocanvas],[needed])
+ AX_PYTHON_MODULE([enchant],[needed])
+ AX_PYTHON_MODULE([sane],[needed])
