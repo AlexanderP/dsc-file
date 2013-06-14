@@ -19,16 +19,25 @@ of libprojectm2. (see #600653)
 Some of them must be used in this package
 -----------------------------------------
 
-* universalchardet: Not an independent shared library and not packaged in Debian.
-universalchardet is part of some mozilla software and it is used in some other Debian
-packages.
+* universalchardet: A package named "uchardet" is now present in Debian archive and seem to
+match but it is not possible to use it with Clementine for the moment. I warned upstream
+developers about this issue.
 
 * qtsingleapplication: It is a small shared library not packaged in Debian 
 unfortunately. It is used by others Debian package as embed code copy too.
 
 * qtiocompressor: It is a small shared library not packaged in Debian unfortunately.
 
-* sha2: It is a a small shared library not packaged in Debian unfortunately.
+* sha2: It is a small shared library not packaged in Debian unfortunately.
+
+* qocoa: It is a collection of Qt wrappers. It is used for easily switch between standard Qt widget
+and OSX widget according to the platform. It is a hard requirement for Clementine.
+Upstream author recommends to use it as an embed copy :
+  - https://github.com/mikemcquaid/Qocoa#usage
+
+* libmygpo-qt: It is a small shared library not packaged in Debian unfortunately.
+In addition, Clementine upstream developers want to use their own embed version
+for the moment. (see CMakeLists.txt)
 
 Some of them must not be used in this package
 ---------------------------------------------
