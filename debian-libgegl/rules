@@ -25,4 +25,7 @@ binary-install/libgegl-doc::
 	find debian/$(cdbs_curpkg)/usr/share/gtk-doc -type f -exec chmod -x {} \;
 	find debian/$(cdbs_curpkg)/usr/share/doc/$(cdbs_curpkg)/ -name .gitignore -delete
 
+binary-install/libgegl-dev::
+	find debian/$(cdbs_curpkg)/usr/share/doc/$(cdbs_curpkg)/ -name libgegl-sc-0.2.so -delete
+
 common-binary-predeb-arch:: list-missing
