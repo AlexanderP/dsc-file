@@ -26,6 +26,6 @@ binary-install/libgegl-doc::
 	find debian/$(cdbs_curpkg)/usr/share/doc/$(cdbs_curpkg)/ -name .gitignore -delete
 
 binary-install/libgegl-dev::
-	find debian/$(cdbs_curpkg)/usr/share/doc/$(cdbs_curpkg)/ -name libgegl-sc-0.2.so -delete
+	find debian/libgegl-dev/ -name libgegl-sc-0.3.so -delete
 
 common-binary-predeb-arch:: list-missing
