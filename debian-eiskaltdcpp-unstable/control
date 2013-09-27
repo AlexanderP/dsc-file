@@ -9,12 +9,11 @@ Build-Depends: debhelper (>= 7.0.50~), po-debconf, autotools-dev,
  libnotify-dev, liblua5.1-0-dev, libpcre3-dev,
  libboost-dev, libboost-system-dev,
  libbz2-dev, zlib1g-dev, libssl-dev, libaspell-dev,
- libidn11-dev, libattr1-dev
+ libminiupnpc-dev, libidn11-dev, libattr1-dev
 Homepage: http://code.google.com/p/eiskaltdc/
 Vcs-Git: git://github.com/tehnick/eiskaltdcpp-unstable-debian.git
 Vcs-Browser: https://github.com/tehnick/eiskaltdcpp-unstable-debian/tree/launchpad/debian
-Standards-Version: 3.9.3
-DM-Upload-Allowed: yes
+Standards-Version: 3.9.4
 
 Package: eiskaltdcpp-unstable
 Section: metapackages
@@ -105,11 +104,15 @@ Description: sound files for EiskaltDC++
  .
  (This is daily builds of the EiskaltDC++ packages)
 
-Package: libeiskaltdcpp2.2-unstable
+Package: libeiskaltdcpp2.3-unstable
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Replaces: libeiskaltdcpp2.2
-Conflicts: libeiskaltdcpp2.2
+Replaces: libeiskaltdcpp2.2,
+ libeiskaltdcpp2.2-unstable,
+ libeiskaltdcpp2.3
+Conflicts: libeiskaltdcpp2.2,
+ libeiskaltdcpp2.2-unstable,
+ libeiskaltdcpp2.3
 Description: DC++ kernel library from EiskaltDC++
  This package installs only DC++ kernel library which required EiskaltDC++.
  .
@@ -124,7 +127,7 @@ Package: libeiskaltdcpp-dev-unstable
 Section: libdevel
 Architecture: any
 Depends: ${misc:Depends},
- libeiskaltdcpp2.2-unstable (= ${binary:Version})
+ libeiskaltdcpp2.3-unstable (= ${binary:Version})
 Replaces: libeiskaltdcpp-dev
 Conflicts: libeiskaltdcpp-dev
 Description: DC++ kernel from EiskaltDC++ (development files)
@@ -274,7 +277,7 @@ Description: EiskaltDC++ daemon
 
 Package: eiskaltdcpp-cli-unstable
 Architecture: all
-Depends: ${misc:Depends},
+Depends: ${perl:Depends}, ${misc:Depends},
  libgetopt-long-descriptive-perl,
  libdata-dump-perl,
  libjson-rpc-perl,
