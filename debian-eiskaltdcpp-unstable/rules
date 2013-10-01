@@ -106,8 +106,8 @@ override_dh_installchangelogs:
 
 .PHONY: override_dh_makeshlibs
 override_dh_makeshlibs:
-	dh_makeshlibs -V -plibeiskaltdcpp2.2-unstable
+	dh_makeshlibs -V -plibeiskaltdcpp2.3-unstable
 
 .PHONY: override_dh_shlibdeps
 override_dh_shlibdeps:
-	dh_shlibdeps -a -ldebian/libeiskaltdcpp2.2-unstable/usr/lib
+	dh_shlibdeps -a -ldebian/libeiskaltdcpp2.3-unstable/usr/lib
