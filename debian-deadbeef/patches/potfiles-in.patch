@@ -1,10 +1,11 @@
 diff -Naur deadbeef-0.5.0+git20110516/po/POTFILES.in deadbeef-0.5.0+git201105161/po/POTFILES.in
 --- deadbeef-0.5.2+git20120419.orig/po/POTFILES.in
 +++ deadbeef-0.5.2+git20120419/po/POTFILES.in
-@@ -26,3 +26,6 @@ plugins/converter/support.c
- plugins/gtkui/dspconfig.c
- plugins/gtkui/fileman.c
- plugins/converter/converter.glade
-+plugins/shellexecui/interface.c
-+plugins/shellexecui/shellexecui.c
-+plugins/shellexecui/support.c
+@@ -33,3 +33,7 @@
+ plugins/gtkui/actionhandlers.c
+ plugins/gtkui/ctmapping.c
+ plugins/gtkui/widgets.c
++plugins/gtkui/pltmenu.c
++plugins/gtkui/smclient/eggdesktopfile.c
++plugins/gtkui/smclient/eggsmclient.c
++plugins/pltbrowser/pltbrowser.c

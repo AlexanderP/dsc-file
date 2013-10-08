@@ -15,13 +15,6 @@ else
 	ENABLEGTK3=yes
 endif
 
-# Disabled because ffmpeg 0.11 doesn't build
-#ifneq (,$(filter $(DEBIAN_CODENAME),sid wheezy)) 
-#	DISABLEFFMPEG= --disable-ffmpeg 
-#else
-#	DISABLEFFMPEG= 
-#endif
-
 ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
 	BUILDDEBFLAGS= -- -Zlzma -z9
 else
@@ -35,7 +28,7 @@ override_dh_auto_configure:
 	dh_testdir
 	cp debian/$(CONTROL) debian/control
 	./autogen.sh
-	dh_auto_configure -- --enable-gtk3=$(ENABLEGTK3) $(DISABLEFFMPEG)
+	dh_auto_configure -- --enable-gtk3=$(ENABLEGTK3)
 
 override_dh_makeshlibs:
 	dh_makeshlibs -n
