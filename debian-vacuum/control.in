@@ -8,7 +8,7 @@ Homepage: http://code.google.com/p/vacuum-im/
 
 Package: vacuum
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libvacuumutils@X.XX@ (>= ${source:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt4-sql-sqlite, libvacuumutils@X.XX@ (>= ${source:Version})
 Conflicts: vacuum-spellchecker
 Replaces: vacuum-spellchecker
 Description: Jabber client using Qt
