@@ -33,3 +33,15 @@ Description: Development files for Vacuum
  This package contains Vacuum include files you need if you
  want to develop plugins for Vacuum.
 
+Package: vacuum-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: ${misc:Depends},
+ vacuum (= ${binary:Version}), libvacuumutils@X.XX@ (= ${source:Version})
+Description: Jabber client using Qt (debug symbols)
+ This package contains the debugging symbols for Vacuum.
+ .
+ Vacuum is a free instant messaging application designed for the Jabber
+ (XMPP) IM network (including Google Talk). It has full Unicode support, 
+ and supports most important XMPP features.

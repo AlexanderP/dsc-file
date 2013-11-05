@@ -46,5 +46,9 @@ override_dh_install:
 override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
 
+override_dh_strip:
+	dh_strip --dbg-package=vacuum-dbg
+
+
 %:
 	dh $@ --parallel
