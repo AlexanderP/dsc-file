@@ -1,0 +1,13 @@
+Subject: fix LIBS passed to linker.
+Author: Ricardo Mones <mones@debian.org>
+Bug-Debian: http://bugs.debian.org/713554
+--- launchy-2.5.orig/src/src.pro	2012-05-21 02:24:21.000000000 +0200
++++ launchy-2.5/src/src.pro	2013-07-09 18:10:33.820019134 +0200
+@@ -75,6 +75,7 @@
+     DEFINES += SKINS_PATH=\\\"$$PREFIX/share/launchy/skins/\\\" \
+         PLUGINS_PATH=\\\"$$PREFIX/lib/launchy/plugins/\\\" \
+         PLATFORMS_PATH=\\\"$$PREFIX/lib/launchy/\\\"
++    LIBS += -lX11
+     if(!debug_and_release|build_pass) { 
+         CONFIG(debug, debug|release):DESTDIR = ../debug/
+         CONFIG(release, debug|release):DESTDIR = ../release/

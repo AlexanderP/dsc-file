@@ -11,12 +11,12 @@ else
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-override_dh_install:
-	dh_install
-	rm -rf $(CURDIR)/debian/launchy/usr/lib/launchy/plugins/icons/
-
 override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
 
 %:
-	dh $@ --parallel
+	dh $@ --buildsystem=qmake_qt4
+
+override_dh_auto_configure:
+	pod2man --release '' -c '' debian/manpage.pod > launchy.1
+	dh_auto_configure
