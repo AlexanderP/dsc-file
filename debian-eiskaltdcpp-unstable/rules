@@ -4,16 +4,22 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
+
 ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
 	BUILDDEBFLAGS= -- -Zlzma -z9
 else
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-NUMJOBS=2
+ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+endif
+
+ifeq (,$(NUMJOBS))
+	NUMJOBS = 1
+endif
 
 CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
-CFLAGS:=$(shell dpkg-buildflags --get CFLAGS) $(CPPFLAGS)
 CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(CPPFLAGS)
 LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
 
@@ -103,6 +109,21 @@ override_dh_install:
 
 override_dh_installchangelogs:
 	dh_installchangelogs ChangeLog.txt
+
+.PHONY: override_dh_strip
+override_dh_strip:
+	dh_strip -Nlibeiskaltdcpp2.3-unstable \
+			-Neiskaltdcpp-qt-unstable \
+			-Neiskaltdcpp-qt-mini-unstable \
+			-Neiskaltdcpp-gtk-unstable \
+			-Neiskaltdcpp-gtk3-unstable \
+			-Neiskaltdcpp-daemon-unstable
+	dh_strip -plibeiskaltdcpp2.3-unstable --dbg-package=libeiskaltdcpp2.3-unstable-dbg
+	dh_strip -peiskaltdcpp-qt-unstable --dbg-package=eiskaltdcpp-qt-unstable-dbg
+	dh_strip -peiskaltdcpp-qt-mini-unstable --dbg-package=eiskaltdcpp-qt-mini-unstable-dbg
+	dh_strip -peiskaltdcpp-gtk-unstable --dbg-package=eiskaltdcpp-gtk-unstable-dbg
+	dh_strip -peiskaltdcpp-gtk3-unstable --dbg-package=eiskaltdcpp-gtk3-unstable-dbg
+	dh_strip -peiskaltdcpp-daemon-unstable --dbg-package=eiskaltdcpp-daemon-unstable-dbg
 
 .PHONY: override_dh_makeshlibs
 override_dh_makeshlibs:
