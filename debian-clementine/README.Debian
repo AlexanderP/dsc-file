@@ -3,8 +3,8 @@ clementine for Debian
 
 The current upstream version of clementine use some embed copy code located in 3rdparty/*. 
 
-Some of them are required in this package but have an equivalent Debian package
---------------------------------------------------------------------------------
+Some of them have an equivalent Debian package
+----------------------------------------------
 
 * libprojectm2: It is a shared library already packaged in Debian but some patches are
 needed to compile Clementine with it. Patches are now included since version 2.0.1+dfsg-6
@@ -16,12 +16,21 @@ of libprojectm2. (see #600653)
 
 * chromaprint: It is a shared library packaged in Debian.
 
+* sqlite: It is a shared library packaged in Debian.
+  Note that recent upgrade of sqlite package breaks the global search
+  feature of clementine. For the moment clementine developers don't care about
+  this incompatibility and strongly encourage maintainers to use their embedded
+  old version of sqlite statically. But this is not an acceptable solution in a
+  Debian context. So for the moment we still force the use of the system version
+  of sqlite by set the cmake options `-DSTATIC_SQLITE=OFF` and `-DI_HATE_MY_USERS=ON`.
+  For more information see:
+    - line 318 of CMakeList.txt
+    - http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=722471
+    - http://code.google.com/p/clementine-player/issues/detail?id=3865
+    - http://code.google.com/p/clementine-player/issues/detail?id=3847
+
 Some of them must be used in this package
 -----------------------------------------
-
-* universalchardet: A package named "uchardet" is now present in Debian archive and seem to
-match but it is not possible to use it with Clementine for the moment. I warned upstream
-developers about this issue.
 
 * qtsingleapplication: It is a small shared library not packaged in Debian 
 unfortunately. It is used by others Debian package as embed code copy too.
@@ -44,18 +53,14 @@ Some of them must not be used in this package
 
 * qtwin: Not needed on GNU/Linux system so not used in this package.
 
+* tinysvcmdns: Not needed on GNU/Linux system so not used in this package.
+
+* mingw: Not needed on GNU/Linux system so not used in this package.
+
 * gmock: It is just used for tests and tests require X server running. So it is not
 used in this package.
 
 * fancytabwidget: Only useful for certain experimental options.
-
-* keychain: Only useful for certain experimental options.
-
-* gloox: Only useful for certain experimental options.
-
-* libportfwd: Only useful for certain experimental options.
-
-* libxrme: Only useful for certain experimental options.
 
 * SPMediaKeyTap: Not needed on GNU/Linux system so not used in this package.
 
@@ -71,12 +76,8 @@ For the reasons above, the following components have been removed in the DFSG De
 -------------------------------------------------------------------------------------------------------------
  
 * 3rdparty/fancytabwidget
-* 3rdparty/gloox
-* 3rdparty/keychain
 * 3rdparty/libechonest
-* 3rdparty/libportfwd
 * 3rdparty/libprojectm
-* 3rdparty/libxrme
 * 3rdparty/qsqlite
 * 3rdparty/qtwin
 * 3rdparty/qxt
@@ -85,6 +86,7 @@ For the reasons above, the following components have been removed in the DFSG De
 * 3rdparty/google-breakpad
 * 3rdparty/chromaprint
 * 3rdparty/SPMediaKeyTap
+* mingw/
+* 3rdparty/tinysvcmdns/
 
- -- Thomas PIERSON <web.pierson@gmail.com>, Mon, 23 May 23:57:48 +0200
-
+ -- Thomas Pierson <contact@thomaspierson.fr>, Sat, 2 Nov 14:15:40 +0200
