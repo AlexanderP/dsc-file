@@ -55,7 +55,6 @@ override_dh_auto_build:
 
 override_dh_auto_install:
 	$(MAKE) INSTALL_ROOT=$(CURDIR)/debian/psi-plus install
-	rm -f $(CURDIR)/debian/psi-plus/usr/bin/psi-plus.debug # Removing static debug file
 	# Making the same, but using webkit
 	$(MAKE) clean
 	sed -i 's| (|-webkit (|' version
@@ -67,21 +66,16 @@ override_dh_auto_install:
 	rm $(CURDIR)/debian/psi-plus-webkit/usr/share/applications/psi-plus.desktop
 	cp $(CURDIR)/psi-plus $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-plus-webkit
 	cp $(CURDIR)/debian/psi-plus-webkit.desktop $(CURDIR)/debian/psi-plus-webkit/usr/share/applications/
-	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/bin/psi-plus.debug # Removing static debug file
 	# Deleting temporary files
-	rm -f $(CURDIR)/debian/psi-plus/usr/share/psi-plus/COPYING
-	rm -f $(CURDIR)/debian/psi-plus-webkit/usr/share/psi-plus/COPYING
+	rm $(CURDIR)/debian/psi-plus/usr/share/psi-plus/COPYING
+	rm $(CURDIR)/debian/psi-plus-webkit/usr/share/psi-plus/COPYING
 
 override_dh_install:
-	# Fix permissions
-	chmod uog-x $(CURDIR)/skins/mac/native_mac/images/qcombobox.png
 	dh_install
-	# Deleting exported plugins
-	rm -f $(CURDIR)/debian/psi-plus-plugins/usr/lib/psi-plus/plugins/libcontentdownloaderplugin.so
 	# Exporting all from psi-plus-common
 	bash ./debian/mergedups.sh
 	# Deleting extra copy of sound files
-	rm -rf $(CURDIR)/debian/psi-plus-common/usr/share/psi-plus/sound/
+	rm -r $(CURDIR)/debian/psi-plus-common/usr/share/psi-plus/sound/
 
 override_dh_auto_clean:
 	dh_clean
@@ -101,6 +95,12 @@ override_dh_auto_clean:
 
 	rm -rf .pc_psi
 	sed -i 's|-webkit||' version
+
+override_dh_strip:
+	dh_strip -ppsi-plus --dbg-package=psi-plus-dbg
+	dh_strip -ppsi-plus-webkit --dbg-package=psi-plus-webkit-dbg
+	dh_strip -ppsi-plus-plugins --dbg-package=psi-plus-plugins-dbg
+	dh_strip --remaining-packages
 
 override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)

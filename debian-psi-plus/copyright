@@ -7,7 +7,7 @@ Upstream-Contact: zet <vladimir.shelukhin@gmail.com>
  Dealer_WeARE <wadealer@gmail.com>
  maj <maksim.maj@gmail.com>
  diSabler <dsy@dsy.name>
-Source: https://github.com/tehnick/psi-plus/tags
+Source: https://github.com/psi-plus/psi-plus-snapshots/tags
  The orig.tar.xz is generated from upstream gzipped tarball, except it uses
  LZMA2 compression. See section get-orig-source in debian/rules file for details.
  .
@@ -83,13 +83,11 @@ Files: src/psimedia/*
 Copyright: 2008-2009 Barracuda Networks, Inc.
  2003-2007 Michail Pishchagin <mblsha@users.sourceforge.net>
  2003-2007 Justin Karneges <justin@affinix.com>
- 1999-2000 Tom Tromey
- 2000 Red Hat, Inc.
  2007 Kevin Smith <kismith@psi-im.org>
  2009 Sergey Il'inykh
  2009 Maciej Niedzielski
  1992-2006 Trolltech AS.
- 2010 Khryukin Evgeny
+ 2010 Evgeny Khryukin
  2010 Vitaly Tonkacheyev
 License: LGPL-2.1+
 
@@ -119,15 +117,11 @@ License: LGPL-3
 Files: iris/tools/icetunnel/*
  iris/tools/nettool/*
  iris/src/irisnet/*
- iris/src/libidn/*
  iris/src/xmpp/xmpp-core/*
  iris/src/xmpp/xmpp-im/*
 Copyright: 2008-2010 Barracuda Networks, Inc.
  2001-2008 Justin Karneges <justin@affinix.com>
- 2002-2003 Simon Josefsson
- 1999-2000 Tom Tromey
  2003-2007 Michail Pishchagin <mblsha@users.sourceforge.net>
- 2000 Red Hat, Inc.
  2006 Remko Troncon
  2010-2013 Il'inykh Sergey aka Rion <rion4ik@gmail.com>
  2006 Maciek Niedzielski
@@ -205,10 +199,10 @@ Files: themes/* skins/*
  src/plugins/generic/pepchangenotifyplugin/*
  src/plugins/generic/extendedmenuplugin/*
  src/plugins/generic/pstoplugin/*
- src/plugins/generic/yandexnarodplugin/*
  src/plugins/generic/otrplugin/*
+ src/plugins/deprecated/yandexnarodplugin/*
 Copyright: 2009-2013 Sergey Ilinyh aka Rion <rion4ik@gmail.com>
- 2009-2012 Khryukin Evgeny
+ 2009-2012 Evgeny Khryukin
  2009-2010 Virnik
  2006-2007 Maciej Niedzielski
  2009-2012 Kravtsov Nikolai

@@ -4,12 +4,11 @@ Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: debhelper (>= 8), libqt4-dev
 Homepage: https://github.com/psi-plus/psi-plus-l10n
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 
 Package: psi-plus-l10n
 Section: localization
 Architecture: all
-Pre-Depends: dpkg (>= 1.15.6~)
 Depends: ${misc:Depends}, psi-plus | psi-plus-webkit
 Conflicts: psi-plus-i18n
 Replaces: psi-plus-i18n
