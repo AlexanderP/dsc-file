@@ -28,7 +28,7 @@ override_dh_auto_configure:
 	dh_testdir
 	cp debian/$(CONTROL) debian/control
 	./autogen.sh
-	dh_auto_configure -- --enable-gtk3=$(ENABLEGTK3)
+	dh_auto_configure -- --enable-gtk3=$(ENABLEGTK3) --enable-staticlink=no
 
 override_dh_makeshlibs:
 	dh_makeshlibs -n
