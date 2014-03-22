@@ -1,6 +1,6 @@
---- ocropus-0.6.0+hg20120907.orig/ocrolib/common.py
-+++ ocropus-0.6.0+hg20120907/ocrolib/common.py
-@@ -533,10 +533,10 @@ data_paths = [
+--- ocropus-0.6.0+hg20130905.orig/ocrolib/common.py
++++ ocropus-0.6.0+hg20130905/ocrolib/common.py
+@@ -681,10 +681,10 @@ data_paths = [
      "./models",
      "./data",
      "./gui",
@@ -14,13 +14,12 @@
 +    "/usr/share/ocropus",
  ]
  
- def ocropus_find_file(fname):
-
---- ocropus-0.6.0+hg20120907.orig/ocrolib/default.py
-+++ ocropus-0.6.0+hg20120907/ocrolib/default.py
-@@ -23,7 +23,7 @@ installable += ["en-mixed-round1.lineest
- 
- # these are system paths
+ def ocropus_find_file(fname,gz=1):
+--- ocropus-0.6.0+hg20130905.orig/ocrolib/default.py
++++ ocropus-0.6.0+hg20130905/ocrolib/default.py
+@@ -16,7 +16,7 @@ installable += ["en-mixed-round1.lineest
+ installable += ["frakant.pyrnn.gz"] # Fraktur recognizer
+ installable += ["fraktur.pyrnn.gz"] # Fraktur recognizer
  
 -modeldir = "/usr/local/share/ocropus/"
 +modeldir = "/usr/share/ocropus/"
