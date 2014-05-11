@@ -19,7 +19,7 @@ OLDVERSIONUTILS=$(shell echo "$(VERSIONUTILS)-1" | bc -l )
 OLDVERSIONUTILS1=$(shell seq 20 $(OLDVERSIONUTILS))
 OLDVERSIONsUTILS=$(shell for i in $(OLDVERSIONUTILS1) ; do  echo libvacuumutils$$i, ; done)
 
-CMAKEOPT= -DCMAKE_BUILD_TYPE=Release
+CMAKEOPT= -DCMAKE_BUILD_TYPE=Release -DPLUGIN_statistics=OFF
 VERSION=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | grep svn | wc -l)
 ifneq (,$(filter 1,$(VERSION)))
 	REV=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | sed 's/.*svn//' | sed 's/-.*//')
