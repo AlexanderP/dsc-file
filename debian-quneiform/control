@@ -19,7 +19,7 @@ Homepage: https://launchpad.net/cuneiform-linux
 
 Package: cuneiform-refactoring
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, cuneiform-refactoring-common (>= ${source:Version}), libcuneiform0.2 (>= ${source:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, cuneiform-refactoring-common (>= ${source:Version}), libcuneiform0.4 (>= ${source:Version})
 Conflicts: cuneiform, cuneiform-linux
 Description: multi-language OCR system
  Cuneiform is an multi-language OCR system originally 
@@ -36,20 +36,20 @@ Description: Data files for cuneiform-linux
  developed and open sourced by Cognitive Technologies. Cuneiform was
  originally a Windows program, which was ported to Linux by Jussi Pakkanen
 
-Package: libcuneiform0.2
+Package: libcuneiform0.4
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: libcuneiform0, cuneiform-linux
+Conflicts: libcuneiform0, cuneiform-linux, libcuneiform0.2
 Description: multi-language OCR system (shared library)
  Cuneiform is an multi-language OCR system originally 
  developed and open sourced by Cognitive Technologies. Cuneiform was
  originally a Windows program, which was ported to Linux by Jussi Pakkanen
 
 
-Package: libcuneiform0.2-dev
+Package: libcuneiform0.4-dev
 Architecture: all
 Section: libdevel
-Depends: ${misc:Depends}, libcuneiform0.2 (>= ${source:Upstream-Version}),  libcuneiform0.2 (<< ${source:Upstream-Version}+1~)
+Depends: ${misc:Depends}, libcuneiform0.4 (>= ${source:Upstream-Version}),  libcuneiform0.4 (<< ${source:Upstream-Version}+1~)
 Suggests: cuneiform-refactoring
 Conflicts: libcuneiform-dev
 Description: Development files for cuneiform
