@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
+	BUILDDEBFLAGS= -- -Zlzma -z9
+else
+	BUILDDEBFLAGS= -- -Zxz -z9
+endif
+
+%:
+	dh $@ --parallel --with quilt
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DCMAKE_BUILD_TYPE=Release
+
+override_dh_builddeb:
+	dh_builddeb $(BUILDDEBFLAGS)
