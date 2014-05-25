@@ -1,0 +1,11 @@
+--- qwit-1.1+svn356.orig/CMakeLists.txt
++++ qwit-1.1+svn356/CMakeLists.txt
+@@ -100,7 +100,7 @@ target_link_libraries( qwit
+ 	qoauth
+ 	)
+ 
+-install( TARGETS qwit DESTINATION ${QT_BINARY_DIR} )
++install( TARGETS qwit DESTINATION bin )
+ install( FILES qwit.desktop DESTINATION share/applications )
+ install( FILES images/qwit.png DESTINATION share/icons )
+ install( FILES ${qwit_QM} DESTINATION ${QT_TRANSLATIONS_DIR} )
