@@ -2,22 +2,30 @@ Source: psi-plus
 Section: net
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7.0.50~),
- libqtwebkit-dev , qconf, libqca2-dev (>= 2.0.0),
- libxss-dev, libaspell-dev, zlib1g-dev, libsm-dev,
- libotr5-dev | libotr2-dev, libtidy-dev, libidn11-dev
+Build-Depends: debhelper (>= 9),
+               libaspell-dev,
+               libidn11-dev,
+               libotr5-dev | libotr2-dev,
+               libqca2-dev,
+               libqtwebkit-dev,
+               libsm-dev,
+               libtidy-dev,
+               libxss-dev,
+               qconf,
+               zlib1g-dev
 Homepage: http://psi-dev.googlecode.com/
 Standards-Version: 3.9.5
 
 Package: psi-plus
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- psi-plus-common (= ${source:Version})
-Recommends: sox,
- libqca2-plugin-ossl,
- psi-plus-plugins,
- psi-plus-sounds,
- psi-plus-l10n
+Depends: psi-plus-common (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Recommends: libqca2-plugin-ossl,
+            psi-plus-l10n,
+            psi-plus-plugins,
+            psi-plus-sounds,
+            sox
 Suggests: libqca2-plugin-gnupg, xdg-utils
 Description: Qt-based XMPP/Jabber client (basic version)
  This package contains basic version of Psi+.
@@ -36,8 +44,7 @@ Package: psi-plus-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Depends: ${misc:Depends},
- psi-plus (=${binary:Version})
+Depends: psi-plus (=${binary:Version}), ${misc:Depends}
 Description: Qt-based XMPP/Jabber client (basic version) [debug symbols]
  This package contains the debugging symbols for basic version of Psi+.
  .
@@ -53,14 +60,15 @@ Description: Qt-based XMPP/Jabber client (basic version) [debug symbols]
 
 Package: psi-plus-webkit
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- psi-plus-common (= ${source:Version})
-Recommends: sox,
- libqca2-plugin-ossl,
- psi-plus-plugins,
- psi-plus-sounds,
- psi-plus-skins,
- psi-plus-l10n
+Depends: psi-plus-common (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Recommends: libqca2-plugin-ossl,
+            psi-plus-l10n,
+            psi-plus-plugins,
+            psi-plus-skins,
+            psi-plus-sounds,
+            sox
 Suggests: libqca2-plugin-gnupg, xdg-utils
 Description: Qt-based XMPP/Jabber client (WebKit version)
  This package contains WebKit version of Psi+.
@@ -79,8 +87,7 @@ Package: psi-plus-webkit-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Depends: ${misc:Depends},
- psi-plus-webkit (=${binary:Version})
+Depends: psi-plus-webkit (=${binary:Version}), ${misc:Depends}
 Description: Qt-based XMPP/Jabber client (WebKit version) [debug symbols]
  This package contains the debugging symbols for WebKit version of Psi+.
  .
@@ -112,10 +119,11 @@ Description: common files for Psi+
 
 Package: psi-plus-plugins
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
- psi-plus (=${binary:Version}) | psi-plus-webkit (=${binary:Version})
-Replaces: psi-plus-content-downloader, psi-plus-content-download
-Conflicts: psi-plus-content-downloader, psi-plus-content-download
+Depends: psi-plus (=${binary:Version}) | psi-plus-webkit (=${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Replaces: psi-plus-content-download, psi-plus-content-downloader
+Conflicts: psi-plus-content-download, psi-plus-content-downloader
 Description: plugins for Psi+
  This package contains plugins for Psi+.
  .
@@ -133,8 +141,7 @@ Package: psi-plus-plugins-dbg
 Section: debug
 Priority: extra
 Architecture: any
-Depends: ${misc:Depends},
- psi-plus-plugins (=${binary:Version})
+Depends: psi-plus-plugins (=${binary:Version}), ${misc:Depends}
 Description: plugins for Psi+ [debug symbols]
  This package contains the debugging symbols for Psi+ plugins.
  .
@@ -150,9 +157,7 @@ Description: plugins for Psi+ [debug symbols]
 
 Package: psi-plus-skins
 Architecture: all
-Depends: ${misc:Depends},
- psi-plus | psi-plus-webkit,
- psi-plus-plugins
+Depends: psi-plus | psi-plus-webkit, psi-plus-plugins, ${misc:Depends}
 Description: skins for Psi+
  This package contains skins for Psi+.
  .
@@ -168,8 +173,7 @@ Description: skins for Psi+
 
 Package: psi-plus-sounds
 Architecture: all
-Depends: ${misc:Depends},
- psi-plus | psi-plus-webkit
+Depends: psi-plus | psi-plus-webkit, ${misc:Depends}
 Description: sound files for Psi+
  This package contains sound files for Psi+.
  .

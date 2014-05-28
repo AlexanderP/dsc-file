@@ -3,43 +3,41 @@ Debianized-By: Ivan Borzenkov <ivan1986@list.ru>
 Debianized-Date: Mon, 23 Feb 2009 19:56:49 +0300
 Upstream-Name: Psi+
 Upstream-Contact: zet <vladimir.shelukhin@gmail.com>
- rion <rion4ik@gmail.com>
- Dealer_WeARE <wadealer@gmail.com>
- maj <maksim.maj@gmail.com>
- diSabler <dsy@dsy.name>
+                  rion <rion4ik@gmail.com>
+                  Dealer_WeARE <wadealer@gmail.com>
+                  maj <maksim.maj@gmail.com>
+                  diSabler <dsy@dsy.name>
 Source: https://github.com/psi-plus/psi-plus-snapshots/tags
- The orig.tar.xz is generated from upstream gzipped tarball, except it uses
- LZMA2 compression. See section get-orig-source in debian/rules file for details.
- .
- There is no constant tarball in GitHub: it is generated each time when it is
- asked. So we do not need to keep original tarball in Debian.
+ The orig.tar.gz is just renamed upstream tarball (without changes).
+ See section get-orig-source in debian/rules file for details.
 
 Files: *
- admin/*
- certs/*
- doc/*
- mac/*
- options/*
- qa/*
- qcm/*
- sound/*
- src/*
- tools/*
+       admin/*
+       certs/*
+       doc/*
+       mac/*
+       options/*
+       qa/*
+       qcm/*
+       sound/*
+       src/*
+       tools/*
 Copyright: 2001-2008 Justin Karneges <justin@affinix.com>
- 2003-2009 Michail Pishchagin <mblsha@users.sourceforge.net>
- 2001-2008 Remko Troncon
- 2010-2013 Il'inykh Sergey aka Rion <rion4ik@gmail.com>
- 2006-2007 Kevin Smith <kismith@psi-im.org>
- 2006-2008 Martin Hostettler
- 2006-2008 Joonas Govenius
- 1992-2007 Trolltech ASA.
- 2005 SilverSoft.Net (Denis Kozadaev) <denis@silversoft.net>
- 2009 Barracuda Networks, Inc.
- 2010 Tobias Markmann
- 2006 Cestonaro Thilo
- 2007 Maciek Niedzielski
- 2011 Evgeny Khryukin
- 2011 Artem Izmaylov <artem@aimp.ru>
+           2003-2009 Michail Pishchagin <mblsha@users.sourceforge.net>
+           2001-2008 Remko Troncon
+           2010-2013 Il'inykh Sergey aka Rion <rion4ik@gmail.com>
+           2006-2007 Kevin Smith <kismith@psi-im.org>
+           2006-2008 Martin Hostettler
+           2006-2008 Joonas Govenius
+           1992-2007 Trolltech ASA.
+           2005 SilverSoft.Net (Denis Kozadaev) <denis@silversoft.net>
+           2009 Barracuda Networks, Inc.
+           2010 Tobias Markmann
+           2006 Cestonaro Thilo
+           2007 Maciek Niedzielski
+           2011 Evgeny Khryukin
+           2011 Artem Izmaylov <artem@aimp.ru>
+           2010 senu
 License: GPL-2+ with OpenSSL exception
  This program is free software: you can redistribute it and/or modify it under
  the terms of the GNU General Public License as published by the Free Software
@@ -71,87 +69,84 @@ License: GPL-2+ with OpenSSL exception
 
 Files: iconsets/roster/*
 Copyright: 2003-2007 Michail Pishchagin <mblsha@users.sourceforge.net>
- 2005-2007 Remko Tronçon (http://el-tramo.be)
- 2005-2007 Everaldo Coelho (http://www.everaldo.com)
- 2003 Jason Kim <jmkim@uci.edu>
+           2005-2007 Remko Tronçon (http://el-tramo.be)
+           2005-2007 Everaldo Coelho (http://www.everaldo.com)
+           2003 Jason Kim <jmkim@uci.edu>
 License: LGPL-3
 
 Files: src/psimedia/*
- src/tools/advwidget/*
- src/tools/iconset/*
- src/widgets/*
+       src/tools/advwidget/*
+       src/tools/iconset/*
+       src/widgets/*
 Copyright: 2008-2009 Barracuda Networks, Inc.
- 2003-2007 Michail Pishchagin <mblsha@users.sourceforge.net>
- 2003-2007 Justin Karneges <justin@affinix.com>
- 2007 Kevin Smith <kismith@psi-im.org>
- 2009 Sergey Il'inykh
- 2009 Maciej Niedzielski
- 1992-2006 Trolltech AS.
- 2010 Evgeny Khryukin
- 2010 Vitaly Tonkacheyev
+           2003-2007 Michail Pishchagin <mblsha@users.sourceforge.net>
+           2003-2007 Justin Karneges <justin@affinix.com>
+           2007 Kevin Smith <kismith@psi-im.org>
+           2009 Sergey Il'inykh
+           2009 Maciej Niedzielski
+           1992-2006 Trolltech AS.
+           2010 Evgeny Khryukin
+           2010 Vitaly Tonkacheyev
 License: LGPL-2.1+
 
-Files: src/tools/crash/crash_sigsegv.h
- src/tools/crash/crash_sigsegv.cpp
+Files: src/tools/crash/crash_sigsegv.*
 Copyright: 2003-2007 Justin Karneges <justin@affinix.com>
- 2003 Juan F. Codagnone <juam@users.sourceforge.net>
+           2003 Juan F. Codagnone <juam@users.sourceforge.net>
 License: BSD-2-clause
 
 Files: src/tools/tunecontroller/plugins/winamp/third-party/wa_ipc.h
 Copyright: 1997-2008 Nullsoft, Inc.
 License: zlib-License
 
-Files: src/plugins/generic/noughtsandcrosses/tictac.h
- src/plugins/generic/noughtsandcrosses/tictac.cpp
-Copyright: 1992-2000 Trolltech AS.  All rights reserved.
+Files: src/plugins/generic/noughtsandcrosses/tictac.*
+Copyright: 1992-2000 Trolltech AS.
 License: public-domain
  This files are part of an example program for Qt. This example program may be
  used, distributed and modified without limitation.
 
 Files: iris/*
- iris/src/xmpp/*
+       iris/src/xmpp/*
 Copyright: 2001-2008 Justin Karneges <justin@affinix.com>
- 2008 Remko Troncon
+           2008 Remko Troncon
 License: LGPL-3
 
 Files: iris/tools/icetunnel/*
- iris/tools/nettool/*
- iris/src/irisnet/*
- iris/src/xmpp/xmpp-core/*
- iris/src/xmpp/xmpp-im/*
+       iris/tools/nettool/*
+       iris/src/irisnet/*
+       iris/src/xmpp/xmpp-core/*
+       iris/src/xmpp/xmpp-im/*
 Copyright: 2008-2010 Barracuda Networks, Inc.
- 2001-2008 Justin Karneges <justin@affinix.com>
- 2003-2007 Michail Pishchagin <mblsha@users.sourceforge.net>
- 2006 Remko Troncon
- 2010-2013 Il'inykh Sergey aka Rion <rion4ik@gmail.com>
- 2006 Maciek Niedzielski
+           2001-2008 Justin Karneges <justin@affinix.com>
+           2003-2007 Michail Pishchagin <mblsha@users.sourceforge.net>
+           2006 Remko Troncon
+           2010-2013 Il'inykh Sergey aka Rion <rion4ik@gmail.com>
+           2006 Maciek Niedzielski
 License: LGPL-2.1+
 
 Files: iris/src/jdns/*
 Copyright: 2005-2006 Justin Karneges <justin@affinix.com>
- 2005 Jeremie Miller
+           2005 Jeremie Miller
 License: MIT
 
 Files: src/libpsi/*
 Copyright: 2003-2009 Michail Pishchagin <mblsha@users.sourceforge.net>
- 2006-2008 Maciej Niedzielski
- 2003-2006 Justin Karneges <justin@affinix.com>
- 2005-2008 James Chaldecott
- 2006 Cestonaro Thilo
- 2007 Remko Troncon
- 2009 Caolán McNamara
- 2009 Barracuda Networks, Inc.
- 2010 Dmitriy.trt
+           2006-2008 Maciej Niedzielski
+           2003-2006 Justin Karneges <justin@affinix.com>
+           2005-2008 James Chaldecott
+           2006 Cestonaro Thilo
+           2007 Remko Troncon
+           2009 Caolán McNamara
+           2009 Barracuda Networks, Inc.
+           2010 Dmitriy.trt
 License: GPL-2+
 
 Files: src/libpsi/tools/idle/*
- src/libpsi/tools/zip/zip.*
+       src/libpsi/tools/zip/zip.*
 Copyright: 2001-2008 Justin Karneges <justin@affinix.com>
- 2003 Tarkvara Design Inc.
+           2003 Tarkvara Design Inc.
 License: LGPL-2.1+
 
-Files: libpsi/tools/globalshortcut/NDKeyboardLayout.h
- libpsi/tools/globalshortcut/NDKeyboardLayout.m
+Files: src/libpsi/tools/globalshortcut/NDKeyboardLayout.*
 Copyright: 2010 Nathan Day
 License: MIT
 
@@ -159,78 +154,79 @@ Files: src/libpsi/tools/zip/minizip/*
 Copyright: 1998 Gilles Vollant
 License: zlib-License
 
-Files: themes/* skins/*
- sound/attention.wav
- sound/chess_finish.wav
- sound/chess_start.wav
- sound/pepnotify.wav
- sound/watcher.wav
- sound/chess_error.wav
- sound/chess_move.wav
- sound/email.wav
- sound/reminder.wav
- iconsets/system/default/psiplus/*
- iconsets/roster/default/typing.png
- src/plugins/generic/attentionplugin/*
- src/plugins/generic/extendedoptionsplugin/*
- src/plugins/generic/qipxstatusesplugin/*
- src/plugins/generic/autoreplyplugin/*
- src/plugins/generic/gmailserviceplugin/*
- src/plugins/generic/screenshotplugin/*
- src/plugins/generic/birthdayreminderplugin/*
- src/plugins/generic/gomokugameplugin/*
- src/plugins/generic/skinsplugin/*
- src/plugins/generic/captchaformsplugin/*
- src/plugins/generic/historykeeperplugin/*
- src/plugins/generic/stopspamplugin/*
- src/plugins/generic/chessplugin/*
- src/plugins/generic/icqdieplugin/*
- src/plugins/generic/storagenotesplugin/*
- src/plugins/generic/cleanerplugin/*
- src/plugins/generic/imageplugin/*
- src/plugins/generic/translateplugin/*
- src/plugins/generic/clientswitcherplugin/*
- src/plugins/generic/jabberdiskplugin/*
- src/plugins/generic/videostatusplugin/*
- src/plugins/generic/conferenceloggerplugin/*
- src/plugins/generic/juickplugin/*
- src/plugins/generic/watcherplugin/*
- src/plugins/generic/contentdownloaderplugin/*
- src/plugins/generic/pepchangenotifyplugin/*
- src/plugins/generic/extendedmenuplugin/*
- src/plugins/generic/pstoplugin/*
- src/plugins/generic/otrplugin/*
- src/plugins/deprecated/yandexnarodplugin/*
+Files: themes/*
+       skins/*
+       sound/attention.wav
+       sound/chess_finish.wav
+       sound/chess_start.wav
+       sound/pepnotify.wav
+       sound/watcher.wav
+       sound/chess_error.wav
+       sound/chess_move.wav
+       sound/email.wav
+       sound/reminder.wav
+       iconsets/system/default/psiplus/*
+       iconsets/roster/default/typing.png
+       src/plugins/generic/attentionplugin/*
+       src/plugins/generic/extendedoptionsplugin/*
+       src/plugins/generic/qipxstatusesplugin/*
+       src/plugins/generic/autoreplyplugin/*
+       src/plugins/generic/gmailserviceplugin/*
+       src/plugins/generic/screenshotplugin/*
+       src/plugins/generic/birthdayreminderplugin/*
+       src/plugins/generic/gomokugameplugin/*
+       src/plugins/generic/skinsplugin/*
+       src/plugins/generic/captchaformsplugin/*
+       src/plugins/generic/historykeeperplugin/*
+       src/plugins/generic/stopspamplugin/*
+       src/plugins/generic/chessplugin/*
+       src/plugins/generic/icqdieplugin/*
+       src/plugins/generic/storagenotesplugin/*
+       src/plugins/generic/cleanerplugin/*
+       src/plugins/generic/imageplugin/*
+       src/plugins/generic/translateplugin/*
+       src/plugins/generic/clientswitcherplugin/*
+       src/plugins/generic/jabberdiskplugin/*
+       src/plugins/generic/videostatusplugin/*
+       src/plugins/generic/conferenceloggerplugin/*
+       src/plugins/generic/juickplugin/*
+       src/plugins/generic/watcherplugin/*
+       src/plugins/generic/contentdownloaderplugin/*
+       src/plugins/generic/pepchangenotifyplugin/*
+       src/plugins/generic/extendedmenuplugin/*
+       src/plugins/generic/pstoplugin/*
+       src/plugins/generic/otrplugin/*
+       src/plugins/deprecated/yandexnarodplugin/*
 Copyright: 2009-2013 Sergey Ilinyh aka Rion <rion4ik@gmail.com>
- 2009-2012 Evgeny Khryukin
- 2009-2010 Virnik
- 2006-2007 Maciej Niedzielski
- 2009-2012 Kravtsov Nikolai
- 2009-2010 VampiRus
- 2009-2010 Ivan Borzenkov <ivan1986@list.ru>
- 2010-2013 Ivan Romanov aka taurus <drizt@land.ru>
- 2011-2013 Aleksey Andreev
- 2003 Justin Karneges <justin@affinix.com>
- 2010 senu
- 2008 Ustyugov Roman <qtdevel@gmail.com>
- 2010 Michail Pishchagin <mblsha@users.sourceforge.net>
- 2010 Dmitriy.trt
- 2008 Armando Jagucki
- 2010 Vitaly Tonkacheyev
- 2010 KukuRuzo
- 2011 Evgeny Khryukin
- 2004-2008 Ian Goldberg
- 2004-2008 Chris Alexander
- 2004-2008 Nikita Borisov
- 2007-2010 Timo Engel <timo-e@freenet.de>
- 2008-2009 Alexander Kazarin <boiler@co.ru>
- 2013-2014 Boris Pek <tehnick-8@mail.ru>
- 2013 Georg Rudoy
+           2009-2012 Evgeny Khryukin
+           2009-2010 Virnik
+           2006-2007 Maciej Niedzielski
+           2009-2012 Kravtsov Nikolai
+           2009-2010 VampiRus
+           2009-2010 Ivan Borzenkov <ivan1986@list.ru>
+           2010-2014 Ivan Romanov aka taurus <drizt@land.ru>
+           2011-2013 Aleksey Andreev
+           2003 Justin Karneges <justin@affinix.com>
+           2010 senu
+           2008 Ustyugov Roman <qtdevel@gmail.com>
+           2010 Michail Pishchagin <mblsha@users.sourceforge.net>
+           2010 Dmitriy.trt
+           2008 Armando Jagucki
+           2010 Vitaly Tonkacheyev
+           2010 KukuRuzo
+           2011 Evgeny Khryukin
+           2004-2008 Ian Goldberg
+           2004-2008 Chris Alexander
+           2004-2008 Nikita Borisov
+           2007-2010 Timo Engel <timo-e@freenet.de>
+           2008-2009 Alexander Kazarin <boiler@co.ru>
+           2013-2014 Boris Pek <tehnick-8@mail.ru>
+           2013 Georg Rudoy
 License: GPL-2+
 
 Files: src/plugins/generic/screenshotplugin/qxt/*
 Copyright: 2006-2011 Qxt Foundation <foundation@libqxt.org>
- 2011 Marcin Jakubowski <mjakubowski@gmail.com>
+           2011 Marcin Jakubowski <mjakubowski@gmail.com>
 License: BSD-3-clause
 
 Files: generate-single-repo.sh
@@ -239,7 +235,7 @@ License: GPL-2+
 
 Files: debian/*
 Copyright: 2009-2011 Ivan Borzenkov <ivan1986@list.ru>
- 2011-2014 Boris Pek <tehnick-8@mail.ru>
+           2011-2014 Boris Pek <tehnick-8@mail.ru>
 License: GPL-2+
 
 License: GPL-2+
@@ -295,8 +291,8 @@ License: BSD-2-clause
  modification, are permitted provided that the following conditions are met:
  1. Redistributions of source code must retain the above copyright notice,
     this list of conditions and the following disclaimer.
- 2. Redistributions in binary form must reproduce the above copyright 
-    notice, this list of conditions and the following disclaimer in the 
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
     documentation and/or other materials provided with the distribution.
  .
  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
