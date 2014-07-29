@@ -7,14 +7,6 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),squeeze lucid karmic maverick)) 
-	CONTROL = control.gtk2
-	ENABLEGTK3=no
-else
-	CONTROL = control.gtk3
-	ENABLEGTK3=yes
-endif
-
 ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
 	BUILDDEBFLAGS= -- -Zlzma -z9
 else
@@ -24,25 +16,13 @@ endif
 %:
 	dh --parallel --with quilt $@
 
-override_dh_auto_configure:
-	dh_testdir
-	cp debian/$(CONTROL) debian/control
-	./autogen.sh
-	dh_auto_configure -- --enable-gtk3=$(ENABLEGTK3) --enable-staticlink=no
-
 override_dh_makeshlibs:
 	dh_makeshlibs -n
 
-override_dh_shlibdeps:
-	dh_shlibdeps -Xflac.so -Xlastfm.so -Xmpgmad.so -Xffmpeg.so \
-		-Xvorbis.so -Xsndfile.so -Xwavpack.so -Xcdda.so \
-		-Xvfs_curl.so -Xvfs_zip.so -Xartwork.so -Xdsp_libsrc.so \
-		-Xnotify.so -Xpulse.so -Xmms.so -Xao.so -Xaac.so -Xdca.so 
-
-override_dh_auto_clean:
+override_dh_auto_configure:
 	dh_testdir
-	cp debian/$(CONTROL) debian/control
-	dh_auto_clean
+	./autogen.sh
+	dh_auto_configure
 
 override_dh_install:
 	dh_install
@@ -56,7 +36,7 @@ else
 	cd  debian/deadbeef/usr/lib* && rm deadbeef/*GTK3* 
 	cd  debian/deadbeef/usr/lib* && rm deadbeef/*GTK2*
 endif
-	
+
 override_dh_installchangelogs:
 	dh_installchangelogs -k ChangeLog
 
