@@ -14,7 +14,7 @@ Build-Depends: debhelper (>= 7),
                python-reportlab,
                python-sane,
                gir1.2-gtk-3.0,
-               gir1.2-goocanvas-2.0,
+               gir1.2-goocanvas-2.0 | gir1.2-goocanvas-2.0-9,
                dh-autoreconf
 Standards-Version: 3.9.5
 X-Python-Version: >= 2.5
@@ -32,7 +32,7 @@ Depends: ${python:Depends},
          python-imaging,
          gir1.2-gtk-3.0,
          gir1.2-gtkspell3-3.0,
-         gir1.2-goocanvas-2.0,
+         gir1.2-goocanvas-2.0 | gir1.2-goocanvas-2.0-9,
          iso-codes,
          ghostscript,
          tesseract-ocr | ocrad | gocr | cuneiform | cuneiform-linux | cuneiform-refactoring,
