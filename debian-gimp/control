@@ -2,10 +2,11 @@ Source: gimp
 Priority: optional
 Section: graphics
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 Build-Depends: debhelper (>= 8),
                cdbs (>= 0.4.97),
                autotools-dev,
+               dh-autoreconf,
                gettext,
                gnome-pkg-tools,
                gtk-doc-tools (>= 1.0),
@@ -35,14 +36,14 @@ Build-Depends: debhelper (>= 8),
                libice-dev,
                libjasper-dev,
                libjpeg-dev,
-               liblcms1-dev (>= 1.16) | liblcms-dev,
+               liblcms2-dev (>= 2.2),
                libmng-dev,
                libpango1.0-dev (>= 1.29.4),
                libpng-dev,
                libpoppler-glib-dev (>= 0.12.4),
                librsvg2-dev (>= 2.14.0),
                libsm-dev,
-               libtiff4-dev,
+               libtiff-dev,
                libwebkitgtk-dev (>= 1.6.1),
                libwmf-dev (>= 0.2.8),
                libx11-dev,
@@ -72,12 +73,13 @@ Description: Libraries for the GNU Image Manipulation Program
 
 Package: gimp
 Architecture: any
-Provides: gimp-helpbrowser, gimp-python
+Provides: gimp-python
 Depends: libgimp2.0 (>= ${source:Upstream-Version}),
          libgimp2.0 (<= ${source:Upstream-Version}-z),
          gimp-data (>= ${source:Upstream-Version}),
          gimp-data (<= ${source:Upstream-Version}-z),
          python-gtk2 (>= 2.8.0),
+         libgdk-pixbuf2.0-0 (>= 2.24.1),
          ${shlibs:Depends},
          ${python:Depends},
          ${misc:Depends}

@@ -7,30 +7,30 @@
 # when installing, and create a dependency on the old version of libgimp.
 # TODO: maybe set LD_LIBRARY_PATH instead?
 
-## WARNING: compiling without -O2 (DEB_BUILD_OPTIONS=noopt) may produce
-## undesired effects, especially when scaling JPEG images
-
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/autotools.mk
+#include /usr/share/cdbs/1/rules/autoreconf.mk
 include /usr/share/cdbs/1/class/gnome.mk
 #include /usr/share/gnome-pkg-tools/1/rules/check-dist.mk
 
-LDFLAGS = -Wl,--as-needed
 # explicitly set PYTHON to be the versioned python binary, since dh_python2
 # will just end up depending on the pythonX.X package, and we don't want a
 # version mismatch between the installed python binary and the private python
 # modules.
 DEB_CONFIGURE_EXTRA_FLAGS := --disable-static \
 			--enable-python \
+			PYTHON=/usr/bin/`pyversions -d` \
 			--enable-default-binary \
-			--enable-gtk-doc PYTHON=/usr/bin/`pyversions -d`
+			--enable-gtk-doc
+			--with-lcms=lcms2 \
+			--without-webkit
 #DEB_BUILDDIR := $(DEB_SRCDIR)/builddir
-
+DEB_BUILD_PARALLEL := 1
 DEB_CONFIGURE_SCRIPT="./autogen.sh"
 
 DEB_DH_SHLIBDEPS_ARGS_ALL := -Llibgimp2.0 -l$(CURDIR)/debian/libgimp2.0/usr/lib
-# exclude this since we manually add the Recommends in debian/control
-DEB_DH_SHLIBDEPS_ARGS_gimp := -Xlibcontroller-midi.so
+# exclude this since we manually add the Suggests in debian/control:
+DEB_DH_SHLIBDEPS_ARGS_gimp := -Xusr/lib/gimp/2.0/modules/libcontroller-midi.so
 DEB_DH_MAKESHLIBS_ARGS_gimp := -X/usr/lib/gimp/2.0/modules/
 #DEB_DH_MAKESHLIBS_ARGS_libgimp2.0 += -V -- -c4
 
@@ -38,11 +38,6 @@ DEB_DH_MAKESHLIBS_ARGS_gimp := -X/usr/lib/gimp/2.0/modules/
 #	rm -rf $(DEB_BUILDDIR)
 
 common-install-impl::
-	# Remove compiled python files from the distribution, they're compiled
-	# in postrm by dh_python2
-	# TODO: is this still needed?
-	find $(CURDIR)/debian/tmp -name "*.py[co]" -delete
-
 	# Remove all libtool .la files
 	find $(CURDIR)/debian/tmp/usr/lib -name "*.la" -delete
 
