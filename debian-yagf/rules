@@ -1,9 +1,6 @@
 #!/usr/bin/make -f
 
-CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
-CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(CPPFLAGS)
-LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
-export CPPFLAGS CXXFLAGS LDFLAGS
+LDFLAGS += -Wl,--as-needed
 
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""

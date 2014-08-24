@@ -1,0 +1,16 @@
+Description: fix library path on amd64 systems
+Forwarded: not-needed
+Last-Update: 2014-04-05
+Author: Boris Pek <tehnick-8@mail.ru>
+
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -12,7 +12,7 @@ if (CMAKE_SIZEOF_VOID_P EQUAL 8)
+     endif (EXISTS "${CMAKE_INSTALL_PREFIX}lib64")
+     set_property (GLOBAL PROPERTY FIND_LIBRARY_USE_LIB64_PATHS TRUE)
+ endif(CMAKE_SIZEOF_VOID_P EQUAL 8)
+-add_definitions( -DPRILIBRARY_PATH="${CMAKE_INSTALL_PREFIX}lib${LIB_PATH_SUFFIX}/yagf/")
++add_definitions( -DPRILIBRARY_PATH="${CMAKE_INSTALL_PREFIX}lib/yagf/")
+ 
+ # following 2 lines define where interface translations will be installed
+ set(QML_DESTINATION share/yagf/translations/)
