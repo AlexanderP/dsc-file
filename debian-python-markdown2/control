@@ -1,0 +1,20 @@
+Source: python-markdown2
+Section: python
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 9), python-all (>= 2.6.6-3~)
+Standards-Version: 3.9.5
+Homepage: https://github.com/trentm/python-markdown2
+
+Package: python-markdown2
+Architecture: any
+Depends: ${python:Depends}, ${misc:Depends}
+Description: Python implementation of Markdown
+ This is a fast and complete Python implementation 
+ of Markdown. It was written to closely match the behaviour of 
+ the original Perl-implemented Markdown.pl. Markdown2 also 
+ comes with a number of extensions (called "extras") for 
+ things like syntax coloring, tables, header-ids. See the 
+ "Extra Syntax" section below. "markdown2" supports all 
+ Python versions from 2.4 to 3.3 (and pypy and jython, 
+ though I don't frequently test those).
