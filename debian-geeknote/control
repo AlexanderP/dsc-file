@@ -1,0 +1,24 @@
+Source: geeknote
+Section: misc
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 9), python-all (>= 2.6.6-3~), python-setuptools
+Standards-Version: 3.9.5
+Homepage: http://www.geeknote.me
+
+Package: geeknote
+Architecture: any
+Depends: ${python:Depends}, ${misc:Depends},  python-thrift,
+ python-bs4, python-markdown2, python-sqlalchemy, 
+ python-html2text, python-evernote, python-oauth2
+Description: command line client for Evernote
+ Geeknote is a command line client for Evernote that can be use on 
+ Linux, FreeBSD and OS X.
+ It allows you to:
+   * create notes in your Evernote account;
+   * create tags, notebooks;
+   * use Evernote search in console with different filters;
+   * edit notes directly in console using any editor: nano, vim, 
+     emacs, mcedit;
+   * sync your local files, directories with Evernote;
+   * use Evernote with cron or any scripts.
