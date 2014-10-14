@@ -1,33 +1,17 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
-DEBIAN_CODENAME = $(shell echo $$DIST)
-ifeq "$(DEBIAN_CODENAME)" ""
-	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
-endif
-ifneq (,$(filter $(DEBIAN_CODENAME),precise wheezy sid quantal raring jessie saucy trusty)) 
-	CONTROL = control.jpeg8
-else
-	CONTROL = control.jpeg62
-endif
-ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
-	BUILDDEBFLAGS= -- -Zlzma -z9
-else
-	BUILDDEBFLAGS= -- -Zxz -z9
-endif
-
+BUILDDEBFLAGS= -- -Zxz -z9
 
 %:
 	dh --parallel $@
 
 override_dh_auto_configure:
 	dh_testdir
-	cp debian/$(CONTROL) debian/control
 	dh_auto_configure
 
 override_dh_auto_clean:
 	dh_testdir
-	cp debian/$(CONTROL) debian/control
 	dh_auto_clean
 
 override_dh_builddeb:
