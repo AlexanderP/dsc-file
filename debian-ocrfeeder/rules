@@ -16,7 +16,7 @@ endif
 
 
 %:
-	dh $@ --with python2
+	dh $@ --with python2,autoreconf
 
 override_dh_auto_configure:
 	./autogen.sh

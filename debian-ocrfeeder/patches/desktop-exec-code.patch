@@ -1,0 +1,15 @@
+From: Alberto Garcia <berto@igalia.com>
+Subject: Add code to the Exec key in order to open a file
+Index: ocrfeeder/resources/ocrfeeder.desktop.in
+===================================================================
+--- ocrfeeder.orig/resources/ocrfeeder.desktop.in
++++ ocrfeeder/resources/ocrfeeder.desktop.in
+@@ -4,7 +4,7 @@ Type=Application
+ _Name=OCRFeeder
+ _Comment=The complete OCR suite.
+ TryExec=ocrfeeder
+-Exec=ocrfeeder
++Exec=ocrfeeder -i %f
+ Icon=/usr/share/ocrfeeder/icons/ocrfeeder.svg
+ MimeType=image/bmp;image/gif;image/jpeg;image/jpg;image/pjpeg;image/png;image/tiff;
+ Categories=Application;Office;

@@ -1,0 +1,17 @@
+From: lk@gayinside.net
+Subject: Call gdk_threads_enter() before gtk_main()
+Bug-Debian: https://bugs.debian.org/766554
+Index: ocrfeeder/src/ocrfeeder/studio/studioBuilder.py
+===================================================================
+--- ocrfeeder.orig/src/ocrfeeder/studio/studioBuilder.py
++++ ocrfeeder/src/ocrfeeder/studio/studioBuilder.py
+@@ -161,7 +161,9 @@ class Studio:
+ 
+     def run(self):
+         Gdk.threads_init()
++        Gdk.threads_enter()
+         Gtk.main()
++        Gdk.threads_leave()
+ 
+     def addImage(self, widget):
+         file_open_dialog = widgetPresenter.FileDialog('open', file_filters = [(_('Images'), ['image/*'], [])])
