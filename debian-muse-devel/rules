@@ -28,6 +28,8 @@ override_dh_install:
 	find $(CURDIR)/debian/muse-devel/ -name "LICENSE" -delete
 	find $(CURDIR)/debian/muse-devel/ -name "ChangeLog*" -delete
 	dh_install --remaining-packages
+	#rm -rf $(CURDIR)/debian/muse-devel/usr/lib/muse/modules/lv2Gtk2Helper64.so
+	#rm -rf $(CURDIR)/debian/muse-devel/usr/lib/muse/modules/lv2Gtk2Helper32.so
 
 override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
