@@ -13,10 +13,13 @@ else
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
+SVNREV=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | sed 's/.*svn//g' | sed 's/-.*//g')
+
 override_dh_auto_clean:
 	[ ! -f src/Makefile ] || dh_auto_clean
 
 override_dh_auto_build:
+	sed 's/0UNKNOWN/$(SVNREV)/g' -i $(CURDIR)/get_svn_revision.sh
 	dh_auto_build -- $(MAKE_OPTS) DOC_PATH=\\\"/usr/share/doc/smplayer\\\"
 
 override_dh_auto_install:
