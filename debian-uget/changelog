@@ -1,3 +1,31 @@
+uget (2.0-0+nmu1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream release.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 01 Jun 2015 19:42:52 +0300
+
+uget (1.10.4-1) unstable; urgency=low
+
+  * New upstream release. Closes: #735937
+  * Updated Standard-Version to 3.9.5
+  * Added 03-uglib_missing_potfile.patch: Avoid missing translate file
+  * Updated debian/control canonicalize VCS-* fields 
+  * Updated year in debian/copyright
+
+ -- Elías Alejandro Año Mendoza <ealmdz@gmail.com>  Sat, 25 Jan 2014 21:29:41 -0500
+
+uget (1.10.3-1) unstable; urgency=low
+
+  * New upstream release
+  * Updated Standard-Version to 3.9.4
+  * Changed Build-Depends to libgtk-3-dev instead libgtk2.0-dev
+  * Updated year in debian/copyright
+  * Updated regular expression in debian/watch
+  * Updated debian/rules according debhelper 9
+
+ -- Elías Alejandro Año Mendoza <ealmdz@gmail.com>  Thu, 28 Mar 2013 11:25:10 -0500
+
 uget (1.8.2-1) unstable; urgency=low
 
   * New upstream stable release.
