@@ -20,10 +20,11 @@ OLDVERSIONUTILS1=$(shell seq 20 $(OLDVERSIONUTILS))
 OLDVERSIONsUTILS=$(shell for i in $(OLDVERSIONUTILS1) ; do  echo libvacuumutils$$i, ; done)
 
 CMAKEOPT= -DCMAKE_BUILD_TYPE=Release -DPLUGIN_statistics=OFF
-VERSION=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | grep svn | wc -l)
+VERSION=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | grep git | wc -l)
 ifneq (,$(filter 1,$(VERSION)))
-	REV=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | sed 's/.*svn//' | sed 's/-.*//')
-	CMAKEOPT+= -DVER_STRING=$(REV)
+	COMMIT=$(shell dpkg-parsechangelog | grep '* Commit' | awk -F ': ' '{print $$2}')
+	DATE=$(shell dpkg-parsechangelog | grep '* Date' | awk -F ': ' '{print $$2}')
+	CMAKEOPT+= -DGIT_HASH=$(COMMIT) -DGIT_DATE=$(DATE)
 endif
 
 override_dh_clean:
