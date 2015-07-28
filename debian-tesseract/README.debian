@@ -1,0 +1,27 @@
+Upstream user documentation is at
+
+   https://github.com/tesseract-ocr/tesseract/wiki
+
+And there is some programmer documentation at
+
+   http://tesseract-ocr.github.io
+
+If you don't care about language training, you may stop reading now.
+Normal users don't do any training, and can (for example) install
+Japanese support with a single command.
+
+  apt-get install tessseract-ocr-jpn
+
+For very advanced users, it is possible to run the training scripts
+which have been slightly customized for Debian. Again using Japanese
+as an example, here are the commands. Currently it is easier to
+install all possible fonts rather than carefully figure out exactly
+which ones are required. Definitely room for improvement.
+
+  get clone https://github.com/tesseract-ocr/langdata.git
+  apt-get install fonts-noto-cjk fonts-japanese-mincho.ttf fonts-takao-gothic fonts-vlgothic
+  tesstrain.sh --lang jpn --langdata_dir langdata
+
+
+
+

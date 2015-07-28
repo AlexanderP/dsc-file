@@ -2,11 +2,8 @@ Source: tesseract
 Section: graphics
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7.0.50~), 
-                libtool, 
-                automake, 
-                libleptonica-dev, libtiff5-dev
-Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 7.0.50~), libleptonica-dev (>= 1.70~), automake, libtool, libpango1.0-dev, libcairo2-dev, libicu-dev
+Standards-Version: 3.9.6
 Homepage: http://code.google.com/p/tesseract-ocr/
 
 Package: tesseract-ocr-dev
@@ -28,29 +25,39 @@ Description: Development files for the tesseract command line OCR tool
  it, but since then it has been improved extensively by Google and is
  probably one of the most accurate open source OCR engines
  available. It can read a wide variety of image formats and convert
- them to text in over 40 languages.
+ them to text in over 40 languages. This package includes the development
+ files, static library, and header files.
 
 Package: libtesseract3
 Breaks: tesseract-ocr (<< 3.01~), ocropus (<< 0.4.0~)
 Replaces: tesseract-ocr (<< 3.01~)
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Command line OCR tool
+Description: Tesseract OCR library
  The Tesseract OCR engine was one of the top 3 engines in the 1995
  UNLV Accuracy test. Between 1995 and 2006 it had little work done on
  it, but since then it has been improved extensively by Google and is
  probably one of the most accurate open source OCR engines
  available. It can read a wide variety of image formats and convert
- them to text in over 40 languages.
+ them to text in over 40 languages. This package includes the shared
+ library.
 
 Package: tesseract-ocr
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, tesseract-ocr-eng, libtesseract3
+Depends: ${shlibs:Depends}, ${misc:Depends}, tesseract-ocr-eng (>= 3.01~), tesseract-ocr-osd, tesseract-ocr-equ, libtesseract3 (>= 3.03~)
 Replaces: tesseract-ocr-data
-Description: Command line OCR tool
+Description: Tesseract command line OCR tool
  The Tesseract OCR engine was one of the top 3 engines in the 1995
  UNLV Accuracy test. Between 1995 and 2006 it had little work done on
  it, but since then it has been improved extensively by Google and is
  probably one of the most accurate open source OCR engines
  available. It can read a wide variety of image formats and convert
- them to text in over 40 languages.
+ them to text in over 40 languages. This package includes the command
+ line tool.
+
+Package: tesseract-ocr-all
+Architecture: all
+Depends: ${misc:Depends}, tesseract-ocr, tesseract-ocr-afr, tesseract-ocr-amh, tesseract-ocr-ara, tesseract-ocr-asm, tesseract-ocr-aze, tesseract-ocr-aze-cyrl, tesseract-ocr-bel, tesseract-ocr-ben, tesseract-ocr-bod, tesseract-ocr-bos, tesseract-ocr-bul, tesseract-ocr-cat, tesseract-ocr-ceb, tesseract-ocr-ces, tesseract-ocr-chi-sim, tesseract-ocr-chi-tra, tesseract-ocr-chr, tesseract-ocr-cym, tesseract-ocr-dan, tesseract-ocr-dan-frak, tesseract-ocr-deu, tesseract-ocr-deu-frak, tesseract-ocr-dzo, tesseract-ocr-ell, tesseract-ocr-eng, tesseract-ocr-enm, tesseract-ocr-epo, tesseract-ocr-equ, tesseract-ocr-est, tesseract-ocr-eus, tesseract-ocr-fas, tesseract-ocr-fin, tesseract-ocr-fra, tesseract-ocr-frk, tesseract-ocr-frm, tesseract-ocr-gle, tesseract-ocr-gle-uncial, tesseract-ocr-glg, tesseract-ocr-grc, tesseract-ocr-guj, tesseract-ocr-hat, tesseract-ocr-heb, tesseract-ocr-hin, tesseract-ocr-hrv, tesseract-ocr-hun, tesseract-ocr-iku, tesseract-ocr-ind, tesseract-ocr-isl, tesseract-ocr-ita, tesseract-ocr-ita-old, tesseract-ocr-jav, tesseract-ocr-jpn, tesseract-ocr-kan, tesseract-ocr-kat, tesseract-ocr-kat-old, tesseract-ocr-kaz, tesseract-ocr-khm, tesseract-ocr-kir, tesseract-ocr-kor, tesseract-ocr-kur, tesseract-ocr-lao, tesseract-ocr-lat, tesseract-ocr-lav, tesseract-ocr-lit, tesseract-ocr-mal, tesseract-ocr-mar, tesseract-ocr-mkd, tesseract-ocr-mlt, tesseract-ocr-msa, tesseract-ocr-mya, tesseract-ocr-nep, tesseract-ocr-nld, tesseract-ocr-nor, tesseract-ocr-ori, tesseract-ocr-osd, tesseract-ocr-pan, tesseract-ocr-pol, tesseract-ocr-por, tesseract-ocr-pus, tesseract-ocr-ron, tesseract-ocr-rus, tesseract-ocr-san, tesseract-ocr-sin, tesseract-ocr-slk, tesseract-ocr-slk-frak, tesseract-ocr-slv, tesseract-ocr-spa, tesseract-ocr-spa-old, tesseract-ocr-sqi, tesseract-ocr-srp, tesseract-ocr-srp-latn, tesseract-ocr-swa, tesseract-ocr-swe, tesseract-ocr-syr, tesseract-ocr-tam, tesseract-ocr-tel, tesseract-ocr-tgk, tesseract-ocr-tgl, tesseract-ocr-tha, tesseract-ocr-tir, tesseract-ocr-tur, tesseract-ocr-uig, tesseract-ocr-ukr, tesseract-ocr-urd, tesseract-ocr-uzb, tesseract-ocr-uzb-cyrl, tesseract-ocr-vie, tesseract-ocr-yid
+Description: Tesseract OCR with all language packages
+ This is a metapackage for Tesseract OCR and includes all supported
+ languages.

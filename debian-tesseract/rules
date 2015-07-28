@@ -1,7 +1,9 @@
 #!/usr/bin/make -f
 #export DH_VERBOSE=1
 
-CFLAGS = -Wall -g -fPIC -DTESSDATA_PREFIX=/usr/share/tesseract-ocr/
+CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
+LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
+CFLAGS += -Wall -g -fPIC -DTESSDATA_PREFIX=/usr/share/tesseract-ocr/
 
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
@@ -14,7 +16,15 @@ else
 endif
 
 %:
-	dh $@ --parallel
+	dh $@
+
+override_dh_auto_build:
+	make
+	make training
+
+override_dh_auto_install:
+	$(MAKE) DESTDIR=$$(pwd)/debian/tmp prefix=/usr install 
+	$(MAKE) DESTDIR=$$(pwd)/debian/tmp prefix=/usr training-install
 
 override_dh_auto_test:
 
@@ -24,7 +34,8 @@ override_dh_auto_clean:
 
 override_dh_auto_configure:
 	./autogen.sh
-	./configure --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info CFLAGS="$(CFLAGS)" CXXFLAGS="$(CFLAGS)" LDFLAGS="-Wl,-z,defs" --with-debug
+	./configure --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info CFLAGS="$(CFLAGS)" CXXFLAGS="$(CFLAGS)" LDFLAGS="-Wl,-z,defs $(LDFLAGS)"
+
 
 override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
