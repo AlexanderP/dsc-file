@@ -1,2 +1,3 @@
 version=3
-http://sf.net/gscan2pdf/gscan2pdf-([\d\.]*)\.tar\.gz
+opts="pgpsigurlmangle=s/$/.gpg/" \
+ http://sf.net/gscan2pdf/gscan2pdf-([\d\.]*)\.tar\.gz
