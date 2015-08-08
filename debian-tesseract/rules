@@ -15,12 +15,20 @@ else
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
+ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+endif
+
+ifeq (,$(NUMJOBS))
+	NUMJOBS = 1
+endif
+
 %:
-	dh $@
+	dh $@ --parallel
 
 override_dh_auto_build:
-	make
-	make training
+	make -j$(NUMJOBS)
+	make -j$(NUMJOBS) training
 
 override_dh_auto_install:
 	$(MAKE) DESTDIR=$$(pwd)/debian/tmp prefix=/usr install 
