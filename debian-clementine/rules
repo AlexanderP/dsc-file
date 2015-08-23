@@ -27,6 +27,11 @@ override_dh_auto_build:
 
 override_dh_auto_clean:
 	rm -f debian/clementine.1
+	rm -f dist/Info.plist
+	rm -f dist/clementine.spec
+	rm -f dist/maketarball.sh
+	rm -f dist/windows/clementine.nsi
+	rm -f src/translations/translations.pot
 	dh_auto_clean
 
 override_dh_installchangelogs:
