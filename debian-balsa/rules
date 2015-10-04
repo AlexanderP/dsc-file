@@ -19,7 +19,7 @@ CONFIGURE_FLAGS = --disable-smime \
 			--with-canberra \
 			--with-unique \
 			--enable-threads \
-			--without-nm
+			--without-nm --with-html-widget=webkit
 
 #export DH_ALWAYS_EXCLUDE := COPYING:COPYING.GPLv2:COPYING.LGPLv2.1
 
@@ -37,7 +37,7 @@ endif
 	dh --parallel $@
 
 override_dh_auto_configure:
-	./autogen.sh
+	./autogen.sh $(CONFIGURE_FLAGS)
 	dh_auto_configure -- $(CONFIGURE_FLAGS)
 
 override_dh_builddeb:
