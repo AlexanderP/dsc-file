@@ -31,6 +31,7 @@ override_dh_auto_clean:
 	rm -f dist/clementine.spec
 	rm -f dist/maketarball.sh
 	rm -f dist/windows/clementine.nsi
+	rm -f dist/windows/clementine-portable.nsi
 	rm -f src/translations/translations.pot
 	dh_auto_clean
 

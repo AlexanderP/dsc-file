@@ -1,10 +1,10 @@
 clementine for Debian
 =====================
 
-The current upstream version of clementine use some embed copy code located in 3rdparty/*. 
+The current original upstream version of clementine use some embedded copy code located in 3rdparty/*. 
 
-Some of them have an equivalent Debian package
-----------------------------------------------
+Some of them can be replaced by an equivalent Debian package
+------------------------------------------------------------
 
 * libprojectm2: It is a shared library already packaged in Debian but some patches are
 needed to compile Clementine with it. Patches are now included since version 2.0.1+dfsg-6
@@ -12,25 +12,25 @@ of libprojectm2. (see #600653)
 
 * libqxt: It is a shared library just packaged in Debian.
 
-* libechonest: It is a shared library just packaged in Debian.
-
-* chromaprint: It is a shared library packaged in Debian.
-
-* sqlite: It is a shared library packaged in Debian.
-  Note that recent upgrade of sqlite package breaks the global search
-  feature of clementine. For the moment clementine developers don't care about
-  this incompatibility and strongly encourage maintainers to use their embedded
-  old version of sqlite statically. But this is not an acceptable solution in a
-  Debian context. So for the moment we still force the use of the system version
-  of sqlite by set the cmake options `-DSTATIC_SQLITE=OFF` and `-DI_HATE_MY_USERS=ON`.
-  For more information see:
-    - line 318 of CMakeList.txt
-    - http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=722471
-    - http://code.google.com/p/clementine-player/issues/detail?id=3865
-    - http://code.google.com/p/clementine-player/issues/detail?id=3847
+* taglib: It is a shared library packaged in Debian.
 
 Some of them must be used in this package
 -----------------------------------------
+
+* qsqlite: It is a shared library also packaged in Debian (libqt4-sql-sqlite)
+  but not usable for the reasons above.
+  There is a dispute around sqlite usage in clementine and Debian DFSG rules.
+  Note that in previous version, clementine developers recommended to use an
+  embedded version of the entire sqlite3 library which was not acceptable in
+  Debian. So we always remove the embedded copy and force the use of the system
+  version of sqlite by set the cmake options. Past stories here:
+    - http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=722471
+    - http://code.google.com/p/clementine-player/issues/detail?id=3865
+    - http://code.google.com/p/clementine-player/issues/detail?id=3847
+  Now clementine developers no longer use/include an embedded version of
+  sqlite3 which is a good point. However they now stricly require to use a
+  embedded version of the Qt4 sqlite plugin which include specific changes for
+  clementine. The explanation is at line 318 of CMakeList.txt file.
 
 * qtsingleapplication: It is a small shared library not packaged in Debian 
 unfortunately. It is used by others Debian package as embed code copy too.
@@ -48,17 +48,17 @@ Upstream author recommends to use it as an embed copy :
 In addition, Clementine upstream developers want to use their own embed version
 for the moment. (see CMakeLists.txt)
 
+* gmock: It is a test framework. There are a package google-mock in Debian but
+  it does not provide any shared libraries and recommends to use gmock
+  framework staticaly like clementine developers does. See README.Debian file
+  of google-mock package.
+
 Some of them must not be used in this package
 ---------------------------------------------
 
 * qtwin: Not needed on GNU/Linux system so not used in this package.
 
 * tinysvcmdns: Not needed on GNU/Linux system so not used in this package.
-
-* mingw: Not needed on GNU/Linux system so not used in this package.
-
-* gmock: It is just used for tests and tests require X server running. So it is not
-used in this package.
 
 * fancytabwidget: Only useful for certain experimental options.
 
@@ -67,7 +67,10 @@ used in this package.
 * google-brakepad: Only useful for reporting bugs using the google-breakpad service
   not needed in Debian.
 
----
+* vreen: Only useful to enable the optional VK module. No Debian package available.
+
+"Easter eggs"
+-------------
 
 The current upstream version of clementine also use some non-dfsg files located in data/.
 They are mainly used for some "Easter eggs" displayed in clementine interface.
@@ -76,17 +79,16 @@ For the reasons above, the following components have been removed in the DFSG De
 -------------------------------------------------------------------------------------------------------------
  
 * 3rdparty/fancytabwidget
-* 3rdparty/libechonest
 * 3rdparty/libprojectm
-* 3rdparty/qsqlite
 * 3rdparty/qtwin
+* 3rdparty/vreen
+* 3rdparty/taglib
 * 3rdparty/qxt
 * data/lumberjacksong.txt
 * data/hypnotoad.gif
 * 3rdparty/google-breakpad
-* 3rdparty/chromaprint
 * 3rdparty/SPMediaKeyTap
 * mingw/
 * 3rdparty/tinysvcmdns/
 
- -- Thomas Pierson <contact@thomaspierson.fr>, Sat, 2 Nov 14:15:40 +0200
+ -- Thomas Pierson <contact@thomaspierson.fr>, Sun, 4 Oct 2015 14:15:40 +0200

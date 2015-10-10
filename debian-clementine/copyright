@@ -91,7 +91,7 @@ License: GPL-3+
  On Debian systems, the complete text of the GNU General Public
  License can be found in the file /usr/share/common-licenses/GPL-3'.
 
-License: BSD
+License: BSD-3-clause
  Copyright (c) The Regents of the University of California.
  All rights reserved.
  .
@@ -156,20 +156,150 @@ License: MIT
   THE SOFTWARE.
 
 Files: *
-Copyright: 2010-2012, David Sansome <me@davidsansome.com>
-License: GPL-3
+Copyright: 2009-2015, David Sansome <me@davidsansome.com>
+           2010-2015, John Maguire <john.maguire@gmail.com>
+License: GPL-3+
 
 Files: cmake/*
 Copyright: 2000-2009, Kitware, Inc., Insight Software Consortium
-License: BSD
+License: BSD-3-clause
 
 Files: debian/*
 Copyright: 2010, Thomas Pierson <contact@thomaspierson.fr>
 License: GPL-3
 
-Files: src/engines/enginebase.*
+Files: src/core/*
+       src/covers/*
+       src/internet/*
+Copyright: 2010-2014, John Maguire <john.maguire@gmail.com>
+           2010-2014, David Sansome <me@davidsansome.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/core/mergedproxymodel.*
+       src/core/tagreaderclient.*
+       src/core/taskmanager.*
+       src/core/urlhandler.*
+       src/covers/amazoncoverprovider.*
+       src/covers/kittenloader.*
+       src/internet/core/oauthenticator.*
+       src/internet/digitally/*
+Copyright: 2010-2011, David Sansome <me@davidsansome.com>
+           2011, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2011-2012, 2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/core/mimedata.h
+       src/core/mpris_common.h
+       src/covers/albumcover*
+       src/covers/coverproviders.*
+Copyright: 2010, 2012, 2014, John Maguire <john.maguire@gmail.com>
+  2010-2011, Paweł Bara <keirangtp@gmail.com>
+  2010-2012, David Sansome <me@davidsansome.com>
+  2012, 2014, John Maguire <john.maguire@gmail.com>
+  2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/vk/*
+Copyright: 2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014, Maltsev Vlad <shedwardx@gmail.com>
+           2014, Ivan Leontiev <leont.ivan@gmail.com>
+License: GPL-3+
+
+Files: src/networkremote/incomingdataparser.cpp
+       src/networkremote/networkremote.cpp
+       src/networkremote/networkremotehelper.cpp
+       src/networkremote/outgoingdatacreator.cpp
+       src/networkremote/remoteclient.cpp
+       src/networkremote/songsender.cpp
+Copyright: 2012, Andreas Muttscheller <asfa194@gmail.com>
+           2013, Andreas Muttscheller <asfa194@gmail.com>
+License: GPL-3+
+
+Files: src/internet/seafile/seafilesettingspage.h
+       src/internet/seafile/seafiletree.cpp
+       src/internet/seafile/seafiletree.h
+       src/internet/seafile/seafileurlhandler.cpp
+       src/internet/seafile/seafileurlhandler.h
+Copyright: 2014, Chocobozzz <djidane14ff@hotmail.fr>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/analyzers/nyancatanalyzer.*
+       src/internet/core/internetviewcontainer.cpp
+       src/internet/icecast/icecastservice.h
+       src/internet/internetradio/savedradio.h
+Copyright: 2010-2014, John Maguire <john.maguire@gmail.com>
+  2011, Tyler Rhodes <tyler.s.rhodes@gmail.com>
+  2011-2012, 2014, David Sansome <me@davidsansome.com>
+  2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/ripper/ripcddialog.*
+       src/ripper/ripper.*
+Copyright: 2014, Andre Siviero <altsiviero@gmail.com>
+License: GPL-3+
+
+Files: src/widgets/clickablelabel.*
+       src/widgets/renametablineedit.*
+Copyright: 2010-2011, Andrea Decorte <adecorte@gmail.com>
+License: GPL-3+
+
+Files: src/core/appearance.*
+       src/internet/core/internetsongmimedata.h
+       src/internet/soundcloud/soundcloudservice.h
+Copyright: 2012, 2014, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/analyzers/glanalyzer2.*
+       src/analyzers/glanalyzer3.*
+Copyright: 2004, Enrico Ros <eros.kde@email.it>
+           2009, David Sansome <davidsansome@gmail.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/widgets/fancytabwidget.*
+       src/widgets/stylehelper.*
+Copyright: 2010, Nokia Corporation
+License: LGPL-2.1+
+
+Files: src/internet/subsonic/subsonicsettingspage.h
+       src/internet/subsonic/subsonicurlhandler.*
+Copyright: 2011-2013, Alan Briolat <alan.briolat@gmail.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/core/internetservice.*
+       src/internet/internetradio/savedradio.cpp
+Copyright: 2010, 2014, John Maguire <john.maguire@gmail.com>
+           2009-2012, David Sansome <me@davidsansome.com>
+           2011, Paweł Bara <keirangtp@gmail.com>
+           2011, Tyler Rhodes <tyler.s.rhodes@gmail.com>
+           2011, 2012, 2014, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/covers/coverprovider.h
+       src/covers/lastfmcoverprovider.h
+       src/internet/icecast/icecastmodel.cpp
+Copyright: 2010, 2011, David Sansome <davidsansome@gmail.com>
+           2011, Paweł Bara <keirangtp@gmail.com>
+           2011-2012, 2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/ui/flowlayout.*
+Copyright: 2010, Nokia Corporation
+License: BSD-3-clause
+
+Files: src/widgets/sliderwidget.*
 Copyright: 2003, Mark Kretschmann
-           2004-2005, Max Howell, <max.howell@methylblue.com>
+           2005, Gábor Lehel
 License: GPL-2+
 
 Files: src/engines/gstengine.*
@@ -178,69 +308,586 @@ Copyright: 2003-2005, Mark Kretschmann <markey@web.de>
            2006, Paul Cifarelli <paul@cifarelli.net>
 License: GPL-2+
 
-Files: src/widgets/sliderwidget.*
-Copyright: 2003, Mark Kretschmann <markey@web.de>
-           2005, Gábor Lehel <illissius@gmail.com>
-License: GPL-2+
+Files: src/analyzers/glanalyzer.*
+Copyright: 2004, Adam Pigg <adam@piggz.co.uk>
+           2009, David Sansome <davidsansome@gmail.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
 
-Files: src/widgets/fancytabwidget.*
-       src/widgets/stylehelper.*
-Copyright: 2010, Nokia Corporation
-License: LGPL-2.1
+Files: src/core/songloader.*
+Copyright: 2010-2014, David Sansome <me@davidsansome.com>
+           2010-2014, John Maguire <john.maguire@gmail.com>
+           2011, Paweł Bara <keirangtp@gmail.com>
+           2011-2012, 2014, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2014, Alexander Bikadorov <abiku@cs.tu-berlin.de>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
 
-Files: src/ui/flowlayout.*
-Copyright: 2010, Nokia Corporation
-License: BSD
+Files: src/internet/jamendo/jamendoservice.h
+       src/internet/magnatune/magnatunesettingspage.cpp
+Copyright: 2010, 2011, 2014, John Maguire <john.maguire@gmail.com>
+           2010-2012, David Sansome <me@davidsansome.com>
+           2011, Andrea Decorte <adecorte@gmail.com>
+           2011, Tyler Rhodes <tyler.s.rhodes@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
 
-Files: src/analyzers/analyzerbase.*
-Copyright: 2003-2005, Max Howell <max.howell@methylblue.com>
-License: GPL-2+
+Files: src/core/song.*
+Copyright: 2009-2012, 2014, David Sansome <me@davidsansome.com>
+           2010, 2012, 2014, John Maguire <john.maguire@gmail.com>
+           2010-2011, Paweł Bara <keirangtp@gmail.com>
+           2011, Angus Gratton <gus@projectgus.com>
+           2011-2012, 2014, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2012, Kacper "mattrick" Banasik <mattrick@jabster.pl>
+           2013, Joel Bradshaw <cincodenada@gmail.com>
+           2013, Martin Brodbeck <martin@brodbeck-online.de>
+           2013, Mateusz Kowalczyk <fuuzetsu@fuuzetsu.co.uk>
+           2013, Uwe Klotz <uwe.klotz@gmail.com>
+           2013-2014, Andreas <asfa194@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
 
-Files: src/analyzers/baranalyzer.*
-Copyright: 2003, Mark Kretschmann <markey@web.de>
+Files: src/internet/jamendo/jamendodynamicplaylist.*
+Copyright: 2010, 2014, John Maguire <john.maguire@gmail.com>
+           2010-2011, David Sansome <davidsansome@gmail.com>
+           2011, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/analyzers/analyzercontainer.*
+Copyright: 2010, 2014, John Maguire <john.maguire@gmail.com>
+           2010-2011, David Sansome <davidsansome@gmail.com>
+           2011-2012, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2013, Vasily Fomin <vasili.fomin@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014-2015, Mark Furneaux <mark@furneaux.ca>
+License: GPL-3+
+
+Files: src/internet/core/internetplaylistitem.*
+Copyright: 2009-2011, David Sansome <davidsansome@gmail.com>
+           2010, 2014, John Maguire <john.maguire@gmail.com>
+           2011, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2011, Tyler Rhodes <tyler.s.rhodes@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/core/internetview.cpp
+       src/internet/spotify/spotifyservice.h
+Copyright: 2009-2012, 2014, David Sansome <me@davidsansome.com>
+           2011, Tyler Rhodes <tyler.s.rhodes@gmail.com>
+           2011-2012, 2014, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2011-2012, 2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/spotify/spotifyserver.*
+Copyright: 2011-2012, 2014, David Sansome <me@davidsansome.com>
+           2011-2012, 2014, John Maguire <john.maguire@gmail.com>
+           2014, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014, pie.or.paj <pie.or.paj@gmail.com>
+License: GPL-3+
+
+Files: src/internet/core/searchboxwidget.*
+Copyright: 2012, 2014, John Maguire <john.maguire@gmail.com>
+           2012, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014, Maltsev Vlad <shedwardx@gmail.com>
+License: GPL-3+
+
+Files: src/internet/soundcloud/soundcloudsettingspage.*
+Copyright: 2014, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/seafile/seafileservice.h
+       src/internet/seafile/seafilesettingspage.cpp
+Copyright: 2014, Chocobozzz <djidane14ff@hotmail.fr>
+           2014, David Sansome <me@davidsansome.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/core/internetshowsettingspage.*
+Copyright: 2014, Chocobozzz <florian.bigard@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
 License: GPL-3+
 
 Files: src/analyzers/boomanalyzer.*
-Copyright: 2003-2005, Max Howell <max.howell@methylblue.com>
+Copyright: 2004, Max Howell <max.howell@methylblue.com>
+           2009-2010, David Sansome <davidsansome@gmail.com>
+           2010, 2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014-2015, Mark Furneaux <mark@furneaux.ca>
 License: GPL-3+
-
-Files: src/analyzers/blockanalyzer.*
-Copyright: 2005, Mark Kretschmann <markey@web.de>
-           2003-2005, Max Howell <max.howell@methylblue.com>
-License: GPL-3+
-
-Files: src/analyzers/glanalyzer2.*
-       src/analyzers/glanalyzer3.*
-Copyright: 2004, Enrico Ros
-License: GPL-2+
-
-Files: src/analyzers/glanalyzer.*
-Copyright: 2004, Adam Pigg <adam@piggz.co.uk>
-License: GPL-2+
 
 Files: src/analyzers/sonogram.*
 Copyright: 2004, Melchior FRANZ <mfranz@kde.org>
+           2009-2010, David Sansome <davidsansome@gmail.com>
+           2010, 2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014-2015, Mark Furneaux <mark@furneaux.ca>
+License: GPL-3+
+
+Files: src/internet/core/internetmimedata.h
+       src/internet/core/internetview.h
+Copyright: 2009-2011, David Sansome <davidsansome@gmail.com>
+           2011, Tyler Rhodes <tyler.s.rhodes@gmail.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/core/settingsprovider.h
+       src/core/stylesheetloader.h
+Copyright: 2010, David Sansome <davidsansome@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/podcasts/podcastservice.*
+Copyright: 2012, 2014, John Maguire <john.maguire@gmail.com>
+           2012-2013, David Sansome <me@davidsansome.com>
+           2013-2014, Krzysztof A. Sobiecki <sobkas@gmail.com>
+           2014, Simeon Bird <sbird@andrew.cmu.edu>
+License: GPL-3+
+
+Files: src/internet/icecast/icecastservice.cpp
+       src/internet/somafm/somafmservice.cpp
+Copyright: 2010, 2012, 2014, John Maguire <john.maguire@gmail.com>
+           2010-2013, David Sansome <me@davidsansome.com>
+           2011, Paweł Bara <keirangtp@gmail.com>
+           2011, Tyler Rhodes <tyler.s.rhodes@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/core/internetviewcontainer.h
+       src/internet/magnatune/magnatuneservice.h
+Copyright: 2010-2012, David Sansome <me@davidsansome.com>
+           2011, Tyler Rhodes <tyler.s.rhodes@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/engines/enginebase.*
+Copyright: 2003, Mark Kretschmann
+           2004-2005, Max Howell, <max.howell@methylblue.com>
+           2010, David Sansome <me@davidsansome.com>
+License: GPL-3+
+
+Files: src/analyzers/fht.*
+Copyright: 2004, Melchior FRANZ <mfranz@kde.org>
+           2010, 2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/podcasts/podcastdeleter.*
+Copyright: 2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/transcoder/transcoderoptionsopus.*
+Copyright: 2013, Martin Brodbeck <martin@brodbeck-online.de>
+License: GPL-3+
+
+Files: src/globalsearch/vksearchprovider.*
+Copyright: 2013, Vlad Maltsev <shedwardx@gmail.com>
+License: GPL-3+
+
+Files: src/core/scoped_cftyperef.h
+       src/core/scoped_nsobject.h
+Copyright: 2010-2011, The Chromium Authors
+License: BSD-3-clause
+
+Files: src/core/timeconstants.h
+Copyright: 2011-2012, David Sansome <me@davidsansome.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: Apache-2.0
+
+Files: src/core/mpris2.*
+Copyright: 2010-2011, Paweł Bara <keirangtp@gmail.com>
+           2010-2012, David Sansome <me@davidsansome.com>
+           2012, 2014, John Maguire <john.maguire@gmail.com>
+           2013, Aggelos Biboudis <biboudis@gmail.com>
+           2013, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2013, TTSDA <ttsda@ttsda.cc>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/core/utilities.cpp
+Copyright: 2010-2012, 2014, John Maguire <john.maguire@gmail.com>
+           2010-2014, David Sansome <me@davidsansome.com>
+           2011, 2014, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2012, Alan Briolat <alan.briolat@gmail.com>
+           2012, Veniamin Gvozdikov <G.Veniamin@gmail.com>
+           2013, Glad Olus <gladolus@gmx.com>
+           2013, graehl <graehl@gmail.com>
+           2013-2014, Andreas <asfa194@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014, vkrishtal <krishtalhost@gmail.com>
+License: GPL-3+
+
+Files: src/internet/core/internetmodel.cpp
+Copyright: 2009-2014, David Sansome <me@davidsansome.com>
+           2011, Paweł Bara <keirangtp@gmail.com>
+           2011, Tyler Rhodes <tyler.s.rhodes@gmail.com>
+           2011-2012, 2014, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2012-2013, Alan Briolat <alan.briolat@gmail.com>
+           2012-2014, John Maguire <john.maguire@gmail.com>
+           2014, Chocobozzz <florian.bigard@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014, Maltsev Vlad <shedwardx@gmail.com>
+License: GPL-3+
+
+Files: src/internet/magnatune/magnatuneservice.cpp
+Copyright: 2010-2013, David Sansome <me@davidsansome.com>
+           2011, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2011, Paweł Bara <keirangtp@gmail.com>
+           2011, Tyler Rhodes <tyler.s.rhodes@gmail.com>
+           2012, 2014, John Maguire <john.maguire@gmail.com>
+           2013, Alan Briolat <alan.briolat@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/subsonic/subsonicservice.cpp
+Copyright: 2011-2013, Alan Briolat <alan.briolat@gmail.com>
+           2013, David Sansome <me@davidsansome.com>
+           2013, Ross Wolfson <ross.wolfson@gmail.com>
+           2013-2014, John Maguire <john.maguire@gmail.com>
+           2014, Chocobozzz <florian.bigard@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/subsonic/subsonicservice.h
+Copyright: 2011-2013, Alan Briolat <alan.briolat@gmail.com>
+           2013, David Sansome <me@davidsansome.com>
+           2013, Ross Wolfson <ross.wolfson@gmail.com>
+           2013-2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/subsonic/subsonicsettingspage.cpp
+Copyright: 2011, 2013, Alan Briolat <alan.briolat@gmail.com>
+           2013, Ross Wolfson <ross.wolfson@gmail.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/core/commandlineoptions.h
+Copyright: 2010-2011, David Sansome <davidsansome@gmail.com>
+           2011, Andrea Decorte <adecorte@gmail.com>
+           2011, John Maguire <john.maguire@gmail.com>
+           2013, Kevin Cox <kevincox.ca@gmail.com>
+           2013, Mateusz Kowalczyk <fuuzetsu@fuuzetsu.co.uk>
+           2014, Alexander Bikadorov <abiku@cs.tu-berlin.de>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/core/globalshortcuts.h
+Copyright: 2010, 2014, John Maguire <john.maguire@gmail.com>
+           2010, David Sansome <davidsansome@gmail.com>
+           2010, Paweł Bara <keirangtp@gmail.com>
+           2011, Andrea Decorte <adecorte@gmail.com>
+           2013, Alexander Bikadorov <abiku@cs.tu-berlin.de>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/core/commandlineoptions.cpp
+Copyright: 2010, 2012, David Sansome <me@davidsansome.com>
+           2010-2012, 2014, John Maguire <john.maguire@gmail.com>
+           2012, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2013, Kevin Cox <kevincox.ca@gmail.com>
+           2013, Mateusz Kowalczyk <fuuzetsu@fuuzetsu.co.uk>
+           2014, Alexander Bikadorov <abiku@cs.tu-berlin.de>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/core/globalshortcuts.cpp
+Copyright: 2010, 2014, John Maguire <john.maguire@gmail.com>
+           2010, Paweł Bara <keirangtp@gmail.com>
+           2010-2011, David Sansome <davidsansome@gmail.com>
+           2013, Alexander Bikadorov <abiku@cs.tu-berlin.de>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/analyzers/baranalyzer.cpp
+Copyright: 2003, Mark Kretschmann <markey@web.de>
+           2009-2010, David Sansome <davidsansome@gmail.com>
+           2014, Alibek Omarov <a1ba.omarov@gmail.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014-2015, Mark Furneaux <mark@furneaux.ca>
+License: GPL-3+
+
+Files: src/analyzers/rainbowdashanalyzer.cpp
+Copyright: 2014, Alibek Omarov <a1ba.omarov@gmail.com>
+           2014, David Sansome <me@davidsansome.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014-2015, Mark Furneaux <mark@furneaux.ca>
+License: GPL-3+
+
+Files: src/analyzers/rainbowdashanalyzer.h
+Copyright: 2014, Alibek Omarov <a1ba.omarov@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014-2015, Mark Furneaux <mark@furneaux.ca>
+License: GPL-3+
+
+Files: src/core/player.cpp
+Copyright: 2009-2012, David Sansome <me@davidsansome.com>
+           2010-2011, 2014, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2010-2012, 2014, John Maguire <john.maguire@gmail.com>
+           2011, Andrea Decorte <adecorte@gmail.com>
+           2011, Paweł Bara <keirangtp@gmail.com>
+           2012, Anand <anandtp@live.in>
+           2012, Arash Abedinzadeh <arash.abedinzadeh@gmail.com>
+           2013, Andreas <asfa194@gmail.com>
+           2013, Kevin Cox <kevincox.ca@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014, Mark Furneaux <mark@romaco.ca>
+License: GPL-3+
+
+Files: src/core/player.h
+Copyright: 2009-2012, David Sansome <me@davidsansome.com>
+           2010, 2012, 2014, John Maguire <john.maguire@gmail.com>
+           2011, Andrea Decorte <adecorte@gmail.com>
+           2011, Paweł Bara <keirangtp@gmail.com>
+           2012, Anand <anandtp@live.in>
+           2013, Kevin Cox <kevincox.ca@gmail.com>
+           2014, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014, Mark Furneaux <mark@romaco.ca>
+License: GPL-3+
+
+Files: src/internet/lastfm/lastfmservice.cpp
+Copyright: 2009-2013, David Sansome <me@davidsansome.com>
+           2010-2012, 2014, John Maguire <john.maguire@gmail.com>
+           2011, Andrea Decorte <adecorte@gmail.com>
+           2012, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2012, Harald Sitter <sitter@kde.org>
+           2012, Kacper "mattrick" Banasik <mattrick@jabster.pl>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/jamendo/jamendoservice.cpp
+Copyright: 2010, 2014, John Maguire <john.maguire@gmail.com>
+           2010-2013, David Sansome <me@davidsansome.com>
+           2011, Andrea Decorte <adecorte@gmail.com>
+           2011, Paweł Bara <keirangtp@gmail.com>
+           2011, Tyler Rhodes <tyler.s.rhodes@gmail.com>
+           2014, Chocobozzz <florian.bigard@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/lastfm/lastfmservice.h
+Copyright: 2009-2013, David Sansome <me@davidsansome.com>
+           2010-2012, 2014, John Maguire <john.maguire@gmail.com>
+           2011, Andrea Decorte <adecorte@gmail.com>
+           2012, Harald Sitter <sitter@kde.org>
+           2012, Kacper "mattrick" Banasik <mattrick@jabster.pl>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/lastfm/lastfmsettingspage.cpp
+Copyright: 2009-2011, 2013, David Sansome <me@davidsansome.com>
+           2011, 2014, John Maguire <john.maguire@gmail.com>
+           2011, Andrea Decorte <adecorte@gmail.com>
+           2012, Kacper "mattrick" Banasik <mattrick@jabster.pl>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/core/database.*
+Copyright: 2010, 2012-2014, John Maguire <john.maguire@gmail.com>
+           2010-2011, Paweł Bara <keirangtp@gmail.com>
+           2010-2013, David Sansome <me@davidsansome.com>
+           2012, Marti Raudsepp <marti@juffo.org>
+           2012-2013, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2013, Andreas <asfa194@gmail.com>
+           2013, Uwe Klotz <uwe.klotz@gmail.com>
+           2014, Chocobozzz <djidane14ff@hotmail.fr>
+           2014, Krzysztof A. Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/core/organise.*
+       src/core/application.*
+Copyright: 2010, David Sansome <davidsansome@gmail.com>
+           2014, Andreas <asfa194@gmail.com>
+           2014, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/core/utilities.h
+Copyright: 2010-2012, David Sansome <me@davidsansome.com>
+           2011, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2011-2012, 2014, John Maguire <john.maguire@gmail.com>
+           2013, Andreas <asfa194@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014, vkrishtal <krishtalhost@gmail.com>
+License: GPL-3+
+
+Files: src/core/metatypes.cpp
+Copyright: 2012, 2014, John Maguire <john.maguire@gmail.com>
+           2013, Andreas <asfa194@gmail.com>
+           2013, pie.or.paj <pie.or.paj@gmail.com>
+           2014, David Sansome <me@davidsansome.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014, Maltsev Vlad <shedwardx@gmail.com>
+License: GPL-3+
+
+Files: src/covers/albumcoverloader.*
+Copyright: 2010-2012, 2014, John Maguire <john.maguire@gmail.com>
+           2010-2013, David Sansome <me@davidsansome.com>
+           2011, Paweł Bara <keirangtp@gmail.com>
+           2014, Andreas <asfa194@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/core/organiseformat.cpp
+Copyright: 2010-2011, 2014, David Sansome <me@davidsansome.com>
+           2011, Angus Gratton <gus@projectgus.com>
+           2012, Mateusz Kowalczyk <mk440@bath.ac.uk>
+           2013-2014, John Maguire <john.maguire@gmail.com>
+           2014, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/core/filesystemmusicstorage.cpp
+Copyright: 2010-2011, David Sansome <me@davidsansome.com>
+           2011, Angus Gratton <gus@projectgus.com>
+           2011, Jonathan Anderson <jontis@gmail.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014, vkrishtal <krishtalhost@gmail.com>
+License: GPL-3+
+
+Files: src/internet/core/internetmodel.h
+Copyright: 2009-2012, David Sansome <me@davidsansome.com>
+           2010, 2014, John Maguire <john.maguire@gmail.com>
+           2011, Tyler Rhodes <tyler.s.rhodes@gmail.com>
+           2011-2012, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2014, Chocobozzz <florian.bigard@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/spotify/spotifyservice.cpp
+Copyright: 2011, Tyler Rhodes <tyler.s.rhodes@gmail.com>
+           2011-2012, 2014, John Maguire <john.maguire@gmail.com>
+           2011-2014, David Sansome <me@davidsansome.com>
+           2012, 2014, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2014, Chocobozzz <florian.bigard@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014, pie.or.paj <pie.or.paj@gmail.com>
+License: GPL-3+
+
+Files: src/analyzers/analyzerbase.h
+Copyright: 2004, Max Howell <max.howell@methylblue.com>
+           2009-2010, David Sansome <davidsansome@gmail.com>
+           2010, 2014, John Maguire <john.maguire@gmail.com>
+           2011, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014-2015, Mark Furneaux <mark@furneaux.ca>
+License: GPL-3+
+
+Files: src/internet/icecast/icecastbackend.cpp
+Copyright: 2010-2011, David Sansome <davidsansome@gmail.com>
+           2011, Paweł Bara <keirangtp@gmail.com>
+           2012, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/soundcloud/soundcloudservice.cpp
+Copyright: 2012, 2014, Arnaud Bienner <arnaud.bienner@gmail.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014, maximko <me@maximko.org>
+License: GPL-3+
+
+Files: src/internet/seafile/seafileservice.cpp
+Copyright: 2014, Chocobozzz <djidane14ff@hotmail.fr>
+           2014, David Sansome <me@davidsansome.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/analyzers/baranalyzer.h
+Copyright: 2003-2005, Max Howell <max.howell@methylblue.com>
+           2005, Mark Kretschmann <markey@web.de>
+           2009-2010, David Sansome <davidsansome@gmail.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof A. Sobiecki <sobkas@gmail.com>
+           2014-2015, Mark Furneaux <mark@furneaux.ca>
+License: GPL-3+
+
+Files: src/analyzers/blockanalyzer.*
+Copyright: 2003-2005, Max Howell <max.howell@methylblue.com>
+           2005, Mark Kretschmann <markey@web.de>
+           2009-2010, David Sansome <davidsansome@gmail.com>
+           2010, 2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014-2015, Mark Furneaux <mark@furneaux.ca>
 License: GPL-3+
 
 Files: src/analyzers/turbine.*
-Copyright: 2003, Stanislav Karchebny <berkus@users.sf.net>
-License: GPL-2+
+Copyright: 2003, Max Howell <max.howell@methylblue.com>
+           2003, Stanislav Karchebny <berkus@users.sf.net>
+           2009-2010, David Sansome <davidsansome@gmail.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014-2015, Mark Furneaux <mark@furneaux.ca>
+License: GPL-3+
 
-Files: src/core/fht.*
-Copyright: 2004, Melchior FRANZ <mfranz@kde.org>
-License: GPL-2+
+Files: src/covers/lastfmcoverprovider.cpp
+Copyright: 2011, Paweł Bara <keirangtp@gmail.com>
+           2011-2012, David Sansome <me@davidsansome.com>
+           2012, 2014, John Maguire <john.maguire@gmail.com>
+           2012, Harald Sitter <sitter@kde.org>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
 
-Files: src/core/scoped_nsobject.* 
-Copyright: 2011, The Chromium Authors
-License: BSD
+Files: src/analyzers/analyzerbase.cpp
+Copyright: 2003, Max Howell <max.howell@methylblue.com>
+           2009, 2011-2012, David Sansome <me@davidsansome.com>
+           2010, 2012, 2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+           2014-2015, Mark Furneaux <mark@furneaux.ca>
+License: GPL-3+
 
-Files: src/networkremote/*
-Copyright: 2012, Andreas Muttscheller <asfa194@gmail.com>
+Files: src/internet/core/cloudfileservice.cpp
+Copyright: 2012, 2014, John Maguire <john.maguire@gmail.com>
+           2013, Martin Brodbeck <martin@brodbeck-online.de>
+           2013-2014, David Sansome <me@davidsansome.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/somafm/somafmurlhandler.cpp
+Copyright: 2011-2013, David Sansome <me@davidsansome.com>
+           2012, Olaf Christ <olafc81@gmail.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/core/mpris1.cpp
+Copyright: 2011, Paweł Bara <keirangtp@gmail.com>
+           2011-2012, David Sansome <me@davidsansome.com>
+           2013, Uwe Klotz <uwe.klotz@gmail.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/internet/dropbox/dropboxservice.cpp
+Copyright: 2012-2014, John Maguire <john.maguire@gmail.com>
+           2013, Martin Brodbeck <martin@brodbeck-online.de>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
+License: GPL-3+
+
+Files: src/covers/coverprovider.cpp
+Copyright: 2011, Paweł Bara <keirangtp@gmail.com>
+           2014, John Maguire <john.maguire@gmail.com>
+           2014, Krzysztof Sobiecki <sobkas@gmail.com>
 License: GPL-3+
 
 Files: 3rdparty/gmock/*
 Copyright: 2008, Google Inc.
-License: BSD
+License: BSD-3-clause
 
 Files: 3rdparty/gmock/scripts/generator/*
 Copyright: 2007, Neal Norwitz
@@ -255,9 +902,13 @@ Files: 3rdparty/qtiocompressor/*
 Copyright: 2009, Nokia Corporation
 License: LGPL-2.1 or GPL-3
 
+Files: 3rdparty/qsqlite/*
+Copyright: 2009, Nokia Corporation
+License: LGPL-2.1 or GPL-3
+
 Files: 3rdparty/sha2/*
 Copyright: 2000-2001, Aaron D. Gifford <agifford@infowest.com>
-License: BSD
+License: BSD-3-clause
 
 Files: 3rdparty/qocoa/*
 Copyright: 2011, Mike McQuaid <mike@mikemcquaid.com>
