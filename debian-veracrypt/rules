@@ -1,0 +1,58 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+#export DH_VERBOSE=1
+
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
+	BUILDDEBFLAGS= -- -Zlzma -z9
+else
+	BUILDDEBFLAGS= -- -Zxz -z9
+endif
+
+#LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -ldl
+
+build: build-arch build-indep
+build-arch: build-stamp
+build-indep: build-stamp
+build-stamp:
+	dh_testdir
+	cd src && LIBS="-ldl" $(MAKE) -j$(NCPUS)
+	touch $@
+clean: do-clean
+do-clean: 
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	cd src && (test ! -f Makefile || $(MAKE) clean)
+	dh_clean
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+	mkdir -p debian/veracrypt/usr/bin/
+	install -m755 src/Main/veracrypt debian/veracrypt/usr/bin/
+binary-indep: build install
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installdocs
+	dh_installchangelogs
+	dh_install debian/veracrypt.desktop usr/share/applications
+	dh_install src/Resources/Icons/VeraCrypt-48x48.xpm usr/share/pixmaps/veracrypt.xpm
+	dh_installdocs "src/Release/Setup Files/VeraCrypt User Guide.pdf"
+	dh_installman debian/veracrypt.1
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_installdebconf
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb $(BUILDDEBFLAGS)
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install patch unpatch do-clean
