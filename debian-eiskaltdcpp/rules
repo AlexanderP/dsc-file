@@ -1,17 +1,14 @@
 #!/usr/bin/make -f
 
-DEBIAN_CODENAME = $(shell echo $$DIST)
-ifeq "$(DEBIAN_CODENAME)" ""
-	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
-	BUILDDEBFLAGS= -- -Zlzma -z9
-else
-	BUILDDEBFLAGS= -- -Zxz -z9
+
+ifeq (,$(NUMJOBS))
+	NUMJOBS = 1
 endif
 
 CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
-CFLAGS:=$(shell dpkg-buildflags --get CFLAGS) $(CPPFLAGS)
 CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(CPPFLAGS)
 LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
 
@@ -22,20 +19,23 @@ DEB_DH_INSTALL_SOURCEDIR = $(CURDIR)/debian/tmp
 
 PACKAGE = eiskaltdcpp
 
+DEBIAN_PATH := $(abspath $(dir $(MAKEFILE_LIST)))
+USCAN_REPORT = $(shell uscan --noconf --report --dehs $(DEBIAN_PATH))
+CUR_VER = $(shell echo "$(USCAN_REPORT)" | sed -n 's/.*<upstream-version>\(.*\)<\/upstream-version>.*/\1/p')
+CUR_URL = $(shell echo "$(USCAN_REPORT)" | sed -n 's/.*<upstream-url>\(.*\)<\/upstream-url>.*/\1/p')
+
 CMAKEOPTS = -DCMAKE_BUILD_TYPE=RelWithDebInfo \
-            -DCMAKE_C_FLAGS="$(CFLAGS)" \
             -DCMAKE_CXX_FLAGS="$(CXXFLAGS)" \
             -DCMAKE_SHARED_LINKER_FLAGS="$(LDFLAGS)" \
-            -DCMAKE_MODULE_LINKER_FLAGS="$(LDFLAGS)" \
             -DCMAKE_EXE_LINKER_FLAGS="$(LDFLAGS)" \
             -DCMAKE_INSTALL_PREFIX=/usr \
-            -DUSE_MINIUPNP=ON -DLOCAL_MINIUPNP=ON \
+            -DUSE_MINIUPNP=ON -DLOCAL_MINIUPNP=OFF \
             -DLUA_SCRIPT=ON -DWITH_LUASCRIPTS=ON \
             -DPERL_REGEX=ON -DWITH_DHT=ON \
             -DWITH_SOUNDS=ON \
             -DUSE_QT=ON \
             -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON \
-            -DCHECK_GTK_DEPRECATED=ON \
+            -DCHECK_GTK_DEPRECATED=OFF \
             -DUSE_LIBGNOME2=OFF -DUSE_LIBNOTIFY=ON \
             -DCREATE_MO=ON -DUPDATE_PO=OFF \
             -DNO_UI_DAEMON=ON \
@@ -65,11 +65,11 @@ override_dh_auto_configure:
 	mkdir -p $(BUILDDIR1) && cd $(BUILDDIR1) && cmake $(CMAKEOPTS) $(OPTSSTEP1)
 
 override_dh_auto_build:
-	cd $(BUILDDIR1) && $(MAKE)
+	cd $(BUILDDIR1) && $(MAKE) -j$(NUMJOBS)
 	cp -ra $(BUILDDIR1) $(BUILDDIR2)
 	cd $(BUILDDIR2) && find . -type f -iname '*make*' -exec sed -i "s|$(BUILDDIR1)|$(BUILDDIR2)|" {} \;
 	cd $(BUILDDIR2) && cmake $(CMAKEOPTS) $(OPTSSTEP2)
-	cd $(BUILDDIR2) && $(MAKE)
+	cd $(BUILDDIR2) && $(MAKE) -j$(NUMJOBS)
 
 override_dh_auto_clean:
 	dh_testroot
@@ -102,6 +102,21 @@ override_dh_install:
 override_dh_installchangelogs:
 	dh_installchangelogs ChangeLog.txt
 
+.PHONY: override_dh_strip
+override_dh_strip:
+	dh_strip -Nlibeiskaltdcpp2.2 \
+			-Neiskaltdcpp-qt \
+			-Neiskaltdcpp-qt-mini \
+			-Neiskaltdcpp-gtk \
+			-Neiskaltdcpp-gtk3 \
+			-Neiskaltdcpp-daemon
+	dh_strip -plibeiskaltdcpp2.2 --dbg-package=libeiskaltdcpp2.2-dbg
+	dh_strip -peiskaltdcpp-qt --dbg-package=eiskaltdcpp-qt-dbg
+	dh_strip -peiskaltdcpp-qt-mini --dbg-package=eiskaltdcpp-qt-mini-dbg
+	dh_strip -peiskaltdcpp-gtk --dbg-package=eiskaltdcpp-gtk-dbg
+	dh_strip -peiskaltdcpp-gtk3 --dbg-package=eiskaltdcpp-gtk3-dbg
+	dh_strip -peiskaltdcpp-daemon --dbg-package=eiskaltdcpp-daemon-dbg
+
 .PHONY: override_dh_makeshlibs
 override_dh_makeshlibs:
 	dh_makeshlibs -V -plibeiskaltdcpp2.2
@@ -111,5 +126,4 @@ override_dh_shlibdeps:
 	dh_shlibdeps -a -ldebian/libeiskaltdcpp2.2/usr/lib
 
 get-orig-source:
-	wget -4 "http://eiskaltdc.googlecode.com/files/eiskaltdcpp-$(CUR_VER).tar.xz"
-	mv -f "$(PACKAGE)-$(CUR_VER).tar.xz" ../"$(PACKAGE)_$(CUR_VER).orig.tar.xz"
+	wget -c "$(CUR_URL)" -O "$(PACKAGE)_$(CUR_VER).orig.tar.xz"

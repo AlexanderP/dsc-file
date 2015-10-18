@@ -1,5 +1,271 @@
-eiskaltdcpp (1.90+svn91-1) unstable; urgency=low
+eiskaltdcpp (2.2.9-3+nmu3) unstable; urgency=medium
 
-  * Initial release (Closes: #123456)
+  * Non-maintainer upload.
+  * Backports from Sid
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 27 Jan 2010 20:25:09 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 04 Oct 2015 15:48:11 +0300
+
+eiskaltdcpp (2.2.9-3) unstable; urgency=medium
+
+  * Add debian/patches/fix_TigerHash_on_ARM.patch:
+    Fix program segfault on some ARM environments.
+    Problem is actual for users of Ubuntu and Raspbian.
+
+ -- Boris Pek <tehnick@debian.org>  Fri, 21 Feb 2014 03:50:19 +0400
+
+eiskaltdcpp (2.2.9-2) unstable; urgency=medium
+
+  * Add patches:
+    - fix_work_with_new_libjson-rpc-perl.patch
+    - use_few_servers_for_getting_initial_list_of_DHT_nodes.patch
+    (Backported from upstream master branch.)
+  * Bump Standards-Version to 3.9.5 (was 3.9.4): no changes required.
+  * Update get-orig-source section in debian/rules.
+  * Update debian/watch.
+
+ -- Boris Pek <tehnick@debian.org>  Thu, 02 Jan 2014 20:24:11 +0400
+
+eiskaltdcpp (2.2.9-1) unstable; urgency=low
+
+  * Update to stable release 2.2.9.
+  * Update debian/copyright.
+  * Fixed in upstream:
+    - fixed SIGABRT when gdk_display_get_default() returns NULL (LP: #968761)
+    - fixed work with libjson-rpc-perl >= 1.00 (Closes: #719016)
+  * Add debian/eiskaltdcpp-daemon.lintian-overrides:
+    embedded library libjsoncpp with a number of project-specific patches.
+
+ -- Boris Pek <tehnick@debian.org>  Fri, 30 Aug 2013 07:10:33 +0300
+
+eiskaltdcpp (2.2.8-1) unstable; urgency=low
+
+  * Update to stable release 2.2.8.
+  * Remove obsolete DM-Upload-Allowed flag.
+  * Bump Standards-Version to 3.9.4 (was 3.9.3): no changes required.
+  * Fix lintian note desktop-entry-lacks-keywords-entry.
+  * Simplify debian/rules.
+  * Fixed in upstream:
+    - fixed bashism in sample script (Closes: #690621)
+    - fixed buffer overflow error on exit (LP: #996804)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 24 Jun 2013 03:58:15 +0300
+
+eiskaltdcpp (2.2.7-3) unstable; urgency=low
+
+  * Update debian/rules: configure with -DCHECK_GTK_DEPRECATED=OFF instead of
+    -DCHECK_GTK_DEPRECATED=ON to fix FTBFS with Gtk+ >= 2.24.18
+  * Update debian/control: add build dependency from libboost-system-dev
+    (Fixes FTBFS on Ubuntu Saucy due to Boost transition 1.49 --> 1.53)
+  * Update years in debian/copyright.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Thu, 30 May 2013 11:14:05 +0300
+
+eiskaltdcpp (2.2.7-2) unstable; urgency=low
+
+  * Move package to unstable: no changes required.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 14 May 2013 21:22:52 +0300
+
+eiskaltdcpp (2.2.7-1) experimental; urgency=low
+
+  * Update to stable release 2.2.7.
+  * debian/patches were deleted: now available in upstream.
+  * debian/copyright was updated: added new copyrights holder.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Wed, 30 May 2012 01:17:06 +0300
+
+eiskaltdcpp (2.2.6-5) unstable; urgency=low
+
+  * Added new packages:
+    - eiskaltdcpp-qt-mini and eiskaltdcpp-qt-mini-dbg
+    - eiskaltdcpp-gtk3 and eiskaltdcpp-gtk3-dbg
+    - eiskaltdcpp-cli and libeiskaltdcpp-dev
+  * debian/rules was updated:
+    used hardening flags in compiler options
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 14 May 2012 23:13:19 +0300
+
+eiskaltdcpp (2.2.6-4) unstable; urgency=low
+
+  * Added patches:
+    - debian/patches/fix-for-gcc-4.7.patch
+    - debian/patches/fix-crash-at-launch-time.patch
+
+ -- Boris Pek <tehnick-8@mail.ru>  Thu, 10 May 2012 19:22:30 +0300
+
+eiskaltdcpp (2.2.6-3) unstable; urgency=low
+
+  * Few patches were backported from version 2.2.7 which is not yet released:
+    - debian/patches/fixed-blur-icon-in-the-D-Bus-notifications-in-Ubuntu.patch
+    - debian/patches/correctly-save-header-state-for-tree-views.patch
+    - debian/patches/fixed-crash-on-exit.patch (LP: #944675)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 10 Apr 2012 23:20:06 +0300
+
+eiskaltdcpp (2.2.6-2) unstable; urgency=low
+
+  * debian/rules was updated: now dh is used instead of direct dh_* commands.
+    (fixes FTBFS with new build-arch handling) (Closes: #665865)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 27 Mar 2012 02:33:00 +0300
+
+eiskaltdcpp (2.2.6-1) unstable; urgency=low
+
+  * Update to stable release 2.2.6.
+  * Bumped Standards-Version to 3.9.3.
+  * debian/control was updated:
+    - added string `DM-Upload-Allowed: yes'
+    - added dependence from libattr1 library
+    - updated long descriptions in all packages
+    - updated dependencies of meta-package eiskaltdcpp:
+      now user has choice to install one of packages with GUI or few ones
+      (not only all of them as was earlier)
+    - meta-package eiskaltdcpp was moved to new archive section metapackages
+    - removed old libraries from libeiskaltdcpp2.2 Conflicts and Replaces
+      (these libraries never were in Debian or Ubuntu releases)
+  * debian/copyright was updated:
+    - URL in Format field was updated
+    - copyright information was updated (copyrighters and years)
+  * debian/rules was updated:
+    - configure-stamp and build-stamp files are removed during clean now
+    - uscan is used for checking current upstream version
+      (dpkg-parsechangelog was used earlier)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 27 Feb 2012 03:14:03 +0200
+
+eiskaltdcpp (2.2.5-1) unstable; urgency=low
+
+  * Update to stable release 2.2.5.
+  * debian/copyright was updated:
+    - source tree was reorganized in upstream
+    - new files were added into source tree
+  * debian/eiskaltdcpp-sounds.docs was updated.
+  * debian/rules was updated:
+    configurating options USE_QT_QML and JSONRPC_DAEMON were enabled.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 26 Dec 2011 23:22:08 +0200
+
+eiskaltdcpp (2.2.4-2) unstable; urgency=low
+
+  * Additional fields Vcs-Git and Vcs-Browser in debian/control were updated.
+  * Additional section get-orig-source was added in debian/rules.
+  * File debian/copyright was rewritten in according to DEP-5.
+  * File debian/libeiskaltdcpp2.2.lintian-overrides was added:
+    It hide lintian information note no-symbols-control-file.
+    (There is no stable API in this library)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 09 Oct 2011 03:35:24 +0300
+
+eiskaltdcpp (2.2.4-1) unstable; urgency=low
+
+  * Update to stable release 2.2.4.
+  * Updated file debian/copyright:
+    - new author was added in upstream
+    - new files were added in upstream
+  * Updated file debian/rules:
+    - enabled DHT support in configurating options
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 02 Oct 2011 19:12:57 +0300
+
+eiskaltdcpp (2.2.3-1) unstable; urgency=low
+
+  * Update to stable release 2.2.3.
+  * Added additional fields Vcs-Git and Vcs-Browser in debian/control.
+  * Such bugs were fixed in upstream:
+    - added German translation (Closes: #627930)
+    - fixed bug with connecting to ADC hubs on armel architecture
+      (Closes: #630841)
+    - updated local file cmake/FindGTK2.cmake:
+      it works with Debian multiarch now (LP: #791231)
+  * Fixed new lintian warning 'debian-rules-missing-recommended-target'.
+  * Updated file debian/copyright: new files were added in upstream.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sat, 25 Jun 2011 01:11:16 +0300
+
+eiskaltdcpp (2.2.2-1) unstable; urgency=low
+
+  * Update to stable release 2.2.2.
+  * Added dependence from libminiupnpc library (linked dynamically)
+    now it is used instead local copy of miniupnpc (was linked statically).
+  * Added dependence from libidn11 library (new program requirement).
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 25 Apr 2011 00:44:55 +0300
+
+eiskaltdcpp (2.2.1-1) unstable; urgency=low
+
+  * Update to stable release 2.2.1.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 08 Mar 2011 21:00:59 +0200
+
+eiskaltdcpp (2.2.0-3) unstable; urgency=low
+
+  * Package rules were updated:
+    - eiskaltdcpp-geoip package was removed because of sponsor's remark
+    - eiskaltdcpp-scripts package was updated
+  * File debian/copyright was updated
+
+ -- Boris Pek <tehnick-8@mail.ru>  Wed, 09 Feb 2011 21:34:35 +0200
+
+eiskaltdcpp (2.2.0-2) unstable; urgency=low
+
+  * Small fixes in file debian/rules
+    (it affects only to eiskaltdcpp-geoip package)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 23 Jan 2011 21:27:15 +0200
+
+eiskaltdcpp (2.2.0-1) unstable; urgency=low
+
+  * Update to stable release 2.2.0.
+  * Package rules were updated:
+    - eiskaltdcpp-geoip package was added
+    - eiskaltdcpp-daemon package was added
+    - eiskaltdcpp-daemon-dbg package was added
+    - libeiskaltdcpp2.1.x package was renamed to libeiskaltdcpp2.2
+    - libeiskaltdcpp2.1.x-dbg package was renamed to libeiskaltdcpp2.2-dbg
+  * debian/copyright file was updated
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 17 Jan 2011 01:20:04 +0200
+
+eiskaltdcpp (2.1.1-2) experimental; urgency=low
+
+  * UPnP was temporary switched off because of sponsor's remark.
+    (also see http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=444392)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sat, 11 Dec 2010 17:11:21 +0200
+
+eiskaltdcpp (2.1.1-1) experimental; urgency=low
+
+  * Update to stable release 2.1.1.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 22 Nov 2010 02:24:11 +0200
+
+eiskaltdcpp (2.1.0-1) experimental; urgency=low
+
+  * Update to stable release 2.1.0.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 07 Nov 2010 23:16:29 +0200
+
+eiskaltdcpp (2.1-beta3-1) experimental; urgency=low
+
+  * Update to EiskaltDC++ 2.1 Beta 3
+  * Package was split into several parts.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 01 Nov 2010 22:28:23 +0200
+
+eiskaltdcpp (2.0.3-1) unstable; urgency=low
+
+  * Update to stable release of EiskaltDC++ 2.0.3.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 08 Jun 2010 21:55:18 +0400
+
+eiskaltdcpp (2.0.2-1) unstable; urgency=low
+
+  * Update to stable release of EiskaltDC++ 2.0.2.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Thu, 13 May 2010 11:25:06 +0400
+
+eiskaltdcpp (2.0.1-1) unstable; urgency=low
+
+  * Initial release (closes: #540458).
+
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 27 Apr 2010 01:40:10 +0400

@@ -1,18 +1,21 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Debianized-By: Alexander Pozdnyakov <almipo@mail.ru>
-Debianized-Date: Wed, 27 Jan 2010 20:25:09 +0300
+Debianized-By: Boris Pek <tehnick-8@mail.ru>
+Debianized-Date: Sat, 06 Feb 2010 03:43:21 +0300
 Upstream-Name: EiskaltDC++
-Upstream-Contact: Andrey Karlov <dein.negativ@gmail.com>
- Boris Pek aka Tehnick <tehnick-8@mail.ru>
+Upstream-Contact: Boris Pek <tehnick-8@mail.ru>
  Eugene Petrov <dhamp@ya.ru>
- Alexandr Tkachev <tka4ev@gmail.com>
  Pavel Vatagin <pavelvat@gmail.com>
+ Andrey Karlov <dein.negativ@gmail.com>
 Source: http://code.google.com/p/eiskaltdc/downloads/list
  The orig.tar.xz is just renamed upstream tarball (without changes).
  See section get-orig-source in debian/rules file for details.
 
 Files: *
 Copyright: 2009-2012 Andrey Karlov <dein.negativ@gmail.com>
+ 2009-2013 Eugene Petrov <dhamp@ya.ru>
+ 2009-2013 Boris Pek aka Tehnick <tehnick-8@mail.ru>
+ 2010-2013 Pavel Vatagin <pavelvat@gmail.com>
+ 2010-2013 Alexandr Tkachev <tka4ev@gmail.com>
 License: GPL-3+ with OpenSSL exception
  This program is free software: you can redistribute it and/or modify it under
  the terms of the GNU General Public License as published by the Free Software
@@ -55,7 +58,7 @@ Files: dcpp/*.h dcpp/*.cpp
  extra/freespace.h extra/freespace.cpp
  extra/stacktrace.h
 Copyright:
- 2001-2010 Jacek Sieka <arnetheduck@gmail.com>
+ 2001-2012 Jacek Sieka <arnetheduck@gmail.com>
  2008-2010 Big Muscle (http://strongdc.sf.net)
  1996-2002 Florian Schintke
  2003-2006 RevConnect (http://www.revconnect.com)
@@ -69,11 +72,14 @@ License: GPL-2+
 Files: data/examples/xmms2_audacious2.ru_RU.UTF-8.php
  data/examples/commands.ru_RU.UTF-8.php
  eiskaltdcpp-qt/qtscripts/gnome/commands.ru_RU.UTF-8.php
+ eiskaltdcpp-qt/qtscripts/qmpp_nowplaying/qmmp.sh
 Copyright: 2010 nE0sIghT
  2010 GoTLiuM InSPiRiT <gotlium@gmail.com>
+ 2012 Gustavo Alvarez <sl1pkn07@gmail.com>
 License: GPL-2
 
-Files: data/update_geoip
+Files: update-translations.sh
+ data/update_geoip
  data/examples/amr.en_US.sh
  data/examples/mpris_now_playing.en_US.sh
  data/examples/audacious.en_US.sh
@@ -83,12 +89,18 @@ Files: data/update_geoip
  data/examples/deadbeef.ru_RU.UTF-8.sh
  eiskaltdcpp-qt/qtscripts/amarok_nowplay/amarok.sh
  eiskaltdcpp-qt/qtscripts/clementine_nowplay/clementine.sh
-Copyright: 2010 Uladzimir Bely (WiseLord) <wiselord1983@gmail.com>
+ macosx/build-universal-binary.sh
+ macosx/build.sh
+Copyright: not-applicable
+Comment: Authors:
+ 2011-2012 Boris Pek <tehnick-8@mail.ru>
+ 2010 Uladzimir Bely (WiseLord) <wiselord1983@gmail.com>
  2010 Vovochka404 <vovochka13@gmail.com>
  2011 Mark Lutring
- 2011 Boris Pek
  2012 Unreal7z
  2010 none
+ 2013 Maxim Ignatenko
+ 2013 Dmitry Arkhipov
 License: public-domain
  No license required for any purpose; the work is not subject to copyright
  in any jurisdiction.
@@ -167,7 +179,7 @@ Files: eiskaltdcpp-gtk/src/* eiskaltdcpp-gtk/ui/*
 Copyright: 2004-2010 Jens Oknelid <paskharen@gmail.com>
  2009-2010 freedcpp (http://code.google.com/p/freedcpp)
  2009-2010 Leliksan Floyd <leliksan@Quadrafon2>
- 2010-2011 Boris Pek <tehnick-8@mail.ru>
+ 2010-2012 Boris Pek <tehnick-8@mail.ru>
  2003 Bastien Nocera <hadess@hadess.net>
  2010 Mank <mank@besthub.eu>
  2010 Eugene Petrov <dhamp@ya.ru>
@@ -184,7 +196,7 @@ License: BSD-2-clause
 
 Files: upnp/miniupnpc/*
 Copyright: 1991, 1993 The Regents of the University of California
- 2005-2010 Thomas Bernard (http://miniupnp.free.fr/)
+ 2005-2012 Thomas Bernard (http://miniupnp.free.fr/)
 License: BSD-3-clause
 
 Files: json/jsoncpp/*
@@ -198,8 +210,12 @@ Files: json/jsonrpc-cpp/*
 Copyright: 2008-2012 Sebastien Vincent <sebastien.vincent@cppextrem.com>
 License: LGPL-3+
 
+Files: json/jsonrpc-cpp/mongoose.*
+Copyright: 2004-2011 Sergey Lyubka
+License: Expat
+
 Files: debian/*
-Copyright: 2010-2012 Boris Pek <tehnick-8@mail.ru>
+Copyright: 2010-2013 Boris Pek <tehnick-8@mail.ru>
 License: GPL-2+
 
 License: GPL-2
@@ -340,3 +356,22 @@ License: BSD-2-clause
  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
