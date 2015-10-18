@@ -1,16 +1,31 @@
-uget (2.0.1-0+nmu1) unstable; urgency=medium
+uget (2.0.2-1+nmu1) unstable; urgency=medium
 
   * Non-maintainer upload.
+  * Backports from Sid
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 10 Oct 2015 10:55:04 +0300
+
+uget (2.0.2-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/rules: Add extra option to make hardening better
+  * Updated 03-uglib_missing_potfile.patch
+
+ -- Elías Alejandro Año Mendoza <ealmdz@gmail.com>  Sun, 04 Oct 2015 19:19:52 -0500
+
+uget (2.0-1) unstable; urgency=low
+
   * New upstream release.
+  * Updated Standard-Version to 3.9.6
+  * Switched to GStreamer 1.x. Closes: #785925
+  * Added manpage uget-gtk-1to2.1
+  * Upstream fixed rename remote destination files. Closes: #750172
+  * Upstream fixed update config settings. Closes: #775031
+  * Updated debian/copyright: New path for files
+  * Updated 03-uglib_missing_potfile.patch: New path for files
+  * Added 04-keywords-desktop-file.patch: Keywords entry into desktop file
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 21 Aug 2015 22:37:41 +0300
-
-uget (2.0-0+nmu1) unstable; urgency=medium
-
-  * Non-maintainer upload.
-  * New upstream release.
-
- -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 01 Jun 2015 19:42:52 +0300
+ -- Elías Alejandro Año Mendoza <ealmdz@gmail.com>  Sun, 12 Jul 2015 20:45:00 -0500
 
 uget (1.10.4-1) unstable; urgency=low
 

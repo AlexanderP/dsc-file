@@ -1,0 +1,17 @@
+Description: Add missing file contain translation to the POTFILES.in file
+ Put string "uget/pwmd.c" in po/POTFILES.in
+
+Forwarded: not-needed
+Author: Elías Alejandro Año Mendoza <ealmdz@gmail.com>
+Last-Update: 2015-10-04
+
+--- uget.orig/po/POTFILES.in
++++ uget/po/POTFILES.in
+@@ -2,6 +2,7 @@ uget/pwmd.c
+ uget/UgetApp.c
+ uget/UgetEvent.c
+ uget/UgetPluginAria2.c
++uget/pwmd.c
+ ui-gtk/UgtkAboutDialog.c
+ ui-gtk/UgtkApp-main.c
+ ui-gtk/UgtkApp-timeout.c
