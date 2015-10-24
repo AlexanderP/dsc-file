@@ -1,0 +1,38 @@
+#!/usr/bin/make -f
+# See debhelper(7) (uncomment to enable)
+# output every command that modifies files on the build system.
+DH_VERBOSE = 1
+
+CMAKE=.. -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
+CMAKE2=$(CMAKE) -DMESSAGING_MENU=ON
+
+plugins=clienticons dbusnotifications gmailnotify useractivity usermood
+plugins2=unityintegration
+INSTALL_ROOT=$(CURDIR)/debian/vacuum
+
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9
+
+%:
+	dh $@ --parallel
+
+override_dh_auto_configure:
+	$(foreach plug,$(plugins), cd $(CURDIR)/plugins/$(plug) && mkdir build && cd build && cmake $(CMAKE) || exit 1; )
+	$(foreach plug,$(plugins2), cd $(CURDIR)/plugins/$(plug) && mkdir build && cd build && cmake $(CMAKE2) || exit 1; )
+
+override_dh_auto_build:
+	$(foreach plug,$(plugins), cd $(CURDIR)/plugins/$(plug)/build && make || exit 1; )
+	$(foreach plug,$(plugins2), cd $(CURDIR)/plugins/$(plug)/build && make || exit 1; )
+
+override_dh_auto_install:
+	$(foreach plug,$(plugins), cd $(CURDIR)/plugins/$(plug)/build && make DESTDIR=$(INSTALL_ROOT)-$(plug) install || exit 1; )
+	$(foreach plug,$(plugins2), cd $(CURDIR)/plugins/$(plug)/build && make DESTDIR=$(INSTALL_ROOT)-$(plug) install || exit 1; )
+
+override_dh_auto_clean:
+	dh_clean
+	$(foreach plug,$(plugins), [ ! -d $(CURDIR)/plugins/$(plug)/build ] || rm -rf $(CURDIR)/plugins/$(plug)/build; )
+	$(foreach plug,$(plugins), [ ! -d $(CURDIR)/plugins/$(plug)/build ] || rm -rf $(CURDIR)/plugins/$(plug)/build; )
+
+
+

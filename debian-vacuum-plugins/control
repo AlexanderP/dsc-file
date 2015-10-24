@@ -1,0 +1,52 @@
+Source: vacuum-plugins
+Section: net
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 9), openssl, libqt4-dev, libdbusmenu-qt-dev, pkg-config, libx11-dev, nas, zlib1g-dev, vacuum-dev, cmake
+Standards-Version: 3.9.5
+Homepage: https://github.com/Vacuum-IM
+
+Package: vacuum-clienticons
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: vacuum-plugins-gmailnotify
+Description: Plugin for Vacuum-IM
+ This plugin displays the icon for client of contact in roster.
+
+Package: vacuum-dbusnotifications
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Plugin for Vacuum-IM
+ DBus popup notifications
+
+Package: vacuum-gmailnotify
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: vacuum-plugins-gmailnotify
+Description: Plugin for Vacuum-IM
+ Notify of new e-mails in Google Mail 
+
+Package: vacuum-unityintegration
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: vacuum-plugins-gmailnotify
+Description: Plugin for Vacuum-IM
+ Plugin for unity integration
+
+Package: vacuum-useractivity
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Plugin for Vacuum-IM
+ This plugin defines a payload format for communicating  information 
+ about user activities, such as whether a person is currently 
+ working, travelling, or relaxing.
+
+Package: vacuum-usermood
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Plugin for Vacuum-IM
+ This plugin  is aimed to communicate  information about user`s 
+ activities, such as whether a person is  currently working, travelling,
+ or relaxing. The payload format is  typically transported using the 
+ personal eventing protocol, a profile  of XMPP publish-subscribe 
+ specified in XEP-0163.
