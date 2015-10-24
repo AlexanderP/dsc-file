@@ -1,5 +1,5 @@
 #!/usr/bin/make -f
-#export DH_VERBOSE=1
+export DH_VERBOSE=1
 
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
@@ -22,8 +22,8 @@ OLDVERSIONsUTILS=$(shell for i in $(OLDVERSIONUTILS1) ; do  echo libvacuumutils$
 CMAKEOPT= -DCMAKE_BUILD_TYPE=Release -DPLUGIN_statistics=OFF
 VERSION=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | grep git | wc -l)
 ifneq (,$(filter 1,$(VERSION)))
-	COMMIT=$(shell dpkg-parsechangelog | grep '* Commit' | awk -F ': ' '{print $$2}')
-	DATE=$(shell dpkg-parsechangelog | grep '* Date' | awk -F ': ' '{print $$2}')
+	COMMIT=$(shell cat $(CURDIR)/debian/changelog | grep '* Commit' | sed 1q | awk -F ': ' '{print $$2}')
+	DATE=$(shell cat $(CURDIR)/debian/changelog  | grep '* Date' | sed 1q | awk -F ': ' '{print $$2}')
 	CMAKEOPT+= -DGIT_HASH=$(COMMIT) -DGIT_DATE=$(DATE)
 endif
 
