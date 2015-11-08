@@ -8,9 +8,9 @@ Debian. Since executing the mplayer program to parse its version
 identification output is too heavy-weight, this change introduces a
 dpkg-specific, but light-weight check.
 
---- a/src/core.cpp
-+++ b/src/core.cpp
-@@ -28,6 +28,7 @@
+--- smplayer-15.9.0+svn7200.orig/src/core.cpp
++++ smplayer-15.9.0+svn7200/src/core.cpp
+@@ -29,6 +29,7 @@
  #endif
  
  #include <cmath>
@@ -18,8 +18,8 @@ dpkg-specific, but light-weight check.
  
  #include "mplayerwindow.h"
  #include "desktopinfo.h"
-@@ -1419,9 +1420,10 @@ void Core::startMplayer( QString file, d
-         mplayer_bin = fi.absoluteFilePath();
+@@ -1597,9 +1598,10 @@ void Core::startMplayer( QString file, d
+ 		mplayer_bin = fi.absoluteFilePath();
  	}
  
 -	if (fi.baseName().toLower() == "mplayer2") {
