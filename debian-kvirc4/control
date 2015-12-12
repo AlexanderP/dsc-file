@@ -3,7 +3,7 @@ Section: net
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: debhelper (>= 8.9.4),
- cmake (>= 2.8.4+dfsg.1-3),
+ cmake (>= 3.1),
  libperl-dev,
  zlib1g-dev,
  libx11-dev,
@@ -14,7 +14,7 @@ Build-Depends: debhelper (>= 8.9.4),
  pkg-config,
  libxss-dev,
  python-dev,
- libqtwebkit-dev
+ libqtwebkit-dev, libenchant-dev
 Standards-Version: 3.9.6
 Homepage: http://www.kvirc.de/
 
