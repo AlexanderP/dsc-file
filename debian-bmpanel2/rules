@@ -11,7 +11,7 @@ else
 endif
 
 %:
-	dh $@ --parallel
+	dh $@ --parallel --with python2  
 
 override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
