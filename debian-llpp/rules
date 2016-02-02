@@ -17,4 +17,5 @@ endif
 	dh $@ 
 
 override_dh_auto_build:
-	bash buildall.sh
+	cd mupdf && make build=native
+	bash build.sh build
