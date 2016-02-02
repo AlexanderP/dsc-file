@@ -1,0 +1,19 @@
+--- deadbeef-0.7.0+git20160131.orig/plugins/gtkui/callbacks.c
++++ deadbeef-0.7.0+git20160131/plugins/gtkui/callbacks.c
+@@ -382,7 +382,7 @@ on_gpl1_activate                       (
+                                         gpointer         user_data)
+ {
+     char fname[PATH_MAX];
+-    snprintf (fname, sizeof (fname), "%s/%s", deadbeef->get_doc_dir (), "COPYING.GPLv2");
++    snprintf (fname, sizeof (fname), "/usr/share/common-licenses/%s","GPL-2");
+     gtkui_show_info_window (fname, "GNU GENERAL PUBLIC LICENSE Version 2", &gplwindow);
+ }
+ 
+@@ -393,7 +393,7 @@ on_lgpl1_activate                      (
+                                         gpointer         user_data)
+ {
+     char fname[PATH_MAX];
+-    snprintf (fname, sizeof (fname), "%s/%s", deadbeef->get_doc_dir (), "COPYING.LGPLv2.1");
++    snprintf (fname, sizeof (fname), "/usr/share/common-licenses/%s", "LGPL-2.1");
+     gtkui_show_info_window (fname, "GNU LESSER GENERAL PUBLIC LICENSE Version 2.1", &lgplwindow);
+ }
