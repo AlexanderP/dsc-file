@@ -1,9 +1,38 @@
-eiskaltdcpp (2.2.9-3+nmu3) unstable; urgency=medium
+eiskaltdcpp (2.2.9-4+nmu1) unstable; urgency=medium
 
   * Non-maintainer upload.
   * Backports from Sid
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 04 Oct 2015 15:48:11 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 06 Feb 2016 10:05:40 +0300
+
+eiskaltdcpp (2.2.9-4) unstable; urgency=medium
+
+  * Bump Standards-Version to 3.9.6 (was 3.9.5): no changes required.
+  * Bump debhelper version to 9 (was 7.0.50~); update debian/compat.
+  * Add TLS_1.2_support.patch.
+  * Add fix_NMDC_bug.patch.
+  * Add fix-build-with-Clang.patch.
+    [Thanks to Alexander] (Closes: #753266)
+  * Update package using wrap-and-sort tool.
+  * Update debian/control:
+    - simplify Build-Depends
+    - update project Homepage (moved from Google Code to GitHub)
+    - delete outdated packages from Replaces, Conflicts and Breaks
+    - fix descriptions of eiskaltdcpp-gtk3 binary package
+      (it suggested nonexistent package) (Closes: #749774)
+    - update long decription of all binary packages
+    - fix lintian warning vcs-field-uses-insecure-uri
+    - fix lintian tag capitalization-error-in-description-synopsis
+      meta-package metapackage
+  * Update debian/rules: add --list-missing option for dh.
+  * Add debian/eiskaltdcpp-qt-data.lintian-overrides.
+  * Add debian/eiskaltdcpp-scripts.lintian-overrides.
+  * Add debian/source/lintian-overrides.
+  * Simplify debian/*.docs.
+  * Update debian/copyright.
+  * Update debian/watch.
+
+ -- Boris Pek <tehnick@debian.org>  Thu, 04 Feb 2016 02:18:06 +0300
 
 eiskaltdcpp (2.2.9-3) unstable; urgency=medium
 

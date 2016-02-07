@@ -1,0 +1,97 @@
+Description: Fix NMDC bug
+Origin: https://github.com/eiskaltdcpp/eiskaltdcpp/commit/c7d81be
+Applied-Upstream: 2.4.0
+Last-Update: 2016-02-03
+
+
+--- a/dcpp/ClientManager.cpp
++++ b/dcpp/ClientManager.cpp
+@@ -213,13 +213,7 @@
+ 
+     string ip;
+     uint16_t port = 411;
+-    string::size_type i = ipPort.find(':');
+-    if(i == string::npos) {
+-        ip = ipPort;
+-    } else {
+-        ip = ipPort.substr(0, i);
+-        port = static_cast<uint16_t>(Util::toInt(ipPort.substr(i+1)));
+-    }
++    Util::parseIpPort(ipPort, ip, port);
+ 
+     string url;
+     for(auto i = clients.begin(); i != clients.end(); ++i) {
+@@ -503,9 +497,9 @@
+ 
+         } else {
+             try {
+-                string ip, file, proto, query, fragment;
++                string ip;
+                 uint16_t port = 0;
+-                Util::decodeUrl(aSeeker, proto, ip, port, file, query, fragment);
++                Util::parseIpPort(aSeeker, ip, port);
+                 ip = Socket::resolve(ip);
+                 if(static_cast<NmdcHub*>(aClient)->isProtectedIP(ip))
+                     return;
+@@ -529,9 +523,12 @@
+             }
+         }
+ 
+-        string ip, file, proto, query, fragment;
++        string ip;
+         uint16_t port = 0;
+-        Util::decodeUrl(aSeeker, proto, ip, port, file, query, fragment);
++        Util::parseIpPort(aSeeker, ip, port);
++        if (port == 0) {
++            return;
++        }
+ 
+         try {
+             AdcCommand cmd = SearchManager::getInstance()->toPSR(true, aClient->getMyNick(), aClient->getIpPort(), aTTH.toBase32(), partialInfo);
+--- a/dcpp/NmdcHub.cpp
++++ b/dcpp/NmdcHub.cpp
+@@ -249,7 +249,14 @@
+             return;
+ 
+         string seeker = param.substr(i, j-i);
+-
++        auto pos_slashes = seeker.find("://");
++        if (pos_slashes != string::npos) {
++            //seeker = (pos_slashes + 3 < seeker.size()) ? seeker.substr(pos_slashes+3) : Util::emptyString;
++            //fire(ClientListener::SearchFlood(), this, str(F_("NLO Try generate DDOS on %1%, do nothing") % seeker));
++            return;
++        }
++        bool passive = (seeker.compare(0, 4, "Hub:") == 0);
++        //printf("$Search->%s\n", seeker.c_str()); fflush(stdout);
+         // Filter own searches
+         if(isActive()) {
+             if(seeker == (getLocalIp() + ":" + Util::toString(SearchManager::getInstance()->getPort()))) {
+--- a/dcpp/Util.cpp
++++ b/dcpp/Util.cpp
+@@ -605,6 +605,16 @@
+     //printf("protocol:%s\n host:%s\n port:%d\n path:%s\n query:%s\n fragment:%s\n", protocol.c_str(), host.c_str(), port, path.c_str(), query.c_str(), fragment.c_str());
+ }
+ 
++void Util::parseIpPort(const string& aIpPort, string& ip, uint16_t& port) {
++    string::size_type i = aIpPort.rfind(':');
++    if (i == string::npos) {
++        ip = aIpPort;
++    } else {
++        ip = aIpPort.substr(0, i);
++        port = Util::toInt(aIpPort.substr(i + 1));
++    }
++}
++
+ map<string, string> Util::decodeQuery(const string& query) {
+     map<string, string> ret;
+     size_t start = 0;
+--- a/dcpp/Util.h
++++ b/dcpp/Util.h
+@@ -480,6 +480,7 @@
+     static uint32_t rand(uint32_t low, uint32_t high) { return rand(high-low) + low; }
+     static double randd() { return ((double)rand()) / ((double)0xffffffff); }
+ 
++    static void parseIpPort(const string &aIpPort, string &ip, uint16_t &port);
+ private:
+     /** In local mode, all config and temp files are kept in the same dir as the executable */
+     static bool localMode;

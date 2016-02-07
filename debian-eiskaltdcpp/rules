@@ -59,7 +59,7 @@ OPTSSTEP2 = -DUSE_QT_SQLITE=OFF \
 
 
 %:
-	dh $@ --parallel
+	dh $@ --parallel --list-missing
 
 override_dh_auto_configure:
 	mkdir -p $(BUILDDIR1) && cd $(BUILDDIR1) && cmake $(CMAKEOPTS) $(OPTSSTEP1)
