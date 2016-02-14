@@ -187,75 +187,35 @@ Description: sound files for Psi+
  Full list of features you can found at:
  http://psi-plus.com/wiki/doku.php/en:features
 
-Package: psi-plus-icons
+Package: psi-plus-icons-nonfree
 Architecture: all
-Section: metapackages
-Depends: psi-plus-common, ${misc:Depends}
-Recommends: psi-plus-icons-activities, psi-plus-icons-affiliations, psi-plus-icons-clients, psi-plus-icons-emoticons, psi-plus-icons-moods, psi-plus-icons-roster, psi-plus-icons-system
-Conflicts: psi-plus (<< 0.15~svn2289), psi-plus-activities, psi-plus-affiliations, psi-plus-clients, psi-plus-emoticons, psi-plus-moods, psi-plus-roster, psi-plus-system
-Replaces: psi-plus (<< 0.15~svn2289), psi-plus-activities, psi-plus-affiliations, psi-plus-clients, psi-plus-emoticons, psi-plus-moods, psi-plus-roster, psi-plus-system
-Description: icons for Psi+ meta-package
- Psi+ icons from psi+ svn
-
-Package: psi-plus-icons-activities
-Architecture: all
-Depends: psi-plus-common, ${misc:Depends}
-Conflicts: psi-plus (<< 0.15~svn2289), psi-plus-activities
-Replaces: psi-plus (<< 0.15~svn2289), psi-plus-activities
-Description: activities icons for Psi+
- Psi+ activities icons from psi+ svn
- separate from icons
-
-Package: psi-plus-icons-affiliations
-Architecture: all
-Depends: psi-plus-common, ${misc:Depends}
-Conflicts: psi-plus (<< 0.15~svn2289), psi-plus-affiliations
-Replaces: psi-plus (<< 0.15~svn2289), psi-plus-affiliations
-Description: affiliations icons for Psi+
- Psi+ affiliations icons from psi+ svn
- separate from icons
-
-Package: psi-plus-icons-clients
-Architecture: all
-Depends: psi-plus-common, ${misc:Depends}
-Conflicts: psi-plus (<< 0.15~svn2289), psi-plus-clients
-Replaces: psi-plus (<< 0.15~svn2289), psi-plus-clients
-Description: clients icons for Psi+
- Psi+ clients icons from psi+ svn
- separate from icons
-
-Package: psi-plus-icons-emoticons
-Architecture: all
-Depends: psi-plus-common, ${misc:Depends}
-Conflicts: psi-plus (<< 0.15~svn2289), psi-plus-emoticons
-Replaces: psi-plus (<< 0.15~svn2289), psi-plus-emoticons
-Description: emoticons icons for Psi+
- Psi+ emoticons icons from psi+ svn
- separate from icons
-
-Package: psi-plus-icons-moods
-Architecture: all
-Depends: psi-plus-common, ${misc:Depends}
-Conflicts: psi-plus (<< 0.15~svn2289), psi-plus-moods
-Replaces: psi-plus (<< 0.15~svn2289), psi-plus-moods
-Description: moods icons for Psi+
- Psi+ moods icons from psi+ svn
- separate from icons
-
-Package: psi-plus-icons-roster
-Architecture: all
-Depends: psi-plus-common, ${misc:Depends}
-Conflicts: psi-plus (<< 0.15~svn2289), psi-plus-roster
-Replaces: psi-plus (<< 0.15~svn2289), psi-plus-roster
-Description: roster icons for Psi+
- Psi+ roster icons from psi+ svn
- separate from icons
-
-Package: psi-plus-icons-system
-Architecture: all
-Depends: psi-plus-common, ${misc:Depends}
-Conflicts: psi-plus (<< 0.15~svn2289), psi-plus-system
-Replaces: psi-plus (<< 0.15~svn2289), psi-plus-system
-Description: system icons for Psi+
- Psi+ system icons from psi+ svn
- separate from icons
+Depends: psi-plus | psi-plus-webkit, psi-plus-plugins, ${misc:Depends}
+Replaces: psi-plus-icons,
+          psi-plus-icons-activities,
+          psi-plus-icons-affiliations,
+          psi-plus-icons-clients,
+          psi-plus-icons-emoticons,
+          psi-plus-icons-moods,
+          psi-plus-icons-roster,
+          psi-plus-icons-system
+Breaks: psi-plus-icons,
+        psi-plus-icons-activities,
+        psi-plus-icons-affiliations,
+        psi-plus-icons-clients,
+        psi-plus-icons-emoticons,
+        psi-plus-icons-moods,
+        psi-plus-icons-roster,
+        psi-plus-icons-system
+Description: additional icons for Psi+
+ This package contains additional icons for Psi+. Due to issues with thier
+ licenses they cannot be included into primary Psi+ tarballs.
+ .
+ Psi is a cross-platform powerful XMPP/Jabber client (Qt, C++) designed for the
+ Jabber power users. Psi+ is a development branch of Psi IM XMPP/Jabber client
+ by <psi-dev@conference.jabber.ru> team.
+ .
+ Project Purpose: collection, refinement and writing new patches for transfer
+ them to Psi upstream developers.
+ .
+ Full list of features you can found at:
+ http://psi-plus.com/wiki/doku.php/en:features
