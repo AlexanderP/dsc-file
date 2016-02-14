@@ -1,54 +1,28 @@
 #!/usr/bin/make -f
 
-ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-endif
-
-ifeq (,$(NUMJOBS))
-	NUMJOBS = 1
-endif
-
 PACKAGE = q4wine
 
-BUILDDIR = builddir
-DEB_DH_INSTALL_SOURCEDIR = $(CURDIR)/debian/$(PACKAGE)
+DEBIAN_PATH  := $(abspath $(dir $(firstword $(MAKEFILE_LIST))))
+USCAN_REPORT = $(shell uscan --noconf --report --dehs $(DEBIAN_PATH))
+CUR_VER = $(shell echo "$(USCAN_REPORT)" | sed -n 's/.*<upstream-version>\(.*\)<\/upstream-version>.*/\1/p')
+CUR_URL = $(shell echo "$(USCAN_REPORT)" | sed -n 's/.*<upstream-url>\(.*\)<\/upstream-url>.*/\1/p')
 
-CUR_VER = $(shell uscan --dehs | sed -n 's/.*<upstream-version>\(.*\)<\/upstream-version>.*/\1/p')
+export DEB_CXXFLAGS_MAINT_APPEND = $(shell dpkg-buildflags --get CPPFLAGS)
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
 CMAKEOPTS = -DCMAKE_BUILD_TYPE=Release \
-            -USE_GZIP=ON \
-            -DCMAKE_INSTALL_PREFIX=/usr \
             -DLIBS_ENTRY_PATH=/usr/lib/q4wine/ \
-            ..
-
+            -DCMAKE_INSTALL_PREFIX=/usr \
+            -DUSE_GZIP=ON \
+            -DWITH_WINEAPPDB=OFF
 
 %:
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	mkdir -p $(BUILDDIR) && cd $(BUILDDIR) && cmake $(CMAKEOPTS)
-
-override_dh_auto_build:
-	cd $(BUILDDIR) && $(MAKE) -j$(NUMJOBS)
-
-override_dh_auto_clean:
-	dh_testroot
-	[ ! -f Makefile ] || ( cd $(BUILDDIR) && $(MAKE) clean )
-	[ ! -d $(BUILDDIR) ] || rm -r $(BUILDDIR)
-	rm -f build-stamp configure-stamp config.sub config.guess
-
-override_dh_auto_install:
-	cd $(BUILDDIR) && $(MAKE) install DESTDIR=$(DEB_DH_INSTALL_SOURCEDIR)
-
-override_dh_installchangelogs:
-	dh_installchangelogs ChangeLog
-
-.PHONY: override_dh_strip
-override_dh_strip:
-	dh_strip
+	dh_auto_configure -- $(CMAKEOPTS)
 
 get-orig-source:
-	wget -4 -c "http://sourceforge.net/projects/q4wine/files/q4wine/q4wine%20$(CUR_VER)/q4wine-$(CUR_VER).tar.bz2"
-	mv -f "$(PACKAGE)-$(CUR_VER).tar.bz2" ../"$(PACKAGE)_$(CUR_VER).orig.tar.bz2"
+	wget -c "$(CUR_URL)" -O "$(PACKAGE)_$(CUR_VER).orig.tar.bz2"
 
 .PHONY: override_dh_makeshlibs
