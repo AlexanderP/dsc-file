@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 7.0.50~),
                 libtool, 
                 libasound2-dev, 
                 libsamplerate0-dev, 
-                libmad0-dev, 
+                libmad0-dev, libmpg123-dev,
                 libavformat-dev, 
                 libsndfile1-dev, 
                 libx11-dev, 
@@ -40,8 +40,8 @@ Build-Depends: debhelper (>= 7.0.50~),
                 libglu1-mesa-dev,
                 mesa-common-dev,
                 libgtkglext1-dev,
-		libjansson-dev
-Standards-Version: 3.9.5
+                libjansson-dev
+Standards-Version: 3.9.7
 Homepage: http://deadbeef.sourceforge.net/
 
 Package: deadbeef-dev

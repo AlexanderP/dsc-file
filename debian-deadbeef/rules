@@ -13,6 +13,13 @@ else
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
+CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
+CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
+CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
+LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
+
+export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
+
 %:
 	dh --parallel --with quilt $@
 
@@ -27,15 +34,12 @@ override_dh_auto_configure:
 override_dh_install:
 	dh_install
 	@cp ChangeLog debian/deadbeef/usr/share/doc/deadbeef/changelog.deadbeef
-ifneq (,$(filter $(DEBIAN_CODENAME),squeeze lucid karmic maverick)) 
-	cd  debian/deadbeef/usr/lib* && rm deadbeef/*gtk2* 
-	cd  debian/deadbeef/usr/lib* && rm deadbeef/*GTK2*
-else
 	cd  debian/deadbeef/usr/lib* && rm deadbeef/*gtk2* 
 	cd  debian/deadbeef/usr/lib* && rm deadbeef/*gtk3* 
 	cd  debian/deadbeef/usr/lib* && rm deadbeef/*GTK3* 
 	cd  debian/deadbeef/usr/lib* && rm deadbeef/*GTK2*
-endif
+	cd  debian && sed -i "/dependency_libs/ s/'.*'/''/" `find . -name '*.la'`
+
 
 override_dh_installchangelogs:
 	dh_installchangelogs -k ChangeLog
