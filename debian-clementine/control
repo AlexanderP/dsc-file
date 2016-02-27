@@ -23,7 +23,7 @@ Build-Depends: cmake (>= 2.6),
                libplist-dev,
                libprojectm-dev,
                libqjson-dev,
-               libqt4-dev,
+               libmygpo-qt-dev | libqt4-dev,
                libqt4-opengl-dev,
                libqxt-dev,
                libsparsehash-dev,
@@ -34,8 +34,8 @@ Build-Depends: cmake (>= 2.6),
                libprotobuf-dev, protobuf-compiler,
                libqca2-dev,
                libfftw3-dev,
-               libgpod-dev
-Standards-Version: 3.9.6
+               libgpod-dev, libpulse-dev
+Standards-Version: 3.9.7
 Homepage: http://www.clementine-player.org/
 
 Package: clementine
