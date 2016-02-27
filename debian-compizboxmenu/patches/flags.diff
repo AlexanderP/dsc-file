@@ -1,0 +1,25 @@
+--- compizboxmenu-1.1.1+git20150907.orig/Makefile
++++ compizboxmenu-1.1.1+git20150907/Makefile
+@@ -15,16 +15,16 @@ $(error Python not found. Version >= 2.7
+ endif
+ 
+ # Set up compile flags
+-CPPFLAGS := `pkg-config --cflags dbus-glib-1 gdk-2.0 gtk+-2.0 libwnck-1.0`
+-CPPFLAGS_CLIENT := `pkg-config --cflags dbus-glib-1`
++CPPFLAGS := $(shell dpkg-buildflags --get CPPFLAGS) `pkg-config --cflags dbus-glib-1 gdk-2.0 gtk+-2.0 libwnck-1.0`
++CPPFLAGS_CLIENT := $(shell dpkg-buildflags --get CPPFLAGS) `pkg-config --cflags dbus-glib-1`
+ WARNINGS := -Wall -Wextra -Wno-unused-parameter
+ ifneq ("$(DEBUG)","")
+-	CFLAGS := -O2 -g $(WARNINGS)
++	CFLAGS := -O2 -g $(WARNINGS) $(shell dpkg-buildflags --get CFLAGS)
+ else
+-	CFLAGS := $(WARNINGS)
++	CFLAGS := $(WARNINGS) $(shell dpkg-buildflags --get CFLAGS)
+ endif
+-LDFLAGS := -Wl,--as-needed `pkg-config --libs dbus-glib-1 gdk-2.0 gtk+-2.0 libwnck-1.0`
+-LDFLAGS_CLIENT := -Wl,--as-needed `pkg-config --libs dbus-glib-1`
++LDFLAGS := -Wl,--as-needed `pkg-config --libs dbus-glib-1 gdk-2.0 gtk+-2.0 libwnck-1.0` $(shell dpkg-buildflags --get LDFLAGS)
++LDFLAGS_CLIENT := -Wl,--as-needed `pkg-config --libs dbus-glib-1` $(shell dpkg-buildflags --get LDFLAGS)
+ 
+ VERSION=1.1.12
+ 
