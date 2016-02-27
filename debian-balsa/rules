@@ -1,7 +1,12 @@
 #!/usr/bin/make -f
 export DH_VERBOSE=1
 
-LDFLAGS += -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
+CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
+CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
+CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
+LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
+
+export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
 
 # Compile options
 CONFIGURE_FLAGS = --disable-smime \
