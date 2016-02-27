@@ -3,7 +3,7 @@ Section: net
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: cmake, debhelper (>= 7.0.50~), openssl, libqtwebkit-dev | libqt4-dev, libx11-dev, zlib1g-dev, libidn11-dev, libxss-dev, libenchant-dev, bc
-Standards-Version: 3.9.3
+Standards-Version: 3.9.7
 Homepage: https://github.com/Vacuum-IM
 
 Package: vacuum
@@ -28,7 +28,7 @@ Description: Jabber client using Qt (shared library)
 
 Package: vacuum-dev
 Architecture: all
-Depends: ${misc:Depends}, libvacuumutils@X.XX@ (>= ${source:Version})
+Depends: ${misc:Depends}, libvacuumutils@X.XX@ (>= ${source:Upstream-Version}), libvacuumutils@X.XX@ (<< ${source:Upstream-Version}+1~)
 Description: Development files for Vacuum
  This package contains Vacuum include files you need if you
  want to develop plugins for Vacuum.
@@ -38,7 +38,7 @@ Section: debug
 Priority: extra
 Architecture: any
 Depends: ${misc:Depends},
- vacuum (= ${binary:Version}), libvacuumutils@X.XX@ (= ${source:Version})
+ vacuum (= ${binary:Version}), libvacuumutils@X.XX@ (= ${binary:Version})
 Description: Jabber client using Qt (debug symbols)
  This package contains the debugging symbols for Vacuum.
  .

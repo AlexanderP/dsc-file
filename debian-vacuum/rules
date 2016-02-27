@@ -19,7 +19,17 @@ OLDVERSIONUTILS=$(shell echo "$(VERSIONUTILS)-1" | bc -l )
 OLDVERSIONUTILS1=$(shell seq 20 $(OLDVERSIONUTILS))
 OLDVERSIONsUTILS=$(shell for i in $(OLDVERSIONUTILS1) ; do  echo libvacuumutils$$i, ; done)
 
-CMAKEOPT= -DCMAKE_BUILD_TYPE=Release -DPLUGIN_statistics=OFF
+CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
+CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(CPPFLAGS)
+LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
+
+CMAKEOPT= -DCMAKE_BUILD_TYPE=Release \
+          -DPLUGIN_statistics=OFF \
+          -DCMAKE_CXX_FLAGS="$(CXXFLAGS)"\
+          -DCMAKE_SHARED_LINKER_FLAGS="$(LDFLAGS)" \
+          -DCMAKE_EXE_LINKER_FLAGS="$(LDFLAGS)"
+
+
 VERSION=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | grep git | wc -l)
 ifneq (,$(filter 1,$(VERSION)))
 	COMMIT=$(shell cat $(CURDIR)/debian/changelog | grep '* Commit' | sed 1q | awk -F ': ' '{print $$2}')
@@ -30,7 +40,7 @@ endif
 override_dh_clean:
 	cp $(CURDIR)/debian/control.in $(CURDIR)/debian/control
 	cp $(CURDIR)/debian/libvacuumutils.install $(CURDIR)/debian/libvacuumutils$(VERSIONUTILS).install
-	sed "s/@X.XX@/$(VERSIONUTILS)/" -i $(CURDIR)/debian/control
+	sed "s/@X.XX@/$(VERSIONUTILS)/g" -i $(CURDIR)/debian/control
 	sed "s/@Y.YY@/$(OLDVERSIONsUTILS)/" -i $(CURDIR)/debian/control
 	dh_clean
 
