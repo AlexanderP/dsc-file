@@ -11,9 +11,25 @@ else
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
+Q_CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
+Q_CFLAGS:=$(shell dpkg-buildflags --get CFLAGS) $(Q_CPPFLAGS)
+Q_CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(Q_CPPFLAGS)
+Q_LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
+export Q_CPPFLAGS Q_CFLAGS Q_CXXFLAGS Q_LDFLAGS
+
+Q_OPTS = "QMAKE_CXXFLAGS += $(Q_CXXFLAGS)" \
+         "QMAKE_CFLAGS_DEBUG += $(Q_CFLAGS)" \
+         "QMAKE_CFLAGS_RELEASE += $(Q_CFLAGS)" \
+         "QMAKE_LFLAGS += $(Q_LDFLAGS)"
+
+
+
 %:
 	dh $@ 
-	
+
+override_dh_auto_configure:
+	dh_auto_configure -- $(Q_OPTS)
+
 override_dh_install:
 	cp qt-box-editor-* qt-box-editor
 	dh_install
