@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
 
+export DH_ALWAYS_EXCLUDE := ChangeLog.txt
+
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
