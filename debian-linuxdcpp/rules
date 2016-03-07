@@ -15,6 +15,13 @@ export DH_ALWAYS_EXCLUDE := License.txt
 
 SCONSOPT = -j1 release=1 PREFIX=/usr FAKE_ROOT=debian/linuxdcpp 
 
+CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
+CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
+CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
+LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
+
+export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
+
 %:
 	dh --parallel $@
 
