@@ -1,0 +1,43 @@
+Description: Disable updates checking mechanism.
+Author: Alessio Treglia <alessio@debian.org>
+Forwarded: not-needed
+
+--- a/src/updatechecker.cpp
++++ b/src/updatechecker.cpp
+@@ -39,35 +39,7 @@ UpdateChecker::UpdateChecker(QWidget * p
+ 	, net_manager(0)
+ 	, d(0)
+ {
+-	d = data;
+-
+-	check_url = URL_VERSION_INFO;
+-	user_agent = "SMPlayer";
+-
+-	connect(this, SIGNAL(newVersionFound(const QString &)),
+-            this, SLOT(reportNewVersionAvailable(const QString &)));
+-
+-	connect(this, SIGNAL(noNewVersionFound(const QString &)),
+-            this, SLOT(reportNoNewVersionFound(const QString &)));
+-
+-	connect(this, SIGNAL(errorOcurred(int, QString)), this, SLOT(reportError(int, QString)));
+-
+-	net_manager = new QNetworkAccessManager(this);
+-
+-	QDate now = QDate::currentDate();
+-	//now = now.addDays(27);
+-	int days = QDateTime(d->last_checked).daysTo(QDateTime(now));
+-
+-	qDebug("UpdateChecker::UpdateChecker: enabled: %d", d->enabled);
+-	qDebug("UpdateChecker::UpdateChecker: days_to_check: %d", d->days_to_check);
+-	qDebug("UpdateChecker::UpdateChecker: days since last check: %d", days);
+-
+-	if ((!d->enabled) || (days < d->days_to_check)) return;
+-
+-	QNetworkRequest req(check_url);
+-	req.setRawHeader("User-Agent", user_agent);
+-	QNetworkReply *reply = net_manager->get(req);
+-	connect(reply, SIGNAL(finished()), this, SLOT(gotReply()));
++	return;
+ }
+ 
+ UpdateChecker::~UpdateChecker() {

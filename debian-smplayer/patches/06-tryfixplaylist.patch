@@ -1,0 +1,23 @@
+Description: try to fix playlist hide wuth a hack that always show the playlist if are activated
+Author: PICCORO Lenz McKAY <mckaygerhard@gmail.com>
+Bug-Debian: http://bugs.debian.org/799385
+Bug-Debian: http://bugs.debian.org/799984
+
+Origin: https://sourceforge.net/p/smplayer/patches/62/
+Bug: https://sourceforge.net/p/smplayer/bugs/482/
+Forwarded: not-needed
+
+--- a/src/baseguiplus.cpp
++++ b/src/baseguiplus.cpp
+@@ -427,10 +427,10 @@ void BaseGuiPlus::aboutToExitFullscreen(
+                                   #endif
+                                   );
+ 
++	playlistdock->setFloating( fullscreen_playlist_was_floating );
+ 	if (fullscreen_playlist_was_visible) {
+ 		playlistdock->show();
+ 	}
+-	playlistdock->setFloating( fullscreen_playlist_was_floating );
+ 	ignore_playlist_events = false;
+ #endif
+ }

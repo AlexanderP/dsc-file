@@ -2,14 +2,14 @@ Source: smplayer
 Section: video
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7.0.50~), libqt4-dev, zlib1g-dev, subversion
-Standards-Version: 3.9.6
+Build-Depends: debhelper (>= 9), libqt4-dev, zlib1g-dev, subversion
+Standards-Version: 3.9.7
 Homepage: http://smplayer.sourceforge.net/
 
 Package: smplayer
 Architecture: any
 Depends:
- mplayer2 | mplayer,
+ mpv | mplayer,
  ${misc:Depends},
  ${shlibs:Depends}
 Recommends:

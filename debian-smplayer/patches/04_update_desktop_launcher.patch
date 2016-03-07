@@ -1,0 +1,26 @@
+Description: Add Unity Launcher Quicklist and keywords to desktop file
+Author: Mateusz Łukasik <mati75@linuxmint.pl>
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/938015
+
+--- b/smplayer.desktop
++++ b/smplayer.desktop
+@@ -8,6 +8,19 @@ MimeType=audio/ac3;audio/mp4;audio/mpeg;
+ Name=SMPlayer
+ Type=Application
+ X-KDE-StartupNotify=false
++Keywords=movie;player;media;kde;qt;
++
++X-Ayatana-Desktop-Shortcuts=Screen;Window
++
++[Mini Shortcut Group]
++Name=Open with mini GUI
++Exec=smplayer -minigui
++TargetEnvironment=Unity
++
++[mpc Shortcut Group]
++Name=Open with mpc GUI
++Exec=smplayer -mpcgui
++TargetEnvironment=Unity
+ 
+ # Translations
+ Comment[ar]=واجهة-طرفية ممتازة للمشغل MPlayer

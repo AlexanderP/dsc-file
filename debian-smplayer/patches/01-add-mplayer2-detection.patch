@@ -8,8 +8,8 @@ Debian. Since executing the mplayer program to parse its version
 identification output is too heavy-weight, this change introduces a
 dpkg-specific, but light-weight check.
 
---- smplayer-15.9.0+svn7200.orig/src/core.cpp
-+++ smplayer-15.9.0+svn7200/src/core.cpp
+--- a/src/core.cpp
++++ b/src/core.cpp
 @@ -29,6 +29,7 @@
  #endif
  

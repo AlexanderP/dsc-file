@@ -1,0 +1,18 @@
+Description: Add Debian hardening flags to qmake.
+Author: Mateusz Łukasik <mati75@linuxmint.pl>
+
+ 
+--- smplayer-16.1.0+svn7477.orig/src/smplayer.pro
++++ smplayer-16.1.0+svn7477/src/smplayer.pro
+@@ -33,6 +33,11 @@ DEFINES += CAPTURE_STREAM
+ DEFINES += BOOKMARKS
+ DEFINES += MOUSE_GESTURES
+ 
++QMAKE_CPPFLAGS *= $(shell dpkg-buildflags --get CPPFLAGS)
++QMAKE_CFLAGS   *= $(shell dpkg-buildflags --get CFLAGS)
++QMAKE_CXXFLAGS *= $(shell dpkg-buildflags --get CXXFLAGS)
++QMAKE_LFLAGS   *= $(shell dpkg-buildflags --get LDFLAGS)
++
+ DEFINES += MPV_SUPPORT
+ DEFINES += MPLAYER_SUPPORT
+ 
