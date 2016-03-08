@@ -30,6 +30,15 @@ diff -Naur sz81.orig/Makefile sz81-2.1.7+svn203/Makefile
  
  # For sz81 OSS_SOUND_SUPPORT is now synonymous with SDL_SOUND_SUPPORT.
  # Comment this out if you don't want sound support.
+@@ -37,7 +37,7 @@
+ CFLAGS+=-Wall `$(SDL_CONFIG) --cflags` -DVERSION=\"$(VERSION)\" \
+ 	-DPACKAGE_DATA_DIR=\"$(PACKAGE_DATA_DIR)\" $(SOUNDDEF) -DSZ81 
+ LINK=$(CC)
+-LDFLAGS=
++LDFLAGS?=
+ LIBS=`$(SDL_CONFIG) --libs` 
+ 
+ # You won't need to alter anything below
 @@ -69,14 +69,14 @@
  		echo "Installing into the current folder is not allowed."; \
  		exit 2; \

@@ -11,6 +11,13 @@ else
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
+CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
+CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
+CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
+LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
+
+export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
+
 %:
 	dh $@ --parallel
 
