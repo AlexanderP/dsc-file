@@ -12,6 +12,8 @@ else
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
+NCPUS=1
+
 #LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -ldl
 
 build: build-arch build-indep
