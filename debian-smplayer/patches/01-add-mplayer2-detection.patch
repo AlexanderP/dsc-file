@@ -18,10 +18,10 @@ dpkg-specific, but light-weight check.
  
  #include "mplayerwindow.h"
  #include "desktopinfo.h"
-@@ -1597,9 +1598,10 @@ void Core::startMplayer( QString file, d
- 		mplayer_bin = fi.absoluteFilePath();
+@@ -1585,9 +1586,10 @@
  	}
  
+ #ifdef MPLAYER2_SUPPORT
 -	if (fi.baseName().toLower() == "mplayer2") {
 +	// debian/ubuntu specific check if we are using mplayer2
 +	if ((fi.baseName().toLower() == "mplayer2") || !access("/usr/share/doc/mplayer2/copyright", F_OK)) {
