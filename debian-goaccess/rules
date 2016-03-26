@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --parallel 
+
+override_dh_auto_configure:
+	autoreconf -fiv
+	dh_auto_configure -- --enable-geoip --enable-utf8

@@ -1,0 +1,33 @@
+Source: goaccess
+Section: utils 
+Priority: extra
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 9), autotools-dev, libncurses5-dev, libglib2.0-dev, libgeoip-dev, autoconf, automake, libncursesw5-dev
+Standards-Version: 3.9.7
+Homepage: http://goaccess.prosoftcorp.com/
+
+Package: goaccess
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: log analyzer and interactive viewer for the Apache Webserver
+ Displays fast and valuable HTTP statistics for system administrators that
+ require a visual report on the fly.
+ .
+ The collected information will be displayed to the user (sysadmin) in a
+ visual/interactive window. Collected information includes:
+ .
+  -General Statistics, Bandwidth etc.
+  -Top Visitors
+  -Requested files
+  -Requested static files, images, swf, js, etc.
+  -Referrers URLs
+  -404 or Not Found
+  -Operating Systems
+  -Browsers and Spiders
+  -Hosts, Reverse DNS, IP Location
+  -HTTP Status Codes
+  -Referring Sites
+  -Unlimited log file size
+ .
+ GoAccess can parse both of Apaches' log formats, the Common Log Format and
+ the Combined Log Format
