@@ -1,7 +1,7 @@
 Description: Fix documentation URL
  Use web.archive.org until project website will be repaired.
 Author: Boris Pek <tehnick-8@yandex.ru>
-Last-Update: 2016-01-24
+Last-Update: 2016-02-15
 Forwarded: not-needed
 Bug: https://github.com/brezerk/q4wine/issues/45
 Bug-Debian: http://bugs.debian.org/761968
@@ -28,15 +28,13 @@ Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/q4wine/+bug/1332725
  #define BUGS_HOSTNAME "bugs.winehq.org"
  
  #define APPDB_PORT 80
-diff --git a/src/q4wine-lib/q4wine-lib.cpp b/src/q4wine-lib/q4wine-lib.cpp
-index 0fe09c1..962c4aa 100644
 --- a/src/q4wine-lib/q4wine-lib.cpp
 +++ b/src/q4wine-lib/q4wine-lib.cpp
-@@ -1608,7 +1608,7 @@
-             QString url="http://";
+@@ -1584,7 +1584,7 @@
+             }
              url.append(APP_WEBSITE);
              url.append("/documentation/");
--            url.append(this->getLang());
+-            url.append(lang);
 +            url.append("en_us");
              url.append("/");
              url.append(rawurl);

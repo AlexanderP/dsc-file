@@ -26,9 +26,9 @@ Recommends: sudo,
             wine-development [amd64 any-i386 arm64 armel armhf powerpc] |
             wine1.6 [amd64 i386] |
             wine1.8 [amd64 i386] |
-            wine1.9 [amd64 i386],
-            winetricks
-Suggests: fuseiso [!hurd-i386 !kfreebsd-i386 !kfreebsd-amd64]
+            wine1.9 [amd64 i386]
+Suggests: fuseiso [!hurd-i386 !kfreebsd-i386 !kfreebsd-amd64],
+          winetricks
 Description: Qt GUI for wine (WINE)
  Q4Wine will help you manage wine prefixes and installed applications.
  .

@@ -1,9 +1,19 @@
-uget (2.0.4-1+nmu1) unstable; urgency=medium
+uget (2.0.6-1+nmu1) unstable; urgency=medium
 
   * Non-maintainer upload.
   * Backports from Sid
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 06 Feb 2016 16:30:50 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 16 Apr 2016 15:08:24 +0300
+
+uget (2.0.6-1) unstable; urgency=medium
+
+  * New upstream release
+  * Updated Standard-Version to 3.9.7
+  * Add 05_ignore_build_potfiles.patch: ignore missing files
+  * Remove 03-uglib_missing_potfile.patch: upstream already has considered
+  * gitignore file: added debian/.pot
+
+ -- Elías Alejandro Año Mendoza <ealmdz@gmail.com>  Mon, 04 Apr 2016 18:41:00 -0500
 
 uget (2.0.4-1) unstable; urgency=medium
 
