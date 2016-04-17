@@ -8,7 +8,7 @@ Homepage: https://github.com/Vacuum-IM
 
 Package: vacuum
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libqt4-sql-sqlite, libvacuumutils36 (>= ${source:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt4-sql-sqlite, libvacuumutils37 (>= ${source:Version})
 Conflicts: vacuum-spellchecker
 Replaces: vacuum-spellchecker
 Description: Jabber client using Qt
@@ -16,11 +16,11 @@ Description: Jabber client using Qt
  (XMPP) IM network (including Google Talk). It has full Unicode support, 
  and supports most important XMPP features.
 
-Package: libvacuumutils36
+Package: libvacuumutils37
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: libvacuumutils1., libvacuumutils1.19, libvacuumutils1.20, libvacuumutils1.21, libvacuumutils20, libvacuumutils21, libvacuumutils22, libvacuumutils23, libvacuumutils24, libvacuumutils25, libvacuumutils26, libvacuumutils27, libvacuumutils28, libvacuumutils29, libvacuumutils30, libvacuumutils31, libvacuumutils32, libvacuumutils33, libvacuumutils34, libvacuumutils35,
-Replaces: libvacuumutils1., libvacuumutils1.19, libvacuumutils1.20, libvacuumutils1.21, libvacuumutils20, libvacuumutils21, libvacuumutils22, libvacuumutils23, libvacuumutils24, libvacuumutils25, libvacuumutils26, libvacuumutils27, libvacuumutils28, libvacuumutils29, libvacuumutils30, libvacuumutils31, libvacuumutils32, libvacuumutils33, libvacuumutils34, libvacuumutils35,
+Conflicts: libvacuumutils1., libvacuumutils1.19, libvacuumutils1.20, libvacuumutils1.21, libvacuumutils20, libvacuumutils21, libvacuumutils22, libvacuumutils23, libvacuumutils24, libvacuumutils25, libvacuumutils26, libvacuumutils27, libvacuumutils28, libvacuumutils29, libvacuumutils30, libvacuumutils31, libvacuumutils32, libvacuumutils33, libvacuumutils34, libvacuumutils35, libvacuumutils36,
+Replaces: libvacuumutils1., libvacuumutils1.19, libvacuumutils1.20, libvacuumutils1.21, libvacuumutils20, libvacuumutils21, libvacuumutils22, libvacuumutils23, libvacuumutils24, libvacuumutils25, libvacuumutils26, libvacuumutils27, libvacuumutils28, libvacuumutils29, libvacuumutils30, libvacuumutils31, libvacuumutils32, libvacuumutils33, libvacuumutils34, libvacuumutils35, libvacuumutils36,
 Description: Jabber client using Qt (shared library)
  Vacuum is a free instant messaging application designed for the Jabber
  (XMPP) IM network (including Google Talk). It has full Unicode support, 
@@ -28,7 +28,7 @@ Description: Jabber client using Qt (shared library)
 
 Package: vacuum-dev
 Architecture: all
-Depends: ${misc:Depends}, libvacuumutils36 (>= ${source:Upstream-Version}), libvacuumutils36 (<< ${source:Upstream-Version}+1~)
+Depends: ${misc:Depends}, libvacuumutils37 (>= ${source:Upstream-Version}), libvacuumutils37 (<< ${source:Upstream-Version}+1~)
 Description: Development files for Vacuum
  This package contains Vacuum include files you need if you
  want to develop plugins for Vacuum.
@@ -38,7 +38,7 @@ Section: debug
 Priority: extra
 Architecture: any
 Depends: ${misc:Depends},
- vacuum (= ${binary:Version}), libvacuumutils36 (= ${binary:Version})
+ vacuum (= ${binary:Version}), libvacuumutils37 (= ${binary:Version})
 Description: Jabber client using Qt (debug symbols)
  This package contains the debugging symbols for Vacuum.
  .
