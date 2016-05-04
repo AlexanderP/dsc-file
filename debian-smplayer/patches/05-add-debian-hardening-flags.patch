@@ -4,9 +4,9 @@ Author: Mateusz Łukasik <mati75@linuxmint.pl>
  
 --- smplayer-16.1.0+svn7477.orig/src/smplayer.pro
 +++ smplayer-16.1.0+svn7477/src/smplayer.pro
-@@ -33,6 +33,11 @@ DEFINES += CAPTURE_STREAM
- DEFINES += BOOKMARKS
+@@ -32,6 +32,11 @@
  DEFINES += MOUSE_GESTURES
+ DEFINES += GLOBALSHORTCUTS
  
 +QMAKE_CPPFLAGS *= $(shell dpkg-buildflags --get CPPFLAGS)
 +QMAKE_CFLAGS   *= $(shell dpkg-buildflags --get CFLAGS)
@@ -15,4 +15,3 @@ Author: Mateusz Łukasik <mati75@linuxmint.pl>
 +
  DEFINES += MPV_SUPPORT
  DEFINES += MPLAYER_SUPPORT
- 
