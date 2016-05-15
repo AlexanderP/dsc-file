@@ -4,7 +4,7 @@ Last-Update: 2012-08-17
 
 --- a/src/src.pro
 +++ b/src/src.pro
-@@ -140,6 +140,12 @@
+@@ -154,6 +154,12 @@
  RESOURCES += ../psi.qrc ../iconsets.qrc
  
  # Platform specifics
@@ -15,5 +15,6 @@ Last-Update: 2012-08-17
 +	QMAKE_LFLAGS += $(Q_LDFLAGS)
 +}
  windows {
- 	contains(QMAKE_HOST.arch, x86_64):{
- 		RC_FILE = ../win32/psi_win64.rc
+     RC_ICONS = ../win32/app.ico
+ }
+
