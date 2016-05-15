@@ -1,14 +1,17 @@
-Author: Alessio Treglia <quadrispro@ubuntu.com>
-Description: Fix desktop file according to Freedesktop.org's spec.
----
- gui/qpxtool.desktop |    1 -
- 1 file changed, 1 deletion(-)
+Description: Fix desktop file
+Author: Boris Pek <tehnick-8@mail.ru>
+Last-Update: 2014-02-26
 
---- qpxtool.orig/gui/qpxtool.desktop
-+++ qpxtool/gui/qpxtool.desktop
+--- a/gui/qpxtool.desktop
++++ b/gui/qpxtool.desktop
 @@ -1,5 +1,4 @@
  [Desktop Entry]
 -Encoding=UTF-8
  Name=QPxTool
  GenericName=CD/DVD media quality checker
  GenericName[ru]=Проверка качества носителей CD/DVD
+@@ -11,3 +10,4 @@ Comment[ru]=Проверка качества носителей CD/DVD
+ Categories=System;
+ StartupNotify=true
+ Terminal=false
++Keywords=CD/DVD;quality;test;

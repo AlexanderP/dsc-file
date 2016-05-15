@@ -1,33 +1,19 @@
 #!/usr/bin/make -f
 
-DEB_HOST_ARCH_OS	?= $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
+PACKAGE = qpxtool
 
-ifeq (kfreebsd,$(DEB_HOST_ARCH_OS))
-export QPXTRANSPORT_EXTRA_LIBS="-lcam"
-endif
+DEBIAN_PATH := $(abspath $(dir $(MAKEFILE_LIST)))
+USCAN_REPORT = $(shell uscan --noconf --report --dehs $(DEBIAN_PATH))
+CUR_VER = $(shell echo "$(USCAN_REPORT)" | sed -n 's/.*<upstream-version>\(.*\)<\/upstream-version>.*/\1/p')
+CUR_URL = $(shell echo "$(USCAN_REPORT)" | sed -n 's/.*<upstream-url>\(.*\)<\/upstream-url>.*/\1/p')
 
-DEBIAN_CODENAME = $(shell echo $$DIST)
-ifeq "$(DEBIAN_CODENAME)" ""
-	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
-endif
-ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
-	BUILDDEBFLAGS= -- -Zlzma -z9
-else
-	BUILDDEBFLAGS= -- -Zxz -z9
-endif
-
-override_dh_builddeb:
-	dh_builddeb $(BUILDDEBFLAGS)
+LDFLAGS += -Wl,--as-needed
 
 %:
-	dh $@
+	dh $@ --list-missing
 
-override_dh_auto_clean:
-	[ ! -f Makefile ] || $(MAKE) QMAKE4=qmake-qt4 clean
+override_dh_auto_configure:
+	./configure --prefix=/usr --libdir=/usr/lib --mandir=/usr/share/man
 
-override_dh_auto_install:
-	dh_auto_install
-	install -D -m 0644 debian/pixmap/qpxtool.xpm debian/qpxtool/usr/share/pixmaps/qpxtool.xpm
-	# Uncompress manpages (they are not max compressed)
-	gunzip debian/tmp/usr/share/man/man*/*.gz
-
+get-orig-source:
+	wget -c "$(CUR_URL)" -O "$(PACKAGE)_$(CUR_VER).orig.tar.bz2"

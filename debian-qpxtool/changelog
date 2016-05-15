@@ -1,23 +1,286 @@
+qpxtool (0.7.2-4+nmu2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Backports from Sid
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 15 May 2016 19:52:04 +0300
+
+qpxtool (0.7.2-4) unstable; urgency=medium
+
+  * Update debian/rules: delete option --parallel from dh command because it
+    causes FTBFS on buildd hosts where parallel build is realy enabled.
+
+ -- Boris Pek <tehnick@debian.org>  Sun, 13 Apr 2014 00:18:54 +0400
+
+qpxtool (0.7.2-3) unstable; urgency=medium
+
+  * Simplify patch 05-add-hardening-flags-in-compiler-options.patch.
+  * Update debian/rules:
+    - simplify rules after changes in related patch
+    - add options --parallel and --list-missing to dh
+  * Update debian/qpxtool.install.
+
+ -- Boris Pek <tehnick@debian.org>  Sat, 12 Apr 2014 20:25:56 +0400
+
+qpxtool (0.7.2-2) unstable; urgency=medium
+
+  * Update debian/control:
+    - udate using wrap-and-sort tool
+    - delete now useless sections "Breaks: qpxtool (<< 0.7.1.002-1)"
+    - add build dependency from hurd-dev on hurd-i386
+  * Add patch 06-make-port-for-hurd-i386.patch:
+    Make port for Debian GNU/Hurd.
+  * Update debian/copyright.
+
+ -- Boris Pek <tehnick@debian.org>  Sat, 12 Apr 2014 16:19:23 +0400
+
+qpxtool (0.7.2-1) unstable; urgency=medium
+
+  * New maintainer. (Closes: #629599)
+  * Update to stable release 0.7.2.
+  * Bump Standards-Version to 3.9.5 (was 3.9.3).
+  * Update patches
+    - add 01-do_not_use_lib64_dir.patch
+    - rewrite 03-ftbfs_kfreebsd.patch
+    - rewrite 02-desktop_file.patch
+    - update 04-fix-build-with-libpng15.patch
+    - delete 01-makefile.patch (it is unnecessary now)
+  * Update debian/rules:
+    - add necessary options to configure script for installing files
+      in according with Debian Policy
+    - add get-orig-source section
+    - simplify rules
+  * Fix lintian notes vcs-field-not-canonical.
+  * Update years in debian/copyright.
+  * Update debian/qpxtool.docs.
+  * Add debian/qpxtool.doc-base.
+  * Fix a lot of lintian notes hyphen-used-as-minus-sign:
+    - add fixed debian/man/* files
+    - add debian/qpxtool.manpages and debian/pxfw.manpages
+    - update debian/qpxtool.install and debian/pxfw.install
+  * Update debian/libqpx0.lintian-overrides.
+
+ -- Boris Pek <tehnick@debian.org>  Wed, 26 Feb 2014 16:26:22 +0400
+
+qpxtool (0.7.1.002-6) unstable; urgency=low
+
+  * QA upload.
+  * Bumped Standards-Version to 3.9.3 (was 3.9.2).
+  * Bumped debhelper version to 9 (was 7.0.50~); updated debian/compat.
+  * Added file debian/patches/05-add-hardening-flags-in-compiler-options.patch.
+  * Updated debian/rules: added hardening flags in compiler options.
+  * Changed build dependency from libpng12-dev to libpng-dev.
+    Added file debian/patches/04-fix-build-with-libpng15.patch.
+    Added small hack in debian/rules (see LIBPNG_VER variable).
+    Build with libpng version 1.5.10 was tested successfully.
+    (Closes: #662481, #648127)
+  * Used [kfreebsd-any] instead of hardcoded list of kFreeBSD architectures
+    [kfreebsd-i386 kfreebsd-amd64] in build dependency. (Closes: #634714)
+  * File debian/copyright was updated in according to Copyright format 1.0.
+  * Fixed such lintian warnings and notes:
+    - out-of-date-copyright-format-uri
+    - hardening-no-relro and hardening-no-fortify-functions
+
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 26 Jun 2012 03:11:10 +0300
+
+qpxtool (0.7.1.002-5) unstable; urgency=low
+
+  * QA upload.
+  * Bump Standards.
+  * Orphaning this.
+
+ -- Alessio Treglia <alessio@debian.org>  Tue, 21 Jun 2011 13:04:12 +0200
+
+qpxtool (0.7.1.002-4) unstable; urgency=low
+
+  * We need both Breaks and Replaces fields.
+
+ -- Alessio Treglia <alessio@debian.org>  Wed, 06 Oct 2010 12:48:26 +0200
+
+qpxtool (0.7.1.002-3) unstable; urgency=low
+
+  * Link against libcam on kfreebsd to fix FTBFS.
+  * debian/control:
+    - Properly replace Conflicts/Replaces with Breaks fields.
+    - Bump Standards.
+  * Update debian/copyright.
+
+ -- Alessio Treglia <alessio@debian.org>  Wed, 06 Oct 2010 09:09:15 +0200
+
+qpxtool (0.7.1.002-2) unstable; urgency=low
+
+  * Correct little typo in the descriptions, thanks to Davide Prina for
+    reporting this (Closes: #582445).
+  * Change my email address.
+
+ -- Alessio Treglia <alessio@debian.org>  Sun, 06 Jun 2010 19:48:46 +0200
+
 qpxtool (0.7.1.002-1) unstable; urgency=low
 
-  * Compile
+  * New maintainer (Closes: #543879).
+  * New upstream release.
+  * Move packaging to collab-maint's git area.
+  * Split libraries:
+    - libqpx0 (shared libs)
+    - libqpx-dev (development files)
+  * debian/control:
+    - Drop libqt3-mt-dev, it's no longer needed.
+    - Build-depend on qmake-qt4.
+    - Bump Standards.
+    - Set DM-Upload-Allowed to yes.
+    - Build-depend on libqt4-dev.
+    - Build-depend on libpng12-dev.
+    - Set Conflicts/Replaces proper fields.
+  * Switch to 3.0 (quilt) format.
+  * Switch to debhelper 7.
+  * Drop dpatch support:
+    - Drop 02-typos.dpatch patch, no longer needed.
+    - Drop 03-0.6.1.1.dpatch, no longer needed.
+    - Drop 04-libata.dpatch patch, no longer needed.
+    - 01-qtdir.dpatch -> 01-makefile.patch:
+      + Drop QTDIR which seems to be not respected.
+      + Set QMAKE4 properly.
+      + Add DEP-3 compliant tags.
+  * debian/patches/02-desktop_file.patch:
+    - Fix desktop file as per spec.
+  * debian/{libqpx0,qpxtool}.lintian-overrides:
+    - "MultiMediaMasters & Machinary" is a manufacturer's name and not a
+      spelling error.
+  * debian/rules:
+    - Cleanup.
+    - Fix clean rule by passing the QMAKE4 envar.
+  * Add watch file.
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 23 Mar 2012 21:34:12 +0400
+ -- Alessio Treglia <quadrispro@ubuntu.com>  Mon, 26 Apr 2010 09:36:21 +0200
 
-qpxtool (0.7.1-2) unstable; urgency=low
+qpxtool (0.6.1-5) unstable; urgency=low
 
-  * Compile 
+  * Updating package to standards version 3.8.3.
+  * Removing vcs fields.
+  * Orphaning package.
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 02 Nov 2010 17:58:55 +0300
+ -- Daniel Baumann <daniel@debian.org>  Thu, 27 Aug 2009 10:17:45 +0200
 
-qpxtool (0.7.0-2) unstable; urgency=low
+qpxtool (0.6.1-4) unstable; urgency=medium
 
-  * Update rules. 
+  * Adding patch from Mirko Parthey <mirko.parthey@informatik.tu-chemnitz.de>
+    to make qpxtool work with libata (Closes: #463886).
+  * Rediffing 0.6.1.1.dpatch.
+  * Completing clean target in rules, thanks to Barry deFreese
+    <bddebian@comcast.net> (Closes: #442718).
+  * Reordering rules file.
+  * Using lintian debhelper to install lintian overrides.
+  * Rewriting copyright file in machine-interpretable format.
+  * Adding suggests to pxfw in qpxtool.
+  * Adding vcs fields to control file.
+  * Upgrading package to standards 3.8.0.
+  * Upgrading package to debhelper 7.
+  * Removing watch file.
+  * Reverting Makefile.qmake to upstream.
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 14 Jan 2010 22:33:06 +0300
+ -- Daniel Baumann <daniel@debian.org>  Wed, 02 Jul 2008 12:42:00 +0200
 
-qpxtool (0.7.0-1) unstable; urgency=low
+qpxtool (0.6.1-3) unstable; urgency=low
 
-  * Initial release (Closes: 123456)
+  * Bumped to new policy.
+  * Using new homepage field in control.
+  * Don't hide make errors in clean target of rules.
+  * Added manpage for deadreader and pioquiet.
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 03 Jan 2010 17:54:28 +0300
+ -- Daniel Baumann <daniel@debian.org>  Thu, 27 Dec 2007 14:13:00 +0100
+
+qpxtool (0.6.1-2) unstable; urgency=low
+
+  * Applied patch from upstream to fix FTBFS with linux 2.6.23, thanks to
+    Thomas Maguin <T.Maguin@web.de>.
+
+ -- Daniel Baumann <daniel@debian.org>  Tue, 23 Oct 2007 14:47:00 +0200
+
+qpxtool (0.6.1-1) unstable; urgency=low
+
+  * New upstream release:
+    - Including pxfw.
+  * Updated 02-typos.dpatch.
+
+ -- Daniel Baumann <daniel@debian.org>  Sun, 02 Sep 2007 17:50:00 +0200
+
+qpxtool (0.6.0.9-5) unstable; urgency=low
+
+  * Extendet 04-patch.dpatch to also cover install, not just build.
+    All build system caused breakages are now fixed (Closes: #413211).
+
+ -- Daniel Baumann <daniel@debian.org>  Thu, 08 Mar 2007 14:40:00 +0100
+
+qpxtool (0.6.0.9-4) unstable; urgency=low
+
+  * Reordered dpatches, thanks Eduard for taking care about it before.
+  * Added patch to disable another ldconfig call.
+  * Added lintian overrides.
+
+ -- Daniel Baumann <daniel@debian.org>  Thu, 08 Mar 2007 13:06:00 +0100
+
+qpxtool (0.6.0.9-3) unstable; urgency=low
+
+  * 02-libflags.dpatch, 03-typos.dpatch: dpatch'ified upstream relevant
+    changes from 0.6.0.9-2.1
+  * 04-CWDA.dpatch: fixes typo in ./build, causing failure in a build
+    environment with invalid $HOME (closes: #413211)
+
+ -- Eduard Bloch <blade@debian.org>  Tue, 06 Mar 2007 18:30:31 +0100
+
+qpxtool (0.6.0.9-2.1) unstable; urgency=low
+
+  * NMU, blessed by maintainer
+  * Added missing -fPIC flags on libraries, work around hidden build failures
+    on amd64
+  * setting provisional SONAMEs on the supplementary libraries
+  * debian/rules: explicit removal of final build files
+  * qpxtool/qcheck/test_threads.cpp: minor typo fix
+
+ -- Eduard Bloch <blade@debian.org>  Tue, 06 Mar 2007 17:03:01 +0100
+
+qpxtool (0.6.0.9-2) unstable; urgency=low
+
+  * Replaced 01-libdeps.dpatch with a patch from upstream.
+
+ -- Daniel Baumann <daniel@debian.org>  Sun, 04 Mar 2007 17:42:00 +0100
+
+qpxtool (0.6.0.9-1) unstable; urgency=low
+
+  * New upstream release.
+  * Removed 01-kfreebsd.dpatch, went upstream.
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 03 Mar 2007 10:49:00 +0100
+
+qpxtool (0.5.4-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Daniel Baumann <daniel@debian.org>  Tue, 01 Aug 2006 13:13:00 +0200
+
+qpxtool (0.5.3-3) unstable; urgency=low
+
+  * Making sure, the patch gets really applied in the right order this time
+    (Closes: #376196).
+
+ -- Daniel Baumann <daniel@debian.org>  Sat, 08 Jul 2006 13:26:00 +0200
+
+qpxtool (0.5.3-2) unstable; urgency=low
+
+  * New email address.
+  * Added patch to fix FTBFS on kFreeBSD (Closes: #376196).
+
+ -- Daniel Baumann <daniel@debian.org>  Fri, 07 Jul 2006 08:33:00 +0200
+
+qpxtool (0.5.3-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Daniel Baumann <daniel.baumann@panthera-systems.net>  Mon, 26 Jun 2006 14:03:00 +0200
+
+qpxtool (0.5.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #357847).
+  * Added manpage.
+
+ -- Daniel Baumann <daniel.baumann@panthera-systems.net>  Tue, 21 Mar 2006 11:01:00 +0100

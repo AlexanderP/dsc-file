@@ -1,20 +1,21 @@
 Source: qpxtool
 Section: otherosfs
 Priority: optional
-Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7.0.50~),
- libcam-dev [kfreebsd-i386 kfreebsd-amd64],
- libpng12-dev,
- qt4-qmake,
- libqt4-dev
-Standards-Version: 3.9.3
+Maintainer: Boris Pek <tehnick@debian.org>
+Build-Depends: debhelper (>= 9),
+               hurd-dev [hurd-i386],
+               libcam-dev [kfreebsd-any],
+               libpng-dev,
+               libqt4-dev,
+               qt4-qmake
+Standards-Version: 3.9.5
 Homepage: http://qpxtool.sourceforge.net/
+Vcs-Git: git://anonscm.debian.org/collab-maint/qpxtool.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/qpxtool.git
 
 Package: qpxtool
 Architecture: any
-Depends: ${shlibs:Depends},
- libqpx0 (= ${binary:Version}),
- ${misc:Depends}
+Depends: libqpx0 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Suggests: pxfw
 Description: CD/DVD quality checker
  QPxTool gives you access to all available Quality Checks (Q-Checks) on written
@@ -28,10 +29,10 @@ Description: CD/DVD quality checker
 
 Package: pxfw
 Architecture: any
-Depends: ${shlibs:Depends},
- libqpx0 (= ${binary:Version}),
- qpxtool,
- ${misc:Depends}
+Depends: libqpx0 (= ${binary:Version}),
+         qpxtool,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: Plextor firmware updater
  QPxTool gives you access to all available Quality Checks (Q-Checks) on written
  and blank media, that are available for your drive. This will help you to find
@@ -42,11 +43,8 @@ Description: Plextor firmware updater
  drives.
 
 Package: libqpx0
-Breaks: qpxtool (<< 0.7.1.002-1)
-Replaces: qpxtool (<< 0.7.1.002-1)
 Architecture: any
-Depends: ${shlibs:Depends},
- ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: CD/DVD quality checker (shared libraries)
  QPxTool gives you access to all available Quality Checks (Q-Checks) on written
  and blank media, that are available for your drive. This will help you to find
@@ -56,12 +54,9 @@ Description: CD/DVD quality checker (shared libraries)
  This package contains the shared libraries for QPxTool.
 
 Package: libqpx-dev
-Breaks: qpxtool (<< 0.7.1.002-1)
-Replaces: qpxtool (<< 0.7.1.002-1)
 Architecture: any
 Section: libdevel
-Depends: libqpx0 (= ${binary:Version}),
- ${misc:Depends}
+Depends: libqpx0 (= ${binary:Version}), ${misc:Depends}
 Description: CD/DVD quality checker (development files)
  QPxTool gives you access to all available Quality Checks (Q-Checks) on written
  and blank media, that are available for your drive. This will help you to find

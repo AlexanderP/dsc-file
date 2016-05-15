@@ -1,16 +1,41 @@
-Description: Link against libcam to fix FTBFS on kfreebsd.
-Author: Alessio Treglia <alessio@debian.org>
----
- lib/qpxtransport/Makefile |    2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Description: Fix FTBFS on Debian GNU/kFreeBSD
+Author: Boris Pek <tehnick-8@mail.ru>
+Last-Update: 2014-02-26
 
---- qpxtool.orig/lib/qpxtransport/Makefile
-+++ qpxtool/lib/qpxtransport/Makefile
-@@ -19,6 +19,6 @@ VER_MAJOR  = 0
- VER_MINOR  = 7
- VER_MICRO  = 0
+--- a/configure
++++ b/configure
+@@ -797,6 +797,13 @@
+ 		OSLIBS_HW="-lcam"
+ 		__defprefix="/usr"
+ 		;;
++	gnu/kfreebsd)
++		OSDEFS="-fPIC"
++		OSLIBS_DL="-ldl"
++		OSLIBS_THREAD="-lpthread"
++		OSLIBS_HW="-lcam"
++		__defprefix="/usr"
++		;;
+ 	netbsd|openbsd)
+ 		OSDEFS="-fPIC"
+ 		OSLIBS_THREAD="-lpthread"
+@@ -828,7 +835,7 @@
+ BHOST=`uname -srv`
  
--LDLIBS += $(LIBS_HW) $(LIBS_THREAD) $(LIBS_INET)
-+LDLIBS += $(LIBS_HW) $(LIBS_THREAD) $(LIBS_INET) $(QPXTRANSPORT_EXTRA_LIBS)
+ case "$OSL" in
+-	linux)
++	linux|gnu/kfreebsd)
+ 		__bindir=$__prefix/bin
+ 		__sbindir=$__prefix/sbin
+ 		if test "$ARCH" = "x86_64" ; then
+--- a/lib/qpxtransport/qpx_transport.cpp
++++ b/lib/qpxtransport/qpx_transport.cpp
+@@ -31,6 +31,9 @@
  
- include ../Makefile.lib
+ //#include <sys/types.h>
+ //#include <sys/stat.h>
++#ifdef open64
++#undef open64
++#endif
+ #include <fcntl.h>
+ //#include <poll.h>
+ #include <sys/time.h>

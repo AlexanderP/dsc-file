@@ -1,0 +1,16 @@
+Description: Do not use /usr/lib64/qpxtool for plugins
+ When option --libdir is used for configuring, plugins directory should
+ be set properly.
+Author: Boris Pek <tehnick-8@mail.ru>
+Last-Update: 2014-02-26
+
+--- a/configure
++++ b/configure
+@@ -876,6 +876,7 @@
+ fi
+ if test "$libdir" != "" ; then
+ 	__libdir=$libdir
++	__plugindir=$__libdir/qpxtool
+ fi
+ if test "$mandir" != "" ; then
+ 	__mandir=$mandir
