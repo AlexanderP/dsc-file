@@ -1,0 +1,28 @@
+Description: Allow img2py to work without requiring an X display
+Author: Nicolas Boulenguez
+Bug-Debian: http://bugs.debian.org/698198
+Bug: http://trac.wxwidgets.org/ticket/15483
+Forwarded: http://trac.wxwidgets.org/ticket/15483
+Last-Update: 2013-09-10
+
+--- a/wx/wxPython/wx/tools/img2py.py	2010-04-15 06:26:37.000000000 +0200
++++ b/wx/wxPython/wx/tools/img2py.py	2013-01-15 03:39:32.000000000 +0100
+@@ -95,7 +95,6 @@
+ except AttributeError:
+     b64encode = base64.encodestring
+ 
+-app = None
+ DEFAULT_APPEND = False
+ DEFAULT_COMPRESSED = True
+ DEFAULT_MASKCLR = None
+@@ -145,10 +144,6 @@
+     if functionCompatibile != -1:
+         functionCompatible = functionCompatibile
+         
+-    global app
+-    if not wx.GetApp():
+-        app = wx.PySimpleApp()
+-        
+     # convert the image file to a temporary file
+     tfname = tempfile.mktemp()
+     try:

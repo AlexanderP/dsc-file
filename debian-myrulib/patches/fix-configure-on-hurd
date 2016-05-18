@@ -1,0 +1,48 @@
+Description: Fix build on hurd
+Author: Samuel Thibault <samuel.thibault@ens-lyon.org>
+Bug-Debian: http://bugs.debian.org/512117
+Bug: http://trac.wxwidgets.org/ticket/15480
+Forwarded: http://trac.wxwidgets.org/attachment/ticket/15480/fix-configure-on-hurd
+Applied-Upstream: http://trac.wxwidgets.org/changeset/74779
+Last-Update: 2013-09-10
+
+--- wx.orig/wx/build/aclocal/bakefile.m4	2013-06-05 22:32:00.260042986 +1200
++++ wx/wx/build/aclocal/bakefile.m4	2013-06-05 22:32:06.276043007 +1200
+@@ -443,7 +443,7 @@
+       ;;
+ 
+       powerpc-apple-macos* | \
+-      *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-k*bsd*-gnu | \
++      *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-gnu* | *-*-k*bsd*-gnu | \
+       *-*-mirbsd* | \
+       *-*-sunos4* | \
+       *-*-osf* | \
+@@ -495,7 +495,7 @@
+ 
+     case "${BAKEFILE_HOST}" in
+       *-*-linux* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | \
+-      *-*-k*bsd*-gnu | *-*-mirbsd* )
++      *-*-k*bsd*-gnu | *-*-mirbsd* | *-*-gnu* )
+         if test "x$SUNCXX" = "xyes"; then
+             SONAME_FLAG="-h "
+         else
+--- wx.orig/wx/configure	2013-06-05 22:32:00.260042986 +1200
++++ wx/wx/configure	2013-06-05 22:32:06.296043007 +1200
+@@ -49131,7 +49131,7 @@
+       ;;
+ 
+       powerpc-apple-macos* | \
+-      *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-k*bsd*-gnu | \
++      *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-gnu* | *-*-k*bsd*-gnu | \
+       *-*-mirbsd* | \
+       *-*-sunos4* | \
+       *-*-osf* | \
+@@ -49175,7 +49175,7 @@
+ 
+     case "${BAKEFILE_HOST}" in
+       *-*-linux* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | \
+-      *-*-k*bsd*-gnu | *-*-mirbsd* )
++      *-*-k*bsd*-gnu | *-*-mirbsd* | *-*-gnu* )
+         if test "x$SUNCXX" = "xyes"; then
+             SONAME_FLAG="-h "
+         else

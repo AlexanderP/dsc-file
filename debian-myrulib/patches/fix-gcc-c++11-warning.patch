@@ -1,0 +1,20 @@
+Description: Fix GCC C++11 warning
+ C++11 requires a space between adjacent string literals. This change prevents
+ recent GCC to emit a warning every time wx/defs.h is included.
+Author: Tim Kosse
+Bug-Debian: http://bugs.debian.org/721184
+Origin: http://trac.wxwidgets.org/changeset/74127
+Forwarded: http://trac.wxwidgets.org/changeset/74127
+Last-Update: 2013-08-06
+
+--- wxwidgets2.8-2.8.12.1.orig/wx/include/wx/defs.h
++++ wxwidgets2.8-2.8.12.1/wx/include/wx/defs.h
+@@ -2887,7 +2887,7 @@ typedef const void* WXWidget;
+     "/manifestdependency:\"type='win32'         \
+      name='Microsoft.Windows.Common-Controls'   \
+      version='6.0.0.0'                          \
+-     processorArchitecture='"cpu"'              \
++     processorArchitecture='" cpu "'            \
+      publicKeyToken='6595b64144ccf1df'          \
+      language='*'\""
+ 

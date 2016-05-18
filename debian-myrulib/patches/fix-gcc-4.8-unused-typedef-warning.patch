@@ -1,0 +1,17 @@
+Description: Fix compiler warning about an unused local typedef.
+ gcc-4.8 with -Wunused-local-typedefs warns about the unused local typedef
+ 'wxDummyCheckInt' in wx/debug.h.
+Author: Benjamin Drung <bdrung@ubuntu.com>
+Bug: http://trac.wxwidgets.org/ticket/16028
+
+--- a/wx/include/wx/debug.h
++++ b/wx/include/wx/debug.h
+@@ -191,7 +191,7 @@
+ /*  as wxCHECK2 but with a message explaining why we fail */
+ 
+ #ifdef __GNUC__
+-    #define wxFORCE_SEMICOLON typedef int wxDummyCheckInt
++    #define wxFORCE_SEMICOLON typedef int wxDummyCheckInt __attribute__((unused))
+     /* Note: old gcc versions (e.g. 2.8) give an internal compiler error */
+     /*     on a simple forward declaration, when used in a template    */
+     /*     function, so rather use a dummy typedef which does work...  */

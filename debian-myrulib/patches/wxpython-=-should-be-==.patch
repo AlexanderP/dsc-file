@@ -1,0 +1,29 @@
+Description: Fix code typo
+ = should be ==!
+Author: Olly Betts <olly@survex.com>
+Last-Update: 2013-09-10
+Bug: http://trac.wxwidgets.org/ticket/15490
+Forwarded: http://trac.wxwidgets.org/attachment/ticket/15490/wxpython-%3D-should-be-%3D%3D.patch
+
+--- a/wx/wxPython/src/_bitmap.i
++++ b/wx/wxPython/src/_bitmap.i
+@@ -308,7 +308,7 @@
+                         p.OffsetY(pixData, 1);
+                     }
+                 }
+-                if (depth = 32) {
++                if (depth == 32) {
+                     MAKE_PIXDATA(wxAlphaPixelData);
+                     pixData.UseAlpha();
+                     for (int y=0; y<height; y++) {
+--- a/wx/wxPython/src/gtk/_gdi_wrap.cpp
++++ b/wx/wxPython/src/gtk/_gdi_wrap.cpp
+@@ -3232,7 +3232,7 @@
+                         p.OffsetY(pixData, 1);
+                     }
+                 }
+-                if (depth = 32) {
++                if (depth == 32) {
+                     MAKE_PIXDATA(wxAlphaPixelData);
+                     pixData.UseAlpha();
+                     for (int y=0; y<height; y++) {

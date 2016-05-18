@@ -1,65 +1,27 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
-#export DH_VERBOSE=1
+export DH_VERBOSE=1
+
+export PKCS11_INC=$(shell pwd)/pkcs11
+export WX_ROOT=$(shell pwd)/wx
+NCPUS=2
+export EXTRA_LIBS=-lX11 -ldl
 
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
-	BUILDDEBFLAGS= -- -Zlzma -z9
+ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid vivid wily xenial)) 
+	export CC=gcc-4.9
+	export CXX=g++-4.9
 else
-	BUILDDEBFLAGS= -- -Zxz -z9
+	export CC=gcc
+	export CXX=g++
 endif
 
-NCPUS=1
+%:
+	dh $@ --parallel 
 
-#LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -ldl
-
-build: build-arch build-indep
-build-arch: build-stamp
-build-indep: build-stamp
-build-stamp:
-	cp debian/patches/*.h .
-	dh_testdir
-	LIBS="-ldl" $(MAKE) -j$(NCPUS)
-	touch $@
-clean: do-clean
-do-clean: 
-	dh_testdir
-	dh_testroot
-	rm -f build-stamp
-	(test ! -f Makefile || $(MAKE) clean)
-	cd debian/patches/ && ( test -f pkcs11.h || wget ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-11/v2-20/pkcs11.h; test -f pkcs11f.h || wget ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-11/v2-20/pkcs11f.h; test -f pkcs11t.h || wget ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-11/v2-20/pkcs11t.h)
-	dh_clean
-install: build
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
-	mkdir -p debian/truecrypt/usr/bin/
-	install -m755 Main/truecrypt debian/truecrypt/usr/bin/
-binary-indep: build install
-binary-arch: build install
-	dh_testdir
-	dh_testroot
-	dh_installdocs
-	dh_installchangelogs
-	dh_install debian/truecrypt.desktop usr/share/applications
-	dh_install debian/truecrypt.xpm usr/share/pixmaps
-	dh_installdocs "Release/Setup Files/TrueCrypt User Guide.pdf" 
-	dh_installman debian/truecrypt.1
-ifeq (,$(filter nostrip,$(DEB_BUILD_OPTIONS)))
-	dh_strip
-endif
-	dh_compress
-	dh_fixperms
-	dh_installdeb
-	dh_shlibdeps
-	dh_installdebconf
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb $(BUILDDEBFLAGS)
-
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install patch unpatch do-clean
+override_dh_auto_build:
+	$(MAKE) -j$(NCPUS) wxbuild
+	$(MAKE) -j$(NCPUS) WXSTATIC=1

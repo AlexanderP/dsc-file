@@ -11,11 +11,36 @@ else
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
+CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
+CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
+CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
+LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -lX11 -lcairo
+
+LIBS:= -lX11 -lcairo
+
+export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS LIBS
+
 %:
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	dh_auto_configure -- --with-icu --with-wxsqlite
+	cd wx && ./configure --prefix=$(shell pwd)/debian/wx/usr --libdir=$(shell pwd)/debian/wx/usr/lib --with-gtk=2 --with-opengl --enable-unicode \
+    --enable-graphics_ctx  --enable-static --disable-shared --disable-optimize --with-regex=builtin \
+    --with-libpng=sys --with-libxpm=sys --with-libjpeg=sys --with-libtiff=sys \
+    --with-sdl --disable-precomp-headers
+	cd wx && make
+	cd wx && make -C locale allmo
+	cd wx && make -C contrib/src
+	cd wx && make install 
+	cd wx && make -C contrib/src install 
+	dh_auto_configure -- --with-icu --with-wxsqlite --with-wxdir=$(shell pwd)/debian/wx/usr/bin --with-wxshared=no
 
 override_dh_builddeb:
 	dh_builddeb $(BUILDDEBFLAGS)
+
+override_dh_auto_clean:
+	cd wx && test ! -f Makefile || $(MAKE) clean
+	cd wx && test ! -f Makefile || $(MAKE) -C locale clean
+	cd wx && test ! -f Makefile || $(MAKE) -C contrib/src clean 
+	test ! -d $(shell pwd)/debian/wx/ || rm -rf $(shell pwd)/debian/wx/
+	dh_auto_clean
