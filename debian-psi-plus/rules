@@ -76,6 +76,10 @@ override_dh_install:
 	bash ./debian/mergedups.sh
 	# Deleting extra copy of sound files
 	rm -r $(CURDIR)/debian/psi-plus-common/usr/share/psi-plus/sound/
+	cd $(CURDIR)/debian/psi-plus-common/usr/share/psi-plus/iconsets/ && \
+	chmod -x `find . -name '*.png' -type f` && \
+	chmod -x `find . -name '*.txt' -type f`  && \
+	chmod -x `find . -name '*.xml' -type f`
 
 override_dh_auto_clean:
 	dh_clean
