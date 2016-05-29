@@ -16,7 +16,7 @@ PACKAGE = psi-plus-l10n
 	dh $@ --parallel
 
 override_dh_auto_build:
-	./update-repo.sh make
+	./update-translations.sh make
 
 override_dh_auto_install:
 	mkdir -p $(CURDIR)/debian/$(PACKAGE)/usr/share/psi-plus/translations/
