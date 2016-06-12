@@ -23,5 +23,5 @@ export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
 	dh $@ 
 
 override_dh_auto_build:
-	cd mupdf && make build=native
+	cd mupdf && make build=native libs
 	bash build.sh build
