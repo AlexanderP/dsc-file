@@ -1,0 +1,34 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+# export DH_VERBOSE=1
+
+export QT_SELECT = 5
+
+%:
+	dh $@ --parallel
+
+override_dh_clean:
+	dh_clean
+	rm -rf unix/
+	find . -name *.qm -delete
+	rm -rf debian/librecad.1 debian/librecad.desktop \
+           debian/librecad.sharedmimeinfo debian/librecad.mime \
+           debian/librecad.png debian/librecad.xpm debian/librecad.svg \
+           librecad/support/doc/LibreCADdoc.qch \
+           librecad/support/doc/LibreCADdoc.qhc plugins/intermediate \
+           generated/ custom.pro
+
+override_dh_auto_configure:
+	dh_auto_configure -- librecad.pro
+	cp desktop/librecad* debian
+	cp desktop/graphics_icons_and_splash/Icon\ LibreCAD/Icon_Librecad.svg debian/librecad.svg
+	convert -resize 48x48 desktop/graphics_icons_and_splash/Icon\ LibreCAD/Icon_Librecad.svg debian/librecad.png
+	convert -resize 32x32 desktop/graphics_icons_and_splash/Icon\ LibreCAD/Icon_Librecad.svg debian/librecad.xpm
+
+override_dh_compress:
+	dh_compress -X.qch -X.qhc
+
+copyright_check:
+	$(MAKE) -f /usr/share/cdbs/1/rules/utils.mk debian/stamp-copyright-check
+	rm debian/stamp-copyright-check
