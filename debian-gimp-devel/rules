@@ -82,7 +82,11 @@ override_dh_install:
 	done
 	mv $(CURDIR)/debian/gimp-devel/usr/bin/gimp-devel.sh $(CURDIR)/debian/gimp-devel/usr/bin/gimp-devel
 	mv $(CURDIR)/debian/gimp-devel/usr/bin/gimp-console-devel.sh $(CURDIR)/debian/gimp-devel/usr/bin/gimp-console-devel
-	
+	cd $(CURDIR)/debian/gimp-devel/usr/lib/gimpdevel/share/man/man1/ && gzip -n -9 *.1
+	cd $(CURDIR)/debian/gimp-devel-dev/usr/lib/gimpdevel/share/man/man1/ && gzip -n -9 *.1
+	cd $(CURDIR)/debian/gimp-devel-data/usr/lib/gimpdevel/share/man/man5/ && gzip -n -9 *.5
+
+
 override_dh_shlibdeps:
 	dh_shlibdeps -ldebian/gimp-devel/usr/lib/gimpdevel/lib/
 
