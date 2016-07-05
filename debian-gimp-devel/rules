@@ -27,6 +27,10 @@ ifeq "$(DEBIAN_CODENAME)" "jessie"
 	GEGLOPT += --without-libavformat
 endif
 
+ifeq "$(DEBIAN_CODENAME)" "wily"
+	GEGLOPT += --without-libavformat
+endif
+
 %:
 	dh $@ --parallel
 
@@ -71,21 +75,16 @@ override_dh_auto_clean:
 override_dh_auto_install:
 	ln -s $(CURDIR)/debian/tmp2 $(CURDIR)/debian/tmp
 	find $(CURDIR)/debian/tmp2 -name '*.la' -delete
+	cd $(CURDIR)/debian/tmp2/usr/lib/gimpdevel/share/man/man1/ && gzip -n -9 gimp-?.?.1 gimptool-?.?.1
+	cd $(CURDIR)/debian/tmp2/usr/lib/gimpdevel/share/man/man5/ && gzip -n -9 *.5
+
 
 override_dh_install:
 	dh_install
 	rm -f $(CURDIR)/debian/gimp-devel-dev/usr/lib/gimpdevel/lib/libgegl-npd-0.3.so
 	rm -f $(CURDIR)/debian/gimp-devel-dev/usr/lib/gimpdevel/lib/libgegl-sc-0.3.so
-	for size in 16 24 22 32 48 256 ; do \
-	mv $(CURDIR)/debian/gimp-devel-data/usr/share/icons/hicolor/$${size}x$${size}/apps/gimp.png \
-	$(CURDIR)/debian/gimp-devel-data/usr/share/icons/hicolor/$${size}x$${size}/apps/gimp-devel.png ; \
-	done
 	mv $(CURDIR)/debian/gimp-devel/usr/bin/gimp-devel.sh $(CURDIR)/debian/gimp-devel/usr/bin/gimp-devel
 	mv $(CURDIR)/debian/gimp-devel/usr/bin/gimp-console-devel.sh $(CURDIR)/debian/gimp-devel/usr/bin/gimp-console-devel
-	cd $(CURDIR)/debian/gimp-devel/usr/lib/gimpdevel/share/man/man1/ && gzip -n -9 *.1
-	cd $(CURDIR)/debian/gimp-devel-dev/usr/lib/gimpdevel/share/man/man1/ && gzip -n -9 *.1
-	cd $(CURDIR)/debian/gimp-devel-data/usr/lib/gimpdevel/share/man/man5/ && gzip -n -9 *.5
-
 
 override_dh_shlibdeps:
 	dh_shlibdeps -ldebian/gimp-devel/usr/lib/gimpdevel/lib/
