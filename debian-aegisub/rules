@@ -1,0 +1,52 @@
+#!/usr/bin/make -f
+
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+export DEB_LDFLAGS_MAINT_APPEND := -Wl,--as-needed
+
+ifeq ($(DEB_HOST_ARCH_OS),kfreebsd)
+	confflags += --without-alsa
+endif
+
+%:
+	dh $@ --with quilt,autoreconf --parallel
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+	--with-boost-libdir=/usr/lib/${DEB_HOST_MULTIARCH} \
+	--disable-update-checker $(confflags) \
+	CC="ccache $(CC)" CXX="ccache $(CXX)" LIBS=-lpthread
+
+ifeq ($(DEB_HOST_ARCH_OS),kfreebsd)
+	echo "#undef WITH_ALSA" >> acconf.h
+endif
+
+#	exit 1
+
+override_dh_autoreconf:
+	dh_autoreconf --as-needed
+
+override_dh_auto_install:
+	dh_auto_install
+	find debian/tmp/usr/share -type f -exec chmod a-x '{}' ';'
+
+override_dh_auto_clean:
+	-cp build/git_version.h debian/git_version.h.backup
+	-cp build/version.sh debian/version.sh.backup
+
+	[ ! -f Makefile.inc ] || dh_auto_clean
+
+	-mv debian/git_version.h.backup build/git_version.h
+	-mv debian/version.sh.backup build/version.sh
+	-rm -f src/libresrc/default_config_platform.json
+
+override_dh_clean:
+	dh_clean packages/desktop/aegisub.desktop.template \
+	desktop/aegisub.desktop.template \
+	src/libresrc/bitmap.cpp src/libresrc/bitmap.h \
+	src/libresrc/default_config.cpp src/libresrc/default_config.h \
+	tools/osx-bundle.sed
+
+override_dh_installdocs:
+	dh_installdocs --link-doc=aegisub
+
+override_dh_auto_test:

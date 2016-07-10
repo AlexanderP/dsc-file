@@ -1,0 +1,102 @@
+aegisub (3.2.2-2) unstable; urgency=medium
+
+  * Compile
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 10 Jul 2016 10:51:55 +0300
+
+aegisub-dmo (3.2.2-dmo3) unstable; urgency=medium
+
+  * Rebuild with gcc-5
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Sun, 09 Aug 2015 17:02:23 +0200
+
+aegisub-dmo (3.2.2-dmo2) unstable; urgency=medium
+
+  * Rebuild against libffms2-4
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Sun, 17 May 2015 13:20:15 +0200
+
+aegisub-dmo (3.2.2-dmo1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Mon, 08 Dec 2014 08:08:25 +0100
+
+aegisub-dmo (3.2.1-dmo1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Mon, 15 Sep 2014 16:13:33 +0200
+
+aegisub-dmo (3.2.0-dmo3) unstable; urgency=medium
+
+  * Need to Build-Depends on libavresample-dev to enable libffms2 support
+    (Thanks to Urban Wallasch for the bug report).
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Mon, 04 Aug 2014 20:32:41 +0200
+
+aegisub-dmo (3.2.0-dmo2) unstable; urgency=medium
+
+  * Add -lpthread to linker to fix kfreebsd FTBFS.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Tue, 29 Jul 2014 11:41:36 +0200
+
+aegisub-dmo (3.2.0-dmo1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Tue, 29 Jul 2014 09:13:29 +0200
+
+aegisub-dmo (3.1.3-dmo3) unstable; urgency=medium
+
+  * Build with --disable-update-checker
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Thu, 17 Jul 2014 18:57:43 +0200
+
+aegisub-dmo (3.1.3-dmo2) unstable; urgency=medium
+
+  * Fix FTBFS for kfreebsd-* arches.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Thu, 17 Jul 2014 15:39:52 +0200
+
+aegisub-dmo (3.1.3-dmo1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Sun, 06 Jul 2014 17:51:19 +0200
+
+aegisub (3.1.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Import updated watch file from Bart Martens
+  * Bump ffms2 build dependency to 2.19 to fix audio problems and
+    have correct binary dependencies (Closes: #731143, #730416)
+  * Remove patches, which were imported from upstream git
+
+ -- Sebastian Reichel <sre@debian.org>  Thu, 13 Feb 2014 02:58:17 +0100
+
+aegisub (3.0.4-2) unstable; urgency=low
+
+  * Cherry-pick new upstream patch, which fixes the menu bar
+  * Use canonical Vcs URLs
+
+ -- Sebastian Reichel <sre@debian.org>  Fri, 22 Nov 2013 13:08:28 +0100
+
+aegisub (3.0.4-1) unstable; urgency=low
+
+  * New upstream release (Closes: #691384, #713679, #721189)
+  * Use dh-autoreconf (Closes: #727313)
+  * Update patches
+  * Add new patch for wxWidgets 3.0 support
+  * Update Debian Standards Version: 3.9.3 -> 3.9.5
+  * Update Compat level: 8 -> 9
+  * Build -dbg package
+  * Update manpage
+
+ -- Sebastian Reichel <sre@debian.org>  Thu, 14 Nov 2013 16:49:59 +0000
+
+aegisub (2.1.9-1) unstable; urgency=low
+
+  * Initial Debian release (Closes: #580594)
+
+ -- Sebastian Reichel <sre@debian.org>  Fri, 16 Mar 2012 22:58:00 +0100
