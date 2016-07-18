@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+#DH_VERBOSE = 1
+
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/default.mk
+
+export DH_ALWAYS_EXCLUDE := .gitignore:LICENSE.txt
+
+%:
+	dh $@ --parallel
+
+override_dh_auto_configure:
+	dh_auto_configure
+	cp scripts/qcad_icon.svg debian/qcad.svg
+	convert -resize 64x64 scripts/qcad_icon.svg debian/qcad.png

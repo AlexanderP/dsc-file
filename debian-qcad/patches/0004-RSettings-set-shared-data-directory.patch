@@ -1,0 +1,24 @@
+From 850c13924d6364ee1ab9d056e0aebbcfb61adbb2 Mon Sep 17 00:00:00 2001
+From: Romuald Conty <neomilium@gmail.com>
+Date: Tue, 6 Jan 2015 02:12:25 +0100
+Subject: [PATCH 4/4] RSettings: set shared data directory
+
+---
+ src/core/RSettings.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/core/RSettings.cpp b/src/core/RSettings.cpp
+index 21db08c..ed4b46a 100644
+--- a/src/core/RSettings.cpp
++++ b/src/core/RSettings.cpp
+@@ -100,6 +100,7 @@ bool RSettings::isDeployed() {
+ }
+ 
+ QString RSettings::getApplicationPath() {
++    return QString("/usr/share/qcad");
+     QDir ret(QApplication::applicationDirPath());
+ 
+ #ifdef Q_OS_MAC
+-- 
+1.9.1
+

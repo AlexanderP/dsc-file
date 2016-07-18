@@ -1,0 +1,24 @@
+From 2941b52352313bffb369ff431c2d3d557572bc58 Mon Sep 17 00:00:00 2001
+From: Romuald Conty <neomilium@gmail.com>
+Date: Tue, 6 Jan 2015 02:11:39 +0100
+Subject: [PATCH 2/4] RSettings: set plugins directory
+
+---
+ src/core/RSettings.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/core/RSettings.cpp b/src/core/RSettings.cpp
+index b442af9..21db08c 100644
+--- a/src/core/RSettings.cpp
++++ b/src/core/RSettings.cpp
+@@ -125,6 +125,7 @@ QString RSettings::getApplicationPath() {
+ }
+ 
+ QString RSettings::getPluginPath() {
++    return QString("/usr/lib/qcad/plugins");
+     QDir appDir = QDir(getApplicationPath());
+ 
+ #ifdef Q_OS_MAC
+-- 
+1.9.1
+

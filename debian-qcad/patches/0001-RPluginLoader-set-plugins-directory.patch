@@ -1,0 +1,24 @@
+From e61f2705ae766dc39082e34e3594847b6634c09c Mon Sep 17 00:00:00 2001
+From: Romuald Conty <neomilium@gmail.com>
+Date: Tue, 6 Jan 2015 02:11:15 +0100
+Subject: [PATCH 1/4] RPluginLoader: set plugins directory
+
+---
+ src/core/RPluginLoader.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/core/RPluginLoader.cpp b/src/core/RPluginLoader.cpp
+index 1dfffa2..943b4b2 100644
+--- a/src/core/RPluginLoader.cpp
++++ b/src/core/RPluginLoader.cpp
+@@ -191,6 +191,7 @@ void RPluginLoader::initScriptExtensions(QObject* plugin, QScriptEngine& engine)
+ }
+ 
+ QString RPluginLoader::getPluginsPath() {
++    return QString("/usr/lib/qcad/plugins");
+     QDir pluginsDir = QDir(".");
+     if (!pluginsDir.cd("plugins")) {
+         pluginsDir.cdUp();
+-- 
+1.9.1
+

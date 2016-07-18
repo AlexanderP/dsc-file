@@ -1,0 +1,7 @@
+#!/usr/bin/dh-exec
+release/qcad-bin => /usr/bin/qcad
+release/*.so /usr/lib
+plugins /usr/lib/qcad
+debian/qcad.svg /usr/share/icons/hicolor/scalable/apps
+debian/qcad.png /usr/share/icons/hicolor/64x64/apps
+qcad.desktop /usr/share/applications
