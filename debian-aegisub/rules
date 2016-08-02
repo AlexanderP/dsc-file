@@ -8,22 +8,20 @@ ifeq ($(DEB_HOST_ARCH_OS),kfreebsd)
 endif
 
 %:
-	dh $@ --with quilt,autoreconf --parallel
+	dh $@ --with quilt --parallel
 
 override_dh_auto_configure:
+	./autogen.sh
 	dh_auto_configure -- \
 	--with-boost-libdir=/usr/lib/${DEB_HOST_MULTIARCH} \
 	--disable-update-checker $(confflags) \
-	CC="ccache $(CC)" CXX="ccache $(CXX)" LIBS=-lpthread
+	LIBS=-lpthread
 
 ifeq ($(DEB_HOST_ARCH_OS),kfreebsd)
 	echo "#undef WITH_ALSA" >> acconf.h
 endif
 
 #	exit 1
-
-override_dh_autoreconf:
-	dh_autoreconf --as-needed
 
 override_dh_auto_install:
 	dh_auto_install
