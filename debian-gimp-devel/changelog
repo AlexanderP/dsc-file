@@ -1,3 +1,53 @@
+gimp-devel (2.9.4+git37188-618719b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 618719b3e5fe91c639dd62bf37ea0116665b8523
+  * Date: 1471607031
+  * git changelog:
+  *  618719b - Updated Polish translation
+  *  e16215f - Updated Hungarian translation
+  *  05e4c5f - Bug 769871 - Adds selection to save exif/xmp when
+    exporting a webp file.
+  *  7663ff2 - plugin: fix for errors during export of webp animation
+    with file-webp plugin
+  *  7725f1d - INSTALL: libwebp must be built with --enable-
+    libwebpmux...
+  *  e4a2f22 - Bug 769959 - crash during WebP file loading
+  *  9e9cd49 - INSTALL: adding libwebp in optional dependency list.
+  *  87f14fb - libgimpwidgets: support enums with mnemonics in
+    GimpEnumStrore
+  *  0652cd0 - tools: invert-svg needs glib and GIO dependencies.
+  *  ad0a988 - Updated Polish translation
+  *  3a14a64 - app: add new config class GimpDialogConfig
+  *  1027c71 - app: rename variable in preferences-dialog.c (irrelevant
+    nitpicking)
+  *  c83ee61 - Bug 729765 - remove focusability of various widgets...
+  *  381d9e9 - plug-ins: clean up the file-webp loading code
+  *  52b6eaa - tools: 2 typos
+  *  5ea8cdc - Updated German translation
+  *  183183e - AUTHORS: commit generated changes
+  *  683540d - Updated Portuguese translation
+  *  3a5338d - Updated German translation
+  *  f2ff74c - plug-ins: cleanup in file-webp, mostly simplify the save
+    dialog
+  *  a9c436e - plug-ins: disable the WebP loader/saver in file-gegl
+  *  8d78a9a - authors.xml: adding Nathan Osman.
+  *  26b978d - app: avoid expensive rotated scale calculation when
+    scale_x == scale_y
+  *  5663daa - app: code layout/typo fixes
+  *  5bdb20c - app: make rulers rotation aware
+  *  720b73c - app: fix a few canvas scroll/scale rounding
+    inconsistencies
+  *  e384d53 - app: don't round results of
+    gimp_display_shell_transform_bounds()
+  *  2808384 - Updated POTFILES.skip
+  *  c1021a3 - Bug 769651 - Add webp file format support to gimp master
+  *  98e43b9 - Updated Hungarian translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 20 Aug 2016 02:49:46 +0300
+
 gimp-devel (2.9.4+git37158-8493711-1) unstable; urgency=medium
 
   * Compile

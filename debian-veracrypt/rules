@@ -2,7 +2,14 @@
 # -*- makefile -*-
 #export DH_VERBOSE=1
 
-NCPUS=2
+ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+endif
+
+ifeq (,$(NUMJOBS))
+	NUMJOBS = 1
+endif
+
 export WX_ROOT=$(shell pwd)/wx
 
 DEBIAN_CODENAME = $(shell echo $$DIST)
@@ -21,8 +28,8 @@ endif
 	dh $@ --parallel 
 
 override_dh_auto_build:
-	cd src && $(MAKE) -j$(NCPUS) wxbuild
-	cd src && $(MAKE) -j$(NCPUS) WXSTATIC=1
+	cd src && $(MAKE) -j$(NUMJOBS) wxbuild
+	cd src && $(MAKE) -j$(NUMJOBS) WXSTATIC=1
 
 
 override_dh_auto_clean:

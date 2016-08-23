@@ -1,3 +1,41 @@
+solvespace (2.1.0+git938-991909d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 991909d7949e69027f042e5dc3a72f5db1112adf
+  * Date: 1471139373
+  * git changelog:
+  *  991909d - Show pt-ln distance projected onto workplane when one is
+    active.
+  *  f998293 - Allow displaying outlines without any other edges.
+  *  4c30c09 - Correctly draw vector text for constraints free in 3d.
+  *  efd358d - Unbreak PNG export.
+  *  6e860fb - Make "Show/hide hidden lines" a tri-state button instead.
+  *  8ce2922 - Refactor text window buttons to allow for more custom
+    behavior.
+  *  e2e9167 - Get rid of the MAX_SELECTED restriction in
+    GroupSelection().
+  *  0bf6167 - Update CHANGELOG.
+  *  e381c70 - DXF export: always declare layers before using them.
+  *  35a20ae - GTK: fix an uninitialized variable.
+  *  065a0a8 - Forcibly show the current group once we start a drawing
+    operation.
+  *  b2ab15c - Do not clear selection during operations that don't need
+    it.
+  *  cf9c331 - Update libdxfrw.
+  *  8bf55b3 - Fix multiple memory leaks found with LeakSanitizer.
+  *  fbe2705 - CMake: disable unsigned overflow sanitizer check.
+  *  415a6d3 - Travis: build with clang, so that we can use its
+    sanitizers.
+  *  068ed28 - CMake: fix typo.
+  *  f8b6c33 - CMake: use pkg-config directories in test/.
+  *  e462387 - Add tests to cover 95.3% of constrainteq.cpp branches.
+  *  4b49442 - Align constraint lines to pixel grid.
+  *  ba1cd83 - README: clarify Windows instructions.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 20 Aug 2016 06:27:06 +0300
+
 solvespace (2.1.0+git917-f2633e4-1) unstable; urgency=medium
 
   * Compile

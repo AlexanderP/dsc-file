@@ -1,3 +1,120 @@
+kvirc (4:4.9.2~git-6949-g0f298f6-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 0f298f642250a57dc7d227a48241af4007ad6462
+  * Date: 1471637593
+  * git changelog:
+  *  0f298f6 - CodeTesterWindow: Use unordered_set
+  *  f5a9aa8 - general: Cleanup
+  *  3128cd1 - version.h.cmake: Bump copyright year
+  *  cba71b0 - RuntimeInfo: Use #elif instead
+  *  9930117 - KviInputEditor: Remove Qt >= 5 check
+  *  0f6ff4d - IpcSentinel: Cleanup a bit
+  *  b79e1f0 - Goodbye XP, my old friend
+  *  66bf05d - OptionsWidget_dcc: add full stop at sentence end.
+  *  4685acd - fix broken tooltip section bg width.
+  *  463093d - OptionsWidget_ircOutput: fix show own part message label
+  *  4580f74 - OptionsWidget_ircOutput: remove unused code
+  *  0315c35 - KviQueryWindow: Fix HTML and string concatenation with
+    macro
+  *  bb37fd8 - HttpFileTransfer: no need to  use abreviattions
+  *  44a6a62 - DccFileTransfer: no need to  use abreviations
+  *  0aa874f - KviIrcDataStreamMonitor: Fix #2110
+  *  a2cd9c1 - KvsObjectLayout: Use correct macro
+  *  65f77c7 - PopupEditor: Fix unintentional item reassignmnet
+  *  a72144b - KviIrcView: Move to vector
+  *  71949f9 - popups: fix oopsie warning not joined to server
+  *  a1f3053 - popups: add jconditional oin channel  for joining  dead
+    channels
+  *  bda37ab - fix empty tooltip  glitch when not connected to a server.
+  *  921bcb6 - ScriptEditor: Remove include
+  *  8d214dc - PopupEditor: Maybe fix #2012
+  *  7c4e1d7 - ScriptEditor: Refactor a bit
+  *  7c27ccc - Add /away -d for GUI actions to override the
+    boolUseAwayMessage option. Fixes #2101 and fixes #2102. (#2104)
+  *  6e4811f - default script configuration: bump aliases after 0cbfbf3
+  *  0cbfbf3 - defscript/aliases: Add backall
+  *  b1c0c47 - KviWindow: Fix build
+  *  944f71b - OptionsAwayWidget: Remove pointless destructor
+  *  4a74562 - KviWindow: Real fix for #2103
+  *  8878574 - KviWindow: Skip over blank lines when replaying logs
+  *  5f84c46 - bkvitrayicon: Move srand to module init
+  *  ca1ebd0 - bkvitrayicon: Remove pointless cast
+  *  e330653 - libkvitrayicon: Use C++ headers instead
+  *  de0593a - KviIrcConnection: Topple the leaning tower of if
+    statements
+  *  fd2a3b3 - Clean up KviActionDrawer
+  *  0ef3b63 - Clean up libkvitrayicon
+  *  c58673e - Remove unused m_oStoredWindowStates
+  *  1dd0c55 - numericHandlers: Fix off-by-one in parseNumericStats
+  *  9443391 - KviWindow: QVector -> std::vector
+  *  81510bf - KviTrayIcon: Get rid of the die() method
+  *  522aa3a - KviWindow: Remove if checks on delete
+  *  3f66935 - debian_build: set "DCMAKE_BUILD_TYPE = Debug"
+  *  066e0df - debian_build: debian\rules fix
+  *  3e09b7e - debian_build: fix
+  *  fd750f3 - debian_build: add debug PPA
+  *  05c7d2e - KviBuildInfo: Add build types
+  *  e988cda - OptionsWidget_proxy: Change the ordering when committing
+  *  a358e2e - libkviwindow: Properly enumerate
+  *  3aa10e0 - KviMainWindow: Enumerate through module extension
+    toolbars properly
+  *  03f6e06 - KviIrcContext: More pointless checks
+  *  a23a777 - KviIrcContext: Remove redundant checks when deleting
+  *  4bf5e90 - KviIrcContext: Properly enumerate the vector while
+    iterating
+  *  9b4b2ed - KviIrcContext: Properly enumerate the vector when
+    deleting
+  *  985b5ee - KviWindow: 0 => nullptr
+  *  74ea254 - KviConsoleWindow: Remove pointless ifdef guard and
+    assignment
+  *  e37f31d - KvsEventTable: Update descriptions for OnNickServAuth
+  *  e8024a8 - KVS: Add event handler for CAP
+  *  46b9539 - KviInputEditor: Trailing tab
+  *  664ecb2 - KviInputEditor: Fix HTML
+  *  1e67662 - SimpleCommands: Add wrapper for operwall
+  *  32dc4fb - SimpleCommands: Add wrapper for wallops
+  *  3ef14d7 - SimpleCommands/whois: Fix segfault
+  *  3e10cef - SimpleCommands/whowas: Fix segfault
+  *  6189586 - COPYING: cleanup + update and clarify
+  *  a628679 - refresh GPLv2 lic
+  *  19b367a - remove gplv3, there was never a full transition to gplv3
+  *  5263040 - IpcSentinel: Simplify
+  *  9c9098a - IPCSentinel: Fix launching on windows twice on irc url
+    click
+  *  39a7144 - KviIrcView_events: Trailing tab
+  *  4efbe5f - EventManager: Add overload method to prevent crash
+  *  174ea92 - KviFileTransfer: Fix freeze when killing terminated
+    transfers
+  *  66de677 - void range-for loops when things are being destroyed
+  *  68b8b84 - DccChatWindow: Fix possible issue in tryFlushOutBuffers()
+  *  d4a540c - TermWidget: Fix typo
+  *  2a497c6 - Fixes Issue #2088 (#2091)
+  *  642ec84 - Add forgotten calls to clear()
+  *  b9a7c7f - Remove KviParameterList
+  *  71dff65 - DccChatWindow: Move to deque and unique pointers
+  *  f152371 - proxywidget: More cleanup
+  *  119ba5b - Links: Refactor links window and links widget
+  *  7384474 - SocketSpy: Move to unordered_set
+  *  51b86a6 - KviKvsAsyncOperation: Move to unordered_set
+  *  d02b835 - libkviterm: Move to unordered_set
+  *  3dbb13f - serverwidget: Remove un-needed if checks
+  *  dc5052f - KviIrcConnectionAsyncData: Move to unordered_set
+  *  e3a1ae6 - KviProxyDatabase: Fix MSVC bug
+  *  a0c4c0f - KviIrcServerReconnectInfo: Refactor
+  *  2ceba3c - KviProxyDatabase: Move to vector and unique pointers
+  *  5e0a295 - KviIrcConnectionAsyncData: Move to std::set
+  *  39eaeda - KviKvsAsyncDnsOperation: Remove un-needed if check
+  *  dcd83d5 - KviFileTransfer: Kill filetransfers from back to front
+  *  7fa727e - Fix string concatenation with macro in KviInputEditor
+    (#2094)
+  *  c789459 - remove unused variables
+  *  fa1160e - Textbrowser : fix loading HTML files on Windows
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 19 Aug 2016 23:44:50 +0300
+
 kvirc (4:4.9.2~git-6854-g71bdfcc-1) unstable; urgency=medium
 
   * Compile
