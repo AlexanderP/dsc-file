@@ -1,3 +1,35 @@
+tesseract (3.05.00~git20160901-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: a6871a8c91a224c224c7cb4cbccf442959b94ba6
+  * Date: 1472750490
+  * git changelog:
+  *  a6871a8 - remove install-langs - fix #376
+  *  61032d9 - set fonts_dir to system default font location. Fixes #409
+  *  916897d - print text2image info to stdout instead of strerr
+  *  94e21c3 - add info OSD data file is need too
+  *  b14f735 - you do not need download all tessdata repository
+  *  77af7cf - Merge pull request #406 from stweil/windows
+  *  4708ea3 - vs2010: Fix implementation of strcasestr
+  *  2660647 - Merge pull request #404 from stweil/warnings
+  *  fdf950b - configure: Don't use -Wno-uninitialized for debug builds
+  *  7f8bd11 - Merge pull request #402 from stweil/windows
+  *  6ec1a0a - fileio: Replace assert with tprintf() and exit(1)
+  *  d093ed4 - Merge pull request #401 from stweil/windows
+  *  1950fec - tlog: Remove unused macro TLOG_FATAL
+  *  a1a4575 - Merge pull request #6 from jimregan/gcode_issue1316
+  *  0497dc0 - Merge pull request #17 from tesseract-ocr/gcode_issue1351
+  *  3e53237 - Merge pull request #400 from stweil/windows
+  *  1274874 - ccutil: Fix and simplify implementation of variadic macro
+  *  b000dd2 - Merge pull request #398 from stweil/windows
+  *  3420aca - text2image: Add linefeed to error message
+  *  a1f0f36 - Merge pull request #397 from stweil/warnings
+  *  34ed8dd - stringrenderer: Fix compiler warning (-Wwrite-strings)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 02 Sep 2016 22:03:07 +0300
+
 tesseract (3.05.00~git20160815-1) unstable; urgency=medium
 
   * Compile

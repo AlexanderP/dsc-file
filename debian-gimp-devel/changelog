@@ -1,3 +1,71 @@
+gimp-devel (2.9.4+git37230-3cc77b0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 3cc77b03bfc99c15183e867734fb30ea1cecc3d0
+  * Date: 1472812249
+  * git changelog:
+  *  3cc77b0 - Bug 759904: Some icons can't be set from the icon theme
+  *  12ac114 - app: use gimp_config_path_unexpand() when writing
+    pluginrc
+  *  6b39115 - libgimpconfig: add gimp_config_path_unexpand()
+  *  d151013 - Updated German translation
+  *  9f343f2 - app: try to store plug-in paths in terms of
+    ${gimp_plug_in_dir}
+  *  d6a3cc2 - Updated Hungarian translation
+  *  0b054f0 - app: simplify preferences-dialog.c by adding
+    prefs_entry_add()
+  *  d0263ef - app: minor cleanup in gimpoperationblend.c
+  *  78db28a - Update Russian translation
+  *  f65429e - Updated Slovenian translation
+  *  2c3448d - Updated Slovenian translation
+  *  fb0bcc4 - Updated Slovenian translation
+  *  16d8fac - Updated Slovenian translation
+  *  d20eb19 - Updated Portuguese translation
+  *  cc54e9e - Updated Slovenian translation
+  *  2521e52 - Updated Slovenian translation
+  *  f20509c - Updated Slovenian translation
+  *  dfa390f - Bug 599573 - Remember dialog defaults between Gimp
+    sessions
+  *  bbe6b38 - Bug 768371 - reason for failed configure due to missing
+    dependencies...
+  *  045df2c - Updated Serbian translation
+  *  63fce27 - app: fix some warnings i introduced in preferences-
+    dialog.c
+  *  f11504f - Updated Slovenian translation
+  *  6615a99 - Updated Slovenian translation
+  *  d85b68c - Updated Slovenian translation
+  *  6790938 - Update POTFILES.in
+  *  2ae3393 - Bug 599573 - Remember dialog defaults between Gimp
+    sessions
+  *  8132d51 - Bug 599573 - Remember dialog defaults between Gimp
+    sessions
+  *  f3b7f33 - Updated Serbian translation
+  *  6c29429 - .dir-locals.el: configure emacs to show trailing
+    whitespace
+  *  451f0b5 - .dir-locals.el: fixing (hopefully) the emacs config file.
+  *  9b8009d - Bug 766628 - Preferences window is too tall
+  *  981a1b9 - Bug 599573 - Remember dialog defaults between Gimp
+    sessions
+  *  acfca30 - HACKING: add a comment about the 3 config files for
+    common editors.
+  *  0b7381a - Bug 759601 - Add/Remove layer masks by clicking the layer
+    preview
+  *  dabf8de - Bug 770123 - Add emacs locale settings for GNU coding
+    style.
+  *  cc02ee1 - devel-docs: c.vim to help contributors enforce our coding
+    style in VIM.
+  *  eb94b1e - Add .kateconfig with modelines for Kate
+  *  c29098e - Updated Serbian translation
+  *  baf8d8e - Updated Icelandic translation
+  *  ab8075f - Updated Icelandic translation
+  *  d13bc78 - plug-ins: remove accidentially added .orig file
+  *  73c664e - app: fix code duplication in GimpMybrushCore, and clean
+    up coding style
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 02 Sep 2016 20:10:43 +0300
+
 gimp-devel (2.9.4+git37188-618719b-1) unstable; urgency=medium
 
   * Compile

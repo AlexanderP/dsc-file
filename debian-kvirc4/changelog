@@ -1,3 +1,29 @@
+kvirc (4:4.9.2~git-6959-g9c4462c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 9c4462c0c95252e9969051ce9932628851459378
+  * Date: 1472656103
+  * git changelog:
+  *  9c4462c - Fix local variable shadowing. Fixes #2126.
+  *  901914e - KviIrcConnectionServerInfo: avoid Camel Case in labels
+  *  66d150d - Add missing channel mode descriptions for Criten IRCD.
+    (#2124)
+  *  cc31145 - CMakelists / buildinfo: report GTK status  (#2123)
+  *  ef82a95 - INSTALL: update  -DWANT_GTKSTYLE entry (#2118)
+  *  36abb4f - KviMainWindow: Modernize control loop (#2116)
+  *  69006e1 - Use the correct target for channels in ctcp action
+    messages. (#2121)
+  *  33fcef2 - Clean-up the KviStatusBarClock formatting (#2120)
+  *  753a415 - fix incorrect time indicator
+  *  755ea16 - kill some more xp support and bump Devel::PPPort - remove
+    specification of subsystem, now that we dropped XP - update nsis to
+    force Vista+ - get maketool from cmake var, no conditional needed
+    anymore - bump Devel::PPPort to 3.35 (no code change)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 01 Sep 2016 19:34:47 +0300
+
 kvirc (4:4.9.2~git-6949-g0f298f6-1) unstable; urgency=medium
 
   * Compile
