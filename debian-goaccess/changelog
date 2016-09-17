@@ -1,3 +1,45 @@
+goaccess (1:1.0.2+git1926-e42ac72-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: e42ac72965b419dafe736d7a4c75226471209a47
+  * Date: 1473986186
+  * git changelog:
+  *  e42ac72 - Added the ability to parse reverse proxy logs that have
+    multiple IPs.
+  *  1aa4f66 - Added 'Amazon Simple Storage Service (S3)' to README.md.
+  *  92205ae - Minor indentation change to util source file.
+  *  389e02f - Ensure first integer in percent calculation is casted to
+    float.
+  *  7cd7c88 - Fixed percent calculation due to integer division
+    rounding to zero.
+  *  3805b6f - Ensure config dialog log input fields are completely
+    cleared up.
+  *  3854204 - Changed terminal status bar help keyboard shortcut from
+    [h] -> [?].
+  *  1ca81b5 - Renamed GLog struct pointer name throughout the codebase.
+  *  f339184 - Added missing raw data enum type comment.
+  *  c4c0623 - Fixed function comment typo.
+  *  e1fdc29 - Moved all other JSON escape characters to their own
+    function.
+  *  232cb98 - Added 'MicroMessenger' (WeChat) to the list of browsers.
+  *  cfac823 - Fixed possible code injection when outputting an HTML
+    report.
+  *  4542d3e - Updated --ws-url command line with latest changes under
+    README.md.
+  *  10ea6e3 - Removed unnecessary casts from unit conversion functions.
+  *  1b47c49 - Added tebibyte unit to the byte to string function.
+  *  3aba1ff - Added details about WebSocket URI scheme to the default
+    config file.
+  *  eb0b73c - Added details about WebSocket URI scheme to the man page.
+  *  1608280 - Added the ability to specify a WebSocket protocol
+    (ws|wss) through --ws-url.
+  *  c0f7322 - Added --no-html-last-updated command line option to the
+    config file.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 16 Sep 2016 19:55:14 +0300
+
 goaccess (1:1.0.2+git1906-5fb710c-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,131 @@
+gimp-devel (2.9.4+git37307-d5ffc50-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: d5ffc50c2efd441c5b179e008c4bc82503bd4a07
+  * Date: 1474063044
+  * git changelog:
+  *  d5ffc50 - app: rename w, h to width, height in
+    gimp_item_mask_bounds()
+  *  dba7d58 - app: port gimp_drawable_bucket_fill() to x, y, width,
+    height
+  *  cbac0a4 - app: don't show the "Fonts" startup status message if we
+    don't loas fonts
+  *  7e6d67a - app: various performance improvements to fuzzy-
+    select/bucket-fill
+  *  3ee5df9 - Bug 771484 - text loading impossible, in version commit
+    4b4e1c8
+  *  0ce364e - configure.ac, app: require liblcms2 >= 2.7
+  *  572d556 - Bug 553855 - Bucket fill colour is always blended with
+    filled pixel colour...
+  *  ea6946e - app: small whitespace fix in gimppickable-contiguous-
+    region.h
+  *  4d25640 - Update Greek translation
+  *  95ebc39 - Update Greek translation
+  *  0ecd936 - Bug 771208: 'Y' axis name of Flow Graph Parameter...
+  *  c26c506 - Updated Hungarian translation
+  *  20a32d9 - Bug 599573 - Remember dialog defaults between Gimp
+    sessions
+  *  b63fed7 - libgimpconfig: serialize empty value arrays as (property-
+    name 0)
+  *  7daa7d0 - app: implement GimpConfig::serialize() in GimpFillOptions
+  *  7a5d081 - icons: "gimp-print-resolution" icons better fit "document-
+    print".
+  *  70a3584 - icons: fix icons with crazy sizes.
+  *  410b23e - icons: updated "gimp-prefs-folders" and new "folder"
+    icons.
+  *  6fe900f - app: always call gimp_load_config() on a newly created
+    Gimp instance
+  *  f1897b6 - app: free Gimp members in reverse order of creation
+  *  7f3090f - app: gimp_fonts_exit() don't disconnect from a NULL gimp-
+    >config
+  *  314027f - app: create members of the Gimp instance earlier
+  *  631110e - app: merge units.[ch] into core/gimp-units.[ch]
+  *  9188f54 - app, pdb: remove useless include of "core/gimpunit.h"
+  *  5289a25 - icons, app: "folder-new" icon used for new layer group.
+  *  42ee8c7 - icons: move icon to the right folder.
+  *  49abdc3 - icons: add "edit-delete" icon.
+  *  4b4e1c8 - app: use Freedesktop standard "edit-paste" icon rather
+    than "gtk-paste".
+  *  75e97a2 - icons, libgimpwidgets: gimp-buffer icons renamed to edit-
+    copy...
+  *  64a2c39 - app: add gimp-data-factories.[ch] with some code from
+    gimp.c
+  *  c6a570d - configure, INSTALL, devel-docs: vectorial icons is not
+    proper English.
+  *  0377e61 - app: "help-action-search" has been renamed to "dialogs-
+    action-search"...
+  *  61c260c - app: add a trivial attach-dialog-to-arbitrary-object
+    utility
+  *  342c602 - Bug 771012 - Improve WebP animation-saving
+  *  6bc8b4e - app: don't copy alpha in
+    gimp_operation_profile_transform_process()
+  *  b5cc2a9 - Bug 768966 - Keyboard Shortcut hint disappears from
+    tooltips...
+  *  57d0c89 - libgimpwidgets: stop using GTK_TYPE_HSCALE
+  *  a5868e1 - app: some cleanup in GimpSearchPopup
+  *  53f34eb - Chain up in some size-allocate implementations
+  *  64a93c6 - libgimpwidgets: merge a small GimpRuler optimization from
+    gtk3-port
+  *  4df9a1d - Get rid of gtk_misc_set_alignment(label) and use
+    gtk_label_set_x,yalign()
+  *  d78d4ce - libgimpwidgets: add gtk_label_set,get_x,yalign() to
+    gimp3migration.[ch]
+  *  8952b49 - Updated Hungarian translation
+  *  b462418 - plug-ins: common: fix scripts to generate Makefile.am
+    correctly
+  *  f4f7b89 - app: fix position of "inline" keyword in about-dialog.c
+  *  4033415 - app, libgimpwidgets, plug-ins: kill
+    gtk_scrolled_window_add_with_viewport()
+  *  19239c2 - Updated Polish translation
+  *  51d26b0 - plug-ins: fix the build on OS X
+  *  0b933a2 - Updated Portuguese translation
+  *  adef990 - Updated Portuguese translation
+  *  f91a19b - libgimpwidgets: merge some GimpColorButton API from gtk3-
+    port
+  *  308efbb - Bug 767830 - Help browser does not launch on OS X
+  *  b7d41c8 - Bug 770928: Critical warning clicking history color
+    button
+  *  61530c7 - app: plug a memory leak
+  *  ab328ec - libgimpwidgets: bring back GIMP_STOCK_EDIT as "gtk-edit".
+  *  3f3e385 - Updated Portuguese translation
+  *  ee49c0b - plug-ins: latest perl or whatever seems to need "require
+    './plugin-defs.pl';"
+  *  0856c71 - Updated Hungarian translation
+  *  c6f1761 - icons, app, libgimpwidgets: replace GIMP_STOCK_EDIT with
+    GTK_STOCK_EDIT.
+  *  e404e6b - Bug 770853 - Opening and overwriting a linear gamma png
+    produces wrong colors
+  *  8bff597 - icons: install the new Freedesktop/GTK+ icons.
+  *  0eeee33 - icons: many new icons.
+  *  a440f6c - icons: updated icons.
+  *  252da1b - Bug 769960 - animated WebP loader is not properly
+    handling blending...
+  *  e4ecba5 - plug-ins: lots of cleanup and fixes in file-webp
+  *  3ab1389 - Bug 770600 - Fix broken export to PBM
+  *  f222a08 - libgimp: gimpexport.c: default to saving as animation
+  *  598def5 - Updated Polish translation
+  *  42647ec - libgimpconfig: forgot debug output in
+    gimp_config_path_unexpand_only()
+  *  7ce538b - libgimpwidgets: store profile locations as config paths
+    in profilerc
+  *  f0bd6e7 - etc: s/gtk-cdrom/media-optical/ and s/gtk-floppy/media-
+    floppy/
+  *  eee7b55 - app: fix typo in GimpGeglConfig
+  *  6f0be26 - icons: forgot to rename some "gimp-open" icons into
+    "document-open".
+  *  6c674e9 - app, libgimp*, plug-ins, icons: revert icon names into
+    freedesktop...
+  *  f40e36f - Bug 770171 - Mypaint eraser won't work unless there is an
+    alpha channel
+  *  44010be - libgimpwidgets: use gimp_config_path_unexpand() in
+    gimp_prop_file_choose_button
+  *  9317952 - libgimpwidgets: call gimp_file_entry_set_filename() with
+    filename encoding
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 17 Sep 2016 15:04:37 +0300
+
 gimp-devel (2.9.4+git37230-3cc77b0-1) unstable; urgency=medium
 
   * Compile

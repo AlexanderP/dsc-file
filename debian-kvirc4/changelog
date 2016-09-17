@@ -1,3 +1,46 @@
+kvirc (4:4.9.2~git-6984-gf8f50bd-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: f8f50bd6a787fdae7ce03cc36f97068399700d66
+  * Date: 1474062401
+  * git changelog:
+  *  f8f50bd - Don't use space in default event handler.
+  *  f4c8791 - KviPixmap: Code cleanup
+  *  21e4e74 - oops! slipped into comma
+  *  1721d0e - kvioptions: reuse unused before adding new entries
+  *  379f9b8 - Add option to ignore special characters in nick
+    completion.
+  *  eba8776 - workaround: fix NOTICE/PRIVMSG &szTarget link
+  *  afb8269 - KviMain: Fix [ircurl] description to include SSL flag
+  *  86ac8eb - Add SSL socket support to I/O Graph traffic tracking
+  *  c5b2de3 - themes: fix msgtypeActionCrypted icon assignment after
+    #2139
+  *  b648a2d - Blowfish: Remove unnecessary dynamic allocation and
+    clarify implecations of key length option choice to users.
+  *  8182570 - Crypt: Add code for ActionCrypted icon
+  *  31e81ba - add crypto icons
+  *  5f7f38c - KviIrcServerParser: avoid implicit conversion confusion
+  *  415c439 - Theme: Added msgtypeActionCrypted to default themes
+  *  09aa1d4 - OnAction: Add a 'Was encrypted' parameter
+  *  2560ef6 - Crypt: Add support for CTCP ACTION encryption
+  *  765fead - Crypt: Add support for CTCP ACTION decryption
+  *  4d1ddd4 - KviIrcServerParser: General code cleanup
+  *  b3ac85d - Make the /ctcp ACTION command use KviWindow::ownAction
+    when available
+  *  c8a2f6f - KviInputEditor cleanup (#2129)
+  *  a703bff - Fix segfault when trying to find an invalid window id
+    (#2133)
+  *  b7ee225 - readme: update download link
+  *  292c718 - Fixes keyboard shortcuts in split view IRC channel. Fixes
+    #1319 (#2132)
+  *  49deb06 - Fix using multiple keys in one join command with alias j
+    (#2130)
+  *  88294f0 - Add Vim swap files to the .gitignore
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 17 Sep 2016 13:49:55 +0300
+
 kvirc (4:4.9.2~git-6959-g9c4462c-1) unstable; urgency=medium
 
   * Compile
