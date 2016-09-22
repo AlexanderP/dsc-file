@@ -1,0 +1,52 @@
+Source: qcad
+Section: graphics
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: 	debhelper (>= 9), 
+				dh-exec,
+				libx11-dev,
+				libxext-dev,
+				libxrender-dev,
+				libglu1-mesa-dev,
+				libfreetype6-dev,
+				libfontconfig1-dev,
+				libssl-dev,
+				libdbus-1-dev,
+				libsm-dev,
+				qtbase5-dev,
+				libqt5svg5-dev,
+				qttools5-dev,
+				qtchooser,
+				qt5-qmake, 
+				qtscript5-dev,
+				qttools5-dev-tools,
+				libqt5xmlpatterns5-dev, 
+				libqt5webkit5-dev,
+				libqt5opengl5-dev,
+				imagemagick,
+				librsvg2-bin, 
+				libqt5sql5-sqlite, 
+				qt5-image-formats-plugins,
+				libqt5printsupport5,
+				
+Standards-Version: 3.9.8
+Homepage: http://www.qcad.org/
+
+Package: qcad
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, qcad-data (= ${source:Version})
+Description: Computer Aided Drafting (CAD) software
+ QCAD is a free, open source application for computer aided drafting (CAD) in
+ two dimensions (2D).
+ With QCAD you can create technical drawings such as plans for buildings,
+ interiors, mechanical parts or schematics and diagrams. 
+
+Package: qcad-data
+Architecture: all
+Depends: ${misc:Depends}
+Description: Computer Aided Drafting (CAD) software -- shared files
+ QCAD is a free, open source application for computer aided drafting (CAD) in
+ two dimensions (2D).
+ .
+ This package contains platform independent files for QCAD, including
+ fonts, patterns, and interface translations.
