@@ -1,3 +1,157 @@
+qcad (3.15.5.6+git3976-6205b4e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 6205b4e61c0d4597b5cdd0baf7accdd7619d1dd2
+  * Date: 1475223028
+  * git changelog:
+  *  6205b4e - update translations
+  *  b43fd18 - allow precision override for info labels
+  *  351dde7 - add removeIgnoreCase, containsIgnoreCase for Array
+    objects
+  *  a92b191 - update script bindings
+  *  658a952 - add REntity::to2D
+  *  328320f - allow precision override for RUnit::getLabel
+  *  93603a5 - set version to 3.15.5.6
+  *  2db7d32 - add identification for macOS 10.12
+  *  91eeed7 - no animated app win for Qt!=5.7
+  *  a5f9178 - update translations
+  *  5afbe07 - compile fix
+  *  ecc0ccf - compile fix for Qt 4
+  *  b8a536c - add warning when changing defaults for new drawings
+  *  263eeaa - update point display icons
+  *  e05f9f7 - update script bindings
+  *  4a94b97 - add option to allow action to interrupt other action
+  *  348933c - property editor: make labels selectable / copyable
+  *  cc26547 - update test data
+  *  a738bc5 - fix order of 100 / AcDb markers
+  *  33b84fe - add RTTI for all object types
+  *  9067911 - refactor queryInfiniteEntities
+  *  81166ec - update
+  *  1a00fc5 - return entity instead of entity ID
+  *  a9f2df5 - apply transaction to document or document interface
+  *  a1b0185 - formatting
+  *  9933335 - set version to 3.15.5.5
+  *  50e201a - fix output name of qtscript libraries
+  *  27a6655 - fix RMemoryStorage::queryAllVisibleEntities for frozen
+    parent layers
+  *  042f4bd - set version to 3.15.5.4
+  *  32bcf7a - use transaction document where appropriate to query
+    entities from IDs
+  *  379abf4 - update script bindings
+  *  d8ef0fd - add RLayer::isChildLayerOf
+  *  75485a0 - add -recompute-dim switch to override
+    Dim/ImportRecomputedDimBlocks setting per session
+  *  f1657d9 - fix scaling of dimensions in the context of a viewport
+  *  3775c83 - remove webkit / webengine dependency
+  *  931872d - clean up
+  *  c9e6f34 - rollback invalid changes for Qt 5.6.1
+  *  995adb1 - port to qt 5.6.x
+  *  19bbd92 - update
+  *  e9130b7 - add script bindings for Qt 5.6.1
+  *  5916f84 - update API doc
+  *  68908d2 - update Simple API paste doc
+  *  1a9672f - correct paths to license files
+  *  3ed3204 - add paste
+  *  3ce887d - use getTransactionDocument
+  *  3b647ef - apply transaction to off-screen document, add
+    getTransactionDocument
+  *  438922f - make document optional if shapes are passed to
+    getIntersectionPoints
+  *  b08aae5 - add createOffScreenDocument
+  *  773a848 - fix opaque zoom rectangle
+  *  f7a21aa - delegate import to Image tool if image file is imported
+  *  1541b2d - make Image startable from other tool contexts
+    (ImportFile)
+  *  949c6cb - enable multi-line pasting for ecma script shell
+  *  2b10059 - allow transactions to be applied to a specific document
+  *  fd14541 - fix potential exception when importing unsupported file
+    format
+  *  16c00f7 - set version to 3.15.6
+  *  9733ee3 - update user manual
+  *  e198579 - add lengthen to simple API
+  *  97aefc9 - update translations
+  *  b3d4d34 - update command line manual
+  *  6abb3b5 - minor update
+  *  28098c2 - update user manual
+  *  eb728d2 - allow passing coordinates as separate values for backward
+    compatibility
+  *  9b48e45 - allow passing coordinates as separate values for backward
+    compatibility
+  *  53b9f9e - keep selected item selected when updating block list
+  *  ac06c9b - hide block attributes if block is hidden and
+    GraphicsView/ HideAttributeWithBlock is set
+  *  373c160 - update script bindings
+  *  e318241 - add getTypeForVariable
+  *  f489733 - update script bindings
+  *  a1cbdad - allow multi line paste into command line
+  *  535fa53 - add dwg2maptiles testing
+  *  4cabf30 - update translations
+  *  e8f5a3c - allow user to leave angle input empty for an angle of 0
+  *  b6d4019 - port to Mac OS 10.12 SDK
+  *  9045fc5 - update script bindings
+  *  0a81ef8 - add constructor for arrays passed from scripts
+  *  50ab51d - pass all vectors as RVector or array
+  *  e4eebcb - remove obsolete code
+  *  4b4ec73 - fix potential endless loop in auto snap
+  *  d0001c8 - minor update
+  *  0267a91 - fix zoom box for 3d views
+  *  934bbb5 - refactor lengthen to allow use from other scripts
+  *  d263da0 - minor update
+  *  6d41b55 - backport to Qt 4
+  *  51a6549 - update translations
+  *  fc15b61 - minor update
+  *  5044213 - fix includes
+  *  a3242f4 - fix includes
+  *  99c9c7f - fix potential exception when closing document
+  *  040163d - separate last modification time from modified status
+  *  6ff5e4d - fix potential exception when running with script debugger
+    enabled
+  *  61a7ac2 - support exporting of dashed lines into 3d space
+  *  1975cea - update
+  *  8fc5b02 - Merge branch 'master' of github.com:qcad/qcad
+  *  30fb8df - add sprintf include
+  *  150c186 - update translations
+  *  8822a48 - refactor structure
+  *  21d95c4 - update script bindings
+  *  021545b - allow for custom correction factor per printer
+  *  159f320 - add printer list, default printer API
+  *  164596f - merge changes from tukuyomi (forum)
+  *  b5095e0 - add date.js to pro file
+  *  9aea300 - fix include path
+  *  4c1e75d - fix include path
+  *  b2ecda4 - fix include path
+  *  ad2043e - fix include problem with -always-load-scripts
+  *  90d907d - always re-include files with -always-load-scripts
+  *  a1941e2 - remove sprintf from libary includes
+  *  90b7846 - update icon
+  *  0dd4fca - update unit tests
+  *  866b1e4 - fix snap ranges if retina graphics view display is off
+  *  b4d3f58 - fix preferences default for minimum grid spacing
+  *  319bf2c - fix minimum grid spacing for graphics view if retina
+    resolution is off
+  *  51a3091 - update unit test
+  *  959cc16 - set version to 3.15.5.4
+  *  5ac386d - update script bindings
+  *  e4d88db - add last modification timestamp to RStorage / RDocument
+  *  58eccb3 - Add allowAll flag to operations to allow modifications on
+    all objects
+  *  a2cb18d - add convert to inch tool
+  *  9c738b3 - fix FS#1476 - Draw > Circle > 2 Tangents and Radius:
+    exception with arcs and circle entities
+  *  2d5ef39 - add test for circlectr from two circles
+  *  e46766f - update script bindings
+  *  77cf2b4 - treat layers as locked if parent layer is locked
+  *  6637eb7 - ignore invalid lines in pattern files
+  *  1a26416 - fix FS#1474 - Dimension > Leader: changing options breaks
+    tool
+  *  1116779 - fix FS#1474 - Dimension > Leader: changing options breaks
+    tool
+  *  9c49f08 - fix typo
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 01 Oct 2016 18:41:25 +0300
+
 qcad (3.15.5.3+git3850-407dd44-1) unstable; urgency=medium
 
   * Compile

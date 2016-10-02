@@ -1,3 +1,195 @@
+gimp-devel (2.9.4+git37433-3943d9f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 3943d9fe636dfb3d37489ac0f0a71259d781e133
+  * Date: 1475374226
+  * git changelog:
+  *  3943d9f - app: give focus back to quit dialog after changing active
+    shell.
+  *  c4bb708 - po: explain why `make update-po` will fail on a VPATH
+    build.
+  *  9e99554 - app: add an extracted comment for translators on the quit
+    dialog's text.
+  *  f4abe9a - app: s/seperator/separator/ in an extracted comment for
+    the translators.
+  *  2340f37 - Updated French translation.
+  *  b517dd2 - Updated French translation.
+  *  713e407 - Bug 770911 - Move tool should display relative
+    coordinates in statusbar...
+  *  12cb098 - Bug 772303 - preferences > folders don't have tooltips
+  *  82737bf - libgimpwidgets: don't use GIMP-specific icons for
+    GimpPathEditor
+  *  0089a01 - Bug 706309 - Add a “Save As” button to the “Quit GIMP”
+    dialog
+  *  aa0afe0 - app: invoke the right action when the quick mask button
+    is clicked
+  *  4175466 - pdb: fix PDB compat wrappers which i just broke
+  *  0524b60 - app: consistently treat GimpColorConfig profile paths as
+    config paths
+  *  3e84c55 - app: remember the size of the prefs dialog
+  *  eeb9364 - app: fix capitalization in prefs frame title
+  *  e830982 - app, libgimpwidgets: use the new config path <-> GFile
+    functions
+  *  d36d956 - libgimpconfig: add gimp_file_new_for_config_path() and
+    _get_config_path()
+  *  beb3279 - Bug 320447 - fast switching between "color managed
+    display" and "softproof"
+  *  a898f22 - libgimpwidgets: don't chain up in
+    gimp_frame_size_allocate()
+  *  cb2fe28 - Updated Hungarian translation
+  *  2019756 - app: add the chosen GFile to GimpColorProfileCallback
+  *  6464b47 - app: reorder callbacks in view-commands.c, same order as
+    in the header
+  *  edc903c - app: add a callback to the color profile dialog
+  *  58dc31e - Updated Italian translation
+  *  2ad8b83 - Updated Italian translation
+  *  406b2d0 - Updated Portuguese translation
+  *  d9561ee - Updated Portuguese translation
+  *  ada5fe9 - Bug 772025 - Incomplete toolrc file causes GIMP to hang
+  *  ce4c4a4 - libgimpconfig: fix typo: s/next level/nest level/
+  *  062df6b - Bug 772025 - Incomplete toolrc file causes GIMP to hang
+  *  e1db363 - gegl-apply-operation: s/dither-strategy/dither-method/
+  *  b27f3ff - app: don't leak the passed file in
+    file_open_dialog_show()
+  *  88ff45e - app: keep the statusbar progress from drawing over the
+    right docks
+  *  a6b6259 - Bug 599573 - Remember dialog defaults between Gimp
+    sessions
+  *  009417e - app: reorder and rename indexed conversion parameters to
+    make more sense
+  *  d5f34e7 - app: rename indexed conversion dither option variables
+    and parameters
+  *  f43760a - app: add a callback to the convert indexed dialog
+  *  0932386 - app: add a callback to the stroke dialog
+  *  81603ea - Bug 767178 - Segment fault on deleting an automatic
+    folder tag
+  *  75853ee - fix typo
+  *  c333a04 - gimpwarptool: use the linear sampler for the warp tool to
+    ensure crisp lines after an erase.
+  *  905bb37 - app: add a callback to the fill dialog
+  *  bbbfe5c - app: add a callback to the offset dialog
+  *  2a04cc9 - app: add a callback to the convert precision dialog
+  *  98232c2 - Bug 735895 - Precision Conversion "Dithering" dialog
+  *  1ddccf0 - Updated Hungarian translation
+  *  ec64dbb - app: also reset the profile import policy when resetting
+    color management
+  *  28c0e75 - app: use prefs_file_chooser_button_add() for the temp and
+    swap paths
+  *  f07b9e1 - Bug 599573 - Remember dialog defaults between Gimp
+    sessions
+  *  ea98f99 - app: change gimp_pickable_auto_shrink()'s parameters
+  *  9a9899e - app: general review and cleanup in actions/*-commands.c
+  *  c01a251 - Updated Polish translation
+  *  9931918 - app: attach the "Reset all filters" dialog to Gimp
+  *  1886f55 - app: use dialogs_attach_dialog() for the canvas padding
+    color dialog
+  *  12428ea - app: add dialogs_destroy_dialog(), destroys an attached
+    dialog by its key
+  *  c5957f1 - app: remove the "filters_dialog" member from
+    GimpDisplayShell
+  *  8ab530f - Bug 599573 - Remember dialog defaults between Gimp
+    sessions
+  *  da23240 - app: use gimp_enum_radio_frame_new_with_range() in the
+    merge layers dialog
+  *  5f0e6cf - libgimpbase: add translatable descriptions to enum
+    GimpMergeType
+  *  3c7fcf4 - Bug 599573 - Remember dialog defaults between Gimp
+    sessions
+  *  e703f84 - app: make the ChannelOptionsDialog private
+  *  c2f264f - app: make the LayerOptionsDialog private
+  *  3d28113 - Updated French translation
+  *  2522c7e - app: make the VectorsOptionsDialog private
+  *  e8a0e6a - Updated French translation
+  *  aba0b03 - app: reorder arguments of
+    layer,channel,vectors_dialog_new()
+  *  96709da - Updated po-plug-ins French translation
+  *  0a0f804 - app: don't connect the print size and scale dialogs to
+    GimpImage::disconnect
+  *  d90ce3b - app: attach the "Set Canvas Size" dialog to the image
+  *  8a59640 - app: remove helper struct ImageResizeOptions
+  *  3f1104b - app: remove the "grid_dialog" member from
+    GimpDisplayShell
+  *  1c82fc5 - app: attach the layer scale dialog to the layer
+  *  905dec8 - Bug 599573 - Remember dialog defaults between Gimp
+    sessions
+  *  94d3c7d - Updated Occitan translation
+  *  a87b5a6 - Updated Portuguese translation
+  *  14fc49a - app: make ImageMergeLayersDialog private and provide a
+    cutom callback instead
+  *  88b60e9 - app: make gimp_edit_paste() do what its told to do
+  *  41a64b7 - app: make the LayerAddMaskDialog struct private
+  *  390b8a3 - Updated Hungarian translation
+  *  e909b77 - Bug 771851 - Vertical ruler shows artifacts if the status
+    bar isn't showing
+  *  88008b9 - Updated Hungarian translation
+  *  30a0d62 - Updated Occitan translation
+  *  6da1775 - app: more performance improvements to fuzzy-select/bucket-
+    fill
+  *  7b0307d - app: add preferences-dialog-utils.[ch]
+  *  1f9451b - desktop: fix keywords
+  *  9645f903 - app: make "Color Management" and "Dialog Defaults"
+    resettable individually
+  *  cc8b5cd - app: add gimp_prefs_box_set_page_resettable()
+  *  5037ff3 - Bug 771444: Tablet stylus misbehaves when crossing...
+  *  472608f - desktop: add "GIMP" in keywords to fix search with
+    flatpak.
+  *  ca43284 - app: convert tabs to spaces in gimpprefsbox.h
+  *  0d5fa53 - devel-docs: add new stuff to *-sections.txt, and cleanup
+  *  dd1ac46 - app: simplify pasting code in edit-commands.c
+  *  21ec859 - app: rename gimp_layer_flatten() to
+    gimp_layer_remove_alpha()
+  *  1d76d08 - app: fix position of pasted layers in gimp_edit_paste()
+  *  5c2df43 - Updated Czech translation
+  *  f677e15 - app: special case empty layer groups in
+    gimp_edit_get_paste_offset()
+  *  dfad0d1 - icons: set GEGL_USE_OPENCL=no for symbolic icon inversion
+  *  7b4895f - app: use x,y,width,height instead of x1,y1,x2,y2 in
+    gimp_edit_paste()
+  *  35588d7 - app: add utility functions to get a generic paste
+    GimpObject
+  *  fa94ab0 - app: fix warning in gimp_edit_paste()
+  *  f869933 - libgimp: sort gimp.def properly
+  *  3ed4b3b - app: add "paste as new layers" for the list of named
+    buffers
+  *  754b9a8 - script-fu: port two scripts to gimp-edit-paste-as-new-
+    image
+  *  109e01d - pdb, app, libgimp: rename *-paste-as-new to *-paste-as-
+    new-image
+  *  be91db8 - pdb: fix typo in edit-paste's help
+  *  f5f25de - Updated German translation
+  *  67863da - Bug 637313 - Should be possible to copy/paste whole
+    layers in a single step
+  *  f960e8e - Updated Hungarian translation
+  *  70d6cd9 - app: connect the Gimp instance's clipboard_image to the
+    system clipboard
+  *  7130ba9 - app: add gimp->clipboard_image and API to set/get it
+  *  f0acb33 - app: factor gimp_edit_get_paste_offset() out of
+    gimp_edit_paste()
+  *  08513f5 - app: paste as new layer if the target layer can't be
+    modified
+  *  557965e - app, menus: rename everything "paste as new" to "paste as
+    new image"
+  *  8eb1a90 - Updated Swedish translation
+  *  1f00b5e - app: add setting/getting and sending/recieving images via
+    GimpClipboard
+  *  0740d8d - app: don't keep images from the clipboard in gimp->images
+  *  5136f13 - app: add gimp_selection_data_set_xcf() and _get_xcf()
+  *  63bcc69 - app: factor out xcf_load_stream() and xcf_save_stream()
+  *  6b48a68 - Updated Portuguese translation
+  *  484b91c - Updated Serbian translation
+  *  b4f8bb3 - Updated Serbian translation
+  *  b092a80 - app: reorder edit_fade_cmd_callback() in edit-commands.c
+  *  de5bbd6 - app: don't call gimp_layer_set_lock_alpha() on layer
+    groups
+  *  d85157c - app: rename gimp->global_buffer to gimp->clipboard_buffer
+  *  9bb3391 - app: set tooltips on the tool options' brush, gradient
+    etc edit buttons
+  *  21f8a0f - app: clean up and simplify gimp_selection_extract()
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 02 Oct 2016 10:42:25 +0300
+
 gimp-devel (2.9.4+git37307-d5ffc50-1) unstable; urgency=medium
 
   * Compile

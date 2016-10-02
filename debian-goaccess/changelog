@@ -1,3 +1,42 @@
+goaccess (1:1.0.2+git1947-deeef2f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: deeef2f8047f16a590afaf8161a9f8023b9840a9
+  * Date: 1475109612
+  * git changelog:
+  *  deeef2f - Fixed memory leak when unable to URL decode %U specifier.
+  *  51ee9f9 - Updated WebSocket structure comment.
+  *  5810b35 - Fixed a race condition on WebSocket named piped reader &
+    writer.
+  *  fb36a22 - Ensure we have a valid holder before returning JSON data.
+  *  c74af42 - Added on-disk .deb package details to README.md.
+  *  3785254 - Ensure latest JSON data is fast-forwarded when connection
+    is opened.
+  *  07fe383 - Updated code formatting under gdns_thread_create().
+  *  d03316c - Fixed type on function comment.
+  *  d94877e - Added --no-html-last-updated command line option to
+    README.md.
+  *  e6ebc49 - Updated deb repo notes on README.md.
+  *  d1b0dc3 - Update README.md
+  *  f8d4f0a - Updated man page response time note for Nginx and Apache.
+  *  c0eeeab - Added missing comments to various complex data types.
+  *  c9e85ae - Merge pull request #521 from ishitatsuyuki/patch-1
+  *  988699d - Ensure JSON data values are HTML escaped only when
+    outputting to an HTML file.
+  *  c687fa7 - Add a config flag to know if we are outputting HTML.
+  *  5539fca - Removed pointer null check since it can't be null at that
+    point.
+  *  5730cf1 - browser: classify google cloud clients
+  *  739d4a6 - Updated function get_delim() comment.
+  *  0b3eab4 - Ensure token parser extracts until 0x0 is found in log
+    line.
+  *  73699fd - Ensure log format parser can handle escaped optional
+    delimiter char .
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 30 Sep 2016 21:04:30 +0300
+
 goaccess (1:1.0.2+git1926-e42ac72-1) unstable; urgency=medium
 
   * Compile
