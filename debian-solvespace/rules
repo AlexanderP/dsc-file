@@ -5,22 +5,38 @@ DH_VERBOSE = 1
 DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/default.mk
 
+CMAKEOPT = -DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH) -DCMAKE_BUILD_TYPE=Release
+
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+ifneq (,$(filter $(DEBIAN_CODENAME),trusty)) 
+	CONTROL = control.trusty
+	CMAKEOPT += CMAKE_C_COMPILER=gcc-5 -D CMAKE_CXX_COMPILER=g++-5
+else
+	CONTROL = control.sid
+endif
+
 %:
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	dh_auto_configure -- \
-	-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH) \
-	-DCMAKE_BUILD_TYPE=Release
+	cp debian/$(CONTROL) debian/control
+	dh_auto_configure -- $(CMAKEOPT)
+
 
 override_dh_strip:
 	dh_strip -psolvespace --dbg-package=solvespace-dbg
 	dh_strip -plibslvs1 --dbg-package=libslvs1-dbg
 
 override_dh_install:
-
 	cd $(CURDIR)/debian/tmp/usr/share/solvespace && \
 	for i in fonts/unifont.hex.gz fonts/unicode.lff.gz threejs/three-r76.js.gz threejs/hammer-2.0.8.js.gz; do \
 	gzip -d $${i} && gzip -n $${i%???}; \
 	done
 	dh_install
+
+override_dh_auto_clean:
+	cp debian/$(CONTROL) debian/control
+	dh_auto_clean
