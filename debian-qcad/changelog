@@ -1,3 +1,41 @@
+qcad (3.15.5.6+git4002-898b13b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 898b13b1d4ea02bd7e08a0344854ebd7e7ea439a
+  * Date: 1476444202
+  * git changelog:
+  *  898b13b - show context menu for selectable entities only
+  *  12859a3 - fix potential hang when using script debugger
+  *  dc28346 - update script bindings
+  *  8ff72ed - rename toBiArcPolyline to approximateWithArcs
+  *  8353a4c - add REllipse::approximateWithArcs
+  *  52c0371 - move approximateWithArcs to REllipse
+  *  ab1a7f2 - update script bindings
+  *  1578a0b - add API to get custom properties as int, double
+  *  817889c - ecmagenerator fix
+  *  c750698 - update unit parsing from strings
+  *  b0b123b - remove extra ;
+  *  de7c6eb - update script bindings
+  *  b89e564 - apply operation parameters to transaction
+  *  acbaa2c - add queryBlockDirect with given name
+  *  e331292 - apply block name filter before sorting
+  *  af8ee22 - save text dialog data if user cancels dialog (or presses
+    escape), FS#1490
+  *  70ba885 - update script bindings
+  *  1ff4c78 - remove obsolete code
+  *  a4cc7c9 - update script bindings
+  *  d648fb8 - stretch dimension point when stretching dimensions
+  *  5140649 - add asText parameter to RUnit::unitToSymbol
+  *  f4c4e1e - add support for entity ID links in command line history
+  *  2c2bcb0 - update qcad document icon
+  *  1a01e0d - add qcad document icon
+  *  f57f80c - take out Qt 5.7.0 wacom bug workaround
+  *  27db605 - minor update
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 15 Oct 2016 19:45:11 +0300
+
 qcad (3.15.5.6+git3976-6205b4e-1) unstable; urgency=medium
 
   * Compile

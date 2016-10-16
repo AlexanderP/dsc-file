@@ -1,3 +1,32 @@
+kvirc (4:4.9.2~git-6999-gbc0aa5b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: bc0aa5b07c31d6d95fb184a06cea328141d0bc69
+  * Date: 1475595177
+  * git changelog:
+  *  bc0aa5b - followup to 657a5c4 it turns out that my editor thought
+    the remaining files were already UTF-16 LE where they in fact were
+    not.
+  *  657a5c4 - convert to UTF-16 LE as the others
+  *  20d6588 - Fix Unicode builds, Unicode true|false
+  *  3008162 - it looks like we need more version variables to keep dumb
+    mistakes from happening
+  *  9a40bfa - build unicode aware installers, that would have even
+    worked on xp but was somewhat forgotten back in the day
+  *  16edb89 - quote strings with variables in it maybe? its not that
+    hard, really.
+  *  280cf5c - fix expression for version check
+  *  52ec12b - invert openssl condition on AV again and make it check
+    for the file version, update dicts
+  *  8c0587d - bump openssl 1.0.2j (#2148)
+  *  298ddea - deafult.kvc: bump events and popups versions
+  *  1d336d6 - popups: move user control prologue and options to own
+    popup
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Oct 2016 21:41:36 +0300
+
 kvirc (4:4.9.2~git-6988-g3fd89db-1) unstable; urgency=medium
 
   * Compile

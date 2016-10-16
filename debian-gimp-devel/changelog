@@ -1,3 +1,95 @@
+gimp-devel (2.9.4+git37488-151b44e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 151b44e4bb97afd4bc177f244ccbfa70da3dffea
+  * Date: 1476476051
+  * git changelog:
+  *  151b44e - Bug 759939 - Ghost brush outline in FG Select tool
+  *  3a52bf4 - Bug 731279 - Tool Preset Editor not working correctly
+  *  3d1c564 - Bug 731279 - Tool Preset Editor not working correctly
+  *  b8db0aa - app: actually edit the template's color profile in
+    GimpTemplateEditor
+  *  33276a0 - app: add precondition check on "object" in
+    gimp_context_set_by_type()
+  *  1e69bbd - libgimpconfig: don't unref the GFile in
+    gimp_config_serialize_value()
+  *  2e1a5bc - app: don't leak GimpTemplate's "color_profile" GFile in
+    finalize()
+  *  0353367 - Update German translation
+  *  f722bc9 - app: remove GimpDataEditor's save button, it was useless
+    and confusing
+  *  d1e3d7c - Bug 731279 - Tool Preset Editor not working correctly
+  *  cecdbb7 - Update Greek translation
+  *  bb8a1e6 - Update Greek translation
+  *  184f092 - Bug 771678 - Parametric Brush Aspect Ratio and Angle
+    values...
+  *  8c10f8a - Updated Italian translation
+  *  e9b162b - Update Portuguese translation
+  *  e7cfbb6 - Update Hungarian translation
+  *  dc0ffa4 - Bug 764024 - Allow to choose fill color when resizing
+    layers and images
+  *  997ae1e - Bug 764024 - Allow to choose fill color when resizing
+    layers and images
+  *  3139cb9 - Bug 771558 - PSD files with a layer additional data
+    length...
+  *  a06f7e7 - app: use BG fill in gimp_drawable_fill() if the drawable
+    has no alpha
+  *  f027bf5 - app: clean up the palette-import-dialog in the spirit of
+    recent dialog cleanup
+  *  ce639f0 - app: fall back to BG fill if gimp_get_fill_params()
+    doesn't find a pattern
+  *  be6a47e - app: some more cleanup in IScissors
+  *  e9e1bc1 - Bug 766988 - Colors applied to images are not color
+    managed
+  *  7646157 - Update Scottish Gaelic translation
+  *  322cc63 - Add Finnish translation (cherry picked from commit
+    f17340493ec47a66e11008f8835eedda306afeeb)
+  *  88b016f - Update Polish translation
+  *  6f0bb88 - Installer: simplify file inclusion rules
+  *  c2e3d64 - Update Danish translation (cherry picked from commit
+    2c84150c34fd919ab771918c193b271cf2849d18)
+  *  30728c9 - Update Danish translation (cherry picked from commit
+    e022fdc386144a34720888ce7c4d36ea6aaf1753)
+  *  a030c59 - Update Danish translation
+  *  46b73bb - Bug 772541 - change Quick Mask Attributes mask opacity
+    slider
+  *  6ca9ebd - app: remove the dynamic programming buffer from the
+    GimpIscissorsTool struct
+  *  152c5a2 - app: change most of Iscissors to use a GimpPickable not a
+    GimpImage
+  *  fbb6b5d4 - app: cleanup in GimpFreeSelectTool
+  *  3ee1ff9 - Updated Portuguese translation
+  *  400b9b4 - Updated Portuguese translation
+  *  439a3ff - Bug 667862 - Allow mouse to optionally configure tablet
+    devices
+  *  5cf3cf2 - app: make sure a floating selection always has its
+    drawable's format + alpha
+  *  8aa0a04 - app: keep focus on the quit dialog when saving.
+  *  f67bc22 - app: set active shell on image cell selection in quit
+    dialog...
+  *  ecf4af8 - app: add "gboolean new_has_alpha" to
+    gimp_drawable_convert_type()
+  *  3f8d55f - app: don't set "follow-state" on GimpCellRendererButton
+  *  20d45e5 - po: only warn on pot generation.
+  *  badd7ce - Updated Hungarian translation
+  *  b0cdd51 - Updated Hungarian translation
+  *  ba1d545 - Updated Danish translation (cherry picked from commit
+    85ae7d6deea409cf4312243636ae20bb0def8654)
+  *  de87b0a - app: disconnect the "add" and "remove" handlers on dialog
+    destruction
+  *  e1b31bd - vectortool: one more explaining message.
+  *  15d9f4a - icons, libgimpwidgets: delete "gimp-path-
+    (new|up|down|delete)" icons.
+  *  f8d816c - app: some cleanup in quit-dialog.c
+  *  768b44a - Bug 772315 - Dependency mentioned twice in INSTALL.in
+  *  63a7a94 - Updated Polish translation
+  *  f2e6339 - Fix a typo in a translatable string ("represantation")
+  *  256a317 - Updated Hungarian translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 16 Oct 2016 12:05:57 +0300
+
 gimp-devel (2.9.4+git37433-3943d9f-1) unstable; urgency=medium
 
   * Compile

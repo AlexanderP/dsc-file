@@ -13,7 +13,7 @@ ifeq "$(DEBIAN_CODENAME)" ""
 endif
 ifneq (,$(filter $(DEBIAN_CODENAME),trusty)) 
 	CONTROL = control.trusty
-	CMAKEOPT += CMAKE_C_COMPILER=gcc-5 -D CMAKE_CXX_COMPILER=g++-5
+	CMAKEOPT += -D CMAKE_C_COMPILER=gcc-5 -D CMAKE_CXX_COMPILER=g++-5
 else
 	CONTROL = control.sid
 endif

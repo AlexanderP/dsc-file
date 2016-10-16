@@ -1,3 +1,37 @@
+goaccess (1:1.0.2+git1966-ad547a8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: ad547a88ecf5564b824941beb87e9ec34e46f764
+  * Date: 1476250096
+  * git changelog:
+  *  ad547a8 - Removed right double angle icon from HTML panels.
+  *  059dfd7 - Check for valid selectors when outputting an HTML report
+    w/o tables.
+  *  e53fc7c - Removed unnecessary D3 accessors from bar chart.
+  *  a5c562a - Ensure we break read_lines() loop when performing a dry
+    run (conf dialog).
+  *  82a12d1 - Ensure GW threads are not NULL when attempting to stop ws
+    server.
+  *  e94391f - Ensure read_lines() returns the right value.
+  *  3d29222 - Ensure read_line() returns the right value.
+  *  dd8614e - Added --num-tests command line option to README.md.
+  *  18158f6 - Updated deb repo section on README.md.
+  *  6d13aaa - Added --num-tests command line option to the config file.
+  *  4785dda - Moved relevant debug macros from commons.h to error.h.
+  *  dec8e2b - Added --num-tests command line option to the man page.
+  *  b2c1dce - Added additional error hint to format error ourput.
+  *  f4c0276 - Added the ability to show which token didn't match
+    log/date/time pattern.
+  *  33d4fd8 - Added missing function comment to goaccess.c.
+  *  9c1342f - Fixed month name abbreviation on app.js.
+  *  72cfe4c - Changed function name from read_line() to read_lines().
+  *  10212f9 - Changed buffer initialization for readability.
+  *  b55f1ac - Fixed memory leak when unable to URL decode %q specifier.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Oct 2016 20:36:05 +0300
+
 goaccess (1:1.0.2+git1947-deeef2f-1) unstable; urgency=medium
 
   * Compile
