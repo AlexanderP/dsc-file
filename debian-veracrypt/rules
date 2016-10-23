@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
-#export DH_VERBOSE=1
+export DH_VERBOSE=1
 
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
@@ -10,27 +10,11 @@ ifeq (,$(NUMJOBS))
 	NUMJOBS = 1
 endif
 
-export WX_ROOT=$(shell pwd)/wx
-
-DEBIAN_CODENAME = $(shell echo $$DIST)
-ifeq "$(DEBIAN_CODENAME)" ""
-	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
-endif
-ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid vivid wily xenial)) 
-	export CC=gcc-4.9
-	export CXX=g++-4.9
-else
-	export CC=gcc
-	export CXX=g++
-endif
-
 %:
 	dh $@ --parallel 
 
 override_dh_auto_build:
-	cd src && $(MAKE) -j$(NUMJOBS) wxbuild
-	cd src && $(MAKE) -j$(NUMJOBS) WXSTATIC=1
-
+	cd src && $(MAKE) -j$(NUMJOBS)
 
 override_dh_auto_clean:
 	cd src && test ! -f Makefile || $(MAKE) clean
