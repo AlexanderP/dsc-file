@@ -1,3 +1,40 @@
+goaccess (1:1.0.2+git1986-b8cebbc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: b8cebbc9d677b438a4db6c14d5dc4b56699d3c3a
+  * Date: 1477627598
+  * git changelog:
+  *  b8cebbc - Fixed cppcheck (error) uninitialized variable: w/rfds
+    under goaccess.c.
+  *  0ecc9b4 - Fixed (warning) in format string for 'unsigned int' under
+    csv.c.
+  *  b6b47d3 - Fixed (warning) in format string for 'unsigned int' under
+    bin2c.c.
+  *  cda591c - Added 'Android 7.1 Nougat' to the list of OSs.
+  *  a3c2340 - Added 'Go-http-client' to the list of browsers.
+  *  e3309f4 - Fixed escape issue generating invalid JSON.
+  *  626da93 - Fixed warning: unused variable ‘status’ under bin2c.c
+  *  958546d - Added 'macOS Sierra' to the list of OSs.
+  *  556336f - Use getBoundingClientRect() to reliably determine the
+    width of the chart wrapper.
+  *  973188a - Removed container fadein animation.
+  *  7e49f06 - Ensure invalid format errors are dumped to stderr.
+  *  e95609a - Removed unused function parameter from renderTable().
+  *  476b691 - Ensure the stream is closed if unable to malloc buffer
+    under bin2c.c.
+  *  46309e9 - Ensure there's no memory leak if unable to compress
+    buffer.
+  *  500a618 - Properly check the return value of malloc in bin2c.c.
+  *  1474d33 - Properly check the return value of malloc in bin2c.c.
+  *  f281b6e - Removed unnecessary casting from malloc on bin2c.c.
+  *  54652ed - Removed unnecessary casting from malloc on bin2c.c.
+  *  577396d - Ensure buffer is freed on bin2c.c.
+  *  71dcdb8 - Ensure buffer is freed on bin2c.c.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 29 Oct 2016 10:31:19 +0300
+
 goaccess (1:1.0.2+git1966-ad547a8-1) unstable; urgency=medium
 
   * Compile
