@@ -1,3 +1,52 @@
+kvirc (4:4.9.2~git-7006-g96ca5fb-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 96ca5fbe4e047d59e4bcc28d012bfe92e3a2d228
+  * Date: 1477689869
+  * git changelog:
+  *  96ca5fb - Cleanup included files
+  *  232b0d8 - update po{t}s and pos, specify package name and version
+    in po{t}s
+  *  1ef3cc7 - Improved german translation
+  *  7b5bce7 - Updated german .po files and saved them with poedit as
+    preparation for further work on the translation
+  *  0b12787 - pull translation updates from TX (except de_DE)
+  *  e54c217 - ppa: add ubuntu 16.10 (Yakkety)
+  *  8f78ea2 - lit handler: Only send CHGHOST to common channels
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 29 Oct 2016 10:42:02 +0300
+
+kvirc (4:4.9.2~git-6999-gbc0aa5b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: bc0aa5b07c31d6d95fb184a06cea328141d0bc69
+  * Date: 1475595177
+  * git changelog:
+  *  bc0aa5b - followup to 657a5c4 it turns out that my editor thought
+    the remaining files were already UTF-16 LE where they in fact were
+    not.
+  *  657a5c4 - convert to UTF-16 LE as the others
+  *  20d6588 - Fix Unicode builds, Unicode true|false
+  *  3008162 - it looks like we need more version variables to keep dumb
+    mistakes from happening
+  *  9a40bfa - build unicode aware installers, that would have even
+    worked on xp but was somewhat forgotten back in the day
+  *  16edb89 - quote strings with variables in it maybe? its not that
+    hard, really.
+  *  280cf5c - fix expression for version check
+  *  52ec12b - invert openssl condition on AV again and make it check
+    for the file version, update dicts
+  *  8c0587d - bump openssl 1.0.2j (#2148)
+  *  298ddea - deafult.kvc: bump events and popups versions
+  *  1d336d6 - popups: move user control prologue and options to own
+    popup
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Oct 2016 21:41:36 +0300
+
 kvirc (4:4.9.2~git-6988-g3fd89db-1) unstable; urgency=medium
 
   * Compile

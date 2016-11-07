@@ -1,3 +1,115 @@
+qcad (3.15.6.0+git4056-9e536f6-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 9e536f6323cd125f46637eea4432e3714a192499
+  * Date: 1477661909
+  * git changelog:
+  *  9e536f6 - ignore internal blocks
+  *  74c1a14 - explode solid fills into boundary entities
+  *  1a0104f - fix -exec switch for non-action scripts
+  *  e8c38ea - clean up
+  *  275186e - fix auto split for self intersecting splines
+  *  83ef0a2 - update script bindings
+  *  5d0db84 - fix end point precision when splitting splines
+  *  6837da9 - add RHatchData::clearBoundary
+  *  b562f06 - update script bindings
+  *  c82dfb5 - fix REntityData::getClosestShape for complex shapes in
+    block references
+  *  40bbefd - update command line to use RMath::parseCoordinate
+  *  8dbfeef - fix FS#1496 - Draw > Circle > Center, Point: coordinate
+    input interpreted as radius
+  *  3c445f2 - fix ShapeAlgorithms.getIntersectingShapes for shapes in
+    blocks
+  *  6d3df38 - use RMath.parseCoordinate in stringToCoordinate
+  *  b783422 - add RVector::isNaN
+  *  3904e59 - add RMath::parseCoordinate
+  *  3ff43fb - add RSettings::getCharValue
+  *  5694bf1 - fix compiler warnings
+  *  d3691fe - fix compiler warning
+  *  ba29db7 - update unit test data
+  *  b82340b - fix unit tests
+  *  00fbcbd - set version to 3.15.5.7
+  *  38209d0 - set version to 3.15.5.4
+  *  fb5569a - update script bindings
+  *  8c8c25b - refactor hatch from selection
+  *  2c7a281 - update trimming for ellipses
+  *  cbf0c8a - add RShape::equals to compare shapes
+  *  f0fd65e - clean up
+  *  9c485e1 - update simple API
+  *  5c74234 - update script bindings
+  *  17c39a6 - update unit test data
+  *  1896a46 - refactor trimming to use distances instead of positions
+  *  83978b4 - implement getDistanceFromStart
+  *  db40c1b - add getDistanceAtT, getDistanceFromStart
+  *  6486369 - add RShape::getSelfIntersectionPoints
+  *  4c23027 - add RPolyline::getSegmentsLength, relocateStartPoint with
+    distance
+  *  9bbc80f - add Math.sign polyfill
+  *  a0739c7 - add Math.sign polyfill
+  *  a95311d - several fixes in simple API
+  *  74055ba - update script bindings
+  *  baefa8a - fix hatch unit tests
+  *  dfe9f3d - merge RDirected into RShape
+  *  8929f55 - make sure getClosestIntersectionPoints does not reverse
+    shape
+  *  76aa5ea - refactor Hatch class to HatchFromBoundary
+  *  4f6f3f2 - move getIntersectingShapes and divideShape to
+    ShapeAlgorithms
+  *  65a2a9a - explode block reference arrays into separate block
+    references
+  *  020884f - update script bindings
+  *  ea2f79a - add RPolyline::getConcaveVertices,
+    RPolyline::getConvexVertices
+  *  007700d - fix potential null pointer segfault in
+    RShape::getOffsetLines
+  *  9294f44 - backport
+  *  1fe0f88 - set version to 3.15.6.0
+  *  73342e4 - remove obsolete file
+  *  365ea25 - performance update
+  *  b2504ff - update comment
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 29 Oct 2016 12:47:40 +0300
+
+qcad (3.15.5.6+git4002-898b13b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 898b13b1d4ea02bd7e08a0344854ebd7e7ea439a
+  * Date: 1476444202
+  * git changelog:
+  *  898b13b - show context menu for selectable entities only
+  *  12859a3 - fix potential hang when using script debugger
+  *  dc28346 - update script bindings
+  *  8ff72ed - rename toBiArcPolyline to approximateWithArcs
+  *  8353a4c - add REllipse::approximateWithArcs
+  *  52c0371 - move approximateWithArcs to REllipse
+  *  ab1a7f2 - update script bindings
+  *  1578a0b - add API to get custom properties as int, double
+  *  817889c - ecmagenerator fix
+  *  c750698 - update unit parsing from strings
+  *  b0b123b - remove extra ;
+  *  de7c6eb - update script bindings
+  *  b89e564 - apply operation parameters to transaction
+  *  acbaa2c - add queryBlockDirect with given name
+  *  e331292 - apply block name filter before sorting
+  *  af8ee22 - save text dialog data if user cancels dialog (or presses
+    escape), FS#1490
+  *  70ba885 - update script bindings
+  *  1ff4c78 - remove obsolete code
+  *  a4cc7c9 - update script bindings
+  *  d648fb8 - stretch dimension point when stretching dimensions
+  *  5140649 - add asText parameter to RUnit::unitToSymbol
+  *  f4c4e1e - add support for entity ID links in command line history
+  *  2c2bcb0 - update qcad document icon
+  *  1a01e0d - add qcad document icon
+  *  f57f80c - take out Qt 5.7.0 wacom bug workaround
+  *  27db605 - minor update
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 15 Oct 2016 19:45:11 +0300
+
 qcad (3.15.5.6+git3976-6205b4e-1) unstable; urgency=medium
 
   * Compile

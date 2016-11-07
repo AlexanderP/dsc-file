@@ -1,3 +1,58 @@
+tesseract (3.05.00~git20161028-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 7f57ac4a947687972915cb68498a1e4ea5e159e3
+  * Date: 1477678122
+  * git changelog:
+  *  7f57ac4 - Merge pull request #456 from stweil/opencl
+  *  f67381a - opencl: Fix compiler warning [-Wwrite-strings]
+  *  bccf1c1 - opencl: Fix delete operation
+  *  3ac54b9 - opencl: Fix compiler warning [-Wconversion-null]
+  *  f46dfdc - Fix a padding problem in ThresholdRectToPixOCL
+  *  5db7602 - Fix openCL crash at startup after device profiling
+  *  299fce5 - Merge pull request #449 from stweil/leak
+  *  ea786e2 - api/baseapi: Fix memory leaks at program termination
+  *  6fad5fc - dict/dict: Fix memory leaks at program termination
+  *  55bcfb5 - Merge pull request #443 from jimregan/genlangdata
+  *  14c0549 - Merge pull request #448 from stweil/fixes
+  *  421e4c9 - cutil/cutil: Fix comment (copy+paste error)
+  *  da89ff9 - Merge pull request #447 from stweil/leak
+  *  3eb044b - Merge pull request #446 from stweil/cov
+  *  f1d3a3b - api/tesseractmain: Fix memory leak caused by exit()
+  *  53c572b - ccutils/params: Fix memory leak for static variable
+    global_params
+  *  c7339c3 - viewer/svutil: Fix resource leak
+  *  b1f03cb - classify/adaptmatch: Fix memory leak
+  *  a351dae - ccutil/tessdatamanager: Fix resource leak
+  *  1327551 - classify/mastertraining: Fix memory leaks
+  *  963b935 - classify/adaptmatch: Fix memory leak
+  *  bf334e0 - ccmain/paragraphs: Fix memory leak
+  *  aa945bb - ccstruct/polyblk: Fix memory leak
+  *  c12757b - viewer/svutil: Fix memory leak
+  *  3458e7c - helper script to generate dawg input files from text
+  *  37f568d - Update appveyor.yml
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 29 Oct 2016 11:21:25 +0300
+
+tesseract (3.05.00~git20161011-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 69b1a38426d193326c7e8f72fc4760195c6f4d0c
+  * Date: 1476195800
+  * git changelog:
+  *  69b1a38 - Merge pull request #439 from stweil/warning
+  *  f9ce278 - Turn off macos travis build as it fails during bootstrap.
+  *  34af615 - training: Remove unnecessary const qualifiers
+  *  4b6e7af - Update .travis.yml
+  *  54fafc4 - improve multipage tiff processing (jbreiden patch from
+    2016-03-29)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 15 Oct 2016 17:51:40 +0300
+
 tesseract (3.05.00~git20160929-1) unstable; urgency=medium
 
   * Compile

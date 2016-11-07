@@ -1,6 +1,14 @@
 #!/usr/bin/make -f
 #export DH_VERBOSE=1
 
+ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+endif
+
+ifeq (,$(NUMJOBS))
+	NUMJOBS = 1
+endif
+
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
@@ -28,9 +36,9 @@ override_dh_auto_configure:
     --enable-graphics_ctx  --enable-static --disable-shared --disable-optimize --with-regex=builtin \
     --with-libpng=sys --with-libxpm=sys --with-libjpeg=sys --with-libtiff=sys \
     --with-sdl --disable-precomp-headers
-	cd wx && make
-	cd wx && make -C locale allmo
-	cd wx && make -C contrib/src
+	cd wx && make -j$(NUMJOBS)
+	cd wx && make -j$(NUMJOBS) -C locale allmo
+	cd wx && make -j$(NUMJOBS) -C contrib/src
 	cd wx && make install 
 	cd wx && make -C contrib/src install 
 	dh_auto_configure -- --with-icu --with-wxsqlite --with-wxdir=$(shell pwd)/debian/wx/usr/bin --with-wxshared=no

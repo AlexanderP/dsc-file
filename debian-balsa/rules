@@ -17,14 +17,14 @@ CONFIGURE_FLAGS = --disable-smime \
 			--with-ldap \
 			--with-sqlite \
 			--with-ssl \
-			--with-gtksourceview=2 \
+			--with-gtksourceview \
 			--enable-extra-mimeicons \
 			--with-libnotify \
 			--with-rubrica \
 			--with-canberra \
 			--with-unique \
 			--enable-threads \
-			--without-nm --with-html-widget=webkit
+			--without-nm
 
 #export DH_ALWAYS_EXCLUDE := COPYING:COPYING.GPLv2:COPYING.LGPLv2.1
 

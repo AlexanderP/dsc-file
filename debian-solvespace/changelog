@@ -1,3 +1,104 @@
+solvespace (2.2.0+git1000-592bea8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 592bea81097588d66ab02b1dc4cb7817d53cdd8f
+  * Date: 1477122942
+  * git changelog:
+  *  592bea8 - Travis: add IRC notifications.
+  *  f619a4b - GTK: add a no-op glXSwapBuffers call for apitrace.
+  *  345c982 - OS X: don't crash in GetSaveFile() if default extension
+    is invalid.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 29 Oct 2016 11:46:28 +0300
+
+solvespace (2.1.0+git997-90987d3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 90987d3ee427f5a06df3e5ce4f81d71f252b2aba
+  * Date: 1476418520
+  * git changelog:
+  *  90987d3 - Fix a rendering bug introduced in 9f97e9a.
+  *  3a585ea - Try to re-solve groups that fail rank test.
+  *  b2092ea - Write params if system is solved as REDUNDANT_OKAY.
+  *  8e329ca - Fix a memory leak in
+    test/group/translate_asy/normal_inters.
+  *  b37aba0 - Preserve stipple phase across separate piecewise linear
+    segments.
+  *  47288e9 - Stitch outlines before display to preserve phase of
+    stippling.
+  *  186911a - Factor out PolylineBuilder from DXF export code.
+  *  d2c2503 - Fix many rendering bugs introduced in df83ee4 and
+    9f97e9a.
+  *  ea52fcb - Remove unnecessary GenerateAll/ZoomToFit calls in
+    AfterNewFile.
+  *  62f5f69 - Print a debug message for generations that are taking a
+    long time.
+  *  2ccf595 - Allow creating n-dimensional arrays with translate and
+    rotate groups.
+  *  6658b1f - Allow combining extrude, lathe, translate and rotate
+    group as assemblies.
+  *  5462fc6 - OS X: map the backspace key to the "Delete" function.
+  *  90f10cc - OS X: set scroller knob style to light.
+  *  b5f5e05 - OS X: don't remap OK in message boxes to Escape.
+  *  b036380 - OS X: revert "sort out window visibility and focus."
+  *  291e16e - Fix a few compiler warnings.
+  *  363f5c1 - Fix BitmapFont to not lose texture updates.
+  *  af226b2 - Fix rendering of reference axes in bottom left corner.
+  *  9f97e9a - Allow selecting unit (px/mm) in Canvas::Stroke.
+  *  a5c7fc6 - Disable closed contour check in the test harness.
+  *  df83ee4 - Factor out Style::Stroke.
+  *  1108a6f - Use Canvas::Stroke, not Canvas::Fill, for drawing a
+    point.
+  *  e80a3a0 - Fix a buffer overrun in ssprintf.
+  *  ffa1046 - Fix spelling error.
+  *  f4e8512 - Wavefront OBJ: export mesh color as well.
+  *  aa95850 - GTK: use 3DConnexion button 0 instead of
+    SI_APP_FIT_BUTTON.
+  *  b10e621 - Rephrase error messages that say "select a workplane".
+  *  456c987 - Use transparent white fill color for drawing pixmaps, not
+    black.
+  *  e9725bd - Update CHANGELOG.
+  *  9febc57 - Travis: install libstdc++ 5.
+  *  93da883 - Debian: remove in-tree packaging.
+  *  66ed417 - Fix a handle leak in TtfFontList::PlotString.
+  *  476860a - Normalize the string returned by Extension() to
+    lowercase.
+  *  2371068 - Don't regenerate the entire sketch in AddRequest().
+  *  0e66eaf - OS X: correctly parse output of otool -D.
+  *  3ff236c - Mark group dirty when clicking "allow redundant
+    constraints" link.
+  *  9bcba4b - Fix incorrect rendering of XYZ axes in the bottom left
+    corner.
+  *  a8e7233 - Replace convenience #defines with const auto references.
+  *  f5a37ae - OS X: fix out-of-bounds TW.META access.
+  *  4537444 - Travis: add a few more retries to OS X build script.
+  *  21a4305 - Add "Zoom to Fit" to context menu.
+  *  2f64f18 - Add "Select All" to context menu for no selection.
+  *  2f4c6a6 - Add "Toggle Construction" to context menu.
+  *  da2d035 - Remove exact numeric values from ContextCommand.
+  *  c43a198 - Win32: add proper Unicode support to message boxes.
+  *  fbd89a7 - Update 819c4c5 for Wine compatibility.
+  *  819c4c5 - GL1: work around lack of NPOT textures in Windows OpenGL
+    renderer.
+  *  7787923 - MinGW: unbreak the test harness.
+  *  d12bf04 - Update 58db06d8 to not even try to use std::fstream with
+    Unicode paths.
+  *  fb87431 - Fix a numeric conversion warning.
+  *  58db06d - DXF: update to use Unicode-aware file open routines on
+    Windows.
+  *  fd54e5a - Make translate/rotate groups inherit the "suppress solid
+    model" option.
+  *  06a188c - GTK: show files with uppercase extensions in file open
+    dialog.
+  *  cd5b5b2 - Travis: update brew installation instructions.
+  *  e7edc39 - Alias the "=" key to "+" key.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 15 Oct 2016 18:37:20 +0300
+
 solvespace (2.1.0+git941-ffd9c62-1) unstable; urgency=medium
 
   * Compile

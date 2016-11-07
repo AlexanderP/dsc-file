@@ -4,9 +4,9 @@ Author: Mateusz Łukasik <mati75@linuxmint.pl>
  
 --- smplayer-16.1.0+svn7477.orig/src/smplayer.pro
 +++ smplayer-16.1.0+svn7477/src/smplayer.pro
-@@ -32,6 +32,11 @@
- DEFINES += MOUSE_GESTURES
+@@ -33,6 +33,11 @@
  DEFINES += GLOBALSHORTCUTS
+ #DEFINES += ADD_BLACKBORDERS_FS
  
 +QMAKE_CPPFLAGS *= $(shell dpkg-buildflags --get CPPFLAGS)
 +QMAKE_CFLAGS   *= $(shell dpkg-buildflags --get CFLAGS)
