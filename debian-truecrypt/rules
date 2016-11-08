@@ -11,7 +11,7 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid vivid wily xenial)) 
+ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid vivid wily xenial yakkety)) 
 	export CC=gcc-4.9
 	export CXX=g++-4.9
 else
