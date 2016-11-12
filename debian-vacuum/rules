@@ -54,8 +54,8 @@ override_dh_install:
 	done
 	rm $(CURDIR)/debian/vacuum/usr/share/doc/vacuum/CHANGELOG
 
-override_dh_builddeb:
-	dh_builddeb $(BUILDDEBFLAGS)
+#override_dh_builddeb:
+#	dh_builddeb $(BUILDDEBFLAGS)
 
 override_dh_strip:
 	dh_strip --dbg-package=vacuum-dbg

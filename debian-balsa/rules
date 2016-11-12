@@ -45,8 +45,8 @@ override_dh_auto_configure:
 	./autogen.sh $(CONFIGURE_FLAGS)
 	dh_auto_configure -- $(CONFIGURE_FLAGS)
 
-override_dh_builddeb:
-	dh_builddeb $(BUILDDEBFLAGS)
+#override_dh_builddeb:
+#	dh_builddeb $(BUILDDEBFLAGS)
 
 override_dh_auto_test:
 	

@@ -106,5 +106,5 @@ override_dh_strip:
 	dh_strip -ppsi-plus-plugins --dbg-package=psi-plus-plugins-dbg
 	dh_strip --remaining-packages
 
-override_dh_builddeb:
-	dh_builddeb $(BUILDDEBFLAGS)
+#override_dh_builddeb:
+#	dh_builddeb $(BUILDDEBFLAGS)

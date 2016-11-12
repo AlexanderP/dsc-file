@@ -31,5 +31,5 @@ override_dh_install:
 	#rm -rf $(CURDIR)/debian/muse-devel/usr/lib/muse/modules/lv2Gtk2Helper64.so
 	#rm -rf $(CURDIR)/debian/muse-devel/usr/lib/muse/modules/lv2Gtk2Helper32.so
 
-override_dh_builddeb:
-	dh_builddeb $(BUILDDEBFLAGS)
+#override_dh_builddeb:
+#	dh_builddeb $(BUILDDEBFLAGS)

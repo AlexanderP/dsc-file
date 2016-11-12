@@ -29,6 +29,6 @@ override_dh_auto_configure:
 				 -DWITH_DOCUMENTATION=ON -DWITH_WEBINTERFACE=OFF
 	cp $(CURDIR)/obj-$(DEB_BUILD_GNU_TYPE)/config.h $(CURDIR)/config.h
 
-override_dh_builddeb:
-	dh_builddeb -- -Zxz -z9
+#override_dh_builddeb:
+#	dh_builddeb -- -Zxz -z9
 

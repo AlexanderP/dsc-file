@@ -17,8 +17,8 @@ LDFLAGS = $(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
 override_dh_auto_configure:
 	dh_auto_configure -- -DCMAKE_BUILD_TYPE=relwithdebinfo -DCMAKE_C_FLAGS_RELWITHDEBINFO="$(CFLAGS)" -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="$(CXXFLAGS)" -DCMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO="$(LDFLAGS)" -DCMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO="$(LDFLAGS)" -DCMAKE_INSTALL_RPATH=/usr/lib/cuneiform
 	 
-override_dh_builddeb:
-	dh_builddeb $(BUILDDEBFLAGS)
+#override_dh_builddeb:
+#	dh_builddeb $(BUILDDEBFLAGS)
 
 override_dh_makeshlibs:
 	dh_makeshlibs -n

@@ -13,8 +13,8 @@ endif
 %:
 	dh $@ --parallel
 
-override_dh_builddeb:
-	dh_builddeb $(BUILDDEBFLAGS)
+#override_dh_builddeb:
+#	dh_builddeb $(BUILDDEBFLAGS)
 
 override_dh_install:
 	dh_install

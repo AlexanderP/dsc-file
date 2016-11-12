@@ -20,8 +20,8 @@ BUILDDEBFLAGS = -- -Zxz -z9
 %:
 	dh $@ --buildsystem=cmake --parallel
 
-override_dh_builddeb:
-	dh_builddeb $(BUILDDEBFLAGS)
+#override_dh_builddeb:
+#	dh_builddeb $(BUILDDEBFLAGS)
 
 override_dh_auto_configure:
 	dh_testdir
