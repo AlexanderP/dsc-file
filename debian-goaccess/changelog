@@ -1,3 +1,96 @@
+goaccess (1:1.1.0+git2048-3a7b046-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 3a7b046e99c4db7c0c1e53a212047a3200a823cc
+  * Date: 1478867568
+  * git changelog:
+  *  3a7b046 - Added minor changes to ChangeLog for readability.
+  *  ba6ecad - Minor formatting changes to the ChangeLog.
+  *  c7cfd59 - Minor formatting changes to the ChangeLog.
+  *  71a3567 - Merge pull request #567 from Seravo/feature-html-id-
+    attributes
+  *  3aca02b - Output in HTML id attributes for values (Closes:
+    allinurl/goaccess#566)
+  *  01f8e2f - Updated README.md.
+  *  b83c94c - Updated comments for with-output-resolver config option.
+  *  b808bad - Added crawlers-only command line option to config file.
+  *  86a0d57 - Updated README.md for upcoming version.
+  *  81f9a59 - Version bumped to 1.1 (configure.ac).
+  *  c191d02 - Version bumped to 1.1.
+  *  fec47d1 - Ensure time/date/log format are not cleared upon editing
+    existing format.
+  *  8264680 - Updated man page for the upcoming version.
+  *  e78872b - Use single gear icon for HTML preferences.
+  *  e1b1444 - Updated NEWS with latest changes.
+  *  e136c9e - Updated ChangeLog with latest changes.
+  *  9358b59 - Changed the default number of items to 7 on each HTML
+    table.
+  *  b651883 - Added the ability to display 7 items on each table per
+    panel.
+  *  28c85d7 - Updated man page for the upcoming version.
+  *  afa9377 - Added gear icon the panel options dropdown.
+  *  1f9d475 - Added command line option --html-prefs to README.md.
+  *  f971c56 - Updated bootstrap CSS using a custom build to minimize
+    output file size.
+  *  0d657cf - Added base64 font awesome to the HTML report.
+  *  826a9f9 - Added the ability to set default preferences for the HTML
+    report.
+  *  f280958 - Removed unnecessary call to console.log from app.js.
+  *  696519e - Added a new layout to the HTML output.
+  *  7415b9b - Minor changes to ChangeLog.
+  *  78ad511 - Made minor date format changes to ChangeLog.
+  *  a2628bd - Added --ssl-cert/key and --fifo-in/out to default config
+    file.
+  *  8234390 - Added numeric timezone to stdout reports.
+  *  8ebd9d8 - Updated man page for the upcoming version.
+  *  800e0ed - Updated authors list to reflect latest contributors.
+  *  08f1026 - Added command line options to the list.
+  *  711cfd1 - Merge pull request #564 from AndiDog/feature/url-path-in-
+    ws-url
+  *  cdc7a92 - Allow path other than "/" in web socket URL
+  *  fbc592b - Updated authors list to reflect latest contributors.
+  *  26b8ac4 - Updated man page for the upcoming version.
+  *  307883c - Removed FIPS_mode_set() from websocket.c to make it
+    compatible with LibreSSL.
+  *  84f736f - Ensure <openssl/crypto.h> is included on websocket.h.
+  *  85e772e - Ensure pthread.h is included under gwsocket.h.
+  *  dedf924 - Added command line option --crawlers-only to display
+    crawlers/bots only.
+  *  5c319e3 - Fixed (warning) logical disjunction evaluates to true:
+    !EXPR || EXPR.
+  *  bbd651b - Fixed integer to string key conversion for unique
+    visitors.
+  *  779eccd - Ensure geolocation returns unknown locations when
+    applicable.
+  *  1c2750b - Added  "Remote User" panel to capture HTTP authentication
+    requests.
+  *  95f9925 - Moved GEO_LOCATION config options to the right
+    index/position.
+  *  bfed9c9 - Moved GEO_LOCATION sort choice to the right
+    index/position.
+  *  8457998 - Minor formatting changes to commons.c
+  *  6855fa2 - Minor formatting changes to csv.c
+  *  9111443 - Moved GeoLocation panel (since it's optional) to the last
+    position.
+  *  a60d1b3 - Ensure unknown coutries/continents are listed.
+  *  ca365f9 - Ensure every version of iOS is broken down under the OS
+    panel.
+  *  2e9ac7b - Added details to real-time html report examples.
+  *  f2e7084 - Merge pull request #559 from zkf/patch-1
+  *  c31f9cd - Add SemrushBot to set of crawlers
+  *  0d7947b - Split 'Darwin' OS into its own category.
+  *  b18cbe3 - Moved OSs parsing code to its own function.
+  *  8e8b518 - Added command line options to set websocket FIFO in/out.
+  *  927df4d - Added 'Feed Wrangler' to the list of feeds.
+  *  137935d - Fixed possible race condition when pushing data to a
+    client.
+  *  73a5797 - Added TLS/SSL support to the HTML real-time report.
+  *  f5c35b0 - Fixed formatting on goaccess.c
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 12 Nov 2016 19:26:48 +0300
+
 goaccess (1:1.0.2+git1986-b8cebbc-1) unstable; urgency=medium
 
   * Compile

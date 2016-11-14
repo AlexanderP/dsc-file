@@ -1,3 +1,31 @@
+kvirc (4:4.9.2~git-7017-g48dacdb-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 48dacdbf2e6ccf885d1069bb4b3ef78d18d93671
+  * Date: 1478756999
+  * git changelog:
+  *  48dacdb - Input History: Added skipping of input lines if
+    consecutive lines are the same
+  *  f288f36 - KviKvsEventManager: Fix memory leak in addRawHandler
+  *  fdf491a - KvsObject_painter: Fix potential memory leak in class
+    function pen
+  *  651b298 - KvsObject_pixmap: Fix potential memory leak in class
+    function pixel
+  *  5e13532 - KviCustomToolBar: Fix memory leak in
+    KviCustomToolBar::filterChild
+  *  9c6f897 - libkviurl: Fix memory leak in void BanFrame::addBan()
+  *  1f32e67 - libkvireguser: Fix memory leak in $reguser.mask
+  *  db350d6 - FileTransferWindow: Add MIME data to right click menu for
+    non-KDE
+  *  c4b96d4 - KviTopicWidget: Move existing recent topics to the end of
+    the list
+  *  b9af7a0 - KviKvsCoreFunctions: Code cleanup
+  *  2f5e107 - KviBuildInfo: Update code
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 12 Nov 2016 19:36:26 +0300
+
 kvirc (4:4.9.2~git-7006-g96ca5fb-1) unstable; urgency=medium
 
   * Compile

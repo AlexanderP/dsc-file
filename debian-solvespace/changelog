@@ -1,3 +1,29 @@
+solvespace (2.2.0+git1012-afecbcc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: afecbccb0f89e9288c20a06ace8bea998ec3aac7
+  * Date: 1478365517
+  * git changelog:
+  *  afecbcc - OS X: fix another out-of-bounds TW.META access.
+  *  d151eb5 - CMake: reject in-tree builds.
+  *  b846401 - Update CHANGELOG.
+  *  74cb1f5 - Add two more points to the TTF text request.
+  *  23feb4c - TTF: use metrics of 'A' to determine cap height.
+  *  7bd6ade - TTF: actually use CID as GID when CID-to-GID mapping is
+    absent.
+  *  b8bec35 - TTF: only call FT_Request_Size once after loading.
+  *  0e72c60 - tests: fix bugs and inefficiencies in PrepareSavefile.
+  *  505f503 - Don't consider workplane origin point for bounding box
+    calculation.
+  *  600c39d - Don't consider arc center point for bounding box
+    calculation.
+  *  cdd6174 - tests: remove CHECK_RENDER from migrate_from_v* tests.
+  *  071a7ac - tests: bulk add of migrate_from_v22 tests.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 12 Nov 2016 23:30:18 +0300
+
 solvespace (2.2.0+git1000-592bea8-1) unstable; urgency=medium
 
   * Compile

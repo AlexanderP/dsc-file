@@ -9,5 +9,4 @@ export GIMP2_DATADIR="$INSTALL_DIR/share/gimp/2.0"
 export GIMP2_LOCALEDIR="$INSTALL_DIR/share/locale"
 export GIMP2_PLUGINDIR="$INSTALL_DIR/lib/gimp/2.0"
 export GIMP2_SYSCONFDIR="$INSTALL_DIR/etc/gimp/2.0"
-cd $INSTALL_DIR/bin
-gimp-console-2.9 "$@"
+$INSTALL_DIR/bin/gimp-console-2.9 "$@"

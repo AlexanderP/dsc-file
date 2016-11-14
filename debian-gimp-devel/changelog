@@ -1,3 +1,147 @@
+gimp-devel (2.9.4+git37634-b27cdfa-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: b27cdfa99a5c12ce151e8c826d3648cc320f245d
+  * Date: 1479030975
+  * git changelog:
+  *  b27cdfa - Bug 644032 - Color banding in Hue-Saturation with overlap
+  *  f9cacf4 - Update German translation
+  *  60ecc6f - Update German translation
+  *  16fe4b2 - Update German translation
+  *  3bc2d25 - app: preinit more fishes commonly used for filters on u8
+    images
+  *  17ac37e - app: pass a status_callback to gimp_babl_init_fishes()
+  *  7386ed4 - Revert "app: initialize GEGL after showing the splash"
+  *  49b4767 - Revert "app: move the call to gimp_gegl_init() to
+    gimp_real_initialize()"
+  *  406fa55 - Update Catalan translation
+  *  0788db4 - app: split babl fish creating to a separate function
+    gimp_babl_init_fishes()
+  *  99b9a60 - app: pre-initialize some babl fishes
+  *  99c0400 - app: move the call to gimp_gegl_init() to
+    gimp_real_initialize()
+  *  93da8ca - app: initialize GEGL after showing the splash
+  *  7abe5dd - app: move the gamma setting to the top of the convert
+    precision dialog
+  *  ccf1514 - app: cleanup enum order and comments in the dither GUI
+    code
+  *  35d4867 - Update Swedish translation
+  *  30a8ede - app: treat half precision float the same as single and
+    double
+  *  da49a3f - app: always default to linear for float precision and
+    gamma for 8-bit
+  *  0631f1c - Bug 735895 - Precision Conversion "Dithering" dialog
+  *  e3115f1 - Bug 774155 - gimp crashes on pressing OK in grid
+    configuration
+  *  a5efd8a - Updated Italian translation
+  *  91df48e - Bug 735895 - Precision Conversion "Dithering" dialog
+  *  56ce447 - Bug 735895 - Precision Conversion "Dithering" dialog
+  *  ab5a27d - app: CLAMP(bits, 1, 16) in
+    gimp_gegl_apply_color_reduction()
+  *  4f6dd8a - app: reorganize GimpTemplateEditor's "Precision" controls
+  *  2f7009d - app: add 'component-type' and 'linear' properties to
+    GimpTemplate
+  *  c1ae086 - app: add gimp_babl_linear()
+  *  f92c2b9 - Update German translation
+  *  b58f4fe - icons: make Color theme's "broken chain" icons more
+    obvious.
+  *  d3d1ce2 - Bug 770897 - Opening and overwriting a linear gamma tiff
+    produces wrong colors
+  *  ad7259b - Bug 772317 - Change detach icon of transform tools on-
+    canvas dialog
+  *  768d066 - Bug 316479 - The Perspective Tool creates an empy
+    image...
+  *  ac2b9a5 - configure.ac: require gegl >= 0.3.10
+  *  07eb13c - Bug 769976 - JPEG export ignores quality setting and
+    subsampling fix.
+  *  7c29077 - app: allow to remove the last added IScissors segment
+    with backspace
+  *  e98f45d - Update Polish translation
+  *  a82bd87 - Update Catalan translation
+  *  294d922 - plug-ins: fixing error popup when canceling webp export.
+  *  9ab041d - plug-ins: small typo fix - s/framese/frames/
+  *  8fdee80 - plug-ins: clean and fix webp export.
+  *  d516f9b - Bug 773450 - Animated WEBP images should be able to set
+    frame delay.
+  *  87d3819 - app, pdb: use GeglDitherMethod instead of simply an
+    integer
+  *  c767179 - app, pdb: fix bug in recent gimp-drawable-threshold
+    change
+  *  5e2a618 - app: file_open_image(): fix opening of unknown remote
+    files
+  *  2a9b20d - Bug 772789 - Mac DMG 2.8.18 gets plug-ins path wrong,
+    can't open JPEG files
+  *  b249a99 - Bug 763214 - Wrong rendering of shadings in PDF
+    imports...
+  *  483c282 - Bug 766988 - Colors applied to images are not color
+    managed
+  *  be6b6c7 - Bug 642565 - Use private pointer instead GET_PRIVATE
+    macro in GimpCanvasItem
+  *  123a909 - app: fix the angular value when tilt_y == tilt_x == 0.0.
+  *  be66d1a - app: make an assertion more correct in GimpDrawableUndo
+  *  bb17853 - Bug 760737 - Brush angle jumps when tablet pen is tilted
+    horizontally.
+  *  d905f5b - Update Polish translation
+  *  c369333 - Update Polish translation
+  *  46bcd82 - Bug 773233 - CVE-2007-3126 - Gimp 2.3.14 allows context-
+    dependent attackers...
+  *  bcdd2e8 - app: cleanup in GimpOperationProfileTransform
+  *  58d84f6 - Bug 750178 - Remove "again" from "Export the image
+    again".
+  *  e2e3164 - Update Catalan translation
+  *  56808c7 - Update Polish translation
+  *  21d8c00 - plug-ins: make file_gif_spin_button_int_init() generic.
+  *  a39ee69 - Fix typo and double space between words
+  *  4a0653e - Bug 773960 - smudge tool not working in tiling symmetry.
+  *  59bbd38 - Update Hungarian translation
+  *  d3fce3c - Update Hungarian translation
+  *  7c2bfd3 - Bug 745313 - Description of Equalize wrong in PDB
+  *  3c7fbe9 - app: make gimp_item_mask_bounds() and _intersect() honor
+    a suspended selection
+  *  1bd9d3d - Update German translation
+  *  146b7bd - app: typo: make string translatable
+  *  4d1dd47 - Revert "Update German translation"
+  *  750aa5a - Update German translation
+  *  e83ed61 - plug-ins: cleaning out some indentation tabs.
+  *  1449d3c - app: remove the "Recent Filters" actions from action
+    search again
+  *  aa4f4d6 - NEWS: update 2.9.6 news.
+  *  3cef404 - app, pdb, libgimp: allow to choose the channel when
+    thresholding
+  *  3307c71 - pdb, app, libgimp: change ranges for histogram and
+    threshold to 0.0..1.0
+  *  d918a21 - Update German translation
+  *  94e28b3 - configure.ac: remove the check for a "too new" gdk-pixbuf
+    version
+  *  bd1c9dc - Fix to Catalan translation
+  *  570d89a - Update Swedish translation
+  *  162cd57 - NEWS: some fixes
+  *  0a36051 - Update NEWS for the GIMP 2.9.6 release
+  *  ccb30a6 - Bug 765850 - Deal with libpng error gracefully when
+    exporting...
+  *  a5073ad - configure.ac: require libpng 1.6.25
+  *  a13460b - configure.ac: remove remaining traces of optional librsvg
+  *  f5ecc53 - Fix a lot of warnings all over the place
+  *  44aedeb - Update Polish translation
+  *  a10758a - Update Russian translation
+  *  b4120e3 - Bug 767650 - Uncommitted scissors selection is discarded
+    on tool change
+  *  bc66799 - app: clean up template-options-dialog like other dialogs
+  *  43e2188 - Bug 773382 - --without-librsvg broken by
+    tools/Makefile.am
+  *  d551a67 - Bug 773460 - Color Picker shows wrong values
+  *  9f9307e - app: color manage the new color tag color areas
+  *  967ac88 - app: remove the "edit" button from GimpItemTreeView
+  *  039a322 - menus: add "fill" items to the path and selection menus
+  *  76f9e0c - po: add items-commands.c to POTFILES.in
+  *  bd8f15a - app: reduce code duplication in the filling/stroking code
+  *  31fcd79 - Bug 769738 - Add color tags/labels for
+    layers/channels/paths
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 13 Nov 2016 13:23:33 +0300
+
 gimp-devel (2.9.4+git37538-956d45b-1) unstable; urgency=medium
 
   * Compile
