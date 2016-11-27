@@ -1,3 +1,110 @@
+gimp-devel (2.9.4+git37698-61475fb-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 61475fba834a9b7b4fcb1981a8420587e7e955c5
+  * Date: 1480154776
+  * git changelog:
+  *  61475fb - bug 771621 hardness blur cliping is avoided by shrinking
+    the stamp first
+  *  136ef67 - Bug 775026 - webp-save: expose more saving options in the
+    UI
+  *  2e63533 - app: add GimpDockContainer::get_dialog_factory()
+  *  ecc49ed - iscissors: ensure first and last isegments are distinct
+    before closing the curve
+  *  4a9a072 - Revert "app: handle gtk_accel_map_change_entry ()
+    failure..."
+  *  84ee79c - app: clean out many tabs under app/core/.
+  *  31ae423 - app: do not allow Alt+[0-9] shortcuts.
+  *  eab4929 - app: handle gtk_accel_map_change_entry () failure...
+  *  2081de5 - app: remove transient actions with
+    gimp_action_group_remove_action().
+  *  c0ee959 - app: save menurc after having deleted all the displays.
+  *  94a5b7c - app: cleaning out tabs.
+  *  6131b00 - Bug 774890 - "Keyboard shortcuts" dialog does not show
+    all actions
+  *  1517a09 - Bug 774890 - "Keyboard shortcuts" dialog does not show
+    all actions
+  *  5e71512 - app: indentation in gimpdockable.h was horribly broken
+  *  7a60fd0 - app: better defaults for image dimension.
+  *  3919080 - Bug 774906 - Replace File>New default ppi of 72...
+  *  cb27605 - app: hardness overrides identity matrix on brush
+    transform
+  *  c5edf05 - plug-ins: code cleaning and improved error handling.
+  *  4f67b16 - Bug 774472 - animated-webp: saved layers are not alpha-
+    composited before compression
+  *  a3c65e6 - app: get rid of including menus/ stuff from widgets/ and
+    other places
+  *  b795ae2 - app: do not show the actions from <Dockable>
+    GimpUIManager.
+  *  877b024 - app: minor indentation fix.
+  *  a68edf5 - app: tab cleaning.
+  *  53b3673 - app: action search should search accross all available
+    actions.
+  *  ad339d3 - plug-ins: tab cleaning.
+  *  7540341 - app: plug-in-repeat and plug-in-reshow were renamed...
+  *  f5c06a2 - app: string which should be translated too.
+  *  ced32ce - app: some tab cleaning.
+  *  8b25891 - plug-ins: port smooth-palette to gegl
+  *  21ab694 - Bug 754171 - cmd - missing modifier key to configure
+    input controllers
+  *  fb1dcd0 - app: clean up gimp_controller_keyboard,wheel_scroll()
+  *  3e85121 - Bug 774733 - segmentation fault when discarding text
+    information.
+  *  2a23239 - app: check and clean out duplicate accelerators on
+    startup.
+  *  0cccc20 - app: delete duplicate accelerators.
+  *  a0e5e9c - Update Polish translation
+  *  d22af8f - app: cleaning out some tabs.
+  *  1ce279d - app: s/"Paste Buffer as _New"/"Paste Buffer as _New
+    Image"/
+  *  45a92c1 - NEWS: clean out trailing whitespaces + s/pocker/picker/g
+  *  29ac01d - Fix a typo in NEWS, add another item to the GUI section
+  *  b492242 - Update NEWS for 2.9.6
+  *  571f5c8 - Bug 689750 - Crash on shrinking a selection by an invalid
+    value
+  *  a4ff65c - app: replace gtk_hbox_new() by gtk_box_new().
+  *  5129b85 - app: don't g_warning() on filenames that can't be turned
+    into UTF-8
+  *  82a2754 - Bug 343090 - Most brushes and all patterns appear
+    renameable but aren't
+  *  b1ca8a1 - app: allow to zoom with middle mouse button + control +
+    drag up/down
+  *  014fdb8 - app: make switching paint tools to color picker mode more
+    robust
+  *  61f91c7 - app: be more deterministic in a list view's name column
+    (name editing etc.)
+  *  5acd2ed - Update Polish translation
+  *  4d606e3 - data: new development splash image.
+  *  a694fdd - app: fix warning in xcf_save_prop(): xcf_write_int32()
+    takes guint32*
+  *  1415a78 - Bug 774383 - Text layer created by gimp-text-fontname
+    doesn't...
+  *  cc12c3a - plug-ins: lots of cleanup in file-webp-dialog.c
+  *  4c1cb9a - plug-ins: rename "Preset" to "Source type" in WebP export
+    dialog.
+  *  700da2a - plug-ins: re-apply some of Jehan's cleanups
+  *  1afa322 - Bug 773450 - Animated WEBP images should be able to set
+    frame delay...
+  *  f57a61c - Revert "Bug 773450 - Animated WEBP images should be able
+    to set frame delay.."
+  *  d9da211 - Revert "plug-ins: various fixes and nitpicking to file-
+    webp."
+  *  58e6f6c - plug-ins: various fixes and nitpicking to file-webp.
+  *  9ac455f - Bug 773450 - Animated WEBP images should be able to set
+    frame delay..
+  *  5e6a108 - Bug 773450 - Animated WEBP images should be able to set
+    frame delay...
+  *  4f90957 - Bug 769738 - Add color tags/labels for
+    layers/channels/paths
+  *  54dc424 - app: better progress indication in
+    gimp_babl_init_fishes()
+  *  702d050 - app: minor indentation fix in gimpdrawablefilter.c
+  *  8074872 - Update Polish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 26 Nov 2016 14:02:25 +0300
+
 gimp-devel (2.9.4+git37634-b27cdfa-1) unstable; urgency=medium
 
   * Compile

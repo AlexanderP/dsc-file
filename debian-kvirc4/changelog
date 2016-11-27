@@ -1,3 +1,30 @@
+kvirc (4:4.9.2~git-7028-g392d211-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 392d211772f210b4e691a39e4b37e237ecb13cc8
+  * Date: 1479682563
+  * git changelog:
+  *  392d211 - Fix typo in b556221 in warning messages
+  *  b556221 - Add split view commands window.splitView and
+    window.unsplitView, as well as function $window.isSplitView
+  *  c8bcb86 - normalize File: , Size:  and Mime: formatting
+  *  e1af6ee - Fix quirk in a5932bf on some compilers
+  *  a5932bf - Default DCC Send console confirmation links to use
+    stringUrlFileCommand instead of hardcoded play command
+  *  fa9a5d3 - Fix issue with parsing two strings for Poedit
+  *  3982a2e - Fix unnecessary escaping of % in strings.
+  *  17df6ef - KviIpEditor: Add IPv4 input validator and a basic IPv6
+    input validator
+  *  c8b3294 - OptionsWidget: Fix checking of IPv6 address instead of
+    IPv4 where needed
+  *  6bfafe7 - KviIpEditor: Fix issue where older Qt5 apparently doesn't
+    have QHostAddress::toIPv4Address(bool*)
+  *  6050180 - KviIpEditor: Change to a QLineEdit and update code.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 25 Nov 2016 20:29:39 +0300
+
 kvirc (4:4.9.2~git-7017-g48dacdb-1) unstable; urgency=medium
 
   * Compile
