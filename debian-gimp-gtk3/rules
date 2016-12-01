@@ -10,6 +10,7 @@ GEGLOPT= --prefix="$(PREFIXDIR)" --disable-docs
 MYPAINTOPT= --prefix="${PREFIXDIR}"
 GIMPOPT= --prefix="${PREFIXDIR}" --disable-docs --disable-python
 LCMSOPT= --prefix="$(PREFIXDIR)"
+LPNGOPT= --prefix="$(PREFIXDIR)"
 
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
@@ -59,6 +60,13 @@ override_dh_auto_configure:
 	PATH=$(PREFIXDIR)/bin:${PATH} \
 	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
 	./autogen.sh && ./configure $(LCMSOPT) && \
+	make -j$(NUMJOBS) && \
+	make install
+	cd $(CURDIR)/3rdparty/libpng && \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:${PKG_CONFIG_PATH} \
+	PATH=$(PREFIXDIR)/bin:${PATH} \
+	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
+	./autogen.sh && ./configure $(LPNGOPT) && \
 	make -j$(NUMJOBS) && \
 	make install
 	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:${PKG_CONFIG_PATH} \
