@@ -29,9 +29,8 @@ Description: Development files for the tesseract command line OCR tool
  files, static library, and header files.
 
 Package: libtesseract4
-Breaks: tesseract-ocr (<< 3.01~), ocropus (<< 0.4.0~), libtesseract3
-Replaces: tesseract-ocr (<< 3.01~), libtesseract3
-Conflicts: libtesseract3
+Breaks: tesseract-ocr (<< 3.01~), ocropus (<< 0.4.0~)
+Replaces: tesseract-ocr (<< 3.01~)
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Tesseract OCR library
