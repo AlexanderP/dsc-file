@@ -16,7 +16,7 @@ Description: transitional dummy package
 Package: libtesseract-dev
 Section: libdevel
 Architecture: any
-Depends: libtesseract3 (= ${binary:Version}), ${misc:Depends}
+Depends: libtesseract4 (= ${binary:Version}), ${misc:Depends}
 Replaces: tesseract-ocr-dev (<< 3.0.1-1~)
 Breaks: tesseract-ocr-dev (<< 3.0.1-1~)
 Description: Development files for the tesseract command line OCR tool
@@ -28,9 +28,10 @@ Description: Development files for the tesseract command line OCR tool
  them to text in over 40 languages. This package includes the development
  files, static library, and header files.
 
-Package: libtesseract3
-Breaks: tesseract-ocr (<< 3.01~), ocropus (<< 0.4.0~)
-Replaces: tesseract-ocr (<< 3.01~)
+Package: libtesseract4
+Breaks: tesseract-ocr (<< 3.01~), ocropus (<< 0.4.0~), libtesseract3
+Replaces: tesseract-ocr (<< 3.01~), libtesseract3
+Conflicts: libtesseract3
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Tesseract OCR library
@@ -44,7 +45,7 @@ Description: Tesseract OCR library
 
 Package: tesseract-ocr
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, tesseract-ocr-eng (>= 3.01~), tesseract-ocr-osd, tesseract-ocr-equ, libtesseract3 (>= 3.03~)
+Depends: ${shlibs:Depends}, ${misc:Depends}, tesseract-ocr-eng (>= 3.01~), tesseract-ocr-osd, tesseract-ocr-equ, libtesseract4 (>= 3.03~)
 Replaces: tesseract-ocr-data
 Description: Tesseract command line OCR tool
  The Tesseract OCR engine was one of the top 3 engines in the 1995
