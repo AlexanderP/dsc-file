@@ -1,3 +1,85 @@
+solvespace (2.2.0+git1069-3dd2fc0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 3dd2fc0093d78bd975c98c798b441b8fe267ff6a
+  * Date: 1481350223
+  * git changelog:
+  *  3dd2fc0 - Add CONTRIBUTING.md.
+  *  4356827 - Unix: add FreeBSD compatibility for
+    FindLocalResourceDir().
+  *  374d1b5 - Win32: simplify.
+  *  6fcf1bb - Somewhat improve rendering of transparent meshes.
+  *  4a0b4fd - Win32: unbreak solvespace-cli.
+  *  679a1f0 - Win32/MSVC: garbage-collect symbols even in debug builds.
+  *  d1ddc6e - Win32: fix inclusion of manifest, to get back visual
+    styles.
+  *  6989a3d - CMake: Cairo is required for CLI, not just tests.
+  *  3858cbe - Fix a possible use-after-free in OpenGl2Batch.
+  *  b975380 - Fix refactoring issue in gl2shader.h.
+  *  47244c5 - Implement a command-line interface.
+  *  dbc567e - Reload linked files before upgrading legacy data.
+  *  9301dec - Use the same code for loading resources in all
+    executables.
+  *  7681f6d - Refactor insertion into BSP tree.
+  *  d37f53e - Improve performance of face picking.
+  *  7758844 - Do not re-solve groups that converge but fail rank test.
+  *  f5485cb - Rewrite equations generated for same-orientation
+    constraints.
+  *  78d141c - Rewrite equations generated for curve-line tangent
+    constraints (in 3d).
+  *  3d6d873 - Rewrite equations generated for parallel constraints (in
+    3d).
+  *  cc07058 - Rewrite equations generated for pt-on-line constraints.
+  *  8f93136 - DXF: Import Z coordinate from DXF/DWG files.
+  *  41365c5 - DXF: Fix export of wireframe as 3D DXF.
+  *  aaab8a0 - Fix a crash when extruding TTF text.
+  *  4362954 - Update ANGLE.
+  *  37defcb - Unbreak Camera::UnProjectPoint3.
+  *  01ae452 - Unbreak drawing of DEPTH_ONLY meshes via OpenGL 2 batch
+    canvas.
+  *  61f2488 - Refactor expression parsing.
+  *  8dc60f6 - Fix Windows build with -DOPENGL=1.
+  *  d3f2ac7 - Remove most dependencies on config.h.
+  *  369b0a3 - Optimize toggling visibility of normals, points, edges,
+    outlines.
+  *  683ac78 - Optimize FromTransformationOf for performing identity
+    transformation.
+  *  0ae0343 - Add a simple benchmarking harness.
+  *  9a0f2c3 - Fix detection of transparent meshes.
+  *  73844f7 - Draw triangle back faces like the front, unless we draw
+    them in red.
+  *  c8ff17f - Add OpenGL 2 support on Windows using ANGLE.
+  *  9db50ed - Refactor the renderer frame flush functionality.
+  *  156fe73 - Allow using z-index in UiCanvas, and use it for tooltips.
+  *  92773a5 - Implement BatchCanvas for GL2.
+  *  52557ee - Add an interface for view-independent rendering.
+  *  6d2c2ae - Implement an OpenGL 2 renderer.
+  *  f8824e1 - Reimplement drawing of the mesh wireframe.
+  *  e56630e - Fix creation of workplane based on a workplane.
+  *  c97ba6b - Optimize IdList::MaximumId() from O(n) to O(1).
+  *  ea0a1b7 - Fix uninitialized variable warnings.
+  *  802d092 - When exporting files, initially fill in the basename of
+    the sketch.
+  *  e681ba3 - Rephrase the error message for sketch in workplane
+    creation.
+  *  3c45158 - Add an ability to create a workplane with another
+    workplane.
+  *  c727752 - Fix error message shown when exporting mesh with wrong
+    extension.
+  *  489ae66 - Fix crash when trying to import not .dxf or .dwg files
+  *  fdd08cb - Warn if exporting a non-watertight mesh.
+  *  3b24139 - Fix rendering of horizontal/vertical constraint labels.
+  *  1ec36fc - Add missing newline in OutputDebugStringA invocation.
+  *  9673225 - Fix a crash when adding a symmetric constraint on a line.
+  *  a0d7f1d - Optimize GroupsInOrder.
+  *  13d4a1b - Fix memory leak in RemoveTagged.
+  *  7b9d730 - Hide OpenGL implementation details.
+  *  f5e955a - README: add gdb and lldb debugging instructions.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 10 Dec 2016 09:47:16 +0300
+
 solvespace (2.2.0+git1012-afecbcc-1) unstable; urgency=medium
 
   * Compile

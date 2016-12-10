@@ -1,3 +1,64 @@
+qcad (3.15.8.0+git4146-a67c9da-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: a67c9da826e912be63bcabadd7bd33877186283e
+  * Date: 1481278209
+  * git changelog:
+  *  a67c9da - update translations
+  *  5c3d022 - fix translation context
+  *  f9cda15 - fix Qt header warning
+  *  3eadf31 - fix compiler warnings
+  *  325b609 - fix compiler warnings
+  *  a6a93a5 - fix initialization of length
+  *  3b1e361 - set version to 3.15.6.3
+  *  360443c - change viewport rotation center
+  *  a007cb6 - add off property for viewports
+  *  2975ef8 - clean up
+  *  d63ba67 - use resolution for bitmap export if available
+  *  ec9a47f - improve rendering of line patterns in screen-based
+    linetypes mode
+  *  465f093 - set version to 3.15.6.2
+  *  dd6fcb1 - update script bindings
+  *  1a0cd03 - add rotation to viewport
+  *  70c588d - fix unit test
+  *  b4ceb6c - fix compiler warning
+  *  e4baea7 - increase tolerance for ellipse intersections
+  *  dcc3e29 - increase tolerance for ellipse intersections
+  *  bf46f4a - drag corners of viewports
+  *  b335267 - fix clipping during preview
+  *  f905e4f - add DrawBasedOnRectanglePP::getCenter, getWidth,
+    getHeight
+  *  027e2c3 - clean up
+  *  0b1b538 - fix FS#1508 - QCAD CE: Subscript and superscript
+    formatting lost when file re-opened
+  *  fff918c - rename Viewport to ViewportWidget
+  *  806978f - update script bindings
+  *  f10fce0 - add RPolyline::toLogicallyClosed/toLogicallyOpen
+  *  86ada32 - update example plugin info
+  *  b91e5a8 - update script bindings
+  *  ac75e1f - add RPluginLoader::getPluginInfo based on plugin ID
+  *  4e0b863 - fix compiler warning
+  *  b19c06b - fix import of SVG files without width / height attributes
+  *  02325ec - set version to 3.15.6.1
+  *  ed0beb3 - pass parameters from RHatchEntity::getShapes to
+    RHatchData::getShapes
+  *  889831b - update
+  *  578e2cd - fix range of allowed segment indices
+  *  2b8a833 - fix rounding polyline at start point with single click
+  *  0888186 - fix modify (round) corner of polyline with one click,
+    click positions
+  *  2772755 - fix modify (round) corner of polyline with one click
+  *  35ef7d8 - add calibration example
+  *  9ef8344 - fix compiler warnings
+  *  0a61455 - fix passing of parameters from RTextBasedEntity to
+    RTextBasedData
+  *  55f951b - update API doc
+  *  44e9958 - fix feet / inch value entry with negative signs
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 10 Dec 2016 10:53:44 +0300
+
 qcad (3.15.8.0+git4102-38b6971-1) unstable; urgency=medium
 
   * Compile

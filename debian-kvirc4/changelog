@@ -1,3 +1,32 @@
+kvirc (4:4.9.2~git-7041-gd300312-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: d30031234136d158e896b9302d4e4cd366b7a3a1
+  * Date: 1481204268
+  * git changelog:
+  *  d300312 - Travis: workaround for travis-ci/travis-ci#6307
+  *  5e49ce1 - optionctlr: Remove hardcoded fixed pixel size and
+    restrict resize
+  *  fe649bb - HelpIndex: Code cleanup
+  *  a59dbc1 - HelpIndex: Change deprecated QtAlgorithms qSort to
+    std::sort
+  *  71d2418 - amend bc81991c477ec6f8b53474bd73d5444fc2552d3c
+  *  fd20b1a - Remove usage of deprecated QStyle* typedefs
+  *  8552b2b - fix build on mingw
+  *  9a2cb9a - KvsObject_widget: Add additional size functions
+  *  d742cce - KviIrcView: Fix oversized minimum paint width when
+    boolIrcViewWrapMargin is off
+  *  2a5e49b - KviInputEditor: Auto-scroll text when characters are
+    deleted to minimize trailing whitespace
+  *  d392253 - KviOggTheoraEncoder: Fix incorrect forward declaration of
+    QRgb
+  *  bc81991 - push pots to tx, pull pos from tx
+  *  dc2d879 - fix sentence capitalization
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 09 Dec 2016 21:31:02 +0300
+
 kvirc (4:4.9.2~git-7028-g392d211-1) unstable; urgency=medium
 
   * Compile

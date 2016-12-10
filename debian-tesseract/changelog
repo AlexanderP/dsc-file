@@ -1,3 +1,91 @@
+tesseract (4.00~git1585-0c7ada4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 0c7ada4e1181a3633b82cf27d4c9de293cee17e2
+  * Date: 1481308896
+  * git changelog:
+  *  0c7ada4 - Merge pull request #551 from amitdo/del-unused-listio
+  *  1901aae - Remove 'listio.cpp' and 'listio.h' from vs2010 vcxproj
+  *  d2d708c - Remove unused code.
+  *  3a47adc - Merge pull request #544 from jbarlow83/master
+  *  56b6f06 - Revise after code review
+  *  3c0c54f - Merge pull request #353 from
+    pnordhus/remove_dawgpositionvector_dtor
+  *  fb7298e - Remove unsafe API TessBaseAPIDetectOS entirely
+  *  bc95798 - Implement a new orientation and script detection API for
+    C and C++
+  *  ed4c4c6 - Produce warning for invalid resolution. Fix #453
+  *  94aebb1 - Merge pull request #543 from stweil/leptonica
+  *  217a4dd - tesseract: Disable Leptonica messages
+  *  929d25c - Merge pull request #533 from stweil/crlf
+  *  7f7cea1 - Merge pull request #532 from stweil/openmp
+  *  8cf7539 - Merge pull request #539 from stweil/mingw-w64
+  *  7755e05 - training: Update Makefile for current Mingw-w64
+  *  d55f462 - More clang-tidy from previous commits
+  *  025689f - Fixed damage to binary images when processing PDFs, issue
+    #535
+  *  7744da9 - Fixed Android build breakage
+  *  6551779 - Added missing lstm.train
+  *  5deebe6 - Fixed multilang for LSTM, pushed cube to one side without
+    actually deleting it
+  *  61d0e8f - doc: Fix line endings
+  *  6140be6 - openmp: Fix build with clang++ and compilers without
+    OpenMP support
+  *  798d79a - Update cppan.yml
+  *  c1ec06c - Merge pull request #530 from stweil/clang
+  *  9ec5cd3 - Merge pull request #528 from stweil/opencl
+  *  cefc420 - Remove extra semicolons after member function definitions
+  *  2bb0d9a - opencl: Add missing checks for OpenCL failures
+  *  3e11fc1 - Merge pull request #524 from stweil/coverity
+  *  7e3ff36 - cube: Fix coverity warning caused by unneeded null
+    pointer check
+  *  4704fca - cube: Fix use after free regression
+  *  4ac54a2 - Merge pull request #523 from stweil/casts
+  *  a389b7c - opencl: Remove unneeded and potentially bad type casts
+  *  e4faf95 - Merge pull request #515 from stweil/parameters
+  *  6906162 - Merge pull request #514 from stweil/free
+  *  875db24 - Merge pull request #503 from stweil/modernize
+  *  906438f - Merge pull request #506 from stweil/lstm
+  *  dc06621 - opencl: Replace NULL by nullptr
+  *  397bcc6 - opencl: Replace Tesseract data types by POSIX data types
+  *  9e0da72 - lstm: Fix possible float division by zero
+  *  dfd7082 - lstm: Fix explicit null dereferenced
+  *  f3e8895 - lstm: Pass big parameter by reference (performance)
+  *  bb6cfc1 - lstm: Initialize member variable beam_size_
+  *  06b28a1 - lstm: Initialize member variable input_width_
+  *  afd069c - Fix build.
+  *  68aa285 - Update CMakeLists.txt
+  *  ce76d1c - Fixes to training process to allow incremental training
+    from a recognition model
+  *  9d90567 - Added std:: to vector
+  *  53003f9 - Formatting changes from clang_tidy on latest pull
+  *  92d981b - Change tesseract parameter -psm to --psm
+  *  d2f9264 - Change tesseract parameter -oem to --oem
+  *  78d9170 - Simplify new operations
+  *  03eec61 - cube: Simplify new operations
+  *  23e420a - Merge pull request #512 from NinnOgTonic/master
+  *  392e32d - Correcting link for 3rd party wiki pages
+  *  0d4d36f - Merge pull request #508 from stweil/cube
+  *  5d3926e - Merge pull request #507 from stweil/free
+  *  dd9452c - Merge pull request #511 from stweil/mingw
+  *  faea44c - mingw-w64: Fix compiler warnings caused by macro
+    redefinition
+  *  120a5db - Fix build for Mingw-w64
+  *  185a264 - Fixed the memory leak/double free cleanly
+  *  3d00d3b - Missing pdf font file from previous sync
+  *  f60ff4d - cube/char_samp: Fix some memory leaks
+  *  614f44a - cube/char_bigrams: Fix some memory leaks
+  *  c46e773 - cube: Simplify delete operations
+  *  d2389a8 - Merge pull request #505 from amitdo/contributors-2
+  *  ec99d9f - AUTHORS: Add more contributors
+  *  7b5b167 - Merge pull request #494 from stweil/free
+  *  0df77e3 - Merge pull request #501 from stweil/warn
+  *  d0213fa - Switch leptonica back to master.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 09 Dec 2016 23:05:45 +0300
+
 tesseract (3.05.00~git20161125-1) unstable; urgency=medium
 
   * Compile

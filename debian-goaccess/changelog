@@ -1,3 +1,31 @@
+goaccess (1:1.1.0+git2086-749ecc9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 749ecc954aaa6020501ba1ddbed9f3813137cb7a
+  * Date: 1481087994
+  * git changelog:
+  *  749ecc9 - Fixed typo on parser function comment.
+  *  316c9b3 - Added missing comment to INIT_BUF_SIZE definition.
+  *  8a14c63 - Moved INIT_BUF_SIZE def to commons.h so it can be reused
+    across the codebase.
+  *  47b9f96 - Updated set_default_static_files() function comments.
+  *  314ffd7 - Updated default static list of extensions.
+  *  0a4a678 - Removed unnecessary static file extensions from default
+    array.
+  *  52acb4b - Updated MTRC_UNIQMAP hash structure comment.
+  *  4188631 - Updated MTRC_UNIQMAP hash structure comment.
+  *  bca6d0c - Merge pull request #579 from rib3/aws-s3-bucket-as-
+    virtualhost
+  *  484dca4 - Use bucket name as virtualhost for Amazon S3
+  *  6c76ceb - Added comments to command line options code.
+  *  32c900d - Updated command line options code formatting.
+  *  9d82d10 - Updated command line options code structure.
+  *  2dffeff - Updated command line option comment.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 09 Dec 2016 21:23:24 +0300
+
 goaccess (1:1.1.0+git2072-8953b13-1) unstable; urgency=medium
 
   * Compile
