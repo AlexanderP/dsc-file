@@ -1,3 +1,76 @@
+tesseract (4.00~git1648-2d1decb-2) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 2d1decbdcfbcfb8e92cde429a92386b4c702c938
+  * Date: 1481988821
+  * git changelog:
+  *  2d1decb - Disable training tools on appveyor because of installed
+    cmake 3.6 bug.
+  *  2a9e162 - Update appveyor.yml
+  *  26dfac7 - Update appveyor.yml
+  *  1305002 - Temporarily unsilent appveyor build.
+  *  442b5b7 - Fix building of training tools in shared configuration.
+  *  fc13f96 - Merge pull request #587 from stweil/cube
+  *  5b23f71 - Remove support for VS2010
+  *  e2e0b90 - Merge pull request #586 from stweil/cube
+  *  de0aff1 - doc: Remove cube related documentation
+  *  e11009e - .gitignore: Remove cube code
+  *  f8dffec - fix training build addition to 7c684be7245a (Add missing
+    linker flags for Leptonica)
+  *  cb886a0 - Merge pull request #568 from stweil/opencl
+  *  87a5b9b - Merge pull request #585 from stweil/build
+  *  7c684be - Add missing linker flags for Leptonica
+  *  9d4050f - Merge pull request #583 from neoneye/master
+  *  d38cffc - Fixed typo
+  *  46da0ea - Update appveyor.yml
+  *  a3f1227 - Update appveyor.yml
+  *  6c46cd7 - Update appveyor.yml
+  *  ea37493 - Update appveyor.yml
+  *  27ecaf7 - Update appveyor.yml
+  *  c1a0d19 - Update appveyor.yml
+  *  a220204 - Update appveyor.yml
+  *  f995adf - Update appveyor.yml
+  *  2be79ac - Update appveyor.yml
+  *  8ef28f1 - Update appveyor.yml
+  *  dd91c1e - Turn on silent building for CIs with cppan.
+  *  9f763e5 - Update SourceGroups.cmake
+  *  393c725 - Merge pull request #580 from amitdo/android-remove-cube
+  *  30ad392 - Merge pull request #579 from stweil/master
+  *  06fb884 - Update Android.mk
+  *  23a7330 - Fix page range in log message
+  *  ead87a7 - Fix build.
+  *  831e161 - Merge pull request #569 from stweil/nullptr
+  *  d77a9b7 - Merge pull request #577 from stweil/config
+  *  a020183 - Merge pull request #576 from stweil/shellcheck
+  *  da4c064 - Merge pull request #531 from stweil/guards
+  *  cb6e9e0 - training: Replace NULL by nullptr
+  *  9d6e4f6 - Fixed capi to remove cube part 2
+  *  4b0dae5 - Fixed capi to remove cube
+  *  0b76f26 - More makefile changes to remove cube
+  *  81ebba0 - More makefile changes to remove cube
+  *  5c3839b - Delete cube code
+  *  432684d - Makefile changes to remove cube
+  *  9f5ba91 - Removed dependency on cube from the code
+  *  5129c43 - Stopped error messages from pixaGetCount
+  *  d70f3c3 - Simplify configuration for Leptonica
+  *  b75beda - Fix some issues reported by shellcheck (SC2004, SC2006)
+  *  13e46ae - Made LSTM the default engine, pushed cube out
+  *  dc12404 - Merge pull request #572 from stweil/mingw64
+  *  3a5446b - Use pkg-config for Leptonica compiler flags
+  *  9ec0c4f - api: Add missing dependency on libtiff
+  *  a9b300d - Use pkg-config for icu compiler and linker flags
+  *  aa964b5 - opencl: Fix runtime crash when no device was found
+  *  9234b4c - Merge pull request #565 from stweil/openmp
+  *  224eb8a - openmp: Fix OpenMP support
+  *  faeb0d6 - Merge pull request #563 from stweil/java
+  *  92f2eda - java: Improve build rules
+  *  49401e6 - Merge pull request #558 from stweil/typo
+  *  a87d073 - Fix two typos in comments
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 18 Dec 2016 11:26:12 +0300
+
 tesseract (4.00~git1585-0c7ada4-1) unstable; urgency=medium
 
   * Compile

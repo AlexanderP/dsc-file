@@ -42,7 +42,7 @@ override_dh_auto_clean:
 
 override_dh_auto_configure:
 	./autogen.sh
-	./configure --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info CFLAGS="$(CFLAGS)" CXXFLAGS="$(CFLAGS)" LDFLAGS="-Wl,-z,defs $(LDFLAGS)"
+	./configure --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info CFLAGS="$(CFLAGS)" CXXFLAGS="$(CFLAGS)" LDFLAGS="-llept -Wl,-z,defs $(LDFLAGS)"
 
 
 #override_dh_builddeb:
