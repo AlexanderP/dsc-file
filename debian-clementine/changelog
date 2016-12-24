@@ -1,3 +1,38 @@
+clementine (1.3.1+git1784-g265f27a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 265f27aff689d8c10c0391b7ceaa30d4909fd7c9
+  * Date: 1482501615
+  * git changelog:
+  *  265f27a - Fix libhogweed dll
+  *  43c2fad - Excludes must go before directory in tar command.
+  *  230e822 - Bump DLL versions
+  *  d3898d2 - Add dialog to display streams' audio details (#5547)
+  *  589d641 - Fix playlist save on dialogs which do not enforce
+    extensions (#5496)
+  *  1c08912 - Let the audio sink autonegotiate the bit depth. (Possible
+    fix for #5533) (#5541)
+  *  f166780 - Try building a more featureful dmg again
+  *  08e1db4 - Create dmg with genisoimage & libdmg-hfsplus
+  *  809387c - Revert "Add libdmg-hfsplus to 3rdparty"
+  *  ff8a970 - Revert "Add copyright for libdmg-hfsplus"
+  *  e91cc36 - Add copyright for libdmg-hfsplus
+  *  3662b5e - Add libdmg-hfsplus to 3rdparty
+  *  bd2de93 - Add more override specifiers.
+  *  df5c53a - Add "override" to SpotifyService.
+  *  f829fd2 - Use cross version of otool if available.
+  *  6901c9b - Fix podcast episodes forgotten (#5560)
+  *  da90d1c - Fix cross compiling for mac
+  *  ae4fac4 - Use cross version of install_name_tool if available.
+  *  acc5e9f - Use linux-compatible commands in mac script.
+  *  6f35659 - Fixes for cross compiling for mac.
+  *  d3ea0c8 - Merge pull request #5553 from Chocobozzz/master
+  *  ded3126 - Add compatibility with chromaprint >= 1.4
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 24 Dec 2016 11:23:05 +0300
+
 clementine (1.3.1+git1762-g5e7dd00-1) unstable; urgency=medium
 
   * Compile

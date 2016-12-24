@@ -1,3 +1,26 @@
+solvespace (2.2.0+git1077-9148d0c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 9148d0cb91ad4bf6800ba722a9c8ef6378b5aa1e
+  * Date: 1482349233
+  * git changelog:
+  *  9148d0c - Force DOF check every time a constraint is added.
+  *  10251c6 - In OpenGl2Renderer, do not issue a draw call per
+    DrawVectorText call.
+  *  727c0a9 - Draw projected lines for pt-line-distance constraints in
+    3d.
+  *  5763972 - Don't apply scale twice for text if both height and
+    stroke are in mm.
+  *  626ffea - github: add an ISSUE_TEMPLATE file.
+  *  d6e2ac8 - test: add tests for ExprParser, and fix two crashes.
+  *  11adaf2 - README: update Linux dependencies.
+  *  15571ef - Fix swapped operands in boolean operators in expression
+    parser.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 24 Dec 2016 13:04:50 +0300
+
 solvespace (2.2.0+git1069-3dd2fc0-1) unstable; urgency=medium
 
   * Compile
