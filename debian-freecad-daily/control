@@ -1,0 +1,110 @@
+Source: freecad-daily
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Section: science
+Priority: extra
+Build-Depends: cmake,
+ debhelper (>= 9),
+ gfortran,
+ libboost-date-time-dev,
+ libboost-dev,
+ libboost-filesystem-dev,
+ libboost-graph-dev,
+ libboost-iostreams-dev,
+ libboost-program-options-dev,
+ libboost-python-dev,
+ libboost-regex-dev,
+ libboost-serialization-dev,
+ libboost-signals-dev,
+ libboost-thread-dev,
+ libcoin80-dev,
+ libcv-dev,
+ libeigen3-dev,
+ libfreeimage-dev,
+ libfreetype6-dev,
+ libf2c2-dev,
+ libfltk1.3-dev,
+ libproj-dev,
+ libgts-bin,
+ libgts-dev,
+ libmed-dev, libmedc-dev,
+ liboce-foundation-dev (>= 0.17.1),
+ liboce-modeling-dev (>= 0.17.1),
+ liboce-ocaf-dev (>= 0.17.1),
+ liboce-visualization-dev (>= 0.17.1),
+ libode-dev,
+ libpyside-dev,
+ libqt4-dev,
+ libqt4-opengl-dev,
+ libqtwebkit-dev,
+ libshiboken-dev,
+ libsoqt4-dev (>= 1.6),
+ libspnav-dev,
+ libtool,
+ libx11-dev,
+ libxerces-c-dev,
+ libxext-dev,
+ libxi-dev,
+ libxmu-dev,
+ libxt-dev,
+ libzipios++-dev,
+ libvtk6-dev, vtk6,
+ oce-draw,
+ python-pyside,
+ pyside-tools,
+ python-cxx-dev,
+ python-dev,
+ python-ply,
+ swig,
+ zlib1g-dev, 
+ netgen-headers | wget, 
+ doxygen,
+ mpi-default-dev
+Standards-Version: 3.9.8
+Vcs-Browser: https://anonscm.debian.org/cgit/debian-science/packages/freecad.git
+Vcs-Git: https://anonscm.debian.org/git/debian-science/packages/freecad.git
+Homepage: http://freecadweb.org/
+
+Package: freecad-daily
+Architecture: any
+Depends: libsoqt4-20 (>= 1.6),
+         python-collada,
+         python-matplotlib,
+         python-pivy (>= 0.5.0~v609hg-2) [!powerpc],
+         python-ply,
+         python-pyside,
+         pyside-tools,
+         ${misc:Depends},
+         ${python:Depends},
+         ${shlibs:Depends}
+Suggests: freecad-doc
+Description: Extensible Open Source CAx program (alpha)
+ FreeCAD is an Open Source CAx RAD based on OpenCasCade, Qt and Python.
+ It features some key concepts like macro recording, workbenches, ability
+ to run as a server and dynamically loadable application extensions and
+ it is designed to be platform independent.
+ .
+ Currently, FreeCAD can import and display CAD models in IGES, STEP, and
+ BRep formats and meshes in STL, BMS, AST and Wavefront OBJ formats.
+ Editing and modeling features are currently somewhat limited.
+
+Package: freecad-daily-doc
+Architecture: all
+Section: doc
+Recommends:
+ freecad-daily (= ${source:Version})
+Depends:
+ qt4-dev-tools,
+ ${misc:Depends}
+Description: FreeCAD documentation
+ FreeCAD is an Open Source CAx RAD based on OpenCasCade, Qt and Python.
+ It features some key concepts like macro recording, workbenches, ability
+ to run as a server and dynamically loadable application extensions and
+ it is designed to be platform independent.
+ For more details see http://sourceforge.net/projects/free-cad
+ .
+ This package contains the FreeCAD documentation.
+ .
+ The documentation is provided in Qt's new help format;
+ the new help format version can be viewed in conjunction with the Qt Assistant
+ found in the qt4-dev-tools package.
+

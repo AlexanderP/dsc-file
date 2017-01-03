@@ -1,0 +1,43 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --buildsystem=cmake --parallel --with python2
+
+DEB_BUILD_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+
+extra_flags += \
+-DFREECAD_BUILD_DEBIAN=ON \
+-DCMAKE_CXX_FLAGS="-Wall -DHAVE_SWIG=1 -fpermissive $(shell dpkg-buildflags --get CXXFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)" \
+-DCMAKE_C_FLAGS="-Wall -fpermissive $(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)" \
+-DCMAKE_SHARED_LINKER_FLAGS="$(shell dpkg-buildflags --get LDFLAGS)" \
+-DLIB_SUFFIX="" \
+-DOCC_INCLUDE_DIR="/usr/include/oce" \
+-DCMAKE_INSTALL_PREFIX="/usr/lib/freecad-daily" \
+-DCMAKE_INSTALL_DATADIR="/usr/share/freecad-daily" \
+-DCMAKE_INSTALL_DOCDIR="/usr/share/doc/freecad-daily-doc" \
+
+extra_flags += \
+-DBUILD_FEM_NETGEN=ON \
+-DBUILD_FEM_VTK=ON \
+
+override_dh_auto_configure:
+	dh_auto_configure -- $(extra_flags) -DCMAKE_CXX_COMPILER=/usr/bin/mpic++
+
+override_dh_compress:
+	dh_compress -X.qch -X.qhc
+
+override_dh_installchangelogs:
+	dh_installchangelogs ChangeLog.txt
+	
+override_dh_installmime:
+	dh_installmime
+	dh_install debian/mime/freecad-daily-thumbnailer usr/bin
+	dh_install debian/mime/freecad-daily.thumbnailer usr/share/thumbnailers
+	dh_install debian/mime/freecad-daily.schemas etc/gconf/schemas
+
+override_dh_icons:
+	install -m 644 debian/freecad-daily/usr/share/freecad-daily/freecad-icon-16.png debian/freecad-daily/usr/share/icons/hicolor/16x16/apps/freecad-daily.png
+	install -m 644 debian/freecad-daily/usr/share/freecad-daily/freecad-icon-32.png debian/freecad-daily/usr/share/icons/hicolor/32x32/apps/freecad-daily.png
+	install -m 644 debian/freecad-daily/usr/share/freecad-daily/freecad-icon-48.png debian/freecad-daily/usr/share/icons/hicolor/48x48/apps/freecad-daily.png
+	install -m 644 debian/freecad-daily/usr/share/freecad-daily/freecad-icon-64.png debian/freecad-daily/usr/share/icons/hicolor/64x64/apps/freecad-daily.png
+	install -m 644 debian/freecad-daily/usr/share/freecad-daily/freecad.svg debian/freecad-daily/usr/share/icons/hicolor/scalable/apps/freecad-daily.svg
+

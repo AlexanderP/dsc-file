@@ -1,0 +1,568 @@
+freecad (0.16+git6707-5465bc4-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: releases/FreeCAD-0-16
+  * Commit: 5465bc47c95db45e0be85dc0e2872419efadce0f
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 01 Jan 2017 14:21:03 +0300
+
+freecad (0.16+dfsg2-1) unstable; urgency=medium
+
+  * [4f08de5] Remove data/examples. (Closes: #745237)
+  * [7434cc4] Imported Upstream version 0.16+dfsg2
+
+ -- Anton Gladky <gladk@debian.org>  Sun, 15 May 2016 12:29:42 +0200
+
+freecad (0.16+dfsg1-1) unstable; urgency=medium
+
+  * [9e69a23] Update d/watch.
+  * [bf22c89] Drop copying of Version.h explicitly.
+  * [010b5c8] Refresh/Remove patches.
+  * [24a4f7d] Update d/copyright.
+  * [0547be9] Apply cme fix dpkg-control.
+  * [fc9b859] Update d/copyright.
+  * [6e5df4d] Imported Upstream version 0.16+dfsg1. (Closes: #823816)
+  * [06ed39b] Remove freecad-dev and freecad-doc binaries.
+  * [94c3ac2] Update d/copyright. (Closes: #726805 #745237)
+
+ -- Anton Gladky <gladk@debian.org>  Thu, 12 May 2016 20:48:30 +0200
+
+freecad (0.15.4671+dfsg1-4) unstable; urgency=medium
+
+  * [a934100] Add strict dependency on oce>=0.17.1. (Closes: #802517)
+
+ -- Anton Gladky <gladk@debian.org>  Fri, 29 Jan 2016 13:10:48 +0100
+
+freecad (0.15.4671+dfsg1-3) unstable; urgency=medium
+
+  [ Abdullah Tahiri ]
+  * [f4d259b] Fix Sketcher: Solver: FullPivLU::compute for Eigen-3.3.
+              (Closes: #811239)
+
+ -- Anton Gladky <gladk@debian.org>  Sun, 17 Jan 2016 13:44:36 +0100
+
+freecad (0.15.4671+dfsg1-2) unstable; urgency=medium
+
+  * [0c78ef5] Remove EIGEN2_SUPPORT. (Closes: #786356)
+
+ -- Anton Gladky <gladk@debian.org>  Sun, 25 Oct 2015 18:51:47 +0100
+
+freecad (0.15.4671+dfsg1-1) unstable; urgency=medium
+
+  * [4b6e554] Update d/copyright.
+  * [dd370f0] Update d/watch.
+  * [a70bba6] Imported Upstream version 0.15.4671+dfsg1. (Closes: #789105)
+  * [80ccaac] Refresh patches.
+  * [c868df9] Add pyside-tools as dependency.
+  * [ab8015b] Drop the load of news-page. (Closes: #787948)
+
+ -- Anton Gladky <gladk@debian.org>  Thu, 27 Aug 2015 22:54:47 +0200
+
+freecad (0.14.3702+dfsg-4) unstable; urgency=medium
+
+  [ Anton Gladky ]
+  * [7dbbdb6] Set Standards-Version: 3.9.6. No changes.
+  * [99c5e82] Apply cme fix dpkg-control.
+
+  [ Martin Pitt ]
+  * [91ef5e9] Work around Qt4 not being compatible with boost+gcc5.
+              (Closes: #795069)
+
+ -- Anton Gladky <gladk@debian.org>  Wed, 12 Aug 2015 20:34:02 +0200
+
+freecad (0.14.3702+dfsg-3) unstable; urgency=medium
+
+  [ Yorik van Havre ]
+  * [9ddbf15] Disable automatic DXF library download. (Closes: #764814)
+
+ -- Anton Gladky <gladk@debian.org>  Fri, 24 Oct 2014 18:59:03 +0200
+
+freecad (0.14.3702+dfsg-2) unstable; urgency=medium
+
+  [ Anton Gladky ]
+  * [aafcc31] Remove libswscale-dev from BD. (Closes: #757282)
+  * [81d4b6e] Fix installing of som Mods. (Closes: #736273)
+  * [1a4492e] Remove deprecated lines from d/copyright. (Closes: #745237)
+
+  [ Alexander ]
+  * [efc7d53] Fix compilation with clang. (Closes: #755305)
+
+ -- Anton Gladky <gladk@debian.org>  Sun, 24 Aug 2014 08:12:43 +0200
+
+freecad (0.14.3702+dfsg-1) unstable; urgency=medium
+
+  * [7fc727b] Imported Upstream version 0.14.3702
+  * [3edf0de] Refresh patches.
+  * [077b63a] Redirect unittest output into stdout. Fixes autopkgtests.
+
+ -- Anton Gladky <gladk@debian.org>  Tue, 22 Jul 2014 20:15:18 +0200
+
+freecad (0.13.3637-dfsg-1) unstable; urgency=medium
+
+  * [ddeee1c] Imported Upstream version 0.13.3637-dfsg
+  * [0fe87be] Update/remove patches.
+  * [60ad7cc] Update install files, dependencies.
+  * [9f9cca3] Add autopkgtest.
+
+ -- Anton Gladky <gladk@debian.org>  Sun, 25 May 2014 19:05:13 +0200
+
+freecad (0.13.2935-dfsg-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Update xerces build dependency to libxerces-c-dev. (Closes: #733072)
+
+ -- Jay Berkenbilt <qjb@debian.org>  Wed, 15 Jan 2014 12:19:37 -0500
+
+freecad (0.13.2935-dfsg-1) unstable; urgency=medium
+
+  * [824153f] Move python-collada and python-ply from Recommends to Depends.
+  * [3047a6b] Imported Upstream version 0.13.2935-dfsg
+  * [36a4082] Bump Standards-Version: 3.9.5. No changes.
+
+ -- Anton Gladky <gladk@debian.org>  Wed, 01 Jan 2014 20:29:15 +0100
+
+freecad (0.13.2800-dfsg-1) unstable; urgency=low
+
+  * [e051565] Imported Upstream version 0.13.2800-dfsg. (Closes: #730952)
+  * [a2f0187] Update debian/copyright. (Closes: #726805)
+
+ -- Anton Gladky <gladk@debian.org>  Mon, 02 Dec 2013 22:11:10 +0100
+
+freecad (0.13.2580-dfsg-2) unstable; urgency=low
+
+  * [2aab6f0] Update and re-enable disable_memory_check.patch.
+  * [4d36847] Use wrap-and-sort.
+
+ -- Anton Gladky <gladk@debian.org>  Mon, 30 Sep 2013 18:49:23 +0200
+
+freecad (0.13.2580-dfsg-1) unstable; urgency=low
+
+  [ Anton Gladky ]
+  * [1190215] Update get_git_orig_src.sh.
+  * [077e969] Build against BSD-version of soqt. (Closes: #617613)
+  * [37d60d0] Update patches, remove some of them.
+  * [b4801bc] Simplify debian/rules.
+  * [40ddd86] Imported Upstream version 0.13.2580-dfsg
+  * [61e7426] Minor fix in installation files.
+  * [fcaeb91] Fix syntax error in importOCA.py.
+  * [429db74] Ignore quilt dir
+  * [ffccc7d] Unapply patches after build
+
+  [ Sebastian Hoogen ]
+  * [aa8ab82] Use packaged version of python-ply.
+
+ -- Anton Gladky <gladk@debian.org>  Fri, 27 Sep 2013 19:56:46 +0200
+
+freecad (0.13.1830-dfsg-3) unstable; urgency=low
+
+  [ Simon Ruderich ]
+  * [71fd1c2] Hardening CPPFLAGS and LDFLAGS. (Closes: #711243)
+
+  [ Peter Michael Green ]
+  * [36d7879] Fix build failures with new oce by forcing occ include directory. 
+              (Closes: 718545, 717034)
+  * [7fa3e69] Remove some stuff left behind by build process in clean target 
+              to prevent errors from dpkg-source when building multiple times 
+              in a row. 
+                - obj-* 
+                - src/Mod/Start/Gui/share 
+                - src/Mod/Drawing/App/share
+
+  [ Anton Gladky ]
+  * [5906d0e] Update debian-copyright-file.
+  * [07d04d1] Move python-collada from Depends to Recommends-section.
+  * [cf6cb9f] Add python-collada to Depends.
+  * [36b4bc0] Add versioned dependency on libsoqt4-20. (Closes: #711812)
+  * [32738be] Use canonical VCS.
+
+ -- Anton Gladky <gladk@debian.org>  Wed, 07 Aug 2013 23:43:36 +0200
+
+freecad (0.13.1830-dfsg-2) unstable; urgency=low
+
+  * [800a2d9] Compile freecad against libcoin80. (Closes: #617613)
+  * [abee4e5] Compile against fltk1.3 instead of fltk1.1
+  * [23916ae] Raise the minimal version of soqt4-dev due to coin80.
+  * [87207ba] Update homepage.
+  * [224f12d] Add versioned dependency on python-pivy.
+
+ -- Anton Gladky <gladk@debian.org>  Thu, 30 May 2013 19:48:30 +0200
+
+freecad (0.13.1830-dfsg-1) unstable; urgency=low
+
+  [ Boris Pek ]
+  * [fbdfc08] Update debian/rules: use src/Build/Version.h provided by upstream.
+              (Closes: #706578)
+  * [eb29048] Update scripts/get_git_orig_src.sh: - change version format.
+
+ -- Anton Gladky <gladk@debian.org>  Thu, 02 May 2013 23:05:20 +0200
+
+freecad (0.13.1830-dfsg-1~exp1) experimental; urgency=low
+
+  * [0175d6f] Add python-matplotlib to depends-section.
+  * [eb9bc9a] Imported Upstream version 0.13.1830-dfsg
+  * [e2ec220] Use Standards-Version: 3.9.4. No changes.
+  * [25815b6] Remove obsolete DM-Upload-Allowed flag.
+  * [24f4cd0] Update dates in copyright-file.
+
+ -- Anton Gladky <gladk@debian.org>  Mon, 04 Feb 2013 22:11:12 +0100
+
+freecad (0.13~20130106.gitafb3355-exp1) experimental; urgency=low
+
+  * [0efcf90] Imported Upstream version 0.13~20130106.gitafb3355
+  * [a5ddc03] Install missing usr/share. (Closes: #697573)
+
+ -- Anton Gladky <gladky.anton@gmail.com>  Thu, 10 Jan 2013 18:45:11 +0100
+
+freecad (0.13~20121120.git5082ae2-2~exp2) experimental; urgency=low
+
+  * [bcc4f2e] Enable dir_as_string.patch.
+  * [41e4a4e] Fix python-warning during install.
+
+ -- Anton Gladky <gladky.anton@gmail.com>  Fri, 23 Nov 2012 22:11:25 +0100
+
+freecad (0.13~20121120.git5082ae2-1) experimental; urgency=low
+
+  [ Sandro Knauß ]
+  * [3d64502] Adding libode-dev, libspnav-dev to Builddeps.  
+              Remove all autotool Builddeps.
+  * [c432199] use more debianize directories in debian/rules.
+  * [0a1599d] Add debian/patches/dir_as_string.patch.
+  * [217ec7c] Add debian/patches/use_install_rpath.patch.
+  * [36766ed] Add debian/patches/use_share.pach.
+
+  [ Anton Gladky ]
+  * [96fc2ed] Use cmake for git-version of freecad.
+  * [581b23b] Prepare for 0.13rc
+  * [d9b01ef] Fix compilation.
+  * [197b945] Add script for getting freecad from git-repo.
+  * [ebae551] Imported Upstream version 0.13~20121120.git5082ae2
+
+ -- Anton Gladky <gladky.anton@gmail.com>  Tue, 20 Nov 2012 19:22:23 +0100
+
+freecad (0.12.5284-dfsg-7) unstable; urgency=low
+
+  * [b420ea0] Add -fpermissive to cpp, c-flags to fix FTBFS with gcc-4.7.
+
+ -- Anton Gladky <gladky.anton@gmail.com>  Mon, 14 May 2012 19:32:10 +0200
+
+freecad (0.12.5284-dfsg-6) unstable; urgency=low
+
+  * [d31cbf4] Disable python-pivy depends on powerpc.
+
+ -- Anton Gladky <gladky.anton@gmail.com>  Thu, 12 Apr 2012 21:05:36 +0200
+
+freecad (0.12.5284-dfsg-5) unstable; urgency=low
+
+  * [4d3e1c0] Do not build freecad parallel, it causes FTBFS sometimes ( -j5).
+  * [d749637] Fix FTBFS during compiling against oce-0.9.1. 
+              Thanks to Denis Barbier. (Closes: #664207)
+  * [28cb8ba] Fix bug of identifying SWIG version. 
+              Thanks to Werner Mayer <werner.wm.mayer@gmx.de>. 
+              (Closes: #646374)
+  * [fde200f] Use Standards-Version 3.9.3. No changes.
+  * [595a19e] Minor update of copyright file due to released DEP-5.
+  * [65ef554] Enable HAVE_SWIG option.
+  * [1af4c8a] Fix crash in Help->About menu. (Closes: #663704)
+
+ -- Anton Gladky <gladky.anton@gmail.com>  Sun, 18 Mar 2012 08:51:19 +0100
+
+freecad (0.12.5284-dfsg-4) unstable; urgency=low
+
+  * [84c5407] Add needed #include. Fix compilation on Ubuntu Precise.
+  * [7b3d15a] Move python-pivy from recommends to depends section. 
+              (Closes: #646374)
+  * [9136519] Update homepage section.
+  * [da53f03] Raise dh-compat to version 8.
+
+ -- Anton Gladky <gladky.anton@gmail.com>  Fri, 17 Feb 2012 19:59:20 +0100
+
+freecad (0.12.5284-dfsg-3) unstable; urgency=low
+
+  * [da3974a] Switch from opencascade to oce. (Closes: #659133)
+
+ -- Anton Gladky <gladky.anton@gmail.com>  Thu, 09 Feb 2012 20:55:05 +0100
+
+freecad (0.12.5284-dfsg-2) unstable; urgency=low
+
+  * [125b5f6] Add libeigen3-dev to "depends" in freecad-dev.
+  * Rebuild due to opencv-transition.
+
+ -- Anton Gladky <gladky.anton@gmail.com>  Sun, 22 Jan 2012 20:07:21 +0100
+
+freecad (0.12.5284-dfsg-1) unstable; urgency=low
+
+  * [99b66f2] Imported Upstream version 0.12.5284-dfsg
+  * [dc52b9c] Remove patch (gcc-4.6 compilation), hopefully applied by upstream.
+  * [f66ef5d] Remove patch (typo).
+  * [ce862a0] Update copyright file (add data-files).
+  * [91d5731] Use eigen3 instead of eigen2.
+
+ -- Anton Gladky <gladky.anton@gmail.com>  Mon, 09 Jan 2012 21:29:18 +0100
+
+freecad (0.11.4446-dfsg-4) unstable; urgency=low
+
+  * [d3ec609] Make a line in changelog shorter. Fix lintian-warning.
+  * [df77453] Fix (hopefully) FTBFS on Armel. Thanks to Paul Brook. 
+              (Closes: #623559)
+
+ -- Anton Gladky <gladky.anton@gmail.com>  Fri, 28 Oct 2011 20:25:21 +0200
+
+freecad (0.11.4446-dfsg-3) unstable; urgency=low
+
+  * [12d6b55] Add -lrt key in LDFLAGS to configure properly opencascade on 
+              kfreebsd.
+  * [bbd8acc] Remove .la files from -dev binary.
+  * [8932ee7] Disable memory check in SMDS. (Closes: #623560).
+
+ -- Anton Gladky <gladky.anton@gmail.com>  Sat, 24 Sep 2011 16:35:30 +0200
+
+freecad (0.11.4446-dfsg-2) unstable; urgency=low
+
+  * [93347cc] Switch off SWIG to fix FTBFS. (Closes: #632348)
+
+ -- Anton Gladky <gladky.anton@gmail.com>  Tue, 05 Jul 2011 22:41:21 +0200
+
+freecad (0.11.4446-dfsg-1) unstable; urgency=low
+
+  [ Teemu Ikonen ]
+  * [58f7907] Copyright: Update.
+
+  [ Anton Gladky ]
+  * [f5d9322] Imported Upstream version 0.11.4446-dfsg. (Closes: #576653).
+  * [aeacc72] Add DM-Upload-Allowed field.
+  * [b08f851] Add changes to debian/rules as suggested by Werner Mayer.
+  * [c82751a] Delete old patches.
+  * [e71109f] Add libopencascade-ocaf-dev to BD.
+  * [9746063] Import patch to fix compilation error with GCC-4.6.
+  * [175e959] Update watch file.
+  * [7989aa6] Update debian/rules to dh 7, thanks to Bernhard R. Link.
+
+ -- Anton Gladky <gladky.anton@gmail.com>  Thu, 09 Jun 2011 21:27:03 +0200
+
+freecad (0.11.3729.dfsg-2) unstable; urgency=low
+
+  * Add gfortran and libopencascade-visualization-dev to BD
+    to fix FTBFS (closes: #622694)
+  * Add libqtwebkit-dev to BD (closes: #618241)
+  * Delete quilt from BD and corresponding changes in rules.
+  * Add description to freecad-occ650.patch
+  * Delete encoding string from .desktop
+  * Fix some spelling errors, pointed out by lintian.  
+
+ -- Anton Gladky <gladky.anton@gmail.com>  Thu, 14 Apr 2011 10:23:25 +0100
+
+freecad (0.11.3729.dfsg-1) unstable; urgency=low
+
+  [ Denis Barbier ]
+  * Merge OpenCASCADE 6.5.0 compatibility patch (closes: #617545).
+
+  [ Adam C. Powell, IV ]
+  * New upstream (closes: #622213, #618241).
+  * Changed to source format 3.0 (quilt).
+  * Added patch target which forces autotools to run, and automake and autoconf
+    are now in Build-Depends (closes: #607181).
+  * Set aside src/Build/Version.h to prevent build problems.
+  * Does not install .la files (closes: #621298).
+  * Boost 1.46 compatibility patch (closes: #621877).
+  * Set aside files which autotools modifies so clean works.
+  * Added libtool to Build-Depends (thanks: PICCA Frédéric-Emmanuel).
+  * Bumped Standards-Version, no changes needed.
+
+ -- "Adam C. Powell, IV" <hazelsct@debian.org>  Tue, 12 Apr 2011 23:40:30 -0400
+
+freecad (0.10.3247.dfsg-2) unstable; urgency=low
+
+  * control:
+    - Update to standars-version 3.9.0.
+    - Remove libblas-dev, libatlas-dev from build-deps.
+  * Add debian/shlibs.local file containing the the correct binary dep
+    to libsoqt4-20 (closes: #575239).
+  * copyright: Add a verbatim copy of Tiddlywiki BSD license. Fixes
+    the lintian warning copyright-refers-to-deprecated-bsd-license-file.
+  * Add kFreeBSD portability fixes. Thanks to Petr Salinger
+    <Petr.Salinger@seznam.cz> for the patch (closes: #592461).
+
+ -- Teemu Ikonen <tpikonen@gmail.com>  Wed, 18 Aug 2010 19:34:36 +0200
+
+freecad (0.10.3247.dfsg-1) unstable; urgency=low
+
+  * New upstream version (closes: #582627)
+  * Add debian/source/format file with contents "1.0".
+  * Use freecad.xpm as icon in menu and desktop files.
+  * copyright: Add licensing information for new files in this release.
+  * src/Base/Makefile.in, src/Gui/Makefile.in: Do not remove *.tab.c files
+    in make distclean target.
+  * control:
+    - Add build-dep to libeigen2-dev.
+    - Update to standards-version 3.8.4.
+
+ -- Teemu Ikonen <tpikonen@gmail.com>  Mon, 05 Jul 2010 15:07:49 +0200
+
+freecad (0.9.2646.5.dfsg-1) unstable; urgency=low
+
+  * Add 'dfsg' extension to upstream version, upstream sources are unchanged.
+  * Remove libgl1-mesa-dev build-dep, rely on libcoin to pull in GL libraries.
+  * Change build-dep libatlas-headers to libatlas-dev (closes: #577309).
+
+ -- Teemu Ikonen <tpikonen@gmail.com>  Fri, 14 May 2010 17:20:35 +0200
+
+freecad (0.9.2646.5-1) unstable; urgency=low
+
+  * New upstream version (closes: #561696).
+  * Added swig to Build-Depends (closes: #563523, #563772).
+  * Removed python-opencv from Build-Depends and Recommends (closes: #560768).
+
+ -- Adam C. Powell, IV <hazelsct@debian.org>  Mon, 11 Jan 2010 08:48:33 -0500
+
+freecad (0.9.2646.4-1) unstable; urgency=low
+
+  * New upstream version (closes: #559849, #559846).
+
+ -- Adam C. Powell, IV <hazelsct@debian.org>  Fri, 11 Dec 2009 20:21:32 -0500
+
+freecad (0.9.2646.3-1) unstable; urgency=low
+
+  * New upstream version. Removes TiddlySaver.jar, fixes help problems.
+
+ -- Teemu Ikonen <tpikonen@gmail.com>  Thu, 03 Dec 2009 19:39:27 +0100
+
+freecad (0.9.2646-1) unstable; urgency=low
+
+  [ Werner Mayer ]
+  * New upstream release
+  * In-source copy of PyCXX has been dropped (closes: #547936)
+  * In-source copy of zipios++ has been dropped (closes: #547941)
+  * Change build-dependency on python2.5-dev to python-dev
+  * Add freecad-doc binary package
+  * Remove Suggestion of a chm viewer, suggest freecad-doc instead
+
+  [ Teemu Ikonen ]
+  * Add override to dh_compress
+  * Add versioned build-deb to debhelper (>= 7.0.50)
+  * Add build-deps to libzipios++-dev and python-cxx-dev.
+
+ -- Teemu Ikonen <tpikonen@gmail.com>  Tue, 17 Nov 2009 14:22:00 +0100
+
+freecad (0.8.2237-2) unstable; urgency=low
+
+  * Added libboost-python-dev to Build-Depends (closes: #549738).
+  * Added myself to uploaders list.
+  * Bumped Standards-Version.
+
+ -- Adam C. Powell, IV <hazelsct@debian.org>  Thu, 12 Nov 2009 12:02:42 -0500
+
+freecad (0.8.2237-1) unstable; urgency=low
+
+  * New Upstream release
+
+ -- Teemu Ikonen <tpikonen@gmail.com>  Thu, 16 Jul 2009 18:37:41 +0200
+
+freecad (0.7.1658-1) UNRELEASED; urgency=low
+
+  * New upstream release
+
+ -- Teemu Ikonen <tpikonen@gmail.com>  Mon, 20 Oct 2008 15:35:58 +0200
+
+freecad (0.7.1514-1) UNRELEASED; urgency=low
+
+  * New upstream version
+  * Add more stuff to the copyright file
+  * control: add build-dep to python-central
+
+ -- Teemu Ikonen <tpikonen@gmail.com>  Wed, 06 Aug 2008 18:25:02 +0200
+
+freecad (0.7.1350-1hardy1) UNRELEASED; urgency=low
+
+  * Package for Ubuntu 8.04 (Hardy Heron)
+
+ -- Werner Mayer <wmayer@users.sourceforge.net>  Thu, 29 May 2008 11:11:20 +0200
+
+freecad (0.7.1350-1gutsy1) UNRELEASED; urgency=low
+
+  * Backport to Ubuntu 7.10 (Gutsy Gibbon)
+
+ -- Werner Mayer <wmayer@users.sourceforge.net>  Sat, 24 May 2008 01:54:39 +0200
+
+freecad (0.7.1350-1feisty1) UNRELEASED; urgency=low
+
+  * Backport to Ubuntu 7.04 (Feisty Fawn)
+
+ -- Werner Mayer <wmayer@users.sourceforge.net>  Sat, 24 May 2008 00:09:08 +0200
+
+freecad (0.7.1350-1) UNRELEASED; urgency=low
+
+  * New upstream release from sf.net
+  * Import to debian-science repository at git.debian.org
+  * control:
+    - Update to standards-version 3.7.3
+    - Add Vcs-* fields pointing to git.debian.org
+    - Improve descriptions
+  * Convert copyright to (pseudo) machine readable format, audit source
+  * Fix categories in .desktop file
+  * Change Section to Science/Engineering in .doc-base and menu files
+  * rules: do not ignore errors on clean target, add dh_desktop call
+ -- Teemu Ikonen <tpikonen@gmail.com>  Tue, 05 Aug 2008 18:58:07 +0200
+
+freecad (0.7.1344-1ubuntu2) UNRELEASED; urgency=low
+
+  * New package with fixed self-dependency problem
+
+ -- Werner Mayer <wmayer@users.sourceforge.net>  Thu, 22 May 2008 15:34:34 +0200
+
+freecad (0.7.1344-1ubuntu1) UNRELEASED; urgency=low
+
+  * New debian package for Feisty
+
+ -- Werner Mayer <wmayer@users.sourceforge.net>  Thu, 22 May 2008 11:04:06 +0200
+
+freecad (0.7.1344-1) UNRELEASED; urgency=low
+
+  * Write patch file to make builds with OpenCASCADE libs inside but with no
+    dependency to libopencascade6.2
+
+ -- Werner Mayer <wmayer@users.sourceforge.net>  Wed, 21 May 2008 10:06:07 +0200
+
+freecad (0.7.1343-1) UNRELEASED; urgency=low
+
+  * Embed required OpenCASCADE libs into this package as long as no official
+    Debian package is available
+
+ -- Werner Mayer <wmayer@users.sourceforge.net>  Tue, 20 May 2008 00:40:39 +0200
+
+freecad (0.7.1342-1) UNRELEASED; urgency=low
+
+  * Switch to new versioning scheme of OpenCASCADE packages
+
+ -- Werner Mayer <wmayer@users.sourceforge.net>  Mon, 19 May 2008 23:55:31 +0200
+
+freecad (0.7.1316-1) UNRELEASED; urgency=low
+
+  * Support of pivy (Python binding for Coin/SoQt)
+  * Support of PyQt4
+  * General support of SWIG modules
+
+ -- Werner Mayer <wmayer@users.sourceforge.net>  Sat, 26 Apr 2008 13:51:25 +0200
+
+freecad (0.7.1031-1) UNRELEASED; urgency=low
+
+  * Qt4 port finished
+  * Support of Python binding for Qt4
+  * Support of Python binding for Coin
+  * Support of entirely in Python written modules
+  * Added support of model driven architecture for Python binding
+  * Use boost's signal/slot mechanism to update data
+
+ -- Werner Mayer <wmayer@users.sourceforge.net>  Tue, 04 Jan 2008 13:50:37 +0200
+
+freecad (0.7.645-1) UNRELEASED; urgency=low
+
+  * Qt4 port started
+
+ -- Werner Mayer <wmayer@users.sourceforge.net>  Tue, 24 Jul 2007 13:04:37 +0200
+
+freecad (0.6.472-1) UNRELEASED; urgency=low
+
+  * Initial Release
+
+ -- Werner Mayer <wmayer@users.sourceforge.net>  Tue, 26 Sep 2006 16:55:15 +0200
+
