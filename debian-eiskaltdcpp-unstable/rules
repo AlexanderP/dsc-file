@@ -70,11 +70,17 @@ OPTSSTEP2 = -DUSE_QT_SQLITE=OFF \
 REVISION = $(shell /bin/sh -c "head -n 1 debian/changelog | sed -e 's/^.*-[0-9]\{6,6\}-//' -e 's/-0ppa.*$$//'")
 CMAKEOPTS += -DDCPP_REVISION="$(REVISION)"
 
+ifneq (,$(filter $(DEBIAN_CODENAME),sid stretch)) 
+	CONTROL = control.sid
+else
+	CONTROL = control.jessie
+endif
 
 %:
 	dh $@ --parallel
 
 override_dh_auto_configure:
+	cp debian/$(CONTROL) debian/control
 	mkdir -p $(BUILDDIR1) && cd $(BUILDDIR1) && cmake $(CMAKEOPTS) $(OPTSSTEP1)
 
 override_dh_auto_build:
@@ -85,6 +91,7 @@ override_dh_auto_build:
 	cd $(BUILDDIR2) && $(MAKE) -j$(NUMJOBS)
 
 override_dh_auto_clean:
+	cp debian/$(CONTROL) debian/control
 	dh_testroot
 	[ ! -f Makefile ] || ( cd $(BUILDDIR1) && $(MAKE) clean )
 	[ ! -f Makefile ] || ( cd $(BUILDDIR2) && $(MAKE) clean )

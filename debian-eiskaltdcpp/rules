@@ -52,6 +52,16 @@ OPTSSTEP2 = -DUSE_QT_SQLITE=OFF \
             -DUSE_JS=OFF -DUSE_QT_QML=OFF \
             -DUSE_GTK=OFF -DUSE_GTK3=ON
 
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+ifneq (,$(filter $(DEBIAN_CODENAME),sid stretch)) 
+	CONTROL = control.sid
+else
+	CONTROL = control.jessie
+endif
+
 # This option is for daily builds of the EiskaltDC++ packages on Launchpad
 # See https://launchpad.net/~tehnick/+archive/tehnick for more information
 #REVISION = $(shell /bin/sh -c "head -n 1 debian/changelog | sed -e 's/^.*-[0-9]\{6,6\}-//' -e 's/-0ppa.*$$//'")
@@ -62,6 +72,7 @@ OPTSSTEP2 = -DUSE_QT_SQLITE=OFF \
 	dh $@ --parallel --list-missing
 
 override_dh_auto_configure:
+	cp debian/$(CONTROL) debian/control
 	mkdir -p $(BUILDDIR1) && cd $(BUILDDIR1) && cmake $(CMAKEOPTS) $(OPTSSTEP1)
 
 override_dh_auto_build:
@@ -72,6 +83,7 @@ override_dh_auto_build:
 	cd $(BUILDDIR2) && $(MAKE) -j$(NUMJOBS)
 
 override_dh_auto_clean:
+	cp debian/$(CONTROL) debian/control
 	dh_testroot
 	[ ! -f Makefile ] || ( cd $(BUILDDIR1) && $(MAKE) clean )
 	[ ! -f Makefile ] || ( cd $(BUILDDIR2) && $(MAKE) clean )

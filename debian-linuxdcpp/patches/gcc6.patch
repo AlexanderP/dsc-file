@@ -1,0 +1,26 @@
+Description: Build with -std=gnu++98
+ What broke the build is that gcc 6 changed the default C++ standard
+ from C++98 to C++14.
+ .
+ Not all valid C++98 code is also valid C++11 and C++14 code.
+ .
+ Note that this just changed the default, when told to process C++98 code 
+ gcc 6 does not differ in any significant way from gcc 5.
+ .
+ Making the code compatible with C++14 would be the best possible 
+ solution, but as a workaround it is possible to fix the build with
+ this change to tell gcc that this is C++98 code.
+Author: Adrian Bunk <bunk@stusta.de>
+Bug-Debian: https://bugs.debian.org/811868
+
+--- linuxdcpp-1.1.0.orig/SConstruct
++++ linuxdcpp-1.1.0/SConstruct
+@@ -18,7 +18,7 @@ BUILD_PATH = '#/build/'
+ BUILD_LOCALE_PATH = BUILD_PATH + 'locale/'
+ 
+ BUILD_FLAGS = {
+-	'common'  : ['-I#', '-D_GNU_SOURCE', '-D_LARGEFILE_SOURCE', '-D_FILE_OFFSET_BITS=64', '-D_REENTRANT'],
++	'common'  : ['-I#', '-D_GNU_SOURCE', '-D_LARGEFILE_SOURCE', '-D_FILE_OFFSET_BITS=64', '-D_REENTRANT', '-std=gnu++98'],
+ 	'debug'   : ['-g', '-ggdb', '-Wall', '-D_DEBUG'], 
+ 	'release' : ['-O3', '-fomit-frame-pointer', '-DNDEBUG']
+ }
