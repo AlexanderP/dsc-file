@@ -1,52 +1,50 @@
 #!/usr/bin/make -f
 export DH_VERBOSE=1
 
-CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
-CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
-CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
-LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
+GNOME_DOWNLOAD_URL = http://pawsa.fedorapeople.org/balsa/$(GNOME_TARBALL)
+TARBALL_EXT := tar.bz2
+-include /usr/share/gnome-pkg-tools/1/rules/gnome-get-source.mk
 
-export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
+# Ensure at build time that the library has no dependencies on undefined
+# symbols, and speed up loading.
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 # Compile options
-CONFIGURE_FLAGS = --disable-smime \
-			--with-compface \
+CONFIGURE_FLAGS = --with-compface \
 			--with-gpgme \
 			--with-gss \
-			--with-gtkspell \
 			--with-ldap \
 			--with-sqlite \
-			--with-ssl \
 			--with-gtksourceview \
 			--enable-extra-mimeicons \
 			--with-libnotify \
 			--with-rubrica \
 			--with-canberra \
-			--with-unique \
-			--enable-threads \
-			--without-nm
-
-#export DH_ALWAYS_EXCLUDE := COPYING:COPYING.GPLv2:COPYING.LGPLv2.1
+			--with-libsecret \
+			--with-gnome \
+			--with-html-widget=webkit2
 
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
-	BUILDDEBFLAGS= -- -Zlzma -z9
+ifneq (,$(filter $(DEBIAN_CODENAME),jessie trusty xenial)) 
+	CONFIGURE_FLAGS += --with-gtkspell
 else
-	BUILDDEBFLAGS= -- -Zxz -z9
+	CONFIGURE_FLAGS += --with-spell-checker=gspell
 endif
 
+
 %:
-	dh --parallel $@
+	dh $@ --with autoreconf
 
 override_dh_auto_configure:
 	./autogen.sh $(CONFIGURE_FLAGS)
 	dh_auto_configure -- $(CONFIGURE_FLAGS)
 
-#override_dh_builddeb:
-#	dh_builddeb $(BUILDDEBFLAGS)
-
-override_dh_auto_test:
-	
+# Ensure that .gmo files are gone before package building
+override_dh_clean:
+	dh_clean
+	rm -f po/*.gmo
+	rm -f balsa.desktop

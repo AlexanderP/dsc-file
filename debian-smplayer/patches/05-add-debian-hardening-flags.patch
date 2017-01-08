@@ -4,9 +4,9 @@ Author: Mateusz Łukasik <mati75@linuxmint.pl>
  
 --- smplayer-16.1.0+svn7477.orig/src/smplayer.pro
 +++ smplayer-16.1.0+svn7477/src/smplayer.pro
-@@ -34,6 +34,11 @@
- DEFINES += ADD_BLACKBORDERS_FS
+@@ -35,6 +35,11 @@
  DEFINES += INITIAL_BLACKBORDERS
+ DEFINES += CHROMECAST_SUPPORT
  
 +QMAKE_CPPFLAGS *= $(shell dpkg-buildflags --get CPPFLAGS)
 +QMAKE_CFLAGS   *= $(shell dpkg-buildflags --get CFLAGS)
@@ -15,4 +15,5 @@ Author: Mateusz Łukasik <mati75@linuxmint.pl>
 +
  DEFINES += MPV_SUPPORT
  DEFINES += MPLAYER_SUPPORT
+ 
 

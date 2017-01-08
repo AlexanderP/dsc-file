@@ -3,7 +3,7 @@
 
 CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
 LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
-CFLAGS += -Wall -g -fPIC -DTESSDATA_PREFIX=/usr/share/tesseract-ocr/
+CFLAGS += -Wall -g -fPIC -DTESSDATA_PREFIX=/usr/share/tesseract-ocr/4.00/
 
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""

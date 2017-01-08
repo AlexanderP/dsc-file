@@ -1,3 +1,65 @@
+gimp-devel (2.9.4+git37778-03185f8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 03185f80706c6d1bbfe2630922e2eee6be215d2e
+  * Date: 1483674820
+  * git changelog:
+  *  03185f8 - app: normalize some layer mode alpha/opacity handling
+  *  22a95d6 - app: fix error handling in
+    gimp_tool_preset_deserialize_property()
+  *  66bc98d - Revert "New GimpMetadata as subclass of GExiv2Metadata"
+  *  3ab08c8 - New GimpMetadata as subclass of GExiv2Metadata
+  *  559a758 - Bug 776516 - Saving over existing GZ or BZ2 compressed
+    files...
+  *  8111ad6 - Bug 776417 - improve Sample Average and Sample Merged
+    description.
+  *  237d83d - Bug 773462 - Color Picker should support range...
+  *  00faf17 - Update Portuguese translation
+  *  6c59353 - Update Portuguese translation
+  *  e2bcf88 - XCF: use version >=9 if layer mode is one of the new LCH
+    modes
+  *  c2665a2 - app: tooltip of Color Picker's "Sample average" option
+    mixed up.
+  *  3bab693 - plug-ins: variable alignement.
+  *  3d98642 - Bug 768058 - Color picker tool should be able to ignore
+    snapping
+  *  adad7c6 - Bug 167203 - color picker tools should always draw
+    outline
+  *  4ac59f8 - Bug 776648 - Spin buttons of histogram box do not take
+    image precision into account
+  *  38d4bdc - Update Swedish translation
+  *  1ed5def - Bug 728633 - Improvements to the file-raw plugin
+  *  779649b - Merge branch 'master' into bug-728633
+  *  ce9e7fe - metadata: small fix
+  *  c9520ba - libgimpwidgets: make color chooser scales range to 100.0
+    instead of 255
+  *  4167489 - Bug 757686 - There is no easy way to do a radiometrically
+    correct...
+  *  69adce4 - metadata: don't truncate IPTC values
+  *  f8e291b - Bug 769112 - The metadata windows takes a lot of CPU.
+  *  3c2b4df - libgimpwidgets: handle invalid enum values in
+    gimp_enum_store_set_icon_prefix()
+  *  7c35d75 - Bug 776294 - Screenshot buttons cannot be clicked
+  *  0c0c86d - Bug 776515 - pdbgen.pl generated code includes tabs
+  *  b6e7d19 - Merge branch 'master' into bug-728633
+  *  af02104 - app: s/gegl:color-reduction/gegl:dither/ in sanity.c and
+    gimpgegltool.c
+  *  9d4fad1 - Bug 776503 - brightness-contrast in split preview mode
+    changes...
+  *  fc9da4c - app: allow to toggle the histogram dialog between gamma
+    and linear
+  *  d5bd26f - Update Polish translation
+  *  33ee7f9 - Update Arabic translation
+  *  6e608f6 - Bug 626494 - Enhancement to script-fu-server logging to
+    output milliseconds taken
+  *  5627ad5 - app: use gegl:dither instead of gegl:reduction
+  *  75be560 - app: make sure the blend tools doesn't stay around on
+    removed drawables
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 06 Jan 2017 20:30:59 +0300
+
 gimp-devel (2.9.4+git37740-e31f8e1-1) unstable; urgency=medium
 
   * Compile

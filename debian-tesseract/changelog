@@ -1,3 +1,41 @@
+tesseract (4.00~git1699-263a4d2-2) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 263a4d2601bad3bfac9fa12001a214c08582b81a
+  * Date: 1483807566
+  * git changelog:
+  *  263a4d2 - Update README.md
+  *  6f83ba0 - Add include dirs to cppan config.
+  *  2a5a915 - Add training tool deps.
+  *  3817aa3 - Fix windows dll build.
+  *  e6ccfb2 - Merge pull request #625 from stweil/lstm
+  *  534a237 - Move AVX / SSE messages to function PrintVersionInfo
+    (crash fix)
+  *  38033ce - Merge pull request #618 from stweil/lstm
+  *  19616b0 - lstm: Move class SIMDDetect to new source file and
+    improve code
+  *  e949812 - Merge pull request #617 from stweil/lept
+  *  680bfdd - Remove code for old versions of Leptonica
+  *  e8d477c - Merge pull request #616 from stweil/lstm
+  *  5cfe0c7 - lstm: Add AVX / SSE support for Windows
+  *  b2a0262 - lstm: Update AVX / SSE support
+  *  fc94820 - Update appveyor.yml
+  *  25fed52 - Merge pull request #614 from stweil/lept
+  *  9a4a321 - Fix build for non x86
+  *  21a5c51 - Update INSTALL.GIT.md
+  *  f4ea71e - Update CMakeLists.txt
+  *  04f4370 - Update appveyor.yml
+  *  1127d01 - Update CMakeLists.txt
+  *  3566a1d - Merge pull request #613 from stweil/lept
+  *  c160f80 - Add error message with cmake 3.6.
+  *  7a9a2f7 - Fix Leptonica version check for cmake
+  *  c124f87 - Merge pull request #608 from amitdo/cmake-leptonica-1740
+  *  4332264 - CMake - Set minimum Leptonica version to 1.74.0
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 07 Jan 2017 21:24:09 +0300
+
 tesseract (4.00~git1674-c7caaaf-1) unstable; urgency=medium
 
   * Compile
