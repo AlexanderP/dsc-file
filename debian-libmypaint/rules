@@ -7,6 +7,11 @@ include /usr/share/dpkg/default.mk
 %:
 	dh $@  --with autotools-dev --parallel
 
+override_dh_auto_configure:
+	dh_testdir
+	./autogen.sh
+	dh_auto_configure
+
 override_dh_auto_install:
 	dh_auto_install
 	cd $(CURDIR)/debian/tmp/usr/lib/*linux-gnu/ && ln -s libmypaint-1.3.so.0.0.0 libmypaint-1.3.so
