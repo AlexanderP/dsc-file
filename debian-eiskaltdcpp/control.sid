@@ -1,0 +1,320 @@
+Source: eiskaltdcpp
+Section: net
+Priority: optional
+Maintainer: Boris Pek <tehnick@debian.org>
+Build-Depends: chrpath,
+               cmake,
+               debhelper (>= 9),
+               libaspell-dev,
+               libattr1-dev,
+               libboost-dev,
+               libboost-system-dev,
+               libbz2-dev,
+               libglade2-dev,
+               libgtk-3-dev,
+               libgtk2.0-dev,
+               libidn11-dev,
+               liblua5.1-0-dev,
+               libminiupnpc-dev,
+               libnotify-dev,
+               libpcre3-dev,
+               libqt4-dev,
+               libssl1.0-dev,
+               pkg-config,
+               po-debconf,
+               qt4-dev-tools,
+               zlib1g-dev
+Homepage: https://github.com/eiskaltdcpp/eiskaltdcpp
+Vcs-Git: https://github.com/tehnick/eiskaltdcpp-debian.git
+Vcs-Browser: https://github.com/tehnick/eiskaltdcpp-debian
+Standards-Version: 3.9.6
+
+Package: eiskaltdcpp
+Section: metapackages
+Architecture: all
+Depends: eiskaltdcpp-emoticons,
+         eiskaltdcpp-qt (>= ${binary:Version}) |
+            eiskaltdcpp-qt-mini (>= ${binary:Version}) |
+            eiskaltdcpp-gtk (>= ${binary:Version}) |
+            eiskaltdcpp-gtk3 (>= ${binary:Version}),
+         eiskaltdcpp-scripts,
+         eiskaltdcpp-sounds,
+         ${misc:Depends}
+Description: EiskaltDC++ metapackage
+ This package installs the most popular and recommended combination of
+ EiskaltDC++ related packages.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: eiskaltdcpp-common
+Architecture: all
+Depends: ${misc:Depends}
+Description: common files for EiskaltDC++
+ This package contains the common files for the different EiskaltDC++ versions.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: eiskaltdcpp-emoticons
+Architecture: all
+Depends: ${misc:Depends}
+Suggests: php5-cli
+Description: emoticons for EiskaltDC++
+ This package contains the emoticon packs for EiskaltDC++.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: eiskaltdcpp-scripts
+Architecture: all
+Depends: ${misc:Depends}
+Suggests: php5-cli
+Description: scripts examples for EiskaltDC++
+ This package contains the scripts examples for EiskaltDC++.
+ It used by /sh and /alias chat commands (see man-page or /help in chat).
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: eiskaltdcpp-sounds
+Architecture: all
+Depends: ${misc:Depends}
+Description: sound files for EiskaltDC++
+ This package contains the sound files for EiskaltDC++.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: libeiskaltdcpp2.2
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: DC++ kernel library from EiskaltDC++
+ This package installs only DC++ kernel library which required EiskaltDC++.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: libeiskaltdcpp2.2-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: libeiskaltdcpp2.2 (= ${binary:Version}), ${misc:Depends}
+Description: DC++ kernel from EiskaltDC++ (debug symbols)
+ This package contains the debugging symbols for EiskaltDC++ kernel library.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: libeiskaltdcpp-dev
+Section: libdevel
+Architecture: any
+Depends: libeiskaltdcpp2.2 (= ${binary:Version}), ${misc:Depends}
+Description: DC++ kernel from EiskaltDC++ (development files)
+ This package contains header files for EiskaltDC++ kernel library.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: eiskaltdcpp-qt
+Architecture: any
+Depends: eiskaltdcpp-common,
+         eiskaltdcpp-qt-data (= ${source:Version}),
+         libqt4-sql-sqlite,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Recommends: libqtscript4-core,
+            libqtscript4-gui,
+            libqtscript4-network,
+            libqtscript4-xml
+Description: EiskaltDC++ GUI on Qt
+ This package installs only EiskaltDC++ with GUI based on Qt.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: eiskaltdcpp-qt-mini
+Architecture: any
+Depends: eiskaltdcpp-common,
+         eiskaltdcpp-qt-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: EiskaltDC++ GUI on Qt (stripped-down version)
+ This package installs only EiskaltDC++ with GUI based on Qt. This is
+ stripped-down version of program. Such features were disabled:
+  - Qt Declarative UI support
+  - QtScript basic support
+  - SQLite support
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: eiskaltdcpp-qt-data
+Architecture: all
+Depends: ${misc:Depends}
+Suggests: eiskaltdcpp-emoticons,
+          eiskaltdcpp-scripts,
+          eiskaltdcpp-sounds,
+          php5-cli
+Description: data files for EiskaltDC++ Qt
+ This package contains the data files for EiskaltDC++ Qt.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: eiskaltdcpp-qt-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: eiskaltdcpp-qt (= ${binary:Version}),
+         libeiskaltdcpp2.2-dbg (= ${binary:Version}),
+         ${misc:Depends}
+Description: EiskaltDC++ GUI on Qt (debug symbols)
+ This package contains the debugging symbols for EiskaltDC++ Qt.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: eiskaltdcpp-qt-mini-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: eiskaltdcpp-qt-mini (= ${binary:Version}),
+         libeiskaltdcpp2.2-dbg (= ${binary:Version}),
+         ${misc:Depends}
+Description: EiskaltDC++ GUI on Qt (stripped-down version) (debug symbols)
+ This package contains the debugging symbols for EiskaltDC++ Qt. This is
+ stripped-down version of program. Such features were disabled:
+  - Qt Declarative UI support
+  - QtScript basic support
+  - SQLite support
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: eiskaltdcpp-gtk
+Architecture: any
+Depends: eiskaltdcpp-common,
+         eiskaltdcpp-gtk-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: EiskaltDC++ GUI on Gtk
+ This package installs only EiskaltDC++ with GUI based on Gtk
+ (based on FreeDC++ and LinuxDC++).
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: eiskaltdcpp-gtk3
+Architecture: any
+Depends: eiskaltdcpp-common,
+         eiskaltdcpp-gtk-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: EiskaltDC++ GUI on Gtk3
+ This package installs only EiskaltDC++ with GUI based on Gtk3. This is an
+ experimental mode of GUI. If you have some problems use Gtk2 based UI instead
+ (package eiskaltdcpp-gtk).
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: eiskaltdcpp-gtk-data
+Architecture: all
+Depends: ${misc:Depends}
+Suggests: eiskaltdcpp-emoticons,
+          eiskaltdcpp-scripts,
+          eiskaltdcpp-sounds,
+          php5-cli
+Description: data files for EiskaltDC++ Gtk
+ This package contains the data files for EiskaltDC++ Gtk.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: eiskaltdcpp-gtk-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: eiskaltdcpp-gtk (= ${binary:Version}),
+         libeiskaltdcpp2.2-dbg (= ${binary:Version}),
+         ${misc:Depends}
+Description: EiskaltDC++ GUI on Gtk (debug symbols)
+ This package contains the debugging symbols for EiskaltDC++ Gtk.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: eiskaltdcpp-gtk3-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: eiskaltdcpp-gtk3 (= ${binary:Version}),
+         libeiskaltdcpp2.2-dbg (= ${binary:Version}),
+         ${misc:Depends}
+Description: EiskaltDC++ GUI on Gtk3 (debug symbols)
+ This package contains the debugging symbols for EiskaltDC++ Gtk3.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: eiskaltdcpp-daemon
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Suggests: eiskaltdcpp-cli
+Description: EiskaltDC++ daemon
+ This package installs only EiskaltDC++ daemon (without any GUI).
+ Support of control via JSON-RPC is enabled.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: eiskaltdcpp-daemon-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: eiskaltdcpp-daemon (= ${binary:Version}),
+         libeiskaltdcpp2.2-dbg (= ${binary:Version}),
+         ${misc:Depends}
+Description: EiskaltDC++ daemon (debug symbols)
+ This package contains the debugging symbols for EiskaltDC++ daemon.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.
+
+Package: eiskaltdcpp-cli
+Architecture: all
+Depends: libdata-dump-perl,
+         libgetopt-long-descriptive-perl,
+         libjson-rpc-perl,
+         libterm-shellui-perl,
+         ${misc:Depends},
+         ${perl:Depends}
+Suggests: eiskaltdcpp-daemon
+Description: EiskaltDC++ command-line interface
+ This package installs EiskaltDC++ CLI (command-line interface) written in perl.
+ This program is to control eiskaltdcpp-daemon via JSON-RPC protocol.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with DC++, FlylinkDC++, LinuxDC++ and other DC
+ clients. EiskaltDC++ also interoperates with all common DC hub software.

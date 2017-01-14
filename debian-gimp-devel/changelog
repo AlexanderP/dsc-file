@@ -1,3 +1,393 @@
+gimp-devel (2.9.4+git37778-03185f8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 03185f80706c6d1bbfe2630922e2eee6be215d2e
+  * Date: 1483674820
+  * git changelog:
+  *  03185f8 - app: normalize some layer mode alpha/opacity handling
+  *  22a95d6 - app: fix error handling in
+    gimp_tool_preset_deserialize_property()
+  *  66bc98d - Revert "New GimpMetadata as subclass of GExiv2Metadata"
+  *  3ab08c8 - New GimpMetadata as subclass of GExiv2Metadata
+  *  559a758 - Bug 776516 - Saving over existing GZ or BZ2 compressed
+    files...
+  *  8111ad6 - Bug 776417 - improve Sample Average and Sample Merged
+    description.
+  *  237d83d - Bug 773462 - Color Picker should support range...
+  *  00faf17 - Update Portuguese translation
+  *  6c59353 - Update Portuguese translation
+  *  e2bcf88 - XCF: use version >=9 if layer mode is one of the new LCH
+    modes
+  *  c2665a2 - app: tooltip of Color Picker's "Sample average" option
+    mixed up.
+  *  3bab693 - plug-ins: variable alignement.
+  *  3d98642 - Bug 768058 - Color picker tool should be able to ignore
+    snapping
+  *  adad7c6 - Bug 167203 - color picker tools should always draw
+    outline
+  *  4ac59f8 - Bug 776648 - Spin buttons of histogram box do not take
+    image precision into account
+  *  38d4bdc - Update Swedish translation
+  *  1ed5def - Bug 728633 - Improvements to the file-raw plugin
+  *  779649b - Merge branch 'master' into bug-728633
+  *  ce9e7fe - metadata: small fix
+  *  c9520ba - libgimpwidgets: make color chooser scales range to 100.0
+    instead of 255
+  *  4167489 - Bug 757686 - There is no easy way to do a radiometrically
+    correct...
+  *  69adce4 - metadata: don't truncate IPTC values
+  *  f8e291b - Bug 769112 - The metadata windows takes a lot of CPU.
+  *  3c2b4df - libgimpwidgets: handle invalid enum values in
+    gimp_enum_store_set_icon_prefix()
+  *  7c35d75 - Bug 776294 - Screenshot buttons cannot be clicked
+  *  0c0c86d - Bug 776515 - pdbgen.pl generated code includes tabs
+  *  b6e7d19 - Merge branch 'master' into bug-728633
+  *  af02104 - app: s/gegl:color-reduction/gegl:dither/ in sanity.c and
+    gimpgegltool.c
+  *  9d4fad1 - Bug 776503 - brightness-contrast in split preview mode
+    changes...
+  *  fc9da4c - app: allow to toggle the histogram dialog between gamma
+    and linear
+  *  d5bd26f - Update Polish translation
+  *  33ee7f9 - Update Arabic translation
+  *  6e608f6 - Bug 626494 - Enhancement to script-fu-server logging to
+    output milliseconds taken
+  *  5627ad5 - app: use gegl:dither instead of gegl:reduction
+  *  75be560 - app: make sure the blend tools doesn't stay around on
+    removed drawables
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 06 Jan 2017 20:30:59 +0300
+
+gimp-devel (2.9.4+git37740-e31f8e1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: e31f8e11957fd7e9dbdf5ef83544956d85952675
+  * Date: 1482422726
+  * git changelog:
+  *  e31f8e1 - app: fix indentation.
+  *  da9957f - Updated Slovenian translation
+  *  67b51ca - Updated Slovenian translation
+  *  9f7db89 - Updated Slovenian translation
+  *  6217527 - app: fix typo s/depecrated/deprecated/.
+  *  99050ec - Bug 769022 - Improve text along path when path is short.
+  *  3fa016f - app: clean out tab indentations.
+  *  0d89f5b - Update Catalan translation
+  *  f91e2a9 - imagemap: clear preview area background before drawing
+    image
+  *  0cdca57 - plug-ins: use an epsilon to compare double values.
+  *  3b41d16 - app: cleaned out tabs.
+  *  7335dc8 - Bug 776017 - Print resolution changes not taken in
+    account...
+  *  4827116 - plug-ins: add a "Load Defaults" button to reset print
+    resolution...
+  *  9f15ad6 - Update Hungarian translation
+  *  4357e8f - Update Hungarian translation
+  *  2a1e215 - Update Hungarian translation
+  *  1b0ec32 - Update Catalan translation
+  *  6e29680 - Updated Italian translation
+  *  31869cb - app: hide double precision from the Image -> Precision
+    menu
+  *  3710c0d - app: hide double precision from File -> New and from
+    templates
+  *  aaa9ae1 - Bug 698278 - Preferences|Reset ignores
+    /etc/gimp/2.0/gimprc
+  *  350c6ca - Bug 775134 - mypaint-brush: Saved color in a brush isn't
+    taken into account
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 24 Dec 2016 15:56:52 +0300
+
+gimp-devel (2.9.4+git37718-619a885-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 619a885696b12da5e6669fce269386d4028315e3
+  * Date: 1481111508
+  * git changelog:
+  *  619a885 - Bug 775391 - Collapse "Radius" widget when "Sample
+    average" is unchecked
+  *  afccaa9 - Bug 775646 - Levels Tool: handles difficult to read with
+    dark theme.
+  *  c351040 - app: make sure fg, bg, brush, pattern etc. changes don't
+    write gimprc
+  *  d226816 - Update Portuguese translation
+  *  ab6cf7e - Update Portuguese translation
+  *  f296988 - Bug 775396 - Delete Layer/Channel/Path should be
+    consistently the last...
+  *  efe79d1 - Fixes to Catalan translation
+  *  43b63af - Fixes to Catalan translation
+  *  7642cdf - NEWS: adding the no-focus in toolbox change.
+  *  4c760e0 - Fix typos in NEWS
+  *  43681a6 - app: flush blur cache and other caches when invalid
+  *  b65b996 - Update the list of updated translations
+  *  1744534 - Update Russian translation
+  *  e735297 - Update NEWS
+  *  52ad5bb - app: remove focusability of toolbox buttons.
+  *  1c6073f - Update Polish translation
+  *  724b2a5 - app: fix a bug introduced in blur cacheing
+  *  a4dee3e - app: disable hardness blur for pipes, fix other pixmaps
+    to blur only pixmap
+  *  0c04275 - app: cache bitmap brushes expensive hardness and disable
+    dynamic change
+  *  b3519bf - Update Greek translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 10 Dec 2016 16:11:34 +0300
+
+gimp-devel (2.9.4+git37698-61475fb-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 61475fba834a9b7b4fcb1981a8420587e7e955c5
+  * Date: 1480154776
+  * git changelog:
+  *  61475fb - bug 771621 hardness blur cliping is avoided by shrinking
+    the stamp first
+  *  136ef67 - Bug 775026 - webp-save: expose more saving options in the
+    UI
+  *  2e63533 - app: add GimpDockContainer::get_dialog_factory()
+  *  ecc49ed - iscissors: ensure first and last isegments are distinct
+    before closing the curve
+  *  4a9a072 - Revert "app: handle gtk_accel_map_change_entry ()
+    failure..."
+  *  84ee79c - app: clean out many tabs under app/core/.
+  *  31ae423 - app: do not allow Alt+[0-9] shortcuts.
+  *  eab4929 - app: handle gtk_accel_map_change_entry () failure...
+  *  2081de5 - app: remove transient actions with
+    gimp_action_group_remove_action().
+  *  c0ee959 - app: save menurc after having deleted all the displays.
+  *  94a5b7c - app: cleaning out tabs.
+  *  6131b00 - Bug 774890 - "Keyboard shortcuts" dialog does not show
+    all actions
+  *  1517a09 - Bug 774890 - "Keyboard shortcuts" dialog does not show
+    all actions
+  *  5e71512 - app: indentation in gimpdockable.h was horribly broken
+  *  7a60fd0 - app: better defaults for image dimension.
+  *  3919080 - Bug 774906 - Replace File>New default ppi of 72...
+  *  cb27605 - app: hardness overrides identity matrix on brush
+    transform
+  *  c5edf05 - plug-ins: code cleaning and improved error handling.
+  *  4f67b16 - Bug 774472 - animated-webp: saved layers are not alpha-
+    composited before compression
+  *  a3c65e6 - app: get rid of including menus/ stuff from widgets/ and
+    other places
+  *  b795ae2 - app: do not show the actions from <Dockable>
+    GimpUIManager.
+  *  877b024 - app: minor indentation fix.
+  *  a68edf5 - app: tab cleaning.
+  *  53b3673 - app: action search should search accross all available
+    actions.
+  *  ad339d3 - plug-ins: tab cleaning.
+  *  7540341 - app: plug-in-repeat and plug-in-reshow were renamed...
+  *  f5c06a2 - app: string which should be translated too.
+  *  ced32ce - app: some tab cleaning.
+  *  8b25891 - plug-ins: port smooth-palette to gegl
+  *  21ab694 - Bug 754171 - cmd - missing modifier key to configure
+    input controllers
+  *  fb1dcd0 - app: clean up gimp_controller_keyboard,wheel_scroll()
+  *  3e85121 - Bug 774733 - segmentation fault when discarding text
+    information.
+  *  2a23239 - app: check and clean out duplicate accelerators on
+    startup.
+  *  0cccc20 - app: delete duplicate accelerators.
+  *  a0e5e9c - Update Polish translation
+  *  d22af8f - app: cleaning out some tabs.
+  *  1ce279d - app: s/"Paste Buffer as _New"/"Paste Buffer as _New
+    Image"/
+  *  45a92c1 - NEWS: clean out trailing whitespaces + s/pocker/picker/g
+  *  29ac01d - Fix a typo in NEWS, add another item to the GUI section
+  *  b492242 - Update NEWS for 2.9.6
+  *  571f5c8 - Bug 689750 - Crash on shrinking a selection by an invalid
+    value
+  *  a4ff65c - app: replace gtk_hbox_new() by gtk_box_new().
+  *  5129b85 - app: don't g_warning() on filenames that can't be turned
+    into UTF-8
+  *  82a2754 - Bug 343090 - Most brushes and all patterns appear
+    renameable but aren't
+  *  b1ca8a1 - app: allow to zoom with middle mouse button + control +
+    drag up/down
+  *  014fdb8 - app: make switching paint tools to color picker mode more
+    robust
+  *  61f91c7 - app: be more deterministic in a list view's name column
+    (name editing etc.)
+  *  5acd2ed - Update Polish translation
+  *  4d606e3 - data: new development splash image.
+  *  a694fdd - app: fix warning in xcf_save_prop(): xcf_write_int32()
+    takes guint32*
+  *  1415a78 - Bug 774383 - Text layer created by gimp-text-fontname
+    doesn't...
+  *  cc12c3a - plug-ins: lots of cleanup in file-webp-dialog.c
+  *  4c1cb9a - plug-ins: rename "Preset" to "Source type" in WebP export
+    dialog.
+  *  700da2a - plug-ins: re-apply some of Jehan's cleanups
+  *  1afa322 - Bug 773450 - Animated WEBP images should be able to set
+    frame delay...
+  *  f57a61c - Revert "Bug 773450 - Animated WEBP images should be able
+    to set frame delay.."
+  *  d9da211 - Revert "plug-ins: various fixes and nitpicking to file-
+    webp."
+  *  58e6f6c - plug-ins: various fixes and nitpicking to file-webp.
+  *  9ac455f - Bug 773450 - Animated WEBP images should be able to set
+    frame delay..
+  *  5e6a108 - Bug 773450 - Animated WEBP images should be able to set
+    frame delay...
+  *  4f90957 - Bug 769738 - Add color tags/labels for
+    layers/channels/paths
+  *  54dc424 - app: better progress indication in
+    gimp_babl_init_fishes()
+  *  702d050 - app: minor indentation fix in gimpdrawablefilter.c
+  *  8074872 - Update Polish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 26 Nov 2016 14:02:25 +0300
+
+gimp-devel (2.9.4+git37634-b27cdfa-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: b27cdfa99a5c12ce151e8c826d3648cc320f245d
+  * Date: 1479030975
+  * git changelog:
+  *  b27cdfa - Bug 644032 - Color banding in Hue-Saturation with overlap
+  *  f9cacf4 - Update German translation
+  *  60ecc6f - Update German translation
+  *  16fe4b2 - Update German translation
+  *  3bc2d25 - app: preinit more fishes commonly used for filters on u8
+    images
+  *  17ac37e - app: pass a status_callback to gimp_babl_init_fishes()
+  *  7386ed4 - Revert "app: initialize GEGL after showing the splash"
+  *  49b4767 - Revert "app: move the call to gimp_gegl_init() to
+    gimp_real_initialize()"
+  *  406fa55 - Update Catalan translation
+  *  0788db4 - app: split babl fish creating to a separate function
+    gimp_babl_init_fishes()
+  *  99b9a60 - app: pre-initialize some babl fishes
+  *  99c0400 - app: move the call to gimp_gegl_init() to
+    gimp_real_initialize()
+  *  93da8ca - app: initialize GEGL after showing the splash
+  *  7abe5dd - app: move the gamma setting to the top of the convert
+    precision dialog
+  *  ccf1514 - app: cleanup enum order and comments in the dither GUI
+    code
+  *  35d4867 - Update Swedish translation
+  *  30a8ede - app: treat half precision float the same as single and
+    double
+  *  da49a3f - app: always default to linear for float precision and
+    gamma for 8-bit
+  *  0631f1c - Bug 735895 - Precision Conversion "Dithering" dialog
+  *  e3115f1 - Bug 774155 - gimp crashes on pressing OK in grid
+    configuration
+  *  a5efd8a - Updated Italian translation
+  *  91df48e - Bug 735895 - Precision Conversion "Dithering" dialog
+  *  56ce447 - Bug 735895 - Precision Conversion "Dithering" dialog
+  *  ab5a27d - app: CLAMP(bits, 1, 16) in
+    gimp_gegl_apply_color_reduction()
+  *  4f6dd8a - app: reorganize GimpTemplateEditor's "Precision" controls
+  *  2f7009d - app: add 'component-type' and 'linear' properties to
+    GimpTemplate
+  *  c1ae086 - app: add gimp_babl_linear()
+  *  f92c2b9 - Update German translation
+  *  b58f4fe - icons: make Color theme's "broken chain" icons more
+    obvious.
+  *  d3d1ce2 - Bug 770897 - Opening and overwriting a linear gamma tiff
+    produces wrong colors
+  *  ad7259b - Bug 772317 - Change detach icon of transform tools on-
+    canvas dialog
+  *  768d066 - Bug 316479 - The Perspective Tool creates an empy
+    image...
+  *  ac2b9a5 - configure.ac: require gegl >= 0.3.10
+  *  07eb13c - Bug 769976 - JPEG export ignores quality setting and
+    subsampling fix.
+  *  7c29077 - app: allow to remove the last added IScissors segment
+    with backspace
+  *  e98f45d - Update Polish translation
+  *  a82bd87 - Update Catalan translation
+  *  294d922 - plug-ins: fixing error popup when canceling webp export.
+  *  9ab041d - plug-ins: small typo fix - s/framese/frames/
+  *  8fdee80 - plug-ins: clean and fix webp export.
+  *  d516f9b - Bug 773450 - Animated WEBP images should be able to set
+    frame delay.
+  *  87d3819 - app, pdb: use GeglDitherMethod instead of simply an
+    integer
+  *  c767179 - app, pdb: fix bug in recent gimp-drawable-threshold
+    change
+  *  5e2a618 - app: file_open_image(): fix opening of unknown remote
+    files
+  *  2a9b20d - Bug 772789 - Mac DMG 2.8.18 gets plug-ins path wrong,
+    can't open JPEG files
+  *  b249a99 - Bug 763214 - Wrong rendering of shadings in PDF
+    imports...
+  *  483c282 - Bug 766988 - Colors applied to images are not color
+    managed
+  *  be6b6c7 - Bug 642565 - Use private pointer instead GET_PRIVATE
+    macro in GimpCanvasItem
+  *  123a909 - app: fix the angular value when tilt_y == tilt_x == 0.0.
+  *  be66d1a - app: make an assertion more correct in GimpDrawableUndo
+  *  bb17853 - Bug 760737 - Brush angle jumps when tablet pen is tilted
+    horizontally.
+  *  d905f5b - Update Polish translation
+  *  c369333 - Update Polish translation
+  *  46bcd82 - Bug 773233 - CVE-2007-3126 - Gimp 2.3.14 allows context-
+    dependent attackers...
+  *  bcdd2e8 - app: cleanup in GimpOperationProfileTransform
+  *  58d84f6 - Bug 750178 - Remove "again" from "Export the image
+    again".
+  *  e2e3164 - Update Catalan translation
+  *  56808c7 - Update Polish translation
+  *  21d8c00 - plug-ins: make file_gif_spin_button_int_init() generic.
+  *  a39ee69 - Fix typo and double space between words
+  *  4a0653e - Bug 773960 - smudge tool not working in tiling symmetry.
+  *  59bbd38 - Update Hungarian translation
+  *  d3fce3c - Update Hungarian translation
+  *  7c2bfd3 - Bug 745313 - Description of Equalize wrong in PDB
+  *  3c7fbe9 - app: make gimp_item_mask_bounds() and _intersect() honor
+    a suspended selection
+  *  1bd9d3d - Update German translation
+  *  146b7bd - app: typo: make string translatable
+  *  4d1dd47 - Revert "Update German translation"
+  *  750aa5a - Update German translation
+  *  e83ed61 - plug-ins: cleaning out some indentation tabs.
+  *  1449d3c - app: remove the "Recent Filters" actions from action
+    search again
+  *  aa4f4d6 - NEWS: update 2.9.6 news.
+  *  3cef404 - app, pdb, libgimp: allow to choose the channel when
+    thresholding
+  *  3307c71 - pdb, app, libgimp: change ranges for histogram and
+    threshold to 0.0..1.0
+  *  d918a21 - Update German translation
+  *  94e28b3 - configure.ac: remove the check for a "too new" gdk-pixbuf
+    version
+  *  bd1c9dc - Fix to Catalan translation
+  *  570d89a - Update Swedish translation
+  *  162cd57 - NEWS: some fixes
+  *  0a36051 - Update NEWS for the GIMP 2.9.6 release
+  *  ccb30a6 - Bug 765850 - Deal with libpng error gracefully when
+    exporting...
+  *  a5073ad - configure.ac: require libpng 1.6.25
+  *  a13460b - configure.ac: remove remaining traces of optional librsvg
+  *  f5ecc53 - Fix a lot of warnings all over the place
+  *  44aedeb - Update Polish translation
+  *  a10758a - Update Russian translation
+  *  b4120e3 - Bug 767650 - Uncommitted scissors selection is discarded
+    on tool change
+  *  bc66799 - app: clean up template-options-dialog like other dialogs
+  *  43e2188 - Bug 773382 - --without-librsvg broken by
+    tools/Makefile.am
+  *  d551a67 - Bug 773460 - Color Picker shows wrong values
+  *  9f9307e - app: color manage the new color tag color areas
+  *  967ac88 - app: remove the "edit" button from GimpItemTreeView
+  *  039a322 - menus: add "fill" items to the path and selection menus
+  *  76f9e0c - po: add items-commands.c to POTFILES.in
+  *  bd8f15a - app: reduce code duplication in the filling/stroking code
+  *  31fcd79 - Bug 769738 - Add color tags/labels for
+    layers/channels/paths
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 13 Nov 2016 13:23:33 +0300
+
 gimp-devel (2.9.4+git37538-956d45b-1) unstable; urgency=medium
 
   * Compile

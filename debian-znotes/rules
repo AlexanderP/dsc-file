@@ -29,5 +29,5 @@ override_dh_auto_configure:
 	lrelease znotes.pro
 	dh_auto_configure -- $(Q_OPTS)
 
-override_dh_builddeb:
-	dh_builddeb $(BUILDDEBFLAGS)
+#override_dh_builddeb:
+#	dh_builddeb $(BUILDDEBFLAGS)

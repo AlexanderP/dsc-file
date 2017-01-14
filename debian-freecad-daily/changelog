@@ -1,0 +1,119 @@
+freecad-daily (0.17~git9544-95b7610-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 95b7610536b3c66db6f5b6f66a63f1c80db877d0
+  * Date: 1483724420
+  * git changelog:
+  *  95b7610 - show exceptions when activating a workbench as error
+    message, not log message
+  *  bf5dcbd - move import statement to fix error
+  *  96dc57c - replace Qt keyword slots with Q_SLOTS
+  *  524ee4a - fix Qt5 port of messageHandler
+  *  899c5c3 - Merge pull request #417 from dev-at-stellardeath-
+    org/path_helix
+  *  b334197 - Arch: decompose multifuse objects when exporting to IFC
+  *  cd3c1d5 - Path: Helix taskpanel shows interdependencies of holes
+  *  4efd3e8 - fix -Wunused-parameter
+  *  6dff7f1 - Merge pull request #413 from realthunder/sortEdges
+  *  109f869 - Extensions: Fix GeoFeatureGroup drag&drop
+  *  dd0b714 - Extensions: Fix wrong group test and prevent crash
+  *  c4ec348 - PartDesign: Show origin for primitive editing
+  *  40cc288 - PartDesign: Fix test for new group body
+  *  d2764a3 - PartDesign: Adopt python interface to body group
+  *  b4a569e - PartDesign: Change body viewprovider to group
+  *  9a3b952 - PartDesign: Port body to be a origin group
+  *  47ed29f - Extensions: GeoFeatureGroup only for GeoFeature
+  *  dfbd6aa - cleanup work: overload methods instead of using new
+    method names
+  *  43ad429 - Add Part BOA multiCut, multiCommon and multiSection
+    methods
+  *  8e1f536 - Coincident constraint making mode added
+  *  75ad582 - Lock doesn't complain "no selection"
+  *  670e59e - Lock constraint in always available when sketch is open
+  *  1230f49 - Lock constraint can be applied with better selection
+  *  ecd1f46 - Added DrawSketchHandlerLock
+  *  f6f8363 - Updated viewport dimensions to reflect users unit schema
+  *  0d4b185 - Arch: Fixed small bug in components
+  *  608f737 - use normals if available
+  *  0ad9318 - compute signed distances of points to shape, show results
+    of visual inspection for point clouds
+  *  7943ce4 - Merge pull request #412 from mlampert/HoldingTags
+  *  d585499 - Make DraftGeomUtils.findWires use Part.sortEdges
+  *  e381b23 - Added Part.sortEdges
+  *  e92f315 - Changed default values for tags and disabled old popup
+    menu.
+  *  556e25e - Fixed another initialisation issue - depending on how the
+    dressup is created.
+  *  8efbe9e - Basic UI for holding tags.
+  *  807cf80 - Hide job while editing dressup.
+  *  34f2105 - Fixed edit dialog initialisation.
+  *  9bf58b1 - Reduced logging.
+  *  cb85072 - Fixed alignment issue and unit tests. The trick is really
+    to over-extend edges before creationg shapes for the common
+    operation, and trying to avoid alignment of the edge with the cone's
+    seam.
+  *  27b71ab - Maintaining rapid commands.
+  *  f232096 - Fixed build and tests.
+  *  068dc2d - Reduced logging.
+  *  d6c588e - Added resiliancy against vertical path elements.
+  *  c1fc88c - Fixed caching issue.
+  *  6b758e2 - Added support for vertical paths along the edge of a
+    cylindrical tag.
+  *  ab382ce - Improved tag height based on obj.Base properties, if they
+    exist.
+  *  5e1efba - Fixed generation and edge case where there is no wire to
+    cut the tag.
+  *  1635d73 - Removed core which isn't used anymore; some debugging
+    info to figure out the save/restore issus.
+  *  b26a7ad - OCC based tag line generation by extruding the edges
+    cutting through a tag and retreiving the common with the tag solid.
+  *  9eca75e - Added pixellation of arbitrary path curve.
+  *  e807094 - Create cones for debugging cone shaped tags.
+  *  f294821 - Use PathGeom for holding tags dressup.
+  *  0fabe5c - Fixed helix construction.
+  *  a3ae53a - Added arcToHelix.
+  *  198ab6d - Rebase on new Line/LineSegment code.
+  *  23196b4 - Fixed most of the state machine issues, still a problem
+    with intersection of edges. Need to rebase.
+  *  4a810bc - Support for arcs and helix with tests.
+  *  6462d77 - Added support for arcs on square tags.
+  *  88e9d26 - Added HoldingTags dressup with tests, using PathGeom and
+    PathTestUtils.
+  *  6ab6603 - FEM: fix unit tests in the regard of new material module
+    name
+  *  846637e - FEM: adapt FEM examples to new material module name
+  *  739fe3a - FEM: move modules MechanicalMaterial to a more general
+    FemMaterial
+  *  1d2857e - FEM: GUI, move create node set tool to mesh tools
+  *  100e1bf - FEM: solver ccx task panel, typo
+  *  97b08f2 - FEM: netgen mesh obj, move a new obj inside an active
+    analysis if there is one
+  *  6df6bae - FEM: GMSH mesh obj, switch to FEM WB on double click on
+    obj
+  *  437ce69 - FEM: GMSH mesh task panel, add an ok and cancel button,
+    remove close button
+  *  f562b3d - FEM: code formating, flake8 and delete not used imports
+  *  a3427c7 - fix major bug in ExtensionContainer::restoreExtensions
+  *  40ad0b7 - Merge pull request #410 from mlampert/issue-2825
+  *  ab4fe61 - Merge pull request #409 from eivindkv/ObjectLabelObserver
+  *  d51188b - Setting a minimum # interpolations for displaying an arc.
+  *  ef5fb08 - Moved ObjectLabelObserver from Gui::Application to
+    App::Application.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 06 Jan 2017 21:42:56 +0300
+
+freecad-daily (0.17~git9463-164b94c-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: 164b94c8fa9bf61f7672eb5ee6b4704b2d42c965
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 01 Jan 2017 22:05:43 +0300
+
+freecad-daily (0.6.472-1) UNRELEASED; urgency=low
+
+  * Initial Release
+
+ -- Werner Mayer <wmayer@users.sourceforge.net>  Tue, 26 Sep 2006 16:55:15 +0200

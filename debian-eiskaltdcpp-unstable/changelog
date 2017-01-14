@@ -1,3 +1,33 @@
+eiskaltdcpp-unstable (2.2.9+git20161119-2) unstable; urgency=medium
+
+  * Rebuild 
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 03 Jan 2017 21:56:12 +0300
+
+eiskaltdcpp-unstable (2.2.9+git20161119-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://github.com/eiskaltdcpp/eiskaltdcpp.git
+  * Branch: master
+  * Commit: 0fa9a730eb63ba1a4f9440d5a746e8d6df094286
+  * Date: 1479504813
+  * git changelog:
+  *  0fa9a73 - Merge pull request #347 from mkhon/master
+  *  6802c19 - cmake: up required C++ standard: -std=c++0x -> -std=c++11
+  *  fb76df5 - Tests: fix prev
+  *  cb16dea - Tests: up Travis CI environment: precise -> trusty
+  *  cbf760e - Tests: update scripts (reduce number of targets)
+  *  33d1786 - Windows: up readme
+  *  8d920bf - Tests: add workaround for std::sprintf problem in build
+    for Windows see https://github.com/mxe/mxe/issues/1104
+  *  3f9d7c1 - Tests: fix prev
+  *  75487f6 - Tests: update scripts for Travis CI fix build after
+    update (20-Oct-2016) deb packages on http://pkg.mxe.cc/
+  *  acb332e - rename README -> README.md
+  *  535d1a0 - Up Readme: info for Travis CI and Coverity Scan
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 26 Nov 2016 12:46:49 +0300
+
 eiskaltdcpp-unstable (2.2.9+git20161012-1) unstable; urgency=medium
 
   * Compile

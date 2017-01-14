@@ -23,8 +23,8 @@ override_dh_auto_clean:
 	dh_testdir
 	dh_auto_clean
 
-override_dh_builddeb:
-	dh_builddeb $(BUILDDEBFLAGS)
+#override_dh_builddeb:
+#	dh_builddeb $(BUILDDEBFLAGS)
 
 override_dh_auto_test:
 	

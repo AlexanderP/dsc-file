@@ -7,10 +7,10 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),quantal))
-	BITTORRENT=yes
+ifneq (,$(filter $(DEBIAN_CODENAME),jessie, trusty,xenial))
+	BITTORRENT=ON
 else
-	BITTORRENT=no
+	BITTORRENT=OFF
 endif
 
 CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
@@ -21,7 +21,7 @@ LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
 	dh --parallel $@
 
 override_dh_auto_configure:
-	dh_auto_configure -- -DWITH_BITTORRENT=OFF \
+	dh_auto_configure -- -DWITH_BITTORRENT=$(BITTORRENT) \
 				 -DCMAKE_EXE_LINKER_FLAGS="$(LDFLAGS)" \
 				 -DCMAKE_SHARED_LINKER_FLAGS="$(LDFLAGS)" \
 				 -DCMAKE_CXX_FLAGS="$(CXXFLAGS)"\
@@ -29,6 +29,8 @@ override_dh_auto_configure:
 				 -DWITH_DOCUMENTATION=ON -DWITH_WEBINTERFACE=OFF
 	cp $(CURDIR)/obj-$(DEB_BUILD_GNU_TYPE)/config.h $(CURDIR)/config.h
 
-override_dh_builddeb:
-	dh_builddeb -- -Zxz -z9
+#override_dh_builddeb:
+#	dh_builddeb -- -Zxz -z9
+
+
 

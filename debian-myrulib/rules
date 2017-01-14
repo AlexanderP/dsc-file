@@ -43,8 +43,8 @@ override_dh_auto_configure:
 	cd wx && make -C contrib/src install 
 	dh_auto_configure -- --with-icu --with-wxsqlite --with-wxdir=$(shell pwd)/debian/wx/usr/bin --with-wxshared=no
 
-override_dh_builddeb:
-	dh_builddeb $(BUILDDEBFLAGS)
+#override_dh_builddeb:
+#	dh_builddeb $(BUILDDEBFLAGS)
 
 override_dh_auto_clean:
 	cd wx && test ! -f Makefile || $(MAKE) clean

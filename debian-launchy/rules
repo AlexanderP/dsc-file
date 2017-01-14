@@ -11,8 +11,8 @@ else
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-override_dh_builddeb:
-	dh_builddeb $(BUILDDEBFLAGS)
+#override_dh_builddeb:
+#	dh_builddeb $(BUILDDEBFLAGS)
 
 %:
 	dh $@ --buildsystem=qmake_qt4

@@ -11,6 +11,12 @@ else
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
+ifneq (,$(filter $(DEBIAN_CODENAME),sid stretch)) 
+	CONTROL = control.sid
+else
+	CONTROL = control.jessie
+endif
+
 export DH_ALWAYS_EXCLUDE := License.txt
 
 SCONSOPT = -j1 release=1 PREFIX=/usr FAKE_ROOT=debian/linuxdcpp 
@@ -25,6 +31,14 @@ export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
 %:
 	dh --parallel $@
 
+override_dh_auto_clean:
+	cp debian/$(CONTROL) debian/control
+	dh_auto_clean
+
+override_dh_auto_configure:
+	cp debian/$(CONTROL) debian/control
+	dh_auto_configure
+
 override_dh_auto_build:
 	scons $(SCONSOPT)
 
@@ -34,6 +48,6 @@ override_dh_auto_install:
 override_dh_installchangelogs:
 	dh_installchangelogs -k Changelog.txt
 
-override_dh_builddeb:
-	dh_builddeb $(BUILDDEBFLAGS)
+#override_dh_builddeb:
+#	dh_builddeb $(BUILDDEBFLAGS)
 

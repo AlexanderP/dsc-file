@@ -17,8 +17,8 @@ endif
 override_dh_auto_configure:
 	dh_auto_configure -- --ruby=/lib/rubyripper --enable-gtk2 --enable-cli --enable-lang-all
 
-override_dh_builddeb:
-	dh_builddeb $(BUILDDEBFLAGS)
+#override_dh_builddeb:
+#	dh_builddeb $(BUILDDEBFLAGS)
 
 override_dh_install:
 	dh_install

@@ -1,3 +1,113 @@
+kvirc (4:4.9.2~git-7044-ga70718f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: a70718fddd1eb74869e6589db085309a337053c0
+  * Date: 1483271438
+  * git changelog:
+  *  a70718f - libkvichan: Fix typo in documentation
+  *  907dca6 - KviIrcSocket: Use a unique pointer for the timer
+  * DCMAKE_BUILD_TYPE=Debug
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 01 Jan 2017 15:21:32 +0300
+
+kvirc (4:4.9.2~git-7042-g90a846a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 90a846ad2ef4e5b4163e81f6d507e80422f1b6de
+  * Date: 1481581818
+  * git changelog:
+  *  90a846a - Add compatibilty to fish10 and mircryption keyx cbc mode.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 24 Dec 2016 10:50:59 +0300
+
+kvirc (4:4.9.2~git-7041-gd300312-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: d30031234136d158e896b9302d4e4cd366b7a3a1
+  * Date: 1481204268
+  * git changelog:
+  *  d300312 - Travis: workaround for travis-ci/travis-ci#6307
+  *  5e49ce1 - optionctlr: Remove hardcoded fixed pixel size and
+    restrict resize
+  *  fe649bb - HelpIndex: Code cleanup
+  *  a59dbc1 - HelpIndex: Change deprecated QtAlgorithms qSort to
+    std::sort
+  *  71d2418 - amend bc81991c477ec6f8b53474bd73d5444fc2552d3c
+  *  fd20b1a - Remove usage of deprecated QStyle* typedefs
+  *  8552b2b - fix build on mingw
+  *  9a2cb9a - KvsObject_widget: Add additional size functions
+  *  d742cce - KviIrcView: Fix oversized minimum paint width when
+    boolIrcViewWrapMargin is off
+  *  2a5e49b - KviInputEditor: Auto-scroll text when characters are
+    deleted to minimize trailing whitespace
+  *  d392253 - KviOggTheoraEncoder: Fix incorrect forward declaration of
+    QRgb
+  *  bc81991 - push pots to tx, pull pos from tx
+  *  dc2d879 - fix sentence capitalization
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 09 Dec 2016 21:31:02 +0300
+
+kvirc (4:4.9.2~git-7028-g392d211-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 392d211772f210b4e691a39e4b37e237ecb13cc8
+  * Date: 1479682563
+  * git changelog:
+  *  392d211 - Fix typo in b556221 in warning messages
+  *  b556221 - Add split view commands window.splitView and
+    window.unsplitView, as well as function $window.isSplitView
+  *  c8bcb86 - normalize File: , Size:  and Mime: formatting
+  *  e1af6ee - Fix quirk in a5932bf on some compilers
+  *  a5932bf - Default DCC Send console confirmation links to use
+    stringUrlFileCommand instead of hardcoded play command
+  *  fa9a5d3 - Fix issue with parsing two strings for Poedit
+  *  3982a2e - Fix unnecessary escaping of % in strings.
+  *  17df6ef - KviIpEditor: Add IPv4 input validator and a basic IPv6
+    input validator
+  *  c8b3294 - OptionsWidget: Fix checking of IPv6 address instead of
+    IPv4 where needed
+  *  6bfafe7 - KviIpEditor: Fix issue where older Qt5 apparently doesn't
+    have QHostAddress::toIPv4Address(bool*)
+  *  6050180 - KviIpEditor: Change to a QLineEdit and update code.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 25 Nov 2016 20:29:39 +0300
+
+kvirc (4:4.9.2~git-7017-g48dacdb-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 48dacdbf2e6ccf885d1069bb4b3ef78d18d93671
+  * Date: 1478756999
+  * git changelog:
+  *  48dacdb - Input History: Added skipping of input lines if
+    consecutive lines are the same
+  *  f288f36 - KviKvsEventManager: Fix memory leak in addRawHandler
+  *  fdf491a - KvsObject_painter: Fix potential memory leak in class
+    function pen
+  *  651b298 - KvsObject_pixmap: Fix potential memory leak in class
+    function pixel
+  *  5e13532 - KviCustomToolBar: Fix memory leak in
+    KviCustomToolBar::filterChild
+  *  9c6f897 - libkviurl: Fix memory leak in void BanFrame::addBan()
+  *  1f32e67 - libkvireguser: Fix memory leak in $reguser.mask
+  *  db350d6 - FileTransferWindow: Add MIME data to right click menu for
+    non-KDE
+  *  c4b96d4 - KviTopicWidget: Move existing recent topics to the end of
+    the list
+  *  b9af7a0 - KviKvsCoreFunctions: Code cleanup
+  *  2f5e107 - KviBuildInfo: Update code
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 12 Nov 2016 19:36:26 +0300
+
 kvirc (4:4.9.2~git-7006-g96ca5fb-1) unstable; urgency=medium
 
   * Compile

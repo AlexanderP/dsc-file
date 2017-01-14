@@ -1,3 +1,327 @@
+tesseract (4.00~git1699-263a4d2-2) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 263a4d2601bad3bfac9fa12001a214c08582b81a
+  * Date: 1483807566
+  * git changelog:
+  *  263a4d2 - Update README.md
+  *  6f83ba0 - Add include dirs to cppan config.
+  *  2a5a915 - Add training tool deps.
+  *  3817aa3 - Fix windows dll build.
+  *  e6ccfb2 - Merge pull request #625 from stweil/lstm
+  *  534a237 - Move AVX / SSE messages to function PrintVersionInfo
+    (crash fix)
+  *  38033ce - Merge pull request #618 from stweil/lstm
+  *  19616b0 - lstm: Move class SIMDDetect to new source file and
+    improve code
+  *  e949812 - Merge pull request #617 from stweil/lept
+  *  680bfdd - Remove code for old versions of Leptonica
+  *  e8d477c - Merge pull request #616 from stweil/lstm
+  *  5cfe0c7 - lstm: Add AVX / SSE support for Windows
+  *  b2a0262 - lstm: Update AVX / SSE support
+  *  fc94820 - Update appveyor.yml
+  *  25fed52 - Merge pull request #614 from stweil/lept
+  *  9a4a321 - Fix build for non x86
+  *  21a5c51 - Update INSTALL.GIT.md
+  *  f4ea71e - Update CMakeLists.txt
+  *  04f4370 - Update appveyor.yml
+  *  1127d01 - Update CMakeLists.txt
+  *  3566a1d - Merge pull request #613 from stweil/lept
+  *  c160f80 - Add error message with cmake 3.6.
+  *  7a9a2f7 - Fix Leptonica version check for cmake
+  *  c124f87 - Merge pull request #608 from amitdo/cmake-leptonica-1740
+  *  4332264 - CMake - Set minimum Leptonica version to 1.74.0
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 07 Jan 2017 21:24:09 +0300
+
+tesseract (4.00~git1674-c7caaaf-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: c7caaaf8cd8841b0156d6ee6e98b81d5fcaa66f8
+  * Date: 1482605055
+  * git changelog:
+  *  c7caaaf - Update cppan.yml
+  *  cbd4f54 - Merge pull request #605 from amitdo/travis-leptonica-174
+  *  b0b4c57 - Travis CI - Update Leptonica to 1.74.0
+  *  c1f191c - Travis CI - Update Leptonica to 1.74.0
+  *  7f14e17 - Travis CI - Update Leptonica to 1.74
+  *  11f2057 - Multi-page TIFF buffering is broken - fix #233
+  *  38cb4ac - require leptonica 1.74 or higher
+  *  29ad9ac - Add tesseractmain.
+  *  e8b2e39 - Add training tools to cppan config.
+  *  1950a49 - Merge pull request #603 from stweil/opencl
+  *  b262136 - opencl: Show up to four OpenCL platforms
+  *  02a6970 - autotools: test if compiler support -mavx and -msse4.1
+  *  54611c1 - increase min autoconf version (2.59). Fixes #598.
+  *  8b3c6ac - Merge branch 'master' of github.com-egorpugin:tesseract-
+    ocr/tesseract
+  *  f0bbf1a - Update cppan config.
+  *  c1ee2fe - Merge pull request #597 from techtonik/patch-1
+  *  df8dcf1 - AppVeyor: add build version
+  *  c8fcc89 - AppVeyor: add downloadable builds
+  *  bf10925 - Merge pull request #595 from stweil/lept
+  *  c07c465 - Add missing Leptonica linker flags (needed for macOS)
+  *  5bddb99 - Update appveyor.yml
+  *  7a9f74c - Update appveyor.yml
+  *  cb91c2c - Update appveyor.yml
+  *  560978b - Update appveyor.yml
+  *  21d8686 - Update appveyor.yml
+  *  e3491de - Update appveyor.yml
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 25 Dec 2016 12:03:52 +0300
+
+tesseract (4.00~git1648-2d1decb-2) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 2d1decbdcfbcfb8e92cde429a92386b4c702c938
+  * Date: 1481988821
+  * git changelog:
+  *  2d1decb - Disable training tools on appveyor because of installed
+    cmake 3.6 bug.
+  *  2a9e162 - Update appveyor.yml
+  *  26dfac7 - Update appveyor.yml
+  *  1305002 - Temporarily unsilent appveyor build.
+  *  442b5b7 - Fix building of training tools in shared configuration.
+  *  fc13f96 - Merge pull request #587 from stweil/cube
+  *  5b23f71 - Remove support for VS2010
+  *  e2e0b90 - Merge pull request #586 from stweil/cube
+  *  de0aff1 - doc: Remove cube related documentation
+  *  e11009e - .gitignore: Remove cube code
+  *  f8dffec - fix training build addition to 7c684be7245a (Add missing
+    linker flags for Leptonica)
+  *  cb886a0 - Merge pull request #568 from stweil/opencl
+  *  87a5b9b - Merge pull request #585 from stweil/build
+  *  7c684be - Add missing linker flags for Leptonica
+  *  9d4050f - Merge pull request #583 from neoneye/master
+  *  d38cffc - Fixed typo
+  *  46da0ea - Update appveyor.yml
+  *  a3f1227 - Update appveyor.yml
+  *  6c46cd7 - Update appveyor.yml
+  *  ea37493 - Update appveyor.yml
+  *  27ecaf7 - Update appveyor.yml
+  *  c1a0d19 - Update appveyor.yml
+  *  a220204 - Update appveyor.yml
+  *  f995adf - Update appveyor.yml
+  *  2be79ac - Update appveyor.yml
+  *  8ef28f1 - Update appveyor.yml
+  *  dd91c1e - Turn on silent building for CIs with cppan.
+  *  9f763e5 - Update SourceGroups.cmake
+  *  393c725 - Merge pull request #580 from amitdo/android-remove-cube
+  *  30ad392 - Merge pull request #579 from stweil/master
+  *  06fb884 - Update Android.mk
+  *  23a7330 - Fix page range in log message
+  *  ead87a7 - Fix build.
+  *  831e161 - Merge pull request #569 from stweil/nullptr
+  *  d77a9b7 - Merge pull request #577 from stweil/config
+  *  a020183 - Merge pull request #576 from stweil/shellcheck
+  *  da4c064 - Merge pull request #531 from stweil/guards
+  *  cb6e9e0 - training: Replace NULL by nullptr
+  *  9d6e4f6 - Fixed capi to remove cube part 2
+  *  4b0dae5 - Fixed capi to remove cube
+  *  0b76f26 - More makefile changes to remove cube
+  *  81ebba0 - More makefile changes to remove cube
+  *  5c3839b - Delete cube code
+  *  432684d - Makefile changes to remove cube
+  *  9f5ba91 - Removed dependency on cube from the code
+  *  5129c43 - Stopped error messages from pixaGetCount
+  *  d70f3c3 - Simplify configuration for Leptonica
+  *  b75beda - Fix some issues reported by shellcheck (SC2004, SC2006)
+  *  13e46ae - Made LSTM the default engine, pushed cube out
+  *  dc12404 - Merge pull request #572 from stweil/mingw64
+  *  3a5446b - Use pkg-config for Leptonica compiler flags
+  *  9ec0c4f - api: Add missing dependency on libtiff
+  *  a9b300d - Use pkg-config for icu compiler and linker flags
+  *  aa964b5 - opencl: Fix runtime crash when no device was found
+  *  9234b4c - Merge pull request #565 from stweil/openmp
+  *  224eb8a - openmp: Fix OpenMP support
+  *  faeb0d6 - Merge pull request #563 from stweil/java
+  *  92f2eda - java: Improve build rules
+  *  49401e6 - Merge pull request #558 from stweil/typo
+  *  a87d073 - Fix two typos in comments
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 18 Dec 2016 11:26:12 +0300
+
+tesseract (4.00~git1585-0c7ada4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 0c7ada4e1181a3633b82cf27d4c9de293cee17e2
+  * Date: 1481308896
+  * git changelog:
+  *  0c7ada4 - Merge pull request #551 from amitdo/del-unused-listio
+  *  1901aae - Remove 'listio.cpp' and 'listio.h' from vs2010 vcxproj
+  *  d2d708c - Remove unused code.
+  *  3a47adc - Merge pull request #544 from jbarlow83/master
+  *  56b6f06 - Revise after code review
+  *  3c0c54f - Merge pull request #353 from
+    pnordhus/remove_dawgpositionvector_dtor
+  *  fb7298e - Remove unsafe API TessBaseAPIDetectOS entirely
+  *  bc95798 - Implement a new orientation and script detection API for
+    C and C++
+  *  ed4c4c6 - Produce warning for invalid resolution. Fix #453
+  *  94aebb1 - Merge pull request #543 from stweil/leptonica
+  *  217a4dd - tesseract: Disable Leptonica messages
+  *  929d25c - Merge pull request #533 from stweil/crlf
+  *  7f7cea1 - Merge pull request #532 from stweil/openmp
+  *  8cf7539 - Merge pull request #539 from stweil/mingw-w64
+  *  7755e05 - training: Update Makefile for current Mingw-w64
+  *  d55f462 - More clang-tidy from previous commits
+  *  025689f - Fixed damage to binary images when processing PDFs, issue
+    #535
+  *  7744da9 - Fixed Android build breakage
+  *  6551779 - Added missing lstm.train
+  *  5deebe6 - Fixed multilang for LSTM, pushed cube to one side without
+    actually deleting it
+  *  61d0e8f - doc: Fix line endings
+  *  6140be6 - openmp: Fix build with clang++ and compilers without
+    OpenMP support
+  *  798d79a - Update cppan.yml
+  *  c1ec06c - Merge pull request #530 from stweil/clang
+  *  9ec5cd3 - Merge pull request #528 from stweil/opencl
+  *  cefc420 - Remove extra semicolons after member function definitions
+  *  2bb0d9a - opencl: Add missing checks for OpenCL failures
+  *  3e11fc1 - Merge pull request #524 from stweil/coverity
+  *  7e3ff36 - cube: Fix coverity warning caused by unneeded null
+    pointer check
+  *  4704fca - cube: Fix use after free regression
+  *  4ac54a2 - Merge pull request #523 from stweil/casts
+  *  a389b7c - opencl: Remove unneeded and potentially bad type casts
+  *  e4faf95 - Merge pull request #515 from stweil/parameters
+  *  6906162 - Merge pull request #514 from stweil/free
+  *  875db24 - Merge pull request #503 from stweil/modernize
+  *  906438f - Merge pull request #506 from stweil/lstm
+  *  dc06621 - opencl: Replace NULL by nullptr
+  *  397bcc6 - opencl: Replace Tesseract data types by POSIX data types
+  *  9e0da72 - lstm: Fix possible float division by zero
+  *  dfd7082 - lstm: Fix explicit null dereferenced
+  *  f3e8895 - lstm: Pass big parameter by reference (performance)
+  *  bb6cfc1 - lstm: Initialize member variable beam_size_
+  *  06b28a1 - lstm: Initialize member variable input_width_
+  *  afd069c - Fix build.
+  *  68aa285 - Update CMakeLists.txt
+  *  ce76d1c - Fixes to training process to allow incremental training
+    from a recognition model
+  *  9d90567 - Added std:: to vector
+  *  53003f9 - Formatting changes from clang_tidy on latest pull
+  *  92d981b - Change tesseract parameter -psm to --psm
+  *  d2f9264 - Change tesseract parameter -oem to --oem
+  *  78d9170 - Simplify new operations
+  *  03eec61 - cube: Simplify new operations
+  *  23e420a - Merge pull request #512 from NinnOgTonic/master
+  *  392e32d - Correcting link for 3rd party wiki pages
+  *  0d4d36f - Merge pull request #508 from stweil/cube
+  *  5d3926e - Merge pull request #507 from stweil/free
+  *  dd9452c - Merge pull request #511 from stweil/mingw
+  *  faea44c - mingw-w64: Fix compiler warnings caused by macro
+    redefinition
+  *  120a5db - Fix build for Mingw-w64
+  *  185a264 - Fixed the memory leak/double free cleanly
+  *  3d00d3b - Missing pdf font file from previous sync
+  *  f60ff4d - cube/char_samp: Fix some memory leaks
+  *  614f44a - cube/char_bigrams: Fix some memory leaks
+  *  c46e773 - cube: Simplify delete operations
+  *  d2389a8 - Merge pull request #505 from amitdo/contributors-2
+  *  ec99d9f - AUTHORS: Add more contributors
+  *  7b5b167 - Merge pull request #494 from stweil/free
+  *  0df77e3 - Merge pull request #501 from stweil/warn
+  *  d0213fa - Switch leptonica back to master.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 09 Dec 2016 23:05:45 +0300
+
+tesseract (3.05.00~git20161125-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: cf90e8569719a18aeed4d503fefa7688255430d7
+  * Date: 1480092343
+  * git changelog:
+  *  cf90e85 - Merge pull request #502 from stweil/ocl
+  *  ba6961e - opencl: Fix OpenCL kernel code assertion for newer
+    versions
+  *  786b482 - opencl: Format OpenCL kernel code
+  *  0020fbc - opencl: Clean whitespace issues in OpenCL kernel code
+  *  a8f4441 - Fix build with leptonica 1.73.
+  *  b4fcd0d - Set leptonica-1.73 as a dependency instead of master.
+  *  67deea5 - Fix unix build.
+  *  6444695 - Fix windows build.
+  *  64159c7 - Merge pull request #177 from stweil/posix
+  *  ed81de9 - Merge branch 'master' of https://github.com/tesseract-
+    ocr/tesseract
+  *  3dddf37 - Increase version number in VS2010
+  *  60f6d6e - Update cppan.yml
+  *  d869cd1 - Merge pull request #499 from amitdo/contributors
+  *  5b64942 - AUTHORS - Add community contributors
+  *  19978a2 - Merge pull request #498 from stweil/lstm
+  *  b54894a - Fix 32 bit builds (missing _mm256_extract_epi64)
+  *  addb67c - Merge pull request #496 from stweil/lstm
+  *  95df572 - Fix broken cmake builds
+  *  5bb97f9 - Merge pull request #495 from stweil/warn
+  *  c882373 - Fix compiler warning (-Wmaybe-uninitialized)
+  *  51368c8 - Fixed failed merge of memory leak
+  *  14bd70d - Merge branch 'stweil-opt' Testing before pull.
+  *  0169969 - Merge branch 'opt' of https://github.com/stweil/tesseract
+    into stweil-opt Testing before pulling.
+  *  a8cfc7e - Merge pull request #491 from stweil/lstm
+  *  beb564d - lstm: Fix compilation (undeclared 'isnan')
+  *  cdc2863 - Merge pull request #466 from stweil/opencl
+  *  871e500 - Merge pull request #471 from ciupicri/patch-1
+  *  6f302a9 - Merge pull request #489 from stweil/merge
+  *  b0abed7 - add option "make training-uninstall"
+  *  ac3b40d - Merge pull request #478 from stweil/w
+  *  4780110 - Merge pull request #488 from stweil/conflict
+  *  0c9235e - Fix typos in new LSTM code
+  *  a7d2758 - opencl: Fix typo in name of local variable
+  *  2fbc8cf - Fix typo in documentation
+  *  a0fc432 - Fix an unfixed merge conflict
+  *  9c7e99b - Merged with commit
+    4ca6ba985b54065146321fa7a540d056b3ff54ca
+  *  dd216f6 - Added more missing license headers
+  *  5913d73 - Added missing license headers
+  *  4f45940 - training: Fix compiler warnings (deprecated register
+    keyword)
+  *  7e90200 - Fix some compiler warnings (unused function parameters)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 25 Nov 2016 22:17:16 +0300
+
+tesseract (3.05.00~git20161113-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 8bff1e618ff4f14dfacd523ff0b57b944999f24f
+  * Date: 1479053869
+  * git changelog:
+  *  8bff1e6 - Merge pull request #475 from stweil/fix
+  *  4ca6ba9 - opencl: Fix type of parameter for clGetProgramInfo
+  *  ec5b1bd - opencl: Fix type of parameter for clGetContextInfo
+  *  a461592 - allow combination of enable/disable
+  *  182ca5b - Merge pull request #470 from stweil/fix
+  *  22d53e6 - Merge pull request #469 from stweil/opencl2
+  *  1e60a8d - Fix crash caused by undefined value of local variable
+  *  a1b9e98 - opencl: Remove unused function getNumDeviceWithEmptyScore
+  *  f8bc09a - Merge pull request #467 from stweil/opencl2
+  *  10886d3 - opencl: Add missing argument for L_WARNING
+  *  90dad1f - opencl: Fix wrong implementation of function
+    getNumDeviceWithEmptyScore
+  *  8972c0e - Merge pull request #463 from stweil/opencl
+  *  1a0aada - opencl: Move declaration of MORPH_BC from .h to .cpp file
+  *  1dbc8c1 - Merge pull request #461 from stweil/opencl
+  *  aea2022 - opencl: Clean handling of lmask32, rmask32
+  *  610b2d2 - Merge pull request #459 from stweil/opencl
+  *  3f959e3 - opencl: Add tiff library needed by openclwrapper
+  *  44e6e87 - Merge pull request #457 from stweil/opencl
+  *  ab8209c - opencl: Fix mismatched new[] / free
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 14 Nov 2016 20:58:35 +0300
+
 tesseract (3.05.00~git20161028-1) unstable; urgency=medium
 
   * Compile

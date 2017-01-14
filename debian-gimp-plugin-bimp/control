@@ -1,0 +1,19 @@
+Source: gimp-plugin-bimp
+Priority: optional
+Section: graphics
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 9), libgimp2.0-dev
+Standards-Version: 3.9.8
+Homepage: http://www.alessandrofrancesconi.it/projects/bimp/
+
+Package: gimp-plugin-bimp
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: plugin for The GIMP to manipulations on groups of images
+ BIMP is a graphical batch plugin to apply a set of GIMP manipulations 
+ on groups of images.
+ .
+ You can use predefined manipulations like resize, crop, flip, rotate, 
+ color correction, sharpen, watermark, format conversion, rename, but 
+ you can also select other installed plugins or script-fu and apply them 
+ to each image.

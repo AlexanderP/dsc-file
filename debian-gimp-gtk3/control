@@ -1,0 +1,127 @@
+Source: gimp-gtk3
+Priority: optional
+Section: graphics
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9),
+               autotools-dev,
+               dh-autoreconf,
+               gettext,
+               gnome-pkg-tools,
+               gtk-doc-tools (>= 1.0),
+               intltool (>= 0.40.1),
+               iso-codes,
+               libaa1-dev,
+               libart-2.0-dev,
+               libasound2-dev (>= 1.0.0) [linux-any],
+               libatk1.0-dev (>= 2.2.0),
+               libbz2-dev,
+               libcairo2-dev (>= 1.10.2),
+               libcurl4-gnutls-dev (>= 7.15.1),
+               libdbus-glib-1-dev (>= 0.70),
+               libexif-dev (>= 0.6.15),
+               libfreetype6-dev (>= 2.2),
+               libfontconfig1-dev (>= 2.2.0),
+               libglib2.0-dev (>= 2.30.2),
+               libglib2.0-doc,
+               libgtk-3-dev,
+               libgtk-3-doc,
+               libgdk-pixbuf2.0-dev (>= 2.24.1),
+               libgdk-pixbuf2.0-doc,
+               libgs-dev,
+               libgudev-1.0-dev (>= 167) [linux-any],
+               libice-dev,
+               libjpeg-dev,
+               libmng-dev,
+               libpango1.0-dev (>= 1.29.4),
+               libpoppler-glib-dev (>= 0.12.4),
+               librsvg2-dev (>= 2.14.0),
+               libsm-dev,
+               libtiff-dev,
+               libwebkitgtk-3.0-dev,
+               libwmf-dev (>= 0.2.8),
+               libx11-dev,
+               libxcursor-dev,
+               libxmu-dev,
+               libxpm-dev,
+               libxt-dev,
+               zlib1g-dev,
+               patchutils,
+               python-dev (>= 2.6.6-3),
+               python-gtk2-dev (>= 2.10.4),
+               xsltproc,
+               python2.6 | python2.7,
+               libjson-glib-dev,
+               libjson-c-dev,
+               libgexiv2-dev,
+               python-cairo-dev,
+               libopenexr-dev,
+               git,
+               libsdl1.2-dev,
+               libavcodec-dev,
+               libavformat-dev,
+               libsuitesparse-dev,
+               libexiv2-dev,
+               ccache,
+               libspiro-dev,
+               liblua5.1-dev,
+               libv4l-dev,
+               libswscale-dev,
+               libopenraw-dev,
+               libpango1.0-dev,
+               libwebp-dev,
+               libgraphviz-dev,
+               libgirepository1.0-dev,
+               libraw-dev,
+               valac,
+               graphviz, gtk-update-icon-cache
+Homepage: http://www.gimp.org/
+
+Package: gimp-gtk3
+Architecture: any
+Depends: gimp-gtk3-data (>= ${source:Upstream-Version}),
+         gimp-gtk3-data (<= ${source:Upstream-Version}-z),
+         libgdk-pixbuf2.0-0 (>= 2.24.1),
+         ${shlibs:Depends},
+         ${misc:Depends}
+Recommends: ghostscript
+Description: advanced picture editor
+ GIMP is an advanced picture editor. You can use it to edit, enhance, and
+ retouch photos and scans, create drawings, and make your own images.
+ It has a large collection of professional-level editing tools and
+ filters, similar to the ones you might find in Photoshop. Numerous
+ fine-control settings and features like layers, paths, masks, and
+ scripting give you total control over your images.
+ .
+ Many image file formats are supported, including JPEG, Photoshop (.psd),
+ and Paint Shop Pro (.psp) files. It can also be used to scan and print
+ photos.
+ .
+ To open files remotely (like over HTTP), install the gvfs-backends
+ package.
+ .
+ To use a MIDI device (like a musical keyboard) as an input controller in GIMP,
+ install libasound2 and read the how-to at /usr/share/doc/gimp/README.MIDI
+
+Package: gimp-gtk3-data
+Architecture: all
+Recommends: gimp-devel
+Depends: ${misc:Depends}
+Description: Data files for GIMP
+ This package contains architecture-independent supporting data files
+ for use with GIMP.
+
+Package: gimp-gtk3-dev
+Architecture: any
+Section: libdevel
+Depends: gimp-gtk3 (= ${binary:Version}),
+         pkg-config,
+         ${shlibs:Depends},
+         ${misc:Depends}
+Description: Headers and other files for compiling plugins for GIMP
+ This package contains the header files for the GNU Image Manipulation
+ Program, along with the static versions of libgimp.
+ It also includes the gimptool-2.0 utility.
+ .
+ Install this package if you wish to compile your own plugins,
+ or if you wish to develop packages that use gimp-devel. 

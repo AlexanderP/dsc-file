@@ -5,10 +5,11 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
-	BUILDDEBFLAGS= -- -Zlzma -z9
+ifneq (,$(filter $(DEBIAN_CODENAME),trusty wily jessie wheezy)) 
+	CONTROL = control.qt4
 else
-	BUILDDEBFLAGS= -- -Zxz -z9
+	CONTROL = control.qt5
+	export QT_SELECT=5
 endif
 
 Q_CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
@@ -22,12 +23,11 @@ Q_OPTS = "QMAKE_CXXFLAGS += $(Q_CXXFLAGS)" \
          "QMAKE_CFLAGS_RELEASE += $(Q_CFLAGS)" \
          "QMAKE_LFLAGS += $(Q_LDFLAGS)"
 
-
-
 %:
-	dh $@ 
+	dh $@ --parallel
 
 override_dh_auto_configure:
+	cp debian/$(CONTROL) debian/control
 	dh_auto_configure -- $(Q_OPTS)
 
 override_dh_install:
@@ -35,5 +35,9 @@ override_dh_install:
 	dh_install
 	rm qt-box-editor
 
-override_dh_builddeb:
-	dh_builddeb $(BUILDDEBFLAGS)
+override_dh_auto_clean:
+	cp debian/$(CONTROL) debian/control
+	dh_auto_clean
+
+#override_dh_builddeb:
+#	dh_builddeb $(BUILDDEBFLAGS)

@@ -3,7 +3,7 @@
 
 CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
 LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
-CFLAGS += -Wall -g -fPIC -DTESSDATA_PREFIX=/usr/share/tesseract-ocr/
+CFLAGS += -Wall -g -fPIC -DTESSDATA_PREFIX=/usr/share/tesseract-ocr/4.00/
 
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
@@ -42,8 +42,8 @@ override_dh_auto_clean:
 
 override_dh_auto_configure:
 	./autogen.sh
-	./configure --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info CFLAGS="$(CFLAGS)" CXXFLAGS="$(CFLAGS)" LDFLAGS="-Wl,-z,defs $(LDFLAGS)"
+	./configure --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info CFLAGS="$(CFLAGS)" CXXFLAGS="$(CFLAGS)" LDFLAGS="-llept -Wl,-z,defs $(LDFLAGS)"
 
 
-override_dh_builddeb:
-	dh_builddeb $(BUILDDEBFLAGS)
+#override_dh_builddeb:
+#	dh_builddeb $(BUILDDEBFLAGS)
