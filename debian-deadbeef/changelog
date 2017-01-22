@@ -1,3 +1,39 @@
+deadbeef (0.7.2+git6967-4c5af84-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 4c5af84fc446965952fc33200001444c26fd9d92
+  * Date: 1485013850
+  * git changelog:
+  *  4c5af84 - artwork: load any first available cover from id3v2, if
+    front (type 3) is not found
+  *  c141ad4 - localize: split string extraction into a module, for
+    reusing in another script
+  *  1dc1e4d - aac: set stream info on init
+  *  30415b1 - tf: fix %codec% to use overriden filetype
+  *  512ab9e - aac: fix rdb count calculation
+  *  aeea14b - vfs_curl: use new logger
+  *  fbea273 - mp3: cleanup and improve stream parser
+  *  a5465cf - mp3: changed number of validation frames to 20
+  *  da9f4bc - mp3/vfs_curl: a set of mem corruption / stream parsing
+    fixes
+  *  1de50fd - mp3: cleanup
+  *  0350c0b - mp3: refactor mpeg parser
+  *  c72b218 - localize.pl: tabs -> spaces
+  *  512ba7b - localize: better string id generation
+  *  9b2298b - localize: remove unused function
+  *  9422d3b - localize: renamed action2pot to localize
+  *  cd1fc09 - action2pot: data extraction fixes; more cmdline options;
+    better android xml support; string id generation
+  *  34dc4c5 - artwork: fix cache path buffer size
+  *  3208fd9 - action2pot: tabs->spaces
+  *  360c083 - a tool for extracting text data from plugin actions and
+    config dialog scripts, and producing strings.pot, strings.c or
+    strings.xml from them
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 22 Jan 2017 11:46:55 +0300
+
 deadbeef (0.7.2+git6948-d6699ef-1) unstable; urgency=medium
 
   * Compile

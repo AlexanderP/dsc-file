@@ -1,3 +1,64 @@
+solvespace (2.2.0+git1137-bb2cc4a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: bb2cc4aa568e7206bdc2d02cb3e0eb8b8d3364c5
+  * Date: 1484980484
+  * git changelog:
+  *  bb2cc4a - GTK: do not compose rendered geometry with an alpha
+    buffer.
+  *  669e6f0 - Select the appropriate entity when dragging a circle or a
+    normal.
+  *  119b17a - Fix an occasional crash when starting to drag an entity.
+  *  86f229c - Render points corresponding to a DOF in the front layer.
+  *  db75e06 - Add a command to show center of mass, assuming uniform
+    density.
+  *  068191b - GTK: unbreak the color chooser.
+  *  8749a17 - Draw constraints/entities when hovered or selected even
+    if invisible.
+  *  e388d9f - List applied constraints when selecting an entity.
+  *  5d9356a - List constrained requests when selecting a constraint.
+  *  4aae229 - Add *.slvs to gitignore.
+  *  3e66807 - Fix a crash after creating a constraint.
+  *  8d0e226 - CMake: do not depend on testsuite in the default target.
+  *  572fbc7 - Reapply "Simplify Group::IsVisible(), GroupsInOrder()."
+  *  04e86d9 - Travis: revert the hack for transient build failures.
+  *  67146f6 - Revert "Simplify Group::IsVisible(), GroupsInOrder()."
+  *  8370382 - Fix reference to a shader that no longer exists.
+  *  5b2ad9b - Fix 2d stippling of hovered and selected faces.
+  *  6931979 - Fix an OpenGL initialization glitch.
+  *  5c34b3f - Allow copying and pasting of datum points.
+  *  12a1a35 - Reserve space upfront when possible, to avoid re-
+    allocations.
+  *  fba8885 - Normalize CRLF newlines to LF when loading string
+    resources.
+  *  ec07516 - GTK: work around a gtkmm<3.22 bug.
+  *  29e43e6 - Fall back to en_US if the system locale is not available.
+  *  cde86a0 - Fix an uninitialized variable.
+  *  6b67cfe - Except when using OpenGL ES 2, use OpenGL 3.2+ Core
+    profile.
+  *  6de5133 - GTK: default to the en_US locale if LANGUAGE is set and
+    empty.
+  *  022d012 - Simplify Group::IsVisible(), GroupsInOrder().
+  *  43db220 - Turn newly created redundant constraints with a label
+    into references.
+  *  c00ab25 - Don't move points when automatically constraining
+    coincident.
+  *  855de07 - Automatically constrain arc or rectangle points.
+  *  55ae10b - Do not hover or select entities from any pending request.
+  *  96476ca - GTK: respect the scale factor when computing coordinates.
+  *  fb667fb - Use a dedicated BitmapFont instance per Canvas.
+  *  33c9ffb - Gettext: automatically update all translations.
+  *  c12672b - Internationalize platform-specific code.
+  *  aeebc3c - Gettext: fill in empty msgstrs from msgid.
+  *  0eb33de - Fix typo: ua-UA → uk-UA.
+  *  984f74d - Internationalize all messages without substitutions.
+  *  4fda1e4 - Add ua-UA translation.
+  *  da7c74a - GTK: only attempt to use libspnav on X11.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 22 Jan 2017 13:43:30 +0300
+
 solvespace (2.2.0+git1097-00dda08-1) unstable; urgency=medium
 
   * Compile

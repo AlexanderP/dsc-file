@@ -1,3 +1,200 @@
+gimp-devel (2.9.4+git37919-7079d5f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 7079d5f73056274fc7b99b965240eb37c433191d
+  * Date: 1485034269
+  * git changelog:
+  *  7079d5f - app: add a huge switch() to
+    gimp_layer_mode_get_composite_mode()
+  *  da10525 - app: change default composite mode for new modes to src-
+    atop
+  *  c152fa8 - app: fix the blend space of the legacy modes to be
+    perceptual
+  *  05f3d38 - app: rename GimpOperationPointLayerMode to
+    GimpOperationLayerMode
+  *  0c35bae - app: in gimp_composite_blend(), more alloca avoiding
+  *  c993adf - app: remove a trampoline in layer/paint mode dispatch
+  *  fb3b995 - app: in gimp_composite_blend(), avoid another alloca when
+    doing in-place output
+  *  4d985d1 - app: in gimp_composite_blend(), avoid an alloca when
+    doing in-place output
+  *  a1b8448 - app: make GimpPaintOptions' "use-applicator" default to
+    FALSE again
+  *  485094b - app: fix painting with the new layer mode code
+  *  2acd2fe - app: do_layer_blend(): pass the right blend/composite
+    parameters
+  *  1835b2a - app: improve precision of paint tools' straight line
+    distance...
+  *  d1c3c3d - app: improve Measure Tool digit precision.
+  *  7a330dc - libgimpbase: update gimp_unit_get_digits() description.
+  *  3ab25af - libgimpbase: fix a few typos.
+  *  f836892 - Bug 763734 - better decimal places for physical units.
+  *  5da89f0 - app: in gimp_composite_blend(), avoid overwriting input
+    in some cases (again)
+  *  894d4c0 - app: finish GimpLayerColorSpace rename
+  *  e9d72ef - app: finish GimpLayerColorSpace rename
+  *  386e18e - app: rename GimpLayerBlendTRC to GimpLayerColorSpace
+  *  f6436ee - app: in gimp_composite_blend(), avoid overwriting input
+    in some cases
+  *  a5ee5f2 - app: cast ops using (gpointer) everywhere instead of 3
+    different ways
+  *  268e35a - app: remove prepare() impls from erase and anti-erase
+  *  349cff8 - app: remove "gboolean linear" from
+    gimp_get_layer_mode_function()
+  *  417d955 - app: in gimpblendcomposite.h, small fix in
+    compfun_dst_atop()
+  *  7df1bb4 - app: in gimp_blend_composite(), fix dst_atop and avoid
+    some conversions
+  *  d656fba - app: coding style cleanup in all layer modes, fiddle with
+    includes a bit
+  *  80c947f - app: add missing breaks in switches of gimpblendcomposite
+  *  4e9ce95 - app: indentation in operations-types.h
+  *  4683b98 - app: use the GimpBlendFunc typedef in
+    gimpblendcomposite.h
+  *  f645665 - app: unconditionally set alpha in
+    hardlight/softlight/overlay
+  *  bfdea93 - app: indentation and formatting cleanup in
+    gimpblendcomposite.h
+  *  72cbda1 - app: composite_blend, fix src_over
+  *  41fff69 - app: make layer modes more configurable
+  *  d1fea4d - png: add a combo-box for specifying png bitdepth/variant
+  *  7236ca5 - NEWS: minor fixes.
+  *  1262370 - app: remove "gboolean linear" parameters
+  *  b809613 - app: implement gimp_layer_mode_get_blend_trc()
+  *  0bcb306 - app: fix typo
+    s/GIMP_LAYER_COMPOSITE_OVER/GIMP_LAYER_COMPOSITE_SRC_OVER/
+  *  6e72d3e - app: add blend-trc and composite-mode properties to
+    GimpOperationPointLayerMode
+  *  dd3eec6 - app: change linking order of the sub-libs of
+    app/operations
+  *  5c4eb75 - app: register the enums in operations-enums.h as GTypes
+  *  e267d87 - app: add operations-enums.h with two soon-needed enums
+  *  69c4644 - app: rename GimpLayerModeFunction to GimpLayerModeFunc
+  *  b2e1237 - Update Portuguese translation
+  *  31aae07 - Update Portuguese translation
+  *  03e102c - Update NEWS for 2.9.6, this will come in handy eventually
+  *  97efe76 - Update Polish translation
+  *  e1b7eb7 - app: divide blend mode, limit high values to 5.0
+  *  8928bcd - Bug 777017 - creating an empty layer group inside an
+    existing...
+  *  87e5d10 - app: make tests build again
+  *  80003df - Bug 777233 - Printing an SVG file results in a black
+    sheet of paper
+  *  d68a62d - Update Polish translation
+  *  5eb0fa8 - app, libgimp: add LINEAR variants of more layer modes
+  *  a24e232 - app: move functions on enum GimpLayerMode to new files
+    gimp-layer-modes.[ch]
+  *  d4edf0e - Update Polish translation
+  *  3158aa7 - Update Slovak translation
+  *  60847cc - app: remove odd ratio scaling, replace with range check
+    for nan
+  *  315ccc7 - app: remove clamping in multiply mode
+  *  50669fe - app, libgimp: rename BEHIND enum values to be consistent
+    with others
+  *  6bf9e47 - app, libgimp: add linear variants of most layer modes
+  *  5951d39 - app, libgimp: reorder enum GimpLayerMode
+  *  f013747 - app: remove clamps from addition, subtract and grain
+    blend modes
+  *  39adf36 - app: use hypotf in lhc chroma blend mode
+  *  bd66794 - app: avoid the second gegl_node_set() in
+    gimp_gegl_mode_node_set_mode()
+  *  52e3398 - Update Greek translation
+  *  819b749 - plug-ins: twain: fix layer mode name
+  *  f8c6536 - app: cache fishes in lch blend modes
+  *  975a0a6 - app: reuse more code
+  *  be8c201 - app: move factored out compositing to common header
+  *  acd20fb - app: use cached fishes in lch chroma mode
+  *  de7ceeb - Updated Danish translation by scootergrisen
+  *  75cb904 - Updated Danish translation by scootergrisen
+  *  7959141 - app: make compositing of hsv value blend mode consistent
+  *  75173b9 - app: make compositing of grain extract blend mode
+    consistent
+  *  954030f - app: make compositing of dodge blend mode consistent with
+    rest
+  *  13eab78 - app: improve and simplify alpha handling of LCH blending
+    modes
+  *  feb2bb4 - app: lch color modes remove unneeded includes
+  *  0b1f684 - app: remove unneded variable named tmp
+  *  24b04c0 - app: use single precision hypotf and constants for
+    performance
+  *  ee05717 - Update Spanish translation
+  *  68cc8bb - app: make using gimp_drawable_update() less verbose
+  *  0bc45c8 - app: default to use gegl applicator in paint tools
+  *  dc5b86f - app: add TRC variants to get_layer_mode_function()
+  *  4df1af2 - app: add linear variant of behind mode
+  *  377f468 - app: add gimp_gegl_mode_is_linear
+  *  5271027 - app: explictly code linear vs gamma for hardlight and
+    softlight
+  *  36ebe03 - app: remove lingering old files of dead code
+  *  f9aeff5 - app: fix a lingering old gimp:softlight-mode
+  *  a187329 - app: sort includes in gimp-operations.c
+  *  77f9659 - app: move gimplayermodefunctions.[ch] to layer-modes/
+  *  b959e0b - app: move GimpOperationPointLayerMode to layer-modes/
+  *  e17f640 - app: eliminate unnecessary condition in
+    GimpOperationReplaceMode
+  *  ad13426 - app: clean up Makefile.am in layer-modes/ and layer-modes-
+    legacy/
+  *  8b5553c - app: move the remaining 3 layer modes to layer-modes/
+  *  b90fa4f - app: clean up spaces in GimpOperationColorEraseMode
+  *  01b25ba - app: change mask handling in GimpOperationReplaceMode
+  *  7ed2857 - app: fix type s/legacyy/legacy/
+  *  f45fc97 - app: add missing op .h files
+  *  ec1f7a9 - app: split legacy out of grain extract and merge
+  *  8f38424 - app: split legacy out of soft and hard light
+  *  784a8ee - app: split legacy out of burn and divide
+  *  0891028 - app: forgot to s/gimp:normal-mode/gimp:normal/g
+  *  9142bb1 - app: move erase and anti-erase to layer-modes/
+  *  0fcc2cd - app: also fix multiply enum/name mapping
+  *  2ce2504 - app: fix fix
+  *  33f6398 - app: fix enum to name mapping for hsv legacy modes
+  *  56ba42a - app: correct names of screen and difference layer ops
+  *  71030f4 - app: duplicate hsv layer modes, and fix alpha handling
+  *  40ec407 - Update Polish translation
+  *  c3e5e30 - app: split legacy lighten only and darken only ops
+  *  2ed8bd1 - app: use relative paths in tests/Makefile.am
+  *  99189d7 - app: move dissolve to layer-modes/
+  *  153796d - app: fix names of addition and subtract ops
+  *  dfcb5c1 - app: add new files for subtract/addition ops
+  *  5a7fd54 - app: split addition and subract in legacy and new
+  *  60e1d8e - app: move the LCH layer modes to layer-modes/
+  *  92047ea - app: layer op fission cleanup
+  *  b001626 - app: move overlay to operations/layer-modes/ and call it
+    GimpOperationOverlay
+  *  b6be1b7 - app: duplicate difference mode, new and legacy
+  *  9d5893f - app: add the ops for screen blend ops
+  *  3a50cdc - app: split screen op in legacy and new
+  *  60dcb17 - app: fix layer mode in test-xcf.c
+  *  fd070ee - app: start moving layer modes into their own build
+    directories
+  *  67275dd - script-fu: replace deprecated constants by their new
+    names
+  *  076621d - app: split dodge op in legacy and new
+  *  c2583fa - app: add new multiply op
+  *  7358872 - app: do not let pixel encoding determine layer modes
+  *  e5ac288 - libgimpbase: add compat enum get_type() functions to
+    gimpbase.def
+  *  07600c6 - libgimpbase: proper names for the GimpChannelType enum
+  *  0a0acc9 - plug-ins: remove the hardcoded compat enums from script-
+    fu and pygimp
+  *  178794f - libgimpbase: rename enum GimpHueRange's values
+  *  a200611 - libgimpbase: fix typo on Makefile.am
+  *  152adbb - Rename GIMP_LAYER_MODE_FOO_BROKEN to
+    GIMP_LAYER_MODE_FOO_LEGACY
+  *  e53b269 - libgimpbase: add new files gimpcompatenums.[ch]
+  *  66060e3 - app, libgimp*, plug-ins: replace enum
+    GimpLayerModeEffects by GimpLayerMode
+  *  4fb6242 - libgimpconfig: better compat enum handling in
+    gimp_config_deserialize_enum()
+  *  4aa7a24 - Update Polish translation
+  *  38c7960 - metadata: fix a few memory leaks
+  *  fc293f0 - configure.ac: require gexiv2 >= 0.10.3
+  *  7ab80ea - libgimpconfig: support "compat enums" in
+    gimp_config_deserialize_enum()
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 22 Jan 2017 13:54:22 +0300
+
 gimp-devel (2.9.4+git37778-03185f8-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,267 @@
+freecad-daily (0.17~git9758-f3f7b01-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: f3f7b01202646d7103961ba24063658a9f72e650
+  * Date: 1485022536
+  * git changelog:
+  *  f3f7b01 - improve whitespaces
+  *  69857f3 - DAG: remove early return to avoid update chain changes
+  *  b427409 - DAG: remove defined but unused function
+  *  4f8e046 - DAG: Fix preprocessor definition inconsistencies
+  *  d9adc9c - DAG: Add document graph recompute test
+  *  665eb63 - DAG: Change object graph handling to be bidirectional
+  *  93262e9 - Draft: more coherent rectangle creation
+  *  700ed33 - Merge pull request #461 from f3nix/layout-fix
+  *  92c3165 - fix possible crash in destructor of FeaturePythonPyT
+    template
+  *  37b7513 - Fix layout issue in DraftGui's _inputfield.
+  *  ad57478 - fix a couple of compiler warnings
+  *  f5c0f57 - write consistently 'B-spline' in menus and tooltips
+  *  62b4782 - Several fixes: + use different iterator variable for
+    nexted loops + avoid loss of data warnings + improve layout
+  *  0955ccf - fix whitespaces
+  *  7a3c8d0 - make indexes of GeomBSplineCurve consistent to OCC API
+  *  5dab557 - in geometry classes raise RuntimeError instead of basic
+    exception type
+  *  ad29408 - Merge pull request #447 from
+    abdullahtahiriyo/bspline_2017
+  *  eeb7dd4 - spend own type for Python wrappers of FeaturePrimitive
+    and BodyBase
+  *  ac7750f - issue #0002867: AttachExtension crash
+  *  14ae74f - Use contour area for wire size instead of bounding box
+  *  306ad7f - Replace Vector3D ==/!= with difference <
+    Precision::Confusion()
+  *  e9b5722 - python3: dict.has_key("key") --> "key" in dict
+  *  7c15e14 - Added a search box to the PropertyLink dialog
+  *  c241bed - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  bce02da - Using system link color in property editor
+  *  39bd5ea - issue #0002867: AttachExtension crash
+  *  67fdbfd - Arch: Fixed bug in Section Plane + TechDraw view when the
+    section is empty
+  *  2a67c7f - Merge pull request #453 from qingfengxia/fluidmaterial
+  *  4d5fab1 - Merge pull request #456 from mlampert/develop
+  *  632f1f5 - Merge pull request #454 from bblacey/develop
+  *  81ae4f9 - Fixed z=0 issues; added rapid move for square tag that is
+    at the maximum height (or higher).
+  *  6ead01e - Use Gitter notifications
+  *  8252616 - Fem: add air and water fluid material into
+    data/Mod/Material
+  *  a378a16 - Fem: modify taskpanelFemMaterial to support simple Fluid
+    Material
+  *  3f0c9d7 - Merge branch 'master' into bspline_2017
+  *  0f4a5b4 - Merge pull request #452 from luzpaz/travis-mascot
+  *  cfe2aa7 - fix TravisCI mascot logo
+  *  2f44192 - Merge pull request #451 from kkremitzki/master
+  *  38c8884 - Streamline README.md
+  *  370d4f5 - Merge pull request #450 from kkremitzki/master
+  *  79f99b3 - Move gitter.im badge
+  *  8624711 - Add gitter.im badge
+  *  c0ec75e - Merge pull request #449 from looooo/python3-arch
+  *  f3fb676 - py3: Arch: some more fixes
+  *  636804f - Merge pull request #448 from sliptonic/master
+  *  2bc1162 - py3: Arch: print fixes
+  *  1a21a4b - py3: cherry-picking fixes a cherry pick for the arch
+    module introduced problems with python2 and the start-wb.
+  *  31e4489 - py3: resolving diff in Arch
+  *  8ad2c69 - py3: open function is in module 'io' in py3 instead of
+    __builtin__
+  *  4f43cfa - py3: adapt scripts to work with Python3
+  *  1591601 - py3: Arch: *.py: Fix syntax for python3
+  *  ed37367 - Path: Make contour default final depth to part bottom
+    instead of 0
+  *  c4405f8 - Path: fix missing field in profile edges
+  *  9876307 - fix crashes in creation of parabola or hyperbola
+  *  46075f3 - Sketcher: Symmetry support for BSpline
+  *  5956d03 - Merge pull request #446 from agryson/openscad-artwork-
+    align
+  *  252d84f - Sketcher: Array/Copy/Clone support for BSpline
+  *  8d81a71 - Update Metadata
+  *  7744fcf - Align OpenSCAD icons to guidelines
+  *  45b8989 - set layout of text of progress bar in unit test dialog
+  *  5b5189a - workaround for running graphviz under Qt5
+  *  177f36a - Merge pull request #445 from agryson/drawing-artwork-
+    alignment
+  *  2e789dc - Sketcher: BSpline SnellsLaw - unsupported
+  *  f935f33 - Sketcher: BSpline point-on-object - unsupported
+  *  c1decd3 - Sketcher: Enable relative movement of BSpline edge
+  *  f35d739 - Update Page template icons
+  *  df91ee5 - Don't depend on svg contents for file info
+  *  8ba60da - Updated Metadata
+  *  ce4ee4b - Update Drawing Workbench icons to Tango
+  *  17c6921 - Draft: Fixed bug in line UI - fixes #2860
+  *  c6144c2 - Draft: improvements to Stretch code, added support for
+    rectangles
+  *  0f7d4ac - PATH: Fix for x10 input field issue in tool table
+  *  a588349 - Horizontal and Vertical Constraint creation modes
+  *  6e7c491 - fixes #0002858: Vector2d Equality Incorrect
+  *  cd6c918 - Merge pull request #443 from dev-at-stellardeath-
+    org/path_helix
+  *  adb9353 - Merge pull request #444 from looooo/python3-fixes
+  *  2f66ff6 - wrapper for QVariant <> Base::Quantity <> PyObjectWrapper
+  *  67c1bca - Merge branch 'master' into path_helix
+  *  4da262d - Sketcher: BSpline solver improvement
+  *  6b5622a - Sketcher: BSpline - Equality not supported user
+    indication
+  *  2eec558 - Sketcher: BSpline - UI Perpendicularity
+  *  340d33f - Sketcher: BSpline - Informing the user of non-supported
+    tangencies
+  *  e53dc90 - Sketcher: BSpline simplified endpoint
+    tangency/perpendicularity solver implementation
+  *  9bf1e8f - Sketcher: BSpline box selection
+  *  42331bd - python3: neutral fixes
+  *  f2faa50 - PathHelix: Switch to QToolBox based task panel
+  *  d8afbe5 - Fix 2843 DrawProjGroup Restore
+  *  2fef05c - Revise edge & vector compare function for clarity
+  *  70f0a3c - Merge pull request #437 from tomate44/SavePicture
+  *  df82247 - Merge pull request #441 from agryson/draft-stretch-align
+  *  a631730 - Merge pull request #439 from agryson/spreadsheet-artwork-
+    align
+  *  6115e78 - Merge pull request #438 from berndhahnebach/bhbdev063
+  *  e2b5623 - FEM: code formating, flake8
+  *  73b9c73 - FEM: unit tests, update FreeCAD files of FEM unit tests
+  *  4360c0b - FEM: unit tests, fix some issues and save FreeCAD files
+    of the unit tests
+  *  eb9f1d0 - FEM: pre checks, do not allow youngs modulus and thermal
+    conductivity (later for thermomech analysis) to be 0.0
+  *  bfc3c3f - Minor grid alignments
+  *  512fd62 - Sketcher: Enable BSpline edge and enpoints movement
+  *  9914e41 - Update Metadata
+  *  1c7e098 - Align Spreadsheet icons to Tango
+  *  1b59e74 - Sketcher: Solver Simplification for basic case
+  *  0ef082b - Sketcher: Construction of periodic BSplines
+  *  348d4cf - Sketcher: Periodic bspline icons
+  *  e441c2a - Merge pull request #436 from
+    sliptonic/feature/removeoldtags
+  *  8924cb1 - avoid changing scenegraph while traversing it
+  *  09d8034 - Doc: Fixed typo
+  *  5a884c9 - Add Transparent background to Save picture options
+  *  b0abdd1 - PATH: remove old holding tag code and GUI elements
+  *  c704c28 - Draft: Added stretch tool - fixes #1163
+  *  5929ad3 - correct clipping issue
+  *  42a2faf - Update Helix Metadata
+  *  62b08cd - Update helix icon
+  *  1ceb718 - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  bbd606a - Merge pull request #434 from mlampert/HoldingTagArcs
+  *  e4c3573 - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  e76333f - Fixed segmentation of xy-plane arcs, made # segments
+    factor a property.
+  *  671e588 - Sketcher: BSpline autoconstraints on creation
+  *  b255ada - Sketcher: Sketcher Elements support for BSpline
+  *  1076b70 - Part: BSpline creation method corrected as per Werner's
+    indication
+  *  0c34f1b - Merge pull request #433 from agryson/arch-artwork-
+    alignment
+  *  f2c884a - Merge pull request #432 from mlampert/HoldingTags
+  *  675cd52 - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  c9de368 - Sketcher: BSpline restore internal geometry
+  *  2a4353a - Sketcher: BSpline delete internal geo on deletion
+  *  d66242b - Sketcher: Contraint class extension
+  *  032ead0 - fix broken shadow
+  *  8e87cd6 - Revert modifications to 3rd party icon
+  *  1f43ad7 - Minor updates and polish
+  *  4bf8b51 - Update Arch Workbench icon metadata
+  *  39e48dd - Align Arch Workench icons to Tango
+  *  9d54420 - Added support for rounded tags.
+  *  126fe81 - Translation of strings.
+  *  3cbf1c3 - Reduced debug logging.
+  *  891add9 - Added preferences for holding tags.
+  *  70c3fc8 - Automatically disable tags if they overlap with previous
+    tag and/or do not fall on the base wire.
+  *  2403890 - Minimum # tags is 2, makes sense and avoids the endless
+    loop.
+  *  190aa1f - Retrieve colors from settings.
+  *  45893d7 - Fixed adding new tags - sorting required.
+  *  706875b - Fixed v-scrollbar issue and added edit button.
+  *  f89eea7 - Using InputField for width and height and use proper
+    properties.
+  *  6792e2c - Minor name cleanups.
+  *  0781cf7 - Added support for manual point input.
+  *  8f7102e - Adding and modifying tags with mouse works - event and
+    selection handlers are properly registered and removed again.
+  *  e6c968c - Basic tag visualization and selection.
+  *  c2f2a25 - issue #0002739: Mac users must Command click instead of
+    Ctrl click multiple elements.
+  *  675bcc2 - fixes #0002125: CMake shouldn't generate Version.in for
+    release tarballs.
+  *  a9530bc - issue #0002739: Mac users must Command click instead of
+    Ctrl click multiple elements.
+  *  cbcbd48 - Merge pull request #431 from sliptonic/feature/coretests
+  *  57850b5 - fix crash in graphviz export due to invalidated iterators
+  *  678f36c - PATH: some simple core tests
+  *  1155022 - Sketcher: BSpline Weights internal geometry support
+  *  6bd801d - Sketcher: expose Bspline pole internal geometry
+  *  d949f52 - Sketcher: BSpline solver Internal Geometry for poles
+  *  07eebb1 - Sketcher: Constraint Third Redefinition for internal
+    geometry
+  *  609c80b - Part: Fixes triggered by Werner's comments on my branch
+  *  e7dacb9 - Part: Bezier serialization support extension to periodic
+  *  0e2cf2e - fixes #0002837: Misspell in PY module
+  *  b7c0127 - PATH: changed default opened  tabs in panel ui files back
+    to base gemoetry
+  *  21b1166 - PATH: fix for 2805 changed TaskPanels to use unit
+    conversions via FreeCAD.Units commented out references to segLen
+    since it si used nowhere
+  *  0e65256 - issue #0000466: Sketcher: allow moving the dimension
+    datums in two directions
+  *  f5367d7 - fix warning and improve code formatting
+  *  61c3f2c - Merge pull request #428 from vejmarie/step
+  *  5d817c7 - Merge pull request #426 from brawaga/patch-2
+  *  d88fd4c - Merge pull request #424 from brawaga/patch-1
+  *  186b9e2 - make code a bit more readable
+  *  6668a86 - Merge pull request #420 from ChrisLuck/stepdown_2
+  *  61fb3d4 - Fem: add _CommandMaterialFluid.py and
+    FemMaterial.makeFluidMaterial method
+  *  358238f - Merge remote-tracking branch 'origin/master' into step
+  *  7ccd9a9 - Create Compound per STEP file definition within FreeCAD
+    interface STEP hierarchy is in that case respected
+  *  5a370d6 - Merge pull request #421 from dev-at-stellardeath-
+    org/master
+  *  2a977c3 - Merge pull request #419 from f3nix/qt-keywords-1
+  *  0c5ac71 - Merge pull request #418 from triplus/master
+  *  59ef8d8 - Doc: Cosmetic fixes in doxygen output
+  *  81e9228 - issue #0000753: angle constraint auto places the
+    constraints visuals including its value in the wrong place
+  *  61b685f - Part: BSpline serialization
+  *  c20b17f - Sketxher: Basic creation method
+  *  40aafe7 - FEM: remove precheck for load since an static analyis
+    could be valid without loads
+  *  aa83257 - FEM: code formating, remove trailing whitspaces
+  *  f9f6826 - FEM: VTK tools, add stress and strain vectors (x,y,z)
+  *  57a94af - FEM: result task panel, add stress and strain vectors to
+    possible user defined results
+  *  3003b7d - FEM: frd reader, add reading strain data and calculate
+    stress and strain vector
+  *  dc3b454 - FEM: result object, add properties for stress and strain
+    vectors
+  *  01b3db5 - FEM: frd reader, add B32 beam elements
+  *  2537cf5 - FEM: mesh group, add a needed def to mesh tools and use
+    the new mesh group object in gmsh mesh class
+  *  1973efa - FEM: mesh group, add task panel
+  *  d1954ae - FEM: mesh group, add command to FreeCAD GUI menu and tool
+    bar
+  *  c72cd50 - FEM: mesh group, add object
+  *  edb1f02 - FEM: VTK tools, only import results into vtk if they
+    exists
+  *  3ec0a50 - FEM: VTK tools, fix value assignment
+  *  b5bfc01 - FEM: frd reader, typo
+  *  ba38e06 - FEM: result object, typo
+  *  162c74c - Draft: Moved dimension decimals preference setting to the
+    dimension preferences tab - issue #2832
+  *  5d2e834 - Draft: Fixed spline bug in DXF importer
+  *  58844fe - Update Part_ru.ts
+  *  a0533b7 - Changed comparison for points - fixes issue if bone is at
+    plunge point.
+  *  e7daf5a - Sketcher: BSpline icons courtesy of Jim
+  *  2830179 - Update Fem_ru.ts
+  *  25fc1d3 - Merge pull request #422 from mlampert/issue-2664
+  *  8ea8699 - Part: Enable BSpline creation from poles
+  *  9d55585 - Check for 0 pointer in initialisation for assigning
+    default values.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 21 Jan 2017 21:44:29 +0300
+
 freecad-daily (0.17~git9544-95b7610-1) unstable; urgency=medium
 
   * Compile

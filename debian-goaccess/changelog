@@ -1,3 +1,36 @@
+goaccess (1:1.1.0+git2125-d538408-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: d538408f9a6a9fc404da4e004ced1693572acad0
+  * Date: 1484798703
+  * git changelog:
+  *  d538408 - Fixed redundant condition 'tkn!=NULL' warning
+    [parser.c:1197].
+  *  22608fd - Added --process-and-exit command line option to the
+    config file.
+  *  adf98a8 - Ensure start/end dates are updated real-time in the HTML
+    output.
+  *  db50111 - Removed unused DOM elements from template.
+  *  f6aa238 - Ensure overall start/end dates are written to the JSON
+    output.
+  *  42a6378 - Added --process-and-exit command line option to the man
+    page.
+  *  d4ed7a7 - Ensure charts are reloaded when the scroll event is
+    triggered.
+  *  24d0a58 - Added namespace to scroll event to ensure event is not
+    rebound.
+  *  41629e7 - Added --process-and-exit command line option to
+    README.md.
+  *  831d0a8 - Render HTML report tables that are only within the
+    viewport.
+  *  3134984 - Render D3 charts that are only within the viewport.
+  *  dcc5bbd - Added --process-and-exit command line option to parse log
+    and exit.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 20 Jan 2017 21:45:09 +0300
+
 goaccess (1:1.1.0+git2113-cbde81d-1) unstable; urgency=medium
 
   * Compile
