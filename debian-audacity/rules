@@ -1,0 +1,51 @@
+#!/usr/bin/make -f
+
+export DEB_LDFLAGS_MAINT_APPEND=-Wl,-z,defs -Wl,--as-needed
+
+configure_flags := \
+	--disable-dynamic-loading \
+	--with-expat=system \
+	--with-ffmpeg=system \
+	--with-lame=system \
+	--with-libid3tag=system \
+	--with-libmad=system \
+	--with-libsndfile=system \
+	--with-libsoxr=system \
+	--with-libtwolame=system \
+	--with-libvamp=system \
+	--with-lv2=system \
+	--with-midi=system \
+	--with-portaudio=system \
+	--with-portsmf=system \
+	--with-sbsms=local \
+	--with-soundtouch=system \
+	--with-libvorbis=system 
+
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+ifneq (,$(filter $(DEBIAN_CODENAME), jessie)) 
+	configure_flags += 	--with-libflac=local
+	
+else
+	configure_flags += 	--with-libflac=system
+endif
+
+%:
+	dh $@ --parallel --with autoreconf
+
+override_dh_auto_configure:
+	dh_auto_configure -- $(configure_flags)
+
+# The tests fail to build as of version 2.0.6
+override_dh_auto_test:
+
+override_dh_auto_build:
+	[ ! -f $(CURDIR)/lib-src/libflac/Makefile ] || ( cd $(CURDIR)/lib-src/libflac/ && make ) 
+	dh_auto_build
+
+override_dh_auto_install:
+	dh_auto_install
+	# Don't package unnecessary copy of GPL
+	rm debian/tmp/usr/share/doc/audacity/LICENSE.txt
