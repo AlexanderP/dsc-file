@@ -1,0 +1,38 @@
+Source: pinta
+Section: graphics
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 9), 
+               cli-common-dev (>= 0.5.7~), 
+               autoconf,
+               automake,
+               dh-autoreconf, 
+               gettext, 
+               gtk-sharp2, 
+               yelp-tools, 
+               libglib2.0-dev,
+               nunit-console, 
+               mono-reference-assemblies-4.0 | wget
+Build-Depends-Indep: intltool,
+               mono-devel (>= 2.8),
+               mono-xbuild (>= 2.8),
+               libgtk2.0-cil-dev,
+               libglade2.0-cil-dev,
+               libmono-addins-cil-dev,
+               libmono-addins-gui-cil-dev,
+Standards-Version: 3.9.8
+Homepage: http://pinta-project.com/
+
+Package: pinta
+Architecture: all
+Depends: ${shlibs:Depends}, ${cli:Depends}, ${misc:Depends}, gnome-icon-theme
+Description: Simple drawing/painting program
+ Pinta is an easy to use drawing/editing program. Its goal is to
+ provide a simplified experience for casual users.
+ .
+ Features include:
+  - Adjustments (Auto level, Black and White, Sepia, …)
+  - Effects (Motion blur, Glow, Warp, …)
+  - Multiple layers
+  - Unlimited undo/redo
+  - Drawing tools (Paintbrush, Pencil, Shapes, …)
