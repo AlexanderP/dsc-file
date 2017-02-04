@@ -1,3 +1,25 @@
+solvespace (2.2.0+git1147-4465bc0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 4465bc0270ee185e5029ecacfe27665fa7fe5ab0
+  * Date: 1486058990
+  * git changelog:
+  *  4465bc0 - CMake: do not remove translations on `make clean`.
+  *  51b8828 - README: suggest release builds, as these are much faster.
+  *  2794242 - Remove a redundant ReloadAllImported() call.
+  *  6e88eae - Fix a path construction issue introduced in 3fc85b7.
+  *  d4b052d - Fix logic introduced in 55ae10b.
+  *  3fc85b7 - CLI: add the "regenerate" command, for use in Makefiles
+    etc.
+  *  27a5f6f - CLI: include directory name in %-replacement.
+  *  67a916d - CLI: show usage when --help/-h passed.
+  *  ff0af6f - Fix a typo in 495a7ac.
+  *  495a7ac - Refactor the "File → Export Image" command.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 03 Feb 2017 21:33:08 +0300
+
 solvespace (2.2.0+git1137-bb2cc4a-1) unstable; urgency=medium
 
   * Compile

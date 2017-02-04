@@ -35,7 +35,7 @@ endif
 
 QMAKE=qmake-qt4
 QCONF=qt-qconf
-CONF=--enable-plugins --enable-whiteboarding --debug --no-separate-debug-info
+CONF=--debug --no-separate-debug-info
 
 # Selecting all plugins
 plugins_generic = $(notdir $(wildcard $(CURDIR)/src/plugins/generic/*plugin ) )
@@ -45,7 +45,7 @@ plugins_unix = $(notdir $(wildcard $(CURDIR)/src/plugins/unix/*plugin ) )
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	#$(QCONF)
+	# $(QCONF)
 	./configure --prefix=/usr $(CONF)
 
 override_dh_auto_build:

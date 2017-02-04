@@ -1,3 +1,268 @@
+freecad-daily (0.17~git9945-709d2f3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 709d2f325db0490016807b8fa6f49d1c867b6bd8
+  * Date: 1486160742
+  * git changelog:
+  *  709d2f3 - fixes #0002887: add FC logo (watermark) in Save Picture
+    Tool
+  *  9b58d8b - Merge pull request #495 from luzpaz/grammar-fixes
+  *  33e0bc3 - fix various warnings
+  *  bb5c01b - typo r/scema/scheme/
+  *  ad7f6b9 - fix --log-file description grammar
+  *  1afa150 - raise error if parameters of ellipse are invalid
+  *  25496ad - Add Addon Manager to Tools menu
+  *  66982e2 - Sketcher: Polyline continuous mode support
+  *  b708957 - Sketcher: BSpline deletion/special hideunused internal
+    geometry
+  *  4750bd4 - Expressions: Generalized
+    FunctionExpression::simplify(...) function.
+  *  0d6f777 - Expressions: Fixed issue #2879.
+  *  715fa81 - Arch: Upgraded Equipment tool - fixes #2573
+  *  6c3b78e - Merge pull request #490 from AjinkyaDahale/patch-1
+  *  2623ca4 - fix whitespaces
+  *  a97fbc3 - Merge pull request #489 from vejmarie/step
+  *  5d21eb6 - fix crash in
+    ViewProviderGeoFeatureGroupExtension::getLinkedObjects
+  *  7a9fecb - Minor bug in PartDesignGui::ViewProviderPipe
+  *  7b5707b - Add an update timer to the progress bar set to 500ms
+    instead of nothing. STEP Reader is updating the progress bar every
+    time a new Shape is decoded/transferred and loaded, which is a huge
+    amount of "interrupt" and slow down drastically the global
+    performance
+  *  2780edd - Arch: fixed import of IFC Site geometry
+  *  e8c822c - Changes based on wwmayer's comments
+  *  fb2cd4d - Moved Perpendicular to constraint mode framework
+  *  5e997fe - Brought back select then constraint for all constraint
+    tools yet converted
+  *  a881d30 - Miscellaneous changes to constraint creation modes
+  *  9ec7bd4 - Sketcher: Fixing Green selection on new style constraints
+  *  a39d254 - Moved point on object to general constraint mode
+    framework
+  *  643e61c - Moved parallel to general constraint mode framework
+  *  180772b - Moved coincident and vertical to general constraint mode
+    framework
+  *  dad03ca - Moved CmdSketcherConstrainLock to general constraint mode
+    framework
+  *  4ad41e1 - Generalize DrawSketchHandlerGenConstraint::releaseButton
+  *  99f93f3 - CmdSketcherConstraint::applyConstraint() is now used in
+    DrawSketchHandlerGenConstraint
+  *  61324d8 - Initial commit with DrawSketchHandlerGenConstraint
+  *  583bb48 - Replace All SelectionFilterGates in Constraint Modes by
+    GenericConstraintSelection
+  *  b2c5e84 - Addition to CmdSketcherConstraint and
+    GenericConstraintSelection
+  *  93cb552 - Coincident constraint mode works on root (origin) too
+  *  3f02c72 - Skeleton of general CmdSketcherConstraint Class
+  *  9f68469 - Merge pull request #486 from agryson/icon-sizes
+  *  bcc2e45 - Merge pull request #487 from berndhahnebach/bhbdev066
+  *  0b4374e - Merge pull request #488 from mlampert/QtGui-import-fix
+  *  c4a552e - Fixed QtGui import.
+  *  2d84615 - include required header under Linux
+  *  321ca98 - use names directly from document to set them in scene
+    inspector
+  *  71fe911 - FEM: Z88 result reader, fix open Z88 results files
+    directly
+  *  3f08dd5 - FEM: import Z88 results, change module name to import...
+  *  469e391 - FEM: import VTK results, change module name to import...
+  *  df66ce0 - FEM: export results to vtk, code formating and
+    documatation information
+  *  9ce1662 - Fem: add FemResult export to VTK files for visualization
+    externally
+  *  1b44eff - Show current icon size if not in list
+  *  ce416f2 - Show icon units
+  *  616f45f - Remove reliance on PM_ToolBarIconSize
+  *  fc4a1c6 - Activate only UI tree leaf as to display properly colors
+    when browsing a STEP (there is currently a limitation within the
+    reader which creates compound which are totally grey) and accelerate
+    browsing by de-activating Compound rendering
+  *  bcea759 - fix crash with null pointer links in PropertyLinkList
+    handle case with null pointers as value in STEP reader avoid to
+    create coumpound objects with null pointer links
+  *  3a3fa30 - Arch: fixed small bug in Site area calculation
+  *  64d0eb9 - can't assign nullptr to a QPixmap
+  *  303f088 - fix linking error in TechDraw
+  *  2a1d02e - Merge pull request #485 from WandererFan/January
+  *  c636278 - Merge pull request #483 from looooo/python3-path
+  *  541ff37 - Fix tuple unpacking issue
+  *  06a5bfb - Remove py3-incompatible tuple argument from Path
+  *  e47edae - Update Path to py3-compatible printing
+  *  5f72efa - Avoid issue if ViewProvider deleted while graphic still
+    active
+  *  49c2be1 - Fix potential race when cancelling DPG creation
+  *  722b2d1 - Install default PAT file
+  *  7cb3e93 - Preferences for GeomHatch
+  *  b1a5fd9 - Add dialog for GeomHatch creation
+  *  84b858a - fix naming conflicts
+  *  42bb647 - update tooltips, menu order
+  *  299ac94 - Geometric hatch for Section face
+  *  1d3a8a9 - minor fixes: debug message/tooltips/etc
+  *  f51b581 - Initial working version of geometric crosshatch/PAT files
+  *  54fed5c - Improve handling of broken references (changed
+    Edge/Vertex names)
+  *  afa8c9f - Prevent DetailView crop circle marker
+  *  0cb29cf - Fix Diamter/Radius Dimensions in Detailview
+  *  935c4f8 - Make detail crop circle public
+  *  c0ab95a - Add Vector2D conversion
+  *  fad1edb - Add formatVector for Vector2d
+  *  7959d84 - remove debug messages
+  *  98c8394 - Handle corrupted 2D references
+  *  3d8622d - ViewSection inherits Scale from Base
+  *  3ce9c48 - Clean up children on Page delete
+  *  6cad2bc - Delete DPGI's when parent DPG deleted Ensure Gui/QGIVxx
+    is removed when App/DVxxxx is deleted
+  *  0204b77 - Warn if Anchor view deleted in Projection Group
+  *  1738107 - Correct handling of deleted Features in QGraphicsScene
+  *  c0c4569 - Change DPG freature name from "cView" to "ProjGroup"
+  *  a6129b9 - Remove SectionLine on delete or cancel
+  *  78c07ce - Remove section line from DVP on delete of DVS
+  *  60ba62c - Fix non-rotation of QGIDecorations with QGIViewPart
+  *  429c32b - Reset edit after dialogs
+  *  9e7d56d - Fix NaN in iso sections
+  *  0623e8f - Fix DPG positioning on mouse move
+  *  94a647a - Fix Svg export page & text size in HiRez
+  *  5e62c6b - Add arrowstyle preference
+  *  5007193 - Initial Bitmap fills for Faces
+  *  ad98ff1 - Restore lost dimension tail
+  *  fe617e1 - Make SVG hatches scalable
+  *  f68cbc8 - Basic working HiResolution TD
+  *  32bacd0 - py3: ported Path to python3
+  *  71f6a28 - python: Path: *.py: Fix python3 syntax
+  *  8ed62e3 - Merge pull request #482 from agryson/multi-workbench-
+    artwork-alignment
+  *  49c02b9 - Update Plot icon metadata
+  *  1c07ca7 - Align Plot Workbench icons to guidelines
+  *  35c817e - Update Ship icon Metadata
+  *  806df18 - Align Ship Workbench icons to guidelines
+  *  ab196b5 - Correct outline color in sketcher icon
+  *  ea2f873 - Start: misc fixes in startpage
+  *  fa4b5d2 - Merge pull request #480 from drallod/master
+  *  357ecb5 - Path: Issue #0002817:
+  *  fc2010b - Arch: Export rebars to IFC as SweptDiskSolids + fixed
+    half-done py3 compatibility - fixes #2684
+  *  1e4b6ed - Merge pull request #479 from
+    abdullahtahiriyo/bspline_stage1b_2017_firstdeliverable_fixes
+  *  9725be8 - Sketcher: Documentation of delete functions
+  *  0edf172 - Sketcher: Fix deletion of geometry having internal
+    geometry inserted before the geometry
+  *  175d177 - Merge pull request #467 from mlampert/path-unit-test-
+    fixes
+  *  d4da536 - Restored exception masking - although i'm not sure it's a
+    good thing.
+  *  c9c7d19 - Import pivy only if gui is up.
+  *  013043b - Refactored cmake file once again - exposing root
+    exception.
+  *  e1a22b7 - Fixed unit tests for the case where LineOld is not set to
+    false.
+  *  831e467 - Refactored cmake file and added TestPathCore.
+  *  ea7789b - Fixed merge issues and re-enabled tests.
+  *  f0db6b8 - Hooked Path tests into global unit test target.
+  *  7805dce - Fixed holding tags unit tests.
+  *  33a3c5f - Merge pull request #478 from agryson/sketcher-artwork-
+    alignment
+  *  9512b46 - Update Metadata
+  *  f254987 - Update xpm icons
+  *  0746a8e - Align Sketcher Workbench icons to guidelines
+  *  0df4af4 - issue #0002540: Crash on startup
+  *  a240f5d - issue #0002540: Crash on startup
+  *  9b49777 - Merge pull request #475 from
+    abdullahtahiriyo/bspline_stage1b_2017_firstdeliverable
+  *  7756c27 - use triangular tabs in property view only on Windows
+  *  36e1d07 - fix -Wunused-variable
+  *  a460c54 - Merge pull request #472 from looooo/python3-complete
+  *  f47fc48 - code cleanup
+  *  f10a436 - STEP reader improvements Create Global STEP Tree when
+    assemblies are present Make TBB usage dependant of its activation
+    status at CMake Level Fix hierarchy opening into STEP Assembly
+  *  dd63fe9 - Changed comparison of adjecent edge points to use
+    PathGeom.pointsCoincide to deal with the higher precision of doubles
+    underneath.
+  *  bef8153 - Merge pull request #474 from mlampert/logging
+  *  80e7ece - Sketcher: BSpline - avoid tiny circles on removal of
+    equality
+  *  6ad5182 - Sketcher: BSpline Creation - as single command for one-
+    step undo
+  *  bad73ab - Sketcher: BSpline Creation fix - Remove introduced pole
+    if creation cancelled
+  *  cc31dac - Sketcher: BSpline Creation improvement - Add constraints
+    by groups
+  *  ec8c514 - Sketcher: BSpline Creation acceleration - pole
+    constraining on pole creation
+  *  38fc707 - Sketcher: BSpline Creation solver call reduction
+  *  bdc81aa - Sketcher: BSpline Creation - pole circle on click
+  *  f4a8820 - Sketcher: InternalAligment Python extension to
+    InternalAlignmentIndex
+  *  f92e5db - Fixed moved dogbone to use logging module - and fixed a
+    bug while I was at it.
+  *  7cc843c - Fixed secondary debug logging in holding tags.
+  *  dfb1094 - Path logging interface and bulk transfer of HoldingTags
+    dressup to use module.
+  *  fdd34ef - Draft: Fixed small bug in SVG output
+  *  9a6191f - Draft: AutoGroup system
+  *  38921cf - py3: ported Complete to python3
+  *  9f2a389 - py3: add PyMOD_INIT_FUNC from: py3: ported module init to
+    python3, wwmayer
+  *  bebda4c - fix crash when pressing cancel on pipe task panel
+  *  d9dda3f - Path: Fixed issue where GCodeEditorDialog wouldn't appear
+    for some post processors
+  *  087853b - Draft: improved makeSketch backward compatibility
+  *  8204397 - Draft: various fixes and improvements of makeSketch
+  *  1d5d539 - FEM: GMSH mesh object, in some cases the task panel did
+    not open
+  *  0984672 - make sure that the passed 'self' pointer to a method of
+    the Python wrapper is never null
+  *  294b230 - fix crash when cancelling revolution task panel
+  *  8a100bf - issue #0002836: Crash in sketcher
+  *  43e8c21 - issue #0002816: Trimming tool crashes
+  *  417f074 - handle stricter tolerance of Vector3d for equality in
+    Draft unit test
+  *  654da13 - Merge pull request #468 from cconnett/master
+  *  9f859a0 - Draft: Fixed encoding bug in dwg import - fixes #2872
+  *  9134a1e - Grammar fix
+  *  1c0c848 - Merge pull request #464 from berndhahnebach/bhbdev064
+  *  27c4136 - TaskTransformedParameters derives from
+    Gui::DocumentObserver to handle deletion of view provider when
+    clicking Cancel button
+  *  bc84e88 - add observer for GUI documents
+  *  529e141 - FEM: unit tests, get rid of duplicate defs
+  *  b8403d4 - FEM: unit tests, update result files to start with
+    element numbering with 1
+  *  dbe6efb - FEM: unit tests, start element numbers of the unit test
+    FEM meshes with 1
+  *  94ddfdb - FEM: unit tests, make all FEM unit test in one directory
+    in tmp directory
+  *  227beac - FEM: unit tests, fix def to update results
+  *  cfa97b0 - FEM: unit tests, reorder paths
+  *  a5d6c29 - FEM: unit tests, convert result stat file from win to
+    unix line ending
+  *  d553d50 - FEM: splitted input file, fix if there is no constraint
+    fix but constraint displacement and plane rotation instead
+  *  1347c7b - FEM: examples, update them to the new solid material
+    category
+  *  d87d0a9 - FEM: imports, comment not used imports
+  *  56d43c2 - FEM: code formating, flake8
+  *  72c7a8a - change old DAG implementation to pass unit tests
+  *  6105ea7 - Merge pull request #463 from qingfengxia/fluidmaterial
+  *  66b91b1 - partially revert changes of issue #0002858 and add
+    IsEqual method
+  *  db0fe5b - change old DAG implementation to pass unit tests
+  *  66fcaf6 - Fem: add push button to export customed fluid and solid
+    material to FCMat file
+  *  b788503 - Fem: add icon for FemMaterialFluid command toolbar item
+  *  a90d221 - Fem: add length scaling (metre to mm) option for VTK mesh
+    import
+  *  0afb7b6 - Merge pull request #462 from looooo/fix_translation
+  *  172206f - restore old DAG implementation and fix some build
+    failures
+  *  c43b39d - Sketcher: BSpline creation mode end on right-click
+  *  4915a09 - py3: code from python3-branch broke the translation in
+    Start-wb. This commit should fix this
+  *  f21fa3e - fix compiler warning
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 04 Feb 2017 10:54:50 +0300
+
 freecad-daily (0.17~git9758-f3f7b01-1) unstable; urgency=medium
 
   * Compile

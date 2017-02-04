@@ -1,10 +1,10 @@
-Description: Add hardening flags in compiler options
+Description: Add hardening flags into compiler options
 Author: Boris Pek <tehnick-8@mail.ru>
-Last-Update: 2012-08-17
+Last-Update: 2014-07-25
 
 --- a/src/src.pro
 +++ b/src/src.pro
-@@ -154,6 +154,12 @@
+@@ -156,6 +156,12 @@
  RESOURCES += ../psi.qrc ../iconsets.qrc
  
  # Platform specifics
@@ -17,4 +17,3 @@ Last-Update: 2012-08-17
  windows {
      RC_ICONS = ../win32/app.ico
  }
-

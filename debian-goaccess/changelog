@@ -1,3 +1,52 @@
+goaccess (1:1.1.0+git2151-8e9e3a9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 8e9e3a995a59fcf13077ff669cf1fc8563fdc93b
+  * Date: 1486087932
+  * git changelog:
+  *  8e9e3a9 - Changed percentage calculation to be based on the total
+    within each panel.
+  *  9189ec1 - Fixed percent issue when calculating visitors field in
+    CSV output.
+  *  bd08c35 - Fixed percent issue when calculating visitors field in
+    JSON output.
+  *  e3d43ca - Updated GeoIP source file comment description.
+  *  0ea4e03 - Updated GeoIP2 source file comment description.
+  *  22d2d7a - Ensure the --load-from-disk flag is enabled if no piped
+    data and no file is passed.
+  *  103ea4e - Ensure buffers for unknown geolocations are filled as
+    well.
+  *  bde3f39 - Reuse is_geoip_resource() function where applicable.
+  *  071cb07 - Updated GeoIP source file comment description.
+  *  d8830a4 - Added missing function comments to GeoIP2.
+  *  9f5fd64 - Added support for MaxMind GeoIP2.
+  *  4c0fecd - Removed unnecessary GeoIP include from header file.
+  *  a5fd1ba - Reuse is_geoip_resource() function where applicable.
+  *  ba65b12 - Reuse is_geoip_resource() function where applicable.
+  *  4c6acd3 - Reuse is_geoip_resource() function where applicable.
+  *  c1b15ef - Ensure is_geoip_resource() checks for a valid GeoIP
+    resource.
+  *  97629d3 - Made geo_location_data static and change scope of
+    +geoip_open_db().
+  *  61c4fe6 - Removed reference to unused global GeoIP object.
+  *  79c594f - Moved GeoIP function calls to its own source file.
+  *  92181d3 - Updated man page with latest X-Forwarded-For (XFF)
+    change.
+  *  b882c7d - Display the right number of parsed lines upon erroring
+    out.
+  *  bf8dde9 - Ensure the right type of IP (v4/6) for XFF is assigned to
+    logitem.
+  *  e30131b - Minor change to the code format on tcbtdb.c.
+  *  9651a3c - Added <sys/stat.h> to tcbtdb.c so the compiler doesn't
+    complain about it.
+  *  0d820fa - Added sanity check for db-path config variable
+  *  47066d4 - Fixed issue where parser couldn't read some X-Forwarded-
+    For formats.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 03 Feb 2017 17:32:40 +0300
+
 goaccess (1:1.1.0+git2125-d538408-1) unstable; urgency=medium
 
   * Compile

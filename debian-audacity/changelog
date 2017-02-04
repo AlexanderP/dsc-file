@@ -1,3 +1,32 @@
+audacity (2.1.2+git6071-31df61f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 31df61f5375dd9761a2e6782070d53edc6cd1d8a
+  * Date: 1485965376
+  * git changelog:
+  *  31df61f - Set IS_ALPHA to 0.
+  *  92bef0f - Updated README.txt
+  *  856dfef - More accurate comments, after foregoing bug1567 fixes.
+  *  5392fee - Bug1521 residual: Save new project, still must remove
+    project* folder
+  *  0cb89a8 - Remember Save/SaveAs Path.
+  *  5a5a285 - Update German Translation by Joachim Huffer
+  *  7075526 - Update Greek Translation by Dimitris Spingos
+  *  6b65375 - Bug1521, bug1567 Mac: wipe .DS_Store in temp folder when
+    saving too
+  *  3ebf9fc - Remove a sleep that does not help bug1567
+  *  dd836f4 - Bug1567 Residual - Use wxDIR_HIDDEN in recursive delete.
+  *  04c3a7c - wxRmDir() diagnostics
+  *  62cfeea - Unless on Windows, don't remove directories like files...
+  *  53c3adf - Bug 1577 - Application configuration file location
+    incorrect on Linux/case-sensitive Macs
+  *  a05d039 - Bug1567: intermittent failure to load libraries, plugins
+    on Sierra...
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 04 Feb 2017 00:08:02 +0300
+
 audacity (2.1.2+git6057-97bf72d-1) unstable; urgency=medium
 
   * Compile

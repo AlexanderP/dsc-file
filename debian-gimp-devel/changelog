@@ -1,3 +1,167 @@
+gimp-devel (2.9.4+git38031-1a2ef41-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 1a2ef4149246df0d38b062c67b254b9b7a69d8d5
+  * Date: 1486148130
+  * git changelog:
+  *  1a2ef41 - app: fix handling of fully desaturated colors in lch
+    chroma mode
+  *  eb93475 - app: improve data in layer mode info array
+  *  7726238 - Update Greek translation
+  *  d97be7e - app: add repository of layer mode information
+  *  1214d4a - app: move all special-case mode processing optimizations
+    to GimpOperationLayerMode
+  *  e957347 - app: build layer mode operations with SSE2 flags.
+  *  58260e5 - configure: all code in AC_LANG_* macro should be double-
+    bracketed.
+  *  d33d80a - build: poppler-data added as a submodule of poppler.
+  *  7447b50 - app: tab and space cleaning.
+  *  dd4848e - plug-ins: headers only needed with the Sendmail-email
+    plugin.
+  *  c6f00eb - app, menus, plug-ins: add new menu Color -> Tone Mapping
+  *  7c9a740 - app, menus: add gegl:image-gradient and gegl:snn-mean to
+    the menus
+  *  5500864 - Updated Italian translation
+  *  d434c60 - app, menus: add some more GEGL filters to the menus
+  *  c175afb - app: re-arrange some color related menu items
+  *  b2a44a9 - configure: add a "Eeeeeeeeeeeeeeeeeeeeek" notice on
+    configure error.
+  *  393ce1d - plug-ins: use the new composite mode API in file-psd
+  *  2a96d59 - app: add internal and PDB API and UI to control a layer's
+    composite mode
+  *  a18dcb9 - configure.ac: require babl >= 0.1.24
+  *  f43092c - plug-ins: make screenshot-win32 compile again.
+  *  4c33008 - build: factorize a bit the flatpak manifest.
+  *  a02a597 - plug-ins: minor tab cleanup.
+  *  08e8c0e - app, plug-ins: move the locale processing code in the
+    core.
+  *  65e8521 - plug-ins: better parse locales.
+  *  5346594 - Bug 777754 - Failure to recognise installed help system.
+  *  d2ba594 - libgimp: minor tab cleaning.
+  *  d967219 - plug-ins: tab cleaning.
+  *  d2f50e6 - app: change composite mode of erase to SRC_ATOP
+  *  c6a2a64 - app: add composite mode support to erase mode
+  *  1924212 - app: remove "default:" from the switch in
+    gimp_layer_mode_get_operation()
+  *  e518b97 - Bug 723498 - Gimp changes contrast and color of images
+  *  10b67c5 - app: remove GIMP_HELP_CONFIG_USE_GEGL help ID, no longer
+    needed
+  *  45d1e0b - app: change the help IDs of posterize and desaturate
+  *  efb1c5e - Fix indents to amend the previous commit
+  *  d61a62a - Enabled a whole bunch of help IDs for GEGL-based filters
+  *  c09b54d - build: enable WebKit dependency and get a full-feature
+    Flatpak build!
+  *  eb9981e - libgimpwidgets: add gimp_screen_get_color_profile()
+  *  2dbf1b4 - app: rename gimp_layer_mode_is_linear() to
+    gimp_layer_mode_wants_linear_data()
+  *  8771361 - app: move arrays of magic GimpLayerMode knowledge to gimp-
+    layer-modes.c
+  *  4ff7f23 - build: last dependency for a full flatpak build,
+    temporarily disabled.
+  *  2bef344 - build: adding Ghostscript dependency to flatpak build.
+  *  c99800b - build: update flatpak howto.
+  *  8a95a51 - app: move the vivid-, pin- and linear-light modes around
+    in the UI
+  *  d348220 - app: remove the HSV modes from the default layer mode
+    group
+  *  9397aff - app: add GIMP_LAYER_MODE_LUMA_DARKEN_ONLY and
+    _LUMA_DARKEN_ONLY
+  *  7fd76c9 - libgimpbase: make .def-file consistent again.
+  *  0d073b9 - libgimpbase: make the private data size > 0 to avoid
+    critical warnings
+  *  884edf5 - libgimpbase: make GimpMetadata its own type derived from
+    GExiv2Metadata
+  *  53d4ad7 - map-object: fix bogus if()-statement.
+  *  b8e7907 - build: update the flatpak howto with information on
+    runtime module list.
+  *  5170980 - app: add a tooltip to the layer mode group combo
+  *  c58d471 - app: remove gimp_paint_mode_menu_new() and use
+    GimpLayerModeBox
+  *  6e522d7 - app: add gimp_layer_mode_box_set_label() and
+    set_ellipsize()
+  *  3d79f38 - app: properly notify on group changes in
+    GimpLayerModeComboBox
+  *  69b7cb0 - libgimp, tools: commit regenerated enums files
+  *  3fa931e - app: add icons to the group selector in GimpLayerModeBox
+  *  f5868a0 - Update Polish translation
+  *  a842217 - Update POTFILES.in
+  *  7ffba03 - build: adding network and dbus unlimited access.
+  *  efce5d0 - build: update jasper in flatpak build to version 2.0.10.
+  *  e9a6d93 - app: add darken only, lighten only that uses luminance
+  *  a622f98 - app: add new widget GimpLayerModeBox
+  *  0b7b120 - build: add a Flatpak howto.
+  *  ca832fb - build: adding libwmf dependency to flatpak.
+  *  0d4dd11 - Bug 777880 - better handling of sensitivity functions for
+    channel combobox on threshold, levels and curves tools
+  *  448f12c - build: adding aalib, libmng and libwebp dependencies to
+    flatpak.
+  *  0319b49 - configure: fix typo s/PostPcript/PostScript/.
+  *  4245deb - build: add an initial flatpak-builder manifest.
+  *  8d744bc - app, libgimp: found two more hidden
+    GIMP_LAYER_MODE_NORMAL_NON_LINEAR
+  *  5389e8e - app, libgimp: rename GIMP_LAYER_MODE_NORMAL to
+    NORMAL_LINEAR
+  *  cdfbc74 - app: add new widget GimpLayerModeComboBox, still unused
+  *  312e3ba - app: add gimp_layer_mode_get_for_group()
+  *  da2ad35 - Update Catalan translation
+  *  db98dc5 - app: never propagate indexed images to floating point
+  *  a6545cc - app: add enum value GIMP_LAYER_MODE_GROUP_DEFAULT
+  *  0aa7f8f - Fix a user-visible typo
+  *  3e3cdba - app: blacklist gegl:matting-levin in the GEGL tool
+  *  31241a9 - app, libgimp: remove
+    GIMP_LAYER_MODE_DARKEN,LIGHTEN_ONLY_LINEAR
+  *  09af8db - app: slight optimization of sse2 for src_atop
+  *  e1c1a5a - app: implement SSE2 acceleration of src_atop
+  *  0fcf4ca - app: remove gimpblendcomposite.h from Makefile.am, it's
+    gone
+  *  ebd3ab1 - A more hackish way to use GimpLayerMode instead of
+    GimpLayerModeEffects
+  *  17a805b - Add missing mnemonics for Keep/Convert buttons
+  *  579676c - app: fix grain_extract behavior
+  *  6a1d49b - app: fix legacy divide blend mode
+  *  9128f3f - app: skip color calculation in the blend funcs if either
+    dest or src ...
+  *  5dbf9cd - app: add new enum GimpLayerModeGroup { LINEAR,
+    PERCEPTUAL, LEGACY }
+  *  59471ad - app: remove default from gimp_layer_mode_get_blend_fun
+    switch
+  *  b88d74d - app: make darken only and lighten only work in linear
+  *  019d7cb - app: update autogenerated core-enums.c
+  *  09af917 - app: fix label of LINEAR_BURN blend mode
+  *  f44fb1e - app: more gimp_unit_get_scaled_digits() usage.
+  *  d836d94 - app: implement non-legacy blend modes in
+    GimpOperationLayerMode
+  *  5978def - app: improve vivid-light formula
+  *  2762662 - app: use gimp_unit_get_accurate_digits() in a few places.
+  *  0c07ae3 - libgimpbase: new gimp_unit_get_accurate_digits() API
+    function.
+  *  e83383c - Bug 777589 - explains GIF animation's minimum framerate.
+  *  774687d - app: improve formulas of softlight and linear light
+    blending modes
+  *  4a3fbb8 - app: fix OVERLAY mode so it gets fed linear data
+  *  2733bfb - plug-ins: link smooth-palette against GEGL
+  *  40395b8 - app: require gegl:wavelet-blur and blackist it in the
+    GEGL tool
+  *  17fb208 - Bug 777625 - Wavelet decompose plugin
+  *  dba909a - Bug 776370 - Changing active layer breaks the GEGL
+    operation dialog
+  *  58e7aff - app: order property code consistently in gimpcoreconfig.c
+  *  27519fc - Bug 734657 - Import as 32-bit floating-point linear by
+    default
+  *  6c8985d - Update Polish translation
+  *  83374f4 - app: make replace mode request linear data
+  *  d3b8a0d - app: s/trc/space/ in the property names too
+  *  2537d3d - app: refer to (color) space instead of trc for
+    blend/composite
+  *  b10fc58 - app: add a "layer-mode" property to
+    GimpOperationLayerMode
+  *  d293a00 - app, menus: add gegl:edge-neon to Filters -> Edge Detect
+  *  c9ad09d - app: add a handful more blending innerloops
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 04 Feb 2017 09:39:08 +0300
+
 gimp-devel (2.9.4+git37919-7079d5f-1) unstable; urgency=medium
 
   * Compile

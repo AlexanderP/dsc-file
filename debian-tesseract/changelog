@@ -1,3 +1,36 @@
+tesseract (4.00~git1755-0ff26ee-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 0ff26ee3de166659970d80e50aef4000ff2557b2
+  * Date: 1486106115
+  * git changelog:
+  *  0ff26ee - Merge pull request #698 from stweil/configure
+  *  b7ef3e0 - configure: Run AVX test only with 64 bit compiler
+  *  bd45b3a - fix #537: Error in pixClone: pixs not defined
+  *  fd0683f - remove obsolete OpenCl code from
+    TessBaseAPI::ProcessPagesMultipageTiff; fixes #635
+  *  5291ae9 - Merge pull request #680 from voyageur/disable_graphics
+  *  5de844f - Merge pull request #687 from jwilk/spelling
+  *  bf9f40c - Fix typos
+  *  57b7236 - Provide SVSync::StartThread() with GRAPHICS_DISABLED
+  *  4c39775 - Fix Network declarations with GRAPHICS_DISABLED
+  *  8aeb73e - Partial fix for GRAPHICS_DISABLED build, issue #679
+  *  f566a45 - clang-tidy changes from sync
+  *  a1c22fb - Fixed issue #557
+  *  b453f74 - Fixed issue #633 (multi-language mode
+  *  ca16a08 - Removed dead TODO
+  *  9b604b1 - Fix possible warning when WIN32_LEAN_AND_MEAN is already
+    defined.
+  *  d6f2ba8 - Update cppan.yml
+  *  a8e8bac - Merge pull request #666 from solomennikm/err-err_exit
+  *  65b3dde - Merge pull request #675 from stweil/macos-simd-detect
+  *  fa677f1 - Implement SIMD detection on macOS-gcc; complain if no
+    SIMD detection
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 03 Feb 2017 21:03:54 +0300
+
 tesseract (4.00~git1735-c768b58-1) unstable; urgency=medium
 
   * Compile

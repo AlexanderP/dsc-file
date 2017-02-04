@@ -1,3 +1,31 @@
+kvirc (4:4.9.2~git-7063-g9e8a9d9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 9e8a9d9e0d38993e145dddab64b42114efc4d3f6
+  * Date: 1486229098
+  * git changelog:
+  *  9e8a9d9 - str module fixes/cleanup
+  *  ca157d4 - make channel list dialogs more consistent; fix #1790
+  *  c018b8c - [AV] strawberry perl on choco should now have a checksum,
+    update dicts
+  *  30ee141 - SharedFilesWindow: Remove unused variables and some code
+    cleanup
+  *  0b0edac - KviKvsParser: Remove logically dead code
+  *  553444a - KviSignalHandler: Be explicit when ignoring return values
+    of certain functions
+  *  a497da7 - KviInputEditor: Fix error in usage of
+    QString::lastIndexOf in commit ebdcedc
+  *  ebdcedc - KviInputEditor: General code cleanup and simplification
+  *  b21d504 - KviIrcConnection: Fixes potential memory leak
+  *  205eef2 - Encryption: A fix and some code cleanup
+  *  bfb9194 - Fixes unintentional hiding of local variable in nested
+    scope
+  *  d93ae16 - Fix #2077
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 04 Feb 2017 20:56:40 +0300
+
 kvirc (4:4.9.2~git-7051-gee01c76-1) unstable; urgency=medium
 
   * Compile
