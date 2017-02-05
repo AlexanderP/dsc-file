@@ -5,4 +5,4 @@
 
 override_dh_auto_configure:
 	autoreconf -fiv
-	dh_auto_configure -- --enable-geoip --enable-utf8
+	dh_auto_configure -- --enable-geoip=legacy --enable-utf8
