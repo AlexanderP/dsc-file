@@ -10,6 +10,12 @@ MYPAINT_SCONSOPTS = enable_openmp=true
 %:
 	dh $@ --with python2
 
+override_dh_auto_configure:
+
+
+override_dh_auto_clean:
+
+
 override_dh_clean:
 	#scons -c
 	rm -f lib/mypaintlib_wrap.cpp options.cache .sconsign.dblite \
