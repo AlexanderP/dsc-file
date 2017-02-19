@@ -1,3 +1,101 @@
+deadbeef (0.7.2+git7040-06c799d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 06c799d4698782fd479d57e7a9ec5d0476aa65e6
+  * Date: 1487187651
+  * git changelog:
+  *  06c799d - streamer: race condition fix
+  *  bd2a748 - pulse: fix compatibility with the new streamer
+  *  8415c64 - streamer: fixed resumed session seek position regression
+  *  6736674 - streamer: play_current refactoring
+  *  db9ccfb - streamer: next/prev track based on last played track,
+    when manually switching
+  *  c416ed8 - dumb: fix readpos immediately after seek
+  *  598b7e8 - main: send configchanged immediately on load, to notify
+    listeners
+  *  8f8dd0c - cocoaui: configchanged cleanup; fixed stop_after_album
+  *  ea51263 - license fix in dsp.* and streamreader.*
+  *  005e47f - streamer: moved stop_after_album_check to streamer_next
+  *  31bbd0d - streamer: fixed some glitches / regressions
+  *  5d79e5a - streamer: refactor / get rid of streamer_move_to_*
+    functions
+  *  7b97466 - streamer: locking fix
+  *  9c4eaa6 - linux compile fix
+  *  b9d54ad - gtkui: compile fix
+  *  4517516 - gtkui, cocoaui: track ref leak
+  *  3661654 - linux compile fix
+  *  a5d323e - gtkui, cocoaui: improved status bar tf
+  *  8257979 - streamer: jump to next track on error
+  *  22548a2 - Merge branch 'blockstreamer'
+  *  fa4db12 - streamer: handle case when streamer attempts to read
+    beyond end of track
+  *  14fd6f3 - streamer: increase buffer size
+  *  393387e - gtkui: use tf for statusbar
+  *  a7a9154 - streamer: refactor stop after end of playlist/queue
+  *  d1356ab - streamer: stop playback at the end of playlist
+  *  4c7618a - cocoaui: use title formatting for status bar
+  *  82930bb - tf: added %playback_bitrate% for getting immediate
+    bitrate
+  *  c95e674 - streamer: handling seeking at the end of track
+  *  1c9acf4 - mp3: division by zero error on corrupt file
+  *  9bf9af7 - mp3: division by zero error on corrupt file
+  *  f84d918 - streamer: further cleanup; better output format setting
+  *  738bf45 - streamer: fixed buffering state and immediate bitrate
+  *  3feda48 - main: fix seek to start of track (seekpos=0 regression)
+  *  a1bfd1e - streamer: only one format setting per block
+  *  a8f4240 - streamer: buffer readiness checking by counting blocks
+  *  fb0d1c6 - streamer: reset current track params after switching to
+    the next one
+  *  ae5237f - block streamer: fixed buffer management issues
+  *  33c121a - block streamer WIP
+  *  bf7556a - block streaming: plays some sound, but hangs on mutex
+    locks
+  *  d6377c2 - dsp and format conversion moved to streamer_read
+  *  8c5795a - streamer: move dsp code to a separate module
+  *  27de649 - block-based streaming WIP
+  *  d4bf09f - block-based streaming WIP
+  *  6f218a2 - playlist: load saved 64bit start/end sample values from
+    playlists
+  *  4613a6c - finish conversion to new startsample/endsample API
+  *  b207de4 - convert the code to use 64 bit start/end/current sample,
+    with some new APIs (WIP)
+  *  8201827 - gtkui: allow spaces in drag-drop URI lists (fixes #933)
+  *  d7596a0 - converter: merge existing metadata from the converted
+    files with source metadata (fixes #1016)
+  *  24fea7c - tf: handle vfs paths in %title% (fixed #1047)
+  *  a07b7aa - playlist: don't clear playlist on load failure (fixes
+    #1204)
+  *  280d82d - main: fix appending playlist from command line (fixes
+    #1554)
+  *  f822dd8 - gtkui: force column sizes to positive values on load
+    (workaround for bug #1672)
+  *  1175989 - mp3: don't trust xing header for calculating file
+    bitrate, as the file can be incomplete (fixes #1699)
+  *  c0ad757 - gtkui: fix column format index for year on edit
+  *  0bff431 - coreaudio: minor cleanup
+  *  ed28e1e - resume last session by default; fixed session resuming
+    regression
+  *  6a464fe - coreaudio: device_id cleanup
+  *  fe137e7 - coreaudio: fix device_id management bug
+  *  64a4250 - mp3: never guess duration from filesize based on 1st
+    frame
+  *  058853f - streamer: fixed autoplay in
+    streamer_play_current_track_real
+  *  e07d811 - streamer: better handling of seek errors
+  *  c802f0e - main: handle negative seeking position error
+  *  70250c0 - mp3: better handling of seek beyond end of file
+  *  3126bb0 - alac: fix mutex lock error
+  *  5940c53 - streamer: cleanup, additional fix for pausing near end of
+    track (fixes #1411)
+  *  a387764 - coreaudio: better unpause handling
+  *  92cfc20 - streamer: added streamer_yield function, to allow
+    sequential queries
+  *  a3a5ebb - streamer: fixed seeking to end of track glitch
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 17 Feb 2017 17:38:57 +0300
+
 deadbeef (0.7.2+git6972-de6cf82-1) unstable; urgency=medium
 
   * Compile

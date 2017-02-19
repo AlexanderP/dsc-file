@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/default.mk
+
+%:
+	dh $@  --parallel --with autotools-dev
+
+
+override_dh_auto_install:
+	[ ! -f $(CURDIR)/translation/Makefile ] || ( cd $(CURDIR)/translation && make )
+	cd $(CURDIR)/translation && $(CURDIR)/translation/mtrconv ru ru.mtr
+	cd $(CURDIR)/translation && $(CURDIR)/translation/mtrconv en en.mtr
+	dh_auto_install
+
+override_dh_auto_clean:
+	[ ! -f $(CURDIR)/translation/mtrconv ] || rm -f $(CURDIR)/translation/mtrconv
+	[ ! -f $(CURDIR)/translation/en.mtr ] || rm -f $(CURDIR)/translation/en.mtr
+	[ ! -f $(CURDIR)/translation/ru.mtr ] || rm -f $(CURDIR)/translation/ru.mtr
+	dh_auto_clean
+
+override_dh_install:
+	rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/en.mtr
+	dh_install

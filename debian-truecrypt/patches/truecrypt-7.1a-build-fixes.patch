@@ -1,0 +1,121 @@
+diff --git a/Build/Include/Makefile.inc b/Build/Include/Makefile.inc
+index 39395e9..3bd6efb 100644
+--- a/Build/Include/Makefile.inc
++++ b/Build/Include/Makefile.inc
+@@ -10,7 +10,7 @@ $(NAME): $(NAME).a
+ 
+ clean:
+ 	@echo Cleaning $(NAME)
+-	rm -f $(APPNAME) $(NAME).a $(OBJS) $(OBJS:.o=.d) *.gch
++	rm -f $(APPNAME) $(NAME).a $(OBJS) $(OBJS:.o=.d) *.gch $(RESOURCES) SystemPrecompiled.d
+ 
+ %.o: %.c
+ 	@echo Compiling $(<F)
+diff --git a/Common/Tcdefs.h b/Common/Tcdefs.h
+index 9ab14a4..9cada69 100644
+--- a/Common/Tcdefs.h
++++ b/Common/Tcdefs.h
+@@ -15,7 +15,9 @@
+ #define TC_APP_NAME						"TrueCrypt"
+ 
+ // Version displayed to user 
++#ifndef VERSION_STRING
+ #define VERSION_STRING					"7.1a"
++#endif
+ 
+ // Version number to compare against driver
+ #define VERSION_NUM						0x071a
+@@ -247,7 +249,9 @@ void EraseMemory (void *memory, int size);
+ #define TC_MAX_PATH		260	/* Includes the null terminator */
+ #endif
+ 
++#ifndef TC_STR_RELEASED_BY
+ #define TC_STR_RELEASED_BY "Released by TrueCrypt Foundation on " TC_STR_RELEASE_DATE
++#endif
+ 
+ #define MAX_URL_LENGTH	2084 /* Internet Explorer limit. Includes the terminating null character. */
+ 
+diff --git a/Main/GraphicUserInterface.cpp b/Main/GraphicUserInterface.cpp
+index 04426bd..3a9932d 100644
+--- a/Main/GraphicUserInterface.cpp
++++ b/Main/GraphicUserInterface.cpp
+@@ -1250,19 +1250,16 @@ namespace TrueCrypt
+ 			File backupFile;
+ 			backupFile.Open (*files.front(), File::OpenRead);
+ 
+-			uint64 headerSize;
+ 			bool legacyBackup;
+ 
+ 			// Determine the format of the backup file
+ 			switch (backupFile.Length())
+ 			{
+ 			case TC_VOLUME_HEADER_GROUP_SIZE:
+-				headerSize = TC_VOLUME_HEADER_SIZE;
+ 				legacyBackup = false;
+ 				break;
+ 
+ 			case TC_VOLUME_HEADER_SIZE_LEGACY * 2:
+-				headerSize = TC_VOLUME_HEADER_SIZE_LEGACY;
+ 				legacyBackup = true;
+ 				break;
+ 
+diff --git a/Main/Main.make b/Main/Main.make
+index 565ed40..2a00269 100644
+--- a/Main/Main.make
++++ b/Main/Main.make
+@@ -105,7 +105,7 @@ TC_VERSION = $(shell grep VERSION_STRING ../Common/Tcdefs.h | head -n 1 | cut -d
+ 
+ $(APPNAME): $(LIBS) $(OBJS)
+ 	@echo Linking $@
+-	$(CXX) -o $(APPNAME) $(LFLAGS) $(OBJS) $(LIBS) $(FUSE_LIBS) $(WX_LIBS)
++	$(CXX) -o $(APPNAME) $(LFLAGS) $(OBJS) $(LIBS) $(FUSE_LIBS) $(WX_LIBS) $(TC_EXTRA_LIBS)
+ 
+ ifeq "$(TC_BUILD_CONFIG)" "Release"
+ ifndef NOSTRIP
+diff --git a/Main/TextUserInterface.cpp b/Main/TextUserInterface.cpp
+index d9e93e6..852109b 100644
+--- a/Main/TextUserInterface.cpp
++++ b/Main/TextUserInterface.cpp
+@@ -1371,19 +1371,16 @@ namespace TrueCrypt
+ 			File backupFile;
+ 			backupFile.Open (filePath, File::OpenRead);
+ 
+-			uint64 headerSize;
+ 			bool legacyBackup;
+ 
+ 			// Determine the format of the backup file
+ 			switch (backupFile.Length())
+ 			{
+ 			case TC_VOLUME_HEADER_GROUP_SIZE:
+-				headerSize = TC_VOLUME_HEADER_SIZE;
+ 				legacyBackup = false;
+ 				break;
+ 
+ 			case TC_VOLUME_HEADER_SIZE_LEGACY * 2:
+-				headerSize = TC_VOLUME_HEADER_SIZE_LEGACY;
+ 				legacyBackup = true;
+ 				break;
+ 
+diff --git a/Makefile b/Makefile
+index 265bb6f..cdfaad8 100644
+--- a/Makefile
++++ b/Makefile
+@@ -50,6 +50,9 @@ export WXCONFIG_CFLAGS :=
+ export WXCONFIG_CXXFLAGS :=
+ WX_ROOT ?= ..
+ 
++CFLAGS += -Wno-sequence-point
++CXXFLAGS += -Wno-narrowing
++PKCS11_INC ?= $(HOME)/pkcs11
+ 
+ export TC_BUILD_CONFIG := Release
+ 
+@@ -278,7 +281,7 @@ all clean:
+ 
+ ifeq "$(MAKECMDGOALS)" "wxbuild"
+ CFLAGS :=
+-CXXFLAGS :=
++CXXFLAGS := -w
+ LFLAGS :=
+ endif
+ 

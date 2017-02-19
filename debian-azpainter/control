@@ -1,0 +1,16 @@
+Source: azpainter
+Section: graphics
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 9), autotools-dev, libx11-dev, libxext-dev, libxft-dev, libxi-dev, libjpeg-dev, libpng-dev | libpng12-dev, libfreetype6-dev, libfontconfig1-dev, zlib1g-dev
+Standards-Version: 3.9.8
+Homepage: https://osdn.net/projects/azpainter/
+
+Package: azpainter
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: 16bit RGB full color paint software.
+ Full color painting software for Linux for illustration drawing. 
+ This is not suitable for dot editing. Since the color is handled with 
+ 16 bit color (15 bit fixed point number) internally, the accuracy of 
+ color rises, but the memory is consumed correspondingly.

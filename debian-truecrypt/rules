@@ -5,23 +5,26 @@ export DH_VERBOSE=1
 export PKCS11_INC=$(shell pwd)/pkcs11
 export WX_ROOT=$(shell pwd)/wx
 NCPUS=2
-export EXTRA_LIBS=-lX11 -ldl
+export TC_EXTRA_LIBS=-lX11 -ldl
 
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
-endif
-ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid vivid wily xenial yakkety)) 
-	export CC=gcc-4.9
-	export CXX=g++-4.9
-else
-	export CC=gcc
-	export CXX=g++
 endif
 
 %:
 	dh $@ --parallel 
 
 override_dh_auto_build:
+ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid xenial yakkety zesty)) 
+ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid yakkety zesty)) 
+	patch -p1 < debian/patches/truecrypt-7.1a-gcc5.patch
+	patch -p1 < debian/patches/truecrypt-7.1a-gcc6.patch
+else
+	patch -p1 < debian/patches/truecrypt-7.1a-gcc5.patch
+endif
+else
+	echo "no patch"
+endif
 	$(MAKE) -j$(NCPUS) wxbuild
 	$(MAKE) -j$(NCPUS) WXSTATIC=1

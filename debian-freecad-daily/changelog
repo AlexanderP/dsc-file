@@ -1,3 +1,265 @@
+freecad-daily (0.17~git10149-4169e94-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 4169e94b697c08cbc5427661498d2d1b9657a6ec
+  * Date: 1487429874
+  * git changelog:
+  *  4169e94 - Part: code formating, white spaces
+  *  54bbd79 - Part: compound filter, GUI command
+  *  8369d68 - Part: compound filter, core module
+  *  ba9e342 - Part: compound filter, icon
+  *  787b930 - improve exception handling in BSplineCurvePy class
+  *  72375db - clear error state when creating spline
+  *  2209c7d - Fix ProgressBar rendering following STEP reader
+    enhancement
+  *  67a0bd4 - improve whitespaces
+  *  7e42975 - Fix more GCC warnings.
+  *  bc525a4 - fix crash due to GIL
+  *  4d21adf - py3: spreadsheet: gathering spreadsheet relevant commits:
+    356b3b5736d6a83a91050973f77db9fc005b8551 Update
+    Arch,Fem,Material,Spreadsheet for py3 print
+    70967107210481e362eab1cef78d15b8ba08c300 py3: Fixes from last rebase
+  *  9b6ef85 - py3: fixed error in spreadsheet
+  *  3efc4fe - py3: python3-related fix in Spreadsheet
+  *  3d3a8d0 - py3: ported Spreadsheet to python3
+  *  f9cb89a - python: Spreadsheet: *.py: Fix python3 syntax
+  *  b115d79 - Arch: Add default storey when exporting to IFC + allow
+    all Arch objects to have Undefined role
+  *  686ba70 - FEM: python import modules, use same method structure in
+    all modules, methods where only moved around, no changes inside the
+    methods
+  *  4387a4a - FEM: result task panel, only activate button if result
+    really exists
+  *  80e68bd - FEM: result task panel, reorder signal and slots and add
+    comments
+  *  68ec258 - FEM: result task panel, fix restore result settings for
+    some result types
+  *  e25c67f - FEM: result task panel ui, move user defined equation in
+    separate frame
+  *  a2374d0 - FEM: result task panel ui, reorder result radio buttons
+  *  2cdaba4 - FEM: code formating, white spaces
+  *  e38d0ad - PathHelix: Fix locale issue for Gui::InputField setText()
+    method
+  *  837f2ea - PathHelix: Be more liberal in what constitues a straight
+    cylinder
+  *  5cb17a6 - implement toNurbs for ellipse
+  *  1463a26 - FEM: examples, update them to the new mechanical python
+    result object
+  *  8736bdc - FEM: result task panel, use better object names
+  *  18dafb4 - FEM: result view provider, implement checks for open
+    result task panel
+  *  e4bd905 - FEM: result task panel, reset mesh color and deformation
+    in taskpanel and not by use of FemTools, fixes if mutlip fixes if
+    problems if multiple meshes or results are in an analysis
+  *  c9f843a - FEM: result task panel, fix option hide constaints and
+    parts and make a small change inside
+  *  28d0d73 - FEM: result task panel, changes in the way the task panel
+    is called be the commands in Gui
+  *  91bd0fc - FEM: Doxygen tweeks Discussion in [FEM
+    subforum](https://forum.freecadweb.org/viewtopic.php?f=18&t=12833&st
+    art=40#p158684) ...Calculix FRD Reader doxygen tweek ...Calculix INP
+    Reader doxygen tweek ...Result import and export VTK file library
+    doxygen tweek ...Z88 Mesh reader and writer doxygen tweek ...Z88
+    Disp Reader doxygen tweek ...Command show result doxygen tweek
+  *  a01acef - FEM: frd reader, missing mode_strain_found = False
+  *  e111440 - FEM: ccx writer, better handling of different analysis
+    types
+  *  2de20b8 - FEM: gmsh mesh class, small improvement in gmsh binary
+    handling
+  *  e07b45d - FEM: better module names for CalculiX result reader
+    modules
+  *  9431d8e - FEM: better module name for Z88 o2 result reader
+  *  e651a3f - FEM: vtk result file import, workaround for calculating
+    the DisplacementLengths
+  *  12f53b6 - FEM: move the new python FemResult object to
+    FemMechanicalResult object derived from C++ FemResult object
+  *  aa49586 - FEM: result task panel, codeformating and a comment
+  *  08b51b4 - FEM: result task panel, fix user defined result errors on
+    new refactoring
+  *  b4b41ff - FEM: result task panel, fix because empty result are
+    really empty now and do not have a 0.0 in list
+  *  17eac77 - FEM: code formating, white spaces
+  *  b55a768 - FEM: result object refactor, fix frd, vtk, z88 result
+    file import
+  *  c13ca92 - FEM: result object refactor, move most properties from
+    C++ to a new Python result object
+  *  ea1829c - FEM: vtk result file reading, activate import in python
+    vtk import module
+  *  1c18867 - FEM: VTK post processing, changes: - vtk result file
+    reading - some changes in vtk post processing pipe line
+  *  99fa203 - Merge pull request #522 from looooo/python3-
+    import+inspect
+  *  52f420d - Merge pull request #515 from kkremitzki/view-mappings
+  *  49a8705 - Fix some Quarter High DPI Display issues. Ported from
+    code by Randall O'Reilly.
+  *  bf66153 - Increment year in copyright info
+  *  f95eba0 - Merge pull request #524 from agryson/update-copyright
+  *  c1dad1b - Path: Fixed wrong display of non-displayable paths -
+    fixes #2484
+  *  0c7587a - Increment year in copyright info
+  *  3076b59 - Merge branch 'master' of
+    https://github.com/FreeCAD/FreeCAD
+  *  f4d8945 - issue #2902: add unit test
+  *  19111f1 - issue #2902: track attribute objects in parent structure
+    to notify about changes
+  *  4f23b56 - issue #0002902: replace members of PyObjectBase with a
+    PyDictObject
+  *  8868943 - Arch: Testing opening property for windows
+  *  b72aa9f - issue #0002902: PyObjectBase notification chain can lead
+    to unexpected changes to document
+  *  89925e2 - implement NURBS converson of circle
+  *  27fd215 - add methods to convert a curve to a B-Spline or NURBS
+  *  1cbe0be - Arch: Fix in Arch Test
+  *  04e0620 - py3: ported Inspection to python3
+  *  944d62e - py3: ported Import to python3
+  *  05544f3 - Merge pull request #521 from looooo/python3-OpenSCAD
+  *  87bf0d9 - Merge pull request #520 from f3nix/gcc-warnings-1
+  *  ec00893 - Merge pull request #519 from f3nix/qt5-warnings-1
+  *  d925db1 - py3: Material: print to python3 taken from:
+    23fa650261ed346b2c5a6216b7720b87e063b27d author: kkremitzki
+  *  de89c2e - python: Material: *.py: Fix syntax for Python 3
+  *  159dbe2 - python: OpenSCAD: *.py: Fix python3 syntax
+  *  34a3039 - declare hasExtension of Python wrapper as const method
+  *  69e027a - fix rendering problems by using the cache context
+  *  6d6fbdc - implement correct way to query VBO status of viewer from
+    SoBRepFaceSet node
+  *  0700345 - make vboAvailable a static variable and extend interface
+    of renderShape to avoid side effects
+  *  8612c4f - write custom action class to notify shape node about vbo
+    changes
+  *  56ff88e - cleanup experimental code, improve whitespaces
+  *  968a597 - get VBO support for SoBrepFaceSet working on Windows
+  *  8383f72 - Accelerate 3D rendering with VBO support *First step to
+    move Part rendering using VBO instead of direct rendering *Update
+    comments inside the code *Assume VBO is available if OpenGL > 3.0 is
+    detected *Add initial Color support to VBO rendering ! *Initial full
+    feature VBO rendering implementation *Modify some include issue for
+    linux build *Try to fix linux include header *Reupdate header
+    include for linux support *Fix compilation on linux *Fix linux and
+    MacoOS build *Fix glGetString definition *Fix Windows build *Add VBO
+    support as an option into the Preference menu *Fix crash while
+    running FreeCAD test bench with new VBO rendering infrastructure (in
+    both cases) *Improve performances *Compute material index only when
+    a VBO update is required (improve frame rate by 10%) *Clean the code
+    *Fix Travis compilation warning *Try to fix Windows compilation
+    issue *Update include for Windows
+  *  b9e8b4f - revert previous change in main() for POSIX systems
+  *  fd2a178 - Fix some GCC warnings.
+  *  d7541bc - QStyleOptionViewItemV4 is deprecated in Qt5. Replace it
+    with QStyleOptionViewItem.
+  *  1a8d535 - handle Coin3d version older than 4.0
+  *  04071b4 - Update view mappings to sensible defaults
+  *  d7ed8c4 - Part: Set per-face transparency in boolean ops - fixes
+    #1029,#2806
+  *  ebb3c84 - Gave keyboard shortcuts (V,1 -> V,5) to Draw Styles
+  *  40abcf5 - fix OSX build failure due to outdated Coin3d version
+  *  79d7f3e - Fix build with VTK 7.1 which introduces vtkMTimeType.
+  *  7ec37c9 - Fix RPATHS for area-native and area libs on Linux.
+  *  b77188e - Adding Normals in OBJ exports
+  *  cc46acf - [Sketcher] Moved radius to constraint mode framework
+  *  3d9b46d - [Sketcher] corrected artifact introduced by faulty
+    conflict resolution
+  *  3cf00a1 - [Sketcher] Moved distance to constraint mode
+  *  47624cf - Moved vertical and horizontal distance to constraint
+    creation mode
+  *  5ff6895 - Moved symmetric to general constrain creation mode
+    framework
+  *  45cb028 - Moved equal to general constrain creation mode framework
+  *  adc13ed - Move tangent to general constraint mode framework
+  *  df658ae - Replace some of the allowedSelSequences with more general
+    form
+  *  798a57e - issue #0002503: Invisible pad object
+  *  e1110bb - Arch: Allow the hi-res version of Equipment objects to be
+    a shape too
+  *  819b3e8 - Draft: Fixed buggy task panel of Facebinder
+  *  72d2349 - Merge pull request #512 from WandererFan/Fix2888
+  *  81c3bc6 - make new Part.Line behaviour the default
+  *  513decf - Cleanup orphan features on DVP delete
+  *  63d5749 - Fix crash if BaseView null on Section delete
+  *  69163cb - Fix #2888 Crash on Delete View
+  *  43a5483 - Merge pull request #511 from luzpaz/Short-urls
+  *  9925e90 - issue #0002183: Mesh View . Use Bounding-Box Not Working
+    For Flat Lines
+  *  8b8b423 - Added crowdin badge to README
+  *  aa59757 - fix 'Flat Lines' display mode of meshes
+  *  6c2a7b4 - issue #0002891: Sketching impossible, Type.Error
+    Exception
+  *  364f53a - Replace new Short URLs with old wiki URLs pt2
+  *  bb52cd1 - Replace new Short URLs with old wiki URLs
+  *  0598af8 - unset PYTHONHOME on Windows to avoid eventual problems
+    with a conflicting Python installation
+  *  b3ca0ba - fix German translation
+  *  f33c7b3 - issue #0001203: Allow User to Adjust Size of Constraint
+    Points
+  *  2ab9ef9 - Qt4/Qt5 neutral changes fix interface of slot functions
+    in DlgSettingsEditorImp to avoid warnings with Qt5
+  *  0a6b382 - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  f2467d7 - Add persistence to Python console word wrap
+  *  c0b29a4 - Merge pull request #504 from kkremitzki/master
+  *  b9fea9c - Merge branch 'JanPatch' of
+    https://github.com/WandererFan/FreeCAD
+  *  2c31b01 - Fix 2889 Toggle Frames for DrawViewSymbol
+  *  18cd5b5 - Feature Request 1880 - hide Template
+  *  12346a6 - Fix 2884 crash on page delete
+  *  0a05394 - Copy/Paste error referencing Image WB
+  *  79a5a6a - Change Scale to PropertyFloatConstaint to prevent OCC
+    loop when Scale == 0
+  *  d5bb03b - hidden pref setting for face debugging
+  *  64b36a2 - Update Metadata
+  *  5965f48 - Align Part workbench icons to guidelines
+  *  c23d885 - Draft: Fixed point tool
+  *  9591e93 - Fix doc header references to be http/https agnostic
+  *  70049da - Fix 2889 Toggle Frames for DrawViewSymbol
+  *  c47d043 - Feature Request 1880 - hide Template
+  *  2c7afff - Fix 2884 crash on page delete
+  *  86363ca - Copy/Paste error referencing Image WB
+  *  e0231e2 - Change Scale to PropertyFloatConstaint to prevent OCC
+    loop when Scale == 0
+  *  7c3e244 - hidden pref setting for face debugging
+  *  15ab763 - Merge pull request #503 from agryson/vulture-artwork-
+    feedback
+  *  6fde632 - Integrate forum feedback on icons
+  *  c797b47 - Merge pull request #501 from luzpaz/doxygen-typo-fix
+  *  48c620b - Merge pull request #500 from pekkaroi/pathcompound-fix
+  *  6b0a0ff - issue #0001935
+  *  09b1c5c - fix doxygen typo introduced to DraftVecUtils.py
+  *  00c850f - Merge branch 'master' into pathcompound-fix
+  *  60ae927 - issue #0002031: show object name when hovering tree view
+  *  63ee215 - findParentJob fixed to work from within a PathCompound
+  *  36b7e03 - fix eval flsw: do not use GUI stuff in App modules!
+  *  095d462 - Arch: Added oddtopus's fixes to Arch Frame
+  *  216d8c6 - commit 10000
+  *  5cf9eb0 - commit 9999
+  *  019b0e2 - Draft: doxygen tweaks Getting familiarized with doxygen
+    by starting some initial work on Draft module typo introduced from
+    commit
+  *  76b3397 - py3: ported module init to python3
+  *  915a1b1 - py3: Draft: use ordered dicts
+  *  76a4e74 - py3: Draft: Trackers integer division
+  *  8165b2a - py3: Draft: python3 translate
+  *  2deaf4f - Update to Python 3 print
+  *  da2b9f3 - py3: error with decode translation. translation already
+    is a function defined in DraftTools and is responsable for right
+    decoding. Not doing it twice.
+  *  742d92c - py3: fix in draft translate function
+  *  8696ecd - py3: ported Draft to python3
+  *  81464b5 - python: Draft: *.py: Fix syntax for Python3
+  *  09ef1e9 - undo removal of function caused by PR494
+  *  899e57f - PATH: post processor tweaks and loop select. rename
+    generic_post.py: This is actually a post specific to a machine.  The
+    generic name is confusing fix test case. Contour has no plunge angle
+    scrubbing postprocessors for python 2 style prints Keep loop select
+    usable when task panel is open.
+  *  17a3d1e - fix warnings: -Wmaybe-uninitialized
+  *  16a23d1 - disable Path module on Win32 if cmake version is less
+    than 3.4.3
+  *  c014fe1 - Merge pull request #460 from realthunder/PathArea
+  *  850bba7 - prework for issue #0002698
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 18 Feb 2017 19:02:23 +0300
+
 freecad-daily (0.17~git9945-709d2f3-1) unstable; urgency=medium
 
   * Compile

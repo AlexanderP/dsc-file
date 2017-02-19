@@ -1,3 +1,123 @@
+gimp-devel (2.9.4+git38105-fdf7b24-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: fdf7b24de444aeb1026a81fde9c9286bdbfff38a
+  * Date: 1487403545
+  * git changelog:
+  *  fdf7b24 - Update Greek translation
+  *  f538eb2 - app: add the profile import policy to prefs -> import
+  *  eff87d4 - app: make blend/composite attributes of color-erase
+    immutable
+  *  60466dc - app: implement the different composite modes for anti-
+    erase mode
+  *  15f5d57 - app: implement the different composite modes for replace
+    mode
+  *  b6d7be4 - app: implement the different composite modes for behind
+    mode
+  *  7a755d5 - app: implement the different composite modes for dissolve
+    mode
+  *  d1a0c25 - app: implement the different composite modes for normal
+    mode
+  *  7402127 - app: remove GIMP_LAYER_MODE_FLAG_WANTS_LINEAR_DATA and
+    friends
+  *  50d8455 - app: avoid some GCC warnings due to unhandled switch
+    cases
+  *  3bd9ce5 - Update Russian translation
+  *  b3f802a - Bug 778523 - Optionally add alpha to layers of imported
+    images
+  *  5af2ecc - app: move post-loading image import logic to new files
+    file-import.[ch]
+  *  8aa3d5e - app: improve layer-mode menu separator logic
+  *  e30d235 - app: derive the layer-mode menu layout entirely from the
+    info arrays
+  *  c3d2f57 - app: add GimpLayerModeContext enum
+  *  33f470f - app: more layer mode info
+  *  a246290 - app: clean up gimpoperationlayermode.c a bit
+  *  ebd939c - app: merge the GimpLayerModeFunc into gimp-layer-
+    modes.c's array
+  *  57360a0 - Bug 778597 - Eraser paints transparent areas with BG
+    color
+  *  df45936 - app: add more IMMUTABLE flags to the layer modes
+  *  a774b24 - Small fix in the Windows Installer Italian translation
+  *  78e337f - Updated Slovenian translation
+  *  92f1024 - configure.ac: require GEGL >= 0.3.12
+  *  cb733ef - app: add layer mode flags to mark blend and compositing
+    modes immutable
+  *  9b636ff - Bug 778571 - Add support to import/export layer color
+    tags from/to psd files
+  *  c8ebd04 - build: workaround python2 crashes in Flatpak.
+  *  afc69f8 - build: fix Webkit build in Flatpak package.
+  *  2c503d4 - Update Russian translation
+  *  c3c895c - Slightly normalize wavelet-decompose metadata
+  *  8634b5c - app: make layer blend color space and compositing color
+    space configurable
+  *  b119fc9 - libgimpwidgets: show help buttons in dialogs again
+  *  801bd8f - plug-ins: get rid of icons in dialog buttons (use labels
+    not stock IDs)
+  *  813ae84 - devel-docs: get rid of icons in dialog buttons (use
+    labels not stock IDs)
+  *  40981f4 - libgimp*: get rid of icons in dialog buttons (use labels
+    not stock IDs)
+  *  7da7bab - app: get rid of icons in dialog buttons (use labels not
+    stock IDs)
+  *  a0a5eda - Update Polish translation
+  *  65485ae - Bug 777096 - Curves line for Alpha channel invisible with
+    default theme
+  *  7111ead - libgimpconfig: gimp_config_reset_properties(): reset only
+    changed properties
+  *  b7d3c4b - Update Russian translation
+  *  d422a37 - Updated Italian translation
+  *  2bca4b2 - Bug 777911 - Cage Transform edits locked, invisible and
+    group layers
+  *  80f528a - app: reorder and clean up stuff in the cage tool before
+    starting fixes
+  *  c0444e3 - app: update the layer mode combo model after construction
+  *  b3dea58 - app: fix SRC_ATOP and DST_ATOP too
+  *  6853c91 - app: don't expand the convolution matrix table widget
+  *  4c3a772 - app: fix SRC_OVER composite mode
+  *  bed63c6 - app: consolidate button creation code for the convolution
+    matrix
+  *  e40091c - app: add rotate/flip buttons to the convolution matrix
+    gui
+  *  e1e41b8 - app: allow painting on transparent layers with modes !=
+    normal
+  *  8bba14e - app: indentation fix in gimpgeglprocedure.c
+  *  891f85e - app: move gimp-gegl-config.[ch] to operations/
+  *  80244ad - Update Polish translation
+  *  a3b8d0c - app: some cleanup and adding const in gimp-layer-modes.c
+  *  daf206c - app: make struct GimpLayerModeInfo private
+  *  2950fec - app: move layer mode enums and gimp-layer-modes.[ch] to
+    operations/
+  *  b3e4588 - psd: add support for loading and exporting Hard Mix layer
+    mode
+  *  1284715 - app: fix composite mode of erase mode
+  *  8f4700b - app: add "hard mix" blend mode
+  *  5c873bd - Reintroduce a cleaner version of the linear light fix
+  *  005b16e - Revert "Resurrect previous version of the linear light
+    formula and fix it"
+  *  1366592 - Resurrect previous version of the linear light formula
+    and fix it
+  *  e69924b - Fix the linear light layer mode formula
+  *  7a000a0 - app: include composite mode in legacy layer mode info
+  *  6c983eb - build/win: Upgrade dependencies.
+  *  e00b0db - build/win: Upgrade a few dependencies to fix build
+  *  0159d0b - Fix the vivid light formula
+  *  3f91ad7 - app: replace some layer mode logic with data driven
+    functions
+  *  832c79e - Activate exporting more layer modes from XCF to PSD
+  *  2bce09f - Add Linear Burn to PSD exporting, update the list of XCF
+    layer modes
+  *  023cdd1 - Update XCF to PSD layer mode mappings
+  *  0584fc0 - psd: add stubs for Darker Color and Lighter Color layer
+    modes
+  *  b471c90 - Update PSD to GIMP layer mode mappings
+  *  15d4b8b - icons: SVG and 48x48 version of the Import/Export
+    preferences icon.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 18 Feb 2017 16:30:41 +0300
+
 gimp-devel (2.9.4+git38031-1a2ef41-1) unstable; urgency=medium
 
   * Compile

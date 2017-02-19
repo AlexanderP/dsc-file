@@ -1,6 +1,8 @@
 #!/usr/bin/make -f
 
 export DEB_LDFLAGS_MAINT_APPEND=-Wl,-z,defs -Wl,--as-needed
+export DEB_CXXFLAGS_MAINT_APPEND = $(shell dpkg-buildflags --get CXXFLAGS) -std=gnu++11
+
 
 configure_flags := \
 	--disable-dynamic-loading \

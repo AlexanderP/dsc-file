@@ -1,3 +1,40 @@
+solvespace (2.3.0+git1166-9157425-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 91574254fefbc46fa5a14127b37e2a93dcb01fa1
+  * Date: 1487307679
+  * git changelog:
+  *  9157425 - Improve handling of corner cases related to assembled
+    loop normals.
+  *  dea573e - Highlight normals and circle radii that have a degree of
+    freedom.
+  *  3bcc376 - Same orientation constraint doesn't exist in a workplane.
+  *  6bc2ed9 - Remove nonexistent degrees of freedom from lathe groups.
+  *  3c36d8f - Pin comments with custom styles to front layer, like
+    regular ones.
+  *  3121845 - Fix undefined behavior in solvespace-cli.
+  *  41794db - Fix a crash in expression parser.
+  *  e6ed36f - Add solvespace-debugtool, to expose some internals via
+    CLI.
+  *  f29d9d7 - GTK: run DoLater after the next main loop iteration.
+  *  1871efa - Commit missing parts of d77f617.
+  *  2e15f60 - Win32: implement support for full-screen graphics window.
+  *  d77f617 - Remove the "show menu bar" option.
+  *  6cf5409 - Update testsuite after ced4244.
+  *  cd26256 - Travis: run tests again.
+  *  97e7185 - Snap point to entity when constraining to a hovered
+    entity.
+  *  ced4244 - Explicitly represent the parameter used in constraints.
+  *  80c7296 - Win32: do not redefine VOS_NT_WINDOWS32/VFT_APP.
+  *  4260be2 - DXF: mark POLYLINE as 3d if any of the points have non-
+    zero Z.
+  *  baf9dc0 - Remove degenerate triangles when generating triangle
+    mesh.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 17 Feb 2017 22:01:55 +0300
+
 solvespace (2.2.0+git1147-4465bc0-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,47 @@
+goaccess (1:1.1.0+git2179-d779612-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: d7796129dca51f9adea0a38fe8ae8a47cffdebb1
+  * Date: 1487300207
+  * git changelog:
+  *  d779612 - Added --daemonize command line option to run goaccess as
+    a daemon (if --real-time-html enabled).
+  *  0e225f1 - Fixed clean up of invalid UTF-8 sequences in WebSocket
+    server.
+  *  3572704 - Perform UTF-8 validation prior to send buffer from the
+    server to the client.
+  *  47bbabf - Ensure UTF-8 validation is not performed in the JSON
+    output.
+  *  4049780 - Fixed implicit declaration of function warning of
+    ht_get_meta_data().
+  *  73b1ad2 - Ensure invalid JSON characters are stripped before sent
+    to the browser.
+  *  a772b98 - Changed ws_validate_string() scope to be used across
+    other source files.
+  *  8670442 - Changed verify_utf8() scope to be used across other
+    source files.
+  *  98438fd - Merge pull request #639 from da2x/patch-15
+  *  63caa40 - Merge pull request #653 from julianxhokaxhiu/bump_alpine
+  *  b115ec1 - Use the latest Alpine image
+  *  3c0759c - Merge pull request #650 from SjonHortensius/browsers-
+    fixes
+  *  d8b3f7e - Merge pull request #651 from julianxhokaxhiu/dockerfile
+  *  6469fe9 - Update README.md
+  *  744fe0d - Add HTTP binding
+  *  bdd3d43 - Fix supervisord.conf source file path
+  *  2740383 - Provide Dockerfile
+  *  4cfe5b3 - Updated man page for upcoming release.
+  *  1bff10d - Added PinRSS as a feed reader
+  *  bf5f97a - Update crawlers, fix Yandex/Baidu + add some more
+  *  cda3b8e - Added note about trailing forward-slash on default config
+    file.
+  *  38c4df9 - Ensure db-path uses trailing forward slash on default
+    config file.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 17 Feb 2017 17:26:20 +0300
+
 goaccess (1:1.1.0+git2151-8e9e3a9-2) unstable; urgency=medium
 
   * Compile. add enable-geoip=legacy 
