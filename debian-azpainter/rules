@@ -8,14 +8,16 @@ include /usr/share/dpkg/default.mk
 
 override_dh_auto_install:
 	[ ! -f $(CURDIR)/translation/Makefile ] || ( cd $(CURDIR)/translation && make )
-	cd $(CURDIR)/translation && $(CURDIR)/translation/mtrconv ru ru.mtr
+	cd $(CURDIR)/debian && $(CURDIR)/translation/mtrconv ru ru.mtr
 	cd $(CURDIR)/translation && $(CURDIR)/translation/mtrconv en en.mtr
+	cd $(CURDIR)/debian && $(CURDIR)/translation/mtrconv uk uk.mtr
 	dh_auto_install
 
 override_dh_auto_clean:
 	[ ! -f $(CURDIR)/translation/mtrconv ] || rm -f $(CURDIR)/translation/mtrconv
 	[ ! -f $(CURDIR)/translation/en.mtr ] || rm -f $(CURDIR)/translation/en.mtr
-	[ ! -f $(CURDIR)/translation/ru.mtr ] || rm -f $(CURDIR)/translation/ru.mtr
+	[ ! -f $(CURDIR)/debian/ru.mtr ] || rm -f $(CURDIR)/debian/ru.mtr
+	[ ! -f $(CURDIR)/debian/uk.mtr ] || rm -f $(CURDIR)/debian/uk.mtr
 	dh_auto_clean
 
 override_dh_install:

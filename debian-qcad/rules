@@ -23,8 +23,13 @@ endif
 override_dh_auto_configure:
 	cp debian/$(CONTROL) debian/control
 	dh_auto_configure
-	cp scripts/qcad_icon.svg debian/qcad.svg
-	convert -resize 64x64 scripts/qcad_icon.svg debian/qcad.png
+
+override_dh_install:
+	dh_install
+	for size in 16 24 32 48 64 96 128 192 256 512 ; do \
+	mkdir -p $(CURDIR)/debian/qcad/usr/share/icons/hicolor/$${size}x$${size}/apps/ && \
+	convert -resize $${size}x$${size} scripts/qcad_icon.png $(CURDIR)/debian/qcad/usr/share/icons/hicolor/$${size}x$${size}/apps/qcad_icon.png ; \
+	done
 
 override_dh_auto_clean:
 	cp debian/$(CONTROL) debian/control
