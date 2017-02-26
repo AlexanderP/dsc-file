@@ -23,3 +23,7 @@ override_dh_auto_clean:
 override_dh_install:
 	rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/en.mtr
 	dh_install
+	mkdir -p $(CURDIR)/debian/azpainter/usr/share/icons/hicolor/48x48/mimetypes/ && \
+	install -Dm644  $(CURDIR)/desktop/azpainter.png $(CURDIR)/debian/azpainter/usr/share/icons/hicolor/48x48/mimetypes/application-x-azpainter-apd.png
+	mkdir -p $(CURDIR)/debian/azpainter/usr/share/icons/hicolor/scalable/mimetypes/ && \
+	install -Dm644  $(CURDIR)/desktop/azpainter.svg $(CURDIR)/debian/azpainter/usr/share/icons/hicolor/scalable/mimetypes/application-x-azpainter-apd.svg

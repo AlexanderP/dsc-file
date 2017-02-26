@@ -38,6 +38,7 @@ endif
 	dh $@ --parallel --with autoreconf
 
 override_dh_auto_configure:
+	git show -s --format="#define REV_LONG \"%H\"%n#define REV_TIME \"%cd\"%n" | tee ./src/RevisionIdent.h
 	dh_auto_configure -- $(configure_flags)
 
 # The tests fail to build as of version 2.0.6

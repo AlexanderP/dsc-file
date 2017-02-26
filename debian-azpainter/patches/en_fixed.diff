@@ -1,5 +1,14 @@
 --- azpainter-2.0.1.orig/translation/en
 +++ azpainter-2.0.1/translation/en
+@@ -48,7 +48,7 @@
+ +=Overwrite
+ +=Save as
+ +=Save a copy
+-+=Show palette
+++=Show panels
+ +=Flip canvas horizontally
+ +=Show background as plaid pattern
+ +=Show grid
 @@ -76,7 +76,7 @@
  +=[Shift:  horizontally] [Ctrl: vertically]
  +=[+Ctrl when pressed: delete selection]
@@ -27,6 +36,28 @@
  +=subtraction
  +=screen(color filter)
  +=overlay
+@@ -226,7 +226,7 @@
+ 
+ 
+ #**********************
+-# palette window
++# panel window
+ #**********************
+ 
+ 
+@@ -792,10 +792,10 @@
+ +=move selection position
+ 
+ #--------------------
+-# Palette setting
++# Panel setting
+ 
+ [2018]
+-0=Palette setting
++0=Panel setting
+ +=Up
+ +=Down
+ 
 @@ -811,8 +811,8 @@
  +=System
  +=Cursor
@@ -38,6 +69,15 @@
  +=canvas background color
  +=color of plaid background
  +=max undo times [2-400]
+@@ -848,7 +848,7 @@
+ 500=[*] applied when next time starting up
+ +=working directory
+ +=GUI font
+-+=palette font
+++=panel font
+ +=image directory
+ +=brush
+ +=texture
 @@ -856,7 +856,7 @@
  600=hotspot position
  +=load image
@@ -47,7 +87,7 @@
  
  1000=a non-existing directory is set as working directory.
  +=Units can be used for K,M,G. Byte without unit.\nMaximum 1 GB.\n0 to output to all files.
-@@ -1161,13 +1161,13 @@
+@@ -1161,24 +1161,24 @@
  +=Radial blur...
  +=Lens blur...
  
@@ -65,7 +105,13 @@
  +=Plaid...
  
  +=Concentration line...
-@@ -1178,7 +1178,7 @@
+-+=Flash...
+-+=Solid flash...
+++=Flash (ring of fire)...
+++=Solid flash (sun)...
+ +=Uni flash...
+-+=Uni flash(wave)...
+++=Uni flash (wave)...
  
  +=Mosaic...
  +=Crystal...
@@ -74,7 +120,7 @@
  
  +=Sharp...
  +=Unsharp mask...
-@@ -1204,7 +1204,7 @@
+@@ -1204,13 +1204,13 @@
  
  +=Extraction of line drawing
  +=1px dot line correction
@@ -83,3 +129,17 @@
  +=Edging...
  +=Three-dimensional frame...
  +=Shift...
+ 
+ ### 表示
+-6000=Palette(&P)
++6000=Panel(&P)
+ +=Canvas flip horizontally(&Q)
+ +=Show background as check pattern(&K)
+ +=Show grid(&G)
+@@ -1250,5 +1250,5 @@
+ +=Grid setting(&G)...
+ +=Shortcut key setting(&K)...
+ +=Canvas key setting(&C)...
+-+=Palette setting(&P)...
+++=Panel setting(&P)...
+ +=Version information(&A)...

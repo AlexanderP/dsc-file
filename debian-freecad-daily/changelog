@@ -1,3 +1,190 @@
+freecad-daily (0.17~git10275-b217fe2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: b217fe2287317e76422af5ab3ce7ae6c21969200
+  * Date: 1487950213
+  * git changelog:
+  *  b217fe2 - set continuous constraint mode consistently to true by
+    default
+  *  a90014c - add missing word, fix layout
+  *  b4bf37e - fix wrong return type
+  *  fc08fa1 - Sketcher: costraint creation mode uses toolbar icons
+  *  6be9a9b - Sketcher: Added option to turn constraint creation modes
+    on/off
+  *  e757c57 - Sketcher: External edges in constraint modes (Symmetry)
+  *  31456a7 - Sketcher: External edges in constraint modes (Angle)
+  *  167b28d - Sketcher: External edges in constraint modes (Equal)
+  *  ff74ba3 - Sketcher: External edges in constraint modes (radius)
+  *  2ffd94d - Sketcher: External edges in constraint modes (tangent)
+  *  daf5a1f - Sketcher: External edges in constraint modes
+    (perpendicular)
+  *  29761fc - Sketcher: External edges in constraint modes (parallel)
+  *  8966498 - Sketcher: External edges in constraint modes
+    (DistanceX/Y)
+  *  c6fd807 - Sketcher: External edges in constraint modes (point on
+    object)
+  *  ab4a222 - Sketcher: External edges in constraint modes (distance)
+  *  39725ff - [Sketcher] Moved angle to constraint creation mode
+  *  b32c102 - add missing header files for Linux build
+  *  43a19ac - need to also copy __init__.py files to make local build
+    working properly
+  *  dacf91c - FEM: examples, update them to the updated
+  *  8944ae2 - FEM: module moving, fix cmake, init, modulimports
+  *  7bfd50e - FEM: move python modules: - object modules to new
+    PyObjects directory - Gui modules to new PyGui directory
+  *  7f884e8 - Qt5: cmake install dependencies on macOS
+  *  d5348c6 - py3: Mesh: fix py3 Long/Int problem with python2
+  *  6c8c3dc - py3: gathering diff from Mod/Mesh
+    98a8275938388992ef1b7bb76dcd43438f61bf7e  py3: make most of the unit
+    test to succeed
+  *  2673f9e - py3: ported MeshPart to python3
+  *  3803896 - py3: ported Mesh to python3
+  *  f6b6e62 - python: TemplatePyMod: *.py: Fix python3 syntax
+  *  a101d42 - py3: ported Drawing to python3
+  *  744724a - Drawing: Remove broken and unused DrawingAlgos.py file
+  *  5582604 - python: Drawing: *.py: Fix python3 syntax
+  *  5574da5 - Add git commit info to Doxygen index page.
+  *  2e4e9e8 - Merge pull request #551 from bblacey/macOS-app-icon-2920
+  *  9f4ad70 - Merge pull request #547 from bblacey/bundler
+  *  1073d06 - if possible then keep canonical curve and avoid to get a
+    B-spline
+  *  2dcbba9 - call BRepLib::BuildCurves3d after mapping a 2d curve onto
+    a surface to correctly create a 3d curve
+  *  21080af - Packaging: macOS relocation of libraries without children
+  *  28f7944 - Use scalable application icon resources on macOS
+  *  402aef2 - Arch: Support for object colors in DAE importer/exporter
+  *  64912a5 - allow to pass also a face to Curve2d.toShape
+  *  dd20ba3 - use Ctrl+MMB for zooming
+  *  e5fe3d8 - Merge pull request #544 from luzpaz/short-url-cont
+  *  97c9174 - fix various warnings
+  *  3136b42 - Fixed typos
+  *  d61de34 - Cleanup non-short-url wiki links in translations
+  *  cd7e49f - Updates based on forum feedback
+  *  4cd5822 - Update metadata
+  *  d18655d - Align PartDesign Workbench icons to guidelines
+  *  51c40e9 - FEM: examples, update them to the updated python result
+    mechanical object
+  *  0c0cf1e - FEM: result mechanical object, use same name sheme as for
+    all other FEM objects
+  *  eb14ba5 - FEM: ccx writer, write peeq output request to input file
+    if nonlinear material analysis, by sodelo
+  *  b3bcef5 - FEM: frd importer, import peeq strain if available, by
+    sodelo
+  *  9091c47 - FEM: mechanical result object, add peeq strain propert,
+    by sodelo
+  *  b203725 - FEM: cmake, sort a entry
+  *  168c253 - FEM: objects FEM, initialize names if they where not
+    given
+  *  fe1a733 - FEM: mesh region object, move make def into make objects
+    FEM module
+  *  b7d69d9 - FEM: mesh group object, move make def into make objects
+    FEM module
+  *  c5008f9 - FEM: mesh gmsh object, move make def into make objects
+    FEM module
+  *  907a14d - FEM: nonlinear material object, move make def into make
+    objects FEM module
+  *  de9b534 - FEM: material object, move make def into make objects FEM
+    module
+  *  feae651 - FEM: mechanical result object, move make def into make
+    objects FEM module
+  *  b03b080 - FEM: constraint selfweight object, move make def into
+    make objects FEM module
+  *  99c5b57 - FEM: solver z88 object, move make def into make objects
+    FEM modul
+  *  4f0f3aa - FEM: solver calculix object, move make def into make
+    objects FEM module
+  *  6ffbac3 - FEM: shell thickness object, move make def into make
+    objects FEM module
+  *  b7111c3 - FEM: beam section object, move make def into make objects
+    FEM module
+  *  c63f1e7 - FEM: analysis object, move make def into make objects FEM
+    module
+  *  b7c1bb0 - FEM: create a make objects module to make python object
+    creation more consistent
+  *  e768701 - fix insecure implementation of debugprint
+  *  b61a95c - py3: TechDraw: Int->Long
+  *  e13d4a7 - py3: ported Measure and TechDraw
+  *  f2dc8c5 - Some fixes of pr 538 fix -Wreturn-type homogenous naming
+    style use official spelling of B-spline
+  *  5133a87 - Sketcher: Delete non-suported BSpline constraints on
+    NURBS conversion
+  *  c1f4fd9 - Sketcher: BSpline toolbar command support for Convert to
+    NURBS external geometry
+  *  4c9073e - Sketcher: SketchObject convert to NURBS support for
+    External Geometry
+  *  2b6292a - Sketcher: Convert to NURBS command improvement -
+    abortcommand
+  *  f1cf2fc - Sketcher: Expose Internal Geometry for BSplines
+  *  f291942 - Part: Add support for reversing a geomcurve
+  *  4fe4792 - Sketcher: Fix zero curvature normal exception
+  *  ca05f86 - Sketcher: Convert to NURBS toolbar via python to enable
+    undo
+  *  0531411 - Sketcher: Increase Degree toolbar via python to enable
+    undo
+  *  55f373e - Sketcher: IncreaseBSplineDegree python implementation
+  *  4abe462 - Sketcher: ConverttoNURBS python implementation
+  *  ce7e186 - Sketcher: Adaptation of code to handle the icons
+  *  afd7610 - Sketcher: BSpline Increase Degree tool
+  *  8ddc9cb - Add metadata
+  *  2a7cdf7 - Add extra icons based on new feedback
+  *  3c28937 - Create BSpline Toggle icons
+  *  d5b068e - Sketcher: Shape to NURBS conversion
+  *  90bec55 - Sketcher: Automatic calculation of divisions for comb
+  *  fcc0865 - Sketcher: Bspline comb - change representation to be
+    convex
+  *  2ecfb67 - Sketcher: Bspline support for external geometry
+  *  d92b3fc - Sketcher: Settings - Allow to set the number of segments
+    per geometry
+  *  00aadc4 - Sketcher: BSpline show/restore geometry information
+    commands as a dropdown menu
+  *  99dee8a - Sketcher: Switch of comb geometry information
+  *  135137e - Sketcher: BSpline degree/comb hide/show commands
+  *  e348736 - Sketcher: Comb appropriate scaling for closed and
+    periodic BSplines
+  *  feb29bd - Sketcher: BSpline curvature comb
+  *  9c10b32 - Part: Geometry functionality extension
+  *  1bac54e - Sketcher: new BSpline toolbar / command to hide control
+    polygon
+  *  2a4f246 - Sketcher: Information Layer show/hide node support
+  *  9e6beb1 - Sketcher: Information layer scenography update on
+    geometry change
+  *  4cffdfe - Sketcher: Geometry Information layer for BSplines
+  *  693f4c7 - update of xlsx-importer: new parser, trigonomic functions
+    give the same result in the FreeCAD-spreadsheet, support of celltype
+    "inlineStr".
+  *  f556359 - fix setEdit, unsetEdit and doubleClicked methods of
+    Python view provider
+  *  ced83be - Merge pull request #541 from wwmayer/vbo_cleanup
+  *  4a3252e - Fix Face color display issue with Vbo turned on
+  *  399cdd8 - use Coin API to deal with vbo and add methods to cleanup
+    GL resources on destruction
+  *  6630bcf - issue #0001999: [STEP] Tessellation data or OpenInventor
+    data memory leak
+  *  112749b - Merge pull request #537 from agryson/sketcher-icon-
+    updates
+  *  448ac27 - fix crash in uIso of Sphere
+  *  c1c4a90 - move vbo handling to private class
+  *  c7652d7 - Update icons based on forum feedback
+  *  1f12a3f - py3: FEM, more convert map to list
+  *  be2b577 - py3, FEM, redifine open in all import modules
+  *  9a5d920 - py3: FEM, redefine open in import modules
+  *  7045113 - py3: FEM, convert map to list
+  *  8bc6936 - py3: FEM, fix import Units module
+  *  3617fc3 - py3: FEM, put print in brackets and import print_function
+  *  5c0bcf6 - py3: FEM, PyMods, preprocessor conditions, Py::Long vs
+    Py::Int
+  *  3fab41f - Merge pull request #535 from bblacey/mantis-2886
+  *  46f5554 - command to creation section from plane and mesh
+  *  b52b94a - Packaging: Set macOS dynamic loader paths
+  *  845d676 - implement tearDown to close document
+  *  48f9987 - part: bspline: tests use copy instead of deepcopy
+  *  2b35bb3 - part: bspline: tests
+  *  978978f - Navigation indicator for FreeCAD
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 24 Feb 2017 19:27:00 +0300
+
 freecad-daily (0.17~git10149-4169e94-2) unstable; urgency=medium
 
   * fix icon desktop

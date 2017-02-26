@@ -1,3 +1,76 @@
+gimp-devel (2.9.4+git38145-dc74ac9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: dc74ac9470f8015db73b8200fe73608fd42816a4
+  * Date: 1487886802
+  * git changelog:
+  *  dc74ac9 - Update German translation
+  *  f3303eb - icons: adding the missing gimp-prefs-import-export color
+    icon.
+  *  c11c955 - app: fix comment typo in previous commit
+  *  4c5f6a8 - Bug 778966 - severe input lag with ruler and one window
+    mode ...
+  *  93787cd - app: completely set up the filter in
+    gimp_filter_tool_create_filter()
+  *  8e2ad16 - app: make GimpDrawableFilter's color management more
+    correct
+  *  ad9ccc4 - Bug 778990 - PNM file plugin doesn't preserve 16-bit
+    image precision
+  *  c87543a - Bug 778990 - PNM file plugin doesn't preserve 16-bit
+    image precision
+  *  3cd7171 - app: set the complete layer mode in
+    gimp_text_layer_from_layer()
+  *  3d58a23 - Bug 764619: Color paint dynamic parameter and square
+    artifacts when one or two channel are disabled
+  *  bb95793 - app: nicer formatting for GIMP_COMPONENT_MASK_ALL
+  *  3f07ab3 - tools: handle multiline enum values in gimp-mkenums
+  *  0874703 - Bug 778988 - XCF error: unsupported XCF file version 10
+    encountered
+  *  89b2786 - app: add gimp_layer_mode_get_context_array()
+  *  125727f - app: nicer formatting for GIMP_LAYER_MODE_CONTEXT_ALL
+  *  74ec82c - app: whitespace such and such in gimp-layer-modes.c
+  *  acc58c4 - app: layer-modes: add comments to lighten/darken only
+  *  4c252a6 - app: layer-modes, by default use linear blend_space for
+    add/sub/mul/div
+  *  49ccd8d - app: gimp-layer-modes specify blend space for lighten and
+    darken only
+  *  9683978 - app: add luminance mode to the groups array
+  *  fa18c25 - app: introduce XCF version 10 for the new layer modes
+  *  314ad95 - app, libgimp: commit regenerated files after enum
+    GimpLayerMode change
+  *  c40ac6f - app: append rather than insert blend mode in layer mode
+    enum
+  *  ae03b15 - app: make blendfunction of RGB luminance work again
+  *  aaed8a6 - app: Bug 753163 - Add blend mode "RGB Luminance"
+  *  eeebd98 - libgimp: need to cast GimpMetadata when calling
+    GExiv2Metadata API
+  *  f144418 - Update Polish translation
+  *  1dd2c52 - app, pdb, libgimp: add PDB API for layer blend space and
+    compositing space
+  *  ac36497 - app: correctly set the initial sensitivity in the layer
+    options dialog
+  *  f34ef2a - app: annhilate <math.h> from the face of last commit
+  *  1572bcc - app: add support for subpixel image grids
+  *  63f1ec4 - app, libgimp, plug-ins: remove the _LINEAR layer mode
+    variants
+  *  9fd139e - Bug 778896 - Make effective use of gexiv2 to remove the
+    orientation
+  *  8f36294 - libgimpbase: avoid build-time race between the two
+    generated enum files
+  *  adae388 - Bug 593576 - PDF Import filter: crashes when importing
+    large image PDF or specifying high resolution
+  *  9279f17 - Update Russian translation
+  *  9e324d0 - Dim color tag colors a little for less noise
+  *  d42f5c4 - app: don't depend on mask alignment for SSE compositing
+  *  f2ea995 - app: fix infinite recursion when compositing unaligned
+    buffers
+  *  608070f - pdb, libgimp: mode gimp_temp_name() from fileops.pdb to
+    gimp.pdb
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 24 Feb 2017 14:16:55 +0300
+
 gimp-devel (2.9.4+git38105-fdf7b24-1) unstable; urgency=medium
 
   * Compile

@@ -7,6 +7,14 @@ include /usr/share/dpkg/buildflags.mk
 # Program build options
 MYPAINT_SCONSOPTS = enable_openmp=true
 
+ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+endif
+
+ifeq (,$(NUMJOBS))
+	NUMJOBS = 1
+endif
+
 %:
 	dh $@ --with python2
 
@@ -24,7 +32,7 @@ override_dh_clean:
 	dh_clean
 
 override_dh_auto_build:
-	scons $(MYPAINT_SCONSOPTS)
+	scons -j$(NUMJOBS) $(MYPAINT_SCONSOPTS)
 
 override_dh_auto_test:
 ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
@@ -37,7 +45,7 @@ endif
 
 override_dh_install:
 	# Install to debian/tmp, then cut up.
-	scons prefix=/usr $(MYPAINT_SCONSOPTS) --install-sandbox=$(CURDIR)/debian/tmp
+	scons -j$(NUMJOBS) prefix=/usr $(MYPAINT_SCONSOPTS) --install-sandbox=$(CURDIR)/debian/tmp
 	# Headers and a static lib are installed by the above, but are not
 	# required at runtime. It's probably counterproductive to ship just a
 	# static lib in a dev package (see mailing list thread).
