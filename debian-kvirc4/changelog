@@ -1,3 +1,36 @@
+kvirc (4:4.9.2~git-7085-gaea2bb2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: aea2bb27ea3c98a73319cb9fb3a53d7431bb8667
+  * Date: 1488553137
+  * git changelog:
+  *  aea2bb2 - fix a few oddities in the help browser
+  *  1c936ae - misc doc fixes
+  *  4dd690f - switch to the correct window even if it's open already
+  *  2d70f91 - KviWindowListBase: Add ability to close classic window
+    list buttons with middle-click.
+  *  dd5ea64 - [AV] fix hunspell installation after update to 1.6
+  *  7ffd04f - RawEventWindow: Fix crash when saving raw events
+  *  684e730 - Add wii default alias
+  *  d6f325d - notifier module: Make message text selectable.
+  *  d6c66fa - KviCryptEngine: Fix typo
+  *  8237da1 - Revert "KviHtmlGenerator: Fix default foreground and
+    background colors"
+  *  fdb997d - KviHtmlGenerator: Fix default foreground and background
+    colors
+  *  77c1f05 - Miscellaneous documentation fixes
+  *  1dc42d6 - Disable old broken OnURLLinkPopupRequest when restoring
+    default script; fix #2140 (#2183)
+  *  fb6ec13 - make the repaint timers of kviircview and kviinputeditor
+    faster when selecting text to decrease lag
+  *  d4d29a8 - reguser module: Fix crash in reguser.add when user exists
+    and group is set
+  *  8e5483a - rename IRC-Hispano default network
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 03 Mar 2017 18:50:26 +0300
+
 kvirc (4:4.9.2~git-7069-g91a0315-1) unstable; urgency=medium
 
   * Compile

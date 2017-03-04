@@ -1,3 +1,85 @@
+audacity (1:2.1.2+git6134-0efe931-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 0efe931df26da43198b03972ed50b4c3c88b2662
+  * Date: 1488569237
+  * git changelog:
+  *  0efe931 - Bug 290 - (Mac) LAME: Audacity looks for LAME in a
+    restricted folder that Mac no longer supports
+  *  2efd4ee - Bug 1599 - Amelioration.  Don't require TrackExists to
+    paste.
+  *  a5f7dc6 - Alpha welcome screen help hyperlinks to alpha manual.
+  *  4576ccb - HasFiles and HasSubDirs require a successfully opened
+    directory.
+  *  d1b4995 - Two Initialisations (Valgrind)
+  *  a3d20c8 - Don't invert 24 or 32 bit PCM files when reimported via
+    FFmpeg libs
+  *  b66675d - Restore legacy Nyquist plug-in PEAK-LEVEL property
+  *  f19b79f - Consistency: 'plug-in' not 'plugin'
+  *  a4136f5 - Bug 1427 - Summary: Wording Issues - Metadata Tags
+  *  95861bf - Bug 1567 - Amelioration.  Delete EMPTY temp dirs on close
+    in multiproject
+  *  fc42fd9 - Bug 1597 - Tweak: make version check on welcome user-
+    initiated.
+  *  95e5d37 - CXXFLAGS on ./configure no longer required.
+  *  facaeb9 - Enable version checking (from build info) in release
+    versions.
+  *  f26478f - Typo Comit -> Commit
+  *  bf7799e - Bug 1412 - (partial workaround for) modeless real/empty
+    "Help on the Internet" pair.
+  *  9cb68a6 - Always include build date/time in CheckUpdate
+  *  c53e2db - Bug 1597 - Enh: Greater clarity over status of versions
+    needed
+  *  4329168 - Bug 1401 - Wait for window visibility before starting
+    timer
+  *  ebd767f - Change NyqBench Shortcut Letters (fr.po)
+  *  0a0a9f6 - Bug 1528 - Linux: Mod-script-pipe can't be built
+  *  ad24fee - configure: add check for gcc 4.9.0 up-front
+  *  7517b26 - Set minimum size of EditCurvesDialog (bug 470)
+  *  a80556d - Bug 1574 - Built-in generators may generate wrong length
+  *  d9f7b36 - Bug 1576 - Assert when New Length is zero in Change Speed
+    effect
+  *  67810d3 - Bug 1573 - Multi-line SAL scripts fail in Nyquist Prompt
+  *  81dd23b - Bug 1566 - Incorrect error message if Nyquist returns
+    mono sound as an array
+  *  1a5a025 - Update Nyquist v4 property lists and comments
+  *  73b421a - Bug 1591 - Windows: Click Track not removed from previous
+    installation
+  *  f4bfe1f - Bug 1599 - Cannot paste clipboard text into label unless
+    content already on Audacity clipboard
+  *  1ffe736 - Comment about missing/broken ERR_HANDLING.
+  *  2a47947 - Merge remote-tracking branch 'dave/metadatacancel'
+  *  06dc907 - Fix for bug 1550 - metadata editor: esc does not cancel
+  *  72d2aaa - Merge remote-tracking branch 'paul/bug451'
+  *  5d76e66 - Merge remote-tracking branch 'paul/AUbug'
+  *  9234973 - Merge pull request #175 from
+    cannam/mp3_fix_truncated_import
+  *  9e7756c - Set IS_ALPHA to 1
+  *  7808033 - Fix crash opening menu in some AU effects
+  *  79c07bd - Bug451 re-fix: When file open fails, don't erase
+    blockfiles
+  *  e8ac121 - Tweak Polish Translation by Michał Trzebiatowski
+  *  89c44f9 - Add fileSpec to CleanDir, so can be selective about files
+    to delete.
+  *  0a518b6 - Don't follow symlinks in RecursivelyEnumerate
+  *  085c260 - Typo in README.txt
+  *  4286124 - New section about duplicate plugins
+  *  630fc59 - Tweak all-in-one text
+  *  b7cd1f4 - Update Installer DMG background.png
+  *  a239a13 - Update README.txt and mac/Install.txt
+  *  8a100a1 - Update Greek Translation by Dimitris Spingos
+  *  04e9989 - Update Polish Translation by Michał Trzebiatowski
+  *  c81c4d4 - Update Slovenian Translation by Martin Srebotnjak
+  *  1370dda - Tweak Ukranian Translation by Yuri Chornoivan
+  *  cf4e07a - Tweak Brazilian Portuguese Translation by Lucas Teixeira
+  *  a6b3811 - Tweak French Translation by Intv0id (missing strings)
+  *  5b10c38 - Bug1594, 1567: Don't destroy source project when saving-
+    as!
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 04 Mar 2017 19:13:09 +0300
+
 audacity (2.1.2+git6080-0ceae62-1) unstable; urgency=medium
 
   * Compile

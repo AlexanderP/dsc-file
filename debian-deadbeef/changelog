@@ -1,3 +1,43 @@
+deadbeef (0.7.2+git7060-7a6106c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 7a6106c824aacb1aa6cdebbdc53cf22d2f40dddf
+  * Date: 1488537742
+  * git changelog:
+  *  7a6106c - streamer: don't stop playback on stream buffer starvation
+  *  1f93687 - streamer: playpos regression fix
+  *  3a18cf2 - coreaudio: fixed stop at end of stream handling
+  *  c29b5cd - alsa: cleanup; prevent stopping playback before all
+    samples are played
+  *  449edb1 - streamer: get rid of currtrack_mutex; fix race condition
+    causing crash
+  *  710026d - streamer: fix playback pos after resume regression
+  *  fbf337c - streamer: better output format management
+  *  c374a32 - streamer: improved output format setting
+  *  88b54b5 - streamer: remove asserts
+  *  d1d797c - alsa: ignore snd_pcm_start error (fixed #1717)
+  *  c5d1528 - streamer: stop after current refactored; better handling
+    of tiny files
+  *  5f769ab - streamer: reworked output format setting to no longer
+    need to query dsp plugins with 0 frames
+  *  d35a144 - streamer: fixed crash and playpos issues when looping
+    single track (fixed #1716)
+  *  1dfd44b - streamer: fixed playpos bug
+  *  180d564 - streamer: don't stop playback before playing selected
+    track
+  *  5635c62 - pulse: flush on play
+  *  559c47b - alsa: reduce mutex locking; cleanup/refactoring; flush on
+    play fix
+  *  5896239 - fixed tests
+  *  69b6022 - alsa: refactoring/cleanup to fix compat with the new
+    streamer
+  *  3db7621 - gtkui: remove potentially dangerous streamer call from
+    gtkui seekbar code
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 03 Mar 2017 18:10:59 +0300
+
 deadbeef (0.7.2+git7040-06c799d-1) unstable; urgency=medium
 
   * Compile

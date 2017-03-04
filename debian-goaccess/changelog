@@ -1,3 +1,40 @@
+goaccess (1:1.1.0+git2197-cfe5060-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: cfe50605944942475820d21e66d87cc03d21f98d
+  * Date: 1488545677
+  * git changelog:
+  *  cfe5060 - Ensure bar/line opacity changes on axis label mouseover.
+  *  5183beb - Fixed issue where global config file would override
+    command line arguments.
+  *  939be0e - Changed return value of str_inarray() to return array
+    index when found.
+  *  8d682aa - Cast log size to intmax_t since it's platform dependent
+    and may vary.
+  *  3232b9f - Ensures goaccess doesn't exit when waiting for data from
+    a pipe.
+  *  10302f6 - Added a replacement for GNU getline() to dynamically
+    expand fgets buffer.
+  *  6bd93e6 - Allow live data from a pipe and from a regular file at
+    the same time.
+  *  c6bdee3 - Changed how files are read from the command line.
+  *  e2fe146 - Added --daemonize command line to README.md.
+  *  d053042 - Minor formatting changes to README.md.
+  *  e586680 - Removed unnecessary if condition to get get_log_sizes()
+    from CSV.
+  *  e19a1ff - Added --daemonize command line option to the man page.
+  *  8ad4a72 - Updated man page for upcoming version.
+  *  0f2b39c - Updated Docker section README.md.
+  *  88d0236 - Added single dash to command line help usage.
+  *  2a06045 - Updated command line help usage.
+  *  8dbfef2 - Removed unused parameter from display_content() function.
+  *  38128cd - Added the ability to specify multiple logs as input
+    sources.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 03 Mar 2017 18:02:06 +0300
+
 goaccess (1:1.1.0+git2179-d779612-1) unstable; urgency=medium
 
   * Compile
