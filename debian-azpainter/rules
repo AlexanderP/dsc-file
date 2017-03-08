@@ -8,22 +8,24 @@ include /usr/share/dpkg/default.mk
 
 override_dh_auto_install:
 	[ ! -f $(CURDIR)/translation/Makefile ] || ( cd $(CURDIR)/translation && make )
-	cd $(CURDIR)/debian && $(CURDIR)/translation/mtrconv ru ru.mtr
+	cd $(CURDIR)/translation && $(CURDIR)/translation/mtrconv ru ru.mtr
 	cd $(CURDIR)/translation && $(CURDIR)/translation/mtrconv en en.mtr
-	cd $(CURDIR)/debian && $(CURDIR)/translation/mtrconv uk uk.mtr
+	cd $(CURDIR)/translation && $(CURDIR)/translation/mtrconv uk uk.mtr
 	dh_auto_install
 
 override_dh_auto_clean:
 	[ ! -f $(CURDIR)/translation/mtrconv ] || rm -f $(CURDIR)/translation/mtrconv
 	[ ! -f $(CURDIR)/translation/en.mtr ] || rm -f $(CURDIR)/translation/en.mtr
-	[ ! -f $(CURDIR)/debian/ru.mtr ] || rm -f $(CURDIR)/debian/ru.mtr
-	[ ! -f $(CURDIR)/debian/uk.mtr ] || rm -f $(CURDIR)/debian/uk.mtr
+	[ ! -f $(CURDIR)/translation/ru.mtr ] || rm -f $(CURDIR)/translation/ru.mtr
+	[ ! -f $(CURDIR)/translation/uk.mtr ] || rm -f $(CURDIR)/translation/uk.mtr
 	dh_auto_clean
 
 override_dh_install:
 	rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/en.mtr
+	rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/ru.mtr
+	rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/uk.mtr
 	dh_install
-	mkdir -p $(CURDIR)/debian/azpainter/usr/share/icons/hicolor/48x48/mimetypes/ && \
-	install -Dm644  $(CURDIR)/desktop/azpainter.png $(CURDIR)/debian/azpainter/usr/share/icons/hicolor/48x48/mimetypes/application-x-azpainter-apd.png
-	mkdir -p $(CURDIR)/debian/azpainter/usr/share/icons/hicolor/scalable/mimetypes/ && \
-	install -Dm644  $(CURDIR)/desktop/azpainter.svg $(CURDIR)/debian/azpainter/usr/share/icons/hicolor/scalable/mimetypes/application-x-azpainter-apd.svg
+	#mkdir -p $(CURDIR)/debian/azpainter/usr/share/icons/hicolor/48x48/mimetypes/ && \
+	#install -Dm644  $(CURDIR)/desktop/azpainter.png $(CURDIR)/debian/azpainter/usr/share/icons/hicolor/48x48/mimetypes/application-x-azpainter-apd.png
+	#mkdir -p $(CURDIR)/debian/azpainter/usr/share/icons/hicolor/scalable/mimetypes/ && \
+	#install -Dm644  $(CURDIR)/desktop/azpainter.svg $(CURDIR)/debian/azpainter/usr/share/icons/hicolor/scalable/mimetypes/application-x-azpainter-apd.svg
