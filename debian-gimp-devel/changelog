@@ -1,3 +1,74 @@
+gimp-devel (2.9.4+git38186-7d34507-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 7d345071c7d1c0de007e6966f963fae06f9a2159
+  * Date: 1489177623
+  * git changelog:
+  *  7d34507 - app: make color-erase mode an ordinary layer mode
+  *  dfb3ddc - app: make erase mode an ordinary layer/paint mode
+  *  91ef42d - app: fix subtractive src-over compositing
+  *  2224733 - Bug 779827 - Brushes in Symmetry Tiling mode are off by
+    one pixel.
+  *  8e68ca8 - app: fix NULL mask handling in previous commit
+  *  7704b61 - Bug 779326 - GIMP Crash on Merging/flattening image ...
+    ... possibly due to small win32 stack
+  *  44b4d0f - app: small fixes in gimpoperationlayermode.c
+  *  c9a0b5a - Bug 778284 - Release howto should mention to close all
+    running...
+  *  7b23e0e - app: add LEGACY flag to NORMAL_LEGACY mode
+  *  b22c09e - app: implement color-erase mode as a
+    GimpOperationLayerMode blendfun
+  *  398a7b0 - app: add subtractive compositing functions to
+    GimpOperationLayerMode
+  *  40c0ea4 - app: add GIMP_LAYER_MODE_FLAG_SUBTRACTIVE
+  *  a2f3616 - app: more consistent layer/comp parameter usage in the
+    compositing functions
+  *  361ca1b - app: show overlay mode also in legacy mode menu
+  *  ef76291 - icons: forgot to rename the scalable "justify" icons
+  *  adacd32 - Update Hungarian translation
+  *  dda54c1 - Deprecate stock items for good and change all icon
+    defines to GIMP_ICON_*
+  *  181f2de - Update Hungarian translation
+  *  49b7f25 - Update Swedish translation
+  *  d545b46 - app: defer image menu updates to an idle function
+  *  e0aab13 - configure.ac: require GEGL >= 0.3.14
+  *  91e861a - libgimpwidgets, *: deprecating stock IDs for good, part
+    one...
+  *  4ad9967 - Fixed long standing translation error, thanks to 'found'
+  *  3f15db9 - libgimpbase: add missing compat enum get_type()s to
+    gimpbase.def
+  *  2ee8a2e - app: avoid an alloca in gimp_composite_blend()
+  *  f9566a9 - Update French translation
+  *  58e5f38 - Updated Italian translation
+  *  2cb26a0 - libgimpwidgets: invalidate the rulers' backdrop when the
+    widget style is changed
+  *  a57c7fb - app: fix bottom-of-stack dissolve layers using src-
+    atop/in
+  *  5e66611 - plug-ins: replace deprecated enum values in script-fu
+    scripts
+  *  fb3d1e4 - app, pdb, libgimp: rename values of enum
+    GimpConvertPaletteType
+  *  ed1ab14 - app, pdb, libgimp: rename values of enum
+    GimpConvertDitherType
+  *  86e101e - Update Polish translation
+  *  b769894 - libgimp: fix the layer mode compat #defines to use the
+    new value names
+  *  f8d55b7 - app: put BLEND_SPACE_IMMUTABLE back for NORMAL
+  *  3cf423f - *: rename NORMAL to NORMAL_LEGACY and NORMAL_LINEAR to
+    NORMAL
+  *  78836af - app: fix initial values of blend/composite space/mode
+    combos ...
+  *  34cd299 - Fixes to Catalan translation
+  *  0c9d76d - app: fix profile transforms in GimpDrawableFilter
+  *  f63906e - app: add src-format and dest-format properties to
+    gimp:profile-transform
+  *  0edecc8 - libgimpcolor: support "CIE Lab (alpha)" in
+    gimp_color_profile_get_format()
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 10 Mar 2017 23:34:23 +0300
+
 gimp-devel (2.9.4+git38145-dc74ac9-1) unstable; urgency=medium
 
   * Compile

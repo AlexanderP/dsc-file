@@ -1,3 +1,274 @@
+freecad-daily (0.17~git10473-78b986a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 78b986a2657b7de79b6e350a2535dc0fbfe3f1cf
+  * Date: 1489254987
+  * git changelog:
+  *  78b986a - Fix startpage auto height and width
+  *  ea2ed34 - Reorganize start WB
+  *  a437517 - Update getting started wiki link
+  *  6decf61 - Remove commits list from Start WB
+  *  d844f02 - Update background image reference
+  *  0f705f7 - Remove commits from start wb
+  *  c4fa50e - Break out html and js into files
+  *  22d4797 - Break translation texts out into own file
+  *  214b044 - Break off css into separate file
+  *  b4171fd - Delete unused html file
+  *  bcf1f00 - Move start WB images to separate folder
+  *  4466768 - Merge pull request #608 from triplus/master
+  *  80ab56e - Navigation indicator translations support
+  *  91c59c7 - Arch: Material improvements
+  *  09cc396 - Arch: small bugfix in IFC export
+  *  177c350 - Arch: misc minor bugfixes
+  *  08d8f70 - Part: Support subcomponent transparencies in compounds
+  *  09c1ee7 - Merge pull request #600 from triplus/macOS-Integration
+  *  02efa6a - Merge pull request #601 from jsmaniac/patch-print-radius
+  *  07d224e - str(Sketcher.Constraint('Radius', 1, 2)) should not
+    return "<Constraint '?'>"
+  *  93ade86 - Fine tune statusbar integration
+  *  0196d50 - cmake: reset shiboken-cmake-suffix for python < 3
+  *  256791d - stop profile based and primitives if file is in
+    undetermined workflow
+  *  fdc3772 - stop dressup features when applied to non-acitve body
+  *  1d8ef64 - fixing transformed features and guessworkflow
+  *  6cbb76b - fixing dressup features
+  *  f8e8362 - fix pd tools from running when no active parts
+  *  8300306 - Use CMAKE_PREFIX_PATH for Qt 5 builds
+  *  17d2f2b - ascii weirdness
+  *  338ca55 - Spreadsheet: Fixed issue #2894: Unit strings could be
+    used as aliases.
+  *  3017173 - source typo fixes pt6
+  *  ec5f19a - FEM: example 2D, update to the new element geometry
+    object
+  *  19a0f85 - FEM: cmakes, object fem, init gui modules, sort by name
+  *  092a5da - FEM: fluid section and elment fluid 1D object, make name
+    fit in FEM name system
+  *  34ad6af - FEM: shell thickness and elment geometry 2D object, make
+    name fit in FEM name system
+  *  977fd89 - FEM: beam sectiong and element geometry 1D object, make
+    name fit in FEM name system
+  *  77e4a6d - FEM: code formating, flake8
+  *  bda1b62 - FEM: icon file, sort by names
+  *  7f72f9e - FEM: fenics import/export: one line documentation, fixed
+    make_femmesh call
+  *  a6cfb18 - Arch: Renaming Hires to HiRes
+  *  5625bab - Arch: Added Hires property + display mode to all Arch
+    objects
+  *  84ac526 - fallback handling if in VBO rendering no normals are set
+  *  ed0727a - move VBO rendering code into its own method
+  *  6b66a38 - Updated translations with latest files from crowdin
+  *  7ff58ef - split sketcher settings page and move to its own group
+  *  7711d71 - replace deprecated gluPickMatrix
+  *  b1347ec - support of highlighting and selection if shading is
+    disabled
+  *  6612e7c - Deploy artifacts when DEPLOY is true (#595)
+  *  db66835 - add option to placement dialog to rotate around center of
+    mass
+  *  35e8ede - extend interface to get actual property with geometric
+    data, get center of gravity of a geometry
+  *  45bf8ed - fix -Wunused-private-field, -Woverloaded-virtual
+  *  1ee6dcf - PartPesign: Py: expose some methods of ViewProvider
+  *  0160478 - PartDesign: add ViewProviderPython
+  *  722ffe5 - PartDesign: update primitives to use
+    PartDesign::FeaturePy
+  *  d9c803f - PartDesign: add FeaturePython
+  *  271bc74 - Draft: Fixed Shape2DView's Cut Face mode bug when cutting
+    through multi solids
+  *  8f5c7b4 - Use new FreeCAD/freecad homebrew formula API for Qt4 &
+    Qt5 (#590)
+  *  f66307e - Disable pyra13 output within UNV file, as this element is
+    not officially supported by this file format.
+  *  732bd85 - Properly fix the Tetrahedron node ordering with VTK. This
+    was reported into PR #203 back this summer 2016. A memory overwrite
+    is happening if the enum are not properly sized
+  *  19f8fd4 - source typo fixes pt5
+  *  d751423 - FEM: fenics xml mesh format, add mesh import
+  *  2f93571 - Fixed python3 mistake in main cmake file
+  *  cafd49d - Fixed another typo
+  *  404debb - Merge branch 'master' of
+    https://github.com/FreeCAD/FreeCAD
+  *  569f263 - Move glortho2d to GLKMatrix4MakeOrtho as to avoid
+    Deprecated Warning on Mac OS
+  *  09510f0 - Merge pull request #583 from triplus/Font-size
+  *  0d7a8e1 - Merge pull request #582 from kkremitzki/sketch_hex_fix
+  *  288239c - Configurable coordinate info font size in Sketcher
+  *  fa472ec - Fix hexagon creation error
+  *  624ac0d - Removed wrong typo fix
+  *  adca327 - add 'no shading' and 'hidden line' styles
+  *  81884f7 - py3: gathering diff for CMakeList.txt
+    fe96347c28039e97a0acdc37f7df9861ffc96eda
+    33073603bd3b20a2debb9444a7247266f658baaa
+    6400fcca2cb8f5fde95013d4de97c2c45f3bb4e7
+    7c50633c8efc6d65d96f1b6f820c89320eabe1dc
+  *  4db0484 - python: We only support 2.7.x
+  *  61658e6 - Qt5: Enabled HiDPI scaling and Use HiDPI Qt Pixmaps
+  *  69a9a0c - FEM: examples, update them to the updated result object
+    with folw results
+  *  e9e09a5 - FEM: make object module, sort methods by name
+  *  8afbd2b - FEM: result task panel, add Fem to module name
+  *  85bfe10 - FEM: FEM mesh 2 mesh command, make name fit in FEM name
+    system
+  *  8411d03 - FEM: command modules, add Fem to file and class name
+  *  f5c717b - FEM: mesh clear command, make name fit in FEM name system
+  *  f19481b - FEM: mesh print info command, make name fit in FEM name
+    system
+  *  11166f9 - FEM: result show command, make name fit in FEM name
+    system
+  *  dc39edd - FEM: results purge command, make name fit in FEM name
+    system
+  *  ef0a253 - FEM: solver control command, make name fit in FEM name
+    system
+  *  8cf0001 - FEM: solver run command, make name fit in FEM name system
+  *  fb833d4 - FEM: code formating, use better variable name in the
+    regard of codespell tool
+  *  886ba74 - Fixed G2/3 command generation for flipped arcs.
+  *  ad8cc9b - Using fuzzy comparison for half circle detection.
+  *  450e3d8 - use consistent display mode names
+  *  f560398 - add boolean parameter to MeshKernel::AddFacets to disable
+    check for manifold edges of new faces
+  *  24793f0 - fix doc strings, replace label with check box in export
+    panel
+  *  da0f810 - Avoid empty meshes. Improve object type detection.
+  *  2231baa - Throw Python exception if format is unknown.
+  *  095bb48 - Tidy up.
+  *  944aa01 - Export Part and Group objects.
+  *  e6f7c9d - Clean up docstrings to conform to PEP 8, tidy up.
+  *  3792f25 - Add setting to export compressed/uncompressed AMFs
+  *  e178d93 - Added some metadata to exported AMF
+  *  0bd3e5d - Added AMF compression. Works with Cura, not Slic3r
+  *  0b76013 - Renamed AmfExport.(h|cpp) to Exporter.(h|cpp)
+  *  3eefe3e - Refactoring mesh export code
+  *  a9949ab - Basic AMF writing support
+  *  ff1ac5f - Add AMF to understood extensions/formats.
+  *  7a0a997 - py3: Arch: mostly print-statements
+    7247937288be85fe217c2d57cdb96c9a666e4e28
+    00528f4b445fd851df53a79b4be6f1ff480f74d0
+    b7e3a874dbadbac1c1ecfade4b8676c15fdf25ee
+  *  9d85f3b - Update arch exception catching for py3
+  *  99c9900 - source typo fixes pt4 (only on py3 merged code)
+  *  30979dc - resolve merge conflict
+  *  f94e1ff - py3: web: gathering diff of py3-branch
+    76b3397762cb8e24b589e5d6de1bb623382f61fd
+    ec9dcf7453d44ce21e6ab5e460293006a49e7ccc
+    11eb995a2e88df1125056403fb302ce85749f83c
+  *  9913143 - py3: Test: gathering diff of py3-branch
+    ec9dcf7453d44ce21e6ab5e460293006a49e7ccc
+  *  dcdce7b - py3: Test: print
+  *  91e2e00 - python: Test: *.py: Fix python3 syntax
+  *  946c126 - py3: Start: gathering diff of py3-branch
+    ec9dcf7453d44ce21e6ab5e460293006a49e7ccc
+  *  52fc819 - py3: start: make the startpage load again
+  *  55545fb - py3: ported Start to python3
+  *  742d2c1 - Merge pull request #575 from bblacey/develop
+  *  6844e7e - Upgrade to Eigen 3.3.3 to avoid spurious compiler
+    warnings
+  *  a3e0178 - Trivial typos
+  *  cd1f010 - revert commit 1255ac62c and fix original code
+  *  d343bb0 - Cleanup clang inconsistent override warnings-smesh
+  *  ac9f475 - Clean up clang inconsistent override warnings.
+  *  02fb687 - do code cleanup move BOPTools from Part to PartGui
+    because it depends on GUI
+  *  4664e5b - Merge pull request #573 from looooo/python3-
+    Part+PD+Sketcher
+  *  dd02fc1 - py3: Sketcher: remaining diff of python3-branch
+  *  bcde3cd - py3: ported Skechter to python3
+  *  3a27378 - python: Sketcher: *.py: Fix python3 syntax
+  *  381419c - py3: ported PartDesign to python3
+  *  da1081b - python: PartDesign: *.py: Fix python3 syntax
+  *  8b45976 - py3: Part: Gui: gathering commits from python3-branch
+  *  69828c2 - py3: Part: BOPTools: to make the BOPTools available in
+    python3 the way to import these tools had to be changed: old:
+    ```from Part import BOPTools``` -> new: ```import BOPTools``` this
+    is also changed for python2
+  *  a388a9d - py3: Part: App: gathering commits relevant for
+    Mod/Part/App
+  *  ed23c0d - py3: ported Part to python3
+  *  e594ade - Merge pull request #572 from berndhahnebach/femdev
+  *  c110499 - FEM typos
+  *  d964187 - Install macOS bundle executables into MacOS
+  *  8b86bfb - Merge pull request #569 from luzpaz/typos-pt3
+  *  a78e8ff - source typo fixes pt3 (only on py3 merged code)
+  *  6c720ce - resolve merge conflict
+  *  6226d2b - Improved comment about Quarter doxygen commands
+  *  0e3db30 - fiel --> file
+  *  942d30c - Address is actually spelled with two "d"
+  *  63ccfdd - fix typo and and add explanation for a cell address
+  *  de8f66f - Some fixes for doygen syntax errors and some
+    configuration to make it run smoother under Windows
+  *  df67368 - resolve merge conflict
+  *  1a4385e - py3: fix Python2 build
+  *  70aebe9 - py3: ported Sandbox to python3
+  *  4705980 - py3: Robot: gathering remaining diff of Robot-Modul
+    d90e334005baa59805a9c812203ef107ca3be2a8
+  *  21ffbea - py3: ported Robot to python3
+  *  8b5fb47 - python: Robot: *.py: Fix python3 syntax
+  *  b265030 - py3: ReverseEngeneering: port Py_InitFunc to python3
+  *  1558e92 - py3: ported ReverseEngineering to python3
+  *  125fd78 - py3: ported Raytracing to python3
+  *  a39ef71 - python: Raytracing: *.py: Fix python3 syntax
+  *  0e9189e - py3: Points: gathering commits:
+    5f682d2a97a0b965813077d03fa2aee65377f3b2
+    5ccfa18e8c8471639a7f98e294625c5532e7440e
+    24836b36d5214db6823d6ac409afa42ce47ce263
+  *  e90ddef - py3: ported Points to python3
+  *  5f5797e - FEM: visible command names, use FEM instead of Fem
+  *  5a6ccfb - FEM: vtk import, comment not used part of the code
+  *  e98d632 - FEM: code formating, flake8 in import Fenics mesh
+  *  10dd719 - FEM: fenics xml mesh format, add export module
+  *  474ab30 - FEM: mesh view provider, add property to adjust max faces
+    to show inner mesh data
+  *  d8edf39 - FEM: gmsh mesh object task panel, fix import
+  *  30941ac - FEM: z88 result reader, use generic result fill method
+  *  cf7bc38 - FEM: fill imported result object, some refactor work
+  *  7dce02b - FEM: result reader, replace try except by if key in dict
+  *  6f105c4 - FEM: import tools, move fill result obj with imported
+    results inside import tools module
+  *  a569319 - FEM: import tools, move imported mesh creation def inside
+    new import tools module
+  *  90aeb37 - FEM: source code typos, issue 0002914
+  *  35e66ac - FEM: gmsh mesh, make geo file better readable
+  *  07d1dcc - FEM: code formating, flake8
+  *  cc2c51b - FEM: ccx input writer, write object labels as comments
+  *  de0cf45 - FEM: ccx input writer, typo
+  *  f482f6d - FEM: vtk post processing, add peeq strain
+  *  a8ded93 - FEM: result task panel, add peeq strain results and add
+    peeq to result stats, by sodelo
+  *  1cfd041 - FEM: result object, view provider, move task panel checks
+    inside the setEdit
+  *  f838e5f - FEM: 1DFlow, fix unit tests
+  *  20f4325 - FEM: 1DFlow, fix z88 input file writer
+  *  919823d - FEM: 1DFlow, result reading and display results
+  *  8bb1df3 - FEM: 1DFlow, ccx solver handling
+  *  1e1b9a8 - FEM: 1DFlow, gui command
+  *  5c0660d - FEM: 1DFlow, object modules
+  *  f087a65 - FEM: 1DFlow, icon
+  *  0485edd - source typo fixes pt2 (only on py3 merged code)
+  *  06b10a4 - Improved macOS statusbar integration
+  *  dde5295 - source typo fixes pt1 (only on py3 merged code)
+  *  681b6a3 - Update Metadata
+  *  9c29475 - Align Robot workbench icons to guidelines
+  *  2ecacef - Sketcher: fix issue #0002788
+  *  5084b96 - Qt5: build FreeCAD for macOS with both Qt5 and Qt4
+  *  1255ac6 - Fixed typo.
+  *  2bc020d - Don't manage button arrow
+  *  441ce4a - issue #0002741: Crashes when drawing tutorial
+  *  dd7b65a - Draft: Added utilities -> create Working Plane Proxy
+    command
+  *  5bb2a5d - Draft: Added a couple of missing tooltips
+  *  dbb8afb - Arch: Added option to create new material as a copy of an
+    existing one in Arch Material dialog
+  *  8903502 - Draft: Added checkbox to center working plane on current
+    view in Select Plane dialog
+  *  5eedcc4 - make cmake configure version with older versions
+  *  9d4f8fa - Enable all VTK components available on macOS
+  *  aab99ad - Arch: Added materials support to Arch OBJ import/exporter
+    - fixes #2139
+  *  10191e9 - fixes #0002921, fixes #0002922
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 11 Mar 2017 22:10:55 +0300
+
 freecad-daily (0.17~git10275-b217fe2-1) unstable; urgency=medium
 
   * Compile
