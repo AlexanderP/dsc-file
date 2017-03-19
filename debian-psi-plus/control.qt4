@@ -5,16 +5,14 @@ Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: debhelper (>= 9),
                libaspell-dev,
                libidn11-dev,
-               libminizip-dev,
+               libminizip-dev | wget,
                libotr5-dev | libotr2-dev,
-               libqca-qt5-2-dev,
-               libqt5webkit5-dev,
-               libqt5x11extras5-dev,
+               libqca2-dev,
+               libqtwebkit-dev,
                libsm-dev,
                libtidy-dev,
                libxss-dev,
                qconf,
-               qtmultimedia5-dev,
                zlib1g-dev
 Homepage: http://psi-dev.googlecode.com/
 Standards-Version: 3.9.8
@@ -24,12 +22,12 @@ Architecture: any
 Depends: psi-plus-common (= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: libqca-qt5-2-plugins,
+Recommends: libqca2-plugin-ossl,
             psi-plus-l10n,
             psi-plus-plugins,
             psi-plus-sounds,
             sox
-Suggests: xdg-utils
+Suggests: libqca2-plugin-gnupg, xdg-utils
 Description: Qt-based XMPP/Jabber client (basic version)
  This package contains basic version of Psi+.
  .
@@ -66,13 +64,13 @@ Architecture: any
 Depends: psi-plus-common (= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: libqca-qt5-2-plugins,
+Recommends: libqca2-plugin-ossl,
             psi-plus-l10n,
             psi-plus-plugins,
             psi-plus-skins,
             psi-plus-sounds,
             sox
-Suggests: xdg-utils
+Suggests: libqca2-plugin-gnupg, xdg-utils
 Description: Qt-based XMPP/Jabber client (WebKit version)
  This package contains WebKit version of Psi+.
  .

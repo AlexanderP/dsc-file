@@ -1,3 +1,50 @@
+clementine (1.3.1+git1830-ga034c2d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: a034c2d4d0507e6f49b48482d2b993953de18cba
+  * Date: 1489677482
+  * git changelog:
+  *  a034c2d - Remove non-allowed characters in playlist filename when
+    saving. (Fixes #5460)
+  *  f7eea6c - static_cast<:: apparently confuses older GCC.
+  *  2d1b425 - Fixes #5660 - compile error
+  *  e7ec942 - Explicitly using python2 to prevent errors on py3-default
+    systems
+  *  6c9bc43 - Refactor analyzers for new FHT modifications. Use
+    QVectors where possible. Make readability changes in the code.
+  *  6a19afd - Refactor FHT class: use QVector and const values, remove
+    unnecesary memory handling.
+  *  b7fb649 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  0215707 - Uses effective fields for album hashing and comparison
+    (#5653)
+  *  62bc647 - Roll back to the cache naming conventions for covers
+    (#5651)
+  *  99ad5dc - Refactor EffectiveAlbumArtistName()
+  *  426118a - Revert "include opus support in windows build (#5648)"
+  *  a8cbb3b - Unlock DB mutexes implicitly using scopes. Add error
+    handling for query.
+  *  f5bd7ef - ItemHasCover(): Replace pointer with reference
+  *  82f0d26 - Use the 'effective_album' title when searching for a
+    track's cover
+  *  e30e6da - Add 'effective_album' property to Song
+  *  2c64351 - Refactor icon handling. Make empty-cover filtering work
+    again.
+  *  deb7c33 - Add support for 'album artist' field in the
+    LibraryBackendInterface
+  *  58b7c62 - Make Cover Manager aware of 'album artist' field
+  *  62cec8c - Prioritize album artist in cover search and manager
+  *  5d0cf34 - Use new clementine images API.
+  *  81c905b - include opus support in windows build (#5648)
+  *  3d80f7e - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 17 Mar 2017 14:25:33 +0300
+
 clementine (1.3.1+git1808-g3b51f80-1) unstable; urgency=medium
 
   * Compile

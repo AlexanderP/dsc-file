@@ -10,10 +10,29 @@ ifeq (,$(NUMJOBS))
 	NUMJOBS = 1
 endif
 
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+ifneq (,$(filter $(DEBIAN_CODENAME),jessie trusty)) 
+	QMAKE=qmake-qt4
+	CONTROL = control.qt4
+else
+	CONTROL = control.qt5
+	QMAKE=qmake
+	export QT_SELECT=qt5
+endif
+
+
 Q_CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
 Q_CFLAGS:=$(shell dpkg-buildflags --get CFLAGS) $(Q_CPPFLAGS)
-Q_CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(Q_CPPFLAGS)
+ifneq (,$(filter $(DEBIAN_CODENAME),jessie trusty)) 
+	Q_CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(Q_CPPFLAGS) -std=c++11
+else
+	Q_CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(Q_CPPFLAGS)
+endif
 Q_LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
+
 export Q_CPPFLAGS Q_CFLAGS Q_CXXFLAGS Q_LDFLAGS
 
 Q_OPTS = "QMAKE_CXXFLAGS += $(Q_CXXFLAGS)" \
@@ -23,17 +42,6 @@ Q_OPTS = "QMAKE_CXXFLAGS += $(Q_CXXFLAGS)" \
 
 PACKAGE = psi-plus
 
-DEBIAN_CODENAME = $(shell echo $$DIST)
-ifeq "$(DEBIAN_CODENAME)" ""
-	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
-endif
-ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
-	BUILDDEBFLAGS= -- -Zlzma -z9
-else
-	BUILDDEBFLAGS= -- -Zxz -z9
-endif
-
-QMAKE=qmake-qt4
 QCONF=qt-qconf
 CONF=--debug --no-separate-debug-info
 
@@ -45,6 +53,7 @@ plugins_unix = $(notdir $(wildcard $(CURDIR)/src/plugins/unix/*plugin ) )
 	dh $@ --parallel
 
 override_dh_auto_configure:
+	cp debian/$(CONTROL) debian/control
 	# $(QCONF)
 	./configure --prefix=/usr $(CONF)
 
@@ -82,6 +91,7 @@ override_dh_install:
 	chmod -x `find . -name '*.xml' -type f`
 
 override_dh_auto_clean:
+	cp debian/$(CONTROL) debian/control
 	dh_clean
 	[ ! -f Makefile ] || $(MAKE) distclean
 	rm -f config.sub config.guess

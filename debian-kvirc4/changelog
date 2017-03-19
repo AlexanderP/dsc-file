@@ -1,3 +1,34 @@
+kvirc (4:4.9.2~git-7099-gca80ee6-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: ca80ee628f491594878c6762a62f38fac3ed4f8c
+  * Date: 1489328960
+  * git changelog:
+  *  ca80ee6 - Event OnQuit: Change example to a working example.
+  *  85761b2 - snd module: Fix file descriptor check
+  *  111cb9c - logview module: Fix memory leak in logview export
+  *  2d5fd9d - rijndael module: Fix potential memory leak and invalid
+    length check
+  *  04a4b61 - RegisteredUsersDialog: Fix memory leak in exportClicked
+  *  16b2892 - serverdb module: Fix memory leak in addserver command
+  *  2481f81 - KviKvsObject: Fix return type for font property and
+    indirectly fix memory leak.
+  *  24f54e0 - KviInputEditor: Fix out-of-bounds access in mirc color
+    lookup
+  *  fcdf169 - KviKvsParser: Fix potential memory leak
+  *  a88762e - Fix potential memory leak.
+  *  1fb80a8 - rijndael module: Fix incorrect size check
+  *  638ef78 - module window: Fix memory leak in crypt engine
+    initializer.
+  *  a347dea - Fix various memory leaks in usages of static
+    KviKvsScript::run
+  *  2e602d0 - add only a direct shortcut to kvirc in the windows start
+    menu (#2207)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 17 Mar 2017 13:38:19 +0300
+
 kvirc (4:4.9.2~git-7085-gaea2bb2-1) unstable; urgency=medium
 
   * Compile
