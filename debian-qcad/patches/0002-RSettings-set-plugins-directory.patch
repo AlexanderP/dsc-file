@@ -11,11 +11,14 @@ diff --git a/src/core/RSettings.cpp b/src/core/RSettings.cpp
 index b442af9..21db08c 100644
 --- a/src/core/RSettings.cpp
 +++ b/src/core/RSettings.cpp
-@@ -201,6 +201,7 @@
-  * \return Path to the application plugins folder.
-  */
+@@ -125,6 +125,7 @@ QString RSettings::getApplicationPath() {
+ }
+ 
  QString RSettings::getPluginPath() {
 +    return QString("/usr/lib/qcad/plugins");
      QDir appDir = QDir(getApplicationPath());
  
  #ifdef Q_OS_MAC
+-- 
+1.9.1
+
