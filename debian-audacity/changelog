@@ -1,3 +1,267 @@
+audacity (1:2.1.3+git6327-78149bc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 78149bc3da4a7d18c0487baf7002b23759a814c3
+  * Date: 1490294880
+  * git changelog:
+  *  78149bc - Disable command-list capture code, by default.
+  *  3ffcc29 - Add code to capture command List
+  *  a07bf9c - Rearrange 'Skip to' menu
+  *  f4ac5c2 - Update Ukranian Translation by Yuri Chonoivan
+  *  7a2b199 - Fix Italian Translation Typos by Lorenzo Pini
+  *  260044b - Ffix wx assert in debug build
+  *  def0d2b - Fix Linux build
+  *  f62062a - Update Catalan Translation by Robert Gelonch
+  *  ebfca79 - Update Russian Translation by Alexander Gvaramiya
+  *  1dce830 - Record on same track is now the default.
+  *  5f6a013 - Fix windows build
+  *  5aefa78 - More of the exception safety project...
+  *  1b00c87 - Where reading a WaveTrack, specify whether to allow
+    exceptions...
+  *  38b8e57 - Specify whether to throw on bad read in Mixer and
+    WaveTrackCache...
+  *  987b038 - Exception safety in overrides of WriteSummary
+  *  39b8d99 - WaveTrack::Get, WaveClip::GetSamples take a mayThrow=true
+    argument...
+  *  834a141 - More of the exception safety project, no new throws yet
+  *  98d1468 - BlockFile::ReadData overrides: on failure, pad with 0s or
+    throw...
+  *  70d9e4b - GetMinMax, GetRMS functions take a mayThrow argument,
+    return numbers
+  *  dcac878 - Safeties where block file read/write exceptions need to
+    propagate...
+  *  1552ff1 - When opening a file into a new project, delete the
+    project on failure
+  *  2626f6c - Exception safety in: subclasses of ImportFileHandle
+  *  ed6f2ea - Exception safety in: locking of BlockFile for read
+  *  f5fe928 - Strong safety guarantee for removing file dependencies
+  *  7159966 - Comment that cache-filling should be no-fail (we don't
+    use it anyway)
+  *  54c1b0c - Exception safety in: opening and saving of projects
+  *  4d4cd91 - Hoist, and delay, the saving of import tag while opening
+    the file...
+  *  22a12c6 - Exception safety in: some effects and generators...
+  *  1fad629 - Exception safety in: overrides of ShowInterface
+  *  79c3bef - Exception safety in: general effect performing functions
+  *  2cbdd1c - Exception safety in: ControlToolBar & Ruler functions...
+  *  0bb6a3d - Exception safety in: importing functions...
+  *  0c8bedc - Exception safety in: subclasses of ExportPlugin; and more
+    error checking
+  *  4845940 - Exception safety in: general exporting routines
+  *  464828d - Exception safety in: batch processing
+  *  abbe927 - Exception safety in: CommandManager
+  *  40aa70a - Exception safety for Edit toolbar button presses
+  *  664974d - Exception safety in: ondemand
+  *  195732f - Exception safety in: BatchCommands
+  *  1a90b7d - TimerRecordDialog:  comment why nothing need be done for
+    exceptions
+  *  63e44e2 - Rearrange a few things in time shift button up...
+  *  68c7269 - If exception in cut/copy, leave clipboard clear (no
+    partial results)
+  *  41f1ebf - Commit resampling of tracks to undo history one track at
+    a time
+  *  82dd754 - Reviewed uses of release(); prefer Destroy_ptr to hold
+    window objects
+  *  7927fe0 - Fix move constructors and assignments of
+    AudacityException classes
+  *  e9a4fc8 - fix the XML writer -- don't throw if target path did not
+    previously exist.
+  *  d812b7f - Merge branch 'master' into HEAD
+  *  12e3d1d - Small correction to parsing of LOF file
+  *  5e3a4fa - Name Record Beside menu option correctly.
+  *  715758d - Small improvements in Sequence and BlockFile
+  *  52fd607 - Sequence::AppendBlock and Sequence::Blockify  are static
+  *  2677796 - Zero and return false for all failures to read block file
+    summary...
+  *  7b7ad75 - Remove Sequence::CopyWrite and needless file reads in
+    Sequence::Set
+  *  c6b4e2f - Add code to capture menus
+  *  8795794 - Fix for bug 1611: after select none, temporary in-
+    correctness
+  *  ec7fe2d - Fix for bug 613: menu key deselects track.
+  *  5b9ae95 - Bug 1610 - Unable to save projects
+  *  8f71aa6 - Allow same command more than once in the menus.
+  *  148fc40 - Restore menu items removed for DarkAudacity.
+  *  d85ee24 - Merge branch 'menus'
+  *  5c1f4d2 - Menu rearrangement merged from DarkAudacity
+  *  d38dde2 - Revert "Fix compilation of EXPERIMENTAL_EFFECTS_RACK"
+  *  9842d07 - Fix compilation of EXPERIMENTAL_EFFECTS_RACK
+  *  e78d209 - GPL v2 and CC BY 3.0
+  *  439edae - Update source files.
+  *  748e718 - Workaround for FLAC__MAX_METADATA_TYPE not defined.
+  *  7b6b6ef - Update .pot and .po files to 2.2.0
+  *  90051c7 - To 2.2.0 in .pot file.
+  *  47fb879 - Don't translate the empty string.
+  *  2bc9497 - %d to %s in cs.po
+  *  fbf8970 - Update Polish Translation by Pavel Fric
+  *  e94fa1d - Fix compilation on MSVC2013 Express.
+  *  864d0b2 - Start of exception safety project; NEW SOURCE FILES
+  *  ce7b467 - Exception safety in all uses of XML writing functions
+  *  3bb0424 - Strong exception safety in all uses of XMLFileWriter...
+  *  b81cdee - Comment where xml writing functions may throw
+  *  e3355c3 - Stops of possible file i/o exceptions in most places
+    needing it...
+  *  e9a0876 - TrackPanel aborts any dragging action when an exception
+    escapes
+  *  006aeda - Use SafelyProcessEvent
+  *  8e5975b - Report read exceptions met in SBSMS and Nyquist callbacks
+    to user...
+  *  a8a2598 - Intercept exceptions in command script, report failure.
+  *  d11027c - Allow exceptions from BlockFile::Recover, handle them in
+    ProjectFSCK
+  *  f508493 - more guarded calls
+  *  01c5f25 - Rewrite one try-catch with GuardedCall so we can show the
+    user errors
+  *  6525bb1 - Translate exceptions to error codes in callback
+    functions...
+  *  576d3e3 - Don't let the catch-all block in Effect intercept the new
+    exception
+  *  87e7517 - Guarded calls in batch processing
+  *  eeb301e - Gracefully handle disk exhaustion exceptions during
+    recording
+  *  f4e2fb5 - AudioIO::StopStream stops exceptions in many non-editing
+    actions
+  *  a1bc694 - Define application-level exception handler of last
+    resort.
+  *  40e73cd - Define classes and functions for exception handling
+    framework
+  *  9fde752 - Define an AudacityException subclass for unready on-
+    demand data
+  *  acf3c01 - Define an AudacityException subclass for user
+    cancellation of progress
+  *  195509a - Define an AudacityException subclass for file errors
+  *  f1cce8a - Define an AudacityException subclass for assertion
+    violations
+  *  df077d1 - Exception framework: define AudacityException and
+    GuardedCall...
+  *  26f917b - On-demand tasks check for i/o errors, and if so, make no
+    false progress
+  *  1c91c2b - ODDecodeTask makes progress unless there is an exception
+  *  1a32126 - ODComputeSummaryTask is safe for exceptions; makes no
+    progress then
+  *  5de19dc - ODDecode task checks blockfile error, making no progress
+    if so...
+  *  a399d4e - No naked malloc (calloc, strup, ...) and free!
+  *  1126925 - Remove naked malloc (or similar) and free in: various
+  *  cab99f7 - Remove naked malloc (or similar) and free in: other
+    effects
+  *  0c7e467 - Remove naked malloc (or similar) and free in: reverb
+  *  0380953 - Remove naked malloc (or similar) and free in:
+    Equalization48x
+  *  1614db9 - Remove naked malloc (or similar) and free in: export
+  *  9314fe0 - Remove naked malloc (or similar) and free in: import
+  *  48d951d - Remove naked malloc (or similar) and free in:
+    RawAudioGuess.cpp
+  *  53b9869 - Remove naked malloc (or similar) and free in: FFmpeg
+  *  58574f2 - Redo type HFFT as a smart pointer, remove malloc and free
+  *  c5007d8 - No naked array new!
+  *  6ca89c2 - Remove naked new[] in: builtin effects
+  *  f858d97 - Remove naked new[] in: linear algebra functions for
+    Repair
+  *  cb05476 - Remove naked new[] in: effects plug-ins
+  *  a4c7d37 - Remove naked new[] in: effects framework
+  *  692a033 - Remove naked new[] in: various
+  *  ce2e154 - Remove naked new[] in: Benchmark
+  *  18be1bd - Remove naked new[] in: tracks
+  *  2b23667 - Remove naked new[] in: AudioIO
+  *  e6db1a5 - Remove naked new[] in: blockfile and commands
+  *  88cac8c - Remove naked new[] in: import
+  *  9bdc7b2 - Remove naked new[] in: export
+  *  ea05fac - Remove naked new[] in: mixer
+  *  0113e6f - Remove naked new[] in: ondemand, toolbars, widgets
+  *  089e696 - More utilities in MemoryX.h
+  *  5ca8766 - define freer
+  *  1eff721 - Define some useful type aliases for arrays of floats and
+    doubles
+  *  aebaaf4 - require unsigned arguments for Array(s)Of::reinit
+  *  ef2b747 - Define ValueRestorer for a frequent kind of RAII action
+  *  a74ea83 - Last loose ends in removal of all naked scalar new
+  *  bb5dc07 - Fix one scalar naked new that crept back in
+  *  38236a8 - More new -> NEW, delete -> DELETE in comments
+  *  ec0297e - more safenew
+  *  9119d70 - Wave track duplication: don't append empty clips, do copy
+    cutlines
+  *  b4734ff - Duplicate command copies cutlines
+  *  934a505 - Changes in WaveClip construction...
+  *  25619fb - Don't create placeholder clips in Duplicate command ...
+  *  65c722b - Comment: resample, reformat of WaveClip needs no
+    recursion for cutlines
+  *  3d29ba1 - Various precautions, efficiencies, fixes of unreported
+    bugs
+  *  ac246d0 - Fix bug 1566 differently (signed/unsigned comparison)
+  *  4744f5c - OD tasks store weak pointers to block files...
+  *  aee45d9 - Fix bogus error dialog when append-recording with no
+    waves...
+  *  0be6629 - Sort labels after warping time, just in case...
+  *  37e7b57 - a null check
+  *  d9be2be - Restore selected status of tracks correctly in export
+    multiple
+  *  7b073cd - Fix naming of right channel of mix-and-render results
+  *  0e43079 - Further precautions for the corrupt .wav bug...
+  *  2c0cdda - Fix dangling pointer bug in lv2 effects
+  *  87775d3 - null pointer checks on all uses of WaveTrackCache::Get
+  *  31832b2 - fix WaveTrackCache, again...
+  *  4065124 - Benchmark::OnRun: clarify, simplify, avoid possible
+    divide by 0
+  *  6a57987 - safer use of weak pointer
+  *  509f974 - Consistently use delete[] not free for NoteTrack
+    serialization...
+  *  7dbb946 - Propagate progress bar cancellation correctly in
+    Normalize
+  *  97fd8f5 - Certain short-lived things don't need to persist as
+    member variables...
+  *  08b99c5 - Remove Effect::mWarper, and stack-allocate warpers
+    instead
+  *  b9e4aa0 - Simplify Normalize by removing needless member variables
+  *  0af9b46 - Move many fields out of Envelope that are needed only
+    during editing
+  *  3c4a15f - Remove some unused members
+  *  790ade7 - Some simplifications and un-duplications
+  *  5fdd9fe - Remove TrackList::GetLink
+  *  9eaa406 - Utility for track editing leaves fewer direct calls to
+    GetLinked()
+  *  54aea4b - Rewrite TrackPanel::FindTrack as FindCell ...
+  *  8ddbc1d - Assume number of spectrogram bins = 1/2 FFT window in
+    fewer places...
+  *  d831318 - simplify SpectrogramSettings::GetScale; abstract
+    frequency-to-bin...
+  *  a4a9df5 - One function for the common parts of BlockFile::ReadData
+    overrides
+  *  a86cc1c - Stylistic changes
+  *  004df48 - Make Effect::mTracks private
+  *  aa0d55a - Use enum class ProgressResult, don't interconvert with
+    int or bool
+  *  5036583 - Fewer inclusions of AudacityApp.h
+  *  a9396b9 - Change required to compile certain uses of finally, I
+    don't know why
+  *  d174099 - Disallow copy of Sequence
+  *  b019e28 - remove unused variable
+  *  c55d838 - Clarify operator precedence
+  *  3e51fd5 - fix some comments
+  *  6665370 - Fix spelling in a function name
+  *  9af53f9 - un-confused editor indenting
+  *  81285ee - More const and override
+  *  9ddb5bb - more use of size_t
+  *  12a78f9 - Some maintenance of experimental branches, mostly
+    compilation
+  *  4913b12 - Correct the argument passed to OnEffect by EffectRack
+  *  cde1e1e - Remove some duplication, fix EXPERIMENTAL_OUTPUT_DISPLAY
+    and Esc key
+  *  64d163e - Make EXPERIMENTAL_OUTPUT_DISPLAY compile
+  *  ed8c7fd - Make EXPERIMENTAL_MIDI_OUT compile, but it fails to link
+  *  1e8f0e5 - EXPERIMENTAL_VOICE_DETECTION: compile, use const, more
+    careful casts
+  *  4c6306e - Fix compilation of old NoiseRemoval
+  *  e7c0862 - Fix compilation of EXPERIMENTAL_OD_FFMPEG
+  *  463e7d9 - Make EXPERIMENTAL_FIND_NOTES work again
+  *  dbb2f04 - Incomplete fixes for compilation of
+    EXPERIMENTAL_EQ_SSE_THREADED
+  *  f061b0b - Prepare for 2.2.0 Release Cycle.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 25 Mar 2017 09:41:25 +0300
+
 audacity (1:2.1.2+git6137-2fef7f3-1) unstable; urgency=medium
 
   * Compile

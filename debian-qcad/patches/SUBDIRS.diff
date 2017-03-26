@@ -1,11 +1,11 @@
 --- qcad-3.16.7+git4445-a12fe59.orig/qcad.pro
 +++ qcad-3.16.7+git4445-a12fe59/qcad.pro
-@@ -13,7 +13,7 @@ win32 {
+@@ -13,7 +13,7 @@
      }
  }
  else {
--    SUBDIRS += $$system("ls -d ../qcad?* 2>/dev/null | grep -v $(basename $(pwd)) | grep -v qcadmobile")
-+#    SUBDIRS += $$system("ls -d ../qcad?* 2>/dev/null | grep -v $(basename $(pwd)) | grep -v qcadmobile" )
+-    SUBDIRS += $$system("ls -d ../qcad?* 2>/dev/null | grep -v $(basename $(pwd))$ | grep -v qcadmobile")
++#    SUBDIRS += $$system("ls -d ../qcad?* 2>/dev/null | grep -v $(basename $(pwd))$ | grep -v qcadmobile")
  }
  
  !r_mobile {

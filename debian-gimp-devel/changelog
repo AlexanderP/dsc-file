@@ -1,3 +1,129 @@
+gimp-devel (2.9.4+git38272-c3dc3ea-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: c3dc3ea59f25de57703390123a14039fb7a2c0eb
+  * Date: 1490410364
+  * git changelog:
+  *  c3dc3ea - Fix rle encoding, first byte of run was added to previous
+    non-run.
+  *  10360c9 - app: add new XCF property PROP_FLOAT_COLOR
+  *  8df8cd0 - autogen: fix and improve automake/aclocal detection.
+  *  8322ffd - libgimpwidgets: some minor tab cleaning.
+  *  766d1aa - app: factor out duplicated code in gimp-operation-
+    config.c
+  *  70d4285 - app: try to move the compat filter config to its new
+    place
+  *  11d34b0 - themes: add commented-out font_name property in "System"
+    theme.
+  *  e58d8fc - themes: removing the "Small" theme.
+  *  c8068d9 - tools: add invert-svg.c in the distribution.
+  *  9a2da53 - tools: invert-svg is to be built natively for the build
+    OS.
+  *  ee6c7ec - Bug 780015 - Filter settings are not properly restored
+    after Gimp restart
+  *  8cf53b4 - Update Hungarian translation
+  *  f99059d - Update Hungarian translation
+  *  a0521a5 - app: change the "XCF compat" stuff to "XCF compression"
+  *  8689f14 - app: commit the generated config-enums.c
+  *  b3354ba - app: move monitor xres, yres back to their local scope in
+    prefs
+  *  2289299 - Revert "Bug 780270 - MinGW build fail on Windows, wrong
+    definition in..."
+  *  758836e - app: base the stroke width defaults on the y resolution
+    defaults.
+  *  6cf2641 - Bug 780270 - MinGW build fail on Windows (broken m4
+    macro).
+  *  dd47e7b - Bug 731390 - XCF files have a max size of 4G
+  *  829bad4 - Bug 731390 - XCF files have a max size of 4G
+  *  061c2e7 - app: clean up xcf_save_prop() to do things more
+    consistently
+  *  0c58dcd - Bug 731390 - XCF files have a max size of 4G
+  *  01be120 - Bug 731390 - XCF files have a max size of 4G
+  *  a0a5f71 - Bug 731390 - XCF files have a max size of 4G
+  *  f861585 - libgimpwidgets: entry width of gimp_prop_size_entry_new()
+    is too small.
+  *  4beff2f - app: base the line width defaults for strokes on the
+    screen resolution.
+  *  c97209b - app: fix abbreviated commit hashes
+  *  78077dc - app: fix inconsistent capitalization.
+  *  f6cb74c - app: core/gimpmarshal.h is generated after building in
+    app/config/.
+  *  bc344a9 - Bug 750180 - Fix different ways of writing Plug-in Plug-
+    In Plugin.
+  *  d339aef - app: add icon size auto-guess from monitor resolution.
+  *  3790e22 - app: make tooltips on drawable actions more obvious.
+  *  74a8077 - app: make tooltips on view actions more obvious.
+  *  da84c61 - Bug 777749 - Paths Tool: better drawing of edited path
+    after a visibility change
+  *  e666eb6 - app: remove unused PROP_FILENAME enum value from
+    GimpSettingsEditor
+  *  2226fb1 - Bug 780270 - MinGW build fail on Windows, wrong
+    definition in...
+  *  a8d6bea - Update Polish translation
+  *  f81fe0c - Update Hungarian translation
+  *  6a9c8e9 - Update Swedish translation
+  *  461d807 - libgimpwidgets: order enum combos of GimpDesaturateMode
+    more logically
+  *  48e4044 - Bug 780065 - Change default way to desaturate to
+    Luminance
+  *  5ea5458 - app: fix child offsets of a pasted layer group
+  *  4cec2b9 - Update Kazakh translation
+  *  140835a - Update Kazakh translation
+  *  9eb143f - Bug 780137 - SVG icon files are not removed by make
+    distclean.
+  *  8055f14 - app: fix and streamline HSL color layer mode
+  *  e69e84c - plug-ins: s/HSV_COLOR_LEGACY/HSL_COLOR_LEGACY/ in file-
+    openraster.py
+  *  03756d0 - app: rename "Color (HSV) (legacy)" mode to "Color (HSL)
+    (legacy)"
+  *  da9c427 - app: fix version comments in GimpLayerMode enum
+  *  ff5eb69 - app: improve performance of HSV hue mode
+  *  661c22c - app: rename "Color (HSV)" mode to "Color (HSL)"
+  *  45516a0 - app: improve performance of HSV [sic] color mode
+  *  77211f1 - app: improve performance of HSV saturation mode
+  *  bcb242d - app: improve performance of HSV value mode
+  *  3fa2c91 - app: remove mono-mix layer mode
+  *  677bc33 - Update Hungarian translation
+  *  9d4084c - app: in gimp_composite_blend(), reduce conversion of
+    transparent pixels
+  *  06e0c75 - Update Italian translation
+  *  e2ff186 - Bug 779942 - Make GimpPickButton honor monitor profile
+  *  1f24573 - Update Italian translation
+  *  a4d7841 - Update Italian translation
+  *  1b0966d - app: fix double node insertion to a graphless filter
+    stack
+  *  064c452 - Bug 779942 - Make GimpPickButton honor monitor profile
+  *  9921d4c - app: derive GimpIconSizeScale from GimpFrame not GtkFrame
+  *  d603b70 - app: pack the icon size scale into the right vbox in the
+    prefs dialog
+  *  e29e950 - app: make sure signal connections are disconnected later.
+  *  324e1a2 - app: completely minor typo in function parameter.
+  *  0753296 - app: remove unused gimp_tool_palette_initialize_tools().
+  *  33196a6 - app: minor tab cleaning.
+  *  6aaf667 - Update Polish translation
+  *  ab1bc49 - configure: vector icons now in auto mode.
+  *  59488ff - app: order config-enums.h alphabetically
+  *  7d8976a - Update POTFILES.in
+  *  682c5e9 - Update Greek translation
+  *  a88afe4 - app: fix dockbook tab border values.
+  *  e30c92c - app: also update dockbook tab borders with icon sizes.
+  *  26f054e - app: GimpEditor styling depending on config's icon
+    settings.
+  *  86cd53e - app: dockbook tab icon size depends on the icon settings.
+  *  cfae836 - Bug 745835 - Small icons as Option, not theme
+  *  ed0fda0 - app: add split layer mode
+  *  23e6984 - app: add merge layer mode
+  *  157d70e - Bug 768066 - Color picker tool should indicate pick
+    position
+  *  bf21bc1 - devel-docs: add missing stuff to *-sections.txt files
+  *  4a75f33 - libgimpwidgets: s/"document-
+    open"/GIMP_ICON_DOCUMENT_OPEN/ in GimpFileEntry
+  *  c6c0899 - app: add mono-mix layer mode
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 25 Mar 2017 12:46:21 +0300
+
 gimp-devel (2.9.4+git38186-7d34507-1) unstable; urgency=medium
 
   * Compile

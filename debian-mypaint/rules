@@ -34,6 +34,8 @@ override_dh_clean:
 override_dh_auto_build:
 	scons -j$(NUMJOBS) $(MYPAINT_SCONSOPTS)
 
+override_dh_auto_install:
+
 override_dh_auto_test:
 ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 	# Max-RSS: ~74000 kbytes

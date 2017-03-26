@@ -1,3 +1,217 @@
+freecad-daily (0.17~git10640-2365dd6-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 2365dd6f8b424ecf01c16b70b3217ccc53098070
+  * Date: 1490387442
+  * git changelog:
+  *  2365dd6 - Merge pull request #649 from realthunder/PathColorCorrect
+  *  244492f - PathGui: restore Path default color
+  *  e006178 - Merge pull request #648 from wwmayer/fix_warnings
+  *  e96390e - Qt5OpenGL: replace gluOrtho2D for macOS, move includes of
+    GL stuff from header to source
+  *  4a639b6 - Merge pull request #647 from
+    kkremitzki/python_wordwrap_fix
+  *  b68fa26 - Fix preferences Python console bug
+  *  abe15bb - fix signed vs unsigned warning
+  *  15e3da3 - Path.Area: fixing boost windows build error
+  *  dbf3030 - Path.Area: fixing boost::geometry compilation issue
+  *  1d64d1e - Path.Area: wire sorting fix and improvement
+  *  dbfc65d - Path.Area: improved FeatureAreaPy error message
+  *  40033ac - Path.Area: avoid FeatureArea recompute on doc load
+  *  b0e9d4b - Path.Area: fixed getShape with index
+  *  d447257 - Path.Area: changed section transformation
+  *  b49a8ec - Path.Area: improved section tolerance
+  *  796a8f3 - Path.Area: support arc plane selection
+  *  80850e1 - Path.Area: improved section plane tolerance issue
+  *  abd4f6a - Path.Area: refined properties in FeatureArea
+  *  1029982 - Path.Area: support negative stepdown
+  *  31e82f0 - Path.Area: fixed handling of shape with placement
+  *  721a256 - Path.Area: fixed missing brace
+  *  c1ab980 - Path.Area: Changed FeatureArea WorkPlane behavior
+  *  b8843ec - Path.Area: improved code readablity
+  *  e9c7822 - Move Step reader to New Part Design workflow
+  *  bd7d094 - Merge pull request #645 from sliptonic/master
+  *  a93382a - Path: fix bug with non-planar objects
+  *  14041eb - Draft: Fixed buggy ungroup function
+  *  b5e2df3 - Merge pull request #643 from ianrrees/20170323-remove-mac-
+    opengl-warning
+  *  a3c4c60 - Remove warnings about Qt4 + OpenGL + MacOS issues
+  *  44a9ecd - PathGui: increase pre-select GCode display decimal
+  *  b091acd - PathGui: speed up path marker display
+  *  3f7c4bc - PathGui: fixed potential crash on Path object delete
+  *  9e5f6b2 - PathGui: ViewProviderPath default to bbox selection style
+  *  0c68b69 - PathGui: show path marker in front of path wire
+  *  5e9d9af - Merge pull request #640 from realthunder/PreSelectCoord
+  *  10bb489 - Merge pull request #639 from kkremitzki/startwbfix2
+  *  ac663ea - Merge pull request #637 from sliptonic/master
+  *  5744cd5 - Gui: do not round pre-select coord display
+  *  ff50942 - Make Start WB Py3 friendly and consistent width
+  *  34324c6 - Path: Several small bugs related to Arch Panel support in
+    Path.
+  *  4d9169f - Qt5OpenGL: add missing header for macOS/Linux builds
+  *  3da36c1 - Qt5OpenGL: add missing header for macOS/Linux builds
+  *  c193dbe - enable FREECAD_USE_QTOPENGL_WIDGET by default for Qt5,
+    fixes #0002952, fixes #0001401
+  *  08a901a - Qt5OpenGL: fix to make the 3d viewer fit into the mdi
+    area after re-docking it
+  *  2ec2ea5 - Qt5OpenGL: fix flickering on resize
+  *  2ba7d8e - Qt5OpenGL: update flags when dragging or removing
+  *  0568209 - Qt5OpenGL: add OpenGL debug logger (deactivated)
+  *  3ac834c - Qt5OpenGL: use OpenGL debug logger to locate problems,
+    fix a couple of errors
+  *  2c6f1fd - Qt5OpenGL: fix transparency issue with framebuffer
+    objects with old OpenGL API
+  *  e1c5597 - Qt5OpenGL: implement grabFramebuffer
+  *  ed33adc - Qt5OpenGL: make off-screen renderer working
+  *  5bf326c - Qt5OpenGL: fix creating thumbnals, pdf, print preview and
+    snapshot
+  *  4bf14e7 - Ot5OpenGL: fix phantom objects in sketcher selection
+    mode, get texture with the exact content of the 3d viewer
+  *  f04badd - Qt5OpenGL: at startup determine some basic information
+    about OpenGL setup
+  *  6638ff9 - Qt5OpenGL: do not use pixel buffer for the moment
+  *  b0cd0a5 - Qt5OpenGL: release context when finished
+  *  749ace7 - Qt5OpenGL: Framebufferobject rendering works and handles
+    transparency and anti-aliasing
+  *  27d76f3 - Qt5OpenGL: port Image rendering mode to make box zoom &
+    selection and cutting work again
+  *  1abc9d3 - port Flag class to use QOpenGLWidget
+  *  f587ec5 - disabling depth test makes 3d viewer work again
+  *  a1dd462 - move QuarterWidget to QOpenGLWidget
+  *  ef5d392 - move Image viewer to QOpenGLWidget
+  *  c17e9a2 - add option to switch between old and new OpenGL classes
+    of Qt
+  *  caee7ca - Get path on OSX when imported from external Python
+  *  e7beb51 - Fix minor potential memory leak.
+  *  dbe9d75 - Path:  small bugs. remove deprecated setting of first
+    rapid.
+  *  975f403 - Path: first iteration of a post processor for smoothie.
+  *  8a3ac33 - Path: Drilling checks for bit size to determine
+    drillability
+  *  ffc4fb2 - Path: additional functionality for arch panels
+  *  8699d14 - Path: add linuxcnc export for tooltable
+  *  09ac25f - Path: more bug fixes
+  *  4926bfa - Path:  Engrave can handle other 2D objects including
+    sketch
+  *  7d4ae8a - Path: ToolLibraryManager copy button is smarter.
+  *  57da9b7 - Path: bug fixes
+  *  424fb81 - Path: drilling panel
+  *  ec1028a - path: make linuxcnc post respect F parameter as velocity
+  *  a66e8b4 - Path:  A possibly il-advised revision to library
+  *  493d346 - Path: adapt other operations
+  *  d312681 - Path: contour handles arch panels
+  *  1250576 - Path: PathEngrave converted to use use TC tools
+  *  9bce3b3 - Path: PathMillFace correctly determines TC
+  *  0ca3960 - path: contour gets correct TC
+  *  53bc54b - path: drilling asks for correct tc on create
+  *  95a4728 - Path: drilling mostly working again
+  *  25e4b13 - Path: fix PathContour panel
+  *  3b54157 - Path: fix drilling panel
+  *  9e4a6fe - Path: convert pathmill face to use tc tools
+  *  2dee821 - Path: adjust ops to use TC tools
+  *  4ec8f2f - path:  add TC selector to panels
+  *  eb8e5b4 - Path: Make post-processing aware of tool changes
+  *  aaee72c - Path:  Make operations use tool from adapted TCs
+  *  c633e59 - Path: make toolcontrollers seamless
+  *  7bdcfb0 - Issue #2682
+  *  f852e6b - Gui: increase pre-select information display
+  *  8093a95 - Remove debug code
+  *  a210cc5 - Gui: added bbox selection style to GeometryObject
+  *  69af452 - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  8ba6896 - Arch: little fix in IFC exporter
+  *  969f5cc - test MultiTransformed applied to a box outside the body
+  *  86cb37b - issue #2808
+  *  2c9d5e3 - render full selection of huge part models in real time
+  *  f9c8c9d - Use PULL_REQUEST_TEMPLATE for FreeCAD pull requests
+  *  a8fc6b3 - Part: BOPTools and CompoundFilter, remove not needed
+    overwrting of setEdit and unsetEdit which prevents some C++ sedEdit
+    modes to work
+  *  e737993 - Merge pull request #629 from agryson/assembly-artwork-
+    alignment
+  *  b413a7e - Create main workbench icon
+  *  c020048 - Update Metadata
+  *  468dbb0 - Align Assembly Workbench icons to guidelines
+  *  c4fdc92 - fixes #2964, #2968
+  *  b60fe48 - Fixed Typos
+  *  6a385f5 - Possible solution to a problem in pad/pocket up-to-face
+  *  d920cf4 - Path: fixed Command unit test
+  *  b6b678b - PathGui: shorten preselect GCode display length
+  *  2f1880c - PathGui: enable ViewProviderPath pre-select
+  *  b9573b7 - Path: improved Command efficiency
+  *  36c9944 - FEM: ccx tools, highlight nodes of elements with
+    nonpositive jacobian if ccx fails
+  *  f2a0263 - FEM: import frd, import all steps of peeq, by sodelo
+  *  9568fa4 - FEM: import tools, move calculate abs disp from import
+    vtk to import tools
+  *  2134e81 - FEM: fluid material, fix command to add such material
+  *  90df4d1 - FEM: material task panel, check if material properties
+    have the appropriate units
+  *  aaefe9d - FEM: material task panel, typo in  KinematicViscosity
+  *  0f90e25 - Base: add unit for kinematic viscosity
+  *  e3d5584 - Forgotton in initial commit
+  *  f6ecd5a - Update Metadata
+  *  1fcde51 - Replace png icons with 64px svgs
+  *  46d4e2b - Align FEM workbench icons to guidelines
+  *  dd9c27d - fix tests
+  *  02166ed - couple of tests and fix to avoid crash on selected edge
+  *  d23e603 - fix groove
+  *  ea45280 - make relinkToOrigin to NOT modify subnames on
+    PropertyLinkSub-s. Fixes TaskRevolution crash on 'Select Reference'
+  *  4325ea4 - same axis and profile only for sketches
+  *  e77e6aa - fix getAxis for faces
+  *  bd3fef0 - set referenceaxis properly and fix getaxis
+  *  934f473 - fix revolve and groove when no sketches in selection or
+    when no sketches in active body
+  *  e5f0de8 - stop revolve if no sketches in selection
+  *  3e195d5 - in approximate, don't autocorrect continuity. Explain
+    requirements in UserDocu instead
+  *  fedbf42 - BSplineSurface approximate, add parametrization type and
+    smoothing algo
+  *  281e593 - BSplineCurve approximate, fix function sometime failing
+    with smoothing algo
+  *  e219f5c - App: FreeCADInit.py: force downstream modules to use
+    either from FreeCAD import Mod or old style
+  *  0caad78 - App: FreeCADInit.py: add newStyleModule function
+    FreeCAD._newStyleModule("MyMod") # removes MyMod from the sys.path
+  *  2a7fdef - App: FreeCADInit.py: remove unused import + add local Mod
+    dir
+  *  bcfac0e - use __ModDirs__ for module directories and set the search
+    path of FreeCAD to the base directories, which contain all the
+    modules
+  *  c2cdc9e - py3: Gui: FreeCADGuiInit.py
+  *  067e661 - py3: App: FreeCADInit.py
+  *  de414f0 - copy scripts at compile time to build directory
+  *  b0b8998 - partially revert changes of 7054346 to again copy image
+    resources at compile time
+  *  c7d01a7 - Arch: fixed bug in panel tools
+  *  4f16517 - Arch: Add more metadata to exported DAE files
+  *  256a5b6 - Web: Add freecad version in iv files exported by the
+    sketchfab exporter
+  *  58ed7c3 - Arch: fixed bug in panels
+  *  5372865 - Arch Added extra panel tools for sliptonic:
+  *  378f99f - Added App::PropertyPrecision
+  *  9c82156 - Persistent toolbars for FreeCAD
+  *  78ad6b9 - Path: support plane select command G17,18,19
+  *  48e54a0 - Path: ignore N command
+  *  c80f680 - Remove unused sketcher commands in PDN
+  *  2dc12cd - Profiles for Arch pipes (fixes issue #2954)
+  *  0d81472 - PartDesign: fix non-selectable datum features
+  *  7e6ad74 - TempoVis: fix container detection
+  *  dc227dc - Show: TempoVis: made to accept any iterable as list of
+    objects
+  *  7054346 - Fix image installation for Start WB
+  *  0b2ac1d - ports-cache timeout
+  *  981cca9 - Merge pull request #614 from DeepSOIC/BOPTools2
+  *  e89e97c - Part.BOPTools: fix wire making
+  *  932c31b - Part.BOPTools: drag-drop support
+  *  b615009 - Web: misc fixes to sketchfab exporter
+  *  bf3b6d4 - Using sketchfab API v3
+  *  623fcea - Web: Added sketchfab exporter
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 25 Mar 2017 14:54:58 +0300
+
 freecad-daily (0.17~git10473-78b986a-1) unstable; urgency=medium
 
   * Compile

@@ -1,0 +1,11 @@
+--- librecad-2.1.0+git4292-f0357fe.orig/librecad/src/boost.pri
++++ librecad-2.1.0+git4292-f0357fe/librecad/src/boost.pri
+@@ -113,7 +113,7 @@ unix {
+     }
+ 
+ 
+-    #BOOST_INCDIR -= $$QMAKE_DEFAULT_INCDIRS
++    BOOST_INCDIR -= $$QMAKE_DEFAULT_INCDIRS
+     INCLUDEPATH += $${BOOST_INCDIR}
+     HEADERS += $${BOOST_INCDIR}
+ 
