@@ -1,3 +1,153 @@
+audacity (1:2.1.3+git6553-c44e5a2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: c44e5a281a9532cd4a712a7d48bb9acbb3b20dd4
+  * Date: 1491665163
+  * git changelog:
+  *  c44e5a2 - Add missing include.
+  *  53e6d95 - Tweak Theme Colours.  Smaller L & R on Linux.
+  *  f508439 - Recolour Classic theme to wxSYS_COLOUR_3DFACE
+  *  221b027 - Bug 1628 - Tracks > Align items two submenus deep
+  *  5f9e8ef - Update Chinese Translation by dingpengyu
+  *  8f7d0a9 - Update Catalan Translation by Robert Antoni
+  *  ae95bc6 - Remove Sync-Lock Button
+  *  5d75b79 - Change 'Set' to 'Zoom'
+  *  431308d - Make Light Theme more like Classic.
+  *  caca4d2 - Zoom presets: wording change
+  *  3651d0a - Update logo used in program.
+  *  8ad2e59 - Tweak Theming.  Reticules, Down buttons; Selected
+    buttons.
+  *  ce37650 - Theme to be a drop-down
+  *  b8fcbd1 - Faster CI builds (Travis)
+  *  5416c21 - Bug 1625 - Mute/Unmute All Tracks in "None" Solo Button
+    Mode
+  *  fc2628d - Removed ZoomInfo::GetZoom() which I added in my previous
+    commit
+  *  1fa97a4 - Added zoom presets
+  *  c1592d2 - Move more on/off options lower in menus.
+  *  715da2b - On/Off options to end of menus, where possible.
+  *  f5e67f5 - Use logo background to fill splash and about box.
+  *  fae1089 - Fix positioning of Mute/Solo button when clicked on.
+  *  1c1191e - Fix dark Mute/Solo buttons on Light theme.
+  *  fefc856 - Update slider in tracks on theme change.
+  *  419b790 - Make monitoring work after a theme change
+  *  c8f58c9 - Bug 1624: mute/unmute all commands do not adjust solo
+    buttons
+  *  fa62d80 - Add numbers on ruler back (if not DA)
+  *  b3ae505 - Use RecordBeside for identifier for Record in 2.2.0
+  *  c17a7f5 - Improve repainting after a theme change.
+  *  017990f - Added prefix std:: to my uses of find_if in recent
+    commits
+  *  d417acd - Complete the exception handling project, enable the
+    throws
+  *  5543924 - All the catches are in place for BlockFile and other
+    errors, now throw.
+  *  b62bddf - Merge branch 'master' into HEAD
+  *  da28a45 - User visible message when there are errors importing
+    labels
+  *  52f0f75 - Add Tracks->Pan->Left/Right/Center
+  *  c9b03b5 - Merge branch 'darkmerge'
+  *  ebff4db - Reinstate SplitStereoToMono for non DA builds.
+  *  d091163 - Select SubMenu made into a full top level menu.
+  *  a7a4a70 - Two commands added, neither on a menu: Clip Left Clip
+    Right
+  *  c382139 - New commands for selecting clips using the keyboard
+  *  a519e6f - New commands for clip boundaries using the keyboard
+  *  8c8f380 - Make default theme depend on EXPERIMENTAL_DA #define.
+  *  0e3f4ce - Fix for windows build
+  *  ae48ac2 - Strong guarantee, void return from all mutating methods
+    of Sequence
+  *  fc0f093 - Sequence::Append* give strong guarantee
+  *  63cf80d - Sequence::Delete gives strong guarantee
+  *  06f6953 - Sequence::SetSamples, ::SetSilence give strong guarantee
+  *  73e6159 - Sequence::ConvertToSampleFormat gives strong guarantee
+  *  3c65731 - Sequence::InsertSilence gives strong guarantee
+  *  160d846 - Sequence::Paste gives strong guarantee
+  *  2ba6065 - Sequence consistency check throws; new unused commit
+    functions use it
+  *  6b0c5c0 - WaveClip::Flush returns void, throws on error
+  *  ec3a4f5 - Merge branch 'master' into HEAD
+  *  5e42fe8 - Merge branch 'master' into darkaudacity
+  *  028ed19 - Sync with DarkAudacity
+  *  0fc04fd - Complete DA/Classic conditionals
+  *  48821a0 - Merge branch 'master' into darkaudacity
+  *  ff40b95 - Make without-DA be more like Classic.
+  *  e633dc0 - Document guarantees of now void-returning WaveTrack,
+    WaveClip methods
+  *  5963f27 - void returns from many WaveClip methods, comment safety
+    guarantees
+  *  aa83c4c - Implement the more than weak guarantees needed for
+    recording...
+  *  e3d4a8d - Comment the strength of guarantees of some WaveTrack
+    methods
+  *  3db132f - Fix WaveTrack::SplitAt
+  *  9cdbd18 - Merge branch 'master' into HEAD
+  *  46fc789 - Apply theme preference at start
+  *  35a4f1a - Move Sync-Lock renaming to internationalisation.
+  *  9ec2bdb - Comments on the DA conditionals.
+  *  bd364ea - Merge branch 'master' into darkaudacity
+  *  1525f14 - Update Greek Translation by Dimitris Spingos
+  *  08e57f3 - MIDI play changes for TrackPanel, MixerBoard;
+    conditionally compiled
+  *  1c93198 - Re-implement note tracks in MixerBoard
+  *  59d740a - Use a dedicated velocity slider for note tracks
+  *  1f0e01b - Merge branch 'master' into HEAD
+  *  7195f9a - fix windows build
+  *  2c84657 - Exception handling: most "TO DO: Actually handle this"
+    comments gone
+  *  0d72505 - Other methods of WaveTrack return void, will throw on
+    failure instead
+  *  e1473df - void return, not boolean success, from some Track virtual
+    functions...
+  *  71dd75a - More exception handling; incidentally implement TimeTrack
+    copy/paste
+  *  a23d6e2 - More exception handling; incidentally implement TimeTrack
+    copy/paste
+  *  6b84dc1 - Factory methods will return non-NULL or throw
+  *  f1b354b - More pure virtuals in Track, supply Note and Time
+    overrides
+  *  ad34145 - Clarify paste logic, throw to rollback on error, keep
+    TimeTrack unique...
+  *  608dcc9 - Reimplement prohibitions on moving clips by throwing
+    exceptions...
+  *  8e2e4a5 - Define SimpleMessageBoxException
+  *  d1cbac4 - more finally, more const, remove unused, fix warnings
+  *  699b9d0 - Merge branch 'master' into head
+  *  a1b88fe - Fix assertion in MIDI prefs when there are no devices
+  *  8928bd4 - Correct MixerTrackCluster::GetRight()
+  *  a936aed - Another use of type AudioTrack
+  *  a9879bd - Refactor clipfix.ny to fix multiple problems
+  *  23dc35a - Bug1614: fix crash duplicating a clip
+  *  7bda40f - Common functions read and write mute and solo in Wave and
+    Note
+  *  1a86819 - Fixes for clang build with 64 bit unsigned long
+  *  82f909f - Again, fix compilation without USE_MIDI
+  *  64a6fa6 - pacovila PR 183 verb to noun
+  *  930e834 - Mark Young PR 192 (modified)
+  *  8c796e2 - Some preliminaries for playable MIDI tracks
+  *  d109142 - Make mute and solo of NoteTrack persistent, if
+    EXPERIMENTAL_MIDI_OUT
+  *  6c4cf46 - Move mute and solo state into PlayableTrack
+  *  ed00884 - Remove MixerTrackClusters right to left, remove assertion
+  *  b2ab9b5 - Simplify MixerBoard.cpp using the PlayableTrack type
+  *  f1bec85 - use AudioTrack
+  *  c391a8f - Define AudioTrack and PlayableTrack as common bases for
+    Wave and Note
+  *  80984c9 - From Pokechu22: Rename gain to velocity on note tracks
+  *  c20a352 - Update Chinese Translation by zhangmin
+  *  9dadc5a - Revert "Needed to compile Pokechu22's fix-midi-output on
+    Mac"
+  *  5badb91 - Needed to compile Pokechu22's fix-midi-output on Mac
+  *  2d912f3 - Replace assert calls with wxASSERT
+  *  0ce9598 - Fix midi-related compile problems in AudioIO and
+    NoteTrack
+  *  bdb0790 - Fix compiling when USE_MIDI not is defined
+  *  e2a7282 - Fix wording issues reported on Wiki
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 08 Apr 2017 21:14:00 +0300
+
 audacity (1:2.1.3+git6327-78149bc-1) unstable; urgency=medium
 
   * Compile

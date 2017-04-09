@@ -1,3 +1,23 @@
+deadbeef (0.7.2+git7073-ad54496-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: ad5449650613f899c659d454bf3da53bbfd8018c
+  * Date: 1491564136
+  * git changelog:
+  *  ad54496 - streamer: fix crash when trying to play invalid file
+    (fixes #1741)
+  *  5ff6742 - logger: init/deinit order fix
+  *  07b4303 - [logger] make logger thread safe
+  *  5e84f48 - logger: added context pointer to logger APIs
+  *  c517553 - coreaudio: mutex-protected API calls, better state/error
+    checking, fix random audio thread freezes
+  *  ffa6813 - streamer: streaming audio init regression fix (fixes
+    #1737)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 08 Apr 2017 12:21:45 +0300
+
 deadbeef (0.7.2+git7067-1621307-1) unstable; urgency=medium
 
   * Compile

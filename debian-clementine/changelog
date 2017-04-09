@@ -1,3 +1,34 @@
+clementine (1.3.1+git1843-g2c60481-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 2c60481f746f57e96eebd3eacdf1e7eccd305aff
+  * Date: 1491213657
+  * git changelog:
+  *  2c60481 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  9f00e02 - This fixes "First track always the same in shuffle #793".
+    Adding this call in the if statement allows a reshuffle to happen
+    after the playlist ends so that when the playlist will restart, it
+    will already have a new set location to go to. (#5689)
+  *  fba9e8d - Fix psychedelic mode on analysers (#5688)
+  *  672d00b - Fixes the issue "Seek instead of navigation with arrow
+    keys #5550". Now allows the leaf to be closed by arrow left at any
+    point of the leaf, not only the parent, and if the library is
+    focused and arrow keys are pressed and there is nothing to open or
+    close, the request is ignored (no seek) (#5684)
+  *  a5d12d0 - Request to merge a fix for a crash during searching under
+    Internet Tab (#5682)
+  *  0b34586 - Fix some warnings shown on start-up (#5679)
+  *  18d2e35 - Register QAbstractSocket::SocketState meta type
+  *  0f4db74 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 08 Apr 2017 18:33:14 +0300
+
 clementine (1.3.1+git1835-ge3ece3d-1) unstable; urgency=medium
 
   * Compile
