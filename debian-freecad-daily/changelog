@@ -1,3 +1,251 @@
+freecad-daily (0.17~git10807-b32e980-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: b32e9806e1b075c745c0c9692e81aea1dcab81e4
+  * Date: 1492039838
+  * git changelog:
+  *  b32e980 - Arch: Fixed support of v/vt/vn notation in OBJ importer
+  *  6661d04 - Merge pull request #690 from
+    abdullahtahiriyo/_more_sketcher_fixes_
+  *  e57dc5c - Sketcher: change carbon copy alignment by-pass from ALT
+    to ALT+CTRL for Linux compatibility
+  *  4909c02 - Sketcher: fix incresing bspline degree fails to show new
+    poles
+  *  c2e83c7 - consistently use term 'B-spline' in the sketcher GUI
+  *  10ce910 - updated recompute() function
+  *  91121a8 - added recompute() function to reflect changes in the GUI
+  *  0a2a02f - Fix AddonManager sorting for Macros
+  *  7e5d0ed - Fix AddonManager sorting
+  *  cababe1 - fix scan coverity issues
+  *  ce36b29 - fix scan coverity issues
+  *  004324b - fix scan coverity issues: uncaught exception
+  *  292fdeb - fix scan coverity issues: unchecked dynamic_cast
+  *  09dfcf6 - Part Design: Keep body transparency when adding a new
+    feature
+  *  fcd459e - AddonManager: Disabling list sorting for now - fixes
+    #3003
+  *  3b50a78 - BSpline: Comb representation factor with hystheresis to
+    avoid continuous comb variations on geometrically independent
+    geometry
+  *  147bf89 - Sketcher: addGeometry list addition using copy to avoid
+    copying tags
+  *  96fcedb - Sketcher: Carbon Copy - Allow cross-body sketcher links
+  *  8323917 - Sketcher: Carbon Copy - Correct inverted logic (worked
+    but it is not clear)
+  *  7818f1f - Sketcher: Carbon Copy enable checks when not in a body
+  *  7463aa7 - fixes #0002994: Validate Sketch's missing coincidence
+    tool finds false positives
+  *  92623c3 - TreeView: fix children order when cyclic ref is found
+  *  71a555a - Sketcher: using copy in addGeometry instead of clone to
+    avoid that python users inadvertendly generate two geometries with
+    the same Geometry tag
+  *  4fe698e - Sketcher: Carbon Copy
+  *  f6126ba - Part: hiding tag handling functions as protected until a
+    need for them is clear
+  *  7e37d46 - Part: Modify python copy to use c++ copy() instead of
+    clone()
+  *  e54b6a1 - Sketcher: Fix sketchobject copy/clone
+  *  c3c670e - Part: Geometry refactoring copy/clone
+  *  3f17292 - Sketcher: Updated resource file
+  *  e84a6fa - Sketcher: Bspline knot multiplicity icons
+  *  2a58ac0 - Sketcher: New function to reuse of python exception
+    message text in the UI
+  *  7685823 - Part: Geometry assignTag function
+  *  6a67a7d - Sketcher: Carbon Copy - inform user of the limitations
+    and disallow selection
+  *  68445de - Sketcher: Carbon Copy - refactoring of code
+  *  0d70996 - Sketcher: Carbon Copy aware of sketch orientation and
+    location
+  *  30ffd1d - Sketcher: Carbon copy using copy instead of clone
+  *  9382de1 - Part: Geometry creation of copy method to distinguish
+    from clone
+  *  e9764d8 - Sketcher: CarbonCopy link values via expression engine
+  *  88b75cd - Sketcher: SketchObject basic carbon copy functionality -
+    without expressions engine
+  *  97090f3 - Sketcher: Carbon Copy toolbar command
+  *  cf339a4 - Sketcher: Updating resource file
+  *  15e88ba - Sketcher: Carbon copy icons
+  *  b9ffb09 - Sketcher: Carbon copy Python command
+  *  73212a2 - Reusable Draft Snap toolbar commands
+  *  ba3274c - Fix typos
+  *  727c835 - Merge pull request #680 from ianrrees/20170409-improve-
+    docstrings
+  *  9ac1994 - Improve Python docstrings in Part and MeshPart
+  *  4fbfd8d - Draft: Added InPlace property to shape2Dviews
+  *  ce68a5b - expose Geometry::getTag to Python
+  *  f13aac4 - Send console Log/Warning/Error to stderr vs stdout
+  *  ec715e3 - Linux/MacOS - only write colour codes to TTYs
+  *  4976c0d - Use colour output from main executable on MacOS
+  *  3abc019 - fix -Wsign-compare
+  *  497728a - add method to create new tag id
+  *  16e09ea - fix warning of unused variable
+  *  418beea - Sketcher: Only Reference constraints allowable on
+    construction points like bspline knots
+  *  a091749 - Sketcher: Increase/Decrease knot multiplicity toolbar
+    commands adapted to provide more meaningful error messages
+  *  7e9571a - Sketcher: SketchObject Modifyknotmultplicity adapted to
+    raise exceptions on errors
+  *  4786473 - Sketcher: Adapt increase multiplicity toolbar command to
+    use unique identifier
+  *  99d64ff - Part: Geometry - implement missing setHandle functions
+    and refactoring
+  *  391eaff - Sketcher: Decrease multiplicity command adaptation to
+    unique identifier
+  *  2a4d5a4 - Sketcher: Adapt modify knot multiplicity code to preserve
+    the unique identifier
+  *  9580440 - Part: Add unique identifier to Geometry
+  *  a61e032 - Sketcher: Clear knot selection after multiplicity
+    operation
+  *  99da931 - Sketcher: OCC checks for knot functionality
+  *  7601cdc - Sketcher: Dropdown toolbar button for increase/decrease
+    BSpline knot multiplicity
+  *  8ca728a - Sketcher: BSpline Decrease knot multiplity toolbar
+    command
+  *  7b60a97 - Sketcher: SketchObject BSpline reduce knot multiplicity
+  *  e9798b0 - Sketcher: Increase knot multiplicity auto-reconstruction
+    of pole circles for UI user
+  *  a17ac10 - Sketcher: Expose Internal Geometry for BSplines
+  *  d96c842 - Sketcher: Assertion on solver bspline control point
+    creation to expose any potential index miscalculation and memory
+    overflow
+  *  debff30 - Sketcher: Increase multiplicity command - no creation of
+    unsolicited internal geometry
+  *  3fa87fd - Sketcher: Fixing crash on undoing knot multiplicity
+    increase
+  *  47820e2 - Sketcher: TestSketcherApp.py fix AppConveyor sporadic
+    failures
+  *  56ab9d8 - Sketcher: Curvature comb general representation scale fix
+  *  6653d96 - Sketcher: Cleaning up BSpline knot multiplicity increase
+    SketchObject implementation
+  *  f6dc312 - Part: Fixing signed vs unsigned warning
+  *  41a1d70 - Sketcher: BSpline creation adapted to the more flexible
+    python constructor
+  *  d825c4c - Part: BSplineCurve Python creation change for greater
+    flexibility
+  *  bc4ae73 - Sketcher: SketchObject - Python command to increase knot
+    multiplicity
+  *  2f6ee06 - Sketcher: SketchObject functionality to increase knot
+    multiplicity
+  *  02e370d - Sketcher: Enable reuse of constraint helper functions in
+    other toolbars
+  *  bd2f7a0 - Sketcher: Add toolbar command to increase knot
+    multiplicity
+  *  e34788b - Part: GeomBSpline enable direct construction from
+    parameters
+  *  ca48841 - Part: GeomBSplineCurve extension to get, increase or
+    reduce multiplicity
+  *  d80437e - Sketcher: Enable showing knots on BSpline creation
+  *  1d8ba29 - Sketcher: Bspline toolbar command show/hide knot
+    multiplicity geometry information layer
+  *  9ecb24c - Sketcher: Bspline knot multiplicity geometry information
+    layer
+  *  8bdae94 - Sketcher: Bspline - SketchObject - Delete Unused geometry
+    extended to knots
+  *  ea99ba5 - Part: Geometry - Ensure that no point is set as
+    construction by mistake/user mistake
+  *  325eb27 - Sketcher: Ensure that no point is set as construction by
+    mistake/user mistake
+  *  63ce5df - Sketcher: Solver bypass of knotpoints
+  *  4ace8e7 - Sketcher: Construction points added as fixed parameters
+  *  ed3f5a5 - Sketcher: SketchObject Expose internal geometry extended
+    to knots
+  *  409cbb7 - Part: Geometry add support for getting the number of
+    knots in a B-Spline
+  *  2369112 - Sketcher: Bspline solver knot support - unfinished
+  *  b5c4a8a - Sketcher: Elements widget external geometry
+    identification fix
+  *  43ab645 - Draft: Fixed buggy Trimex in non-XY planes
+  *  0c0b212 - add unit test to check for order of nodes of quadratic
+    mesh elements
+  *  1b7224c - set enum size dependent on word size
+  *  04a3283 - Draft: Better block handling in dxf import & export
+  *  3ef2e05 - path: Look up the parent job, set units accordingly for
+    each selected object
+  *  218482e - Make linuxcnc_post use the job unit system and output
+    <unit>/min
+  *  1d336fe - avoid possibly crash when trying to add objects to the
+    wrong document
+  *  52c3b45 - properly close task dialog when document is getting
+    closed
+  *  aaac13c - add new signal to Document class for convinience and add
+    method to DocumentObserver
+  *  bf54226 - close sketch selection task panel on undo
+  *  394ea47 - perform auto view fit when creating body object on sketch
+    creation
+  *  8643f1c - Arch/Draft: Autoselect results of Up/downgrade and arch
+    component
+  *  ac2f9f8 - Make Body object on creation of Sketch/Primitive
+  *  e2b73e5 - Add abort method to PartDesign TaskDlgFeaturePick
+  *  05b5b48 - Refactor PartDesign create primitive commands
+  *  a86583e - fix crash when trying to drag and drop origin object in
+    body object
+  *  aa086c1 - Draft: Hold snapping points
+  *  f4edb7a - Arch: Rebars can now be based on any wire, not only
+    sketches
+  *  8337a79 - Added App::PropertyPlacementList
+  *  c014840 - Spin icon a little after forum feedback
+  *  1d60277 - TreeView: fix tree view performance
+  *  275732a - AddonManager: Misc fixes
+  *  d8b8bbd - Merge pull request #675 from kkremitzki/issue0002998
+  *  c902422 - Create Macro dir for AddonManager if nonexistent
+  *  a253af0 - Merge pull request #673 from gdoffe/path_dogbonedressup
+  *  428c567 - path: use findParentJob() in getToolControllers()
+  *  42efec9 - fixes 0002978 spreadsheet row problem for rows above AA
+  *  e58b747 - More precise real values for Calculix input files.
+  *  e46a8fe - Navigation indicator support
+  *  d7d7aa2 - add methods firstVertex and lastVertex to TopoEdge
+  *  add9bf9 - fix memory leak on IGES import
+  *  a289538 - fixes #1999: Tessellation data or OpenInventor data
+    memory leak
+  *  97ca11f - Increase tolerance for overlapping Vertexes
+  *  21f683e - Merge pull request #666 from ianrrees/20170402-path-add-
+    geom-tolerance
+  *  a079b41 - Path: Use Deflection param for PathSurface meshes
+  *  c913481 - Path: Add Property to Job for geometry tolerance
+  *  78d8272 - Merge pull request #665 from realthunder/TreeViewFix
+  *  b42c45b - TreeView: fixed disappearing item
+  *  1bde451 - fix wrong size svg export page
+  *  b01a51d - extend API of TimerFunction class
+  *  c80f6f0 - add missing header
+  *  38d41f9 - PathGui: added selection style preference
+  *  151d8a7 - Gui: allow bounding box style to be customized
+  *  b2f937e - Update "as-is" icon based on forum feedback
+  *  e7dd0ba - Align core icons to guidelines
+  *  4784751 - extend API of TimerFunction class
+  *  784edd3 - Typo fixes for doxygen and source comments
+  *  ce56bdb - Merge pull request #659 from sliptonic/feature/stock
+  *  defb75b - path: enable stock
+  *  3b6020c - add doc and a couple of new methods to MakePipeShell
+  *  7667875 - Fixed error in addon manager
+  *  0ca5ebe - Fix commit 7741f74ae - Show more mac versions in about
+    dialog
+  *  7983a79 - Merge pull request #655 from
+    gdoffe/toolimprove_dogbonedressup
+  *  7741f74 - Show more mac versions in about dialog
+  *  5af90ff - path: make dogbone dressup using new tool controller
+  *  c5b7c98 - Fix building with GCC and Qt5.
+  *  7e9da5e - fix possible crash in view provider of boolean algorithm
+    features
+  *  64754a6 - Gui: Gesture: fix for conda
+  *  f323b8c - Gui.TreeWidget: check cyclic dep when populating
+  *  a5dead1 - Gui.TreeWidget: removed incorrect assertion
+  *  752f7a3 - Gui: fixed ambiguous boost::bind
+  *  535762e - Gui: improved TreeView drag and drop
+  *  b95674d - Gui: made the TreeView stable
+  *  7901cf7 - issue #0002698: Exported STEP-File contains surplus
+    PRODUCTS
+  *  809758b - Gui: expose claimChildren to Python
+  *  2decd50 - App: add "Expanded" to DocumentObject.State
+  *  03f9d81 - App: expose recompute controlling to Python
+  *  1e546b3 - Merge pull request #651 from agryson/fem-feedback
+  *  e20d6d5 - Edit warp icon based on forum feedback
+  *  3074c2e - Arch: Add property to stairs object for making ladder
+    style stairs
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Apr 2017 12:47:14 +0300
+
 freecad-daily (0.17~git10640-2365dd6-1) unstable; urgency=medium
 
   * Compile

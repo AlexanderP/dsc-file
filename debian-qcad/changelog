@@ -1,3 +1,177 @@
+qcad (3.16.7+git4513-ba931d5-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: ba931d5e7efe2f14a62273378be47a5f6f1d3f3b
+  * Date: 1491572240
+  * git changelog:
+  *  ba931d5 - update workaround for Qt 5.6.1, 5.6.2 bug under macOS
+  *  7a81b3b - workaround for Qt 5.6.1, 5.6.2 bug under macOS
+  *  a36a1ac - fix FS#1569 - File > Print Preview: changing offset in
+    drawing preferences has no immediate effect
+  *  b1383ca - Merge branch 'master' of github.com:qcad/qcad
+  *  4b04ccf - Merge branch 'master' of github.com:qcad/qcad
+  *  4d4f92b - add RPATH ORIGIN under Linux
+  *  99d035d - update translations
+  *  4a2e7d3 - fix entity visibility in nested blocks / layer 0
+  *  f36172a - update dump
+  *  eb05f20 - add layer / visibility test cases
+  *  669ffd7 - add layer / visibility test cases
+  *  7322032 - add test data for layers, visibility, layer 0
+  *  d9cd766 - extend visibility check for entities on layer 0
+  *  021f9af - add RExporter::getBlockRefViewportStack
+  *  f67ae70 - fix check for special layer 0 handling
+  *  1f48207 - update script bindings
+  *  c7c8c1d - fix block attribute visibility / color in layer 0
+    compatibility mode
+  *  23bd42d - add RExporter::getColor to get color of current entity
+  *  9a0f364 - update comments
+  *  ffce774 - add QTextLayout meta type declaration
+  *  63da695 - add RTextLayout::getLayout
+  *  cf078d7 - clean up
+  *  285c208 - update comments
+  *  38d87d1 - Merge branch 'master' of github.com:qcad/qcad
+  *  5acb09f - update / add rendering test files
+  *  4d1673d - Update Slo translation
+  *  345c09b - update
+  *  b40a089 - update API doc
+  *  363fc41 - use REntity::isVisible when computing bounding box
+  *  8f8c3fe - make RTextLayout scriptable
+  *  f047b8a - add sanity checks
+  *  f31dc27 - add sanity checks
+  *  ba4da63 - only export sane labels
+  *  40352ae - add RTextBasedData::isSane
+  *  f9416ac - add isSane
+  *  e6fa54e - add isValid, isSane to dimension classes
+  *  947c6da - make RTextLayout scriptable, add RTextLayout::hasLayout
+  *  3236ceb - add REntity::isValid REntity::isSane
+  *  b961a68 - add comment
+  *  4c88a50 - update translations
+  *  18b8641 - update layer preferences
+  *  dd2ccfe - add TODOs, clean up
+  *  f1e43d8 - clean up
+  *  c351cdf - move visibility check for attributes to attribute class
+  *  0612e2f - don't delegate attribute color to block reference
+  *  50449df - make sure update reminder is shown after splash is closed
+  *  410b7ce - update
+  *  8c92fa4 - add user level warning when recursive block references
+    are detected
+  *  46e8cad - clean up
+  *  4f3c208 - set version to 3.16.7.4
+  *  0cc6668 - fix trackpad zooming under macOS with Qt 5
+  *  f992550 - clean up
+  *  c3d0b41 - add debugging info
+  *  357853a - Merge branch 'master' of github.com:qcad/qcad
+  *  c6a8a78 - add nativeGestureEvent
+  *  1ce1ee0 - set verion to 3.16.7.3
+  *  b39d7d1 - Merge branch 'master' of github.com:qcad/qcad
+  *  ad14ff3 - add xcbglintegrations to deployment
+  *  38120ee - add more example script bindings
+  *  021b26b - update script bindings
+  *  7dcf010 - use REntity::isVisible for all visibility checks
+  *  1aac0c5 - rename getType to getShapeType
+  *  9e3b52e - move getType to entity data classes
+  *  e4b4011 - fix detection of QCAD modules
+  *  5c90780 - clean up
+  *  868337e - update unit tests
+  *  5ff4164 - update unit tests
+  *  3137b9f - add script bindings for Qt 5.9
+  *  a12fe59 - Merge branch 'master' of github.com:qcad/qcad
+  *  612ca75 - set version to 3.16.7.2
+  *  093e905 - Merge pull request #14 from neomilium/fix-endless-make
+  *  199a139 - fix endless build problem
+  *  a04bf0a - update RObject::dump
+  *  de55da5 - update script bindings
+  *  9bf6f21 - add isLayerOff, isLayerOffOrFrozen
+  *  9f98f01 - add layer off flag
+  *  0f06e9f - add isLayerOff, isLayerOffOrFrozen
+  *  e5a996b - add support for off flag of layers (negative color value)
+  *  47f67d0 - add layer property off
+  *  17a80fa - set version to 3.16.7.1
+  *  ecc1993 - update translations
+  *  c4634d8 - update credits
+  *  d2bc7ac - update translations
+  *  5e9d153 - update translations
+  *  78ee4b7 - add preference to disable entity highlighting
+  *  5a6d77a - set version to 3.16.7
+  *  5ef7426 - fix FS#1560 - Main Menu not selectable (Ubuntu 16.04,
+    Unity)
+  *  a12714a - fix preferences, about menu placement (locale fr)
+  *  eef8157 - disable menu placement based on text heuristic by default
+    (macOS)
+  *  594fc13 - update credits
+  *  782b788 - update script bindings
+  *  de40681 - add space as decimal separator option
+  *  2ad4053 - decimal separator
+  *  13c22fa - decimal separator
+  *  31c8133 - update script bindings
+  *  6393f0d - use char instead of QChar for decimalSeparator
+  *  07d0ed1 - update templates
+  *  9328735 - set version to 3.16.6.0
+  *  18a3261 - avoid rendering of dots in hatch patterns not containing
+    dots
+  *  9f15cfe - render zero length segments in painter paths as one pixel
+    dots
+  *  93f8a94 - ignore zero length segment at end when rendering ellipse
+  *  944e134 - add option to ignore zero length lines
+  *  3c3e042 - add RPattern::hasDots
+  *  a78443b - update test file
+  *  92ad296 - fix FS#1559 - Font substitution in command line tools
+  *  b786096 - update translations
+  *  6b55cd7 - fix FS#1557 - Zero length lines not shown
+  *  4cc25cc - add unit tests for fill option
+  *  609e8cb - add fill option for shapes (rectangles, polygons)
+  *  768eb8f - update translations
+  *  33e4454 - don't translate key code
+  *  2aa1bc6 - add Ctrl+Return shortcut for text dialog
+  *  93c6ee4 - check if widget supports selectAll
+  *  9b0bafe - Merge pull request #13 from teegee/for-andrew
+  *  56487a7 - OptionsToolBarFocus: Select-all after control-space.
+  *  29c193c - Suppress qmake warning on Linux.
+  *  a88be56 - fix path of translations.pri
+  *  c1abb5d - set version to 3.16.5.5
+  *  75e0d4c - update translatable text
+  *  1a6bbc8 - update translations
+  *  7deb534 - update translations
+  *  323c655 - fix FS#1554 - Auto focus of options toolbar when entering
+    numbers broken after Esc
+  *  b6d69a3 - update translations
+  *  51f44e8 - add readTextFile, writeTextFile convenience functions
+  *  1183ea1 - fix FS#1553 - Modify > Break out Manual: exception with
+    circles
+  *  b891e89 - fix FS#1553 - Modify > Break out Manual: exception with
+    circles
+  *  a7f2d5d - update translations
+  *  856a582 - update translations
+  *  76cb8ba - fix problem with
+    RDocumentInterface::getLastKnownViewWithFocus returning secondary
+    views
+  *  4d981fc - set version to 3.16.5.4
+  *  0351541 - add hasOwnPropertyCI, getOwnPropertyCI
+  *  ce8cbf9 - update test data
+  *  46928d3 - update translations
+  *  855f19b - update test data
+  *  7de6d1c - initialize decimal separator setting
+  *  2aa8a2a - set version to 3.16.5.3
+  *  b21bdc9 - add workaround for QTBUG-57990
+  *  e449ce6 - fix compiler warning
+  *  f183833 - clean up
+  *  4e05f09 - fix compilation in DOS environment
+  *  8125bd7 - use copy instead of cp under windows
+  *  33f5fdf - update automatic detection of qcad modules
+  *  6a0f574 - set version 3.16.5.2
+  *  6509857 - auto detect and compile available modules
+  *  31dcebb - update
+  *  8b13cc6 - disable update check if it causes crash (QTBUG-56747)
+  *  8a82e8b - update error handling
+  *  7f84e69 - check for maximum image size
+  *  32e31fe - Merge pull request #12 from teegee/rob
+  *  46cb829 - TextDialog: Fixed source focus.
+  *  8f393c2 - Update Slo translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Apr 2017 07:16:54 +0300
+
 qcad (3.16.5+git4362-745d320-2) unstable; urgency=medium
 
   * fix icon desktop

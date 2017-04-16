@@ -1,3 +1,28 @@
+solvespace (2.3.0+git1194-e5259d7-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: e5259d7a3eef2662b98c27853b0eda506ab62416
+  * Date: 1491972683
+  * git changelog:
+  *  e5259d7 - Swap arc endpoints when pasting transformed with negative
+    scale.
+  *  5d67b42 - CMake: don't have multiple rules generating same targets.
+  *  287bd98 - Fix copying and pasting image requests.
+  *  99f6ea3 - Add an option to display areas of closed contours.
+  *  c0b6eaa - Fix automatic marking of constraints as reference.
+  *  43dc162 - Rewrite equation for pt-on-circle to avoid negative
+    diameter.
+  *  8fd11f4 - Fix forcing NURBS to mesh in a step group when the flag
+    is inherited.
+  *  ecb6550 - Change mentions of OpenGL 2 to OpenGL 3.
+  *  7eb6574 - Rename TextWindow::CHAR_WIDTH to CHAR_WIDTH_.
+  *  b0ea9d8 - Allow suppressing solid model of extrude and lathe
+    groups.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Apr 2017 09:51:21 +0300
+
 solvespace (2.3.0+git1184-6337bbb-1) unstable; urgency=medium
 
   * Compile

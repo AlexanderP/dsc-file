@@ -1,3 +1,75 @@
+gimp-devel (2.9.4+git38318-81a44d5-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 81a44d5fb0096ce0133f015b65e143cf81624aac
+  * Date: 1492093344
+  * git changelog:
+  *  81a44d5 - build: remove workaround for a flatpak bug.
+  *  0a42c6b - pdb: fix input range of context-set-brush-size
+  *  d4bb12d - app: fix painting with force == 0
+  *  5b13540 - Bug 781098 - only build invert-svg with --enable-vector-
+    icons.
+  *  03f9f2e - Update Greek translation
+  *  13ed12d - plug-ins: avoid OOB write on malicious GIH files.
+  *  68e15ad - configure: fix a PKG_CHECK_MODULES() test.
+  *  8c10194 - configure: disable vector icons on Windows with GTK+ <
+    2.24.32.
+  *  10f12bd - PCX: Avoid segmentation fault with invalid file.
+  *  5255d91 - app: fix total weight calc. of hardness convolution
+    kernel
+  *  670be1f - app: fix brush offset when shrinking to compensate for
+    blur
+  *  20c9b60 - PCX: Stop parsing an invalid file early on.
+  *  810f1fc - app: disable brush blur caching
+  *  3bed373 - app: various brush hardness improvements
+  *  257504c - Bug 780859 - Brush hardness blur is slow
+  *  da30b86 - Bug 780859 - Brush hardness blur is slow
+  *  c585c99 - Bug 740634 - Color picker crashes when there are multiple
+    monitors
+  *  b7ee733 - libgimp: add new functions to gimp.def
+  *  16bebed - pdb: add debug group; add debug-timer-{start,end} procs
+  *  32239a2 - Bug 315051 - Image preview in transforms keeps original
+    version visible
+  *  f030511 - Bug 315051 - Image preview in transforms keeps original
+    version visible
+  *  2d22d0b - Bug 780907 - GIMP 2.9.5 layer-blending-mode Tear
+  *  913b54d - tools: fix visible "plug-in" strings in PDB sources.
+  *  6c8ba75 - Bug 779632 - Clone tool jittering
+  *  d8e8a27 - app: in tools, show source location indicator at pixel
+    center
+  *  7c7a1b6 - app: integer-ify position/offset members of
+    GimpSourceCore
+  *  a9c6bc0 - app: some cleanup in GimpTransformTool
+  *  b6ffcca - app: default to "no grid" for transform tools
+  *  257a4ce - Update Polish translation
+  *  2e9abfb - Update German translation
+  *  6c806aa - Update German translation
+  *  3c0cffe - app: add GimpFilterTool::set_config()
+  *  9b500c0 - app: initialize generated properties with their default
+    values
+  *  dddcdb4 - configure: work around a bug in AX_PROG_CC_FOR_BUILD...
+  *  b8a04c5 - tools: add invert-svg in the DISTCLEANFILES.
+  *  8fee058 - app: fixing 2 argument type build warnings.
+  *  b734586 - Bug 769550: recommend recent GTK+ on Windows with working
+    keyboard...
+  *  da70cc7 - app: make GimpFilterTool always have a container of
+    recent settings
+  *  7e702ad - app: turn all members of GimpSettingsBox into properties
+  *  79a0ca5 - app: "shift" property in tiling was to be soft-limited by
+    image width.
+  *  5e7d9d8 - Bug 772785 - Quit dialog should exit when all the images
+    in the list...
+  *  3df24ff - Update Catalan translation
+  *  c043ffd - Update Polish translation
+  *  8352f35 - app: remove some overengineering from GimpFilterTool
+  *  f56df8d - app: add functions to switch preview side and orientation
+    to GimpFilterOptions
+  *  3aeebfa - app: remove all class variables from GimpFilterToolClass
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Apr 2017 11:14:59 +0300
+
 gimp-devel (2.9.4+git38272-c3dc3ea-1) unstable; urgency=medium
 
   * Compile
