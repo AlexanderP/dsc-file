@@ -22,7 +22,7 @@ override_dh_auto_clean:
 
 
 override_dh_clean:
-	python setup.py clean --all
+	#python setup.py clean --all
 	rm -f lib/mypaintlib_wrap.cpp options.cache .sconsign.dblite \
 	      tests/test_brushPaint.png tests/test_directPaint.png
 	find . -type f -name "*.pyc" -delete
@@ -34,10 +34,10 @@ override_dh_auto_build:
 override_dh_auto_install:
 
 override_dh_auto_test:
-ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
-	python setup.py nosetests --where lib
-	python setup.py test
-endif
+#ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+#	python setup.py nosetests --where lib
+#	python setup.py test
+#endif
 
 override_dh_install:
 	# Install to debian/tmp, then cut up.
