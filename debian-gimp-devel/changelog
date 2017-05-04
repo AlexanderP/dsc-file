@@ -1,3 +1,47 @@
+gimp-devel (2.9.4+git38342-95b27a1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 95b27a1ac869282ba029b30fbbe31ba5d3665993
+  * Date: 1493332054
+  * git changelog:
+  *  95b27a1 - app: add tool-internal undo to the blend tool
+  *  573d6b8 - app: change the blend tool graph only if the enpoints
+    were actually changed
+  *  74606d0 - app: improve
+    GimpTool::button_release(GIMP_BUTTON_RELEASE_CLICK)
+  *  e0dcf53 - Bug 781804 - Dodge/Burn tool produces artifacts with
+    negative channel values
+  *  b349f1a - Update Chinese (Taiwan) translation
+  *  cd25f1d - Update Chinese (Taiwan) translation
+  *  98fb972 - Update Chinese (Taiwan) translation
+  *  65d75f0 - Update Chinese (Taiwan) translation
+  *  f37a28a - Update Chinese (Taiwan) translation
+  *  2944dbd - Update Polish translation
+  *  3ae9c12 - app: fix more leaks in gimp_image_merge_layers()
+  *  3f7b135 - app: fix memory leak in gimp_image_merge_layers()
+  *  b0d2d4f - app: indentation fix.
+  *  d0c1ae9 - plug-ins: minor formatting stuff in wavelet-decompose
+  *  61d9197 - app: add some blank lines to gimp_help_get_locales() and
+    fix comment syntax
+  *  c2b643d - app: For clone tool, pattern source, use the pattern
+    center
+  *  bcc3437 - Bug 344684 - Greyscale (no alpha) clipboard brushes are
+    of the wrong type
+  *  cb795e8 - app: add a FIXME about clipboard images in GimpBufferView
+  *  6eeb5c2 - app: support clipboard images in the clipboard brush and
+    pattern
+  *  c2f0226 - Bug 781408 - script fails due to error in edit-copy /
+    edit-paste
+  *  f981f83 - plug-ins: replace deprecated enum values in py-slice plug-
+    in
+  *  8c35cc9 - app: add GIMP_TESTING_NO_GEGL_BLACKLIST flag
+  *  e75f2ff - Updated German translation
+  *  dab9af6 - Updated German translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 28 Apr 2017 11:39:38 +0300
+
 gimp-devel (2.9.4+git38318-81a44d5-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,55 @@
+deadbeef (0.7.2+git7105-81817d3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 81817d3c195537e5359587617c505b7f68ff5d14
+  * Date: 1493193656
+  * git changelog:
+  *  81817d3 - [cue] "SONGWRITER" instead of "composer"
+  *  3786ba7 - [cue] support REM COMMENT "..."
+  *  6626f25 - [cue] reset songwriter (composer) variable for each new
+    track
+  *  bef2188 - support SONGWRITER tag in cue sheet (closes #844)
+  *  a9cd75d - gtkui: make selection playtime display optional (fixed
+    #1753)
+  *  8dbd05f - Revert "ffmpeg: More decoder overhaul."
+  *  9ac17dd - logging: don't log plugin connection failures as errors
+    (fixes #1750)
+  *  7b7c361 - gme: added SGC file format support
+  *  bdc76c4 - alsa: multithreading issues fix
+  *  2e6e9d2 - playlist: only display file errors when file type was
+    recognized, but could not be open by any of the decoders
+  *  879ec23 - streamer: set current playlist in play_index
+  *  fd6cb59 - gtkui: minor logviewer widgets fixups
+  *  1cc83dd - Gtk log viewer (#1748)
+  *  c9c4d0a - gtkui: selected time tf fix
+  *  0a4dcf5 - junklib: fixed BOM stripping when converting from UTF16
+  *  a4fccde - logger: fixed error layer check
+  *  ebdc20a - streamer: moved playqueue updating to after track starts
+    playing
+  *  4c3c4b5 - convert some of the info log messages to errors during
+    plugin loading
+  *  e496494 - logger: buffer initial error messages, and send them to
+    the first registered listener
+  *  7acd5f5 - selection_playback_time cleanup / naming
+  *  04d123e - dsp: downsampler fix and more tests
+  *  6f49cf4 - tests: added basic tests for downsampler
+  *  9a87229 - dsp: downsampler cleanup / refactor
+  *  e6a1a2a - Tests: fixed tagging tests regression caused by logger
+  *  43a21d9 - main: added comment about main_cleanup_and_quit
+  *  f8e93ac - streamer: cleanup play_index
+  *  a77e7ec - main: fix cleanup regression
+  *  53d86fe - main: move streamer/output free to after gui->stop is
+    called
+  *  e075671 - gtkui: make sure all widget are removed/destroyed on quit
+  *  01d3f0c - logger: fix mutex leak bug
+  *  ae6ad22 - gtkui: display total time of selected tracks in the
+    statusbar (Closes: #1575) (#1720)
+  *  e0e947f - blargg_endian: Fails to build on non-x86 with musl
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 28 Apr 2017 07:11:25 +0300
+
 deadbeef (0.7.2+git7073-ad54496-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,23 @@
+solvespace (2.3.0+git1201-280d5b9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 280d5b902f95fda3727d0d12a2653c38c9675049
+  * Date: 1493248074
+  * git changelog:
+  *  280d5b9 - TTF: avoid crashes on fonts without U+0041 LATIN CAPITAL
+    LETTER A.
+  *  5078907 - I18n: regenerate.
+  *  ab7cdea - I18n: add a ru_RU translation.
+  *  5408f73 - Fix a crash creating a group from a non-reference
+    workplane.
+  *  fe622a1 - Add a test for workplane request.
+  *  85b4b25 - Fix a crash changing g->meshCombine when g-
+    >type!=EXTRUDE.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 28 Apr 2017 10:22:52 +0300
+
 solvespace (2.3.0+git1194-e5259d7-1) unstable; urgency=medium
 
   * Compile

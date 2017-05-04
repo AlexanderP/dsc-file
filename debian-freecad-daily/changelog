@@ -1,3 +1,205 @@
+freecad-daily (0.17~git10962-0a32b91-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 0a32b91b6b0633d645ffb181d25316c6b747cb89
+  * Date: 1493387209
+  * git changelog:
+  *  0a32b91 - Convert OCC exceptions into Base::Runtime exceptions for
+    App:DocumentObject handling
+  *  e3b47ca - Correct copy-paste typos in exception throwing
+  *  9cfca05 - Change all exceptions thrown within
+    AttachExtension::positionBySupport from Base::Exception to a
+    meaningful derivative
+  *  c3eb3e7 - Part Design: Allow attachment error messages and error
+    setting propagation
+  *  df1e264 - replacement for PR 698
+  *  9aac25b - fixes #0003000: View property Angular Deflection can
+    freeze FC
+  *  8679950 - fix crash when setting invalid selection filter, improve
+    doc strings
+  *  84f8644 - py3: part-design: involute-gear
+  *  ead0061 - Draft: fixed getSVG to work in non-GUI mode
+  *  bd57dbf - add warning to generated file not to make manual changes
+  *  63cb979 - fix reference leak
+  *  a2dd176 - issue #0002996: PyObjectBase notification chain can lead
+    to unexpected changes to document
+  *  6368b2f - TechDraw: Tidy, and fix Qt5 template text edition
+  *  20828b3 - Merge pull request #711 from realthunder/PathArea
+  *  e1fcdcf - Path.Area: add abs_center parameter to Path.fromShapes
+  *  3e7b6b3 - Merge pull request #710 from wwmayer/SurfaceFilling
+  *  fa50729 - reset highlighting of references if object is being
+    deleted, fix crash with invalid sub-element names
+  *  2cfb029 - highlighting of point constraints
+  *  35544db - fix vertex highlighting
+  *  7e977a8 - rename material binding class member for faces to make
+    clear its purpose
+  *  6a4171c - implement highlighting of surface in filling task panel
+  *  aad1777 - fix include dir on cmake
+  *  d73fd1e - Extend task panel for filling function
+  *  e50dff0 - Extend task panel for filling function
+  *  b47805d - Extend task panel for filling function
+  *  b0eed05 - Extend Py interface of PropertyStringList to accept all
+    sequence types
+  *  2967349 - Extend task panel for filling function
+  *  e2065ec - Extend task panel for filling function
+  *  4a51171 - [path] Add feeds to PathDressupHoldingTags output
+  *  afd6057 - [path] Set ToolController before calling setup in
+    PathDressupHoldingTags
+  *  9df1564 - [path] Fix AttributeError when attempting to export
+    holding tags gcode
+  *  1815a9e - Fix wrong variable name symbolLineWidth ->
+    svgSymbolLineWidth.
+  *  e2b5c16 - ArchSectionPlane: Fix incomplete SVG because of = instead
+    of +=.
+  *  f673658 - ArchSectionPlane: Remove placeholders in getSVG and more
+    clean up.
+  *  99247f5 - ArchSectionPlane: Add properties for the line color and
+    the fill color
+  *  9633c94 - ProjectionAlgos: Make the style of the lines in the SVG
+    file configurable.
+  *  2bda3a3 - Path.Area: return Py_None with ref counting
+  *  c9be3b3 - Path.Area: added Line, Grid, Triangle pocket mode
+  *  b623b20 - Path.Area: suppress holes when project
+  *  4680488 - Path.Area: make XY plane selection explicit
+  *  041c403 - Path.Area: support open path direction control
+  *  e870489 - Path.Area: change Distance() to SquareDistance()
+  *  17a57a3 - Path.Area: added outline projection support
+  *  5eba2cb - Path.Area: replaced sort_Edges with WireJoiner
+  *  7f25fe6 - Path.Area: fixed plane finding
+  *  1094dcb - libarea: fixed open curve clipping
+  *  9e3f461 - Path.Area: added feedrate to Path.fromShapes
+  *  13e4a1b - Path.Area: added orientation param to Path.fromShapes
+  *  b26945b - Path.Area: use normal move for step down
+  *  43704f3 - Fix typos
+  *  0d51767 - Draft: bugfix in DXF export of panel cuts
+  *  42e785b - Draft: Array now propagates DiffuseColor of base object
+  *  447cbef - AddonManager: support for qt5
+  *  eb5c56b - Merge pull request #708 from
+    abdullahtahiriyo/fix_driving_angle_value
+  *  eefc51e - Sketcher: Force solver to return non-driving angles in [-
+    pi,pi]
+  *  444cfc3 - encode names of constraints when writing to XML
+  *  b619b84 - Sketcher: Consistency in terminology
+  *  c57e594 - Sketcher: On reference constraint double click, change it
+    to driving and enter edit mode
+  *  e44208d - Sketcher: Lock constraint bug fix
+  *  0aa9438 - Sketcher: Lock constraint relative mode and group locking
+  *  44e5ee4 - fix clang warning: -Wunused-private-field
+  *  bd23414 - fix build failure
+  *  a4d2a9f - Extend task panel for filling function
+  *  0335e2a - Extend task panel for filling function
+  *  a76ebbc - Initial task panel for filling function
+  *  5b0c93f - add lineedit class with clear button
+  *  71de600 - make EdgeSelection an internal class
+  *  0f1c667 - rename task panel class to be conform with the feature
+    class
+  *  6e5bba3 - fix crash ExpressionDelegate::paint
+  *  a75a98e - Use OCCT Handle macro for Handle_ classes
+  *  ea3d86b - Fix typos
+  *  e12be7a - [path] Set ToolController before calling setup in
+    PathDressupHoldingTags
+  *  a547ceb - [path] Fix AttributeError when attempting to export
+    holding tags gcode
+  *  cc0c09f - Merge pull request #704 from wwmayer/Curveonmesh
+  *  48a6bca - project polyline on mesh and create edge
+  *  67fc70d - Added AlephObjects to credits
+  *  a967c41 - Small improvements to the PropertyLink editor
+  *  ad112ca - Sketcher: Remove unused variable
+  *  09d7746 - Sketcher: Elements Widget add construction information
+  *  b06150b - Sketcher: Hide Internal Alignment Constraints
+  *  937c617 - Sketcher: Rendering order widget
+  *  4c3ffb5 - Sketcher: Fixes #3009 error with geompoints in sketcher
+  *  b6833e8 - Sketcher: Basic symmetry for angle constraint
+  *  b2c2e3f - fix material binding of indexed lineset when highlighting
+    an edge
+  *  f44c200 - fix unused variable warnings
+  *  6b391fa - set shortcut for deletion of items
+  *  f87c6ff - implement highlighting of references
+  *  884b820 - rename SurfaceFeature to GeomFillSurface
+  *  951bf59 - remove superfluous classes BezierSurface and
+    BSplineSurface
+  *  ff34c3e - move handling of Bezier and BSpline surface creation into
+    a common class to increase flexibility
+  *  3eed509 - improve undo/redo handling
+  *  3857e52 - implement Remove command in context menu
+  *  5689e4c - remove superfluous FillType enum
+  *  f96d374 - improve usability of surface function
+  *  ffa88e5 - do not make property read-only in property editor
+  *  6a71dd2 - fix edit mode of view provider
+  *  39f433a - choose more comprehensive class and file names
+  *  4b25a0f - polish filling feature
+  *  a5452e9 - polish sewing feature
+  *  1fd27d1 - port Surface module to v0.17
+  *  e29636a - + fix bugs in edge checking
+  *  a303b76 - + fix design flaw to reduce side effects
+  *  88b1539 - + move FillType.h to App folder
+  *  d3ac517 - + make surface module compile with v0.17 and occ 7
+  *  7706124 - + use PyCXX for module initialization
+  *  6bf1dc8 - + delete superfluous files
+  *  a8adbaa - Fix: edges of a solid can be used as surface input
+  *  307105f - Curve validation is done in a common ancestor of App and
+    GUI
+  *  d980889 - Check for null shape before calling ShapeType
+  *  e681dc3 - Unhide surface props and set the filltype to read-only in
+    data tab
+  *  0af6fc0 - allow wires as surface input
+  *  724fa4f - try to convert non-b-splines into b-splines; further
+    parameter check
+  *  0533535 - Surface properties are hidden
+  *  d3fb21f - PropertyEnumerator for fill type
+  *  2d5119c - Corrected feature property names
+  *  d8e48f3 - Surface icon in the object tree
+  *  7c95f25 - Warning for surfaces with 2 edges only
+  *  76c357a - Cancelling the just created surface deletes it
+  *  29eed4a - Unified UI for Bezier and b-spline surfaces
+  *  8aeb5ae - Cancel by fill type edit did not work
+  *  1920b40 - use taskbox in taskdialog
+  *  e83189b - header clean up
+  *  4372355 - createFace function signature
+  *  17946ce - task widget based from qwidget instead of qdialog
+  *  9d1dc7d - task flow
+  *  64bc5ab - class hierarchy and macros
+  *  d5a9994 - Dialog with radio buttons for choosing Bezier and b-
+    spline surface fill type
+  *  486578e - diagnostics
+  *  405fa9c - One more experiment
+  *  0c76e1f - One step towards the dialog
+  *  90ad7e3 - Next try for showing dialog
+  *  65bd9da - fill type radio buttons - incomplete
+  *  328d525 - Bezier and B spline cleanup, fixed B spline error
+  *  c85368b - B-spline surface operation enabled
+  *  37406a9 - Bezier surface: check selected objects
+  *  1311d5c - cleanup: fill type into superclass
+  *  1fb63c0 - Refactor and cleanup: FeatureBezSurf
+  *  186bd33 - WMayer's fix: subshape copy
+  *  14014bc - Fix build failures on Windows by WMayer
+  *  00f245e - Transformed Bezier curves work now
+  *  66e4457 - Specify edge name correctly
+  *  4f96fa2 - Let the Surface workbench appear and try to create a
+    Bezier surface
+  *  6f4e3ac - Added Surface module
+  *  6b26fa6 - fix segmentation fault in TaskFeaturePick::makeCopy
+  *  5f1158c - Moving Arch BIMServer, Arch Git and Web Sketchfab to new
+    external WebTools workbench
+  *  cf7bc5b - Draft: Clones now adopt color/transparency of their
+    cloned objects on creation
+  *  66884ef - Arch: Allow to set which wire cuts the hole in Arch
+    Windows
+  *  ff9b027 - Draft: Adding missing stuff from last commit
+  *  fcae6ef - Draft: Finally fixed Draft UI focus bug - fixes #2810
+  *  17b597f - TechDraw: Fixed scaling of Draft/Arch views
+  *  b7d81a8 - Arch: Support for Panels based on other shapes in
+    PanelCut
+  *  3b06b86 - Draft: Fixed weaknesses in Draft Edit command
+  *  9a3b2a9 - when removing faces in thickness tool via context menu
+    then remove selection gate
+  *  eb02efa - do not use translated text for icon names
+  *  8f5057a - readd removed preferences icon for sketcher
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 28 Apr 2017 17:33:37 +0300
+
 freecad-daily (0.17~git10807-b32e980-1) unstable; urgency=medium
 
   * Compile
