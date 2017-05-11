@@ -1,3 +1,132 @@
+audacity (1:2.1.3+git6657-6491aed-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 6491aed13cb9fb7e94ed8a0a79a441194905e873
+  * Date: 1493932731
+  * git changelog:
+  *  6491aed - Fix build failure from absent gettext
+  *  c0f835b - Add border around theme Images.  Do fixups.
+  *  ef62bd7 - Bug 1637 - Keyboard interaction with many controls in
+    toolbars broken
+  *  e7f95e2 - A small step towards HiDPI
+  *  a2ba221 - Bug 1640 - Reset Toolbars reduces Selection Toolbar to a
+    stub
+  *  78135d2 - Use blue for negative Numbers
+  *  a53e301 - Tooltips for unmodified Play and Record.
+  *  d4726c2 - Revert "Enable EXPERIMENTAL_MIDI_OUT for all
+    platforms..."
+  *  f51e4d8 - Some MIDI editing and display enhancements, not dependent
+    on playback
+  *  77db2e7 - Transpose notes even when channel isn't visible
+  *  3de3e7c - Add call to MakeParentModifyState for note track controls
+  *  1daf22c - Fix Fit to Height not resizing note tracks
+  *  298bb3f - NoteTrack: Implement Silence and InsertSilence
+  *  e707f6a - Use static_cast instead of c-style casts for the velocity
+    sliders
+  *  8db7e65 - Get rid of SetStyle for sliders
+  *  a76ad22 - Fix midi channel toggling
+  *  c07caad - Enable EXPERIMENTAL_MIDI_OUT for all platforms...
+  *  7c9c74d - Remove logging left in by mistake.
+  *  b9b5e0c - Fix mac build
+  *  43ff84b - Preserve toolbar size when theming.
+  *  cd69bf0 - Add shortcut hint to shift-record tooltip.
+  *  57b2008 - Bug 1639 - Left and Right arrow keys don't work in docked
+    toolbars, if bound to some action.
+  *  ae24cab - Remove 'TODO's for completed documentation
+  *  9d501f6 - Add preference for Record being to new track.
+  *  623d0f2 - Bug 1639 - Revert fix.
+  *  8bfe4cc - Fix more cases of Wave and Note track editing wrongly
+    throwing
+  *  baf46c1 - Update to Select Previous/Next clip commands
+  *  ce1d067 - Update to Clip Boundary commands
+  *  0b942d0 - Move scrub ruler line down 1px
+  *  5e28e3f - Line to mark off scrub ruler.
+  *  5088881 - Bug 1639 - Left and Right arrow keys no longer work in
+    docked toolbars
+  *  5dd6a35 - Use #ifdef not #if in two places
+  *  05badc2 - simplify some conditional compilation
+  *  b2b9708 - Fix possible assertion violations for cut, paste, trim
+  *  615a505 - Include Experimental.h
+  *  a3b9dbd - Remove unused variable
+  *  74ac96e - Only move Nyquist prompt to nyquist IF EXPERIMENTAL_DA
+  *  6102c77 - Bug 1630 - Accessibility of the length/end radio buttons
+  *  47c6ac3 - Theme the spectrogram.
+  *  ff3ed65 - Draw TimeTrack Background in unselected colour.
+  *  c918376 - Repaint resizer section of toolbar, if required, after an
+    UpdatePrefs.
+  *  51517fa - Fix Mac build
+  *  66cc6ba - Add Track Behaviors preference files
+  *  5165700 - Add preference option for Stem Plot
+  *  53a6475 - Stem Plot option when displaying samples
+  *  7f98672 - MIDI_OUT on by default on windows.
+  *  60a53d5 - Ensure colours of rulers and TimeTrack background update
+    after a theme change.
+  *  7661d17 - Send size event after repopulating MeterToolbar buttons.
+  *  7e2a7aa - Correct default colour for rulers.
+  *  d9e25bf - Add themed background for time track
+  *  1114d5f - Add theming for NoteTrack
+  *  354b173 - Add back units have coloured backgrounds.
+  *  2a043c0 - Add settable ruler colouring.
+  *  f0db511 - Add rotated pip
+  *  603b5a8 - Update the 4 Themes.
+  *  e08ceaf - Add background to numbers on meter, IF meter bar and
+    number colour is too similar.
+  *  6bcbe41 - Make SelectionBar end/length radio buttons behave
+    normally
+  *  2cc39d7 - Option so (theme) developers can work with Mac buttons on
+    PC (and vice versa)
+  *  de798b1 - Fix: Swap Stereo sets pan to far right.
+  *  93b5456 - Rotate pip on vertical slider.
+  *  621f01a - Draw diagonal grabber and background in themed colours.
+  *  03af773 - Button and hover effect for microphone/speaker on meter
+    bar.
+  *  d0bafeb - Fix posterisation.  Add blend themes option.
+  *  94d8c2c - fix the previous
+  *  967e1fc - More exception safety for selection states of tracks
+  *  972f747 - Fix progress bar in Normalize
+  *  8184ae5 - Update HiContrast Theme
+  *  dfe423f - Rearrange toolbar order in menus.
+  *  3aff330 - Fix compilation of EXPERIMENTAL_OUTPUT_DISPLAY; fix a
+    warning in it
+  *  218f2eb - Fix two more 'select' commands which expected to be
+    activated by a keyboard event.
+  *  a68f7fc - Fix activation of certain 'select' commands via menu.
+  *  e7007c1 - Remove unwanted period
+  *  083d123 - Don't update checkmarks of occult menu items.
+  *  6d36168 - Add Show/Hide Extra menus preference.
+  *  031f841 - Organise the occult commands in the Preferences Key View.
+  *  5924530 - Removed zoom presets
+  *  db3ec50 - Fix missing or conflicted access keys
+  *  649e52d - Improved logging of command list.
+  *  e9df6cb - Move Nyquist Prompt into plug-ins
+  *  6f38298 - Show default checked checkboxes (only) in menu listing.
+  *  24c2c6e - Bug 1633 - Spectral Selection Toolbar incorrect above 100
+    kHz
+  *  80928bf - Increase upper limit for KHz format in spectral selection
+    toolbar.
+  *  795cbe0 - Improve menu listing from screenshot tool
+  *  7192470 - Fix build broken by debug casting.
+  *  c1c6a91 - Move pixel-to zoom items under zoom.
+  *  96534c0 - Tweak menu screenshot code (show check/submenu options)
+  *  c4484a4 - Rename Size as 'Reclaimable Space" for now
+  *  22d4482 - Fix: Metadata editor menu item should be available
+    always.
+  *  a868d0c - Add Hi-Contrast Theme
+  *  0681668 - Recolour light theme if system theme  clashes.
+  *  82a7778 - Merge pull request #193 from walisser/clang
+  *  6e44005 - Cleaner code to pop non toggle buttons up.
+  *  ffdba2e - Add missing access key for new menu item
+  *  8fdc60f - Time Configure and Make (in Travis)
+  *  54b26f1 - Make light theme lighter/bluer/crisper.
+  *  bcb723f - Improve DarkTheme buttons on mac.
+  *  b3d6186 - Bug 1629 - Edit Toolbar buttons work once only.
+  *  03f6efb - Speed up Travis build by using more cores.
+  *  05662ac - Wiki Wording issue: capitalise 'Speed'
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 05 May 2017 09:38:11 +0300
+
 audacity (1:2.1.3+git6553-c44e5a2-1) unstable; urgency=medium
 
   * Compile

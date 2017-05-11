@@ -1,3 +1,97 @@
+tesseract (4.00~git1900-8e79297-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 8e79297dcefecdb929d753d28554fec51417ec39
+  * Date: 1493852984
+  * git changelog:
+  *  8e79297 - Final part of endian improvement. Adds big-endian support
+    to lstm and fixes issue 518
+  *  6ac31dc - Fixed DetectOS so it doesn't crash with a big image
+  *  926a066 - Merge pull request #867 from stweil/fix
+  *  46c887b - genericvector: Fix minimum size
+  *  b2454d2 - Merge pull request #865 from stweil/posix
+  *  5cc8c05 - ccmain: Replace Tesseract data types by POSIX data types
+  *  e7794c0 - arch: Replace Tesseract data types by POSIX data types
+  *  c1d649e - api: Replace Tesseract data types by POSIX data types
+  *  b4d7705 - Merge pull request #863 from stweil/warnings
+  *  048cf9d - Remove unused local variables
+  *  5eb9f0c - Merge pull request #862 from stweil/doc
+  *  b8137d8 - Merge pull request #861 from stweil/malloc
+  *  2f48d69 - doc: Fix use of MAINTAINER_MODE
+  *  6bfde5d - Remove undefined macro MAC_OR_DOS
+  *  030d29a - cutil: Remove unused freelist.c and freelist.h
+  *  e219ad1 - classify: Replace memfree by free
+  *  1d6dd03 - training: Replace memfree by free
+  *  ca89a11 - cutil: Remove unused code using memfree
+  *  80fdb63 - classify: Remove unused ContextsSeen
+  *  b9dff16 - Merge pull request #860 from stweil/malloc
+  *  300841f - Replace memalloc / memfree by C++ new / delete
+  *  ebea04e - Merge pull request #859 from stweil/unused
+  *  85afda6 - blobs: Remove unused macro
+  *  aebdcd8 - Remove unused global function memrealloc
+  *  445befd - Remove unused include statements for freelist.h
+  *  857d920 - Merge pull request #856 from stweil/doc
+  *  6e80812 - Merge pull request #857 from stweil/new_delete
+  *  6d19e7c - SVNetwork: Avoid unneeded new / delete operations
+  *  83588bc - Classify: Avoid unneeded new / delete operations
+  *  bb75793 - ccstruct: Remove unneeded NULL checks
+  *  aea0d9a - api: Remove unneeded NULL checks
+  *  fd3f8f9 - Merge pull request #352 from pnordhus/reduce_mallocs
+  *  a28b2a0 - Merge pull request #855 from stweil/lept
+  *  eaf5629 - Merge pull request #744 from stweil/malloc
+  *  2794410 - doc: Remove generated files and add rules to build
+    manpages
+  *  1c59914 - Use Leptonica struct names L_Compressed_Data, Pix
+  *  f8fba59 - Replace alloc_struct, free_struct
+  *  7a116ce - More formatting fixes from clang tidy
+  *  7701552 - Jeff's fixes to pdf rendering
+  *  13b7900 - Merge pull request #778 from cjmayo/singleopts
+  *  177ceff - Merge pull request #853 from stweil/doc
+  *  84f78f8 - Merge pull request #851 from stweil/typo
+  *  151a76e - doc: Remove unsupported font name
+  *  73db84d - Fix typo in comment
+  *  500bfaf - Added std:: to some stl types
+  *  1cc5111 - Added extra Init that takes a memory buffer or a
+    filereader function pointer to enable read of traineddata from
+    memory or foreign file systems. Updated existing readers to use
+    TFile API instead of FILE. This does not yet add big-endian
+    capability to LSTM, but it is very easy from here.
+  *  10e04ff - Merge pull request #849 from stweil/opencl
+  *  394162e - Merge pull request #848 from stweil/lept
+  *  72b86e0 - Merge pull request #847 from stweil/crash
+  *  582eaeb - opencl: Remove more unused functions and related code
+  *  b5abfb5 - ccstruct: Fix Leptonica data type
+  *  1e11b16 - opencl: Fix crash on hosts with no OpenCL platform
+  *  50f92c8 - Merge pull request #843 from stweil/opencl
+  *  e8ca29f - opencl: Remove unused function selectedDeviceIsNativeCPU
+  *  bf9160c - opencl: Remove unused function pixConvertRGBToGray
+  *  7bb00d9 - Merge pull request #834 from stweil/master
+  *  e2b1e9f - Fix ChangeLog for Leptonica 1.74
+  *  a3e0c10 - Remove unneeded code for old Leptonica versions
+  *  325de57 - Update Leptonica version for Travis CI
+  *  11b244f - Merge pull request #831 from aleksey-nikolaev/cmake-
+    install
+  *  be747a5 - Correct include path for installed project
+  *  6641989 - Cmake install
+  *  e18a802 - Merge pull request #823 from RandomDSdevel/typo-fixes
+  *  6614b86 - Merge pull request #824 from stweil/typo
+  *  2be8676 - autogen.sh:  Small Typo Fix
+  *  8f8651b - Fix typo
+  *  7231e67 - typo in comment
+  *  6393e61 - Merge pull request #816 from stweil/codacy
+  *  934e612 - testing: Fix warnings from shellcheck
+  *  afd6b7d - Merge pull request #813 from jbarlow83/4.00-opencl
+  *  f54577e - Fix #786 - 3.05 linkage fails on macOS Sierra with --
+    enable-opencl
+  *  36a995b - Merge pull request #812 from stweil/readme
+  *  98961ed - README: Update stable version
+  *  5baa8c8 - Merge pull request #808 from stweil/macos
+  *  31cb732 - opencl: Add missing TIFF library for macOS
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 05 May 2017 09:07:29 +0300
+
 tesseract (4.00~git1822-cf0b378-1ppa1~yakkety1) yakkety; urgency=medium
 
   * Automated backport upload; no source changes.

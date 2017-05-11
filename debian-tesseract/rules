@@ -41,6 +41,7 @@ override_dh_auto_clean:
 	dh_clean java/com/Makefile java/com/google/Makefile java/com/google/scrollview/Makefile java/com/google/scrollview/events/Makefile java/com/google/scrollview/ui/Makefile
 
 override_dh_auto_configure:
+	sed "s/AM_MAINTAINER_MODE/AM_MAINTAINER_MODE([enable])/g" -i configure.ac
 	./autogen.sh
 	./configure --host=$(DEB_HOST_GNU_TYPE) --build=$(DEB_BUILD_GNU_TYPE) --prefix=/usr --mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info CFLAGS="$(CFLAGS)" CXXFLAGS="$(CFLAGS)" LDFLAGS="-llept -Wl,-z,defs $(LDFLAGS)"
 

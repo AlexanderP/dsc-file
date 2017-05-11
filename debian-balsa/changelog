@@ -1,3 +1,51 @@
+balsa (2.5.3+git8597-9df15e6-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/balsa
+  * Branch: master
+  * Commit: 9df15e65e086d94c236402050255152e4ce1e2f3
+  * Date: 1493907704
+  * git changelog:
+  *  9df15e6 - Try to recover from parser failure
+  *  8272e8c - Reset the GMimeStream for a new message
+  *  0c02579 - Do not dereference NULL GError pointer
+  *  c609310 - Assistant improvements
+  *  c7f48b7 - Update Brazilian Portuguese translation
+  *  c40103c - Update Polish translation
+  *  422efc1 - Restore support for $(DESTDIR) installations
+  *  6642a02 - Restore updating the icon cache
+  *  0048c1d - Disable debug output
+  *  fb527d9 - Do not define an unused path
+  *  961b414 - Update po/Makevars
+  *  87a20f8 - Update POTFILES.in
+  *  705c456 - Implement GSSAPI single sign-on for SMTP, POP3
+  *  4400b65 - Install extra mimetype icons in Balsa's data tree
+  *  4c7e7b4 - More carefully check names of extra mime icons
+  *  dd08f5a - Pass install directories on compile command line
+  *  2bd7d14 - Update Polish translation
+  *  a1b1465 - Fix building outside the source directory
+  *  b311eb0 - Fix access to local POP3 server
+  *  97df0ef - Clarify spell checker options
+  *  e07f9e1 - Fix a bug in the SMTP code, and generally clean up
+  *  47950e2 - Remove unused code
+  *  0edb637 - Clean up identity code
+  *  f2745b6 - More cleanups
+  *  8ef58d6 - Update Polish translation
+  *  b90dfec - Fix some more conversion specifier mismatches
+  *  4e4d3c3 - Use g_uri_* functions instead of custom code
+  *  b36ec16 - Cast gsize to unsigned long, to print with %lu
+  *  87e9d82 - Remove custom base64 encode and decode stuff
+  *  3c96437 - Retain ownership of a GFile.
+  *  3284432 - Use existing buffers for base-64 conversions
+  *  a4325bc - IMAP code simplifications
+  *  42bcfa1 - Do not unref NULL NetClientPop object
+  *  10a7ffa - Do not return pointer to finalized object
+  *  4d76a48 - Update German translation
+  *  32ca831 - Update Polish translation
+  *  7c9a796 - Streamline code
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 05 May 2017 10:50:12 +0300
+
 balsa (2.5.1+git20170408-1) unstable; urgency=medium
 
   * Compile
