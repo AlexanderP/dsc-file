@@ -1,3 +1,41 @@
+deadbeef (0.7.2+git7140-d1387ca-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: d1387ca3a105480ac4905f9ea384f140e12e4ce0
+  * Date: 1494849503
+  * git changelog:
+  *  d1387ca - tf: corrected size-based version checking; added tests
+    for that
+  *  66e98fe - tf: fix typo in HAS_DIMMED macro
+  *  01f7bec - cue: change command parsing to be case-insensitive
+  *  e9c3eca - gtkui: fix transient map for add location dialog
+  *  61bd651 - gtkui: allow double-clicking plugins in list to open
+    configuration dialog
+  *  0c87c00 - tf: backwards compat fix of the newly added `dimmed`
+    field in ddb_tf_context_t
+  *  1c09cd1 - cue: improved handling of cuesheet commands, while adding
+    more supported fields
+  *  5ae8daf - gtkui: fix vertical separator in preference dialog
+  *  78bac41 - streamer: fixed a few issues with jumping to next track
+    after failure
+  *  bc37497 - gtkui: added support for dim and bright text in playlist
+    columns
+  *  a1b2146 - streamer: delete the old code that became unreachable
+    after refactoring
+  *  87e6ddd - streamer: playing_track cleanup
+  *  13ad821 - streamer: temporarily set failed track as current, and
+    send trackinfochanged event, for UI updates
+  *  2c4d485 - streamer: log failed tracks; fix retrying next track
+    until looped to the first failed
+  *  3c933fd - Merge branch 'master' into streamer-error-handling
+  *  6ec35f2 - added ISSUE_TEMPLATE.md
+  *  b29f45b - tf: fixed handling undef expressions from dimming
+    execution
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 15 May 2017 18:42:02 +0300
+
 deadbeef (0.7.2+git7122-ea91710-1) unstable; urgency=medium
 
   * Compile

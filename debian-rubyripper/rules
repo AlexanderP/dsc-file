@@ -22,4 +22,4 @@ override_dh_auto_configure:
 
 override_dh_install:
 	dh_install
-	chmod a+x $(CURDIR)/debian/rubyripper/usr/lib/rubyripper/rr_lib.rb
+	#chmod a+x $(CURDIR)/debian/rubyripper/usr/lib/rubyripper/rr_lib.rb

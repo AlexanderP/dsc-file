@@ -1,3 +1,183 @@
+freecad-daily (0.17~git11084-fa00b4f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: fa00b4f06a0c96de57a777d6532467dfd8e5d141
+  * Date: 1494694329
+  * git changelog:
+  *  fa00b4f - Path.Area: use FC tag based logging
+  *  dbbc32d - Console: fix getLogLevel
+  *  a6abf0b - Console: added tag based log support
+  *  2fa2370 - remove const from exception handler to fix build failure
+  *  4971818 - fix -Woverloaded-virtual
+  *  ff82e88 - remove commented code
+  *  017752b - improve whitespaces and reduce code duplication
+  *  33bed8d - remove export macro from template class to fix linker
+    errors on Windows
+  *  a7bc962 - Renaming getPyDict to getPyObject for consistency with
+    BaseClass
+  *  b410f88 - Enable exceptions to save/restore information in a python
+    dictionary and enable throwing exception from dictionary information
+  *  9c698f1 - Exception Factory pre-compiled header
+  *  80c91a5 - SketchObject:ModifyBSplineKnotMultiplicity re written to
+    use THROW macro and CADKernelError exception
+  *  db85118 - Enable PyException to reconstruct the original exception
+  *  9a5f782 - pytools fix
+  *  d284249 - Extend PyTools to export exception dictionary if present
+  *  fbca57b - Use PyErr_setObject with a PyDict to set Base::Exception
+    information to BaseFreeCADError Python exception
+  *  ea725a8 - Register exception producers in Application
+  *  fe0c498 - Exception Factory and producers
+  *  57698ef - Provide default constructors for all exception types
+  *  d7fafbf - Exception: Extension to access debug information and
+    change of line to int type
+  *  39025e4 - Path.Area: fix projection code for OCE
+  *  d4c0813 - Path.Area: fix work plane direction
+  *  a0e280e - Path.Area: outline now supports solid and non-planar
+    faces
+  *  dd36a9f - Path.Area: force CW orientation on pocket mode offset
+  *  997200d - Path.Area: add parameter 'Outline' to remove inner holes
+  *  9120d6d - Path.Area: fix path orientation setting
+  *  2d23673 - Path.Area: rename Clearance parameter to ResumeHeight
+  *  a1e8bb1 - Path.Area: fixed zigzag pocket mode
+  *  e97d9c3 - add keyword support to MakePipeShell.add, support
+    overloaded method
+  *  9b28b56 - exception handling in BRepOffsetAPI_MakePipeShellPy
+  *  36c60d3 - Use xrange instead of range when exporting to collada.
+  *  42d6b1b - Specify Eigen3 include path on macOS
+  *  a8bd3e9 - fix creation of NaN that invalidates the view frustum
+  *  32176db - fix possible freeze when creating sketch grid
+  *  1e04f7d - Fix for linear_extrude request of null object i.e. null
+    text
+  *  513efcb - Fix for linearextrude with twist
+  *  56e023a - AppPartPy.cpp: improved docstrings for Part.makeLine and
+    Part.makePolygon
+  *  b07075d - py3: AddonManager: use urllib.request insted of urllib2
+    issue 0000995
+  *  b77d8ca - minor fixes for pr749
+  *  ca3e58e - py3: App: files D-Z ported to python3 issue 0000995 diff
+    to py3-branch will remain in the following files in src/App: -
+    ExtensionContainer.cpp - FeaturePythonPyImp.h +.inl most likely
+    these files depend on Tools and Base
+  *  f9bfd77 - add method to get ancestors of a sub-shape
+  *  2b42295 - Path: PathDrilling updates -Log Level to INFO -PEP8
+    formatting -move sort_jobs to PathUtils
+  *  e0ed65e - Some input field validating
+  *  69bbd95 - Change a button text to a more sensible one
+  *  3e7cab0 - Polishing PathDrilling
+  *  5150ea3 - Added support for Arch Panels. Added possibility to add
+    custom features to drill
+  *  b4ae9b6 - Drilling refactoring and cleanup
+  *  0b8b576 - enable removing of drilled features in BaseList. Activate
+    Find All button
+  *  51d7949 - add optional parameter to TopoShape.check() to run bop
+    check
+  *  0d03375 - py3: App: files A-C ported to python3
+  *  36960df - Fix #2971 segfault on hide() current page from Python
+  *  5a0f53d - Fix #2972 Export Pdf Page Not in Foreground
+  *  5cc00e0 - Fix Dimension double child collection
+  *  7628089 - DrawGeomHatch improvements
+  *  ae269df - Prevent ghost centre marks in ViewDetail
+  *  f60464e - implement detail view highlight in base view
+  *  eb34dc5 - fix confusing class name
+  *  75397d9 - clean up GeomHatch feature, gui & dialog
+  *  0ab0a92 - Correct property names in Prefs
+  *  24698be - Apply HiRez mods to ViewClip
+  *  980145c - make creation of sub-elements in selection view more
+    flexible
+  *  e8d1401 - fix implementation of Module attribute
+  *  03bf3ac - Expose method to Python to get property name of main
+    geometry fix inheritance of MeshFeaturePy fix inheritance of
+    PartFeaturePy remove useless test() method implement getPyObject in
+    GeoFeature in case a sub-class doesn't implement it
+  *  19b1452 - Draft: New button to modify working plane during Wire
+    drawing
+  *  84a9f74 - Added a 'show' option to the Selection View's context
+    menu
+  *  4174aac - Arch: Changing the Length of a Wall now affects its
+    baseline
+  *  0ad2e47 - add command to merge point clouds
+  *  164b8c7 - Draft: use viewer.redraw() in interactive operations
+  *  1137d5e - Gui: expose ViewerPy.redraw() method
+  *  73f2307 - Draft: Fixed encoding in importDXF message - issue #3019
+  *  4355b28 - Compute the document before inserting STEP file. Consider
+    that inserted Tree Element are computed and remove the Touched flag
+    before recomputing lately the document This is accelerating the STEP
+    file
+  *  6642022 - Step Reader Improvements Call new functions which allows
+    to allocate in a single call Object into the document instead of
+    multiple calls Put into a Compound, STEP Compound instead of a Sub
+    Tree which was creating far too much object (aka replicate what CAD
+    Assistant and EDrawings are doing when opening a complex STEP tree)
+  *  1543566 - fix memory leak in DocumentObject::execute and return
+    ASAP on errors
+  *  91a6dd7 - Base::Type extension to get Type by key
+  *  3e862bd - Add addObjects to add multiple objects in one step
+  *  7738668 - Merge pull request #742 from looooo/gui_1
+  *  4f044dc - py3: Gui: files P-Z ported to python3
+  *  a3539c5 - py3: resolve dangling-pointer issues
+  *  aa3f928 - py3: Gui: files A-P ported to python3
+  *  226dd17 - py3: path: some fixes to make path py3-compileable
+  *  6ba65d4 - py3: Fem: PyGui: use relative imports for PyGui
+  *  d27afa1 - Improved persistent toolbars start logic
+  *  65c7138 - Merge pull request #740 from DeepSOIC/gesture_fix1
+  *  6e39a78 - Gui: GestureNav: disable rotation when over a dragger
+  *  2d61415 - Gui: GestureNav: fix constant hand cursor
+  *  297b20e - Arch: small fix to last commit
+  *  aa65230 - Arch: Fixed multilayer wall colors + added control in
+    wall creation panel + fixed default roles
+  *  37a62b4 - Draft: Fixed snapping to intersection of Arch axes
+  *  2c5bc5d - Exception: FUNCSIG instead of PRETTY_FUNCTION for
+    Microsoft compiler
+  *  af2f37e - Merge pull request #733 from triplus/BootPhase
+  *  bd64f4c - Boot phase reference point
+  *  bf5f348 - Test: simplified command to run single test
+  *  1091511 - Base::Exception extension
+  *  c974e9d - Exception: Add CADKernelError exception for specialized
+    OCC exception propagation to App::DocumentObject
+  *  378a1e4 - Qt5: workaround for undocking of mdi view fix minor
+    issues reported by clang static analyzer
+  *  1a9c878 - Merge pull request #729 from DeepSOIC/PickRadius_fix1
+  *  0fc9e2b - Arch Multimaterial
+  *  b4b882f - Gui: PickRadius support for View3DPy.getObjectInfo()
+  *  a328e1f - Support of OpenSCAD offset command
+  *  192dbf1 - Merge pull request #725 from m0n5t3r/path-helix-sort-
+    duplicates
+  *  6acbdad - [path] Remove duplicate first drill job in PathHelix
+  *  7bee2c5 - Sketcher: Visualization of horizontal alignment
+    constraint
+  *  40c6d4b - Sketcher: Vertical alignment constraint command
+  *  cfc2d86 - Sketcher: Horizontal alignment constraint command
+  *  d02a34c - Qt5 port: workaround to keep multi-sampling when
+    undocking mdi window
+  *  9ec00eb - correct method name
+  *  ad06765 - if set display node name in scene inspector panel
+  *  f76a9a7 - add SwitchBoard node class
+  *  d679bba - Revert "Sketcher: Constraint Node restructuring to enable
+    independent hidding of driving/driven constraints"
+  *  7628f2b - Revert "Sketcher: Edit Controls' checkboxes to
+    independently hide/show driving/non-driving constraints"
+  *  d25d7a2 - Revert "Sketcher: hidding constraints - fix entry into
+    empty sketch"
+  *  e94a86d - Sketcher: hidding constraints - fix entry into empty
+    sketch
+  *  03a9d58 - Sketcher: Edit Controls' checkboxes to independently
+    hide/show driving/non-driving constraints
+  *  5b2e2b3 - Sketcher: Constraint Node restructuring to enable
+    independent hidding of driving/driven constraints
+  *  0556edf - [path] Make PathHelix use the new tool controllers
+  *  d31bbd2 - Merge pull request #719 from m0n5t3r/path-helix-sort
+  *  bac7aa9 - [path] Sort helix drill jobs to improve efficiency
+  *  38388cf - remove undesired virtual keyword from
+    ViewProviderPythonFeatureImp
+  *  765e164 - Gui: implemented isShow() for python viewproviders
+  *  6ffe883 - Fix for null string and single blank string
+  *  18f723c - use specialized Python exception classes
+  *  1673ab8 - use specialized exception classes
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 15 May 2017 08:26:13 +0300
+
 freecad-daily (0.17~git10962-0a32b91-1) unstable; urgency=medium
 
   * Compile

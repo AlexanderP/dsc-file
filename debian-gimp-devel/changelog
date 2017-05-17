@@ -1,3 +1,113 @@
+gimp-devel (2.9.4+git38409-8534307-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 853430739162d79403841cebe8a221049d29ae21
+  * Date: 1494770488
+  * git changelog:
+  *  8534307 - Update Polish translation
+  *  f25c0cb - Bug 121446 - Transform tool bounding box for path
+  *  bb2417c - app: add ui_meta keys for controlling some UI attributes
+    dynamically
+  *  d6eb927 - app: add interpreter for the GUM language
+  *  bb97726 - app: layers-text-tool should give the focus to the
+    canvas.
+  *  526918b - app: layers_text_tool_cmd_callback() is not supposed to
+    be run on...
+  *  10099bd - app: layers-text-tool action should only be sensitive
+    when active...
+  *  99ab780 - app: update layer backdrop only after removing from stack
+  *  dd8e2e9 - app: don't invalidate layer when invalidating its
+    backdrop
+  *  590924f - build: update the flatpak-howto.
+  *  07ac78e - app: add GimpLayerStack
+  *  a051002 - app: add GimpLayer::excludes_backdrop property
+  *  a671356 - app: add gimp_layer_mode_get_included_region()
+  *  c78cecd - app: rename GimpLayerModeAffectMask to
+    GimpLayerCompositeRegion
+  *  b5974d3 - app: make LCH lightness select-criterion faster
+  *  465eba3 - app: factor out button-2-motion handling code in
+    GimpDisplayShell
+  *  a78098b - INSTALL: add GIO and glib-networking in the list of
+    required packages.
+  *  bb19660 - configure: add hard dependency on glib-networking.
+  *  0c98028 - app: don't hide the transformed layer for the flip tool
+  *  fb9e957 - Updated Italian translation
+  *  3e2429f - modules: remove the "lcms" and "proof" display filters
+  *  89641ec - libgimpwidgets: gimp_prop_enum_combo_box_new(): reorder
+    GimpSelectCriterion
+  *  d955b8c - libgimpbase: change labels of GimpSelectCriterion values
+  *  5355fe1 - app: GimpToolPalette: disconnect signals in dispose() not
+    finalize()
+  *  70eff55 - configure.ac: require babl >= 0.1.27 and GEGL >= 0.3.15
+  *  a634e61 - app: change text tool font size default.
+  *  7f9bf84 - app: font size wrong when hitting "Reset to default
+    values" in text...
+  *  3f42061 - app, libgimpbase: allow to select colors by CIE L, C, and
+    H
+  *  db4e120 - libgimpwidgets: fix code duplication in
+    gimp_prop_enum_combo_box_new()
+  *  2766a9f - app: add an LCH mode to GimpColorFrame
+  *  2428e85 - Update Italian translation
+  *  a15ca86 - Updated Italian translation
+  *  964bb22 - Updated Italian translation
+  *  e5e9e4b - Bug 749902 - Add Hue-Chroma operation/tool and LCH color
+    selector
+  *  c77bcc7 - libgimp, pdb: update generated files
+  *  e48e75a - Update Polish translation
+  *  dfce143 - app: push regenerated operations-enums.c file
+  *  13e2153 - app: swap enum/ui order of dst-atop and src-in
+  *  1e6acbd - enums: generate enum files in source dir
+  *  8c814a2 - app: use gimp_unit_get_scaled_digits() in the Pointer
+    Information dock.
+  *  695a1c2 - libgimpbase: update gimp_unit_get_digits() description...
+  *  6561dec - Bug 315051 - Image preview in transforms keeps original
+    version visible
+  *  7f33ede - app, libgimp: allow to register more than one MIME type
+    per procedure
+  *  560340e - app, pdb, libgimp: make the raw image importer
+    configurable
+  *  7e23990 - app: add new GtkTreeView subclass GimpPlugInView
+  *  0ccb5e6 - app: don't prepare input color transform for source
+    filters
+  *  628be2a - app: fix typo s/Devics/Devices/.
+  *  ab56f52 - app: "Reset to default values" does not properly reset
+    generated...
+  *  129a0e4 - app: "Reset to default values" does not properly reset
+    aspect ratio.
+  *  e83b136 - configure: remind to run gdk-pixbuf-query-loaders.exe on
+    Windows builds.
+  *  6126437 - configure: shared-mime-info is necessary to detect SVG
+    icons.
+  *  6265282 - build: update flatpak-howto.txt to build both 32 and 64-
+    bit from...
+  *  bd5ec46 - app: improve GimpFilterTool::can_pick()
+  *  bfadac1 - app: add GimpColorTool::can_pick() virtual function
+  *  bc45899 - app: in prop gui & co., allow picking outside drawable
+    bounds
+  *  3c7a548 - app: call the active vectors handler at the end of
+    gimp_display_shell_connect
+  *  722a1a1 - app: add gimp_edit_paste_as_new_image() and use it from
+    GUI and PDB
+  *  4f5bd08 - app: remove unused includes from gimpdisplayshell-dnd.c
+  *  536cc85 - app: keep the src image's resolution and unit in
+    copied/cut GimpBuffers
+  *  80ec868 - Update Greek translation
+  *  c2b7983 - app: remove unused old render structs from gimpdrawable-
+    blend.c
+  *  4455cd9 - Bug 779620 - "Advanced Color Options" in filter dialogs
+    is confusing
+  *  c940b5d - Bug 779620 - "Advanced Color Options" in filter dialogs
+    is confusing
+  *  ecb346a - libgimpwidgets: gimp_prop_boolean_combo_box_new(): use a
+    GimpIntComboBox
+  *  530b62a - app: s/imagemap/drawablefilter/ in some comments
+  *  3bb1f09 - Bug 780698 - 32-bit integer FITS files won't open
+  *  e546b1a - Update Polish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 14 May 2017 21:40:40 +0300
+
 gimp-devel (2.9.4+git38342-95b27a1-1) unstable; urgency=medium
 
   * Compile

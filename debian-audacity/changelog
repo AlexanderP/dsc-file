@@ -1,3 +1,73 @@
+audacity (1:2.1.3+git6698-07ce602-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 07ce60218c31dd32757a525c86a681ef0aa0f54f
+  * Date: 1494701437
+  * git changelog:
+  *  07ce602 - Reinstate 48x48 Logo (for Linux/Mac use)
+  *  978f09b - Lose unused images from theme.
+  *  0ac2d90 - SelectAllIfNone now selects all time if none, and all
+    tracks if none.
+  *  c42a111 - Add accelerator keys for Ext-&Bar and Ext-Co&mmand
+  *  e66028d - Eliminate "Average RMS" redundancy in messages from
+    Contrast...
+  *  35fe313 - Smarter SelectAllIfNone
+  *  ddb8db8 - Modify the screen reader messages of some of the keyboard
+    clip commands
+  *  495755b - Fix for keyboard clip commands
+  *  6c0e8c7 - Change default setting of "move selection with tracks" to
+    be "off"
+  *  b2d8f36 - Fix for bugs in keyboard clip commands due to rounding
+    errors
+  *  85e984d - More envelope fixes, including some for 1643, 1644
+  *  327e5d8 - Correct envelope update for Join that includes a gap
+    between clips
+  *  a9160cf - Envelope::InsertSpace preserves limiting values of the
+    split point
+  *  8c4dc38 - WaveTrack::SplitAt no longer needs to insert envelope
+    points...
+  *  aba52bc - Update envelope properly for TimeTrack and WaveTrack
+    editing...
+  *  2d84c65 - When Envelope domain is shortened, evaluation inside
+    won't change...
+  *  945e411 - Partial range copy of Envelope will not leave coincident
+    points
+  *  f5a7e4c - Define private Envelope evaluator functions taking
+    relative time...
+  *  01b99f2 - Remove pointer back to Envelope from EnvPoint
+  *  2e7f806 - Fix EqualRange for case of zero tolerance
+  *  a26b79d - Merge branch 'master' into HEAD
+  *  ebd1de4 - Interim fixes for envelopes
+  *  f859bf6 - Remember Start/Center setting on SelectionToolbar
+  *  52509d4 - Add option of Start/Center to SelectionBar
+  *  94c4377 - Bug 1641 - Don't use the 'space trick' on Linux/Mac
+    menus.
+  *  5b36f5d - Fix missing access keys
+  *  5dfb471 - Interim fixes for Envelopes
+  *  09607c2 - Fix position of wxASSERTs
+  *  927c500 - Bug 1626 - Preview of non-RTP effects fails if all the
+    track is selected
+  *  b6d43e4 - Various fixes involving Envelope.  More to come later.
+  *  d2acf1f - Bug842: rescale clip offsets, envelope times when setting
+    track rate
+  *  e36070e - Small fix to envelope operations in Equalization user
+    interface
+  *  7ad910c - Simplify envelope binary search and uses of it
+  *  30e67bc - some reindentation
+  *  26c4d65 - Public Envelope methods all take & return ABSOLUTE time
+    values...
+  *  9c683a4 - Rename some member functions of Envelope
+  *  4be1912 - Better constructors for Envelope
+  *  3ba1ebc - Remove unused members of Envelope
+  *  f0bdfc1 - Move record-new-track option
+  *  6a33e83 - Bug 1641 - Follow up.  NUMPAD_ENTER, Backspace, Delete
+  *  6e65596 - Bug 1641 - Panel navigation accelerators don't appear in
+    the menus
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 14 May 2017 12:11:55 +0300
+
 audacity (1:2.1.3+git6657-6491aed-1) unstable; urgency=medium
 
   * Compile

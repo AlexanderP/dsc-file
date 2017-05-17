@@ -1,3 +1,39 @@
+librecad (2.1.2+git4314-afb182a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: master
+  * Commit: afb182a531228ec6c6f5b26e4bb44a829a965405
+  * Date: 1494628184
+  * git changelog:
+  *  afb182a - Merge pull request #886 from webmite/master
+  *  7c222fe - Merge pull request #885 from webmite/rs_math-eval-
+    Imperial-shorthand
+  *  dc5f386 - Fix for issue #884 -- Improve Current Drawing Preferences
+    - Units tab upDateAnglePrecision referenced wrong comboBox
+  *  8a18e58 - Update rs_math.cpp eval fn
+  *  199e6ec - fix github issue #880, gcc 6 builds failed because of -
+    isystem and #include_next issues in gcc 6
+  *  3d4adab - Merge pull request #869 from Germar/master
+  *  e98c054 - fix: correct auto refactoring mistake, renaming
+    destructor ~RS_ActionDrawLinePolygonCenTan to
+    ~LC_ActionDrawLinePolygonCenTan failed
+  *  c797282 - Merge pull request #857 from rbuj/20170111-2-osx
+  *  4fd2868 - refactoring manual merge of pull request #851, insert
+    copyright and rename files and class from RS_* to LC_*
+  *  9f56ac9 - add an action: a new method to draw a polygon
+  *  19bc891 - fixed bug: entities painted by plugins become invisible
+    at certain positions on drawing
+  *  7461a36 - when loading plugins, only load *.dll files on Windows
+  *  9db3f51 - use standard Qt plugin format for plugins
+  *  5862d43 - Updated translations after lupdate
+  *  ba7b933 - Merge branch 'master' of github.com:LibreCAD/LibreCAD
+  *  ead9450 - Updated translations from pootle server
+  *  95c20a0 - added some extra detail to README.md [ci skip]
+  *  ab2886a - updated markdown links in README.md [ci skip]
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 14 May 2017 18:13:34 +0300
+
 librecad (2.1.0+git4292-f0357fe-1) unstable; urgency=medium
 
   * Compile

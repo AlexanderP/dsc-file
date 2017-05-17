@@ -1,3 +1,30 @@
+gimp (2.8.22+git32516-d9f6e8b-1.1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: gimp-2-8
+  * Commit: d9f6e8ba57c2b04e9148b31a9e140ba23ff75337
+  * Date: 1494533760
+  * git changelog:
+  *  d9f6e8b - build/osx: also fill in CFBundleShortVersionString
+  *  64da0f7 - Installer: only install file-mng on x64 (crashes on x86)
+  *  badc048 - Installer: file-ps/ghostscript updates (only install on
+    x64)
+  *  6a1aad4 - Installer: libwinpthread-1.dll is needed for 32-bit
+    compatibility
+  *  9eafce4 - Bug 773920 - Could not load or add help system - TLS/SSL
+    support not...
+  *  b361897 - libgimpwidgets: now needs -lgdi32 in
+    libgimpwidgets_2_0_la_LIBADD
+  *  9622c59 - configure.ac: post-release bump version to 2.8.23
+  *  e39a4e1 - configure.ac: release-bump version to 2.8.22
+  *  c25ace0 - NEWS: Remove trailing whitespace
+  *  db20e47 - Add more news items for 2.8.22
+  *  33d4504 - Bug 740634 - Color picker crashes when there are multiple
+    monitors
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 14 May 2017 19:09:56 +0300
+
 gimp (2.8.20+git32505-05716ea-1) unstable; urgency=medium
 
   * Compile

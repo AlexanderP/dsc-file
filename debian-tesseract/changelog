@@ -1,3 +1,98 @@
+tesseract (4.00~git1977-ffb1ec3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: ffb1ec353568af6068b03dd25500a6a171e6b314
+  * Date: 1494696826
+  * git changelog:
+  *  ffb1ec3 - Merge pull request #918 from rfschtkt/issue529
+  *  5c8f88b - Merge pull request #917 from stweil/crashfix
+  *  8b939b0 - Merge pull request #915 from stweil/tessdatamanager
+  *  b4cf466 - Issue #529: inside main() use return rather than exit
+  *  9a5ed19 - Issue #529: cleanup
+  *  8439670 - Fix crash if output file could not be opened
+  *  db8750e - Remove unused method TessdataManager::LoadFileLater
+  *  65b839e - Remove unused method TessdataManager::OverwriteEntry
+  *  6bebe71 - Merge pull request #910 from stweil/opt
+  *  29f3de9 - Merge pull request #914 from stweil/clean
+  *  4e93259 - Merge pull request #912 from stweil/leak
+  *  81ad09b - Merge pull request #913 from stephengroat/patch-1
+  *  5dc4af6 - baseapi: Simplify code
+  *  69296f8 - Clean method UNICHARSET::add_script
+  *  7814259 - Fix order of destructor calls for DawgCache and
+    TessBaseAPI
+  *  b4b1406 - shouldn't rely on different install
+  *  14baca3 - test brew installs but allow failures
+  *  f37f858 - main: Fix two memory leaks
+  *  af212af - Merge pull request #909 from stweil/include
+  *  3a67ff9 - Optimize code by replacing init_to_size with
+    resize_no_init
+  *  bb2348b - genericvector: Fix and optimize function LoadDataFromFile
+  *  80f51c3 - ccutil: Remove unneeded include statement
+  *  21e739c - Merge pull request #907 from stweil/no-tiff
+  *  5e3665c - Remove most libtiff dependencies
+  *  2b373d1 - Merge pull request #896 from rfschtkt/toomanywarnings
+  *  8dad542 - Fewer g++ -Wunused-variable warnings
+  *  7f382df - Fewer g++ -Wsign-compare warnings (cont.)
+  *  c335508 - Fewer g++ -Wsign-compare warnings
+  *  1bd561d - Fewer g++ -Wmaybe-uninitialized warnings
+  *  da3c462 - Merge pull request #906 from stweil/casts
+  *  7831a35 - ccutil: Simplify code (removes type cast)
+  *  8c75d26 - Remove unneeded type casts when using Leptonica macro
+    GET_DATA_BYTE
+  *  8b65bb3 - Merge pull request #905 from stweil/formatstring
+  *  121a7c6 - ccstruct: Fix non portable and wrong format strings
+  *  9abbc4c - ccstruct: Fix wrong format string
+  *  0c88b72 - training: Fix format error and some compiler warnings
+  *  9266f01 - Remove macros which are no longer needed
+  *  ef1d960 - Use standard macros for format strings
+  *  f2252fd - Introduce standard macros for format specifiers
+  *  2008daf - Merge pull request #904 from stweil/rangecheck
+  *  64994a2 - Merge pull request #900 from rfschtkt/cast
+  *  9b998a7 - Merge pull request #897 from rfschtkt/RAII
+  *  c273f85 - Improve index range check
+  *  7a99a41 - Merge pull request #903 from stweil/formatstring
+  *  3cccae6 - Fix wrong format string
+  *  190584f - RAII: PB_LINE_IT::get_line(): was leaked inside
+    POLY_BLOCK::fill()
+  *  8aa0a2d - RAII: *::GetUNLVText()
+  *  1dab239 - RAII: *::GetBoxText()
+  *  b7b68a6 - RAII: *::GetTSVText()
+  *  a1fff87 - RAII: *::GetHOCRText()
+  *  986970d - RAII: pdfrenderer.cpp: pdftext
+  *  3c6e18e - RAII: pdfrenderer.cpp: buffer
+  *  936ca00 - RAII: pdfrenderer.cpp: cidtogidmap
+  *  2772f78 - RAII: LTRResultIterator::GetUTF8Text
+  *  f75665c - RAII: TessBaseAPI::GetUTF8Text()
+  *  4840c65 - RAII: ResultIterator::GetUTF8Text(): was leaked inside
+    TessBaseAPI::GetUTF8Text()
+  *  3983d2f - Reviewed uses of reinterpret_cast
+  *  3454061 - Update README.md
+  *  d4b5136 - Merge pull request #899 from chongzhe/patch-1
+  *  a9c1dde - Update README.md
+  *  b86b4fa - Better fix for re-enabling training
+  *  0afd593 - Use NDEBUG macro instead of DEBUG.
+  *  2ea946d - Turn on building of text2image.
+  *  6ba14f3 - Update appveyor.yml
+  *  7dcd2ff - Update CMakeLists.txt
+  *  6d9243c - Update appveyor.yml
+  *  549cf27 - Update appveyor.yml
+  *  96ab9c3 - Update appveyor.yml
+  *  afe64eb - Merge pull request #890 from stweil/ci
+  *  82b70aa - Add cache to Appveyor CI
+  *  4b83261 - Don't redirect build output to file for Appveyor CI
+  *  d18931e - Fixed int types for imported tf networks
+  *  4fa463c - Corrected SetEnableTraining for recovery from a recognize-
+    only model.
+  *  006a56c - Merge pull request #885 from stweil/ci
+  *  f5494a7 - Update and improve configuration for Travis CI
+  *  00d6d94 - Merge pull request #877 from stweil/opencl
+  *  d53254e - opencl: Add 'static' attributes for local functions and
+    variables
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 14 May 2017 11:37:12 +0300
+
 tesseract (4.00~git1900-8e79297-1) unstable; urgency=medium
 
   * Compile
