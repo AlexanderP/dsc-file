@@ -1,3 +1,43 @@
+goaccess (1:1.2.0+git2392-09c9133-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 09c91336ad3bb2c72bbfd5f26742541b77f2d37c
+  * Date: 1495627594
+  * git changelog:
+  *  09c9133 - Make less common video extensions optional in the config
+    file.
+  *  332bd47 - Merge pull request #781 from terceiro/add-ogg-to-static-
+    files
+  *  380d60b - goaccess.conf: add webm format
+  *  05100c1 - goaccess.conf: add .ogv static file extension (ogg video)
+  *  bd9cef2 - goaccess.conf: add .ogg extension (Ogg Vorbis audio)
+  *  5a79990 - Added --ignore-referer-report command line option to hide
+    referers from output.
+  *  e1a1058 - Fixed const qualifier from pointer assignment warning.
+  *  dad404f - Updated pot files and FR translation labels.
+  *  fe69bd6 - Updated pot files labels.
+  *  2ba900b - Ensure key phrases from Google are added even when https
+    is used.
+  *  71ce4d6 - Merge pull request #774 from xobs/fix-startup-websocket-
+    race
+  *  411f8b0 - Merge pull request #775 from xobs/infer-wss-uri
+  *  d5787f7 - js: app: use wss:// when connecting via https
+  *  3ce6adb - gwsocket: call ws_init() from main thread
+  *  004d100 - websocket: create ws_fifo in ws_init not ws_start
+  *  d6546de - Merge pull request #771 from xobs/openssl-1.1-support
+  *  4152916 - autoconf: use non-deprecated functions for lssl, lcrypto
+    test
+  *  354a2f0 - Ensure HTTP method is extracted by looking at the
+    trailing space.
+  *  bc9b8c9 - Merge pull request #770 from LTD-Beget/fix_ws_set_header
+  *  fa6823c - websocket: use uppercase method name only
+  *  1802974 - Updated pot files labels.
+  *  3b0b0ae - Added additional TUI dialog labels for i18n.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 28 May 2017 14:03:13 +0300
+
 goaccess (1:1.2.0+git2370-43d1027-1) unstable; urgency=medium
 
   * Compile

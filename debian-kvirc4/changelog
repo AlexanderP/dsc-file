@@ -1,3 +1,23 @@
+kvirc (4:4.9.2~git-7110-g88ef901-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 88ef901cfae4e2ec739107566609334f70e93230
+  * Date: 1495842060
+  * git changelog:
+  *  88ef901 - Check modules for Qt dependencies when deploying
+  *  ae97a8f - unbreak my last commit, don't cache perl and choco dirs,
+    too big
+  *  90e1ffe - push and pull po{t}s, typo fixes
+  *  8b81b07 - Make Windows code Unicode-aware (#2219)
+  *  f5d172c - Build also in debug mode for windows (#2192)
+  *  c947b1e - appveyor: fix zlib VS version
+  *  5b14c71 - appveyor: Update MSVC to 2015 and Qt to 5.8.0
+  *  48fd3bc - Remove \r chop when pasting last log
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 28 May 2017 14:46:32 +0300
+
 kvirc (4:4.9.2~git-7102-gdb664a3-1) unstable; urgency=medium
 
   * Compile

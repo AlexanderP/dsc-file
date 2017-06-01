@@ -1,3 +1,114 @@
+freecad-daily (0.17~git11160-ee1d953-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: ee1d9533ee793c6ec7f0b445cb3a4547801bf008
+  * Date: 1496073540
+  * git changelog:
+  *  ee1d953 - Invert test case
+  *  5dceccd - Add PartDesignMirrored test
+  *  24728b4 - Change TestPartDesignApp to spaces and unix line endings
+  *  7858b47 - Add PartDesignMirrored test
+  *  0ca3f6c - Change TestPartDesignApp to spaces and unix line endings
+  *  2a6a58e - properly raise exception in TopoShapePy::check
+  *  1224705 - Arch: Small fix in site creation
+  *  1096d82 - Using PropertyFont in Arch, Draft
+  *  6854013 - Test: add a def to run all test case clases from a test
+    module
+  *  ccbc0c6 - Fix for CMake failure from empty Homebrew Python site-
+    packages
+  *  ff049b5 - added PlacementList property for the Rebar object
+  *  852a984 - py3: CXX: remaining diff: win: exernalize missing CXX-
+    functions define PYCXX_PYTHON_2TO3
+  *  d5c5870 - FEM: group meshing, add some checks and output to catch
+    some problems
+  *  612bfcc - FEM: code formating, change tabs in spaces
+  *  3708c76 - FEM: Fenics meshes, flake8
+  *  85c2e6a - FEM: Fenics meshes, add support for xdmf format, some
+    more improvements
+  *  7ed786c - FEM: constraint pressure, add support for shell meshes if
+    they have group data
+  *  34cac07 - FEM: ccx writer and mesh tools, fix bug in mesh group
+    search
+  *  c26671c - FEM: unittest, move mesh creation at end of test object
+    creation
+  *  8570203 - FEM: unittest, get rid of not useful self.
+  *  413c7ed - FEM: unittest, move all CCX analysis tests in one test
+    case class
+  *  661fdbd - FEM: unittest, get rid of duplicates and move them to
+    helpers
+  *  288406d - FEM: unittest, move unv test out of analysis test case
+  *  b616eea - FEM: unittest, update result files and FreeCAD files
+  *  6fbeead - Path: use the actual values instead of absolute values
+    when calculating distance
+  *  2c862f0 - Path: add zmax to the job weight so we drill the holes
+    that are closer to the surface first
+  *  d0bad0a - Path: re-add the fix from
+    https://github.com/FreeCAD/FreeCAD/pull/725
+  *  bed4255 - Path: make PathUtil.sort_jobs more generic, allow tuning
+    job weights
+  *  53770df - Fix incomplete creation of an SVG path from edges.
+  *  c4b1685 - Add opening symbols to clones of windows
+  *  c6e0c6a - fixes #0003018
+  *  b604b27 - AddonManager: Introduced SSL fix discussed on FreeCAD-
+    addon issue #11
+  *  335da6a - Arch: Fixed moving and rotating spaces
+  *  2a2ab3c - Updated translations
+  *  379ffe0 - Merge pull request #773 from realthunder/PathArea
+  *  ae9f699 - Path.Area: make Path.fromShapes optionally return end pos
+  *  fe8d328 - Path.Area: removed LogLevel from setDefaultParams
+  *  c94ffe1 - Path.Area: fix side effect on projection
+  *  a0da4b1 - Display the number of selected elements in Selection View
+  *  ee58881 - Draft: Leave all clones selected after cloning
+  *  94c68d7 - py3: base: repair compile-fail
+  *  0e9e49c - py3: Base: files R-Z ported to python3 issue 0000995
+  *  1ec3e5d - workaround for broken tree indicators with Qt 5.6 under
+    Windows
+  *  6bdc3eb - workaround for broken tree indicators with Qt 5.6 under
+    Windows
+  *  08b7d91 - Arch: Fixed error in DXF export of Arch Panel sheets
+  *  945313c - fix crashes with FEM post-processing commands
+  *  8da4563 - Draft: Allow to set the Working Plane from 3 selected
+    vertices
+  *  c30c325 - fix build failure if VTK is not enabled
+  *  e239a70 - fix crash caused by PR761
+  *  d3895d0 - fix crash in pipeline command
+  *  a72a4d9 - Add Python wrapper for pipeline object
+  *  5fbca1a - py3: port PR changes to be compatible with Py3
+  *  ce8a423 - Fix for Polyhedron with faces
+  *  2becb8a - py3: Base: files I-R ported to python3 PyObjectBase.cpp
+    and PyObjectBase.h not included issue 0000995
+  *  ef22d52 - py3: define xrange for python3 this is done in files
+    where the xrange is used. replace this with range once python2 is
+    not supported anymore. issue 0000995
+  *  fed9d79 - StringIO/ io fix for addonmanager
+  *  1b2b964 - extend error text set in Python console by additional
+    information if present
+  *  f3e722c - in Python console check if exception is dict and set more
+    readable text
+  *  b1e3777 - vs 2013 has already version info grater 18
+  *  7114667 - py3: Base: files A-I ported to python3 issue 0000995
+  *  22cbd5b - Fix for cylinder with polygon number as a decimal
+  *  6ba7a10 - Merge pull request #758 from KeithSloan/zero-rad
+  *  8904d65 - Fix for circlee with zero radius
+  *  ca48846 - Merge branch 'master' of
+    https://github.com/FreeCAD/FreeCAD
+  *  1be8c73 - handle possible exceptions from onDocumentRestored()
+  *  4d75541 - fix crash when Part model changes with VBO activated
+  *  f665629 - issue #0003025: Unhandled unknown exception caught in
+    GUIApplication::notify when opening file
+  *  e02db45 - fix crash when Part model changes with VBO activated
+  *  dc413ac - fix build failure and make Py2/Py3 specific change
+  *  7d47a72 - Fix various issues: + fix dangling pointers when fetching
+    Python error text + initialize members in overloaded constructors of
+    Exception class + implement assignment operator in sub-class + move
+    to PyCXX API to simplify handling with reference counting and
+    reading values from the dict
+  *  869e42e - try to repair add-on manager
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 29 May 2017 19:21:06 +0300
+
 freecad-daily (0.17~git11084-fa00b4f-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,48 @@
+tesseract (4.00~git2006-42066ce-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 42066ce69057dc81ae6cbc176300bb20223c7d0b
+  * Date: 1495779398
+  * git changelog:
+  *  42066ce - Merge pull request #953 from stweil/doc
+  *  add00ed - Update documentation for installation
+  *  5b43c9b - use correct name for Mac OS X, correct link to training
+    wiki; fix #818
+  *  6dd871b - Merge pull request #942 from stweil/openmp
+  *  15b3596 - Optimize LSTM code for builds without OpenMP
+  *  5a06417 - Merge pull request #937 from stweil/fix
+  *  fb863c9 - UNICHARSET: Add missing initialization
+  *  da1254d - Merge pull request #936 from stweil/opt
+  *  e6d6839 - Reduce number of new / delete operations for class
+    LanguageModel
+  *  562de89 - Reduce number of new / delete operations for class
+    KDTreeSearch
+  *  95bf30d - Update README.md
+  *  baf6cfe - Merge pull request #935 from stweil/coverity
+  *  edeb0a4 - README: Add Coverity badge
+  *  84db453 - Merge pull request #934 from stweil/opencl
+  *  df36c85 - opencl: Remove more unused code
+  *  f581497 - Merge pull request #932 from stweil/dockerfile
+  *  defb399 - Fix and improve Dockerfile
+  *  482cd82 - Merge pull request #930 from stweil/opt
+  *  fef5972 - EquationDetect: Remove unneeded new / delete operations
+  *  8bd2fa7 - Merge pull request #927 from stweil/inttypes
+  *  e05f4c6 - Remove obsolete comments and unused code from
+    ccutil/host.h
+  *  3a6a8d7 - Replace Standard C library header files by C++ header
+    files
+  *  697f842 - Merge pull request #925 from stweil/opt
+  *  0ba202f - Remove unneeded null pointer check
+  *  46ca830 - genericvector: Add overloaded LoadDataFromFile
+  *  852b678 - Merge pull request #922 from stweil/automake
+  *  5d60444 - automake: Enable all warnings and fix a warning
+  *  2a4483d - Merge pull request #920 from stweil/fix
+  *  079d6b9 - Improve robustness of TessdataManager
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 28 May 2017 16:45:03 +0300
+
 tesseract (4.00~git1977-ffb1ec3-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,142 @@
+audacity (1:2.1.3+git6794-515ec64-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 515ec64a36109865295e2fec9d0375198a8e1705
+  * Date: 1495947112
+  * git changelog:
+  *  515ec64 - More fixes for envelope, specifically Time Track cut and
+    paste
+  *  5ff09c2 - Cut from flat TimeTrack does not leave unnecessary
+    points...
+  *  5886bd8 - Don't push time track points right of paste point off to
+    infinity
+  *  2985d24 - Fix envelope editor
+  *  9ee11e9 - Merge branch 'master' into HEAD
+  *  216ead2 - Provide two choices for defaults in KeyPreferences
+  *  389335d - Clickable Start - Length and stable position of '<' and
+    '>'
+  *  ca01b55 - Add clickable < and >  alternative to RadioButtons for
+    start/length
+  *  a4cc9a9 - Improve rendering and drawing of envelope with
+    discontinuity
+  *  e428425 - Change the drawing of wave track envelope at high zoom...
+  *  537ccfb - Change evaluation of envelope near discontinuities...
+  *  9c7e236 - Prefer "sampleDur" to "sampleTime" for some variable
+    names
+  *  c8f65d8 - Merge branch 'master' into HEAD
+  *  eea55f7 - Make Nyquist debug window resizable
+  *  597ddbf - Further speed up to showing preferences.
+  *  181c137 - More envelope fixes, avoiding some unnecessary insertions
+    of points
+  *  bcc0bed - Envelope::SetTrackLen adds a point only when none was
+    present...
+  *  6c2c273 - More Envelope::GetValueRelative; add point for join only
+    as needed
+  *  250a2ea - Merge branch 'master' into HEAD
+  *  a8ac80e - Bug1651: NoteTrack sync-lock and crash fixes...
+  *  b3a70b5 - Add hyphen between fields and tooltips.
+  *  8afeed5 - Faster opening of preferences.
+  *  01356f9 - Add i18n hints for selection toolbar
+  *  59a9539 - Fix Radio Buttons on SelectionToolbar for Dark Theme
+  *  3761ae3 - Replace dummy checkbox by vertical line.
+  *  552a69d - Add radio buttons for Start-End, Start-Length e.t.c.
+  *  d210b18 - Limit consolidation of undo items by other means
+  *  0303d28 - Fix for bug 1650
+  *  4b2b0d9 - Fix Windows warning: inconsistent DLL linkage between
+    base & derived
+  *  f0040b0 - Bug 1210, alternative fix for unfriendly message
+  *  cd6c983 - Clip move commands - minor fix.
+  *  f46ac26 - Update commands for moving clips using the keyboard
+  *  646c285 - Bug1646: Fix many defects in the Note Track stretching
+    tool
+  *  646c66f - Sync lock adjustment for NoteTrack stretch...
+  *  54636c6 - Allow NoteTrack to stretch left of zero
+  *  82ce041 - Preview cursor for Stretch can take left, right, or
+    center form
+  *  90eb4ec - Make MIDI track stretch path-independent
+  *  9fb7185 - Rewrite undo handling for Stretch to be more like other
+    drags...
+  *  2eb6285 - Group some TrackPanel fields into a structure
+  *  655fc9d - Smarter VoiceOver text for Selection controls.
+  *  7a6dda1 - Add title-clicking to SelectionToolbar
+  *  2fcf715 - Update Help link for Spectrogram Settings
+  *  6a9e0ff - Fix Travis Build
+  *  7d31691 - Allow selected controls on SelectionToolbar
+  *  62f75eb - (Hi-DPI) No longer upscale ImageCache
+  *  5a26afd - Update Help links: SilenceMarker.ny SoundFinder.ny
+  *  9c6bfd7 - Disable Debug button for some Nyquist effects
+  *  04ba10a - Add help button support for other Nyquist effects
+  *  99e5516 - Save built-in browser size
+  *  e99b54e5 - Add help button for Classic Filter
+  *  4a08ea6 - Make HTML dialog resizable (on windows).
+  *  d549dcc - Bug 1649 - Freeze with Truncate Silence
+  *  b96f169 - Fix link to Spectrogram Settings Help
+  *  d6a9011 - "Error opening sound device" as Error dialog
+  *  bba5a8f - Add help button for Nyquist Prompt
+  *  e7a9c37 - Add help buttons for normal built-in effects
+  *  fd3d41e - Add help pages for shipped Nyquist effects
+  *  1dd6b84 - Enable Help button for Nyquist effects
+  *  469120c - Enable help button for effects
+  *  429fad6 - Send Spectrum Settings help to its own page in the manual
+  *  c0b30e8 - Update HiContrast Theme
+  *  f9827a5 - Minor fix for commands for shifting clips using the
+    keyboard.
+  *  4e187d0 - Bug 1648 - Crash clicking Help icon in Spectrograms
+    Settings
+  *  01f853f - Fix Windows build
+  *  a6310d7 - Fix Travis build
+  *  63ae687 - Consolidation of Undo items not limited to three
+  *  dc64fab - Make new clip move commands compatible with TrackPanel
+    refactor...
+  *  f757819 - TrackPanel::OnClipMove is a static function
+  *  227850f - Group some member variables into ClipMoveState
+  *  282abfc - Abstract TrackPanel::GetSnapLeft() and ::GetSnapRight()
+  *  d36ac2c - Revert "Fix for keyboard commands for time shifting
+    clips"
+  *  7900aa5 - Update for commands which interact with clips using the
+    keyboard.
+  *  6d75d94 - Make Stem plots the default (when zoomed in)
+  *  ff2838e - Clip boundary command: minor change to Cursor to next
+    clip boundary
+  *  9da999d - Use OffsetTimeByPixels correctly...
+  *  eaec68a - Bug 1642 - (Windows) Adding a shortcut or toggling Extra
+    Menus causes ENTER on dropdown to open new project
+  *  97cdd31 - Bug 1541 -  Residual: Wrong commands shown in tooltip
+  *  52caef9 - Add tooltip for iconic help button.
+  *  bc55087 - Bug 1492 - Using Scrub Ruler to start Scrub or then
+    change to Seek removes the selection
+  *  b911607 - Fix for keyboard commands for time shifting clips
+  *  0caad3e - Bug 502 - Labels may disappear if partly before time zero
+  *  8b14ac0 - Bug 718 - On dual monitors the splash screen is
+    positioned incorrectly
+  *  349b66b - Bug 1584 - Pinned / Unpinned tool tip inconsistency
+  *  a0ea5d6 - Bug 1469 - Shift key does not modify Play/Record buttons
+    when Karaoke view has focus
+  *  4be26f5 - Bug 1552 - Record button greyed out while playback paused
+  *  83d3864 - Bug 1583 - "Pinned" play head preference requires restart
+  *  a532d99 - Add Midi Prefs and Libraries Prefs help pages
+  *  e16f6f9 - Add small help button to Prefs pages
+  *  b196c7d - Bug 1541 - Skip to Start/End buttons don't show that they
+    respect SHIFT usage
+  *  a9c4178 - Bug 509 - Soloing/unsoloing in Mixer Board does not
+    repaint waveform colour until window or Track Panel refresh
+  *  18cec36 - Bug 1607 - 2nd Screen issue with MixerBoard and Karaoke
+    Window
+  *  c8b2cc9 - Bug 641 - ASSERT when adding recording not at start of
+    track.
+  *  2f10c1c - Bug 1532 - Toolbars fail to arrange correctly when
+    maximizing or restoring main window size
+  *  6478895 - Bug 1565 - Windows: Toolbars don't show tooltips when
+    button is disabled
+  *  cc38ba3 - Bug 1607 - Some dialogs appear on primary monitor when
+    Audacity is running on secondary monitor
+  *  4c3455c - Bug 1523 - OK in Preferences changes language from
+    "System" to the specific system locale
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 28 May 2017 17:50:46 +0300
+
 audacity (1:2.1.3+git6698-07ce602-1) unstable; urgency=medium
 
   * Compile

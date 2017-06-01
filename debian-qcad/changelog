@@ -1,3 +1,48 @@
+qcad (3.17.0+git4594-214e279-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 214e27993fbbadad4241b6bf4e1c5f23eea7a70d
+  * Date: 1496050310
+  * git changelog:
+  *  214e279 - back port to qt 4
+  *  127a349 - update translations
+  *  73ce859 - update initialization of previous / current version
+    detection
+  *  a331045 - add preference to explode multiline texts into simple
+    text blocks
+  *  488f649 - update script bindings
+  *  8a7888f - add RTextProxy, RTextBasedData::getSimpleTextBlocks
+  *  8313361 - compile fix
+  *  66d5498 - update script bindings
+  *  457df7d - add more information to RTextLayout (text blocks with
+    same formatting)
+  *  475dc91 - update streaming format for RBox
+  *  a820025 - add bounding box and TTF flag for text layout
+  *  939b302 - add RColor::setCompat
+  *  a5a7461 - set version to 3.17.1.1
+  *  d5fa29c - update translations
+  *  c929f51 - set version to 3.17.1
+  *  4788633 - update script bindings
+  *  034fcdb - add additional info to RTextLayout
+  *  31aa0fe - add experimental code to explode multipline texts into
+    simple text blocks
+  *  92e97c7 - fix FS#1583 - Option / Rotation missing defaults for 15
+    and 345 degree
+  *  9d9a070 - fix FS#1582 - Layer > Show all Layers / Hide all Layers:
+    unexpected outcome when frozen column not shown
+  *  09971ec - set version to 3.17.0.1
+  *  2a31885 - set version to 3.17.0.0
+  *  3390732 - fix duplicate shortcut
+  *  9ba4003 - update image tool
+  *  aacb71c - update image tool
+  *  1aa6744 - refactor image tool to use getOperation, updatePreview
+  *  3447198 - update translations
+  *  e624528 - update api doc
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 29 May 2017 12:53:54 +0300
+
 qcad (3.16.7+git4566-e01bcb8-1) unstable; urgency=medium
 
   * Compile

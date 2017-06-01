@@ -1,3 +1,50 @@
+deadbeef (0.7.2+git7170-294df3c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 294df3cf90c6a6d1da4d05ac52feb575b98591de
+  * Date: 1496091549
+  * git changelog:
+  *  294df3c - streamer: fixed auto-stopping playback after last-track
+    (fixes #1784)
+  *  957b479 - linux vscode config changes
+  *  47ffc18 - add .dirstamp to gitignore
+  *  e5c7063 - Merge branch 'streamer-fixup'
+  *  674d019 - add linux task to vscode config
+  *  5b30224 - streamer: buffering state vs stopping fix
+  *  bb42ad7 - streamer: reworked buffering state handling
+  *  f586063 - added some folders to ignore list of vscode
+  *  c1a158a - added vscode test task
+  *  d3d367e - osx: fixed random CopyPNGFile error
+  *  340654b - vscode config for building, running and debugging
+    deadbeef on macOS
+  *  64e20c9 - .gitignore update; fixed double-include in common.h
+  *  d24c764 - gtkui: refactor preset column types code also add Codec
+    and Bitrate
+  *  4c81575 - gtkui: add even argument to column data draw functions
+  *  190ccaf - gtkui: add sort format to columns
+  *  df55585 - gtkui: don't use pango's alpha attributes
+  *  7bef064 - streamer: cleanup trackinfochanged events, fix buffering
+    state UI (bad commit, breaks stuff)
+  *  094acd7 - added some folders to ignore list of vscode
+  *  b873c8e - added vscode test task
+  *  6a3eab8 - osx: fixed random CopyPNGFile error
+  *  0a4c6e5 - vscode config for building, running and debugging
+    deadbeef on macOS
+  *  b4ffa34 - .gitignore update; fixed double-include in common.h
+  *  b669ceb - gtkui: refactor preset column types code also add Codec
+    and Bitrate
+  *  3f5399c - gtkui: add even argument to column data draw functions
+  *  43a3019 - gtkui: add sort format to columns
+  *  1e7dd68 - gtkui: don't use pango's alpha attributes
+  *  f3d70cd - gtkui: add groups spacing preferences item (fixes #1745)
+  *  8842858 - tf: tests for pad and pad_right
+  *  46b33eb - tf: implement $pad and $pad_right
+  *  85b3b30 - tf: fixed repeat with 0 count
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 30 May 2017 11:54:11 +0300
+
 deadbeef (0.7.2+git7140-d1387ca-1) unstable; urgency=medium
 
   * Compile

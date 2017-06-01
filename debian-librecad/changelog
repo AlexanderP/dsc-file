@@ -1,3 +1,22 @@
+librecad (2.1.2+git4317-db449e8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: master
+  * Commit: db449e8cce1c84c0df39c36ef6ce305ff2a5d366
+  * Date: 1495572774
+  * git changelog:
+  *  db449e8 - Merge pull request #888 from webmite/Print-Custom-
+    PageSize-handling
+  *  5ef1206 - removal of unused code lines
+  *  7673c19 - fix for Issue #864 -- custom page size - incorrect unit
+    handling This gets the unit handling corrected for custom paper
+    size. It appears to generate correct dimensional pages for 'File |
+    Export | pdf' but it does not complete printing if using something
+    like pdf creator if just doing a 'File | Print'.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 29 May 2017 15:49:00 +0300
+
 librecad (2.1.2+git4314-afb182a-1) unstable; urgency=medium
 
   * Compile
