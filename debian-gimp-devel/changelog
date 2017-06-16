@@ -1,3 +1,147 @@
+gimp-devel (2.9.4+git38502-f3d827d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: f3d827d082ef89645c8bbdb2c32cbc830531fc95
+  * Date: 1496425217
+  * git changelog:
+  *  f3d827d - desktop: add test-appdata.sh to EXTRA_DIST
+  *  3ca48a0 - enums: don't use comments in generated enum recipes
+  *  fcc52da - build: no need to embed lcms2 in our flatpak anymore.
+  *  b1ea1eb - app: apply some more filters immediately (without GUI)
+  *  639e69c - build: bumping flatpak dependency to GNOME 3.24 runtime.
+  *  e83e99d - m4macros: add ax_gcc_func_attribute.m4
+  *  52789e1 - Updated Italian translation
+  *  a5f0bf3 - Updated Italian translation
+  *  d4e55fe - Updated Italian translation
+  *  6b33d85 - Updated Italian translation
+  *  c1deb5c - Updated Italian translationù
+  *  e64e61c - libgimpwidgets: call babl_exit() when unloading
+  *  1176482 - libgimpwidgets: don't babl_init() in
+    gimp_color_scale_class_init()
+  *  731cc47 - plug-ins: pyconsole.py must be included in the
+    distribution.
+  *  9391a0a - build: make the flatpak remote-add call clearer.
+  *  697fbfa - AUTHORS: regenerated
+  *  3834199 - app: add member "default_run_mode" to GimpGeglProcedure
+  *  320a3db - plug-in: add python-console.py back to EXTRA_DIST
+  *  9d50279 - app: rename procedure_commands_run_procedure()
+  *  ed2fb29 - app: add a "settings" argument to GimpGeglProcedure
+  *  14bcde2 - app: small code reorganization in the curves tool
+  *  ff91bb1 - app: fix unused variable warning in warp tool
+  *  3c6403b - NEWS: remove "Make paint tools draw in all open views"
+    item.
+  *  7136f09 - app, cursors: add a cursor for the warp tool
+  *  feeffb6 - Update authors.xml
+  *  f876f3b - app: fix curves tool color picking
+  *  a5b03dd - app: add
+    gimp_filter_tool_{enable,disable}_color_picking()
+  *  2e6b385 - A few more tweaks to NEWS for 2.9.6
+  *  226fb03 - Update NEWS for 2.9.6. There is still hope :-P
+  *  34d3ed4 - Update release-howto.txt with changes done in the gimp-2-
+    8 branch
+  *  894845f - plug-ins: actually use the remembered profile_policy in
+    screenshot
+  *  9069852 - app: change gimp_operation_config_new() to _get_type()
+  *  03085f4 - app: ref the GimpProgress in
+    gimp_procedure_execute[_async]()
+  *  b9ebebf - Update Polish translation
+  *  6918b4b - plug-ins: set the GimpColorConfig on all script-fu color
+    buttons
+  *  6978094 - libgimpwidgets: make GimpColorButton set GimpColorConfig
+    on the color dialog
+  *  937900d - Bug 783166 - Script-Fu color selector crashes
+  *  f16ba7d - libgimpconfig: remove negative value handling from
+    gimp_scanner_parse_color()
+  *  b8505a4 - libgimpconfig: fix negative float parsing
+  *  44fd647 - Update Italian translation
+  *  84e5aed - app: turn invert-perceptual, -linear and -value into
+    normal filter actions
+  *  ea7f1ba - app: reduce indentation depth in
+    gimp_plug_in_manager_search_directory()
+  *  f24edcd - Revert "Bug 783108 - Make paint tools draw in all open
+    views"
+  *  2aa246f - Bug 783108 - Make paint tools draw in all open views
+  *  be513e0 - Update Russian translation
+  *  e985110 - plug-ins: install python-console plug-in in its own
+    subdirectory.
+  *  efae55a - app: allow plugin inside first-level directories of plug-
+    ins folders.
+  *  cb02326 - libgimpbase: minor tab cleaning.
+  *  7e25248 - desktop: add a test for strict validation of appdata
+    file.
+  *  7e22488 - desktop: use https for everything, even the screenshots.
+  *  5bcde32 - enums: run gimp-mkenums from the build dir
+  *  f9fa0d1 - enums: don't write generated enum files to src-dir if
+    unchanged
+  *  7d2edec - Bug 782759 - strict validation of appdata file fails.
+  *  4946909 - libgimpwidgets: reorder some code in
+    gimp_scale_entry_new_internal()
+  *  c615000 - libgimpwidgets: a bit of s/GtkObject/GtkAdjustment/
+  *  c4701c4 - Bug 782759 - strict validation of appdata file fails.
+  *  293aecf - Update Catalan translation
+  *  cb5d977 - Update Polish translation
+  *  e7d781f - app: future-proof XCF layer blend/composite props
+  *  7f7d8b4 - Updated Italian translation
+  *  f400bdc - app: add interpolation, abyss policy, and high quality
+    preview options ...
+  *  5b624e0 - Bug 782840 - CMYK color selector broken when a CMYK
+    profile is configured
+  *  1ec2e2e - libgimpwidgets: a little s/GtkObject/GtkAdjustent/ in
+    gimpscaleentry.c
+  *  81fe78b - app: derive GimpFgBgEditor from GtkEventBox instead of
+    GtkDrawingArea
+  *  54e2c19 - app: use 2/3 of the area's shorter side for
+    GimpFgBgEditor's oog color too
+  *  331fc27 - libgimpwidgets: draw GimpColorArea's border on top of the
+    oog indicator
+  *  297ec3f - app: add an out-of-gamut indicator to GimpFgBgEditor
+  *  c4dfef0 - libgimpwidgets: add an out-of-gamut indicator to
+    GimpColorArea
+  *  cd5930d - warp: reorder warp tool options
+  *  40afffb - app: add option to stroke the warp tool during cursor
+    motion ...
+  *  13b619c - app: use different samplers for preview and commit in
+    warp tool
+  *  05874c1 - libgimpconfig: don't gimp_rgb_clamp() in
+    gimp_scanner_parse_color()
+  *  6ab57a1 - Bug 749902 - Add Hue-Chroma operation/tool and LCH color
+    selector
+  *  0c2ec6a - libgimpwidgets: simplify gimp_scale_entry a lot by using
+    GBindings
+  *  4f903a6 - app: set the palette import dialog's "# Colors" scale to
+    logarithmic
+  *  9d48230 - libgimpwidgets: mark out-of-gamut colors also in the RGB
+    and HSV color areas
+  *  5b4dcbf - Bug 782759 - strict validation of appdata file fails.
+  *  3814ac9 - app: in warp tool, avoid nop strokes with the MOVE
+    behavior
+  *  5be79bc - app: in warp tool, compress motion events
+  *  a0b30d5 - app: in warp tool, improve update region calc.
+  *  2b167d6 - Bug 749902 - Add Hue-Chroma operation/tool and LCH color
+    selector
+  *  127e7da - Bug 773461 - Color picker lacks L*a*b* mode
+  *  9c7cae6 - app: maintain warp tool graph structure during undo/redo
+  *  13e274d - app: add "spacing" parameter to warp tool; change
+    "hardness" range
+  *  f807cbe - libgimpconfig: change GimpColorConfig's out-of-gamut
+    color to magenta
+  *  ff44cb5 - libgimpcolor: disable gimp_rgb_clamp() in
+    GimpParamSpecRGB
+  *  8a0e65e - Small fix in Italian translation
+  *  d428331 - Updated Italian translation
+  *  0dbdf23 - app, menus: rename confusing layers-text-tool and vectors-
+    path-tool.
+  *  002e7fc - plug-ins: darktable: implement support for locating
+    darktable on macOS
+  *  8199003 - plug-ins: darktable: have separate function to obtain
+    executable name
+  *  bb17bcd - Update German translation
+  *  8f2471b - Bug 772667 - instant freeze on rotate
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 02 Jun 2017 21:19:36 +0300
+
 gimp-devel (2.9.4+git38409-8534307-1) unstable; urgency=medium
 
   * Compile

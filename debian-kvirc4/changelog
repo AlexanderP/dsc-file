@@ -1,3 +1,28 @@
+kvirc (4:4.9.2~git-7115-g2c89201-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 2c89201e37740afd562333117f00ca53fe871fe3
+  * Date: 1496319570
+  * git changelog:
+  *  2c89201 - regenerate perl stuff from 5.26.0 - xs.inc using
+    ExtUtils::ParseXS 3.34 (compile warning fix) - ppport.h from
+    Devel::PPPort 3.36 (content unchanged, only relevant for people
+    using the default DEFAULT_INC_EXCLUDES_DOT value building this file)
+  *  775c885 - Merge branch 'master' of github.com:kvirc/KVIrc
+  *  6772507 - amend 0dbf448ab659b1967eb795f990735461b2c19fea remove a
+    line which is already handled in the if block before it
+  *  358cd58 - Ignore Visual Studio folders (#2225)
+  *  0dbf448 - [AV] update openssl, (hopefully short-term) hack for
+    handling msvc 12 dependency of it. remove xml from windeployqt as
+    its correctly detected now, use debug zlib on debug builds also
+    revert an erroneously committed change to the targeted windows
+    version in CMakeLists.txt (though it appeared to be still working, i
+    want to be sure)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 02 Jun 2017 08:10:05 +0300
+
 kvirc (4:4.9.2~git-7110-g88ef901-1) unstable; urgency=medium
 
   * Compile

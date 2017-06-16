@@ -1,3 +1,23 @@
+deadbeef (0.7.2+git7176-56b96db-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 56b96db78b5314252173294421575c2268f94b42
+  * Date: 1496258398
+  * git changelog:
+  *  56b96db - renamed StreamerTest.m -> ResamplerTest.m
+  *  a544bef - streamreader: added stdlib.h include
+  *  8d75742 - streamer: fixed songfinished->playtime value (unbreak
+    last.fm scrobbling)
+  *  e45a85d - streamer: reduced IO locking, better streamreader
+    documentation
+  *  114dd13 - junklib: integrate the USLT tag with trkproperties Fixes
+    #1660
+  *  c4071e8 - gtkui: fix group spacing calculation during resize
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 02 Jun 2017 07:30:29 +0300
+
 deadbeef (0.7.2+git7170-294df3c-1) unstable; urgency=medium
 
   * Compile

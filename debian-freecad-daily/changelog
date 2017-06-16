@@ -1,3 +1,90 @@
+freecad-daily (0.17~git11216-83095ca-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 83095ca574c48e146894df2a7757f6a94659ee0b
+  * Date: 1496457827
+  * git changelog:
+  *  83095ca - Draft: Fixed clone bug - fixes #3066
+  *  369cc73 - py3: port external FreeCAD module to Python3 whitespace
+    improvement
+  *  8164722 - py3: port external FreeCAD module to Python3 issue
+    0000995
+  *  eb60d4f - py3: some fixes to make start-workbench load on python3
+    issue 0000995
+  *  8a6d613 - py3: win: Link required vc14 CRT libs issue 0000995
+  *  3aa6153 - Draft: Added snapping between mid of two hold points
+  *  a0901f5 - Addon manager: Added a button to check for available
+    updates (git mode only)
+  *  b91e960 - py3: /cMake gathering commits for cmake mostly this
+    changes are necessary to build FreeCAD with py3 (and conda) on
+    windows. issue 0000995
+  *  38544db - Draft: Added visual feedback when modifying x,y,z values
+    manually
+  *  99e400e - Addon manager: Added check for optional py dependencies
+  *  749d666 - fixes #0002156: Sketcher Visualization fails to represent
+    sketch properly
+  *  bc6a52e - fixes #0002499
+  *  5890979 - Addonmanager: Small fix
+  *  e2e1f44 - Addon manager: strip possible whitespaces in dependencies
+    checking
+  *  590c57d - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  456d3b8 - Addon manager: Added dependency checking
+  *  1a33f3b - Fixes #0002735
+  *  f6e0f06 - Path: add output precision option to linuxcnc post.
+    Modified unit tests to use it.
+  *  69a797b - Path: trying to fix unit test again
+  *  0405a67 - Path: added use of return_last to contour.
+  *  aad8653 - Path: fixes for unittest
+  *  6768a70 - Path: PathArea logging
+  *  8f690e6 - Path: Cleanup MillFace Dialog
+  *  39631cf - Path: Area logging
+  *  68ca689 - Path: minor fixes to PathMillFace
+  *  098ca48 - Path: add cursor waiting decorator to long running
+    functions. Remove obsolete ToolDescription code from label change.
+  *  9b1b12d - Path: TC panel bug.  Loses decimal part of float spindle
+    rate
+  *  29a8cbf - Path: make cursor reflect busy
+  *  2ef59ac - Path: More work on PathMillFace to remove old heeks
+    dependency
+  *  0917fcb - Path: TD version of getEnvelope for testing.
+  *  c7afbd1 - Path: Engrave was using safeheight and clearance
+    incorrectly.
+  *  474282f - Path: engrave will do arrays
+  *  775b91d - PATH: conversion of PathContour to PathArea nearly
+    complete
+  *  018ba98 - Path: use verbose mode for fromShapes() to get relative
+    arc centers
+  *  9524ef8 - PATH: Smoothie post for laser includes spindle speed
+    (power) on every line
+  *  697fd74 - Path:  Convert Contour and MillFace to use PathArea
+  *  947c10a - py3: src/Tools: python3 diff, 2. part issue 0000995
+  *  36a0b51 - Honor CMAKE_INSTALL_RPATH in SET_BIN_DIR
+  *  0c8a873 - Path.Command: fix toGCode() bug introduced in 0e9c1c07
+  *  11dcd18 - py3: src/Tools: python3 diff, 1. part issue 0000995
+  *  4b04253 - Notification to the user that a body is not active when
+    inserting a datum entity - fixes #2511
+  *  7863a63 - Fillet Feature: Return if radius <= 0
+  *  0e9c1c0 - Path.Command: rounding instead of truncate in toGCode
+  *  4a08048 - TopoShapeEdgePy.xml: improved docstrings
+  *  d31de98 - Create AppImage on Travis
+  *  052704e - Fix #1937 mis-shapen projections in TechDraw and Drawing
+  *  fabc800 - Add ctags tag files to gitignore
+  *  8032a7a - replace hard-coded values with enum values
+  *  455b646 - set Restore flag also for copy&paste operation
+  *  b7067c0 - minimal improvement of Document documentation
+  *  2686f51 - Checking for Document Restoring when extension has a null
+    property
+  *  548a79a - App:Document new status bit to mark Restoring
+  *  1a136c9 - Arch Fixed wrong direction of preset structures
+  *  f555927 - Draft: First version of Draft Label object
+  *  f5a8ffb - check for valid vertexes when measuring angles between
+    two edges
+  *  abc5c2a - handle OCC exception when accessing point of a vertex
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 03 Jun 2017 11:08:48 +0300
+
 freecad-daily (0.17~git11160-ee1d953-1) unstable; urgency=medium
 
   * Compile

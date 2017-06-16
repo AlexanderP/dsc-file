@@ -1,3 +1,47 @@
+audacity (1:2.1.3+git6818-721faf8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 721faf89c63f3623a17d69c3c16eedd98a9daeec
+  * Date: 1496342405
+  * git changelog:
+  *  721faf8 - Avoid possible dangling pointer problems with
+    EVT_TRACKLIST_UPDATED
+  *  f807f7f - Removed a disabled piece of track list selection...
+  *  8da2287 - Delete this start of time shift on double-click (it never
+    completed)
+  *  f418de2 - Rearrange Selection Toolbar fields, and fix spacings.
+  *  c43a640 - Lose hyphen on selection toolbar
+  *  c48310c - Fix 'Disallowed' message when using up-arrow.
+  *  1c6c608 - Use same format for choice in Selection Toolbar as in
+    SpectralSelection Toolbar
+  *  29df7e1 - Speccache performance improvments
+  *  b6a1ca9 - Fix for bug 376
+  *  73d2478 - Rename Nyquist plug-in debug button header
+  *  2ef243f - Revert the change in display of WaveTrack envelope at
+    high zoom
+  *  7122877 - Fix crash from bad SelectionToolbarMode
+  *  545dbaf - Bug 68 - Vertical scale only has zeros when displaying
+    Waveform (dB) view at -48 dB
+  *  c7a911c - More shortcut tweaks.
+  *  ab1c62c - Conclude Envelope rewrite for better handling of
+    discontinuities
+  *  4c80a07 - Bug835(cut-then-paste should be no-op): Rewrite
+    Envelope::Paste...
+  *  58e7a94 - Envelope::Paste takes a time tolerance argument
+  *  02fe963 - Define consistency check for Envelope, to be used in
+    Paste
+  *  bd4d2dc - Rewrite Envelope::InsertSpace
+  *  0126918 - Simplify InsertOrReplaceRelative, always trim when to
+    domain...
+  *  6dd826a - Merge branch 'master' into HEAD
+  *  a09fcee - Tweak shortcut list
+  *  ed9744e - Fewer shortcuts in default shortcut list.
+  *  534cf87 - FIx so NVDA reads 'Categories' rather than 'trreCtrl'.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 02 Jun 2017 14:15:15 +0300
+
 audacity (1:2.1.3+git6794-515ec64-1) unstable; urgency=medium
 
   * Compile
