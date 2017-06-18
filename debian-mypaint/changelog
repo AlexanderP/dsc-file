@@ -1,3 +1,42 @@
+mypaint (1.3.0~git4800-7b066bd-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/mypaint/mypaint.git
+  * Branch: master
+  * Commit: 7b066bda09275464081e0ad0f86357446363278c
+  * Date: 1497773354
+  * git changelog:
+  *  7b066bd - Update BUILDING.md
+  *  cab48ae - Merge pull request #819 from briend/doctest-fix
+  *  108e8a6 - correct doctests.  view-zoom calibration changed
+    fundamental speed calculation, which watercolor brush uses.  New
+    comparison images needed. fixes #818
+  *  06282c7 - Fix up doctests.
+  *  57d37ad - inputs: zoom and view-rotation inputs
+  *  066b01c - brushwork: accept non-tree target layers
+  *  92d1ed6 - lib.document: add doctests for load and import_layers.
+  *  e0843b7 - Feature: add an "Import Layers…" action.
+  *  df775d1 - lib.command: allow AddLayer to add imported layers.
+  *  ca96a90 - gui/filehandling.py: flake8 correctness
+  *  a6648a2 - gui/filehandling.py: remove dead code.
+  *  aecdf5f - gui/buttonmap.py: flake8 compliance.
+  *  cf14342 - Wayland: use CROSSHAIR not MOUSE cursor.
+  *  48e30b3 - Merge pull request #812 from briend/curve-points.
+  *  75fb10e - curves widget: snapto on 0.5, lines drawn on 0.10
+  *  fc75712 - increase curve points to 64
+  *  be1fe88 - Windows CI: convert to Styrene bundler.
+  *  128c5e1 - Appveyor: Separate Artifacts
+  *  90b4210 - Appveyor: Automated Windows Builds
+  *  4acb2ab - Make cairo_request() compatible with headless.
+  *  4e90888 - Add API for temp. overlays for the current layer.
+  *  e46ed6e - Make blit_tile_into use the surface's impl.
+  *  527df05 - lib.layer: various flake8 fixes (NFC)
+  *  d6e76c9 - Add API to allow Cairo drawing on layers.
+  *  6698847 - pixbufsurface: flake8 tweaks (NFC)
+  *  daf8a1d - Mode stack: Add layer for brush tools
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 18 Jun 2017 12:28:25 +0300
+
 mypaint (1.3.0~git4774-bde8a54-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,31 @@
+goaccess (1:1.2.0+git2411-8d79384-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 8d79384cd97e7a97187423479c4626de2edc575d
+  * Date: 1497569242
+  * git changelog:
+  *  8d79384 - Updated pot files and FR translation labels.
+  *  6ac9376 - Removed unnecessary on-disk db path malloc.
+  *  4563b1f - Updated pot files labels.
+  *  eea6e16 - Added additional status codes labels for i18n.
+  *  ac464d8 - Updated pot files and FR translation labels.
+  *  5ae60c6 - Updated pot files labels.
+  *  52bedd3 - Added additional status codes labels for i18n.
+  *  89f3759 - Ensure i18n labels are properly displayed on the terminal
+    output.
+  *  3c35091 - Ensure no memory leak occurs when hiding specific
+    referrers.
+  *  2d85293 - Fixed compiler warning /* within comment [-Wcomment].
+  *  2f68b7a - Renamed geoip source/header files due to conflict on
+    Cygwin.
+  *  0b66c3b - Updated typos in function comments.
+  *  439ac87 - Added --hide-referer command line option to hide referers
+    from report.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 16 Jun 2017 07:43:58 +0300
+
 goaccess (1:1.2.0+git2398-02b06b9-1) unstable; urgency=medium
 
   * Compile

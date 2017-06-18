@@ -1,3 +1,146 @@
+freecad-daily (0.17~git11310-d28bae3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: d28bae3f52b3e7cf959e8b9f7bcff264f95db191
+  * Date: 1497583542
+  * git changelog:
+  *  d28bae3 - Added pref option to disable the FreeCAD logo in the
+    FCStd file thumbnail
+  *  07fd41f - use assertAlmostEqual for comparison with floating
+    numbers
+  *  944a111 - Add PartDesign_Mirrored test based on additive primitive
+  *  01cca0b - Add PartDesign_Mirrored offset failure test
+  *  ab48fdb - render both faces
+  *  6f18ce6 - Show failure message when part design transformation does
+    not intersect
+  *  90f0e5c - Remove redundant matrix scale factor multiplication
+  *  ff18838 - Fix transformation support, so that support is updated
+    with any previous transformation executed
+  *  9e21572 - Reverting to checkIntersection via boolean operation
+  *  e02430f - Draft: Added icons to select plane buttons
+  *  294551a - Path.Area: fix Path.fromShapes retraction threshold
+  *  56f8de7 - Path.Area: fix plane finding on face shape
+  *  561c48a - Path.Area: deep copy on makeSection output
+  *  d257f1b - Path.Area: section intermediate shape output for
+    debugging
+  *  d6e1601 - Path.Area: fixed random wrong section output
+  *  1065dc5 - Path: Contour works on clones and other objects with
+    proxy and shape.
+  *  e169085 - Path: disable diameter checking in Drilling
+  *  aeec1c8 - Path: added a hidden property to store the areaparams
+  *  b5e233d - Path: fix bug in drilling hemispherical faces have an odd
+    edge that doesn't have a Curve attribute.
+  *  f44cae2 - Path: remove obsolete NC sources
+  *  cc4abd2 - Path: usecomp setting toggles the availability of the
+    side property
+  *  0766a73 - Path: first experiments with collision detect
+  *  c97724e - Path: remove Pocket OCC algorithm
+  *  936bbed - Path: bug fixes
+  *  dcbfc88 - Path: add output precision option to linuxcnc post.
+    Modified unit tests to use it.
+  *  eb64ecc - improve exception message if proximity function fails
+  *  1854d3d - Draft: Fixed typo
+  *  dd48cc5 - Path: Add PathDressupRampEntry.py to CMakeList
+  *  c3bd7b6 - Path.Area: fixed projection tolerance problem
+  *  e24aa3f - Arch: Fixed small bug in Space
+  *  fb62c91 - Added RebarShape property to the Rebar object and defined
+    setEdit() function in Rebar object
+  *  c1070e5 - NULL is defined as nullptr on FreeBSD and causes a build
+    failure For more information see:
+    https://forum.freecadweb.org/viewtopic.php?f=4&t=22897&p=177660#p177
+    660
+  *  acdf40e - Navigation indicator orbit style improvements
+  *  780bede - Add Tux to translation scripts
+  *  af68de8 - Path: PathArray support for Polar and 2D arrays
+  *  d7b1399 - Add ToolController property to PathCompound
+  *  2a3f1cb - Add ToolController property to PathCopy
+  *  44bbffe - Path: Add ToolController property to PathArray Object
+  *  b7876ac - Path: DressupRampEntry Method3 improvement + flake8
+  *  3209eca - Path: DressupRampEntry bug fix + added RampMethod3
+  *  8dac1d0 - Added Helix. Other cleanup and fixes.
+  *  40fe7a0 - added second method for ramping
+  *  f03eee3 - DressupRampEntry initial commit
+  *  a405b4d - issue #0003070: VRML 2 crashes with corner cases
+  *  ab1b344 - AddonManager: Further older ssl/urllib2 version support
+  *  2ea7a1f - FEM: ccx input writer, do not write EigenmodeLimits if
+    they are set to -1.0
+  *  63a2153 - FEM: prerequisites check, add a check to proof if all
+    material objects do have the same ref shape type
+  *  a8dbc81 - FEM: material task panel, fix in reference shape type
+    test
+  *  5c5292c - AddonManager: Support older versions of ssl module
+  *  f2fff72 - Draft: Fixed unicode conversion bug in DXF export
+  *  086d2ed - FEM: ccx input writer, better writing code in ccx elsets
+  *  c85d8c6 - FEM: ccx input writer, move some defs from ccx input file
+    writer to input file writer: - get the material sets and write them
+    to material objects - get the geometry beam and shell sets as well
+    as the fluid beam sets and write them to the objects
+  *  85deb88 - FEM: ccx input writer, use variables for elementset names
+    instead of hardecoded values
+  *  de8d421 - FEM: ccx input writer, code typo, use an elif instead of
+    if
+  *  a9fb191 - FEM: ccx input writer, check for string type instead of
+    the specific string Eall
+  *  e6642d4 - FEM: ccx input writer, split ccx element set writing and
+    1D-Flow element set id retriving from each other
+  *  94775af - FEM: ccx inputwriter, get rid of a duplicate in 1DFlow
+    section
+  *  2fed6fd - FEM: ccx input writer, code formating
+  *  6fe8b38 - FEM: input writer, constraint force, move the refshape
+    type code into fem tools
+  *  1ca27a2 - FEM: abaqus writer, fix precision
+  *  cd0014b - FEM: abaqus writer, use better names for elementsets
+  *  b01e482 - FEM: abaqus writer, some comments
+  *  546c02a - FEM: unit tests, add some comments
+  *  bf45cb1 - FEM: unit tests, use FreeCADs native Python API to create
+    the meshes
+  *  c06cbde - FEM: unit tests, use better file name for unv read write
+    test
+  *  cb90f46 - FEM: unit tests, use the lately commited dev in Test to
+    run unit tests of FEM
+  *  20b4865 - FEM: gmsh mesh tool, get rid of the error pop up in the
+    regard of BooleanFragments Compound
+  *  6e0f060 - Fixed typo errors
+  *  bf69372 - py3: support of Python 3.4
+  *  3c96803 - Draft: move the planetrack when drawing a polyline
+  *  0544ecb - Arch: Allow Arch objects to be arrayed if their Axis
+    property is set
+  *  4031e75 - Arch: Fixing wrong normal direction in structures
+  *  9513792 - py3: support of Python 3.4
+  *  2b32367 - Arch: Added Axis System
+  *  255b281 - Arch: Allow axes to have labels
+  *  43a8a94 - Arch: Safeguards in Arch cutplane command - fixes #3023
+  *  f118659 - Fixing translate refactoring error.
+  *  5424fcd - Draft: Better msg in dxf import/export to inform the
+    possibility to use the addon manager - issue #3064
+  *  5f54fc0 - py3: fix several crashes
+  *  4c3cee0 - Replaced default context argument with explicit call for
+    pylupdate to pick up the strings and contexts.
+  *  617cea6 - Fixed M6 tool index for linuxcnc and opensbp.
+  *  6d57a0f - Removed obselete tooltable editor implementations.
+  *  3368c86 - Moved almost all translate implementations away from
+    QtGui.
+  *  fa9166b - Fixed post processing output if document is in current
+    working directory.
+  *  5261b5b - Removed unused properties from PahJob; fixed post
+    processing arguments
+  *  8ce3432 - py3: fox compiler warnings issue 0000995
+  *  d52f9f5 - Draft: autogroup arrays
+  *  88bd341 - fixes #0002926: Trying to access Part.Shape.children()
+    before doc.recompute() crashes the whole program
+  *  98f8879 - Py3: in Py2 use string instead of unicode for identifier
+  *  69d0e8b - py3: partially revert of getattr -> getattro because
+    getattro is only needed for the static callback function issue
+    0000995
+  *  f2e1b0d - py3: PyFindMethod -> GnericGetAttr issue 0000995
+  *  bc696e5 - py3: change of getattr -> getattro issue 0000995
+  *  3168f8e - Don't create AppImage on Travis
+  *  a900701 - Redefine complete workbench purpose
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 18 Jun 2017 06:03:10 +0300
+
 freecad-daily (0.17~git11216-83095ca-1) unstable; urgency=medium
 
   * Compile

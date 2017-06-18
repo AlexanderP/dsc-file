@@ -1,3 +1,183 @@
+gimp-devel (2.9.4+git38617-c83f0e8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: c83f0e88afa5575d7b19873175a98c9b2622719c
+  * Date: 1497721361
+  * git changelog:
+  *  c83f0e8 - app: add virtual transform/type-conversion functions to
+    GimpLayer
+  *  40dccbd - Bug 556884 - More messages marked for translation
+  *  7999cfb - libgimp*: tab cleaning.
+  *  6cd91f1 - app: move the handle transform matrix calculation to gimp-
+    transform-utils.[ch]
+  *  430c31b - app, plug-ins: clean out trailing whitespaces in source
+    code.
+  *  60f09c3 - desktop: make the appstream metainfo file translatable.
+  *  dc17194 - po: add gimptooltransformgrid.c to POTFILES.in
+  *  a5f3808 - app: use the newly added tool widgets in the transform
+    tools
+  *  457f6bf - app: add GimpToolTransformGrid, GimpToolRotateGrid and
+    GimpToolShearGrid
+  *  46843c8 - Bug 763398 - Shipping AppStream metadata file for gimp-
+    data-extras
+  *  44d33bf - app: change return value of
+    GimpToolWidget::button_press() from gboolean to gint
+  *  b097dce - Update Polish translation
+  *  2ea3c1c - NEWS: remove trailing whitespace and use consistent
+    tense.
+  *  dd6dab1 - Bug 783528 - PDF export ignores layer masks.
+  *  85c0373 - libgimpcolor: support CAIRO_FORMAT_A8 in
+    gimp_cairo_surface_get_format()
+  *  e242ec4 - Update Spanish translation
+  *  138b0e4 - Update NEWS
+  *  b9eef3d - Merge branch 'master' into templates-update
+  *  073d792 - Update Catalan translation
+  *  0bd94f1 - plug-ins: properly "Apply layer masks before saving" when
+    checked.
+  *  d37fb8a - app: split sanity check into early/late stages, to fix
+    gegl translation
+  *  7bf0496 - Updated Italian translation
+  *  79dfc83 - NEWS: add multi-page PDF export support.
+  *  90219a0 - plug-ins: vectorize and apply-masks checked by default
+    for PDF export.
+  *  c8550c9 - plug-ins: create file-pdf-save2 with the additional
+    parameter.
+  *  c08cf41 - plug-ins: only check non-defaut parameters in non-
+    interactive mode.
+  *  d03de52 - Bug 382688 - Export layers as pages to PDF file
+  *  1c25a2f - app: remove double identity check from raster brush
+    transform funcs
+  *  c690ed6 - Bug 771616 - Changing parametric brush Hardness parameter
+    doesn't work properly
+  *  ecf5a6e - NEWS: add the new dynamics.
+  *  1bc52da - app: return FALSE from gimp_canvas_item_hit() when the
+    item is invisible
+  *  013bb4d - app: add signal GimpToolWidget::snap_offsets() and API to
+    emit it
+  *  495f90e - app: allow to set an angle on a GimpCanvasHandle in
+    GIMP_HANDLE_CROSS mode
+  *  ad660a3 - app: add gimp_tool_widget_add_transform_guides()
+  *  7082fc8 - app: add x1,y1,x2,y2 parameters to
+    gimp_canvas_transform_guides_set()
+  *  e58f6aa - data: add a basic "Pressure Size" dynamics.
+  *  d6b0132 - app: s/groupe/group/ in a descriptive comment for
+    function.
+  *  9ba2a67 - Bug 783629 - invert-svg build failure
+  *  ceb43bf - Better typography in template names
+  *  1b9fd03 - Remove more obsolete templates
+  *  0098eed - Fix gimpicons.c, reorder items
+  *  0f7c2f1 - Merge branch 'master' into templates-update
+  *  fb1b7a8 - Fix the build process
+  *  70b389a - Cherry-pick template updates from icons-wip branch by
+    Klaus Staedtler
+  *  e23ee85 - app: output an error message when iso code parsing
+    failed.
+  *  36316e2 - Bug 156858 - Add option menu of standard aspect ratios to
+    ratio-using tools
+  *  b737463 - app: fix event reordering during motion compression
+  *  ed17982 - app: use a GimpToolCompass in GimpMeasureTool
+  *  667435c - app: some code reordering in
+    gimp_blend_tool_button_press()
+  *  18fe8f6 - app: add GimpToolCompass, which is the entire canvas GUI
+    of the measure tool
+  *  e05ba83 - app: add signal GimpToolWidget::status() and API to emit
+    it
+  *  7841d04 - Update NEWS
+  *  5d12642 - Update Russian translation
+  *  19f5f67 - app: add "clipping" option to the flip tool
+  *  46b6c4f - app: add support for reflecting across guides to the flip
+    tool
+  *  20ccc4e - app: pad flipped/rotated drawables with transparency, not
+    bg color
+  *  5543a9d - app: compress tool motion evnets more conservatively
+  *  3c5d707 - app: add gimp_canvas_handle_set_size() and use it in
+    GimpToolLine
+  *  b92d988 - app: add gimp_tool_widget_get_shell(), and implement
+    get_property("item")
+  *  0eda6b0 - app: fix blend tool behavior across multiple displays
+  *  09d6f2b - app: fix use of NULL canvas item in iscissors tool
+  *  323aea6 - Update Polish translation
+  *  94f05ba - Update Greek translation
+  *  169083e - Updated Esperanto translation
+  *  10be415 - Updated Esperanto translation
+  *  1f76f04 - app: use a GimpToolLine in GimpBlendTool
+  *  6fe578f - app: add GimpToolLine, an subclass of GimpToolWidet
+  *  b026689 - app: add new base class GimpToolWidget
+  *  d658779 - app: properly remove the children when a GimpCanvasGroup
+    gets destroyed
+  *  2e209ac - app: keep GimpCanvasItem from emitting "update" during
+    destruction
+  *  a4d2aca - app: add gimp_canvas_item_transform_distance() and
+    transform_distance_square()
+  *  53a84bc - app: move enums GimpButtonPressType and
+    GimpButtonReleaseType
+  *  b11dec6 - app: remove some #includes from gimpfiltertool-settings.c
+  *  b610d97 - NEWS: add improved PCX support.
+  *  dc069e4 - plug-ins: coding-style fix, adding comments and removing
+    unused var.
+  *  daa5611 - Fix for Bug 159947 - saving 1bpp PCX files
+  *  8d4642f - Bug 159947 - saving 1bpp PCX Files
+  *  0de2596 - configure: default CPPFLAGS_FOR_BUILD to CPPFLAGS on
+    native builds.
+  *  d45fd40 - app: remove GimpFilterOptions' "settings" property
+  *  d648f52 - NEWS: Colorize is a GEGL-based filter now too
+  *  cb142b3 - icons: forgot Symbolic-Inverted/Makefile.am in the
+    previous icons commit
+  *  ec01408 - Update NEWS
+  *  9d3be61 - icons: add the new icons64_system_image group to
+    EXTRA_DIST
+  *  40a1d7c - app: move new "about.h" include to its place, add some
+    newlines
+  *  8b3f5e8 - build: updates to the flatpak howto.
+  *  593255d - icons: install PNG version of gimp-
+    (error|info|question|warning) icons.
+  *  406c047 - libgimp: clean out some tabs.
+  *  b7dd262 - Bug 774971 - Display errors outputted by GEGL.
+  *  6c2658e - app: keep track of all messages displayed by
+    GimpErrorDialog.
+  *  20fdb8d - Bug 783482 - Fail to link invert-svg in jhbuild prefix on
+    FreeBSD...
+  *  728aada - devel-docs: some fixes in libgimpwidgets-sections.txt
+  *  f9ee38e - libgimp: add blurbs to all object properties for the docs
+  *  4f4d6b2 - app: register the "settings folder" (e.g. GIMPDIR/curves)
+    with the settings type
+  *  82d23fc - app: don't unref the passed file in
+    gimp_operation_config_[de]serialize()
+  *  109f23a - app: replace the hue-saturation tool by a generic filter
+    action
+  *  85aab2a - app: restore color balance's tooltip
+  *  7189bf3 - menus: forgot to remove tools-color-balance from the
+    Tools menu
+  *  5abf0c2 - app: rename gimppropgui-constructors.[ch] to gimppropgui-
+    generic.[ch]
+  *  9e1aee4 - app: move all custom gimppropgui constructors to their
+    own files
+  *  757ca64 - app: replace the color balance tool by a generic filter
+    action
+  *  34d302e - Update Catalan translation
+  *  ecfec41 - app: remove the colorize tool and replace it by a generic
+    filter action
+  *  d2de5a0 - Bug 555777 - Export to MNG animation fails
+  *  467573c - Update Polish translation
+  *  cb61c08 - Update NEWS
+  *  8412192 - Bug 783386 - Circuit filter broken
+  *  adb826f - app: allow filter actions to have hardcoded default
+    operation settings
+  *  d20171d - devel-docs: add some missing newly added functions
+  *  caef6d0 - libgimp*: various doc fixes
+  *  60a5009 - libgimpcolor: some doc fixes and updates
+  *  e67e22c - libgimp: forgot to push the generated libgimpfile two
+    commits earlier
+  *  2d38abd - configure.ac: require babl >= 0.1.28 and GEGL >= 0.3.18
+  *  c0c1225 - pdb: remove a  misplaced " from fileops.pdb
+  *  e122303 - Bug 783382 - Lava filter broken
+  *  142c167 - app: change the default value of "import-raw-plug-in"
+    from NULL to ""
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 18 Jun 2017 12:46:23 +0300
+
 gimp-devel (2.9.4+git38502-f3d827d-1) unstable; urgency=medium
 
   * Compile

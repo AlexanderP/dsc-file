@@ -1,3 +1,32 @@
+deadbeef (0.7.2+git7188-2cc7a5d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 2cc7a5d677158fb67c89d85a4a3383f3c2e6d770
+  * Date: 1497517901
+  * git changelog:
+  *  2cc7a5d - cue: follow up fixes for plt_set_cue_file and related
+    code
+  *  28565d1 - osx: cue plugin building
+  *  1762628 - add cue playlist plugin (tracks/cdimage+cue support)
+    (closes #1809)
+  *  e0c820e - gtkui: use raw value column instead of display column
+    when saving metadata, Fixes #1793
+  *  808f700 - Losslessly reduce the size of SVG images.
+  *  89f29c0 - osx: switch to xcode 8.3 image on travis
+  *  bb8b2f4 - gtkui: add hotkey for track properties (#1803)
+  *  662cc91 - cocoaui: add missing textfield delegate for handling
+    plugin configuration text field changes
+  *  ee68b88 - issue template update
+  *  268cb2b - pltbrowser: add option to disable double-click playlist
+    switch (#1801)
+  *  f57f576 - quickinstall: install to ./build by default, when PREFIX
+    is not set
+  *  41f8a74 - added translation/help.zh_TW.txt to portable_postbuild.sh
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 16 Jun 2017 07:56:35 +0300
+
 deadbeef (0.7.2+git7176-56b96db-1) unstable; urgency=medium
 
   * Compile
