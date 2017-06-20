@@ -10,7 +10,7 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),sid stretch)) 
+ifneq (,$(filter $(DEBIAN_CODENAME), buster sid stretch)) 
 	CONTROL = control.sid
 else
 	CONTROL = control.jessie

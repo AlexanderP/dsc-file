@@ -16,8 +16,8 @@ endif
 	dh $@ --parallel 
 
 override_dh_auto_build:
-ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid xenial yakkety zesty)) 
-ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid yakkety zesty)) 
+ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid buster xenial yakkety zesty)) 
+ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid buster yakkety zesty)) 
 	patch -p1 < debian/patches/truecrypt-7.1a-gcc5.patch
 	patch -p1 < debian/patches/truecrypt-7.1a-gcc6.patch
 else
