@@ -2,8 +2,9 @@ Source: psi-plus
 Section: net
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 9),
-               libaspell-dev,
+Build-Depends: cmake,
+               debhelper (>= 9),
+               libhunspell-dev,
                libidn11-dev,
                libminizip-dev | wget,
                libotr5-dev | libotr2-dev,
@@ -14,16 +15,16 @@ Build-Depends: debhelper (>= 9),
                libxss-dev,
                qconf,
                zlib1g-dev
-Homepage: http://psi-dev.googlecode.com/
+Homepage: http://psi-plus.com/
 Standards-Version: 3.9.8
 
 Package: psi-plus
 Architecture: any
 Depends: psi-plus-common (= ${source:Version}),
          ${misc:Depends},
-         ${shlibs:Depends}
-Recommends: libqca2-plugin-ossl,
-            psi-plus-l10n,
+         ${shlibs:Depends},
+         libqca2-plugin-ossl
+Recommends: psi-plus-l10n,
             psi-plus-plugins,
             psi-plus-sounds,
             sox
@@ -41,31 +42,13 @@ Description: Qt-based XMPP/Jabber client (basic version)
  Full list of features you can found at:
  http://psi-plus.com/wiki/doku.php/en:features
 
-Package: psi-plus-dbg
-Section: debug
-Priority: extra
-Architecture: any
-Depends: psi-plus (=${binary:Version}), ${misc:Depends}
-Description: Qt-based XMPP/Jabber client (basic version) [debug symbols]
- This package contains the debugging symbols for basic version of Psi+.
- .
- Psi is a cross-platform powerful XMPP/Jabber client (Qt, C++) designed for the
- Jabber power users. Psi+ is a development branch of Psi IM XMPP/Jabber client
- by <psi-dev@conference.jabber.ru> team.
- .
- Project Purpose: collection, refinement and writing new patches for transfer
- them to Psi upstream developers.
- .
- Full list of features you can found at:
- http://psi-plus.com/wiki/doku.php/en:features
-
 Package: psi-plus-webkit
 Architecture: any
 Depends: psi-plus-common (= ${source:Version}),
          ${misc:Depends},
-         ${shlibs:Depends}
-Recommends: libqca2-plugin-ossl,
-            psi-plus-l10n,
+         ${shlibs:Depends},
+         libqca2-plugin-ossl
+Recommends: psi-plus-l10n,
             psi-plus-plugins,
             psi-plus-skins,
             psi-plus-sounds,
@@ -73,24 +56,6 @@ Recommends: libqca2-plugin-ossl,
 Suggests: libqca2-plugin-gnupg, xdg-utils
 Description: Qt-based XMPP/Jabber client (WebKit version)
  This package contains WebKit version of Psi+.
- .
- Psi is a cross-platform powerful XMPP/Jabber client (Qt, C++) designed for the
- Jabber power users. Psi+ is a development branch of Psi IM XMPP/Jabber client
- by <psi-dev@conference.jabber.ru> team.
- .
- Project Purpose: collection, refinement and writing new patches for transfer
- them to Psi upstream developers.
- .
- Full list of features you can found at:
- http://psi-plus.com/wiki/doku.php/en:features
-
-Package: psi-plus-webkit-dbg
-Section: debug
-Priority: extra
-Architecture: any
-Depends: psi-plus-webkit (=${binary:Version}), ${misc:Depends}
-Description: Qt-based XMPP/Jabber client (WebKit version) [debug symbols]
- This package contains the debugging symbols for WebKit version of Psi+.
  .
  Psi is a cross-platform powerful XMPP/Jabber client (Qt, C++) designed for the
  Jabber power users. Psi+ is a development branch of Psi IM XMPP/Jabber client
@@ -127,24 +92,6 @@ Replaces: psi-plus-content-download, psi-plus-content-downloader
 Conflicts: psi-plus-content-download, psi-plus-content-downloader
 Description: plugins for Psi+
  This package contains plugins for Psi+.
- .
- Psi is a cross-platform powerful XMPP/Jabber client (Qt, C++) designed for the
- Jabber power users. Psi+ is a development branch of Psi IM XMPP/Jabber client
- by <psi-dev@conference.jabber.ru> team.
- .
- Project Purpose: collection, refinement and writing new patches for transfer
- them to Psi upstream developers.
- .
- Full list of features you can found at:
- http://psi-plus.com/wiki/doku.php/en:features
-
-Package: psi-plus-plugins-dbg
-Section: debug
-Priority: extra
-Architecture: any
-Depends: psi-plus-plugins (=${binary:Version}), ${misc:Depends}
-Description: plugins for Psi+ [debug symbols]
- This package contains the debugging symbols for Psi+ plugins.
  .
  Psi is a cross-platform powerful XMPP/Jabber client (Qt, C++) designed for the
  Jabber power users. Psi+ is a development branch of Psi IM XMPP/Jabber client
