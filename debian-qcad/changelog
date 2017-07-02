@@ -1,3 +1,105 @@
+qcad (3.17.0+git4751-0a6bc28-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 0a6bc283bf5d369e6152aa426c8eb373dc4f50c0
+  * Date: 1498840209
+  * git changelog:
+  *  0a6bc28 - update script bindings
+  *  8290575 - add RDocumentInterface::addDrawableToPreview to export
+    drawables to preview
+  *  1ed52a0 - add warning when exporting entity that is not on current
+    block
+  *  9c7770f - update debugging info
+  *  991b2dd - add unit test for scaling formatted text
+  *  ad6c53c - update user reference manual
+  *  5cf935c - scale internal text height changes when scaling texts
+  *  aa32f8f - update translations
+  *  83fc1a8 - update translations
+  *  c22ce30 - set version to 3.17.3
+  *  bb1f690 - update translations
+  *  692accd - add more text heights
+  *  401678d - move processLayerArgument and
+    processPolylineWidthArgument to common.js
+  *  d7607e6 - fix setMinimumWidth for polylines without width
+    information
+  *  9069cf9 - add callback to initialize view
+  *  4eb5eec - update user manual
+  *  6ef3bd4 - update script bindings
+  *  3810114 - add 30 degrees cabinet projection
+  *  304c77f - add cabinet 30 degrees projection type
+  *  07ee2c9 - update script bindings
+  *  efd2390 - fix translation of projections
+  *  6751e47 - add dimetric projection
+  *  153b316 - add dimetric projection
+  *  bb2cdd5 - update script bindings
+  *  b42101d - add processPolylineWidthArgument
+  *  dc08313 - add RPolyline::setMinimumWidth
+  *  c948ddc - set version to 3.17.2.1
+  *  470cda6 - fix FS#1609 - Edit > Drawing Preferences: dimension size
+    scale cannot be changed to 1
+  *  f809f20 - update unit test
+  *  81194fb - translate transaction log string
+  *  e5bb19a - clean up
+  *  fca5f77 - make sure only one property watcher is created per
+    control
+  *  3f0d4bf - fix potential exception with non-existing paths
+  *  9e64612 - fix potential exception in derived tools
+  *  b21cd14 - update explode preferences
+  *  ba48371 - clean up
+  *  2079407 - fix return of object
+  *  a468d31 - fix FS#1605 - Edit > Paste: Empty layers created when
+    pasting to current layer
+  *  9ed1b7a - spell check
+  *  232bede - update API doc
+  *  40c46ca - clean up
+  *  718124c - update API doc
+  *  ddfcaa5 - add addLayer to simple API
+  *  d3b3edf - fix label of custom projection types
+  *  9305d58 - remove Qt translation files
+  *  64442e8 - backport to Qt4
+  *  69b72ba - update translations
+  *  2a88c06 - fix getting selected block from block list
+  *  e80f3a0 - fix FS#1600 - File > Save As: Only partial information
+    shown for available filters
+  *  b3404a3 - fix FS#1600 - File > Save As: Only partial information
+    shown for available filters
+  *  ef6bf7e - clean up
+  *  b14368b - add File > Close shortcut under Linux when using Qt 5
+  *  b9807b2 - update languages
+  *  2ebe3a8 - update languages
+  *  5c9f815 - update translations
+  *  797d076 - update translations
+  *  928afed - add turkish
+  *  f657d62 - update translations
+  *  21f5a46 - add more languages
+  *  81d00a2 - update user reference manual
+  *  84ac348 - add option to allow / disallow same name for block
+  *  540923c - update translations
+  *  eb27dab - update tool tip
+  *  6319cd6 - update translations
+  *  51bea57 - update TextAlong tool (riverbuoy)
+  *  051344c - update script bindings
+  *  0af0798 - fix FS#1597 - Edit > Convert Drawing Unit: dimension
+    scale override set for all dimensions
+  *  fdc96db - allow getting dim scale of entity without falling back to
+    document setting
+  *  f99ca46 - set version to 3.17.2
+  *  3bae21e - update icons to use 512x512px canvas
+  *  8dd1805 - update text along tool
+  *  715f02e - fix LWPOLYLINE without Z values
+  *  1513e1c - clean up
+  *  722ee22 - fix handle type
+  *  f2db48d - fix handle type
+  *  6a43fa3 - clean up
+  *  f7e2f30 - make handle counter available to derived classes
+  *  3e22a4a - make sure handles are unique
+  *  b4fbc64 - fix downloading of file from URL
+  *  158461f - add debugging info when inserting URL
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 30 Jun 2017 21:13:08 +0300
+
 qcad (3.17.0+git4671-7f66d99-1) unstable; urgency=medium
 
   * Compile

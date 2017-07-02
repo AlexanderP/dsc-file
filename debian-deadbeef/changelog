@@ -1,3 +1,40 @@
+deadbeef (0.7.2+git7213-b284c9e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: b284c9eb233223c9609eaf3c3ee9f92beff16561
+  * Date: 1498654321
+  * git changelog:
+  *  b284c9e - rg_scanner: add makefile
+  *  b3a51d3 - streamer: don't print buffer starve error message after
+    playback stops
+  *  16a70d9 - hotkeys: added Move Tracks Up / Down actions (fixes
+    #1667)
+  *  f5c9738 - mp3: fix memory leak caused by implicit decoder init when
+    seeking to sample 0 (fixes #1824)
+  *  5de69bc - sid: fixed couple of memory leak bugs in libsidplay2
+    (fixes #1824)
+  *  8360229 - gtkui: fix background rendering of playlist rows on GTK3
+  *  4a8d76c - minor test fixes
+  *  0955071 - utf8: fixed bug in u8_strlen
+  *  b9e26c3 - Merge branch 'streamer-testing'
+  *  2e0984e - cue: ISRC only applies to the current track
+  *  7681d8b - gtkui: use GtkApplication model
+  *  c531bf3 - (cdimage+cue) support showing subindexes as separate
+    tracks in playlist
+  *  7ae9514 - fix GTK3 lib path
+  *  fcd1e8a - update build scripts to use GTK3.10 and GTK2.16, support
+    for GTK3.0 and GTK2.12 has been removed
+  *  ef8396e - main: implement --volume command line option, Fixes #1785
+  *  35721f3 - hotkeys: Add "Add/Remove From Playback Queue" option
+    (#1804)
+  *  6910b26 - streamer: fixed the issue preventing same track from
+    playing multiple times from play queue
+  *  dc4fd4e - include cue plugin in portable builds
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 29 Jun 2017 23:37:56 +0300
+
 deadbeef (0.7.2+git7188-2cc7a5d-1) unstable; urgency=medium
 
   * Compile

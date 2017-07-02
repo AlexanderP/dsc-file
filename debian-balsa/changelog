@@ -1,3 +1,38 @@
+balsa (2.5.3+git8660-19ada16-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/balsa
+  * Branch: master
+  * Commit: 19ada16efc1f8a16e83f97fb9ed5e620585211d9
+  * Date: 1498700513
+  * git changelog:
+  *  19ada16 - Assert that a child widget is non-NULL
+  *  e04dace - Assert that the BalsaWindow is not NULL
+  *  463f343 - Handle GError pointer more carefully
+  *  a0928a2 - Assert that a node is not NULL
+  *  f20c0f3 - Check for NULL pointer
+  *  c12c6c3 - Handle broken pipe and other errors before writing
+  *  4c226aa - Remove dead assignment
+  *  299ed0e - Update ChangeLog
+  *  2132973 - Assert that getpwuid returns a valid structure
+  *  c7cefef - Update ChangeLog
+  *  d291946 - Assert that a mailbox is either IMAP or local
+  *  97fee93 - Add libnetclient/test/start-test-env.sh to .gitignore
+  *  8d6ac09 - Do not store label values that are never read
+  *  f599fef - Remove unused initializer
+  *  326a3cc - Decode all RFC-2047-encoded headers
+  *  ef0d8fc - Update Polish translation
+  *  0b0b231 - Update Brazilian Portuguese translation
+  *  44e38cc - Update Spanish translation
+  *  f1e24b0 - Possible fix for Red Hat Bugzilla #1462546
+  *  3269eda - Update Spanish translation
+  *  f991e28 - Update POTFILES.in
+  *  727722a - Implement automatic sending in background
+  *  1aabc0d - Update Polish translation
+  *  762c330 - Build with Gtk version < 3.22
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 30 Jun 2017 16:42:23 +0300
+
 balsa (2.5.3+git8636-214347e-1) unstable; urgency=medium
 
   * Compile

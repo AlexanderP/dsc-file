@@ -1,3 +1,240 @@
+freecad-daily (0.17~git11479-fbb2b44-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: fbb2b44861f1a9df441374ba4fa2385c9a5b7f8c
+  * Date: 1498905544
+  * git changelog:
+  *  fbb2b44 - Made posts into a module and use it for import.
+  *  c806e45 - FEM: unit tests, small unit test def for writeABAQUS
+    diggits
+  *  0b86a2c - FEM: unit test, fix 1DFlow unit test
+  *  27e2baa - FEM: code formating, trailing ws
+  *  7b5adb9 - FEM: issue #0003038 Fenics mesh import/export: removed
+    lxml dependency
+  *  74e7940 - Draft: More solid closing of Draft commands - fixes #2532
+  *  51c6ca0 - support to assign long to Quantity with Py2
+  *  a32972e - Fix Drawing/TechDraw BSplines
+  *  18ed89a - Fix tooltable xml import
+  *  bcfc1bf - Path: make pathmillface use different depth calculation
+  *  75dc43f - Path: fix import problem in toolcontroller
+  *  3254aca - Path: if TC is none, partials wouldn't post
+  *  266fb0b - Path: Adding Apply buttons
+  *  02912ae - Path: cancel for pocket
+  *  a5a88e5 - Path: remove obsolete code from cmake
+  *  8b804d7 - path: more collision support
+  *  0326b5b - Path: unsetEdit support
+  *  17b16a7 - Path: adding cancel buttons to operations
+  *  ad52e41 - Path: cleanup and add collision
+  *  6d389e0 - fix cyclic dependency with Py2 import
+  *  86c8004 - Arch: Small fix in Rebar
+  *  a545ffc - Arch: Added wood grain properties to Panel Sheets
+  *  b416245 - Arch: Added MakeFace property to pnel cuts and sheets
+  *  859b94e - Draft: trying different method to solve encoding problem
+  *  de9dbc4 - FEM: ccx input writer, if eigenvalue limits are set to
+    0.0, omit them in input file
+  *  9f18fa6 - FEM: ccx writer, change a comment
+  *  6fc27e9 - FEM: ccx prefs, use default time steps for all analysis
+    types
+  *  f29424c - FEM: solver calculix, allow user time steps without
+    Parameter DIRECT
+  *  d0aefe4 - FEM: 1DFlow, delete not needed files and code formating
+  *  9fd6738 - FEM: FluidSection: Unit test
+  *  1fa7eaf - FEM: prerequisite checks, extend for 1DFlow
+  *  3fb0532 - FEM: import FRD, fix import of strain vector
+  *  f84b0cb - FEM: python task panels, more selection on click of list
+    items in task panel
+  *  49dc28c - FEM: gmsh tool, add CoherenceMesh option to remove
+    duplicate vertices, set default to true
+  *  4b2c5f5 - path_script py3-fixes
+  *  27aaaf7 - Path.Area: fix thickening of pocket path
+  *  cbfc6ae - Part GeomBezierCurve implement Save() and Restore()
+  *  e15b80f - Arch: Added Distance property to Rebars
+  *  1eda79c - Crowdin script - save the downloaded file as freecad.zip
+  *  ca42551 - FEM: mesh region task panel, highlight elements on click
+    in list issue #0003017
+  *  5095d03 - FEM: python task panels, only start SelectionObserver if
+    noone runs already
+  *  2170efe - Update Assembly_fr.ts
+  *  7d44c26 - Fixed deletion of dressup - clearing child object pointer
+    prevents Tree from moving it to the root of the tree.
+  *  7773d30 - Fixed job dialog commit.
+  *  f919345 - Merge pull request #836 from WandererFan/SSTrack
+  *  674aabe - fix #3094 ShapeString tracking
+  *  3ada141 - Draft: Fixed encoding error
+  *  0768ae9 - Coverity fixes
+  *  f56df2e - Add viewPartAsSvg in App
+  *  fc1c863 - Add viewPartAsDxf function in App
+  *  ab19a5e - Handle "floating" straight edges in Svg
+  *  17b69c7 - Replace DPG table lookup logic with calculations
+  *  f53a3bd - Add tolerance parm to checkParallel
+  *  ed73fb6 - Draft: Small optimizing in
+    DraftGeomUtils.findIntersection()
+  *  41051e9 - implement object serialization for BSplineCurve class
+  *  e7c7c07 - implement object serialization for Vector class
+  *  f2127c3 - try to fix travis build
+  *  a4e0d79 - Arch: Fixed typo
+  *  7d80f90 - Changing c-py interface to use 's' instead of 'S' for py
+    2/3 compatibility; also makes the code simpler.
+  *  6a3a102 - Removing dependency on lxml - fixed some bugs on deleting
+    a job and all it's sub components.
+  *  e399785 - Disable exception catching in tests to figure out why
+    TestPathApp cannot be imported on the build system.
+  *  e7e5a73 - Fixed contour setting the visibility although there is no
+    ViewObject associated with it.
+  *  2c50fbf - Fixed tag unit tests
+  *  ab82810 - Disabling tags if the cannot generate commands.
+  *  022354f - Added wating_effects for holding tag generation - big
+    improvement.
+  *  789e79c - Moved all post/pre processor into their own directory.
+  *  03c5168 - Proper taskk panel cleanup on escape.
+  *  a689ebd - Fixed post processor loading.
+  *  38c2296 - Allow multiple holding tags to be added - until user hits
+    Esc or presses the Done button.
+  *  ec9e43e - Forward modifyStandardButtons into python task dialogs.
+  *  b11849b - Changed marker spheres to have constant size regardless
+    of view scale.
+  *  924336e - Made holding tags tolerant to panelsheet base objects.
+  *  a223915 - Add all dressups to the profile and contour context
+    menus.
+  *  c268c95 - Adapted unit tests for the new interface.
+  *  0d52a94 - Switched solid detection to blacklisting instead of
+    whitelisting.
+  *  5575802 - Removed questionable log message.
+  *  63ab07a - Fixed spindle speed limitation in UI and template
+    restore.
+  *  c031b78 - Changed empty template selection to '<none>'.
+  *  62cf21b - Added solid detection and consolidated PathJob Base
+    selection option (removed empty option).
+  *  fbb3434 - Added support for PanelSheets.
+  *  d5068ff - Some cleanup and refactoring.
+  *  43b70cf - Added Job attributes to the template.
+  *  bb33a12 - Added template selection and preference integration to
+    job creation dialog.
+  *  1aab8d2 - Added file dialog to job export.
+  *  907ea1b - Added file path and job template to preferences.
+  *  0fcaea1 - Made job creation sequence a bit nicer.
+  *  8f64b5e - Simple job initialisation from template xml file.
+  *  97d2592 - Added export of job template - fixed output file.
+  *  8d8ea99 - Renamed LoadTool to ToolController.
+  *  c4cb45c - Replaced Tooltable with Tool in the TC; Added
+    PropertyTool; Fixed sanity check.
+  *  7d39669 - Arch: Detect and use Reinforcement addon if present
+  *  3e8249a - py3: fix some simple incompapilities issue 0000995
+  *  931820c - py3: boost: some diff for the cmake of libarea to work
+    with boost1.64. (at least this is necessary for conda)
+  *  9c253eb - Iterate over faces in testPocketToFaceCase
+  *  df06c1e - Update testPocketToFaceCase to handle OCC<7 face-naming
+    inconsistency
+  *  dfb3c41 - Add pocket to face test case
+  *  e4b61ca - Add PartDesign Pocket tests
+  *  3542140 - Use assertAlmostEqual and remove deprecated failUnless
+  *  5b2c0fc - Complete PartDesign::Pad test cases
+  *  c6fda58 - Add Sketcher test rectangle function
+  *  654276c - fix issues in CoordinateSystem class and expose to Python
+  *  cd9adc7 - py3: arch: fix tests issue 0000995
+  *  fe66e96 - draft: move translation to DraftGui otherwiser there are
+    some strange ImportEroors.
+  *  d9d1e86 - py3: Draft: string / unicode: issue 0000995 - use
+    optional argument to get unicode from translation in python2 - add a
+    utf8_decode function to get unicode from string, bytes, unicode
+  *  3bb9a9e - only change view provider stuff when GUI is up
+  *  08a3088 - FEM: gmsh mesh tools, fix highorderoptimize
+  *  da1afaa - FEM: mesh tools, code formating
+  *  8b0fb35 - do not let unit test for revolution fail if refinement
+    option is on
+  *  847a208 - add type 'long' to expected types list in scale and
+    scaleTo
+  *  5f492a8 - Qt5: set color to progress bar using style sheet
+  *  989fe40 - various fixes: + fix typos + fix const correctness +
+    whitespace improvements
+  *  39bf432 - Add missing header for random numbers
+  *  78cb881 - DependencyGraph: Ensure OriginFeatures get in the correct
+    subgraph
+  *  fa4d677 - Revert link integrity checks in properties
+  *  4ecd831 - GeoFeatureGroup: Make link collection non-DAG save
+  *  bfb95e3 - Partially fix PartDesign move test
+  *  da866e5 - Allow add/remove multiple objects in a group
+  *  f9200f4 - Extend python interface for groups and fix test cases
+  *  eb601df - Fix undo/redo while checking link integrity
+  *  9fbf118 - Group tests and fixes
+  *  0487b66 - Links ensure uncyclic graph and correct groups
+  *  f0f7125 - Group: ensure single group only
+  *  26200f9 - Parent groups are irelevant, not only parent
+    geofeaturegroups
+  *  8079cf4 - Drag&Drop: Tree is responsible for undo/redo
+  *  81f9138 - Fix collecting of cs relevant links
+  *  183a4b4 - GeoFeatureGroup: Handle drag into document
+  *  aa0d25f - Groups: Handle add and remove object correctly
+  *  53ff196 - GeoFeatureGroup: add object adds relevant links
+  *  bdf981e - Unify and fix group handling in geofeaturegroups
+  *  bbabe83 - DependencyGraph: grouping & unflatten is optional
+  *  25df3c5 - DependencyGraph: Fix colors and unflatten
+  *  aaea436 - DependencyGraph: Add colors to coordinate systems
+  *  e192f32 - DependencyGraph: Subgraphs are identified by label
+  *  4e25d2d - DependencyGraph: Add unflatten step
+  *  e20aae6 - DependencyGraph: Show origins correctly
+  *  f08ab52 - DependencyGraph: Show GeoFeatureGroups as subgraph. fixes
+    #0002142
+  *  35c4c5e - Consistently name origins
+  *  6b2558d - Sketcher: Use correct global placements
+  *  80e74ae - Introduce global placement calculations
+  *  f3358ad - Fix drag&drop of geofeature groups. fixes #0002835 fixes
+    #0002796
+  *  9ccb01e - fix bug with multiple object names in selection view when
+    selecting in tree view
+  *  6e1a6d8 - fix bug in pr774, improve whitespaces
+  *  c3c94e8 - Fix 'shrink curve' misbehaviors for Sketcher Extend
+  *  c51d0b4 - Adds extend feature to Mod/Sketcher
+  *  2ea961f - Sketcher Extend Icon
+  *  57128dd - fix -Wsign-compare
+  *  d940bdc - Accelerate VBO rendering (bareleye model goes from about
+    18fps to 34fps on a Macbook Pro) Fix crashes related to VBO buffer
+    expansion by reallocating the buffers when needed
+  *  0af2e1b - FEM: mesh tools, group elements, return empty tuple
+    instead of None
+  *  3886850 - FEM: element set search, fix indent for mesh group search
+  *  c97a3d1 - FEM: prerequisite checks, fix material reference shape
+    type check
+  *  1b08ae0 - fix UNV reader by checking for CR or CR+LF in group names
+    and removing them
+  *  63f9e6c - quantities must be expressed in units m,g,s for MKS and
+    internal scheme
+  *  5475368 - various fixes from pr813: fix crash due to invalifated
+    iterator minor performance improvement do not connect twice
+    automatically connected signal-slot fix compiler warning
+  *  b1495bd - improve readability, minor performance improvements
+  *  25a28b0 - Sketcher: redundant autoconstraint avoidance - Edit
+    control checkbox
+  *  c093cb1 - Sketcher: redundant avoidance -  remove old inferior
+    mechanism
+  *  93721e8 - Sketcher: extension of redundant avoidance to indirect
+    coincidence
+  *  497478f - horiz/vert redundant autoconstraint avoidance extended to
+    Polyline tool
+  *  90028d4 - Sketcher: avoid horiz and vertical autoconstraint
+    redundants on line creation
+  *  2147798 - Path: fix potential crash bug.
+  *  634cbf1 - Add Units schemaTranslate for Unit::Velocity. Independent
+    of scale, use only mm/min or in/min because it is compatible with
+    GCODE feed rate units. (My use case is definition os feed-rates in
+    PathLoadTool.py).
+  *  03c3db5 - Use the current UnitsSchema for the tool table.
+  *  ccd5624 - Set the maimum tool RPM to 100,000. The default 100 is
+    too small.
+  *  408b143 - Fem: py3 fixes
+  *  17031e2 - Path: py3 fixes
+  *  f6a086d - add comment to source code
+  *  619fb17 - fix crash when argument list of openTransaction() is
+    empty
+  *  fe1f0dc - due to branding reasons avoid a direct mentioning of
+    FreeCAD
+  *  6415b46 - fix build failure on FreeBSD, support colored output to
+    terminal
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 02 Jul 2017 14:43:12 +0300
+
 freecad-daily (0.17~git11310-d28bae3-1) unstable; urgency=medium
 
   * Compile

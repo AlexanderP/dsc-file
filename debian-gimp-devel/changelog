@@ -1,3 +1,217 @@
+gimp-devel (2.9.4+git38747-6f2948f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 6f2948fe54128171e3f943dd8b0a03e783c2786b
+  * Date: 1498919194
+  * git changelog:
+  *  6f2948f - app: don't let GimpColorTool change displays when
+    GimpDrawTool has a widget
+  *  3d08a52 - app: add an optional GimpToolWidget to GimpFilterTool
+  *  be193ac - app: fix parent_class type of
+    GimpOperationScalarMultiplyClass
+  *  bcb6b77 - app: change GimpColorTool to not touch tool->display and
+    tool->drawable
+  *  b858428 - app: brightness-contrast: move
+    gimp_tool_control_activate,halt() around a bit
+  *  33c84f3 - app: GimpPaintTool: don't chain up to start/halt the tool
+  *  5377213 - app: HALT the crop tool when clicking on another display
+  *  79207bd - app: restore the crop tool's "Click or press Enter to
+    crop" status message
+  *  e8c6382 - app: re-enable GimpRectangleTool's "suppress_updates"
+    keyboard moving hack
+  *  56d8772 - app: don't base GimpToolRectangle's new "is_first" on
+    rectangle extents
+  *  26b9e7a - app: set better status title strings in crop, text,
+    rectangle select
+  *  2aff5b0 - app: add new string property "status-title" to
+    GimpToolRectangle
+  *  c9abe09 - app: improve GimpToolRectangle's statusbar messages
+  *  9dc6d4f - app: improve button release behavior or GimpToolRectangle
+    a lot
+  *  34485cf - plug-ins: don't say for(int x...) in file-pcx.c
+  *  5c8c301 - app: treat a NO_MOTION release like NORMAL one in
+    GimpToolRectangle
+  *  ff915b6 - app: fix warnings and crashes in rectangle select and
+    crop
+  *  e7964e4 - app: we were leaking a reference in
+    gimp_tool_rectangle_button_release()
+  *  5e08d71 - app: gimp_tools_exit(): destroy the tool manager before
+    the tool options
+  *  8bf20a6 - app: use integer not unsigned integer for
+    GimpGeglConfig::num-processors
+  *  f1a93f8 - app: some cleanup in GimpTextTool
+  *  f73cd0a - app: remove GimpRectangleOptions stuff from
+    GimpTextOptions
+  *  1f5739d - app: set the number of threads on GeglConfig again, it
+    needs testing
+  *  23f31b2 - app: remove the handle transform tool toggle from
+    preferences
+  *  2296d08 - app: remove gimp_draw_tool_add_rectangle_guides() and
+    _add_corner()
+  *  e11cb1e - app: remove GimpRectangleTool, all users were ported to
+    tool widgets
+  *  4ebec35 - app: port GimpTextTool to GimpToolRectangle
+  *  a562860 - app: add boolean property "force-narrow-mode" to
+    GimpToolRectangle
+  *  719f96d - app: fix gimp_tool_rectangle_frame_item()
+  *  3378520 - Updated Italian translation
+  *  e51915a - app: rename all tools' widget members to simply "widget"
+  *  5ee96b1 - plug-ins: move conditional gimp_install_procedure() of
+    file-darktable...
+  *  90c6181 - plug-ins: libgimp/gimpui.h include not necessary.
+  *  375acda - app: implement GimpTool::cursor_update() in GimpDrawTool
+  *  4d9d4d8 - plug-ins: messed up the last fix to file-rawtherapee's
+    Makefile.am
+  *  a7e706f - app: must set GimpDrawTool's widget to NULL when a tools
+    is halted
+  *  4ea8868 - plug-ins: conditional gimp_install_procedure() should be
+    in init().
+  *  e34c5c6 - Update POTFILES.in and POTFILES.skip
+  *  1ba1235 - plug-ins: fix file-rawtherapee build
+  *  6b094de - configure: clean a bit libtiff check.
+  *  4772948 - plug-ins: do some basic tweaking on file-rawtherapee.
+  *  90659de - Bug 784228 - Add RawTherapee plugin to GIMP sources and
+    installers
+  *  479c234 - plug-ins: use C-style comments.
+  *  e5bdaa3 - libgimpwidgets: fix some weird indentation.
+  *  28d3897 - libgimpwidgets: fix typo s/shold/should/.
+  *  4b103eb - app: factor out widget creation to start() functions
+  *  0e4d319 - app: do stuff in gimp_vector_tool_button_press() more
+    like in other tools
+  *  0a1aa7e - app: measure tool cleanup
+  *  5e2a296 - Update Catalan translation
+  *  1d33b20 - app: port the rectangle and ellipse select tools to
+    GimpToolRectangle
+  *  94bb1a7 - app: some cleanup and fixes in GimpToolRectangle
+  *  8a1d782 - app: add optional round corners to GimpToolRectangle
+  *  75871cf - app: add the options to draw an ellipse within
+    GimpToolRectangle
+  *  9d042e4 - app: add gimp_canvas_arc_set()
+  *  c07a5f0 - app: add gimp_tool_widget_add_arc()
+  *  3a0aab7 - app: gimp_tool_widget_get_cursor(): rename
+    "cursor_modifier" to just "modifier"
+  *  e4ec9e8 - app: move tool widget creation into
+    gimp_blend_tool_start()
+  *  a3acb74 - app: move status message setting from GimpBlendTool to
+    GimpToolLine
+  *  8b3be42 - app: add gimp_draw_tool_set_default_status()
+  *  068f850 - app: dispatch to the right vfunc in
+    gimp_tool_widget_hover_modifier()
+  *  0123569 - app: GimpDrawTool: implement GimpTool::modifier_key()...
+  *  a89e6ee - app: connect to GimpToolWidget::status and ::status-
+    coords in GimpDrawTool
+  *  72f8d7d - app: connect to GimpToolWidget::snap-offsets in
+    GimpDrawTool
+  *  f4fd101 - app: implement GimpTool::oper_update() in GimpDrawTool
+  *  4e50eb5 - app: implement GimpTool::key_press() and ::key_release()
+    in GimpDrawTool
+  *  8ff941e - app: call gimp_blend_tool_halt() at the end of
+    gimp_blend_tool_commit()
+  *  0d3f719 - app: add gimp_draw_tool_set_widget() and use it in all
+    ported tools
+  *  87e6de7 - app: implement the crop tool using GimpToolRectangle
+  *  be63a4a - app: add new GimpToolWidget subclass GimpToolRectangle
+  *  2f09635 - app: add gimp_rectangle_options_connect() and
+    _disconnect()
+  *  1ebf905 - app: change gimp_tool_widget_add_corner() to take x, y,
+    width, height
+  *  14795c1 - Fix typos in translatable strings
+  *  9bcbd12 - Typo fixed.
+  *  00ea73f - app: add a generic GimpToolWidget::response() signal
+  *  d27359c - app: add gimp_tool_widget_add_rectangle(),
+    _rectangle_guides(), _corner()
+  *  ff35d35 - Update Polish translation
+  *  84e1f75 - app: store the snap offsets in GimpToolWidget
+  *  d089aa6 - app: rename enum GimpRectangleToolFixedRule to
+    GimpRectangleFixedRule
+  *  6e2e8a6 - app: move the rectangle tool enums from tools-enums to
+    display-enums
+  *  9c3a2b5 - app: add gimp_canvas_corner_set() which sets everything
+    except the anchor
+  *  f3c999c - app: scale remove outdated warning about scaling indexed
+    images
+  *  970e9ac - app: exclusive visibility toggle should also update same
+    level items.
+  *  3d7716a - app: use a GimpToolPolygon in GimpFreeSelectTool
+  *  2192f52 - app: add new GimpToolWidget subclass GimpToolPolygon
+  *  9e2a3c7 - app: add gimp_tool_widget_add_polygon() and
+    add_polygon_from_coords()
+  *  9d8f943 - app: add gimp_canvas_polygon_set_points()
+  *  c3766b6 - app: make the points array const in
+    gimp_channel_select_polygon()
+  *  96b8023 - app: add gimp_image_pick_vectors(), remove
+    gimp_draw_tool_on_vectors()
+  *  523b73f - app: move guide and sample point picking to gimpimage-
+    pick-item.[ch]
+  *  a720268 - app: rename gimpimage-pick-layer.[ch] to gimpimage-pick-
+    item.[ch]
+  *  2a1a81e - Update Greek translation
+  *  f7d4bcf - app: remove API that is not needed any longer from
+    GimpDrawTool
+  *  924cb15 - app: add a fill button to the vector tool options, just
+    like stroke
+  *  8b36164 - app: bye bye to 1534 lines of code in GimpVectorTool, use
+    a GimpToolPath
+  *  3ab92c7 - app: add GimpToolWidget subclass GimpToolPath, a complete
+    vectors editor
+  *  c4d5693 - app: add various handle and vectors hit tests to
+    gimpcanvasitems-utils.[ch]
+  *  a78d45f - Update Catalan translation
+  *  662ca09 - Bug 783867 - svg image corrupt with librsvg < 2.40.6.
+  *  7d89c0e - authors.xml: add Nikc M. and Lionel N.
+  *  1aca558 - app: forgot to #include "gimptoolpath.h" in
+    gimptoolwidget.c
+  *  82e2fa2 - app: add gimp_tool_widget_add_path(), not used yet
+  *  91deb61 - app: add virtual functions GimpToolWidget::key_press()
+    and ::key_release()
+  *  d2bfbfb - app: some more cleanup in GimpToolLine
+  *  163d466 - Update POTFILES.in
+  *  8e329d2 - build: replace `flatpak build-export` by `flatpak-builder
+    --export-only`
+  *  625ec4b - app: add utility function gimp_canvas_handle_calc_size()
+  *  e2d1a57 - plug-ins: fix comment explaining cairo_save().
+  *  a2b438c - plug-ins: fill the background color inconditionally on
+    full image size.
+  *  6560e38 - app: clear GimpToolTransformGrid's status when we leave
+    proximity
+  *  9564778 - app: some cleanup in GimpTransformTool
+  *  99dee58 - app: manage GimpHandleTransformTool's handle-mode with an
+    object binding
+  *  77d516b - app: another copy/paste error broke moving in
+    GimpToolHandleGrid
+  *  055ca32 - app: manage the preview opacity with an object binding
+    too
+  *  9f59657 - app: also manage all contrain and frompivot properties
+    centrally
+  *  0411801 - app: manage the transform tools' grid properties in
+    GimpTransformTool
+  *  4b597f9 - app: take the handle transform tool out of the playground
+  *  96da8c1 - app: add status message to the handle transform tool
+  *  4a05dde - Export layers as pages to pdf / Reverse pages order
+  *  8ab11e7 - app: bring back the live transformed path in
+    GimpTransformTool
+  *  546bbe1 - app: add a transform matrix to GimpCanvasPolygon and all
+    API using it
+  *  3ddfd10 - app: add some newlines in gimpcanvasboundary.c
+  *  2d55978 - app: bring back the live selection transform boundary in
+    GimpTransformTool
+  *  214a1ba - app: use a GimpToolTransformGrid in GimpPerspectiveClone
+  *  aa1e6c0 - app: factor out a few lines of code in
+    gimp_transform_tool_draw()
+  *  b1dddcd - app: add #defines of standard handle sizes to
+    gimpcanvashandle.h
+  *  f5a6c85 - app: remove gimp_draw_tool_add_transform_guides()
+  *  3b21c08 - app: add proximity-sensitive handles to the handle
+    transform tool
+  *  e13d3f1 - app: remove a lot of cruft from GimpTransformTool
+  *  38c9ee9 - app: use a GimpToolHandleGrid in GimpHandleTransformTool
+  *  6bd316e - app: add new GimpToolTransformGrid subclass
+    GimpToolHandleGrid
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 02 Jul 2017 13:14:21 +0300
+
 gimp-devel (2.9.4+git38617-c83f0e8-1) unstable; urgency=medium
 
   * Compile

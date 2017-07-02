@@ -3,14 +3,15 @@ Section: graphics
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: debhelper (>= 9), autotools-dev, autoconf, libjson-c-dev, intltool,
- dpkg-dev (>= 1.16.1~), gettext, libgirepository1.0-dev, libglib2.0-dev, libtool-bin | libtool
+ dpkg-dev (>= 1.16.1~), gettext, libgirepository1.0-dev, libglib2.0-dev, libtool-bin | libtool, python-dev
 Standards-Version: 3.9.8
 Homepage: http://mypaint.org/
 
 Package: libmypaint-2.0-0
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: mypaint-data (<< 1.3.0~), mypaint (<< 1.3.0~)
+Replaces: libmypaint0
+Conflicts: mypaint-data (<< 1.3.0~), mypaint (<< 1.3.0~), libmypaint0
 Description: MyPaint brush engine library
  libmypaint is the brushstroke rendering engine used by MyPaint.
  It is highly configurable, allowing artists to create brushes that simulate
@@ -32,6 +33,8 @@ Description: Development files for libmypaint
 Package: gir1.2-libmypaint-2.0
 Architecture: any
 Section: introspection
+Replaces: gir1.2-libmypaint0
+Conflicts: gir1.2-libmypaint0
 Depends: ${misc:Depends}, libmypaint-2.0-0 (= ${binary:Version})
 Description: development files for libmypaint
  This package contains introspection data for the libmypaint library.

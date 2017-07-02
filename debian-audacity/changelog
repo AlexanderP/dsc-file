@@ -1,3 +1,174 @@
+audacity (1:2.1.3+git7087-7494afb-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 7494afb7d5615341026fbb6c0dceb4a8bb879e16
+  * Date: 1498953713
+  * git changelog:
+  *  7494afb - Changed two prefs labels partly per suggestion
+  *  bda2e54 - Fix typo in menu name
+  *  c457ce3 - Fix for bug 1673
+  *  7c4aa4c - Colon before recording space value, per Wording
+  *  c38b8c8 - Use same cursor colour on Mac/Linux as on Win.
+  *  0878de1 - BLACK is the new WHITE (for split lines).
+  *  46154d0 - Upgraders to 2.2.0 retain the full set of default
+    shortcuts.
+  *  aa8be0c - Make it easier to start a new selection at a split line.
+  *  8f50940 - Restore turning-off highlighting label glyph when mouse
+    leaves it...
+  *  dc1193a - Split lines now only show over middle third of track
+    height.
+  *  f6d92ec - Revert "Update from expat 2.1.0 to version 2.2.1..."
+  *  f3e31ec - Simplify SelectHandle ctor; make frequency snapping
+    functions static
+  *  2b146bf - Update from expat 2.1.0 to version 2.2.1...
+  *  b800777 - Other new files from expat github, probably not needed
+  *  941ad55 - Update expat sources
+  *  138c188 - Message now says merge to match with Undo History
+  *  2f3530e - Fix verbosity in status message.
+  *  a9cbebc - Reduce number of shortcuts provided by default.
+  *  17b705f - Status bar help for selecting from a split line
+  *  27f706b - TrackPanelAx::SetFocus - minor fix
+  *  69ab49c - Fix for Audacity crashing when running Jaws on Windows 10
+    1703
+  *  d8930f0 - Fix Windows build - simple fix
+  *  4c2a69c - More uses of shared_ptr and weak_ptr to Tracks and
+    TrackPanelCells
+  *  e424f8e - TrackPanel::mpClickedTrack is a safe weak_ptr
+  *  6684c7b - More careful use of weak pointers to tracks in UIHandles
+  *  e2f0a16 - TrackButtonHandle keeps weak_ptr to the cell
+  *  b0c6a67 - TrackPanelMouseEvent stores shared_ptr to cell; some
+    handles too...
+  *  708d84a - CommonTrackPanelCell::FindTrack returns shared_ptr
+  *  b3208ab - Restore status message "Click and drag to select audio"
+  *  1c0af82 - Changed hit test priorities; message, cursor for text box
+    mouse-over
+  *  bce3571 - Redo hit test priorities in TrackPanel...
+  *  9e0010e - Time track editing requires click on the curve in multi
+    tool...
+  *  24ebf27 - Cursor change and status message for mouse over label
+    text boxes
+  *  828d9c3 - Simplify label track hit tests
+  *  34da6e6 - Mouse-over highlighting of slider thumbs in toolbar &
+    mixer board
+  *  adf4c61 - New highlighed slider thumb images, distinct only in
+    Classic theme
+  *  7358c12 - Default spectrum FFT size now 1024 (was 256)
+  *  6dc52c3 - Fix Windows build.
+  *  f0f4f03 - Manage all TrackPanelCell objects by shared_ptr
+  *  f8b74db - Iterators over TrackPanelCell give shared_ptr
+  *  58fea6d - null check uses of CommonTrackPanelCell::FindTrack
+  *  28b40e0 - Manage TrackPanelResizerCell by shared_ptr, no singleton
+  *  35ce499 - Manage TrackControls and TrackVRulerControls by
+    shared_ptr; ...
+  *  c355b82 - Remove a comment
+  *  2806b50 - Fix crashes in repainting, and update first visible track
+    correctly
+  *  30ec8a1 - Overdub off by default only in DA.
+  *  bbab89b - Cut then paste has no net effect on envelope in some more
+    cases...
+  *  6373a50 - Select, cut, paste, undo:  selection should be a point as
+    after cut
+  *  869de7d - Overdub off by default.
+  *  44a081c - Fix pasting of envelope from expanded cutline
+  *  d6e09e1 - more build fixes
+  *  8349888 - Permute the list of source files in XCode project
+  *  f79a4c3 - Revert "XCode project won't forgive missing return
+    values"
+  *  d635535 - Fix another error in Mac build
+  *  a5d718f - Fix error in Mac build uncovered by the previous
+  *  a2192b3 - XCode project won't forgive missing return values
+  *  52322da - Fix Windows build again
+  *  d3c9a1d - JAWS fix?: Now do the delay of event handling...
+  *  fb18f6a - JAWS fix?: Make things safe to delay TrackList event
+    handling...
+  *  4ac40d1 - Use weak_ptr in track selection state
+  *  fa5a742 - weak_ptr not events to avoid dangling track pointers in
+    UIHandles
+  *  3219193 - Use weak_ptr to remember focused track, don't ask for
+    trouble
+  *  bd5d2bf - Accessor for shared pointer to track, given only a bare
+    pointer
+  *  1fce8b5 - Remove oudated comment
+  *  30317ef - fix Windows build
+  *  3f67011 - Rollback preview in Spectrogram settings or preferences
+    if cancelled
+  *  5b22984 - Do rollback of cancelled Preview for Spectrogram
+    settings/prefs
+  *  4820228 - Change virtual function interface of PrefsPanel
+  *  aa924b5 - Rename Apply in spectrum settings & prefs dialogs,
+    reposition it too
+  *  6cea982 - Bug 383 - Residual: Don't reset toolbars on a resize
+    either.
+  *  750fc34 - Clarify what the TrackList events are for...
+  *  c48bf4f - Fix old unreported minor bug with vertical rulers of
+    Label tracks...
+  *  a0a6d33 - Bug1655: Sequence inconsistency in cut or copy...
+  *  21b429e - Update Mixer Board moving Note Track with TCP menu item,
+    if MIDI_OUT
+  *  e771d6d - Restore a NULL check in OnSplitNew, don't crash if non-
+    wave selected
+  *  4fab736 - Fix errors in post build step on Mac
+  *  68dfdab - Store tracks in TrackList with shared_ptr ...
+  *  d52d8de - Use 32x32 cursors on Mac.
+  *  de70727 - Fix backgrounds to L and R on Mac.
+  *  af79294 - Add borders round Mac Cursors, for better contrast.
+  *  0049593 - Style MixerBoard Mute/Solo as on TCP.
+  *  d37de4a - Bug1665: Pan, Gain, Velocity were unresponsive except on
+    last track
+  *  88cafa7 - Bug 383 - Screenshot Tools doesn't checkmark re-opened
+    Toolbars bars in View Menu
+  *  e37c337 - Don't duplicate stereo track in mixer board
+  *  24dbf98 - Bug1667: fix right-click on vertical ruler, waveform
+    views
+  *  389e286 - Set font colour later.
+  *  d721893 - Set colours in AColour on all platforms.
+  *  86901a0 - Fix MixerBoard Theming
+  *  a0eba9f - Set Nyquist default latency to 100 ms
+  *  92335ce - Enable Nyquist audio device selection
+  *  1c03eee - Bug 1218 - "Other uncompressed files": AIFF defaults to 8-
+    bit export.
+  *  911a57d - Bug 1660 - (Windows) Default track name appears as "Audio
+    Trac ".
+  *  aee04ab - Bug 1663 - Cut does not remove Quick-Play region.
+  *  9b06f76 - Small TrackPanel fixes, including bug 1662, popup menu
+    crashes
+  *  293abce - comment
+  *  4264406 - Correct the left edge of sizer between channels
+  *  f9865f3 - Fix crashes in TCP popup menu items on Windows
+  *  d7a9c15 - Smarter iterators for all track panel cells, not just
+    track areas
+  *  91c86fd - TrackPanelCellIterator visits all cells, and FindCell
+    simply uses it
+  *  ffbc4d5 - Simplify iterations over TrackPanelCells with range-for
+  *  f94ac4d - comments
+  *  fe06ab2 - Merge branch 'master' into HEAD
+  *  a6c583e - fix #include path
+  *  43d1c77 - Improve focus rectangle on Mac Transport toolbar buttons,
+    all themes
+  *  8875702 - Simplifications after the big refactor; improvements in
+    cursor change
+  *  a94eb75 - Further regularize the odd case of hit-test on the
+    resizer region
+  *  34026d1 - Still better cursor handling: change cursor at once...
+  *  d9a91c1 - TrackPanel simplifications; improved cursor handling...
+  *  114f5a4 - Simplify ToolsToolBar::SetCurrentTool
+  *  41a5644 - Remove unnecessary "virtual"
+  *  ef9e646 - Use override
+  *  d6b430c - Remove unused function
+  *  f858a7b - Correct boundaries of the background cell
+  *  773dad3 - Merge branch 'master' into HEAD
+  *  453be64 - Bigger + and - on zoom buttons in Light Theme.
+  *  3edc331 - Slight change to backgrounds of Light theme Mac Transport
+    buttons...
+  *  b293ad0 - Fix 'black spot' issue on buttons.
+  *  b24560a - Completion of FocusRect fix.
+  *  d2187b4 - Make FocusRect visible on Dark Themes.
+  *  e9f525d - Fix Windows build.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 02 Jul 2017 11:37:55 +0300
+
 audacity (1:2.1.3+git6967-8629363-1) unstable; urgency=medium
 
   * Compile
