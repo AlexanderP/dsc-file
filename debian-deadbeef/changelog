@@ -1,3 +1,56 @@
+deadbeef (0.7.2+git7243-872aa79-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 872aa794bc7025a96b6ed1a563cb5dfff4090153
+  * Date: 1500109026
+  * git changelog:
+  *  872aa79 - messagepump: assert if there are reference holding
+    messages in the queue at exit
+  *  f1ebfb1 - streamer: don't send trackchanged event from
+    streamer_free, fixes a ref leak
+  *  d073218 - streamer: added comment about handling 0-sized blocks
+  *  481b7fe - cocoaui: fixed ref leak in updateDockNowPlaying
+  *  214cd3a - streamer: reference leak fix in streamreader
+  *  4396711 - cocoaui: do songChanged drawing logic on trackinfochanged
+    event, to force cursor move as soon as the next song starts
+    buffering
+  *  2d2f9e3 - streamer: don't send trackinfochanged when buffering
+    ends, to avoid double sending. the event is sent soon after, when
+    tracks starts playing
+  *  52c077c - playlist: fixed one of the issues when adding zipped
+    files
+  *  871adc0 - v2m: more hacks in duration calculation
+  *  ab762e4 - streamer: fixed an issue when last block wasn't handled
+    correctly, when input->read returns zero bytes
+  *  86efd26 - v2m: seeking and duration (very slow)
+  *  84dbf30 - v2m: fix double-calling sdInit()
+  *  1996576 - v2m: char * vs string literal warning fixes
+  *  8fb36a9 - v2m: UpdateSampleDelta rewrite
+  *  7547ea9 - v2m: various type fixes
+  *  dbe85e9 - v2m: added voice synth
+  *  9cd6c7b - v2m: get rid of printfs
+  *  c240eac - v2m: initial commit -- no seeking, duration, metadata,
+    and very crashy
+  *  c53433f - alsa: align code with streamer changes
+  *  0a4322f - streamer: fix handling stop_after_current
+  *  a141996 - streamer: avoid loading CPU when nothing is streaming;
+    wait some time to let the buffered samples play back, then stop
+    audio
+  *  0b955f5 - streamer: fix crash when trying to open deleted file
+    (fixes #1831)
+  *  190d5ab - fixed running streamer tests
+  *  a570ae5 - streamer test compile fixes
+  *  b8aee80 - pulse: a better fix for mutex deadlock
+  *  3d64dcd - streamer: disable error message
+  *  1cb8761 - pulse: cleanup forward decls
+  *  1ecf3b3 - pulse: temporary fix for pulseaudio locking up
+  *  b828b27 - improved resuming session with a paused track
+  *  3be3455 - psf: rename main.c to psfmain.c
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 16 Jul 2017 17:20:37 +0300
+
 deadbeef (0.7.2+git7213-b284c9e-1) unstable; urgency=medium
 
   * Compile

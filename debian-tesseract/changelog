@@ -1,3 +1,43 @@
+tesseract (4.00~git2067-66e686a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 66e686a0e6748ba8bbebacf7f22a2647032d7cef
+  * Date: 1500217494
+  * git changelog:
+  *  66e686a - Merge pull request #1041 from stweil/leptonica
+  *  900bf60 - Merge pull request #1040 from stweil/clean
+  *  45fb7dd - Fixed regression of issue #644 again!
+  *  ba95a68 - Use lept_free to free memory allocated by Leptonica
+  *  5a7b7ed - PangoFontInfo: Remove unused method is_italic
+  *  0cd71c6 - PangoFontInfo: Remove unused method is_bold
+  *  fbfbf67 - PangoFontInfo: Remove unused method is_smallcaps
+  *  500f913 - PangoFontInfo: Remove unused method is_monospace
+  *  059e30d - PangoFontInfo: Remove unused method is_fraktur
+  *  f4f66f8 - Fixed regression of issue #644
+  *  4b6f0b9 - Merge pull request #1039 from stweil/clean
+  *  4907a23 - Fix windows build.
+  *  9929587 - Remove extra semicolons
+  *  fa9e43f - Fix wrong data type in argument for sscanf
+  *  f527715 - Fix type of bit values (fixes compiler warning)
+  *  dc8745e - Move LSTM unicharset and recoder to traineddata with
+    version string part1. Backwards compatible - maybe.
+  *  7588540 - Removed changes from last commit that didn't belong
+  *  3ec11bd - Deleted some dead LSTM code, making everything use the
+    recoder
+  *  aee910a - Fixed build broken by previous commits that added use of
+    string in low-level code
+  *  df41eab - Added script-specific validation and normalization for
+    virama-using scripts and updated normalization for others
+  *  da03e4e - Fixes from pull of cleanups: clang tidied, reviewed,
+    fixed new bugs, undeleted needed code. Probably breaks the build,
+    due to some inclusion of changes in utf8/32 conversion
+  *  f5c18f7 - Merge pull request #1018 from hotchkiss87/fix_file_names
+  *  f057938 - fix filenames in comments
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 16 Jul 2017 18:07:00 +0300
+
 tesseract (4.00~git2044-10779bd-1) unstable; urgency=medium
 
   * Compile

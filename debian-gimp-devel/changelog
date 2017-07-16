@@ -1,3 +1,146 @@
+gimp-devel (2.9.4+git38835-f2306ab-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: f2306abc0a9c6d3c40d0409375e7e03992b58eb7
+  * Date: 1500145556
+  * git changelog:
+  *  f2306ab - Bug 761170: Warnings building with clang
+  *  4208ace - app: make GimpToolTransformGrid handle modifiers itself
+  *  0a5251c - app: simplify gimp_transform_tool_modifier_key()
+  *  0cb3e75 - app: use a lot of g_clear_object() and g_clear_pointer()
+  *  f356154 - app: fix leaks when freeing the list of accum_buffers in
+    gimpsmudge.c
+  *  be6ccc4 - themes: minor theme fix.
+  *  16c72da - plug-ins: minor tab cleanup.
+  *  d315cc1 - Bug 761170 - Warnings building with clang
+  *  a223ba8 - Bug 707745 - Selected text is hard to read in the text
+    tool's on-canvas editor
+  *  18ecc1c - Update Catalan translation
+  *  e15a444 - Bug 784799 - select > shrink and border produce
+    horizontal gaps in selection
+  *  4f2c0dd - Bug 784802 - crop tool incorrectly detects current aspect
+    ratio
+  *  8f6c0fd - app: use some canvas item highlighting in GimpCageTool
+  *  f73b7f9 - app: remove obsolete prototypes from gimpmovetool.h
+  *  44d7a26 - app: remove GimpFilterTool's "drawable" member
+  *  77f1424 - app: fix modifying the selection while
+    GimpRectangleSelectTool is active
+  *  27d5dcf - app: don't remove dirname in save dialog when adding file
+    extension
+  *  5bf0e3c - app: fix initializing a rectangle select by clicking into
+    a selection
+  *  6992b43 - menus: remove the "Image -> Tools -> Color Tools" submenu
+  *  afb9941 - app: allow to close a GimpToolPolygon without committing
+    it
+  *  4f7fff8 - app: change some gimp-operation-config.[ch] parameters to
+    GObject
+  *  29795a2 - app: remove all "has_settings" stuff from the
+    GimpFilterTool API
+  *  2938599 - Update Polish translation
+  *  51cc689 - app: add gimp_operation_config_list_properties()
+  *  2a75df0 - app: rename all GimpOperationTool variables to "op_tool"
+  *  6a312a7 - app: simplify GimpTool::undo() and ::redo()
+  *  1c01f10 - app: rename gimp_transform_tool_transform() to
+    gimp_transform_tool_commit()
+  *  8de3e69e88 - plug-ins: fix a tab in metadata/Makefile.am
+  *  0459e30 - Bug 784716 - Bump Map not working
+  *  ef294f4 - app: clean up how tools are COMMITed and HALTed
+  *  3fd2186 - Bug 784701 - Text entry fields unaligned in metadata
+    editor ui file
+  *  84b0993 - Bug 784700 - Bug fix for crash with metadata editor when
+    some fields are empty
+  *  23ae146 - Bug 777485 - Move unified transform tool shear handles to
+    places...
+  *  8c2ca36 - Bug 769112 - The metadata windows takes a lot of CPU.
+  *  8294ca9 - Bug 784502 - Multiple identical path entries for
+    resources cause...
+  *  5ff9218 - plug-ins: add all metadata sources to SOURCES
+  *  a5fe6b8 - Clean up metadata menu stuff: capitalization, separator,
+    indentation
+  *  6b80104 - plug-ins: factor out set_tag_string() utility in metadata-
+    exitor.c
+  *  9cc8996 - Update Russian translation
+  *  c68239e - Make new Metadata submenu and new dialogs' captions
+    translatable.
+  *  4789acf - libgimpbase: add new metadata symbols to gimpbase.def
+  *  486e0f3 - plug-ins: lots and lots of cleanup in metadata/
+  *  a10b07e - plug-ins: fix some warnings in metadata/
+  *  747b376 - libgimpbase: remove
+    gimp_metadata_register_xmp_namespace[s]()
+  *  18e2ae4 - Update POTFILES.in
+  *  945a695 - libgimp: clean up metadata patch to not warn and other
+    minor changes
+  *  dc9856c - Bug 769820 - Cannot enter Iptc information when no
+    metadata is available...
+  *  98f7fc8 - plug-ins: in file-csource, add RLE support for RGB565
+  *  cd3ca47 - Bug 784462 - Export in C source format reports wrong
+    BPP/buffer-size ...
+  *  16cfcf1 - app: remove some #if 0'ed code from GimpToolPolygon
+  *  4ae3aed - Small fix in Italian translation
+  *  787f645 - app: fiddle less with GimpFilterTool internals in
+    GimpOperationTool
+  *  84269cc - app: move the add_controller() callback to GimpFilterTool
+  *  3f6e9e4 - app: don't crash in gimp_tool_info_get_description()
+  *  f6c2e80 - app: don't completely clear a GimpOperationTool when it's
+    halted
+  *  bc708fb - app: fix curves and levels tool to not crash with how
+    GimpFilterTool works now
+  *  bc1997e - app: fix shutdown of GimpHistogramView
+  *  163d01c - plug-ins: Ignore build artefacts from rawtherapee
+  *  bc05ec5 - plug-ins: Use Windows registry to find darktable
+  *  3665617 - app: some more s/blurb/label/ and s/help/tooltip/ in
+    app/tools/
+  *  c682c54 - app: add an optional "label" to GimpTool which overrides
+    GimpToolInfo's
+  *  d521510 - app: fix rectangle and ellipse select tool cursors
+  *  25f4ae3 - app: don't try to commit the crop tool when it has no
+    display
+  *  e21be2f - app: rename GimpToolInfo's "blurb" and "help" members
+  *  1f42d65 - app: remove undo_desc, icon_name, help_id stuff from
+    GimpFilterTool
+  *  8e68743 - app: add gimp_tool_set/get_undo_desc/icon_name/help_id()
+  *  89d611f - app: GimpFilterTool: remove members
+    "import_dialog_title"...
+  *  5468384 - app: rename GimpTool::get_undo_desc() and
+    ::get_redo_desc()
+  *  c734f3a - Updated Italian translation
+  *  0fd9fd3 - Updated Italian translation
+  *  bfb51b0 - app: don't compute slider values for 0-length lines while
+    dragging
+  *  76644b7 - app: add a "status_title" to GimpCreateControllerFunc
+  *  04b407a - app: s/slider_count/n_sliders/ in GimpToolLine and
+    firends
+  *  c7bc765 - app: use sliders to control "balance" and "base" for
+    gegl:spiral
+  *  60586a8 - app: add sliders to GimpToolLine; add slider-line
+    controller
+  *  6de4fca - app: add a custom GUI for gegl:supernova, with an on-
+    canvas controller
+  *  e8ee547 - app: move all propgui files from app/widgets/ to new
+    folder app/propgui/
+  *  fd25797 - app: fix gimp_operation_tool_sync_op() to use the right
+    output extents
+  *  e701700 - app: only use area dim., not off., for ui range of pixel-
+    distance op props
+  *  54fd810 - app: make the "force" option insensitive for the pencil
+    tool
+  *  9de19a1 - app: orient the spiral op line controller so that 0-
+    degree rotation points right
+  *  2da59e7 - app: add a "status-title" string property to GimpToolLine
+  *  f4f2de1 - app: start an infrastructure for on-canvas controllers
+    for operations
+  *  a2c3310 - app: add new function
+    gimp_filter_tool_get_drawable_area()
+  *  00a9659 - app: add virtual function GimpFilterTool::config_notify()
+  *  9e55fb8 - app: call gimp_filter_tool_get_operation() in
+    initialize() not constructed()
+  *  c842077 - Update Polish translation
+  *  ddee27f - Fix typos in translatable strings
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 16 Jul 2017 09:42:47 +0300
+
 gimp-devel (2.9.4+git38747-6f2948f-1) unstable; urgency=medium
 
   * Compile

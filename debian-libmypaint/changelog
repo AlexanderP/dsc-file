@@ -1,3 +1,44 @@
+libmypaint (2.0.0~git778-08c4236-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/mypaint/libmypaint.git
+  * Branch: master
+  * Commit: 08c4236d4c0e871bf6c29f2e42cafd55d1f361ce
+  * Date: 1500113300
+  * git changelog:
+  *  08c4236 - Not all of libmypaint-gegl was versionned.
+  *  831b2a0 - increase custom input range from -2, +2 to -10, +10 to
+    allow 1:1 mapping from custom setting which already allows -10, +10.
+    Existing brushes shouldn't be affected but will need to be editing
+    to allow full range usage.
+  *  1672d09 - Merge pull request #96 from mypaint/anti_offset
+  *  6be05db - anti_offsets, convert to use direction_360 input, apply
+    angle adjuster and multiplier.
+  *  f211eac - switching offset to use direction_360
+  *  b35eb0e - Anti_Offset: new setting; offset angle.  Adjusts the
+    offset from default 90 to 0 through 180.  Only works for ASC offsets
+    at the moment
+  *  f158be6 - Anti_Offset added additional side and mirror offset
+    inputs based against ascension angle instead of direction.  More
+    stable and less noise at low speeds but requires Tilt.
+  *  f1d8af9 - Anti_Offset- add log multiplier setting to expand
+    usefulness. Affects all offset settings, does not affect existing
+    brushes as default multiplier is 1X
+  *  798c60d - fix indents and add flap state as suggested by martin
+  *  eec96a9 - Implemented lower boundary for vector norm calculation to
+    avoid jittering.
+  *  09359fa - Increase max dab settings
+  *  69951a2 - Angular offset with normed vector
+  *  17059f0 - Brush Settings tooltip: Typo fixed
+  *  0d3cc45 - Brush Settings: 4 offset modes added. X, Y, Angular (one
+    side), Angular (both sides).
+  *  0ea7d55 - Update brushsettings.json
+  *  6505237 - correct direction_360 for viewrotation
+  *  2681060 - new input: Attack Angle
+  *  86c7208 - Brush Input: 360deg Direction added
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 16 Jul 2017 19:08:46 +0300
+
 libmypaint (2.0.0~git760-34bf7ee-2) unstable; urgency=medium
 
   * Compile

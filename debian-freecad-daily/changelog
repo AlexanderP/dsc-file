@@ -1,3 +1,165 @@
+freecad-daily (0.17~git11591-7cfc084-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 7cfc084e476fcf6c189a9d41596d68fd265d71d9
+  * Date: 1500216966
+  * git changelog:
+  *  7cfc084 - fixes #0003122: FC 0.17 crashes when a sketched located
+    outside a body object
+  *  3d33c30 - GeoFeatureGroupExtension.h typo
+  *  a36c90c - Added missing apostrophe
+  *  c4ca27e - allow to set constraints via Python
+  *  b8a1e33 - add locale information to system information
+  *  e6b9ec5 - Qt5 port: make Sandbox module compile with Qt5
+  *  fb841d6 - handle OCC exception in Feature::getPySubObjects and
+    convert to Python exception
+  *  1d83d17 - do not hide any drawing elements when entering edit mode
+    of a sketch
+  *  2b82bc6 - add export macro, extend enum of class
+    AbstractMouseSelection
+  *  a57ec19 - Merge pull request #875 from itain/PathToolUnitsFix
+  *  2ba4bfb - When refreshing the pathToolController ui, use
+    UserStrings and not just plain values. Fixes Symptom: If I open the
+    PathToolController, Press "Edit Local Copy..." and then "Ok" the
+    units for the feedrates were gone.
+  *  aa07c77 - remove unused variables
+  *  5bc9581 - fix whitespaces
+  *  01eaca1 - Merge pull request #874 from mlampert/feature/arch-panel-
+    scale
+  *  870f3eb - Added Scale to PanelSheet.
+  *  828793f - Merge pull request #873 from luzpaz/typo-fixes
+  *  e3066d1 - FEM: typo
+  *  87e5472 - FEM: typo
+  *  17a60d3 - CAM: typo
+  *  ba9b2a8 - Sketcher: typo
+  *  dd13750 - Sketcher: typo
+  *  a689403 - travis: build freecad with py3
+  *  9ec6955 - Fix compiler Warnings
+  *  8ab063a - Final fix for hierarchical STEP exporter
+  *  1b36dc2 - Fix keepExplicitPlacement
+  *  5362650 - Improve hierarchical exporter
+  *  a120a1c - Add initial code for hierarchical STEP exporter
+  *  4095fdb - Fix bug 3076 about color issue when opening a
+    hierarchical step file with Compound.
+  *  c839a88 - Add Vertices and Edges support to STEP Compound Importer
+  *  2645b79 - Introduce relative placement for STEP importer instead of
+    absolute placement
+  *  165dcc9 - Merge pull request #869 from kkremitzki/pdtests4
+  *  4331a80 - Add missing assertions for PartDesign Datum tests
+  *  58d0b31 - Revise PartDesign Draft base test approach
+  *  544e658 - Add linear and polar pattern tests
+  *  d9277c4 - Flesh out basic dressup feature tests
+  *  fb5aeea - Add dressup feature test structure
+  *  4eb5945 - Break out PartDesign tests into own folder
+  *  1b56637 - typo fix
+  *  2badea8 - TechDraw: typo fix
+  *  9343f5c - Path: typo fix
+  *  928749d - typo fix
+  *  17b637b - typo fix
+  *  960b7c1 - fix typo
+  *  d5d45e2 - fix typos
+  *  d65d3d9 - FEM: Change tool-bar organization
+  *  1a0c193 - FEM: Change menu-bar organization
+  *  f2c0f9c - FEM: Adjust names of constraint menu items
+  *  7ec6459 - FEM: Use short names for VTK post commands
+  *  2e118be - FEM: unit tests, temporary workaround for py3
+  *  8e3bab6 - FEM: unit test, fix unit test if not all stats are used
+  *  d079741 - Added grbl post processor.
+  *  a7cb062 - Added support for imperial shopbot output and some
+    standard post processor arguments.
+  *  465155b - Path: option for drilling return level fix #3098
+  *  104eb53 - Fixed Contour.Direction and simplified Dogbone.Side
+    determination.
+  *  1bda016 - Fixed strongarming 'Side' for dogbnoe.
+  *  d999500 - Fixed Dogbone creation to work for PathContour again.
+  *  9874444 - Path: add feature for drill tip calculation
+  *  6c52548 - Path: add jointype and miterlimit to edge profiling
+  *  ddb2001 - Path: Change Profile 'side' enumeration to inside/outside
+  *  48337e0 - Path: fix #3048  Visibility on recompute is now preserved
+  *  444fc18 - Path: implement jointype for contour and profile fix
+    #3116
+  *  023c5d8 - Path: Make PathProfile verbose
+  *  349f8b5 - avoid to eventually try to init Gui twice
+  *  d31be31 - Draft: Refined Select plane to accept any 3 selected
+    vertices
+  *  ad2a4b5 - FEM: unit tests, add all result stats, except 1DFlow
+  *  a1523e3 - FEM: result stats, fix some issues and add all result
+    types
+  *  4b25f75 - FEM: unit tests, use better coordinate values
+  *  5785bd3 - py3: fix FEM Flow1D unit test FEM mesh
+  *  cc89afb - Merge pull request #859 from sliptonic/master
+  *  0a77648 - Merge remote-tracking branch 'realthunder/PathArea'
+  *  e8b93ef - Path: cleanup start points Make sure we're storing path
+    parms for debugging
+  *  7ace550 - Path: simplify the test fixture
+  *  c359ba6 - Path: fix bug in gcode importer. Wouldn't handle lines
+    with only a line number
+  *  fc989c7 - Path: Centroid post re-write
+  *  3093c4c - re-arrange TestPathPost setup to simplify testing muliple
+    posts
+  *  e4c696c - Path: MillFace start point
+  *  2cc09f9 - Improve Part.Shape.project documentation
+  *  3aab7ff - Introduced custom spacing property in the Rebar object
+  *  a066490 - + exception handling in FreeCADGui.addModule
+  *  d554497 - Path.Area: fix sortWires
+  *  120b37b - Path.Area: change fromShape() 'start' parameter behavior
+  *  90334e0 - Path.Area: handle empty wires without vertex
+  *  fdedf8f - Arch: Gave small tolerance to pipe connectors in case
+    their baselines don't join exactly
+  *  087a1c1 - Draft: Extended WPProxy tool
+  *  b046fa5 - Adde __init__ to the deployment.
+  *  6a14bb7 - fix for mixing up SchemeVersion and FileVersion
+  *  cab3358 - Arch: Removed Armatures property from Structures + added
+    Host property to Rebars
+  *  a390d01 - Revise GitPython warning to only fire once on mass
+    upgrade
+  *  42f20fb - Fix GitPython capitalization consistency
+  *  843da68 - Remove Deb/Ubuntu-specific python-git package reference
+    for pip-installable GitPython
+  *  e141101 - AddonMgr: Catch GitPython < 2.x error and advise upgrade
+  *  b1c9616 - AddonMgr: Use hard reset for addon git repair
+  *  e76b77f - AddonMgr: Check and repair addon .git folders
+  *  dca6533 - Reset depth_params index when starting a new iterator.
+    Otherwise when a profile consists of multiple cuts (example: profile
+    outline+circles+holes) only the first one will respect the requested
+    depths.
+  *  9592eff - fix some issues: + fix unicode <-> utf-8 conversion + fix
+    translation issue + fix closing logic
+  *  fc36dfe - Add TextDocument with full size editor
+  *  9e7eb3b - Fixed spelling error in profile.
+  *  6f6d463 - Fix depth_params for python3.
+  *  c4fc809 - FEM: mesh objects, show them only if they are edited or
+    needed for result viewing
+  *  b2fa046 - FEM: mesh objects, use same name sheme as for all other
+    FEM objects
+  *  ed95e92 - FEM: visibility, do not hide parts which depends on mesh
+    name - since the mesh object depend on a part and the part can
+    change this can mess up visibiliy
+  *  3d2be45 - FEM: pre checks, check if constraint references are not
+    empty
+  *  3f16f0a - FEM: nonlinear material, add a third yield point and only
+    write yield points if they are not empty
+  *  06054bd - FEM: nonlinear material, set nonlinear geometry for
+    nonlinear material in ccx solver
+  *  b12831b - Revise PartDesign Loft tests to avoid sketches with
+    shared edges failure in OCC < 7
+  *  2f6f001 - Revise PartDesign Loft tooltips
+  *  027418a - Make PartDesign Loft have different tooltip than
+    PartDesign Pipe
+  *  e1b78ab - Add basic PartDesign::Loft test cases
+  *  220a63a - Add basic PartDesign AdditivePipe and SubtractivePipe
+    tests
+  *  7f03cca - Check PartDesign::AdditivePipe's auxiliary spine for
+    existence before deciding its externality
+  *  338c610 - Update PartDesign tests for CreateRectangleSketch
+    refactor
+  *  e1b6fc2 - Add TestSketcherApp.CreateCircleSketch and refactor
+    CreateRectangleSketch
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 16 Jul 2017 19:40:31 +0300
+
 freecad-daily (0.17~git11479-fbb2b44-1) unstable; urgency=medium
 
   * Compile

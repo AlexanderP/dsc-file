@@ -1,3 +1,48 @@
+qcad (3.17.0+git4779-4463234-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 4463234b770452c6cce76990f0b1bfe5570d7e53
+  * Date: 1500035329
+  * git changelog:
+  *  4463234 - update translations
+  *  4889ae6 - update test data
+  *  a71b39b - set version to 3.17.3.3
+  *  d4741b1 - remember maximized status
+  *  b779a8c - set version to 3.17.3.2
+  *  a39cacb - only force same color of block attributes if layer0
+    compatibility is on
+  *  d4b7873 - add property to disbale scene regeneration
+  *  8b0a719 - update script bindings
+  *  4eb2ea5 - add insertFitPointAt(t, point)
+  *  6efa97d - add RMath::containsFuzzy
+  *  e9564ba - copy spline if it changes from using fit points to
+    control points and vice versa
+  *  0e9789a - fix FS#1615 - Decimal point of dimensions shown as '?',
+    preferences page throws exception
+  *  948a710 - fix FS#1616 - Edit > Convert Drawing Unit: leader arrow
+    switched off
+  *  72949b5 - update translations
+  *  6976e64 - fix lookup of default action
+  *  c3e8b2b - update script bindings
+  *  9236f5c - fix potential exception if configured default action not
+    available
+  *  8cdb896 - add RPolyline::splitAtDiscontinuities
+  *  e1d50b3 - add support for auto terminate, passing existing item
+    document to insert
+  *  b5a77b8 - Merge branch 'master' of github.com:qcad/qcad
+  *  9587aa8 - Merge branch 'master' of github.com:qcad/qcad
+  *  0cce442 - workaround for QTBUG-38256, QTBUG-57990
+  *  cce8ec0 - allow overriding of default action
+  *  0662c87 - update preferences
+  *  c026a00 - update translations
+  *  1643f24 - add preference to switch off status bar tips
+  *  0d554a3 - add support for Freeze Layer preference
+  *  ea40a96 - set version to 3.17.3.1
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Jul 2017 17:08:13 +0300
+
 qcad (3.17.0+git4751-0a6bc28-1) unstable; urgency=medium
 
   * Compile
