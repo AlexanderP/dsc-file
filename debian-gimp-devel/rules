@@ -11,6 +11,7 @@ MYPAINTOPT= --prefix="${PREFIXDIR}"
 GIMPOPT= --prefix="${PREFIXDIR}" --disable-docs --disable-python
 LCMSOPT= --prefix="$(PREFIXDIR)"
 LPNGOPT= --prefix="$(PREFIXDIR)"
+GEXIVOPT= --prefix="$(PREFIXDIR)" --enable-static --disable-Werror
 
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
@@ -37,7 +38,22 @@ endif
 	dh $@ --parallel
 
 override_dh_auto_configure:
+ifneq (,$(filter $(DEBIAN_CODENAME),stretch xenial yakkety zesty)) 
+	cd $(CURDIR)/3rdparty/gexiv2 && \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:${PKG_CONFIG_PATH} \
+	PATH=$(PREFIXDIR)/bin:${PATH} \
+	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
+	./autogen.sh $(GEXIVOPT) && \
+	make -j$(NUMJOBS) && \
+	make DESTDIR=/tmp install && \
+	cd /tmp/build/gimp-devel*/debian && mv tmp2 $(CURDIR)/debian/ 
+else
+	echo "no build gexiv2"
+endif
 	cd $(CURDIR)/3rdparty/babl && \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:${PKG_CONFIG_PATH} \
+	PATH=$(PREFIXDIR)/bin:${PATH} \
+	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
 	./autogen.sh $(BABLOPT) && \
 	make -j$(NUMJOBS) && \
 	make install

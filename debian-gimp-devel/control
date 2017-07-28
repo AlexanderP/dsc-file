@@ -75,7 +75,12 @@ Build-Depends: debhelper (>= 9),
                libgirepository1.0-dev,
                libraw-dev,
                valac,
-               graphviz
+               graphviz,
+               gobject-introspection,
+               libgirepository1.0-dev,
+               python-gi,
+               python3-gi,
+               valac
 Homepage: http://www.gimp.org/
 
 Package: gimp-devel
