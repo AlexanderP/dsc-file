@@ -1,3 +1,395 @@
+audacity (1:2.1.3+git7363-6cb6652-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 6cb6652464c80f1ca1ac78b8d6f18b42c1a59031
+  * Date: 1501346373
+  * git changelog:
+  *  6cb6652 - Fix Linux: triple height Selection Toolbars
+  *  bc6d8d3 - Tweak Dutch translation by Thomas De Rocker
+  *  17a84c0 - Updated Basque translation by Xabier Aramendi
+  *  77a2ac6 - New Basque (Spanish) translation by Osoitz Elkorobarrutia
+  *  4a28645 - Fix bug found by Bill Wharrie in hightlighting of labels
+  *  0830234 - Audacity.dox version to 2.2.0
+  *  00f6ee2 - Const 'fix' no longer needed, thanks to Paul's fix.
+  *  6d1b17a - Update Dutch translation by Thomas De Rocker
+  *  dba49dd - Bug1702(Mac Sierra): Use right lib paths, no weird
+    startup tricks...
+  *  ac558ce - Copying of Audacity.sh not an intall-only step, for debug
+    convenience
+  *  8b32eea - Bug290 (load LAME, FFmpeg from correct place): original
+    fix again...
+  *  e359383 - Mac: Don't execve in main or fork & crash to evade its
+    ill effects...
+  *  32f3ccd - Update file name
+  *  00f8658 - LightTheme fix, but without the const.
+  *  08795f6 - Fix line ending in Spanish translation
+  *  2b3f914 - Update Greek translation by Dimitris Spingos
+  *  aa58124 - Update Spanish translation by Antonio Paniagua Navarro
+  *  e4e7d86 - Update Ukranian translation by Yuri Chornoivan
+  *  d1b6f3d - Update Danish translation by scotergrisen
+  *  c316f81 - Revert fix to light theme.  To track down library issue.
+  *  f707887 - Bug1227: Make Audacity detect System language on Mac
+    correctly
+  *  34f8e79 - Bug1590: Mac skips plugin cfg entries for .ny's of other
+    versions...
+  *  fa42d4f - Some null checks, might be needed when project is closing
+  *  188886f - Revert 'Possible fix for Mac library issue.'.
+  *  6513fcf - Possible fix for Mac library issue.
+  *  07ea0ae - Workaround for GarageBand as synth not respecting notes-
+    off message
+  *  c2229b1 - Preset change menu items for Lv2 effects in plain UI did
+    nothing! ...
+  *  4a4fa8d - Bug1183: make spectrogram settings scrollable for limited
+    resolution
+  *  ff60610 - Bug1404: Close realtime effect with Enable unchecked;
+    reopen; play...
+  *  54afdc7 - More of bug 1338: avoid Mac hang with modal invocation of
+    plugin...
+  *  6ce85be - No need for CXXFLAGS in ./configure anymore.
+  *  ddf2369 - Bug1502: VST and AU plug-ins should show correct rates
+    and spectra
+  *  2d56c8e - Fix misbehavior of toolbars after click without drag on a
+    grabber...
+  *  2f178db - Revert "Bug 1432 another case..." It's not safe for
+    Windows...
+  *  3b0a113 - The new event filter works more safely with Destroy, not
+    Close events
+  *  67b858e - Bug 1432 another case...
+  *  68a0f29 - Remove unused member variable
+  *  503f354 - Bug1432 partial, keep correct focus in more cases, not
+    all...
+  *  9aea0d3 - Do not redundantly track focus in AButton...
+  *  a8ba5d5 - Restore LightTheme colours that were faded
+  *  b3c8f5d - Bug1432 partial: Dragging toolbar should't change
+    focus...
+  *  b521fb8 - Earlier detection and abort editing in case of overlong
+    block file...
+  *  d88371b - Revert stuff
+  *  e9576bf - work
+  *  1a9dd31 - Bug1432, more: Restore focused control after drag of
+    toolbar
+  *  ace1ac0 - Bug1432, partial: Click on toolbar grabber, without drag,
+    does nothing.
+  *  f0de38d - Scanned for bad naked new; found none; changed comments,
+    used safenew
+  *  7156479 - Typo fix (extra s)
+  *  c6fef0a - Use local libraries by default on linux
+  *  f1aa916 - Bug1603, speculative fix: AUNBandEQ crashes Audacity...
+  *  f4c3f19 - Bug1520: Correct TQP when snap-to-nearest second & region
+    selection
+  *  d9c3a02 - Bug1623: Update play, record button images when modal
+    dialog closes
+  *  e2c0b2d - Update German Translation to current .pot
+  *  0145b33 - Update German translation by Joachim Huffer
+  *  0feda03 - Comment a recent fix
+  *  31be794 - Bug1652 addendum: correctly reread old key prefs with
+    Control for Mac
+  *  7ced70c - Bug1315 fix suggested by Bobby Kent (export file dialog
+    problem)
+  *  cdc32e2 - Remove credit of iAVC.  We don't use it, and have no link
+    for it.
+  *  f79d5c3 - Update credits...
+  *  f9b9456 - Revert "Credit Brian Armstrong, Henric Jungheim, and Max
+    Kellermann"
+  *  5481ecc - Credit Brian Armstrong, Henric Jungheim, and Max
+    Kellermann
+  *  cc46833 - Fix regression, loss of distinct colour in Scrub Ruler
+  *  69655a1 - Fix menu item with two &s
+  *  c982db5 - Time track menu items for lin/log display are radios
+    again
+  *  a45f3bb - Update .pot and .po files.
+  *  9fa6376 - Avoid attempting to translate empty string.
+  *  6f12e6a - Update German translation by Joachim Huffer
+  *  f38caa5 - Add strings that were not translated.
+  *  de0cc3e - Bug 1699 - Selected keyboard prefs line unreadable in 3
+    of 4 themes on Mac
+  *  904ddbf - Bug1684: Fix misbehaving slider in Change Speed effect...
+  *  3218351 - Bug1652: Should show Mac Control [sic] modifier in menu
+    shortcuts...
+  *  1ef235c - Bug1661: Default audio track name not being translated...
+  *  a9d8da6 - Adjust existing sel bound: erase any snap from start
+    position on move
+  *  e61e60a - Update TrackPanel cursor for unmoving mouse, changing
+    display...
+  *  7591a65 - Bug 1693: partial fix.
+  *  3e1890f - Bug1627 again: Fix it so that we don't disable all scrub,
+    though!
+  *  57e0400 - Bug1627: Fix infinite recursion of error dialogs, failing
+    start scrub
+  *  d1f7e7e - Bug1656: (Win) KB nav of toolbar buttons should skip
+    disabled...
+  *  59dab52 - Bug1697: Fix selecting with Snap To in effect
+  *  c4a1787 - Improve source for generation of .pot file.
+  *  416b897 - Update Italian translation by Carmelo Battaglia
+  *  69d6f36 - Bug1696: Drag-and-drop should import Midi file as a Note
+    track
+  *  bb4a1b8 - Bug1688, more: fix Midi stretch when selection goes to
+    end
+  *  6d47a79 - Bug 1689: Fix MIDI devices not being found on linux
+  *  cfeb7bc - Zoom to fit after any import (labels, audio, or midi)
+  *  cfab325 - Never permit import of MIDI as audio...
+  *  f725e93 - Still better redrawing of resized Note tracks, still not
+    perfect...
+  *  8279adc - Changing NoteTrack height, keep # of piano keys (roughly)
+    constant...
+  *  c45adf6 - Update audacity.pot and .po using more source files.
+  *  b4c3119 - Updated source for translatable strings.
+  *  207db5e - Improved Note Track vertical ruler zooming...
+  *  c476110 - Update audacity.pot and .po files.
+  *  bcf21ad - Make building without EXPERIMENTAL_MIDI_OUT  possible
+    again.
+  *  bba9b99 - NoteTrack, extreme vertical zoom-in: limit top & bottom
+    margin height
+  *  d256bfe - NoteTrack, extreme vertical zoom-in: limit top & bottom
+    margin height
+  *  60405eb - Theme Tweaks
+  *  c1c1977 - When a VST effect is opened, the dialog is not the focus.
+  *  36dcddf - Update Greek Translation
+  *  ea9f86e - remove unused variable
+  *  7f289a9 - Revert "Remove unused variable"
+  *  0ca907a - Remove unused variable
+  *  48889d3 - Precaution in case a certain assertion fails (I haven't
+    observed it)
+  *  fcd1751 - Bug1632: correct length of non-WAV exports >= 2^32
+    samples long...
+  *  4925d0a - Fix cursor changes for selection
+  *  c4995ef - TCP buttons can distinguish up and down highlight
+    backgrounds...
+  *  9b35792 - Simplify the error messages in case of disk i/o
+    exceptions
+  *  a9a6f01 - Stop showing the tooltip for track rearrange after button
+    down
+  *  64ce79f - Change Menu button tooltip, and it includes the shortcut
+  *  17c964e - Distinct status bar message for Time track envelope edit
+  *  5f8cde4 - Fix condition for displaying (Esc to cancel)
+  *  ed4300f - Move status bar message texts out of class ToolsToolBar
+  *  14450d6 - Fix flickering tooltips in TrackPanel
+  *  c72bb76 - Fix flickering TrackPanel tooltip
+  *  1b8f3da - Again disable tooltips for vertical rulers.
+  *  e86fd3c - Bug1688: MIDI stretch when select time extends beyond
+    track end...
+  *  f2deb1c - Bug1691: Make Mute and Solo shortcuts for focused track
+    work for Midi
+  *  1faa234 - Fix bug 1662 (crashing TCP menu commands on Windows)
+    differently...
+  *  f3574c6 - build fix
+  *  abce981 - A few tooltips for TCP buttons, vertical rulers, track
+    rearrange
+  *  bb97036 - Tooltips for Wave & Note track vertical rulers
+  *  77d5a4c - Tooltip for click and drag on TCP
+  *  42921b7 - Tooltips for TCP buttons
+  *  812fd2a - move function
+  *  fa96dcf - Cursor was meant to change to hand only after click on
+    TCP
+  *  cc0f76d - Clear the tooltip when leaving the cell that defines it
+  *  a5e2854 - Omit Note tracks from scrubbing and seeking
+  *  03f9592 - Bug 1690: Playback does not stop at the end of MIDI
+    playback
+  *  4d3d32c - Remove MIDI-only playback (without portaudio) logic
+  *  23e517f - windows build
+  *  c50567e - Time track properly warps the MIDI event times (but not
+    pitches)
+  *  8b37ac5 - Merge pull request #199 from henricj/appveyor_fix
+  *  1d5a945 - Various small fixes for MIDI playback, including Cut
+    Preview (C key)
+  *  19b11c0 - Fix cut preview with note tracks
+  *  8a02687 - Fix velocity offset edge case
+  *  896d5d6 - Fix drawing MIDI channels with IDs greater than 16
+  *  62ebb2f - Remove unused and unneeded MIDI methods and variables
+  *  437de15 - Add more method and field documentation
+  *  bd294ea - Midi diag mentions conditional compilation flags, but
+    only in ALPHA
+  *  681161f - Add MIDI device diagnostics
+  *  053b0b5 - Fix highlight of TCP menu button after command
+  *  ca83b06 - fix i18n-hint
+  *  5644bed - No TrackPanel tooltips for now, may later reenable
+    selected ones...
+  *  e55393a - Fix assertion when cancelling from selection drag
+  *  7a038c9 - Remove tab key target cycling and snap escape;
+    reimplement for Esc
+  *  d3572eb - Same tolerance for hitting clip boundaries as for
+    selection snap
+  *  89c8e8a - null checks
+  *  38fd97b - Fix "C" linkage of PaUtil_GetTime (TOUCHES lib-src !)
+  *  e81df83 - more use of final
+  *  c5fc8ee - Revert "Split lines now only show over middle third of
+    track height."
+  *  7b93a3a - Whoops, we lost the non-multi draw tool!  Fix that.
+  *  812f364 - Bug 1685: garbage status bar messages and tooltips, scrub
+    in Windows
+  *  558efda - A null check
+  *  52d8dc1 - Bug1682, maybe: More careful treatment of some Envelope
+    corner cases
+  *  8fae980 - Prohibit use of inherited TrackList::clear()
+  *  8bf3791 - TrackList constructed only by factory function, to avoid
+    more trouble
+  *  84a6bad - In a user visible message: TAB > Tab
+  *  903ceba - Bug1669: Close and Menu buttons should never disappear...
+  *  2185b42 - Selection bar drop down list box: Fix name read by Jaws
+    screen reader
+  *  4a500c7 - Bug1636: fix Crash on OK selecting RIAA or Telephone Eq
+    curve...
+  *  54af4f1 - More precautions about the back-pointers of tracks to
+    their lists
+  *  e9cb505 - More guards against recursive event dispatches causing
+    surprises...
+  *  9ad15da - Bug1683: crashes applying Nyquist effects to stereo
+    tracks
+  *  a4f1c2c - Keyboard commands for clip boundaries: change to screen
+    reader message
+  *  aaed921 - Track panel tooltips, including TAB key hint...
+  *  9072628 - Preview selection snap lines before click; toggle them
+    with TAB...
+  *  0ba91ea - Don't make the finger cursor when hovering over the split
+    line...
+  *  2150bde - Implement selection snap lines before click, and TAB to
+    cancel them
+  *  b7ae012 - A single UIHandle can define multiple rotation states
+  *  4eece4b - Extras like snap guidelines can be drawn for targets not
+    yet clicked
+  *  33c6a77 - SelectHandle gets snap information in hit test
+  *  49b0420 - ChooseBoundary takes separate x and y arguments
+  *  7903e20 - Rewrite SelectHandle snapping; selection really matches
+    snapped start
+  *  67282cb - SnapManager::Snap returns its results in a struct
+  *  ac10dc1 - Construct SnapManager with const TrackList
+  *  5f49892 - Keyboard commands for moving clips: minor fix
+  *  f24a704 - Fix TAB key cycle with cutline in Select tool
+  *  4d1ce20 - Make TAB key act as before, when a Label track has focus.
+  *  5e4f453 - Fix crashes when ESCaping a drag
+  *  6c0b3bb - Shift+TAB cycles hit test targets backwards
+  *  8d13bf1 - Update _MSC_VER #if block for VS2015+
+  *  f1213e4 - Use the _DEBUG flag instead of __wxDEBUG__ for selecting
+    the link libraries. The include directories are determined by the
+    configuration, which is indicated by _DEBUG.  Using __wxDEBUG__
+    means that the debug libraries might get used with the release
+    includes (or the reverse).
+  *  3b39bde - EffectDialog can't have a default constructor. The base
+    class does not have one.
+  *  b3c0cbc - wxToString() doesn't support "unsigned long long", so
+    size_t doesn't work on Windows x64 builds.
+  *  32522c9 - Include compiler version in build information.
+  *  88dfb5d - Avoid false warning about uninitialized pointer.
+  *  48edd22 - Put the theme data in .rdata/.rodata
+  *  14d0d8a - fix build
+  *  050824f - Remove some unnecessary #includes
+  *  a618ec8 - Fix priority of multiple hits
+  *  c1cd324 - Implement TAB key rotation among hit targets...
+  *  2cce171 - Implement TAB key rotation among hit test targets
+  *  d7738c4 - Handles mark need for highlight in new Enter() method not
+    ctor...
+  *  4ec6baf - Cursor handling always relies on current mouse state, not
+    remembered
+  *  308d89b - Reuse SelectHandle object during movement, as with other
+    handle types
+  *  d148c39 - More use of override
+  *  4108b5a - XCode build: Remove ~1500 noisy warnings (unknown
+    compiler options)
+  *  f1d0d88 - Fix some errors in recent highlighting changes
+  *  fa010f6 - Fix #include paths, and unnecessary redrawing
+  *  cddeb94 - Revert "Highlighting of resizers"
+  *  cfb67e2 - Disabled experimental mouse-over highlights of more
+    TrackPanel things
+  *  3e7f82c - Highlighting of resizers
+  *  b11c3c8 - Highlighting of Wave and Note track vertical rulers
+  *  ed4057a - Highlighting of cutlines and clip boundaries
+  *  a4d53b4 - Highlighting of label text boxes
+  *  ecebf76 - Highlighting of samples
+  *  2d65cdc - Highlighting of time-shift grips
+  *  7fb107e - Highlighting of envelopes
+  *  b5696ca - Add EXPERIMENTAL flag
+  *  c4fe499 - Utilities for TrackPanel highlighting
+  *  f8d9c42 - Fix click without drag and double-click on Pan, Gain,
+    Velocity sliders
+  *  2231d2d - Fix flashing toolbars when moving mouse in empty
+    TrackPanel
+  *  71ac4bb - Fixes for commands to move cursor to or select to clip
+    boundaries
+  *  88b4be0 - Wording: Auto-select, if selection required.
+  *  7d96858 - Back to a dark colour for cursor on Light and Classic.
+  *  e3a822c - Always Record on a new Track Pref.
+  *  71a75fc - Fixes for commands to select next/previous clip
+  *  a5fffbd - Correct the handler for modifier key-down...
+  *  e3ea42f - Force error on Mac when return value is missing...
+  *  4dcd105 - Fix crashes mousing over TCP
+  *  bca09f4 - null check
+  *  16645f6 - Back-pointer from Track to TrackList is weak (fixes
+    crashes)
+  *  9489fed - build fix
+  *  cb9d37f - build fix
+  *  0fa0d48 - build fix
+  *  fb75f1d - build fix
+  *  1c281fa - build fixes
+  *  65c098f - Revert "More fixes for Windows build"
+  *  ef9745b - More fixes for Windows build
+  *  2bdbea4 - Mouseover highlight 1) MIDI buttons 2) other buttons 3)
+    sliders...
+  *  51e25cd - Highlighting of Track Control Panel sliders
+  *  44d6d5f - Highlight MIDI channel buttons
+  *  25641ae - Highlight TCP buttons
+  *  2475b15 - Support for TCP button highlighting
+  *  ada4b63 - Pass more context information into drawing routines
+  *  f09a7be - TCP draw use hit target for button, slider state; remove
+    hacky global
+  *  3d7471a - new file
+  *  dc864f3 - Fix windows build, and simplify a little
+  *  7eafbf6 - Improve the internals of refactored TrackPanel...
+  *  8e44827 - TrackPanelCell hit tests can return multiple results...
+  *  b3d62e2 - Simplify by removing class HitTestResult...
+  *  c079544 - Defaulting TrackPanel cursor, status message; simplifies
+    other code
+  *  f5b0afc - Rename TrackPanel::HandleCursor as HandleMotion...
+  *  2c1a16f - Changed lifetime management of UIHandle objects, no
+    singletons...
+  *  d2fbca8 - All UIHandle::Preview() return same cursors, messages as
+    HitTest...
+  *  3a8280c - Distinguish TrackPanelMouseState from
+    TrackPanelMouseEvent...
+  *  c1f667f - Move some handle and cell classes into their own files
+  *  4e68df5 - Merge pull request #202 from scootergrisen/patch-1
+  *  8c69501 - Add danish translation
+  *  3aab193 - Fix Nyquist message logging
+  *  f0702fb - 1678: Cursor to track start/end misbehaves when no tracks
+    selected
+  *  76ea923 - Correct outdated comment about memory management of
+    BlockFiles
+  *  739422b - Add split line before new recording on same track.
+  *  c12f849 - Bug 1656 - (Windows) Disabled Edit Toolbar buttons not
+    skipped for navigation and respond to ENTER as if auto-select was On
+  *  d903845 - Bug 1677 - Residual.  Handle ESC during track
+    rearrangement.
+  *  4de3264 - Remove Track: improvement for screen readers.
+  *  5d15974 - Make EXPERIMENTAL_MIDI_OUT buildable on all, and enabled
+  *  f0903dc - Enable EXPERIMENTAL_MIDI_OUT on all platforms
+  *  e4875cf - Add Portmidi dependencies (libasound2-dev, alsa-utils,
+    alsa-oss) to travis
+  *  f50b301 - Regenerate configure scripts and Makefile.in's
+  *  0c00435 - Attempt to add the rest of the makefile for portmidi
+  *  1610da4 - Re-add automake files for portmidi
+  *  724091e - Fix missing include for allegro
+  *  9ab4011 - Bug 1677 - Swap two tracks leads to crash on exit.
+  *  b46abbe - Keep the current note centered when holding control to
+    zoom
+  *  776e4df - Mismatched return values will cause compiler errors in
+    Xcode build
+  *  bc281fa - Fix one of the patches to wxWidgets source for Mac...
+  *  e7065d9 - Fix note track status message
+  *  b7d6077 - Implement Shift+Right-click for full extent on the note
+    track VRuler
+  *  a5df25f - Bug 1672 - Residual
+  *  51c5c73 - Bug 1672 - OS window close button crashes Audacity if
+    Screenshot Tools are open. File > Close hides Screenshot tools and
+    then any closure method crashes Audacity.
+  *  0e21143 - Implement scrolling for the note track vertical ruler
+  *  58bd034 - Move Shift+J and Shift+K shortcuts into the standard set.
+  *  fb26ee9 - wxCOPY rather than wxINVERT for cursor.
+  *  cbe554e - Ensure Nyquist Prompt initialises mName
+  *  11f9a8b - "Hi Contrast" -> "High Contrast"
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 30 Jul 2017 08:43:17 +0300
+
 audacity (1:2.1.3+git7087-7494afb-1) unstable; urgency=medium
 
   * Compile

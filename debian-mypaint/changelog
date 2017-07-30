@@ -1,3 +1,36 @@
+mypaint (1.3.0~git4847-70ce73d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/mypaint/mypaint.git
+  * Branch: master
+  * Commit: 70ce73d9e0776d42f33306cc7c6ed1790705899c
+  * Date: 1501371164
+  * git changelog:
+  *  70ce73d - Fix a missing return statement.
+  *  5efc32a - lib.feedback: Fix import ordering bug.
+  *  40fc582 - Add missing "import lib.feedback" everywhere!
+  *  dba8e08 - Add progress bar for loading and saving.
+  *  731a77a - Don't paint the insensitive state with alpha.
+  *  3308e0f - lib.feedback: New mechanism for reporting feedback.
+  *  c135968 - Various: flake8 conformance + typos.
+  *  06af07e - filehandling: refactor existing UI feedback.
+  *  842c4d1 - filehandling: remove some dead code.
+  *  3b3d497 - README: make AppVeyor badge link to master branch.
+  *  1f679d0 - Tidy imports of the mode constants.
+  *  79a7da9 - lib.layer: flake8 compliance.
+  *  4253cca - Vacuum the rendering mipmaps too.
+  *  e5af48b - lib.tiledsurface: update copyright info.
+  *  c04ac85 - lib.tiledsurface: flake8 fixes.
+  *  e2bb20b - Profiling: find gprof2dot.py more reliably
+  *  12fd8f5 - Fix doctests :tired_face:
+  *  29aa6d9 - Debug menu: add "Vacuum Empty Tiles" command.
+  *  623412c - Minor PEP8/Flake8 fixes.
+  *  147d339 - flake8: tolerate E226 (spaces around arithmetic).
+  *  9cdd70d - Fix Travis build.
+  *  56d7079 - Dynamics: reset button clears the mapping graph.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 30 Jul 2017 12:01:06 +0300
+
 mypaint (1.3.0~git4825-f03e5ec-1) unstable; urgency=medium
 
   * Compile

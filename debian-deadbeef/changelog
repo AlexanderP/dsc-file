@@ -1,3 +1,29 @@
+deadbeef (0.7.2+git7255-8774d46-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 8774d46e28092175428e43d8416bafdebfdccf22
+  * Date: 1500564172
+  * git changelog:
+  *  8774d46 - playlist: cleanup
+  *  ab83c25 - streamer: don't auto-play next track if stream_track
+    fails with startpaused=1
+  *  2ce02a5 - cueutil: removed track count trace messages
+  *  5f17e4f - junklib: id3v2 whole tag single-byte charset detection
+  *  47325bf - streamer: get rid of autoplay variable
+  *  c9c6e17 - streamer: old buffer size const cleanup
+  *  ed48fed - backport conf.c and logger.c changes from android branch
+  *  57336a6 - streamer: backport changes from android branch
+  *  0a76f75 - supereq: fixed buffer overrun in Equ.cpp (thanks to
+    github/tsowa)
+  *  4327c07 - conf: fix accessing config data outside of
+    conf_lock/unlock (thanks to github/tsowa)
+  *  bb5450e - streamer: removed a bogus FIXME
+  *  5483de9 - streamer, mp3: fixed in-decoder replaygain
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 27 Jul 2017 07:27:59 +0300
+
 deadbeef (0.7.2+git7243-872aa79-1) unstable; urgency=medium
 
   * Compile

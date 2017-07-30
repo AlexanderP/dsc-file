@@ -1,3 +1,171 @@
+freecad-daily (0.17~git11699-0544934-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 0544934070e9df8a932da06d77c46a14efcd2766
+  * Date: 1501322323
+  * git changelog:
+  *  0544934 - Fixed merge issue.
+  *  0d00b0e - Fixed up onDelete for dogbone and ramp entry as well.
+  *  1630d49 - Add object back to the job it came from on tag dressup
+    deletion - without requiring the job selection dialog.
+  *  700a5c1 - Enable dressup menus also on top of other dressups.
+  *  53a717b - Moved existing holding tag dressup to use the common UI
+    implementation.
+  *  842ea49 - Prevent segfault if vertex map isn't set.
+  *  c5e5d5c - Some refactoring
+  *  ccecab9 - Decoupled UI from model - can add and delete tags without
+    recomputation.
+  *  0e3cbe3 - Cleaned up dressup creation.
+  *  900e9e0 - Start new implementation of holding tags, just called
+    Tag.
+  *  92efb41 - Extracted preferences for holding tags into their own
+    file.
+  *  8659302 - fix typo introduced with pr702
+  *  2ac4d13 - Process holes before the perimeter for Arch.PanelSheets
+  *  2f367e6 - Merge pull request #904 from Karsten-Merkle/master
+  *  d33e742 - python3 issues
+  *  ab596b0 - Fix PathJob creation through the console.
+  *  c22320a - fix possible segfault in modelRefine
+  *  7cc9876 - fix possible segfault in modelRefine
+  *  df9c812 - fix build failure
+  *  04b176e - PartDesign Hole Feature implemented.
+  *  0406556 - Make PartDesign::ProfileBased::onChanged(...) protected
+    (not private).
+  *  f114cc8 - ExpressionBinding/QuantitySpinBox: skip updating if bound
+    to a read-only property.
+  *  394c9f1 - PDN: Update ellipsoid primitive test for OCC < 7
+  *  7f34faa - PDN: Make Loft and Pipe claim children correctly
+  *  373d81b - PDN: Make Loft hide its sections when task dialog
+    accepted
+  *  c62a773 - PDN: Add tests for Boolean, MultiTransform, Primitives,
+    Shapebinder
+  *  e63387f - Path: typo fix
+  *  6b51266 - improve whitespaces
+  *  99e3f95 - + add method trim() to Part.Curve
+  *  7b066fe - Fix missing file during installation (Import_rc.py)
+  *  3a0c4db - Fix a stupid bug due to a bad copy/paste into the
+    hierarchical STEP function which was resetting the XCAF doc just
+    before writing it, ending up to write empty files
+  *  2cd24b0 - Add AP214/203 support to the hierarchical STEP
+    Importer/Exporter
+  *  7f80f79 - Fix Import_rc.py path
+  *  5ef87ac - Enable the ReadShapeCompoundMode into the C++ code
+  *  b81f88d - Add parameter initialization within Import Init.py and
+    enhance the understand of the parameters behavior into the UI
+  *  9979fc4 - Add initial support for Import hierarchical STEP in
+    preferences menu
+  *  7a9e636 - Arch Added a Flip property to roofs to fix inverted
+    direction
+  *  028e545 - Draft: Fixed rotation of Points
+  *  352acca - Draft: Fixed Move & Rotate continue mode
+  *  6df8161 - fix makeGeometryCurvePy to return a LinePy for lines
+    instead of a GeometryCurvePy
+  *  37258b9 - Arch: Fixed crash in wall with height=0
+  *  7fc0635 - Draft: Copy groups too when moving/rotating/copying
+    groups
+  *  73250f0 - App: typo fix
+  *  183eee1 - Merge branch 'master' of
+    https://github.com/FreeCAD/FreeCAD
+  *  a51b2f6 - fix Py3 issue
+  *  81bdb1f - Sketcher: typo fix
+  *  54a8b92 - Arch: Added Centerline display mode to rebars
+  *  b26a943 - Arch: Fixed Space Area errors and added boundaries
+    edition in task panel - fixes #3112
+  *  e20975c - add attribute to control format of a quantity via Python
+  *  7ab8a99 - fixes #0003137: Unit UserString wrong
+  *  80ad573 - Fixed typo - crowdin issue
+  *  9ff76fc - try to fix tolerance if shape is broken after
+    fillet/chamfer operation
+  *  55e0e6c - Part::Mirroring: This fixes issue #2671 by changing the
+    type of Base and Normal to PropertyPosition and PropertyDirection.
+    These two classes handles units better.
+  *  054a3da - Part::Thickness: This fixes issue #2876 by changing
+    property type for value to include a unit.
+  *  20503f3 - rename handleMissingProperty to handleChangedPropertyName
+  *  a2cdd52 - Added PropertyContainer::handleMissingProperty(...) and
+    PropertyContainer::handleChangedPropertyType(...).
+  *  f8a7606 - Added PropertyPosition and PropertyDirection classes.
+    Basically PropertyVector classes with units.
+  *  b6d733d - Added PropertyVectorDistance::getPathValue() to return
+    vector elements with correct unit.
+  *  dbce627 - Added getPaths(...) to PropertyVector class.
+  *  79e87e2 - add missing header file
+  *  360c07c - Path: add option to use pybind11 instead of boost-python
+    for libarea
+  *  488c1a1 - handle exception thrown by BRepBuilderAPI_RefineModel
+  *  7c1e689 - make link clickable as suggested in PR 892
+  *  c243046 - misc. typos in Assembly and Path WB
+  *  ebbe1fa - FEM: unit tests, code formating, flake8
+  *  261ab99 - FEM: unit tests: case frd file mflow and networkpressure
+    reading, adapt to the slightly changed frd result file
+  *  d2db47b - FEM: unit tests, use 1DFlow results of unit test python
+    code analysis
+  *  efc9b44 - FEM: unit tests, add test case for reading frd file with
+    mflow and npressure
+  *  cdb4819 - FEM: unit tests, adapte 1DFlow example and extend stats
+    comparing to mflow and networkpressure in conjunction with inout
+    nodes file
+  *  71a283f - FEM: move 1DFlow inout nodes file into analysis directory
+    and do not delete it
+  *  3d55e7d - FEM: frd reading, 1DFlow frd reading, add nodes key
+    vector
+  *  a8f7b35 - FEM: unit tests, code formating, delete some empty lines
+  *  1a05e67 - FEM: load stats, give error message if more than one
+    results object in the analysis and no result object was geven
+  *  d37189f - FEM: working dir, check if it has a slash at the end, if
+    not add one
+  *  0b05377 - FEM: fix defs in fem tools module if run in cmd (non gui)
+    mode
+  *  b25eb48 - misc. typo fixes
+  *  ebb8fc5 - Arch: Store rebar base wires
+  *  5ffe171 - FABlin post-processor for the Path WB
+  *  4e145b2 - FIXES: minor bug in custom spacing of rebar object
+  *  2e96d9b - Fixed issue #2877: Added hypot() and catet() functions to
+    expression framework.
+  *  1519ca0 - Arch: looo's fix in nester
+  *  97eaad7 - Merge pull request #885 from mlampert/bugfix/svg-import-
+    rounded-corners
+  *  c2f5b0a - Fixed SVG import of rectangles with rounded corners.
+  *  aba4338 - Arch: Nester optimizations
+  *  a3d7881 - Arch: Initial Nest command
+  *  a8faef0 - Do not use C++11 utf8 strings - not supported by VC2013.
+  *  29ff650 - Spelling
+  *  a91c5bb - Add UnitsSchemaMmMin - izes are only in mm, speed in
+    mm/munute.
+  *  7bcb99d - Arch: remove buggy recompute inside onChanged
+  *  382ad28 - Merge pull request #884 from eivindkv/Fix_issue_3128
+  *  67060d6 - Arch: Add standard Arch component task panel to window
+    task panel
+  *  1fa40d9 - Allow first HDF5, MPI checks to fail (not REQUIRED)
+  *  3e017ce - Do not error when MPI is missing
+  *  b765193 - try to use pkg-config to find libhdf5 and openmpi
+  *  77734de - FEM: update examples result objects
+  *  cfb3b62 - FEM: result reading 1DFlow, give warning if there is no
+    inoutnodes file
+  *  e723ba2 - FEM: unit tests, create tempdir if not exist, delete not
+    needed imports
+  *  d9dbb91 - FEM: unit test, again enable all stat types except
+    1DFlow, fix osx failure by only use 14 diggits
+  *  7b45534 - FEM: unit test, tests for seg2 and seg3 python mesh API
+  *  84c7029 - FEM: inp import, add Seg3 to python mesh import tools and
+    inp import
+  *  8cf2015 - Fix upside down GeomHatch on asymmetric faces
+  *  0a7c6c4 - Fix #3113 TechDraw needs Drawing in cmake
+  *  cbf42ad - Coverity fixes
+  *  033242e - protect document against nested recomputes + convert
+    ObjectStatusLocker into a template class to make its usage more
+    flexible + add status flag 'Recomputing' and set in
+    Document::recompute to detect and avoid nested calls of recompute
+  *  d3f5ace - fix text of commands to create B-spline curves
+  *  b36686e - calling close() causes the MDI view to get deleted as
+    soon as possible while deleteLater() waits until the GUI is
+    responsive
+  *  44fba58 - close document in spreadsheet tests
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 30 Jul 2017 12:21:49 +0300
+
 freecad-daily (0.17~git11591-7cfc084-1) unstable; urgency=medium
 
   * Compile

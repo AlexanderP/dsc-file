@@ -1,3 +1,39 @@
+gscan2pdf (1.8.4+git2646-4123a3f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 4123a3f82ab14bf75e18f17dce4063d34670f911
+  * Date: 1501267151
+  * git changelog:
+  *  4123a3f - Bumped version to 1.8.4
+  *  43e1ab0 - Fixed bug updating list of option-dependent values
+  *  a20d3e4 - Round scan options with ranges to valid values before
+    applying. Closes bug #264 (Effective resolution is 75 DPI despite
+    selecting 600 or 1200).
+  *  892595e - * Fixed bug writing postscript file. * + support for
+    ghostscript backend due to apparent bug in tiff2ps.
+  *  94158dc - Renumber some tests to make room for more
+  *  fff83eb - In preparation for future removal of libsane-perl
+    frontend, change default frontend libsane-perl -> libimage-sane-
+    perl, and similarly switch selected frontend on upgrade from older
+    version.
+  *  136eac9 - be is dead - removing .be
+  *  d670392 - Silence undefined units warnings in tests
+  *  c4d88a7 - Fix paragraph formatting in save as text output
+  *  03330c9 - + t/0821_Frontend_Image_Sane.t
+    t/0822_Frontend_Image_Sane.t t/0823_Frontend_Image_Sane.t
+  *  bdf8366 - Assume pixels/inch if the image doesn't know better
+  *  1965b69 - Fix race condition in t/0823_Frontend_Sane.t
+  *  6e901c3 - Fix race condition causing failures in
+    t/0610_Dialog_Scan_Image_Sane.t & t/0610_Dialog_Scan_Sane.t
+  *  fa9be5b - t/421_cuneiform.t: Update number of skipped tests
+  *  12917c6 - Cope with Tesseract 3.0.5 writing Page 1 instead of Page
+    0
+  *  e805d7b - Post release commit
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 30 Jul 2017 20:48:41 +0300
+
 gscan2pdf (1.8.3+git2630-e61d7e1-2) unstable; urgency=medium
 
   * Compile

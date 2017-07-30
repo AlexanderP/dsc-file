@@ -1,3 +1,29 @@
+tesseract (4.00~git2076-61adbdf-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 61adbdfa4bb5f17b92f8cae30fec38e3519542a2
+  * Date: 1501112961
+  * git changelog:
+  *  61adbdf - Merge pull request #1054 from tdhintz/master
+  *  67314ea - Merge pull request #1 from tdhintz/tdhintz-stdmax-patch
+  *  c5a861b - Define std::max under VS2017 x64
+  *  0e95e2c - Rewrote the recoder to use an encoding based on wubi
+    instead of radical-stroke index, changed from normalized to
+    unnormalized unichar representation
+  *  b0ead95 - Changed the way unicharsets are handled to allow support
+    for the ™ character. Can find the issue where it was requested.
+  *  4efc539 - clang tidy on previous pull
+  *  4e8018d - Important fix to RTL languages saves last space on each
+    line, which was previously lost
+  *  3f77354 - Removed unnecessary using statements and cleaned up
+    google/non-google distinction
+  *  cec1037 - Fixed BestPix to always return the highest resolution
+    available, even if a lower bit depth than the original
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 27 Jul 2017 11:01:54 +0300
+
 tesseract (4.00~git2067-66e686a-1) unstable; urgency=medium
 
   * Compile
