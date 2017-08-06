@@ -12,6 +12,7 @@ GIMPOPT= --prefix="${PREFIXDIR}" --disable-docs --disable-python
 LCMSOPT= --prefix="$(PREFIXDIR)"
 LPNGOPT= --prefix="$(PREFIXDIR)"
 GEXIVOPT= --prefix="$(PREFIXDIR)" --enable-static --disable-Werror
+WEBPOPT=  --prefix="$(PREFIXDIR)" --enable-libwebpmux --enable-libwebpdemux --enable-aligned
 
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
@@ -47,6 +48,13 @@ ifneq (,$(filter $(DEBIAN_CODENAME),stretch xenial yakkety zesty))
 	make -j$(NUMJOBS) && \
 	make DESTDIR=/tmp install && \
 	cd /tmp/build/gimp-devel*/debian && mv tmp2 $(CURDIR)/debian/ 
+	cd $(CURDIR)/3rdparty/libwebp && \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:${PKG_CONFIG_PATH} \
+	PATH=$(PREFIXDIR)/bin:${PATH} \
+	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
+	./autogen.sh && ./configure $(WEBPOPT) && \
+	make -j$(NUMJOBS) && \
+	make install
 else
 	echo "no build gexiv2"
 endif
