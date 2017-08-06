@@ -46,8 +46,8 @@ ifneq (,$(filter $(DEBIAN_CODENAME),stretch xenial yakkety zesty))
 	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
 	./autogen.sh $(GEXIVOPT) && \
 	make -j$(NUMJOBS) && \
-	make DESTDIR=/tmp install && \
-	cd /tmp/build/gimp-devel*/debian && mv tmp2 $(CURDIR)/debian/ 
+	make DESTDIR=$(CURDIR)/debian/tmp3 install && \
+	cd $(CURDIR)/debian/tmp3$(CURDIR)/debian && mv tmp2 $(CURDIR)/debian/ 
 	cd $(CURDIR)/3rdparty/libwebp && \
 	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:${PKG_CONFIG_PATH} \
 	PATH=$(PREFIXDIR)/bin:${PATH} \
