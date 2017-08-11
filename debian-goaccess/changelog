@@ -1,3 +1,38 @@
+goaccess (1:1.2.0+git2471-1ed3381-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 1ed33815d204fba73a9832aa3d877d1bb08b035e
+  * Date: 1502463257
+  * git changelog:
+  *  1ed3381 - Renamed command line option from --pidfile to --pid-file.
+  *  a7cd689 - Renamed command line option from --pidfile to --pid-file
+    on the man page.
+  *  b89f508 - Added --pidfile command line option in order to write the
+    daemon pid to a file.
+  *  6635a1b - Added --pidfile command line option to the man page.
+  *  dc1fd60 - Added --pidfile command line option to the default config
+    file.
+  *  943776f - Fixed use-after-free when two color items were found on
+    color_list.
+  *  9bb8bc2 - Added missing comments to parse_color() function for
+    better readability.
+  *  7ccc23c - Minor updates to code indentation.
+  *  b22c776 - Change priority of predefined static extensions.
+  *  0a8210b - Change priority of static extensions in config file.
+  *  18217b6 - Fixed float percent value on JSON/HTML output for locales
+    using decimal comma.
+  *  ca753d6 - Fixed typo in function comment.
+  *  12b6036 - Merge pull request #859 from kabeza/es-lang
+  *  4446a5e - New spanish language
+  *  2482781 - Minor update to the man page.
+  *  8ee1f60 - Minor update to man page.
+  *  c9f6729 - Minor update to man page.
+  *  b77dcd1 - Updated man page --hl-header option.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 11 Aug 2017 20:10:00 +0300
+
 goaccess (1:1.2.0+git2453-13bf70c-1) unstable; urgency=medium
 
   * Compile

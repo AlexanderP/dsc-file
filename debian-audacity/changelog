@@ -1,3 +1,55 @@
+audacity (1:2.1.3+git7389-c7d949c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: c7d949c02129f39949e24c3472a3917723317024
+  * Date: 1502291130
+  * git changelog:
+  *  c7d949c - Menu consistency: Previous before Next for tools & clip
+    Move
+  *  adb42fe - FIX: Slider thumb clipped when at far right.
+  *  da3f281 - Fix: Nyquist PEAK property when NIL & Stereo
+  *  95560ad - Bug1676, more: don't bother caching the first visible
+    track...
+  *  eb72603 - Reviewed uses of release(); rewrote questionable ones in
+    one file...
+  *  8eb64f5 - Bug1676: correct repaint of rearranged tracks on Linux...
+  *  eee58d9 - Bug 1292 - Enh: Zoom Normal (Ctrl+2) may move selection
+    off screen
+  *  7a5bbbc - Bug 388 - Mac: Recording Preferences has an unsupported
+    "Hardware Playthrough" option
+  *  3302455 - Allow loop play whenever we allow play.
+  *  7baf22b - J, K, Shift-J and Shift-K always enabled.
+  *  aee0c4c - Fix for broken build (::None)
+  *  dddac6e - Bug 1707 - MIDI Loop Play misses first few notes on
+    looping.
+  *  a3c4c5a - Bug1705: .gro files should open by drag and drop
+  *  3288f8d - Bug1704: should default file dialogs to Documents, not
+    program path
+  *  a559453 - "/DefaultOpenPath" is now in only one place
+  *  e3efc98 - Remove the last defaulting to cwd
+  *  af447a8 - Remove another use of cwd for default opening paths
+  *  5f7353a - Chain export commands: no cwd; use the default export
+    path, not open
+  *  5d48e96 - Where FileSelector was used, default to Documents not
+    cwd; save prefs
+  *  a9d4c2c - Defaulting of file paths to Documents is defined in just
+    one place
+  *  d7ac0d3 - Fix some missed internationalizations
+  *  3e39771 - MIDI imports, like other imports, are put into recent
+    files list
+  *  1895994 - Effect parameter names containing '=' now work in chain
+    editing...
+  *  560a1e8 - Bug 1608: Don't crash editing parameters of LV2 effect in
+    a Chain
+  *  40a4f89 - Bug 1706: Export Midi available whenever MIDI tracks
+    exist
+  *  5bdac8b - Bug1698: don't use 0 for menu item ID on Mac (assertion
+    in wxWidgets)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 10 Aug 2017 07:45:47 +0300
+
 audacity (1:2.1.3+git7363-6cb6652-1) unstable; urgency=medium
 
   * Compile

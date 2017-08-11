@@ -1,3 +1,161 @@
+gimp-devel (2.9.4+git38937-1cf2e66-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 1cf2e66826911ba47e3956fe7890ad1a7ca0d9a9
+  * Date: 1502348837
+  * git changelog:
+  *  1cf2e66 - Update Spanish translation
+  *  722abb5 - libgimpwidgets: init GimpColorHexEntry's text after
+    construction
+  *  dccaa5d - plug-ins: in file-psd, use SRC_OVER and RGB_PERCEPTUAL
+    for all layers
+  *  4d3481c - plug-ins: small cleanup to last commit
+  *  e8f6a38 - plug-ins: in file-psd, read blend mode info of lsct layer
+    records
+  *  ff29920 - Fix NEWS: it's going to take more than that to set pass-
+    through mode to layer groups in PSD
+  *  4e17291 - Mention newly added pass-through layer group mode in NEWS
+  *  63b0410 - Some basics of loading and exporting the pass-through
+    mode of layer groups in PSD.
+  *  26a238c - app: default the number of threads used to
+    g_get_num_processors()
+  *  67fc418 - app: adapt gimp_image_merge_layers() to handle pass-
+    through groups ...
+  *  3635cf0 - app: move bottom-layer special casing to
+    GimpOperationLayerMode
+  *  1ca1e15 - app: implement {begin,end}_render() for GimpGroupLayer
+  *  1c68617 - app: use {begin,end}_render() and
+    GimpTileHandlerProjectable ...
+  *  426bc37 - app: add GimpTileHandlerProjectable
+  *  f0aec02 - app: add gimp_projectable_{begin,end}_render()
+  *  dc1d61f - app: handle excludes_backdrop in GimpGroupLayer
+  *  10371ec - app: implement pass-through mode in GimpGroupLayer
+  *  ac31902 - app: connect layer backdrop to source node's input
+  *  785a083 - app: add GimpDrawable::get_source_node() vfunc
+  *  440d8d6 - app: add pass-through layer mode
+  *  7ecd3f2 - Bug 785890 - libappgegl doesn't use SSE2 compiler flags
+    ...
+  *  fd63d96 - Update Polish translation
+  *  c41e8ec - Bug 785535 - Histogram not updating in real when filters
+    are active
+  *  5720637 - app: use "const GeglRectangle*" in the
+    GimpTileHandlerValidate API
+  *  12f920d - app: change GimpTileHandlerValidate's API to use
+    GeglRectangle
+  *  bf6c3cb - app: add gimp_drawable_has_filters()
+  *  97c9a99 - Regression fix for metadata viewer allows to view all
+    tags.
+  *  38c8c76 - NEWS: vectors-select-(top|bottom|previous|next) item
+    duplicate.
+  *  822c00e - NEWS: update with some missing improvements.
+  *  aa3bc36 - plug-ins: WebP kmax hint text not properly displayed for
+    origin value.
+  *  b6c4905 - configure: libwebp(de)?mux follow libwebp version.
+  *  da4f137 - configure: libwebp dependency bumped to 0.6.0.
+  *  bfc301e - plug-ins: help text for special values of kmax.
+  *  b150622 - plug-ins: change save procedures of the file-raw-data
+    plug-in
+  *  ee7d951 - Update Nepali translation
+  *  2d11d29 - app: improve GimpToolLine slider motion
+    clamping/constraint
+  *  42f0db1 - plug-ins: rename file-raw/file-formats.h to file-raw/file-
+    raw-formats.h
+  *  b58985d - NEWS: add exclusive visibility in item group.
+  *  7c171b4 - app: exclusive visibility in item group only toggles
+    within the group.
+  *  a0ea6d6 - Update Polish translation
+  *  e1f4e94 - NEWS: fix some typos and add missing changes.
+  *  06a4e15 - app: swap base and balance slider order in spiral
+  *  8e946ca - app: don't calculate balance when base == 1 in spiral, to
+    avoid NaN
+  *  ac51991 - Update German translation
+  *  b0a9539 - Update German translation
+  *  f950414 - Mention Free Select changes in NEWS
+  *  f25e78b - Update NEWS
+  *  1a09a5b - Update Russian translation
+  *  28407e9 - Update German translation
+  *  47d7f19 - Fix typo and make the label consistent with the other one
+  *  5ea831b - plug-ins: add minimum version information for RawTherapee
+    and Darktable.
+  *  87bbba5 - plug-ins: fix the RawTherapee version test.
+  *  b3eb876 - plug-ins: add some MacOS support to find RawTherapee.
+  *  7f85244 - plug-ins: some alignment cleaning.
+  *  e4902e2 - Distinguish between plug-ins and filters in NEWS
+  *  a39a488 - Update NEWS
+  *  1acaa44 - app: make number-of-threads default value calculation
+    less obfuscated
+  *  eef09ab - app, menus: add gegl:spiral to the menus
+  *  1ec2bcc - app, docs: s/in order do/in order to/.
+  *  1941e51 - app: minor s/placeolder/placeholder/
+  *  8121769 - app: don't propagate NULL error when saving XCFs
+  *  6b84293 - app: limit allowable tile data size in XCFs
+  *  7a10afc - app: turn magic matching debug output into GIMP_LOG()
+  *  d227a0d - app: disable gimp_display_shell_profile_update() debug
+    output
+  *  bb93e34 - Bug 785427 - GIMP crashes after applying any GEGL filter
+  *  17c9f7c - Update Catalan translation
+  *  2a7a53b - Bug 785240 - Naming the first color in a new palette is
+    hard
+  *  82e34fb - docs, etc: regenerated default gimprc and its manpage
+  *  1a46a76 - Update POTFILES.skip
+  *  713995e - Bug 784261 - Have some nice error message for formats
+    known to work...
+  *  287cfb1 - app: some more g_clear_pointer() in
+    gimp_plug_in_manager_finalize()
+  *  b6f5bd2 - plug-ins: update .gitignore in file-raw/
+  *  87438c8 - plug-ins: merge file-rawtherapee/ into file-raw/
+  *  0369ac9 - plug-ins: remove all TIFF extensions and magics from file-
+    raw/file-formats.h
+  *  59558f8 - plug-ins: replace file-raw/file-formats.h's "darktable"
+    strings by "%s"
+  *  fea66e0 - plug-ins: prefix file-darktable's .lua files with "file-
+    darktable-"
+  *  a653a47 - plug-ins: rename file-darktable/ to file-raw/
+  *  38be044 - plug-ins: check that the installed RawTherapee is at
+    least version 5.2
+  *  619a05a - Bug 785265 - Patch for localization for combotext in
+    metadata editor
+  *  8830494 - Update Russian translation
+  *  17478b0 - Update Polish translation
+  *  0b9dd1d - configure.ac: require gexiv2 >= 0.10.6
+  *  7d5f1e4 - app: change GimpSettings to store its time as gint64
+  *  4a5b740 - libgimpconfig: add GIMP_CONFIG_PROP_INT64() and
+    GIMP_CONFIG_PROP_UINT64()
+  *  bcda53e - Bug 785001 - Enhanced smudge tool: Smudge with painting
+  *  5928e3b - Update Catalan translation
+  *  4684702 - Update Greek translation
+  *  894d85f - app: GIMP_MAX_NUM_THREADS should follow max value of
+    GeglConfig's...
+  *  32ffabc - Bug 784226 - Maximum of processing threads hard-coded to
+    16.
+  *  24c2bdf - Bug 784890 - Being able to take a screenshot of a single
+    window and...
+  *  3fa2127 - app: fixes for previously contributed commit.
+  *  2de6bea - Bug 585607 - Vectors select (next, previous, top &
+    bottom)
+  *  7da262d - Bug 784836 - Context conflict on "Lower" in po-plug-ins.
+  *  04a53db - app: consistently name the filter tool presets "Presets"
+    in the GUI
+  *  bef155e - app: prepend "Last used: " to the names of the automatic
+    filter presets
+  *  9af7883 - app: add a tooltip to the color temperature preset menu
+    button
+  *  3b19166 - libgimpbase: return a \0 terminated string from
+    gimp_metadata_get_guid()
+  *  cb0757e - app: split some utils out of gimppropgui.[ch] to
+    gimppropgui-utils.[ch]
+  *  b08f532 - Update Polish translation
+  *  694fde4 - app: fix area-based scale_limits in
+    gimp_prop_widget_new_from_pspec()
+  *  d13fa39 - Bug 749902 - Add Hue-Chroma operation/tool and LCH color
+    selector
+  *  93d2f49 - Bug 784961 - Undeclared identifier 'TIME_UTC' - GIMP
+    fails to build...
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 11 Aug 2017 03:09:37 +0300
+
 gimp-devel (2.9.4+git38835-f2306ab-1) unstable; urgency=medium
 
   * Compile

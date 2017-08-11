@@ -1,3 +1,86 @@
+freecad-daily (0.17~git11749-6c4bdf2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 6c4bdf24dfd697ee212ec5950969125851a0907c
+  * Date: 1502301561
+  * git changelog:
+  *  6c4bdf2 - Arch: Better tangent calculation fo rebar profile
+  *  bcff2ab - TechDraw: DraftView now renders Arch Rebars as wireframes
+  *  e1848f2 - Arch: Allow to build windows on any shape that contains
+    wires
+  *  8d71bfb - Complete workbench dependecies
+  *  d930184 - Add support for exporting part mesh to JSON
+  *  6f23272 - Fixed ToolController creation when there are multiple
+    jobs.
+  *  46ff910 - Arch: fixed normal direction bug in structures
+  *  673da2b - Merge pull request #918 from triplus/PDN_AddSub_Names
+  *  bab75bb - PDN - what's this and command names improvements
+  *  6b05302 - Merge pull request #915 from berndhahnebach/bhbdev090
+  *  9ea5d9a - FEM: constraint self weight view provider, delete display
+    modes - the new constraint python includes the display modes already
+    - constraint self weight is retrieved from this new constraint
+    python - thus the display modes can be removed from the view
+    provider
+  *  c623fc9 - FEM: Use ConstraintPython for SelfWeight
+  *  ef85389 - FEM: add ConstraintPython object type
+  *  b7e8348 - FEM: unit tests, import all FEM python modules
+  *  5cd503f - FEM: py3, proper import Units module
+  *  347febd - FEM: code formating, flake8
+  *  b7110d0 - AddonManager: Allow to specify dependencies in addons are
+    either Part or PartWorkbench
+  *  3dd1c9f - add method to get ccx version and inform user in case of
+    problems
+  *  46aab48 - restore cursor when loading results file raises an
+    exception
+  *  e038c1c - FEM: example files, adapt them to the new result mesh
+    object
+  *  cdc526b - FEM: frd, vtk and Z88 result import, do not create an
+    analysis object on import of lonley results
+  *  3eb44c6 - FEM: mechanical result object, it does not depend on an
+    active analysis anymore
+  *  3cc0a8f - FEM: mesh result object, make use of it
+  *  193f967 - FEM: mesh result object, make it child of mechanical
+    result
+  *  265d10c - FEM: mesh result object, add icon
+  *  6d2fd22 - FEM: mesh result object, implement new object
+  *  a28ffd6 - FEM: code formating, flake8
+  *  8341e0e - FEM: 3D beam/shell output preferences
+  *  62bbda8 - FEM: set mesh color, use proper return values for python
+    API
+  *  a644ba4 - FEM: Z88 result impoort, small improvements
+  *  49a673d - FEM: Fenics and Z88 mesh import, add empty seg3 dict on
+    return value
+  *  dbd1619 - FEM: code formating, better readable return values
+  *  4636119 - FEM: gmsh mesh object, some better comment
+  *  317aa2d - FEM: make python make def of netgen mesh object fit in
+    FEM name sheme
+  *  59a8f18 - FEM: code formating, flake8 in new boudary layer code
+  *  d0e15f5 - Fem solve bondary layer meshing issue #3111
+  *  1c92781 - FEM: add BoundaryLayer support into write_geo() of
+    FemGmshTools.py
+  *  94f9a39 - FEM: add FemMeshBoundaryLayer related py files to
+    CMakefiles
+  *  6b7ec3d - FEM: add FemMeshBoundaryLayer Command and icon file
+  *  457a870 - FEM: add FemMeshBoundaryLayer obj and gui objects
+  *  c786fbb - FEM: add MeshBoundaryLayerList property in FemMeshGmsh
+    obj
+  *  daee73a - Remove obsolete files
+  *  034520e - improve whitespaces
+  *  4056eb9 - Merge pull request #910 from vejmarie/fix_step_placement
+  *  d75c33f - Fix Placement and Color export within Hierarchical Step
+    exporter of single shapes
+  *  ea708c1 - Arch: Added IFC pref option to export objects with full
+    parametric properties
+  *  1220eb0 - Export single STEP object with absolute coordinate
+    instead of (0,0,0) as default origin
+  *  dc84141 - Fixed wire transformation for scales other than 1.
+  *  820d895 - Merge pull request #906 from luzpaz/shipwb-fix
+  *  7f4d089 - ShipWB: unicode issue 2609 (partial fix)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 09 Aug 2017 23:04:13 +0300
+
 freecad-daily (0.17~git11699-0544934-1) unstable; urgency=medium
 
   * Compile

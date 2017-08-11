@@ -1,3 +1,95 @@
+deadbeef (0.7.2+git7312-604f60c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 604f60c4c6c18583f858392fa145b71bcda5d703
+  * Date: 1502368377
+  * git changelog:
+  *  604f60c - remove statusnotifier from
+    scripts/portable_package_static.sh
+  *  dc4359b - disable statusnotifier plugin by default, and don't ship
+    in static builds -- it's causing more harm than good
+  *  acef983 - gtkui: display selection time when stopped; fixed prefwin
+    config var name typo (fixes #1817)
+  *  e5cbbe9 - fixed osx build command in README.md
+  *  8158d98 - gtkui: fix buffer size bug in format_timestr (fixes
+    #1846)
+  *  9ba2c8d - po sync
+  *  2cb159a - gtkui: fixed background bar color after same-color hack
+  *  bc5dead - gtkui: fixed seekbar regression
+  *  651bc19 - playlist: fixed cue+archives and some general vfs
+    regressions
+  *  8e98d56 - gtkui: better volumebar
+  *  dc639a0 - gtkui: improved seekbar
+  *  5decd72 - cocoaui: added Esc key equivalent to the Cancel button in
+    Add Location panel
+  *  4bedc85 - conf: do not log error when couldn't open config file;
+    early exit immediately after creating the empty config file
+  *  1dda4a1 - configure: check for zlib before enabling gme
+  *  560dec0 - streamer: send unpaused event when starting playback from
+    paused state
+  *  47a0c81 - streamer: another fix for paused state / event (fixes
+    #1842)
+  *  6021afb - send DB_EV_PAUSED when restoring resume state into paused
+    mode (fixed #1842)
+  *  939360a - cocoaui: added handling CMD+Up/Down, Home and End to
+    playlist widget
+  *  beb2a5f - cocoaui: impl trkproperties -> add new field
+  *  b5b27f8 - cocoaui: impl trkproperties -> capitalize
+  *  0646598 - cocoaui: impl trkproperties -> crop
+  *  0162a29 - cocoaui: implemeted trkproperties -> remove
+  *  738d00e - cocoaui: fixed metadata editor bug with setting 1-char
+    values
+  *  3942887 - junklib: fixed regression about setting id3v2 tag
+    presence flags
+  *  23fd7e0 - cue: restored missing track properties/flags
+  *  a9f286e - junklib: only split /-separated id3v2.3 strings into
+    multiple values when surrounded by spaces
+  *  508ea70 - cocoaui: disable mm key grabber in debug builds, to avoid
+    XCode debugger UI conflict
+  *  84e261f - cocoaui: remove mutex locks which cause too much slow-
+    downs
+  *  20b0fac - cue: cleanup
+  *  efa3b14 - cue: cleanup
+  *  452e0ce - aac: fixed missing pl_unlock
+  *  bbc8e39 - cue: fixed the existing cuesheet unit test
+  *  e97c59b - cue: yet more tracks+cue fixes
+  *  4ae153d - cue: tracks+cue WIP, improved handling of FILE in the
+    middle of TRACK fields
+  *  08cdeca - cue: bigger code overhaul
+  *  d4807c2 - cue: reworking tracks+cue (WIP)
+  *  ab5fe1a - cue: fixed embedded cuesheet support; some refactor and
+    better docs
+  *  60ff3b8 - cue: refactor / cleanup / fix code duplication
+  *  838f807 - cue: fix plt_process_cue handling of loading_cue flag
+  *  fa9167e - playlist: cleanup unused code and fix some warnings
+  *  daca3c7 - cue: deprecate plt_insert_cue and
+    plt_insert_cue_from_buffer;  convert existing code to use
+    plt_process_cue
+  *  240b9ba - cue: added a FIXME about vfs usage
+  *  d382361 - cue: fixed crash; prevent bogus error messages
+  *  a6e845a - playlist: fixed regression in adding folders recursively
+  *  5950e39 - cue: mark used audio files, to avoid duplicates
+  *  9d43093 - cue: cleanup; fixed calculating last track region
+  *  1ad0720 - cue: guess file extension for tracks+cue
+  *  0a7eb94 - cue: don't crash on missing files
+  *  18fd140 - cue: reworked plt_load_cue_file to support multiple files
+    with multiple tracks (WIP)
+  *  f77a0fe - cue: cleanup
+  *  a82e8eb - cue: cleanup and refactor
+  *  31f63ce - cue: build list of cue files, skeleton code for loading
+    cue in folders
+  *  26b67a1 - playlist: slight code cleanup
+  *  82469b8 - osx: build fix
+  *  93ab833 - move all revelant cuesheet code from playlist.c to
+    cueutil.c
+  *  45d2426 - cue: silence debug messages..
+  *  a63e2d2 - process cue files internally / get rid of the cue
+    playlist plugin
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 11 Aug 2017 20:22:40 +0300
+
 deadbeef (0.7.2+git7255-8774d46-1) unstable; urgency=medium
 
   * Compile

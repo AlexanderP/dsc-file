@@ -1,3 +1,35 @@
+tesseract (4.00~git2092-efa50da-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: efa50daf5a47e2be82b0c994c231ac112ac223de
+  * Date: 1502222714
+  * git changelog:
+  *  efa50da - Merge pull request #1070 from stweil/resolution
+  *  0720b3f - Change default resolution from 70 to 300 dpi
+  *  5f5e85e - Fixed lack of error on non-existent traineddata
+  *  0a91498 - Improved error message on missing optional config
+  *  4b3c5f6 - Added check for non-empty traineddata flag
+  *  c67c2e9 - Add combine_lang_model to cmake and cppan builds.
+  *  08ec577 - Merge pull request #1064 from stweil/win32
+  *  cdec915 - Fix broken build for Windows
+  *  8e55e52 - Harder unittest that uses file i/o and string
+    manipulation
+  *  4572940 - Portability fix to help tests compile with the same code
+    in both Google and github
+  *  2fbcba6 - Initial push of one simple unittest
+  *  77c44cd - Added convert to int and directory listing to
+    combine_tessdata
+  *  2ef1aea - Added AVX2 and AVX512 detector
+  *  39b168a - Removed errors introduced by git merge
+  *  4e9665d - Added ADAM optimizer, unless git screwed it up, cos there
+    is no diff
+  *  2633fef - Part 2 of separating out the unicharset from the LSTM
+    model, fixing command line for training
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 10 Aug 2017 07:06:51 +0300
+
 tesseract (4.00~git2076-61adbdf-1) unstable; urgency=medium
 
   * Compile
