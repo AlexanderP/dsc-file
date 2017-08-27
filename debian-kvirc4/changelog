@@ -1,3 +1,36 @@
+kvirc (4:4.9.2~git-7157-g82f44408f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 82f44408f63075903c6fd9ff1fb4765caf840d47
+  * Date: 1503797051
+  * git changelog:
+  *  82f44408f - Add a checkbox in the event editor to enable or disable
+    event handlers.
+  *  a8c8e0bd6 - Allow code examples in docs to wrap
+  *  47c6af326 - Enable appveyor's fast_fail strategy (#2272)
+  *  32c9b9ce8 - Fix for #1749
+  *  355dcfcce - When "/server -s" is used, default to port 6697.
+  *  9433e78da - Fix the second parameter of $context.getSSLCertInfo not
+    being optional
+  *  5d20afae2 - remove blank part of the splash img
+  *  cd3bf0ef5 - [KviKvsEventTable] parameters naming fix between docs <-
+    > displayed entries (#2265)
+  *  bff6c4d1d - Remove lots of redundant line feeds around block
+    elements in the docs.
+  *  9293b1410 - Fix the text of all links in the documentation being
+    lowercase.
+  *  95cf7934a - Add missing include on some versions of Qt
+  *  e05d3393d - Make our docs work better with the QTextBrowser.
+  *  2e57fc1dd - error in spanish translation (#2268)
+  *  457ae5b36 - [KviKvsEventTable]  Capitalize some remaining
+    parameters (#2264)
+  *  e51fe37e7 - disabled handler: match color style to kvirc (#2261)
+  *  b54b2127c - Update KviIrcServerParser_numericHandlers.cpp (#2260)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 27 Aug 2017 11:25:53 +0300
+
 kvirc (4:4.9.2~git-7141-gcd585fa-1) unstable; urgency=medium
 
   * Compile

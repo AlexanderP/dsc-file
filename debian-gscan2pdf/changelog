@@ -1,3 +1,47 @@
+gscan2pdf (1.8.6+git2671-eedfcd94-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: eedfcd948332e8c8776de14dfd070eb1f94380b4
+  * Date: 1503419612
+  * git changelog:
+  *  eedfcd94 - Fixed unpaper detection for v0.3
+  *  d41e6c30 - Bumped version to 1.8.6
+  *  c7e678fe - Reapply only those current scan settings that were reset
+    by the reload
+  *  463bb654 - + Reload recursion limit in Edit/Preferences Break of
+    out reload recursion loop if maximum number of reloads is exceeded.
+  *  b74d061b - Tidied t/175_open_session2.t
+  *  1ccc4c9e - Fixed visibility of options for DjVu, JPEG, & TIFF in
+    save dialogue
+  *  d0b03189 - Post release commit
+  *  465ef124 - Prerelease commit
+  *  a30e5835 - Bumped version to 1.8.5
+  *  9e2cc8d7 - Update to Slovak translation
+  *  a9f2aafd - + A3 to default paper sizes
+  *  82379946 - Eliminate unnecessary strings from gscan2pdf.pot to
+    prevent unnecessary work and confusion on the part of the
+    translators
+  *  7c91a531 - Reapply current scan settings for those scanners that
+    reset them when forcing a reload
+  *  6ab7e2ef - +
+    Gscan2pdf::Scanner::Profile::remove_backend_option_by_name()
+  *  461da3ce - - support for libsane-perl
+  *  1d2fe5a0 - Fix test failures due to incorrect test count
+  *  ad0090fe - Fix test failures due to timezone in metadata
+  *  470975f9 - Fix test failures due to warning from unpaper
+  *  30f9d137 - Update to Hungarian translation
+  *  515cdb9d - Log program versions as well as their existence
+  *  d88bc517 - Suppress warning messages reading empty files in /etc/*-
+    release
+  *  c65f7b4f - + support for Poppler (pdftops) as postscript backend
+  *  88356bf2 - ImageMagick-6.9.9.3 reports bytes
+  *  745821df - file-5.31 cannot recognize PGM files
+  *  987c8665 - Post-release commit
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 25 Aug 2017 02:33:46 +0300
+
 gscan2pdf (1.8.4+git2646-4123a3f-1) unstable; urgency=medium
 
   * Compile

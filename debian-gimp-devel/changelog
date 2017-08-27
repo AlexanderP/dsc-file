@@ -1,3 +1,99 @@
+gimp-devel (2.9.6+git38998-58fdaae3ad-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 58fdaae3ad0d6573695eab407d4c85d392757532
+  * Date: 1503603327
+  * git changelog:
+  *  58fdaae3ad - enums: add intermediate generated enum files to
+    .gitignore
+  *  468dc22898 - configure.ac: post-release version bump to 2.9.7
+  *  5afea2f6d3 - Release 2.9.6
+  *  9d2f93f62d - Update Croatian translation
+  *  1c740f0d21 - app: update .gitignore in app/gegl/
+  *  97829ba3d4 - NEWS: Croatian translation got an update, whee!
+  *  895edd6d76 - data: add .gitignore to tool-presets/Crop and fix tabs
+    in its Makefile.am
+  *  50128d533f - Update Croatian translation
+  *  ad4564e527 - plug-ins: do not use stock IDs.
+  *  71fb5e9acc - Far more bugs have been fixed or addressed between
+    2.9.4 and 2.9.6
+  *  e1624573c0 - Update Icelandic translation
+  *  88dfce2c52 - Update Icelandic translation
+  *  2df281a219 - devel-docs/release-howto.txt: mention to use "cp" not
+    "mv" on the server
+  *  e34ce3b269 - NEWS: mention that we now almost always create layer
+    in NORMAL mode
+  *  d230ca24c6 - docs, etc: regenerate default gimprc and its manpage
+  *  e16c8a2352 - Move the new "default_new_layer_mode" APIs to the
+    image...
+  *  497fb9b0c3 - plug-ins: in metedata-editor.c, don't use initial
+    declarations
+  *  4f245c8272 - plug-ins: s/snprintf/g_snprintf/ in fits-io.c
+  *  4b5f0c10ac - Update Icelandic translation
+  *  885b7abab0 - Update Polish translation
+  *  e40ebde536 - plug-ins: in file-psd, add support for exporting layer
+    groups
+  *  33255a439b - plug-ins: in file-psd, improve PS <-> GIMP layer-mode
+    mapping
+  *  f13c177ea7 - app: fix babl format names in luminance mode
+  *  838449254a - plug-ins: use gimp_get_default_new_layer_mode() for
+    most new layers
+  *  59fae30b53 - pdb: add new procedure gimp-get-default-new-layer-mode
+  *  033e33fbf6 - libgimp: use NORMAL mode for a transparent temporary
+    layer in gimpexport.c
+  *  1cbb2f3309 - app: add a comment to test-xcf.c about why we use
+    LEGACY layer modes
+  *  7ce77c47cc - app: stop hardcoding NORMAL_LEGACY for new
+    layers/images
+  *  a256cf3338 - app: add GimpCoreConfig::default-new-layer-mode
+  *  b89d10a830 - app: fix compositing of non-LEGACY layers in "show
+    mask" mode
+  *  730573375d - app: use GIMP_LAYER_MODE_NORMAL for most tests in
+    app/tests/
+  *  77f51dd737 - app: specify blend function for
+    GIMP_LAYER_MODE_COLOR_ERASE_LEGACY
+  *  0cfe550639 - app, pdb: change a lot of
+    GIMP_LAYER_MODE_NORMAL_LEGACY to just NORMAL
+  *  58a68f5e98 - app: add a missing case to a switch in
+    GimpToolRectangle
+  *  bac042db39 - app/gegl: temp hotfix to disable threading in
+    gegl:copy-buffer
+  *  94c6bb4603 - Bug 783755 - Smudge should blend the smudged colors
+    using linear RGB
+  *  17596fb145 - Update Icelandic translation
+  *  64ade97702 - app: move libappgegl's SSE2 bits to a separate library
+  *  71bbd88e00 - app: layer mode code shuffling
+  *  0181e9e4ac - Updated Italian translation
+  *  065ddbd523 - NEWS: move thread-safe libgimp to Core.
+  *  0709f1ed00 - NEWS: libgimp calls now thread-safe.
+  *  6ff1ffa688 - libgimpbase: add gp_(un)?lock() calls to the def file.
+  *  15f7344038 - libgimp, libgimpbase: allow multi-threaded plugins by
+    locking...
+  *  4410ab0db0 - bump required GEGL version to 0.3.20
+  *  61f61a96d6 - NEWS: adding angle display when straight line
+    constraining.
+  *  a3cd156265 - app: remove useless double space.
+  *  78244f9cb5 - Bug 785816 - show angle in degrees when drawing
+    straight lines.
+  *  90a808e863 - bump required babl version to 0.1.30
+  *  4ef1648774 - Update Russian translation
+  *  0d3b666c7a - Update Russian translation
+  *  a592192500 - Update Russian translation
+  *  d875f24e66 - Updated Italian translation
+  *  2f037fcba5 - Update Polish translation
+  *  87dbc05cbd - darktable: add info message to dt when started
+  *  b926de5ada - Bug 783755 - Smudge should blend the smudged colors
+    using linear RGB
+  *  4ac359dc41 - Updated Italian translation
+  *  cab45eebf0 - libgimpbase: fix compilation error in gimpmetadata.c
+  *  59905273b2 - Update Spanish translation
+  *  292f88150a - Update Spanish translation
+  *  586a47edff - Update Spanish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 25 Aug 2017 07:23:12 +0300
+
 gimp-devel (2.9.4+git38937-1cf2e66-1) unstable; urgency=medium
 
   * Compile

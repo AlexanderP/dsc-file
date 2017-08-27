@@ -1,3 +1,251 @@
+freecad-daily (0.17~git11910-12d411ac5-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 12d411ac59f4e04dfce8fc764acbcdc4442532dc
+  * Date: 1503619979
+  * git changelog:
+  *  12d411ac5 - Draft: Fixed line to sketch conversion
+  *  249d13005 - Arch: Changed order of Rebar tools to match the wiki
+  *  7321fa6b7 - don't filter point cloud when estimating normals to
+    avoid mismatch of number of points and normals
+  *  5996ebcf6 - load organized point clouds in pcd files without
+    properties
+  *  ace619c09 - FEM: z88, fix tet10 import and export node order
+  *  4efcad775 - FEM: z88 disp reader, adapt new result mesh creation
+    for results objects
+  *  88e2b6de9 - Reduced logging for pocket ops again.
+  *  ab2e516b3 - Refactored pocket and facing to use the same base
+    class; added min travel and keep tool down to the interface - latter
+    one is hidden since it currently doesn't seem to work.
+  *  8c70c3abc - Fixed retraction of tool when profiling multiple holes.
+  *  90952b1c5 - Added docstrings to Gui classes.
+  *  1f1e88710 - Fixed error in circular hole when created with invalid
+    features. Not sure how they get through but they should not cause an
+    exception.
+  *  9f0ba77a5 - Added doc strings to operations.
+  *  a59e1004c - Replaced BaseGeometry 'Update' with 'Clear', since
+    update didn't actually do anything and 3 buttons is consistent with
+    the BaseLocation dialog.
+  *  be89ab0ac - Gate Locations processing on feature enablement.
+  *  b7d62e4d6 - Moved GetPoint dialog to replace the add+remove+edit
+    section and leave the list of locations visible - much better user
+    experience
+  *  1f3a1d7c8 - Added option to snapper to hode the snapbar once it's
+    done
+  *  2642e668c - Added location points for drilling to base framework.
+  *  b92d39675 - Enabled drilling of arcs.
+  *  81f62d60f - Reduced PathAreaOp log level to info.
+  *  a93bda280 - Fixed input field update again.
+  *  185879351 - Fixed typo.
+  *  c94383b77 - Fixed typo and wrong signal generation for Depths page.
+  *  7f1caafc4 - Fix PathJob losing its base.
+  *  d9272777a - Fixed drilling tip length issue.
+  *  12d23df2a - Removed remaining old accel keys and fixed PathSanity
+    object references.
+  *  aec6cfe23 - Only set properties if they have actually changed (the
+    onChanged/updateData callbacks are called synchronously).
+  *  e7e7ef20a - Rearranged tab orders for pages.
+  *  43c12d9d6 - Added tooltips to all dialogs, except for drilling.
+  *  8268d7fb8 - Removed nc directory and adapter - again.
+  *  0d529c05d - Removed obsolete ui files.
+  *  ed6f16d62 - Adding missing engraving ui files.
+  *  519083900 - Cleaning up some unused functions.
+  *  0c89193d9 - Refactored Engrave to be based on PathOp - added
+    support for StepDown, default behaviour is a single step.
+  *  a32f527ac - Added support for baseobject into PathOp, used by
+    almost all ops anyway.
+  *  6fcff10b9 - Fixed markdown
+  *  1664e6513 - Restored icons for profile ops; cleaned up accel keys.
+  *  bc53677dc - Rmoved empty implementation of PathFromShape
+  *  21f98304b - Rebased Helix op on PathOp framework, also it's UI.
+  *  bddcb2842 - Split base hole processing into separate class.
+  *  26b9c67da - Split DrillingGui into its own file and base it off of
+    PathOpGui.
+  *  f32ef5946 - Renamed PathAreaOpGui to PathOpGui - there's nothing
+    Area specific in there.
+  *  2b83f1204 - Added ability to overwrite standard pages.
+  *  564522f60 - Consolidated DepthsPage into single class.
+  *  f0c69cce0 - Refactored PathDrilling operation using PathOp.
+  *  0d4bc71a6 - Moved base functionality into PathOp and renamed AreaOp
+    interface to areaOp...
+  *  19f4e8a56 - Fixed Apply button misbehaviour for drilling.
+  *  1c4dd1959 - Removed Names and added support for ArchPanels again.
+  *  4140bdfd0 - Removed Positions and replaced Enabled with Disabled.
+  *  68af1f6df - Eliminated Diameter as a property.
+  *  4e8d0cbea - Converted MillFace to be based on PathAreaop.
+  *  6b8960d12 - Renamed PathContour to PathProfileContour for
+    consistency.
+  *  73b15db3e - Consolidated UI for all profile ops.
+  *  99042ff62 - Explicit log messages if job cannot be found or it
+    doesn't have a base.
+  *  100fbe7ac - Converted ProfileEdges to based off PathAreaOp.
+  *  6bd53273b - Renamed ui for ProfileFaces to match implementation
+    names.
+  *  3c3c30259 - Extracted common profile functionality into base class.
+  *  1e76c9925 - Renamed PathProfile to PathProfileFaces for
+    consistency; moved common depth calculation for ops with
+    BaseGeometry into PathAreaOp.
+  *  4c5ba3840 - Refactored Commmand and ViewProvider to be data driven
+    and moved imlementation into PathAreaOpGui.
+  *  50711c1ba - Converted PathProfile to be based on PathAreaOp.
+  *  d07319e4d - Fixed issues with BaseGeometry UI processing and
+    extended interface to support multiple shapes.
+  *  83e5c8098 - Moved pocket specific logic back into PathPocket.
+  *  a742c1120 - Split pocket gui into its own file and based on
+    PathAreaOpGui.
+  *  2884d3ac6 - Moved PathPocket to use PathAreaOp.
+  *  cfd2d4ca5 - Cleaned up import statements.
+  *  442765cbb - Corrected selection index.
+  *  51f0050b9 - Updating cmake files.
+  *  f08454d01 - Added alternate TaskPanel layouts, for fun.
+  *  9ef7a941f - Added Depths page.
+  *  0bb1c3b72 - First cut on splitting GUI into generic part and op
+    specifics.
+  *  8c8175779 - Split Contour UI into it's own implementation file.
+  *  42f0d71d4 - Split Contour op into generic PathArea part and contour
+    specifics.
+  *  bb3e69fdd - Fixed typo.
+  *  f5979d3a4 - Draft: grammer fix
+  *  6d194a4bd - Use argparse for post processor argument parsing and
+    added preamble and postamble as arguments.
+  *  012cffefe - implement slicing for VectorPy class
+  *  c4c1034e4 - Py3: replace sq_slice and sq_ass_slice with
+    mp_subscript and mp_ass_subscript because they are not used any more
+    in Py3
+  *  0e81583e3 - Set object's Restore flag while restoring the Path
+    property.
+  *  533a78026 - add method toFormat to get number format from character
+  *  858df142e - Base: Make Quantity parser accept 1/[unit] as [unit]^-1
+  *  1165d3c6e - Base: Fixes in MKS units schema
+  *  38fa71203 - Base: Add DynamicViscosity and SpecificEnergy units
+  *  21fd2743a - Base: Add properties to InputField for setting Quantity
+    from Python
+  *  71130d09e - Do not overwrite tooltips for InputFields.
+  *  ca4488f43 - unit test for duplicate links in a group
+  *  fdce472b2 - App::Document: fix breakDependency
+  *  cea242d7f - Refactoring Sketcher execute() to use solve()
+  *  3d4920e4e - Sketcher: Extension to report redundancy,
+    Standardisation of return codes for solve, documentation,
+    initialisation of solver information
+  *  f974fec2b - Clarify solver situation at the end of of
+    ViewProvider::OnDelete
+  *  48f76bd0a - Fixing unreported bug behaving like #2710 without
+    AutoUpdate under conflicting constraints + improving documentation
+  *  aa4319797 - Refactoring solve+recompute and reinstating initial
+    solve+recompute behaviour
+  *  2004544e5 - fixes #0002710: Freecad doesn't show sketch elements
+    added when overconstrained issue #0002836: Crash in sketcher
+  *  3d86498a4 - when drawing constraint icon handle the case when view
+    provider of sketch is not in sync with geometry
+  *  aa5db283c - Arch: Fixed orienation bug in structure
+  *  1de105881 - compile Path module with boost < 1.55
+  *  a4b7ade4b - Make it pass desktop-file-validate
+  *  f23496819 - Turned tracking off for profile.
+  *  a8ea8256b - Reduced ramp entry log level to info.
+  *  43c740687 - Removed automatic parameter emmission into output file
+    from phillips post processor.
+  *  51bc693f5 - Made comments real openbsp comments, instead of relying
+    on the g-code compatibility.
+  *  2f1d519a6 - Changed speed setting to take opensbp multiple speed
+    rates into account - and only issues a new setting if there are any
+    changes. From the documentation it seems we ought to use VS instead
+    of JS and MS if we don't want the ramp-down-ramp-up procedure
+    involved with FS and MS. Given that Path only changes these settings
+    on a tool change it's probably OK for now.
+  *  fd54f7209 - Fixed xy vs. z speed order for MS and JS command.
+  *  3b097a360 - Added support for comments to opensbp
+  *  42e9cbcc4 - Don't create step movements for vertically diagonal
+    moves.
+  *  7fbc80c11 - fix crash when moving a free sketch to a body
+  *  0942c150e - Arch: Renamed Rebar -> Custom Rebar
+  *  9a90d1029 - Arch: Don't remove splitter if removing splitter fails
+  *  b61ba45a3 - AddonManager: don't close if a thread is still running
+  *  9251691a0 - CommandSketcherBSpline Increaseknot extended to comply
+    with the convention: if not rethrowing, must report
+  *  7a9596203 - fixes of PR 765 remove QT_TRANSLATE_NOOP because of
+    compiler warnings mark _isReported as mutable to avoid removing
+    const keyword from ReportException() improve whitespaces
+  *  04c09b301 - Generator script modified to first report and then ask
+    for the python representation, so as keep track of the reported
+    status
+  *  572bd0ae0 - Exception extension to only report once
+  *  4ad3f9993 - SketchObject Modifyknotmultiplicity written to support
+    translatable exception messages
+  *  3c630dc31 - Exceptions: translation support
+  *  a5080329d - Draft: draft2sketch now (partially) supports bezcurves
+    and bsplines (no constraints yet)
+  *  0adf582b1 - Arch: Fixed cutplane bug - fixes #3082
+  *  aa8221641 - Draft: Fixed wrong arc projections in TechDraw
+  *  4e4da960a - Arch: Fixed wrong IFC extrusion value
+  *  26f8cb6f8 - in selection view do not extract element names from
+    item text but set and get user data
+  *  7aec98ffb - add methods to get normal and curvature information
+    from surfaces
+  *  ddcd7a4c9 - FEM: gmsh mesh tool, fix geo tolerance value
+  *  576bfd2fa - Fixed tool tip length compensation and added safeguards
+    against invalid cutting edge angles.
+  *  3f0e8613a - Path: Drilling. Fix drillbit tip compensation.
+  *  49d75f88b - fix warning
+  *  892e78d44 - extend Python api of units: + get list of all available
+    schemas + get currently set schema + translate a quantity to a given
+    schema
+  *  2cd535e01 - WhatsThis support for Python based commands
+  *  bb9b5ba38 - in PropertyLinkList replace assert with C++ exception
+    to avoid a crash
+  *  d5b554d2b - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  8237b1c01 - Arch: Fixed small bug in arch panel
+  *  371cb0fa2 - fix compiler warning
+  *  a54b80ba6 - Draft: Dont hide Start and End properties in Draft
+    wires
+  *  42b39b59f - AddonManager: If using git, clicking an installed WB
+    now says if an update is available
+  *  7c87549e4 - Fix return type
+  *  2e92f301d - PDN: Fix Loft claimChildren to only grab sketches
+  *  0d3f5b114 - PDN: Fix Pipe claimChildren to only grab sketches
+  *  b6abbeb9c - PDN: Automatically activate body if document has only 1
+  *  d29bed15d - PDN: Add catch statements for Revolution perpendicular
+    axis
+  *  fdf66b3e8 - PDN: Check both parallel and antiparallel cases before
+    trying Revolve
+  *  2a6205206 - Path: possibility to add custom drill point
+  *  40b1093bd - PATH: Clarify comment in PathDrilling
+  *  0dce2394b - PATH: add arc edges to drillables in PathDrilling
+  *  0d471dbed - FEM: Fenics: issue #3038: fixes missing isatty()
+    function in Python wrapper classes for stderr and stdout
+  *  2826bf073 - Arch, IFC import, code formating
+  *  c3cdf6b22 - Arch: IFC import, add pref to view fit while importing
+  *  35b574901 - FEM: gmsh mesh object, make the geometry tolerance unit
+    less
+  *  6fa4fb4c0 - FEM: gmsh group meshing, add edges and vertexes
+  *  2044eba62 - FEM: code formating, flake8 on new Fenics code
+  *  fa05b1b06 - FEM: Fenics mesh: added mesh group task panel for xdmf
+    export, flake8, improves issue #3038
+  *  7161b98a7 - FEM: Fenics mesh: flake8 restored
+  *  8da914fb7 - FEM: Fenics mesh: improved 1D and 2D export
+  *  0456928fd - FEM: Fenics mesh: writer XDMF, removed write_volumes
+    function and substituted by write_codim function
+  *  b611cfc8e - FEM: Fenics mesh: export and marking, fixed flake8
+    issues
+  *  f95ca7185 - FEM: Fenics mesh: added mesh group marking in xdmf file
+  *  bd4bc9c25 - FEM: Fenics mesh: some small improvements
+  *  0b98673c7 - FEM: Fenics mesh: implemented generalized cell writeout
+    function with co-dimension parameter
+  *  785d660dd - FEM: Fenics xdmf: added writeout of gmsh groups as cell
+    functions
+  *  d4f59e173 - Arch: Fixed load error in console mode
+  *  d84c2d354 - drag and drop for compound objects
+  *  24bdf806e - for fillet&chamfer copy transparency from base object
+  *  d896d11fa - always update colors after updating shape to get rid of
+    previously set transparency
+  *  172cbcd77 - job selector for a tool shows not the job label but the
+    job name
+  *  8203a35a0 - select all faces in shape builder if this option is
+    activated
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 25 Aug 2017 08:19:37 +0300
+
 freecad-daily (0.17~git11749-6c4bdf2-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,90 @@
+deadbeef (0.7.2+git7372-97ffd134-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 97ffd1348c4b1dc83c9bd9424efce33f1af5f655
+  * Date: 1503601912
+  * git changelog:
+  *  97ffd134 - premake: added converter
+  *  bb0f1095 - converter: minor refactoring and fixed wav riff chunk
+    size
+  *  481093d7 - converter: cleanup global variables
+  *  d71c4b1b - converter: get rid of `fact` chunk, it's not required
+    for PCM formats
+  *  563a2d6f - converter: fixed writing pcm_f32 wavs
+  *  b76b5ccc - converter: fixed writing pcm_u8 wavs
+  *  06cbefc7 - converter: fixed wav writer reentrancy and pcm_s16
+    support
+  *  b546a522 - converter: restored writing 'fact' chunk for 24bit wav
+  *  b80fc5f3 - converter: fixed writing pcm_s24 wav files
+  *  ee733d94 - converter: WAV float / 32 / 24 fix WIP
+  *  c4652b74 - cocoaui: remember selected converter output sample
+    format
+  *  86371008 - cocoaui: added Log clear button
+  *  99c0fb95 - cocoaui: fixed scroll glitch on double click in search
+    view
+  *  f8dfe0ed - Update build status link
+  *  d67a5832 - gtkui: listview: refactor empty region detection
+  *  a2c1853c - gtkui: listview: don't start playback when double
+    clicking below last playlist item
+  *  37d84b1a - gtkui: listview: don't update cursor when clicking below
+    last playlist item
+  *  dad48d9d - gtkui: fixed rg preamp labels in prefwindow (fixes
+    #1857)
+  *  07459e14 - cocoaui: rg_scanner ui improved plugin init
+  *  3df144d3 - gtkui: remove rg tags impl
+  *  98975f1e - cocoaui: when removing rg tags, don't rewrite tags which
+    don't have rg info
+  *  8afb90db - replaygain: fixed memset bug in replaygain_init_settings
+  *  0653c6fd - cocoaui: minor rg_scanner ui fix
+  *  b191c448 - cocoaui: implemented Remove RG Info
+  *  2e8372d0 - Merge remote-tracking branch 'origin/gtk-rg'
+  *  e6adb2fb - cocoaui: fix cleanup code on non-UI thread
+  *  febe089c - gtkui: finished rg_scanner_ui
+  *  ed040de9 - gtkui: rg_scan cleanup on windows close
+  *  c06a6ca3 - gtkui: rg scanner ui WIP
+  *  93c07fcc - gtkui: rg scanner UI result display
+  *  b4b6a15d - gtkui: rg_scanner progress cancel handling
+  *  06c0a2f4 - gtkui: rg_scanner UI WIP
+  *  fc62ca85 - cdda: automatically detect charset and convert cd text
+    to utf8
+  *  2e4d99e4 - gtkui: added rg.c and rg.c: initial and partial port of
+    RG Scanner UI from CocoaUI
+  *  addef7e5 - vscode: build and run using premake
+  *  769e1dfa - premake: fixed vorbis; improved flac; added ape
+  *  58950a48 - premake: added flac, wavpack and vorbis plugins
+  *  6455d1b2 - premake: added rg_scanner builder
+  *  6e8958ce - rg_scanner: cleanup
+  *  df0687ac - premake: added hotkeys
+  *  98ed64d4 - premake cleanup
+  *  ebcdd26c - Merge branch 'master' into gtk-rg
+  *  c01a7a18 - renamed premake workspace
+  *  4f5eea74 - prototype premake5 support: build core, gtkui2, alsa and
+    mp3
+  *  2eebadd5 - gtkui: fix gtk2.16 compat in trkproperties.c; skip
+    deadbeefapp.c content when compiling for gtk2
+  *  bbfa31c4 - sndio: fixed the most obvious bugs and make it play
+    sound
+  *  8124ca66 - sndio: better openbsd libsndio detection; fix sndio
+    plugin to not reinit on configchanged event
+  *  bef2b6c2 - playlist: removed debug printf
+  *  cae1bfd9 - fixed bad icons
+  *  d151fac9 - Revert "Losslessly reduce the size of SVG images."
+  *  ad285346 - new github url
+  *  8a6d51a1 - gtkui: display rg windows via menu click
+  *  478dbeae - gtkui: rg scanner UI laid out in glade
+  *  16745c91 - gtkui: rg scanner menu stubs
+  *  a16c1ffc - new CONTRIBUTING.md
+  *  b4639866 - gtkui: fixed EQ color
+  *  f495bf5e - gtkui: make it more clear that the customizable
+    background color is used in the EQ window
+  *  98a73306 - Require sudo for linux build
+  *  031637d7 - plugins: fixed wrong coreaudio plugin name usage
+  *  8ad3e6a0 - conf: release lock after failing to load config
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 27 Aug 2017 10:11:44 +0300
+
 deadbeef (0.7.2+git7312-604f60c-1) unstable; urgency=medium
 
   * Compile

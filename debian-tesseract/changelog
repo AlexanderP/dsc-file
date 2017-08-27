@@ -1,3 +1,38 @@
+tesseract (4.00~git2113-27d25e9c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 27d25e9c99ca65a2137f54f4c9c2bd20fc050024
+  * Date: 1503555413
+  * git changelog:
+  *  27d25e9c - Merge pull request #1094 from stweil/spaces
+  *  b016c48d - Add missing spaces in help text
+  *  1e3bf29c - Merge pull request #1092 from stweil/fixtext
+  *  8bb5a89d - Don't add empty line to text output
+  *  de98a68d - Merge pull request #1089 from stweil/text
+  *  742b3035 - Fix hint for training build
+  *  6f13d755 - Merge pull request #1051 from stweil/googletest
+  *  3847b7dd - Merge pull request #1085 from KindDragon/patch-1
+  *  d171488e - Added CMake option to use system ICU library
+  *  7afa05a0 - Merge pull request #1072 from stweil/listlangs
+  *  197b89b6 - Merge pull request #1077 from chrismamo1/chore/cleanup-
+    compiler-warnings
+  *  3755a29a - Merge pull request #1076 from chrismamo1/bug/listlangs-
+    without-eng
+  *  6f281c36 - fix a problem I introduced in a previous commit
+  *  71111674 - fix a set-but-not-used warning and add casts for
+    comparing signed+unsigned numbers
+  *  b89bb09f - fix a set but not used warning and cleanup some old code
+    from 2007
+  *  f9b51d79 - suppress a strict aliasing warning; the original author
+    was very clear about the nature of the problematic code
+  *  5fd3e22f - move code around so that list-langs will work without an
+    English traineddata file
+  *  cc0d87c5 - List available languages recursively
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 25 Aug 2017 01:16:54 +0300
+
 tesseract (4.00~git2092-efa50da-1) unstable; urgency=medium
 
   * Compile
