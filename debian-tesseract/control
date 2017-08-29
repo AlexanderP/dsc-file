@@ -4,7 +4,8 @@ Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: debhelper (>= 7.0.50~), libleptonica-dev (>= 1.72~), 
                automake, libtool, libpango1.0-dev, libcairo2-dev, libicu-dev, 
-               libpng-dev, libjpeg-dev, libtiff-dev, zlib1g-dev, git, autoconf-archive, asciidoc, xsltproc, docbook-xsl, docbook-xml
+               libpng-dev, libjpeg-dev, libtiff-dev, zlib1g-dev, git, autoconf-archive, asciidoc, 
+               xsltproc, docbook-xsl, docbook-xml
 Standards-Version: 3.9.8
 Homepage: https://github.com/tesseract-ocr/
 
@@ -46,7 +47,7 @@ Description: Tesseract OCR library
 
 Package: tesseract-ocr
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, tesseract-ocr-eng (>= 3.01~) | tesseract-ocr-eng-ltsm, tesseract-ocr-osd | tesseract-ocr-osd-ltsm, tesseract-ocr-equ, libtesseract4 (>= 3.03~)
+Depends: ${shlibs:Depends}, ${misc:Depends}, tesseract-ocr-eng (>= 3.01~), tesseract-ocr-osd, tesseract-ocr-equ, libtesseract4 (>= 3.03~)
 Replaces: tesseract-ocr-data
 Description: Tesseract command line OCR tool
  The Tesseract OCR engine was one of the top 3 engines in the 1995
