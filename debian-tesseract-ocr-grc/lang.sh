@@ -10,15 +10,15 @@ CONTROL="control"
 rm -f *.install
 cp -f control.in ${CONTROL}
 
-for i in ${LANG} 
+for i in ${LANG}
 do
-j=$(cat lang.txt | grep "${i}__" | awk -F '__' '{print $2}')
+j=$(cat lang.txt | grep "^${i}__" | awk -F '__' '{print $2}')
 cat >> ${CONTROL} << EOF
 Package: tesseract-ocr-${i}
 Architecture: all
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: \${misc:Depends}
-Recommends: tesseract-ocr (>= 3.04)
+Recommends: tesseract-ocr (>= 3.99)
 Replaces: tesseract-ocr-data (<< 2)
 Description: tesseract-ocr language files for ${j}
  A commercial quality OCR engine originally developed at HP between 1985
@@ -29,14 +29,14 @@ Description: tesseract-ocr language files for ${j}
 EOF
 
 cat >> tesseract-ocr-${i}.install << EOF
-$(echo ${i} | sed 's/-/_/g').* usr/share/tesseract-ocr/4.00/tessdata/
+best/$(echo ${i} | sed 's/-/_/g').* usr/share/tesseract-ocr/4.00/tessdata/
 
 EOF
 done
 
 for i in ${LANG_OLD} 
 do
-j=$(cat lang.txt | grep "${i}__" | awk -F '__' '{print $2}')
+j=$(cat lang.txt | grep "^${i}__" | awk -F '__' '{print $2}')
 cat >> ${CONTROL} << EOF
 Package: tesseract-ocr-${i}
 Architecture: all
