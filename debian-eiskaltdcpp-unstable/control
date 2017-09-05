@@ -20,13 +20,15 @@ Build-Depends: autotools-dev,
                libminiupnpc-dev,
                libnotify-dev,
                libpcre3-dev,
-               libqt4-dev,
                libssl-dev,
                pkg-config,
                po-debconf,
-               qt4-dev-tools,
-               qt4-qtconfig,
-               zlib1g-dev
+               qtbase5-dev,
+               qtmultimedia5-dev,
+               qtscript5-dev,
+               qttools5-dev,
+               qttools5-dev-tools,
+               zlib1g-dev, qtdeclarative5-dev
 Homepage: https://github.com/eiskaltdcpp/eiskaltdcpp
 Vcs-Git: git://github.com/tehnick/eiskaltdcpp-unstable-debian.git
 Vcs-Browser: https://github.com/tehnick/eiskaltdcpp-unstable-debian/tree/launchpad/debian

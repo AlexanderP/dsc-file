@@ -17,6 +17,8 @@ CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
 CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(CPPFLAGS)
 LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
 
+export QT_SELECT=qt5
+
 %:
 	dh --parallel $@
 

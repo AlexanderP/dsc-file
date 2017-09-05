@@ -20,13 +20,15 @@ Build-Depends: autotools-dev,
                libminiupnpc-dev,
                libnotify-dev,
                libpcre3-dev,
-               libqt4-dev,
-               libssl1.0-dev,
+               libssl-dev,
                pkg-config,
                po-debconf,
-               qt4-dev-tools,
-               qt4-qtconfig,
-               zlib1g-dev
+               qtbase5-dev,
+               qtmultimedia5-dev,
+               qtscript5-dev,
+               qttools5-dev,
+               qttools5-dev-tools,
+               zlib1g-dev, qtdeclarative5-dev
 Homepage: https://github.com/eiskaltdcpp/eiskaltdcpp
 Vcs-Git: git://github.com/tehnick/eiskaltdcpp-unstable-debian.git
 Vcs-Browser: https://github.com/tehnick/eiskaltdcpp-unstable-debian/tree/launchpad/debian
@@ -177,13 +179,11 @@ Package: eiskaltdcpp-qt-unstable
 Architecture: any
 Depends: eiskaltdcpp-common-unstable,
          eiskaltdcpp-qt-data-unstable (= ${source:Version}),
-         libqt4-sql-sqlite,
+         libqt5sql5-sqlite,
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: libqtscript4-core,
-            libqtscript4-gui,
-            libqtscript4-network,
-            libqtscript4-xml
+Recommends: libqt5script5,
+            libqt5scripttools5
 Replaces: eiskaltdcpp (<< 2.1.0), eiskaltdcpp-qt
 Conflicts: eiskaltdcpp-qt
 Breaks: eiskaltdcpp (<< 2.1.0)

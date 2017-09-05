@@ -46,7 +46,6 @@ CMAKEOPTS = -DCMAKE_BUILD_TYPE=RelWithDebInfo \
             -DLUA_SCRIPT=ON -DWITH_LUASCRIPTS=ON \
             -DPERL_REGEX=ON -DWITH_DHT=ON \
             -DWITH_SOUNDS=ON \
-            -DUSE_QT=ON \
             -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON \
             -DCHECK_GTK_DEPRECATED=OFF \
             -DUSE_LIBGNOME2=OFF -DUSE_LIBNOTIFY=ON \
@@ -55,25 +54,33 @@ CMAKEOPTS = -DCMAKE_BUILD_TYPE=RelWithDebInfo \
             -DXMLRPC_DAEMON=OFF -DJSONRPC_DAEMON=ON \
             -DUSE_CLI_JSONRPC=ON \
             -DWITH_DEV_FILES=ON \
+            -DUSE_IDNA=ON \
             ..
 
 OPTSSTEP1 = -DUSE_QT_SQLITE=ON \
-            -DUSE_JS=ON -DUSE_QT_QML=ON \
+            -DUSE_JS=ON \
             -DUSE_GTK=ON -DUSE_GTK3=OFF
 
 OPTSSTEP2 = -DUSE_QT_SQLITE=OFF \
-            -DUSE_JS=OFF -DUSE_QT_QML=OFF \
+            -DUSE_JS=OFF \
             -DUSE_GTK=OFF -DUSE_GTK3=ON
 
 # This option is for daily builds of the EiskaltDC++ packages on Launchpad
 # See https://launchpad.net/~tehnick/+archive/tehnick for more information
-REVISION = $(shell /bin/sh -c "head -n 1 debian/changelog | sed -e 's/^.*-[0-9]\{6,6\}-//' -e 's/-0ppa.*$$//'")
+REVISION = =$(shell cat debian/changelog |grep '* Commit' | sed 1q |awk -F ': ' '{print $$2}')
 CMAKEOPTS += -DDCPP_REVISION="$(REVISION)"
 
-ifneq (,$(filter $(DEBIAN_CODENAME),sid stretch)) 
+ifneq (,$(filter $(DEBIAN_CODENAME),sid stretch buster zesty)) 
 	CONTROL = control.sid
+	export QT_SELECT=qt5
+	CMAKEOPTS += -DUSE_QT=OFF -DUSE_QT5=ON
+	OPTSSTEP1 += -DUSE_QT_QML=OFF
+	OPTSSTEP2 += -DUSE_QT_QML=OFF
 else
 	CONTROL = control.jessie
+	CMAKEOPTS += -DUSE_QT=ON -DUSE_QT5=OFF 
+	OPTSSTEP1 += -DUSE_QT_QML=ON
+	OPTSSTEP2 += -DUSE_QT_QML=OFF
 endif
 
 %:
