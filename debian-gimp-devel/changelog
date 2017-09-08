@@ -1,3 +1,75 @@
+gimp-devel (2.9.6+git39038-ee4ec014ef-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: ee4ec014efc35dcabd5bf7b9cf3fdd4622549650
+  * Date: 1504772264
+  * git changelog:
+  *  ee4ec014ef - Update Spanish translation
+  *  743b303b19 - build: skip Recommends for docker image
+  *  b5865a1ba6 - build: Add more dependencies to the build image
+    Dockerfile
+  *  723c4d7f87 - app: remove GimpColorizeConfig, merge its props into
+    GimpOperationColorize
+  *  62c37c7ddb - Update Polish translation
+  *  0ce289876a - Keep NEWS updated, start listing contributors
+  *  613d3b0893 - Dockerfile for building GIMP 2.9.x
+  *  eb2741ed70 - Bug 592533 - Mask positions move to top-left when
+    saving as PSD
+  *  3cfa35ec07 - plug-ins: in file-psd, fix active layer selection
+    during loading
+  *  6ecce4cbf9 - plug-ins: in file-psd, fix potential group-layer
+    naming conflict during loading
+  *  dc89e380c8 - plug-ins: in file-psd, improve layer opacity
+    loading/saving
+  *  58f2bbfdbd - plug-ins: in file-psd, refactor layer creation code
+    during loading
+  *  b86b19235e - darktable: Fix typo in last commit
+  *  82dd06720d - darktable: Add more shell escaping for Windows
+  *  855f2f1cbe - plug-ins: Fix finding raw loaders on Win/OSX
+  *  e6c1c14a94 - pdb, libgimp: change the gimp-drawable-invert API
+    again
+  *  3007193704 - Update Polish translation
+  *  e2ddfdc391 - libgimpbase: add #define GIMP_METADATA_ERROR
+    gimp_metadata_error_quark ()
+  *  6b1ed42912 - app: add a timer to gimp_gegl_convert_color_profile()
+  *  582c6edd54 - libgimp*: use some g_clear_object() and
+    g_clear_pointer()
+  *  4cfeb53d09 - libgimpcolor: use gimp_color_profile_get_format() in
+    GimpColorTransform
+  *  d092ee9102 - libgimpcolor: add a new
+    gimp_color_profile_get_format()
+  *  c63d812be8 - libgimpcolor: rename gimp_color_profile_get_format()
+    to _get_lcms_format()
+  *  f59a635604 - libgimpcolor: use the new cmsFLAGS_COPY_ALPHA in
+    GimpColorTransform
+  *  fd8fd89d98 - configure.ac: require lcms >= 2.8
+  *  31d6c7df60 - NEWS: start NEWS list for GIMP 2.9.8.
+  *  278c054dd6 - plug-ins: gimp_dialog_run() returns int.
+  *  6b1291747f - Open password protected PDF feature
+  *  ac7d8aa98d - Bug 787019 - Gimp 2.9.6 misses -lm in
+    libgimpbase/Makefile.am
+  *  5effdd03b4 - app: add dedicated op for pass through mode, with
+    shortcuts
+  *  2e6c39ed9c - pdb, libgimp: rename gimp_drawable_invert() to
+    _invert_non_linear()
+  *  188a82552b - libgimpwidgets: fix double $(AM_V_GEN) in Makefile.am
+  *  494d18941d - Bug 785152 - The default GIMP brush should not be a
+    clipboard brush
+  *  2a9bacb528 - configure.ac: require Babl >= 0.1.31 and GEGL >=
+    0.3.21
+  *  0ef3795f0a - */Makefile.am: work around a bug in the new glib-
+    genmarshal
+  *  f3d684b0fc - plug-ins: in file-psd, fix missing some attributes
+    loading empty layers
+  *  546b46a7d2 - Update Polish translation
+  *  a2981cffe7 - Update Croatian translation
+  *  d5a46f19bc - Update Croatian translation
+  *  c0084c9a25 - Update Croatian translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 08 Sep 2017 12:13:58 +0300
+
 gimp-devel (2.9.6+git38998-58fdaae3ad-1) unstable; urgency=medium
 
   * Compile

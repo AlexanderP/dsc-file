@@ -1,3 +1,105 @@
+freecad-daily (0.17~git11970-6de23532c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 6de23532c8aa5d5ebdea845612cb067dd2994f1e
+  * Date: 1504812754
+  * git changelog:
+  *  6de23532c - Path: libarea: update to latest pybind11
+  *  0e18c6e06 - Improvements for PR973 to rename a macro: + remove
+    check for write-protected macro because this still can be renamed +
+    do nothing if the user didn't define a different file name + keep
+    the item in the list view selected
+  *  21e1a5fde - Add a rename option to the macro dialog Forum thread:
+    https://forum.freecadweb.org/viewtopic.php?f=8&t=24005 Fixes #3173
+  *  d0c5865f3 - show cursor for selection in Blender style when Ctrl is
+    pressed while left-clicking
+  *  98470fe67 - do not clear selection when clicking on empty space
+    while Ctrl key is pressed
+  *  94fcefd20 - direct support of Volt in units framework
+  *  2b461e9cc - Arch: fix grammatical error
+  *  4baf05933 - qt5: fix in Draft translate
+  *  4cde30c18 - Arch: Applied fix to cyclic dependency problem to
+    windows
+  *  7af5b78bf - AddonManager: Inform which addons have updates
+    available
+  *  77d93089a - Merge pull request #962 from triplus/DraftSnapWhatsThis
+  *  9409c0699 - WhatsThis support for Draft Snap toolbar
+  *  c9957b8a9 - Port to occ7.2: + use default constructor of
+    BRepOffsetAPI_MakeOffsetShape since overloaded versions are
+    deprecated + use default constructor of BRepOffsetAPI_MakeThickSolid
+    since overloaded versions are deprecated + fix small bug in
+    MeshVertex
+  *  61c7ac7fd - Draft: WP Proxy now supports perspective camera too
+  *  fd5e7768d - Port to occ7.2: + replace use of StlMesh classes as
+    they have been removed
+  *  79d399e43 - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  cc8770677 - Addon manager - create Macro folder if not present
+  *  949c86d36 - Port to occ7.2: + Standard_Failure::Caught() is now
+    marked as deprecated and should be replaced with standard C++
+    exception handling
+  *  5aa60a4d3 - fixed typos kindly highlighted by @luzpaz
+  *  5a0b0944c - Port to occ7.2: + replace Quantity_Parameter with
+    Standard_Real is it's marked deprecated + include NCollection_Vector
+    as it's needed by STEPCAFControl_Writer + remove
+    GC_MakeConicalSurface used for cone and distance as this was never
+    implemented in any earlier occ version and has been removed now
+  *  d8347b1ac - port smesh to occ7.2
+  *  5d2b22ca2 - improve whitespaces
+  *  fe3f671b8 - Updated translation strings (and sent to crowdin)
+  *  7f23886e8 - FEM: mech result task panel, use the result tools stat
+    def instead of an own method
+  *  cbe3054c7 - FEM: command purge results, make it independent from
+    ccx analysis tools
+  *  2cc72df72 - FEM: since result object does not depend on analysis
+    mesh, make analysis tools independed from result object
+  *  d675f1d02 - FEM: z88, fix some comment in result importer
+  *  4096c8bbc - FEM: code formating, get rid of tabs
+  *  cb5047080 - trivial typo fix
+  *  e2cba9f1c - Path: typos
+  *  69c7b35a6 - Arch: Grid command
+  *  6e7952ec6 - PDN: Add several Hole tests
+  *  44f163178 - PDN: Add simple hole test
+  *  2751a3e84 - Merge pull request #956 from luzpaz/more-crowdin-typos
+  *  409f5186c - Arch: typo fix
+  *  a5bc70cca - remove properties from transactions when being deleted
+  *  5219cb5b3 - Different approach to determining the qt version.
+  *  353ebde7a - Reduced log level to info.
+  *  d8eb9a31c - Fix Qt4/5 setResizeMode -> setSectionResizeMode
+  *  467ef5578 - Misc. typos discovered via crowdin
+  *  c0ad3fec6 - Fix macOS Qt4 build
+  *  e29915b59 - Stylesheets: update to v.2.07 - several improvements
+    and bugs fixed - added Selector styles (by now it's a 3rd party
+    plugin but for anyone that installs it, it will style the bar
+    nicely) - hide redundant info inside cells with links inside the
+    Properties View
+  *  42945cd59 - Path: remove obsolete operations PathFaceProfile
+    PathFacePocket are no longer necessary
+  *  da836d183 - Path: remove pathcompoundextended
+  *  a15421e9c - Path: gui cleanup
+  *  a651609fe - path: convert smoothiepost to use argparse
+  *  151cfda1a - path: gui cleanup for copy related functions remove
+    compound
+  *  550d35fb0 - Path: cleanup on operation copy
+  *  1efe5cfe7 - Path: cleanup simplecopy
+  *  694fb31df - Path: Command to duplicate an operation. Creates a copy
+    of the currently selected operation in the same job
+  *  d93f9b186 - Fix crash in enum property due to index out of range
+  *  fccb5dbc8 - Draft: New UI for the Scale tool
+  *  04390300c - More py3 compatibility, same root cause though.
+  *  0fff9d416 - Fixed unit test for python3.
+  *  e0ebe92d1 - Added full unit test to make sure tool chain works
+    correctly.
+  *  f2483f2ff - Added preambles option to fromShapes to prevent
+    Path.Area from emmitting a preamble before every block of movement.
+  *  36284251c - Fixed merge issue.
+  *  a076179cf - Start of dogbone unit tests.
+  *  a9867b4fd - Removed redundant import.
+  *  21502ce1f - Converted PathProfile to be based on PathAreaOp.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 08 Sep 2017 13:10:40 +0300
+
 freecad-daily (0.17~git11910-12d411ac5-1) unstable; urgency=medium
 
   * Compile

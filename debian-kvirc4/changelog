@@ -1,3 +1,68 @@
+kvirc (4:4.9.2~git-7189-ge7e2f4048-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: e7e2f4048920ca2da10ccb5c1b00781fcd895d39
+  * Date: 1504652637
+  * git changelog:
+  *  e7e2f4048 - Revert "Escape things in the class editor. Fixes #2211.
+    (#2243)"
+  *  3021bb31b - OptionsWidget_message: fix label text "Use specified
+    smart colors for own nick:"
+  *  208d97992 - OptionsWidget_message: fix enabling/disabling of
+    selector.
+  *  5f0e41272 - Improve the script tester a little bit (#2282)
+  *  20efc5d86 - KviKvsPopupMenu: Code cleanup
+  *  9c3295d27 - style.css: remove the Dreaded Dark Slate Gray Colour
+    from Hell
+  *  f6dcefbc4 - PackAddonDialog: Show the output path when an addon is
+    exported.
+  *  15b40fdd5 - Add an option to allow the use of smart nickname
+    colours with no background (#2284)
+  *  692d10d9d - KviTreeWindowList: Fix the broken background color if a
+    stylesheet has been loaded.
+  *  144981f2b - Don't crash on reguser.add if the provided mask is
+    already assigned to other user.
+  *  f5e68adfb - Overriding this misspelling
+  *  921d7ecbc - Show if the current theme has been overriden with a
+    stylesheet
+  *  b007b25bd - KviRuntimeInfo: Fix the Qt theme detection
+  *  9defac5f5 - Fix wrapping of <pre> in the docs.
+  *  ab3a530f1 - Allow the user to bypass the default stylesheet.
+  *  ed718b00f - Clean up properly after the search field in the
+    settings dialog is emptied.
+  *  d09814dd9 - Handle ftpes:// links too.
+  *  0315e6cfe - Make the "window list type" selector a combobox instead
+    of a checkbox.
+  *  b9e966095 - Fix the global stylesheet not being copied when
+    installing.
+  *  e4ef82fcf - Add OwnAction, OwnActionCrypted and TopicCrypted
+    message types.
+  *  571e2adba - misc doc fixes
+  *  06e936af2 - Fix black on black when using mirc reverse in the topic
+    widget.
+  *  61cc3ebb9 - Add "search as you type" functionality to the settings
+    dialogs.
+  *  53d76db32 - Make the current mouse position the origin of the
+    tooltips of the user list.
+  *  931641f50 - Switch the order of creation of debug and release
+    builds
+  *  5ce339050 - Use https for sourceforge
+  *  fd7f8989d - Raise the main window when an irc link is opened from a
+    browser. (#2279)
+  *  5d1b8667f - Make the default ftp client open sftp:// and ftps://
+    links.
+  *  c3dc09c62 - Add ucrtbased.dll to the release directory for Windows
+    debug builds. Closes #2227
+  *  f395f4216 - Remove EventEditorWindow.setCurrentHandlerEnabled.
+    (#2275)
+  *  8ddb763c9 - defscript popups: improvements and fixes (#2241)
+  *  1d63565bc - Update the user's username and host as soon as he sends
+    us something.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 07 Sep 2017 19:16:45 +0300
+
 kvirc (4:4.9.2~git-7157-g82f44408f-1) unstable; urgency=medium
 
   * Compile

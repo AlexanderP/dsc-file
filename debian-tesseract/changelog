@@ -1,3 +1,32 @@
+tesseract (4.00~git2135-147a1a50-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 147a1a50b766b94c3f2ffa9b8bdccfacf2d42ff0
+  * Date: 1504765859
+  * git changelog:
+  *  147a1a50 - Merge pull request #1112 from Sineaggi/fix-unix-simd
+  *  0d7c89ea - Add -mavx and -msse4.1 compile flags on unix
+  *  f29498ff - Merge pull request #1088 from Shreeshrii/master
+  *  3104c426 - Merge pull request #1104 from stweil/typo
+  *  69ef9401 - Groundtruth for testing/eurotext.tif
+  *  e0464a0d - Delete readme.md
+  *  f7284569 - Use groundtruth from testing directory
+  *  0ed7317c - Rename unittest/testfiles/phototest.txt to
+    testing/phototest.txt
+  *  61f96981 - training: Fix typos in comments (found by codespell)
+  *  b9365cdf - api: Fix typo in comment
+  *  10cf5084 - Changed syntax for AM_CPPFLAGS
+  *  3b05b3e2 - revert blank line at end
+  *  6ac5d0ba - dawg: Fix typos and file information in file header
+  *  9c2fa0d1 - Merge pull request #1100 from Sineaggi/master
+  *  69b9d298 - Fix version.h not being installed
+  *  52cac3a4 - Fix library being named liblibtesseract on non win32
+    platforms
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 07 Sep 2017 21:13:33 +0300
+
 tesseract (4.00~git2113-27d25e9c-1) unstable; urgency=medium
 
   * Compile
