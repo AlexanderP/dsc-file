@@ -1,0 +1,80 @@
+Source: tesseract-lang-old
+Section: graphics
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.8
+Homepage: https://github.com/tesseract-ocr/
+
+Package: tesseract-ocr-dan-frak
+Architecture: all
+Provides: tesseract-ocr-language, tesseract-ocr-lang
+Depends: ${misc:Depends}
+Recommends: tesseract-ocr (>= 3.04)
+Replaces: tesseract-ocr-data (<< 2)
+Description: tesseract-ocr language files for Danish (Fraktur)
+ A commercial quality OCR engine originally developed at HP between 1985
+ and 1995. In 1995, this engine was among the top 3 evaluated by UNLV. It
+ was open-sourced by HP and UNLV in 2005. This package contains the data
+ needed for processing images in a particular language.
+
+Package: tesseract-ocr-deu-frak
+Architecture: all
+Provides: tesseract-ocr-language, tesseract-ocr-lang
+Depends: ${misc:Depends}
+Recommends: tesseract-ocr (>= 3.04)
+Replaces: tesseract-ocr-data (<< 2)
+Description: tesseract-ocr language files for German (Fraktur)
+ A commercial quality OCR engine originally developed at HP between 1985
+ and 1995. In 1995, this engine was among the top 3 evaluated by UNLV. It
+ was open-sourced by HP and UNLV in 2005. This package contains the data
+ needed for processing images in a particular language.
+
+Package: tesseract-ocr-equ
+Architecture: all
+Provides: tesseract-ocr-language, tesseract-ocr-lang
+Depends: ${misc:Depends}
+Recommends: tesseract-ocr (>= 3.04)
+Replaces: tesseract-ocr-data (<< 2)
+Description: tesseract-ocr language files for equations
+ A commercial quality OCR engine originally developed at HP between 1985
+ and 1995. In 1995, this engine was among the top 3 evaluated by UNLV. It
+ was open-sourced by HP and UNLV in 2005. This package contains the data
+ needed for processing images in a particular language.
+
+Package: tesseract-ocr-kur
+Architecture: all
+Provides: tesseract-ocr-language, tesseract-ocr-lang
+Depends: ${misc:Depends}
+Recommends: tesseract-ocr (>= 3.04)
+Replaces: tesseract-ocr-data (<< 2)
+Description: tesseract-ocr language files for Kurdish
+ A commercial quality OCR engine originally developed at HP between 1985
+ and 1995. In 1995, this engine was among the top 3 evaluated by UNLV. It
+ was open-sourced by HP and UNLV in 2005. This package contains the data
+ needed for processing images in a particular language.
+
+Package: tesseract-ocr-slk-frak
+Architecture: all
+Provides: tesseract-ocr-language, tesseract-ocr-lang
+Depends: ${misc:Depends}
+Recommends: tesseract-ocr (>= 3.04)
+Replaces: tesseract-ocr-data (<< 2)
+Description: tesseract-ocr language files for Slovak (Fraktur)
+ A commercial quality OCR engine originally developed at HP between 1985
+ and 1995. In 1995, this engine was among the top 3 evaluated by UNLV. It
+ was open-sourced by HP and UNLV in 2005. This package contains the data
+ needed for processing images in a particular language.
+
+Package: tesseract-ocr-tgl
+Architecture: all
+Provides: tesseract-ocr-language, tesseract-ocr-lang
+Depends: ${misc:Depends}
+Recommends: tesseract-ocr (>= 3.04)
+Replaces: tesseract-ocr-data (<< 2)
+Description: tesseract-ocr language files for Tagalog
+ A commercial quality OCR engine originally developed at HP between 1985
+ and 1995. In 1995, this engine was among the top 3 evaluated by UNLV. It
+ was open-sourced by HP and UNLV in 2005. This package contains the data
+ needed for processing images in a particular language.
+

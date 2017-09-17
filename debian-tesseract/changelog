@@ -1,13 +1,63 @@
-tesseract (4.00~git2135-147a1a50-1) unstable; urgency=medium
+tesseract (4.00~git2172-e62e8f5f-1) unstable; urgency=medium
 
   * Compile
   * URL: https://github.com/tesseract-ocr/tesseract.git
   * Branch: master
-  * Commit: 147a1a50b766b94c3f2ffa9b8bdccfacf2d42ff0
-  * Date: 1504765859
+  * Commit: e62e8f5f802c0d8f3dd67da993327cdafaee9763
+  * Date: 1505457921
   * git changelog:
+  *  e62e8f5f - Merge pull request #1109 from mingodad/mingodad-fix-
+    interword-spaces
+  *  188e1fc2 - Merge pull request #1128 from vidiecan/issue_1127
+  *  2a77d5ad - returns the correct dictionary if lstm only used
+  *  d962d344 - Merge pull request #1126 from stweil/unittest
+  *  67f706f9 - unittest/apiexample_test: Use googletest API for error
+    handling
+  *  b42df389 - unittest/apiexample_test: Report missing test image
+  *  5c7600c2 - unittest/apiexample_test: Fix test for out-of-tree
+    builds
+  *  86555247 - unittest/apiexample_test: Use "C" locale
+  *  7e4f5faa - Merge pull request #1123 from stweil/googletest
+  *  4ae227df - unittest: Fix path for libtesseract in out of tree
+    builds
+  *  04b0397c - Merge pull request #1120 from amitdo/multiplelibs
+  *  876344f8 - Merge pull request #1121 from Shreeshrii/install-git-
+    instructions
+  *  c55e487e - Add additional information
+  *  a905548e - Autotools build: Remove the option 'USING_MULTIPLELIBS'
+  *  dd422c36 - Merge pull request #1118 from Shreeshrii/fixoverwrite
+  *  4e9c9758 - fix accidental overwrite using old version
+  *  7569c899 - Merge pull request #1116 from Shreeshrii/fixunittest
+  *  9a038f89 - Add merge_unicharsets to build
+  *  f6c22dbf - remove duplicate - gunit.h
+  *  c50e4f62 - Fix cppan dependency.
+  *  36e0d209 - Fix windows build.
+  *  63e18620 - Disable travis os x builds as they do not work well on
+    travis-side.
+  *  3493785f - Fixed apiexample and intsimdmatrix tests and prepared
+    Makefile.am for more tests
+  *  9d258e20 - Fixed build of unicharset_extractor
+  *  fc6a390c - Added intsimdmatrix as a generic integer matrixdotvector
+    function with AVX2 and SSE specializations
+  *  ad74e8a6 - Fixed integer overflow error
+  *  4cf123e0 - Added ability to randomly rotate images upside-down
+    during training for training OSD
+  *  3e63918f - Fixed order of characters in ligatures of RTL languages
+    issue #648
+  *  a912967c - Rewrote unicharset_extractor to use the new string
+    normalizer and read plain text as well as box files.
+  *  c773eb57 - Fixed rendering of Thai and units of char spacing
+  *  e96d1df0 - Fixed leaks in pango font info
+  *  bf774382 - Updated comments on RemapOutputs
+  *  0382222d - More clang-tidy fixes from sync
+  *  f25cc27a - Update fopr leptonica 1.74
+  *  a2a72d7c - Clang tidy changes from sync
+  *  a18620cf - Improved results on images with no resolution. Estimates
+    resolution from the size of the connected components, based on
+    average text size.
   *  147a1a50 - Merge pull request #1112 from Sineaggi/fix-unix-simd
   *  0d7c89ea - Add -mavx and -msse4.1 compile flags on unix
+  *  ea557a3e - Fix to preserve_interword_spaces work again
   *  f29498ff - Merge pull request #1088 from Shreeshrii/master
   *  3104c426 - Merge pull request #1104 from stweil/typo
   *  69ef9401 - Groundtruth for testing/eurotext.tif
@@ -25,7 +75,7 @@ tesseract (4.00~git2135-147a1a50-1) unstable; urgency=medium
   *  52cac3a4 - Fix library being named liblibtesseract on non win32
     platforms
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 07 Sep 2017 21:13:33 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 16 Sep 2017 00:24:43 +0300
 
 tesseract (4.00~git2113-27d25e9c-1) unstable; urgency=medium
 
