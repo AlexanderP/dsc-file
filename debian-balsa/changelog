@@ -1,3 +1,27 @@
+balsa (2.5.3+git8737-049f0a29-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/balsa
+  * Branch: master
+  * Commit: 049f0a29782b62436f425565e6d0f7aedfe5f7f0
+  * Date: 1505925221
+  * git changelog:
+  *  049f0a29 - Make '-lz' a dependency, not a global link arg
+  *  98ebeeeb - Use glib-genmarshal --header --body
+  *  dc445f67 - Do not include internal dependencies
+  *  767d56da - Adapt the meson build to reflect option changes
+  *  1edb64b1 - Remove option to build with GnomeKeyring
+  *  c8f829d1 - HAVE_GNOME is redundant
+  *  1c543128 - Allow installing the help files
+  *  820b6cc9 - Better building with meson
+  *  11720477 - Meson uses msgfmt rather than intltool-merge
+  *  68e0d366 - Make balsa and balsa_ab installable.
+  *  096f86f6 - Fix install directories
+  *  633ed475 - Initial meson build sysem support
+  *  e7fdfe5b - Fixes to Catalan translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 21 Sep 2017 16:40:58 +0300
+
 balsa (2.5.3+git8724-d45b2875-1) unstable; urgency=medium
 
   * Compile

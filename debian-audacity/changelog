@@ -1,3 +1,59 @@
+audacity (1:2.1.3+git7485-7b70aa08a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 7b70aa08af63beeaccdd26d3e0d32d101292e42a
+  * Date: 1505933015
+  * git changelog:
+  *  7b70aa08a - Bug1718: AU effect presets import dialog should find
+    user presets too
+  *  02403c123 - Bug1746: Playing Note & Wave at once should stop at end
+    of selection
+  *  a5aaaf517 - Bug1744: Switch flat EQ curve to linear and draw points
+    correctly...
+  *  ecd149eda - Revert "Fix for #1554: toolbars open undocked if
+    previously hidden"
+  *  75d557463 - Use -c (check) option in msgfmt when generating .mo
+    files
+  *  048c1b8c5 - Fix for #1554: toolbars open undocked if previously
+    hidden
+  *  731a2ac40 - Fix format of tooltip text for toolbar buttons in RTL
+    languages...
+  *  954a97442 - Changed the conditional compilation for
+    alpha/beta/release...
+  *  5a2966026 - Update audacity.pot
+  *  e41acf912 - Fix some omissions from translations, thanks
+    scootergrisen & mkpoli...
+  *  f6b5d8e65 - Generate msgid and msgid_plural in .pot for wxPLURAL
+    macro
+  *  ec5f9d6b6 - Translation of strings in Benchmark
+  *  1e1560d63 - Fix missed translations in Plot Spectrum
+  *  a3245b56a - Translate "Audacity website:" in About dialog
+  *  b2382eab2 - Translation of Quality preference choices
+  *  70b5076b0 - Fix some untranslated prompts and messages...
+  *  3b7e99273 - Remove some unused strings that confused translators...
+  *  b6029a876 - Some translation fixes that will not add to the .pot
+    file
+  *  e2129feac - Translate the items in the popup menu of the scrubbing
+    ruler
+  *  5f298accb - Translated effect name and description in many places
+    in Effect.cpp...
+  *  42f894581 - Fix statically allocated message string in _() (didn't
+    translate!)
+  *  adc269568 - i18n-hints about the name "Nyquist" ...
+  *  0cab2e92b - Fix some comments
+  *  cc3c56818 - Bug1744: Editing of linear frequency scale EQ curve
+    should work
+  *  cee28ab53 - Bug1735 addendum: fix oddities pasting left of Note
+    track offset...
+  *  761bd6bf8 - Translation of time, frequency, and bandwidth format
+    names
+  *  47552acfc - Bug1735: crash pasting copied part of Note track
+    starting at > 0...
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 21 Sep 2017 15:51:26 +0300
+
 audacity (1:2.1.3+git7458-7314de6a3-1) unstable; urgency=medium
 
   * Compile

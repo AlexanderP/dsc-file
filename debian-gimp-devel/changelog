@@ -1,3 +1,64 @@
+gimp-devel (2.9.6+git39073-16eadb8ad1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 16eadb8ad1a82afbf08f91b8750f977e5e508ded
+  * Date: 1506003238
+  * git changelog:
+  *  16eadb8ad1 - Update Indonesian translation
+  *  4b12467d4e - build: gexiv2 also was bumped.
+  *  411e550fb7 - build: libwebp required version was bumped.
+  *  589e27bf0c - app: in GimpFlipTool, stop drawing before initializing
+    tool
+  *  ee3ecb7833 - app: avoid id. matrix short-circuit in trans. tool
+    when ...
+  *  6dfe04e928 - Bug 787848 - Duplicate image crashes if there is an
+    empty layer group
+  *  7bff087444 - Update Hungarian translation
+  *  bd2ed6265a - Update Polish translation
+  *  54ac0feb5a - app: "bpc" is bytes not bits per pixel in the new XCF
+    endian code
+  *  a735ba0daa - app: add code to read/write XCF tile data as big-
+    endian
+  *  4ff911f84d - app: add xcf_read_component() and
+    xcf_write_component()
+  *  77bf6313c3 - Update Catalan translation
+  *  ce982e12b9 - libgimpcolor: pass intent to babl_space from icc
+    creation
+  *  0dfed0ec8a - Update Catalan translation
+  *  8027a818d9 - Fixes to Catalan translation
+  *  4902f6e610 - NEWS: update with no commit on identity transform and
+    selection.
+  *  c1c0a306be - Bug 787545 - GIMP records unused Transform tool into
+    Undo history.
+  *  9c94072213 - app: do not add undo step when clearing an already
+    empty channel.
+  *  0d9a85a207 - Bug 784643 - Crash when using transform tools
+  *  677e5c233a - icons: start completing the main Symbolic icons SVG
+    file.
+  *  971be6dc20 - tools: missing space separations.
+  *  0f2002c948 - plug-ins: check GError domain and code, not the
+    message.
+  *  19b300efe7 - NEWS: add file-pdf-load2 PDB API.
+  *  af8519b208 - plug-ins: fixes and review to the previous commit.
+  *  8ef7303f7d - Bug 787090 - Encrypted PDF support
+  *  90aed24e73 - Update Hungarian translation
+  *  16d33b034b - Bug 787494 - incorrect babl_space_from_icc() call.
+  *  a0dc9abe23 - NEWS: update.
+  *  2c19ea2145 - app: add compiler info in `gimp -v`.
+  *  415f869f20 - app: drop workaround for bug #785521
+  *  9b4382614b - Bug 787222 - Can't convert from 16 bit to 16 bit
+    floating point.
+  *  9f83dcab8e - Update Catalan translation
+  *  54b4d1e0a2 - Bug 787326 - MacOS's CFSTR() does not work with const
+    variables.
+  *  1773cd91a2 - app: in GimpCursorView, move cursor info update to an
+    idle function
+  *  66df027591 - Fixes to Catalan translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 21 Sep 2017 20:51:31 +0300
+
 gimp-devel (2.9.6+git39038-ee4ec014ef-1) unstable; urgency=medium
 
   * Compile

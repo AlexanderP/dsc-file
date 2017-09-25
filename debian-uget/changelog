@@ -1,21 +1,21 @@
-uget (2.0.9-0+nmu1) unstable; urgency=medium
-
-  * New upstream release 
-
- -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 23 Feb 2017 17:28:50 +0300
-
-uget (2.0.8-1+nmu2) unstable; urgency=medium
-
-  * Rebuild
-
- -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 03 Jan 2017 22:12:33 +0300
-
-uget (2.0.8-1+nmu1) unstable; urgency=medium
+uget (2.0.10-1+nmu2) unstable; urgency=medium
 
   * Non-maintainer upload.
   * Backports from Sid
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 19 Oct 2016 19:49:35 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 19 Sep 2017 22:45:31 +0300
+
+uget (2.0.10-1) unstable; urgency=medium
+
+  * New upstream release. Closes:#873870
+  * Updated Standard-Version to 4.1.0
+  * Add 06_fix_spelling_error.patch: fixing spelling errors in source code
+  * debian/rules: adding upstream changelog
+  * debian/control: Updated Vcs-Git with https
+  * debian/watch: Updated to version 4
+  * debian/copyright: Updated year
+
+ -- Elías Alejandro Año Mendoza <ealmdz@gmail.com>  Sat, 02 Sep 2017 08:25:46 -0300
 
 uget (2.0.8-1) unstable; urgency=medium
 

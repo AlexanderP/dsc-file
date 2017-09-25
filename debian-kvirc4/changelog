@@ -1,3 +1,21 @@
+kvirc (4:4.9.2~git-7194-g9322d59cd-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 9322d59cd43e8e5d1da878747860e8daf04d4e30
+  * Date: 1506019088
+  * git changelog:
+  *  9322d59cd - Cmake updates
+  *  100f7dad5 - Fix invalid IP integer for DCC RSEND request (#2252)
+  *  ebd8fd302 - small typo (#2305)
+  *  6fbd3ca40 - Work around the 'disappearing console' problem. Setting
+    a style sheet on QComboBox has always been problematic.
+  *  5db1c7a8e - test: remove hack cmake_policy(SET CMP0026 OLD) this
+    breaks appveyor builds (#2304)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 22 Sep 2017 07:19:18 +0300
+
 kvirc (4:4.9.2~git-7189-ge7e2f4048-1) unstable; urgency=medium
 
   * Compile

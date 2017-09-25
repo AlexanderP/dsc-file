@@ -1,3 +1,41 @@
+goaccess (1:1.2.0+git2511-00a4093-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 00a40938bc17748625e046e7c77fc8b303a780fd
+  * Date: 1506050333
+  * git changelog:
+  *  00a4093 - Merge pull request #893 from aadityabagga/update-readme
+  *  8847b81 - Update README.md
+  *  c5ada5c - Updated tcb function comments to reflect return value.
+  *  a87060c - Updated tcb function comments to reflect return value.
+  *  18281a4 - Ensure we retrieve uint64_t record from db using
+    tcadbget.
+  *  e71024f - Ensure we retrieve uint32_t record from db using
+    tcadbget.
+  *  639732b - Ensure we retrieve uint64_t record from db using
+    tcadbget.
+  *  2f58ad5 - Ensure we retrieve int record from db using tcadbget
+    instead of tcadbget2.
+  *  0609bf7 - Ensure we retrieve int record from db using tcadbget
+    instead of tcadbget2.
+  *  b6058eb - Use calloc to allocate unique request key and initialize
+    buffer.
+  *  8eea00a - Use calloc to allocate unique visitors key and initialize
+    buffer.
+  *  e3dc232 - Ensure unique visitor key variables are initialized to
+    NULL.
+  *  7c55574 - Updated function comment under parser.c.
+  *  6aae766 - Updated Docker feature text in README.md.
+  *  4bbe73d - Increased the number of MAX_IGNORE_IPS to 1024 + 128.
+  *  14fd0c3 - Updated Docker feature text in README.md.
+  *  9f0025b - Updated Docker feature text in README.md.
+  *  e416dc2 - Updated Docker feature text in README.md.
+  *  a64d12a - Updated NEWS with latest changes.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 22 Sep 2017 17:59:35 +0300
+
 goaccess (1:1.2.0+git2492-28777f6-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,39 @@
+gscan2pdf (1.8.7+git2688-672da3f6-2) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 672da3f6edc2bfe762d2010724f0a3266cc45d3d
+  * Date: 1506098229
+  * git changelog:
+  *  672da3f6 - Prerelease commit
+  *  b512c23a - Fixed bug requiring scan dialog to be requested twice
+    after changing frontend
+  *  42cdb189 - Bumped version to 1.8.7
+  *  b7f31f5b - Take filename of PDF to email from default filename
+    settings (and therefore from metadata). If this produces a blank
+    filename, use "document.pdf".
+  *  96fd6efc - Right mouse click in thumbnail panel makes the page
+    range (e.g. in save dialogue) default to "selected".
+  *  97d72372 - Update to Hungarian translation
+  *  d1541154 - Fixed visibility of options in save dialogue (again)
+  *  d2d82f1a - Filter out integers from tool warnings, analogous to the
+    hex warnings from unpaper
+  *  6c00943b - Fixed bug causing profile dropdown to be cleared after
+    setting profile
+  *  8b5209f6 - Ghost save button, rather than hiding save dialogue if
+    all pages removed
+  *  3e0d58c8 - Fixed crash with scanimage frontend due to empty cache
+  *  9142ae0d - - Reload recursion limit in Edit/Preferences Set reload
+    recursion limit as triangular number of number of scan options.
+  *  566aa01d - Fix Poppler PostScript backend not listed in Save dialog
+  *  09ad88ee - Update POD text for libsane-perl removal
+  *  d4e9c601 - Fix unsupported libsane-perl offered as Frontend choice
+  *  41b0c26b - + units to edit paper dialogue
+  *  2eb4df98 - + units to scan dialogue
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 22 Sep 2017 22:44:57 +0300
+
 gscan2pdf (1.8.6+git2671-eedfcd94-1) unstable; urgency=medium
 
   * Compile

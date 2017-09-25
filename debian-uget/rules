@@ -2,28 +2,11 @@
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
-DEBIAN_CODENAME = $(shell echo $$DIST)
-ifeq "$(DEBIAN_CODENAME)" ""
-	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
-endif
-
-ifneq (,$(filter $(DEBIAN_CODENAME),sid stretch buster)) 
-	CONTROL = control.sid
-else
-	CONTROL = control.jessie
-endif
-
-
 %:
 	dh $@ --with autoreconf
 
+override_dh_installchangelogs:
+	dh_installchangelogs README
+
 override_dh_auto_install:
 	dh_auto_install -- DESTDIR=$(CURDIR)/debian/uget
-
-override_dh_auto_clean:
-	cp debian/$(CONTROL) debian/control
-	dh_auto_clean
-
-override_dh_auto_configure:
-	cp debian/$(CONTROL) debian/control
-	dh_auto_configure

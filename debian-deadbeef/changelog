@@ -1,3 +1,30 @@
+deadbeef (0.7.2+git7391-8491f3c3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 8491f3c3a2cbd6623e9e9db5c25424d4101b5dc5
+  * Date: 1506081580
+  * git changelog:
+  *  8491f3c3 - cocoaui: improved replaygain scanner UI using sheets for
+    progress bars
+  *  4980daee - cocoaui: fixed rg scanner ref leaks
+  *  b467b586 - Merge branch 'osx-dnd'
+  *  155d3a00 - cocoaui: changed utitype string to more suitable id.
+  *  715170fb - dnd: external drops and internal drops now have the same
+    behaviour, drops are added before selected track or at the end of
+    playlist if no track is selected.
+  *  17880fe0 - dnd motion activates playlist
+  *  3a4bf1c9 - tf: fixes snprintf_clip retval
+  *  050cfd6b - cocoaui: better widgetMessage fix
+  *  0d012207 - tf: fixed wrong tf_eval return value when buffer is
+    smaller than needed (fixes #1877)
+  *  3005fe77 - Merge branch 'master' into osx-dnd
+  *  06c28890 - rg_scanner: fix a ref leak
+  *  1467cc94 - cocoaui: fixed calling UI API from background thread
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 22 Sep 2017 18:07:20 +0300
+
 deadbeef (0.7.2+git7375-8a870cc9-1) unstable; urgency=medium
 
   * Compile
