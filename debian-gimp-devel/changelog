@@ -1,3 +1,92 @@
+gimp-devel (2.9.6+git39126-e75ea3c2af-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: e75ea3c2af518d4b54f87696b490d8a2b71ea98b
+  * Date: 1507340614
+  * git changelog:
+  *  e75ea3c2af - build: add a stable flatpak manifest.
+  *  789cb3ce6e - build: workaround for broken cleanup of flatpak.
+  *  80a526861f - Bug 788461 - Selection with a Fixed size is created
+    with an ...
+  *  e8b37a7a25 - Bug 788461 - Selection with a Fixed size is created
+    with an ...
+  *  9fee677b5c - libgimpwidgets: use default unit for eevl ratio
+    quantity in size boxes
+  *  1e7bb051b5 - build: delete gimptool and gimp-console from the
+    finale flatpak.
+  *  54f4f4457f - build: base both the dev and nightly builds off a
+    BaseApp.
+  *  e545116b89 - build: run flatpak-builder with --ccache option for
+    faster builds.
+  *  55083baa98 - app: also make options_box into a GWeakRef.
+  *  7be856a47d - app: use GWeakRef instead of
+    g_object_add_weak_pointer().
+  *  12df7960ad - Bug 788442 - Gimp crashes not using GEGL Operation
+    tool.
+  *  e06a18b944 - app: use a single size entry for the pos/size props of
+    GimpRectangleOptions
+  *  f2a80a093a - libgimpwidgets: enable ratio expressions for size
+    entries with two fields
+  *  6caae9c53b - libgimpwidgets: add ratio expressions to eevl
+  *  7362d47922 - libgimpwidgets: use struct, not parameters, to pass
+    eevl options
+  *  0ae7acd594 - app: in xcf-load, avoid writing buffer data for empty
+    tiles
+  *  2a0c610e02 - app: don't show the manual language list when no
+    manuals are installed.
+  *  b1f8f60229 - app: fix building GUI language store instead of empty
+    manual language...
+  *  e6b55392d2 - NEWS: add Wavelet Decompose improvements and update
+    localization list.
+  *  656914a344 - NEWS: add new capability of reading manual of any
+    localization...
+  *  3061333fdb - app: the manual language can now be customized through
+    the Preferences.
+  *  6608196978 - app: reuse GimpLanguageComboBox to show available
+    manual languages.
+  *  d0bb3efff4 - libgimpcolor: follow API updates in babl
+  *  a7620b08aa - Bug 788399 - Corrupted display of sample points
+  *  8f3cee4241 - app: also fix the calls to xcf_read,write-component()
+  *  4503dad78c - app: also, it's not the number of pixels but the
+    number of components, sigh
+  *  ebbcaddae7 - app: enable XCF version 12 which finally saves big-
+    endian tile data only
+  *  2e0035c9df - app: XCF endian swapping was still not correct
+  *  bda06dd450 - Update Polish translation
+  *  46e7d02d5a - Update German translation
+  *  33b05cd367 - Bug 786844 - Issue with grain merge layer mode
+  *  7da0153f17 - Update Galician translation
+  *  6efbe67dc4 - Update Russian translation
+  *  290c5f54e3 - wavelet-decompose: marke user-visible messages for
+    translation
+  *  fbf0d33323 - Mark user-visible messages for translation
+  *  88e6dc46af - plug-ins: use a domain on g_set_error().
+  *  f4d9aa00f1 - Bug 788175 - New string in file-pdf-load.c needs
+    plurals.
+  *  5fdf49421b - Another small fix in Italian translation
+  *  234f8c7ab0 - Small fix in Italian translation
+  *  41a2a3634c - plug-ins: wavelet-decompose improvements
+  *  92e58c4caf - Updated Italian translation
+  *  c2330f002d - Bug 787951 - improve help system.
+  *  973f340206 - Update Greek translation
+  *  b5e5fca5a2 - Updated Italian translation
+  *  a8dd6b2d7b - Updated Italian translation
+  *  2ffcf7390d - NEWS: update file-pdf-load2 information.
+  *  d5fd67022b - plug-ins: add parameters to file-pdf-load2 to load
+    multiple pages.
+  *  71450ef7da - plug-ins: forgot to typecast the parameter.
+  *  ce4cc1a768 - Bug 787039 - Make clear that the PDF import dialog
+    selects all pages...
+  *  ab2d36cccf - NEWS: fix my name.
+  *  96673794d9 - build: make a new Flatpak manifest for the 2.9.6
+    release.
+  *  a35d46d5a6 - build: update the howto.
+  *  40fe08b8c1 - build: update webkit patch for flatpak build.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 07 Oct 2017 15:24:34 +0300
+
 gimp-devel (2.9.6+git39073-16eadb8ad1-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,31 @@
+balsa (2.5.3+git8754-c003a7b8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/balsa
+  * Branch: master
+  * Commit: c003a7b89b3f6c2095fe7f8333176f0c7d988fc4
+  * Date: 1507028960
+  * git changelog:
+  *  c003a7b8 - Update German translation
+  *  f6d46576 - Clean up GdkColor references
+  *  4b4d897f - Fix prefixes in marshal files
+  *  6d379f87 - Fix basenames of marshal files
+  *  12df5713 - .split() strings returned by custom config command
+  *  6bbc29bc - Use gnome.genmarshal if glib is new enough
+  *  d2241178 - Use --output option of glib-genmarshal
+  *  5897b665 - Use include_directories instead of explicit -I…
+  *  8ed2b45b - Be consistent in including filter header files
+  *  ae397d8c - We no longer ever define BALSA_DEBUG_THREADS
+  *  ce935873 - Remove 'debug-threads' option
+  *  9ab343b6 - Remove deprecated gdk_threads_* stuff
+  *  1ec1a319 - Drop 'enable-' and 'with-' from option names
+  *  7ecfaca1 - Use documented option syntax for msgfmt
+  *  2d246d8b - New file doc/LINGUAS
+  *  5d9e830d - Replace 'yes'|'no' values with 'true'|'false'
+  *  6d15149b - Make an absolute path to the po dir for soundlist
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 06 Oct 2017 23:41:03 +0300
+
 balsa (2.5.3+git8737-049f0a29-1) unstable; urgency=medium
 
   * Compile

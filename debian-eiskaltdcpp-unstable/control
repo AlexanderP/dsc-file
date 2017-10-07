@@ -179,13 +179,11 @@ Package: eiskaltdcpp-qt-unstable
 Architecture: any
 Depends: eiskaltdcpp-common-unstable,
          eiskaltdcpp-qt-data-unstable (= ${source:Version}),
-         libqt4-sql-sqlite,
+         libqt5sql5-sqlite,
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: libqtscript4-core,
-            libqtscript4-gui,
-            libqtscript4-network,
-            libqtscript4-xml
+Recommends: libqt5script5,
+            libqt5scripttools5
 Replaces: eiskaltdcpp (<< 2.1.0), eiskaltdcpp-qt
 Conflicts: eiskaltdcpp-qt
 Breaks: eiskaltdcpp (<< 2.1.0)

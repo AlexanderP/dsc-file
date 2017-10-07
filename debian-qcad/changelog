@@ -1,3 +1,84 @@
+qcad (3.18.1+git4887-6734cde27-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 6734cde27637ab15346adc87e2b54065ca9cb0d6
+  * Date: 1507305375
+  * git changelog:
+  *  6734cde27 - add getViewOffset
+  *  2372257b8 - refactor RTransaction::addObject
+  *  4c063964c - add createDocument, createDocumentInterface
+  *  b9cba4a59 - disable arrow head block property for leaders
+  *  7ea6181b6 - update example scripts
+  *  5acf63ec9 - add example script
+  *  c747def19 - fix constness of getDocument, getDocumentInterface,
+    getScene
+  *  94a658a71 - fix constness of getDocument, getDocumentInterface
+  *  5a2a11b03 - add hasCurrentViewport for convenience
+  *  76b6f8653 - clean up
+  *  250d82437 - update script bindings
+  *  678ea122f - add pixel width support to Qt graphics scene/view
+  *  213ceb4ad - export active viewport with dashed, thick frame
+  *  c432f32c8 - allow to click viewport inside area
+  *  83e0040a9 - add pixelwidth rendering flag for exporters /
+    painterpaths
+  *  62064123d - activate viewport with double-click
+  *  f4e1c0a03 - setting / unsetting current viewport
+  *  24e23aa78 - update setting options toolbar icon
+  *  4525b8268 - fine tune options toolbar icon size
+  *  67456994b - refactor setting options toolbar icon
+  *  248b8e7b8 - fix icon resolution
+  *  e4997e25b - update readme
+  *  20424141d - disable translation of unused properties
+  *  7d2294da3 - update translations
+  *  2f4ec0ac4 - set version to 3.18.1
+  *  f2ddad5e8 - Merge branch 'master' of github.com:qcad/qcad
+  *  3f9424a3f - clean up
+  *  fef1108e9 - update
+  *  ef0a4d547 - update script bindings
+  *  cb65208a1 - set version to 3.18.0.2
+  *  5e283ccde - port to win32, msvc
+  *  b0c55f2de - compile fix msvc
+  *  a853defab - fix: FS#1617 - Edit > Convert Drawing Unit: Views in
+    view list not converted
+  *  fc3d36517 - set version to 3.18.0.1
+  *  7846df2f8 - layer list: eye icon toggles both off and frozen
+  *  3b74f0499 - detect pro tools during testing
+  *  3536b3f0b - fix expected unit test data for CAD font text
+  *  9520ff26d - add originalShapes in addPath
+  *  2062816bb - update script bindings
+  *  a87edb36e - fix color of exported viewport contents
+  *  9b9a02aaa - add preference to disable color correction for printing
+  *  e3b92166f - add RView::scale
+  *  eb72a6c3a - fix visibility of viewport contents
+  *  9b9c77ec9 - ignore dimscale of 0
+  *  f59b8b471 - fix clipping when highlighting viewport
+  *  a27da8407 - add plot properties to RLayout
+  *  df9d796b0 - fix visibility of viewport contents
+  *  a13ca3f3f - add Misc > Layer menu
+  *  a14775961 - clean up
+  *  894407e62 - remove example script to convert white layers to black
+  *  a929823c3 - add preference to disable color correction for printing
+  *  05ebc05b9 - add scale property for leaders
+  *  049e1bf95 - add dimscale support for leaders
+  *  b0d676f04 - change encoding of SansNS to UTF-8
+  *  685ee105b - clean up
+  *  a2fa9d8d4 - Merge branch 'master' of github.com:qcad/qcad
+  *  8e668178b - fix FS#1636 - Options toolbar: wrong icon size
+  *  e545bde6e - add ToggleLayerVisibility unit test
+  *  daa7970f4 - refactor toggling of layers, fix untoggleble layers
+  *  29d0eb811 - fix RUnit::doubleToString for large numbers
+  *  a38e68887 - update script bindings
+  *  fe86ec8c1 - fix rendering of arcs / circles based on splines
+  *  dfb18fe8c - add getArea to RPolylineEntity API
+  *  ae68e8c22 - add RBlockListQt getItem
+  *  b05ed3201 - update API doc
+  *  b48fdf4eb - refactor
+  *  1c1e2709c - refactor getBlockItem to createBlockItem
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 07 Oct 2017 12:00:36 +0300
+
 qcad (3.18.0+git4820-557c22944-1) unstable; urgency=medium
 
   * Compile

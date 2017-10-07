@@ -1,3 +1,49 @@
+deadbeef (0.7.2+git7418-a0422ae1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: a0422ae1892b1f0a9006e51381ea3746c0c8a5f2
+  * Date: 1507124944
+  * git changelog:
+  *  a0422ae1 - src: improved configurability; added setting target
+    samplerate based on the input (fixed #1880)
+  *  24aa1cc7 - rg_scanner: use %album artist% instead of %artist% for
+    identifying tracks in the same album
+  *  6d3fc012 - gtkui: fix crash on NULL track list in replaygain scan
+    code (fixes #1902)
+  *  557bf3ca - premake: added vfs_curl
+  *  0259d359 - premake: added Release32 configuration
+  *  bb7fabf8 - premake: added 32 bit debug build support
+  *  cbe80729 - added rg_scanner to portable_package_static.sh
+  *  01e985d7 - replaygain: don't write album rg in track mode
+  *  bccb715c - gtkui: fixed rg scan by tags action (fixes #1874)
+  *  88c566f0 - added shared/Makefile.am
+  *  ecfaa89f - premake: added m3u plugin
+  *  437eeff9 - added shared to configure/make (for make distcheck)
+  *  c3858041 - streamer: fix get_prev_track bug, stopping playback
+    instead of finding the previous track correctly (fixes #1900)
+  *  e29907df - partial fix to make distcheck, should fix #1899
+  *  a14ef045 - alsa: fixed wrong format setting error messages
+  *  bb9d0ab3 - cocoaui: tweaked dnd visual line indicator to better
+    support list view when groupped.
+  *  ec5b13a7 - cocoaui: added visual indicator for dnd.
+  *  25673092 - mp3: fixed scanning short files with id3v1
+  *  12af46a1 - mpc: slight code cleanup; fixed a few compiler warnings
+  *  1db371c7 - mpc: fixed mutex lock regression
+  *  075edeab - cue: added handling of non-audio tracks
+  *  4c45bee4 - cue: a better BOM regression fix and cleanup
+  *  1f8f7f3e - streamer, alsa, pulse: fix buffer misalignment after
+    format switch
+  *  5e2a8b90 - gtkui: relocate the generated gtkui-gresources.c to
+    plugins/gtkui/temp/
+  *  97e12450 - cue: fixed utf8 bom skipping
+  *  483f8b01 - added rg_scanner to static builds
+  *  6a0a9b9a - streamer: clip the buffer returned by streamer_read to
+    frame boundary
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 06 Oct 2017 19:08:51 +0300
+
 deadbeef (0.7.2+git7391-8491f3c3-1) unstable; urgency=medium
 
   * Compile

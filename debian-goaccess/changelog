@@ -1,3 +1,53 @@
+goaccess (1:1.2.0+git2540-889a19f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 889a19f45463c4caaa80b6c9256e3ad66d08b15e
+  * Date: 1507291335
+  * git changelog:
+  *  889a19f - Ensure accumulated time is also displayed in the terminal
+    output.
+  *  70f05a3 - Merge pull request #910 from TerraTech/accumulatedTime
+  *  6a08dd2 - Added --log-size command line option to man page.
+  *  b73fd2a - Added --no-parsing-spinner command line option to man
+    page.
+  *  a49b835 - Add ability to store accumulated processing time into
+    DB_GEN_STATS tcb file via '--accumulated-time' switch
+  *  acdd9ff - Merge pull request #909 from TerraTech/issue/901
+  *  c7bb8ee - Add valid_output_type() to validate the filename given
+    via '-o'
+  *  d467bb8 - Merge pull request #908 from TerraTech/issue/907
+  *  29a4170 - Fixed typo in function comment.
+  *  4dc14e8 - Updated command line option --no-parsing-spinner help
+    description.
+  *  0365f2e - options.c: Fix conf.filenames duplication problem if logs
+    are via pipe.
+  *  790e99e - Minor changes to the comments in main().
+  *  efbffb3 - Merge pull request #905 from
+    TerraTech/disable_parsing_spinner
+  *  44287ec - Merge pull request #904 from TerraTech/amend_dcc5bbdc
+  *  9953733 - Merge pull request #894 from aadityabagga/update-readme-2
+  *  4cde573 - goaccess.c: Curses should not be initialized if '--
+    process-and-exit' is in effect
+  *  a9ebcb3 - Add '--no-parsing-spinner' switch
+  *  ea1d1a5 - Updated README.md, Docker section.
+  *  6bf71ff - Fixed a regression where fifo-in/out would fail with
+    ENXIO.
+  *  a26cce1 - Fixed comparison between pointer and zero character
+    constant.
+  *  b66b465 - Merge pull request #897 from aslakr/patch-1
+  *  5002888 - Added 10.13 = macOS High Sierra
+  *  98d2286 - Update README.md
+  *  3706c23 - Update README.md
+  *  c5a7bd9 - Merge pull request #896 from TerraTech/size_switch
+  *  61ea537 - Add log-size switch handling
+  *  07fdeab - Updated README.md examples section.
+  *  689e3b2 - Updated README.md examples section.
+  *  83e1426 - Update README.md
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 06 Oct 2017 19:04:01 +0300
+
 goaccess (1:1.2.0+git2511-00a4093-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,70 @@
+audacity (1:2.1.3+git7519-66915b63e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 66915b63ee491503f37f423ded1eab47f2975365
+  * Date: 1507304415
+  * git changelog:
+  *  66915b63e - Updated sl.po -- Slovenian submitted by Martin
+    Srebotnjak...
+  *  6a8bba0a9 - Fix all remaining misuses of macro _ in static
+    initializers...
+  *  c94222ff5 - Fix missed translations in Distortion effect after
+    language change
+  *  4609d5af2 - A few more missed translations...
+  *  f7a059e4f - Updated hi.po -- Hindi submitted by Bashishtha Singh
+  *  4a0fbf83a - Bug1735 residual: paste into region starting < Note
+    Track start...
+  *  d78033887 - Fix initialization of Debug and Preview buttons
+  *  10e75a4bc - Fix missing Portuguese and Chinese, Simplified in Mac
+    preferences
+  *  025eb3075 - One more trick needed to get eu distinct from eu_ES in
+    preferences
+  *  f2d9ff59b - Roger's fixes for MIDI timing on Alsa, as adapted by
+    Paul Licameli
+  *  ce649cf85 - Re-enabling the separate MIDI thread, and comments
+    about that
+  *  d6657df04 - Roger Dannenberg's explanatory comments for new
+    MidiTime function
+  *  51296237d - Roger's timing correction for Alsa; I unified with non-
+    Alsa case...
+  *  2b8426231 - Roger's SystemTime() for use later, fixed to compile on
+    all...
+  *  7c67133ff - Roger's changed FillMidiBuffers loop test (seems
+    harmless, all OSs)
+  *  b38bacfaf - Remove my USE_TIME_INFO conditional compilation... will
+    fix otherwise
+  *  857a7ca73 - Roger Dannenberg's fix for MIDI notes-off, applied to
+    Linux only...
+  *  a971dd5bb - Detect whether ALSA is the portaudio host (possible
+    only on Linux)
+  *  428f54367 - ALL OSs: fix race starting play, which inserted leading
+    zero samples
+  *  771ed7088 - Fix format mismatches caught by msgfmt -c on Travis
+  *  1fc8f73a0 - Updated pl.po -- Polish submitted by Michał
+    Trzebiatowski
+  *  9978986f8 - Fixes in .po as suggested by scootergrisen; remove some
+    #,fuzzy
+  *  dc00f7366 - Updated ko.po -- Korean taken from Transifex
+  *  bcb2d4cc6 - Post-beta updates of some of the translation files,
+    fixing omissions
+  *  9c059f511 - Updated da.po -- Danish submitted by scootergrisen
+  *  b1413b792 - Updated zh_CN.po -- Chinese (Simplified) submitted by
+    mkpoli
+  *  cbe98c977 - Updated tr.po -- Turkish submitted by Kaya Zeren
+  *  2d9fa61ba - Updated de.po -- German submitted by Joachim Huffer
+  *  15bfd8bdc - Updated uk.po -- Ukrainian submitted by Yuri Chornoivan
+  *  2afec0c7e - Updated el.po -- Greek submitted by Dimitris Spingos
+    (Δημήτρης Σπίγγος)
+  *  b2edf34e3 - Updated nl.po -- Dutch submitted by Thomas de Rocker
+  *  7dfa4f4cf - Updated eu.po -- Basque submitted by Xabier Aramendi
+    ("azpidatziak")
+  *  e414dcdb7 - Updated eu_ES.po -- Basque(Spain) submitted by Oisotz
+  *  b1d9be00e - Added eu_ES (Basque (Spain)) to supported languages
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 06 Oct 2017 22:47:53 +0300
+
 audacity (1:2.1.3+git7485-7b70aa08a-1) unstable; urgency=medium
 
   * Compile
