@@ -70,7 +70,7 @@ OPTSSTEP2 = -DUSE_QT_SQLITE=OFF \
 REVISION = =$(shell cat debian/changelog |grep '* Commit' | sed 1q |awk -F ': ' '{print $$2}')
 CMAKEOPTS += -DDCPP_REVISION="$(REVISION)"
 
-ifneq (,$(filter $(DEBIAN_CODENAME),sid stretch buster zesty)) 
+ifneq (,$(filter $(DEBIAN_CODENAME),sid stretch buster zesty artful)) 
 	CONTROL = control.sid
 	export QT_SELECT=qt5
 	CMAKEOPTS += -DUSE_QT=OFF -DUSE_QT5=ON

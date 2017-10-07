@@ -39,7 +39,7 @@ endif
 	dh $@ --parallel
 
 override_dh_auto_configure:
-ifneq (,$(filter $(DEBIAN_CODENAME),stretch xenial yakkety zesty)) 
+ifneq (,$(filter $(DEBIAN_CODENAME),stretch xenial yakkety zesty artful)) 
 	cd $(CURDIR)/3rdparty/gexiv2 && \
 	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:${PKG_CONFIG_PATH} \
 	PATH=$(PREFIXDIR)/bin:${PATH} \
