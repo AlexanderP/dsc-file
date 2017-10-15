@@ -16,7 +16,7 @@ extra_flags += \
 -DCMAKE_INSTALL_DOCDIR="/usr/share/doc/freecad-daily-doc" \
 
 extra_flags += \
--DBUILD_FEM_NETGEN=ON \
+-DBUILD_FEM_NETGEN=OFF \
 -DBUILD_FEM_VTK=ON \
 
 override_dh_auto_configure:
