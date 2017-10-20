@@ -1,3 +1,27 @@
+eiskaltdcpp-unstable (2.2.9+git20171009-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://github.com/eiskaltdcpp/eiskaltdcpp.git
+  * Branch: master
+  * Commit: 4c9cbf207e0cc49102398a35ba72ea62dc28dc4a
+  * Date: 1507543251
+  * git changelog:
+  *  4c9cbf20 - Windows: fix static build with Qt >= 5.8
+  *  ee303351 - Windows: explicit define type of installer 4 variants:
+    makensis -Dstatic=32 EiskaltDC++.nsi makensis -Dstatic=64
+    EiskaltDC++.nsi makensis -Dshared=32 EiskaltDC++.nsi makensis -
+    Dshared=64 EiskaltDC++.nsi
+  *  e1f56783 - Update documentation.
+  *  b9330022 - Windows: sync libnames with MXE
+  *  516a4492 - Fix 45b5fa1a708eab077361700f4d1a1bc5e5a4b9ba for OpenSSL
+    < 1.1.
+  *  45b5fa1a - Revert changes from
+    c7536437a452c49766bc4b4aff282acdd7466048
+  *  c7536437 - Core: fix segfault on exit when library is built with
+    OpenSSL >= 1.1.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 19 Oct 2017 12:47:37 +0300
+
 eiskaltdcpp-unstable (2.2.9+git20171007-1) unstable; urgency=medium
 
   * Compile

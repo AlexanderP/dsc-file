@@ -1,3 +1,64 @@
+qcad (3.18.1+git4932-18d071b16-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 18d071b163edac7edc67c2b3d137687b05cc5f24
+  * Date: 1508319577
+  * git changelog:
+  *  18d071b16 - clean up
+  *  d6fa832bf - update icon resolution
+  *  8064e9e41 - update about dialog
+  *  4915bb66c - update script bindings
+  *  def919e16 - use configured defaults for initial layer 0
+  *  3ea3cb734 - add optional list of ignored keys when copying custom
+    properties
+  *  3d69a8640 - use File preferences category instead of Open/Save
+  *  5f3cfb69c - use standard clear button to clear filter instead of
+    our own
+  *  bc9c771ef - add comment
+  *  8ef447cd5 - update translations
+  *  9e9c3caaa - update translations
+  *  d53954d60 - update translations
+  *  fc3a14b03 - support post new actions
+  *  8e4b3516e - add File.getOpenFileName
+  *  b08f66c77 - change preference category load/save to open/save
+  *  a3ea1139d - clean up
+  *  c5ada7e95 - clean up
+  *  fa5a0f82e - move print preview preference
+  *  89e119c9e - automatically switch to print preview when layout block
+    is activated
+  *  0a663d91f - add print preview preferences
+  *  18674d539 - exclude non-scriptable function from script bindings
+  *  11d123d79 - update script bindings
+  *  294129a67 - update script bindings
+  *  dd08637a2 - optionally include model space when querying layout
+    blocks
+  *  685cce291 - set version to 3.18.1.2
+  *  41dab94ad - update example file
+  *  144ba46d2 - update example file
+  *  77e473109 - increase maximum number of active viewports
+  *  7d557c94b - update layout dialog
+  *  cce72665f - define draw order by draw order property and entity ID
+  *  ff6794c8d - allow removing of layouts
+  *  4a67edb04 - fix entity attributes when rendered inside viewport
+  *  f264f59de - update script bindings
+  *  9b53320a4 - update .pro
+  *  c9327c75c - allow renaming of layouts
+  *  0c0f7d505 - add isLayout
+  *  3000d94e1 - add layout editing dialog
+  *  e57070c7f - rename RBlock::isLayout to RBlock::hasLayout
+  *  b79097fd2 - store print settings for individual blocks, update view
+    when settings change
+  *  85d2425e5 - update script bindings
+  *  811fd75d7 - add experimental transformation of input coordinates
+  *  55862187d - add RDocumentInterface::setCurrentBlock with ID
+  *  0a29f160a - store print settings per layout block
+  *  1561af62e - fix icons
+  *  061840548 - disallow exploding of viewport entities
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 19 Oct 2017 14:46:43 +0300
+
 qcad (3.18.1+git4887-6734cde27-1) unstable; urgency=medium
 
   * Compile

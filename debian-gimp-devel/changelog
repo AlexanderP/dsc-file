@@ -1,3 +1,123 @@
+gimp-devel (2.9.6+git39200-90a024be54-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 90a024be54dc0a7eb6c7b2f79bc83d52f9b704f3
+  * Date: 1508355814
+  * git changelog:
+  *  90a024be54 - app: improve spinscale target calculation
+  *  8d90999814 - app: highlight upper/lower halves of spinscales while
+    hovering
+  *  2bbb0f509b - app: fix tentative gradient leak in the blend tool
+    editor
+  *  6e5aeb4fbf - app: indentation fix in the blend tool editor
+  *  cdedc120c5 - Update Catalan translation
+  *  5456ddbb40 - Bug 683553 - Spinscale scrollvalues in Brushsize are
+    much too small
+  *  2bf166d2ce - app: use fuzzy comparison in various layer-mode
+    blendfuncs
+  *  d4d8dbbc1b - app: add custom gui for gegl:color-to-alpha(-plus)
+  *  c5b88702e6 - app: allow specifying a callback function for propgui
+    pickers
+  *  92cd4d4619 - app: s/diffration-patterns/diffraction-patterns/
+  *  6c1e3beb69 - Update Polish translation
+  *  0655c70350 - Update German translation
+  *  087003746c - Update German translation
+  *  ae9b9c642d - app: preserve dirname when switching save dialogs
+  *  862bb00478 - app: clear tentative gradient when halting the blend
+    tool
+  *  5a8033151f - app: fix function doc-comment.
+  *  c5f94c1f27 - NEWS: update the list of contributors
+  *  9548d54e12 - app: fix conversion of midpoints to stops in the blend
+    tool, when ...
+  *  695b6ed260 - NEWS: mention newly added on-canvas gradient editing
+  *  0e9747380b - app: in GimpOperationBlend, fix left/right-most colors
+    when offset > 0
+  *  c465e17ed6 - Update Catalan translation
+  *  a789c6e5e2 - app: in GimpOperationBlend, swap leftmost and
+    rightmost colors when ...
+  *  4e2e60caf4 - app: fix leftmost and rightmost gradient colors in
+    GimpOperationBlend
+  *  dfeafcb175 - app: cache last-sampled gradient segment in
+    GimpOperationBlend
+  *  4bfa6e716e - app: don't update blend tool filter upon irrelevant
+    line changes
+  *  429bc5507c - app: fix fg/bg color change handling in the blend tool
+  *  4f6b4d27bc - app: implement tool undo for gradient editing in the
+    blend tool
+  *  9469ac26f0 - app, libgimpbase: implement blend tool gui for
+    gradient midpoints
+  *  1aa4877426 - app: implement blend tool gui for gradient stops
+  *  8d12fada8a - app: implement blend tool gui for gradient endpoints
+  *  a9ca354d26 - app: add tool gui to the blend tool
+  *  420ea8037a - app: convert midpoints to stops via double-click in
+    the blend tool
+  *  63c8fc73dd - app: handle prepare-to-remove-slider signal in the
+    blend tool
+  *  9ae09fb03a - app: add support for removing gradient stops to the
+    blend tool
+  *  29bae454a2 - app: add support for adding gradient stops to the
+    blend tool
+  *  690f51d4eb - app: modify the gradient in response to blend-tool
+    slider motion
+  *  ac1b788787 - app: add sliders for gradient stops and midpoints in
+    the blend tool
+  *  4f1195be29 - app: add "modify active gradient" option to the blend
+    tool
+  *  f95f8eb347 - app: add "instant mode" option to the blend tool
+  *  02ad016b39 - app: don't show a PLUS cursor modifier before starting
+    the blend tool
+  *  5d2555bdb5 - app: add gimp_color_panel_dialog_response(); add
+    "response" signal
+  *  32de48780b - app: use get_{left,right}_flat_color() in gradient
+    editor
+  *  1f3030eb41 - app: improve curved gradient segment sampling
+  *  1b2a395e88 - app: improve num. stability of
+    gimp_gradient_segment_range_compress()
+  *  3aff0a1a0e - app: treat gradient segments as clopen ranges
+  *  d710773aba - app: add gimp_gradient_segment_range_merge()
+  *  082f6a4122 - app: add gimp_gradient_segment_range_get_n_segments()
+  *  c5faf02759 - app: add gimp_gradient_split_at()
+  *  6840dabad4 - app: add
+    gimp_gradient_segment_get_{left,right}_flat_color()
+  *  6971b89397 - app: implement compare() for GimpGradient
+  *  17583ff04a - app: implement copy() for GimpGradient
+  *  2ad9f40dbe - app: add "custom" gradient
+  *  f36f234fc0 - app: add compare() virtual function to GimpData
+  *  33de4d5530 - app: add gimp_data_copy()
+  *  507bc43716 - app: improve status messages of GimpToolLine
+  *  dad521e334 - app: add misc. parameters to GimpControllerSlider
+  *  9e26d7ea5f - app: add handle-clicked signal to GimpToolLine
+  *  50acb6690d - app: add prepare-to-remove-slider signal to
+    GimpToolLine
+  *  bac7dac4ba - app: allow adding and removing sliders to/from a
+    GimpToolLine
+  *  86954037de - app: add dashed canvas handle types
+  *  63ccbc4fb0 - app: add keyboard control to GimpToolLine
+  *  d4cb1623ea - app: add persistent handle selection to GimpToolLine
+  *  042650e18c - app: rename slider-value variables in GimpToolLine
+  *  fb31a592c6 - app: add gimp_tool_line_get_slider()
+  *  f47df72dc6 - plug-ins: link file-raw aginst libgimpcolor and
+    libgimpconfig explicitly
+  *  adff950d58 - app: in file-psd, make layer-group saving more
+    Photoshop-like
+  *  9e015f4b7d - plug-ins: in file-psd, fix bad sign extension in
+    decode_packbits()
+  *  d01e182c7b - Bug 787457 - Paint brush settings display system
+    language (e.g. zh_TW)
+  *  18cb45f250 - Updated Italian translation
+  *  e1afed3ddd - Update Polish translation
+  *  b62b442550 - Updated Italian translation
+  *  6a9f4588c9 - build: fix previous commit and add xdg-config/gtk-3.0
+    access.
+  *  925a77e205 - build: only grant access to needed services in
+    flatpak.
+  *  34ac56e770 - build: using cmake-ninja for jasper build system in
+    flatpak.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 19 Oct 2017 19:19:06 +0300
+
 gimp-devel (2.9.6+git39126-e75ea3c2af-1) unstable; urgency=medium
 
   * Compile

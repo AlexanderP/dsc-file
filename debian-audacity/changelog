@@ -1,3 +1,50 @@
+audacity (1:2.1.3+git7542-1a22a59ee-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 1a22a59ee9c750c74ccacc8998f0f58deca5e6f2
+  * Date: 1508377679
+  * git changelog:
+  *  1a22a59ee - Fix links to local help for buttons in Library
+    preferences...
+  *  423a752be - Improved file exception message for locale "en" as well
+    as for blank
+  *  147c3f9d6 - Use American spelling
+  *  e329990ec - fix build
+  *  9a081b0aa - Updated README.txt by Bill Wharrie
+  *  68706c24c - Improve the message for exhaustion of file storage on
+    Windows
+  *  2d17ddc10 - Fix overload resolution of a call to
+    HelpSystem::ShowHelp...
+  *  32e40b3f7 - Fix a remote help link in Lib prefs> Locate... >
+    Download ...
+  *  448eb2eb7 - Spectral Edit Multi Tool has a manual page
+  *  93f20b2bf - Improved message for failed file writes in recording,
+    and elsewhere
+  *  49174461d - Overwriting export via save-compressed or chain
+    commands: safety...
+  *  cbf4c11e2 - When export fails, don't leave a partially written
+    file.
+  *  969427980 - Guard against crash when stopping a stream...
+  *  b49e46741 - Bug1756: reinstate status for disk capacity during
+    recording
+  *  8a762f95b - In case save of new project fails, clean up the _data
+    directory
+  *  cbfde23e4 - Fix for 1753: keyboard interaction with meter buttons
+    broken
+  *  c2f82181f - Update special case copying of wxstd.mo for Mac build
+  *  13358059c - Release build
+  *  fadef9004 - Updated pt_BR.po -- Brazilian Portuguese submitted by
+    Cleber Tavano...
+  *  196076230 - Fix a null dereference found by Pvs-studio...
+  *  31b820b47 - src/widget/OverlayPanel: PVS-Studio: fixes bug with
+    remove function.
+  *  a2a08e852 - Fix extraneous copies of three .mo files in mac build
+  *  571ce7f86 - Fix the few missing messages of sl.po
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 19 Oct 2017 09:14:36 +0300
+
 audacity (1:2.1.3+git7519-66915b63e-1) unstable; urgency=medium
 
   * Compile
