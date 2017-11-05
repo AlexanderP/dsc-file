@@ -1,3 +1,164 @@
+freecad-daily (0.17~git12541-7e4a0ae17-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 7e4a0ae1777631e79f4de7b16687ea69651a1a94
+  * Date: 1509632152
+  * git changelog:
+  *  7e4a0ae17 - Merge pull request #1069 from easyw/master
+  *  095bc7862 - avoid stop loading on coincident points
+  *  adc24f8c8 - Merge branch 'master' of
+    https://github.com/FreeCAD/FreeCAD
+  *  7ea6b0e19 - use scoped connection to automatically disconect on
+    deletion
+  *  225910230 - Comment explaining the local implementation of snapper
+    mouse move
+  *  03ad4fb59 - Fixed holding tags snapper interaction.
+  *  84e67a247 - Moved tag generation together with button box for
+    better getpoint handling.
+  *  17ebceb14 - Use PathGetPoint for Tags.
+  *  27e7dcfe1 - Fixed PathSanity.
+  *  8fc24a063 - Using vertical speed for tags.
+  *  c41f5862f - checkpoint
+  *  7c7f56bf3 - FEM: general prefs, use directory chooser for working
+    dir setting
+  *  c309ea41e - FEM: material task panel, repair restore of values
+    considering locales
+  *  780d1791f - add occ library dir to PathSimulator
+  *  ea4f6f2b2 - PathSimulator: move all changes to branch
+    path_simulator
+  *  f9fec3f72 - Fix dialog texts
+  *  3a28e4f62 - Solve the C++/Python type checking issue
+  *  f53191400 - change abs to fabs (for linux compatibility)
+  *  c05219cfe - fix some linux compiler warnings
+  *  e1d624b2c - Fixed some non standard c++ operations.
+  *  08890b77c - Fix another linux compilation issue...
+  *  5d2213381 - Increase Fast Forward speed Fix Linux compilation issue
+    (hopefully)
+  *  1a7c4b3a8 - fix bug: when pressing play again, only first operation
+    was done.
+  *  1322bbf13 - Add 2 color stock, speed control and resolution control
+  *  77193b7e3 - Add sliders to task
+  *  831cb793f - Add missing files and place ui file in correct location
+  *  153959f98 - fixes after merge with upstream
+  *  22233110e - integrate simulator into path workbench
+  *  e886ef2a2 - Initial simulation works
+  *  16b1eccd7 - debugging wip
+  *  b9362df31 - implement ApplyCommand and SetCurrentTool
+  *  fbbd0ce35 - implement beginSimulation and getResultMesh
+  *  e366a3cfa - Finally! the PathSim object is visible at freecad
+  *  60ef98a8f - add python object resistration
+  *  71ec1392b - initial sim engin added. initial python interface.
+  *  e3e5a6170 - Add initial class
+  *  9f0b8c5ef - Add generated PathSimulation Module
+  *  5657acdfb - fix BSpline curves treatment in Draft.makeSketch.
+    BSplineCurves in a wire were doubled. Don't expose internal
+    geometries of BSplineCurves of a wire to keep sketch lighter.
+  *  21c4fa316 - add ArcOfEllipse to DraftGeomUtils.orientEdge
+  *  d2f4fcb6a - add BSpline support to Draft.makeSketch
+  *  2bc75bd94 - Fixing security error on MacOS for AddonManager, see
+    https://forum.freecadweb.org/viewtopic.php?f=3&t=24898
+  *  178e5ddf8 - Only build Qt5 version for macOS on travis
+  *  795a57c77 - fix layout in ccx preferences page
+  *  e16c152da - Draft/Arch: Support for Y situations in sketches -
+    issue #3163
+  *  8d3fe2111 - Qt5 port: Sandbox module
+  *  d1ae93df8 - save last accessed file directly in the user parameters
+  *  a16f5bf9a - override onExtendedDocumentRestored in AttachExtension
+  *  7d3af3647 - add virtual method onExtendedDocumentRestored
+    DocumentObjectExtension
+  *  336057335 - prepare zipios++ for unicode support
+  *  25fb77a5a - fixes #0002419: Matrix rotation and Units compatibility
+  *  0ad9436ea - fixes #0002632: Improvements to Prefs for Python
+  *  5022b41d9 - add fem test for testing group behaviour of analysis
+    object
+  *  7529754c3 - py3: some diff for fem with py3
+  *  e102ac12f - libarea: improve arc fitting
+  *  80bc1255c - support of backward compatibility to load old fem
+    project files
+  *  ce6809415 - inherit FemAnalysis from DocumentObjectGroup and remove
+    Member property
+  *  8f8f89025 - Clarifying preference string
+  *  be0e70cca - minor improvements
+  *  24081a574 - use abstract interface to create point cloud from
+    geometric feature
+  *  16e6d887e - implement FileInfo::completeExtension
+  *  cfe2d134a - Updated translations from crowdin
+  *  564d5a3e7 - removed Complete from translation scripts
+  *  09fe85e8f - Arch: import IFC, fix View Fit while importing
+  *  7448d47b8 - Fixed more python 2/3 unicode issues.
+  *  dce9c0e38 - Refactored use of iteritems into function to deal with
+    python 2.7 and 3 compatibility.
+  *  a14d6215f - Reduced log level for debug messages.
+  *  0d4e9d47c - Python version independent string and unicode handling.
+  *  be115bcab - Fixed cmake file for Path.
+  *  4826e6387 - Removed references to Spreadsheet from docstrings.
+  *  03ea6a1f3 - Instead of hiding FinalDepth make it read-only and set
+    tooltip appropriately.
+  *  88c3fc1db - Use operation name and icon as the TaskPanel title and
+    icon.
+  *  83cf84a96 - Fixed job on-demand conversion for FaceMilling.
+  *  eaa7b6f59 - Fixed all ops to use Op...Depth in order to not mess
+    with the expressions.
+  *  1a2946809 - Replaced spreadsheet with dedicated SetupSheet object
+    in order to better support expression setting.
+  *  322598dec - Fixed whitespace inconsistency.
+  *  dba05326f - Reverted back to using the spreadsheet Name for the
+    expression, since it has less issues than using the Label.
+  *  46d120071 - Workaround for DAG invalidation - remove all
+    expressions before deleting an object.
+  *  d2b1768e1 - Using the template attribute encoding/decoding.
+  *  0d8a1500d - Added template attribute encoding/decoding for setup
+    sheet label changes.
+  *  8d8fb529d - Fixed dogbone unit test to deal with expression instead
+    of Lock property.
+  *  704569d1c - Fixed the name collission issue of expressions.
+  *  14dfa13ee - Renamed Settings to SetupSheet.
+  *  b6eb3f0b4 - Fixed dirty'ing of page and op.
+  *  cccf014f0 - Various bug fixes
+  *  47b136085 - Create Scale property on the fly if older
+    Arch.PanelSheet is loaded.
+  *  fa523e087 - Fixed error msg about unsupported stock type.
+  *  0e1fb178c - Making templateAttrs a const method - so exporting
+    doesn't diry the tool
+  *  9d98ac390 - Changed tool parameters to use a QuantitySpinBox.
+  *  f13ac4c17 - Removed obsolete ToolControl.ui
+  *  6db9389cf - Changed tool controller editor to use QuantitySpinBox
+    for speeds.
+  *  6ace67f04 - Removed depths lock - obsolete through usage of
+    expressions.
+  *  5a106f7a9 - Introduced Op-values and set expressions for all user
+    modifyable properties - updated template support.
+  *  1f81dde99 - Fixed PathGui.QuantitySpinButton to default to a noop
+    in case underlying property doesn't exist (makes UI code cleaner)
+  *  6797d5b4b - Extracted Job Settings into their own implementation
+    file.
+  *  9cec64880 - Switched Depths page to use QuantitySpinBox instead of
+    InputField.
+  *  f3d48abe2 - Refactored QuantitySpinBox handling into separate
+    class.
+  *  73eb24ae2 - Fixed clearance height value.
+  *  0e8d1903c - Switched PageHeight to use QuantitySpinBox.
+  *  87cf84151 - Switched default values into Settings spreadsheet.
+  *  ead2eb4e4 - Replaced job default-properties with setting
+    spreadsheet and set expressions for heights and rapid speeds.
+  *  51ed2f752 - Added tooltips for defaults in export dialog.
+  *  d63da3602 - Fixed default tool controller creation if job template
+    doesn't include TCs.
+  *  204015052 - Added job default values to template export.
+  *  ec664c3c2 - Added default values for heights and rapid feed rates
+    for new tools.
+  *  3499ac62f - improvements of wait cursor make filtering of modal
+    dialogs working with Qt5 save/restore filter flags don't filter
+    events for File > Export when using showPreferences don't show wait
+    cursor
+  *  769e93973 - Draft: Fix dimensions of parametric circles
+  *  725a5b654 - method to get paths between two objects
+  *  af64ffcaf - check for clang version to disable warning
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 03 Nov 2017 07:38:47 +0300
+
 freecad-daily (0.17~git12433-489c8c9ae-1) unstable; urgency=medium
 
   * Compile

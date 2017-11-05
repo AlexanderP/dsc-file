@@ -15,7 +15,7 @@ extra_flags += \
 -DCMAKE_INSTALL_DATADIR="/usr/share/freecad" \
 -DCMAKE_INSTALL_DOCDIR="/usr/share/doc/freecad-doc" \
 
-extra_flags += -DBUILD_FEM_NETGEN=ON \
+extra_flags += -DBUILD_FEM_NETGEN=OFF \
 
 override_dh_auto_configure:
 	dh_auto_configure -- $(extra_flags)

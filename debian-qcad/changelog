@@ -1,3 +1,113 @@
+qcad (3.18.1+git5025-dbfd69712-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: dbfd69712dd44a9f20fe9d4dcac783021fa263c4
+  * Date: 1509557226
+  * git changelog:
+  *  dbfd69712 - Merge branch 'master' of github.com:qcad/qcad
+  *  87ed98ad1 - fix potential exception on quit
+  *  4efb3fad3 - avoid multiple No Selection choices in property editor
+  *  816940bd3 - workaround for qt 5.8
+  *  942cce525 - add warning
+  *  8a1c83363 - update examples files
+  *  49f1740db - update translations
+  *  7f11b24e6 - update script bindings
+  *  100bc2846 - introduce separate handler / signal if current block
+    changes
+  *  a36ce5280 - update examples
+  *  b5f3291ac - update user reference manual
+  *  2767ce0cb - update api doc
+  *  2e731a0c5 - update version number
+  *  6182f2c04 - fix required unit test file
+  *  5899051a7 - update translations
+  *  3f35d03e8 - Merge branch 'master' of github.com:qcad/qcad
+  *  bfdfb2ae0 - use query box when retrieving shapes
+  *  9bed41a7d - update license file (fonts)
+  *  21af42913 - clean up
+  *  8378af839 - load TTF fonts in fonts directory
+  *  a06be2cb0 - Fixed some old translation typos and nonconsistency -
+    Radius=Polmer
+  *  2b4eb3983 - Added new template to SLO_OS
+  *  3f9612365 - Update Slo transltion
+  *  078227861 - update splashscreens
+  *  1e41e5d0f - snap to contents of viewports
+  *  ad21626ce - fix snapping to intersections inside block references /
+    viewports
+  *  6d019d133 - add unit test for snap to intersection in block
+    reference
+  *  e6a385bcf - disable app win under linux during opening of file
+  *  e78e38f18 - add warning if there id no MDI widget
+  *  718e184c5 - update translations
+  *  2005073dc - clean up
+  *  d28266ea8 - update options toolbar after changing preferences
+  *  5eb6ca33b - update icons
+  *  b164d1cdb - always pass document when getting printer settings
+  *  3dcb5dcf5 - make color and page settings block specific
+  *  74a21c2a9 - add support for editing block specific preferences
+  *  88f838574 - use alphanumerical order in layer and block combo boxes
+  *  ef98feb5c - set version to 3.19.0
+  *  aa0dd7565 - clean up
+  *  a48cb5653 - update script bindings
+  *  5a9ed7478 - allow storing widget state to RObject based class
+  *  32dd8be72 - add isObject
+  *  f64822501 - performance improvements
+  *  3398aaa3c - update pro file
+  *  816c9c9ae - add option to ignore color mode for parts of exported
+    geometry
+  *  3ade887ed - performance improvements
+  *  e92aa6477 - add block sorting functor
+  *  93a597d9a - update script bindings
+  *  f37cff562 - add RMath::fuzzyAngleCompare
+  *  c6996f427 - hide overall property
+  *  186935468 - add reference point to move viewport contents
+  *  fc7cdc272 - update script bindings
+  *  7c47b4322 - update GPLv3 exceptions
+  *  38d365f18 - fix potential exception
+  *  fc225716d - avoid setting document modified flag
+  *  689904499 - get document from document interface
+  *  f372761d7 - update standard variable names
+  *  52fd89671 - always finish actions when leaving application
+  *  4a2b5e076 - make sure current block is never invalid
+  *  867e27451 - update GPLv3 exceptions
+  *  7bbaba1c3 - move layout dialog
+  *  c5cce2099 - fix updating of cache for layouts, linetypes
+  *  2ea5c7fd3 - performance update
+  *  d8ce75641 - move renaming of layout
+  *  6d2330132 - restore zoom / offset when switching block if current
+    block is deleted
+  *  db33d958b - move layout dialog
+  *  0c2ac38e1 - fix block name validation
+  *  7f944edd8 - add order to layout dialog
+  *  0c1d8274c - add queryAllLayouts, isLayoutBlock
+  *  8969c9ae6 - update translations
+  *  52cb2d150 - update script bindings
+  *  c300bd762 - add collapsed layer state / property
+  *  7f72b9cd8 - update script bindings
+  *  565d94550 - add rotation parameter
+  *  17bc0b251 - add additional checks to prevent exceptions
+  *  85c94a54c - fix potential exception
+  *  83db02022 - move switching to layout code
+  *  602721b10 - update example files
+  *  28ba05272 - prevent highlighting of viewports on invisible layers
+  *  11315c9e2 - clean up
+  *  f49c39722 - disable activation of viewports
+  *  92192f943 - update icon size linux
+  *  b72f3dec4 - refactor printing, print preview
+  *  507d83b66 - update
+  *  b1b765663 - update
+  *  05a207768 - update translations
+  *  dd1014d79 - set version to 3.18.1.3
+  *  c9e262952 - add isSimpleTextEntity
+  *  6fe63e74e - refactor to offer Explode.explodeEntity
+  *  ba79db66a - add potential future optimization
+  *  126b436c4 - fix selecting connected entities for splines
+  *  2b5e11b2c - update variable name
+  *  de3a2a81d - optionally close open MDI widgets when opening files
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 02 Nov 2017 13:48:01 +0300
+
 qcad (3.18.1+git4932-18d071b16-1) unstable; urgency=medium
 
   * Compile

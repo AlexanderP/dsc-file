@@ -12,7 +12,7 @@ Build-Depends: cmake,
 Homepage: https://web.archive.org/web/20131204020055/http://q4wine.brezblock.org.ua/
 Vcs-Git: https://github.com/tehnick/q4wine-debian.git
 Vcs-Browser: https://github.com/tehnick/q4wine-debian
-Standards-Version: 3.9.8
+Standards-Version: 4.1.1
 
 Package: q4wine
 Architecture: any
@@ -26,7 +26,8 @@ Recommends: sudo,
             wine-development [amd64 any-i386 arm64 armel armhf powerpc] |
             wine1.6 [amd64 i386] |
             wine1.8 [amd64 i386] |
-            wine1.9 [amd64 i386]
+            wine1.9 [amd64 i386] |
+            wine2.0 [amd64 i386]
 Suggests: fuseiso [!hurd-i386 !kfreebsd-i386 !kfreebsd-amd64],
           winetricks
 Description: Qt GUI for wine (WINE)

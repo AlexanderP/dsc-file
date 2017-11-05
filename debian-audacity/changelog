@@ -1,3 +1,49 @@
+audacity (1:2.1.3+git7566-d6ee9bf97-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: d6ee9bf9758977ca1fb9358401edc125c62bb1b2
+  * Date: 1509039879
+  * git changelog:
+  *  d6ee9bf97 - remove incorrect information about PortMidi
+  *  58f07d202 - Flush .aup before writing .au; no redundant out-of-
+    space messages
+  *  7eeb88384 - Compensate for bug in wxCopyFile, which can return
+    incorrect success
+  *  985457e99 - Rearrange steps in saving project so .aup is cleaned up
+    on failure
+  *  fd2a24201 - XMLFileWriter cleans up correctly in case of failure
+  *  c87451952 - When saving compressed fails, clean up partial results
+  *  3f00979fc - maketarball script includes portmidi, minus unused sub-
+    dirs
+  *  985abaf40 - minor edits to INSTALL
+  *  41f191453 - Make patch describing change in portaudio source at
+    38fd97b
+  *  72dec607b - Update for Audacity 2.2.0
+  *  c613a0bd4 - revert last three
+  *  c02bf9168 - Rearrange steps in saving project so .aup is cleaned up
+    on failure
+  *  a6c69dec7 - XMLFileWriter cleans up correctly in case of failure
+  *  874d8da02 - When saving compressed fails, clean up partial results
+  *  7f7c7795e - Credit Cliff Scott
+  *  f370df652 - Sense empty .au at opening, treat as missing, give
+    recovery options
+  *  e05051670 - Correct other failure paths in DirManager::SetProject
+  *  15a1fa14e - a comment about the new saving procedure
+  *  c1d1bee6b - Better error handling when moving a project to another
+    directory...
+  *  bea1a089f - spelling
+  *  e4b9b7b50 - Avoid long repetitions of message boxes for opening
+    corrupt project
+  *  404eca84c - Implement mayThrow argument of WaveTrackCache::Get
+    properly...
+  *  39a5669cb - Allow user cancellation of save
+  *  d7d7d67f7 - Edit one link destination inside an internationalized
+    string...
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 02 Nov 2017 10:44:51 +0300
+
 audacity (1:2.1.3+git7542-1a22a59ee-1) unstable; urgency=medium
 
   * Compile

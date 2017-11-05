@@ -1,3 +1,28 @@
+gscan2pdf (1.8.8+git2699-41e9a451-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 41e9a451514a67348fb575f84309e2f5855668cc
+  * Date: 1509301354
+  * git changelog:
+  *  41e9a451 - Bumped version to 1.8.8
+  *  72377f43 - Update to Hungarian translation
+  *  59d10b7d - Fix Perl warning about redundant argument in sprintf
+  *  a2644b9a - Fix 16-bit PNM parsing
+  *  343bd4b5 - Fix race condition updating widgets before they can be
+    created after cycling device handle
+  *  8b30ea33 - Remove erroneous skip in t/166
+  *  4369b315 - Fix default value for unpaper script direction
+  *  effd3817 - Don't hardcode grey levels into rtl test
+  *  57875991 - Add option to profile only after successfully applying
+    it
+  *  204486fe - Filter out 1 and 2 digit integers from tool warnings.
+    Show original message, not filtered message.
+  *  d5374836 - Postrelease commit
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 02 Nov 2017 11:53:24 +0300
+
 gscan2pdf (1.8.7+git2688-672da3f6-2) unstable; urgency=medium
 
   * Compile

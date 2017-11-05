@@ -1,3 +1,75 @@
+deadbeef (0.7.2+git7481-1aae735a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 1aae735abfe5eb82ac0aa30d09fe2ee6ba6bc460
+  * Date: 1509723432
+  * git changelog:
+  *  1aae735a - ffmpeg: cleanup, better version abstraction, warning
+    fixes
+  *  45803c45 - streamer: crash fix; better stream error reporting
+  *  4f3831e1 - ffmpeg: code cleanup; disable network streams, as they
+    cause ffmpeg to freeze internally; fixed a few bugs
+  *  6f4fb48b - streamer: fixed decoder->init failure handling
+  *  2d5fa683 - cocoaui: save playlist after add location
+  *  e6cc3f59 - playlist: fixed a wrong code change, which makes
+    archives to be ignored when added directly, when ignore_archives
+    option is set -- it's intended to be used only when adding whole
+    folders
+  *  04596d40 - gtkui: removed a very wrong fill_list_background call,
+    which was breaking playlist rendering
+  *  9e683946 - gtkui: removed a bunch of commented out code from
+    ddblistview
+  *  a442b68b - mp3: fixed streaming regression
+  *  4bae2448 - premake: added resampler plugin
+  *  13f52d9d - pulse: followup fix to samplerate limiter, it wasn't
+    correctly cached in plugin.fmt
+  *  484c1539 - pulse: better error reporting; limited max pulse
+    samplerate at 192KHz -- pulse returns NULL in extreme cases (fixes
+    #1892)
+  *  325ed427 - premake: added psf plugin
+  *  100e4d34 - premake: added ffmpeg
+  *  c9770157 - psf: ignore files larger than 4MB, identify by first 200
+    bytes, use new logger system
+  *  d949060f - coreaudio: don't ask audioqueue to use ultra-high sample
+    rates, limit at 192K, higher than that either doesn't play anything
+    at all, or causing hick-ups
+  *  3bb97382 - mp3: removed disable gapless option (more harm than
+    good)
+  *  142b4773 - streamer: send events after stopping the output
+  *  5ba57576 - coreaudio: format setting regression fix
+  *  0d901be3 - streamer: fixed a few occurances of calling output
+    plugin from within streamer lock (fixes #1906)
+  *  5285eb3f - streamer: removed buffering UI hack, and reworked the
+    streamer to send the events in the original order
+  *  464e735c - streamer: handle all events in one go
+  *  19c942d0 - streamer: fix handling prev/next during buffering
+  *  75c35bc9 - mp3: fixed handling tiny mp3 files with id3v1/apev2
+    tags; added tests
+  *  82d3be7e - junklib: fixed junk_get_tag_offsets restoring original
+    file pos
+  *  f483c466 - coreaudio: fix setting non-stereo format
+  *  6eb9657a - tests: added tests for junk_get_tag_offsets
+  *  36cbfee8 - junklib: added junk_get_tail_size and
+    junk_get_tag_offsets
+  *  446177f6 - gme: #elif typo fix
+  *  00efbf08 - cocoaui: save config and send configchanged event for
+    all preference changes
+  *  f55e6666 - cocoaui: hooked up resume last session and reset stop
+    after current track/album preferences UI
+  *  2d9262b5 - gme: gzip code improvement
+  *  d0f02f64 - cocoaui: hooked up "ignore archives" option UI
+  *  863c5d1f - gme: linux build fix
+  *  32d1ba14 - gme: fixed vgz support on android
+  *  25d99e3f - playlist: fixed handling ignore_archives and
+    follow_symlinks options
+  *  ae0d9e0f - premake: exclude deadbeefapp.c and gtkui-gresources.c
+    from gtk2 build
+  *  7093cd16 - sid: added to premake build
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 04 Nov 2017 09:43:08 +0300
+
 deadbeef (0.7.2+git7443-593a395c-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,94 @@
+gimp-devel (2.9.6+git39254-e042393199-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: e0423931992a8e2ecc61e3f279f48f3485bab080
+  * Date: 1509627879
+  * git changelog:
+  *  e042393199 - app: small cleanup in GimpSpinScale
+  *  da41269dcd - Update Spanish translation
+  *  ae851c34b4 - app: avoid spin scale pointer wrap when value is at
+    upper/loewr limit
+  *  2bdf5372ba - app: wrap pointer around screen edges during relative
+    spin scale adjustment
+  *  0323541d86 - Bug 780375 - Color picker won't pick on Wayland
+  *  0f716b3357 - Updated Italian translation
+  *  262f25b319 - app: fix GimpDataEditor name entry set_editable()
+    logic
+  *  bccef43049 - app, pdb: prevent custom gradient from being renamed
+  *  b7b263e97b - app: update GimpContainerEntry when the selected
+    item's name changes
+  *  9eb75cde00 - app: use G_FILE_CREATE_NONE for saved internal data
+    files
+  *  ab05320ce1 - Updated Italian translation
+  *  fb5354c9e5 - Bug 780979 - Fullscreen windows with WS_EX_NOACTIVATE
+    | WS_EX_TRANSPARENT ...
+  *  d14f6647ad - libgimp, libgimpbase: rename
+    gimp_base_compat_enum_init()
+  *  61727c69e0 - Update Polish translation
+  *  a5e1dd84fd - app: implement GimpToolActiveModifiers in GimpTool
+  *  dd30cc79b5 - app: let tools control how they recieve modifier keys
+    during a stroke
+  *  70881728f2 - Bug 786844 - Wavelet decompose plugin changes image
+    slightly
+  *  e4440e3fdb - app: save custom gradient across sessions
+  *  601f1bde98 - app: small cleanup in gimpwidgets-utils.c
+  *  4f871cb57d - NEWS: update various notable improvements.
+  *  8dc33b7729 - Fixes to Catalan translation
+  *  fdd8b3f4f6 - app: add "#include <gegl.h>" to tests
+  *  7655dd727b - app: make error-console highlighting criterion
+    configurable
+  *  b2bc33bdf1 - app: blink the statusbar on warnings and errors
+  *  e029795dfb - app: add gimp_widget_blink(); use instead of
+    gimp_dockable_blink()
+  *  e921c89496 - app: improve gimp_highlight_widget() visibility on
+    dark themes
+  *  35ac95815a - Update Spanish translation
+  *  29331c3b3e - Update Catalan translation
+  *  8515877244 - Update Catalan translation
+  *  e47b955454 - Update Catalan translation
+  *  66b92854f0 - Bug 789436 - Fix out of boundary write in file-xmc.c.
+  *  9a073508f7 - Bug 789436 - Fix out of boundary write in file-xmc.c.
+  *  7a4d5385fd - libgimpbase: add gimp_base_compat_enum_init() to
+    gimpbase.def
+  *  3b15ff5d30 - app: convert bg color to image color space when
+    removing alpha
+  *  7c32451dfb - Bug 784305 - Deprecated enum constants are not
+    registered in python-fu.
+  *  819a27564e - Bug 734982 - update project information upon release.
+  *  715c458649 - Bug 734981 - Update maintainers and authors.
+  *  20ab06a119 - Fixes to Catalan installer
+  *  59ea5ba298 - build: sync with flathub manifest.
+  *  dd924bb33a - build: stable flatpak manifest is now hosted at
+    flathub.
+  *  5f7c03235c - app: when changing layer-mode group, check new mode
+    against context
+  *  6f7d95c21c - app: remove legacy color-erase mode from the layer
+    mode combo
+  *  eada4a3ef8 - build: update 2.9 Windows installer graphics
+  *  a44ef8e866 - Bug 786840 - Selecting last option in file association
+    list ...
+  *  78aff4dde6 - app: add compress-threshold-range prop to color-to-
+    alpha-plus gui
+  *  4165ba2a03 - plug-ins: in file-psd, fix active layer selection upon
+    loading
+  *  6fb497247d - plug-ins: in file-psd, read/write layer group expanded
+    state
+  *  4db000a522 - pdb, libgimp: add gimp-item-{get,set}-expanded()
+  *  d027a059ef - app: respond to viewable expanded state changes in
+    container views
+  *  06ef794977 - Update Polish translation
+  *  ef89e07283 - Update Catalan translation
+  *  66bb469a78 - Bug 786992 - removing alpha produces a black image
+    (sometimes), with OpenCL
+  *  0c305bdb0f - app: use the layer's composite space when flattening
+    it
+  *  96efde0f22 - app: add
+    gimp_layer_get_real_{blend,composite}_{space,mode}()
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 02 Nov 2017 17:15:38 +0300
+
 gimp-devel (2.9.6+git39200-90a024be54-1) unstable; urgency=medium
 
   * Compile
