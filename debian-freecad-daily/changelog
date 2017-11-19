@@ -1,3 +1,102 @@
+freecad-daily (0.17~git12608-36301ff67-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 36301ff67b6e165bddbabe5b63be0d90dd296cde
+  * Date: 1510865063
+  * git changelog:
+  *  36301ff67 - Sketcher: Fix for issue #3245, including regression
+    test.
+  *  9c4b31a4a - TechDraw: Updated translation scripts
+  *  9a3a98c30 - Correct sceneRect when Template size changes
+  *  dc0f65152 - Path.Area: improve coplanar checking performance
+  *  4f7bcded7 - Path.Area: improve projection algorithm efficiency
+  *  15d1b80df - Adding a 20mm border
+  *  00a7610ed - Part Design: Gear.py typo fix
+  *  b8eb1ec84 - fix generation script of Python wrapper
+  *  987b8db0b - More typos, grammar fixes, uniformity
+  *  5f7576ca7 - Make 'fluid' lower case in menu text and tooltip
+  *  12893d362 - replace 'GMSH' with correct spelling 'Gmsh'
+  *  9d2642899 - FEM: gmsh tools, use fixed order for group data in geo
+    file it is needed to make a unit test for geo writing
+  *  088733587 - FEM: typo in unit test comment
+  *  8c7bb0cd5 - fix warning
+  *  04ea29528 - add kd tree class add mesh decimation algorithm
+  *  0b33f977f - Draft: Fix import of dxf files in no-gui mode
+  *  c46893d53 - Added TotalLength property in rebar object
+  *  9017f1852 - Added Length property in Rebar object
+  *  0cb8a39d3 - DlgCustomizeSpNavSettings.ui: remove trailing
+    whitespace
+  *  d04fd1626 - make retrieving view direction numerically more stable,
+    change orientation of bottom view
+  *  d8b285593 - Draft: tooltip uniformity fixes
+  *  5ea950e35 - Spreadsheet: follow-up correction to d43716fbc519e
+    [skip ci]
+  *  4ea6204d2 - Fix Dimension value format with Qt5
+  *  3c790009a - Fix calculation of integer scale
+  *  9d038ddf6 - Make decimal point optional in FormatSpec
+  *  196dd536e - Fix QGIVSymbol positioning/rotation
+  *  88b15ffdf - Poistioning and Rotation for QGIVAnnotation
+  *  600962362 - Fix QGIVImage positioning/rotation
+  *  44fd20016 - Rotate DrawViewPart around part centroid
+  *  03f439caf - AddonManager: allow to update all updatable addons at
+    once by pressing the update button again (git-python only)
+  *  15d5e27a5 - Fix issue with working directory.
+  *  39eaa63b5 - OpenSCAD: make tooltips uniform and grammatically
+    correct
+  *  ca36e884b - fix German translation
+  *  d43716fbc - Spreadsheet: set tooltips for fore/background buttons
+  *  2a443f5ef - Fixed issue with empty expression.
+  *  209271078 - fix German translation
+  *  74d1aa72e - fix German translation
+  *  db26cbcc4 - Sketcher: fix false detection of doubleclick
+  *  b01c503c2 - fixes #0003159: ShapeBinder is part of solid
+  *  d9187fa44 - Fixes #3252 - obsolete FC links in package/debian FC
+    man pages
+  *  5fe7a9af7 - Spreadsheet: Fix for issue #3225.
+  *  bb764b147 - FEM: unit test, extend the make objects test
+  *  551f6dc4a - FEM: unit test, move FEM objects test to the right test
+    class and fix code formating flake8
+  *  5c6a51c1a - FEM: code formating, flake8
+  *  3011fc8b2 - fix build failure on macoS when including glext.h
+  *  def0b8178 - changes in Mesh module: + cppcheck: fix some minor
+    issues found by code analyzer + export to IDTF + fix for throwing
+    exception + optimize mesh rendering
+  *  547af2f5b - + found a solution using painter path to fix the text
+    rending in image view
+  *  ec1bcccb8 - fix crashes in dependency walker
+  *  71836f4b3 - Less copyright-harmful clone icons for Draft and
+    PartDesign
+  *  41deaf82d - Sketcher: Delete all geometry menu command (in sketcher
+    tools)
+  *  3aec9b385 - Sketcher: Python command to delete all internal
+    geometry and constraints of an sketch
+  *  7f5e0caf3 - code cleanup
+  *  3daa4fe69 - prepare zipios++ for unicode support
+  *  17663ebac - Add TechDraw to translation scripts
+  *  c70c6b15f - Remove incorrect .qm/.ts files
+  *  926b84440 - Rename superPlacement property to AttachmentOffset
+  *  647b6d6ea - make philips postprocessor compatible with current Path
+    Workbench
+  *  267736376 - Draft: Fix module loading in non-GUI mode
+  *  71fbfa952 - add 2d features to body for drag and drop
+  *  d5d3513a5 - remove pointless Section option from boolean operation
+    in PD
+  *  edcc8ac76 - windows python path setup: allow to set the PYTHONHOME
+    variable
+  *  a9e1a5517 - move PySide abstraction layer to Ext /bin is not in the
+    python-path for a installed build.
+  *  621d4283e - fix build failures with gcc
+  *  e0d5d92cd - implement own ply/pcd importer/exporter
+  *  d76cccac3 - Arch: Fixed wrong strucutral presets
+  *  2fd36495d - Merge pull request #1071 from
+    abdullahtahiriyo/restore_carbon_copy_interbody
+  *  e4a52991b - Sketcher: Restore inter-body expression engine links in
+    Carbon Copy
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 17 Nov 2017 07:44:10 +0300
+
 freecad-daily (0.17~git12541-7e4a0ae17-1) unstable; urgency=medium
 
   * Compile

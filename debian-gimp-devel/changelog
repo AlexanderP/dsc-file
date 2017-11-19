@@ -1,3 +1,113 @@
+gimp-devel (2.9.6+git39320-945ef0de25-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 945ef0de25a863aa2d28e56b862c5325fcf3b9c6
+  * Date: 1510851313
+  * git changelog:
+  *  945ef0de25 - app: restore gradient when adding/removing stop on
+    same blend-tool action
+  *  6036217d20 - app: improve elimination of trivial blend-tool edit
+    actions
+  *  6a6af19ff8 - app: update image menu when starting a blend-tool edit
+    action
+  *  ac983d99fa - NEWS: update.
+  *  189a474502 - app: copy *-color-tag-* tooltips into labels.
+  *  1e5311f0e8 - app: no need to show all components as icons when
+    alpha is invisible.
+  *  0e8b89c821 - app: more casing inconsistencies and a double space.
+  *  be9d5758c2 - app: various action labels made more accurate.
+  *  6b0f9f001f - app: apply Title Case to action labels.
+  *  c70925126a - app: s/channel/drawable/.
+  *  1e87642ef0 - Bug 785061 - Add channels-select-
+    (prev|next|top|bottom) actions.
+  *  4003bc79db - app: layers-mode-* actions should not always be
+    sensitive.
+  *  87140a4cc6 - app: more accurate labels for "Visible" actions.
+  *  a3b6f01824 - NEWS: update.
+  *  80b04d06da - Bug 789173 - Make canvas rotation information visible
+    on the main window
+  *  953a095563 - Bug 789173 - Make canvas rotation information visible
+    on the main window
+  *  4bd118ec8a - app: make GimpTileHandlerValidate thread safe
+  *  ffb923464c - app: more accurate labels for "Other" actions.
+  *  8350ab4217 - app: add gimp_container_tree_view_name_edited() as
+    public default callback
+  *  7aadf34a23 - Bug 790328 - Buffer dialog should support renaming of
+    entries
+  *  5d91657747 - app: indentation fix to last commit
+  *  2e9ab59d19 - app: use matrix to determine if doing perspective
+    transform in preview
+  *  788e04bddb - app: GimpScaleComboBox resized appropriately with its
+    contents.
+  *  864e3df7a9 - app: fix comment typos.
+  *  d6c72d0f71 - Bug 790261 - autogen.sh non-portable use of echo -n.
+  *  7da24fd97b - app: bump GIMP_UI_WINDOW_POSITION_EPSILON in test-ui.c
+  *  8aa5e7825e - app: move error console highlight flags to aux-info
+  *  1e6f82d9f0 - modules: in colorblind, change "deficiency" prop to
+    "type"
+  *  19a28cc709 - Revert "app: do not add undo step when clearing an
+    already empty channel."
+  *  b5e0dfb6e2 - app: clarify "Into" -> "Into The Selection" in the
+    buffers dialog too
+  *  da4939419b - NEWS: update for 2.9.8
+  *  0611ca1d50 - app: remember the modes of the color picker info
+    window's GimpColorFrames
+  *  cbe6cd8ebd - app: notify on "mode" when a GimpColorFrame mode is
+    chosen from the menu
+  *  393336b76f - configure.ac: require GEGL >= 0.3.22
+  *  aee1a1f430 - Update Polish translation
+  *  d680c5453f - app: fix typo in a translatable string
+  *  f12d0d8c29 - Bug 789764 - Please add Paste In Place feature
+  *  79836aea34 - configure.ac: require babl >= 0.1.36
+  *  531eafe41d - app: sort available display filters by name
+  *  d591bf51f0 - app: clear display filter stack when emptying a
+    display
+  *  b1c5725373 - Update Russian translation
+  *  54ec9373fb - Bug 789981 - Wrong layer structure in PSDs with deeply
+    nested layer groups
+  *  6708af3976 - plug-ins: in file-psd, repalce tabs with spaces
+  *  4ded26c4f1 - app: update group layer offset before calling
+    gimp_pickable_flush()
+  *  fe3339e215 - app: in GimpSearchPopup, activate selected action
+    after closing popup
+  *  d87fb81f1f - Update NEWS
+  *  7f232a87b3 - data: new development splash image
+  *  c49a21d95c - app: improve histogram bin calculation
+  *  b2b6552f1f - Bug 788394 - Crash (segmentation fault) when
+    calculating a histogram ...
+  *  8793d6a3b2 - Fixes to Catalan translation
+  *  e2fb7a41c6 - modules: various changes in clip-warning
+  *  c97c2fe06d - Update Polish translation
+  *  6ffa17bd33 - app: avoid unnecessary work when all display filters
+    are disabled
+  *  bf659a9979 - modules: stylistic code and ui text cleanup in display
+    filters
+  *  bc9f179edf - app: add gimp_data_is_{copyable,duplicatable}() to
+    gimp_data.h
+  *  2fe6575d7e - Bug 789901 - Gimp allows duplicating non-duplicatable
+    data objects ...
+  *  089bfe4e3d - app: copy brush spacing when copying generated brushes
+  *  880d3bd182 - app: port GimpData subclasses from ::duplicate() to
+    ::copy()
+  *  9cd8e7f9c6 - app: apply display filters in sRGB, not monitor
+    profile
+  *  22a28a23cc - libgimpcolor: add shortcut in
+    gimp_color_profile_is_equal()
+  *  2520e0455c - modules: remove custom display filter gui
+  *  7ec271bd0c - modules: small cleanup in display-filter-clip-
+    warning.c
+  *  5b118a260b - modules: add clip-warning display filter
+  *  5a726a028e - app: use a propgui for display filters that return a
+    NULL config widget
+  *  bcb7545fe1 - app: in propgui, use flat color buttons for rgb props
+    with no alpha
+  *  a5a2b56850 - app: use actual render area when processing display
+    filters
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 16 Nov 2017 21:47:25 +0300
+
 gimp-devel (2.9.6+git39254-e042393199-1) unstable; urgency=medium
 
   * Compile

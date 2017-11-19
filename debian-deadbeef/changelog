@@ -1,3 +1,43 @@
+deadbeef (0.7.2+git7504-15c0bf7a-2) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 15c0bf7aacd7830e02b4004bc3c985cd1ad8c723
+  * Date: 1510781139
+  * git changelog:
+  *  15c0bf7a - coreaudio: increase buffer size, and use only 2 buffers
+  *  41cac28f - streamer: removed bogus dsp reset; added mutex
+    protection when changing dsp chain
+  *  dfa07ec0 - streamer: unified playback startup code; fixed flushing
+    the output when interrupting playback
+  *  62314824 - sync po files
+  *  b0b34128 - translation: added "skip to" submenu strings
+  *  a82bf3f5 - translation: added "Skip to" to translation/extra.c
+  *  9a2059d3 - alsa: fixed a few errors / regressions
+  *  5aa0e297 - premake: use cross-platform copy and mkdir
+  *  6a0bec7c - streamer: fixed race condition causing a crash
+  *  a1390f1e - gtkui: implemented crop in track properties
+  *  e7f4da54 - gtkui: implemented "edit in place" trkproperties ctx
+    menu item
+  *  0ea1666d - supereq: compile fix
+  *  e40a65c7 - pulse: removed sleep after write
+  *  31b421db - supereq: cleanup old unused code
+  *  8b8d5cd2 - alsa: fixed error handling / locking
+  *  52931c69 - logger: flush stderr after each line
+  *  91124bf7 - alsa: refactored code with better error handling and
+    attempts to fix -EPIPE errors on hires streams
+  *  55d47c85 - gtkui: restored playlist background filling
+  *  cac1a60f - cue: fixed double-adding tracks when adding a folder
+    with multiple cuesheets referencing the same audio file
+  *  ee3ac5d5 - streamer: fixed updating buffering state UI
+  *  d53a6482 - cocoaui: add location panel improved
+  *  fec3f75e - streamer: mutex lock scope fix
+  *  5dd0cb5c - supereq: removed old unused files; more detailed license
+    info
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 17 Nov 2017 23:30:53 +0300
+
 deadbeef (0.7.2+git7481-1aae735a-1) unstable; urgency=medium
 
   * Compile

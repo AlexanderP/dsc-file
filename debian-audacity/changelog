@@ -1,3 +1,55 @@
+audacity (1:2.1.3+git7596-a49f14ad0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: a49f14ad0298df1924fe038acdd1495546ac3630
+  * Date: 1510252349
+  * git changelog:
+  *  a49f14ad0 - doxygen.  Class list completed for letter 'A'.
+  *  a612af5c0 - Rename File > Save Other to File > Export
+  *  b94b49265 - Don't make orphans in original after save-as
+  *  1007980bc - fix a comment
+  *  0bae8c3a9 - Bug 1774 - Recording does not honor waveform color
+  *  c28be778e - Linty fixes
+  *  26a6815db - Fixed the value of MAX_HIGH_SURROGATE
+  *  f667b9f26 - When escaping characters for XML, don't escape valid
+    surrogate pairs on platforms where wchar_t (and, by extension,
+    wxUChar) is 2 bytes. Also, ignore invalid surrogates and the
+    noncharacters U+FFFE and U+FFFF.
+  *  25a65c34e - Fix bad punctuation, thanks to Joachim Huffer, update
+    .pot again
+  *  6136bb5e8 - Update audacity.pot
+  *  66d586136 - i18n-hints
+  *  a9f5c9c92 - Implement ComboEditor::Clone, and use override
+  *  072667e90 - Move Cliff Scott's credit to Contributors section
+  *  91b59d8af - Callthrough to base class UpdatePrefs was missing
+  *  e5c07fae8 - some missed translations, i18n-hints
+  *  31231a54d - use override
+  *  9612e3d97 - indentation, final newlines, spelling, remove unused
+    members
+  *  da5e5e51c - Config file keys do not need to localize
+  *  d3b1ae512 - Effect param keys don't need to localize; audacity.pot
+    can shrink...
+  *  75becb03f - Fix auto-scrolling when dragging edge of existing
+    selection
+  *  68f00326f - We're now on Version 2.2.1 development.
+  *  d8c3a59bd - Zoom to fit (as in 2.1.3) after File > Open (Recent),
+    audio/MIDI file
+  *  a5dfff4bd - Fix message box for completed Export Multiple which got
+    lost in 2.2.0
+  *  08fba266b - Bug1767: High Sierra: dbl-click 2 file icons, should
+    get 1 app icon
+  *  5dd72acc0 - Bug1770: fix crash applying chains
+  *  68897d893 - Some cppcheck fixes by David Binderman
+  *  7c4901966 - Bug 1766 - Invalid check for unsupported Nyquist plug-
+    in version
+  *  b48c6b0fd - Clip (and track) colours now persists in .aup file.
+  *  42c52de7f - Coloured clips basics
+  *  fd3813fa3 - Open 2.2.1 alpha
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 16 Nov 2017 10:42:58 +0300
+
 audacity (1:2.1.3+git7566-d6ee9bf97-1) unstable; urgency=medium
 
   * Compile

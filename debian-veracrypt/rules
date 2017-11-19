@@ -10,10 +10,21 @@ ifeq (,$(NUMJOBS))
 	NUMJOBS = 1
 endif
 
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+
+
 %:
 	dh $@ --parallel 
 
 override_dh_auto_build:
+ifneq (,$(filter $(DEBIAN_CODENAME), sid buster artful)) 
+	patch -p1 < debian/patches/005-fix-ftbfs-gcc-7.diff
+else
+	echo "no patch"
+endif
 	cd src && $(MAKE) -j$(NUMJOBS)
 
 override_dh_auto_clean:

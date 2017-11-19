@@ -1,3 +1,69 @@
+qcad (3.19.0+git5076-1df2276b8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 1df2276b8b7c4ca2597fd2e611a1c2052fa3d4cc
+  * Date: 1510768943
+  * git changelog:
+  *  1df2276b8 - update translations
+  *  21e007663 - don't snap to entities if parent layer not snappable
+  *  860b02407 - snappable on by default
+  *  1b2d64845 - update script bindings
+  *  2d581038e - enable/disable snapping for layer
+  *  642ab6893 - update script bindings
+  *  5bc1dadcb - add getNotifyListeners
+  *  b522e7dc1 - add individual freeze property
+  *  b8f369408 - add isParentLayerPlottable
+  *  7a1b42f74 - layer defpoints is never plottable
+  *  93fdc4ae6 - implement plottable layer flag for views / printing
+  *  81cb285d7 - clean up
+  *  81968c7d5 - initialize modes
+  *  b8edb25bf - update script bindings
+  *  1ab5dec5b - refactor addPath -> addDrawable
+  *  dbbb06d21 - implement no snap for layers
+  *  031c4f84d - add flags no plot
+  *  57789207a - format
+  *  4a38b55e1 - refactor bools to flags
+  *  2ee615f9b - refactor bools to flags
+  *  4e39107a9 - update translations
+  *  f1526d340 - update script bindings
+  *  e84759497 - make script handler scriptable
+  *  56bfd424d - refactor print preview
+  *  401b7a68c - convert paper / print settings of all blocks
+  *  a43cddbd6 - make script handler scriptable
+  *  980ab0f14 - clean up
+  *  7cb021aef - fix potential crash with block listeners
+  *  9df496d3a - set version to 3.19.1
+  *  34c487f3f - update script bindings
+  *  d209785a4 - add support for converting viewports
+  *  630bf0c50 - add RViewportEntity::setPosition
+  *  ae6c4a521 - implement scaling of viewports
+  *  b86a32b9f - fix dimscale in viewports
+  *  988694ae5 - fix FS#1655 - File > Print Preview: cannot adjust page
+    preferences for model space
+  *  4eb138793 - update
+  *  9ef24801f - set version to 3.19.0.1
+  *  c7585d23b - fix FS#1652 - Insert file as block: block attributes
+    not on correct block
+  *  50a80124b - update user manual
+  *  070e6a619 - update example
+  *  cc9dbf010 - add osifont
+  *  282ba9262 - fix regen when exiting print preview
+  *  1a409305c - fix exception in app preferences, defaults for new
+    documents
+  *  3db3332fd - fix include path
+  *  fce7a26bf - fix potential exception
+  *  a8a1b0255 - update transform and background if block changes
+  *  a4ec6f24a - replace line feeds in layer / block names with _
+  *  8bcdb6efb - auto scale dimensions in layout blocks
+  *  aa23e655d - add option to automatically scale dimensions in layout
+    blocks
+  *  47ef3bc2a - aviod warning for new properties
+  *  3c6c8fefe - fix type of PDSIZE
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 16 Nov 2017 17:37:01 +0300
+
 qcad (3.18.1+git5025-dbfd69712-1) unstable; urgency=medium
 
   * Compile
