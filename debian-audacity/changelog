@@ -1,3 +1,119 @@
+audacity (1:2.1.3+git7670-80995ed87-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 80995ed8748d0928d786e56cafa25e8f2e89cf15
+  * Date: 1512410459
+  * git changelog:
+  *  80995ed87 - Updated README.txt by Bill Wharrie
+  *  57126b66e - Updated zh_TW.po -- Chinese (Traditional) submitted by
+    mkpoli
+  *  1dfe97097 - Corrections in zh_CN.po -- Chinese (Simplified)
+    submitted by mkpoli
+  *  264905907 - Updated it.po -- Italian to 100% submitted by Carmelo
+    Battaglia
+  *  faa603a0e - Fix build of .mo files on all platforms
+  *  947874600 - Revert "msgfmt on Windows made errors for comments in
+    .po starting #~|"
+  *  d1a7aa31b - msgfmt on Windows made errors for comments in .po
+    starting #~|
+  *  a627f7b77 - Updated zh_CN.po -- Chinese (Simplified) submitted by
+    mkpoli
+  *  5aa3ff94c - Fix more ambiguous accelerators...
+  *  d70eb74c4 - Make exported label tracks locale-independent
+  *  db2074dfc - Bug1791: Quick-play looped should begin where you
+    pick...
+  *  d5547a786 - Update French translators credits + timestamp (#221)
+  *  5bec6e660 - Added script locale/diagnostics.sh
+  *  be5c06130 - Updated es.po -- Spanish submitted by Antonio Paniagua
+    Navarro
+  *  71dc6a7df - French translation improvements
+  *  5eccf5172 - Fix ambiguous accelerators in pt_PT.po, and some
+    punctuation, from Bruno
+  *  b0879a561 - Fix ambiguous accelerator in el.po
+  *  c55ad8552 - Display translator credit only for the chosen locale
+  *  c8eec056a - Remove line numbers from comments in ar.po
+  *  01d457030 - Update audacity.pot without line numbers in comments...
+  *  ce7561a0b - Don't make duplicate msgid
+  *  ac2c4c8d3 - Revert "Fix duplicate strings for translation (Skip
+    &Forward)"
+  *  6c8d4e0aa - Fix duplicate strings for translation (Skip &Forward)
+  *  e2dfaed0f - pt, zh, ja translation changes for Windows installer...
+  *  0d89bc3f1 - Fix some typos in msgids, thanks to Olivier Humbert...
+  *  6bde63604 - Updated ar.po -- Arabic (92%) submitted by Hussam Eddin
+    Alhomsi
+  *  653fa2d35 - Fix progress dialog for export of FLAC
+  *  b69a272ad - Updated fr.po (and audacity.iss) -- French submitted by
+    Olivier Humbert...
+  *  5723a7c38 - audacity.desktop.in for ja, zh_CN, and zh_TW (thanks to
+    mkpoli)
+  *  81f9bf776 - Work in progress on fr.po by Olivier Humbert...
+  *  065947c39 - Fix format specifier in cs.po
+  *  101f6c748 - Merged all the .po files...
+  *  0975c7a32 - Incomplete update of fr.po -- French submitted by
+    Olivier Humbert
+  *  54e806666 - Incomplete update of it.po -- Italian submitted by
+    Carmelo Battaglia
+  *  fd683d377 - Updated cs.po -- Czech submitted by Pavel Fric
+  *  fb8ab9132 - Do not include .gitattributes in tarball
+  *  61f4284e1 - Make append-recording insert clip boundaries again
+  *  afdcded32 - Make Release build
+  *  0532f9be3 - More sanity checking in file save ...
+  *  9c028c076 - Certain sanity checks against crash or bad behavior on
+    corrupt projects...
+  *  6350d96c0 - Updated pt_PT.po -- European Portuguese submitted by
+    Bruno Ramalhete
+  *  4eaef13f0 - Fix small sub sub headings in local copy of manual.
+  *  5ea729e77 - audacity.desktop.in for nl (thanks to Thomas De Rocker)
+  *  44e6f3e3e - audacity.desktop.in for hi (thanks to Bashishtha Singh)
+  *  b64ba45b1 - Add Arabic translation for audacity.desktop.in.
+  *  92691d848 - Bug1784: Changed conditions for exceptions from
+    Sequence...
+  *  6e72aed6a - Sequence consistency check will not throw in 2.2.1
+  *  206866295 - Replaced one THROW_INCONSISTENCY_EXCEPTION with othe
+    precautions
+  *  21787621f - Comment aids reasoning about preconditions for Sequence
+    methods
+  *  430bd1230 - Fix Regular Interval Labels
+  *  5354a788c - audacity.desktop.in for pt_PT (thanks to Bruno
+    Ramalhete)
+  *  8426d87e0 - audacity.desktop.in for el (thanks to Dimitris Spingos
+    (Δημήτρης Σπίγγος))
+  *  c1779c843 - audacity.desktop.in for pt_BR (thanks to Cleber Tavano)
+  *  4ff5d4332 - Fix Russian translation (#208)
+  *  fc7ec2df4 - Updated pt_PT.po (79%) -- European Portuguese submitted
+    by Bruno Ramalhete...
+  *  a0baf67d9 - Updated ar.po -- Arabic (85%) submitted by Hussam Eddin
+    Alhomsi
+  *  d3864595c - 12 languages 100% up-to-date with version 2.1.1
+  *  634db2c3f - Updated zh_CN.po -- Chinese (Simplified) submitted by
+    mkpoli
+  *  2a77d7329 - Updated uk.po -- Ukrainian submitted by Yuri Chornoivan
+  *  64dcc89bb - Updated pt_BR.po -- Brazilian Portuguese submitted by
+    Cleber Tavano
+  *  95b248b9e - Updated nl.po -- Dutch from Transifex
+  *  33801d4b5 - Updated ko.po -- Korean from Transifex
+  *  ca999ce8f - Updated el.po -- Greek submitted by Dimitris Spingos
+    (Δημήτρης Σπίγγος)
+  *  c193ec176 - Updated de.po -- German submitted by Joachim Huffer
+  *  0fb14f3e4 - Updated da.po -- Danish submitted by scootergrisen
+  *  fc5709699 - Updated tr.po -- Turkish submitted by Kaya Zeren
+  *  64ed369e9 - Updated pl.pl -- Polish from Transifex
+  *  212e6ce63 - Updated hi.po -- Hindi submitted by Bashishtha Narayan
+    Singh
+  *  758aec6e3 - Updated eu.po -- Basque submitted by Xabier Aramendi
+    ("azpidatziak")
+  *  08d63aa36 - Fix roundoff bug in NumericTextCtrl
+  *  1d311651e - comment
+  *  f136b5c53 - Reviewed uses of InconsistencyException outside
+    Sequence.cpp
+  *  2f40c1c77 - Don't use InsertSilence when previewing effects
+  *  dc76988bd - Menu name change to "&Export" was a bit late for
+    localization...
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 05 Dec 2017 17:47:44 +0300
+
 audacity (1:2.1.3+git7596-a49f14ad0-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,259 @@
+freecad-daily (0.17~git12767-75d006a97-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 75d006a97df65abef578c1d4dfc50ff2e89922c1
+  * Date: 1512488232
+  * git changelog:
+  *  75d006a97 - Expression completer: Fixed issue #3197.
+  *  d2c307a1d - Fixed StepDown value by removing special handling of
+    legacy behaviour.
+  *  3579f38d6 - Builder3D: doxy typo/grammar fixes
+  *  9f20d9284 - Merge pull request #1137 from mlampert/bugfix/circular-
+    hole-setup
+  *  feeab3ce8 - Remove automatic base features if OP was created with
+    selected faces.
+  *  5f7faa25a - Fixed hole detection for bottom faces.
+  *  fc5077f41 - Fixed direct editing of point in GetPoint dialog.
+  *  25e92ca25 - Added circular faces to drillable targets.
+  *  7588081af - Implement option for perspective drawing views
+  *  5bc256d3f - Fix "still touched after recompute" and display
+  *  95cc7a900 - AddonManager: set focus back on WB list after updating
+  *  30c1b2a5a - Merge pull request #1134 from mlampert/bugfix/circular-
+    hole-setup
+  *  04ea26a66 - Fix for missing base class initialisation during
+    creation.
+  *  1cfae464b - issue #0002973: Path to FreeCAD.app can't contain
+    unicode
+  *  93aa85994 - fixes #0002745: The Disappearing Grid
+  *  34b40f23a - fixes #0002923: Python console history misbehaves with
+    word-wrapped lines
+  *  25afe3227 - SVG Cleanup: tweaked <dc:description> tags for changed
+    clone icons
+  *  9831dfe53 - SVG Cleanup: remove typos + uniformity fixes
+  *  3d9ecab34 - SVG cleanup: remove all redundant <dc:title> content
+  *  56111a081 - Typos: user-facing and trivial
+  *  af0477fc4 - remove trailing whitespace
+  *  15b509db2 - Implement LineGroups for default weights
+  *  1b1970544 - FEM: new solver, add Cantilever example with all
+    solvers
+  *  460d064ac - FEM: all pref gui tabs, some typo, layout and format
+    improvements
+  *  74e265df2 - FEM: elmer writer, add new Gmsh node group attribute
+  *  42bfdf23a - FEM: elmer solver, fix Py3 issues
+  *  da426b36c - FEM: new solver frame work, fix it in the regard of the
+    analysis object change to a real group object
+  *  9e32d4845 - FEM: ccx tools, fix them in the regard of the analysis
+    object change to a real group object
+  *  168c7cf02 - FEM: unit test elmer, add a testmode to solver
+    framework
+  *  3458c0b08 - FEM: unit tests, elmer sifio and geo writing
+  *  cab5ea33f - FEM: elmer sifio, write case file entries in same order
+    if module is called twice
+  *  4380a5ec6 - FEM: unit test, add all new objs to the make obj test
+  *  78421a678 - FEM: elmer equations, add posibility to easy create
+    them by python with objects fem modul
+  *  ac163bdbc - FEM: code formating, flake8 in new objects potential
+    boundary and flux-solver
+  *  3d5de0f9f - FEM: Potential-boundary and flux-solver objects, add
+    icons
+  *  b095e9435 - FEM: Potential-boundary constraint and elmerflux-
+    solver, add objects and implement them in elmer
+  *  e7fe13ba4 - FEM: command solver run, fix FreeCAD freeze on new
+    frame work
+  *  3eeee4786 - FEM: command solver run, delete duplicate code
+  *  73d1e9f01 - FEM: new commands, use same code system as it is used
+    in the other commands
+  *  743f55528 - FEM: new commands, remove add in command names the wiki
+    pages retrive the names from the command names, thus they have to us
+    the same name system
+  *  c0acb903d - FEM: unit test, add elmer solver and equations to
+    module import test
+  *  c03c7e770 - FEM: elmer writer, fix density for self weight on edges
+  *  8a1bf4bcb - FEM: elmer, use an vector icon in svg
+  *  51383aa9a - FEM: elmer, add electrostatic equation
+  *  412df6f4c - FEM: elmer, add it to the new solver framework and add
+    equation object for elmer
+  *  42b3c3353 - FEM: constraint initial flow velocity, add object,
+    command, icon, task panel, etc.
+  *  ce69c1531 - FEM: constraint flow velocity, add object, command,
+    icon, task panel, etc
+  *  51c46dd2a - FEM: constraint body heat source, add object, command,
+    etc
+  *  e4939d358 - FEM: general python contraint, add module
+  *  f17bd36e0 - FEM: selection widget, add module
+  *  5c18c71ad - FEM: unit test, add new solve modules ccx and z88 and
+    add a input file write test for new ccx solver
+  *  7ad273f3c - FEM: old ccx analysis tools, move analysis tools into
+    ccx analysis tools, all new solver should use the new solver frame
+    work
+  *  38ef85141 - FEM: ccx input file writer, move writer into new
+    femsolver package
+  *  f38fb30a7 - FEM: prefs, add the pref to choose between new and old
+    ccx solver to the pref gui
+  *  45e81db4e - FEM: ccx, add it to the new solver framework but use
+    the old ccx writer
+  *  f8f267fcc - FEM: z88, remove from old solver framework
+  *  609e97a82 - FEM: z88, add it to the new solver framework
+  *  d9bef5af5 - FEM: new solver framework, add gui for working path
+    pref
+  *  dda82d600 - FEM: new solver framework, initial commit
+  *  1a2f575a5 - FEM: fem utils module, new module to collect some FEM
+    utilities
+  *  fd7e2d9e0 - FEM: code formating, typos in comments
+  *  23bc8f356 - FEM: gmsh tools, better init for class attributes
+  *  adfcd154c - fixes #0003176: Sketcher: always over-constrained when
+    referencing external B-Spline
+  *  651ff2448 - when painting items make sure that constraint id is in
+    range
+  *  e7d4296b2 - remove export macro from template class
+  *  3b82ffff0 - When we are restoring, don't set the Label on object
+    creation as it will be restored later. This is to avoid potential
+    duplicate label conflicts.
+  *  2ae131397 - Moved ObjectStatusLocker template class to Base/Tools.h
+  *  75829b367 - Merge pull request #1128 from realthunder/PathArcFix
+  *  b640b9865 - libarea: improve arc fit
+  *  724936582 - libarea: disable max arc points parameter
+  *  8bbcfd6dc - Surface WB: add a Gui widget for unbound edges to the
+    Filling tool.
+  *  1a2e77cf6 - Spinboxes: Fix for issue #3278.
+  *  8b3755ee3 - removed example and dumper from deployment
+  *  0b629e67d - Clarified tooltip
+  *  d53dbaa13 - Fixed tooltip still refering to xml instead of json.
+  *  780326481 - Added template export to Path menu, rearranged layout a
+    bit for better consistency.
+  *  5a0019e9e - App/Range.cpp: mInor doxygen refinements
+  *  0f6edecce - FEM: mesh tools and input writer, better debug print
+    messages
+  *  c21baa8a6 - FEM: mesh tools, use for voumes the better get group
+    data def
+  *  708c42aa7 - FEM: mesh tools, use for faces the better get group
+    data def
+  *  23ec4156c - FEM: mesh tools, more smart code int get group data def
+  *  e3f47ec6a - FEM: mesh tools, make retrieving group data ids useable
+    for all element types
+  *  d948cd2e0 - FEM: code formating, flake8, trailing ws and typo in
+    comment
+  *  09c11b950 - Path: Allow adjusting of feed rate in DressupRampEntry
+  *  ea487bb94 - Sketcher: Fixed regression in fix for issue #3245.
+  *  7822f4aac - Draft: Added Fuse property to Clones
+  *  fa9278da7 - Removing black-on-white theming to allow system colors
+    in Qt help
+  *  0cca82b53 - Path.Area: honour 'from_center' in offset pocket mode
+  *  4a9fea365 - Fixed selection guard removal after exception.
+  *  cd1a4e8b4 - Hiding some advanced, not ready for prime time features
+    unless EnableExperimentalFeatures is set and true in the
+    preferences.
+  *  a84a0ce43 - Abort OP creation transaction if TC selection is
+    aborted with cancel, #3274
+  *  7da187f96 - Fixed range issue in comparing edges when they have
+    different # vertexes
+  *  b2bfc8c93 - Changed form layout to grid layout for qt5
+    compatibility.
+  *  ac47d8062 - Merge pull request #1118 from luzpaz/SubWCRev-summary-
+    update
+  *  c6b3ebba8 - Tools: SubWCRev.py file info update
+  *  58a55aeeb - set global link scope of surface features
+  *  3e921cbda - Draft: Added a utility command to add selected objects
+    tothe construction group
+  *  2ee230a1a - Draft: Added preference option to set focus on Length
+    when drawing lines
+  *  f33116c08 - Arch: fixed multiple-group bug in Arch addComponent
+  *  df427de3e - fixes #0003027: if type(App.Vector) in
+    originSketch.Geometry: newSketch.Geometry = originSketch.Geometry
+    Raises types in list must be
+  *  d72791e8d - in PropertyGeometryList::setPyObject check for sequence
+    instead of list
+  *  32510bde8 - fixes #0003260: Double Quote in tool name is not
+    escaped in FCStd file
+  *  2059d47e2 - move encodeAttribute from Property to Persitence to
+    avoid code duplication
+  *  fcb5b9cde - in PropertyStringItem prepare input string for
+    assignment via Python
+  *  56af70374 - Fix Techdraw UI typo found via crowdin + misc. typos
+  *  0973dd5e7 - add class ViewProviderDragger derive
+    ViewProviderGeometryObject from ViewProviderDragger derive
+    ViewProviderPart from ViewProviderDragger
+  *  c71b579f9 - Span property group headers across all cells to avoid
+    text truncation Render the background of property value editor
+    widgets to avoid cell contents showing through the editor
+  *  e8587cf0b - Misc. typo fixes
+  *  8e48e336e - FEM: constraint initial temperature, make reference
+    property hidden and readonly
+  *  3e2da0cd7 - FEM: prefs, add an option to deactivate group meshing
+    for analysis
+  *  2ee72456e - FEM: ccx writer, use the new Abaqus writer parameter
+    and fix unit test
+  *  f271e52b3 - FEM: Abaqus writer, add method parameter for elem and
+    group options
+  *  801fae3a3 - FEM: Abaqus writer pref ui, move from FEM to Import /
+    Export
+  *  854ab38cf - FEM: Abaqus writer pref ui, some changes proposed by
+    werner - ui class name matches with file name - class is not derived
+    from ui but uses it as a private member -
+    https://forum.freecadweb.org/viewtopic.php?f=10&t=25381
+  *  1bf52f468 - FEM: Abaqus writer, pref GUI for element and group
+    export parameter
+  *  b7ea89b65 - FEM: Abaqus writer, add groups to inp writer
+  *  184bc0332 - FEM: Abaqus writer, first get all data and write it
+    afterwards
+  *  921c8b737 - FEM: Abaqus writer, add pref to distingish between: -
+    all elements - highest dimension elements - FEM elements (only edges
+    not belonging to faces and faces not belonging to volumes)
+  *  4e7c091c5 - FEM: Abaqus writer, write FacesOnly and EdgesOnly for
+    mixed FEM meshes, could be slow on non mixed meshes
+  *  1f11a3cc8 - FEM: mesh api, add EdgesOnly and FacesOnly
+  *  737315a50 - FEM: Fix typo
+  *  60c92701b - FEM: Gmsh tools, add parameter to write groups of nodes
+    for any group
+  *  447d4816c - Fix #3224 Seg Fault in DrawProjGroup
+  *  7de79e799 - Fix #2967 Ph2 Do not show page on restore.
+  *  868d9cc6c - improve whitespaces
+  *  0f6d0221f - Fixed cut mode for pocket shape.
+  *  e7a509306 - Expose curve accuracy as a preference.
+  *  375614a1f - pylint cleanup
+  *  9d9d99f3b - Attacher: fix Py attachment editor for Python3
+  *  b24a9c9ad - Misc. typos
+  *  399dca7cb - fix crashes when using sketch tools
+  *  83f7f85d0 - Arch: Fixed axis property of components
+  *  f41ff3a45 - Arch: Fixed 'object in more than one group' bug in Arch
+  *  9b4f57e57 - Changed TC editor fields horizontal sizing to expand.
+  *  9f659eb55 - Make keep tool down work - as good as it gets.
+  *  870d66198 - Make simulator work with non standard operations.
+  *  737ca980f - Merge pull request #1106 from mlampert/bugfix/tags-
+    precision
+  *  77a33b09d - Merge branch 'master' into bugfix/tags-precision
+  *  8ea6b92ea - Comment set name of combiview tab 2
+  *  0d1451f39 - User-facing typo fixes
+  *  df1011d94 - Path: Allow removing of all base objects in Circular
+    hole tools
+  *  aca5bff11 - Merge branch 'master' into bugfix/tags-precision
+  *  3b957a12b - various minor changes: + whitespace improvement + code
+    cleanup
+  *  8985372d1 - Don't issue x and y coordinates for the initial G0 to
+    ClearanceHeight, #3034
+  *  d3f942cd6 - Fixed tag marker display for path's not on z=0
+  *  85571ac9a - Fixed updating view after tag generation.
+  *  9c9faab42 - Increased tolerance for accepting tags.
+  *  99a2fd16f - fixes #0002290: Point-on-object constraint icon not
+    selectable
+  *  b3631e134 - fixes #0003258: Draft Snap toolbar doesn't display
+    MenuText AKA status bar text when hovering over icons
+  *  54219f151 - Path.Area: handle empty wires during sorting
+  *  6ad0a1825 - Path.Area: replace push_back with emplace_back
+  *  ba7fed239 - Very minor problem. Test of sheets is impacted by the
+    locale. The decimal separator may be , instead of .
+  *  046954a05 - fix coverity issues
+  *  532d9b230 - fix coverity issue
+  *  c770ce7a3 - Added color prefs to sketcher create commands
+  *  1f76beba6 - Path: typo fixes
+  *  6f1691fec - PartDesign: Fix previous commit + more typos
+  *  706141b96 - Make uniform the use of B-spline visible to users
+  *  bd59cea7f - fix Shaft Wizard due to renamed property
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 05 Dec 2017 19:37:07 +0300
+
 freecad-daily (0.17~git12608-36301ff67-1) unstable; urgency=medium
 
   * Compile

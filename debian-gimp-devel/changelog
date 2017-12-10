@@ -1,3 +1,134 @@
+gimp-devel (2.9.6+git39401-9f1e3de4da-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 9f1e3de4daf1ab6d6de6a77fc209e38db7a65787
+  * Date: 1512488898
+  * git changelog:
+  *  9f1e3de4da - Update Spanish translation
+  *  94a6ba9025 - Updated Italian translation
+  *  5aa9428445 - app: migrate plug-in-gauss shortcuts to filters-
+    gaussian-blur.
+  *  482b907cb7 - app: reorder alphabetically changed action paths in
+    migration code.
+  *  81d9da0c17 - Bug 775931 - Shortcut for non-existing action shadows
+    existing one.
+  *  4e4c1cd57e - Bug 790810 - Nested layer groups lead to a deadlock
+    with multithreading
+  *  dec2375a26 - app: add gimp:buffer-source-validate operation
+  *  4dab0ac0ac - libgimpbase: fix gettext invocation for enum/flags
+    desc/abbrev
+  *  fd9cce57ee - configure.ac: require perl >= 5.10.0
+  *  3c4ea160dc - Update Polish translation
+  *  b1ac9f33b2 - Bug 790917 - Exporting 16bit per channel w/ alpha data
+    as TGA destroys part of the image
+  *  e042c82d59 - app: flush group proj. switching from pass-through to
+    non-pass-through
+  *  9451a8f690 - Update Swedish translation
+  *  9f79be44f8 - app: flush pass-through groups' projection
+    asynchronously
+  *  61ae3089ad - app: avoid begin_render()/end_render() when flushing
+    projections
+  *  be97b97a2b - app: set group layer projection priority according to
+    depth
+  *  1a2c0e8198 - app: add gimp_projection_{get,set}_priority()
+  *  a52ff51990 - app: add GimpViewable::ancestry-changed signal,
+    get_depth() function
+  *  32d575b64f - Bug 785080 - 02-Gray Theme lacks foreground-background
+    contrast.
+  *  c4c40b6a01 - app: set sensitivity for median-blur filter action
+  *  c0274b7b1f - app: disable OpenCL by default, like GEGL does
+  *  d60c237805 - Bug 785781 - Additional Free Selection step (hitting
+    Enter)...
+  *  568c147f8d - app: do not assume PixbufStyle type exists.
+  *  ba8dca5f47 - app: g_type_class_unref() PixbufStyle in
+    themes_exit().
+  *  0830fe8923 - libgimpwidgets, app: make ABBREVIATED default
+    GimpIntComboBox layout
+  *  ed2fe2d2d1 - libgimpbase, libgimpwidgets: add new functions to .def
+    files
+  *  8e51e7c351 - libgimpwidgets: fix return type of
+    gimp_int_combo_box_get_layout()
+  *  66bed0d272 - authors: add shark0r.
+  *  6962c6b6d6 - app: a bit more cleanup, aligning variables.
+  *  18a96d9268 - Bug 770424 - Themes: insensitive menu item are not
+    readable.
+  *  337dba62fd - Bug 770424 - Themes: insensitive menu item are not
+    readable
+  *  33d4095fd5 - app: fix a typo (transarent)
+  *  5a28753924 - app: add abbreviations for layer modes
+  *  f80f33216f - libgimpbase: use abbreviations for GimpGradientType
+  *  a08a9171d7 - app: modify unabbreviated value descriptions of
+    GimpGradientColor
+  *  91f7f90262 - Update Greek translation
+  *  8fbac7090a - Update Spanish translation
+  *  c8b4c0686c - app: use ICON_ONLY layout for group combo in
+    GimpLayerModeBox
+  *  d3e527a959 - libgimpbase, app: add abbreviations to gradient enums
+  *  0f43dedfb5 - libgimpwidgets: use ABBREVIATED layout for
+    GimpEnumComboBoxes ...
+  *  47ac6111de - libgimpwidgets: add "layout" property to
+    GimpIntComboBox
+  *  658d07dffe - libgimpwidgets: fill ABBREV column in GimpEnumStore
+  *  684c850196 - libgimpwidgets: add ABBREV column to GimpIntStore
+  *  f7d6805ebb - */Makefile.am: add abbreviations to generated enum
+    files
+  *  4b521435a1 - gimp-mkenums: add @if@ conditional inclusion
+  *  300eb7e6c7 - gimp-mkenums: add @valueudesc@, @valueuhelp@,
+    @valueuabbrev@ subs.
+  *  627a2b8ded - gimp-mkenums: add @valueabbrev@ substitution
+  *  bbcb66dbd4 - gimp-mkenums: tabs-to-spaces, indentation, and
+    trailing-space cleanup
+  *  7df427583f - libgimpbase: add gimp_{enum,flags}_value_get_abbrev()
+  *  10e3295581 - Bug 790911 - fix jaggy stroke in Tiling Symmetry
+    Painting
+  *  5ec5781c3a - Update Greek translation
+  *  702c4227e8 - 790783 - buffer overread in XCF parser if version
+    field...
+  *  f9125b514b - Update Polish translation
+  *  2ff52af5a9 - Bug 790810 - Nested layer groups lead to a deadlock
+    with multithreading
+  *  d228e76ebe - app: fix memory leak.
+  *  120fda66e7 - NEWS: fix some typo.
+  *  1e78d3d249 - plug-ins: make Darktable version checking more
+    generic.
+  *  717cd7881e - Update Catalan translation
+  *  eeddd13209 - Revert "app: make GimpTileHandlerValidate thread safe"
+  *  35b0f6102e - app: update group-layer item offset after updating
+    offset node
+  *  5180c01045 - configure.ac: require GEGL >= 0.3.24
+  *  61262f6e8e - Update Spanish translation
+  *  4355088644 - app: layer's Blend|Composite Space|Mode actions labels
+    too long.
+  *  d88a09334d - app: get rid of more abused GIMP_ICON_CLOSE on *-color-
+    tag-menu.
+  *  fa25b476be - icons, modules, libgimpwidgets: add clip-warning
+    display filter icon
+  *  b6cb1d167c - Bug 790631 - C plug-ins instability when processing
+    gegl graphs ...
+  *  9c0dac9e6d - app: heed deprectation warning of
+    gegl_operation_context_get_source
+  *  30d29e03f8 - Bug 789614 - Fix heap overflow in pattern handling
+  *  d8ae581703 - libgimp: make GimpTileBackendPlugin thread safe
+  *  a30f855981 - configure.ac: require babl >= 0.1.38
+  *  c10c640451 - plug-ins: Hide darktable debug output
+  *  3c7ade6423 - Update Polish translation
+  *  39d03909dc - app: s/GIMP_ICON_CLOSE/GIMP_ICON_EDIT_CLEAR/ for *-
+    color-tag-none.
+  *  e3f8b470d2 - Revert "app: copy *-color-tag-* tooltips into labels."
+  *  1b804e5770 - Update Polish translation
+  *  7e613516a2 - Bug 788403 - When importing an image, don't change to
+    "untitled"...
+  *  d613842eba - Bug 788768 - GIMP crashes loading a valid truncated
+    xcf
+  *  e19958c5f1 - app: use SAFE_CLAMP() in histogram bin calculation
+  *  e9f45798d0 - libgimpmath: add SAFE_CLAMP() macro
+  *  5eb6187421 - app, menus: add gegl:median-blur to the menus
+  *  a9cc82499d - Update Catatalan translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 05 Dec 2017 18:59:47 +0300
+
 gimp-devel (2.9.6+git39320-945ef0de25-1) unstable; urgency=medium
 
   * Compile

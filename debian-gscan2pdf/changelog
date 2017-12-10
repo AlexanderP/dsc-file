@@ -1,3 +1,38 @@
+gscan2pdf (1.8.8+git2714-cbce9f3f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: cbce9f3f2335ec1ea96347ab45d7512a541b4fe1
+  * Date: 1511795608
+  * git changelog:
+  *  cbce9f3f - Prerelease commit
+  *  bf79124b - + support for scan options without ranges, e.g.
+    booleans, in tolerance check
+  *  2de8e4b0 - Prerelease commit
+  *  8a42cd46 - Updated to Slovak translation
+  *  47a1022d - Fix crash reading corrupt config file
+  *  3532dfc9 - Don't reapply scan settings if value is within tolerance
+  *  ea09eefb - + missing documentation for Edit/Properties
+  *  d2df4481 - For single-sided documents, hide rotate
+    facing/reverse/both side dropdown
+  *  3b825419 - + support for the new API in ImageMagick for unsharp
+    mask
+  *  ad7f3ba8 - Hide extended page numbering checkbox and source
+    document frame unless scanner is not capable of duplex and ADF is
+    selected. Therefore, for duplex-capable scanners, this is never
+    shown. For duplex-incapable scanners, this is shown if the ADF is
+    selected, but otherwise hidden.
+  *  ce0b7368 - Adapt t/131 to pass with IM7
+  *  a7295998 - Fix killing processes on cancel
+  *  3263d632 - Fix t/166 exit calling "get" on an undefined value
+    Gscan2pdf/Translation.pm
+  *  d10a2414 - Rename preference "Open scan dialog at program start" ->
+    "Open scan dialog at program start"
+  *  59027cba - Post-release commit
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 03 Dec 2017 00:14:34 +0300
+
 gscan2pdf (1.8.8+git2699-41e9a451-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,42 @@
+deadbeef (0.7.2+git7524-619e7b07-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 619e7b073cbecc3ecd81d06086b239a994f0df3e
+  * Date: 1512579267
+  * git changelog:
+  *  619e7b07 - mp3: stop trying to recognize a file as mp3 after 100KB
+    of invalid data
+  *  17f889bd - add deprecation attribute / note to DB_playItem_t
+    startsample and endsample fields
+  *  4324136d - rename start/end sample variables back to 0.7.2 names,
+    to avoid breaking API
+  *  779ac7a8 - mp4util: fixed CFLAGS and link order
+  *  997b9d38 - Revert "support showing subindexes as separate tracks in
+    playlist"
+  *  cf7bbb75 - sc68: zlib dependency check
+  *  928a7cb0 - psf: zlib dependency check
+  *  382a60ee - added -std=c99 to shared/Makefile.am
+  *  9288f852 - fixed a few make distcheck issues
+  *  df8b3885 - alac: fixed output format regression
+  *  2b85e73e - added an API to check whether a cue is being loaded
+    during decoder->insert call; fixed an issue with FLAC binary
+    cuesheet being used during normal cuesheet loading (fixes #1930)
+  *  1e55e534 - update to latest osx deps
+  *  babeccb1 - playlist: NULL pabort fix
+  *  7672be44 - coreaudio: cleanup
+  *  b7b7ed0e - dsp: fixed buffer allocation bug, resulting in a
+    possible crash
+  *  0949d116 - coreaudio: re-added audiounit backend
+  *  55f0130c - translators.txt update
+  *  2314058a - cdda: fix passing NULL to junk_detect_charset (fixes
+    #1926)
+  *  95b40607 - cue: style fixes
+  *  7b8703a0 - cue: map SONGWRITER > composer
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 06 Dec 2017 22:27:04 +0300
+
 deadbeef (0.7.2+git7504-15c0bf7a-2) unstable; urgency=medium
 
   * Compile
