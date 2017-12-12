@@ -19,7 +19,7 @@ Description: transitional dummy package
 Package: libtesseract-dev
 Section: libdevel
 Architecture: any
-Depends: libtesseract4 (= ${binary:Version}), ${misc:Depends}
+Depends: libtesseract4 (= ${binary:Version}), ${misc:Depends}, libleptonica-dev
 Replaces: tesseract-ocr-dev (<< 3.0.1-1~)
 Breaks: tesseract-ocr-dev (<< 3.0.1-1~)
 Description: Development files for the tesseract command line OCR tool
@@ -32,7 +32,43 @@ Description: Development files for the tesseract command line OCR tool
  files, static library, and header files.
 
 Package: libtesseract4
-Breaks: tesseract-ocr (<< 3.01~), ocropus (<< 0.4.0~)
+Breaks: tesseract-ocr (<< 3.01~), ocropus (<< 0.4.0~),
+ tesseract-afr (<< 4.00~), tesseract-ara (<< 4.00~), tesseract-aze (<< 4.00~),
+ tesseract-bel (<< 4.00~), tesseract-ben (<< 4.00~), tesseract-bul (<< 4.00~),
+ tesseract-cat (<< 4.00~), tesseract-ces (<< 4.00~), tesseract-chi-sim (<< 4.00~),
+ tesseract-chi-tra (<< 4.00~), tesseract-chr (<< 4.00~), tesseract-dan (<< 4.00~),
+ tesseract-deu (<< 4.00~), tesseract-deu-frak (<< 4.00~), tesseract-ell (<< 4.00~),
+ tesseract-eng (<< 4.00~), tesseract-enm (<< 4.00~), tesseract-epo (<< 4.00~),
+ tesseract-equ (<< 4.00~), tesseract-est (<< 4.00~), tesseract-eus (<< 4.00~),
+ tesseract-fin (<< 4.00~), tesseract-fra (<< 4.00~), tesseract-frk (<< 4.00~),
+ tesseract-frm (<< 4.00~), tesseract-glg (<< 4.00~), tesseract-grc (<< 4.00~),
+ tesseract-heb (<< 4.00~), tesseract-hin (<< 4.00~), tesseract-hrv (<< 4.00~),
+ tesseract-hun (<< 4.00~), tesseract-ind (<< 4.00~), tesseract-isl (<< 4.00~),
+ tesseract-ita (<< 4.00~), tesseract-ita-old (<< 4.00~), tesseract-jpn (<< 4.00~),
+ tesseract-kan (<< 4.00~), tesseract-kor (<< 4.00~),  tesseract-lav (<< 4.00~),
+ tesseract-lit (<< 4.00~), tesseract-mal (<< 4.00~), tesseract-mkd (<< 4.00~),
+ tesseract-mlt (<< 4.00~), tesseract-msa (<< 4.00~), tesseract-nld (<< 4.00~),
+ tesseract-nor (<< 4.00~), tesseract-ocr-amh (<< 4.00~), tesseract-ocr-asm (<< 4.00~),
+ tesseract-ocr-aze-cyrl (<< 4.00~), tesseract-ocr-bod (<< 4.00~), tesseract-ocr-bos (<< 4.00~),
+ tesseract-ocr-ceb (<< 4.00~), tesseract-ocr-cym (<< 4.00~), tesseract-ocr-dan-frak (<< 4.00~),
+ tesseract-ocr-dzo (<< 4.00~), tesseract-ocr-fas (<< 4.00~), tesseract-ocr-gle (<< 4.00~),
+ tesseract-ocr-gle-uncial (<< 4.00~), tesseract-ocr-grc (<< 4.00~), tesseract-ocr-guj (<< 4.00~),
+ tesseract-ocr-hat (<< 4.00~), tesseract-ocr-iku (<< 4.00~), tesseract-ocr-jav (<< 4.00~),
+ tesseract-ocr-kat (<< 4.00~), tesseract-ocr-kat-old (<< 4.00~), tesseract-ocr-kaz (<< 4.00~),
+ tesseract-ocr-khm (<< 4.00~), tesseract-ocr-kir (<< 4.00~), tesseract-ocr-kur (<< 4.00~),
+ tesseract-ocr-lao (<< 4.00~), tesseract-ocr-lat (<< 4.00~), tesseract-ocr-mar (<< 4.00~),
+ tesseract-ocr-mya (<< 4.00~), tesseract-ocr-nep (<< 4.00~), tesseract-ocr-ori (<< 4.00~),
+ tesseract-ocr-pan (<< 4.00~), tesseract-ocr-pus (<< 4.00~), tesseract-ocr-san (<< 4.00~),
+ tesseract-ocr-sin (<< 4.00~), tesseract-ocr-srp-latn (<< 4.00~), tesseract-ocr-syr (<< 4.00~),
+ tesseract-ocr-tgk (<< 4.00~), tesseract-ocr-tir (<< 4.00~), tesseract-ocr-uig (<< 4.00~),
+ tesseract-ocr-urd (<< 4.00~), tesseract-ocr-uzb (<< 4.00~), tesseract-ocr-uzb-cyrl (<< 4.00~),
+ tesseract-ocr-yid (<< 4.00~), tesseract-pol (<< 4.00~), tesseract-por (<< 4.00~),
+ tesseract-ron (<< 4.00~), tesseract-rus (<< 4.00~), tesseract-slk (<< 4.00~),
+ tesseract-slk-frak (<< 4.00~), tesseract-slv (<< 4.00~), tesseract-spa (<< 4.00~),
+ tesseract-spa-old (<< 4.00~), tesseract-sqi (<< 4.00~), tesseract-srp (<< 4.00~),
+ tesseract-swa (<< 4.00~), tesseract-swe (<< 4.00~), tesseract-tam (<< 4.00~),
+ tesseract-tel (<< 4.00~), tesseract-tgl (<< 4.00~), tesseract-tha (<< 4.00~),
+ tesseract-tur (<< 4.00~), tesseract-ukr (<< 4.00~), tesseract-vie (<< 4.00~)
 Replaces: tesseract-ocr (<< 3.01~)
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
@@ -47,9 +83,10 @@ Description: Tesseract OCR library
 
 Package: tesseract-ocr
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, tesseract-ocr-eng (>= 3.01~), tesseract-ocr-osd, libtesseract4 (>= 3.03~)
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ tesseract-ocr-eng (>= 4.00~), tesseract-ocr-osd (>= 4.00~), libtesseract4 (>= 4.00~)
 Replaces: tesseract-ocr-data
-Description: Tesseract command line OCR tool
+Description:tesseract command line OCR tool
  The Tesseract OCR engine was one of the top 3 engines in the 1995
  UNLV Accuracy test. Between 1995 and 2006 it had little work done on
  it, but since then it has been improved extensively by Google and is
