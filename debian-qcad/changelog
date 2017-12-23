@@ -1,3 +1,83 @@
+qcad (3.19.0+git5161-7016a0bba-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 7016a0bba937ca4e18786144340f9827eb40b3b4
+  * Date: 1513345558
+  * git changelog:
+  *  7016a0bba - set version to 3.19.2
+  *  09965a6d3 - update translations
+  *  94a5ad230 - update variable names
+  *  72ed68648 - update
+  *  c555b9572 - fix complementing of context menu
+  *  93bdb1d46 - update example
+  *  a3bd20a0c - update script bindings
+  *  510a5eed3 - add RSplineEntity::getControlPointAt,
+    RSplineEntity::getFitPointAt
+  *  598cc5efe - add RSpline::getFitPointAt
+  *  aab4e9147 - report failure to initialize plugin
+  *  7a64fe7c7 - show error in red
+  *  bd1852ac7 - set version to 3.19.1.3
+  *  3c333225b - prevent duplicate command line history
+  *  69a42f3c9 - update script bindings
+  *  61d2ab8d5 - add auto transaction groups
+  *  bc1468a35 - update script bindings
+  *  d642ea324 - implement command line multi paste in RCommandLine.cpp
+  *  ddf3c1ce4 - update action order
+  *  4caf13971 - avoid transform where necessary to maintain original
+    shapes
+  *  b6209e802 - don't remove original shapes on painter path transforms
+  *  72e16d06b - add text tests
+  *  0580dc69b - update J letter order
+  *  60cf46278 - minor updates
+  *  961fc3d4f - avoid painter path transforms
+  *  86a90950d - update handling of original shapes attached to painter
+    paths
+  *  4c4f8c2cb - add rc
+  *  a61b5ca27 - add rc
+  *  d4c50c241 - add rc
+  *  5446417c9 - add rc
+  *  5cdf0dbee - add rc
+  *  0d2898f7b - add rc
+  *  aba06d4cb - add rc
+  *  ff17dbf66 - add rc
+  *  b816b3bf3 - add rc
+  *  6186169ec - add rc
+  *  e5e676003 - add rc
+  *  2f45e2f25 - update rc
+  *  135496241 - add .gitignore
+  *  41e76a5ee - add resource files for win deployment
+  *  3bd481bbe - update qcad.rc
+  *  73074f5ce - fix FS#1677 - Dimension: Scale option grayed out in
+    model space
+  *  3b928e4b4 - allow complementing block resource list context menus
+  *  4e4c1b7ec - clear selection map cache if object changes
+  *  8fd60d594 - update script bindings
+  *  c0ab24c56 - only ignore key event if default action and current
+    action ignore it
+  *  59c29360e - ignore key events by default
+  *  136904987 - fix defaults for print settings for blocks
+  *  348797bba - make RGraphicsViewQt::pan scriptable
+  *  725ca2297 - clean up
+  *  f2e98efb2 - update API doc
+  *  948d9e8f9 - update script bindings
+  *  de1f7d1ff - add options for transparent background, export
+    selection bounding box
+  *  ae1a2d1ea - update API doc
+  *  15129b517 - all zooming to set of entities
+  *  6c6917f34 - add RDocument::getEntitiesBox
+  *  d01f0372b - add implementation for RStorage::getEntitiesBox
+  *  012e6db29 - add RStorage::getEntitiesBox
+  *  624688388 - add margin to RGraphicsView::zoomToSelection add
+    RGraphicsView::zoomToEntities
+  *  9bd6c8597 - no documentInterface in RGuiAction
+  *  da2805269 - no documentInterface in RGuiAction
+  *  4f2072582 - don't store documentInterface in RGuiAction
+  *  62ad7d97b - only stretch selected entities
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 16 Dec 2017 20:02:11 +0300
+
 qcad (3.19.0+git5099-ae1efa293-1) unstable; urgency=medium
 
   * Compile

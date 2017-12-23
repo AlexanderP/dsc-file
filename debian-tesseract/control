@@ -9,13 +9,6 @@ Build-Depends: debhelper (>= 7.0.50~), libleptonica-dev (>= 1.72~),
 Standards-Version: 3.9.8
 Homepage: https://github.com/tesseract-ocr/
 
-Package: tesseract-ocr-dev
-Depends: libtesseract-dev, ${misc:Depends}
-Architecture: all
-Section: oldlibs
-Description: transitional dummy package
- This is a transitional dummy package.
-
 Package: libtesseract-dev
 Section: libdevel
 Architecture: any
@@ -86,7 +79,7 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
  tesseract-ocr-eng (>= 4.00~), tesseract-ocr-osd (>= 4.00~), libtesseract4 (>= 4.00~)
 Replaces: tesseract-ocr-data
-Description:tesseract command line OCR tool
+Description: Tesseract command line OCR tool
  The Tesseract OCR engine was one of the top 3 engines in the 1995
  UNLV Accuracy test. Between 1995 and 2006 it had little work done on
  it, but since then it has been improved extensively by Google and is

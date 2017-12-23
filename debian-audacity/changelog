@@ -1,3 +1,36 @@
+audacity (1:2.1.3+git7687-970b9a27e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 970b9a27eea7e79173f3e57c65ec72229ffddbb1
+  * Date: 1513268864
+  * git changelog:
+  *  970b9a27e - Fix ASSERT condition.
+  *  cab984d59 - Add Spectral VZoom Reset
+  *  41ac4cd47 - Add Hover-Over-Down State for Button
+  *  3379b4e49 - VZoom cfg defaults different for Audacity and DA.
+  *  516af7178 - Fix for #1554: toolbars open undocked if previously
+    hidden
+  *  3649f39dc - SetText and GetText deprecated.  Use modern
+    equivalents.
+  *  9735775a8 - Fix bug 963 again
+  *  13c6fdf66 - VZooming Changes
+  *  8a1f5bb74 - Fix misspelling pointed out by Olivier Humbert
+  *  a0fad21fe - Remove special treatment of late additions to 2.2.1
+    i18n messages
+  *  cb363cdd9 - Make right half of VRuler inactive.
+  *  f463eda36 - Clean up some dead code and MSVC warnings.
+  *  b63e61d8e - Menu item scrub -> seek and accelerator tweaks.
+  *  1d05f14b0 - Merged Ext-Bar and Ext-Command menus.
+  *  161a86910 - Version 2.2.2 is open for alpha development
+  *  26d72bea9 - Updated sl.po -- Slovenian submitted by Martin
+    Srebotnjak
+  *  2ce898f5f - Make it.po and zh_CN.po friendly to Windows build,
+    again ( avoid #~| )
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 16 Dec 2017 11:56:31 +0300
+
 audacity (1:2.1.3+git7670-80995ed87-1) unstable; urgency=medium
 
   * Compile

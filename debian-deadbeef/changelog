@@ -1,3 +1,49 @@
+deadbeef (0.7.2+git7553-425dc607-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 425dc607cce95d7aab39de0d10b75b9a3832fbe0
+  * Date: 1513628270
+  * git changelog:
+  *  425dc607 - opus: fixed tag reading and writing
+  *  50185f67 - vorbis: multi-value metadata fields done right
+  *  7d263753 - converter: added opus plugin support for tag writing
+  *  c375d4d3 - rg: save playlist after updating file tags
+  *  a764d6c8 - converter: "lock_align" typo fix
+  *  4b3d99b0 - converter: "coded" typo fix
+  *  48e3f976 - converter: use unsigned char buffer for wave format id
+  *  1fc22a11 - liboggedit: more compile warning fixes
+  *  0f15c344 - liboggedit: apply upstream patch for vorbis tagging
+    regression
+  *  82000e0c - liboggedit: fix compiler warnings
+  *  4fd82937 - osx: dylib build issue fix
+  *  43f66b1b - liboggedit: cleanup commented out code
+  *  79d211fe - liboggedit: revert the change which breaks ogg vorbis
+    tagging
+  *  bf6d4478 - liboggedit: update to latest
+  *  9bc4561a - opus: osx project folder path fix
+  *  646bd8f0 - opus: static build include fix
+  *  d87e89e4 - opus: added missing Makefile.am
+  *  58a143f6 - opus: added linux build scripts
+  *  c22b822b - added opus to default content-type map
+  *  940ff074 - ffmpeg: remove opus extension from default list
+  *  dbdc3c2a - opus: fixed stereo/multichannel playback
+  *  cff5a10e - opus: initial commit
+  *  43156f6d - update to latest osx deps
+  *  7fa20ef3 - vorbis: fixed compile warning
+  *  60e55e66 - cocoaui: better compilation-friendly implementation of
+    predefined "artist / album" and "title / track artist" columns
+  *  0c27422c - statusnotifier: remove from build scripts
+  *  460766e5 - fix linux build
+  *  0c965789 - better documentation for actions API in deadbeef.h;
+    renamed DB_ACTION_NOT_FOR_PLAYLIST to
+    DB_ACTION_EXCLUDE_FROM_CTX_PLAYLIST
+  *  2bd7f0a2 - streamer: notify when dsp params change, to adjust
+    output format
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 19 Dec 2017 21:57:04 +0300
+
 deadbeef (0.7.2+git7524-619e7b07-1) unstable; urgency=medium
 
   * Compile

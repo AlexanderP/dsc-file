@@ -1,3 +1,133 @@
+freecad-daily (0.17~git12848-988a40639-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 988a406395836239f6061838ac7b814aa3053de5
+  * Date: 1513438577
+  * git changelog:
+  *  988a40639 - FEM: typos
+  *  4034851a5 - Arch: bugfix in Panel in non-GUI mode
+  *  873bd0b20 - AddonManager: Check if thread is already running
+  *  e37b58247 - Typo fixes
+  *  540a2cc79 - FEM: fem command package, rename it to commands
+  *  6c8dc3dd0 - FEM: fem interface package, rename it to inout
+  *  b28c2bd1c - FEM: Python modules ui panels, move them to resources
+    folder
+  *  bb8fdeccc - FEM: task panels, move them into the view provider
+    modules
+  *  b030184f8 - FEM: Gui cmake, remove init gui module since it will be
+    compied with all Python modules
+  *  6593f58b1 - FEM: netgen, add command only if FEM is build with
+    netgen
+  *  46505a7e2 - Arch: Fixed wrong wall/structure extrusion direction
+  *  ebede3e4d - AddonManager: Disable Install button immediately
+  *  ca247d7ee - Arch: fixed Arch Material not working in console mode
+  *  77fab66ad - Arch: Bugfix in stairs
+  *  d95a65b26 - add VTK related commands only if VTK was found at
+    configure time
+  *  5df83429c - Merge pull request #1163 from berndhahnebach/bhbdev110
+  *  45b938655 - FEM: cmake, use only one cmake file for Python packages
+    and modules
+  *  467fdc69f - Merge branch 'master' of
+    https://github.com/FreeCAD/FreeCAD
+  *  0d7831e19 - move Placement.isNull to Placement.isIdentity add
+    isNull for backward compatibility
+  *  c3ca4bc89 - Draft: Fixed bug in DXF import
+  *  b22f23134 - fix invalid syntax
+  *  25bf33077 - rename Placement.isNull to Placement.isIdentity
+    implement Rotation.isNull and Rotation.isIdentity
+  *  28f7047bf - use getRawValue in property editor to avoid normalizing
+    the rotation axis
+  *  a19faf16f - preserve length of rotation axis
+  *  aa201cba9 - improve whitespaces
+  *  03427bf67 - Add a function to compare 2 double allowing
+    approximation errors
+  *  31c023065 - Improvement of rotations
+  *  28240a806 - Arch: Fixed creation of Spaces in no-GUI mode
+  *  2cf8e0ffd - Draft: Fixed default precision value
+  *  517ae4dd7 - Path.Area: improve code readability
+  *  dfdd8fc82 - FEM: cmake, sort in cmake
+  *  53ae39056 - FEM: constraint flow velocity, fix task panel
+  *  9bcdd0947 - FEM: constraint transform, fixes #3283
+  *  3d862b8de - FEM: make objects module, better name for ccx tools
+    solver def
+  *  d949210ae - Typos, grammar & uniformiity
+  *  c54c08cca - Sketcher: Wrong mapping of constraints to axes
+  *  588f1bd79 - Sketcher: Merge, copy expressions
+  *  9b781f9c5 - Sketcher Solver: Means to reset the initilization of
+    movement
+  *  ad855c99e - Sketcher: New Setting for improved dragging mode
+  *  023e319b8 - Sketcher: Clean code and adapt previous solution only
+    to non-relative cases
+  *  eff8529ec - Sketcher: jumping while dragging - force recalculate
+    initial solution
+  *  19254207c - Draft: crowdin tooltip typo fix
+  *  f9892009f - fixes #0003281: STL object doesn't retain its rotation
+    after change
+  *  87271d0cb - Allow user to modify Vertex size by parameter
+  *  f919eb6a6 - fix object.getGlobalPlacement
+  *  a3ea9e561 - circle-ci + conda-build This enables the possebility to
+    build FreeCAD with conda-packages on linux
+  *  91bb7ed0c - fixes #0003185: Recompute should work if only subgraph
+    is cyclic
+  *  c6f89e6e5 - move implementation of topologicalSort to private class
+    DocumentP and add a parameter
+  *  42aa80bb7 - move global function to private class DocumentP
+  *  6a785f9af - fixes #0003262: normal vector returned by
+    Face.normalAt(u,v) is not always a unit vector
+  *  651d2fd75 - Fix "Unit overflow in pow()" error
+  *  3627cf2b1 - Typo fix for recent commit
+  *  df3440e69 - fix possible build failure on Debian 9
+  *  a8c31221e - FEM: mesh api, fix tolerance in get the nodes by a
+    solid
+  *  564f977db - Fixed gradient in last commit
+  *  04e4e59ad - Bitacovir's new clone icon
+  *  6388a323f - FEM: command module, use active analysis from command
+    manager module
+  *  65bc90d50 - FEM: command module, use selection from command manager
+    module
+  *  6a5408b5d - FEM: commands, fix nonlinear material command for new
+    solver framework
+  *  e7b813f17 - FEM: command package, move equation commands into
+    commtand class module
+  *  76c651226 - FEM: command package, move command modules in one
+    module in new command package
+  *  8599dd59b - FEM: result package, move result tools module in new
+    result package
+  *  23d735c2a - FEM: unit test, again add TestFem and import the test
+    classes from new test package
+  *  8cdc4d329 - FEM: test package, move unit test module in new test
+    package
+  *  bd3d50fa8 - FEM: mesh package, move all mesh modules in new mesh
+    package
+  *  014f8cac3 - FEM: package feminterface, move all import and export
+    modules in new package feminterface
+  *  9376138d0 - fix cmake build failure
+  *  885ef4b5b - add combo box to select C++ standard
+  *  eb40ddda4 - Sketcher: Do not show support when entering sketch edit
+    mode if it is a datum plane
+  *  324c31d4e - Sketcher: Fixing Polyline Arc Endpoint autoconstraints
+  *  4006c6ee9 - Sketcher: Fixes no horizontal/vertical on edge if
+    previous horizontal/vert aligment on vertex
+  *  2e1d21937 - Sketcher: Fix Polygon disappearing on creation with
+    autoconstraints on
+  *  a68096140 - Sketcher: BSpline, prevent 0 mm Radius for poles on
+    creation
+  *  750661de3 - Fix #1947 non-ASCII in file path
+  *  640fce5d0 - Fix #1939 Draft ShapeString with whitespace string
+  *  150bd625b - fix crash in ExpressionCompleter::slotUpdate
+  *  c8c9b76f4 - Misc. typos
+  *  a22dca2ea - FEM: mesh tools, typo in comment, thanks to reox
+  *  18c7f94ae - FEM: CalculiX ccx tools solver, use a better name for
+    new objects
+  *  52fe4cd2a - issue #0003174: Import of simple shapes no longer works
+  *  23cdde88e - Fix some GCC 7 warnings: * dynamic exception
+    specifications are deprecated [-Wdeprecated] * this statement may
+    fall through [-Wimplicit-fallthrough=]
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 17 Dec 2017 11:21:36 +0300
+
 freecad-daily (0.17~git12767-75d006a97-1) unstable; urgency=medium
 
   * Compile

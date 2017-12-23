@@ -1,3 +1,23 @@
+tesseract (4.00~git2188-cdc35338-2) unstable; urgency=medium
+
+  * Remerge Alexander's PPA with Debian
+  * Patch headers that were causing FTBFS for dependencies.
+
+ -- Jeff Breidenbach <jab@debian.org>  Thu, 21 Dec 2017 22:48:20 -0800
+
+tesseract (4.00~git2188-cdc35338-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: cdc35338c53a1af1fcb95473445f2aabfdb3f6d1
+  * Date: 1513247864
+  * git changelog:
+  *  cdc35338 - Added check if input PSM value is outside of range
+    (#1236)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 15 Dec 2017 22:17:31 +0300
+
 tesseract (4.00~git2187-eba0ae3b-1) unstable; urgency=medium
 
   * Compile
@@ -72,6 +92,50 @@ tesseract (4.00~git2178-2cc531e6-1) unstable; urgency=medium
   *  a404c9cd - change type to UChar32 to fix IsValidCodepoint
 
  -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 21 Sep 2017 14:51:52 +0300
+
+tesseract (4.00~git2174-3b62badd-5) unstable; urgency=medium
+
+  * Promote to unstable. Hope it goes well.
+
+ -- Jeff Breidenbach <jab@debian.org>  Mon, 18 Dec 2017 16:49:22 -0800
+
+tesseract (4.00~git2174-3b62badd-4) experimental; urgency=medium
+
+  * Remove tesseract-ocr-dev transition package, no longer needed.
+
+ -- Jeff Breidenbach <jab@debian.org>  Sat, 16 Dec 2017 14:50:00 -0800
+
+tesseract (4.00~git2174-3b62badd-3) experimental; urgency=medium
+
+  * Tighten up dependencies. (closes: #836849)
+
+ -- Jeff Breidenbach <jab@debian.org>  Mon, 11 Dec 2017 14:45:22 -0800
+
+tesseract (4.00~git2174-3b62badd-2) experimental; urgency=medium
+
+  * Migrate to experimental; no source changes.
+
+ -- Jeff Breidenbach <jab@debian.org>  Mon, 18 Sep 2017 15:01:09 -0700
+
+tesseract (4.00~git2174-3b62badd-1ppa1~zesty1) zesty; urgency=medium
+
+  * Automated backport upload; no source changes.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 17 Sep 2017 22:12:42 +0300
+
+tesseract (4.00~git2174-3b62badd-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: 3b62badd770641aa8354696eed604e8606ad74eb
+  * Date: 1505655538
+  * git changelog:
+  *  3b62badd - Merge pull request #1134 from
+    Shreeshrii/fixvalidcodepoint
+  *  a404c9cd - change type to UChar32 to fix IsValidCodepoint
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 17 Sep 2017 22:12:35 +0300
 
 tesseract (4.00~git2172-e62e8f5f-1) unstable; urgency=medium
 
