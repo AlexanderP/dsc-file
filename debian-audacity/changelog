@@ -1,3 +1,51 @@
+audacity (1:2.1.3+git7713-e06a6fd79-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: e06a6fd79787d25f7f710eb73695541495028af5
+  * Date: 1514674818
+  * git changelog:
+  *  e06a6fd79 - Fix blank filenames in .aup saved then saved-as twice
+    to same path...
+  *  0c8890cda - Bug 1793: Applying chain to files should zoom-to-fit
+  *  37ec3b52c - mod-script-pipe: Use release libs in release build.
+  *  647f9ce0b - Merge pull request #225 from Pointedstick/unify-
+    appstream-id
+  *  f73670341 - Standardize on an rDNS-style AppStream ID
+  *  52e976333 - Fix multiple bugs in IsGoodInt and IsGoodInt64
+  *  bdd1358f9 - Error messages for failing to load Nyquist effects
+  *  eb3bc7e64 - Minimal error messages for failing to load non-Nyquist
+    effects
+  *  0f8bd45a7 - ModuleInterface::RegisterPlugin can report an error
+    message
+  *  f3a05540b - Shrink the zone for vertical ruler zooming for
+    NoteTrack too
+  *  db4528069 - Add names to some windows.
+  *  42573d36f - Make 'Message' default be 'Connected'.
+  *  095ee9185 - Reimplement the narrowed hot zone for vertical ruler...
+  *  a7960864d - Fix scripting bug where missing parameters gave syntax
+    error
+  *  b6138b196 - Move pipe scripts into a subdirectory.
+  *  a084c3dbb - pipetest.py to test mod-script-pipe's pipe.
+  *  217a2540d - Convenience .bat file for working with manual.
+  *  0c2f6bb17 - Fix end of range of TrackPanelCellIterator
+  *  63de7f088 - Bug 305 - Analysis effects produce false indication
+    that a label is open for editing
+  *  d9bab5347 - String changes: Exporting 'the audio' rather than 'the
+    entire project'.
+  *  4da9e41e0 - Bug 1799 - Un-muting with a single track unnecessarily
+    activates the Solo button
+  *  1e07ef972 - Workaround Travis update.
+  *  210851593 - Bug 63 - Analysis effects that create labels should
+    give focus to label Track
+  *  4d978bcef - Use wxPrintf not printf
+  *  cd06c04fa - Use wxFprintf not fprintf and you don't need c_str
+  *  2dacaa56a - Further simplification of commit
+    a0fad21fec68a671655bb5158e37880d3fed78ba
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 31 Dec 2017 08:56:59 +0300
+
 audacity (1:2.1.3+git7687-970b9a27e-1) unstable; urgency=medium
 
   * Compile

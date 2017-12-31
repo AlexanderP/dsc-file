@@ -1,3 +1,46 @@
+freecad-daily (0.17~git12875-1ad7724d5-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 1ad7724d503c6e85636f5e64127ca6d6c78e094f
+  * Date: 1514681864
+  * git changelog:
+  *  1ad7724d5 - avoid error 'Duplicate constraint not allowed' when
+    deleting a constraint
+  *  bd4736bf0 - implement PropertyConstraintListItem::assignProperty to
+    add item for each datum constraint
+  *  6ee4be519 - fix heap corruption due to invalid static_cast
+  *  6eb36447e - fix regression of pr1181
+  *  070395d67 - add version info to PySide abstraction
+  *  c1152f2a2 - PartDesign: typos
+  *  e883cbfdf - Part: typos
+  *  7e2fce45c - Arch: Typos
+  *  048c787e3 - Sketcher: comment typos
+  *  128239b54 - Typos: Various workbenches and misc.
+  *  c18bc414b - fixes #0003252: External geometry tool keeps hovered
+    item active after leaving
+  *  1ef069292 - notify selection node about cleared pre-selection
+  *  15b72d2b2 - enable anti-aliasing for Coin's offscreen renderer
+  *  511835e09 - restore removed link to preferences-sketcher.svg
+  *  434a47d61 - Sketcher: new UI command for arbitrary sides polygon
+  *  27c202a1f - Sketcher: Dialog for arbritary sides regular polygon
+  *  d0c1b147d - Sketcher: Icons for arbitrary regular polygon
+  *  b6bbc57d0 - Path.Area: fix wire join function
+  *  c093c5941 - fixes #3284
+  *  b71eb845f - Fixed initial step down value.
+  *  a8ecffb65 - Misc. typo fixes
+  *  3df389f5f - PATH: typo fixes
+  *  77e326052 - add helper class to tmp. block a boost signal/slot
+    connection
+  *  8e3b2d7e8 - show base feature's placement on load if not part of a
+    body
+  *  394ae197f - fix broken transparency mode of mesh objects
+  *  011eed3a6 - add feature to extend given surface
+  *  1db70a48c - Arch: Fixed missing walls in IFC export
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 31 Dec 2017 11:11:03 +0300
+
 freecad-daily (0.17~git12848-988a40639-1) unstable; urgency=medium
 
   * Compile

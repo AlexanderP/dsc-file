@@ -1,3 +1,33 @@
+mypaint (1.3.0~git4889-c93d260d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/mypaint/mypaint.git
+  * Branch: master
+  * Commit: c93d260d4d6c19e9a066198c14009915d0afcedc
+  * Date: 1514409697
+  * git changelog:
+  *  c93d260d - EXPERIMENTAL: add bulk layer visibility switching.
+  *  18ed7d49 - Merge branch layervis-underpinnings.
+  *  69c74e7a - Merge pull request #880 from bmwiedemann/python3
+  *  8092d4e4 - Layers list: announce branch visibility/locked deeply.
+  *  9961c6f9 - layerprops: fix entry weirdness and ugliness.
+  *  a2674a98 - More thorough clearing when loading docs.
+  *  5d3c2be2 - Change syncing: flush for certain before saving.
+  *  7c8401b4 - Fix: layer snapshots were recording/replaying opacity
+    twice.
+  *  42a3efaa - Layers window: put mode and opacity on same line.
+  *  4f8d6714 - lib.observable: make calling_observers part of the API.
+  *  e7b596a4 - Standardize existing MVP stuff.
+  *  52295547 - Move unique naming vars.
+  *  4852cc38 - Make the app preferences dict observable too.
+  *  23bde159 - Allow per-document settings.
+  *  445fb8a2 - observable: hide some internals, update copyright.
+  *  22d28b41 - Add ObservableDict class (for prefs & settings)
+  *  29778af2 - CODEQUAL: apply some changes suggested by flake8
+  *  49f0a9fd - Port SCons files to python3
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 30 Dec 2017 23:29:04 +0300
+
 mypaint (1.3.0~git4871-59977ecf-1) unstable; urgency=medium
 
   * Compile

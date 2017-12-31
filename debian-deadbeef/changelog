@@ -1,3 +1,35 @@
+deadbeef (0.7.2+git7569-b6c5b1f2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: b6c5b1f260cc03a35729effe3cb9156c5aa3f8d5
+  * Date: 1514456804
+  * git changelog:
+  *  b6c5b1f2 - wildmidi: bump number of max simultaneous notes to 1024
+    (fixes #1950)
+  *  824f56a5 - premake: added wildmidi
+  *  b80253cd - osx: fix dynamic lib install paths (fixes #1947)
+  *  50a15911 - alsa: reduce sleep time to 1000 usec (fixes #1927)
+  *  387fed52 - replaygain: automatically fall back to track or album
+    gain/peak values, if album or track info is missing in the file
+    tags, respectively (fixes #1856)
+  *  7bfb38b6 - replaygain: fixed processing mode = none
+  *  a527c656 - alsa: fix 100% cpu issue (fixes #1927)
+  *  2f471821 - ogg: fix setting filetype for ogg vorbis and opus
+    streams
+  *  5fd14cf5 - opus: add header gain to track info
+  *  83124544 - opus: only set OP_ABSOLUTE_GAIN to 0
+  *  3192254a - opus: set header gain to 0 when writing tags, since
+    header gain is always automatically converted to album gain
+  *  25996100 - opus: set SAMPLERATE_ORIGINAL meta field
+  *  c98ae18e - opus: header gain / r128 gain reading
+  *  c3b371f1 - cocoaui: older SDK compat fix
+  *  e283fb4d - opus: preserve album art when writing tags
+  *  7a526759 - cocoaui: fix converter worker thread calling UI
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 28 Dec 2017 19:22:15 +0300
+
 deadbeef (0.7.2+git7553-425dc607-1) unstable; urgency=medium
 
   * Compile

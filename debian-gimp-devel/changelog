@@ -1,3 +1,202 @@
+gimp-devel (2.9.8+git39623-9da25e6261-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 9da25e6261a0e27e2bedbbe0649349bce2c9fbe1
+  * Date: 1514681194
+  * git changelog:
+  *  9da25e6261 - app: get_set_error() with domain == 0 is forbidden.
+  *  40bc5307dc - app: do not forbid merging down floating layers,
+    instead anchor them.
+  *  cc47597aae - app: gimp_image_merge_down() on a floating selection
+    crashes GIMP.
+  *  d3cfdf7a38 - app: improve dashboard cache-maximum tooltip
+  *  ee41819165 - app: various GimpDashboard improvements
+  *  354891d22c - app: add gimp_meter_{set,get}_value_active()
+  *  9569ac951e - Update Icelandic translation
+  *  c24df74e69 - Update Swedish translation
+  *  f658ea4071 - Bug 777403 - Calling (file-png-get-defaults) crashes
+    the file-png plug-in
+  *  1d0fa313ea - configure: don't nest anymore poppler and poppler-data
+    checks.
+  *  c99ac02d34 - configure: two levels of quoting needed with
+    AC_CONFIG_COMMANDS.
+  *  bccaf39dc9 - configure: Fix the usage of sed on FreeBSD
+  *  aa2ce4b60d - Fix version number in NEWS
+  *  27a20ca163 - Update NEWS
+  *  b7d2c5eab1 - Add Exposure tool icon, remove erroneous stock entry
+    for the colortemp icon
+  *  803917110d - devel-docs: add point for <release> appstream data in
+    release-howto.
+  *  a017668b09 - desktop: add (commented-out) release tag for 2.10.
+  *  3595ef9dc5 - desktop: add <release> tags for 2.8.x.
+  *  476126a742 - NEWS: keep up-to-date.
+  *  bc16d34604 - build: add Turkish translation to the Windows
+    installer
+  *  3a1490f74a - po-windows-installer: a few technical fixes to the
+    Turkish translation
+  *  76747cadce - Update Chinese (Taiwan) translation
+  *  281aa51580 - Update Chinese (Taiwan) translation
+  *  34e37ea72c - Update Chinese (Taiwan) translation
+  *  a3053e88a1 - Update Chinese (Taiwan) translation
+  *  c281fca1c0 - Fix variables for the new icons
+  *  eef98376dd - Update paths to new icons
+  *  5269d792c5 - Rename colortemp icons to *-tool-*
+  *  4d11e2b184 - Add colortemp icons to the build
+  *  b374198e10 - Move scalable colortemp icon to the right folder
+  *  e53b7db26e - Add color version of the color temperature tool
+  *  d89ed759ef - app: small logics improvement.
+  *  28c3fd92eb - Remove erroneous group of shapes from colortemp icon
+  *  57b43e096c - Add symbolic icons for color temperature tool, full
+    color version to follow
+  *  f14be48e74 - app: protect user_install_dir_copy() against infinite
+    recursivity.
+  *  d7bc78ba8a - NEWS: keep up-to-date.
+  *  b9c2c9ac59 - desktop: use HTTPS everywhere.
+  *  9452b211f6 - po-windows-installer: regenerate gettext files with
+    `make update-po`.
+  *  7d3adc87c0 - configure: properly generate POTFILES for po-*/.
+  *  62cf942c46 - Make Value Invert use the invert icon rather than the
+    stock GEGL one
+  *  9724d7989d - Mark legacy plug-ins/scripts as such in menu
+  *  6a7ed5c57e - Update Turkish translation
+  *  efcf7f9398 - Added Turkish translation for Windows installer
+  *  34a6c6408e - plug-ins: aaargh! Forgot to remove "paintbrush.pgm"
+    from the Makefile.
+  *  ccfec08a84 - Bug 791934 - gimpressionist contains 2 identical
+    brushes.
+  *  cdfffc6924 - app: add some warning for code which should not
+    happen.
+  *  88f33dc0b3 - Bug 791934 - gimpressionist contains 2 identical
+    brushes.
+  *  cf67441782 - app: make user_install_dir_copy() recursive.
+  *  70d702126d - Update Icelandic translation
+  *  f4dc452961 - Update Icelandic translation
+  *  0550c1efcd - Update Icelandic translation
+  *  0ff3bf93f3 - app: misc performance improvements to
+    GimpOperationComposeCrop
+  *  0a09452d17 - plug-ins: fix my name/email in the goat exercise
+  *  74a47a8ac9 - app: implement get_required_for_output() for
+    GimpOperationComposerCrop
+  *  822386f551 - app: avoid potential use-after-free during
+    GimpDashboard destruction
+  *  3837cccb48 - build: add Esperanto translation to the Windows
+    installer
+  *  1f27ee6219 - build, configure.ac: misc Windows installer
+    translations build improvements
+  *  de24c0279d - Update Russian translation
+  *  025ab0432d - Update Esperanto translation
+  *  cdd72d029c - Add Esperanto translation
+  *  41024aecb5 - Update Esperanto translation
+  *  ba928886f7 - Update Russian translation of the Windows installer
+  *  7e76b2e0da - po-windows-installer: add POTFILES.in to DISTFILES
+  *  7df863602a - build: small fix to the Windows installer translations
+    makefile
+  *  286d179181 - Update LINGUAS
+  *  e0d08035c8 - Update POTFILES.skip
+  *  ac059b9499 - build: add/update Windows installer strings
+  *  f1070f4c80 - build: use intltool for Windows installer translations
+  *  0aeb61efc5 - Update Serbian translation
+  *  5008283e1c - Update Serbian translation
+  *  43b23df81e - Update Polish translation
+  *  af17ac600e - Update Icelandic translation
+  *  c6cb985733 - app: fix rotated brush boundary position
+  *  2d4715bee9 - Bug 791901 - GeglBuffers leaked with Zealous Crop.
+  *  fdb9e5056f - Update Icelandic translation
+  *  31713ac331 - Update Esperanto translation
+  *  e2664f1d29 - devel-docs: add a new file "debugging-tips.txt".
+  *  6bd43d73d8 - app: add back helper features to output possible flags
+    for GIMP_DEBUG.
+  *  b84874a798 - Fix the 1280x720 document template
+  *  54158342ca - Update Icelandic translation
+  *  a73565f7c3 - Update Icelandic translation
+  *  4e3cadc9c7 - Update Icelandic translation
+  *  6dcb0f76eb - Update Icelandic translation
+  *  3f60a80d91 - NEWS: still keeping the NEWS up-to-date.
+  *  4df282a6fb - app: fix a typo (realtive)
+  *  09035bc3f5 - Update POTFILES.in
+  *  eded91e118 - Bug 753412 - New Canvas rotation feature rotates
+    brush.
+  *  a0b73420ec - app: add support for brush reflection
+  *  27688ee752 - app: fix angle calculation of generated brushes
+  *  067277340d - app: fix brush zoom verification in
+    gimp_brush_core_pre_paint()
+  *  5f00c189e6 - app: also show line info (distance, angle) when moving
+    an endpoint.
+  *  e1621c32d3 - app: use gimp_display_shell_get_line_status() for
+    GimpToolLine.
+  *  2069496af3 - app: use the new gimp_display_shell_get_line_status()
+    for measure...
+  *  0116d7316a - app: new gimp_display_shell_get_line_status().
+  *  ae12413bfd - Update Icelandic translation
+  *  317f7fa5ca - Bug 791514 - Cannot export to webp file.
+  *  eb21819081 - plug-ins: clean the rest of the file-fli plug-in.
+  *  375b767928 - plug-ins: clean-up coding style of fli plug-in code.
+  *  edb251a7ef - Bug 739133 - (CVE-2017-17785) Heap overflow while
+    parsing FLI files.
+  *  fff57f84a0 - app: add gimpdisplayshell-utils.[ch]
+  *  984ed6cefd - app: constrain line angles in display space, not image
+    space
+  *  59fd0315c2 - NEWS: keep it up-to-date!
+  *  ba759fbcfd - Revert "Bug 790784 - (CVE-2017-17784) heap overread in
+    gbr parser / load_image."
+  *  4fa0cd4dcf - gbr/pat: Fix out of boundary read on illegal names
+  *  f01fa4541f - Update Polish translation
+  *  5b9e277625 - app, plug-ins: clean up previous commit by using
+    g_error_set()...
+  *  657a754f98 - Bug 789610: invalid gbr brush crashing GIMP
+  *  877e79b935 - plug-ins: properly propagate GError.
+  *  037cc8586b - plug-ins: use g_set_error() instead of g_message().
+  *  3ff911d348 - Updated Danish translation of gimp-tips
+  *  eb2980683e - Bug 790853 - (CVE-2017-17787) heap overread in psp
+    importer.
+  *  06d24a79af - Bug 790784 - (CVE-2017-17784) heap overread in gbr
+    parser / load_image.
+  *  28e95fbeb5 - Bug 790849 - (CVE-2017-17789) CVE-2017-17789 Heap
+    buffer overflow...
+  *  3d5732e23e - plug-ins: some minor coding style fix.
+  *  8ea316667c - plug-ins: TGA 16-bit RGB (without alpha bit) is also
+    valid.
+  *  674b62ad45 - Bug 739134 - (CVE-2017-17786) Out of bounds read /
+    heap overflow in...
+  *  9d31d4caf5 - Technical fix for updated ru.po
+  *  0952114df0 - Update Russian translation
+  *  1f4b78bc68 - app: add missing translation context to dashboard
+    action tooltip
+  *  2315784110 - Bug 791741 - Transparent rectangles when image is
+    drawn
+  *  2c495b3b3d - app: argh, remove another unusued member from
+    GimpDashboard
+  *  773e7e4d68 - app: remove unused members from GimpDashboard struct
+  *  6c991eeb99 - app: a few fixes/cleanup in gimp-dashboard.c
+  *  981e8dcdfe - app, menus, icons: add dashboard dockable
+  *  8f3cb718ef - app: add GimpMeter widget
+  *  27512d802b - Bug 791512 - make the selection boundary detection the
+    same as 2.8
+  *  433ee21c7d - Updated Danish translation
+  *  a002e07afa - Merge branch 'fix-pdb-history'
+  *  b05cfc6050 - pdb: (try 3) move PDB generation and sources to
+    toplevel/pdb
+  *  7109db2bdc - Revert until "configure.ac: require GEGL => 0.3.27"
+  *  6c5b1ea6cb - pdb: (try 2) move PDB generation and sources to
+    toplevel/pdb
+  *  682ab6919e - Revert "pdb: move PDB generation and sources to
+    toplevel/pdb"
+  *  6dfb2ef5fe - Revert "pdb: git didn't commit the "groups"
+    subdirectory..."
+  *  f4ce55a31a - pdb: git didn't commit the "groups" subdirectory...
+  *  3b639b1de2 - pdb: move PDB generation and sources to toplevel/pdb
+  *  89a9d0e93e - configure.ac: require GEGL => 0.3.27
+  *  10d80a6ced - plug-ins: try to get more human-readable information
+    on why g_fopen()...
+  *  5bce92be67 - NEWS: add implementation for Freedesktop screenshot
+    API.
+  *  80490a2c07 - plug-ins: add a SCREENSHOT_CAN_SHOOT_WINDOW
+    capability.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 31 Dec 2017 10:10:15 +0300
+
 gimp-devel (2.9.8+git39484-5289afad14-1) unstable; urgency=medium
 
   * Compile

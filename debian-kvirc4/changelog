@@ -1,3 +1,52 @@
+kvirc (4:4.9.2~git-7244-gce3c9017b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: ce3c9017b3c0b9e795744139c496fcef8e2b76ac
+  * Date: 1514557979
+  * git changelog:
+  *  ce3c9017b - Revert "Add an option to order nick completion by last
+    action time. Resolves #2216."
+  *  6ef18f91d - Revert "Add uintNickCompletionOrder to the options
+    widget."
+  *  48b433181 - Revert "Allow adding tooltips to other widgets in the
+    options dialogs."
+  *  f82482448 - Revert "Address @IceN9ne's review."
+  *  c84f8c42d - Correct README
+  *  0b83828f2 - Fix makedist script. Add a super-minimal readme entry.
+  *  70e487854 - Fix about text
+  *  848868048 - Bump version number to 4.9.3 for release
+  *  f042a155e - Fix about text
+  *  d2d559c71 - Fix #2240
+  *  bb3cad37a - Remove --immediate switch from delete
+  *  e9bd8809c - Restore Juanjo's name
+  *  e69587aee - Fix macOS Travis build
+  *  ca59d4d98 - Fix more memory leaks
+  *  cb8897ae4 - Fix some memory leaks
+  *  c2d7675dc - Fix uninitialized variable access
+  *  f743f315a - Address @IceN9ne's review.
+  *  2f723938d - Allow adding tooltips to other widgets in the options
+    dialogs.
+  *  6a0906274 - Add uintNickCompletionOrder to the options widget.
+  *  446bff05a - Add an option to order nick completion by last action
+    time. Resolves #2216.
+  *  de836715d - Tabs need to stay in a block on their own
+  *  e337d6e5c - Better handling of tabs in KviIrcView. Not perfect but
+    at least they aren't floating around and messing up with the
+    selection. Fixes #1855
+  *  63e9e485a - Pull in wodim's fix for #1959
+  *  d0ea547a8 - Maybe fix #2320. Needs testing on high DPI monitors.
+  *  a575f61e2 - Attempt to work on #2302. Needs testing.
+  *  582252f69 - Fix the sound system autodetection (#2278)
+  *  b5d9ba9c1 - Workaround to vc_redist #2335 (#2336)
+  *  5e6fc725e - Remove the default stylesheet.
+  *  8745aa849 - AppVeyor: update Qt to 5.9, upgrade to VS2017
+  *  7ad56c988 - Fix #2323 (#2331)
+  *  6d28ddb44 - Updated OpenSSL version to 1.0.2n
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 29 Dec 2017 20:00:46 +0300
+
 kvirc (4:4.9.2~git-7213-ged2a15689-1) unstable; urgency=medium
 
   * Compile
