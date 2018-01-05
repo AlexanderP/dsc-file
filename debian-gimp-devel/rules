@@ -11,9 +11,9 @@ MYPAINTOPT= --prefix="${PREFIXDIR}"
 GIMPOPT= --prefix="${PREFIXDIR}" --disable-docs --disable-python
 LCMSOPT= --prefix="$(PREFIXDIR)"
 LPNGOPT= --prefix="$(PREFIXDIR)"
-GEXIVOPT= --prefix="$(PREFIXDIR)" --enable-static --disable-Werror
-WEBPOPT=  --prefix="$(PREFIXDIR)" --enable-libwebpmux --enable-libwebpdemux --enable-aligned
-
+#GEXIVOPT= --prefix="$(PREFIXDIR)" --enable-static --disable-Werror
+#WEBPOPT= --prefix="$(PREFIXDIR)" --enable-libwebpmux --enable-libwebpdemux --enable-aligned
+GLIBOPT= --prefix="$(PREFIXDIR)" --enable-debug=minimum --enable-static --disable-gtk-doc --disable-python
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 endif
@@ -27,73 +27,81 @@ ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
 
-ifeq "$(DEBIAN_CODENAME)" "jessie"
-	GEGLOPT += --without-libavformat
-endif
-
-ifeq "$(DEBIAN_CODENAME)" "wily"
-	GEGLOPT += --without-libavformat
-endif
+#ifeq "$(DEBIAN_CODENAME)" "jessie"
+#	GEGLOPT += --without-libavformat
+#endif
+#
+#ifeq "$(DEBIAN_CODENAME)" "wily"
+#	GEGLOPT += --without-libavformat
+#endif
 
 %:
 	dh $@ --parallel
 
 override_dh_auto_configure:
-ifneq (,$(filter $(DEBIAN_CODENAME),stretch xenial yakkety zesty artful)) 
-	cd $(CURDIR)/3rdparty/gexiv2 && \
-	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:${PKG_CONFIG_PATH} \
-	PATH=$(PREFIXDIR)/bin:${PATH} \
-	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
-	./autogen.sh $(GEXIVOPT) && \
-	make -j$(NUMJOBS) && \
-	make DESTDIR=$(CURDIR)/debian/tmp3 install && \
-	cd $(CURDIR)/debian/tmp3$(CURDIR)/debian && mv tmp2 $(CURDIR)/debian/ 
-	cd $(CURDIR)/3rdparty/libwebp && \
-	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:${PKG_CONFIG_PATH} \
-	PATH=$(PREFIXDIR)/bin:${PATH} \
-	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
-	./autogen.sh && ./configure $(WEBPOPT) && \
-	make -j$(NUMJOBS) && \
-	make install
-else
-	echo "no build gexiv2"
-endif
+	sed "s/MYPAINT_BRUSHES_DIR/\"\/usr\/lib\/gimpdevel\/share\/mypaint-data\/1.0\/brushes\"/g" -i app/config/gimpcoreconfig.c
+#ifneq (,$(filter $(DEBIAN_CODENAME),stretch xenial yakkety zesty artful))
+#	cd $(CURDIR)/3rdparty/gexiv2 && \
+#	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
+#	PATH=$(PREFIXDIR)/bin:${PATH} \
+#	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
+#	./autogen.sh $(GEXIVOPT) && \
+#	make -j$(NUMJOBS) && \
+#	make DESTDIR=$(CURDIR)/debian/tmp3 install && \
+#	cd $(CURDIR)/debian/tmp3$(CURDIR)/debian && mv tmp2 $(CURDIR)/debian/ 
+#	cd $(CURDIR)/3rdparty/libwebp && \
+#	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
+#	PATH=$(PREFIXDIR)/bin:${PATH} \
+#	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
+#	./autogen.sh && ./configure $(WEBPOPT) && \
+#	make -j$(NUMJOBS) && \
+#	make install
+#else
+#	echo "no build gexiv2
+#endif
 	cd $(CURDIR)/3rdparty/babl && \
-	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:${PKG_CONFIG_PATH} \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
 	PATH=$(PREFIXDIR)/bin:${PATH} \
 	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
 	./autogen.sh $(BABLOPT) && \
 	make -j$(NUMJOBS) && \
 	make install
 	cd $(CURDIR)/3rdparty/gegl && \
-	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:${PKG_CONFIG_PATH} \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
 	PATH=$(PREFIXDIR)/bin:${PATH} \
 	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
 	./autogen.sh $(GEGLOPT) && \
 	make -j$(NUMJOBS) && \
 	make install
 	cd $(CURDIR)/3rdparty/libmypaint && \
-	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:${PKG_CONFIG_PATH} \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
+	PATH=$(PREFIXDIR)/bin:${PATH} \
+	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
+	./autogen.sh && ./configure $(MYPAINTOPT) && \
+	make -j$(NUMJOBS) && \
+	make install
+	cd $(CURDIR)/3rdparty/mypaint-brushes && \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
 	PATH=$(PREFIXDIR)/bin:${PATH} \
 	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
 	./autogen.sh && ./configure $(MYPAINTOPT) && \
 	make -j$(NUMJOBS) && \
 	make install
 	cd $(CURDIR)/3rdparty/lcms2 && \
-	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:${PKG_CONFIG_PATH} \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
 	PATH=$(PREFIXDIR)/bin:${PATH} \
 	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
 	./autogen.sh && ./configure $(LCMSOPT) && \
 	make -j$(NUMJOBS) && \
 	make install
 	cd $(CURDIR)/3rdparty/libpng && \
-	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:${PKG_CONFIG_PATH} \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
 	PATH=$(PREFIXDIR)/bin:${PATH} \
 	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
 	./autogen.sh && ./configure $(LPNGOPT) && \
 	make -j$(NUMJOBS) && \
 	make install
-	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:${PKG_CONFIG_PATH} \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
 	PATH=$(PREFIXDIR)/bin:${PATH} \
 	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
 	./autogen.sh $(GIMPOPT) && \
