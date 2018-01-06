@@ -11,9 +11,10 @@ MYPAINTOPT= --prefix="${PREFIXDIR}"
 GIMPOPT= --prefix="${PREFIXDIR}" --disable-docs --disable-python
 LCMSOPT= --prefix="$(PREFIXDIR)"
 LPNGOPT= --prefix="$(PREFIXDIR)"
-#GEXIVOPT= --prefix="$(PREFIXDIR)" --enable-static --disable-Werror
-#WEBPOPT= --prefix="$(PREFIXDIR)" --enable-libwebpmux --enable-libwebpdemux --enable-aligned
-GLIBOPT= --prefix="$(PREFIXDIR)" --enable-debug=minimum --enable-static --disable-gtk-doc --disable-python
+GEXIVOPT= --prefix="$(PREFIXDIR)" --enable-static --disable-Werror
+WEBPOPT= --prefix="$(PREFIXDIR)" --enable-libwebpmux --enable-libwebpdemux --enable-aligned
+GLIBOPT= --prefix="$(PREFIXDIR)" --enable-debug=minimum --enable-static --disable-gtk-doc --disable-python 
+GLIBNOPT= --prefix="$(PREFIXDIR)" --disable-python --disable-gtk-doc
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 endif
@@ -27,38 +28,49 @@ ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
 
-#ifeq "$(DEBIAN_CODENAME)" "jessie"
-#	GEGLOPT += --without-libavformat
-#endif
-#
-#ifeq "$(DEBIAN_CODENAME)" "wily"
-#	GEGLOPT += --without-libavformat
-#endif
+ifeq "$(DEBIAN_CODENAME)" "jessie"
+	GEGLOPT += --without-libavformat
+endif
+
 
 %:
 	dh $@ --parallel
 
 override_dh_auto_configure:
 	sed "s/MYPAINT_BRUSHES_DIR/\"\/usr\/lib\/gimpdevel\/share\/mypaint-data\/1.0\/brushes\"/g" -i app/config/gimpcoreconfig.c
-#ifneq (,$(filter $(DEBIAN_CODENAME),stretch xenial yakkety zesty artful))
-#	cd $(CURDIR)/3rdparty/gexiv2 && \
-#	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
-#	PATH=$(PREFIXDIR)/bin:${PATH} \
-#	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
-#	./autogen.sh $(GEXIVOPT) && \
-#	make -j$(NUMJOBS) && \
-#	make DESTDIR=$(CURDIR)/debian/tmp3 install && \
-#	cd $(CURDIR)/debian/tmp3$(CURDIR)/debian && mv tmp2 $(CURDIR)/debian/ 
-#	cd $(CURDIR)/3rdparty/libwebp && \
-#	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
-#	PATH=$(PREFIXDIR)/bin:${PATH} \
-#	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
-#	./autogen.sh && ./configure $(WEBPOPT) && \
-#	make -j$(NUMJOBS) && \
-#	make install
-#else
-#	echo "no build gexiv2
-#endif
+ifneq (,$(filter $(DEBIAN_CODENAME),jessie stretch xenial yakkety zesty artful))
+	cd $(CURDIR)/3rdparty/glib && \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
+	PATH=$(PREFIXDIR)/bin:${PATH} \
+	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
+	./autogen.sh $(GLIBOPT) && \
+	make -j$(NUMJOBS) && \
+	make install
+	cd $(CURDIR)/3rdparty/glib-networking && \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
+	PATH=$(PREFIXDIR)/bin:${PATH} \
+	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
+	./autogen.sh $(GLIBNOPT) && \
+	make -j$(NUMJOBS) && \
+	make install
+	cd $(CURDIR)/3rdparty/gexiv2 && \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
+	PATH=$(PREFIXDIR)/bin:${PATH} \
+	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
+	./autogen.sh $(GEXIVOPT) && \
+	make -j$(NUMJOBS) && \
+	make DESTDIR=$(CURDIR)/debian/tmp3 install && \
+	cd $(CURDIR)/debian/tmp3$(CURDIR)/debian && cp -rf tmp2 $(CURDIR)/debian/ 
+	cd $(CURDIR)/3rdparty/libwebp && \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
+	PATH=$(PREFIXDIR)/bin:${PATH} \
+	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
+	./autogen.sh && ./configure $(WEBPOPT) && \
+	make -j$(NUMJOBS) && \
+	make install
+else
+	echo "no build gexiv2, glib.
+endif
 	cd $(CURDIR)/3rdparty/babl && \
 	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
 	PATH=$(PREFIXDIR)/bin:${PATH} \
@@ -115,23 +127,29 @@ override_dh_auto_test:
 	
 
 override_dh_auto_clean:
-	test ! -d $(PREFIXDIR) || rm -rf $(PREFIXDIR)
-	cd $(CURDIR)/3rdparty/babl && test ! -f Makefile || make clean
-	cd $(CURDIR)/3rdparty/gegl && test ! -f Makefile || make clean
-	cd $(CURDIR)/3rdparty/libmypaint && test ! -f Makefile || make clean
+	test ! -d $(CURDIR)/debian/tmp2 || rm -rf $(CURDIR)/debian/tmp2
+	test ! -d $(CURDIR)/debian/tmp3 || rm -rf $(CURDIR)/debian/tmp3
+	for i in babl gegl gexiv2 glib glib-networking lcms2 libmypaint libpng libwebp mypaint-brushes ; do \
+	cd $(CURDIR)/3rdparty/$${i} && test ! -f Makefile || make clean ; \
+	done
 	dh_auto_clean
 
 override_dh_auto_install:
 	ln -s $(CURDIR)/debian/tmp2 $(CURDIR)/debian/tmp
 	find $(CURDIR)/debian/tmp2 -name '*.la' -delete
-	cd $(CURDIR)/debian/tmp2/usr/lib/gimpdevel/share/man/man1/ && gzip -n -9 gimp-?.?.1 gimptool-?.?.1
+	find $(CURDIR)/debian/tmp2 -name '*.pyc' -delete
+	find $(CURDIR)/debian/tmp2 -name '*.pyo' -delete
+	rm -f $(CURDIR)/debian/tmp2/usr/lib/gimpdevel/share/man/man1/gimp-console-2.9.1
+	cd $(CURDIR)/debian/tmp2/usr/lib/gimpdevel/share/man/man1/ && gzip -n -9 *.1
 	cd $(CURDIR)/debian/tmp2/usr/lib/gimpdevel/share/man/man5/ && gzip -n -9 *.5
+	cd $(CURDIR)/debian/tmp2/usr/lib/gimpdevel/share/man/man3/ && gzip -n -9 *.3
 
 
 override_dh_install:
 	dh_install
 	rm -f $(CURDIR)/debian/gimp-devel-dev/usr/lib/gimpdevel/lib/libgegl-npd-0.3.so
 	rm -f $(CURDIR)/debian/gimp-devel-dev/usr/lib/gimpdevel/lib/libgegl-sc-0.3.so
+	rm -f $(CURDIR)/debian/gimp-devel/usr/lib/gimpdevel/bin/gimptool-?.?
 	mv $(CURDIR)/debian/gimp-devel/usr/bin/gimp-devel.sh $(CURDIR)/debian/gimp-devel/usr/bin/gimp-devel
 	mv $(CURDIR)/debian/gimp-devel/usr/bin/gimp-console-devel.sh $(CURDIR)/debian/gimp-devel/usr/bin/gimp-console-devel
 
