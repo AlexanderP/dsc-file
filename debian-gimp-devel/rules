@@ -15,6 +15,9 @@ GEXIVOPT= --prefix="$(PREFIXDIR)" --enable-static --disable-Werror
 WEBPOPT= --prefix="$(PREFIXDIR)" --enable-libwebpmux --enable-libwebpdemux --enable-aligned
 GLIBOPT= --prefix="$(PREFIXDIR)" --enable-debug=minimum --enable-static --disable-gtk-doc --disable-python 
 GLIBNOPT= --prefix="$(PREFIXDIR)" --disable-python --disable-gtk-doc
+POPPLEROPT= -DCMAKE_INSTALL_PREFIX="$(PREFIXDIR)" -DCMAKE_INSTALL_LIBDIR="$(PREFIXDIR)/lib" -DCMAKE_BUILD_TYPE=release \
+            -DENABLE_QT5=OFF -DENABLE_UTILS=OFF -DENABLE_GTK_DOC=OFF -DENABLE_CPP=OFF -DENABLE_SPLASH=OFF
+LRSVGOPT= --prefix="$(PREFIXDIR)" --disable-pixbuf-loader
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 endif
@@ -28,16 +31,12 @@ ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
 
-ifeq "$(DEBIAN_CODENAME)" "jessie"
-	GEGLOPT += --without-libavformat
-endif
-
-
 %:
 	dh $@ --parallel
 
 override_dh_auto_configure:
 	sed "s/MYPAINT_BRUSHES_DIR/\"\/usr\/lib\/gimpdevel\/share\/mypaint-data\/1.0\/brushes\"/g" -i app/config/gimpcoreconfig.c
+#glib > 2.54.2
 ifneq (,$(filter $(DEBIAN_CODENAME),jessie stretch xenial yakkety zesty artful))
 	cd $(CURDIR)/3rdparty/glib && \
 	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
@@ -53,6 +52,11 @@ ifneq (,$(filter $(DEBIAN_CODENAME),jessie stretch xenial yakkety zesty artful))
 	./autogen.sh $(GLIBNOPT) && \
 	make -j$(NUMJOBS) && \
 	make install
+else
+	echo "no build glib"
+endif
+#gexiv2 > 0.10.6
+ifneq (,$(filter $(DEBIAN_CODENAME),jessie stretch xenial yakkety zesty))
 	cd $(CURDIR)/3rdparty/gexiv2 && \
 	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
 	PATH=$(PREFIXDIR)/bin:${PATH} \
@@ -61,6 +65,23 @@ ifneq (,$(filter $(DEBIAN_CODENAME),jessie stretch xenial yakkety zesty artful))
 	make -j$(NUMJOBS) && \
 	make DESTDIR=$(CURDIR)/debian/tmp3 install && \
 	cd $(CURDIR)/debian/tmp3$(CURDIR)/debian && cp -rf tmp2 $(CURDIR)/debian/ 
+else
+	echo "no build gexiv2"
+endif
+#libpng > 1.6.25
+ifneq (,$(filter $(DEBIAN_CODENAME),jessie xenial yakkety zesty))
+	cd $(CURDIR)/3rdparty/libpng && \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
+	PATH=$(PREFIXDIR)/bin:${PATH} \
+	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
+	./autogen.sh && ./configure $(LPNGOPT) && \
+	make -j$(NUMJOBS) && \
+	make install
+else
+	echo "no build libpng"
+endif
+#libwebp > 0.6.0
+ifneq (,$(filter $(DEBIAN_CODENAME),jessie stretch xenial yakkety zesty))
 	cd $(CURDIR)/3rdparty/libwebp && \
 	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
 	PATH=$(PREFIXDIR)/bin:${PATH} \
@@ -69,36 +90,10 @@ ifneq (,$(filter $(DEBIAN_CODENAME),jessie stretch xenial yakkety zesty artful))
 	make -j$(NUMJOBS) && \
 	make install
 else
-	echo "no build gexiv2, glib.
+	echo "no build libwebp"
 endif
-	cd $(CURDIR)/3rdparty/babl && \
-	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
-	PATH=$(PREFIXDIR)/bin:${PATH} \
-	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
-	./autogen.sh $(BABLOPT) && \
-	make -j$(NUMJOBS) && \
-	make install
-	cd $(CURDIR)/3rdparty/gegl && \
-	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
-	PATH=$(PREFIXDIR)/bin:${PATH} \
-	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
-	./autogen.sh $(GEGLOPT) && \
-	make -j$(NUMJOBS) && \
-	make install
-	cd $(CURDIR)/3rdparty/libmypaint && \
-	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
-	PATH=$(PREFIXDIR)/bin:${PATH} \
-	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
-	./autogen.sh && ./configure $(MYPAINTOPT) && \
-	make -j$(NUMJOBS) && \
-	make install
-	cd $(CURDIR)/3rdparty/mypaint-brushes && \
-	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
-	PATH=$(PREFIXDIR)/bin:${PATH} \
-	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
-	./autogen.sh && ./configure $(MYPAINTOPT) && \
-	make -j$(NUMJOBS) && \
-	make install
+#lcms2 > 2.8
+ifneq (,$(filter $(DEBIAN_CODENAME),jessie xenial yakkety zesty))
 	cd $(CURDIR)/3rdparty/lcms2 && \
 	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
 	PATH=$(PREFIXDIR)/bin:${PATH} \
@@ -106,13 +101,66 @@ endif
 	./autogen.sh && ./configure $(LCMSOPT) && \
 	make -j$(NUMJOBS) && \
 	make install
-	cd $(CURDIR)/3rdparty/libpng && \
+else
+	echo "no build lcms2"
+endif
+#poppler > 0.44.0
+ifneq (,$(filter $(DEBIAN_CODENAME),jessie xenial))
+	cd $(CURDIR)/3rdparty/poppler && \
 	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
 	PATH=$(PREFIXDIR)/bin:${PATH} \
 	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
-	./autogen.sh && ./configure $(LPNGOPT) && \
+	mkdir build && cd build && cmake .. $(POPPLEROPT) && \
 	make -j$(NUMJOBS) && \
 	make install
+else
+	echo "no build poppler"
+endif
+#librsvg > 2.40.6
+ifneq (,$(filter $(DEBIAN_CODENAME),jessie ))
+	cd $(CURDIR)/3rdparty/librsvg && \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
+	PATH=$(PREFIXDIR)/bin:${PATH} \
+	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
+	./autogen.sh && ./configure $(LRSVGOPT) && \
+	make -j$(NUMJOBS) && \
+	make install
+else
+	echo "no build librsvg"
+endif
+#libmypaint = 1.3
+	cd $(CURDIR)/3rdparty/libmypaint && \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
+	PATH=$(PREFIXDIR)/bin:${PATH} \
+	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
+	./autogen.sh && ./configure $(MYPAINTOPT) && \
+	make -j$(NUMJOBS) && \
+	make install
+#mypaint-brushes = 1.3
+	cd $(CURDIR)/3rdparty/mypaint-brushes && \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
+	PATH=$(PREFIXDIR)/bin:${PATH} \
+	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
+	./autogen.sh && ./configure $(MYPAINTOPT) && \
+	make -j$(NUMJOBS) && \
+	make install
+#babl
+	cd $(CURDIR)/3rdparty/babl && \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
+	PATH=$(PREFIXDIR)/bin:${PATH} \
+	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
+	./autogen.sh $(BABLOPT) && \
+	make -j$(NUMJOBS) && \
+	make install
+#gegl
+	cd $(CURDIR)/3rdparty/gegl && \
+	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
+	PATH=$(PREFIXDIR)/bin:${PATH} \
+	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
+	./autogen.sh $(GEGLOPT) && \
+	make -j$(NUMJOBS) && \
+	make install
+#gimp
 	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
 	PATH=$(PREFIXDIR)/bin:${PATH} \
 	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
@@ -129,7 +177,7 @@ override_dh_auto_test:
 override_dh_auto_clean:
 	test ! -d $(CURDIR)/debian/tmp2 || rm -rf $(CURDIR)/debian/tmp2
 	test ! -d $(CURDIR)/debian/tmp3 || rm -rf $(CURDIR)/debian/tmp3
-	for i in babl gegl gexiv2 glib glib-networking lcms2 libmypaint libpng libwebp mypaint-brushes ; do \
+	for i in babl gegl gexiv2 glib glib-networking lcms2 libmypaint librsvg libpng libwebp mypaint-brushes ; do \
 	cd $(CURDIR)/3rdparty/$${i} && test ! -f Makefile || make clean ; \
 	done
 	dh_auto_clean
@@ -142,17 +190,21 @@ override_dh_auto_install:
 	rm -f $(CURDIR)/debian/tmp2/usr/lib/gimpdevel/share/man/man1/gimp-console-2.9.1
 	cd $(CURDIR)/debian/tmp2/usr/lib/gimpdevel/share/man/man1/ && gzip -n -9 *.1
 	cd $(CURDIR)/debian/tmp2/usr/lib/gimpdevel/share/man/man5/ && gzip -n -9 *.5
-	cd $(CURDIR)/debian/tmp2/usr/lib/gimpdevel/share/man/man3/ && gzip -n -9 *.3
 
 
 override_dh_install:
 	dh_install
 	rm -f $(CURDIR)/debian/gimp-devel-dev/usr/lib/gimpdevel/lib/libgegl-npd-0.3.so
 	rm -f $(CURDIR)/debian/gimp-devel-dev/usr/lib/gimpdevel/lib/libgegl-sc-0.3.so
-	rm -f $(CURDIR)/debian/gimp-devel/usr/lib/gimpdevel/bin/gimptool-?.?
 	mv $(CURDIR)/debian/gimp-devel/usr/bin/gimp-devel.sh $(CURDIR)/debian/gimp-devel/usr/bin/gimp-devel
 	mv $(CURDIR)/debian/gimp-devel/usr/bin/gimp-console-devel.sh $(CURDIR)/debian/gimp-devel/usr/bin/gimp-console-devel
 
 override_dh_shlibdeps:
+ifneq (,$(filter $(DEBIAN_CODENAME),jessie xenial))
+	#dpkg-shlibdeps: error: couldn't find library libpoppler.so.73
+	LD_LIBRARY_PATH=$(PREFIXDIR)/lib:$${LD_LIBRARY_PATH} LD_RUN_PATH=$(PREFIXDIR)/lib:$${LD_RUN_PATH} dh_shlibdeps -ldebian/gimp-devel/usr/lib/gimpdevel/lib/
+else
 	dh_shlibdeps -ldebian/gimp-devel/usr/lib/gimpdevel/lib/
+endif
+	
 

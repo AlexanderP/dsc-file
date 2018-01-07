@@ -80,7 +80,11 @@ Build-Depends: debhelper (>= 9),
                libgirepository1.0-dev,
                python-gi,
                python3-gi,
-               valac, libmount-dev, libgnutls28-dev
+               valac, libmount-dev, 
+               libgnutls28-dev, 
+               libpng16-dev | libpng-dev, 
+               cmake, 
+               libopenjp2-7-dev, libcroco3-dev
 Homepage: http://www.gimp.org/
 
 Package: gimp-devel
