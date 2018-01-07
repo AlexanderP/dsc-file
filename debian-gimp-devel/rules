@@ -31,6 +31,12 @@ ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
 
+ifeq "$(DEBIAN_CODENAME)" "jessie"
+	GEGLOPT += --without-libavformat
+	CXXFLAGS += -std=gnu++11
+	CFLAGS += -std=gnu11
+endif
+
 %:
 	dh $@ --parallel
 
