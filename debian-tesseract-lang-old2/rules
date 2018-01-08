@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
+	BUILDDEBFLAGS= -- -Zlzma -z9
+else
+	BUILDDEBFLAGS= -- -Zxz -z9
+endif
+
+%:
+	dh $@ --parallel
+
+#override_dh_builddeb:
+#	dh_builddeb $(BUILDDEBFLAGS)
