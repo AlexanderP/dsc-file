@@ -99,7 +99,7 @@ else
 	echo "no build libwebp"
 endif
 #lcms2 > 2.8
-ifneq (,$(filter $(DEBIAN_CODENAME),jessie xenial yakkety zesty))
+ifneq (,$(filter $(DEBIAN_CODENAME),jessie xenial yakkety zesty artful))
 	cd $(CURDIR)/3rdparty/lcms2 && \
 	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
 	PATH=$(PREFIXDIR)/bin:${PATH} \
