@@ -7,6 +7,9 @@
 # when installing, and create a dependency on the old version of libgimp.
 # TODO: maybe set LD_LIBRARY_PATH instead?
 
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all 
+include /usr/share/dpkg/buildflags.mk
+
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/autotools.mk
 #include /usr/share/cdbs/1/rules/autoreconf.mk
@@ -21,7 +24,7 @@ DEB_CONFIGURE_EXTRA_FLAGS := --disable-static \
 			--enable-python \
 			PYTHON=/usr/bin/`pyversions -d` \
 			--enable-default-binary \
-			--enable-gtk-doc
+			--enable-gtk-doc \
 			--with-lcms=lcms2 \
 			--without-webkit
 #DEB_BUILDDIR := $(DEB_SRCDIR)/builddir

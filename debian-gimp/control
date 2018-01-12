@@ -3,7 +3,7 @@ Priority: optional
 Section: graphics
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Standards-Version: 3.9.8
-Build-Depends: debhelper (>= 8),
+Build-Depends: debhelper (>= 9),
                cdbs (>= 0.4.97),
                autotools-dev,
                dh-autoreconf,
@@ -16,7 +16,7 @@ Build-Depends: debhelper (>= 8),
                libart-2.0-dev,
                libasound2-dev (>= 1.0.0) [linux-any],
                libatk1.0-dev (>= 2.2.0),
-               libbabl-dev,
+               libbabl-dev (>= 0.1.10),
                libbz2-dev,
                libcairo2-dev (>= 1.10.2),
                libcurl4-gnutls-dev (>= 7.15.1),
@@ -67,7 +67,6 @@ Depends: ${shlibs:Depends},
          ${misc:Depends}
 Recommends: gimp-data (>= ${source:Upstream-Version}),
             gimp-data (<= ${source:Upstream-Version}-z)
-Conflicts: libgimp-2.0-0
 Description: Libraries for the GNU Image Manipulation Program
  This package includes the libgimp libraries, which are
  necessary to run GIMP and third-party GIMP plugins.
@@ -90,9 +89,8 @@ Suggests: gimp-help-en | gimp-help,
           gvfs-backends,
           libasound2
 Breaks: gimp-plugin-registry (<< 4.20120506)
-Replaces: gimp-plugin-registry (<< 4.20120506), gimp2.7
-Conflicts: gimp2.7
-Description: The GNU Image Manipulation Program
+Replaces: gimp-plugin-registry (<< 4.20120506)
+Description: GNU Image Manipulation Program
  GIMP is an advanced picture editor. You can use it to edit, enhance, and
  retouch photos and scans, create drawings, and make your own images.
  It has a large collection of professional-level editing tools and
@@ -112,14 +110,12 @@ Description: The GNU Image Manipulation Program
 
 Package: gimp-data
 Architecture: all
-Recommends: gimp
+Enhances: gimp
 Depends: ${misc:Depends}
 Conflicts: gimp (<< 2.4.0~rc2-2),
-           gimp-python (<< 2.6.0),
-		   gimp2.7-data
+           gimp-python (<< 2.6.0)
 Replaces: gimp (<< 2.4.0~rc2-2),
-          gimp-python (<< 2.6.0),
-		  gimp2.7-data
+          gimp-python (<< 2.6.0)
 Description: Data files for GIMP
  This package contains architecture-independent supporting data files
  for use with GIMP.
@@ -133,8 +129,6 @@ Depends: ${shlibs:Depends},
          libgtk2.0-dev (>= 2.12.5),
          pkg-config
 Suggests: libgimp2.0-doc
-Conflicts: libgimp-2.0-0-dev
-Replaces: libgimp-2.0-0-dev
 Description: Headers and other files for compiling plugins for GIMP
  This package contains the header files for the GNU Image Manipulation
  Program, along with the static versions of libgimp.
