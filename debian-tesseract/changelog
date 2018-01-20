@@ -10,6 +10,19 @@ tesseract (4.00~git2189-bc668da0-1) unstable; urgency=medium
 
  -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 27 Dec 2017 10:01:26 +0300
 
+tesseract (4.00~git2188-cdc35338-4) unstable; urgency=medium
+
+  * Remove dependency on ancient Greek which is not part of Tesseract 4.
+
+ -- Jeff Breidenbach <jab@debian.org>  Thu, 18 Jan 2018 12:07:36 -0800
+
+tesseract (4.00~git2188-cdc35338-3) unstable; urgency=medium
+
+  * Fix small packaging problems such as lintian warnings.
+  * Update the package description.
+
+ -- Jeff Breidenbach <jab@debian.org>  Thu, 18 Jan 2018 09:40:48 -0800
+
 tesseract (4.00~git2188-cdc35338-2) unstable; urgency=medium
 
   * Remerge Alexander's PPA with Debian

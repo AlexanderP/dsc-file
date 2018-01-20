@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 7.0.50~), libleptonica-dev (>= 1.72~),
                automake, libtool, libpango1.0-dev, libcairo2-dev, libicu-dev, 
                libpng-dev, libjpeg-dev, libtiff-dev, zlib1g-dev, git, autoconf-archive, asciidoc, 
                xsltproc, docbook-xsl, docbook-xml
-Standards-Version: 3.9.8
+Standards-Version: 4.1.3
 Homepage: https://github.com/tesseract-ocr/
 
 Package: libtesseract-dev
@@ -16,15 +16,14 @@ Depends: libtesseract4 (= ${binary:Version}), ${misc:Depends}, libleptonica-dev
 Replaces: tesseract-ocr-dev (<< 3.0.1-1~)
 Breaks: tesseract-ocr-dev (<< 3.0.1-1~)
 Description: Development files for the tesseract command line OCR tool
- The Tesseract OCR engine was one of the top 3 engines in the 1995
- UNLV Accuracy test. Between 1995 and 2006 it had little work done on
- it, but since then it has been improved extensively by Google and is
- probably one of the most accurate open source OCR engines
- available. It can read a wide variety of image formats and convert
- them to text in over 40 languages. This package includes the development
- files, static library, and header files.
+ Tesseract is an open source Optical Character Recognition (OCR)
+ Engine. It can be used directly, or (for programmers) using an API to
+ extract printed text from images. It supports a wide variety of
+ languages. This package includes the development files, static
+ library, and header files.
 
 Package: libtesseract4
+Section: libs
 Breaks: tesseract-ocr (<< 3.01~), ocropus (<< 0.4.0~),
  tesseract-afr (<< 4.00~), tesseract-ara (<< 4.00~), tesseract-aze (<< 4.00~),
  tesseract-bel (<< 4.00~), tesseract-ben (<< 4.00~), tesseract-bul (<< 4.00~),
@@ -66,13 +65,10 @@ Replaces: tesseract-ocr (<< 3.01~)
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Tesseract OCR library
- The Tesseract OCR engine was one of the top 3 engines in the 1995
- UNLV Accuracy test. Between 1995 and 2006 it had little work done on
- it, but since then it has been improved extensively by Google and is
- probably one of the most accurate open source OCR engines
- available. It can read a wide variety of image formats and convert
- them to text in over 40 languages. This package includes the shared
- library.
+ Tesseract is an open source Optical Character Recognition (OCR)
+ Engine. It can be used directly, or (for programmers) using an API to
+ extract printed text from images. It supports a wide variety of
+ languages. This package includes the shared library.
 
 Package: tesseract-ocr
 Architecture: any
@@ -80,13 +76,10 @@ Depends: ${shlibs:Depends}, ${misc:Depends},
  tesseract-ocr-eng (>= 4.00~), tesseract-ocr-osd (>= 4.00~), libtesseract4 (>= 4.00~)
 Replaces: tesseract-ocr-data
 Description: Tesseract command line OCR tool
- The Tesseract OCR engine was one of the top 3 engines in the 1995
- UNLV Accuracy test. Between 1995 and 2006 it had little work done on
- it, but since then it has been improved extensively by Google and is
- probably one of the most accurate open source OCR engines
- available. It can read a wide variety of image formats and convert
- them to text in over 40 languages. This package includes the command
- line tool.
+ Tesseract is an open source Optical Character Recognition (OCR)
+ Engine. It can be used directly, or (for programmers) using an API to
+ extract printed text from images. It supports a wide variety of
+ languages. This package includes the command line tool.
 
 Package: tesseract-ocr-all
 Architecture: all
@@ -134,7 +127,7 @@ Depends: ${misc:Depends}, tesseract-ocr,
         tesseract-ocr-script-mymr, tesseract-ocr-script-orya, tesseract-ocr-script-sinh, 
         tesseract-ocr-script-syrc, tesseract-ocr-script-taml, tesseract-ocr-script-telu, 
         tesseract-ocr-script-thaa, tesseract-ocr-script-thai, tesseract-ocr-script-tibt, 
-        tesseract-ocr-script-viet, tesseract-ocr-grc
+        tesseract-ocr-script-viet
 Description: Tesseract OCR with all language and script packages
  This is a metapackage for Tesseract OCR and includes all supported
- languages and script.
+ languages and scripts.
