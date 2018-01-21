@@ -1,3 +1,37 @@
+deadbeef (0.7.2+git7583-bc0eedc1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: bc0eedc19df8495a3edab11528172380584cfb67
+  * Date: 1515164003
+  * git changelog:
+  *  bc0eedc1 - cocoaui: make update timer work while a menu is open
+  *  0c94224a - coreaudio: don't display format setting errors at all
+    (fixes #1953)
+  *  b21c1ae6 - gtkui: remove unimplemented trkproperties context menu
+    items
+  *  175c8142 - cocoaui: update converter preview when relevant
+    checkboxes change; update default format
+  *  f758c46c - converter: update preview when relevant checkboxes
+    change
+  *  3a577b19 - converter: improved default format
+  *  afad6ffb - converter: a number of preview improvements (fixes
+    #1879)
+  *  f20ef0e1 - cocoaui: fixed updating preview after changing converter
+    settings
+  *  170cc26a - cocoaui: tweaked DSP configuration UI
+  *  696b6f03 - coreaudio: fix bogus error message when requested audio
+    format could not be set (fixes #1953)
+  *  1637a33d - opus: fixed read callback impl
+  *  dfcaa36b - ape: fix STEREO_SILENCE check regression (fixes #1951)
+  *  7bb37a87 - ape: fix regressions introduced by previous commit
+    (fixes #1952)
+  *  db6b0ef1 - ape: fix decoding stereo streams with single-channel
+    silence (fixes #1951)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 18 Jan 2018 20:46:20 +0300
+
 deadbeef (0.7.2+git7569-b6c5b1f2-1) unstable; urgency=medium
 
   * Compile

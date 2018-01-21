@@ -1,3 +1,27 @@
+gimp (2.8.22+git32577-c954ffe645-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: gimp-2-8
+  * Commit: c954ffe6459db9e51995cf7f08c6fd92100420fb
+  * Date: 1515445123
+  * git changelog:
+  *  c954ffe645 - Update Swedish translation
+  *  7aedfcc7a5 - plug-ins: gif export should not carry on when
+    sanity_check() fails.
+  *  ade85f75e9 - Update Polish translation
+  *  d21c0a96d2 - plug-ins: fix cherry-picked commit.
+  *  3eaeff31f0 - Revert "Bug 790784 - (CVE-2017-17784) heap overread in
+    gbr parser / load_image."
+  *  208a2e6dc7 - app: gimp_image_merge_down() on a floating selection
+    crashes GIMP.
+  *  1f61eceaf0 - gbr/pat: Fix out of boundary read on illegal names
+  *  f344f6a81e - app, plug-ins: clean up previous commit by using
+    g_error_set()...
+  *  4d4a8cf70f - Bug 789610: invalid gbr brush crashing GIMP
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 21 Jan 2018 09:10:20 +0300
+
 gimp (2.8.22+git32568-08bda40eb0-1) unstable; urgency=medium
 
   * Compile

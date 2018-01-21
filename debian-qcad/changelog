@@ -1,3 +1,82 @@
+qcad (3.19.0+git5230-19af34184-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 19af341842c78924a7c0a6699c2d3e230213f0c6
+  * Date: 1516381980
+  * git changelog:
+  *  19af34184 - set version to 3.19.2.3
+  *  cfd25d90f - fix getWidgets
+  *  6de6ae236 - update script bindings
+  *  276faad76 - add RMathLineEdit::isSane
+  *  ba594ff97 - refactor
+  *  85decaf01 - add support for widgets with duplicate names in
+    getWidgets
+  *  dfd1f7afc - update translations
+  *  9eefcdc0b - update translations
+  *  98a2947ea - update script bindings
+  *  bbd097455 - add feedback when selecting layer / deselecting layer
+  *  1b4860a0b - fix script console command line history
+  *  8c4206b1d - add getKeyboardModifiers, isShiftPressed
+  *  4f8d16210 - selectEntities, deselectEntities
+  *  cfd301bfa - update script bindings
+  *  e6cd88671 - update unit tests
+  *  3367a77ff - update tolerance handling
+  *  b5bcfc616 - add tolerance to autoClose
+  *  b2699dfc1 - update translations
+  *  813578393 - update translations
+  *  593894d55 - fix nomenclature sector / segment (FS#1704)
+  *  9fa3a0f44 - update script bindings
+  *  37fcddd9f - add support for key string replacement when copying
+    properties
+  *  fcee2816c - fix order of inserted blocks for part library items
+  *  e41efeac0 - clean up
+  *  439ad55c3 - clean up
+  *  3c1d74873 - fix issue with simple text and fonts with "bold" in
+    font name
+  *  e327babf3 - clean up
+  *  7b19b5ef6 - refactor custom widget in layer dialog
+  *  a5bb00420 - add support for custom UI in layer dialog
+  *  c876d8af7 - update script bindings
+  *  4292ab775 - fix FS#1703 - File > Bitmap Export: Monochrome with
+    black background broken
+  *  d3bb1fbee - update spacing
+  *  64b214d9e - update
+  *  6435e092e - update script bindings
+  *  e40a9b63e - update shortcuts in menus
+  *  9b87ab55a - add evalAppEngine to script API
+  *  1428440b5 - fix FS#1695 - Context menu: editing tools not working
+    in paper space
+  *  937cccc0b - add getDefaultAction
+  *  77bbd4f03 - update translations
+  *  3d5c055d0 - fix shortcuts if focus is in tree / list view in
+    floating dock
+  *  f9867ee55 - fix shortcuts if focus is in tree / list view in
+    floating dock
+  *  0cc32da53 - fix shortcuts in library browser
+  *  1829a45ca - forward key events for shortcut handling
+  *  dd6a11794 - clean up
+  *  2ba2c0801 - esc in spinbox returns focus to graphics view
+  *  375a400e3 - make shortcut timeout configurable
+  *  88a775380 - add keyboard preferences
+  *  e5ac29c6b - update script bindings
+  *  7672daaf1 - limit Qt 5.10 workaround to Qt 5.10
+  *  55cc8c651 - workaround for broken shortcuts in Qt 5.10
+  *  defe548a6 - update translations
+  *  046902f0b - update
+  *  242db9c25 - set version to 3.19.2.2
+  *  9e4e85630 - clean up
+  *  07e4b7ffa - add workaround for QTBUG-65559
+  *  813eaf6be - port to Qt 5.10
+  *  048a80189 - clean up
+  *  e9c169cbe - add script bindings for Qt 5.10
+  *  a0cdb4be6 - port to Qt 5.10
+  *  4ff5be5d2 - fix FS#1677 - Dimension: Scale option grayed out in
+    model space
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 20 Jan 2018 20:18:30 +0300
+
 qcad (3.19.0+git5170-a8aabff79-1) unstable; urgency=medium
 
   * Compile

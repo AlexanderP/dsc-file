@@ -1,3 +1,286 @@
+audacity (1:2.1.3+git7911-2ee3ba576-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 2ee3ba5761bb75ac2aed96e94692b4fd1ec56182
+  * Date: 1516531369
+  * git changelog:
+  *  2ee3ba576 - Bug1828: ESC from dragging of a docked toolbar...
+  *  e1cf05671 - Bug1829: Inform user, erase incomplete files whenever
+    export fails...
+  *  1c36409da - Bug 1819: Hover indication on note track channel toggle
+    appears on all tracks (when they rerender)
+  *  8434c3903 - Start of automated recording tests.
+  *  9f2ff354f - Bug1754: Telephone and AM Radio curves should not
+    flatten...
+  *  f8be26a9b - Spaces allowed in batch command parameter values now
+  *  f9fb4b3b7 - Bug 1773 - Wave Color not grayed out in TCP dropdown
+    menu when in Spectrogram view
+  *  d38f3752d - Update audacity.pot once more.  String freeze for
+    2.2.2.
+  *  f78a418df - An alpha-only toggle command for extra dropout
+    detection; default off
+  *  a019addaf - All preferences in scrollers
+  *  81b22a2b2 - Reimplement the insertion of zeroes at drop-outs...
+  *  be0e6cd60 - Scripting: Unicode chars in responses are now OK.
+  *  8077c1db0 - Change the text of the checkmark for the dropout
+    warning
+  *  b0cb3868c - Make a label track named "Dropouts" not "Errors"
+  *  c2ee1380d - Don't indent lines in the dropout warning
+  *  1130d272d - Update Audacity version in audacity.pot
+  *  b384f99e6 - Bug 1825 - Import Uncompressed File Dialog Incorrect
+    Reference to Menu Item
+  *  74d8160db - Sidebar links now to use https.
+  *  c0fceb3b6 - Wording changes.
+  *  fdf14d98c - Updated audacity.pot
+  *  bc295bd7d - translation hints
+  *  54553b82b - Fix things that confused xgettext
+  *  94827eaa4 - Bug1811: Don't corrupt the project when saving-as to
+    its own path...
+  *  059e186db - Treat save-as of a file to its own path as a simple
+    save
+  *  133bbd927 - We can simplify logic further
+  *  d37c31992 - Fewer uses of DirManager::GetProjectName()
+  *  356763c90 - remove unused
+  *  4d364ee7f - Remove overwrite argument -- it's always !fromSaveAs
+  *  1d9b8b7ba - Undo confusing tangle of Save and SaveAs each calling
+    the other...
+  *  e066c4f38 - Insert zeroes only if dropout detection is enabled
+  *  130e55cdf - Use WarningDialog for drop-outs, and change the wording
+  *  e88615c1b - "Vamp" not "VAMP" in Effects preferences
+  *  af279072b - Correct recent comments...
+  *  4628d6afa - Remap effect type from "Audacity" to "Built-in",
+    carefully...
+  *  1fe857cff - Whitespace corrections
+  *  b0690a2a5 - Disable part of the drop-out detection...
+  *  d2749068f - Allow reporting of drop-outs to be turned off by
+    Recording prefs...
+  *  0a9317226 - Cautions re. size of Preference pages
+  *  b4ee17ed8 - a translation hint
+  *  9777d3e88 - Alert user to drop-outs during recording...
+  *  4ef8da8f1 - Revert "Preliminaries to support better interaction of
+    undo and recording"
+  *  950898dcb - Revert "Bug 1823: Better interaction of undo and
+    record..."
+  *  1e8aba968 - Bug 1823: Better interaction of undo and record...
+  *  2409d46d4 - Prohibit copy of TrackList, no longer needed; allow
+    swap and move
+  *  91f5446eb - Fix interaction of recording and undo...
+  *  89d8fe18b - Define WaveTrack::Reinit()
+  *  6e75ae58a - Preliminaries to support better interaction of undo and
+    recording
+  *  ce5a67a9e - Iterate over the pending tracks for drawing
+  *  7d57a17ff - Change details of focusing of tracks in presence of
+    pending ones...
+  *  4ccb695c6 - Disable Undo and Redo while there are pending changes
+    in TrackList...
+  *  a0c3a4b43 - Add machinery to TrackList for pending changes to
+    tracks
+  *  bd2c7e6ab - Define TrackId to identify tracks across undo states
+  *  8b60e7f02 - Split "Do" functions out of the "Set" functions for
+    some Track settings
+  *  92ba1f10e - Some reimplementation of track iterators and GetLink()
+    ...
+  *  714d53e00 - Big1822: Discard button of History window should remain
+    disabled...
+  *  0265b8792 - More stl idiom for TrackList and its iterators
+  *  ba61e30cb - More cautions with std::list::iterator on Windows
+  *  a30defe8c - Redo "Provide STL idiom for iterating tracks..." ...
+  *  01718da4a - Make a dynamic check of misuse of _ that works in
+    Windows too...
+  *  acbfa1387 - Fix Assert on opening Prefs with high dpi
+  *  f9f3da384 - Update Perl pipe-test.pl script.
+  *  7fb5ec4b7 - Revert "Provide STL idiom for iterating tracks..."
+  *  549fa48a2 - Fix order in which pipes are opened on linux.
+  *  f9dab3679 - Provide STL idiom for iterating tracks...
+  *  af13e8592 - More commands documented in wiki implemented.
+  *  5302dacf3 - Revert the reversion of the elegant fix of wrong MSVC
+    compiler warning
+  *  ce697d052 - mod-script-pipe python scripts working on linux too.
+  *  8e0cffb7f - Simplify GuardedCall and default its return type to
+    void
+  *  5407079c6 - Remove EXPERIMENTAL_OUTPUT_DISPLAY...
+  *  ad221b3e8 - Travis - Remove deprecated-2017Q4
+  *  34531b62f - Shift+Z for Zoom Toggle.   Theme tweaks.
+  *  1d5b373f7 - Move Gale and Martyn to emeritus.
+  *  c975de8c5 - More use of shared_ptr to Track, for safety...
+  *  0319d6ea6 - Friendlier command names in the Edit Chains dialogs...
+  *  fa53d521a - IteratorRange utilities
+  *  5da84b74a - Zooming Tweaks (for repair work) and Wording changes.
+  *  cfdb7950f - Update fix for #1554
+  *  bfbc218a5 - comments
+  *  bfa8a46ce - Prohibit duplication of any metadata tag names (up to
+    case); comments
+  *  44df6455a - Translate the special metadata tags in the edit dialog
+  *  d59592f86 - Fix some Mac compilation warnings
+  *  ff4040393 - Rewrite EqualMaps again, better.
+  *  6ca8cef34 - Fix for select next/previous clip
+  *  498747269 - Correct test of equality of hash maps
+  *  bec6f237b - Fix compilation warnings on Mac
+  *  cb403954f - Use std::[tr1::]unordered_(set|map), not the wxWidgets
+    container macros
+  *  cd8ec5e6a - Try another fix for AppVeyor.
+  *  57c68d144 - Revert "A more elegant fix of an (incorrect) MSVC
+    compiler warning..."
+  *  6967925e4 - Redo CommandManager::DescribeCommandsAndShortcuts with
+    pairs...
+  *  82952ac99 - Appveyor build settings.
+  *  21192a7e7 - ZoomToggle - Changes from user feedback.
+  *  8a074770e - IdentInterface::GetDescription() returns a translated
+    string...
+  *  0c88c8de8 - Supply Audacity.exe.manifest instead of generating it.
+  *  bf30c6198 - Improve mouse wheel zooming
+  *  0cc9c6bc3 - Zoom Toggle
+  *  f57fdc99d - Fix MSVC Build
+  *  499c6b4f3 - Fix building without libid3tag (#230)
+  *  8724a5a28 - Collect some macros in Internat.h; our own macro _ aids
+    debugging
+  *  70167a80f - Make _ force crash in debug build, if used in static
+    initializer
+  *  c6696f1b4 - Move definition of _ and related into Internat.h
+  *  e37d701bc - WXINTL_NO_GETTEXT_MACRO defined in compiler options...
+  *  6f7739464 - Fix line endings
+  *  2c3331424 - A more elegant fix of an (incorrect) MSVC compiler
+    warning...
+  *  5358e4151 - indentation
+  *  ebc1092c4 - One of the compilation warning patches in f463eda36c059
+    made a bug...
+  *  df1d9a08f - Bug1808 (crash in Sliding Time Scale/Pitch Shift)
+    PATCHED IN LIB-SRC...
+  *  27d2b7c51 - Add AutomationCommands class
+  *  d22430c78 - Merge pull request #229 from DjMorgul/master
+  *  f332b9e3c - Obtain file extension starting from the last . (rather
+    than the first) on Export command
+  *  4f76a4b5e - On GetTrackInfo command, return end time (a double)
+    with all its decimals
+  *  5e761f224 - Fix Record button pops up when clicked and it is down.
+  *  d2fe7b175 - Clean up most remaining MSVC warnings.
+  *  b2f8cf180 - Update fr.po
+  *  7c4faf7c3 - FR translation improvement
+  *  d4717de32 - A little mistake here for using incorrect script
+  *  1206afbe9 - Another minor update of audacity.pot ...
+  *  0badd2584 - Reviewed whether fields of PluginDescriptor are
+    translated or not...
+  *  c6bbe4c3d - Fix subtle error revealed by the previous commit ...
+  *  cafbff9ff - Separate plugin accessors for translated and
+    unstranslated strings...
+  *  91b0e82c1 - PluginDescriptor versions are in fact untranslated;
+    make that clear...
+  *  3b90538b8 - Remove description from PluginDescriptor...
+  *  ef25a1187 - Doxygen tweaks.
+  *  1320879ab - Reimplement multi-column format of
+    TimerProgressDialog...
+  *  e19a4fa94 -  Timer record exits Audacity more gracefully...
+  *  9a58ead5c - Uniformity of signatures of all command handler
+    functions
+  *  78aca8c13 - Remove inclusions of Menus.h
+  *  ab6de1181 - No more functor objects; all command handler functions
+    take same args
+  *  77c392d29 - AudacityProject::OnEffect wraps new function DoEffect
+  *  6dead232f - Pair CommandHandlerFinder with functor everywhere, but
+    not used yet
+  *  d263eaa97 - Remove the special PopupFunctor, redo it by other
+    means...
+  *  1e3ab82a0 - Effect commands store PluginID in CommandEntry
+    parameter, not functor
+  *  05984e8bf - CommandEntry stores a string parameter, passed in
+    CommandContext
+  *  0a711d8b2 - define CommandContext
+  *  aa5c3f12a - easy change key bindings
+  *  1f7b62f05 - AudacityProject::RebuildAllMenuBars is static
+  *  3769fdea0 - fix build
+  *  b53e7d7a8 - change a comment
+  *  c66eae1a4 - Fix uses of wxPLURAL and update audacity.pot ...
+  *  d5dca050b - Mid-cycle update of audacity.pot
+  *  d9c879881 - Appveyor (automated Windows builds) merge from
+    bslatner/master
+  *  9d6315fca - Ignore NuGet package binaries
+  *  053a2104a - XML library is required
+  *  baec81614 - Rewrite the composition of clip messages in i18n-
+    friendly way
+  *  def1d5250 - Substitute, don't concatenate, when composing localized
+    strings...
+  *  fa7f1a455 - Correct self-names for the two Chinese locales
+  *  e051de0b6 - Abandon the drag-and-drop of plug ins for now.
+  *  815a80846 - String literals for UTF-8 language names using octal
+    escapes only...
+  *  0df94faad - The message is not in fact a format
+  *  50d6e7518 - null checks -- fix Linux crash in drag-dropping files
+    onto app icon?
+  *  889284555 - Language name table is static and const
+  *  a2c37d643 - Some Doxygen comments
+  *  82ead4224 - Doxygen - Audacity version is now 2.2.2
+  *  c070800e8 - Modifications to the easy installation of .ny files
+  *  17b6ca387 - Install plug-in by file icon context menu or drop on
+    program icon...
+  *  b8df8e753 - macOs magic to allow drag and drop of .ny file onto
+    Audacity program icon
+  *  191945c8f - Make enablement of plug-in after drag-and-drop
+    persistent
+  *  0ec42f3dd - Fix some English grammar biases...
+  *  0bca8d15f - Better localization of tooltips in ASlider...
+  *  cfa62d1d3 - Fix a missed translation
+  *  a1530c36a - Rewrite "Interface preferences displays self-names of
+    languages" ...
+  *  1b19ab4f0 - Revert "Use unicode file format with BOM for
+    Languages.cpp"
+  *  3dc241ed5 - Use unicode file format with BOM for Languages.cpp
+  *  5e670c900 - Some i18n-hints
+  *  b1f7f921a - Translate the format "%s: %s" wherever user-visible...
+  *  3fbfef0eb - Plot Spectrum, Change Pitch localize pitch names;
+    Unicode sharp/flat
+  *  8b86d4688 - Use Unicode 1/3 fraction
+  *  6a810bd82 - Fix Windows Build
+  *  28fd3442b - Fix Windows build
+  *  0df4cd6c3 - Fix transform iterator code.  It was only a missing
+    #include.
+  *  1298ec849 - Cleanup wxPanelWrapper C++.
+  *  84a600bab - Fix windows build
+  *  a86decbbe - fix build
+  *  80a958f8a - Rewrite empty prompts to ShuttleGUI functions as {} ...
+  *  e0970ad1e - Remove unnecesary Format, Printf, casts to wxString
+  *  7fd78183d - Remove needless uses of wxString::c_str() in
+    wxString::Format...
+  *  0efbf6a19 - Localized default names and titles for many utility
+    dialogs...
+  *  384300016 - Define FileDialogWrapper, with localized default prompt
+    and name
+  *  cf4b9eb5c - Define wxDirDialogWrapper, with localized default
+    prompt and name
+  *  729fd3767 - wxDialogWrapper and wxPanelWrapper have localized
+    default window name
+  *  e8b875ff8 - Define AudacityMessageDialog wrapper around
+    wxMessageDialog...
+  *  af290d73c - Define AudacityTextEntryDialog wrapper around
+    wxTextEntryDialog...
+  *  ccb4bbac3 - Translate "Message" as default title of message box...
+  *  378c96fda - Consistently use translated effect name in titles of
+    message boxes...
+  *  d7574b799 - NoteTrack: Fix VZooming indicators.
+  *  916db7605 - Bug 1813 - Vertical Zooming Beartrap
+  *  26a18679f - Comment out iterator transform code
+  *  3c9cdac77 - Drag-and-drop checks file extensions first for plug-in
+    candidates...
+  *  2cdf931e5 - More IteratorRange utility functions and member
+    functions
+  *  7ec5fd79d - Interface preferences displays self-names of languages
+  *  2e8a73bab - Fix Windows build
+  *  765ca0c81 - Easy drag-and-drop installation of Nyquist and LADSPA
+    effects
+  *  2c2db0fe0 - Implement drag-and-drop of Nyquist, LADSPA, VST plug-
+    ins...
+  *  8cfb8d240 - Change ModuleInterface for support of drag-and-drop of
+    plug-in files
+  *  6463e1257 - Move MyCopyFile into class FileNames
+  *  0c97918bb - Ladspa, VST: As before eb3bc7e: keep registering even
+    if some errors
+  *  86b9c5c5f - Can use std::function on Mac too
+  *  80d7f2426 - NoteTrack VZooming.
+  *  94b117568 - mod-script-pipe: Recreate MS project and .sln files.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 21 Jan 2018 16:54:04 +0300
+
 audacity (1:2.1.3+git7713-e06a6fd79-1) unstable; urgency=medium
 
   * Compile

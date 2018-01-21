@@ -1,3 +1,154 @@
+gimp-devel (2.9.8+git39831-4d3720baad-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 4d3720baad3792a418f2d002b66440c1bda29cbb
+  * Date: 1516489731
+  * git changelog:
+  *  4d3720baad - app: in GimpDashboard, fix CPU-usage sampling on
+    Windows
+  *  567ff4e136 - app: fix the same warning in
+    gimp_levels_tool_config_notify()
+  *  cdf5bf6bf7 - app: prevent warnings in
+    gimp_levels_tool_config_notify()
+  *  06c1dc7584 - Update German translation
+  *  1648258985 - Update Turkish translation
+  *  7179bb6736 - Update Russian translation
+  *  8f441befb6 - build: add Basque translation to the Windows installer
+  *  eea34d6915 - app: fix translation context of group menus in
+    GimpDashboard
+  *  4249cee60b - Update Basque language
+  *  4521c089db - Update Basque language
+  *  aaa8afed90 - Update Basque language
+  *  c4cb7b406a - Updated Basque language
+  *  0823c255fa - app: add CPU group to GimpDashboard
+  *  b26a0a12a2 - app: various improvements to GimpMeter
+  *  c548d5d342 - Bug 792657 - A useless error message when cancelling
+    opening a .svgz.
+  *  2e18c80c58 - libgimp: add gimp_get_pdb_status() to return the
+    status of last...
+  *  911e46ee2b - plug-ins: indentation fix.
+  *  a15a18bd75 - Update Rusian translation
+  *  21227c2516 - INSTALL: various fixes.
+  *  a8b8463f16 - app: minor formatting cleanup in gimpguiconfig.c
+  *  7d5188cae6 - configure: depend on babl 0.1.40 or newer
+  *  093295470f - Bug 792606 - Resetting to defaults in Preferences
+    disables SWM
+  *  8da2590533 - Update Catalan translation
+  *  661a87c443 - Update Catalan translation
+  *  df70a35b71 - Update Catalan translation
+  *  42bcd4cb36 - Small fix to Catalan translation
+  *  0c1def0045 - Small fix to Catalan translation
+  *  a8bc8d202c - Bug 784480 - Clicking on-canvas GUI with a tablet
+    stylus crashes...
+  *  3568f1cb3b - app: reorder a line in
+    gimp_display_shell_constructed()
+  *  7f56393138 - app: use GEGL for transform-tools preview
+  *  47804ff77b - app: s/preceptual/perceptual/ in a string.
+  *  ac99d61111 - Updated French translation (main po file)
+  *  ec2c0cb58b - Update Spanish translation
+  *  c5d78cdd3f - NEWS: keep up-to-date.
+  *  cb78618d75 - Bug 783703: no progress bar changes when exporting to
+    psd format
+  *  2707236c34 - app: always resize SVG splash images to an ideal size.
+  *  7f481a6d16 - Update Catalan translation
+  *  f1e2b7c892 - app: improve splash screen sizing.
+  *  c77ec09fb2 - Update Polish translation
+  *  b23f231a1a - Bug 792470 - Some filters e.g. "Levels" are not added
+    to "Repeat last" history
+  *  458e313000 - Rename gimp.appdata.xml.in to
+    org.gimp.GIMP.appdata.xml.in.in.
+  *  b1d413dbd9 - NEWS: RGBE export added and AppStream update.
+  *  54dda25cfc - desktop: update the appdata to take care of the id
+    change.
+  *  d39f7d6fbe - Bug 791861 - Update appdata.xml AppStream ID to match
+    rDNS-style...
+  *  4849d41060 - plug-ins: check pointer before freeing.
+  *  35ecf06f56 - app: don't add blacklisted/excluded actions to the
+    action history
+  *  afe0c794e6 - libgimpbase: increase GIMP_PROTOCOL_VERSION, the
+    config message has changed
+  *  dcd4e46441 - plug-ins: implement RGBE exporting through GEGL.
+  *  8965ef8aae - NEWS: keep up-to-date.
+  *  3cca5a0a7b - plug-ins: use only "#?" for RGBE magic number.
+  *  bebb783c03 - Update Swedish translation
+  *  9799032e4f - Bug 792453: Extend the raw data import plugin to
+    open...
+  *  89445edee1 - Bug 783614 - On a 4k Screen, the text/graphics are too
+    small to...
+  *  341105366d - configure: use the poppler-data required version in
+    pkg-config check.
+  *  b7e50ac46a - Update French translation
+  *  9019c7e0f7 - devel-docs: don't forget flatpak as an official GIMP
+    binary!
+  *  3f7afd5494 - Bug 792439 - Status bar: Rotated angle is too close to
+    zoom arrow.
+  *  5db03953c0 - Bug 785138: .GIH brushes and reference displacement...
+  *  9df67e2134 - devel-docs: improve the statistics script.
+  *  5b80852c2a - devel-docs: add some statistics on C file changes.
+  *  794ca251be - devel-docs: add some stats on icons.
+  *  19741310db - devel-docs: add a release-stats.sh
+  *  e3a68f9a3a - NEWS: update with metadata improvements regarding
+    privacy issues.
+  *  13dcd876e5 - libgimp: always forgetting we need to update this def
+    file!
+  *  82f6baf2bb - plug-ins: file export should follow preferences
+    regarding metadata.
+  *  3061268e25 - libgimp: gimp_image_metadata_save_prepare() uses
+    metadata preferences.
+  *  4c4fa84f85 - app, libgimp, libgimpbase: new
+    gimp_export_(exif|xmp|iptc)() functions.
+  *  c49b8463bd - app: adding metadata handling as "Export Policies" in
+    preferences.
+  *  1a23115024 - Bug 784176 - Tags are exchanged between different
+    assets...
+  *  e27ce76a49 - Bug 790293 - Scale tool: Ctrl uses top-left corner of
+    selection...
+  *  7eccbe557e - Updated French translation for libgimp
+  *  9589d9009c - pdb: update README with new path.
+  *  5e3d4cf131 - libgimp: update gimp_image_metadata_save_prepare()
+    description.
+  *  096debb0fd - Bug 790552 - do not save metadata by default.
+  *  b118e8242b - Bug 784647: Crash when choosing debug option Show
+    Image Graph
+  *  21cb905dad - Revert "app: use FAST filter when painting xfer
+    surface"
+  *  bc5032012e - plug-ins: fix some coding-style issues in metadata-
+    editor.
+  *  62ee5d3c7e - plug-ins: metadata-editor crashes when strtok()
+    initialized with NULL.
+  *  4306f96941 - app: remove forgotten debug output from
+    gimp_transform_tool_modifier_key()
+  *  1d2c015dcf - app: fix modifiers being stuck in transform tools
+  *  31aaf42b90 - NEWS: improve some descriptions.
+  *  a5610e2d9b - NEWS: add some newlines
+  *  7bda46519e - NEWS: keep up-to-date.
+  *  657c39dc74 - plug-ins, themes: use the "normal text" color as
+    stdout color of...
+  *  a7677c865f - themes: add new style "gimp-python-console" for all
+    themes.
+  *  e663526de9 - Bug 753736: GIMP Python green prompt is virtually...
+  *  4645a98915 - Bug 792352: No namespace info available for XMP prefix
+    `darktable'
+  *  e7c3c9f575 - Updated Italian translation
+  *  072b167926 - Update German translation
+  *  29fbeb9e02 - plug-ins: "port" qbist to float (remove the uchar
+    conversion from float code)
+  *  4c519efefd - app: better shortened names for CIE LCH axis.
+  *  eaec634ed3 - app: use L*, a* and b* for the Lab channel short
+    names.
+  *  1b59adfa74 - Update Swedish translation
+  *  78476f3d09 - Update Swedish translation
+  *  b7a8c6f23b - NEWS: keep updated.
+  *  cd3d57de7f - app: forgot some short translated strings.
+  *  c8a8f66358 - app: add context to shortened strings.
+  *  6c9adcedc4 - app: adding comments for translators to shortened
+    labels.
+  *  49a22d6d90 - Update Polish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 21 Jan 2018 10:12:18 +0300
+
 gimp-devel (2.9.8+git39732-f7fe2753e2-1) unstable; urgency=medium
 
   * Compile

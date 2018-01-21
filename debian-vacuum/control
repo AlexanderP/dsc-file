@@ -2,13 +2,25 @@ Source: vacuum
 Section: net
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: cmake, debhelper (>= 7.0.50~), openssl, libqtwebkit-dev | libqt4-dev, libx11-dev, zlib1g-dev, libidn11-dev, libxss-dev, libenchant-dev, bc
-Standards-Version: 3.9.8
+Build-Depends: cmake, 
+               debhelper (>= 7.0.50~),
+               openssl, 
+               libqt5svg5-dev,
+               libqt5webkit5-dev,
+               libqt5x11extras5-dev,
+               libx11-dev,
+               qtmultimedia5-dev,
+               zlib1g-dev,
+               libidn11-dev, 
+               libxss-dev,
+               qttools5-dev-tools, qttools5-dev,
+               libenchant-dev, bc
+Standards-Version: 3.9.7
 Homepage: https://github.com/Vacuum-IM
 
 Package: vacuum
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libqt4-sql-sqlite, libvacuumutils37 (>= ${source:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt5sql5-sqlite, libvacuumutils37 (>= ${source:Version})
 Conflicts: vacuum-spellchecker
 Replaces: vacuum-spellchecker
 Description: Jabber client using Qt
@@ -19,8 +31,8 @@ Description: Jabber client using Qt
 Package: libvacuumutils37
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: libvacuumutils1., libvacuumutils1.19, libvacuumutils1.20, libvacuumutils1.21, libvacuumutils20, libvacuumutils21, libvacuumutils22, libvacuumutils23, libvacuumutils24, libvacuumutils25, libvacuumutils26, libvacuumutils27, libvacuumutils28, libvacuumutils29, libvacuumutils30, libvacuumutils31, libvacuumutils32, libvacuumutils33, libvacuumutils34, libvacuumutils35, libvacuumutils36,
-Replaces: libvacuumutils1., libvacuumutils1.19, libvacuumutils1.20, libvacuumutils1.21, libvacuumutils20, libvacuumutils21, libvacuumutils22, libvacuumutils23, libvacuumutils24, libvacuumutils25, libvacuumutils26, libvacuumutils27, libvacuumutils28, libvacuumutils29, libvacuumutils30, libvacuumutils31, libvacuumutils32, libvacuumutils33, libvacuumutils34, libvacuumutils35, libvacuumutils36,
+Conflicts: libvacuumutils20, libvacuumutils21, libvacuumutils22, libvacuumutils23, libvacuumutils24, libvacuumutils25, libvacuumutils26, libvacuumutils27, libvacuumutils28, libvacuumutils29, libvacuumutils30, libvacuumutils31, libvacuumutils32, libvacuumutils33, libvacuumutils34, libvacuumutils35, libvacuumutils36,
+Replaces:  libvacuumutils20, libvacuumutils21, libvacuumutils22, libvacuumutils23, libvacuumutils24, libvacuumutils25, libvacuumutils26, libvacuumutils27, libvacuumutils28, libvacuumutils29, libvacuumutils30, libvacuumutils31, libvacuumutils32, libvacuumutils33, libvacuumutils34, libvacuumutils35, libvacuumutils36,
 Description: Jabber client using Qt (shared library)
  Vacuum is a free instant messaging application designed for the Jabber
  (XMPP) IM network (including Google Talk). It has full Unicode support, 
