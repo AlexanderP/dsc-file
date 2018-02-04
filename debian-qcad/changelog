@@ -1,3 +1,71 @@
+qcad (3.19.0+git5285-08eff6fe0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 08eff6fe0ba1f5334fde3297af33f74f4da45fe4
+  * Date: 1517589569
+  * git changelog:
+  *  08eff6fe0 - fix cursor paths
+  *  b44b1d20e - fix cursor path
+  *  a41ef7b50 - update meta types
+  *  5470ffee4 - pass document interface when changing settings
+  *  1e296d938 - update copyright year
+  *  38e8dc0c7 - add fallback for temporary directory creation
+  *  ebe09003f - use document interface in layer dialog
+  *  fe1231522 - update resource files
+  *  c7661774f - update looking up actions from scripts in plugins
+  *  b1a4bb1ce - fix potential exceptions
+  *  327b12f7d - add qrc files
+  *  30ac978db - split development and release resources
+  *  2af345d39 - support loading DXF files from resources
+  *  5ae266f5c - support running scripts as resources in a plugin
+  *  38d1e3b2f - prevent duplicate script addons from plugins and files
+  *  deb4f9183 - fix addToPreview
+  *  877d36081 - Merge branch 'master' of github.com:qcad/qcad
+  *  4fd3fc8b8 - support scripts compiled as plugin
+  *  87ebf475d - Merge branch 'master' of github.com:qcad/qcad
+  *  f72b3e518 - support scripts compiled as plugin
+  *  29b8cee74 - Merge branch 'master' of github.com:qcad/qcad
+  *  73b09719a - support scripts compiled as plugin
+  *  6f34cf951 - tolerate absence of scripts folder
+  *  879f0584e - add exists
+  *  151d9ebc2 - tolerate absence of scripts folder
+  *  333c77126 - compile scripts plugin
+  *  a4eb1a515 - add scripts wrapper plugin
+  *  566356ffc - fix compiler warning
+  *  a2bb9af2e - update script bindings
+  *  a0480a095 - update RNewDocumentListener
+  *  dda971400 - update
+  *  ad8e532ad - support shape / shape intersections
+  *  b758668fa - update orientation property
+  *  6681ae387 - keep track of used text height
+  *  c5d1b5f29 - clean up
+  *  0c1c1f82e - optimize updateImage
+  *  ed55dfb94 - update parseScale
+  *  02fc3e8b2 - add orientation property for polyline entities
+  *  60b82e559 - add RPolyline::setOrientation
+  *  9db5f6b79 - update comment
+  *  1f4ed3f19 - update script bindings
+  *  823fb67a1 - disable panning using keys
+  *  a8b0ec2cd - add support for blocks rendered in pixel units
+  *  52e11bfc7 - refactor handling of drawables
+  *  d48967370 - add key listener
+  *  426546b9b - accept key event for number input
+  *  a99648ee2 - clean up
+  *  b7f6252a4 - let arrow key events reach main window
+  *  ce5477cdd - use configured default action as base class for print
+    preview
+  *  1f2309a92 - refactor initialization of default action
+  *  aad6ed724 - update script bindings
+  *  938624a49 - fix pdf export from outside print preview
+  *  08b68c110 - refactor handling of print preview
+  *  defef4281 - fix status of print preview button
+  *  6b74f5b65 - add forceGlobal to force action running in global
+    script engine
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 04 Feb 2018 09:34:35 +0300
+
 qcad (3.19.0+git5230-19af34184-1) unstable; urgency=medium
 
   * Compile

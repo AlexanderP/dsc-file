@@ -1,3 +1,161 @@
+gimp-devel (2.9.8+git39933-614b81ffb4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 614b81ffb44a67bdf849c87878787001eab62fbc
+  * Date: 1517749762
+  * git changelog:
+  *  614b81ffb4 - app, tools: rename "gimpdebug" to "gimp-debug-tool"
+  *  110779eba3 - app: update a GimpMessageBox repeated in a idle
+    function.
+  *  53f7da0408 - app: fix a few comments in last commits
+  *  823791164c - app: use gimp_transform_bezier_coords() when
+    transforming a GimpBezierStroke
+  *  d9ec9386ce - app: allow gimp_stroke_transform() to result in
+    multiple strokes
+  *  9bf1e1c884 - app: add gimp_transform_bezier_coords()
+  *  6b62cce03b - app: add gimp_transform_polygon_coords()
+  *  ea34bbc92b - app: add gimp_coords_interpolate_bezier_at()
+  *  275815c808 - app: misc cleanup in gimpcoords-interpolate
+  *  1cae93ac42 - app: use gimp_transform_polygon() in GimpCanvasPolygon
+  *  1750d97b11 - desktop: make the <release> tag texts translatable.
+  *  5fc91e92e1 - desktop: fix the appstream unit tests.
+  *  78f251b0a7 - Bug 779839 - Add <releases>-Tag to the
+    gimp.appdata.xml.in.
+  *  6d26f78cd6 - desktop: added release information to the AppStream
+    file...
+  *  518035c544 - po: add desktop/org.gimp.GIMP.appdata.xml.in to
+    POTFILES.skip
+  *  4a26d4a3e6 - Bug 793090 - GIMP crashes when invoking filter without
+    an image
+  *  11df85d783 - app: improve/fix wording in Prefs -> Debugging
+  *  91b35591c6 - app: add comment to gimp_transform_polygon()
+  *  17ec3d130e - app: fix gimp_transform_matrix_generic()
+  *  536c65afa0 - app: vbox doesn't need to be an object variable.
+  *  f93d23b01b - app: some code and UI cleanup in GimpCriticalDialog
+  *  6ebc43fdcb - Update Russian translation
+  *  605123d79d - app: add weak pointers for the curves and levels
+    hisrogram view members
+  *  42e9ddd4dd - app: make the buttons translatable again.
+  *  cd5c8d0340 - Move git-version.h to the toplevel also in .gitignore
+  *  44f23bdf0c - app: move git-version.h generation to the repository
+    root.
+  *  6fc05e3683 - app: print an EXIT verbose message before unrefing the
+    Gimp instance
+  *  9ec11eece9 - tools: formatting fixes in Makefile.am
+  *  abc1fbde79 - desktop: minor appdata <release> tag update.
+  *  31d55bc605 - app: adapt include guards of gimp-version.h to new
+    filename
+  *  6945e10b53 - Update POTFILES.in
+  *  4fd1c6c97c - app: add support for Linux backtrace() API.
+  *  986b3fd70a - app: remove duplicate include.
+  *  1b4efd2d5a - app, tools: rename app/version.[ch] to app/gimp-
+    version.[ch].
+  *  dd5be53836 - Update Russian translation
+  *  a56797f33a - NEWS: keep up-to-date.
+  *  1d67e0abcf - app: In GimpPaintTool, swap get_line_status()
+    coordinates
+  *  b40a64aab3 - build: add Greek translation to the Windows installer
+  *  c9ceccdfb2 - po-windows-installer: technical fix to the Greek
+    translation
+  *  04b4bccbb3 - app: #include <string.h> in gimp-transform-resize.c
+  *  5f58a7a260 - app: pass near-plane z-coordinate to gegl:transform
+  *  23f6369658 - libgimpmath: remove gimp_matrix3_will_explode()
+  *  3c0787e4c3 - app: use gimp_transform_polygon() in
+    gimp_transform_resize_boundary()
+  *  258e60f1b7 - app: use gimp_transform_polygon() in
+    GimpCanvasBoundary
+  *  4626190ac7 - app: use gimp_transform_polygon() in
+    GimpCanvasTransformGuides
+  *  9900573345 - app: use gimp_transform_polygon() in
+    GimpCanvasTransformPreview
+  *  cc20cb41f3 - app: add gimp_transform_polygon()
+  *  7dfe81f13d - configure.ac: require GEGL >= 0.3.29
+  *  ee6e981c04 - app: remove the "save your work and restart" advice on
+    fatal errors.
+  *  def98c5983 - Update Polish translation
+  *  0ac29c0b61 - Update POTFILES.in and POTFILES.skip
+  *  07e8ce3604 - app: add SIGABRT to be handled by gimp_fatal_error().
+  *  fe3cf08094 - app, tools: title capitalize the debug dialog titles.
+  *  b8fa968b79 - app: add backtraces on warning messages in
+    GIMP_UNSTABLE.
+  *  b318694bb2 - app, tools: install the debug tools in libexec when
+    appropriate.
+  *  4e5a5dbb87 - app: make the backtrace GUI actually work on Win32.
+  *  a3a4df9528 - app, tools: various fixes for Win32 build.
+  *  9ca8899a12 - libgimpbase, tools: clean some warnings on a Win32
+    build.
+  *  a700b15e37 - pdb: oups! I previously edited a generated file.
+  *  ae3cd00fbd - app, tools: add support for ExcHndl/DrMinGW for Win32
+    debugging.
+  *  015f2fc800 - INSTALL: add gdb or lldb as optional runtime
+    dependencies.
+  *  270730d5cf - app: add a debugging page in preferences.
+  *  4ca31b0571 - app: add lldb as backtrace-creator alternative to gdb.
+  *  eab961c9bb - app: test G_OS_WIN32 rather than G_OS_UNIX for new
+    backtrace feature.
+  *  f8411a3d1f - app: add a "generate-backtrace" preference in
+    GimpCoreConfig.
+  *  beede1718a - app, tools: add backtrace GUI for crashes as well.
+  *  bb88a2d52f - app: reimplement gimp_get_stack_trace().
+  *  9fdf35550b - app: new error dialog to backtrace and encourage
+    people to report bugs.
+  *  5da3bdb4ea - app: fix GimpToolCompass for one perfectly vertical
+    line
+  *  c71535b72a - Bug 792981 - Measure tool is measuring one pixel to
+    the right of initial point
+  *  da4f03b82e - Update Greek translation
+  *  fb9709be30 - Update Basque language
+  *  de5712ddb8 - Update Basque language
+  *  58155f64dd - Update Basque language
+  *  1493950dba - Update Basque language
+  *  78b711647c - Update Basque language
+  *  fab7d6c92d - Update Basque language
+  *  442be72630 - app: port relevant transform tools to
+    GimpGenericTransformTool
+  *  0334595cc1 - app: port GimpHandleGrid from
+    gimp_transform_matrix_handles() to ...
+  *  6a64f09681 - app: add show-guides property to GimpToolTransformGrid
+  *  4c71ee8e7a - app: add GimpGenericTransformTool
+  *  6d0190b7fd - app: add transform_valid member to GimpTransformTool
+  *  e7b6103cc8 - app: improve stability of Gaussian elimination in
+    transform-utils
+  *  5cd0ecc998 - app: fix rotation pivot of GimpCanvasHandle
+  *  de81e33340 - libgimpwidgets: add missing
+    gimp_color_selector_model_get_type in def...
+  *  dce3942a1d - app: in GimpDashboard, more CPU-usage sampling fixes
+    on Windows
+  *  6d075aa10a - app: some cleanup in the first of the two assert
+    removals below
+  *  12148e04c4 - configure.ac: require babl >= 0.1.42 and GEGL >=
+    0.3.28
+  *  0c34db8aac - Bug 792792 - Typo fix for an error message.
+  *  4c2df9b365 - app: all remaining g_assert() replaced by critical
+    warning and return...
+  *  b4c7dd8fd8 - app: run gimp_projectable_get_graph() before
+    gegl_node_get_parent()...
+  *  13b640f84c - libgimpwidgets: restore ABI of GimpColorSelectorClass
+  *  f87bc3fe09 - app: we should not have any g_assert*() code if
+    possible.
+  *  54a1e8f2b1 - libgimpwidgets: use g_return_if_reached() in
+    unreachable code path.
+  *  90037116e4 - libgimpwidgets: oups, fix some stupid miswrite.
+  *  36dd16c6c6 - Bug 792744 - Gimp crashes attempting to merge down a
+    hidden layer
+  *  af2cb761de - Bug 792744 - Gimp crashes attempting to merge down a
+    hidden layer
+  *  b9577a783d - Bug 792744 - Gimp crashes attempting to merge down a
+    hidden layer.
+  *  4d84925db0 - Bug 783680 - Allow to hide color models in
+    GimpColorScales.
+  *  37e9be3a4f - libgimpwidgets: arrange color models in tabs in
+    GimpColorScales.
+  *  8120694759 - app: add include to fix a warning.
+  *  db804ce540 - Update Polish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 04 Feb 2018 17:46:33 +0300
+
 gimp-devel (2.9.8+git39831-4d3720baad-1) unstable; urgency=medium
 
   * Compile

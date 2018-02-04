@@ -1,3 +1,34 @@
+gscan2pdf (1.8.11+git2730-59f86204-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 59f86204a6e2dc85014df703755025bd7486599b
+  * Date: 1516998486
+  * git changelog:
+  *  59f86204 - Update to Czech translation
+  *  16cc5442 - Bumped version to 1.8.11
+  *  d915753c - Support applying profiles resulting in multiple reloads,
+    to prevent profile dropdown from being cleared after setting
+    profile. Closes #276 (Scan profile stays blank)
+  *  4e1d7221 - Sort Data::Dumper output to make it easier to compare
+  *  e1f06e8f - Catch undefined stdout whilst parsing for program
+    version
+  *  dc79943c - + cancel-between-pages option to Gscan2pdf::Config
+  *  394cd9d9 - + notes to documentation about batch scanning from
+    flatbed
+  *  884d7df4 - Update copyright year and email
+  *  4aa360b7 - + preference "Force new scan job between pages"
+  *  eee4677b - Fix string interpolation
+  *  091e54a2 - Fix spelling in docs
+  *  9119210b - Refactor button ghosting in add_pdf_compression()
+  *  3692dc28 - + logging message to try to debug #276
+  *  0cad1e49 - Tidy previous commit
+  *  788dc9b3 - Use pdfunite instead of pdftk in tests
+  *  c3188fb2 - mention reportbug in docs
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 04 Feb 2018 05:47:00 +0300
+
 gscan2pdf (1.8.10+git2714-cbce9f3f-1) unstable; urgency=medium
 
   * Compile

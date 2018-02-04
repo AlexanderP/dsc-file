@@ -1,3 +1,31 @@
+deadbeef (0.7.2+git7596-31787060-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 3178706098ede6848b0eb6b94efd85d3b4dbb1b1
+  * Date: 1517582951
+  * git changelog:
+  *  31787060 - gtkui: log_window: use the same shadow type as the
+    log_view widget
+  *  a1bc01c6 - premake: added artwork plugin
+  *  93829a8b - premake: gtk3 build support; i686 build fixes
+  *  010ead4c - gtkui: re-enable gtkapplication
+  *  c6bce795 - gtkui: disabled gtkapplication
+  *  e3aec3e6 - gtkui: fixed gtk3.10 checks
+  *  fa7ee882 - rg_scanner: channel map converted to static const
+  *  a4facbf5 - ffmpeg: fixed missing decoder.open impl
+  *  a3cadf4c - alsa: fixed regression which caused track restart on
+    unpause
+  *  2bec203d - fixed license text in test sources
+  *  97e48a01 - update to latest osx/deps
+  *  04f148f9 - fixed PCM format conversion bug which was taking
+    channel0 for discarded channels, instead of keeping 0s; added a
+    couple of simple format conversion tests
+  *  9836d103 - rgscanner: better channel to speaker mapping handling
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 03 Feb 2018 23:34:18 +0300
+
 deadbeef (0.7.2+git7583-bc0eedc1-1) unstable; urgency=medium
 
   * Compile

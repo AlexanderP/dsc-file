@@ -1,3 +1,103 @@
+audacity (1:2.1.3+git7977-90e62728d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 90e62728dbdaab0f08b400604277e510d89fe1b7
+  * Date: 1517667797
+  * git changelog:
+  *  90e62728d - Fix Ukrainian translation
+  *  d5696a49b - Fix Ukrainian translation
+  *  1ca92d883 - Remove branches.txt.  Old experiment that is not
+    needed.
+  *  cf66f8805 - Fix build of mod-nyq-bench
+  *  e2f1e9fdd - Fix build of audacity.mo for zh_CN on Windows
+  *  2fea34739 - Updates to README.txt by Bill Wharrie
+  *  1ced86fce - Beta build
+  *  58d478c03 - Update for FFmpeg 3.5
+  *  3d4a357f9 - Update for FFmpeg 3.5
+  *  c1babb3bb - Revert "Make FFmpeg header files browseable in Xcode
+    project"
+  *  6f66ee565 - Make FFmpeg header files browseable in Xcode project
+  *  b878b011c - Fix warnings reported by the pvs-studio team, all
+    inconsequential
+  *  ec31d105b - Simplify conditions
+  *  0a035b0ff - Avoid bit-shifting of -1 value
+  *  c40b25462 - while -> if
+  *  4644b5cb1 - Simplify condition
+  *  168db87dd - Fix identical sub-expressions of - operator
+  *  7c7301162 - Where if and else branches were the same, simplify...
+  *  852935070 - Zoom on mouse when no selection
+  *  60ea8a662 - Update mac icons
+  *  d4b21bb33 - Bug 1600: Should keep progress dialog visible
+    throughout Exp. Multi
+  *  f5737be02 - Ran autoreconf --force --no-recursive
+  *  7c9273f0f - Revert "2.2.0 > 2.2.2 in configure"
+  *  92b6124bb - 2.2.0 > 2.2.2 in configure
+  *  c61b11fae - Corrections for pt_PT.po -- European Portuguese by
+    Bruno Ramalhete
+  *  22605c089 - Enable upstream dropout detection
+  *  b6255d4fa - Update DMG background
+  *  96a9a23de - Update installer images
+  *  5e2e5af0a - Update audacity icon
+  *  2677ec5fe - Bug1831: Export Multi fails? Erase incomplete, restore
+    original file!
+  *  533ca2407 - Raphaël Marinier: remove more unnecessary changes of
+    format...
+  *  c6e1665b5 - Simplification in av_log_wx_callback, because
+    wxLogDebug is threadsafe. (#246)
+  *  e82fcf954 - From Raphael Marinier: Fix Linux crash importing bad
+    .wav file...
+  *  2dbee940e - Fix Windows build
+  *  9e8d36adc - Fix Windows build
+  *  9c1b25131 - Corrections for pt_PT.po -- European Portuguese by
+    Bruno Ramalhete
+  *  52a7f2320 - Re-fix some warnings about mixing signed and unsigned
+    better...
+  *  85ceb5d7f - Correct Audacity version in INSTALL
+  *  3d2451e61 - Correct audacity version numbers in .pot and .po; es.po
+    format errors
+  *  5c1f11416 - Change audacity version in configure.ac
+  *  02caea1b8 - Updated 12 languages
+  *  e9e47bc50 - Updated pt_PT.po -- Portuguese (European) submitted by
+    Bruno Ramalhete
+  *  e401ca3af - Updated zh_CN.po -- Chinese (simplified) submitted by
+    mkpoli
+  *  67c95a670 - Updated ko.po -- Korean from Transifex
+  *  e76812ab9 - Updated eu.po -- Basque submitted by Xabier Aramendi
+    ("azpidatziak")
+  *  d8e2bd1e8 - Updated es.po -- Spanish submitted by Antonio Paniagua
+    Navarro
+  *  e7b931b5b - Updated el.po -- Greek submitted by Dimitris Spingos
+    (Δημήτρης Σπίγγος)
+  *  c9971404c - Updated de.po -- German submitted by Joachim Huffer
+  *  a84388066 - Updated da.po -- Danish submitted by scootergrisen
+  *  4315c063e - Updated tr.po -- Turkish submitted by Kaya Zeren
+  *  aa554a747 - Updated sv.po -- Swedish submitted by A. Regnander
+  *  7fd099111 - Updated fr.po -- French submitted by Olivier Humbert
+  *  2c762e75c - Updated uk.po -- Ukrainian submitted by Yuri Chornoivan
+  *  58e4823f6 - Bug1829, more: detect out-of-space when writing FFmpeg
+    formats
+  *  f4c8920e2 - Fix truncation on FFmpeg export
+  *  f52f2837b - Still better disk error detection in exports
+  *  38568f611 - Bug1829, more: check all errors flushing and closing
+    export files...
+  *  b3b4ace73 - CHANGE LIB-SRC: make FLAC export error-check the
+    closing of files
+  *  07bf08856 - Bug1829, more: correct error checks for writing MP3 &
+    add more of them
+  *  94247cc65 - Some comments in ToolDock.cpp
+  *  89d3d6e6e - Comments and name changes to clarify code for toolbar
+    configurations
+  *  19d4fcab2 - Remove unnused members
+  *  58b44baf0 - Some NULL checks... somehow I crashed on Mac but can't
+    repeat now
+  *  336b2a8fe - Allow scripting to select beyond tracks end time
+  *  2890e4db2 - Allow new empty project to be saved
+  *  76954f4bc - Update default tests in pipe-test.pl for 2.2.2
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 04 Feb 2018 03:56:02 +0300
+
 audacity (1:2.1.3+git7911-2ee3ba576-1) unstable; urgency=medium
 
   * Compile

@@ -1,29 +1,51 @@
 #!/bin/bash
 
-#grc
-
-LANG_OLD=""
-
 LANG="grc"
 
 CONTROL="control"
 rm -f *.install
 cp -f control.in ${CONTROL}
 
-for i in ${LANG}
-do
+
+# See https://github.com/tesseract-ocr/tessdata_best/pull/17
+dependencies() {
+  case "$1" in
+    aze)
+      sed 's/${misc:Depends}/&, tesseract-ocr-aze-cyrl (>= 3.99)/g'
+      ;;
+    uzb)
+      sed 's/${misc:Depends}/&, tesseract-ocr-uzb-cyrl (>= 3.99)/g'
+      ;;
+    aze-cyrl)
+      sed 's/${misc:Depends}/&, tesseract-ocr-aze (>= 3.99)/g'
+      ;;
+    uzb-cyrl)
+      sed 's/${misc:Depends}/&, tesseract-ocr-uzb (>= 3.99)/g'
+      ;;
+    srp-latn)
+      sed 's/${misc:Depends}/&, tesseract-srp (>= 3.99)/g'
+      ;;
+    *)
+      cat
+      ;;
+  esac
+}
+
+
+for i in ${LANG} ${LANG_NEW}; do
 j=$(cat lang.txt | grep "^${i}__" | awk -F '__' '{print $2}')
-cat >> ${CONTROL} << EOF
+dependencies $i >> ${CONTROL} << EOF
 Package: tesseract-ocr-${i}
 Architecture: all
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: \${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
+Breaks: tesseract-ocr (<< 3.99)
 Replaces: tesseract-ocr-data (<< 2)
 Description: tesseract-ocr language files for ${j}
- A commercial quality OCR engine originally developed at HP between 1985
- and 1995. In 1995, this engine was among the top 3 evaluated by UNLV. It
- was open-sourced by HP and UNLV in 2005. This package contains the data
+ Tesseract is an open source Optical Character Recognition (OCR)
+ Engine. It can be used directly, or (for programmers) using an API to
+ extract printed text from images. This package contains the data
  needed for processing images in a particular language.
 
 EOF
