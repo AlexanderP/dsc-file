@@ -1,3 +1,20 @@
+tesseract (4.00~git2198-ce7ee87f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://github.com/tesseract-ocr/tesseract.git
+  * Branch: master
+  * Commit: ce7ee87fa40745f9e4cb13ec0329787afd13ff56
+  * Date: 1516818671
+  * git changelog:
+  *  ce7ee87f - Merge pull request #1290 from amitdo/patch-1
+  *  d377281f - Update CMakeLists.txt
+  *  82ba4235 - Update CMakeLists.txt
+  *  2da95d63 - Add more avx2, sse4.1 flags. Add MSVC's AVX2 ICE
+    workaround.
+  *  4b6fefb2 - Add openmp support for Visual Studio builds.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 09 Feb 2018 22:24:26 +0300
+
 tesseract (4.00~git2193-c9169e5a-1) unstable; urgency=medium
 
   * Compile
@@ -24,6 +41,14 @@ tesseract (4.00~git2189-bc668da0-1) unstable; urgency=medium
   *  bc668da0 - Update README.md (#1239)
 
  -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 27 Dec 2017 10:01:26 +0300
+
+tesseract (4.00~git2188-cdc35338-5) unstable; urgency=medium
+
+  * Update README.debian and move to tesseract-ocr package.
+  * Sponsor Alexander Pozdnyakov as maintainer.
+  * Tweak tesseact --help to reduce bug reports.
+
+ -- Jeff Breidenbach <jab@debian.org>  Mon, 22 Jan 2018 13:27:41 -0800
 
 tesseract (4.00~git2188-cdc35338-4) unstable; urgency=medium
 

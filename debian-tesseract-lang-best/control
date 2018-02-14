@@ -425,8 +425,8 @@ Description: tesseract-ocr language files for Assamese (best)
 Package: tesseract-ocr-aze-cyrl
 Architecture: all
 Provides: tesseract-ocr-language, tesseract-ocr-lang
-Depends: ${misc:Depends}, tesseract-ocr-aze (>= 3.99)
-Recommends: tesseract-ocr (>= 3.99)
+Depends: ${misc:Depends}
+Recommends: tesseract-ocr (>= 3.99), tesseract-ocr-aze (>= 3.99)
 Breaks: tesseract-ocr (<< 3.99)
 Replaces: tesseract-ocr-data (<< 2)
 Description: tesseract-ocr language files for Azerbaijani (Cyrillic) (best)
@@ -776,7 +776,7 @@ Description: tesseract-ocr language files for Sinhala (best)
 Package: tesseract-ocr-srp-latn
 Architecture: all
 Provides: tesseract-ocr-language, tesseract-ocr-lang
-Depends: ${misc:Depends}, tesseract-srp (>= 3.99)
+Depends: ${misc:Depends}, tesseract-ocr-srp (>= 3.99)
 Recommends: tesseract-ocr (>= 3.99)
 Breaks: tesseract-ocr (<< 3.99)
 Replaces: tesseract-ocr-data (<< 2)
@@ -867,8 +867,8 @@ Description: tesseract-ocr language files for Uzbek (best)
 Package: tesseract-ocr-uzb-cyrl
 Architecture: all
 Provides: tesseract-ocr-language, tesseract-ocr-lang
-Depends: ${misc:Depends}, tesseract-ocr-uzb (>= 3.99)
-Recommends: tesseract-ocr (>= 3.99)
+Depends: ${misc:Depends}
+Recommends: tesseract-ocr (>= 3.99), tesseract-ocr-uzb (>= 3.99)
 Breaks: tesseract-ocr (<< 3.99)
 Replaces: tesseract-ocr-data (<< 2)
 Description: tesseract-ocr language files for Uzbek (Cyrillic) (best)

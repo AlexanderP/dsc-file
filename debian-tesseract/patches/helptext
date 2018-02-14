@@ -1,0 +1,34 @@
+Description: Reduce bug reports by tweaking help text.
+ Some advanced modes require data not shipped by distibution.
+ Adjust documentation to reduce confusion from that.
+ 
+ .
+ tesseract (4.00~git2188-cdc35338-5) unstable; urgency=medium
+ .
+   * Update README.debian and move to tesseract-ocr package.
+   * Sponsor Alexander Pozdnyakov as maintainer.
+   * Tweak tesseact --help to reduce bug reports.
+Author: Jeff Breidenbach <jab@debian.org>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: vendor, N/A
+Bug: https://github.com/tesseract-ocr/tesseract/issues/707#issuecomment-364159579
+Forwarded: no
+Reviewed-By: Jeff Breidenbach <jab@debian.org>
+Last-Update: <2018-02-08>
+
+--- tesseract-4.00~git2188-cdc35338.orig/api/tesseractmain.cpp
++++ tesseract-4.00~git2188-cdc35338/api/tesseractmain.cpp
+@@ -138,7 +138,7 @@ void PrintHelpForPSM() {
+ 
+ void PrintHelpForOEM() {
+   const char* msg =
+-      "OCR Engine modes:\n"
++      "OCR Engine modes: (see https://github.com/tesseract-ocr/tesseract/wiki#linux)\n"
+       "  0    Original Tesseract only.\n"
+       "  1    Neural nets LSTM only.\n"
+       "  2    Tesseract + LSTM.\n"

@@ -9,6 +9,17 @@ Build-Depends: debhelper (>= 7.0.50~), libleptonica-dev (>= 1.72~),
 Standards-Version: 4.1.3
 Homepage: https://github.com/tesseract-ocr/
 
+Package: tesseract-ocr
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ tesseract-ocr-eng (>= 4.00~), tesseract-ocr-osd (>= 4.00~), libtesseract4 (>= 4.00~)
+Replaces: tesseract-ocr-data
+Description: Tesseract command line OCR tool
+ Tesseract is an open source Optical Character Recognition (OCR)
+ Engine. It can be used directly, or (for programmers) using an API to
+ extract printed text from images. It supports a wide variety of
+ languages. This package includes the command line tool.
+
 Package: libtesseract-dev
 Section: libdevel
 Architecture: any
@@ -69,17 +80,6 @@ Description: Tesseract OCR library
  Engine. It can be used directly, or (for programmers) using an API to
  extract printed text from images. It supports a wide variety of
  languages. This package includes the shared library.
-
-Package: tesseract-ocr
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends},
- tesseract-ocr-eng (>= 4.00~), tesseract-ocr-osd (>= 4.00~), libtesseract4 (>= 4.00~)
-Replaces: tesseract-ocr-data
-Description: Tesseract command line OCR tool
- Tesseract is an open source Optical Character Recognition (OCR)
- Engine. It can be used directly, or (for programmers) using an API to
- extract printed text from images. It supports a wide variety of
- languages. This package includes the command line tool.
 
 Package: tesseract-ocr-all
 Architecture: all
