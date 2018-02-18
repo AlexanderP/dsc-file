@@ -1,0 +1,71 @@
+#!/usr/bin/make -f
+include /usr/share/dpkg/pkg-info.mk
+
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+
+PACKAGE = eiskaltdcpp
+
+DEBIAN_PATH := $(abspath $(dir $(MAKEFILE_LIST)))
+USCAN_REPORT = $(shell uscan --noconf --report --dehs "$(DEBIAN_PATH)")
+CUR_VER = $(shell echo "$(USCAN_REPORT)" | sed -n 's/.*<upstream-version>\(.*\)<\/upstream-version>.*/\1/p')
+CUR_URL = $(shell echo "$(USCAN_REPORT)" | sed -n 's/.*<upstream-url>\(.*\)<\/upstream-url>.*/\1/p')
+
+
+
+export DEB_CXXFLAGS_MAINT_APPEND = $(shell dpkg-buildflags --get CPPFLAGS)
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+CMAKEOPTS = -DUSE_MINIUPNP=ON \
+            -DLOCAL_MINIUPNP=OFF \
+            -DLUA_SCRIPT=ON \
+            -DWITH_LUASCRIPTS=ON \
+            -DPERL_REGEX=ON \
+            -DWITH_DHT=ON \
+            -DUSE_IDNA=ON \
+            -DWITH_SOUNDS=ON \
+            -DUSE_QT_SQLITE=ON \
+            -DUSE_JS=ON \
+            -DUSE_QT_QML=OFF \
+            -DUSE_ASPELL=ON \
+            -DFREE_SPACE_BAR_C=ON \
+            -DUSE_GTK3=OFF \
+            -DUSE_GTK=ON \
+            -DCHECK_GTK_DEPRECATED=OFF \
+            -DUSE_LIBGNOME2=OFF \
+            -DUSE_LIBNOTIFY=ON \
+            -DCREATE_MO=ON \
+            -DUPDATE_PO=OFF \
+            -DNO_UI_DAEMON=ON \
+            -DXMLRPC_DAEMON=OFF \
+            -DJSONRPC_DAEMON=ON \
+            -DUSE_CLI_JSONRPC=ON \
+            -DWITH_DEV_FILES=ON \
+            -DREPLACE_VERSION="$(DEB_VERSION_UPSTREAM)"
+
+ifneq (,$(filter $(DEBIAN_CODENAME),sid stretch buster zesty artful)) 
+	CONTROL = control.sid
+	export QT_SELECT=qt5
+	CMAKEOPTS += -DUSE_QT=OFF -DUSE_QT5=ON -DUSE_QT_QML=OFF
+else
+	CONTROL = control.jessie
+	CMAKEOPTS += -DUSE_QT=ON -DUSE_QT5=OFF -DUSE_QT_QML=ON
+endif
+
+
+%:
+	dh $@ --buildsystem=cmake --parallel --list-missing
+
+override_dh_auto_configure:
+	cp debian/$(CONTROL) debian/control
+	dh_auto_configure -- $(CMAKEOPTS)
+
+override_dh_auto_clean:
+	cp debian/$(CONTROL) debian/control
+	dh_auto_clean
+
+get-orig-source:
+	wget -c "$(CUR_URL)" -O "$(PACKAGE)_$(CUR_VER).orig.tar.xz"
