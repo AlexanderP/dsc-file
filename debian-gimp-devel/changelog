@@ -1,3 +1,168 @@
+gimp-devel (2.9.8+git40031-bdab2829ef-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: bdab2829ef10778017983d00ebbc9a608c9eb25c
+  * Date: 1518880022
+  * git changelog:
+  *  bdab2829ef - app: more action history sorting logic
+    improvements/fixes
+  *  2e54483361 - app: improve action history sorting
+  *  5f1816aa01 - app: extend initialism-based action search
+  *  9653cdfc40 - app: exclude undo/redo actions from history
+  *  2816695eda - app: add gimp_action_history_is_blacklisted_action()
+  *  dba39b13ad - app: add missing comma in
+    gimp_action_is_gui_blacklisted()
+  *  2275b8e520 - Update and improve Russian translation based on
+    feedback from uroki-gimp.ru
+  *  49b3695e46 - Bug 784802 - Crop and rectangle-select tools
+    incorrectly detect ...
+  *  547d3149d5 - Bug 784802 - Crop and rectangle-select tools
+    incorrectly detect ...
+  *  7959c7bf61 - app: set GimpRectangleOptions highlight-opacity scale
+    to 100
+  *  9e8e321d62 - libgimpbase: rename FILE * argument to stream instead
+    of fd.
+  *  7b6756af8e - libgimpbase: Cast fd to FILE* before calling fileno
+  *  4190f400b0 - app: enable gegl:color-to-alpha custom GUI
+  *  f234920487 - Update Swedish translation
+  *  91a947bbe5 - app: don't allow setting NULL buffer to drawables;
+    modify steal_buffer()
+  *  18a5e41e8e - app: test for gdb and lldb existence in Preferences
+    with...
+  *  fcde7bdf47 - app: small cleanup in xcf_load_channel_props()
+  *  3b8e1ebecb - app: use gimp_drawable_steal_buffer() in
+    gimp_text_layer_from_layer()
+  *  38d4aa8121 - Bug 793428 - Errors when loading an XCF with a saved
+    selection mask
+  *  b50be495cb - app: add gimp_drawable_steal_buffer()
+  *  24fcabc1ca - app: allow passing a NULL buffer to
+    gimp_drawable_set_buffer[_full]()
+  *  13f638fb3f - Update Polish translation
+  *  37f9906961 - app: when WARNING or CRITICAL debugging are ignored,
+    go to terminal.
+  *  a1b1f53bae - Updated Italian translation
+  *  5b3c18223a - NEWS: keep up-to-date.
+  *  127b8470f9 - data: improve the tip about the save and export
+    format.
+  *  d916fedf92 - app: auto-backup of current work-in-progress images
+    during a crash.
+  *  1be002254d - Bug 793392 - Issue when painting with some layer modes
+    ...
+  *  8d3b287273 - app: improve gimp_layer_mode_get_format()
+  *  ec14e1006e - app: add a g_return_val_if_fail() to avoid a crash.
+  *  2956cde6cf - app: switch to #ifdef GEGL_BUG_645810_SOLVED code.
+  *  5b58cc4b7c - build: fix header search paths for windres calls
+    (Win32 build).
+  *  1282a95e6b - Bug 793393 - gimputils.c compilation error under
+    Win32.
+  *  77dcbb52bd - app: fix severity output when redirected to stderr.
+  *  77ed476113 - app: add GIMP_MESSAGE_BUG_WARNING +
+    GIMP_MESSAGE_BUG_CRITICAL severity.
+  *  3dff485d57 - devel-docs: update the debugging-tips file.
+  *  67d0848b9b - NEWS: keep up-to-date.
+  *  6f324b867a - Bug 783755 - Smudge should blend the smudged colors
+    using linear RGB
+  *  3bea6dce03 - app: don't choke when being asked for
+    GIMP_UNIT_PERCENT's factor or digits
+  *  a86eee6ae9 - Bug 793276 - Make jitter scale run to 5 instead of 50
+  *  fd37737fe4 - Bug 400448 - ruler subdivision is wrong for inches
+  *  ac3392477b - app: don't disable undo for unattached items in
+    gimp_item_{start,end}_move()
+  *  68e37f28c2 - Bug 793373 - Crash when ctrl-alt-clicking, dragging
+    then releasing...
+  *  d9987ea7f1 - Bug 793373 - Crash when ctrl-alt-clicking, dragging
+    then releasing...
+  *  b0cd4412e0 - app: make backtrace processed in the thread where
+    error happens.
+  *  5d200c2c4b - app: handle GEGL WARNING and CRITICAL with the new
+    debugging GUI.
+  *  34fe992f44 - app: keep track of number of errors and traces in
+    GimpCriticalDialog.
+  *  4e293a8696 - libgimpbase: allow NULL prog_name in
+    gimp_print_stack_trace().
+  *  040533249c - libgimpbase: use backtrace_symbols_fd() rather than...
+  *  539927ebfa - app: replace all g_assert() by the newly added
+    gimp_assert()
+  *  6db5ba61b2 - Update Polish translation
+  *  ba4c544c29 - Update Greek translation
+  *  4be9f84ed5 - app: pass the GdkWindow to
+    gimp_spin_scale_update,clear_target()
+  *  7bfab7150c - Bug 792991 - Crash when undoing a paste while naming
+    pasted layer
+  *  bd9c569e21 - libgimpbase: forgot (again!) to add the new debug
+    functions in def file.
+  *  ffb94967fa - devel-docs: add some generic statistics on all changed
+    files.
+  *  7aa7e3ca23 - app: check that GimpTool's display is present before
+    actual commit.
+  *  fa53be1a57 - app: simply pass through from the COMMIT to HALT
+    action.
+  *  4ae8f5a7b4 - Bug 793150 - gimp_display_get_image: assertion...
+  *  a5bc153343 - app: fix a second switch with missing paste types.
+  *  da3baa1cab - Bug 793360 - Error when copy-pasting in place a full
+    layer.
+  *  d0ae244fe8 - app: invalidate channel boundary upon buffer "changed"
+    signal
+  *  10c125c627 - app: keep ancestor set in gimp_layer_start_move(), for
+    use in end_move()
+  *  c39d551f39 - app: clean splash
+  *  0613bc948f - app: remove one level of indentation from
+    gimp_meter_expose_event()
+  *  e5452adedd - Updated Danish translation of gimp-python
+  *  3eb09f61e6 - Updated Danish translation of gimp-windows-installer
+  *  26e90bfd1f - build: add Indonesian translation to the Windows
+    installer
+  *  e53d0c742c - libgimp: replace gimp_on_error_query() and
+    g_on_error_stack_trace().
+  *  276f07521c - app, libgimpbase: move the debug functions to
+    libgimpbase.
+  *  43d7a3c77d - app: the crashlog file path is wrong on non-Win32.
+  *  7348f17828 - app: debug preference always sensitive if backtrace()
+    available.
+  *  d5a67cb162 - app: make debugging preference finer-grained than a
+    boolean.
+  *  387a429e37 - po-windows-installer: a few fix miss and re-formatting
+    long lines.
+  *  8f11684188 - po-windows-installer: initial Indonesian translation.
+  *  97716ea3c7 - po-windows-installer: add Indonesian translation.
+  *  8d2ae895bd - app, tools: use the new gimp_print_stack_trace() to
+    output the...
+  *  5de7aab482 - app: replace g_on_error_query() and
+    g_on_error_stack_trace() by...
+  *  580ed29fd2 - Updated Danish translation of gimp-libgimp
+  *  753f4cf4a3 - app: don't check stack_trace_mode anymore in
+    gimp_get_stack_trace().
+  *  07355803a8 - app: use gegl_buffer_signal_connect() in gimp:buffer-
+    source-validate
+  *  94554fcc0c - app: resize group-layer mask after moving the group
+  *  88c5eb6318 - NEWS: keep up-to-date.
+  *  af6b891b64 - plug-ins: in file-psd, read and write group-layer
+    masks
+  *  7e661d3ca9 - pdb: allow adding masks to group layers in layer-add-
+    mask
+  *  9befb8594e - pdb: fail layer-remove-mask if applying a mask to a
+    group layer
+  *  e7a2624a85 - app: fix undo when resizing a group layer with a mask
+  *  17fb644787 - app: add XCF version 13 for images with group-layer
+    masks
+  *  36dec4e6b0 - Bug 51112 - Support layer masks on layer groups
+  *  02a20c6c73 - app: add gimp_item_{start,end}_move()
+  *  2d2dc450e8 - plug-ins: clean out some tabs who lost their way.
+  *  42eaf588fd - plug-ins: ico export crashes on indexed images.
+  *  534e5971fc - app: don't set properties of invisible handles in
+    GimpToolTransformGrid
+  *  dee7dbc399 - app: subdivide perspective-transformed Bezier curves
+  *  9ca36a40a4 - app: same fix/optimization for the propwidgets in
+    app/widgets/
+  *  cc97a87257 - libgimpwidgets: propwidgets: don't g_object_set() the
+    same value again
+  *  d0ede35379 - Bug 793169 - Current Makefile.am not working on Mac.
+  *  b5cc23bf2a - Update Polish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 17 Feb 2018 21:23:26 +0300
+
 gimp-devel (2.9.8+git39933-614b81ffb4-1) unstable; urgency=medium
 
   * Compile

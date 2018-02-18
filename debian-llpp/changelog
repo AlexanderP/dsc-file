@@ -1,3 +1,213 @@
+llpp (26.0.0+git2776-83fa635-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://repo.or.cz/llpp.git
+  * Branch: master
+  * Commit: 83fa6358f9fe108f1cbe7ffd9a649554a9cab1ba
+  * Date: 1518693330
+  * git changelog:
+  *  83fa635 - CSS
+  *  19c7a01 - Avoid VLAs
+  *  7580dad - Plug a leak
+  *  5dd0d80 - Simplify
+  *  3f3abf6 - Simplify
+  *  1b593fb - Whoops
+  *  7548f28 - Cosmetics
+  *  c51ec66 - Refactor outline processing
+  *  012a57d - Remove pointless code
+  *  c8bb5aa - Make help helpful even without opened document
+  *  640f1e9 - Expand
+  *  6a5eba3 - Locks around page/tile freeing
+  *  2078d4a - Sync with upstream
+  *  486b6c0 - Move E into the nearest relevant scope
+  *  8fd6348 - Reject empty keys
+  *  f81e816 - Implement some feature requests
+  *  d08d06b - More intuitive history navigation
+  *  2da9656 - Ignore gravity
+  *  c594f45 - Recent compilers can output dependencies themselves
+  *  434b266 - UI colors
+  *  50a80d2 - Do not leak memory
+  *  c654792 - Address #60
+  *  0f57b48 - Address #59
+  *  8369cf9 - Make pax less confusing
+  *  01ff933 - Whoops
+  *  32081b5 - Sync with upstream
+  *  4fa75de - Sync with upstream
+  *  9bd13e9 - Sync with upstream
+  *  d1d0d03 - Refactor
+  *  34acf12 - Cosmetics
+  *  cc5a1c2 - Use cmd_
+  *  753e192 - Update for shake 0.16
+  *  4b197c1 - Commas
+  *  b8534ce - Cosmetics
+  *  7dec5f0 - Fix corner case
+  *  1a94a83 - Do not needlessly recompute layout
+  *  5ede632 - Consistency
+  *  026901c - Better describe_location
+  *  3603d54 - "Fix" describe_location
+  *  0e8b08a - Allocate memory for texowners and texids at the same
+    instant
+  *  8a08a88 - Simplify
+  *  951fc31 - Fix block/page selection
+  *  d881efa - Ash workaround
+  *  b3f2f1d - Sync with upstream
+  *  945d627 - Use proper reporting functions
+  *  d14f666 - Use proper err function
+  *  af256f5 - Make non-builtin font loading work again
+  *  d7ae82f - Fallback to pdf suffix by default
+  *  4fd5b9f - Sync with upstream
+  *  57f1d46 - Zooming
+  *  1ee4d62 - Track external fullscreen-ing properly
+  *  1e7d609 - Kill redundant line
+  *  65a464a - hmm
+  *  a7d32bd - Merge pull request #51 from nojb/master
+  *  ac408ab - Fix deprecation warnings under OS X
+  *  25a98a2 - Fix html processing
+  *  4bba0a7 - Cosmetics
+  *  9ef9707 - Move guard where it belongs
+  *  f1b88c3 - Remove pointless free
+  *  822cd00 - Remove pointless attribute
+  *  4fc8055 - Fix native build
+  *  7e72a75 - Cosmetics
+  *  ea154bd - Consistency
+  *  67a39d8 - Cosmetics
+  *  d9738cd - Sync with upstream
+  *  d535a72 - Simplify
+  *  a3e6ad6 - Address #49
+  *  6f05c0d - Fix broken gotor[d]
+  *  5bf40fc - Sync with upstream
+  *  1d12059 - Extend
+  *  1415638 - Properly handle scroll bar visibility
+  *  2143481 - Sprinkle with some diagnostics
+  *  da81581 - It's not
+  *  d54cc5f - Fix the condition and error reporting
+  *  bbedf2b - Rejig and comment
+  *  4d61f8b - Robustify mb to utf8 converstion
+  *  886dd6c - Slide-show mode
+  *  ffeac25 - WShoops
+  *  8b3c3bf - Make intentry accept negative numbers
+  *  606ca0f - Just use a copy
+  *  d55e611 - Fix origin
+  *  04e9d80 - Updatge
+  *  08464e5 - Whoops
+  *  8d2ea0e - Mention mupdf+macOS quirk
+  *  907b3a3 - Fix darwin detection
+  *  3ba449f - WIP
+  *  894400d - WIP
+  *  8bb66f3 - WIP
+  *  9c57e15 - WIP
+  *  b630853 - Merge pull request #40 from nojb/master
+  *  75eb1bb - Up-to-date gc handling
+  *  e044223 - Merge remote-tracking branch 'upstream/master'
+  *  1ef1cdc - Remove gc scriptability
+  *  6572184 - Sync with upstream
+  *  5e58240 - Merge remote-tracking branch 'upstream/master'
+  *  d2b9f5c - "Fix" raw literals
+  *  a577ea7 - Whoops
+  *  0aacf2f - Harden version check
+  *  35113fb - llpp: Fix brightness increase key
+  *  5be06f7 - M-h M-C-\
+  *  0cef951 - Cosmetics
+  *  b1d8678 - Cosmetics
+  *  04afdb8 - Refactor
+  *  a9b90a2 - More closure cosmetics/consistency/correctness
+  *  7bdba79 - Cosmetics
+  *  985db8a - Cosmetics
+  *  4abb5e8 - Unify closure of the write end of the pipe
+  *  7f82ab8 - Fix selstring
+  *  617d33a - Bump
+  *  78d308f - Do not die on save failures
+  *  0ebf438 - Reduce whitespace diff
+  *  299c0c8 - Merge remote-tracking branch 'upstream/master'
+  *  cbba929 - Rename wsi_cocoa.ml -> wsi_osx.ml
+  *  cf20d4e - Adapt BUILDING
+  *  23e0d2f - Adapt build.sh to build Cocoa version
+  *  f8576ac - Fix warnings
+  *  40b3320 - Fix bad merge
+  *  2f093e3 - Move OS X building instruction to BUILDING
+  *  fa9be7d - Lower OS X required version to 10.10
+  *  e435000 - Add wrapper-script for auto-reload on file change
+  *  a711676 - Add OS X build instructions to README
+  *  1e83730 - Finish merge (fix mac key codes)
+  *  c271e76 - Sync with upstream (WIP)
+  *  22740b9 - Redundant
+  *  73fea48 - Get i3bar height dynamically
+  *  e2e9a43 - Add cyrillic
+  *  871ce49 - Safety net
+  *  5ea88ef - Better
+  *  8c4191e - Specials handling
+  *  f63f1fa - Cosmetics
+  *  5dca65b - Cosmetics
+  *  1c57ca7 - Update
+  *  eeb8cf3 - Remove manual clearing
+  *  e4674af - Cosmetics
+  *  d087008 - Change the update cursor default to true
+  *  b72f1c8 - Modern monitors are bigger
+  *  a685c81 - Sync with upstream
+  *  43e104d - Change font size
+  *  4c37234 - Add image/png
+  *  d441b85 - Off by one somewhere
+  *  771dc2a - Update
+  *  2fc96b5 - Add missing keys.ml compilation
+  *  af6c381 - Consistency
+  *  67fb95f - Avoid visual artifacts when reshaping
+  *  d7930d1 - Fix initial autoscroll
+  *  9522312 - Cosmetics
+  *  5f914aa - Unbreak specials in auto narrow mode
+  *  923f47d - Cosmetics
+  *  45bd33c - Rebrand
+  *  c03980d - More mimes
+  *  cca8fac - Update
+  *  59ed216 - Cosmetics
+  *  539f9d0 - Cosmetics
+  *  0782eb7 - Make usage of .opt tools optional
+  *  c59dafd - Be explict about read type
+  *  0456613 - Right...
+  *  a1d4985 - Add epub to html conversion
+  *  7f968d3 - Remove fontconfig support
+  *  62e7fed - Cosmetics
+  *  645e2b8 - Cosmetics
+  *  8817a51 - Cosmetics
+  *  0515bfa - Cosmetics
+  *  e8ca739 - Consistency
+  *  f1310fe - Get rid of special handling of keypad
+  *  f684c81 - Hodgepodge of...
+  *  1e3ec44 - Cosmetics
+  *  0587000 - Cosmetics
+  *  73138c0 - Refactor
+  *  4d613ef - Cosmetics
+  *  10a851d - Cosmetics
+  *  cd191fe - Cosmetics
+  *  4e52bf6 - Consistent cosmetics
+  *  0a057d4 - Rename type
+  *  0969546 - Consistency
+  *  9f6f003 - Fix parallel native build too
+  *  897f5bb - Fix parallel build issue
+  *  7eb8017 - Refactor
+  *  3aefa69 - Handle allocation failure
+  *  14986ea - Move zero keycode handling where it belongs
+  *  d463687 - Unbreak mode switch + cosmetics
+  *  a5da61f - Use ADT instead of polyvariants
+  *  cdcb47d - Remove (now) pointless comments
+  *  727d3c0 - Unbreak searching
+  *  c50bffb - Bring some sanity into key handling
+  *  0d84fa1 - Refactor
+  *  4b7985f - Conclude pp.sed removal
+  *  b7d1211 - Get rid of pp.sed
+  *  92218bf - Cosmetics
+  *  f4fc89e - Sync with upstream
+  *  2cc6023 - Fix harmless but incorrect allocation retry
+  *  3aed797 - Sync with upstream
+  *  6b8eedb - Robustify
+  *  2ed2e87 - Restore info wrt. dates
+  *  e0190eb - Use metadata API
+  *  a0c64e9 - Cosmetics
+  *  2221a03 - Use rofi if available
+  *  a23f203 - Cosmetics
+  *  e1cd51d - Use helper to split strings
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 15 Feb 2018 19:28:24 +0300
+
 llpp (23.0.0+git2419-f15aac7-2) unstable; urgency=medium
 
   * Rebuild 

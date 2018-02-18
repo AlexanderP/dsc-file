@@ -1,3 +1,14 @@
+tesseract (4.00~git2198-ce7ee87f-2) unstable; urgency=medium
+
+  * Add a description - patches/man.diff
+  * Corrected the spelling - patches/helptext, doc/combine_tessdata.1.asc
+  * Fixed version of debhelper - control
+  * Fix: "file contains trailing whitespace" - control,rules
+  * Add: dep5 copyright
+  * Build with hardening=+all.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 17 Feb 2018 21:59:08 +0300
+
 tesseract (4.00~git2198-ce7ee87f-1) unstable; urgency=medium
 
   * Compile

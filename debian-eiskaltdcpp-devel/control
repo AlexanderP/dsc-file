@@ -1,7 +1,7 @@
 Source: eiskaltdcpp-devel
 Section: net
 Priority: optional
-Maintainer: Boris Pek <tehnick@debian.org>
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: cmake,
                debhelper (>= 9),
                libaspell-dev,
@@ -39,6 +39,9 @@ Depends: eiskaltdcpp-emoticons,
          eiskaltdcpp-scripts,
          eiskaltdcpp-sounds,
          ${misc:Depends}
+Provides: eiskaltdcpp-unstable
+Replaces: eiskaltdcpp-unstable
+Conflicts: eiskaltdcpp-unstable
 Description: EiskaltDC++ metapackage
  This package installs the most popular and recommended combination of
  EiskaltDC++ related packages.
@@ -50,6 +53,9 @@ Description: EiskaltDC++ metapackage
 Package: eiskaltdcpp-common
 Architecture: all
 Depends: ${misc:Depends}
+Provides: eiskaltdcpp-common-unstable
+Replaces: eiskaltdcpp-common-unstable
+Conflicts: eiskaltdcpp-common-unstable
 Multi-Arch: foreign
 Description: common files for EiskaltDC++
  This package contains the common files for the different EiskaltDC++ versions.
@@ -61,6 +67,9 @@ Description: common files for EiskaltDC++
 Package: eiskaltdcpp-emoticons
 Architecture: all
 Depends: ${misc:Depends}
+Provides: eiskaltdcpp-emoticons-unstable
+Replaces: eiskaltdcpp-emoticons-unstable
+Conflicts: eiskaltdcpp-emoticons-unstable
 Multi-Arch: foreign
 Description: emoticons for EiskaltDC++
  This package contains the emoticon packs for EiskaltDC++.
@@ -73,6 +82,9 @@ Package: eiskaltdcpp-scripts
 Architecture: all
 Depends: ${misc:Depends}
 Recommends: php-cli
+Provides: eiskaltdcpp-scripts-unstable
+Replaces: eiskaltdcpp-scripts-unstable
+Conflicts: eiskaltdcpp-scripts-unstable
 Multi-Arch: foreign
 Description: scripts examples for EiskaltDC++
  This package contains the scripts examples for EiskaltDC++.
@@ -85,6 +97,9 @@ Description: scripts examples for EiskaltDC++
 Package: eiskaltdcpp-sounds
 Architecture: all
 Depends: ${misc:Depends}
+Provides: eiskaltdcpp-sounds-unstable
+Replaces: eiskaltdcpp-sounds-unstable
+Conflicts: eiskaltdcpp-sounds-unstable
 Multi-Arch: foreign
 Description: sound files for EiskaltDC++
  This package contains the sound files for EiskaltDC++.
@@ -98,6 +113,9 @@ Section: libs
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Multi-Arch: no
+Provides: libeiskaltdcpp2.3-unstable
+Replaces: libeiskaltdcpp2.2, libeiskaltdcpp2.2-unstable, libeiskaltdcpp2.3, libeiskaltdcpp2.3-unstable
+Conflicts: libeiskaltdcpp2.2, libeiskaltdcpp2.2-unstable, libeiskaltdcpp2.3, libeiskaltdcpp2.3-unstable
 Description: DC++ kernel library from EiskaltDC++
  This package installs only DC++ kernel library which required EiskaltDC++.
  .
@@ -108,7 +126,10 @@ Description: DC++ kernel library from EiskaltDC++
 Package: libeiskaltdcpp-dev
 Section: libdevel
 Architecture: any
+Provides: libeiskaltdcpp-dev-unstable
 Depends: libeiskaltdcpp2.4 (= ${binary:Version}), ${misc:Depends}
+Replaces: libeiskaltdcpp-dev-unstable
+Conflicts: libeiskaltdcpp-dev-unstable
 Multi-Arch: no
 Description: DC++ kernel from EiskaltDC++ (development files)
  This package contains header files for EiskaltDC++ kernel library.
@@ -126,9 +147,9 @@ Depends: eiskaltdcpp-common,
          ${shlibs:Depends}
 Recommends: libqt5script5,
             libqt5scripttools5
-Provides: eiskaltdcpp-qt-mini
-Replaces: eiskaltdcpp-qt-mini
-Conflicts: eiskaltdcpp-qt-mini
+Provides: eiskaltdcpp-qt-mini, eiskaltdcpp-qt-mini-unstable, eiskaltdcpp-qt-unstable
+Replaces: eiskaltdcpp-qt-mini, eiskaltdcpp-qt-mini-unstable, eiskaltdcpp-qt-unstable
+Conflicts: eiskaltdcpp-qt-mini, eiskaltdcpp-qt-mini-unstable,
 Description: EiskaltDC++ GUI based on Qt
  This package installs only EiskaltDC++ with GUI based on Qt.
  .
@@ -139,6 +160,9 @@ Description: EiskaltDC++ GUI based on Qt
 Package: eiskaltdcpp-qt-data
 Architecture: all
 Depends: ${misc:Depends}
+Provides: eiskaltdcpp-qt-data-unstable
+Replaces: eiskaltdcpp-qt-data-unstable
+Conflicts: eiskaltdcpp-qt-data-unstable
 Suggests: eiskaltdcpp-emoticons,
           eiskaltdcpp-scripts,
           eiskaltdcpp-sounds,
@@ -157,9 +181,9 @@ Depends: eiskaltdcpp-common,
          eiskaltdcpp-gtk-data (= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Provides: eiskaltdcpp-gtk3
-Replaces: eiskaltdcpp-gtk3
-Conflicts: eiskaltdcpp-gtk3
+Provides: eiskaltdcpp-gtk3, eiskaltdcpp-gtk-unstable, eiskaltdcpp-gtk3-unstable
+Replaces: eiskaltdcpp-gtk3, eiskaltdcpp-gtk-unstable, eiskaltdcpp-gtk3-unstable
+Conflicts: eiskaltdcpp-gtk3, eiskaltdcpp-gtk-unstable, eiskaltdcpp-gtk3-unstable
 Description: EiskaltDC++ GUI based on GTK+
  This package installs only EiskaltDC++ with GUI based on Gtk (based on
  FreeDC++ and LinuxDC++ projects).
@@ -175,6 +199,9 @@ Suggests: eiskaltdcpp-emoticons,
           eiskaltdcpp-scripts,
           eiskaltdcpp-sounds,
           php-cli
+Provides: eiskaltdcpp-gtk-data-unstable
+Replaces: eiskaltdcpp-gtk-data-unstable
+Conflicts: eiskaltdcpp-gtk-data-unstable
 Multi-Arch: foreign
 Description: data files for EiskaltDC++ Gtk
  This package contains the data files for EiskaltDC++ Gtk.
@@ -186,6 +213,9 @@ Description: data files for EiskaltDC++ Gtk
 Package: eiskaltdcpp-daemon
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
+Provides: eiskaltdcpp-daemon-unstable
+Replaces: eiskaltdcpp-daemon-unstable
+Conflicts: eiskaltdcpp-daemon-unstable
 Suggests: eiskaltdcpp-cli
 Description: EiskaltDC++ daemon
  This package installs only EiskaltDC++ daemon (without any GUI).
@@ -203,6 +233,9 @@ Depends: libdata-dump-perl,
          libterm-shellui-perl,
          ${misc:Depends},
          ${perl:Depends}
+Provides: eiskaltdcpp-cli-unstable
+Replaces: eiskaltdcpp-cli-unstable
+Conflicts: eiskaltdcpp-cli-unstable
 Suggests: eiskaltdcpp-daemon
 Description: EiskaltDC++ command-line interface
  This package installs EiskaltDC++ CLI (command-line interface) written in perl.

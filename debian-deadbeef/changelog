@@ -1,3 +1,80 @@
+deadbeef (0.7.2+git7648-e346ad96-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: e346ad960aef7e68ef29a75a0a921b4bd544a8d4
+  * Date: 1518701249
+  * git changelog:
+  *  e346ad96 - adplug: added readBuf to libbinio, used from hsc.cpp for
+    speed improvement
+  *  5458d749 - wavpack: fix version checking
+  *  ad01db6c - wavpack: improved wavpack version check (fixes #1973)
+  *  ef7d51cb - wavpack: version 5 support with DSD
+  *  a0c1f41d - flac: cleanup redundant / repeated seeking and other
+    legacy
+  *  7c5426e2 - aac: early out on mp4 files without valid audio tracks
+  *  c1d92973 - cocoaui: don't render empty strings in playlist
+  *  27ae8ddd - flac: don't load empty string from tags
+  *  71bf7a90 - streamer: added comments; removed obsolete comments
+  *  ccc27bc8 - added scripts for building portable builds locally using
+    docker
+  *  2e1828ad - gtkui: remove bogus X11.h includes
+  *  685b3f14 - streamer: fix avg bitrate null ptr bug (fixes #1968)
+  *  123b5b83 - alsa: fixed missing mutex unlock
+  *  68da94df - pltbrowser: localization fix
+  *  99d54602 - updated po files
+  *  7411712f - Update medialib.c
+  *  b962de8e - Set plugins API to newest for all plugins
+  *  f3a1e84c - hotkeys: exclude 'Toggle In Playback Queue' from
+    playlist menu
+  *  56612533 - cleanup translation/extra.c of stuff that's now covered
+    by translation/plugins.c
+  *  afb272d9 - localization: sort plugin files; exclude examples and
+    soundtouch; report source filenames; code reformat
+  *  5b9784a3 - dumb: replace volume ramping integer entry with a
+    dropdown
+  *  69dba33d - updated po files with plugin strings
+  *  04c4ddf6 - updated plugins translation strings
+  *  7f962df0 - localization: improved plugin action parser; ignore
+    tools folder; skip strings without alphabetical chars; split strings
+    containing slashes
+  *  212f1f6e - added plugin strings to po files
+  *  6af79081 - plugin action/config localization tools
+  *  73a66d5d - localization: extract.pm from android branch
+  *  81324e2d - streamer: fixed applying output format settings
+  *  0445ff4e - updated po files
+  *  15ab6787 - gtkui: fixed strings in sound preferences UI
+  *  9b098ee1 - gtkui: exclude 'Remove Track(s) from playlist' from
+    playlist drop-down menu + update api version (#1965)
+  *  85ea1042 - cocoaui: fixed DdbSeekBar mouse tracking
+  *  c0ebb63e - cocoaui: frame update / seekbar update code cleanup
+  *  858745a7 - cocoaui: cleanup seekbar from osx10.9 rendering; fixed
+    seeking regression caused by timer behavior change
+  *  ae68b2af - gtkui: fixed a few layout issues in Sound preferences
+  *  f9aae813 - gtkui: disable localization for numeric strings in Sound
+    Settings
+  *  86366262 - gtkui: fixed gtk3 build
+  *  fb5f228b - Merge branch 'setformat'
+  *  b073fb8d - resampler: remove input-based samplerate calculation
+    from resampler
+  *  b382c6cf - streamer: gtkui: improved UI and fixed logic for
+    samplerate override
+  *  2dfbe87f - gtkui: samplerate configuration value clamping
+  *  24c0b41b - gtkui: added UI for overriding samplerate
+  *  e580419c - streamer: prevent setformat wait check racecondition
+    causing a random startup crash
+  *  9d86ccfb - alsa: fixed -EPIPE / startup stuttering problem
+  *  d64382fb - alsa: refactor / cleanup
+  *  e64f3252 - premake: added supereq and mono2stereo plugins
+  *  ad3424a7 - premake: added artwork plugin
+  *  704dc1a3 - streamer: improved format switching logic
+  *  156417c4 - coreaudio: minor editing
+  *  dd89649d - gtkui: splitter: Use smaller handle size in locked mode
+    and refactor some of the code (#1964)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 15 Feb 2018 19:41:28 +0300
+
 deadbeef (0.7.2+git7596-31787060-1) unstable; urgency=medium
 
   * Compile

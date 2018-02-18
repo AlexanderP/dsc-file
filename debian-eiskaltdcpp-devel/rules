@@ -46,7 +46,7 @@ CMAKEOPTS = -DUSE_MINIUPNP=ON \
             -DWITH_DEV_FILES=ON \
             -DREPLACE_VERSION="$(DEB_VERSION_UPSTREAM)"
 
-ifneq (,$(filter $(DEBIAN_CODENAME),sid stretch buster zesty artful)) 
+ifneq (,$(filter $(DEBIAN_CODENAME),sid stretch buster zesty artful))
 	CONTROL = control.sid
 	export QT_SELECT=qt5
 	CMAKEOPTS += -DUSE_QT=OFF -DUSE_QT5=ON -DUSE_QT_QML=OFF

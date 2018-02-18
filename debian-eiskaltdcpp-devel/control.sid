@@ -112,6 +112,7 @@ Package: libeiskaltdcpp2.4
 Section: libs
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
+Multi-Arch: no
 Provides: libeiskaltdcpp2.3-unstable
 Replaces: libeiskaltdcpp2.2, libeiskaltdcpp2.2-unstable, libeiskaltdcpp2.3, libeiskaltdcpp2.3-unstable
 Conflicts: libeiskaltdcpp2.2, libeiskaltdcpp2.2-unstable, libeiskaltdcpp2.3, libeiskaltdcpp2.3-unstable

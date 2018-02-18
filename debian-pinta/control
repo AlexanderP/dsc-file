@@ -2,16 +2,16 @@ Source: pinta
 Section: graphics
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 9), 
-               cli-common-dev (>= 0.5.7~), 
+Build-Depends: debhelper (>= 9),
+               cli-common-dev (>= 0.5.7~),
                autoconf,
                automake,
-               dh-autoreconf, 
+               dh-autoreconf,
                gettext, 
-               gtk-sharp2, 
-               yelp-tools, 
+               gtk-sharp2,
+               yelp-tools,
                libglib2.0-dev,
-               nunit-console, 
+               nunit-console,
                mono-reference-assemblies-4.0 | wget
 Build-Depends-Indep: intltool,
                mono-devel (>= 2.8),
@@ -20,7 +20,7 @@ Build-Depends-Indep: intltool,
                libglade2.0-cil-dev,
                libmono-addins-cil-dev,
                libmono-addins-gui-cil-dev,
-Standards-Version: 3.9.8
+Standards-Version: 4.1.3
 Homepage: http://pinta-project.com/
 
 Package: pinta
