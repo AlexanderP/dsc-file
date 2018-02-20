@@ -19,16 +19,16 @@ Origin: vendor, N/A
 Bug: https://github.com/tesseract-ocr/tesseract/issues/707#issuecomment-364159579
 Forwarded: no
 Reviewed-By: Jeff Breidenbach <jab@debian.org>
-Last-Update: <2018-02-08>
+Last-Update: <2018-02-20>
 
---- tesseract-4.00~git2188-cdc35338.orig/api/tesseractmain.cpp
-+++ tesseract-4.00~git2188-cdc35338/api/tesseractmain.cpp
-@@ -138,7 +138,7 @@ void PrintHelpForPSM() {
+--- tesseract-4.00~git2207-766b7bd6.orig/api/tesseractmain.cpp
++++ tesseract-4.00~git2207-766b7bd6/api/tesseractmain.cpp
+@@ -128,7 +128,7 @@ static void PrintHelpForPSM() {
  
- void PrintHelpForOEM() {
+ static void PrintHelpForOEM() {
    const char* msg =
 -      "OCR Engine modes:\n"
 +      "OCR Engine modes: (see https://github.com/tesseract-ocr/tesseract/wiki#linux)\n"
-       "  0    Original Tesseract only.\n"
-       "  1    Neural nets LSTM only.\n"
-       "  2    Tesseract + LSTM.\n"
+       "  0    Legacy engine only.\n"
+       "  1    Neural nets LSTM engine only.\n"
+       "  2    Legacy + LSTM engines.\n"
