@@ -17,13 +17,13 @@ dependencies() {
       sed 's/${misc:Depends}/&, tesseract-ocr-uzb-cyrl (>= 3.99)/g'
       ;;
     aze-cyrl)
-      sed 's/${misc:Depends}/&, tesseract-ocr-aze (>= 3.99)/g'
+      sed 's/Recommends.*/&, tesseract-ocr-aze (>= 3.99)/g'
       ;;
     uzb-cyrl)
-      sed 's/${misc:Depends}/&, tesseract-ocr-uzb (>= 3.99)/g'
+      sed 's/Recommends.*/&, tesseract-ocr-uzb (>= 3.99)/g'
       ;;
     srp-latn)
-      sed 's/${misc:Depends}/&, tesseract-srp (>= 3.99)/g'
+      sed 's/${misc:Depends}/&, tesseract-ocr-srp (>= 3.99)/g'
       ;;
     *)
       cat
@@ -46,7 +46,7 @@ Description: tesseract-ocr language files for ${j}
  Tesseract is an open source Optical Character Recognition (OCR)
  Engine. It can be used directly, or (for programmers) using an API to
  extract printed text from images. This package contains the data
- needed for processing images in a particular language.
+ needed for processing images in ${j} language.
 
 EOF
 
