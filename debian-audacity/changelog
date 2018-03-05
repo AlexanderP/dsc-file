@@ -1,3 +1,312 @@
+audacity (1:2.2.2+git8257-fb8b797d6-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: fb8b797d631ef1ac0dcecf5b70bb7b95beb50bd5
+  * Date: 1520081621
+  * git changelog:
+  *  fb8b797d6 - Layout changes
+  *  6b3041118 - Add Help buttons to three Dialogs.
+  *  6914c2141 - Fix parentheses in a Lisp comment
+  *  24a350920 - Internationalization of strings in .ny files, both
+    headers and bodies
+  *  4dfa9aae8 - Combine message catalogs into one...
+  *  38a6ba520 - Generate nyq_po/audacity.pot
+  *  36ab6c733 - Rewrites of all the .ny files for internationalization
+  *  ac9148e48 - Don't use \n sequence inside Lisp strings needing
+    translation...
+  *  da39cc451 - Remove redundant ellipses from names in .ny files...
+  *  0beb16210 - Usage of _ in Nyquist program bodies
+  *  da9471ac7 - Internationalize some of sample-data-export.ny,
+    including HTML...
+  *  4733899dd - Rewrite default values of string controls
+  *  447d15bc7 - Rewrite trailing labels of controls
+  *  8709e9735 - Rewrite choice controls
+  *  4018e3b87 - Rewrite prompts in ;control lines
+  *  cc455fac1 - Rewrite ;copyright
+  *  6298ac947 - Rewrite ;author
+  *  5e390f331 - Rewrite ;info
+  *  72df4e833 - Rewrite ;action
+  *  a13827e02 - Rewrite ;name
+  *  ff3a869e8 - Line breaks allowed in strings (or lists) in $ lines;
+    \n means n ...
+  *  ad4843621 - Allow Nyquist header lines to start with $
+  *  ba8e6bd46 - Change tokenization of header comment lines & translate
+    strings ...
+  *  087994990 - Register translation functions for Nyquist effects into
+    XLisp runtime
+  *  6ea647cc1 - Set up for extracting i18n strings from .ny files with
+    xgettext
+  *  d3493814e - Fix Mac build
+  *  3e8dec452 - Give track name overlay a background.
+  *  3f358a39b - Remove results window from BatchProcessDialog
+  *  6509947de - Fix some MSVC warnings.
+  *  29b214367 - Make std::tuple known in Mac build
+  *  4e0420b9b - In all .ny, http: > https: for Audacity websites
+  *  6b2a219e2 - Changes to make xlisp.h usable in C++ code...
+  *  5aa70545d - Use casts with function pointers to quiet compilation
+    warnings in Nyquist
+  *  8a216e86c - Update audacity.pot for C++ string changes so far
+  *  223e0d588 - Update audacity.pot for C++ strings so far in 2.3.0
+  *  332d62823 - Update POTFILES.in for new and removed files
+  *  42eadfc6f - sort POTFILES.in, so less diff to see in the next
+    commit
+  *  d226aaa8e - Add a space
+  *  59d41a206 - Refine buttons (Chains)
+  *  68e8a7568 - Merge branch 'chains' into master
+  *  ef63f716e - Remove duplicate commands from 'Select Commands'
+    dialog.
+  *  bf03fd874 - Add details box to BatchCommandDialog
+  *  f5929381e - Add buttons to Edit Chains Dialog
+  *  f01fed2ba - Remove unwanted items from 'Select Command' in chains.
+  *  1ef4d7362 - bug 1839 - Consistent recording behavior
+  *  1412f21f6 - Make the name of a control in the selection bar less
+    verbose
+  *  4474dec9c - Fix more hassle from the MSVC STL implementation.
+  *  1fb333e9c - Merge branch 'scripting'
+  *  ca2dc254b - Added a regression test and an image mangling python
+    script
+  *  104c3b6a5 - Add scriptables to screenshot, remove menus.
+  *  e1c30db38 - Fix Open and Save project.
+  *  ea4968e09 - Add GetInfo Preferences.
+  *  11fa48d66 - Fix some warnings.
+  *  f10b9c68e - wxString in Nyquist prompt makes trip to UTF8 and back
+    properly...
+  *  6d687136a - Bug1845: Remove the vacuous undo check, wasn't good
+    enough anyway
+  *  e8da2f82a - Wording.
+  *  8991fe752 - Fix incorrect https and translation markings.
+  *  66c421f28 - Fix Windows build
+  *  cf9ab7040 - bug 1741 Update target of audio import help button
+  *  e5052a197 - Use a type distinction for key strings in normalized
+    form...
+  *  19014f22b - Prompt for track selection when required
+  *  298e440e1 - Fix compilation of EXPERIMENTAL_EFFECTS_RACK again
+  *  a52f7f531 - Fix build of Nyquist workbench
+  *  05de90d4a - James' automation project, minus the new foreign
+    function in XLisp
+  *  33daaafc5 - Make Nyquist effects define their parameters.
+  *  12a2fbf48 - Build on Linux
+  *  0ad533a74 - Automation -> Scripting.
+  *  08b1db614 - Rearrange automation menu, and fix duplicated items.
+  *  fa49d9453 - Script work
+  *  4724c6a13 - Fix spectral preferences extra caching issue.
+  *  6a5a61d39 - Fix reload bug.
+  *  e3ef968d5 - Add DragCommand.  Default Y/N on optional fields.
+    Open/Save project items.
+  *  bcf0865c1 - UnmuteAllTracks, not UnMuteAllTracks.
+  *  859fe69a1 - Case insensitive command names.
+  *  e9e9ee299 - Can choose by Channel or by Track in Set commands.
+  *  8ab934526 - Work on Scripts.
+  *  aae9349f2 - Fix ToneGen automation.
+  *  89cd4aef8 - More Screenshot options
+  *  79145d3e8 - Remove "list" from LISP label format.
+  *  b4f7f485a - Less verbose LISPy output of GetInfo: Type=Labels
+  *  a2eb8cdae - Support Spectral Selection and Spectrogram mode in
+    Automation.
+  *  3c5468a1c - Add buttons.  Help and Cancel.
+  *  f7fe29565 - Make Message command into an AudacityCommand.
+  *  edf90d6e2 - Add envelope commands
+  *  5d36890cb - Shorter command names.  General tidying.
+  *  62ca1cce2 - Improved labels script.
+  *  29c96f547 - Add ability to set the selected label.
+  *  26e1a3336 - More screenshot options.
+  *  5e2371c63 - Use a-lists for Lispy output.
+  *  510f68e9a - Fix \n shenanigans in command output.
+  *  65c160212 - Script the images for Tracks page of manual.
+  *  24e8bbc62 - Scripts in Piped-Work
+  *  1f605ccfc - Fix ScreenshotCommand
+  *  85c36fe7f - Implement selection from ends of tracks.
+  *  99e18a889 - Implement ReloadPreferences for SetPreferences Command.
+  *  1551a5a07 - Include tips in command list.
+  *  5c2f35d96 - Fix Automation listing
+  *  78fbb6e21 - Fix GetInfo: Commands (Automated type matching matched
+    'the wrong thing').
+  *  1d9477a45 - SetClip, SetLabel, SetProject added
+  *  2180379a1 - Optional parameters now working.
+  *  c02a29e26 - Compilation on Mac
+  *  8ebf502cd - Cleaner class hierarchy
+  *  b1b1a362e - Doxygen, Clips and Labels
+  *  ca5dac59f - Support: JSON, Lispy or Other formats
+  *  c0c5cc633 - Structured output for CommandContext
+  *  b83b862b3 - OldStyleCommandType - It's on the way out.
+  *  2f6fc0a1e - Long message target
+  *  e29699086 - More Menus Items, Better prompting Dialogs.
+  *  1c988b4e3 - Automation: AudacityCommand
+  *  b7b01d48e - Replace 2.2.2 'Easter Egg' with place-holder
+  *  bab8ea839 - Thanks for nothing, MSVC std::list<T>::iterator
+    implementation...
+  *  e094dcbaf - Fix unbalanced #pragma warning since commit  080dd34
+  *  a1c03d0f7 - Bug 1786: duplicate shortcuts can be created
+  *  2a08a3cc0 - Fix windows build...
+  *  e3f2a3e3f - Merge pull request #254 from GitHaarek/patch-1
+  *  636e137ee - Merge pull request #257 from Polynomial-C/no_midi
+  *  2ece1acae - Fix build
+  *  e6d069787 - Fix mistake in commit a1dc830 and add a comment
+  *  47dab27df - Update pl.po from Transifex - ready to merge
+  *  d77daa027 - OnShowEffectsRack follows the unused argument
+    convention
+  *  7134ca662 - Fix typo
+  *  de568fc11 - Avoid some needless repaints of AButton
+  *  44bf93894 - indentation
+  *  5aca7b175 - Be careful about pluginsettings.cfg compatibility...
+  *  942175f27 - Comments which IdentInterface functions return
+    persistent values
+  *  575070e9a - Remove PluginDescriptor::GetTranslatedEffectFamily...
+  *  79a9f3f59 - Simplify sorting of effects
+  *  097764d94 - Distinguish Effect Family Id from Effect Family Name...
+  *  d1d78fd56 - Oops, reversions
+  *  8d886aa50 - Oops, revert unready work mistakenly submitted
+  *  86b86a264 - remove file
+  *  ece3f9a49 - Fix typo
+  *  8d6917308 - foo
+  *  459e82452 - Dark versions of spectrograms
+  *  931e48320 - Rearrange automation menu, and fix duplicated items.
+  *  cbbbabb1e - Clean up oddments script.
+  *  34bf4c817 - More spectral images.
+  *  fe03e3cf5 - Add more spectral images
+  *  a9d6be00a - Fix spectral preferences extra caching issue.
+  *  de17e6bbc - Fix reload bug.
+  *  23dd853a3 - Add make html script.
+  *  9bb41d696 - Arrange and Align done.
+  *  41a0b64c0 - New script for arrange.
+  *  ab0d853d9 - More hover highlighting of buttons in oddments script.
+  *  2088e44f0 - Add docimages_oddments.py for the weirder cases.
+  *  4412f325d - Add Clips and Boundaries Scripts.
+  *  ab99b7d6c - Add Envelope script
+  *  43da4995a - Better optionality.
+  *  a36490a0b - Add DragCommand.  Default Y/N on optional fields.
+    Open/Save project items.
+  *  1ffccbd74 - UnmuteAllTracks, not UnMuteAllTracks.
+  *  7dc36eeab - Case insensitive command names.
+  *  123348630 - Can choose by Channel or by Track in Set commands.
+  *  d7953e9ef - Add docimages_all.py script.
+  *  7cfe4ac20 - Add space and dc bias to afters script.
+  *  aff0e242a - Fix ToneGen automation.
+  *  93275b0ff - Effect examples added
+  *  c8bbbe3aa - Script for 'after'
+  *  825df0f21 - More Screenshot options
+  *  213202d4f - Shared part of script extracted.
+  *  0ec5cbb33 - Remove "list" from LISP label format.
+  *  7b4d55acc - Add script for spectrograms.
+  *  4567f2283 - Less verbose LISPy output of GetInfo: Type=Labels
+  *  fda56c7d6 - fix
+  *  4274ba7d0 - Support Spectral Selection and Spectrogram mode in
+    Automation.
+  *  a13788576 - Add buttons.  Help and Cancel.
+  *  7c819595b - Make Message command into an AudacityCommand.
+  *  8b4b16524 - Prevent crash on reentrant Nyquist.
+  *  57c50ff9a - Nyquist can now make a selection and not have it
+    overwritten by Effect.
+  *  3d0d28eb0 - Add envelope commands
+  *  d7e4e338f - Nyquist now defines its parameters.
+  *  9e33e9082 - Allow using default parameters as not-an-error
+  *  b93a2e53c - Protect Nyquist against effect-within-effect
+  *  15aad64f7 - LISP format improvements (Thanks Steve)
+  *  6236a9fb9 - Add support for aud-do command into Nyquist.
+  *  e52552056 - fix
+  *  828d01a48 - Shorter commands.  Shorter scripts.
+  *  54895655e - Improved labels script.
+  *  34f0b97a6 - Add ability to set the selected label.
+  *  a5de0ed0c - More screenshot options.
+  *  9ba3ec059 - Use a-lists for Lispy output.
+  *  205dc1359 - Fix \n shenanigans in command output.
+  *  5d1b3189a - Script the images for Tracks page of manual.
+  *  ea4403ee6 - Typo.
+  *  4ee471adb - Scripts in Piped-Work
+  *  590b471eb - Fix ScreenshotCommand
+  *  e0ee34e87 - Implement selection from ends of tracks.
+  *  2caad0f40 - Implement ReloadPreferences for SetPreferences Command.
+  *  a8903a6c5 - Include tips in command list.
+  *  500765329 - Fix Automation listing
+  *  a0c393a01 - Fix GetInfo: Commands (Automated type matching matched
+    'the wrong thing').
+  *  7fa73dbde - SetClip, SetLabel, SetProject added
+  *  1a7700af8 - Optional parameters now working.
+  *  8b3726e8b - Compilation on Mac
+  *  fa1cedb04 - Fix extra spaces
+  *  860110ff2 - Cleaner class hierarchy
+  *  c0b3c0d13 - Doxygen, Clips and Labels
+  *  425c8b92f - Fix build
+  *  210d4f1fe - Support: JSON, Lispy or Other formats
+  *  43e9c2365 - Structured output for CommandContext
+  *  3017f8ddd - OldStyleCommandType - It's on the way out.
+  *  4c65a74c0 - Long message target
+  *  037df23d3 - More Menus Items, Better prompting Dialogs.
+  *  49a2bb293 - fixes
+  *  cf5ec042f - Automation: AudacityCommand
+  *  33b13018d - Replace almost all wxArrays with std::vector, except
+    for wxArrayString
+  *  3b32d39b5 - Remove wxArrays of pointers
+  *  8be1e8fda - Remove wxArray(Int|Long|Double) except where wxWidgets
+    fns need it
+  *  080dd34e6 - Get rid of wx object arrays, use std::vector
+  *  89d8f0df6 - Rewrite uses of wxEventHandler::(Dis)Connect with
+    (Un)Bind
+  *  2fbe04eda - Replace more Connect with Bind; needed redeclaration of
+    custom events
+  *  e6e8e3251 - Rewrite more Connect() with Bind(), which were type
+    incorrect...
+  *  2f3604bde - Rewrite many calls to Connect() with Bind()...
+  *  bf5228267 - Calls to Disconnect or Unbind in destructors are not
+    needed, if...
+  *  12983e168 - Use wxWeakRef to avoid dangling pointer
+  *  94b97f5c9 - Validators: type safe enum arguments & can specify
+    range in ctor
+  *  6e7d7447c - Use an enum class for numeric validator styles
+  *  cad632b9b - Allow specification of range in the constructor
+    arguments for brevity
+  *  0efb7ce4d - Change constructor & factory arguments of some window
+    classes...
+  *  97a8cf52d - More constructor arguments for EffectScienFilter
+  *  aa72cae61 - Follow wxWidgets argument conventions for other window
+    factories
+  *  5e10ec0de - Options for constructing ASlider, and can specify
+    scroll increments
+  *  228388a63 - Follow wxWidgets argument conventions for PrefsPanel
+    factories
+  *  151cbb130 - Follow wxWidgets argument conventions for other ctors
+  *  ab5ff9060 - More constructor arguments for RulerPanel
+  *  8625df681 - More NumericTextCtrl constructor options
+  *  5724780be - NumericTextControl ctor arguments...
+  *  517bdf1ba - Fix interaction of undo and record
+  *  e0d826a54 - Prohibit copy of TrackList, no longer needed; allow
+    swap and move
+  *  c0f278269 - Fix interaction of recording and undo...
+  *  b2c69cb0f - Define WaveTrack::Reinit()
+  *  a963064b9 - Preliminaries for fixing the interaction of undo and
+    record
+  *  28eeca5fa - Iterate over the pending tracks for drawing and sizing
+    the scrollbars
+  *  d08ae18ca - Change details of focusing of tracks in presence of
+    pending ones...
+  *  fa0fb7d8e - Disable Undo and Redo while there are pending changes
+    in TrackList...
+  *  43776f526 - Don't push vacuous undo items...
+  *  539e87030 - Add machinery to TrackList for pending changes to
+    tracks
+  *  33cfd92c0 - Define TrackId to identify tracks across undo states
+  *  3f0506368 - Split "Do" functions out of the "Set" functions for
+    some Track settings
+  *  242e9a566 - Some reimplementation of track iterators and GetLink()
+    ...
+  *  9dd5b521e - Make the experimental effects rack window compilable
+    and usable...
+  *  586542bfe - Remove post-translation substitutions
+  *  0aad028c9 - Simplify calls to Effect::Delegate
+  *  a3be011bf - inclusions of Audacity.h
+  *  574a20f95 - Rename SpecPowerMeter as SpecPowerCalculation
+  *  57ce726a2 - Rename Meter as MeterPanel, and some DOxygen
+  *  ee4f35f28 - Rename Lyrics as LyricsPanel, and some DOxygen
+  *  a1dc8305f - A function to extend XLisp's table of function bindings
+    dynamically
+  *  e57afb372 - Fix many unused argument warnings in Menus.cpp
+  *  803022db1 - Open 2.3.0 alpha development
+  *  e1f0e974d - Fix --without-midi build
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 03 Mar 2018 17:26:13 +0300
+
 audacity (1:2.1.3+git8006-f665e6da2-1) unstable; urgency=medium
 
   * Compile

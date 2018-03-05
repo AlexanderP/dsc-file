@@ -1,3 +1,32 @@
+mypaint (1.3.0~git4914-acb10b6b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/mypaint/mypaint.git
+  * Branch: master
+  * Commit: acb10b6bc162b3d14cb51aeaf99e62fe816fa034
+  * Date: 1519844597
+  * git changelog:
+  *  acb10b6b - fastpng: revert filename passing to fix builds.
+  *  9e34a541 - Swig: we have to pass filenames to C++ now, and it
+    sucks.
+  *  17f80838 - Begin fixing build and nosetests for Python 3.
+  *  83ac8f85 - Py3 prep: several import fixes.
+  *  8f5231d7 - BUGFIX: fix missing definition of "logger".
+  *  fa65003b - CODEQUAL: pre-Py3 non-functional changes
+  *  dfdb69e1 - New commands: Refactor Layer Group (tiles/pixels)
+  *  32ac1350 - Layer stack snapshots: fix a state announce bug.
+  *  e5d99779 - New commands: Remove Layer Backdrop (by tiles/pixels).
+  *  34aa3ee8 - Move @with_wait_cursor.
+  *  cd27d3c6 - CODEQUAL: assorted flake8 fixes
+  *  f5d21365 - Cache rendered 8bpc tiles instead.
+  *  5eebb8dd - Rework rendering: extract ops, tighter tile loop.
+  *  2f0e351d - CODEQUAL: some flake8, doc & code style fixes.
+  *  9ef48a33 - Autosave: don't start if clean.
+  *  3645ee79 - LRU cache: add pop()
+  *  f576e856 - Windows: update the interactive deps helper.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 03 Mar 2018 06:32:53 +0300
+
 mypaint (1.3.0~git4897-046ec8fb-1) unstable; urgency=medium
 
   * Compile

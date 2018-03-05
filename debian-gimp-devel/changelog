@@ -1,3 +1,90 @@
+gimp-devel (2.9.8+git40086-8039582df0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 8039582df071fe0b17da99e8ba37afc3ea3819c6
+  * Date: 1519889214
+  * git changelog:
+  *  8039582df0 - app: add custom GUI for gegl:recursive-transform
+  *  3985651d26 - app: add transform-grid controller to prop-gui
+  *  827d747fae - Bug 400448 - ruler subdivision is wrong for inches
+  *  b8aeed4774 - app: make the GimpSearchPopup entry icon non-
+    activatable
+  *  cd8ea6b3ca - libgimpwidgets: in GimpNumberPairEntry, add clear icon
+  *  45bfa168bf - libgimpwidgets: in GimpNumberPairEntry, update font
+    when updating text
+  *  8d2381f6e7 - libgimpwidgets: in GimpNumberPairEntry, fix parsing
+  *  5090f544e4 - Update Greek translation
+  *  8796220434 - plug-ins: clean out some lost tabs.
+  *  b671a43a31 - Bug 793815 - segmentation fault on a handler using
+    finalized user data.
+  *  479b7e31d0 - NEWS: keep up-to-date.
+  *  796d3cb38b - configure: bump fontconfig requirement for all
+    platforms.
+  *  f3dd2fd65f - Update translation
+  *  50a45311f1 - Update Hungarian translation
+  *  e0d56e99d6 - Update Hungarian translation
+  *  fa5d9ac3e9 - Update Hungarian translation
+  *  96eb9653b1 - Update Hungarian translation
+  *  6b4abf7b4c - Bug 784802 - Crop and rectangle-select tools
+    incorrectly detect ...
+  *  0de25a145a - libgimpwidgets: in GimpNumberEntryPair, properly set
+    user-override ...
+  *  12f9353410 - configure: oups, forgot to change an autoconfig
+    variable.
+  *  36625e087b - Bug 782676: require fontconfig 2.12.4 on Windows.
+  *  653798146e - Bug 789728 - Screenshot whole screen (Windows 10) only
+    grabs screen...
+  *  56d0998e74 - icons, libgimpwidgets: fixing indentation and cleaning
+    out tabs.
+  *  065a33eb82 - Update Latvian translation
+  *  6a9c4f8ef1 - icons, libgimpwidgets: now with proper gimp-attach +
+    gimp-detach icons.
+  *  7d354e8aa3 - icons: now color version for gimp-attach and gimp-
+    detach.
+  *  a542bb1e8f - icons: new symbolic icons gimp-attach and gimp-detach.
+  *  042bcef90d - Update Latvian translation
+  *  40cdc77ae6 - Update Catalan translation
+  *  14236761cd - Bug 793722 - Capture screenshot of single window fails
+    if...
+  *  cd2fcc3dac - Updated Danish translation
+  *  f295da48e2 - Updated Danish translation of gimp-plug-ins
+  *  4197738e2b - Update Icelandic translation
+  *  4a4ed3b685 - Update Icelandic translation
+  *  48f31f21ae - app: another try to tweak the test sessionrc-expected-
+    2-6
+  *  374fee451c - libgimpbase: consistent gimp_stack_trace namespace for
+    stack trace functions
+  *  e93f458026 - libgimpwidgets: change disabled code in GimpRuler to
+    avoid a warning
+  *  8eb0dee0ee - app: use the new gimp_utils_backtrace_available() in
+    Preferences.
+  *  6975188d6f - Bug 793514 - Adding version check for gdb.
+  *  87525c8911 - BUG 793634: CRITICAL loading psd file with disabled
+    layer mask
+  *  6d056ff91a - app make tests pass again (update sessionrc-expected-2-
+    6)
+  *  447d9bbc56 - desktop: make org.gimp.GIMP.appdata.xml validate again
+  *  edee33e27b - data: remove references to removed brushes.
+  *  d71ed88592 - app: add buffering to reading data files
+  *  26cb87aa2d - data: delete 3 brushes of very questionable origin.
+  *  1a8edbed51 - app: replace GimpHistogramEditor's "valid" by
+    "recompute" flag.
+  *  3535251979 - Bug 793669 - histogram-related bug report.
+  *  264565e121 - Bug 793667 - Solid noise filter (pop-up bug report
+    dialog).
+  *  6c93228718 - Bug 793630 - GIMP does not create 'gradients'
+    directory on first run.
+  *  405ec22bae - Update Spanish translation
+  *  c1d8c6302f - Update Polish translation
+  *  4a0cc01dfa - Bug 793539 - Gimp stops each time you close a picture
+  *  7b5ba251bd - Updates and fixes to Russian translation
+  *  12b579da96 - configure.ac: require babl >= 0.1.44
+  *  912e9baaa6 - file-pdf-load: fix plurals
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 01 Mar 2018 21:00:09 +0300
+
 gimp-devel (2.9.8+git40031-bdab2829ef-1) unstable; urgency=medium
 
   * Compile
