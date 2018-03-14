@@ -39,7 +39,7 @@ for i in ${LANG_OLD} ${LANG}
 do
 j=$(cat lang.txt | grep "^${i}__" | awk -F '__' '{print $2}')
 dependencies $i >> ${CONTROL} << EOF
-Package: tesseract-ocr-${i}
+Package: tesseract-ocr-${i}-legacy
 Architecture: all
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: \${misc:Depends}
@@ -54,14 +54,14 @@ Description: tesseract-ocr language files for ${j} (legacy)
 
 EOF
 
-cat >> tesseract-ocr-${i}.install << EOF
-$(echo ${i} | sed 's/-/_/g').* usr/share/tesseract-ocr/4.00/tessdata/
+cat >> tesseract-ocr-${i}-legacy.install << EOF
+$(echo ${i} | sed 's/-/_/g').* usr/share/tesseract-ocr/4.00/tessdata/legacy/
 
 EOF
 done
 
 dependencies osd >> ${CONTROL} << EOF
-Package: tesseract-ocr-osd
+Package: tesseract-ocr-osd-legacy
 Architecture: all
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: \${misc:Depends}
@@ -76,12 +76,12 @@ Description: tesseract-ocr language files for script and orientation
 
 EOF
 
-cat >> tesseract-ocr-osd.install << EOF
-$(echo osd | sed 's/-/_/g').* usr/share/tesseract-ocr/4.00/tessdata/
+cat >> tesseract-ocr-osd-legacy.install << EOF
+$(echo osd | sed 's/-/_/g').* usr/share/tesseract-ocr/4.00/tessdata/legacy/
 
 EOF
 dependencies equ >> ${CONTROL} << EOF
-Package: tesseract-ocr-equ
+Package: tesseract-ocr-equ-legacy
 Architecture: all
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: \${misc:Depends}
@@ -96,7 +96,7 @@ Description: tesseract-ocr language files for equations
 
 EOF
 
-cat >> tesseract-ocr-equ.install << EOF
-$(echo equ | sed 's/-/_/g').* usr/share/tesseract-ocr/4.00/tessdata/
+cat >> tesseract-ocr-equ-legacy.install << EOF
+$(echo equ | sed 's/-/_/g').* usr/share/tesseract-ocr/4.00/tessdata/legacy/
 
 EOF

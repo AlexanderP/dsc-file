@@ -37,7 +37,7 @@ dependencies() {
 for i in ${LANG} ${LANG_NEW}; do
 j=$(cat lang.txt | grep "^${i}__" | awk -F '__' '{print $2}')
 dependencies $i >> ${CONTROL} << EOF
-Package: tesseract-ocr-${i}
+Package: tesseract-ocr-${i}-best
 Architecture: all
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: \${misc:Depends}
@@ -52,14 +52,14 @@ Description: tesseract-ocr language files for ${j} (best)
 
 EOF
 
-cat >> tesseract-ocr-${i}.install << EOF
-$(echo ${i} | sed 's/-/_/g').* usr/share/tesseract-ocr/4.00/tessdata/
+cat >> tesseract-ocr-${i}-best.install << EOF
+$(echo ${i} | sed 's/-/_/g').* usr/share/tesseract-ocr/4.00/tessdata/best/
 
 EOF
 done
 
 dependencies osd >> ${CONTROL} << EOF
-Package: tesseract-ocr-osd
+Package: tesseract-ocr-osd-best
 Architecture: all
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: \${misc:Depends}
@@ -74,15 +74,15 @@ Description: tesseract-ocr language files for script and orientation
 
 EOF
 
-cat >> tesseract-ocr-osd.install << EOF
-$(echo osd | sed 's/-/_/g').* usr/share/tesseract-ocr/4.00/tessdata/
+cat >> tesseract-ocr-osd-best.install << EOF
+$(echo osd | sed 's/-/_/g').* usr/share/tesseract-ocr/4.00/tessdata/best/
 
 EOF
 
 for i in ${SCRIPT}; do
 j=$(cat script.txt | grep "^${i}__" | awk -F '__' '{print $3}')
 dependencies $i >> ${CONTROL} << EOF
-Package: tesseract-ocr-script-${i}
+Package: tesseract-ocr-script-${i}-best
 Architecture: all
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: \${misc:Depends}
@@ -97,8 +97,8 @@ Description: tesseract-ocr data for ${j} script (best)
 
 EOF
 
-cat >> tesseract-ocr-script-${i}.install << EOF
-$(cat script.txt | grep "${i}__" | awk -F '__' '{print $2}') usr/share/tesseract-ocr/4.00/tessdata/
+cat >> tesseract-ocr-script-${i}-best.install << EOF
+script/$(cat script.txt | grep "${i}__" | awk -F '__' '{print $2}') usr/share/tesseract-ocr/4.00/tessdata/best/
 
 EOF
 done
