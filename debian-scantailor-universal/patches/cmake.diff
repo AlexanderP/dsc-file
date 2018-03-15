@@ -1,0 +1,25 @@
+Description: Fix compile for Ubuntu 16.04
+Author: Alexander Pozdnyakov <almipo@mail.ru>
+Last-Update: 2018-03-15
+
+--- scantailor-universal-0.2.0+git1351-0ea99002.orig/CMakeLists.txt
++++ scantailor-universal-0.2.0+git1351-0ea99002/CMakeLists.txt
+@@ -335,11 +335,13 @@ IF(UNIX)
+ 		ADD_DEFINITIONS(${PTHREADS_CFLAGS})
+ 		LINK_LIBRARIES(${PTHREADS_LIBS})
+ 	ELSE(PTHREADS_FOUND)
+-		MESSAGE(
+-			FATAL_ERROR
+-			"Could not detect threading flags.\n"
+-			"Try specifying them manually in PTHREADS_CFLAGS and PTHREADS_LIBS."
+-		)
++		#MESSAGE(
++			#FATAL_ERROR
++			#"Could not detect threading flags.\n"
++			#"Try specifying them manually in PTHREADS_CFLAGS and PTHREADS_LIBS."
++		#)
++		ADD_DEFINITIONS(-pthread)
++		LINK_LIBRARIES(-pthread)
+ 	ENDIF(PTHREADS_FOUND)
+ ELSEIF(WIN32)
+         ADD_DEFINITIONS(-DNOMINMAX)

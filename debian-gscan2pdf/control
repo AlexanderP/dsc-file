@@ -4,29 +4,42 @@ Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: debhelper (>= 9)
 Build-Depends-Indep: perl (>= 5.8.0-7), gettext, libtest-pod-perl
-Standards-Version: 3.9.8
+# libgtk3-imageview-perl, libgtk3-simplelist-perl,
+# libimage-sane-perl, liblocale-gettext-perl (>= 1.05),
+# sane-utils (>= 1.0.17), libtiff-tools, libpdf-api2-perl,
+# libconfig-general-perl (>= 2.40), libimage-magick-perl, imagemagick,
+# librsvg2-common, libset-intspan-perl (>= 1.10), liblist-moreutils-perl,
+# libhtml-parser-perl, libgoocanvas2-perl, libproc-processtable-perl,
+# libreadonly-perl, liblog-log4perl-perl, libtry-tiny-perl,
+# libossp-uuid-perl | libdata-uuid-perl, libdate-calc-perl, xauth, xfonts-base,
+# xvfb, libatk-adaptor, libgail-common, libsub-override-perl, poppler-utils
+Maintainer: Jeffrey Ratcliffe <jjr@debian.org>
+Standards-Version: 4.1.3
+Vcs-git: https://gscan2pdf.git.sourceforge.net/gitroot/gscan2pdf
+Vcs-Browser: https://sourceforge.net/p/gscan2pdf/code/ci/master/tree/
 Homepage: http://gscan2pdf.sourceforge.net/
 
 Package: gscan2pdf
 Architecture: all
-Depends: libgtk2-imageview-perl, libgtk2-ex-simple-list-perl,
- libsane-perl (>= 0.05~0) | libimage-sane-perl, liblocale-gettext-perl (>= 1.05),
+Depends: libgtk3-simplelist-perl,
+ libimage-sane-perl, liblocale-gettext-perl (>= 1.05),
  sane-utils (>= 1.0.17), libtiff-tools, libpdf-api2-perl,
  libconfig-general-perl (>= 2.40), libimage-magick-perl, imagemagick,
  librsvg2-common, libset-intspan-perl (>= 1.10), liblist-moreutils-perl,
- libhtml-parser-perl, libgoo-canvas-perl, libproc-processtable-perl,
+ libhtml-parser-perl, libgoocanvas2-perl, libproc-processtable-perl,
  libreadonly-perl, liblog-log4perl-perl, libtry-tiny-perl, libfilesys-df-perl,
- libossp-uuid-perl | libdata-uuid-perl, libdate-calc-perl, libimage-sane-perl, ${misc:Depends}
-Recommends: libgtk2-ex-podviewer-perl, sane, xdg-utils, djvulibre-bin,
+ libossp-uuid-perl | libdata-uuid-perl, libdate-calc-perl, ${misc:Depends}
+# libgtk2-imageview-perl,
+Recommends: sane, xdg-utils, djvulibre-bin,
  unpaper, tesseract-ocr | gocr | cuneiform
 Description: GUI to produce PDFs or DjVus from scanned documents
  Only five clicks are required to scan several pages and then save all or a
  selection as a PDF or DjVu file, including metadata if required.
  .
  gscan2pdf can control flatbed or sheet-fed (ADF) scanners with SANE via
- libsane-perl, scanimage or scanadf, and can scan multiple pages at once.
- It presents a thumbnail view of scanned pages, and permits simple operations
- such as cropping, rotating and deleting pages.
+ libimage-sane-perl, scanimage or scanadf, and can scan multiple
+ pages at once. It presents a thumbnail view of scanned pages, and permits
+ simple operations such as cropping, rotating and deleting pages.
  .
  OCR can be used to recognise text in the scans, and the output
  embedded in the PDF or DjVu.
