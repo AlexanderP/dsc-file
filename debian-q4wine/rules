@@ -19,7 +19,7 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid xenial buster yakkety zesty artful)) 
+ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid xenial buster yakkety zesty artful bionic)) 
 	CONTROL = control.qt5
 	CMAKEOPTS += -DQT5=ON
 else
