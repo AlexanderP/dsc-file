@@ -1,0 +1,28 @@
+Source: scantailor-advanced
+Section: graphics
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 9),
+               cmake,
+               qttools5-dev,
+               qttools5-dev-tools,
+               qtbase5-dev,
+               libjpeg-dev,
+               libqt5opengl5-dev,
+               libpng-dev | libpng12-dev,
+               libtiff5-dev | libtiff4-dev,
+               libboost-test-dev,
+               libxrender-dev,
+Standards-Version: 4.1.3
+Homepage: https://github.com/4lex4/scantailor-advanced
+
+Package: scantailor-advanced
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Interactive post-processing tool for scanned pages
+ Scan Tailor Advanced is an interactive post-processing tool for scanned
+ pages. It performs operations such as page splitting, deskewing, adding/
+ removing borders, and others. You give it raw scans, and you get pages
+ ready to be printed or assembled into a PDF or DJVU file. Scanning,
+ optical character recognition, and assembling multi-page documents are
+ out of scope of this project.

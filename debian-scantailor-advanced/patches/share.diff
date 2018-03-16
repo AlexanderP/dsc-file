@@ -1,0 +1,26 @@
+Description: moved share dir
+Author: Alexander Pozdnyakov <almipo@mail.ru>
+Last-Update: 2018-03-15
+
+--- scantailor-advanced-1.0.12+git284-a30d503.orig/CMakeLists.txt
++++ scantailor-advanced-1.0.12+git284-a30d503/CMakeLists.txt
+@@ -407,8 +407,8 @@ IF (WIN32)
+     SET(TRANSLATION_DIRS ".:translations")
+     SET(PLUGIN_DIRS ".")
+ ELSE ()
+-    SET(TRANSLATION_DIRS ".:${CMAKE_INSTALL_PREFIX}/share/scantailor/translations")
+-    SET(PLUGIN_DIRS ".:${CMAKE_INSTALL_PREFIX}/lib/scantailor")
++    SET(TRANSLATION_DIRS ".:${CMAKE_INSTALL_PREFIX}/share/scantailor-advanced/translations")
++    SET(PLUGIN_DIRS ".:${CMAKE_INSTALL_PREFIX}/lib/scantailor-advanced")
+ ENDIF ()
+ 
+ CONFIGURE_FILE(config.h.in ${CMAKE_BINARY_DIR}/config.h @ONLY)
+@@ -679,7 +679,7 @@ ENDFOREACH (ts_file)
+ QT5_ADD_TRANSLATION(QM_FILES ${FILTERED_TRANSLATION_FILES})
+ ADD_CUSTOM_TARGET(compile_translations ALL DEPENDS ${QM_FILES})
+ 
+-INSTALL(FILES ${QM_FILES} DESTINATION "share/scantailor/translations")
++INSTALL(FILES ${QM_FILES} DESTINATION "share/scantailor-advanced/translations")
+ 
+ IF (WIN32)
+     # Copy some DLLs to the staging dir.

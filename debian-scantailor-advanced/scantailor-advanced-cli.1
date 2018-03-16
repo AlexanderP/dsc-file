@@ -1,0 +1,126 @@
+.TH SCANTAILOR-CLI 1 "Mar  27, 2012"
+
+.SH NAME
+scantailor-cli \- an interactive post-processing tool for scanned pages
+.SH SYNOPSIS
+.B scantailor-cli 
+[options] <images|directory|-> <output_directory>
+.PP
+.B scantailor-cli 
+[options] <project_file> [output_directory]
+.SH DESCRIPTION
+
+\fBscantailor-cli\fP is an interactive post-processing tool for scanned pages. It
+performs operations such as page splitting, deskewing, adding/removing borders,
+and others. You give it raw scans, and you get pages ready to be printed or
+assembled into a PDF or DJVU file. Scanning, optical character recognition, and
+assembling multi-page documents are out of scope of this project.
+.SH OPTIONS
+
+.TP
+.BI \-h,\-\-help
+Show help about options
+.TP
+.BI \-v,\-\-verbose
+Turn on verbose output, with all the available data
+.TP
+.BI \-l=,\-\-layout= <0|1|1.5|2>
+0 - auto detect (default)
+.br
+1 - one page layout
+.br
+1.5 - one page layout but cutting is needed
+.br
+2 - two page layout
+.TP
+.BI \-\-layout-direction=,\-ld= <lr|rl>
+default: lr
+.TP
+.BI \-\-orientation= <left|right|upsidedown|none>
+default: none
+.TP
+.BI \-\-rotate= <0.0...360.0>
+it also sets deskew to manual mode
+.TP
+.BI \-\-content-detection= <cautious|normal|aggressive>
+default: normal
+.TP
+.BI \-\-content-box= <<left_offset>x<top_offset>:<width>x<height>>
+if set the content detection is se to manual mode
+.br
+example: --content-box=100x100:1500x2500
+.TP
+.BI \-\-margins= <number>
+sets left, top, right and bottom margins to same number.
+.TP
+.BI \-\-margins-left= <number>
+sets left margins to same number.
+.TP
+.BI \-\-margins-right= <number>
+sets right margins to same number.
+.TP
+.BI \-\-margins-top= <number>
+sets top margins to same number.
+.TP
+.BI \-\-margins-bottom= <number>
+sets bottom margins to same number.
+.TP
+.BI \-\--alignment= <top|center|bottom>
+sets vertical and horizontal alignment.
+.TP
+.BI \-\-alignment-vertical= <top|center|bottom>
+sets vertical alignment.
+.TP
+.BI \-\-alignment-horizontal= <left|center|right>
+sets horizontal alignment.
+.TP
+.BI \-\-dpi= <number>
+sets x and y dpi. (default: 600)
+.TP
+.BI \-\-dpi-x= <number>
+sets x dpi.
+.TP
+.BI \-\-dpi-y= <number>
+sets y dpi.
+.TP
+.BI \-\-output-dpi= <number>
+sets x and y output dpi. (default: 600)
+.TP
+.BI \-\-output-dpi-x= <number>
+sets x output dpi.
+.TP
+.BI \-\-output-dpi-y= <number>
+sets y output dpi.
+.TP
+.BI \-\-color-mode= <black_and_white|color_grayscale|mixed>
+default: black_and_white
+.TP
+.BI \-\-white-margins
+default: false
+.TP
+.BI \-\-normalize-illumination 
+default: false
+.TP
+.BI \-\-threshold= <n>	
+n<0 thinner, n>0 thicker; default: 0
+.TP
+.BI \-\-despeckle= <off|cautious|normal|aggressive>
+default: normal
+.TP
+.BI \-\-dewarping= <off|auto>
+default: off
+.TP
+.BI \-\-depth-perception= <1.0...3.0>
+default: 2.0
+.TP
+.BI \-\-start-filter= <1...6>
+default: 4
+.TP
+.BI \-\-end-filter= <1...6>
+default: 6
+.TP
+.BI \-\-output-project=,\-o= <project_name>
+.SH AUTHOR
+scantailor was written by Joseph Artsimovich <joseph_a@mail.ru>.
+.PP
+This manual page was written by Alexander Pozdnyakov <almipo@mail.ru>
