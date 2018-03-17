@@ -1,3 +1,35 @@
+aegisub (1:3.2.3~git7813-f6a2ac08a-2) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Aegisub/Aegisub.git
+  * Branch: master
+  * Commit: f6a2ac08a63f37c1cb3e7315144411f7d5aa5403
+  * Date: 1520270909
+  * git changelog:
+  *  f6a2ac08a - Makefiles: replace the use of subst macro with patsubst
+    (#56)
+  *  4791222ab - Add support for reading waveform selection in LUA
+  *  21f704f13 - Fix joining as karaoke
+  *  876d59ec2 - remove fontconfig submodule
+  *  1b7388683 - Document process for updating mooonscript
+  *  3c5b61429 - Update moonscript version
+  *  bc157d9bb - Also stub out the `system` lua module that newer
+    versions of busted use
+  *  61028916c - main: fix warning
+  *  16d57dac7 - OpenAL: destroy context when not in use
+  *  5a3b7301c - find/replace: handle enter key in input fields
+  *  a88835e25 - find/replace: bring window to front when activated
+  *  275a35fde - README: fix outdated brew package names
+  *  de9290b75 - Remove fontconfig from macOS deps
+  *  1bd25711e - README: document luajit and wxWidgets build procedure
+    on macOS
+  *  3632ad067 - Build: update boost m4 macros
+  *  3bc5e8f04 - Remove pointless explicit heights for the audio sliders
+  *  f555ac841 - Bump minimum macOS version to 10.8
+  *  70edb03b2 - Fix some audio display rendering quirks on retina OS X
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 15 Mar 2018 12:33:38 +0300
+
 aegisub (1:3.2.3~git7795-8d3ad9f-1) unstable; urgency=medium
 
   * Compile

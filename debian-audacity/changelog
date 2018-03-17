@@ -1,3 +1,176 @@
+audacity (1:2.2.2+git8385-bc6ed7749-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: bc6ed77498ada96898a8efa377015d5cf39b96cf
+  * Date: 1521237512
+  * git changelog:
+  *  bc6ed7749 - Fix missing translations in Choice controls again, see
+    bc773e02d336cd
+  *  a48eb4eec - Bug 1810 - Vertical Zoom in by clicking in the vertical
+    Scale, or context menu, in waveform views is inconsistent.
+  *  2cb76e082 - Bug 1852 - Ctrl+M does not open label for editing
+  *  205b7d6a0 - Rename 'chain' to 'macro' in history and comments.
+  *  2d62013fa - Add Macros Palette to Apply Macro -> submenu,
+  *  e51a9734e - Tweak Select Command.
+  *  5037e2bbe - Menu bar: corrected duplicate access key
+  *  bf9e7fcdb - Clip boundary commands: remove requirement for
+    TrackPanel to be focus
+  *  2da227a71 - Make zoom toggle finer grained
+  *  ddb429028 - Merge pull request #267 from Paul-Licameli/ellipsis-
+    problem
+  *  5b6456cd0 - Exclude dialog commands from Macro editing not by
+    translated name...
+  *  b75e356df - Now use that extra information
+  *  bb7b77cde - Change expansion of XXO and pass more arguments to
+    CommandManager
+  *  4e1831893 - Define XXO alternative to _ just for use in Menus.cpp
+  *  cfd9bd333 - Fix part-translated identifiers for Align cmds; new
+    string pair class
+  *  9780c1488 - Fix mix of internal and translated strings naming Align
+    commands...
+  *  9b7ccc4df - Use TranslatedInternalString for tips of toolbar
+    buttons
+  *  d258385e3 - Use TranslatedInternalString in MacroCommandsCatalog
+  *  6c8ba8b5b - Define TranslatedInternalString
+  *  980cf456f - Update two help URLs.
+  *  814322a79 - Fix Equalization crash in debug build
+  *  01a45a6b3 - Strip ... from Nyquist effect names again (but none
+    shipped have it)
+  *  b45b4c4a7 - Merge pull request #265 from Paul-Licameli/migrate-old-
+    chains
+  *  cc7bf5c32 - Migrate old chains...
+  *  6fe494df5 - Merge pull request #264 from Paul-Licameli/translate-
+    command-names
+  *  c3adc0141 - Translate the two built-in macro names...
+  *  59d41db63 - In "Select Command" translate all...
+  *  357b05efd - If not English locale, don't show short command name in
+    (parentheses)
+  *  4f9ab0848 - Substitute, don't concatenate, if these should be
+    translated
+  *  65b8520e4 - use override
+  *  9d531cad5 - Translate dialog title
+  *  f78515c84 - Fix misleading function declarations -- arguments
+    really are used
+  *  1dd054c16 - Bring Help-Tools under Tools.
+  *  7910688c0 - Add Align commands to repertoire.
+  *  86cd720d9 - Fix two MSVC compile warnings.
+  *  407819e90 - Merge branch 'macros-tweaks'
+  *  5cc1dbc87 - Bring Macros dialog to front after various actions
+  *  b1862d2b1 - Rearrange Macros buttons
+  *  1ccd2678b - Merge branch 'seek-refactor' by Evan Short
+  *  dab9ad812 - Condense SeekLeftOrRight code further.
+  *  7c4ca093f - use enums instead of bool in seekLeftOrRight
+  *  3f29d1948 - refactor SeekLeftOrRight
+  *  83c30620c - Fix Mac build, and avoid global variable
+    ::GetActiveProject()
+  *  49eb7ddb6 - Fix mac build
+  *  59d1ca46d - TrackPanelAx: add Select function
+  *  0c2c95689 - TrackPanelAx: add Navigate function for NVDA object
+    navigation
+  *  dd1ffb039 - Indicative mood for all verbs in command and effect
+    descriptions...
+  *  f4a971da9 - comment
+  *  20c086263 - i18n hint
+  *  29c98f27f - Another fix for list iterators
+  *  40a117b16 - Fix update of minimized state (crash in MSVC debug
+    runtime)...
+  *  ae351abbc - Fix warnings about override and final
+  *  4bfd8abc2 - Fix more missed translations
+  *  369113973 - Update audacity.pot
+  *  8918744e6 - Fix minor typos
+  *  b8cc764e2 - Fix MSVC2013 compiler crash for Windows debug build
+  *  bf0c079f2 - Fix displays of strings for macro dialogs...
+  *  77f720b0c - Show friendly names of commands in message boxes...
+  *  9298ac575 - Fix Linux build
+  *  bf4c8eff6 - Fix another neglected i18n
+  *  4cb2ec6fa - Fix missing i18n of some new prompts
+  *  bc773e02d - Supply some missing translation in Macros dialogs...
+  *  ffadd64a5 - Define MacroCommandsCatalog to associate friendly and
+    internal names...
+  *  9d73effe0 - Merge branch 'gcc_warning_fixes' for ShuttleGui
+  *  89315bd5e - made ShuttleGui destructor virtual
+  *  726f33e80 - fixed an initalization order warning in ShuttleGui.cpp
+  *  d5dd9ff7c - Merge branch 'gcc_warning_fixes' by andheh
+  *  a5d06ff25 - Fix comments needed for Doxygen.
+  *  b4f351a25 - fixed a "signed vs. unsigned" warning in ExportMP3.cpp
+  *  896e7a4dd - fixed a "signed vs. unsigned" warning in
+    BatchProcessDialog.cpp
+  *  87eaaa6f4 - fixing strict-aliasing rule violations by passing enum
+    types as int references
+  *  7a30222f4 - fixed indentation warning in ImportMP3.cpp
+  *  33f2e576e - fixed "signed vs. unsigned" warnings in ExportPCM.cpp
+  *  e8605025b - fixed types in ExportMP3.cpp to avoid "signed vs.
+    unsigned" warnings
+  *  9f8d3a48d - fixed a "signed vs. unsigned" warning in ImportMP3.cpp
+  *  ed83ec73b - fixed "unused variable" warnings
+  *  76bad1911 - fixed "unknown pragma" warning in src/Shuttle.cpp
+  *  3958347be - fixed a "unused variable" warning in src/Project.cpp
+  *  d0960b2c5 - fixed a "signed vs. unsigned" warning
+  *  0a362e241 - fixed "class is implicitly friended with itself"
+    warning
+  *  e6ba33c24 - fixed "/*" in comment warnings
+  *  d72028de2 - fixed more "statement has no effect" warnings
+  *  84016716f - fixed an "used uninitialized" warning in VampEffect.cpp
+  *  6a8557738 - fixed a signed vs. unsigned warning in LadspaEffect.cpp
+  *  c8e42fce2 - fixed initalization order warning
+  *  3ae93e6b4 - fixed unused variable warnings in SelectHandle.cpp
+  *  50901b945 - fixed initialization order warnings
+  *  c6de7d609 - fixed initialization order warning in
+    src/effects/Paulstretch.cpp
+  *  b71c24f15 - fixed a "used uninitialized" warning in
+    src/effects/Amplify.cpp
+  *  809167d93 - fixed an indentation warning in src/TrackArtist.cpp
+  *  f601cacb8 - fixed a initialization order warnings in
+    src/Project.cpp
+  *  1bc794356 - fixed "unknown pragma" warnings for GCC
+  *  9bfbc907a - fixed indentation warnings in src/Menus.cpp
+  *  dd41df237 - fixed an unused variable warning in src/LabelTrack.cpp
+  *  ade7854c1 - fixed "statement has no effect" warnings
+  *  3dd0ce045 - fixed a signed vs. unsigned warning in src/AudioIO.cpp
+  *  1efe69e8b - fixed a initialization order warning in src/AudioIO.cpp
+  *  08a8cc4bc - Strings in Nyquist plug-ins not translated too early...
+  *  f6efacbda - Untranslated from GetVendor; translated in effect info
+    menu only
+  *  4617b0b1a - Change wording: Now "Manage Plug-ins" and "Manage
+    Macros" for those two dialogs.
+  *  8b68864dd - Fix another compilation warning
+  *  4c5e1f30f - Keep focus on Expand/Shrink button when resizing Macro
+    Dialog.
+  *  6b44a53de - Move Macro Dialog buttons around.
+  *  6cd877efe - Fix complier warnings about returning reference to a
+    temporary
+  *  c699bbda7 - Merge branch 'master' of
+    https://github.com/audacity/audacity
+  *  ea0e0d71a - Add scripts for names-on-tracks images.
+  *  8b9313aba - Updated uk.po -- Ukrainian taken from Transifex (99%)
+  *  4ddb14235 - Update old uk.po with msgmerge, so less diff in the
+    next commit
+  *  24ee14412 - Merge branch 'macros' into master
+  *  834c9df32 - Save Changes when Expanding/Shrinking Macro Dialog.
+  *  70b1f69bb - Use names not numbers in MacroIdOfName()
+  *  585a4c617 - Prevent excessive macro reentry.
+  *  153da3a94 - Fix Fade-Ends MacroCommands
+  *  4dfac323c - Make Macro Dialog optically stable.
+  *  159a3ab6a - Rejig EditLabels Dialog.
+  *  5c4b2249f - bug 1851 Remove selection before Timer Record
+  *  f1ab2db9b - bug 1850 - add Track > Pan to History
+  *  e45a6b09d - Change wordings and consolidate prefs.
+  *  eab0af21e - Merge branch 'tools-menu'
+  *  6f8d27208 - Remove Apply-Macro from Tools menu.
+  *  fbef142fa - Move 3 Nyquist plug-ins into Tools menu
+  *  6e40d6d96 - Add Fade-Ends macro.  (a new item in Tools menu)
+  *  c0dcba66d - Rename Chains to Macros.
+  *  8ab69ae5c - Update tools menu on Mac too.
+  *  f41e781c6 - Fix bug where 'Applying chain to project' progress
+    dialog might not show.
+  *  6b54ffdf0 - Update tools menu on changing available chains.
+  *  e6a2d0f99 - Add all chains into the Tools menu.
+  *  8cd5d7f4f - Tools menu and EffectTypeTool
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 17 Mar 2018 09:03:46 +0300
+
 audacity (1:2.2.2+git8257-fb8b797d6-1) unstable; urgency=medium
 
   * Compile

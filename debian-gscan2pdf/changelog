@@ -1,3 +1,81 @@
+gscan2pdf (2.0.1+git2789-f16b51f7-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: f16b51f7d8a2725d0745218988e645ddbc5eb3e8
+  * Date: 1520857871
+  * git changelog:
+  *  f16b51f7 - Prerelease commit
+  *  35299600 - Bumped version to 2.0.1
+  *  5cee99fd - Fixed warning message clearing all pages if no scanner
+    detected
+  *  857a85b6 - Fixed progress bars
+  *  909ce63f - Fixed displaying image after deleting page
+  *  e14c6df7 - Fixed displaying image after undoing
+  *  75734e0d - Refactored interpolated string to satisfy P::C
+  *  d4c76dfd - Fix editing OCR output
+  *  cfd344d3 - Prerelease commit
+  *  4e8fcc9f - && -> and, ! -> not for legibility
+  *  ba104406 - More gtk2->3 corrections
+  *  e294d6f6 - Implement help as HTML instead of POD, as we don't have
+    a POD viewer any more
+  *  769a4993 - Fix about dialogue
+  *  492ad04c - Fixed uninitialised value warning from date field
+  *  7fb9e49b - Fix visibility of page numbering widgets on scan dialog
+  *  4dc17cf2 - Attempt to render background and frame
+  *  df791e87 - Don't allow selection to overlap image borders
+  *  7eb4074f - Fix drag-and-drop
+  *  5595cc4e - Fix perlcritic warnings in ImageView.pm
+  *  3ed89cba - Bumped version to 2.0.0
+  *  d4302ed9 - remove_text->remove for ComboBoxText
+  *  03ad15ef - Fix save dialogue
+  *  815a0462 - Don't set_offset if pixbuf is not defined
+  *  79deb3d5 - Fix test failures due to changes in GTK API
+  *  d4c28faa - Fix handling of visible-scan-options property
+  *  d05690ec - Gtk2->Gtk3 for a couple of tests created after starting
+    the migration
+  *  88c5f9a2 - Refactored Gtk3::Grid widgets
+  *  a7d61897 - Fix deleting multiple pages
+  *  68d4cfc5 - Gtk3::Table -> Gtk3::Grid
+  *  06236be9 - Fixed Gscan2pdf::PageRange
+  *  ce1ae06a - Invalidate imageview if tool changed and selection
+    defined
+  *  ff8ff1fc - Convert pre v2.0.0 selection array to hash
+  *  5c903ad0 - Fixed bug panning image
+  *  f05dca0d - Removed unnecessary perlcritic override
+  *  24d5ef38 - + selector tool
+  *  a0e81a7f - Fix tests for Gscan2pdf::Canvas
+  *  66c91e3d - + basic selection functionality
+  *  7fb3c896 - + tool property
+  *  24440475 - + changed-offset signal
+  *  396a7e57 - Clamp edges to keep pixbuf in allocation area
+  *  7fcdd4ec - Switch from Cairo::ImageSurface to pixbuf
+  *  af28bba4 - Work in image coordinates to make centering more
+    consistent
+  *  71efe123 - Basic use of Gtk3::Application
+  *  ff968a82 - Fix zooming
+  *  95e4ef24 - ok() -> is() for many tests
+  *  c31a9cf9 - Fix panning speed via dnd
+  *  f9a5cff8 - + _set_zoom_with_center()
+  *  a72b9070 - + get_zoomed_size()
+  *  d007001c - + get_pixbuf_size()
+  *  07c7aa45 - + get_viewport()
+  *  385b73d1 - ScrolledWindow->DrawingArea
+  *  26b10f48 - Uncomment code handling mouse clicks in ImageView
+  *  eb60a906 - + zoom* functions to ImageView
+  *  6e1a2e8e - Initial migration to Gtk3. Big things not working are: *
+    DND * zoom in and out of ImageView * selection in ImageView (no idea
+    how to do this)
+  *  7f87e1fa - Fixed setting preferences if frontend not set to libsane-
+    image-perl and no scanner available
+  *  a5bfa790 - Fix spelling checkbox->box in docs
+  *  237cb7af - Fixed ghosting if flatbed only source option but not set
+  *  85f8226b - Older Ubuntus do not support dh11
+  *  da4cfa37 - Post-release commit
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 17 Mar 2018 09:00:28 +0300
+
 gscan2pdf (1.8.11+git2730-59f86204-1) unstable; urgency=medium
 
   * Compile

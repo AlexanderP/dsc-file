@@ -12,12 +12,6 @@ else
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-ifneq (,$(filter $(DEBIAN_CODENAME), buster sid stretch)) 
-	CONTROL = control.sid
-else
-	CONTROL = control.jessie
-endif
-
 CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
 CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
 CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS)
@@ -28,14 +22,6 @@ export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
 %:
 	dh $@ 
 
-override_dh_auto_configure:
-	cp debian/$(CONTROL) debian/control
-	dh_auto_configure
-
 override_dh_auto_build:
 	cd mupdf && make build=native libs
 	bash build.sh build
-
-override_dh_auto_clean:
-	cp debian/$(CONTROL) debian/control
-	dh_auto_clean

@@ -1,3 +1,73 @@
+mypaint (1.3.0~git4970-e1c2a9f8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/mypaint/mypaint.git
+  * Branch: master
+  * Commit: e1c2a9f82d542bdb4c3699fbb96ea92f624322c3
+  * Date: 1521215707
+  * git changelog:
+  *  e1c2a9f8 - CODEQUAL: require flake8 pass for new code in PRs.
+  *  373a607c - Enable HoundCI for Python.
+  *  c62ccfd6 - CODEQUAL: let flake8 run globally & generate useful
+    output.
+  *  32091849 - Py3: relative imports to absolute.
+  *  7f74b385 - Py3: gui.inktool: fix comparisons of number & None
+  *  3def8604 - gui.inktool: don't use confusing builtin name.
+  *  c37243a0 - Py3: fix writes to dict being iterated.
+  *  7896dfcb - Py3: RecentManager unicode fix.
+  *  db02a5e9 - Py3: fix lib.pixbuf.save() arg passing (again).
+  *  e2bc4b7c - lib.helpers: doctest for freedesktop_thumbnail().
+  *  9d1a2819 - lib.helpers: comments updates.
+  *  feb564c5 - filehandling: use filename_to_unicode (check me!)
+  *  852eb08c - Py3: xrange
+  *  4836715b - Py3: hashing of equal-by-id objects.
+  *  351322c4 - Py3: comparisons between None and numbers.
+  *  056463b3 - Py3: arithmetic (ints vs. floats).
+  *  a665e777 - Py3: unicode and bytes compat.
+  *  41cb55ca - Py3: dict iter*() and views compat.
+  *  aac8a229 - CODEQUAL: flake8 fixups, copyrights etc.
+  *  8112f1dc - Py3: test brush loading from both v3 and v2 formats.
+  *  fb8cc34b - Test brushes: separate v2 and new v3 test cases.
+  *  02b7c4df - Travis: experimentally include Py3 build.
+  *  23eca429 - Py3: JSON saving and loading, for settings dicts.
+  *  f06c90d8 - Py3: comparisons against (possible) None values.
+  *  1143804d - Py3: xrange compat.
+  *  c8dd70f4 - Py3: metaclass compat.
+  *  1e4d34af - Py3: comparison of str to None.
+  *  f3b63d9b - lib.color: Py3: indexing of "bytes".
+  *  b92e60c6 - lib.color: add doctest.
+  *  311c3a3e - lib.strokemap: Py3: bytes and unicode fixes.
+  *  fefb33e5 - lib.strokemap: add doctests, deprecate some stuff.
+  *  a061aeb4 - Py3: unicode vs. bytes stuff.
+  *  62f5a96c - Py3: dict iter* stuff.
+  *  67ac223c - Py3: import fixes.
+  *  3486dd87 - CODEQUAL: fix flake8 warnings.
+  *  e8b230d7 - Remove some deprecation warnings.
+  *  a0129f44 - Fix a regression in lib.tiledsurface.flood_fill()
+  *  a21086d4 - Add test case for lib.tiled_surface.flood_fill()
+  *  ccf1a3d0 - tiledsurface: fix autosave regression.
+  *  b8a99f32 - Add test case for PngFileUpdateTask.
+  *  8790eb3f - Automated backups: more fine-grained syncing of
+    settings.
+  *  570a5351 - Just report exceptions raised in auto-backups.
+  *  0a1ac913 - More fixups for g_filename_to_utf8().
+  *  0e3d0e6d - Py3: brushmanager: fix for the current suite of
+    doctests.
+  *  03113a30 - brushmanager: add doctests and a test brushpack.
+  *  f8cac42e - Py3: brushmanager: iteritems
+  *  b63177ef - CODEQUAL: remove unused code.
+  *  2b3a9d83 - Py3: CssProvider only accepts bytes now.
+  *  b2334716 - Py3: sys.argv conversion compat.
+  *  7e4cac60 - Py3: logging fixes.
+  *  c7b941eb - Fix PangoCairo gi version warning.
+  *  2f4fcd96 - Fix an annoying warning regression.
+  *  e66ef65c - Py3: stringio, urllib
+  *  1c920f1f - Py3: unicode and xrange
+  *  f30bf319 - Py3: metaclass compat.
+  *  a57771e0 - CODEQUAL: lint; fix imports, copyrights, typos…
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 16 Mar 2018 19:28:01 +0300
+
 mypaint (1.3.0~git4914-acb10b6b-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,23 @@
+deadbeef (0.7.2+git7655-1ea69bf2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 1ea69bf2673e64c1211e894580bacc679d618a9f
+  * Date: 1521029663
+  * git changelog:
+  *  1ea69bf2 - compile fix
+  *  0e384263 - redundant parenthesis fix
+  *  73819fc9 - 24bit to float conversion fix
+  *  0927a677 - streamer: fix 24 bit softvol bug on ARM CPUs (fixes
+    #1978)
+  *  34b5f9c4 - artwork-legacy: detect failed web fetches with errno=0
+    (#1981)
+  *  26f72867 - removed gratipay link from README.md
+  *  d2fc9efd - dsp: fixed can_bypass check
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 16 Mar 2018 10:49:01 +0300
+
 deadbeef (0.7.2+git7648-e346ad96-1) unstable; urgency=medium
 
   * Compile

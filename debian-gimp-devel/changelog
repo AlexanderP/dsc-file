@@ -1,3 +1,129 @@
+gimp-devel (2.9.8+git40166-f2c80e1878-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: f2c80e1878375a778eaf3d5c5dfeee81f82c7dd5
+  * Date: 1521234520
+  * git changelog:
+  *  f2c80e1878 - plug-ins: coding style cleaning.
+  *  a9a3a67cf2 - plug-ins: 16/32 bit JPEG2000 support.
+  *  4fdf301dea - plug-ins: properly check widget class holding tag
+    data.
+  *  8aaf77ba11 - app: return from gimp_display_shell_space_pressed()
+    immediately when...
+  *  9c663a6574 - libgimpcolor: fix gimp_color_profile_get_lcms_format()
+    for premul formats
+  *  6c8300923d - Bug 779942 - Make GimpPickButton honor monitor
+    profile.
+  *  b279c2d217 - Bug 724692 - Canvas rotation stuck with specific order
+    of actions.
+  *  dc1852049e - app: throttle GimpCanvasProgress updates
+  *  1cc90e52bb - app: fix indentation in gimpcanvasprogress.c
+  *  9799803fae - libgimpbase: add gimp_distance_metric_get_type() to
+    .def file
+  *  c5a0189b7f - libgimp, pdb: some generated files which were not in
+    previous commits.
+  *  c403e472d6 - app: don't sync Blend tool's gradient-repeat property
+    with gimp:blend...
+  *  87330a7746 - app: add "distance-metric" property to the Blend tool
+    options.
+  *  a7f3a2dd9f - app, pdb, libgimp, plug-ins, menus: rename layer
+    composite modes
+  *  d29facda23 - pdb: fix paths in README_NEW_PDB_PROC
+  *  466025abd4 - pdb: fix generated file paths in enumgen.pl
+  *  11ce60ba3d - app: check "gradient-repeat" sensitivity at Blend
+    Options creation.
+  *  5751bb114e - Bug 781621 - PDB shapeburst gradient is slower than
+    the blend tool.
+  *  6f127f9db4 - app: disable multi-threading on "gimp:shapeburst"
+    operation.
+  *  7e6c93379b - Update German translation
+  *  e47d3eb8eb - Update Hungarian translation
+  *  fbc32fd659 - Update German translation
+  *  e3a4a63140 - Update Greek translation
+  *  df0c898b39 - Update Polish translation
+  *  467dc06edb - NEWS: keep updated
+  *  a7644a130d - Update Japanese translation
+  *  c3624a2089 - Update POTFILES.skip
+  *  c2c5fedd13 - po: update gimp-debug-tool.c path in POTFILES.in
+  *  c0c6856190 - build: add Latvian translation to the Windows
+    installer
+  *  0b625df2ce - po-windows-installer: technical fix to Hungarian,
+    Latvian translations
+  *  bf6d9b7fd8 - app-tools: fix gimp-debug-tool usage message
+  *  5893d2dc73 - tools, app-tools: move gimp-debug-tool from tools/ to
+    app-tools/
+  *  646a56fe8a - Makefile.am: add git-version.h to EXTRA_DIST
+  *  87ca71e7c2 - Update German translation
+  *  17767c64a3 - Update German translation
+  *  1ad1790864 - Update Latvian translation
+  *  b590b59542 - app: fix #include order in gimp-spawn.c
+  *  8de34f704d - plug-ins: clean a bit commented-out code.
+  *  ad9079db87 - Update Japanese translation
+  *  a9ff5e14ce - plug-ins: run gimp_image_set_color_profile() after
+    image creation.
+  *  3d55452933 - Bug 794152 - JPEG 2000 Code Stream .j2c support.
+  *  00e828a3ef - plug-ins: deduct color space from profile if not
+    specified otherwise.
+  *  6f5c20eef1 - plug-ins: assume RGB/RGBA for JPEG2000 without
+    declared color space.
+  *  65ba879c65 - configure: make clearer the test for native GEGL
+    executable.
+  *  ca1304da19 - plug-ins: make the JP2 loading errors more accurate.
+  *  7e1fd5983c - app: fix tooltip of propgui color buttons
+  *  8d9580fd2b - app: update layers-dialog floating-sel attrs/highlight
+    when image changes
+  *  b1266b2c3f - app: #include <string.h> in GimpHighlightableButton
+  *  378c5d3b87 - app: don't highlight layers dialog "new" button when
+    pasting to channel
+  *  7dd373293c - app: reduce opacity of GimpHighlightableButton when
+    insensitive
+  *  e4c79cb2d6 - app: use gimp_cairo_rounded_rectangle() in
+    GimpOverlayFrame
+  *  2c6ee43e84 - app: highlight "new", "anchor", and "delete" buttons
+    in layers dialog ...
+  *  15883c7be0 - app: add gimp_item_tree_view_get_delete_button()
+  *  1253964c80 - app: use GimpHighlightableButton for GimpEditor
+    buttons
+  *  a12a2344bc - app: add GimpHighlightableButton
+  *  a6001f1941 - app: add gimp_cairo_rounded_rectangle()
+  *  efa8040780 - app: rename gimp_cairo_foo() functions to follow cairo
+    naming scheme
+  *  52b0e61001 - app: in gimp-spawn.c, add missing #include on Windows
+  *  1b1fba199a - app, libgimp: don't close parent pipes in libgimp; use
+    gimp_spawn_set_cloexec()
+  *  cdb541f81b - app: add gimp_spawn_set_cloexec()
+  *  c6e8dd888c - app: fix buffer overflow in gimp_plug_in_open()
+  *  89505dc774 - Updated Italian translation
+  *  c03eb86f89 - Updated Danish translation of gimp-script-fu
+  *  95af939903 - app: verify input argumets in gimp_spawn_async()
+  *  e1ed39e3a3 - app: in gimp-spawn.c, avoid warning when we don't have
+    vfork()
+  *  86939d847f - libgimpbase: in gimp_stack_trace_print(), shuffle some
+    code around
+  *  a1a126c308 - libgimpbase: in gimp_stack_trace_print(), clear ptrace
+    permission on exit
+  *  b9e629abbb - app, libgimp: use gimp_spawn_async() when spawning
+    plug-ins
+  *  0f2df18dde - app: add gimp_spawn_async()
+  *  0f2c966c5f - libgimpbase: in gimp_stack_trace_print(), enable
+    ptrace under Yama
+  *  73fbb166b3 - plug-ins: robuster tests for image types and minor
+    syntax fixes.
+  *  53a7c6c3a3 - Bug 792141 - Replace jasper with openjpeg.
+  *  58a0a65160 - file-jp2-load: Switch from Jasper to OpenJPEG library
+  *  d7e7ab48ba - Update Polish translation
+  *  0c6441619e - app: default to GIMP_COLOR_SELECTOR_RED in
+    GimpColorEditor
+  *  638ec98a58 - Update Catalan translation
+  *  e5add3a776 - Update Catalan translation
+  *  c9d9b5535b - Bug 794023 - Bad/Double free bugs found by scan-build.
+  *  40df83ad71 - Bug 794023 - Bad/Double free bugs found by scan-build.
+  *  77b3837774 - Update Swedish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 17 Mar 2018 12:16:01 +0300
+
 gimp-devel (2.9.8+git40086-8039582df0-1) unstable; urgency=medium
 
   * Compile
