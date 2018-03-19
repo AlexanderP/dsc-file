@@ -1,12 +1,7 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Debianized-By: Ivan Borzenkov <ivan1986@list.ru>
-Debianized-Date: Mon, 23 Feb 2009 19:56:49 +0300
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Psi+
-Upstream-Contact: zet <vladimir.shelukhin@gmail.com>
-                  rion <rion4ik@gmail.com>
-                  Dealer_WeARE <wadealer@gmail.com>
-                  maj <maksim.maj@gmail.com>
-                  diSabler <dsy@dsy.name>
+Upstream-Contact: Sergey Ilinykh <rion4ik@gmail.com>
+                  Boris Pek <tehnick-8@yandex.ru>
 Source: https://github.com/psi-plus/psi-plus-snapshots/tags
  The orig.tar.gz is just renamed upstream tarball (without changes).
  See section get-orig-source in debian/rules file for details.
@@ -25,7 +20,7 @@ Files: *
 Copyright: 2001-2008 Justin Karneges <justin@affinix.com>
            2003-2009 Michail Pishchagin <mblsha@users.sourceforge.net>
            2001-2008 Remko Troncon
-           2010-2013 Il'inykh Sergey aka Rion <rion4ik@gmail.com>
+           2010-2013 Sergey Ilinykh aka Rion <rion4ik@gmail.com>
            2006-2007 Kevin Smith <kismith@psi-im.org>
            2006-2008 Martin Hostettler
            2006-2008 Joonas Govenius
@@ -38,6 +33,7 @@ Copyright: 2001-2008 Justin Karneges <justin@affinix.com>
            2011 Evgeny Khryukin
            2011 Artem Izmaylov <artem@aimp.ru>
            2010 senu
+           2017 Vitaly Tonkacheyev aka KukuRuzo
 License: GPL-2+ with OpenSSL exception
  This program is free software: you can redistribute it and/or modify it under
  the terms of the GNU General Public License as published by the Free Software
@@ -67,6 +63,12 @@ License: GPL-2+ with OpenSSL exception
  exception to your version of the file, but you are not obligated to do so. If
  you do not wish to do so, delete this exception statement from your version.
 
+Files: src/AutoUpdater/QDChecker.*
+Copyright: NONE
+License: public-domain
+ No license required for any purpose; the work is not subject to copyright
+ in any jurisdiction.
+
 Files: iconsets/roster/*
 Copyright: 2003-2007 Michail Pishchagin <mblsha@users.sourceforge.net>
            2005-2007 Remko Tronçon (http://el-tramo.be)
@@ -82,11 +84,11 @@ Copyright: 2008-2009 Barracuda Networks, Inc.
            2003-2007 Michail Pishchagin <mblsha@users.sourceforge.net>
            2003-2007 Justin Karneges <justin@affinix.com>
            2007 Kevin Smith <kismith@psi-im.org>
-           2009 Sergey Il'inykh
+           2009 Sergey Ilinykh aka Rion
            2009 Maciej Niedzielski
            1992-2006 Trolltech AS.
            2010 Evgeny Khryukin
-           2010 Vitaly Tonkacheyev
+           2010 Vitaly Tonkacheyev aka KukuRuzo
 License: LGPL-2.1+
 
 Files: src/tools/crash/crash_sigsegv.*
@@ -119,20 +121,23 @@ Copyright: 2008-2010 Barracuda Networks, Inc.
            2001-2008 Justin Karneges <justin@affinix.com>
            2003-2007 Michail Pishchagin <mblsha@users.sourceforge.net>
            2006 Remko Troncon
-           2010-2013 Il'inykh Sergey aka Rion <rion4ik@gmail.com>
+           2010-2013 Sergey Ilinykh aka Rion <rion4ik@gmail.com>
            2006 Maciek Niedzielski
+           2009-2010 Dennis Schridde
+           2018 Aleksey Andreev
 License: LGPL-2.1+
 
 Files: iris/src/jdns/*
 Copyright: 2005-2006 Justin Karneges <justin@affinix.com>
            2005 Jeremie Miller
-License: MIT
+License: Expat
 
 Files: src/libpsi/*
 Copyright: 2003-2009 Michail Pishchagin <mblsha@users.sourceforge.net>
            2006-2008 Maciej Niedzielski
            2003-2006 Justin Karneges <justin@affinix.com>
            2005-2008 James Chaldecott
+           2003-2007 Eric Smith
            2006 Cestonaro Thilo
            2007 Remko Troncon
            2009 Caolán McNamara
@@ -148,7 +153,7 @@ License: LGPL-2.1+
 
 Files: src/libpsi/tools/globalshortcut/NDKeyboardLayout.*
 Copyright: 2010 Nathan Day
-License: MIT
+License: Expat
 
 Files: src/libpsi/tools/zip/minizip/*
 Copyright: 1998 Gilles Vollant
@@ -167,6 +172,8 @@ Files: themes/*
        sound/reminder.wav
        iconsets/system/default/psiplus/*
        iconsets/roster/default/typing.png
+       src/plugins/dev/pstoplugin/*
+       src/plugins/dev/omemoplugin/*
        src/plugins/generic/attentionplugin/*
        src/plugins/generic/extendedoptionsplugin/*
        src/plugins/generic/qipxstatusesplugin/*
@@ -192,8 +199,8 @@ Files: themes/*
        src/plugins/generic/contentdownloaderplugin/*
        src/plugins/generic/pepchangenotifyplugin/*
        src/plugins/generic/extendedmenuplugin/*
-       src/plugins/generic/pstoplugin/*
        src/plugins/generic/otrplugin/*
+       src/plugins/generic/httpuploadplugin/*
        src/plugins/deprecated/captchaformsplugin/*
        src/plugins/deprecated/gmailserviceplugin/*
        src/plugins/deprecated/yandexnarodplugin/*
@@ -204,24 +211,24 @@ Copyright: 2009-2013 Sergey Ilinyh aka Rion <rion4ik@gmail.com>
            2009-2012 Kravtsov Nikolai
            2009-2010 VampiRus
            2009-2010 Ivan Borzenkov <ivan1986@list.ru>
-           2010-2014 Ivan Romanov aka taurus <drizt@land.ru>
-           2011-2013 Aleksey Andreev
+           2010-2017 Ivan Romanov aka taurus <drizt@land.ru>
+           2011-2017 Aleksey Andreev
            2003 Justin Karneges <justin@affinix.com>
            2010 senu
            2008 Ustyugov Roman <qtdevel@gmail.com>
            2010 Michail Pishchagin <mblsha@users.sourceforge.net>
            2010 Dmitriy.trt
            2008 Armando Jagucki
-           2010 Vitaly Tonkacheyev
-           2010 KukuRuzo
-           2011 Evgeny Khryukin
+           2010 Vitaly Tonkacheyev aka KukuRuzo
            2004-2008 Ian Goldberg
            2004-2008 Chris Alexander
            2004-2008 Nikita Borisov
-           2007-2010 Timo Engel <timo-e@freenet.de>
+           2007-2011 Timo Engel <timo-e@freenet.de>
            2008-2009 Alexander Kazarin <boiler@co.ru>
-           2013-2014 Boris Pek <tehnick-8@mail.ru>
+           2013-2017 Boris Pek <tehnick-8@yandex.ru>
            2013 Georg Rudoy
+           2016 rkfg
+           2018 Vyacheslav Karpukhin
 License: GPL-2+
 
 Files: src/plugins/generic/screenshotplugin/qxt/*
@@ -229,13 +236,40 @@ Copyright: 2006-2011 Qxt Foundation <foundation@libqxt.org>
            2011 Marcin Jakubowski <mjakubowski@gmail.com>
 License: BSD-3-clause
 
+Files: src/plugins/dev/ripperccplugin/qjsonwrapper.*
+Copyright: 2014 Uwe L. Korn <uwelk@xhochy.com>
+License: Expat
+
+Files: cmake/modules/*
+       iris/cmake/modules/*
+       src/plugins/dev/omemoplugin/cmake/*
+Copyright: 2016-2018 Psi+ Project
+           2016-2018 Vitaly Tonkacheyev aka KukuRuzo
+           2009 Vittorio Giovara <vittorio.giovara@gmail.com>
+License: BSD-3-clause
+
+Files: 3rdparty/qhttp/*
+Copyright: 2014-2016 Amir Zamani <azadkuh@live.com>
+License: Expat
+
+Files: 3rdparty/http-parser/*
+Copyright: Igor Sysoev
+           Joyent, Inc.
+           Fedor Indutny
+License: Expat
+
+Files: themes/chatview/moment-with-locales.js
+Copyright: 2011-2015 Tim Wood, Iskren Chernev and Moment.js contributors
+           2016 JS Foundation and other contributors
+License: Expat
+
 Files: generate-single-repo.sh
-Copyright: 2012-2014 Boris Pek <tehnick-8@mail.ru>
+Copyright: 2012-2017 Boris Pek <tehnick-8@yandex.ru>
 License: GPL-2+
 
 Files: debian/*
 Copyright: 2009-2011 Ivan Borzenkov <ivan1986@list.ru>
-           2011-2014 Boris Pek <tehnick-8@mail.ru>
+           2011-2018 Boris Pek <tehnick-8@yandex.ru>
 License: GPL-2+
 
 License: GPL-2+
@@ -315,8 +349,7 @@ License: BSD-3-clause
  2. Redistributions in binary form must reproduce the above copyright
     notice, this list of conditions and the following disclaimer in the
     documentation and/or other materials provided with the distribution.
- 3. Neither the name of the LibQxt project nor the
-    names of its contributors may be used to endorse or promote products
+ 3. The name of the author may not be used to endorse or promote products
     derived from this software without specific prior written permission.
  .
  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
@@ -331,7 +364,7 @@ License: BSD-3-clause
  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
 
-License: MIT
+License: Expat
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
  in the Software without restriction, including without limitation the rights

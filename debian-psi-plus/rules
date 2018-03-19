@@ -2,28 +2,6 @@
 # Uncomment this to turn on verbose mode.
 #DH_VERBOSE=1
 
-ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-endif
-
-ifeq (,$(NUMJOBS))
-	NUMJOBS = 1
-endif
-
-DEBIAN_CODENAME = $(shell echo $$DIST)
-ifeq "$(DEBIAN_CODENAME)" ""
-	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
-endif
-ifneq (,$(filter $(DEBIAN_CODENAME),jessie trusty)) 
-	CONTROL = control.qt4
-	OPTSSTEP3 = -DUSE_QT5=OFF 
-else
-	CONTROL = control.qt5
-	export QT_SELECT=qt5
-	OPTSSTEP3 = -DUSE_QT5=ON 
-endif
-
-
 PACKAGE = psi-plus
 
 DEBIAN_PATH := $(abspath $(dir $(MAKEFILE_LIST)))
@@ -40,12 +18,15 @@ BUILDDIR2 = $(CURDIR)/debian/builddir2
 DESTDIR   = $(CURDIR)/debian/tmp
 
 CMAKEOPTS = -DBUNDLED_IRIS=ON \
-            -DONLY_PLUGINS=OFF \
             -DUSE_HUNSPELL=ON \
             -DUSE_ENCHANT=OFF \
-            -DSEPARATE_QJDNS=OFF \
+            -DUSE_KEYCHAIN=ON \
             -DUSE_WEBENGINE=OFF \
-            -DUSE_CCACHE=OFF
+            -DUSE_CCACHE=OFF \
+            -DONLY_PLUGINS=OFF \
+            -DBUILD_DEV_PLUGINS=ON \
+            -DSEPARATE_QJDNS=OFF \
+            -DVERBOSE_PROGRAM_NAME=ON
 
 OPTSSTEP1 = -DENABLE_PLUGINS=ON \
             -DENABLE_WEBKIT=OFF
@@ -54,16 +35,11 @@ OPTSSTEP2 = -DENABLE_PLUGINS=OFF \
             -DENABLE_WEBKIT=ON
 
 %:
-	dh $@ --buildsystem=cmake --parallel --list-missing
-
-override_dh_auto_clean:
-	cp debian/$(CONTROL) debian/control
-	dh_auto_clean
+	dh $@ --buildsystem=cmake
 
 override_dh_auto_configure:
-	cp debian/$(CONTROL) debian/control
-	dh_auto_configure -B$(BUILDDIR1) -- $(CMAKEOPTS) $(OPTSSTEP1) $(OPTSSTEP3)
-	dh_auto_configure -B$(BUILDDIR2) -- $(CMAKEOPTS) $(OPTSSTEP2) $(OPTSSTEP3)
+	dh_auto_configure -B$(BUILDDIR1) -- $(CMAKEOPTS) $(OPTSSTEP1)
+	dh_auto_configure -B$(BUILDDIR2) -- $(CMAKEOPTS) $(OPTSSTEP2)
 
 override_dh_auto_build:
 	dh_auto_build -B$(BUILDDIR1)
@@ -75,7 +51,11 @@ override_dh_auto_test:
 
 override_dh_auto_install:
 	dh_auto_install -B$(BUILDDIR1) --destdir=$(DESTDIR)
-	cp -a $(BUILDDIR2)/psi/psi-plus $(DESTDIR)/usr/bin/psi-plus-webkit
+	cp -a $(BUILDDIR2)/psi/psi-plus-webkit $(DESTDIR)/usr/bin/
 	cp -a $(CURDIR)/debian/psi-plus*.desktop $(DESTDIR)/usr/share/applications/
 	cp -a $(CURDIR)/skins $(DESTDIR)/usr/share/psi-plus/
 	cp -a $(CURDIR)/themes $(DESTDIR)/usr/share/psi-plus/
+
+get-orig-source:
+	wget -c "$(CUR_URL)" -O "$(PACKAGE)_$(CUR_VER).orig.tar.gz"
+
