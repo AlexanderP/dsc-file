@@ -2,6 +2,11 @@
 # Uncomment this to turn on verbose mode.
 #DH_VERBOSE=1
 
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+
 PACKAGE = psi-plus
 
 DEBIAN_PATH := $(abspath $(dir $(MAKEFILE_LIST)))
@@ -20,7 +25,6 @@ DESTDIR   = $(CURDIR)/debian/tmp
 CMAKEOPTS = -DBUNDLED_IRIS=ON \
             -DUSE_HUNSPELL=ON \
             -DUSE_ENCHANT=OFF \
-            -DUSE_KEYCHAIN=ON \
             -DUSE_WEBENGINE=OFF \
             -DUSE_CCACHE=OFF \
             -DONLY_PLUGINS=OFF \
@@ -34,10 +38,21 @@ OPTSSTEP1 = -DENABLE_PLUGINS=ON \
 OPTSSTEP2 = -DENABLE_PLUGINS=OFF \
             -DENABLE_WEBKIT=ON
 
+ifneq (,$(filter $(DEBIAN_CODENAME),xenial))
+	CMAKEOPTS += -DUSE_KEYCHAIN=OFF
+else
+	CMAKEOPTS += -DUSE_KEYCHAIN=ON
+endif
+
 %:
-	dh $@ --buildsystem=cmake
+	dh $@ --buildsystem=cmake --parallel
 
 override_dh_auto_configure:
+ifneq (,$(filter $(DEBIAN_CODENAME),stretch xenial artful))
+	sed -i '/^    omemoplugin/d' $(CURDIR)/src/plugins/dev/CMakeLists.txt
+else
+	# no sed
+endif
 	dh_auto_configure -B$(BUILDDIR1) -- $(CMAKEOPTS) $(OPTSSTEP1)
 	dh_auto_configure -B$(BUILDDIR2) -- $(CMAKEOPTS) $(OPTSSTEP2)
 
