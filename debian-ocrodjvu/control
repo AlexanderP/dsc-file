@@ -1,0 +1,53 @@
+Source: ocrodjvu
+Section: text
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends:
+ debhelper (>= 9),
+ dh-python,
+ djvulibre-bin,
+ libxml2-utils,
+ locales,
+ python-all (>= 2.6.6-3~),
+ python-all (>= 2.7.3-5~) | python-argparse (>= 1.2.1-2~),
+ python-djvu,
+ python-html5lib,
+ python-lxml,
+ python-nose,
+ python-pil,
+ python-pyicu (>= 1.0~), xsltproc, docbook-xsl, docbook-xml
+Build-Conflicts:
+ locales-all
+X-Python-Version: >= 2.6
+Standards-Version: 4.1.3
+Homepage: http://jwilk.net/software/ocrodjvu
+
+
+Package: ocrodjvu
+Architecture: all
+Depends:
+ djvulibre-bin,
+ python (>= 2.7) | python-argparse,
+ python-djvu,
+ ${misc:Depends},
+ ${python:Depends}
+Recommends:
+ python-html5lib,
+ python-lxml,
+ python-pyicu (>= 1.0~),
+ python-subprocess32,
+ tesseract-ocr
+Suggests:
+ cuneiform,
+ gocr,
+ ocrad
+Description: tool to perform OCR on DjVu documents
+ Ocrodjvu is a wrapper around the Optical Character Recognition (OCR)
+ systems Cuneiform, Gocr, Ocrad, OCRopus and (standalone) Tesseract. It
+ is designed for OCR on documents in DjVu format, which is especially
+ suited for high-quality archiving of books.
+ .
+ After processing, the DjVu document embeds a text layer. Other programs can
+ then be used to read the document, search it for specific terms, print it out,
+ or use the information in the OCR layer as a way to improve the document's
+ accessibility.

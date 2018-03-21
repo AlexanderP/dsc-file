@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+#export DEB_BUILD_OPTIONS=nocheck
+
+%:
+	dh $@ --with python2
+
+override_dh_auto_install:
+
+override_dh_auto_test:
+ifeq ($(filter nocheck,$(DEB_BUILD_OPTIONS)),)
+	mkdir -p debian/tmp/locale/
+	localedef -f UTF-8 -i en_US ./debian/tmp/locale/en_US.UTF-8/
+	export LOCPATH=$(CURDIR)/debian/tmp/locale/ && \
+	cd tests && \
+	set -e -x; \
+	for python in $(shell pyversions -r); do \
+		$$python /usr/bin/nosetests --verbose; \
+	done
+endif

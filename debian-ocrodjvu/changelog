@@ -1,0 +1,374 @@
+ocrodjvu (0.10.2+git1134-2f9ce47-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/jwilk/ocrodjvu.git
+  * Branch: master
+  * Commit: 2f9ce47da8491ec1e299b8f3da9c9f994dd4ff3a
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 16 Mar 2018 16:14:54 +0300
+
+ocrodjvu (0.10.2-2) unstable; urgency=medium
+
+  * deb/control: bump standards to 4.1.3 (no changes needed).
+  * deb/copyright: expand copyright span.
+  * add deb/gbp.conf.
+
+  [ svn-git-automigration ]
+  * deb/control: update Vcs fields (package moved to salsa).
+
+ -- Daniel Stender <stender@debian.org>  Wed, 07 Mar 2018 18:42:22 +0100
+
+ocrodjvu (0.10.2-1) unstable; urgency=medium
+
+  * New upstream release:
+    + add version to pyicu to deps in deb/control.
+  * use debhelper level 10 (changes in deb/compat and deb/control).
+  * deb/control:
+    + restore myself in Maintainer field.
+    + bump standards version to 4.0.0 (no further changes needed).
+  * deb/copyright:
+    + use https in Format field.
+    + expand copyright spans.
+  * deb/watch:
+    + watch github.com/jwilk/ocrodjvu.
+    + bump version to 4, add version and script.
+
+ -- Daniel Stender <stender@debian.org>  Tue, 18 Jul 2017 11:58:20 +0200
+
+ocrodjvu (0.10.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * deb/copyright: updated Source field (project moved to Github).
+
+ -- Daniel Stender <stender@debian.org>  Wed, 30 Nov 2016 23:11:31 +0100
+
+ocrodjvu (0.10-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Daniel Stender <stender@debian.org>  Fri, 24 Jun 2016 19:04:04 +0200
+
+ocrodjvu (0.9.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * deb/control:
+    + put team in Maintainer field (unconfirmed team uploads).
+    + updated Uploader email address.
+    + bumped standards to 3.9.8 (no changes needed).
+    + use HTTPS for Vcs-Browser.
+    + removed Testsuite field (deprecated).
+  * deb/copyright:
+    + updated copyright spans.
+    + updated maintainer email address.
+  * deb/control:
+    + nosetests doesn't need --all-modules anymore.
+  * deb/tests/ocrodjvu:
+    + dropped --all-modules, use shell loop instead of xargs.
+
+ -- Daniel Stender <stender@debian.org>  Thu, 02 Jun 2016 15:29:52 +0200
+
+ocrodjvu (0.9.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * deb/control: added subprocess32 to Recommends.
+  * Added deb/examples.
+
+ -- Daniel Stender <debian@danielstender.com>  Fri, 04 Sep 2015 19:19:46 +0200
+
+ocrodjvu (0.9-1) unstable; urgency=medium
+
+  * New upstream release.
+  * deb/control; deb/tests/control: depend on pil instead of imaging.
+
+ -- Daniel Stender <debian@danielstender.com>  Mon, 03 Aug 2015 13:35:36 +0200
+
+ocrodjvu (0.8-1) unstable; urgency=medium
+
+  * New upstream release.
+  * deb/control: removed ocropus from Recommends (not available).
+
+ -- Daniel Stender <debian@danielstender.com>  Tue, 16 Jun 2015 09:49:36 +0200
+
+ocrodjvu (0.7.19-3) unstable; urgency=medium
+
+  * deb/control: add Build-Conflicts: locales-all (closes: #788356).
+  * wrap-and-sort -a -s.
+
+ -- Daniel Stender <debian@danielstender.com>  Wed, 10 Jun 2015 18:03:38 +0200
+
+ocrodjvu (0.7.19-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * deb/watch: watch pypi.debian.net.
+
+ -- Daniel Stender <debian@danielstender.com>  Sun, 26 Apr 2015 08:57:31 +0200
+
+ocrodjvu (0.7.19-1) experimental; urgency=medium
+
+  * New upstream release.
+  * deb/control:
+    + added dh-python to build deps.
+    + bumped standards to 3.9.6 (no changes needed).
+  * deb/copyright: updated.
+  * deb/rules: added DH_VERBOSE and DEB_BUILD_OPTIONS export lines.
+  * Added doc/credits.txt to deb/docs.
+  * Fixed upstream-signing-key.
+  * Set up DEP-8 test suite.
+  * Removed unused deb/patches.
+
+ -- Daniel Stender <debian@danielstender.com>  Mon, 05 Jan 2015 12:15:43 +0100
+
+ocrodjvu (0.7.18-1) unstable; urgency=low
+
+  * New upstream release.
+  * deb/changelog: fixed typos.
+  * deb/control:
+    + changed maintainer email address.
+  * deb/copyright:
+    + expanded copyrights to 2014.
+    + changed maintainer email address.
+  * deb/watch: added pgpsigurlmangle (and also deb/upstream-signing-key.pgp).
+
+ -- Daniel Stender <debian@danielstender.com>  Thu, 19 Jun 2014 11:19:47 +0200
+
+ocrodjvu (0.7.17-1) unstable; urgency=low
+
+  * Team upload.
+
+  [ Daniel Stender ]
+  * New upstream release (closes: #671764, LP: #1108387).
+  * Bumped dephelper to 9 (deb/control and deb/compat).
+  * debian/copyright: extended copyrights to 2013.
+  * debian/control:
+    + bumped standards to 3.9.4 (no changes needed).
+    + added html5lib to Recommmends (closes: #672489).
+    + changed X-Python-Version to 2.6.
+    + dropped unnecessary version from python-djvu dep.
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+  * Use "python-all (>= 2.7.3-5)" (that is, python-all that have only 2.7 as
+    supported version) as an alternative to python-argparse in Build-Depends
+    (closes: #707806). Thanks to Luca Falavigna for the bug report.
+
+  [ Jackson Doak ]
+  * New upstream release (0.7.17)
+  * debian/control: Bump standards to 3.9.5 (no changes)
+
+ -- Jackson Doak <noskcaj@ubuntu.com>  Sun, 16 Feb 2014 07:48:51 +1100
+
+ocrodjvu (0.7.9-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Drop build dependency and dependency on python-argparse. Closes: #707805.
+
+ -- Matthias Klose <doko@debian.org>  Thu, 16 May 2013 14:52:47 +0200
+
+ocrodjvu (0.7.9-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+    + Fix detection of Tesseract (closes: #667548). Thanks to Ian Sullivan for
+      the bug report.
+
+ -- Jakub Wilk <jwilk@debian.org>  Mon, 23 Apr 2012 23:02:22 +0200
+
+ocrodjvu (0.7.8-1) unstable; urgency=low
+
+  * New upstream release (Closes: #655599).
+  * Changes of debian/rules:
+    + added version to b-p on python-argparse (Closes: #655598).
+  * Changes of debian/copyright:
+    + added final slash to Format URI.
+    + expanded copyrights to 2012.
+
+ -- Daniel Stender <daniel@danielstender.com>  Sat, 25 Feb 2012 19:47:41 +0200
+
+ocrodjvu (0.7.7-1) unstable; urgency=low
+
+  * New upstream release.
+  * Re-added Gocr and Ocrad as supported engines in the package description
+    of debian/control, and changed that a little further.
+  * Changed Format URI in debian/copyright.
+
+ -- Daniel Stender <daniel@danielstender.com>  Sun, 18 Dec 2011 15:25:42 +0200
+
+ocrodjvu (0.7.6-2) unstable; urgency=low
+
+  * Improved package description (Closes: #650374).
+
+ -- Daniel Stender <daniel@danielstender.com>  Sun, 04 Dec 2011 19:27:56 +0200
+
+ocrodjvu (0.7.6-1) unstable; urgency=low
+
+  * New upstream release (closes: #604874).
+    + Fix typo in hocr output (closes: #600539).
+    + Fix of upside-down generation of hocr data (closes: #611460).
+  * New maintainer (closes: #598156).
+  * Upload to unstable.
+  * Change of debian/control
+    + Changed maintainer.
+    + Bumped Standards-Version to 3.9.2 (no changes needed).
+    + Wrapped-and-sorted.
+    + Bumped rev. of build-dep on python-all to 2.6.6-3~.
+    + Added build-deps on python-html5lib, python-imaging and locales
+      (needed by the upstream).
+    + Changed Vcs-Browser URL.
+    + Removed build-dep on python-support (changed to build with
+      dh_python2.
+  * Changes of debian/copyright
+    + Changed source URL.
+    + Extended copyrights to 2011.
+    + tests/alice* moved to tests/hocr2djvused/alice*,
+      added public domain explanation.
+    + Changed maintainer.
+    + Added myself as copyright holder of debian/*.
+  * Changes of debian/rules
+    + Changed to build with dh_python2.
+    + Remove of subdirectory loop for nosetests.
+    + Remove option --with-doctests for nosetests.
+    + Added creation of standard locale during build-time.
+
+ -- Daniel Stender <daniel@danielstender.com>  Fri, 18 Nov 2011 22:24:31 +0100
+
+ocrodjvu (0.6.1-1) experimental; urgency=low
+
+  * New upstream release.
+    + Fix crash on hOCR with image elements (closes: #598139).
+    + Fix insecure use of temporary files (CVE-2010-4338,
+      closes: #598134).
+
+ -- Jakub Wilk <jwilk@debian.org>  Mon, 27 Sep 2010 00:58:24 +0200
+
+ocrodjvu (0.6.0-1) experimental; urgency=low
+
+  * New upstream release, which adds support for new OCR engine: stand-alone
+    Tesseract.
+    + Update package description.
+
+ -- Jakub Wilk <jwilk@debian.org>  Thu, 16 Sep 2010 19:41:55 +0200
+
+ocrodjvu (0.5.1-1) experimental; urgency=low
+
+  * New upstream release.
+    + Demote dependency on python-lxml to recommendation.
+
+ -- Jakub Wilk <jwilk@debian.org>  Wed, 15 Sep 2010 19:24:35 +0200
+
+ocrodjvu (0.5.0-1) experimental; urgency=low
+
+  * New upstream release, which adds support for new OCR engines: Ocrad and
+    GOCR.
+    + Update package description.
+    + Update the Suggests field.
+
+ -- Jakub Wilk <jwilk@debian.org>  Tue, 14 Sep 2010 23:26:31 +0200
+
+ocrodjvu (0.4.7-1) experimental; urgency=low
+
+  * New upstream release.
+    + Drop all patches, applied upstream.
+    + Don't clean up environment when calling external programs
+      (closes: #594385).
+
+ -- Jakub Wilk <jwilk@debian.org>  Wed, 25 Aug 2010 21:13:35 +0200
+
+ocrodjvu (0.4.6-1) unstable; urgency=low
+
+  * New upstream release.
+    + Fix crash of djvu2hocr on on very long documents (closes: #591389).
+    + Fix deprecation warning with PyICU ≥ 1.0 (closes: #589027).
+  * Fix version information in a test. [test-version.diff]
+  * Add a missing changelog entry. [changelog-0.4.6.diff]
+  * Run doctests at build time.
+    + Build-depend on python-nose.
+  * Require python-argparse only for Python ≤ 2.6.
+  * Bump standards version to 3.9.1 (no changes needed).
+
+ -- Jakub Wilk <jwilk@debian.org>  Tue, 03 Aug 2010 22:00:23 +0200
+
+ocrodjvu (0.4.5-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Jakub Wilk <jwilk@debian.org>  Mon, 24 May 2010 21:27:46 +0200
+
+ocrodjvu (0.4.4-1) unstable; urgency=low
+
+  * New upstream release:
+    + Document that ocrodjvu honours TMPDIR environment variable
+      (closes: #575488).
+    + Don't remove temporary directory if ocrodjvu crashed
+      (closes: #575487).
+  * Enable tests for djvu2hocr.
+    + Build-depend on djvulibre-bin, libxml2-utils.
+  * Switch to source format 3.0 (quilt).
+
+ -- Jakub Wilk <jwilk@debian.org>  Fri, 02 Apr 2010 13:02:03 +0200
+
+ocrodjvu (0.4.3-1) unstable; urgency=low
+
+  * New upstream release:
+    + Give more meaningful error messages on a malformed hOCR produced by
+      Cuneiform (closes: #572522).
+    + Stop crashing on --version (closes: #573496).
+    + Rewrite test running code in debian/rules. (But don't run tests for
+      djvu2hocr, as they broken.)
+  * Update homepage URL.
+
+ -- Jakub Wilk <jwilk@debian.org>  Fri, 19 Mar 2010 12:21:17 +0100
+
+ocrodjvu (0.4.2-1) unstable; urgency=low
+
+  * New upstream release:
+    + Add options to control which layers are rendered (closes: #572081).
+    + Document more clearly semantics of --list-languages and default value
+      for --language (closes: #572089).
+  * Let dh_installdocs install the upstream changelog.
+  * Bump standards version to 3.8.4 (no changes needed).
+  * Update my e-mail addresses.
+  * Respect the ‘nocheck’ build option.
+  * Run tests with all supported Python versions:
+    + Build-depend on python-all.
+
+ -- Jakub Wilk <jwilk@debian.org>  Wed, 03 Mar 2010 22:02:32 +0100
+
+ocrodjvu (0.4.1-1) unstable; urgency=low
+
+  * New upstream release:
+    - Suggest cuneiform, which is now one of the supported OCR engines.
+    - Update package description.
+    - Record in debian/copyright that test files are in public domain.
+    - Run tests at build time.
+  * Don't depend on ocropus, as some parts of the package are usable without
+    it.
+  * Explicitly recommend tesseract-ocr.
+
+ -- Jakub Wilk <ubanus@users.sf.net>  Sat, 23 Jan 2010 13:16:43 +0100
+
+ocrodjvu (0.3.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update debian/copyright.
+
+ -- Jakub Wilk <ubanus@users.sf.net>  Fri, 08 Jan 2010 18:25:56 +0100
+
+ocrodjvu (0.3.0-1) unstable; urgency=low
+
+  * New upstream release:
+    - Add argparse as dependency.
+    - Recommend ocropus (>= 0.3.1).
+    - Recommend python-pyicu.
+    - Require Python 2.5 (or later).
+  * Make hocr2djvused and djvu2hocr scripts available in /usr/bin.
+  * Update debian/copyright in accordance to the latest DEP-5 version.
+  * Don't use distutils to install files; just copy the source into the right
+    location.
+
+ -- Jakub Wilk <ubanus@users.sf.net>  Tue, 22 Dec 2009 22:57:14 +0100
+
+ocrodjvu (0.2.1-1) unstable; urgency=low
+
+  * Initial release (closes: #550921).
+
+ -- Jakub Wilk <ubanus@users.sf.net>  Sat, 17 Oct 2009 18:00:12 +0200

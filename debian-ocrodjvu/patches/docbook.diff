@@ -1,0 +1,16 @@
+Description: Use local docbook.xsl
+Author: Alexander Pozdnyakov <almipo@mail.ru>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: 2018-03-16
+
+--- ocrodjvu-0.10.2+git1134-2f9ce47.orig/setup.py
++++ ocrodjvu-0.10.2+git1134-2f9ce47/setup.py
+@@ -112,7 +112,7 @@ class build_doc(distutils_build):
+                 '--param', 'man.charmap.use.subset', '0',
+                 '--param', 'man.font.links', '"I"',
+                 '--output', 'doc/',
+-                'http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl',
++                '/usr/share/xml/docbook/stylesheet/docbook-xsl/manpages/docbook.xsl',
+                 xmlname,
+             ]
+             self.make_file([xmlname], manname, self.build_man, [manname, command])

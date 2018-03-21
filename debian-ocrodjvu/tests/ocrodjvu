@@ -1,0 +1,5 @@
+#!/bin/sh -e
+mkdir -p "$ADTTMP/locale"
+localedef -f UTF-8 -i en_US "$ADTTMP/locale/en_US.UTF-8"
+export LOCPATH="$ADTTMP/locale/"
+for py in $(pyversions -i); do echo "[*] Testing $py:"; $py -Wd -m nose -v tests/ 2>&1; done
