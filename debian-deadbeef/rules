@@ -3,14 +3,11 @@
 
 export DH_ALWAYS_EXCLUDE := COPYING:COPYING.GPLv2:COPYING.LGPLv2.1
 
+DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
-endif
-ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
-	BUILDDEBFLAGS= -- -Zlzma -z9
-else
-	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
 CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
@@ -21,7 +18,7 @@ LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
 export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
 
 %:
-	dh --parallel --with quilt $@
+	dh $@ --parallel
 
 override_dh_makeshlibs:
 	dh_makeshlibs -n
@@ -34,10 +31,10 @@ override_dh_auto_configure:
 override_dh_install:
 	dh_install
 	@cp ChangeLog debian/deadbeef/usr/share/doc/deadbeef/changelog.deadbeef
-	cd  debian/deadbeef/usr/lib* && rm deadbeef/*gtk2* 
-	cd  debian/deadbeef/usr/lib* && rm deadbeef/*gtk3* 
-	cd  debian/deadbeef/usr/lib* && rm deadbeef/*GTK3* 
-	cd  debian/deadbeef/usr/lib* && rm deadbeef/*GTK2*
+	cd  debian/deadbeef/usr/lib/$(DEB_HOST_MULTIARCH) && rm deadbeef/*gtk2*
+	cd  debian/deadbeef/usr/lib/$(DEB_HOST_MULTIARCH) && rm deadbeef/*gtk3*
+	cd  debian/deadbeef/usr/lib/$(DEB_HOST_MULTIARCH) && rm deadbeef/*GTK3*
+	cd  debian/deadbeef/usr/lib/$(DEB_HOST_MULTIARCH) && rm deadbeef/*GTK2*
 	cd  debian && sed -i "/dependency_libs/ s/'.*'/''/" `find . -name '*.la'`
 
 
@@ -47,5 +44,3 @@ override_dh_installchangelogs:
 override_dh_compress:
 	dh_compress -Xchangelog.deadbeef -Xabout.txt
 
-#override_dh_builddeb:
-#	dh_builddeb $(BUILDDEBFLAGS)

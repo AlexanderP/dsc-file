@@ -2,37 +2,36 @@ Source: deadbeef
 Section: sound
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 7.0.50~), 
-                libltdl-dev | libltdl7-dev, 
-                libtool, 
-                libasound2-dev, 
-                libsamplerate0-dev, 
+Build-Depends: debhelper (>= 9),
+                libltdl-dev | libltdl7-dev,
+                libtool,
+                libasound2-dev,
+                libsamplerate0-dev,
                 libmad0-dev, libmpg123-dev,
-                libavformat-dev, 
-                libsndfile1-dev, 
-                libx11-dev, 
-                libvorbis-dev, 
-                libavutil-dev, 
-                libcddb2-dev, 
+                libavformat-dev,
+                libsndfile1-dev,
+                libx11-dev,
+                libvorbis-dev,
+                libavutil-dev,
+                libcddb2-dev,
                 libgtk2.0-dev, libgtk-3-dev,
-                libcdio-dev, 
-                libogg-dev, 
-                libcurl4-gnutls-dev, 
-                libflac-dev, 
-                autotools-dev, 
-                libwavpack-dev, 
-                libavcodec-dev, 
-                automake, 
-                autoconf, 
-                libnotify-dev, 
-                libpulse-dev, 
-                intltool, 
-                libmpcdec-dev, 
-                libmms-dev, 
-                libfaad-dev, 
+                libcdio-dev,
+                libogg-dev,
+                libcurl4-gnutls-dev,
+                libflac-dev,
+                autotools-dev,
+                libwavpack-dev,
+                libavcodec-dev,
+                automake,
+                autoconf,
+                libnotify-dev,
+                libpulse-dev,
+                intltool,
+                libmpcdec-dev,
+                libmms-dev,
+                libfaad-dev,
                 bison,
                 libzip-dev,
-                libavformat-dev,
                 libimlib2-dev,
                 quilt,
                 yasm,
@@ -41,7 +40,7 @@ Build-Depends: debhelper (>= 7.0.50~),
                 mesa-common-dev,
                 libgtkglext1-dev,
                 libjansson-dev
-Standards-Version: 3.9.8
+Standards-Version: 4.1.3
 Homepage: http://deadbeef.sourceforge.net/
 
 Package: deadbeef-dev
@@ -53,9 +52,10 @@ Description: DeaDBeeF plugins development files
  .
  This package contains all supplementary files you need to develop your plugins
  for DeaDBeeF audio player.
+ .
+ DeaDBeeF plugins development files
 
 Package: deadbeef-gtk3
-Section: sound
 Architecture: any
 Depends: deadbeef (>= ${source:Version}), ${shlibs:Depends}, ${misc:Depends}
 Description: GTK3 interface to DeaDBeeF
@@ -63,9 +63,10 @@ Description: GTK3 interface to DeaDBeeF
  .
  This package contains all supplementary files you need to develop your plugins
  for DeaDBeeF audio player.
+ .
+ GTK3 interface to DeaDBeeF
 
 Package: deadbeef-gtk2
-Section: sound
 Architecture: any
 Depends: deadbeef (>= ${source:Version}), ${misc:Depends}, ${shlibs:Depends}
 Description: GTK2 interface to DeaDBeeF
@@ -73,10 +74,11 @@ Description: GTK2 interface to DeaDBeeF
  .
  This package contains all supplementary files you need to develop your plugins
  for DeaDBeeF audio player.
+ .
+ GTK2 interface to DeaDBeeF
 
 
 Package: deadbeef
-Section: sound
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, deadbeef-gtk2 | deadbeef-gtk3
 Description: ultimate music player for GNU/Linux systems
