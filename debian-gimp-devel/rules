@@ -207,7 +207,7 @@ override_dh_auto_install:
 	find $(CURDIR)/debian/tmp2 -name '*.la' -delete
 	find $(CURDIR)/debian/tmp2 -name '*.pyc' -delete
 	find $(CURDIR)/debian/tmp2 -name '*.pyo' -delete
-	rm -f $(CURDIR)/debian/tmp2/usr/lib/gimpdevel/share/man/man1/gimp-console-2.9.1
+	find $(CURDIR)/debian/tmp2/usr/lib/gimpdevel/share/man/ -name "*" -type l -delete
 	cd $(CURDIR)/debian/tmp2/usr/lib/gimpdevel/share/man/man1/ && gzip -n -9 *.1
 	cd $(CURDIR)/debian/tmp2/usr/lib/gimpdevel/share/man/man5/ && gzip -n -9 *.5
 

@@ -1,3 +1,178 @@
+audacity (1:2.2.2+git8509-b5ffaca98-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: b5ffaca980aebb878836b8d8d98c8fd43e3994cb
+  * Date: 1522443041
+  * git changelog:
+  *  b5ffaca98 - Possible MSVC build fix for Windows build-bot
+  *  877f07834 - Fix redefinition warning in Internat.h
+  *  26cf8a41c - Upgrade mod-script-pipe to wx3.1.1 release build too.
+  *  00b666474 - Upgrade mod-script-pipe to wx3.1.1
+  *  e9146d692 - Update Windows build instructions for wxWidgets 3.1.1.
+  *  3c0c9d48a - Update audacity.iss for 3.1.1
+  *  0fb02a802 - IdentInterfaceSymbol in NumericTextCtrl; don't persist
+    translated
+  *  9015dece0 - Compile with wxWidgets 3.1.1 (on Windows).
+  *  d153afb11 - Allow SetLabel to make a selection too.
+  *  6228b6033 - Modify scripts to adjust to Pull request #271
+  *  4ae7a88fd - Merge pull request #271 from Paul-Licameli/choice-
+    control-names
+  *  842025aeb - Naming conventions for Nyquist choice controls too...
+  *  e1b60916b - More consistent naming conventions for choice control
+    items...
+  *  6f52df545 - Multi-line Nyquist header directives allow embedded
+    comments
+  *  b92e33487 - Bug 1861 - SplitLabels command fails in Macros
+  *  2db691dc6 - Bug 1860 - Enh: Add preference to disable half-wave
+    view on collapse.
+  *  886388e02 - Distinguish internal from visible form of enum valued
+    settings
+  *  7f30636ec - .ny header can distinguish internal vs visible choice
+    strings...
+  *  d464878d6 - Use std::vector<>::data() not address of first element
+  *  2065eebff - IdentInterfaceSymbol to distinguish internal vs visible
+    enum settings
+  *  595cf05d4 - More uses if LocalizedStrings
+  *  81dd580c5 - Pass array and count separately to read/write/define
+    enum
+  *  180cf9279 - Move DbChoices out of Shuttle.h
+  *  1a3005182 - Const'ify images
+  *  b77637750 - Const'ify xpm images
+  *  d8da4015e - Make it possible to const'ify xpm.
+  *  aaecf213b - use const
+  *  2bd466546 - This is not needed after 170f92c
+  *  15e6792be - Fix bug 929
+  *  ab509acdf - Remove overloads that are not needed after 277537c
+  *  a4a588610 - Revert "Bug 893 - Spectral Selection Toolbar misnamed"
+  *  d1ffb8a5b - Supply missing #include
+  *  277537c7b - Store choices as numerical codes in ScreenshotCommand,
+    not strings...
+  *  78f058b84 - ShuttleGetDefinition::DefineEnum should emit a string
+    not number
+  *  1e4ac7010 - addendum
+  *  170f92c18 - A means to specify legacy values of effect choice
+    controls...
+  *  cb8e35574 - Fix half sized equalization dB ruler.
+  *  c086e252f - Fix wording in recording preferences (Thanks Bill)
+  *  460ff4644 - JSONify the JSON (Thanks Robert)
+  *  0bc96c383 - Oops, Internal() was needed here, not Translation()
+  *  afe09bb17 - Bug 1731 - No help button in "Error: not well formed
+    Iinvalid token at line (x)
+  *  eaada3a51 - Bug 893 - Spectral Selection Toolbar misnamed
+  *  e48bd77ea - Fix bad unquoting in Nyquist.
+  *  602be9bea - Fix MSVC build.
+  *  4c9bff73e - Substitute, don't concatenate! In Export. And one
+    missed translation.
+  *  eb35d8409 - GetInfo for Preferences lists internal enum names, not
+    translated
+  *  079868131 - Non-quantitative enum preferences persist as strings
+    not numbers...
+  *  17cc8a495 - Define and use TieNumberAsChoice for Quality sample
+    rate setting
+  *  24e651fe3 - Redo dither method choices in Quality preferences
+  *  a3d12e165 - Make enum class for dither type
+  *  bccf8f92c - Redo resampler method choices in Quality preferences
+  *  2ea5741e2 - Redo format setting choices in Quality preferences
+  *  293f22db3 - Redo zoom setting choices in Tracks preferences
+  *  aed6eb221 - Redo sample display choice  in Tracks preferences
+  *  83a01e255 - Redo view mode choice in Tracks preferences
+  *  872b4f430 - New overload of TieChoice taking EnumSetting...
+  *  47d76e49b - IdentInterfaceSymbol pairs persistent internal name
+    with i18n msgid
+  *  7f7f739fe - Define EnumSetting and EncodedEnumSetting
+  *  238fa7f81 - Possibly hide unused ApplyClipping parameter in Macros.
+  *  545102b16 - Bug 1680 - Pan / Gain dialog sliders do not update on
+    text entry
+  *  5c4444665 - Bug 1012 - Amplify: User Presets do not store Allow
+    Clipping state.
+  *  d5a2e3af2 - Bug 616 - First ampersand in file name removed from
+    File > Recent Files and import dialogues
+  *  de53f6475 - Bug 499 - Normalize includes white space in offset
+    calculation
+  *  14577d878 - Bug 464 - Cursor cannot be scrolled right when beyond
+    all audio in project
+  *  ae564b272 - Bug 1837 - Unable to set empty track name
+  *  8ce8e7bcc - Bug 521 - Lower half of Waveform (dB) vertical scale
+    does not show dB level.
+  *  37541de6b - Bug1858: Allow empty default choice on $ control lines
+    (again)
+  *  05ef58753 - Substitute, don't concatenate in internationalized
+    strings
+  *  d978abba3 - Allow \n to mean newline in .ny header control
+    string...
+  *  7de9b13f6 - Revert changes that break Mac build
+  *  35127c44b - Bug 1548 - Newly recorded tracks do not acquire focus
+  *  a13be4bea - Bug 1612 - Zoom factor lost
+  *  65b4e34f7 - Bug 1725 - Zoom buttons disabled after OK in
+    Spectrogram Settings
+  *  22cb84ff2 - Bug 1806 - Extreme negative settings in Change Tempo
+    cause an "apparent" hang/freeze
+  *  0fb08f74c - Linkus -> Linkus in de.po (requested by Double-A-92)
+  *  cd06f8661 - Remove spaces before question marks (scootergrisen)
+  *  ef5cc132e - Merge branch 'gcc-warnings' (andheh)
+  *  eccd9bcea - made my changes to VSTEffect.cpp C++11 compliant
+  *  6fbfcda1e - fixed an "uninitialized use" warning in VSTEffect.cpp
+  *  430e91d83 - fixed strict-aliasing violations in VSTEffect.cpp
+  *  b56059a77 - fixed some warnings in debug mode (GCC/Linux)
+  *  1cda717a1 - Fix parse of line break in string inside list in header
+    of .ny file
+  *  872eec614 - Make finer gradations on SetTrack sliders
+  *  e01122e84 - Change dangerous shortcuts, Alt+N and Alt+P
+  *  4a7c4f400 - Bug 1830 - Zero Crossings selection may change when
+    zero crossing not found
+  *  d94f6c9b5 - Use Alt+R as accelerator for "Ext&ra"
+  *  0cf7964e3 - Bug 1661 - Default audio track name not being
+    translated
+  *  40085b384 - Fix crash on second invocation of Macros after apply to
+    projects.
+  *  2f89c57b1 - Fix defaults for unchosen optional values.
+  *  975e95aba - Update Nyquist plug-in headers
+  *  2ccc8eec9 - Revert "Don't use c++11 fix ups on OSX 10.6"
+  *  47451da0e - Don't use c++11 fix ups on OSX 10.6 (requested by
+    macrports.org)
+  *  2a8cec8bb - Fix Mac build
+  *  6828627e0 - Fix libsoxr build on Windows
+  *  ccc29c6c7 - Upgrade libsoxr to 0.1.3
+  *  f7f721b52 - Automatic setting size hints in all choice controls in
+    ShuttleGui...
+  *  56bca7427 - Add new dialogs to screenshot list.
+  *  bd30e1f16 - Add long names for some commands in menu.
+  *  63879f2fc - Don't hide macros GUI when applying.
+  *  a02c9de78 - Use capital 'M' for Macro in history.
+  *  0797da041 - Remove Select to Ends Macro
+  *  3896ff98d - Update scripts for revised commands.
+  *  8f8429f9a - Allow SelectTrack to select channels using 0.5 of a
+    track.
+  *  0a7d0068e - Use track selection for SetTrack, SetClip and
+    SetEnvelope
+  *  e661c7da4 - Fix assert on deletion of last macro item
+  *  ce9b5bb9e - Add Select->Region->Track Start to End
+  *  39caf6100 - Merge branch 'split-dialogs'
+  *  2c57cd434 - Format dialogs more evenly.
+  *  e97884004 - Remove 'Set' from optional items.
+  *  8f622805b - Add new small dialogs to extra-menus
+  *  825160b75 - Add six (smaller) dialogs to commands.
+  *  913bd6f18 - Split SetTrackCommand into three dialogs.
+  *  21e4847b9 - Fix compilation on Windows.
+  *  6dca4f785 - Possibly correct some cases of clicky playback or
+    corrupt recording...
+  *  7b658d792 - Fix problem where effects had gone from KeyConfigPrefs.
+  *  750ee4f46 - Merge branch 'macros'
+  *  b421a2b0e - Add new 'Select to Ends' default Macro
+  *  e6a9bd70a - Fix SetTrack for stereo tracks.
+  *  110d4ac47 - Change "Apply Macros" -> "Macros Palette"
+  *  20d577de2 - Preserve location in lists after edits.
+  *  d7406b3b0 - Update Fade-Ends Macro, and RelativeTo enums.
+  *  a47df37ea - Bug 1533 - Selection in label track offset from
+    selection in audio Track
+  *  51011fb38 - Keep Edit Macros dialog open after applying.
+  *  21e330d0e - Bug 1551 - Active transport inhibits the operation of
+    "Type to create a label"
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 31 Mar 2018 08:52:38 +0300
+
 audacity (1:2.2.2+git8385-bc6ed7749-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,193 @@
+gimp-devel (2.9.8+git40281-49285463e6-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 49285463e6c0cc03c361902df4e3006fa135dde3
+  * Date: 1522498758
+  * git changelog:
+  *  49285463e6 - app: align projection update area to coarse grid
+  *  7be2d1457c - app: use gimp_config_writer_string() to output the
+    mypaint-brush-path
+  *  2aa4426d4f - app: improvements in code executed a lot while
+    painting.
+  *  31086ae211 - Update Polish translation
+  *  347acb16d3 - desktop: add gimp-data-extras.metainfo.xml to
+    .gitignore
+  *  29d7cee100 - configure.ac: add new option --enable-bundled-mypaint-
+    brushes
+  *  452b1bd558 - Stop leaking properties of the distcheck machine into
+    the tarball
+  *  4698529dbe - app: make MyPaint brushes path relative on Win32 and
+    macOS.
+  *  8811e31419 - app: cleaning out some if-0 variables.
+  *  479bcaafdd - configure, docs: set correct "mypaint-brush-path"
+    value in man page.
+  *  5d83c7697e - devel-docs: minor typo.
+  *  7c1ea0345e - configure.ac: fix check for freetype2
+  *  dbb9fdb333 - Update Catalan translation
+  *  53c145c0be - app: add --show-debug-menu command-line option
+  *  c3efb1b0de - app: don't show invisible actions in search dialog
+  *  3265797f3e - Bug 794753 - do not dither image mask and channels for
+    imported images
+  *  9cabee5451 - app: call gimp_progress_end() at
+    gimp_image_convert_dither_u8() exit
+  *  527ad94a7e - Bug 794772 - detect freetype2 using pkg-config.
+  *  44f293bcdb - Bug 794753 - do not dither image mask and channels for
+    imported images
+  *  c5ebf29065 - Bug 794747 - Multiple GIMP-WARNINGs about duplicate
+    accelerators on startup
+  *  60e01f5593 - app: fix error reporting in
+    gimp_tool_preset_deserialize_property()
+  *  69d5201d59 - app: fix formatting in previous commit
+  *  a7b0d55fc5 - app: only create GeglBuffer wrapper for cairo-data
+    when used
+  *  0fe50c76f8 - Update Arabic translation
+  *  5614cd444d - app: in gimp_image_convert_precision(), report
+    progress for selection mask
+  *  cf658f64b5 - Bug 794721 - CRITICAL converting image precision
+  *  7f96c9e7c6 - Updated Italian translation
+  *  956ca8e3a3 - app: small fix to
+    gimp_operation_buffer_source_validate_process()
+  *  e5e14b3898 - configure.ac: bump version to 2.10.0-RC1
+  *  368c7c0511 - docs, etc: default gimprc and its manpage regenerated
+    by distcheck
+  *  caa3a98f04 - Bug 790810 - Nested layer groups lead to a deadlock
+    with multithreading
+  *  e4d2de7dde - Update Polish translation
+  *  8c0d30004f - NEWS: some small fixes
+  *  7409c98893 - devel-docs: add OS support specific information.
+  *  ce3899e722 - libgimpwidgets: gimppickbutton-quartz: do not release
+    color_space
+  *  0e9e167da8 - libgimpwidgets: make pick button quartz work on macOS
+    < 10.12
+  *  b2d40eb994 - data: don't install gimp-splash.xcf
+  *  a6fd24a953 - Bug 793951 - Fix crashes when some external APIs fail
+  *  fae9c28354 - app: splash max size now half of width and height.
+  *  b6fbf37730 - Update Swedish translation
+  *  7c4f7c53ea - Bug 794679 - warning on scrolling in the gradient dock
+  *  806d1b0510 - app: fix resizing of image-sized layers when resizing
+    canvas
+  *  20fc93fde0 - devel-docs: update the release procedure regarding
+    appdata contents.
+  *  2cf6d88ac1 - desktop: 2.10.0-rc1 will actually be released on the
+    26th.
+  *  9f3ee499c1 - app: run errors_init() after gimp_load_config().
+  *  3261e03d22 - Update Russian translation
+  *  f561231e1f - app: various speedups to
+    gimp_brush_core_color_area_with_pixmap()
+  *  67041d6b82 - Update Polish translation
+  *  05a1dadf66 - Add new splash screen with undecipherable easter egg,
+    both PNG and XCF
+  *  e931d354ab - build: update Windows installer splash for 2.10 RC
+  *  923ffb7e53 - devel-docs: adding new splash requirements.
+  *  5763b50d45 - app: round layer bounds to global pixel grid when
+    scaling image/group
+  *  139a23451d - app: use GimpObjectQueue in lots of places
+  *  3ee5054eb7 - app: add GimpObjectQueue
+  *  0f532787c9 - app: add "progress" property to GimpSubProgress
+  *  76a88cc60a - app: fix layer-group mask cropping during move
+    operation undo
+  *  6a825f18bb - desktop, po: also update the appdata description.
+  *  f8de23877f - desktop: so the accurate naming of the release is
+    "2.10.0-rc1".
+  *  c0343a5969 - desktop: update the release date.
+  *  1b623a99c8 - Bug 794469 - Shift-click to create
+    layer/channel/path...
+  *  8f07d76786 - app: fix paste-in-place when pasting over a layer
+    group/locked item
+  *  888baac9c8 - Revert "app: tweak sessionrc-expected-2-6 for make
+    check to succeed."
+  *  554347e0ff - app: tweak sessionrc-expected-2-6 for make check to
+    succeed.
+  *  9adeee9d25 - app, po: revert commit a0724783d8 and add a
+    TRANSLATORS comment.
+  *  08c4f84430 - Update Polish translation
+  *  c49e34cf7e - app: shorten to "Debug Policy" the long label in
+    Preferences.
+  *  8266c2246e - Update Russian translation
+  *  501b0822b8 - Update Polish translation
+  *  a0724783d8 - Plural forms work better this way for languages other
+    than English
+  *  9add6b92f3 - Update Polish translation
+  *  6dafb02a11 - app: fix capitalization of the image recovery dialog
+    title
+  *  bb58eab607 - Update Polish translation
+  *  f3b3770283 - Update Polish translation
+  *  f49e4b4263 - Bug 794634 - CRITICAL when adding layers with Dissolve
+    mode
+  *  a9c3b4c54d - desktop: add a <release> tag for GIMP 2.10 RC1.
+  *  a0c55a6b96 - depend on GEGL 0.3.30
+  *  cdabe69164 - Bug 794469 - Shift-click-create layer always set
+    "Default/Normal" mode.
+  *  2c417801fc - app: fix error message in gimp_text_buffer_save()
+  *  822a7228c4 - Bug 794221 - Recently used colors on text don't get
+    added to the color history
+  *  3df168595e - NEWS: keep up-to-date.
+  *  25af765fe6 - app: output a dialog to recover images salvaged after
+    a crash.
+  *  289ecebd69 - Bug 793734 - White alpha border after upscaling
+  *  ab4b7ab33a - app: crop input to output rect in channel ops
+  *  e1b1611ec4 - app: add crop_input parameter to
+    gimp_gegl_apply_operation()
+  *  4580285503 - app, NEWS: metadata export settings are now ON by
+    default.
+  *  848b89afc2 - autogen: add support for recent automake 1.16.
+  *  f497287837 - app: only show FATAL errors by default for stable
+    releases.
+  *  829d44d900 - app: make "color" parameter of
+    gimp_palettes_add_color_history() const
+  *  9a365eaf8b - Bug 794378 - GIMP crashed while I was moving the image
+    window
+  *  c44f5a2f4c - NEWS: keep up-to-date.
+  *  34b68a2c1d - plug-ins: rename s/YUV/YCbCr/ s/eYCC/xvYCC/
+    s/RGB/sRGB/.
+  *  5732b7ab6d - plug-ins: add a color space parameter to file-j2k-
+    load().
+  *  7e52c48364 - plug-ins: open a dialog to select color space of JPEG
+    2000 codestream.
+  *  5e5fa4a024 - plug-ins: .jpc is another known extension for JPEG
+    2000 codestream.
+  *  28d9e43f53 - Bug 792686 - Colormap widget not updated when adding
+    entry
+  *  8447e775ab - Bug 783680 - Allow to hide color models in
+    GimpColorScales
+  *  8f71aeda3d - build: update flatpak builds with latest changes.
+  *  845eb522b6 - Bug 793777 - CRITICALs on focus change in MWM with
+    stylus.
+  *  cada28e91e - app: reset GimpFilterTool widget when resetting
+    settings
+  *  7ca38c54f6 - Bug 794366 - Crash when using Hue-Chroma on a
+    ProPhotoRGB image
+  *  a1d5978826 - Update Polish translation
+  *  16b0110f72 - Bug 791315: Using the Gaussian Blur filter twice (Re-
+    Show)...
+  *  a1b4f4aef5 - Bug 793638 - (gimp-edit-stroke ...) crashes gimp-
+    console-2.9 unless...
+  *  753bd0a0c9 - pdb: add jehan_pdb_misc() and use it in the new
+    procedures
+  *  1789f0fe2a - app, libgimp, pdb: update gimp_edit_blend()
+    description.
+  *  c5c0dbcd24 - NEWS: keep up-to-date.
+  *  e164aee7a9 - app, libgimp, pdb: add "distance-metric" property to
+    GimpPDBContext.
+  *  11dcabc46f - pdb: prepend GEGL enum types with GEGL_TYPE.
+  *  390ef44481 - pdb, libgimp: allow to use external GType-registered
+    enums in the PDB
+  *  c3ef34b496 - Revert "app: "distance-metric" is now a property of
+    GimpContext."
+  *  2c799d4af9 - app: "distance-metric" is now a property of
+    GimpContext.
+  *  d25db86fc9 - NEWS: keep up-to-date.
+  *  1eedbdc942 - desktop: <release> tag texts for upcoming 2.10
+    reworded a bit.
+  *  acc0a97eed - app: updating the previous commit following enum
+    update in GEGL.
+  *  9b11fb2b91 - app, libgimp, libgimpbase, pdb:
+    s/GimpDistanceMetric/GeglDistanceMetric/
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 31 Mar 2018 15:47:51 +0300
+
 gimp-devel (2.9.8+git40166-f2c80e1878-1) unstable; urgency=medium
 
   * Compile

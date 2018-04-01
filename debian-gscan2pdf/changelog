@@ -1,3 +1,38 @@
+gscan2pdf (2.0.1+git2808-2ac6817d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 2ac6817d145abd6980d3f140c613b3911d69748d
+  * Date: 1522425103
+  * git changelog:
+  *  2ac6817d - Ignore options in profile that are already within
+    tolerance
+  *  242f7848 - Bumped version to 2.0.3
+  *  b845fdc0 - Ignore options in profile that are already correctly set
+  *  db8fa9db - Ignore invalid options in profile
+  *  afa07472 - Update to Hungarian translation
+  *  4c9d32a2 - Convert all scans to PNG to allow tesseract to extract
+    resolution
+  *  14b63f44 - Show text in progress bars on scan dialogue
+  *  7aeb2284 - Build corrupt session file by hand rather than storing
+    binary file that is not universally compatible
+  *  1daca4dc - Update cursor depending on selected tool and position
+  *  12fb8e79 - If image is zoomed to fit viewer, update zoom when the
+    size of the viewer changes
+  *  81245ad2 - Fixed manually typing date in metadata dialog (again)
+  *  30904972 - Always update image viewer if page selection changes
+  *  1b874377 - Bumped version to 2.0.2
+  *  b0837a47 - Support Glib::Object::Introspection < 0.043
+  *  4adb6953 - Fixed size of background
+  *  5047a27c - Take colours for image viewer from theme
+  *  8895f64e - Fixed manually typing date in metadata dialog
+  *  b7564ba3 - Change boolean scan options to use switch instead of
+    checkbox widget
+  *  b036c826 - Clear view if no page selected
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 31 Mar 2018 09:50:34 +0300
+
 gscan2pdf (2.0.1+git2789-f16b51f7-1) unstable; urgency=medium
 
   * Compile
