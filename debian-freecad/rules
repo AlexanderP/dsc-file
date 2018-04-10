@@ -15,10 +15,12 @@ extra_flags += \
 -DCMAKE_INSTALL_DATADIR="/usr/share/freecad" \
 -DCMAKE_INSTALL_DOCDIR="/usr/share/doc/freecad-doc" \
 
-extra_flags += -DBUILD_FEM_NETGEN=OFF \
+extra_flags += \
+-DBUILD_FEM_NETGEN=OFF \
+-DBUILD_FEM_VTK=ON \
 
 override_dh_auto_configure:
-	dh_auto_configure -- $(extra_flags)
+	dh_auto_configure -- $(extra_flags) -DCMAKE_CXX_COMPILER=/usr/bin/mpic++
 
 override_dh_compress:
 	dh_compress -X.qch -X.qhc

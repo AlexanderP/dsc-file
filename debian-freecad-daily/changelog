@@ -1,3 +1,854 @@
+freecad-daily (0.17+git13509-0258808cc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 0258808ccb6ba3bd5ea9312f79cd023f1a8671b7
+  * Date: 1523004517
+  * git changelog:
+  *  0258808cc - fixes #0003421: Duplicate workbench message
+  *  e5f42798c - Merge pull request #1396 from berndhahnebach/bhbdev141
+  *  5f073d4ae - FEM: vtk result export, better error message
+  *  c5ef8a1ee - FEM: vtk mesh builder, add some logs and code
+    improvements
+  *  6c60f60a0 - FEM: vtk mesh builder, fix crash if SMESH grid has node
+    gaps
+  *  d2ee3d2ac - PartDesign: fix #0002758 Datum point moves to (0,0,0)
+    when reopening the file
+  *  839cef928 - Gmsh path detection fix for Python3 on Linux
+  *  77512c026 - improve exception handling in
+    ViewProviderBody::dropObject
+  *  deaef0ae0 - chamfer size must be greater than zero
+  *  1b49a006c - fixes #0003416: Crash on draft operation for a face
+  *  4ad053195 - fix NSIS scripts
+  *  85b42a16d - Draft: Fixed possible bug when removing trackers
+  *  2a7cd1bb2 - Add Ext directory to installer
+  *  485630fb3 - FEM: fenics mesh, trailing white spaces
+  *  ccfe39d11 - FEM: Fenics mesh issue #0003038: xml import fixed
+  *  e195f035c - Arch: Fixed bug in WebGL exporter
+  *  b5779a861 - add comments
+  *  6ca441d1b - fix crash when boundary edges are not ordered
+  *  ba3fb75b4 - PropertyContainer: fix false hit when searching
+    property
+  *  03af97513 - fix failing unit tests by using adaptive delte value
+  *  877fdffe3 - MDIView: remove from parent before close
+  *  289117392 - Draft: small bugfix in WPProxy
+  *  63e8b134a - Fix raytracing render for python3
+  *  e589c0466 - add unit tests for psi and ksi
+  *  1cbc20b0b - fix conversion factors for psi and ksi
+  *  e46e576a1 - revert commit 4301216e7
+  *  0ac32464e - Sketcher: Bug fix - prevent inter part/body links
+  *  c3423ad8d - Fix duplicate about entries in mac app menu
+  *  3ca2a408f - Fix invalid Python object error
+  *  c75d1cd77 - handle exception when running unit tests in GUI mode
+  *  889b133af - fix warning
+  *  127895695 - fixes #0003394: Crash on gesture rotation with focus
+  *  852940702 - fix bug and possible crash in overloaded method
+    PropertyLinkSubList::setValues
+  *  118757abc - OpenScad path detection fix for python3 on unix
+  *  428f2555c - py3: make __FreeCADBase__ importable
+    https://forum.freecadweb.org/viewtopic.php?f=10&t=12534&start=510#p2
+    20765
+  *  cab061ba5 - Add Qt Assistant to mac app
+  *  ec6702e64 - Fix travis macOS build
+  *  7fd1e543f - Updated offline documentation
+  *  71f0f1a6d - density is not an SI base unit
+  *  656a669cb - FEM: inout, make import inp mesh Python3 compatible
+  *  8717edb98 - FEM: material task panel, workaround to be able to set
+    poissons ratio to 0
+  *  43bc2de69 - FEM: mesh, changes messages into logs
+  *  e21c34a56 - FEM: unit tests, add various tetra10 mesh element tests
+  *  5e79d4b44 - FEM: unit tests, move mesh tests in own test module
+  *  578d7b287 - fix typos in German translation
+  *  d4f835ab3 - Merged translations from crowdin
+  *  a4714ce77 - Arch: Fixed adding/removing of windows in walls
+  *  e1e06e732 - Start: Removed remaining unauthorized internet access
+    at startup
+  *  f5bd719a6 - cat files in correct order
+  *  86c5c0dc9 - Doc: added splitting/reconstruct instructions to the
+    offline doc scrits readme
+  *  d3f413cbe - Fixed missing X-Parameters in output. Renamed to
+    philips_cnc. Cleaned up and merged code from linux_cnc.
+  *  f485a0786 - fixes #0003361: Spreadsheet: Inserting Row Cause Crash -
+    FC Daily v0.17
+  *  51d0d4e19 - Using UserString for comparison instead of the actual
+    value to avoid rounding errors depending on the unit-system used.
+  *  e9c2145ec - [For v0.18] Sketcher: Doc typo fix
+  *  6c8e10403 - Handle webkit being in a non-standard location on macOS
+  *  0574ac37e - Spreadsheet/Expressions: Fixed issue #3363.
+  *  7c5a9688a - Fix typo in GmshTools
+  *  34633c144 - Path: Remove additional unused 'partial' commands
+  *  47d6b10b7 - Path: remove ToolLengthOffset
+  *  129e2f7a1 - Workaround Qt 5 macOS menu bug
+  *  c960e8d12 - Arch: Fixed window transparency bug
+  *  fa26b06c9 - repair French and Finnish translation files
+  *  9a5bc610b - fix download url in Robot workbench
+  *  4301216e7 - fix PPA build failure
+  *  3b5b284c6 - use Python script to concatenate qch file
+  *  42987dac3 - FEM: mesh api, fix get nodes by face, credits go to
+    user _UR
+  *  437d1cc66 - FEM: analysis, make vtk result pipline object draggable
+    into analysis
+  *  9fab5e835 - FEM: VTK, better comments in vtk result data creation
+  *  c55184e07 - FEM: VTK import, fixes in SMESH mesh builder for vtk
+    import
+  *  482a2aec3 - FEM: VTK export, fix vtk mesh builder and vtk result
+    obj
+  *  9bf2fe8e3 - Offline documentation, make sure directory exists
+    before writting to it
+  *  b81f4694b - Path.Area: work around for OCCT discretization bug
+  *  0859db641 - improve German translation
+  *  11b3f6620 - Escape single quotes in PropertyStringList
+  *  296fcd355 - AddonManager: Fixed addon descriptions
+  *  dbad77bd7 - Doc: cmake now joins parts of offline doc
+  *  b45bc4889 - Misc. typos: Please merge right before 0.17 release
+  *  5109e1588 - TD Translation fixes
+  *  f97e28bdb - TD Translation fixes
+  *  f3f857fc8 - fix possible crash with draggers in transform edit mode
+    of a view provider
+  *  2e63ffd09 - Fixed import statement for py3
+  *  ff955c1aa - check for selected sub-elements in sketcher copy
+    function
+  *  49308811f - fix string to char * conversion
+  *  b70bec971 - Sketcher: Carbon Copy Support for external geometry
+  *  8fdce5a9c - Arch: Small bugfix in Axis position
+  *  597dbf609 - don't allow to set empty list of bodies for boolean
+    operations don't update the body feature if boolean body list is
+    empty
+  *  3fd549ec7 - fixes #0003376: PartDesign Boolean produces exception
+    with wrong selection of active Body
+  *  386ef7ada - FEM: frd import, fix node order of B32 seg3
+  *  7e1334b1f - fix Debian bug #825861
+  *  8c8cee982 - Arch: Fixed not working addition/subtraction in
+    components
+  *  41db9e2a5 - support to handle changed types when reading dynamic
+    properties
+  *  5fbdd7a70 - close document in unit tests for sketcher
+  *  293519885 - Draft: Added word '2D' in DWG/DXF file format
+    descriptions to make it clearer
+  *  d45135e46 - fixes #0002516: Microsoft Visual C++ 2013 is included
+    in the setup package
+  *  b87f2143a - fix typos
+  *  2540f2a3b - FEM: mesh export, fix init file and better output
+  *  1d39db122 - FEM: vtk export, better object choice on export to vtk
+  *  50f28dc63 - FEM: vtk tools, deactivate penta6, hexa8 and hexa20
+    since they will kill FreeCAD
+  *  247129e88 - FEM: vtk tools, fix quad hexa array name
+  *  9a05a7267 - FEM: vtk tools, fix crash in mesh builder if not
+    supported volume is used
+  *  0cdbe26eb - FEM: vtk post processing, add a workaround check for
+    back light
+  *  5d87ee460 - FEM: typo, @luzpaz, I can't hardly belive there are
+    still typos, but there are :-)
+  *  2c2d781aa - Start: Do not access the internet in start page before
+    user explicitely allowed it
+  *  25d47ae65 - Arch: Better fix of windows host system
+  *  ae3869830 - added 3-part offline doc for testing
+  *  2fc1763f2 - FEM: vtk import, add GUI pref page
+  *  06df53ef6 - FEM: vtk import, fix import of generic vtk files
+  *  224c74e9a - FEM: vtk result import, workaround for broken stats
+    calculation
+  *  e3ef7fc90 - FEM: vtk export, fix module name in init
+  *  d310f4328 - FEM: Trivial typo
+  *  fe7962e35 - Merge pull request #1360 from WandererFan/edge2edgeDim
+  *  c02ddba1f - Fix display of Edge/Edge horiz/vert Dims
+  *  9d26fe059 - Preserve setting across language change
+  *  2b35fd173 - Correct delayed scaling of center/section lines
+  *  7cde0236f - Prevent translation of LineGroup name
+  *  4880eff86 - Sync code default values with Pref defaults
+  *  0517a354c - Dependency graph crash minimum fix
+  *  748054496 - fix typo
+  *  c78a02e78 - Remove read only files
+  *  85b30bdd5 - GitPython permission issue on Windows
+  *  4af69bf3f - Draft: Bugfix in SVG export
+  *  7fd67f881 - fix possible crash in pipe/scaling task panels
+  *  c5f407925 - Tools: fixes in wiki download scripts
+  *  fe0ecd982 - Arch: simplified window's Host touch system
+  *  0d00433ee - port FreeCAD plugin for Qtdesigner to Qt5
+  *  5aa7b044d - Draft: Do not allow concurrent snap runs
+  *  24f219448 - open external links with system browser in credits and
+    license tabs
+  *  46acd2f6a - Units: Fixed Building Imperial schema - closes #2792
+  *  d95656d81 - Path: Make simulation work with additional jobs
+  *  08656b8e1 - Path: fix crash if path has dressup
+  *  be3b4d888 - Fix #2624 Draft Patterns Not Installed
+  *  a3a926723 - Sketcher: Move point from python fix
+  *  11ad76b82 - Fix Bad View Position on Add to Clip
+  *  02eadc950 - Use Unit Aware Spinbox in Prefs
+  *  2bfea410f - build plugin with Qt5
+  *  c5bc81ce5 - add PrefUnitSpinBox to designer plugin
+  *  456945881 - fix incorrect usage of Adaptor3d_IsoCurve
+  *  9eed7f06b - Add unit aware preferences widget
+  *  a86a576d4 - fix crash when closing drawing view
+  *  910e9a0fb - Arch: Fixed translation bug in merge walls command
+  *  124d0ef70 - Arch: Fixed bug in windows transparency
+  *  b32587615 - Arch: Fixed translations bug
+  *  506ee9841 - libarea misc. typo fix
+  *  7c1c19a17 - Draft: New dimension arrow tick (Tick-2)
+  *  7b4e59fea - Merge pull request #1346 from luzpaz/weekly-typo-fixes
+  *  6031223eb - Weekly misc. typo fixes
+  *  f189c9598 - workaround for failure to get iso curves
+  *  8c6b4ad1a - fix German translation
+  *  5ca83dda4 - Gui: Fixed regression in getObjectsInfo
+  *  449dbe13e - Fix painting of detail highlight
+  *  2c39dc389 - FEM: source comment typo fix
+  *  4d8fd794f - FEM: mesh view provider, fix for shell beam 3D output,
+    because node numbering does not start with 1
+  *  67e3bb9d1 - Path.Area: fix linux build
+  *  286b252f4 - ViewProviderPath: tweek StartIndex auto step size
+  *  7f891ebea - Path.Area: fix self intersect wire issue
+  *  e5f5e4b7c - Arch: small bugfix in floors
+  *  9ea89f5b5 - Gui: Fixed regression in getObjectInfo
+  *  e131793a3 - Tux: support for future BIM workbench
+  *  7761ea488 - Arch/Draft: Less clutter in output window
+  *  e124b05bf - AddonMAnager: Don't hide error message if some addon
+    failed to install
+  *  b5741a4a9 - Fix error caused by insufficient rights to create
+    symlink under Windows 10
+  *  efa8ceb30 - TechDraw: small corrections for line sizes
+  *  dd49ee27f - add simulate function to MakePipeShell
+  *  22ee06de8 - Merge pull request #1338 from WandererFan/Fixes
+  *  8a26554ed - Fix Dimension Response to Changed X/Y
+  *  404452d6e - Draft: Small fix to Working plane proxy
+  *  bf6917ad8 - Merge pull request #1335 from WandererFan/Fixes
+  *  1700f3610 - Use PrefFontBox for TD Label Font Selection
+  *  df5a986c8 - Add Pref Font Widget
+  *  29864ff82 - Part: Added an icon to Make Compound command
+  *  1a40ea968 - Merge pull request #1333 from luzpaz/misc-source-and-
+    comment-typos
+  *  143ce405e - Misc. source and comment typos
+  *  86019a01e - Arch: Fixed leftover from last commit
+  *  ea0f6797b - Arch: Fixed recursive loop in windows
+  *  8aad83f08 - Updated wiki download scripts
+  *  3dc0f7706 - Better handle non-ascii characters
+  *  0038120c9 - Merge pull request #1330 from reox/centerlines2
+  *  c41363c11 - TechDraw: new center/section draw style
+  *  e5ef0f532 - FEM: import frd results, fix import of peeq
+  *  0650773ab - FEM: import frd, better comments in frd reader and some
+    small moving
+  *  7e6792e4e - FEM: unit tests, remove German comment made for bernd
+    only
+  *  66997448f - Path.Area: arc fix to work around OCCT bug
+  *  443566a63 - Merge pull request #1328 from sasobadovinac/TLSfix
+  *  f6286e6ab - TLSfix
+  *  77c1fc59e - Doxy typos
+  *  4ef801e0d - Updated credits list
+  *  ed240535f - Draft: Small bugfix in dimensions
+  *  69efeb7d8 - Sketcher: complete type and representation
+  *  c606bbbcb - Fix DrawViewAnnotation TextSize
+  *  12f3258de - Applied latest translations from crowdin
+  *  80f9057e7 - Small fix in translation tools
+  *  b9e1cbb6d - Added support for lithuanian, valencian, indonesian and
+    filipino
+  *  35ee3f03a - Draft: Reducing memory leak in snapper - ussie #3340
+  *  b2cd2e0d3 - FEM: unit tests, add ccx tools multi material test
+  *  563ad9e0a - FEM: ccx tools, pop up a error message box on run if
+    more than one meshes are in the analysis
+  *  223a869f8 - FEM: elmer sifio, fix string test
+  *  6eee1b46f - FEM: code formating, flake8
+  *  f445ace40 - Fixed errors in DraftSnap.py
+  *  5e5aa5197 - fix unit test to compare quantities
+  *  b2963382d - fixes #0003350: Draft Snapping does not recognize
+    App::Part container
+  *  5c76affc2 - Merge pull request #1322 from berndhahnebach/bhbdev130
+  *  98df49a64 - FEM: writer base, fix multiple materials
+  *  4962a0188 - FEM: mesh tools, add space to prints
+  *  6fe8a881e - FEM: init module, better file import export description
+  *  6ede0a1d6 - FEM: gmsh tools, delete partially wrong comments
+  *  c67e26c03 - FEM: gmsh tools, fix file closing
+  *  b47e011c1 - Misc source comment typos
+  *  8ebcdf8ac - FEM: mesh tools, fix missing initialization
+  *  8de9707d5 - FEM: elmer sifio, Python3 unicode fix
+  *  c110f0482 - FEM: fix unicode conversion error (sifio.py)
+  *  cfde8a0d5 - Draft: Small fix in snapper
+  *  1cad114c3 - Merge pull request #1320 from WandererFan/Fixes
+  *  52e36973f - Merge branch 'master' into Fixes
+  *  f07d3a177 - Fix default GeomHatch weight
+  *  679f26af5 - Dimension Graphic Properties to Gui side
+  *  99fcba499 - VPart/VSection Graphic Properties to Gui side
+  *  78f4d91b9 - HatchColor & HatchScale prop to Gui side
+  *  033077f76 - KeepLabel Property to Gui side
+  *  f725fbd45 - Misc. source comment typo [skip ci]
+  *  4e2d7c36c - Edge.getParameterByLength fix
+  *  23fff2b1d - Arch: Fixed bug in wall not updated on window size
+    change
+  *  9dd1c7ac3 - implement transform command of point data
+  *  880a200c7 - improve point import and export
+  *  88e8c98d3 - fixes #0002987: FreeCAD should recognize when it's been
+    built as an appimage
+  *  7703bc789 - Residual files left to remove \n from translate()
+  *  4aae6e155 - Remove unneeded code, add menu item
+  *  973da7d3e - Avoid affecting other Tabs when Page deleted.
+  *  c7d64db5b - Arch: Misc. typos and uniformity fixes
+  *  903aae07b - fixes #0003347: No 'Tick' arrow style among other
+    styles in Draft preferences
+  *  83806936c - Change removeWindow logic for consistency
+  *  7349a66cf - Fix Unrequested Page Zoom
+  *  3da2c0c18 - Add 2 templates
+  *  4f291f730 - Allow ProgGroup Item AutoPosition from Python
+  *  190946624 - Arch: move \n out of translation strings
+  *  738b90459 - Fix invalid Python object error Example below led to a
+    crash: import Path t = Path.Tool(name='t', diameter=1.2) tt =
+    Path.Tooltable() tt.setTool(3, t) attrs = tt.templateAttrs() del
+    attrs
+  *  58887d8b8 - fix reference counting issue
+  *  7335b3ae5 - add tab about license information of 3rd party
+    libraries
+  *  fa8f01210 - Path: moved '\n' out of translation()
+  *  fa4058c84 - expose getHelpDir to Python
+  *  73522c3d1 - fix scan coverity issues
+  *  707bbee6a - fix warning: lambda capture 'this' is not used [-
+    Wunused-lambda-capture]
+  *  cc715465d - fix warning: private field 'm_lx' is not used [-Wunused-
+    private-field] fix warning: private field 'm_ly' is not used [-
+    Wunused-private-field]
+  *  1e0d4b7a5 - fix warning: moving a local object in a return
+    statement prevents copy elision [-Wpessimizing-move]
+  *  ed52b2ef5 - fix -Wfor-loop-analysis
+  *  09603ea09 - See PR 1309
+  *  53af3b33d - FEM: examples, update frame work solver example
+  *  1ad03336a - FEM: ccx writer, adapt constraint fixed to the mixed
+    meshes
+  *  aec496e7d - FEM: ccx input writer, write all mesh dirmension ccx
+    elsets
+  *  45f3eb7f4 - FEM: input writer, use own element table for each shape
+    type
+  *  5d5d71cf8 - FEM: writer base, add missing console log
+  *  a33ac3850 - disable tip handling in PD view providers when start or
+    finish editing
+  *  a81a785b5 - proper handling of setting and reverting preview mode
+    in PD view provider
+  *  a20e13b8a - avoid superfluous transaction on PD primitive creation
+  *  d5c890c50 - in ViewProviderBody::updateData make sure a view
+    provider exists
+  *  d455600b6 - Part Design: Avoid feature modification during
+    initialization
+  *  5ffc4f983 - Path: add stock boundary as choice for millface
+  *  00ddc9b8d - Arch: Fixed bug in component icon
+  *  ec04b0e9f - Misc. typos
+  *  c9dc78e8a - FEM: unit tests, small code improvements in solver
+    frame work test
+  *  650a42ecf - FEM: unit tests, reactivate Elmer test
+  *  71dd947aa - FEM: elmer tasks, fix gmsh mesh object type check
+  *  f7e0c42c0 - FEM: unit tests, add some example code to run FEM unit
+    tests
+  *  5022c8df5 - use object's inlist to filter selection in property
+    link dialog to avoid dependency loops
+  *  d9ae10831 - put all STEP export/import options into one tab page
+  *  0a7340b9e - Fix hidden click handles on Templates
+  *  d3bc866a9 - FEM: unit tests, recreate ccx tools results, due to
+    changes in frequency model the results have changed
+  *  5012abf75 - FEM: unit tests, ccx tools frequency, delete not used
+    document objects
+  *  0652802b8 - FEM: unit tests, move frequency ccx tools test in own
+    def
+  *  7ce2d4bc5 - FEM: unit tests, ccx tools move base name declaration
+  *  76bf21b79 - FEM: unit tests, recreate ccx tools results
+  *  347adfa9f - FEM: unit tests, fix ccx result creation def
+  *  6d9775fb5 - FEM: unit tests, improve imports and dir definitions
+  *  bffe546da - FEM: unit tests, delete unused imports
+  *  a2446a6b7 - FEM: unit tests, move module fem common test module to
+    common test module
+  *  7f2c586bc - FEM: unit tests, move solver framework and ccxtools
+    test classes in separate modules
+  *  8c660e507 - FEM: unit tests, move helpers in separate test tools
+    module
+  *  b6aa01336 - FEM: GUI prefs general tab, again make ALL dir chooser
+    really dir chooser
+  *  41d7decdc - FEM: GUI prefs general tab, fix solver frame work
+    custom path
+  *  ecf7f4581 - FEM: prints, use FreeCAD console prints and console
+    error for ccx tools and writer module
+  *  6417db458 - FEM: ccx tools, better error messages on Python run
+  *  1071742de - FEM: unit tests, fix ccx tools result creation and
+    recreate them
+  *  88051e01d - FEM: ccx tools, remove setting analysis type with the
+    analysis tools, is done in solver object
+  *  3b8fa5cb2 - FEM: Fenics, add Fenics tools module
+  *  9ae9150be - Sketcher: Expose Type as readonly python attribute
+  *  f3098d5ac - Crowdin: fix case for 'partdesign'
+  *  55a2a7ab5 - Crowdin: Corrected B-spline term in translation
+  *  6b04f8961 - Arch: removing \n from translated strings
+  *  b6b9f6154 - Misc. typos
+  *  540b2dc79 - Correct Selection When Multiple Pages
+  *  2ca7912d1 - Show Page Label in Tab
+  *  02d318f89 - Prevent Page Template Interference
+  *  2990e1e7b - Changed Cutting Edge Angle to be the full bit angle and
+    renamed label.
+  *  89275766d - Merge pull request #1292 from triplus/NavigationRevit
+  *  a7e39ed85 - Navigation indicator Revit style
+  *  fccf90ac0 - Merge pull request #1291 from WandererFan/Fixes
+  *  37644285d - Fix CmdTechDrawProjGroup Selection Criteria
+  *  cdf08f784 - Added info about third-party licenses in the About
+    dialog
+  *  23bdf54e9 - Sketcher virtual space toolbar issue
+  *  7b70d0005 - Merge pull request #1287 from WandererFan/Fixes
+  *  ebf33403e - Show Dimension text on Document load
+  *  356f87965 - Prevent Loop in BRepBuilderAPI_Transform
+  *  1402e39ba - Path: Consolidate available tool types and material
+    types to one place. Fixes issue #3335
+  *  cee5b2807 - Another fix to compile against qt5 with python2
+    (detection of shiboken2)
+  *  4506e4968 - Fixes for python 2to3 migration
+  *  4ef00d7be - workaround for netgen to use latest netgen/master
+  *  6bd237e41 - Update TechDraw Unit Test set
+  *  337619f24 - make green for tip a bit darker
+  *  758745f0b - PartDesign: Highlight body tip
+  *  bb39cc783 - fixes #0003323: Crash when clearing transaction list
+  *  7d5d250a0 - fix syntax errors
+  *  a86c0fe13 - sWhatsThis fixes
+  *  dc4c4d27d - FEM: code formating, use a variable which is not used
+    to get flak8 quiet
+  *  7fbd5b286 - FEM: Misc. comment typo
+  *  227a25a68 - FEM: code formating, flake8
+  *  7405b886a - FEM: result taks panel, better comment
+  *  3efe2e287 - FEM: source comment typo
+  *  4a430c5c7 - FEM: materials, fix users material path in task panel
+  *  7072b3f93 - FEM: issue #3038 Fenics integration
+  *  114cdc682 - 0003279: Error 'invalid DAG' after deleting sketch
+    using expressions
+  *  70399e6c9 - fixes #0003302: PDN cloned object have duplicated
+    'Unnamed' ghost on every file reopen
+  *  865593b66 - fixes #0002559: Body becomes visible upon changing
+    DisplayModeBody
+  *  76d27f464 - updated Init.py with import type
+  *  92021e0c6 - adding stpZ format: STEP compression format support
+  *  dac8cd50f - moving comment at right place
+  *  44e57a367 - adding 'import sys' needed when opening a dxf file
+  *  2520785b1 - libarea: fix arc fitting bug
+  *  7d6f6dd93 - Correct Scaling/boundingRect of Svg Symbols
+  *  54cc25d1f - fix crash in fillet/chamfer dialog if no part exists in
+    document
+  *  cc00dc85d - #3325: DlgPropertyLink as editor of Tip property
+  *  d9627d531 - tmp. disable unit test for link goes out of scope
+  *  ed893ff50 - fix -Winconsistent-missing-override
+  *  0718e2c56 - fix -Winconsistent-missing-override
+  *  7fed1a29c - do not raise exception if link is out of scope, but
+    write a warning
+  *  d1949f6e2 - add command to show/hide several constraints at once
+  *  12968ed4a - Path: Limit tool angle input
+  *  11b8f91c5 - Misc. typos
+  *  666c5c8b8 - FEM: typo fix
+  *  ada88a3dd - expose more members of Constraint class to Python
+  *  55d9d4dba - FEM: task panel, fix loading of broken material file
+  *  83c8e43dc - FEM: material task panel, fix custom export
+  *  dc73b9d69 - FEM: gerneral prefs, make custom materils dir chooser
+    really a dir chooser
+  *  7095ad937 - FEM: pref general, make string multi os compatible
+  *  7f3b40a9c - fix crash when deleting constraint
+  *  e9e0071cc - improve whitespaces
+  *  acded1c95 - save values before invalidating iterator, whitespace
+    improvements
+  *  94ca10531 - Sketcher: Setting in Preferences to switch on/off
+    notification of constraint substitution
+  *  620188073 - Sketcher: Avoid single tangency plus coincident when
+    preexisting single tangency
+  *  180d722a5 - Sketcher: Avoid single tangency when preexisting
+    coincident
+  *  5d35713aa - adjust copyright text
+  *  da1d69ce4 - Relax regex for editable text in Template
+  *  fb16c867e - libarea: imporve arc fitting
+  *  7e5d2bd92 - Path.Area: make wire explode respect arc accurarcy
+  *  0ff676abe - FEM: typos
+  *  2e049fd5e - FEM: udate example files
+  *  f8eaa6eff - fix const correctness, restore sketcher icon
+  *  696eb7433 - Sketcher:  Switch virtual space toolbar button to
+    operate on selection
+  *  740afeb64 - Sketcher: constraints' widget checkbox as python
+    command
+  *  879ff7088 - Sketcher: Switch Virtual Plane icon
+  *  8a2ec12b5 - Sketcher: Bug fix not updating constraints on switch of
+    virtual space
+  *  4b7ef1c5b - Sketcher: New toolbar for VirtualSpace and Command to
+    switch VirtualSpace
+  *  0c888309d - Sketcher: Extend virtual space switching and update to
+    constraints widget
+  *  d98793033 - Sketcher: Enable switching of virtual space in
+    ViewProvider
+  *  31189b6c2 - Sketcher: Python Interface for Constraint Virtual Space
+  *  d559c1477 - Sketcher: Enable Virtual space updates on the View
+    Provider
+  *  cccaa6d4d - Sketcher: Extension of Constraints Widget to support
+    checkboxes for Virtual Space
+  *  1899680dd - Sketcher: Extension of constraints to store virtual
+    space affiliation
+  *  1719d0ba6 - fix bug in SmSwitchboard::doAction
+  *  b09283423 - Arch: Fixed remaining hole bug when removing windows
+    from walls
+  *  f0d06f0c1 - Draft - fixed chamfer property of Wires - fixes #3044
+  *  141caeb53 - Fixes in credits dialog
+  *  23bf7f39a - Sketcher: comment typos
+  *  2d1ffaa6a - FEM: inp file settings, fixies fixes #3314i wrong pref
+    on restore
+  *  6d744c8c8 - FEM: ccx tools solver, get rid of no longer needed and
+    confusing attribute
+  *  e1e84cd34 - FEM: unit test, add a test for adding multiple ref
+    shapes
+  *  c85afd0e4 - FEM: objects, use fem name sheme for object package
+    names
+  *  07ae0e56c - Path: Fix MillFace default values
+  *  383825e9c - Path: libarea typos
+  *  2b1012f70 - Add missing const_cast
+  *  6ce8e1a0a - Fix compliation against shiboken2 head
+  *  7791ba4f1 - AboutApplication.ui: typos fix
+  *  627c4e790 - Give default values to cutting edge angle so
+    simulations with work even if user did not specify a valid cutting
+    angle.
+  *  f291abce5 - Added a dedication to Roland Frank in the About dialog
+  *  5cee8c9cd - Return the actual job instead of the check result of it
+    being a job or not.
+  *  21c845a64 - Path: remove redundant Path_Shape command
+  *  59dedd127 - PATH BUGFIX DressUP-LeadINOut-Line-Generation-SIMFix
+  *  8f84087e6 - Path.Area: respect zero start point when generating
+    path
+  *  c509ec5de - Sketcher: Fix normal rendering when full-constraint
+  *  3ee6b6ac9 - FEM: typos
+  *  ee321c5f8 - FEM: ccx tools solver, fix solver type check
+  *  6ab072b1c - FEM: file modes, delete executable mode on some Python
+    modules
+  *  83be75b0d - FEM: general pref ui, make working dir chooser work
+    again
+  *  4ca4aafb0 - FEM: general pref ui, typo
+  *  299d1939f - FEM: ccx tools, typo
+  *  223a2b196 - FEM: beam rotation, add some pre checks
+  *  993515097 - FEM: beam rotaion, implement writer, this fixes a very
+    old restiction, the beam analysis in z-axis
+  *  a15474afe - FEM: mesh tools, add method to get the beam normals for
+    ccx
+  *  3699cfe7b - FEM: beam rotation object, deactivate task panel since
+    reference shapes are not yet supported for rotations
+  *  fa596b891 - FEM: beam rotation object, add it to the solver frame
+    works
+  *  4ac2f2d37 - FEM: beam rotation object, add an own icon for this
+    object
+  *  bc8219cc3 - FEM: beam rotation object, add this new object
+  *  128e5d3a7 - FEM: ccx writer, slightly resort key sort creation on
+    ccx elset creation
+  *  0145383d3 - FEM: ccx writer, check for empty ccx elset on creation
+  *  66351b723 - FEM: ccx writer, resorting in elset creation
+  *  233a32d27 - FEM: ccx writer, use set and intersection instead of
+    two nested for loops
+  *  6811d528f - FEM: ccx input file, use even shorter elset names for
+    the short names and raise exception if the elset name is still to
+    long
+  *  3824df2eb - FEM: ccx writer, resort elset creation methods
+  *  c8e87a039 - FEM: ccx writer, better elset name def and raise
+    exception if name is too long
+  *  c78504e6e - FEM: vtk DataAtPoint, implementation
+  *  615588495 - FEM: Auto disable mesh and solid when opening VTK
+    functions
+  *  e53307691 - FEM: code formating
+  *  3d2856e89 - Mod/Test/BaseTests.py source typo
+  *  45a1d6c90 - Fix Exception when Source Shape IsNull
+  *  38da0c731 - improve whitespace, fix const correctness
+  *  c7b137fe8 - Sketcher: Change nomenclature relating to Block
+    constraint
+  *  a4c29ba52 - Sketcher: Constraint widget adapted to Block constraint
+  *  c27d5a26b - Sketcher: UI Block constraint creation sanity checks
+  *  9634da681 - Sketcher: Block constraint - Prevent from adding
+    constraint if the solver has redundant/conflicting constraints
+  *  34f533b0e - Sketcher: Block Constraint - Advanced
+    redundant/conflict redundant handling
+  *  9b7d1d604 - Sketcher: Blocked constraint viewprovider rendering
+  *  d2e89b98d - Sketcher Blocked Constraint icons
+  *  1932a2f15 - Sketcher: Blocked Constraint toolbar commands
+  *  7495fe1c3 - Sketcher: Blocked Constraint Python
+  *  48fc50336 - Sketcher: Blocked Constraint solver level
+  *  f64760b8a - PartDesign: OnDelete basefeature fixing and
+    visualization
+  *  4d3675763 - improve whitespaces
+  *  01e6cde7a - PartDesign: Fix bug of mirror transformation of
+    multiple features
+  *  23f88c5d8 - Fixed 2885, dogbone maintaining F parameter.
+  *  8a39ddf88 - Fixed recursion problem
+  *  e4e5d4e5f - Fixed path unit test setup for new PathDressup
+  *  55268a06f - Changed lead-in-out dressup to use PathDressup.baseOp()
+    instead of relying that it is dressing up an op directly.
+  *  c3f03d369 - Removed ToolController from all dressups and replaced
+    with recursive search for the base op's ToolController.
+  *  69c1acd39 - Prevent adding an entry method dressup to an op that's
+    already has one.
+  *  8511597a4 - Made dogbone resilient to all dressups and profiles.
+  *  4b0d6c688 - Fixed import of PathGeom - might want to refactor that
+    one day.
+  *  a4fe22062 - Fixed template-export menu activation.
+  *  434bf4d3f - TechDraw: Add option to use polygonal HLR algorithm
+  *  e697f2ef5 - Arch: Fixed wrong orientation and shape of window
+    louvres
+  *  ff467dcb4 - Path: Fixed possible bug in last commit
+  *  6bddaf6eb - BUGFix PATH Dressup Sim FreeCADBreakdown
+  *  e6e4710ae - remove SetMinTolerance as suggested by PR 1240
+  *  6e5b1dfb9 - typo
+  *  50e1866c4 - indentation fix
+  *  33f334049 - tolerance fix in TopoFace.validate()
+  *  8461df7ea - fix some TopoShape documentation
+  *  acb3a34d9 - AddonManager: Download biggest code block from macro
+    pages in case there is more than one code block
+  *  a0ccdb521 - Sketcher: Correction of B spline normals
+  *  663e4ee36 - PartDesign: Extension of Pocket Feature to have two
+    dimensions
+  *  f6825a268 - Path: changed --output-doubles to --axis-modal and
+    reversed the default behavior
+  *  9b43affd8 - Path: typo in command name
+  *  b965a829c - rename command and PEP8
+  *  15cbbcd24 - Path New Dressup LeadInOut to perform Tool Roll towards
+    shape including G41-42
+  *  4fb676e4b - path: cleanup linuxcnc post and fix vertical feed
+    problem
+  *  a3684424a - Remove NewViewMulti from toolbars/menu
+  *  4b9f43b46 - Allow GroupExtension as Source for Views
+  *  051d910db - Misc. comment typos
+  *  3ee51d576 - FEM: crowdin fix
+  *  478611371 - Part: add Refine property to BOPs
+  *  27701ae85 - PartDesign: #2683 add Refine property
+  *  80e3bfb69 - avoid division by zero when discretizing a shape
+  *  305a56781 - raise exception in PropertyLinkSubList::setPyObject for
+    wrong type
+  *  d5eac120c - Merge pull request #1229 from sliptonic/master
+  *  4be81c280 - Merge branch 'master' into master
+  *  6051a6e9c - Draft: Fixed wrong wire point position - closes #3063
+  *  d7f5d7fbc - Merge pull request #7 from luzpaz/path-source-typo
+  *  ae2a4e647 - Path: rename Set_StartPoint to conform to command name
+    standard
+  *  12e6533df - Path: rename dressup commands to conform to standard
+  *  2009f9a61 - Path: source typo fix
+  *  9a215440b - fix automatic update of dependency graph for Qt5
+  *  e404cadee - fix automatic update of dependency graph
+  *  dc0a73922 - update circle-ci
+  *  baf824de9 - update conda dependency versions: boost 1.66 xerces-c
+    3.2.0
+  *  f3b32da63 - PathScripts: py3 print Draft: typo in importDXF.py
+  *  4fb16c696 - Fixed source typo
+  *  e09a276fe - further simplification when to use which rendering
+    method when saving an image
+  *  575dc0b76 - fix compiler warning due to unused variable
+  *  a701c71ed - add option to compute vertex normals from the
+    triangulation instead of the u,v nodes This is a workaround for
+    issue #0003180: Wrong normal of part object
+  *  95fbd8a09 - add method to get u,v nodes of the tessellation of a
+    face add method to get the nodes of the tessellation of an edge
+  *  bbfbb0e7d - Misc. comment typos
+  *  8ba4e0c5d - code cleanup
+  *  97f002009 - improve whitespaces
+  *  bc4d463cd - Sketcher: Remove errors in reporting view while
+    deleting
+  *  348e666fd - improve whitespaces
+  *  0dd0eab0d - Sketcher: Overload delConstraintonPoint Python to allow
+    deletion on GeoId and Pos
+  *  eeb607388 - FEM: pref, delete depreciated ccx solver switch because
+    every solver has its own command
+  *  1f96775ab - FEM: calculix solver, use separate command for CalculiX
+    ccxtools and CalculiX framework solver
+  *  334ec9868 - FEM: command module, add some comment
+  *  7b75af307 - FEM: code formating, flake8
+  *  130f51d9a - FEM: new analysis, add a ccx tools solver to any new
+    analysis, best for new users
+  *  b54a222c7 - FEM: unit test solver frame work, delete ccx tools
+    solver in solver frame work test class
+  *  0d21e94d3 - Sketcher: Improve validation ui to select whether to
+    ignore construction geometry or not
+  *  759929228 - Sketcher: Fix "highlight open vertex" visualization
+  *  10c0af4a8 - Sketcher: Validation tool improvement
+  *  fb8875df0 - Path: Indicate fromShape as deprecated - issue #2786
+  *  a8ab24aba - Arch: Fixed CTH profiles - fixes #2826
+  *  c44af23f1 - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  86ca43743 - Added 'Remove link' option to PropertyLinkList dialog
+    too
+  *  77318ba6e - make workaround with transparent background more
+    reliable
+  *  3679c18e5 - fix unicode problems for python3
+  *  75a98c961 - add Base::PyGILStateLocker in
+    Gui::Command::getResources
+  *  497b41d6d - workaround to create images with transparent background
+  *  79dff6b8c - Fix crash when deleting View with Dimensions
+  *  7f49a1ac1 - Typo
+  *  706be3fbd - Reusability of snap toolbar commands
+  *  2b7c28b64 - Stylesheets general button with menu support
+  *  29533320f - add method to get view providers of d view via Python
+  *  8f868f778 - handle disabled dock windows when setting up main
+    window
+  *  4b781d75b - fix crash when querying information about an object
+    that is not part of a document
+  *  861dc42d3 - Fix Section Line Wrong Position
+  *  70099d570 - Allow View Position to be Locked
+  *  0866e1a59 - Added flycutter option to the tool edit ui.
+  *  c8af1d16a - Crowdin: fix missing whitespace
+  *  143ba3faf - Navigation indicator enable translations
+  *  ab7c98917 - Merge pull request #1210 from berndhahnebach/bhbdev116
+  *  c255ec0df - FEM: pref ui, better name for CalculiX solver base
+  *  c6740dc89 - FEM: sovler framework ccx z88, add comment
+  *  90ff0d9ea - FEM: unit test, replace new solver frame work by solver
+    frame work
+  *  76969de5e - FEM: unit test, use better path names
+  *  092e92b5a - FEM: unit test, move solver framework in new test class
+  *  c84918230 - FEM: unit test, add test for isOfTypeNew
+  *  13b1ea602 - FEM: unit test, add test for FreeCADs isDerivedFrom
+  *  5fc5122fc - FEM: unit test, add test for isDerivedFrom def from fem
+    utils modul
+  *  a8b3b2f23 - FEM: unit test, add type test for all FEM objects from
+    object creation module
+  *  9e87dfa6c - FEM: fem utils, add def to return type for all objects
+    (Python and C++)
+  *  b73853efa - FEM: fem tools package, move fem utils in it
+  *  ace7f3822 - FEM: unit test, better name for CalculiX new framework
+    machine
+  *  cec934280 - FEM: unit test, remove not needed back slashes
+  *  6d7f31f3b - FEM: unit test, rename make objects test def
+  *  907adad9a - FEM: ccx tools, delete elmer code since ccx tools only
+    support ccx
+  *  5ee46bc8d - FEM: ccx tools, comment improvements
+  *  0f4b4c963 - FEM: constraint body heat source, use for proxy type
+    the same name sheme like other constraints
+  *  c34bbb007 - FEM: proxy type, use for all classes the notation Fem::
+    same as C++ classes
+  *  8f91010ba - FEM: typo in comment
+  *  220905c40 - FEM: Python base constraint, move modules into gui and
+    obj packages
+  *  a8a9e13ca - FEM: Python base constraint, split in obj and gui
+    module
+  *  13335e531 - FEM: fem tools package, move ccx tools in it
+  *  01d215fec - FEM: fem tools package, add this new package
+  *  cf62473cb - FEM: input writer, move module into solver package
+  *  c4b52499b - FEM: make objects module, fix type of constraint fluid
+    boundary
+  *  ab9f0ff14 - FEM: obj types, sort constraints
+  *  1559fed0e - FEN: z88 writer, comment some logs
+  *  910f573e4 - FEM: ccx input writer, get rid of code duplicate in
+    time meassurement
+  *  07ee3b7c3 - FEM: z88 input writer, add time output
+  *  8964584fd - FEM: new solver framework, add log if input file
+    writing was finished for Z88 and CCX
+  *  2ce33df6d - FEM: solver framework, use ccx tools as standard solver
+    on new installations
+  *  90f3aada2 - FEM: solver framework, two checks for _dirTypes
+  *  6a15a2f31 - verify iterators in partialTopologicalSort to be on the
+    safe side currently this can cause a crash because issue 3214 is not
+    fixed yet See also:
+    https://forum.freecadweb.org/viewtopic.php?f=19&t=26295
+  *  39a34c1d2 - Arch: Fixes in IFC exporter
+  *  c95b366fd - Arch: Better grouping of common Arch properties
+  *  af7428dfa - Arch: Fixed bug in MoveWithHost system
+  *  b6304d16a - Fix Path Keep View and Sim in Sync,typo Linuxcnc_post
+  *  636f36126 - Qt5 build related improvements
+  *  250586d2b - Grammar error
+  *  3d9efc129 - Persistent toolbars error handling
+  *  a35dd3fee - Typos
+  *  78c9a34f5 - fix compiler warning
+  *  249c4a05b - Draft: Added property to allow to turn off Shape2DView
+    recomputes if invisible
+  *  8382a8f61 - Draft: Fixed DXF import
+  *  5a95bb7a1 - Merge pull request #1205 from mlampert/bugfix/path-
+    macro-path-3303
+  *  d13d0bddf - Expose getUserMacroDir to python and use in
+    preferences.
+  *  2c69b79c1 - path: fix help message typo
+  *  9c4120df7 - fixes from IchGucksLive for drilling simulation.
+    Tweaks to linuxcnc post
+  *  2b95227ed - Path: typos
+  *  f69b78903 - Path: typos
+  *  8690d870a - Misc. typos
+  *  2c1288181 - Fixed indentation
+  *  23f2a444c - Fixes #3294 TechDraw: Prevent scale changing
+  *  d1e83f107 - Fix crash in DrawViewDraft/DrawViewArch
+  *  41b71ee3a - Export FreeCAD Rebar properties to IFC file and
+    refactored code
+  *  3e6fcd8e8 - FEM: Python imports, fix import in feminout package
+  *  22ed0bce5 - code reduction w.r.t offscreen rendering
+  *  8eaee314a - simplify to define when to use which offscreen
+    rendering method
+  *  f6ff4ed59 - improve UpToFace option of pad/pocket for datum planes
+  *  dd45eddbb - Draft: Fixed py3 compatibility issues
+  *  4c9c0175b - Draft: fixed bug in Point tool
+  *  f7629821e - Draft: Fixed translation problem in bezcurve
+  *  d16ef8763 - Arch: Fixed some missing objects in IFC export
+  *  946921734 - Arch: Fixed wrong placement of structures
+  *  ade72a81b - AddonManager: Enable the use of submodules
+  *  c198650bd - Draft: Fixed problem with french translation
+  *  50c280fdb - fixes #0003141: Unexpected behaviour using pad to face
+    on padded shape binder
+  *  ac88edc3d - allow to move PD objects via drag and drop to a body
+  *  d24379d82 - add option to getBodyFor to suppress dialog to set
+    workflow style to modern
+  *  22b117fd8 - +fixes #0003095: Manual migration from 0.16 models to
+    0.17 models not possible
+  *  12ab80508 - fix typo
+  *  70d094994 - fix crash in ViewProviderBody::setVisualBodyMode due to
+    missing view provider
+  *  14d06fe84 - fix typo and improve whitespaces
+  *  433f36630 - fix function assertActivePart by creating the part
+    container
+  *  9e0ddec00 - port to occ 7.2.1
+  *  4c7a0a140 - port to occ 7.2.1
+  *  8faa9f38b - fixes #0002621: Exporting with File Type *.svg, *.svgz,
+    *.dxf should be prevented if not in Drawing WB
+  *  21e85921e - set global scope of Part offset to use it with PD
+    bodies
+  *  a6a004b6b - fixes #0002866: Gui::InputField rounds values to 2
+    digits
+  *  483d09967 - remove now superfluous member from InputField
+  *  cfc3dc22a - respect format option when changing values with wheel
+    or up/down keys in input field
+  *  90a71f34b - fix utf-8 decoding issue in Draft
+  *  74aa6b04b - FEM: code formating, Python flake8: W503
+  *  93850bd9a - FEM: code formating, Python flake8: E211, E305
+  *  f6edbbdc5 - FEM: Typo residuals
+  *  c121e76f1 - FEM: unit test, add all python packages to import test
+  *  0b95e866b - fix const correctness
+  *  9cf42d3a8 - Sketcher: Settings Dialog new color for dependent
+    constraints
+  *  2a6f55e65 - Sketcher: Special sketcher color for dimensions having
+    an expression
+  *  69535ad7c - Sketcher: Support for detecting expressions in
+    constraints
+  *  65e793293 - improve whitespaces
+  *  ec678e234 - Sketcher: Solver angle -pi,pi conversion corrected
+  *  27cff5ce8 - Sketcher: Match angle on lines representation match
+    solver result
+  *  96beb5ec7 - improve whitespaces
+  *  9ce575601 - Sketcher: Fix transfer of tangency and perpendicular
+    end-to-endpoint constraints
+  *  62819fec2 - consistently add Q_OBJECT macro to all sub-clases of
+    PropertyItem
+  *  e2a3ae428 - Packaging typos
+  *  5107d86b6 - Crowdin: Removing whitespace from widgets
+  *  1950bd151 - fix assertPlacement for unit tests do not explicitly
+    check for angles as they can be quite different for even identical
+    quaternions
+  *  31bf496b6 - unit tests for Rotation class
+  *  83fe8f8c3 - fix OpenSCAD importer
+  *  9e2fa2d91 - support some more handlers in VectorPy and throw better
+    exceptions for unsupported operators
+  *  401af9289 - implement setting custom attributes for RotationPy to
+    assign matrix or pair of vectors
+  *  7c1cccdd6 - FEM: cmake, only copy Python GUI modules if gui is
+    build
+  *  8c85db3cf - FEM: make objects module, less code duplication on
+    imports
+  *  30e33e480 - FEM: python imports, small improvements on some imports
+  *  34b485b64 - FEM: source typos
+  *  93dd48dc6 - FEM: Moar typos
+  *  f34659a29 - TechDraw LabelFont defaults
+  *  a866b420d - TechDraw: Crowdin request to remove apostrophes in
+    translation string
+  *  9bd3b8f20 - Copy mesh data directly into the numpy arrays instead
+    of creating a temporary local copy in order to save memory when
+    dealing with very large meshes
+  *  7ec6d1b5a - Fix insane memory usage when exporting Meshes to
+    Collada format - MeshPy::getTopology() is an expensive function
+    (since it iterates over all Points and Facets) and therefore it
+    should not be called repeatedly
+  *  87b360e55 - TechDraw Prefs page 1 defaults & tooltips
+  *  c54887806 - Fix LineGroup install & default issues
+  *  55f050e0f - Fix crash when Source.Shape is Null
+  *  553fa64ec - Fix crash during multi-object delete
+  *  98be3a3ff - Support old Source property (PropertyLink)
+  *  76373b2c6 - LinkScope clean up
+  *  e163ae174 - Allow multiple sources for all View types
+  *  7eba11360 - Coverity 169507
+  *  88b5af4fe - simplify debugging of changing datum constraints
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 08 Apr 2018 16:24:02 +0300
+
 freecad-daily (0.17~git12875-1ad7724d5-1) unstable; urgency=medium
 
   * Compile
