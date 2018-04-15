@@ -1,4 +1,4 @@
-Source: freecad
+Source: freecad-0.16
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Section: science
 Priority: extra
@@ -52,11 +52,9 @@ Build-Depends: cmake,
                swig,
                zlib1g-dev, mpi-default-dev,  netgen-headers | wget, doxygen
 Standards-Version: 3.9.8
-Vcs-Browser: https://anonscm.debian.org/cgit/debian-science/packages/freecad.git
-Vcs-Git: https://anonscm.debian.org/git/debian-science/packages/freecad.git
 Homepage: http://freecadweb.org/
 
-Package: freecad
+Package: freecad-0.16
 Architecture: any
 Depends: libsoqt4-20 (>= 1.6),
          python-collada,
@@ -68,8 +66,8 @@ Depends: libsoqt4-20 (>= 1.6),
          ${misc:Depends},
          ${python:Depends},
          ${shlibs:Depends}
-Suggests: freecad-doc
-Description: Extensible Open Source CAx program (beta)
+Suggests: freecad-0.16-doc
+Description: Extensible Open Source CAx program (alpha)
  FreeCAD is an Open Source CAx RAD based on OpenCasCade, Qt and Python.
  It features some key concepts like macro recording, workbenches, ability
  to run as a server and dynamically loadable application extensions and
@@ -79,11 +77,11 @@ Description: Extensible Open Source CAx program (beta)
  BRep formats and meshes in STL, BMS, AST and Wavefront OBJ formats.
  Editing and modeling features are currently somewhat limited.
 
-Package: freecad-doc
+Package: freecad-0.16-doc
 Architecture: all
 Section: doc
 Recommends:
- freecad (= ${source:Version})
+ freecad-0.16 (= ${source:Version})
 Depends:
  qt4-dev-tools,
  ${misc:Depends}

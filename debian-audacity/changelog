@@ -1,3 +1,137 @@
+audacity (1:2.2.2+git8603-5fd1f7e60-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 5fd1f7e606ac4e0acd4537638868a6769b8475f6
+  * Date: 1523636642
+  * git changelog:
+  *  5fd1f7e60 - Bug 1866 - Mac: Sliders have black backgrounds when
+    building on wx3.1.1
+  *  e3a2167b7 - Mac: Build wx3.1.1 libs for Audacity.
+  *  717887939 - Flicker-Free Grabbers and Mic/Speaker icons.
+  *  cbd0f8aba - Fix (my) typo in a Mac #define.
+  *  71f49ae0f - Fix build targeting MacOS 10.6
+  *  0c99501bf - Initialize tables of effect and command names properly
+  *  effab49a6 - Improve Mac wx3.1.1 compatibility
+  *  dc7d3f941 - Bug 297 - Enh: Dependencies Dialog lacks a way to copy
+    file names to clipboard
+  *  8ff80bde1 - Bug 262 - Enh: Mixer Board: Track strip and border
+    colours to match those in current TrackPanel
+  *  0e25f65eb - Modification to fix for Bug 875 - NumericTextCtrl
+  *  8e71ebca8 - Fix accessibility of Help button in dialogs
+  *  09063d6b4 - Bug 1465 - Labels Editor: Does not remember modified
+    size and position after OK
+  *  47bbedb20 - Avoid too-small prefs dialog
+  *  8e32c2df5 - Only build mod-xxx-xxx if user requests it.
+  *  2319c436a - Add more space for Directory pref.
+  *  edacab85f - Save prefs size, even on a Cancel
+  *  2d2f282c8 - Bug 825 - Sync Lock behaves inconsistently when moving
+    of clips is disabled
+  *  b8f13f769 - More uses of IdentInterfaceSymbol; avoid localized
+    strings in configs
+  *  a0762d67b - INTERNAL, not TRANSLATED, command/effect names in
+    config key paths...
+  *  b200819f7 - Use IdentInterfaceSymbol to identify commands and
+    effects
+  *  11d217076 - Remove PluginManager::GetTranslatedVendor()...
+  *  0394660e9 - Use IdentInterfaceSymbol for vendor strings, which are
+    used in paths
+  *  d9606e8cd - Make effect family names translatable and add i18n-hint
+    comments
+  *  2c19e8f81 - Use IdentInterfaceSymbol to identify effect families
+  *  915e6ead4 - Use IdentInterfaceSymbol in old-style commands...
+  *  e3c54a769 - Use IdentInterfaceSymbol in PluginDescriptor
+  *  68e4bf6c5 - Bug 1557 - Win/Linux: Shortcuts for select/deselect all
+    do not work in Mixer Board
+  *  9cb593fe5 - Fix MSB8012 and consequent Link error with modules.
+  *  ca118dd5b - Enable Spectral Selection by default.
+  *  d1c2ff82f - Bug 1864 - Spectrogram settings dialog hides the
+    checkbox for "Enable Spectral Selection"
+  *  26860d9ef - Mixer toolbar: change accessibility names of sliders
+  *  526606fc2 - Fix more accessibility names after the move to wx 3.1.1
+  *  1c751fd86 - Revert "Change procedure to choose append-record tracks
+    once again..."
+  *  bbcd92437 - Change procedure to choose append-record tracks once
+    again...
+  *  473a92d28 - Bug 916 - User input not validated in Noise Reduction
+    effect
+  *  0dd3aef6b - Bug 891 - Number-entering bug in kHz High Frequencies.
+    Unfriendly to have to enter High first if new Low is above High.
+  *  7ab4b8c6d - Bug 875 - First character is highlighted when tabbing
+    into TimeText controls, not first non-zero character.
+  *  8de9c53e9 - Allow again recording of stereo into two adjacent mono
+    tracks
+  *  0909a4acf - Bug 293 - Paste/insert does not affect included label
+    tracks when Sync-Lock is off
+  *  5fe3c1bdd - Append-Rec: Prefer first, not last, track with correct
+    # of channels
+  *  7ef7e80e1 - Fix FadeEnds Macro
+  *  b792094b5 - Bug 1710 - The Incredible Shrinking ToolBar
+  *  082752e58 - Fix Linux toolbar resizing bug
+  *  98bbb3436 - Fix sizers in WarningDialog
+  *  564e840d5 - Fix background colour of Prefs
+  *  b36482d64 - If record overrides append because of channel count,
+    record unlimited
+  *  9fcccd32a - Rewrite append-record onto only the proper number of
+    channels
+  *  b60fae447 - Fix some warnings on mac
+  *  04d710850 - Rejig mod-xxx building under Windows
+  *  1339c3a5e - Add wx link info into mod-script-pipe for Windows
+  *  f9ee3cdc4 - Fix some of the accessibility names that disappeared
+    with the move to WX 3.1.1
+  *  6e59c2e28 - Move Nyquist Workbench to Tools menu
+  *  31ce57e32 - Make modules as part of Travis build
+  *  e35c49f64 - Merge branch 'automake'
+  *  a13a925c6 - autoreconf -ivf
+  *  213daba23 - Avoid multiple include of configunix.h
+  *  b24dae713 - Update configure.ac for modules.
+  *  2004aa2be - Add m4 macros for gnu++11
+  *  60a8e832b - Update module makefiles
+  *  30d438958 - Get module sources ready for building on linux
+  *  0885fda45 - Fix mod-nyq-bench compilation under Windows.
+  *  af54ac9cf - Don't record a stereo track into a mono track
+  *  6a6244333 - Switch AppVeyor to wxWidgets 3.1.1
+  *  76f72f0a3 - Don't record a mono track into a stereo track.
+  *  902e1ab0a - Merge branch 'paint-by-numbers'
+  *  291be502a - Generate JSON box list for ThemeCache
+  *  8782a7264 - Add code for iota theme-bitmap
+  *  bf9beb1f3 - Revert locale tidy up
+  *  67f7ca7d0 - Bug 1731 - No help button in "Error: not well formed
+    Invalid token at line (x) [Residual]
+  *  de13357a2 - Appveyor updates and without locale (Thanks henricj)
+  *  68b4cb919 - Add "Help" button to Noise Reduction.
+  *  c0e1c82be - Add missing files to Mac build.
+  *  082ab5ca2 - Don't build locale in release build
+  *  0a12f6a81 - Increase max sample rate for RAW to 384 kHz
+  *  f027708fe - Fix an issue caused by the accessibility changes in
+    wxWidgets 3.1.1
+  *  0fb99c5f5 - Back to Visual Studio Express 2013 as the standard
+    audacity.sln.
+  *  d68500fe2 - Possible MSVC buildbot fix.
+  *  1eafc323d - Exclude win/.nuget from Git.
+  *  3880558e2 - Merge remote-tracking branch 'henricj/locale'
+  *  6220c2761 - Do an autoreconf -ivf
+  *  b7b367a16 - Prepare for compiling with wxWidgets 3.1.1
+  *  112fd246f - Rework locale VS project to use CustomBuildStep. Make
+    sure Clean, Build, and Build targets work. Use NuGet to provide
+    gettext for msgfmt.
+  *  8c1542221 - Allow 'Export Multiple' of a single track.
+  *  b8eeebc26 - Merge branch 'cmake'
+  *  03945e805 - Compile all libs and link (Debug only so far) using
+    CMake
+  *  47e826546 - Move all CMake of lib-src to cmake-proxies
+  *  94a731982 - Add cotire (compile time reducer) to CMake
+  *  2ff69bc04 - Add remaining libs to CMake
+  *  a6bbfc400 - Add more libs for Audacity to CMake
+  *  c3a440e56 - Add audacity src
+  *  ece54aa94 - Get basic CMake for mod-script-pipe working.
+  *  3d82ee7ec - fix Mac build
+  *  1f0061ba7 - Fix sizing bug in InfoDialog (misuse of wxALIGN_BOTTOM)
+  *  4ae394ff5 - Fix some warnings (MSVC)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 13 Apr 2018 21:16:20 +0300
+
 audacity (1:2.2.2+git8509-b5ffaca98-1) unstable; urgency=medium
 
   * Compile

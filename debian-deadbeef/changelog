@@ -1,3 +1,47 @@
+deadbeef (0.7.2+git7679-609e3bea-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 609e3bea56cfd61bb8e03d19e80151954760ae1d
+  * Date: 1523541030
+  * git changelog:
+  *  609e3bea - premake: fixed configuration name bug
+  *  03f6f3b1 - cue: look at DT_UNKNOWN files when searching for
+    cuesheets, to support GVFS mounts (fixes #2000)
+  *  cef38972 - cocoaui: improved dnd refcounting, added support for dnd
+    folders and playlists
+  *  2bc00efd - cue: handle local paths with ':' symbols in them (fixes
+    #2000)
+  *  e0f03a6c - added comment for DB_EV_FIRST
+  *  4aff4764 - Revert "gtkui: GTK_ORIENTATION_HORIZONTAL gtk2 compat"
+    (fixes #1994)
+  *  9ee19535 - gtkui: GTK_ORIENTATION_HORIZONTAL gtk2 compat
+  *  bfd945e4 - converter: append extension from the original file, if
+    the encoder preset ext is empty
+  *  b1e73920 - cocoaui: better error handling in HelpWindowController
+  *  03b5dda6 - cocoaui: better help-cocoa.txt location
+  *  6d69dd5d - drain the streamer and main event queues before
+    terminating
+  *  7498f6ef - cocoaui: HelpWindowController.swift purpose comment
+  *  b0e1747b - cocoaui: removed unneeded semicolons from
+    HelpWindowController.swift
+  *  dd11b9d4 - travis: use xcode9.2
+  *  84bbf913 - osx: configured xcode project to use swift; added PoC
+    swift window, implementing the help text
+  *  72759999 - cocoaui: help window improvement / refactoring
+  *  325d2091 - copyright year update in about txt
+  *  5a1b022a - opus: save RG info in standard format, relative to
+    header gain, without peaks
+  *  1f961cda - replaygain: save playlist after removing RG info
+  *  6bc3da98 - cocoaui: corrected playlist cursor drawing code
+  *  7e27e518 - removed deleted help.pt_BR.txt from Makefile
+  *  c66c5e09 - cocoaui: added help-cocoa.txt
+  *  0c985f3b - updated linux help.txt
+  *  597fd58c - cocoaui: added help viewer
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 13 Apr 2018 18:08:47 +0300
+
 deadbeef (0.7.2+git7655-1ea69bf2-1) unstable; urgency=medium
 
   * Compile

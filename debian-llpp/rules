@@ -22,10 +22,13 @@ export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
 %:
 	dh $@ 
 
+override_dh_strip:
+
+
 override_dh_auto_build:
 	mkdir $(CURDIR)/build-ocaml
 	cd $(CURDIR)/ocaml && \
 	./configure -prefix $(CURDIR)/build-ocaml && \
-	make -j 10 world && make install
-	cd mupdf && make -j 10 build=native libs
-	PATH="$(CURDIR)/build-ocaml/bin:${PATH}" sh build.sh build  
+	make -j 3 world && make install
+	cd mupdf && make -j 3 build=native libs
+	PATH="$(CURDIR)/build-ocaml/bin:${PATH}" sh build.sh build man

@@ -1,3 +1,74 @@
+qcad (3.20.0+git5433-7f1b8d092-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 7f1b8d092d300f307d796de48b2653117b6877c6
+  * Date: 1523651478
+  * git changelog:
+  *  7f1b8d092 - make line weight in screen based linetype mode unit
+    independent
+  *  dd5160912 - fix print current view shortcut in print preview
+  *  8e77aded1 - fix PDF export shortcut
+  *  5cfdb58fb - clean up
+  *  47241e93b - fix printing shortcut
+  *  6e6ce1938 - update translations
+  *  d8e1859b6 - set version to 3.20.1
+  *  b4f365002 - fix resource lookup from plugin
+  *  a937d7901 - update translations
+  *  516d91874 - make point type entities easier to select
+  *  a8223acc2 - update
+  *  3ead405cf - add warning if nothing in stretch area
+  *  65298dcc1 - fix color changes in CAD font text
+  *  506ccd8b0 - workaround for Qt 4
+  *  1835021af - clean up
+  *  a1efc8a58 - Merge branch 'master' of github.com:qcad/qcad
+  *  fd1dbcbc1 - fix Qt 4 qsTr workaround
+  *  dda5a17c2 - fix compiler warning
+  *  8ea248b7c - Qt 4 API workaround for qsTranslate with plurals
+  *  b876bd7d2 - clean up
+  *  904c8056c - prevent rotation, mirroring, scaling for pixel unit
+    blocks
+  *  f288c30e0 - hide pixel unit property
+  *  375e34940 - prevent rotating pixel unit block
+  *  8ec9d4e53 - update script bindings
+  *  57f459133 - update warning
+  *  8f64459f4 - avoid warning when previewing operation involving
+    blocks
+  *  851090db6 - implement block pixel unit as variable instead of
+    custom property
+  *  a7fe514ef - don't convert entities in pixel unit blocks
+  *  dbb30d087 - use autoPath for icon paths
+  *  a830563f5 - update script bindings
+  *  a58bf6815 - add getKeyLog
+  *  706588b7e - clean up
+  *  f0017f589 - clean up
+  *  4c278808a - fix keycodes with numbers when options toolbar with
+    inpiut fields shown
+  *  a4960a767 - Merge branch 'master' of github.com:qcad/qcad
+  *  818fe7de0 - clean up
+  *  bd1abd75a - fix startup warning about action not found
+  *  70b851609 - fix loading files from compiled resources
+  *  24cd530c6 - fix loading dxf from compiled resource
+  *  33b9ed383 - update spashscreens
+  *  59794a47e - port to Qt 4
+  *  a365cfc3c - update to version 3.20
+  *  ab37de2b5 - update script bindings
+  *  6f3d0c3b0 - allow disabling of double click to edit blocks per
+    entity
+  *  c115c6100 - add support for alternative / translatable title for
+    custom properies
+  *  4f38e3f37 - update translations
+  *  44912b50e - add support for appending ellipse arc to polyline
+  *  5d52491f6 - fix getting orientation of polyline for polylines with
+    arcs
+  *  5421a4933 - update translations
+  *  b4c74180a - fix FS#1732 - Saving dimension with custom text
+    position
+  *  d8d4d2ffd - set version to 3.20.0
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 14 Apr 2018 11:53:21 +0300
+
 qcad (3.19.0+git5382-54b73311f-1) unstable; urgency=medium
 
   * Compile

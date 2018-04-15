@@ -1,3 +1,215 @@
+gimp-devel (2.9.8+git40420-6b0f5136e0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 6b0f5136e09f64a830b65037f48493fc0040674f
+  * Date: 1523708856
+  * git changelog:
+  *  6b0f5136e0 - app: use "g" for gradient shortcut.
+  *  5e98dade14 - configure/app: depend on GEGL 0.3.32
+  *  680da3ada8 - Update Polish translation
+  *  c3f98cccbd - app: fix menu path for gradient tool
+    s/Blen_d/Gra_dient/.
+  *  063a83c1ec - app: migrate configuration files for s/Blend/Gradient/
+    tool renaming.
+  *  257eb95258 - app: simpler and better-aligned packig in
+    gimpviewablebox
+  *  4705684b0e - po: fix typo in POTFILES.in
+  *  5f6dfc7617 - app: add GimpGradientBlendColorSpace parameter to
+    gimp_drawable_gradient()
+  *  b0beb0197a - Bug 795230 - Rename Blend tool and provide PDB
+    compatibility
+  *  4f2e078ccb - Bug 795230 - Rename Blend tool and provide PDB
+    compatibility
+  *  b55c116755 - Bug 795230 - Rename Blend tool and provide PDB
+    compatibility
+  *  ea474f5e78 - Bug 795230 - Rename Blend tool and provide PDB
+    compatibility
+  *  99ea6f91e2 - app: fix the build after the
+    GimpGradientBlendColorSpace commit
+  *  ebb9d83d63 - Bug 795230 - Rename Blend tool and provide PDB
+    compatibility
+  *  bf49b47620 - Bug 795207 - Add color space to blend(gradient) tool
+    options
+  *  3cb7fc86aa - NEWS: update
+  *  ff34965faf - Bug 795177 - seg fault with clone tool
+  *  65c7ce5e7d - build: add Chinese (China) translation to the Windows
+    installer
+  *  6785a689cf - po-windows-installer: add Chinese (China) translation
+  *  2255f09fac - Update Chinese (China) translation
+  *  b91742a84f - Bug 795185 - Corrective rotation guides are incorrect
+    in GIMP 2.10.
+  *  3841d3d537 - Bug 795185 - "Show image preview" works differently if
+    checked before...
+  *  421c9fc51a - Bug 795050 - ‘strncpy’ output truncated before
+    terminating nul
+  *  5b8b33dad7 - app: invert zoom mapping in gegl:panorama-projection
+    gyro controller
+  *  5430e7794c - app: various fixes in GimpToolGyroscope
+  *  7bb0821977 - Update Polish translation
+  *  1993d8a4a7 - Bug 768872 - Tiling Symmetry doesn't wrap vertical
+    coordinates over...
+  *  12ec7976d5 - NEWS, desktop: small fixes in NEWS and in <release>
+    appdata.
+  *  0a1dd37719 - desktop: preparing a new <release> tag for 2.10.0 RC2.
+  *  4b725c6c03 - NEWS: more updates
+  *  a627d47951 - NEWS: update
+  *  9f55de0b25 - Update Russian translation
+  *  087d2462bc - configure/app: depend on babl 0.1.46
+  *  dd77b05967 - 2.10: updates for appdata
+  *  6453b371a9 - app: fix status message of GimpToolGyroscope
+  *  f6255ae70b - desktop: changes in appdata and 2.10 <release> now
+    uncommented.
+  *  6982533292 - app: add custom GUI for gegl:panorama-projection
+  *  8738d2f22b - app: add a gyroscope controller to prop-gui
+  *  634d5ae57d - app: add GimpToolGyroscope
+  *  2c1f1c507c - app, cursors: add zoom cursor modifier
+  *  f81542e5c9 - app, cursors: add rotate cursor modifier
+  *  ae6a7bf98f - libgimpbase: improve multi-threaded stack traces.
+  *  4bc982b84a - Bug 795123 - plug-in crash starts neverending loop.
+  *  3f95dc52d3 - Bug 791519 - Unexpected selection from channel
+  *  6effffba93 - pdb: one of the recent typo fixes was in a generated
+    file
+  *  bba8f69594 - Revert "Bug 791512 - make the selection boundary
+    detection the same as 2.8"
+  *  54ca0a7f68 - Add Gray theme back to GIMP
+  *  f5cb1fed85 - Bug 795081 - Crash when using a brush combined with a
+    dynamics
+  *  e98506b000 - app: remove option for paint tools to opt out of a
+    separate thread
+  *  2ae16ca604 - app: reorganize gimppaintool-paint
+  *  f77edcdf19 - app: do not use gimp_filename_to_utf8() in the signal
+    handler.
+  *  ab7c3d2b24 - libgimpbase: oups, I lost the "full" option in my
+    backtrace.
+  *  9dfd35be05 - build: update base dependencies to fix flatpak.
+  *  bb52431cdd - libgimpbase: gimp_stack_trace_*() should get
+    backtraces for all threads.
+  *  53fae39aee - Bug 795057 - Insensitive text in plug-ins is
+    unreadable with dark themes
+  *  c4975dd893 - Update Polish translation
+  *  7fdb963e01 - Bug 794996 - Misc. typo fixes in comments in app/
+  *  8994246be2 - Bug 791519 - Unexpected selection from channel
+  *  bb4ac7c829 - Bug 791519 - Unexpected selection from channel
+  *  8e7a34297f - app: move painting to a separate thread
+  *  ce9ca03ed4 - app: add gimp_drawable_{start,end,flush}_paint()
+  *  db50c72c24 - app: align display paint area to a coarse grid
+  *  440be88035 - Bug 794926 - Foreground select tool: several critical
+    errors when ...
+  *  6ebc3f1b09 - Makefiles: don't use -xobjective-c when linking files
+    on Mac
+  *  06950be7f0 - Makefiles: don't use -xobjective-c when compiling C++
+    files on Mac
+  *  bea27171ad - app: throttle statusbar progress updates
+  *  87a10aaf9e - Bug 795048 - Image->mode->Grayscale results in a black
+    or transparent image
+  *  81e1e3967d - app: silence gcc warning
+  *  2dd2f2f371 - Bug 770424 - Themes: insensitive menu item are not
+    readable
+  *  0ae8e356d1 - po: fix desktop file keywords syntax for Basque
+    translation.
+  *  d907898c65 - build: update dev and nightly flatpak manifests.
+  *  d2c4db1984 - build: upstream flathub build and base modules updated
+    too.
+  *  494f68418a - build: do not bundle glib anymore.
+  *  43549b7a38 - app: remove some references to TileManager from xcf-
+    load.c comments
+  *  f7c2ce9b13 - app: fix smudge tool artifacts
+  *  d66839993d - Updated Russian translation
+  *  87b9611628 - app: fix build error "‘memset’ was not declared in
+    this scope".
+  *  299a258237 - NEWS: keep updated
+  *  4336e2e52a - app: parallelize gimpbrushcore-loops.cc
+  *  6e314b5090 - app: move brush-core loops to a separate file
+  *  f7ea9abc73 - app: add include guards to gimppatincore-loops.h
+  *  cf21dcbe37 - Rework and rename the default Dark theme
+  *  7aecc90e10 - Remove Lighter, Darker, and Gray themes
+  *  0009794d9d - app: migrate tool-presets with
+    s/GimpImageMapOptions/GimpFilterOptions/.
+  *  082a6404c9 - app: fix iterator area in
+    canvas_buffer_to_paint_buf_alpha()
+  *  b88170b9e0 - NEWS: keep up-to-date.
+  *  ba06a0fe86 - Bug 794949 - Plugin crash when opening png, jpeg or
+    tiff with...
+  *  cb239e60f6 - app: parallelize gimp-gegl-loops.cc
+  *  828b99b5b3 - app: switch gimp-gegl-loops.c to C++
+  *  3df757ffd7 - app: parallelize gimppaintcore-loops.cc
+  *  e8a14deecf - app: switch gimppaintcore-loops.c to C++
+  *  c8d4c079a2 - app: parallelize gimpbrush-transform.cc
+  *  565f1f2aa4 - app: switch gimpbrush-transform.c to C++
+  *  86b89cf62a - app: add gimp-parallel
+  *  700cc33bec - configure.ac: require a C++11 compiler
+  *  394c930fbe - app: avoid potential division by 0 in dashboard CPU
+    usage sampler
+  *  fa02a2c64f - libgimp: add an exception handler for Windows.
+  *  76bce77d09 - libgimp: various warning fixes for Win32.
+  *  9c8a8ae576 - libgimp: do not end the fatal and signal handlers with
+    gimp_quit().
+  *  e98b937643 - libgimp: add a gimp_fatal_func() allowing stack
+    tracing plug-ins on...
+  *  6bcb30e1ee - devel-docs: update debugging-tips.txt regarding --
+    stack-trace-mode...
+  *  c46211190f - libgimp: properly catch SIGABRT signal.
+  *  6936a655bd - plug-ins: minor fix of an error string.
+  *  33822c51c2 - app: check if tool control is active before setting
+    modifier state.
+  *  7230d5d777 - Bug 794356 - Rulers always shown for subsequent image
+    views
+  *  65a697ff67 - app: switch the first two args of
+    gimp_channel_new_from_buffer()
+  *  de0706f3f1 - Updated French translation
+  *  cdc20c9c79 - Updated French translations
+  *  bbd79f9d62 - app: fix Wilber's eyes
+  *  b46b9d8921 - Bug 772126 - Make GimpColorFrame handle very long
+    numbers
+  *  5e2600db1e - NEWS: keep up-to-date.
+  *  cad72b1432 - app: remove unused variable in
+    gimp_tile_handler_validate_command()
+  *  4acdc7392a - app: use gegl_tile_handler_damage_rect() in
+    TileHandlerValidate
+  *  da3c96f541 - app: add "misc" group to the dashboard
+  *  4c041b2e8a - app: allow hiding groups in the dashboard
+  *  ea48b9f31c - Bug 794356 - Rulers always shown for subsequent image
+    views
+  *  8a24de6557 - app: fix dashboard help id.
+  *  d779c13891 - app: do not edit symmetry variables but properties.
+  *  3c1516ea50 - app: mirror positions 0.0 are accepted.
+  *  6501faf90d - Update Swedish translation
+  *  f242bf4d92 - appdata: Install appstream metadata to non-deprecated
+    directory
+  *  15041e8ff7 - NEWS: starting the news for 2.10.0.
+  *  617d0c4550 - etc: add 4K Ultra HD template and fix DCI 4K.
+  *  c9df2a6879 - app: do not raise a warning when failing to
+    deserialize symmetry...
+  *  e0029d31b4 - Bug 792520 - Image symmetries should be saved: version
+    the properties.
+  *  65717041ed - app: save image symmetries in the XCF file.
+  *  9090a98498 - app: fix new g_object_ref() warnings in
+    gimp_filter_tool_edit_as()
+  *  fe932fe7ad - Bug 794826 - Do not default to last used filter
+    settings
+  *  14a054e980 - app: add a "Filter Dialogs" section to prefs -> dialog
+    defaults
+  *  62ec4831db - app: ...and a mnemonic.
+  *  44ce8b4dd8 - app: a colon was missing after "Debug Policy" in
+    preferences
+  *  f586aac43a - app: use g_clear_foo() in
+    gimp_gegl_procedure_finalize()
+  *  e55c94eff0 - Bug 794854 - Brush color is not added to color history
+    in smudge tool
+  *  019af3dacb - file-open-location: don't close dialog if no file was
+    opened
+  *  a4b366f494 - file-open-location: disable widgets only while opening
+    a file
+  *  33b7d8e334 - file-open-location: create only one progress bar
+  *  fd6d4931c8 - It's alive!
+  *  a3071d2620 - configure.ac: require babl >= 0.1.45 and GEGL =>
+    0.3.31
+  *  04a798d786 - app: do not copy needlessly paint_mask GimpTempBuf.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 14 Apr 2018 15:46:38 +0300
+
 gimp-devel (2.9.8+git40281-49285463e6-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,31 @@
+scantailor-advanced (1.0.14+git311-f6dadc3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/4lex4/scantailor-advanced.git
+  * Branch: master
+  * Commit: f6dadc3af280b2ae604cfe4cf81545a6da416bc6
+  * Date: 1523251800
+  * git changelog:
+  *  f6dadc3 - Version 1.0.14
+  *  2937ffe - ~ Update VERSION.
+  *  822ba3f - ~ Fixed: mixed pixels after cropping at page layout
+    stage.
+  *  08ab1e0 - ~ Removed some old unused code.
+  *  0a32468 - # Canceled feature "Support for processing of images with
+    light content on dark background"
+  *  2d512d6 - ~ Fixed: some parameters on some platforms were saved
+    into xml invalidly.
+  *  ce79f66 - ~ Fixed: the color segmenter state was saved incorrectly.
+  *  91ce827 - ~ Fixed: the area for estimating whether the input image
+    at output is black on white has been extended.
+  *  6523f77 - ~ Code refactoring and fixes.
+  *  c00a434 - ~ Code refactoring and fixes.
+  *  53cd5ef - ~ Each math function call has been wrapped in std
+    namespace to avoid ambiguous calls.
+  *  f3bfdad - ~ Code refactoring and fixes.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 13 Apr 2018 20:24:45 +0300
+
 scantailor-advanced (1.0.12+git299-91211e0-1) unstable; urgency=medium
 
   * Compile

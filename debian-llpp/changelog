@@ -1,3 +1,154 @@
+llpp (26.0.0+git2995-be7dc6c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://repo.or.cz/llpp.git
+  * Branch: master
+  * Commit: be7dc6c82c2916c8af43b315e75a82325d9ad3b1
+  * Date: 1523736574
+  * git changelog:
+  *  be7dc6c - Fitz leaks sigsetjmp which is only available under
+    _POSIX_C_SOURCE
+  *  03e33ab - Sync with upstream
+  *  2589b2e - Remove this...
+  *  6fa433c - Better
+  *  1efe5bb - Fix more mistakes
+  *  ee71956 - Expand
+  *  5340dc6 - Fix mistakes
+  *  9806585 - Make it work
+  *  a59c521 - WIP
+  *  a1e85e2 - vecho
+  *  3d67580 - Rebuild local mupdf under certain unlikely conditions
+  *  bde9ecf - Update
+  *  4892d03 - Do everyone a favour...
+  *  3bbb976 - zsh
+  *  cb6f947 - Safety nets, debugging, useless eval removal, etc
+  *  ca603c8 - Use incs consitently
+  *  102f43f - Nope
+  *  64b50b5 - Trip to the drawing board was successful
+  *  fe520e0 - Pipe starts a subshell
+  *  15dc969 - Cosmeitcs
+  *  f04f06e - Save on printfs
+  *  ced9f46 - Update
+  *  0cb9cb5 - Reword
+  *  945669f - Sigh
+  *  5a9d5a5 - Whoops
+  *  91e530d - Update
+  *  07933b4 - Stray newline
+  *  f026fe6 - Continue (Sh|m)ake-iication
+  *  be57880 - Rebranding du jour
+  *  33e5bbe - a vs an + period
+  *  3f458a0 - Fix directory creations and digesting on macOS
+  *  3aca2f0 - Not really
+  *  ee9418b - Use sh
+  *  4a0dcaf - Do not list transitive prereqs
+  *  ad1f188 - Remove stray semicolon
+  *  bb98737 - Shellology
+  *  fb4bd46 - Bump required mupdf version
+  *  8e5a101 - Bump required OCaml version
+  *  cd0e599 - Test ocaml's version
+  *  423b333 - Reword
+  *  8163be6 - Properly digest all relevant parts of the bundle
+  *  3a65ac3 - Quoting
+  *  c892d67 - What did i tell myself about the past?
+  *  35052d5 - Safety nets
+  *  186e83d - Fix
+  *  06cea44 - Quotes
+  *  2c13937 - Whoops
+  *  686202f - Consistency
+  *  bee676a - https://en.wikipedia.org/wiki/George_Santayana
+  *  f5bdf1d - Save those dollars
+  *  304ccf4 - Play nice with -u shell option
+  *  50719d6 - Update
+  *  120218e - Sedvoid
+  *  e32ca0c - Massage
+  *  9ae201c - Consistent vecho
+  *  97e4efa - build.sh: build llpp.app bundle
+  *  1597064 - Whoops
+  *  9754db6 - Sigh...
+  *  56b5b4c - Stop being fancy
+  *  17e8d0c - Digest better
+  *  6bdca93 - Comment
+  *  a251c88 - Cosmetics
+  *  c9a7a4b - Derive source directory from dirname of $0
+  *  c774bdd - Next step - attoseconds
+  *  6a7c3a6 - Nanoseconds
+  *  b6c5fb3 - Update
+  *  15c8495 - Simplify
+  *  8e9ed7c - macOS
+  *  7e3b42c - c99 (w/o _GNU_SOURCE)
+  *  3259064 - Remove _i
+  *  37b3e31 - Add -strict-formats and deal with massive fallout
+  *  62d79b0 - Deal with a warning that was not caught without -warn-
+    error a
+  *  a8f7340 - Module specific flags machinery
+  *  d55d094 - Paranoia and fat trimming
+  *  2bf6913 - Consistency
+  *  e05767c - Every line is sacred
+  *  e63d6f2 - Remove debugging aid
+  *  20724cd - shasum is apparently a perl thing
+  *  666e5ae - Update
+  *  1c59926 - Be lazy
+  *  4283758 - Try.. try again
+  *  cee666d - Avoid doing useless work
+  *  e8b5926 - Simplify
+  *  d635ca4 - Version stuff
+  *  606ae74 - For me zsh's -x output is much easier to parse
+  *  47f50ee - Use GNU date's %N if available
+  *  f1e5e6a - Robustify
+  *  681e79c - Smileys
+  *  32692ed - Quoting
+  *  3331f12 - Better message
+  *  281c37e - Still not perfect
+  *  f870d4a - Saner
+  *  e61aedd - Facelift
+  *  322a77a - No idea
+  *  87ce09f - Update
+  *  0b2d3e6 - Improve
+  *  2666b86 - Consistency
+  *  953d56c - Update
+  *  e47fe43 - Less verbose dirty
+  *  d4e7393 - Remove mkhelp.sh
+  *  c1561dd - Fold mkhelp into build
+  *  c7573e7 - Cosmetics
+  *  13ddde1 - Improve
+  *  feeef73 - Better still
+  *  c648636 - A bit better
+  *  149d49f - mmm
+  *  612b78a - mli...
+  *  643aacd - Update
+  *  452da18 - First approximation of a better build.sh
+  *  4e85806 - Still not sure how fallbacks work in prince
+  *  f585a78 - Ditto
+  *  b49ec67 - Font viewer works better with infinitely tall pages
+  *  64de59b - Document layout-height
+  *  fa262e2 - Better reflects transient nature of layout...
+  *  4ce308c - Declare environ unconditionally
+  *  719f1e7 - macOS
+  *  a674d40 - Outta harlem
+  *  cafe803 - Re-open document on layout height changes
+  *  9e1cb05 - Whoops
+  *  1613867 - Remove cxack
+  *  a648996 - Update
+  *  d5f2a46 - Layout height
+  *  0956848 - Layout height
+  *  07ad62e - Remove wtmode
+  *  996f903 - Move page only if search result is not visible
+  *  a587d5d - Greek
+  *  481ac56 - Alegreya fallback (for greek currently) + dpi bump
+  *  ed2242d - Semicolon
+  *  9d2cb68 - Add a real word
+  *  93fb1b7 - Merge branch 'master' of ssh://github.com/moosotc/llpp
+  *  b426113 - Add quote
+  *  91fa810 - Merge pull request #73 from nojb/master
+  *  a838e0f - Fix OS X compile
+  *  4a46e61 - Now i know my ABC..
+  *  79e81cd - Italic pattern that killed p054
+  *  6cbfd17 - Substitute Gentium Plus with PT Astra Serif
+  *  1c92061 - It's easier for me to read gentium than p052 for some
+    reason...
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 15 Apr 2018 09:14:54 +0300
+
 llpp (26.0.0+git2858-d32fb71-1) unstable; urgency=medium
 
   * Compile
