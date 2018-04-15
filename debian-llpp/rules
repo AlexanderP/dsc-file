@@ -1,5 +1,5 @@
 #!/usr/bin/make -f
-#export DH_VERBOSE=1
+export DH_VERBOSE=1
 
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
@@ -23,5 +23,9 @@ export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
 	dh $@ 
 
 override_dh_auto_build:
-	cd mupdf && make build=native libs
-	bash build.sh build
+	mkdir $(CURDIR)/build-ocaml
+	cd $(CURDIR)/ocaml && \
+	./configure -prefix $(CURDIR)/build-ocaml && \
+	make -j 10 world && make install
+	cd mupdf && make -j 10 build=native libs
+	PATH="$(CURDIR)/build-ocaml/bin:${PATH}" sh build.sh build  
