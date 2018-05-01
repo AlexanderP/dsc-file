@@ -1,3 +1,22 @@
+deadbeef (0.7.2+git7686-24feac8b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 24feac8bec6505e306d192eaa15f72717fdddd4c
+  * Date: 1523906709
+  * git changelog:
+  *  24feac8b - cue: fixed handling cuesheets in zip
+  *  dbefa141 - cocoaui: minor editing of help-cocoa.txt
+  *  4af501cd - mp3: don't estimate duration from bitrate -- inaccurate
+    duration breaks cuesheet support
+  *  cb5b7858 - examples: updated decoder_template
+  *  8974b025 - opus: totalsamples off-by-one fix
+  *  c471c060 - opus: streaming support regression fix
+  *  6fe4a79b - opus: fixed startsample/endsample usage
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 27 Apr 2018 20:15:41 +0300
+
 deadbeef (0.7.2+git7679-609e3bea-1) unstable; urgency=medium
 
   * Compile

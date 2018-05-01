@@ -1,3 +1,48 @@
+audacity (1:2.2.2+git8630-660dc03b9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 660dc03b9fa354151e38c123b3a9a9928b57c8d0
+  * Date: 1524829529
+  * git changelog:
+  *  660dc03b9 - GetInfo tweaks.
+  *  0b11323e0 - Add sublime to .gitignore
+  *  ae36eea26 - Bug 1855 - Accelerators not removed from names in
+    translation
+  *  de1e8d96d - Fix TimerRecord ASSERT in debug builds.
+  *  7c8d4dc26 - Bug 1835 - Mixer Board track names do not update
+    immediately on updating track names
+  *  b1e0add67 - Bug 1870 - Mixer Board on Windows - with a single track
+    the window cannot be moved on the screen
+  *  c2e07b462 - Change manifest from 'any architecture' to '32bit'.
+  *  fb490c24b - Change wxMilliSleep from 10ms to 50ms
+  *  7bc32734a - Clear TODO: comments for Nyquist docs
+  *  b71b80553 - Bug 1868 - Track selection fails at a certain critical
+    track height.
+  *  5e8ba1085 - Fix path to script.  (Thanks Cliff)
+  *  cef8976e8 - Update mac build instructions.
+  *  5c1d0354e - Merge pull request #275 from Paul-Licameli/wx-3.1-macOs-
+    10.7
+  *  69eba8f15 - Merge branch 'no-non-ascii'
+  *  763b2845a - Fix non-ASCII character in portaudio comment
+  *  121fdc570 - Fix non-ASCII characters in wxLogDebug
+  *  42fb02bf9 - Remove 4x bevel on MixerBoard
+  *  933c86dce - Draw slider background in correct colour on MixerBoard.
+  *  35d24bbed - Tweak spacing in vertical rulers.
+  *  c8a31324b - Remove dead code from SelectionBar
+  *  c34dd3172 - Reduce flicker of Selection Toolbar Text
+  *  fc473ba50 - Mac: script to build wx 3.1.1 & change xcodeproj to use
+    10.7 minimum
+  *  5120a9dfc - Fine tune spacing between minor ticks in rulers.
+  *  89788d469 - mod-script-pipe windows release build to link to
+    release dlls.
+  *  a2a68d9a3 - Add Comment: C++11 polyfiller is on the way out.
+  *  8344a2bae - Bug 1867 - Jumping numbers on meter resizing
+  *  6d96ec1e5 - Fix sizer ASSERT with equalization dialog.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 28 Apr 2018 19:14:20 +0300
+
 audacity (1:2.2.2+git8603-5fd1f7e60-1) unstable; urgency=medium
 
   * Compile

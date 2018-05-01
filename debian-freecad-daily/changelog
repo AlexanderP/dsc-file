@@ -1,3 +1,181 @@
+freecad-daily (0.17+git13638-983f2472a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 983f2472a871f8b808fccdf8fa8d05dd276c3fba
+  * Date: 1525006241
+  * git changelog:
+  *  983f2472a - more fixes for flatmesh + fix gcc warning + add
+    conversion function for boost.python + switch build off by default
+    due to travis build failure for Py3
+  *  7ceb9721e - check for minimum Eigen3 version to build flatmesh
+    module
+  *  2fcc35446 - fix several warnings: -Winconsistent-missing-override -
+    Wsign-compare -Wmaybe-uninitialized -Wmissing-braces
+  *  c32ca39b3 - suppress warning 4275
+  *  ae9305f49 - fix warning -Winconsistent-missing-override
+  *  a83d0e612 - support occ version < 7.0 for mesh flattening
+  *  620768b8a - fix export of base class
+  *  5a7bc3376 - disable Py::Exception(const std::string&) constructor
+    as it will be removed in future PyCXX versions
+  *  09e85f7ef - Add include for TColgp_Array1OfPnt
+  *  33c77a546 - Add View and Page Dxf export
+  *  ddac40afb - Move Dxf function to Mod/Import Ph1
+  *  d1c0c431b - include missing headers due to updated occ version
+  *  6aeab2284 - add switch to toggle building of flat mesh module
+  *  77a647010 - implement optional Python binding for flatmesh using
+    boost
+  *  af4e53003 - minor fixes
+  *  3affc2da9 - make sure MeshPart still builds without smesh
+  *  31cee58df - fix crash when entering quit() in Python console for
+    Py3
+  *  68cc427b0 - Improve handling of external smesh + add
+    SMESH_version.h.cmake to set full version number instead of using
+    compiler define + do not set include path of smesh globally + do not
+    set library path of smesh globally + do not set HAVE_NETGEN define
+    globally + improve using debug and release libs of smesh for MSVC
+  *  2092afe07 - make finding smesh optional
+  *  547cc9f36 - external smesh: use version info for precompiler
+    conditionals
+  *  21cdc9ea4 - port to smesh 8.3 using #ifdef EXTERNAL_SMESH for the
+    diff
+  *  5941a32f7 - fix Linux build failure
+  *  d34847f75 - improve icon theme handling
+  *  48f5be732 - flatmesh: missing include + do not show flatmesh-gui if
+    flatmesh is not available
+  *  900ec439d - do not show F2 as short cuts for renaming on macOS as
+    it doesn't work
+  *  0599879e2 - Arch: Further encoding bugfix in IFC exporter
+  *  059e4e65d - Merge branch 'randomshapecolor' of
+    https://github.com/dulouie/FreeCAD into dul
+  *  505488c4f - Misc. typos
+  *  8c0b57466 - conda: update circle-ci build
+  *  01beecc7a - draft: fix diameter-dimension
+  *  aa14ed6ba - Arch: Added 4-pane window preset
+  *  5ccb7e7d3 - Add some debug and util routines.
+  *  00f36d78e - Update Page display when View removed.
+  *  371c7e458 - Ensure Section face redrawn on update
+  *  a40996016 - Add #3337 Arbitrary Dimension
+  *  c3d56ca36 - Fix exterior angle arc and value
+  *  4cd563b5c - Remove duplicate code/save Dim line geom
+  *  d67147871 - Doxygen: fix broken link in freecadweb.org/api page +
+    update all links to https://
+  *  5f7df347f - Path: misc. source comment typos
+  *  13db1e534 - Crowdin: Path string fixes
+  *  2c78478b5 - Part: fix compoundfilter's items property tooltip
+  *  61db1afe4 - fix crash when using space mouse on Windows and built
+    with Qt5
+  *  1e2b9758c - Arch: Fixed encoding bug in ifc exporter
+  *  786054fd2 - Fixed ArchDetail example
+  *  a099eb3ca - Improvements on mesh flattening commands: comment out
+    import of pivy because it's not used and pivy.graphics isn't
+    available on all platforms Add MeshPart_ prefix to command names for
+    consistency reasons and to make Qt help working correctly When
+    adding commands to Mesh workbench make sure the commands could be
+    created beforehand to avoid annoying warnings
+  *  c518744e3 - cmake stuff
+  *  37fb72e50 - nullspace
+  *  08b329c9b - add area relaxing method: not yet working
+  *  818870582 - add edge relaxing method
+  *  18b654488 - win: pybind11: workaround for strdup
+  *  7df027c88 - change pybind11/boost handlinG
+  *  8c448e370 - openscad py3 fixes
+  *  d8d79c908 - win fixes + pybind11 improvementS
+  *  74cd8706a - MeshFlattening: fixes for windows
+  *  76b66159b - MeshFlattening: add function to unwrap face
+  *  2329ac38e - MeshFlattening: add function to unwrap mesh
+  *  e1247dcb4 - MeshFlattener: boundary extractor
+  *  ce33e2dbe - MeshFlattening: initial commit
+  *  05b800400 - hide python code displayed @ startup
+  *  40919896e - Add getAllViews() method to DrawPagePy
+  *  f13689753 - Fix #3367: view/data pane is unselected
+  *  4f3f62072 - Coverity fixes
+  *  a4ae54f65 - remove unneeded cmake switch
+  *  33b883acb - fix broken layout in view color panel
+  *  1f121a17c - py3: Spreadsheet use Unicode instead of bytes
+  *  7da2d6ebb - py3: rebar-fix
+  *  77895f959 - py3: draft fixes (grid) integer-division (please
+    remember using // for integer division ;) + use same color for arrow
+    and line
+  *  5d1fa6723 - Fix add ArchSection w/ multiple Pages
+  *  dc79d4172 - Sketcher: fix menu periodic bspline call
+  *  ae7bef997 - Expressions: Fixed issue #3432; aggregate functions
+    sometimes ignore some of their arguments.
+  *  b440dc830 - behave like standard Python interpreter in console mode
+    if no file name is passed
+  *  519d02dd0 - ViewProviderGeometryObject: set default random shape
+    color to false
+  *  8958aaae5 - Merge branch 'randomshapecolor' of
+    https://github.com/dulouie/FreeCAD into randomshapecolor
+  *  d8b5b6938 - fix small layout issues
+  *  492f5057e - random shapecolor with toggle in settings dialog
+  *  68f25713d - Fix finding boost python >= 1.67
+  *  3c9e6b038 - fix requesting boost python component for version >=
+    1.67.0
+  *  52443a1b1 - fix minor uic warning
+  *  10e33d03f - Active container (light gray) and edit (yellow) colors
+    in Tree view are now changeable in prefs->display->colors
+  *  869b5c891 - Explicitly link against -lpthread on Unix
+  *  6ac274b08 - minor fixes in FindPyCXX check
+  *  01a26172c - disable Py::Exception(const std::string&) constructor
+    as it will be removed in future PyCXX versions
+  *  840c9e8b3 - prepare for PyCXX 7.0
+  *  c4aaef403 - fixed missing py2 case
+  *  04a8bf6a2 - fix syntax error for python3
+  *  5b744ae05 - fix runtime error creating a wire from string with
+    python3
+  *  329739954 - fix possible crash when saving preferences
+  *  5326d15ed - improve handling if PySide(2) is not installed
+  *  c16813f4e - Arch: Fixed wrong wall base wire orientation
+  *  9551e2bf7 - Part: Added icon to Simple Copy command
+  *  514058a02 - Arch: Fixed leftover encoding bug (backported to 0.17)
+  *  4f1c3a971 - Draft: Fixed snapping to shapes inside a moved Part
+    container - fixes #3392
+  *  72d334d86 - Fix #3426: Hierarchical step export not working with
+    occt 7.2
+  *  18a7bad3b - py3: fem: some additional fixes
+  *  e6727e806 - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  5293cede2 - Revert changes per yorik
+  *  25b58a1a8 - Arch: Residual trailing \n chars removed from
+    translate()
+  *  90c668972 - Arch: translation fixes
+  *  c582b069b - fix compiler warnings with py3 and msvc
+  *  a29e8725b - fix compiler warnings with Py3
+  *  6858146c8 - don't make existence of PySide2 mandatory
+  *  7ed84a659 - workaround for bug in VS 2013 that occurs at Python
+    init time
+  *  4adeb7702 - extend API of smooth command to allow to run different
+    algorithms
+  *  8a7525f62 - PartDesign: fix #2758 Datum Point persistence, again
+  *  cab320be4 - py3: addon-manager
+  *  d97701499 - py3: fix dxf import
+  *  be5ea8391 - PySide2: qApp -> QApplication
+  *  0bd9f17ba - py3: port ship to py3 imports
+  *  f3a514b44 -  Deploy Travis builds to 0.18
+  *  646111495 - App: fix py return of propertyLinkSubList
+  *  04a7f566f - Merge pull request #1402 from luzpaz/drafttools-fix-
+    newline
+  *  1207b5681 - Follow-up fix for e0161f4652
+  *  d96cc9dbd - Arch: Fixed wall clone icon
+  *  50ef6e174 - Arch: Added blocking system to walls
+  *  f95117c70 - Sync TechDraw what's this with Wiki page names
+  *  973e0e4bd - Align TechDraw menu and toolbars
+  *  e0161f465 -  [For v0.18]Draft: add translation() + move \n out of
+    translation strings
+  *  0884b353a - [For v0.18]PartDesign: translation fixes
+  *  7101d9a89 - Arch: small bugfix in Rebar
+  *  2400fe64b - Draft: dimension and extension lines overshoots
+  *  8aba6f1d5 - Path:  Reword menu items from 'partial' to
+    'supplemental'
+  *  f0a91a89e - python3: ConfigParser -> RawConfigParser
+  *  130c44521 - start v0.18 development
+  *  018b41032 - [For v018] Fix build with Qt5 beta
+  *  aa0f6b54d - fixes #0003424: 'basic_string::_M_construct null not
+    valid' when opening a v0.16 project with v0.17
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 29 Apr 2018 18:23:49 +0300
+
 freecad-daily (0.17+git13509-0258808cc-1) unstable; urgency=medium
 
   * Compile

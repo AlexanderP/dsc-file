@@ -1,3 +1,309 @@
+gimp-devel (2.10.0+git40627-8c1830335c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 8c1830335c578a36fc4bd2b3c0bd2b29c01ae26a
+  * Date: 1525067608
+  * git changelog:
+  *  8c1830335c - Add Chinese (Taiwan) translation
+  *  c3b1cf05d8 - Update Russian translation
+  *  abeef86452 - Update Swedish translation
+  *  45b9da92f7 - Update POTFILES.in
+  *  3de1f33702 - app: font loading output a GError.
+  *  17e64d2017 - Update Polish translation
+  *  00dcd50a6c - Bug 748553 - GIMP crash if a font does not have read
+    permission.
+  *  48b04fb746 - Updated Italian translation
+  *  151eeb9761 - app: use gimp_item_{start,end}_transform() in
+    GimpEditSelectionTool
+  *  741c78ec9e - app: serialize "draw mask" option of region-select
+    tools
+  *  4cc8481b66 - app: get rid of a few forgotten stock-ids and
+    new_from_stock()
+  *  0fce8fdb3c - app: expand/unexpand locale paths in pluginrc.
+  *  f6b586237c - app: identifier of MyPaint brush GimpData using
+    ${mypaint_brushes_dir}.
+  *  0c4cbbfffa - Revert "desktop: add an <icon> tag in appdata."
+  *  077036273c - libgimpbase: Find thread ID on FreeBSD with thr_self
+  *  a007ad4b98 - app: remove debug output from
+    gimp_image_create_color_transforms()
+  *  f3bf8cd53f - plug-ins: don't use gimp_rgb_to_cmyk_int() in
+    newsprint
+  *  74c1f021bf - Fix some texts in NEWS.pre-2-10.
+  *  e0d1793b39 - Update Catalan translation
+  *  e5dcd80957 - desktop: add an <icon> tag in appdata.
+  *  aa67a0228b - Bug 795620 - Missing gegl in rpath of python/gimp.so
+  *  710ac0fb52 - Bug 795611 - unit-editor.c: Boolean result is used in
+    bitwise operation
+  *  fc8e28c971 - NEWS: truncate and move content to NEWS.pre-2-10
+  *  8265b2425b - app: s/GtkObject/GObject/ in gui-message.c, and minor
+    reordering
+  *  ee47a848eb - configure.ac: no need to override gimp_version any
+    longer
+  *  2451435323 - configure: argh! Forgot to AC_SUBST() the GEGL major-
+    minor version.
+  *  f6a8d93190 - configure, gimp.pc: do no hardcode the major.minor
+    version of GEGL.
+  *  7e19906827 - gimp.pc: Fix reference to gegl-0.3.
+  *  74698bd5d4 - Update German translation
+  *  6463e80c71 - build: update my howto for flatpak releases.
+  *  8be9b12e78 - configure.ac: require GEGL >= 0.4.1
+  *  fa79130c35 - configure.ac: post-release version bump to 2.10.1
+  *  5e662c37d7 - configure.ac: release GIMP 2.10.0 \o/
+  *  36586f291a - docs, etc: system gimprc and its manpage regenerated
+  *  26c67cf7d2 - devel-docs: more s/2.9/2.10/
+  *  9cb91971ea - desktop: update release date… again…
+  *  f6a56fac51 - app: move exclusion and linear-burn modes to a more
+    logical position
+  *  12904cffc8 - pdb: fix typo s/chanel/channel/
+  *  9f86c7ec04 - Update Swedish translation
+  *  6980904074 - Update Polish translation
+  *  ae509749d4 - devel-docs: more s/2.9/2.10/
+  *  3c410273b0 - README: s/2.9/2.10/ and make it say "stable"
+  *  b0b381b6c8 - libgimp*: don't say "2.9" in metadata
+  *  7854fcdc80 - NEWS: make it say "2.10 Stable Branch"
+  *  4e832722e2 - NEWS: updates and fixes
+  *  f35c2cdcec - script-fu: port chrome-it.scm to non-deprecated color
+    API
+  *  f1db670f19 - configure,app: depend on GEGL-0.4.0
+  *  6057828582 - desktop: use tilde for 'rc' separation in version
+    scheme.
+  *  f7788becaa - AUTHORS: regenerated
+  *  a44e1500fa - app: fix rectangle select tool cursor after
+    committing/halting
+  *  2d19848277 - app: don't invalidate gradient cache upon gradient-
+    type changes
+  *  740bfa5c75 - NEWS: add Korean translation update.
+  *  e46a8497ac - po: update Korean translation.
+  *  d4404aa4bc - libgimpconfig: fix the fix of the fix!
+  *  04aff3d4ea - NEWS, authors.xml: add the 2.10 splash author.
+  *  bd86c5f603 - desktop, NEWS: release date and NEWS updated.
+  *  1b44812ab1 - libgimpconfig: fix wrong typo fix.
+  *  4a77ff2d3d - Bug 795557 - Misc. typo fixes in source, comments and
+    doxygen (pt3)
+  *  6e87ceb896 - app: use half the cache size for symmetric conical
+    gradients
+  *  ea3de6d524 - splash: Add 2.10 splash image + svg
+  *  c4674037bd - Update Swedish translation
+  *  4cba522774 - Update Swedish translation
+  *  d6a7302678 - app: crop GimpDrawableFilter output
+  *  08f2b2d93b - Update Polish translation
+  *  fb6328b9ad - desktop: preparing appdata for 2.10.0 release.
+  *  5970046e25 - app: use gradient cache for conical gradients
+  *  38ba45cf31 - app: in GimpOperationGradient, move cache generation
+    back to process()
+  *  ef5bd98e99 - app: protect GimpContext's "parent" pointer against
+    dangling
+  *  45be8b2591 - app: use paint composite-mode, instead of AUTO, in
+    more places
+  *  95921427d5 - app: remove multithreading warning from the
+    preferences dialog
+  *  fa9a4108c3 - app: various improvements to GimpOperationGradient
+  *  4fce5d2518 - Bug 793714 - Error when merging layer group with Pass
+    through mode
+  *  bd03ea7617 - Clear kde_hacks and change treeview selected color
+  *  8696c05855 - app: disable the "Use Applicator" toggle in paint
+    options
+  *  106fc9309f - Bug 795510 - SYS_gettid is not available on non-Linux
+    system.
+  *  44a931e16c - ripple: put the compat code in the proper place, fix
+    up POTFILES.in
+  *  d18cc028ca - Update Finnish translation
+  *  dcefc10eca - app: make setting of layer mode on new layers smarter
+    in layers-commands.c
+  *  1c91cdabc8 - app: change the default new layer mode in
+    GimpDialogConfig
+  *  9ac34bda70 - app: change the default paint mode in GimpContext to
+    GIMP_LAYER_MODE_NORMAL
+  *  00f3c4e47b - libgimp: use the right layer mode in
+    gimp_layer_new_from_surface()
+  *  709f248438 - data: make the "Structure" brush obsolete.
+  *  e6de783b3c - remove the ripple plugin, provide compat PDB-API
+  *  21f891955f - desktop: fix a few links and a release date in appdata
+    file.
+  *  8a899aa547 - NEWS: kick up 2.10.0 RC3 news.
+  *  9325013fb0 - data: add a gitignore in new "Fun" brush category.
+  *  7c0d8a2d2a - Bug 589371 - some new brushes.
+  *  8d54476457 - Bug 795493 - Warning when removing a text layer
+  *  9bbd763d3c - data: new splash screen.
+  *  f9cfb55d7e - data: meeeeeeeh!
+  *  57c849df03 - data: Wilber is kitch and he knows it!
+  *  e87589f35a - Update Catalan translation
+  *  8cd75a5860 - data: update pepper brush.
+  *  db227148f0 - pdb: finally deprecate gimp-color-balance
+  *  f14a865ebf - Update Swedish translation
+  *  a9fb4f9a39 - pdb: make all item-transform procedures honor the
+    "linked" flag
+  *  b80036e14f - pdb: deprecated gimp-layer-translate
+  *  acbdc4d5b4 - pdb: add gimp-item-transform-translate procedure
+  *  5b80d3d3be - app: fix source operations on layers with alpha
+  *  6ffa19d595 - fix internal name of the filter-grid help-id
+  *  a31ee3ec22 - app: fix outer border color of GimpSpinScale to look
+    OK on all themes
+  *  7256f18447 - app: change offsets parameters of
+    GimpItem::translate() from int to double
+  *  b1a36b044b - app: cast another argument to g_object_ref() in
+    gimp_tool_info_new()
+  *  33d9336083 - app: gimp_get_temp_file() / gimp_temp_name() should
+    create tmp/ if...
+  *  08cc37271f - libgimpconfig: create parent directories for config
+    file if necessary.
+  *  ada987828d - Update Catalan translation
+  *  c77c756f6a - Update Catalan translation
+  *  87f9e65408 - data: move the Pepper brush to a "Fun" category.
+  *  d7ced206ee - Update Polish translation
+  *  a6a8147b19 - app: fix indentation of GimpUndoType enum descriptions
+  *  37742a9fee - Bug 795410 - Deleting a layer group and then undoing
+    the deletion ...
+  *  eeae5b48ca - app: avoid pushing undo for nested
+    gimp_group_layer_{suspend,resume}_mask()
+  *  577e17032a - app: fix undo when moving a group-layer child outside
+    the group
+  *  da2430deaa - build: fix the forgotten splash screen for dev
+    flatpak.
+  *  4d6cba0cfb - app: make --show-playground visible in --help.
+  *  c0eb7858a5 - Bug 795057 - Insensitive text in plug-ins is
+    unreadable with dark themes
+  *  8be37da012 - Bug 795418 - Gimp 'critical error' when running
+    luminosity masks script
+  *  38a2887802 - app, pdb:
+    s/gimp_pdb_item_is_modifyable/gimp_pdb_item_is_modifiable/
+  *  ee1d62bcb8 - Bug 795412 - Typo in man file
+  *  a1081bd595 - app: fix gimp_pdb_item_is_modifyable() for channels
+  *  e4f327eca8 - Bug 795385 - Segmentation fault when using gradient
+    tool
+  *  c0bac871ca - Bug 795385 - Segmentation fault when using gradient
+    tool
+  *  ee7554678e - Bug 795369 - crop tool not changing from landscape to
+    portrait ...
+  *  187f2b4453 - app: #include <string.h> in tool_manager.c
+  *  b1df7d5497 - Update POTFILES.in
+  *  cb5f5d05e3 - app: make the sample point dockable work with more
+    than 4 sample points
+  *  01e5a6b133 - app: improve drawing of sample points so they are
+    always visible
+  *  f2a1fd5bf0 - app: refactor gimppaintcore-loops to coalesce
+    iteration
+  *  76eedf2198 - configure.ac: require a C++14 compiler
+  *  66bc050df8 - app: indentation fix to last commit
+  *  87e6653c9a - app: improve drawable flipping speed
+  *  12d38816a5 - pdb: fix formatting of generated code in
+    item_transform.pdb
+  *  428110f63f - app: remove non-cut/copy/paste functions from gimp-
+    edit.[ch]
+  *  7caa339855 - devel-docs: some updates to GIMP3-API-Changes.txt
+  *  ab7fbeed08 - Update Swedish translation
+  *  147c09f19e - Bug 795161 - Misc. typo fixes in source comments and
+    doxygen
+  *  43974c3c6a - data: update splash-screen text for 2.10.0-RC2
+  *  542a04735b - app: fix airbrush periodic stamp behavior
+  *  ce8c4cb2a0 - Bug 795288 - Layer is moved by arrow keys even after
+    all locks...
+  *  64c38edd81 - Bug 795300 - ICC profile conversion artifacts and
+    gamma problems
+  *  0a39874bda - themes: fix "Dark" selected colors in "kde_hack_1"
+    too, whatever that is
+  *  cafb18643f - app: another optimization in GimpOperationGradient
+  *  12b9d7a4e7 - build: update dev flatpak to 2.10.0 RC2.
+  *  79460c82c3 - Update Swedish translation
+  *  370dbd3e04 - Updated Danish translation of gimp-tips
+  *  e94d3b953f - Updated Danish translation of gimp-plug-ins
+  *  3b41261287 - Updated Danish translation
+  *  d32d13b16d - Updated Danish translation of gimp-libgimp
+  *  9dbf919d46 - app: speed up gradient rendering a lot
+  *  bccaaeb56c - configure.ac: post-release version bump to 2.10.0-RC2-
+    git
+  *  6582692ec6 - configure.ac: release 2.10.0-RC2
+  *  27d75a5bd0 - NEWS: mention CIE Lab gradient blending
+  *  ff82b3779c - NEWS: more updates
+  *  5e3df8032a - NEWS: mention new libgimp API
+  *  4d94863abc - app: don't use style->dark for histogram and curve
+    intersections/grid
+  *  434728da08 - themes: switch Dark's base[SELECTED] and
+    text[SELECTED] colors
+  *  436e53d390 - pdb: improve docs about which procedures are affected
+    by context settings
+  *  e02a03a63d - devel-docs: add missing stuff to libgimpbase-
+    sections.txt
+  *  93313cd93c - docs, etc: system gimprc and manpage regenerated with
+    new setting
+  *  93f41b344c - pdb: improve docs of
+    gimp_context_set_diagonal_neighbors()
+  *  c0dd812ea6 - pdb: fix use of "seed" properties in
+    plug_in_compat.pdb
+  *  2da25576c3 - app: fix duplication of GeglParamSpecSeed, we missed
+    its limits before
+  *  cb84e0ab56 - configure.ac: reqire GEGL >= 0.3.34
+  *  fff0717632 - PFM: Fix writing with ',' as decimal separator
+  *  4bcc1183e5 - devel-docs: add new libgimp functions
+  *  233ac80de1 - script-fu: port all scripts to the new gimp-drawable-
+    edit functions
+  *  90ef8b123c - libgimp: properly sort gimp.defs
+  *  ddfc7715cb - app: make the airbrush tool thread-safe w.r.t. paint
+    thread
+  *  e02a339e01 - app: reorganize gimppainttool-paint, to allow use by
+    subclasses
+  *  3f4995d3d7 - pdb: add procedures to set the built-in gradients
+  *  92a8978064 - data: re-add 3 brushes of very questionable origin,
+    but as "obsolete".
+  *  64bab848c3 - NEWS, devel-docs: next release is RC2 + some fixes in
+    release howto.
+  *  d3124d980a - Update Swedish translation
+  *  410e55c40c - pdb: never pass bogus supersample values to
+    gimp_drawable_gradient()
+  *  055e61f065 - Updated Italian translation
+  *  c30239c912 - Updated Italian translation
+  *  bba7130cc2 - Updated Italian translation
+  *  dbf57b4494 - Update Russian translation
+  *  5ee67deea5 - pdb: deprecate all non-clipboard functions in the
+    "edit" group
+  *  1305926f38 - pdb: forgot to add drawable_edit.pdb
+  *  c50449670b - Fix build with vector icons enabled
+  *  ef3edece9b - pdb: improve docs of deprecated functions
+  *  50536e1c38 - Bug 795230 - Rename Blend tool and provide PDB
+    compatibility
+  *  1a277f2cc6 - icons: s/gimp-tool-blend/gimp-tool-gradient/ in SVG
+    icons
+  *  02808e8072 - Merge branch 'fix-gradient-history'
+  *  92330425c8 - Bug 795230 - Rename Blend tool and provide PDB
+    compatibility
+  *  2e69608a46 - Bug 795230 - Rename Blend tool and provide PDB
+    compatibility
+  *  721ce91d75 - Bug 795230 - Rename Blend tool and provide PDB
+    compatibility
+  *  9fd44d5e44 - Bug 795230 - Rename Blend tool and provide PDB
+    compatibility
+  *  e30a32d56e - Bug 795230 - Rename Blend tool and provide PDB
+    compatibility
+  *  309d118f65 - app, devel-docs: improve position of loading text on
+    splash image.
+  *  09b16f6cc0 - app: avoid copying the brush boundary on each brush
+    tool flush()
+  *  1806e56405 - INSTALL: make clear not to install libmypaint from
+    master.
+  *  9674186bed - Update Swedish translation
+  *  7e82a24875 - Update Swedish translation
+  *  f505f57bd8 - Update Swedish translation
+  *  f365de49a0 - Update Polish translation
+  *  d528f80c16 - app: cast g_object_ref() argument in
+    gimp_plug_in_proc_frame_init()
+  *  3661097c04 - app: add gimp_pdb_context_get_paint_options_list()
+  *  0c066f311e - app: drop alpha from all fishes in gimpgradient.c
+  *  3736bfd189 - app: even in a "gradient tool" its called "Blending"
+    not "Gradienting"
+  *  8cc1258444 - Update Polish translation
+  *  6d6da684f1 - app: add handling of CIE Lab blend space to gradient
+  *  e007da2604 - libgimpbase: add GIMP_GRADIENT_BLEND_CIE_LAB value to
+    enum
+  *  f660d614f2 - NEWS: keep up-to-date.
+  *  45c172a885 - Bug 795257 - Segmentation fault crash using the clone
+    tool
+  *  3ac794816a - Bug 724692 - Canvas rotation stuck with specific order
+    of actions.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 30 Apr 2018 11:48:43 +0300
+
 gimp-devel (2.9.8+git40420-6b0f5136e0-1) unstable; urgency=medium
 
   * Compile

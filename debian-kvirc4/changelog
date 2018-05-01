@@ -1,3 +1,42 @@
+kvirc (4:5.0.0~git-7318-2ecd28f53-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 2ecd28f539a308a5dc2327e33ab15055c96a5ab6
+  * Date: 1524743598
+  * git changelog:
+  *  2ecd28f53 - LF and UTF8 all the things (#2378)
+  *  bebefa0c2 - Fix undefined behavior involving lifetime of
+    temporaries
+  *  2150de449 - Remove unused/useless code
+  *  d3a07c0d8 - KviKvsParser: Fix potential memory leak
+  *  47140bffc - Remove dead and useless code
+  *  4c6e91202 - KviKvsObject: Fix checking validity of returned
+    QMetaProperty
+  *  d8a366b7a - DccChatWindow: Fix error handling
+  *  45de69c1d - convert to LF so it leaves me alone
+  *  8944d335c - update debian rules
+  *  9298ee49c - add .gitattributes
+  *  a2ebd4622 - really really remove mailing list link and try to fix
+    debian build
+  *  ef32ddf99 - actually remove mailinglist link
+  *  af1f7ae1a - update version to 5.0.0 (#2373)
+  *  690dd6d2b - remove russian website and mailing list links from help
+    menu (#2374)
+  *  76a1754ca - add clang-format setting to avoid starting commas
+    (#2375)
+  *  ef514f725 - Fix #2262 (#2266)
+  *  c0da65170 - change dev build installer name (#2371)
+  *  82be064fd - Fix Coverity complaints about uninitialized member
+    variables
+  *  6fb0debf2 - remove qt5_use_modules for Qt 5.11 cmake modules for Qt
+    5.11 don't have that function anymore, so it needs to be replaced
+    with the standard way of library linkage. downside is that the
+    module listing in the Status page isn't looking too fancy anymore.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 27 Apr 2018 20:36:52 +0300
+
 kvirc (4:4.9.3~git-7299-c44e6e613-1) unstable; urgency=medium
 
   * Compile

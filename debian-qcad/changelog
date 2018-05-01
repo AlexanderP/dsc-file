@@ -1,3 +1,107 @@
+qcad (3.20.0+git5513-fa078226b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: fa078226b6e61d0d288f819494a63ce274e6796d
+  * Date: 1524860175
+  * git changelog:
+  *  fa078226b - hide license key of not applicable
+  *  0d06f4d39 - update translations
+  *  4e42e897b - set version to 3.20.1.4
+  *  ed6555093 - update script bindings
+  *  73f93165d - add license key to about dialog
+  *  9e716fab1 - allow plugins to check their license before running
+  *  5cbb5e574 - clean up
+  *  e07bb8879 - fix FS#1746 - File > Bitmap Export: File base name cut
+    off in file save dialog
+  *  bd667ca54 - fix FS#1745 - File > Bitmap Export: thick lines
+    exported thin
+  *  5c2c1df3b - update script bindings
+  *  c4a2c4e0c - scale images using drag and drop
+  *  c07464189 - add RBox::scaleByReference
+  *  0f6348a56 - add RVector::getAbsolute
+  *  4cb09baa3 - clean up
+  *  66592b901 - scale images using drag and drop
+  *  bd7197d21 - update script bindings
+  *  9c36ef859 - add live preview when inserting / modifying images
+  *  4467d0819 - add RImageData::setFade, setBrightness, setContrast
+  *  5a2c58150 - add ROperation::getTransactionGroup
+  *  944f9f5fb - update script bindings
+  *  4b864db16 - add support for tagged states
+  *  dd076f710 - fix dimension options for angular dimension
+  *  5ae4e35f3 - capitalization
+  *  c0b19ce14 - update qrc
+  *  507742926 - fix compiler warning
+  *  62047e8c3 - add test
+  *  c4ef2369f - add options toolbar ui for angular dimensions
+  *  292e1e0ef - add gitignore
+  *  12e2b7fb8 - add drag and drop tests
+  *  4bfa52146 - update translatable strings
+  *  57a975732 - update translations
+  *  daa3b49e7 - set version to 3.20.1.3
+  *  8f7284962 - add support for flipped dimension when using dxflib
+  *  2f8c19e2a - add support for flipped dimension arrows to dxflib
+  *  7bd3c3469 - draw reference point always on top of (highlighted)
+    entities
+  *  5a8412bdf - move polyline segments using drag and drop
+  *  99d6e5c07 - clean up
+  *  972a69d6e - support arrow flipping for aligned dimensions
+  *  58d2e4b33 - support arrow flipping for radial dimensions
+  *  fb9275e40 - clean up
+  *  11bf53051 - update outside arrows for angular dimensions
+  *  821474e02 - clean up
+  *  0c2dc1d2c - flip arrows of angular dimensions
+  *  78debd8b7 - update script bindings
+  *  02838a3d4 - handle clicks on reference points
+  *  3d61a8ac4 - show arrow reference point as round
+  *  c1ffe9341 - add properties for dimension arrows flip state
+  *  577e18f0b - add RClickReferencePointOperation to react to reference
+    point clicks
+  *  3bb5c19ff - add RClickReferencePointOperation to react to reference
+    point clicks
+  *  c7801dbf8 - add arrow reference point type
+  *  72d100b06 - add REntity::clickReferencePoint to react to reference
+    point clicks
+  *  30e889edc - update writeDimension for angular dimensions
+  *  0c62d5508 - update isDimension for angular dimensions
+  *  f2e696fbf - clean up
+  *  c7499efbd - add preference to enable keyboard navigation in list
+    widgets
+  *  96685c831 - update script bindings
+  *  1655be6c7 - split RDimAngular2L / RDimAngular3P
+  *  e9a869df1 - add RVector::getRotated, getScaled, getMirrored
+  *  c43d75a33 - update comment
+  *  a9f57253d - set version to 3.20.1.2
+  *  570163ffd - make some static functions from non-scriptable class
+    QPrinterInfo scriptable
+  *  9eb0b5502 - add support for direct printing to given printer
+  *  9d88cb808 - don't show print dialog when running in command line
+    mode
+  *  813bafd1e - fix point size when printing
+  *  653e8eec9 - add preference for print point size
+  *  f00068248 - make sure title of property attributes group is
+    translated
+  *  9fb829f85 - update translations
+  *  7bbf2eaeb - fix FS#1741 - Property Editor: titles of block
+    attributes with _ cut off
+  *  445bd29fa - add warnings
+  *  f770d66db - scale visual properties before applying other
+    transformations
+  *  afc70d081 - scale visual properties of block reference
+  *  8f282b24f - fix selecting entities around points if snap range is
+    very large
+  *  7ffef4f68 - update script bindings
+  *  17e53ad98 - add RColor::addColor to API
+  *  6c4a8dcb5 - update credits
+  *  f554c590e - fix potential exception
+  *  6034d8c6a - use exists / autoPath for path arguments
+  *  fdccc8aaf - fix path when getting OpenFile.js action from resources
+  *  6375be0a6 - set version to 3.20.1.1
+  *  03bdd674a - fix path to OpenFile.js when loaded from resource
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 28 Apr 2018 20:45:10 +0300
+
 qcad (3.20.0+git5433-7f1b8d092-1) unstable; urgency=medium
 
   * Compile

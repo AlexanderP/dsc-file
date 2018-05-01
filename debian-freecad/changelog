@@ -1,3 +1,25 @@
+freecad (0.17+git13519-1a8b86801-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: releases/FreeCAD-0-17
+  * Commit: 1a8b868018f45ea486c0023fdbfeb06febc1fb89
+  * Date: 1524376166
+  * git changelog:
+  *  1a8b86801 - Fix finding boost python >= 1.67
+  *  d436c4549 - Fix add ArchSection w/ multiple Pages
+  *  e540e1bba - Sketcher: fix menu periodic bspline call
+  *  f522116a7 - Expressions: Fixed issue #3432; aggregate functions
+    sometimes ignore some of their arguments.
+  *  e17b34094 - Fix #3426: Hierarchical step export not working with
+    occt 7.2
+  *  acdde5b24 - Arch: Fixed leftover encoding bug (backported to 0.17)
+  *  551c50464 - initialize member to fix possible crash
+  *  6a25fe9ce - PartDesign: fix #2758 Datum Point persistence, again
+  *  577317077 - Sync TechDraw what's this with Wiki page names
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 25 Apr 2018 20:06:04 +0300
+
 freecad (0.17+git13510-aa0f6b54d-1) unstable; urgency=medium
 
   * Compile
