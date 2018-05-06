@@ -1,0 +1,127 @@
+=encoding utf-8
+
+=head1 NAME
+
+goldendict - a feature-rich dictionary lookup program
+
+=head1 SYNOPSIS
+
+ goldendict
+
+=head1 DESCRIPTION
+
+B<Goldendict> is a cross-platform and international dictionary written
+in Qt.
+
+=head1 Features
+
+=over
+
+=item *
+
+Use of WebKit for an accurate articles' representation,
+complete with all formatting, colors, images and links.
+
+=item *
+
+Support of multiple dictionary file formats, namely:
+
+=over
+
+=item *
+
+Babylon .BGL files, complete with images and resources
+
+=item *
+
+StarDict .ifo/.dict./.idx/.syn dictionaries
+
+=item *
+
+Dictd .index/.dict(.dz) dictionary files
+
+=item *
+
+ABBYY Lingvo .dsl source files, together with abbreviations.
+The files can be optionally compressed with dictzip. Dictionary
+res-urces can be packed together into a .zip file.
+
+=item *
+
+ABBYY Lingvo .lsa/.dat audio archives. Those can be indexed
+separately, -r be referred to from .dsl files.
+
+=back
+
+=item *
+
+Support for Wikipedia, Wiktionary, or any other MediaWiki-based
+sites to perform lookups in.
+
+=item *
+
+Ability to use arbitrary websites as dictionaries via templated
+Url patterns.
+
+=item *
+
+Hunspell-based morphology system, used for word stemming and
+spelling suggestions.
+
+=item *
+
+Ability to index arbitrary directories with audio files for
+pronunciation lookups.
+
+=item *
+
+Full Unicode case, diacritics, punctuation and whitespace folding.
+This means the ability to type in words without any accents,
+correct case, punctuation or spaces (e.g. typing 'Grussen' would
+yield 'grüßen' in German dictionaries).
+
+=item *
+
+Scan popup functionality. A small window pops up with the
+translation of a word chosen from another application.
+
+=item *
+
+Support for global hotkeys. You can spawn the program window at
+any point, or directly translate a word from the clipboard.
+
+=item *
+
+Tabbed browsing in a modern Qt 5 interface.
+
+=back
+
+=head1 LICENSE
+
+Copyright (c) 2008-2009 Konstantin Isakov L<ikm@users.berlios.de>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+=head1 HOMEPAGE
+
+http://goldendict.org/
+
+=head1 BUGREPORTS
+
+For bugreports into upstream use GitHub
+issue L<https://github.com/goldendict/goldendict/issues/>.
+
+If You use goldendict under Debian, You can submit a bugreport onto Debian
+Bug Tracking System (BTS).
+For additional information use the link: L<https://www.debian.org/Bugs/>.
+
+This manpage was written by Dmitry E. Oboukhov L<unera@debian.org> for
+Debian project.

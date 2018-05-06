@@ -1,0 +1,438 @@
+goldendict (1.5.0~rc2+git20180412+ds-1) unstable; urgency=medium
+
+  [ Boyuan Yang ]
+  * New upstream snapshot.
+  * Bump Standards-Version to 4.1.4. (no changes needed)
+  * Bump debhelper compat to v11.
+  * d/control: Add new qtmultimedia5-dev build-dependency.
+
+ -- Boyuan Yang <073plan@gmail.com>  Fri, 13 Apr 2018 11:34:12 +0800
+
+goldendict (1.5.0~rc2+git20170908+ds-1) unstable; urgency=medium
+
+  [ Boyuan Yang ]
+  * New upstream snapshot. (Closes: #867497)
+    + Enable support for Zim dictionaries.
+    + Enable support for Chinese conversion.
+  * Remove third-party maclibs and winlibs (+ds).
+  * Apply "wrap-and-sort -abst".
+  * Bump Standards-Version to 4.1.0.
+  * Switch from cdbs to debhelper v10+.
+    + Bump debian/compat to 10.
+    + Enable full hardening.
+  * Update man page for goldendict accordingly.
+  * Drop menu file (per ctte's decision in #741573).
+  * Refresh patches.
+  * Limit libhunspell version (>= 1.6.1).
+  * Refresh watch file.
+
+ -- Boyuan Yang <073plan@gmail.com>  Wed, 13 Sep 2017 16:27:37 +0800
+
+goldendict (1.5.0~git20160508.g92b5485-3) unstable; urgency=medium
+
+  [Dmitry E. Oboukhov]
+  * Apply Boyuan Yang changes, sorry for too long timeout.
+
+  [Boyuan Yang <073plan@gmail.com>]
+  * Non-maintainer upload.
+  * Ack previous upload. Thank you Gianfranco!
+  * Add myself into uploaders list. (Hijacking package)
+  * Add watch file. (Closes: #793039)
+  * Update Vcs-* field. (Closes: #864667)
+  * Drop .install file. (Closes: #837677)
+  * Drop .menu file as per ctte's decision.
+  * Build against Qt5. (Closes: #784468)
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Mon, 11 Sep 2017 11:49:42 +0300
+
+goldendict (1.5.0~git20160508.g92b5485-2) unstable; urgency=medium
+
+  [ Dmitry E. Oboukhov ]
+  * Apply Gianfranco Costamagna changes, sorry for too long timeout.
+
+  [ Gianfranco Costamagna <locutusofborg@debian.org>]
+  * debian/patches/8e11d2a0bdec3ccf24ebb61d468b005543b899ee.patch:
+    - fix 64 bit Big Endian build failures (Closes: #824929).
+      thanks Adam Conrad for the great help there and upstream for
+      the replacing-fix.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Mon, 11 Sep 2017 10:50:10 +0300
+
+goldendict (1.5.0~git20160508.g92b5485-1) unstable; urgency=medium
+
+  * New snapshot.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Sun, 08 May 2016 09:28:57 +0300
+
+goldendict (1.5.0~git20150923-1) unstable; urgency=medium
+
+  * New snapshot.
+   - Updated Homepage (debian/control), closes: #786649.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Wed, 23 Sep 2015 10:27:23 +0200
+
+goldendict (1.5.0~git20131003-1) unstable; urgency=low
+
+  * New snapshot.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Thu, 03 Oct 2013 00:42:19 +0400
+
+goldendict (1.0.2~git20130816-1) unstable; urgency=low
+
+  * New snapshot.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Fri, 16 Aug 2013 13:42:32 +0400
+
+goldendict (1.0.2~git20130620-1) unstable; urgency=low
+
+  * New snapshot.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Thu, 20 Jun 2013 23:27:54 +0400
+
+goldendict (1.0.2~git20120929-3) unstable; urgency=low
+
+  * Drop .desktop file, closes: #689205.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Mon, 01 Oct 2012 11:23:16 +0400
+
+goldendict (1.0.2~git20120929-2) unstable; urgency=low
+
+  * Repatch old debian patches.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Sun, 30 Sep 2012 00:06:24 +0400
+
+goldendict (1.0.2~git20120929-1) unstable; urgency=low
+
+  * New GIT-snapshot
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Sat, 29 Sep 2012 18:52:52 +0400
+
+goldendict (1.0.2~git20110906-1) unstable; urgency=low
+
+  * New GIT-snapshot.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Tue, 06 Sep 2011 09:43:30 +0400
+
+goldendict (1.0.2~git20110805-1) unstable; urgency=low
+
+  * New GIT snapshot.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Fri, 05 Aug 2011 16:21:30 +0400
+
+goldendict (1.0.2~git20110706-1) unstable; urgency=low
+
+  * New GIT-snapshot.
+  * Fix a few lintian warnings.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Wed, 06 Jul 2011 13:48:58 +0400
+
+goldendict (1.0.2~git20110314-1) unstable; urgency=low
+
+  * New GIT-snapshot.
+  * Fixed B-D, closes: #618180.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Mon, 14 Mar 2011 16:22:44 +0300
+
+goldendict (1.0.1-1) unstable; urgency=low
+
+  * New upstream version.
+    * Support for Forvo online pronunciations added.
+    * Support for Phonon for audio file playback (DirectShow under Windows).
+      This allows playing most audio files (.mp3 etc).
+    * History of search queries added.
+    * Dictionary bar added, allowing to disable individual dictionaries
+      in the currently selected group.
+    * Multi-word queries are now split into individual words and
+      presented as links, and all compound expressions (expressions
+      consisting of two or more words) within the query are found
+      and displayed.
+    * Morphological analysis is now applied to compound expressions
+      as well (e.g. "dozing off" -> "doze off")
+    * It is now possible to assign keyboard shortcuts to the groups
+      for fast switching now.
+    * It is now possible to use any file as a group icon.
+    * Content not originating from the site the user browses can
+      now be blocked (hides ads).
+    * Internal links in websites are now followed in-place.
+    * Audio files from websites are now played.
+    * Drop-down list of open tabs added.
+    * Clicking a link with middle mouse button now opens it in a new tab.
+    * Double-clicking words in an article translates them right
+      away (hold Ctrl to open in new tabs).
+    * Typing while focused on the word list initiates new search now.
+    * Zooming fonts in word list and translate line is now possible.
+    * Simply moving the mouse away from the scan popup window hides it.
+    * Toggling main window gives focus to the translation line.
+    * Zip files are now indexed, conserving memory and startup
+      times considerably.
+    * Better support for RTL languages.
+    * Improvements in BGL and DSL support.
+    * Support for portable version mode (just create the
+      portable/directory to enable it).
+    * Checking for the running instance is now always done correctly.
+    * Lots and lots of smaller improvements, speedups and bugfixes.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Sat, 04 Dec 2010 17:54:24 +0300
+
+goldendict (0.9.1~git20101013-1) experimental; urgency=low
+
+  * New GIT-snapshot
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Wed, 13 Oct 2010 08:53:01 +0400
+
+goldendict (0.9.1~git20100719-2) unstable; urgency=low
+
+  * Fixed typos in debian/control, thanks for
+    Erik Esterer <erik.esterer@gmail.com>, closes: #590007.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Fri, 23 Jul 2010 09:50:16 +0400
+
+goldendict (0.9.1~git20100719-1) unstable; urgency=low
+
+  * New GIT-snapshot
+  * Added menu item, closes: #589302.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Mon, 19 Jul 2010 09:44:35 +0400
+
+goldendict (0.9.1~git20100707-1) unstable; urgency=low
+
+  * New GIT-snapshot
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Wed, 07 Jul 2010 10:30:00 +0400
+
+goldendict (0.9.1~git20100609-3) unstable; urgency=low
+
+  * Unstable upload.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Thu, 10 Jun 2010 20:25:58 +0400
+
+goldendict (0.9.1~git20100609-2) experimental; urgency=low
+
+  * New GIT-snapshot (merge from git://gitorious.org/goldendict/goldendict.git)
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Wed, 09 Jun 2010 11:50:43 +0400
+
+goldendict (0.9.1~git20100609-1) unstable; urgency=low
+
+  * New GIT-snapshot
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Wed, 09 Jun 2010 11:44:36 +0400
+
+goldendict (0.9.1~git20100413-1) unstable; urgency=low
+
+  * New GIT-snapshot
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Tue, 13 Apr 2010 10:18:32 +0400
+
+goldendict (0.9.1~git20100322-1) unstable; urgency=low
+
+  * New GIT-snapshot.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Mon, 22 Mar 2010 22:54:29 +0300
+
+goldendict (0.9.1~git20100204-3) unstable; urgency=low
+
+  * Added pkg-config into BD-list, closes: #568955,
+    thanks for "Aaron M. Ucko" <ucko@debian.org>.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Tue, 09 Feb 2010 09:18:05 +0300
+
+goldendict (0.9.1~git20100204-2) unstable; urgency=low
+
+  * Unstable uploading.
+  * Standards-Version bumped to 3.8.4.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Fri, 05 Feb 2010 09:19:38 +0300
+
+goldendict (0.9.1~git20100204-1) experimental; urgency=low
+
+  * New GIT-snapshot.
+  * I don't care such managers as kde/gnome. From now I'll set tag 'wontfix'
+    for every reports about adding/excluding/editing .desktop files. I am
+    fed up with their problems. Now .desktop was removed, closes: #568425.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Thu, 04 Feb 2010 23:39:57 +0300
+
+goldendict (0.9.1~git20100117-1) unstable; urgency=low
+
+  * New GIT-snapshot.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Sun, 17 Jan 2010 11:46:25 +0300
+
+goldendict (0.9.1~git20091117-1) unstable; urgency=low
+
+  * New GIT snapshot.
+  * Added goldendict-wordnet into Suggests.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Tue, 17 Nov 2009 12:30:10 +0300
+
+goldendict (0.9.1~git20091108-3) unstable; urgency=low
+
+  * Added manpage, closes lintian error.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Sun, 08 Nov 2009 20:47:44 +0300
+
+goldendict (0.9.1~git20091108-2) unstable; urgency=low
+
+  * Fixed FTBFS with mips platphorm.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Sun, 08 Nov 2009 16:32:17 +0300
+
+goldendict (0.9.1~git20091108-1) unstable; urgency=low
+
+  * New GIT snapshot.
+  * Depend on libzip was removed in upstream.
+  * FTBFS with binutils-gold has been fixed, closes: #554694,
+    thanks for Peter Fritzsche <peter.fritzsche@gmx.de>.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Sun, 08 Nov 2009 11:38:12 +0300
+
+goldendict (0.9.0+svn404-1) unstable; urgency=low
+
+  * SVN revision: 404.
+    * Zip files are now indexed along with the articles. This means that
+      their listings aren't now loaded into memory, resulting in many
+      megabytes of memory savings (with larger zips) and faster startup,
+      too.
+    * Change SJIS-WIN to CP932 in Babylon parser. This may fix problems
+      with Babylon Japanese dictionaries under Windows, where libiconv
+      had problems with the former encoding name.
+    * Clicking a link with middle mouse button opens it in a new tab.
+    * Don't save overly large search queries into history. Those are
+      usually large bogus selections of whole text blocks and they
+      only mess up menus.
+    * Prevent triggering spurious translations when changing group or
+      editing the query while there's an item in the word list selected.
+    * Fix problem with the 'All' group in history. The value of it is
+      too large for a signed int.
+    * History of search queries implemented.
+    * Remove the internal copy of libzip. (Debian patches was removed, too).
+  * Standards-Version bumped to 3.8.3.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Mon, 26 Oct 2009 11:35:09 +0300
+
+goldendict (0.9.0+svn387-1) experimental; urgency=low
+
+  * SVN revision: 387.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Mon, 12 Oct 2009 17:14:45 +0400
+
+goldendict (0.9.0+svn386-1) unstable; urgency=low
+
+  * SVN revision: 386.
+    * Updated Greek translations.
+    * Add 'Show names in dictionary bar' option. This should
+      aid StarDict users since there're no icons in those
+      dictionaries.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Mon, 12 Oct 2009 16:58:32 +0400
+
+goldendict (0.9.0+svn384-1) unstable; urgency=low
+
+  * SVN revision: 384.
+    * Fix crash with Qt >= 4.5.3 when browsing MediaWiki sites by deleting
+      network replies after they signal completion, not immediately during
+      that moment.
+    * All translations were "lupdated" and now include all the latest
+      untranslated strings.
+    * German translation update by Daniel Kaneider.
+    * Allow the "file.dsl.files.zip" naming scheme for file.dsl.dz files.
+      The old one, "file.dsl.dz.files.zip" still works too.
+    * Warn if a user's running certain X.Org releases which have the RECORD
+      extension broken.
+    * Dictionary bar, a bar with dictonary icons for the current group, was
+      implemented. Clicking icons disables corresponding dictionaries. When
+      clicking with Shift/Ctrl, a dictionary can be made solo.
+    * View' menu introduced. It allows switching toolbars and side pane on/off
+      without any arcane knowledge on how to toggle them on/off via RMB.
+    * Greek translation added (thanks to Jennie Petoumenou)
+    * Fixes overblown menus when there's a large selection present.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Mon, 12 Oct 2009 11:25:00 +0400
+
+goldendict (0.9.0+svn369-1) unstable; urgency=low
+
+  * SVN revision: 369.
+    * Correctly handle bword:// links when they contain non-ascii
+      letters and dots by independently decoding IDN for each part.
+    * Prevent accidential index purging when the program is terminated
+      in some obsure way and the dictionary loading thread gets killed
+      prematurely.
+    * Add an option to block content (images, frames etc) not originating
+      from the site the user browses. This effectively hides all
+      advertisements on the websites.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Tue, 08 Sep 2009 21:54:36 +0400
+
+goldendict (0.9.0+svn366-1) unstable; urgency=low
+
+  * SVN revision: 366.
+    * Always allow session shutdown to proceed without any cancellations.
+      This fixes problems with GoldenDict preventing KDE4 from shutting down.
+    * Support all ISO-8859 encodings in form of %ISO1%, %ISO2% etc for
+      websites.
+    * Translate language code to a code of a major country speaking that
+      language, and use that country's flag as an icon for the language.
+      Previously the language code was used as a country code without any
+      translation, which only worked right if they were matching, that
+      being merely a coincidence (e.g. ru => RU, but zh => CN).
+    * German translation added (thanks to Daniel Kaneider)
+      The translation is 90% complete -- this is an ongoing effort.
+    * In Qt style file, specify foreground color as well, so the colors would
+      always be consistent no matter the chosen system color theme.
+    * Remove some erroneous sokuon cases from Romaji tables.
+    * Support for double consonants (sokuon) added.
+    * When performing diacritics folding, weed out any combining marks which
+      managed to get past the normal diacritic folding routine.
+  * Fixed list in the long description, closes: #542455,
+      thanks for Gerfried Fuchs <rhonda@debian.at>.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Fri, 21 Aug 2009 11:54:07 +0400
+
+goldendict (0.9.0+svn357-1) unstable; urgency=low
+
+  * SVN revision: 357 (all my patches were applied by upstream).
+  * Now a few translations are available under debian.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Mon, 03 Aug 2009 23:56:29 +0400
+
+goldendict (0.9.0+svn354-5) unstable; urgency=low
+
+  * Now bug in libzip was fixed, so we can restore the dependence.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Wed, 29 Jul 2009 09:52:23 +0400
+
+goldendict (0.9.0+svn354-4) unstable; urgency=low
+
+  * Middle click on mainwindow.
+  * Double click add dictionary to group.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Thu, 23 Jul 2009 15:39:10 +0400
+
+goldendict (0.9.0+svn354-3) unstable; urgency=low
+
+  * Fix FTBFS on S390.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Mon, 13 Jul 2009 10:05:18 +0400
+
+goldendict (0.9.0+svn354-2) unstable; urgency=low
+
+  * Middle mouse click on TrayIcon.
+  * Patched version of libzip was temporary given back into goldendict,
+    we are waiting for close the bug: #536215.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Fri, 10 Jul 2009 09:25:17 +0400
+
+goldendict (0.9.0+svn354-1) experimental; urgency=low
+
+  * SVN revision: 354.
+  * Standards-Version bumped to 3.8.2.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Wed, 08 Jul 2009 11:16:40 +0400
+
+goldendict (0.9.0+deb1-1) unstable; urgency=low
+
+  * Initial Release, closes: #531766.
+  * Sources were repackaged: added external dependence to libzip.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Mon, 25 May 2009 23:51:31 +0400

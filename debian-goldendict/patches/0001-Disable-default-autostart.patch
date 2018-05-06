@@ -1,0 +1,23 @@
+From: Boyuan Yang <073plan@gmail.com>
+Date: Wed, 13 Sep 2017 16:30:25 +0800
+Subject: Disable default autostart
+Forwarded: not-needed
+
+---
+ preferences.ui | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/preferences.ui b/preferences.ui
+index 3e47d6f..2c93785 100644
+--- a/preferences.ui
++++ b/preferences.ui
+@@ -55,6 +55,9 @@
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QCheckBox" name="cbAutostart">
++            <property name="enabled">
++             <bool>false</bool>
++            </property>
+             <property name="toolTip">
+              <string>Automatically starts GoldenDict after operation system bootup.</string>
+             </property>
