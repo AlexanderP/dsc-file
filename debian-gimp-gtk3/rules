@@ -42,7 +42,7 @@ endif
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	sed "s/MYPAINT_BRUSHES_DIR/\"\/usr\/lib\/gimpdevel\/share\/mypaint-data\/1.0\/brushes\"/g" -i app/config/gimpcoreconfig.c
+	sed "s/MYPAINT_BRUSHES_DIR/\"\/usr\/lib\/gimpgtk3\/share\/mypaint-data\/1.0\/brushes\"/g" -i app/config/gimpcoreconfig.c
 #glib > 2.54.2
 ifneq (,$(filter $(DEBIAN_CODENAME),jessie stretch xenial yakkety zesty artful))
 	cd $(CURDIR)/3rdparty/glib && \
