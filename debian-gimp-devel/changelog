@@ -1,3 +1,193 @@
+gimp-devel (2.10.0+git40759-1139c00721-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: master
+  * Commit: 1139c00721da11cd1fae1d78b16a02c404346d6b
+  * Date: 1526131751
+  * git changelog:
+  *  1139c00721 - app: in GimpHistogramEditor, avoid calculating
+    histogram of detached layers
+  *  d5b0b08431 - app: cancel async histogram calculation in
+    gimp_histogram_clear_values()
+  *  729240db34 - app: improve GimpAsync description
+  *  b984f94506 - Update Catalan translation
+  *  f70440d911 - Update Ukrainian translation
+  *  38105c61a9 - Update Ukrainian translation
+  *  c5e5991ebc - Add Ukrainian translation
+  *  e597801764 - Update Ukrainian translation
+  *  075f615752 - Update Ukrainian translation
+  *  44ffbe74df - app: always update GimpHistogramView bins when
+    changing histograms
+  *  4ad72cfc77 - app: connect GimpHistogramView to bg-histogram
+    "notify" signal
+  *  6a0f0c13ec - Update Hungarian translation
+  *  9d9e9c707e - plug-ins: minor cleanup.
+  *  39a1680043 - desktop: preparing appdata <release> tag for 2.10.2.
+  *  2f73a83bbe - INSTALL: add info about libheif optional dependency.
+  *  05145f44f2 - plug-ins: set appropriate status when file-heif's
+    load_image() fails.
+  *  36196d408e - Update Polish translation
+  *  49382e53d5 - app: in GimpCurvesTool, calculate histogram
+    asynchronously
+  *  b0ce645fe2 - app: in GimpLevelsTool, calculate histogram
+    asynchronously
+  *  4af6fb5944 - app: in GimpThresholdTool, calculate histogram
+    asynchronously
+  *  d0b7fe6f52 - app: in GimpHistogramEditor, calculate histogram
+    asynchronously
+  *  1923fa8b44 - app: add gimp_drawable_calculate_histogram_async()
+  *  9ea560d4a9 - app: add gimp_histogram_calculate_async()
+  *  1b646804ea - app: add gimp_parallel_run_async()
+  *  e1d15feff7 - app: add GimpAsync
+  *  66db143502 - Bug 796014 - Cannot open some older .xcf files made
+    with 2.8.22 in 2.10.
+  *  0d26d00ca3 - build: replace some survivor s/2.9/2.10/.
+  *  f741cacc28 - app: fix last commit: identify displays by name not by
+    pointer
+  *  5427d82d21 - Installer: better error message about unsupported OS
+  *  3ced1e18f4 - app: fix GimpDeviceManager to not add the same display
+    twice
+  *  577e01d48a - Small fix in Italian translation
+  *  4202ac7b78 - Small fix in Italian translation
+  *  dd7f9d97a8 - Add Dutch translation
+  *  962b8496fc - Bug 795899 - "Some fonts failed to load" error when
+    missing fonts/...
+  *  0d74264c4d - app: rename argument in gimpprefsbox.h too
+  *  384b116c15 - app: clean up GimpPrefsBox and the prefs dialog a bit
+  *  fa0a02125c - app: make the splash texts dynamic, so they are larger
+    on larger splashes
+  *  cb045c3e63 - Bug 795911 - GIMP crashed while I was undoing a
+    gradient
+  *  9e8e3496a5 - Update Dutch translation
+  *  3d9bc96423 - app: improve gimp_eraser_tool_is_alpha_only()
+  *  bc09c71818 - Bug 795909 - Multiple images opened with floating
+    selection ...
+  *  24db45d0bb - Update Swedish translation
+  *  084cbc3102 - app: fix pass-through group histograms (proactively)
+  *  87df5eaea0 - Updated Italian translation
+  *  b775437561 - app: #include "core/gimpdrawable.h" in
+    gimperasertool.c
+  *  1910ff8b1a - app: warn when alpha-only painting has no effect
+  *  2c58598172 - app: add gimp_layer_mode_is_alpha_only()
+  *  2e68088c35 - app: use gimp:normal instead of gegl:over in
+    gimp_gegl_apply_cached_operation()
+  *  f3febfe343 - Bug 795866 - Transparent gradient on transparent layer
+    ...
+  *  7e1df2c8c6 - app: add layers/channels/vectors freeze/thaw to
+    gimpplugin-cleanup
+  *  d87259ccf9 - app: fix gimp_gegl_apply_operation() for source OPs
+  *  a9db2baa4e - Update Swedish translation
+  *  29cf157f69 - app: add +gimp_container_freeze_count() which returns
+    the freeze_count
+  *  1950eda8ab - app: fix rendering of the bg_histogram in
+    GimpHistogramView
+  *  b15f38d21f - pdb: add "Since: 2.10" to the newly added freeze/thaw
+    procedures
+  *  7540ce779d - Bug 795716 - Wavelet Decompose takes too long to group
+    layers
+  *  40e3406b91 - pdb: add gimp-image-{freeze,thaw}-
+    {layers,channels,vectors}
+  *  88c63420e8 - app: ignore
+    gimp_container_view_{select,activate,context}_item() ...
+  *  dfebe463b1 - Updated Italian translation
+  *  7daeedf324 - Update Polish translation
+  *  f5ecc9f859 - app, menus: add gegl:spherize to the menus
+  *  cdd129110c - app, menus: add gegl:recursive-transform to the menus
+  *  4b9ce3be58 - Update Ukrainian translation
+  *  bad7b19211 - NEWS: translations
+  *  cc00a64088 - Update Hungarian translation
+  *  31f5d7dc04 - Bug 795720 - Change MD5 sums to SHA512 ones.
+  *  8a105e6038 - Update Hungarian translation
+  *  da77713dd7 - Update Swedish translation
+  *  33a92e2447 - app: get rid of gimp_get_backtrace().
+  *  47a036f750 - Bug 795814 - Error saving VERY large file.
+  *  5a048f5b5d - imagemap: fix invalid source removal
+  *  324873c7b8 - build: no need for the splash screen patch anymore
+    (was for 2.10.0 RC2).
+  *  1ef0f50698 - build: update nightly and dev flatpak.
+  *  98a575370c - app: add a check on not-NULL string before
+    g_utf8_validate().
+  *  d58f131b59 - Bug 795650 - Gimp crashes on start in Windows.
+  *  b706eaf002 - plug-ins: enable metadata loading in file-heif
+  *  bf2599fe20 - Update Hungarian translation
+  *  a6d4056c12 - Update Swedish translation
+  *  c476eb4312 - Update Swedish translation
+  *  15b9bb1581 - plug-ins: port file-heif to GIO
+  *  a22f9fe32b - Update Catalan translation
+  *  4c004d5e16 - NEWS: translations, formatting
+  *  17ce730591 - NEWS: add font loading update.
+  *  e173aebf76 - Update Russian translation
+  *  3899276245 - NEWS: update
+  *  2d3b8f67a8 - Installer: optional GIMP debug symbols inclusion
+  *  7e3fa0c8d8 - plug-ins: port file-heif to GEGL, and don't use any
+    deprecated API
+  *  ba149f1759 - plug-ins: add HEIF loading/saving plug-in written by
+    Dirk Farin
+  *  07c81abf01 - app: fix propgui random seed generation
+  *  48f6d1b8ee - app: avoid scaling GimpCanvasArc to zero, it causes a
+    non-invertable matrix
+  *  2e643e6270 - app: cleanly remove log handlers on exit
+  *  c692994b98 - Update Catalan translation
+  *  4508a57a52 - Update Catalan translation
+  *  f3ba248b2f - Update Swedish translation
+  *  35f1bfc1f7 - Added Julien Hardelin as documentation author
+  *  62279047b1 - Bug 795763 - Update gimp.org links to https://
+  *  7376f9ce29 - Installer: update URLs
+  *  c5bde2559e - Installer: require Windows 7 or newer
+  *  8bc219b2c3 - Installer: require Windows 7 or newer
+  *  2f28ddf62b - Installer: include less cruft
+  *  fc34accf4c - Installer: another leftover library to clean up
+  *  0bde05c64a - Updated and fixed Italian translation (tnx to S.
+    Ginestrini)
+  *  68b4938830 - Installer: fixes for upgrading from 2.8
+  *  69cbd89694 - Installer: use mingw Python
+  *  074b337d43 - Installer: don't attempt signing when not compressing
+    the installer
+  *  449e7b4961 - Installer: NOCOMPRESSION fix 2 (installer name)
+  *  e8947d2ac4 - Installer: oops, NOCOMPRESSION should only affect
+    installer compression
+  *  634b0e68c3 - Installer: add missing files
+  *  e7c50755f9 - Installer: more fixes for split GIMP/deps directories
+  *  d981c930c5 - Installer: forgot a few things for GIMP/deps split
+  *  770f596c6e - Installer: fix mode
+  *  b6813cfe3c - Installer: split GIMP and dependencies again (makes it
+    easier to digitally sign binaries I built myself)
+  *  68f4c8a5ed - Revert "build: fix removal of old GIMP versions during
+    installation on Windows"
+  *  7ec7167fb5 - Update Swedish translation
+  *  6be0bb1358 - app: always set text-tool image when starting the
+    editor
+  *  12908aed8c - pdb: don't change generated files...
+  *  e8d0f8e3cf - data: don't use deprecated enum value nicks in tool
+    presets
+  *  a204d922b4 - Updated uk translation
+  *  474e27b27a - Bug 795693 - GIMP doesn't enable visibility of vector
+    layers in PSD
+  *  d8ae5481ac - build: fix removal of old GIMP versions during
+    installation on Windows
+  *  25db980d01 - build: add MyPaint brushes component to the Windows
+    installer
+  *  de508da0e9 - build: add 2.10 splash to the Windows installer
+  *  9839891ec0 - Bug 795688 - Misspelled "Pinsel" in the german GIMP
+    windows installer
+  *  bf7bbdba2e - build: add Chinese (Taiwan) translation to the Windows
+    installer
+  *  b8b7cf0ba5 - po-windows-installer: technical fix to the Chinese
+    (Taiwan) translations
+  *  d094ab7e56 - app: add some g_return_if_fail() in
+    gimp_font_list_load_names().
+  *  e796e3a50a - app: popup error at startup when some fonts fail to
+    load.
+  *  070bcb8979 - libgimpbase: strengthen other use of
+    g_win32_locale_filename_from_utf8()
+  *  55d1ea5cf0 - app: check that the font path is not NULL.
+  *  69f864d5f5 - app: use a GFileEnumerator to loop through font files.
+  *  1811d8ebf9 - script-fu: fix a typo in the Add Border script
+  *  0884f901a2 - Update Greek translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 12 May 2018 18:27:55 +0300
+
 gimp-devel (2.10.0+git40627-8c1830335c-1) unstable; urgency=medium
 
   * Compile

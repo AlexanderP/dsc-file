@@ -1,3 +1,46 @@
+audacity (1:2.2.2+git8655-a13e7191c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: a13e7191c418e59daf9fcf9b47d075d06022fecb
+  * Date: 1526030628
+  * git changelog:
+  *  a13e7191c - Add an option to use a dialog to enter the name of a
+    new label
+  *  a06e845b2 - Usage of the fuller C++11 library, now that we can on
+    Mac
+  *  c20aefc10 - Save, later rethrow exceptions caught in callbacks from
+    C libraries
+  *  ac373502a - Don't need AudacityException::Move, use
+    std::exception_ptr
+  *  f7515c90d - Now I can revert my partial reversion of b56059a
+  *  83421e8b1 - Replicated C++11 library things no longer needed
+  *  a9e7a7e5d - movable_ptr(_with_deleter) -> std::unique_ptr
+  *  b8a8712ba - make_movable -> std::make_unique
+  *  7a0475e39 - Remove most uses of AUDACITY_OLD_STD
+  *  56c42e870 - Bug1871: Make Effect::Preview cleanup sequence as was
+    before 79c3bef
+  *  59cb9be78 - pa_ringbuffer.c wasn't compiled by Travis, that broke
+    the build
+  *  00615831c - define EXPERIMENTAL_REWRITE_RING_BUFFER
+  *  36c643005 - Add RMS analyzer Nyquist plug-in
+  *  504cf0fe8 - Runtime translation for 3rd party Nyquist plug-ins
+  *  705fc9620 - Update export warnings
+  *  0d5fb01c9 - Can't call Fit() on (negative) wxDefaultSize
+  *  ff8926f18 - Hyphenation consistency update
+  *  6d2bd8a2f - Added: where to get wxWidgets and Xcode
+  *  9e92f4f37 - Use path separator that depends on platform (in
+    screenshot tools).
+  *  837d5e18f - Fix Audacity failing silently on new instance
+  *  0248c870b - Rename "Sliding Time Scale/Pitch Shift" effect
+  *  4733cd777 - Update enum name to match control type name
+  *  16ff3b405 - Nyquist text widget must not fail verification
+  *  da0183875 - Update Pluck and Rhythm Track plug-ins
+  *  cf07f858e - NumericTextCtrl for time input in Nyquist plug-ins
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 12 May 2018 05:30:27 +0300
+
 audacity (1:2.2.2+git8630-660dc03b9-1) unstable; urgency=medium
 
   * Compile

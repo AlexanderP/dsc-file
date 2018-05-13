@@ -1,3 +1,91 @@
+freecad-daily (0.17+git13701-976369621-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 9763696216ffc0381c6724d1f301ecd9011bee9b
+  * Date: 1526091281
+  * git changelog:
+  *  976369621 - Arch: Added convenience function
+    ArchComponent.convertOldComponents to convert the Role property to
+    IfcRole
+  *  30476e951 - Arch: Renamed Role property to IfcRole
+  *  89bee2c83 - Draft: Catch deleted objects in DraftGui.todo
+  *  26d7d7472 - Convert deprecated boost::signal to signals2
+  *  eefaaa58d - Eliminate some redundant executes
+  *  459458361 - Fix compilation with GCC 8
+  *  186df5238 - Cleaned up translation.
+  *  de9b157a9 - Updated copyright
+  *  4adae91ab - Setting rotation center for the job on change.
+  *  6fe32862b - Maintain center of rotation for compound objects.
+  *  5103b74bf - Set Path Center.  Depends on mlampert's rotation vis
+  *  454d86b20 - fixed feed rate for angular moves
+  *  bf51263a2 - Path rename dressup
+  *  f93357003 - Initial Commit
+  *  1bdda1c47 - Fixed rotation axis rendering for B and C.
+  *  d720ef1d1 - Add support for rotation center to ViewProviderPath.
+  *  49d016e2a - Fixed inch scaling
+  *  e637bfda2 - Added center property to Path to deal with rendering
+    rotational axis.
+  *  7ec797757 - Added support for G20/G21 to g-code import.
+  *  17cca2a1f - Added g-code A parameter support to drilling cycle.
+  *  2ff14529a - A g-code parameter support for G2/G3
+  *  f425a8a28 - PathViewProvider support for A parameter in G0 and G1.
+  *  15c2b9a28 - fix FreeCad crash when no tool is assigned to an
+    operation
+  *  9b907e3ac - Added missing comma
+  *  6656d9c6d - follow-up source typos
+  *  420c2d7c0 - Source typos fixes
+  *  d9314b756 - Draft: Draft Text now uses its own python object
+    instead of App::Annotation
+  *  32f089f28 - Arch: optimizing block walls
+  *  b5ffabace - Arch: All Arch objects can now have any IFC type(role)
+  *  b3fb790d5 - Draft: Added reference mode to Draft Scale task panel
+  *  c36026358 - Arch/Draft: Make sure an active doc exists before
+    creating objects
+  *  176eb8c66 - [AddonManager] Add github support
+  *  6597b446c - [AddonManager] Save macros without 'Macro_' prefix
+  *  d25b8ed40 - Stylesheets: updated and upgraded to full SVG design
+  *  8e017399a - Arch: Added a new 'beam mode' to draw structure objects
+  *  d9b8d6155 - Expose task panel layout through preferences.
+  *  a91a544c1 - draft: fix snapping with images
+  *  710692718 - Arch: Optimized Arch panel waves generation
+  *  cb4a5ee18 - set exception message when returning with 0
+  *  8d4f31f02 - fix bug tracker issue id:0003450 : Freecad crash when
+    simulating without operations.
+  *  7fa81fd2e - Draft: Fixed syntax error
+  *  650fed979 - Point Draft importDXF to Mod/Import/ImpExpDxf
+  *  78b72c6d4 - Only setting Path.Area curve accuracy if it is not, and
+    also set it when Preferences get saved.
+  *  d4fa4ec21 - removed newline altogether
+  *  6de9a3206 - Used QChar::fromLatin1('\n') instead
+  *  5cd5c6ad8 - Added QString::fromUtf8("\n")
+  *  86469bd5d - revert some spacing changes
+  *  a529ba178 - Crowdin: more fixes
+  *  bc0a88551 - Draft: move newlines out of translations
+  *  fb224b009 - Crowdin: fix in different WBs
+  *  4604bd945 - Merge pull request #1435 from
+    WandererFan/newDxf2ModImport
+  *  cb12b0eda - Add Export Page as Dxf to TD Gui
+  *  fe6c07b24 - Add writeDXFObject to Import
+  *  717a4a50a - increase memory memory on MSVC to fix internal compiler
+    error
+  *  52f437562 - Arch: Added setting to limit areas calculations for
+    large objects
+  *  fff7c0328 - Arch: Window presets now include windows and doors from
+    Parts Library, if available
+  *  1a2868b53 - Changed grbl feed rate output to mm/min.
+  *  0dead11c3 - Spreadsheet: typo fixes
+  *  271740d0a - fix version check for cmake < 3.7
+  *  9ec568ddf - Detect pycxx version and add source for version 7 and
+    greater.
+  *  c9f6855fc - FEM: typos, can't hardly belive there still are some
+    ...
+  *  d8eed1f92 - FEM: Clarity fix of term 'dia' as 'diameter'
+  *  ba9dba4b2 - FEM: typo fixes
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 12 May 2018 20:17:08 +0300
+
 freecad-daily (0.17+git13638-983f2472a-1) unstable; urgency=medium
 
   * Compile

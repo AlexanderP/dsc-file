@@ -1,3 +1,185 @@
+llpp (27.0.0+git3163-c230b67-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://repo.or.cz/llpp.git
+  * Branch: master
+  * Commit: c230b67ac07f1e595fcbc8f958842fa2ca7a8c83
+  * Date: 1526036800
+  * git changelog:
+  *  c230b67 - Update
+  *  e61ff9e - Remove stat&ppx experiments
+  *  1ecd9ac - Cosmetics
+  *  8b77688 - Move Quit to utils
+  *  be5864b - Refactor unisyms
+  *  6cbcc13 - Move pipef to utils
+  *  ee9df5c - Glutils
+  *  7542bc1 - Remove keyhack
+  *  74b2b3e - Update
+  *  b6c89d0 - Drop libmupdf past hack
+  *  b720837 - Accurate(r) mupdf tracking
+  *  fb41a3f - Cosmetics
+  *  7c217a8 - Stricter warnings and fallout
+  *  73d77b3 - Update
+  *  287c9a1 - Consistency
+  *  7d0cd72 - Inconsolatazi4-Regular
+  *  e5ff67c - Nigeria
+  *  2891f93 - Update
+  *  3708986 - Move UniSyms to utils
+  *  61ed18e - Selection
+  *  f356231 - stat vs sum
+  *  8813ad8 - Set LC_CTYPE to UTF-8 when launched using LaunchServices
+    (e.g. by double-clicking)
+  *  5aab894 - Just say "No" to broken compilers
+  *  036f5a3 - イングリッシュ
+  *  14ed73d - Update
+  *  ebc7faf - Clarify
+  *  751be86 - More robust font-family fallback
+  *  b33403f - Update
+  *  fde0405 - Move ppx to misc
+  *  5498c3c - Cosmetics
+  *  278c347 - Update
+  *  bea085f - Placeholder
+  *  6f55aba - Update
+  *  9681ef2 - Complete completion removal
+  *  f8c982b - Completions became stale and nobody shepherds them
+  *  efb88ca - Update
+  *  143ead5 - Drop any pretense that Windows is supported
+  *  b4ccf82 - Sync with upstream
+  *  7c2071b - mkdir
+  *  b4b6c71 - Drop Windows reference
+  *  1600b5c - Remove ghyll scroll
+  *  0b3f94d - Remove -embedd
+  *  5191d25 - Move float equal diagnostic paragmas around
+  *  5a0d017 - Dash
+  *  091bb7b - Ingrish
+  *  8c40b80 - Tell pandoc to use epub2
+  *  94f03ac - Don't lie
+  *  ad99955 - Hmmm..
+  *  8311d9c - Update
+  *  dec2df9 - Shuffle
+  *  6aea2fc - Dog
+  *  105eceb - Remove redundant mkdir
+  *  f255d2e - Make ppx things "intuitive"
+  *  640f079 - PPX experiment
+  *  940aafb - Proper path to past
+  *  66b9cd3 - Expand
+  *  242651c - Update
+  *  a5a9c95 - Update
+  *  8afdcaa - Deep out-of-tree
+  *  6059aac - Clarify
+  *  89afe33 - No more
+  *  a576525 - Update
+  *  6a32082 - Update
+  *  d19303d - Apter version tracking
+  *  df83211 - Dances around lack of local ocaml
+  *  e454da4 - Naming
+  *  68d8575 - Track ocaml version
+  *  86692b2 - Legalese
+  *  c1d8336 - Weird
+  *  c4a5331 - Sync with upstream
+  *  1e59242 - Shuffle
+  *  f41b21c - Inline now
+  *  aa5098f - Use ocaml as a substitute for bc
+  *  00cd2f4 - This is bash
+  *  c221304 - Caching
+  *  6536d9d - Proper indentation
+  *  23111e8 - Update
+  *  2483e07 - Shuffle
+  *  678cd44 - Avoid mentioning revision twice
+  *  e95e9b0 - Crude but works
+  *  daa6dae - Only output relevant parts of digest
+  *  1235101 - Restore true out-of-treeness
+  *  40c1eca - Add U+2192
+  *  ba24cbd - Plain CRC should be enough
+  *  8a76c72 - No idea
+  *  37e6424 - Suppress digesting error output
+  *  72566a5 - Sprinkle with some locals
+  *  d15b61a - Cosmetics
+  *  a828f1a - Off by one
+  *  bf4361c - Cosmetics
+  *  88f4104 - Update
+  *  3298f72 - Whoops
+  *  ef00a6f - Don't hammer poor constrained AWS
+  *  5dabdc3 - Whoops
+  *  0e57492 - No idea
+  *  78be071 - Update consistently
+  *  252eda8 - Update
+  *  df7ae7b - Update
+  *  4592226 - Use github mirror
+  *  6f05faf - Paper over
+  *  2342467 - Change digest
+  *  5217f70 - Settle on CRC for now
+  *  47dac4f - Topy
+  *  b828b5a - Naming
+  *  fc5f75f - Safety rename
+  *  dd403c3 - Better
+  *  767b46b - Save those lines
+  *  0315202 - Napoleon failed
+  *  7bfb9c4 - Update
+  *  2f918ab - Update
+  *  499d3c2 - Don't lie
+  *  17c2b61 - Fix out-of-treeness
+  *  922f572 - Shrug
+  *  305d9a8 - Another small step towards genericity
+  *  52bef4f - Deal with clang warnings
+  *  328c318 - Update
+  *  84cc456 - sh->bash
+  *  112869d - Update
+  *  05e6303 - Remove zsh workarounds
+  *  db6645e - Bashify build.sh
+  *  63ec438 - Don't lie
+  *  b946b1b - Kill stray empty line
+  *  130fe59 - Include diag.h when compiling with clang
+  *  85b906d - Update
+  *  2ebdd00 - Update
+  *  24fafc2 - Update
+  *  9449589 - Fix url
+  *  bba12eb - Move wsel to misc
+  *  1d22aa6 - Move x11 specifics
+  *  49fda35 - Move
+  *  32ca41b - Avoid excessive digesting
+  *  03f8d32 - Cosmetics
+  *  305acac - Whoops
+  *  24f19bf - Exploit awesomeness of build.sh more
+  *  d5fe653 - Fix opening certain files with absolute path
+  *  7709f1c - Fix inotify for certain filenames
+  *  ede97b1 - Die
+  *  cf3c485 - Exploit the power of build.sh
+  *  c1f9389 - Cosmetics
+  *  dda13b3 - Nomenclature
+  *  41672e5 - Bail out if ocaml compilation fails
+  *  4cfe3ad - Transitive rebuilding
+  *  804c331 - Don't overdo it
+  *  fdee603 - Address #76
+  *  87faa12 - Sync with upstream
+  *  bd7ab20 - Add diacritical problem
+  *  bf168d1 - Better
+  *  5a7534f - Initial
+  *  4683f4a - Sync with upstream
+  *  12b9f41 - vecho workaround for bash
+  *  406d427 - Properly handle lack of git tree when computing ver
+  *  c008c8c - Cosmetics
+  *  0b16748 - Simplify
+  *  f41a4c3 - Update
+  *  17e3124 - Don't be annoying (should only concern users with a
+    particular username)
+  *  42f72b1 - Expand
+  *  9f34d34 - Change to the directory that contains bootstrap.sh
+  *  01d451d - Capitalization
+  *  efc37e9 - Consistency
+  *  6ab0316 - Update
+  *  4660787 - Update
+  *  df07ca1 - _GNU_SOURCE is now defined in build.sh
+  *  1004554 - No readlink on MacOS it seems
+  *  b61f996 - Initial
+  *  1da3e5f - Bootstraping
+  *  962dd0a - Small fixes to bootstrap.sh build script while testing it
+    on Debian 9 and on Ubuntu 16.04 on Windows
+  *  d9ec10c - Another attempt to resurect it
+  *  e66bdc7 - Update
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 12 May 2018 04:54:05 +0300
+
 llpp (26.0.0+git2995-be7dc6c-1) unstable; urgency=medium
 
   * Compile
