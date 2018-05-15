@@ -3,7 +3,7 @@
 #grc
 
 LANG_OLD="dan-frak deu-frak kur slk-frak tgl"
-LANG="bul cat ces  dan deu  ell eng fin fra hun ind ita lav lit nld nor pol por ron rus slk slv spa srp swe tur ukr vie chi-sim chi-tra amh asm aze-cyrl bod bos ceb cym dzo fas gle guj hat iku jav kat kat-old kaz khm kir lao lat mar mya nep ori pan pus san sin srp-latn syr tgk tir uig urd uzb uzb-cyrl yid afr ara aze bel ben chr enm epo est eus frk frm glg heb hin hrv isl ita-old jpn kan kor mal mkd mlt msa spa-old sqi swa tam tel tha"
+LANG="bul grc cat ces  dan deu  ell eng fin fra hun ind ita lav lit nld nor pol por ron rus slk slv spa srp swe tur ukr vie chi-sim chi-tra amh asm aze-cyrl bod bos ceb cym dzo fas gle guj hat iku jav kat kat-old kaz khm kir lao lat mar mya nep ori pan pus san sin srp-latn syr tgk tir uig urd uzb uzb-cyrl yid afr ara aze bel ben chr enm epo est eus frk frm glg heb hin hrv isl ita-old jpn kan kor mal mkd mlt msa spa-old sqi swa tam tel tha"
 
 CONTROL="control"
 rm -f *.install
@@ -41,6 +41,7 @@ j=$(cat lang.txt | grep "^${i}__" | awk -F '__' '{print $2}')
 dependencies $i >> ${CONTROL} << EOF
 Package: tesseract-ocr-${i}-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: \${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -63,6 +64,7 @@ done
 dependencies osd >> ${CONTROL} << EOF
 Package: tesseract-ocr-osd-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: \${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -83,6 +85,7 @@ EOF
 dependencies equ >> ${CONTROL} << EOF
 Package: tesseract-ocr-equ-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: \${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)

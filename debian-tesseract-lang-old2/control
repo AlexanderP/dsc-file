@@ -8,6 +8,7 @@ Homepage: https://github.com/tesseract-ocr/
 
 Package: tesseract-ocr-dan-frak-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -21,6 +22,7 @@ Description: tesseract-ocr language files for Danish (Fraktur) (legacy)
 
 Package: tesseract-ocr-deu-frak-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -34,6 +36,7 @@ Description: tesseract-ocr language files for German (Fraktur) (legacy)
 
 Package: tesseract-ocr-kur-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -47,6 +50,7 @@ Description: tesseract-ocr language files for Kurdish (legacy)
 
 Package: tesseract-ocr-slk-frak-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -60,6 +64,7 @@ Description: tesseract-ocr language files for Slovak (Fraktur) (legacy)
 
 Package: tesseract-ocr-tgl-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -73,6 +78,7 @@ Description: tesseract-ocr language files for Tagalog (legacy)
 
 Package: tesseract-ocr-bul-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -84,8 +90,23 @@ Description: tesseract-ocr language files for Bulgarian (legacy)
  extract printed text from images. This package contains the data
  needed for processing images in the Bulgarian language.
 
+Package: tesseract-ocr-grc-legacy
+Architecture: all
+Multi-Arch: foreign
+Provides: tesseract-ocr-language, tesseract-ocr-lang
+Depends: ${misc:Depends}
+Recommends: tesseract-ocr (>= 3.99)
+Breaks: tesseract-ocr (<< 3.99)
+Replaces: tesseract-ocr-data (<< 2)
+Description: tesseract-ocr language files for Greek, Ancient (to 1453) (legacy)
+ Tesseract is an open source Optical Character Recognition (OCR)
+ Engine. It can be used directly, or (for programmers) using an API to
+ extract printed text from images. This package contains the data
+ needed for processing images in the Greek, Ancient (to 1453) language.
+
 Package: tesseract-ocr-cat-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -99,6 +120,7 @@ Description: tesseract-ocr language files for Catalan (legacy)
 
 Package: tesseract-ocr-ces-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -112,6 +134,7 @@ Description: tesseract-ocr language files for Czech (legacy)
 
 Package: tesseract-ocr-dan-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -125,6 +148,7 @@ Description: tesseract-ocr language files for Danish (legacy)
 
 Package: tesseract-ocr-deu-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -138,6 +162,7 @@ Description: tesseract-ocr language files for German (legacy)
 
 Package: tesseract-ocr-ell-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -151,6 +176,7 @@ Description: tesseract-ocr language files for Greek (legacy)
 
 Package: tesseract-ocr-eng-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -164,6 +190,7 @@ Description: tesseract-ocr language files for English (legacy)
 
 Package: tesseract-ocr-fin-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -177,6 +204,7 @@ Description: tesseract-ocr language files for Finnish (legacy)
 
 Package: tesseract-ocr-fra-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -190,6 +218,7 @@ Description: tesseract-ocr language files for French (legacy)
 
 Package: tesseract-ocr-hun-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -203,6 +232,7 @@ Description: tesseract-ocr language files for Hungarian (legacy)
 
 Package: tesseract-ocr-ind-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -216,6 +246,7 @@ Description: tesseract-ocr language files for Indonesian (legacy)
 
 Package: tesseract-ocr-ita-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -229,6 +260,7 @@ Description: tesseract-ocr language files for Italian (legacy)
 
 Package: tesseract-ocr-lav-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -242,6 +274,7 @@ Description: tesseract-ocr language files for Latvian (legacy)
 
 Package: tesseract-ocr-lit-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -255,6 +288,7 @@ Description: tesseract-ocr language files for Lithuanian (legacy)
 
 Package: tesseract-ocr-nld-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -268,6 +302,7 @@ Description: tesseract-ocr language files for Dutch (legacy)
 
 Package: tesseract-ocr-nor-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -281,6 +316,7 @@ Description: tesseract-ocr language files for Norwegian (legacy)
 
 Package: tesseract-ocr-pol-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -294,6 +330,7 @@ Description: tesseract-ocr language files for Polish (legacy)
 
 Package: tesseract-ocr-por-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -307,6 +344,7 @@ Description: tesseract-ocr language files for Portuguese (legacy)
 
 Package: tesseract-ocr-ron-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -320,6 +358,7 @@ Description: tesseract-ocr language files for Romanian (legacy)
 
 Package: tesseract-ocr-rus-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -333,6 +372,7 @@ Description: tesseract-ocr language files for Russian (legacy)
 
 Package: tesseract-ocr-slk-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -346,6 +386,7 @@ Description: tesseract-ocr language files for Slovakian (legacy)
 
 Package: tesseract-ocr-slv-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -359,6 +400,7 @@ Description: tesseract-ocr language files for Slovenian (legacy)
 
 Package: tesseract-ocr-spa-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -372,6 +414,7 @@ Description: tesseract-ocr language files for Spanish (legacy)
 
 Package: tesseract-ocr-srp-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -385,6 +428,7 @@ Description: tesseract-ocr language files for Serbian (legacy)
 
 Package: tesseract-ocr-swe-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -398,6 +442,7 @@ Description: tesseract-ocr language files for Swedish (legacy)
 
 Package: tesseract-ocr-tur-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -411,6 +456,7 @@ Description: tesseract-ocr language files for Turkish (legacy)
 
 Package: tesseract-ocr-ukr-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -424,6 +470,7 @@ Description: tesseract-ocr language files for Ukrainian (legacy)
 
 Package: tesseract-ocr-vie-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -437,6 +484,7 @@ Description: tesseract-ocr language files for Vietnamese (legacy)
 
 Package: tesseract-ocr-chi-sim-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -450,6 +498,7 @@ Description: tesseract-ocr language files for Chinese - Simplified (legacy)
 
 Package: tesseract-ocr-chi-tra-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -463,6 +512,7 @@ Description: tesseract-ocr language files for Chinese - Traditional (legacy)
 
 Package: tesseract-ocr-amh-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -476,6 +526,7 @@ Description: tesseract-ocr language files for Amharic (legacy)
 
 Package: tesseract-ocr-asm-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -489,6 +540,7 @@ Description: tesseract-ocr language files for Assamese (legacy)
 
 Package: tesseract-ocr-aze-cyrl-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99), tesseract-ocr-aze (>= 3.99)
@@ -502,6 +554,7 @@ Description: tesseract-ocr language files for Azerbaijani (Cyrillic) (legacy)
 
 Package: tesseract-ocr-bod-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -515,6 +568,7 @@ Description: tesseract-ocr language files for Tibetan Standard (legacy)
 
 Package: tesseract-ocr-bos-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -528,6 +582,7 @@ Description: tesseract-ocr language files for Bosnian (legacy)
 
 Package: tesseract-ocr-ceb-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -541,6 +596,7 @@ Description: tesseract-ocr language files for Cebuano (legacy)
 
 Package: tesseract-ocr-cym-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -554,6 +610,7 @@ Description: tesseract-ocr language files for Welsh (legacy)
 
 Package: tesseract-ocr-dzo-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -567,6 +624,7 @@ Description: tesseract-ocr language files for Dzongkha (legacy)
 
 Package: tesseract-ocr-fas-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -580,6 +638,7 @@ Description: tesseract-ocr language files for Persian (legacy)
 
 Package: tesseract-ocr-gle-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -593,6 +652,7 @@ Description: tesseract-ocr language files for Irish (legacy)
 
 Package: tesseract-ocr-guj-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -606,6 +666,7 @@ Description: tesseract-ocr language files for Gujarati (legacy)
 
 Package: tesseract-ocr-hat-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -619,6 +680,7 @@ Description: tesseract-ocr language files for Haitian (legacy)
 
 Package: tesseract-ocr-iku-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -632,6 +694,7 @@ Description: tesseract-ocr language files for Inuktitut (legacy)
 
 Package: tesseract-ocr-jav-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -645,6 +708,7 @@ Description: tesseract-ocr language files for Javanese (legacy)
 
 Package: tesseract-ocr-kat-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -658,6 +722,7 @@ Description: tesseract-ocr language files for Georgian (legacy)
 
 Package: tesseract-ocr-kat-old-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -671,6 +736,7 @@ Description: tesseract-ocr language files for Old Georgian (legacy)
 
 Package: tesseract-ocr-kaz-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -684,6 +750,7 @@ Description: tesseract-ocr language files for Kazakh (legacy)
 
 Package: tesseract-ocr-khm-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -697,6 +764,7 @@ Description: tesseract-ocr language files for Khmer (legacy)
 
 Package: tesseract-ocr-kir-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -710,6 +778,7 @@ Description: tesseract-ocr language files for Kyrgyz (legacy)
 
 Package: tesseract-ocr-lao-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -723,6 +792,7 @@ Description: tesseract-ocr language files for Lao (legacy)
 
 Package: tesseract-ocr-lat-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -736,6 +806,7 @@ Description: tesseract-ocr language files for Latin (legacy)
 
 Package: tesseract-ocr-mar-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -749,6 +820,7 @@ Description: tesseract-ocr language files for Marathi (legacy)
 
 Package: tesseract-ocr-mya-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -762,6 +834,7 @@ Description: tesseract-ocr language files for Burmese (legacy)
 
 Package: tesseract-ocr-nep-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -775,6 +848,7 @@ Description: tesseract-ocr language files for Nepali (legacy)
 
 Package: tesseract-ocr-ori-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -788,6 +862,7 @@ Description: tesseract-ocr language files for Oriya (legacy)
 
 Package: tesseract-ocr-pan-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -801,6 +876,7 @@ Description: tesseract-ocr language files for Punjabi (legacy)
 
 Package: tesseract-ocr-pus-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -814,6 +890,7 @@ Description: tesseract-ocr language files for Pashto (legacy)
 
 Package: tesseract-ocr-san-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -827,6 +904,7 @@ Description: tesseract-ocr language files for Sanskrit (legacy)
 
 Package: tesseract-ocr-sin-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -840,6 +918,7 @@ Description: tesseract-ocr language files for Sinhala (legacy)
 
 Package: tesseract-ocr-srp-latn-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}, tesseract-ocr-srp (>= 3.99)
 Recommends: tesseract-ocr (>= 3.99)
@@ -853,6 +932,7 @@ Description: tesseract-ocr language files for Serbian (Latin) (legacy)
 
 Package: tesseract-ocr-syr-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -866,6 +946,7 @@ Description: tesseract-ocr language files for Syriac (legacy)
 
 Package: tesseract-ocr-tgk-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -879,6 +960,7 @@ Description: tesseract-ocr language files for Tajik (legacy)
 
 Package: tesseract-ocr-tir-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -892,6 +974,7 @@ Description: tesseract-ocr language files for Tigrinya (legacy)
 
 Package: tesseract-ocr-uig-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -905,6 +988,7 @@ Description: tesseract-ocr language files for Uyghur (legacy)
 
 Package: tesseract-ocr-urd-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -918,6 +1002,7 @@ Description: tesseract-ocr language files for Urdu (legacy)
 
 Package: tesseract-ocr-uzb-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}, tesseract-ocr-uzb-cyrl (>= 3.99)
 Recommends: tesseract-ocr (>= 3.99)
@@ -931,6 +1016,7 @@ Description: tesseract-ocr language files for Uzbek (legacy)
 
 Package: tesseract-ocr-uzb-cyrl-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99), tesseract-ocr-uzb (>= 3.99)
@@ -944,6 +1030,7 @@ Description: tesseract-ocr language files for Uzbek (Cyrillic) (legacy)
 
 Package: tesseract-ocr-yid-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -957,6 +1044,7 @@ Description: tesseract-ocr language files for Yiddish (legacy)
 
 Package: tesseract-ocr-afr-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -970,6 +1058,7 @@ Description: tesseract-ocr language files for Afrikaans (legacy)
 
 Package: tesseract-ocr-ara-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -983,6 +1072,7 @@ Description: tesseract-ocr language files for Arabic (legacy)
 
 Package: tesseract-ocr-aze-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}, tesseract-ocr-aze-cyrl (>= 3.99)
 Recommends: tesseract-ocr (>= 3.99)
@@ -996,6 +1086,7 @@ Description: tesseract-ocr language files for Azerbaijani (legacy)
 
 Package: tesseract-ocr-bel-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1009,6 +1100,7 @@ Description: tesseract-ocr language files for Belarusian (legacy)
 
 Package: tesseract-ocr-ben-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1022,6 +1114,7 @@ Description: tesseract-ocr language files for Bengali (legacy)
 
 Package: tesseract-ocr-chr-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1035,6 +1128,7 @@ Description: tesseract-ocr language files for Cherokee (legacy)
 
 Package: tesseract-ocr-enm-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1048,6 +1142,7 @@ Description: tesseract-ocr language files for English, Middle (1100-1500) (legac
 
 Package: tesseract-ocr-epo-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1061,6 +1156,7 @@ Description: tesseract-ocr language files for Esperanto (legacy)
 
 Package: tesseract-ocr-est-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1074,6 +1170,7 @@ Description: tesseract-ocr language files for Estonian (legacy)
 
 Package: tesseract-ocr-eus-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1087,6 +1184,7 @@ Description: tesseract-ocr language files for Basque (legacy)
 
 Package: tesseract-ocr-frk-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1100,6 +1198,7 @@ Description: tesseract-ocr language files for Frankish (legacy)
 
 Package: tesseract-ocr-frm-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1113,6 +1212,7 @@ Description: tesseract-ocr language files for French, Middle (ca.1400-1600) (leg
 
 Package: tesseract-ocr-glg-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1126,6 +1226,7 @@ Description: tesseract-ocr language files for Galician (legacy)
 
 Package: tesseract-ocr-heb-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1139,6 +1240,7 @@ Description: tesseract-ocr language files for Hebrew (legacy)
 
 Package: tesseract-ocr-hin-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1152,6 +1254,7 @@ Description: tesseract-ocr language files for Hindi (legacy)
 
 Package: tesseract-ocr-hrv-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1165,6 +1268,7 @@ Description: tesseract-ocr language files for Croatian (legacy)
 
 Package: tesseract-ocr-isl-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1178,6 +1282,7 @@ Description: tesseract-ocr language files for Icelandic (legacy)
 
 Package: tesseract-ocr-ita-old-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1191,6 +1296,7 @@ Description: tesseract-ocr language files for Italian - Old (legacy)
 
 Package: tesseract-ocr-jpn-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1204,6 +1310,7 @@ Description: tesseract-ocr language files for Japanese (legacy)
 
 Package: tesseract-ocr-kan-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1217,6 +1324,7 @@ Description: tesseract-ocr language files for Kannada (legacy)
 
 Package: tesseract-ocr-kor-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1230,6 +1338,7 @@ Description: tesseract-ocr language files for Korean (legacy)
 
 Package: tesseract-ocr-mal-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1243,6 +1352,7 @@ Description: tesseract-ocr language files for Malayalam (legacy)
 
 Package: tesseract-ocr-mkd-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1256,6 +1366,7 @@ Description: tesseract-ocr language files for Macedonian (legacy)
 
 Package: tesseract-ocr-mlt-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1269,6 +1380,7 @@ Description: tesseract-ocr language files for Maltese (legacy)
 
 Package: tesseract-ocr-msa-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1282,6 +1394,7 @@ Description: tesseract-ocr language files for Malay (legacy)
 
 Package: tesseract-ocr-spa-old-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1295,6 +1408,7 @@ Description: tesseract-ocr language files for Spanish, Castilian - Old (legacy)
 
 Package: tesseract-ocr-sqi-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1308,6 +1422,7 @@ Description: tesseract-ocr language files for Albanian (legacy)
 
 Package: tesseract-ocr-swa-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1321,6 +1436,7 @@ Description: tesseract-ocr language files for Swahili (legacy)
 
 Package: tesseract-ocr-tam-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1334,6 +1450,7 @@ Description: tesseract-ocr language files for Tamil (legacy)
 
 Package: tesseract-ocr-tel-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1347,6 +1464,7 @@ Description: tesseract-ocr language files for Telugu (legacy)
 
 Package: tesseract-ocr-tha-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1360,6 +1478,7 @@ Description: tesseract-ocr language files for Thai (legacy)
 
 Package: tesseract-ocr-osd-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
@@ -1373,6 +1492,7 @@ Description: tesseract-ocr language files for script and orientation
 
 Package: tesseract-ocr-equ-legacy
 Architecture: all
+Multi-Arch: foreign
 Provides: tesseract-ocr-language, tesseract-ocr-lang
 Depends: ${misc:Depends}
 Recommends: tesseract-ocr (>= 3.99)
