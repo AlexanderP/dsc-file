@@ -1,0 +1,83 @@
+Source: clementine-qt5
+Section: sound
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: cmake (>= 2.6),
+               debhelper (>= 9),
+               docbook-to-man,
+               libboost-dev,
+               libboost-serialization-dev,
+               libcdio-dev,
+               libchromaprint-dev,
+               libcrypto++-dev,
+               libechonest-dev | wget,
+               libfftw3-dev,
+               libglew-dev,
+               libgpod-dev,
+               libgstreamer1.0-dev,
+               libgstreamer-plugins-base1.0-dev,
+               libimobiledevice-dev,
+               liblastfm-dev,
+               libmtp-dev,
+               libplist-dev,
+               libprojectm-dev,
+               libmygpo-qt-dev,
+               libqt5opengl5-dev,
+               libqt5webkit5-dev,
+               libqxt-dev,
+               libsparsehash-dev,
+               libsqlite3-dev,
+               libtag1-dev (>= 1.8),
+               libusbmuxd-dev,
+               qtbase5-private-dev,
+               qttools5-dev,
+               libprotobuf-dev, protobuf-compiler,
+               libqca2-dev,
+               libfftw3-dev,
+               libgpod-dev, libpulse-dev, libqt5x11extras5-dev
+Standards-Version: 4.1.4
+Homepage: http://www.clementine-player.org/
+
+Package: clementine
+Architecture: any
+Replaces: clementine-player
+Conflicts: clementine-player
+Depends: ${shlibs:Depends}, ${misc:Depends},
+         gstreamer1.0-plugins-base,
+         gstreamer1.0-plugins-good,
+         gstreamer1.0-plugins-ugly,
+         libqt5sql5-sqlite,
+         projectm-data (>= 2.0.1+dfsg-6)
+Recommends: gstreamer1.0-alsa | gstreamer1.0-pulseaudio
+Suggests: gstreamer1.0-plugins-bad
+Description: modern music player and library organizer
+ Clementine is a multiplatform music player focusing on a fast and
+ easy-to-use interface for searching and playing your music.
+ .
+ Summary of included features :
+  - Search and play your local music library.
+  - Listen to internet radio from SomaFM, Magnatune, Jamendo, Intergalactic FM,
+    Digitally Imported, JAZZRADIO.com, ROCKRADIO.com, RadioTunes.com,
+    Soundcloud, Icecast and Subsonic servers. 
+  - Search and play songs you've uploaded to Box, Dropbox, Google Drive, and
+    OneDrive.
+  - Create smart playlists and dynamic playlists.
+  - Tabbed playlists, import and export M3U, XSPF, PLS and ASX.
+  - CUE sheet support.
+  - Play audio CDs.
+  - Visualisations from projectM.
+  - Lyrics and artist biographies and photos.
+  - Transcode music into MP3, Ogg Vorbis, Ogg Speex, FLAC or AAC.
+  - Edit tags on MP3 and OGG files, organise your music.
+  - Fetch missing tags from MusicBrainz.
+  - Discover and download Podcasts.
+  - Download missing album cover art from Last.fm.
+  - Native desktop notifications using libnotify.
+  - Remote control using an Android device, a Wii Remote, MPRIS or the
+    command-line.
+  - Copy music to your iPod, iPhone, MTP or mass-storage USB player.
+  - Queue manager.
+ .
+ It is largely a port of Amarok 1.4, with some features rewritten to take
+ advantage of Qt4.
+ .

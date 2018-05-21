@@ -1,0 +1,1109 @@
+clementine-qt5 (1.3.1+git2058-gf00d9727c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: qt5
+  * Commit: f00d9727c3b9a67145217ba1100bb9c2eb5a12f3
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 19 May 2018 08:56:48 +0300
+
+clementine-qt5 (1.3.1+git1956-g37912a87b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 37912a87b89461d637b077503c8db5026b05e20a
+  * Date: 1525195787
+  * git changelog:
+  *  37912a87b - Fix WavPack playback (#6048)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 12 May 2018 01:30:22 +0300
+
+clementine-qt5 (1.3.1+git1955-g776fb3830-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 776fb3830e1390925200611494063296da601d7e
+  * Date: 1523792125
+  * git changelog:
+  *  776fb3830 - Merge pull request #6043 from
+    TheUbuntuGuy/feature/mf.playnext
+  *  d28a31843 - Clang format
+  *  2793cfa7f - Add to loaderinserter
+  *  3626d8496 - Add play next from library
+  *  a789ce82c - Allow playing of tracks already in queue
+  *  6e387c257 - Initial playlist implementation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 27 Apr 2018 21:40:16 +0300
+
+clementine-qt5 (1.3.1+git1949-ge52c7f647-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: e52c7f6475a989fb83aa74fe11298c2e81ba30b4
+  * Date: 1520855759
+  * git changelog:
+  *  e52c7f647 - Fix formatting
+  *  d33ac6ef8 - Fix background not loading.
+  *  c393926be - Fix background not loading.
+  *  de23c3181 - Fix resume playback on start not working.
+  *  c3a7920cb - Don't use empty URL's from LastFM.
+  *  ddfa5e63f - Fix channels loading for DI.fm services after API
+    domain changes (#6023)
+  *  c9d954f8a - Fix bug in covermanager not saving album cover to DB.
+    (#6011)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 16 Mar 2018 11:50:37 +0300
+
+clementine-qt5 (1.3.1+git1942-g1732e56fe-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 1732e56fe6e6d6df5e0f5aa71f0f1ce924e4fa78
+  * Date: 1519515749
+  * git changelog:
+  *  1732e56fe - Hide TrackSliderPopup on appropriate leaveEvent
+  *  9929450cc - Revert "Hide TrackSliderPopup on exit from popup"
+  *  f629d3731 - Hide TrackSliderPopup on exit from popup
+  *  43e1b6922 - Fix docker run command
+  *  c98a8cdae - Experiment with building in docker on Travis.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 02 Mar 2018 19:51:01 +0300
+
+clementine-qt5 (1.3.1+git1937-g33e1a9bc3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 33e1a9bc32e8640bc54da32d2e67cd521ad951f8
+  * Date: 1518651047
+  * git changelog:
+  *  33e1a9bc3 - Update README.md
+  *  2555595ce - Determine operator enum instead of comparing with magic
+    numbers
+  *  37262434b - Merge pull request #5985 from kleinfreund/master
+  *  4ab6f359d - Smart Playlists: Add empty/not empty operators
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 15 Feb 2018 21:13:53 +0300
+
+clementine-qt5 (1.3.1+git1933-geafc1713a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: eafc1713abb197b268e23c5617a55a5273c2f6f8
+  * Date: 1517678350
+  * git changelog:
+  *  eafc1713a - Merge pull request #5960 from vikramambrose/feature-
+    playlist-page-search-filter
+  *  ba777f6e0 - Merge pull request #5906 from akinozgen/master
+  *  595eec787 - Removed filter for audio/folder OneDrive items as
+    OneDrive doesn't count many audio file types as audio (e.g. flac)
+    (#5977)
+  *  efeafeea6 - Update clementine.desktop (#5975)
+  *  38c1f8777 - Fix compilation with crypto++ >= 6.0.0 (#5974)
+  *  5e065609b - Ensure song items are shown on Favorited signal
+  *  fefea9de6 - Disable drag of track items until this is properly
+    implemented
+  *  ae71d24f6 - Ensure all nodes are shown when filter is cleared
+  *  3da938eac - Add search filter to playlist list page
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 04 Feb 2018 01:41:54 +0300
+
+clementine-qt5 (1.3.1+git1922-g790fc2ff2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 790fc2ff2895d15631b3806e30801439d268c434
+  * Date: 1515576125
+  * git changelog:
+  *  790fc2ff2 - Replace Nokia based FancyTabWidget with standard
+    QTabWidget (#5956)
+  *  2e4a67b8d - Add appearance option to hide playlist filter toolbar
+    (#5942)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 20 Jan 2018 14:59:12 +0300
+
+clementine-qt5 (1.3.1+git1920-gd9b12a559-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: d9b12a5599a603437842fb6aa0c44fbbc8ac527f
+  * Date: 1514033318
+  * git changelog:
+  *  d9b12a559 - Added additional check when enclosure type is missing
+    (#5934)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 27 Dec 2017 08:39:56 +0300
+
+clementine-qt5 (1.3.1+git1919-gb724291ef-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: b724291ef9e6e1406d8229e32ff9b0ae2bc39bc9
+  * Date: 1513288083
+  * git changelog:
+  *  b724291ef - Ensure that the correct playlist is played (#5929)
+  *  650eb0534 - Always include the hours in the the time string if the
+    duration if (#5925)
+  *  27bef68cf - Attempt to reload stream on "Server does not support
+    seeking." error (#5923)
+  *  3134e09ae - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 16 Dec 2017 10:12:48 +0300
+
+clementine-qt5 (1.3.1+git1915-g944e5fb32-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 944e5fb326909f2e74c1383a486bfd773ee7de76
+  * Date: 1511776850
+  * git changelog:
+  *  944e5fb32 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  d71651db7 - Explicitly link libprojectm renderer to GLEW
+  *  7599b5771 - Explicitly link qt to libclementine-common
+  *  eab875c46 - Add support for deleting the currently playing track
+    via the commandline (#5899)
+  *  27fc91592 - Add settings option to stop playback if song fails to
+    play (#5905)
+  *  7b1b43ffe - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 30 Nov 2017 22:22:24 +0300
+
+clementine-qt5 (1.3.1+git1909-g83e860eab-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 83e860eabd9f4a864c553f110742027cdd01b76f
+  * Date: 1510567244
+  * git changelog:
+  *  83e860eab - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  ce22905a0 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 16 Nov 2017 08:51:28 +0300
+
+clementine-qt5 (1.3.1+git1907-g9a5bcb7a3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 9a5bcb7a353872ef9f9c95bfd02e02049c25c270
+  * Date: 1509357643
+  * git changelog:
+  *  9a5bcb7a3 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  221f6d726 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  f1b767faa - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 02 Nov 2017 08:54:31 +0300
+
+clementine-qt5 (1.3.1+git1904-gdfa7042ff-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: dfa7042ff388a549aa9fc221686b194302312966
+  * Date: 1507295280
+  * git changelog:
+  *  dfa7042ff - Subsonic: download cover art (#5880)
+  *  62d1eb445 - Added Hindi translations for desktop file. Removed
+    empty lines (#5876)
+  *  ba8a82bff - Merge branch 'mananaBanana-minorFixes'
+  *  a7ec5662e - Updated qt bug report page
+  *  c024b1340 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  b851741a0 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 06 Oct 2017 19:48:44 +0300
+
+clementine-qt5 (1.3.1+git1898-gd2a69b2f9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: d2a69b2f91c9a38a5163d1bbced179d5b2c6e159
+  * Date: 1505728845
+  * git changelog:
+  *  d2a69b2f9 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  913cc2918 - Include xingmux plugin on mac.
+  *  4310b7ed0 - Rename Mac OS X to macOS in README.md (#5861)
+  *  6faa749b1 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 21 Sep 2017 13:51:20 +0300
+
+clementine-qt5 (1.3.1+git1894-g06e8d1eb5-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 06e8d1eb560b00d0a38cbbd92c9d4579a3e5bddf
+  * Date: 1504519245
+  * git changelog:
+  *  06e8d1eb5 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  f511ee12e - Spelling: "Wii Remote" → ←↑↓⊕⊖⌂ (#5844)
+  *  b581f2454 - Spelling: Hip Hop (#5843)
+  *  36459d2e6 - Spelling "%" → "percent" for consistency (#5842)
+  *  566708b77 - ↑↓ for "Up" and "Down" (#5841)
+  *  be79e8f92 - Spelling: FLAC elsewhere (#5840)
+  *  38cc22ca8 - Update song.cpp (#5839)
+  *  b89ccb04f - Spelling: D-Bus (#5838)
+  *  050813bf9 - Spelling: D-Bus (#5837)
+  *  c29886d8c - Spelling: URL (#5836)
+  *  55ef90872 - Spelling: Log in, Last.fm (#5835)
+  *  f910b2ff0 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 07 Sep 2017 19:56:29 +0300
+
+clementine-qt5 (1.3.1+git1882-ga8cb9bbd2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: a8cb9bbd2a199cc12b4d514826a5b4fed96fba9b
+  * Date: 1503599534
+  * git changelog:
+  *  a8cb9bbd2 - Authenticate Last.fm with "oauth".
+  *  a056a7316 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  dad0c8f31 - [win32] Fix build in src/ui/ (#5784)
+  *  328e669e8 - Fix mac build
+  *  86d7639a7 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 25 Aug 2017 00:02:33 +0300
+
+clementine-qt5 (1.3.1+git1877-g203ec76-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 203ec76973d0c38980bd220ce534f1674eee4fbd
+  * Date: 1502284356
+  * git changelog:
+  *  203ec76 - Add contextual searches to playlists, library and global
+    search. (#5649)
+  *  4aee299 - Fix MPRIS track ids
+  *  d8135a9 - Update letras lyrics site
+  *  95b59b8 - Just cd for travis
+  *  186250c - Experiment with Travis CI
+  *  04beaa9 - Fix MPRIS2 playlist ids.
+  *  03ff002 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  fcceab3 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 10 Aug 2017 05:30:43 +0300
+
+clementine-qt5 (1.3.1+git1869-g63e9079-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 63e90791a497b91591740b4c635a6cf021d2c253
+  * Date: 1500989706
+  * git changelog:
+  *  63e9079 - Make the initial SmartPlaylistQuerySearchPage vertically
+    resizeable, somewhat (#5799)
+  *  32f31d4 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  4987653 - Resolve #3693 (#5790)
+  *  61d2aaa - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 27 Jul 2017 09:17:53 +0300
+
+clementine-qt5 (1.3.1+git1865-g8205e3d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 8205e3d846c0db0d738640711721027bb03c6f1f
+  * Date: 1499680845
+  * git changelog:
+  *  8205e3d - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  a781cc0 - Add 'transient' hint to OSD_X11 (#5756) (#5779)
+  *  f288dd2 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Jul 2017 09:21:45 +0300
+
+clementine-qt5 (1.3.1+git1862-g19b5111-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 19b51111f8a059641b0b9a73ac7cc413f71fca71
+  * Date: 1498543254
+  * git changelog:
+  *  19b5111 - Update lyrics.wikia parsing (#5773)
+  *  ec33b0e - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  7bd0639 - fix up key in playlist (#5768)
+  *  3c0f005 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 30 Jun 2017 13:31:20 +0300
+
+clementine-qt5 (1.3.1+git1858-g63e97fe-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 63e97fe0ac6a9b5a8a71226449798764767eb1f7
+  * Date: 1497261658
+  * git changelog:
+  *  63e97fe - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  6035ce0 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 16 Jun 2017 09:22:34 +0300
+
+clementine-qt5 (1.3.1+git1856-g8953227-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 8953227c65e870ae36a108c7f27f4d6ef19fae50
+  * Date: 1496249976
+  * git changelog:
+  *  8953227 - New shortcut: remove current playing song from playlist
+    (#5723)
+  *  583eb25 - Gtkicons (#5742)
+  *  bdda50b - Continuation of "Seek instead of navigation with arrow
+    keys" #5550, now allows up arrow key. (#5721)
+  *  8ff7d57 - SoundCloud service simple search limit is set. (#5738)
+  *  322e49d - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 02 Jun 2017 12:10:50 +0300
+
+clementine-qt5 (1.3.1+git1851-gf8f6fef-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: f8f6feff3466bf6563d1e7065448dc982871408a
+  * Date: 1494842476
+  * git changelog:
+  *  f8f6fef - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 28 May 2017 15:33:17 +0300
+
+clementine-qt5 (1.3.1+git1850-gf854bc5-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: f854bc5deb67b78193672a1ab59df904ead9f1d5
+  * Date: 1494241679
+  * git changelog:
+  *  f854bc5 - Simpler iconloader::Load() logic (#5706)
+  *  61e6fc7 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 12 May 2017 08:24:58 +0300
+
+clementine-qt5 (1.3.1+git1848-ge8dbea8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: e8dbea8c933474a70680947d67bf78fc8be91018
+  * Date: 1493632855
+  * git changelog:
+  *  e8dbea8 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  c1e7887 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  52f1982 - Delete Undo Fix Attempt - Should Solve Issue #5701 Using
+    Clementine to delete a song from disk should not be added to the
+    undo stack (#5702)
+  *  5acbcbb - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  edccd95 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 05 May 2017 07:37:15 +0300
+
+clementine-qt5 (1.3.1+git1843-g2c60481-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 2c60481f746f57e96eebd3eacdf1e7eccd305aff
+  * Date: 1491213657
+  * git changelog:
+  *  2c60481 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  9f00e02 - This fixes "First track always the same in shuffle #793".
+    Adding this call in the if statement allows a reshuffle to happen
+    after the playlist ends so that when the playlist will restart, it
+    will already have a new set location to go to. (#5689)
+  *  fba9e8d - Fix psychedelic mode on analysers (#5688)
+  *  672d00b - Fixes the issue "Seek instead of navigation with arrow
+    keys #5550". Now allows the leaf to be closed by arrow left at any
+    point of the leaf, not only the parent, and if the library is
+    focused and arrow keys are pressed and there is nothing to open or
+    close, the request is ignored (no seek) (#5684)
+  *  a5d12d0 - Request to merge a fix for a crash during searching under
+    Internet Tab (#5682)
+  *  0b34586 - Fix some warnings shown on start-up (#5679)
+  *  18d2e35 - Register QAbstractSocket::SocketState meta type
+  *  0f4db74 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 08 Apr 2017 18:33:14 +0300
+
+clementine-qt5 (1.3.1+git1835-ge3ece3d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: e3ece3d4c44361b23842f60340009b68e8b462a7
+  * Date: 1490093412
+  * git changelog:
+  *  e3ece3d - SaveToTemporaryFile(): use QTemporaryFile directly
+  *  35e274c - Refactor SongLoader::LoadRemotePlaylist()
+  *  f44414d - Add Utilities::SaveToTemporaryFile()
+  *  f609bc7 - Fix remote-playlist load
+  *  33aa38b - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 24 Mar 2017 19:00:52 +0300
+
+clementine-qt5 (1.3.1+git1830-ga034c2d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: a034c2d4d0507e6f49b48482d2b993953de18cba
+  * Date: 1489677482
+  * git changelog:
+  *  a034c2d - Remove non-allowed characters in playlist filename when
+    saving. (Fixes #5460)
+  *  f7eea6c - static_cast<:: apparently confuses older GCC.
+  *  2d1b425 - Fixes #5660 - compile error
+  *  e7ec942 - Explicitly using python2 to prevent errors on py3-default
+    systems
+  *  6c9bc43 - Refactor analyzers for new FHT modifications. Use
+    QVectors where possible. Make readability changes in the code.
+  *  6a19afd - Refactor FHT class: use QVector and const values, remove
+    unnecesary memory handling.
+  *  b7fb649 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  0215707 - Uses effective fields for album hashing and comparison
+    (#5653)
+  *  62bc647 - Roll back to the cache naming conventions for covers
+    (#5651)
+  *  99ad5dc - Refactor EffectiveAlbumArtistName()
+  *  426118a - Revert "include opus support in windows build (#5648)"
+  *  a8cbb3b - Unlock DB mutexes implicitly using scopes. Add error
+    handling for query.
+  *  f5bd7ef - ItemHasCover(): Replace pointer with reference
+  *  82f0d26 - Use the 'effective_album' title when searching for a
+    track's cover
+  *  e30e6da - Add 'effective_album' property to Song
+  *  2c64351 - Refactor icon handling. Make empty-cover filtering work
+    again.
+  *  deb7c33 - Add support for 'album artist' field in the
+    LibraryBackendInterface
+  *  58b7c62 - Make Cover Manager aware of 'album artist' field
+  *  62cec8c - Prioritize album artist in cover search and manager
+  *  5d0cf34 - Use new clementine images API.
+  *  81c905b - include opus support in windows build (#5648)
+  *  3d80f7e - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 17 Mar 2017 14:25:33 +0300
+
+clementine-qt5 (1.3.1+git1808-g3b51f80-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 3b51f80fa3a992d2a820fe7b8b4d126d1351dac6
+  * Date: 1488541787
+  * git changelog:
+  *  3b51f80 - Small improvements to Cover Manager (#5645)
+  *  30e3fdb - Fix overflow in MoodbarProxyStyle (fixes #5638) (#5643)
+  *  27bf50d - Do not log sensitive data in OAuthenticator.
+  *  973f32c - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  652f38a - Fix C:\data cache directory for portable builds
+  *  1aed619 - Fix intergalactic FM URLs.
+  *  3dd4375 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 03 Mar 2017 19:37:46 +0300
+
+clementine-qt5 (1.3.1+git1801-g8a6cc8b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 8a6cc8b5069265e1e92e22def985e22c5955e503
+  * Date: 1487004406
+  * git changelog:
+  *  8a6cc8b - Add missing <functional> includes (#5630)
+  *  4325be6 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  07f1ab6 - Change license for network remote protocol buffer
+    meassages to Apache
+  *  9967bd4 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 17 Feb 2017 19:07:02 +0300
+
+clementine-qt5 (1.3.1+git1797-g6483510-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 6483510bcaaab055a059648035b4429b4f0a4d66
+  * Date: 1485770444
+  * git changelog:
+  *  6483510 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  df0e7ab - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 03 Feb 2017 18:59:15 +0300
+
+clementine-qt5 (1.3.1+git1795-g69cddf7-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 69cddf70efccf0ff29a7c537afda8ccf26398109
+  * Date: 1484747460
+  * git changelog:
+  *  69cddf7 - macOS: Clear stale native notifications on 10.9+. (#5601)
+  *  b463e63 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  3485bbe - Workaround to spotify loading playlist issue (#5593)
+  *  1a47720 - Use CaseInsensitive file type checking #5499 (#5592)
+  *  7ce7fe1 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  becb0b3 - Remove some stray vkontakte code
+  *  c7b8aac - Remove support for VK
+  *  87d12ff - Use versioned FLAC DLL.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 20 Jan 2017 23:15:56 +0300
+
+clementine-qt5 (1.3.1+git1787-g57d0039-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 57d00394ee87bb5bcfedf6361d5640976209f362
+  * Date: 1483636197
+  * git changelog:
+  *  57d0039 - Bugfix for resume playback on start
+  *  00c96f7 -  Consider depth levels in path sorting (#5445) (#5573)
+  *  789c492 - Fix a typo in a header guard (#5570)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 06 Jan 2017 12:43:02 +0300
+
+clementine-qt5 (1.3.1+git1784-g265f27a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 265f27aff689d8c10c0391b7ceaa30d4909fd7c9
+  * Date: 1482501615
+  * git changelog:
+  *  265f27a - Fix libhogweed dll
+  *  43c2fad - Excludes must go before directory in tar command.
+  *  230e822 - Bump DLL versions
+  *  d3898d2 - Add dialog to display streams' audio details (#5547)
+  *  589d641 - Fix playlist save on dialogs which do not enforce
+    extensions (#5496)
+  *  1c08912 - Let the audio sink autonegotiate the bit depth. (Possible
+    fix for #5533) (#5541)
+  *  f166780 - Try building a more featureful dmg again
+  *  08e1db4 - Create dmg with genisoimage & libdmg-hfsplus
+  *  809387c - Revert "Add libdmg-hfsplus to 3rdparty"
+  *  ff8a970 - Revert "Add copyright for libdmg-hfsplus"
+  *  e91cc36 - Add copyright for libdmg-hfsplus
+  *  3662b5e - Add libdmg-hfsplus to 3rdparty
+  *  bd2de93 - Add more override specifiers.
+  *  df5c53a - Add "override" to SpotifyService.
+  *  f829fd2 - Use cross version of otool if available.
+  *  6901c9b - Fix podcast episodes forgotten (#5560)
+  *  da90d1c - Fix cross compiling for mac
+  *  ae4fac4 - Use cross version of install_name_tool if available.
+  *  acc5e9f - Use linux-compatible commands in mac script.
+  *  6f35659 - Fixes for cross compiling for mac.
+  *  d3ea0c8 - Merge pull request #5553 from Chocobozzz/master
+  *  ded3126 - Add compatibility with chromaprint >= 1.4
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 24 Dec 2016 11:23:05 +0300
+
+clementine-qt5 (1.3.1+git1762-g5e7dd00-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 5e7dd00024328f7ce43946ae8e30ef362d409284
+  * Date: 1479128124
+  * git changelog:
+  *  5e7dd00 - Use a flickr group instead of a tag for kittens.
+  *  d19ee71 - Try disabling SPMediaKeyTap on Sierra+.
+  *  420601f - Add support for classicalradio.com
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 14 Nov 2016 20:00:27 +0300
+
+clementine-qt5 (1.3.1+git1759-g804d716-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 804d716e47d5d037abcb83a1cd81956bad52007c
+  * Date: 1476994409
+  * git changelog:
+  *  804d716 - Merge pull request #5520 from nicolasmartinelli/master-
+    endpoint
+  *  650f06f - Fix Subsonic endpoint
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 28 Oct 2016 20:51:59 +0300
+
+clementine-qt5 (1.3.1+git1757-g1a2f6e2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 1a2f6e2fe8ff054f1125183d3b00b468d9f5fb5a
+  * Date: 1476371939
+  * git changelog:
+  *  1a2f6e2 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  fa7bcff - Fix undefined symbol error conversion from std::string to
+    TagLib::String Taglib version 1.9.1-2.4 on debian
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Oct 2016 22:22:00 +0300
+
+clementine-qt5 (1.3.1+git1755-gac90f0b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: ac90f0b091f1e620748f4f6e294199d5cf021c7f
+  * Date: 1474884052
+  * git changelog:
+  *  ac90f0b - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  20ed72f - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  622a3e4 - Add support for displaying lyrics from a Vorbis comment
+    (#5495)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 30 Sep 2016 21:55:03 +0300
+
+clementine-qt5 (1.3.1+git1752-ge5ab3e7-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: e5ab3e786f9adde12cec3cc90cfe8c1cc6b06320
+  * Date: 1473674848
+  * git changelog:
+  *  e5ab3e7 - Network Remote: Check bytesAvailable >= 4 before reading
+    length integer
+  *  363e88a - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  d96a044 - added popular libraryfiltergroup filter: Album
+    artist/Album (#5476)
+  *  8da53ab - Add option to show/hide sidebar (#5459)
+  *  afb7e1d - Add attribution to wikipedia artist biographies
+  *  8ad5681 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 16 Sep 2016 20:27:33 +0300
+
+clementine-qt5 (1.3.1+git1746-gd70778b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: d70778b99b8b7e39a794b2df3a07efe84fe60a60
+  * Date: 1472464848
+  * git changelog:
+  *  d70778b - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  d9b3a93 - Update playlist virtual order after sorting (#5436)
+    (#5466)
+  *  09b0fab - Add new command line option for creating a new one
+    playlist #5373 (#5468)
+  *  0ce9e16 - Don't cache missing covers (#5471)
+  *  700361a - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 01 Sep 2016 20:20:45 +0300
+
+clementine-qt5 (1.3.1+git1741-ga99dc10-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: a99dc10cd6f5eaf2479f4b6cd3217d6bcd5b34b4
+  * Date: 1470650444
+  * git changelog:
+  *  a99dc10 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 20 Aug 2016 00:43:22 +0300
+
+clementine-qt5 (1.3.1+git1740-g0b5fb0c-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: 0b5fb0ccfff11de73b1654fc794087624f34393c
+  * Date: 1470045648
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 02 Aug 2016 20:52:32 +0300
+
+clementine-qt5 (1.3.1+git1735-ga4e2eab-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: a4e2eabaa482e129748c092df859262244234e5e
+  * Date: 1468940332
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 23 Jul 2016 14:32:52 +0300
+
+clementine-qt5 (1.3.1+git1726-g1f95a23-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: 1f95a23fd47f68620037cd7939281d5e64fe4065
+  * Date: 1467811605
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 09 Jul 2016 13:57:43 +0300
+
+clementine-qt5 (1.3.1+git1710-gaeb493c-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: aeb493c0167cebb8575c8ce7a76c162e5c9eb739
+  * Date: 1466603697
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 24 Jun 2016 21:31:03 +0300
+
+clementine-qt5 (1.3.1+git1707-gfde64e3-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: fde64e31b8b7016050512c46c551b5098821fb27
+  * Date: 1465319093
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 11 Jun 2016 10:13:40 +0300
+
+clementine-qt5 (1.3.1+git1681-ge31278c-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: e31278c05666f8ae0e819bd831c65e8766ba2679
+  * Date: 1462787734
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 13 May 2016 20:49:01 +0300
+
+clementine-qt5 (1.3.1+git1680-g931b6aa-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: 931b6aa2a8f2e2983c5a3dd2c65f9449a4387a2c
+  * Date: 1461578443
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 29 Apr 2016 22:32:35 +0300
+
+clementine-qt5 (1.3.0+git1629-g3afa80b-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: 3afa80bef036010eb439b059cc79969b50d884c9
+  * Date: 1460713484
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 15 Apr 2016 23:40:46 +0300
+
+clementine-qt5 (1.2.4~git1613-g9cb1ed5-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: 9cb1ed5126fa4dfed13970452c94a17ad9452c7e
+  * Date: 1459433219
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 02 Apr 2016 10:16:38 +0300
+
+clementine-qt5 (1.2.4~git1586-gf482612-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: f482612127ca72ea92cd04b95f33c6ae3a1ddab7
+  * Date: 1458330045
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 19 Mar 2016 09:22:34 +0300
+
+clementine-qt5 (1.2.4~git1574-g357af22-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: 357af2263b9efbbbfe3816b84c8a128f926e89ec
+  * Date: 1456740041
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 04 Mar 2016 16:15:21 +0300
+
+clementine-qt5 (1.2.4~git1572-g51c1c36-3) unstable; urgency=medium
+
+  * add Build-Depends libmygpo-qt-dev libpulse-dev 
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 27 Feb 2016 10:23:46 +0300
+
+clementine-qt5 (1.2.4~git1572-g51c1c36-2) unstable; urgency=medium
+
+  * lintian fix
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 26 Feb 2016 21:54:26 +0300
+
+clementine-qt5 (1.2.4~git1572-g51c1c36-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: 51c1c369345ee672fee58f1ac971b6b3c5b58ca5
+  * Date: 1455805078
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 19 Feb 2016 20:59:53 +0300
+
+clementine-qt5 (1.2.4~git1519-g20de7a1-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: 20de7a1a811326aedf46648cd3382d383ad388cc
+  * Date: 1454606022
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 05 Feb 2016 21:53:25 +0300
+
+clementine-qt5 (1.2.4~git1512-g9467bab-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: 9467babee478018eabfe480d0933dac79e9f9fb7
+  * Date: 1453388082
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 22 Jan 2016 21:21:35 +0300
+
+clementine-qt5 (1.2.4~git1473-g0a5334a-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: 0a5334a52adf6a291077c596b46dd17ec2f87e55
+  * Date: 1450913670
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 25 Dec 2015 21:43:07 +0300
+
+clementine-qt5 (1.2.4~git1450-gd50cfd5-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: d50cfd529346cc4c53ac6b64e0a6b7eaad29c523
+  * Date: 1449811861
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 12 Dec 2015 09:59:54 +0300
+
+clementine-qt5 (1.2.4~git1434-gf300946-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: f300946c818f7a7d52deedf241724c473459ec89
+  * Date: 1448634492
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 27 Nov 2015 20:55:28 +0300
+
+clementine-qt5 (1.2.4~git1402-g6de8558-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: 6de85589baf3f71bc7fface070c17028f1ab676c
+  * Date: 1447332311
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 14 Nov 2015 13:58:34 +0300
+
+clementine-qt5 (1.2.4~git1390-gf92e88e-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: f92e88e321fa13b3be9c61546bae8108b5ba6713
+  * Date: 1446223551
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 30 Oct 2015 22:52:45 +0300
+
+clementine-qt5 (1.2.4~git1376-gb36b20f-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: b36b20f5f439ac58ef22abb5f63890c231604d07
+  * Date: 1444998744
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 17 Oct 2015 12:11:52 +0300
+
+clementine-qt5 (1.2.3+git20150928-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: daddbdea96d059c55ec0d741d52d7dcb783ba638
+  * Date: 1443435445
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 03 Oct 2015 14:24:02 +0300
+
+clementine-qt5 (1.2.3+git20150918-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: 21ab4518d9012067b64f81fae272af3a52846c34
+  * Date: 1442533465
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 19 Sep 2015 18:27:01 +0300
+
+clementine-qt5 (1.2.3+git20150902-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: 28e09c0ddd5eeb5b789afce93661597fb5d91350
+  * Date: 1441190037
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 04 Sep 2015 21:17:52 +0300
+
+clementine-qt5 (1.2.3+git20150814-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: fff58e772ed21fd05fd259a29c1f43f97012192e
+  * Date: 1439552186
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Aug 2015 21:46:43 +0300
+
+clementine-qt5 (1.2.3+git20150730-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: edf67f5b1032011610d54cd5870fc43a344d8d85
+  * Date: 1438262649
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 31 Jul 2015 22:37:11 +0300
+
+clementine-qt5 (1.2.3+git20150715-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: 85858d7bbe56bd016122ffb5eefba428b6c2cf52
+  * Date: 1436979525
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 17 Jul 2015 20:52:57 +0300
+
+clementine-qt5 (1.2.3+git20150703-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: 159f1e4cf57b2a940e42ba78f712a6c84eed19bd
+  * Date: 1435934139
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 04 Jul 2015 22:11:02 +0300
+
+clementine-qt5 (1.2.3+git20150617-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: 1323af5025dee8e475db55266dfb6dcec4e5ae6d
+  * Date: 1434548959
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 20 Jun 2015 20:47:26 +0300
+
+clementine-qt5 (1.2.3+git20150602-1) unstable; urgency=medium
+
+  * Compile
+  * Branch: master
+  * Commit: 4b332b8137f0470bad8fc4a341a94ee25cc269a3
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 07 Jun 2015 20:52:54 +0300
+
+clementine-qt5 (0.1.0+svn240-1) unstable; urgency=low
+
+  * Initial release (Closes: #123456)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 25 Feb 2010 20:51:07 +0300

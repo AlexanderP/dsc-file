@@ -1,0 +1,96 @@
+clementine for Debian
+=====================
+
+The current original upstream version of clementine use some embedded copy code located in 3rdparty/*. 
+
+Some of them can be replaced by an equivalent Debian package
+------------------------------------------------------------
+
+* libmygpo-qt: It is a shared library packaged in Debian.
+
+* libprojectm2: It is a shared library already packaged in Debian but some patches are
+needed to compile Clementine with it. Patches are now included since version 2.0.1+dfsg-6
+of libprojectm2. (see #600653)
+
+* taglib: It is a shared library packaged in Debian.
+
+Some of them must be used in this package
+-----------------------------------------
+
+* qxt: It is a modified copy of a the qxtglobalshortcut component of the libqxt
+  library. This library was packaged in Debian by myself but the project was
+  now abandoned by upstream and will become irrelevant in the future of QT
+  developments. Therefore we can't use the system packaged equivalent any
+  longer and I think it's better now to let Clementine developers manage and
+  maintain this modified copy.
+
+* qsqlite: It is a shared library also packaged in Debian (libqt4-sql-sqlite)
+  but not usable for the reasons above.
+  There is a dispute around sqlite usage in clementine and Debian DFSG rules.
+  Note that in previous version, clementine developers recommended to use an
+  embedded version of the entire sqlite3 library which was not acceptable in
+  Debian. So we always remove the embedded copy and force the use of the system
+  version of sqlite by set the cmake options. Past stories here:
+    - http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=722471
+    - http://code.google.com/p/clementine-player/issues/detail?id=3865
+    - http://code.google.com/p/clementine-player/issues/detail?id=3847
+  Now clementine developers no longer use/include an embedded version of
+  sqlite3 which is a good point. However they now stricly require to use a
+  embedded version of the Qt4 sqlite plugin which include specific changes for
+  clementine. The explanation is at line 318 of CMakeList.txt file.
+
+* qtsingleapplication: It is a small shared library not packaged in Debian 
+unfortunately. It is used by others Debian package as embed code copy too.
+
+* qtiocompressor: It is a small shared library not packaged in Debian unfortunately.
+
+* sha2: It is a small shared library not packaged in Debian unfortunately.
+
+* qocoa: It is a collection of Qt wrappers. It is used for easily switch between standard Qt widget
+and OSX widget according to the platform. It is a hard requirement for Clementine.
+Upstream author recommends to use it as an embed copy :
+  - https://github.com/mikemcquaid/Qocoa#usage
+
+* gmock: It is a test framework. There are a package google-mock in Debian but
+  it does not provide any shared libraries and recommends to use gmock
+  framework staticaly like clementine developers does. See README.Debian file
+  of google-mock package.
+
+Some of them must not be used in this package
+---------------------------------------------
+
+* qtwin: Not needed on GNU/Linux system so not used in this package.
+
+* tinysvcmdns: Not needed on GNU/Linux system so not used in this package.
+
+* fancytabwidget: Only useful for certain experimental options.
+
+* SPMediaKeyTap: Not needed on GNU/Linux system so not used in this package.
+
+* google-brakepad: Only useful for reporting bugs using the google-breakpad service
+  not needed in Debian.
+
+* vreen: Only useful to enable the optional VK module. No Debian package available.
+
+"Easter eggs"
+-------------
+
+The current upstream version of clementine also use some non-dfsg files located in data/.
+They are mainly used for some "Easter eggs" displayed in clementine interface.
+
+For the reasons above, the following components have been removed in the DFSG Debian version of this package :
+-------------------------------------------------------------------------------------------------------------
+ 
+* 3rdparty/fancytabwidget
+* 3rdparty/libprojectm
+* 3rdparty/qtwin
+* 3rdparty/vreen
+* 3rdparty/taglib
+* data/lumberjacksong.txt
+* data/hypnotoad.gif
+* 3rdparty/google-breakpad
+* 3rdparty/SPMediaKeyTap
+* mingw/
+* 3rdparty/tinysvcmdns/
+
+ -- Thomas Pierson <contact@thomaspierson.fr>, Sun, 1 Oct 2017 14:15:40 +0200

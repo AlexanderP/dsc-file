@@ -1,0 +1,40 @@
+#!/usr/bin/make -f
+
+CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
+CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(CPPFLAGS)
+LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
+
+CMAKEOPTS = -DBUNDLE_PROJECTM_PRESETS=OFF \
+	-DSTATIC_SQLITE=ON \
+	-DCMAKE_CXX_FLAGS="$(CXXFLAGS) -DQT_NO_DEBUG_OUTPUT -DQT_NO_WARNING_OUTPUT"
+
+CMAKEOPTS += -DUSE_SYSTEM_PROJECTM=ON \
+	-DCMAKE_SHARED_LINKER_FLAGS="$(LDFLAGS)" \
+	-DCMAKE_EXE_LINKER_FLAGS="$(LDFLAGS)"
+
+BUILDDEBFLAGS = -- -Zxz -z9
+
+%:
+	dh $@ --buildsystem=cmake --parallel
+
+override_dh_auto_configure:
+	dh_auto_configure -- $(CMAKEOPTS)
+
+override_dh_auto_build:
+	docbook-to-man debian/clementine.sgml > debian/clementine.1
+	dh_auto_build
+
+override_dh_auto_clean:
+	rm -f debian/clementine.1
+	rm -f dist/Info.plist
+	rm -f dist/clementine.spec
+	rm -f dist/maketarball.sh
+	rm -f dist/windows/clementine.nsi
+	rm -f dist/windows/clementine-portable.nsi
+	rm -f src/translations/translations.pot
+	dh_auto_clean
+
+override_dh_installchangelogs:
+	dh_installchangelogs Changelog
+
+override_dh_auto_test:
