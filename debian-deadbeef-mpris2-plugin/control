@@ -1,0 +1,13 @@
+Source: deadbeef-mpris2-plugin
+Section: sound
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 9), deadbeef-dev, libglib2.0-dev, autotools-dev, automake, autoconf, autopoint, libtool
+Standards-Version: 4.1.4
+Homepage: https://github.com/Serranya/deadbeef-mpris2-plugin
+
+Package: deadbeef-mpris2-plugin
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: MPRISv2 plugin for DeaDBeeF-player
+ This plugin aims to implement the MPRISv2 for DeaDBeeF.

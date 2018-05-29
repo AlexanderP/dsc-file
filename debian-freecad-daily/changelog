@@ -1,3 +1,163 @@
+freecad-daily (0.17+git13801-4b089f966-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 4b089f96676958566b0049b9c69ffccd39c0eb50
+  * Date: 1527353578
+  * git changelog:
+  *  4b089f966 - fix inconsistency with default value of random shape
+    color
+  *  7c010ab9a - implement option to change corner of navi cube
+  *  d15c7d067 - + option to disable navi cube + handle destruction of
+    GL context in 3d viewer class + fix for OpenGL error message:
+    'Texture is not valid in the current context. Texture has not been
+    destroyed'
+  *  865f83b57 - remove unrealiable implementation of
+    ViewNormalToSketchPlaneCmd
+  *  ddf881a1d - make NaviCube working for Qt4 and Qt5
+  *  ba99fff1d - fix Qt5 build failure
+  *  13a4f8414 - First Qt5 compatible NaviCube attempt
+  *  934603b60 - Draft: Fixed draft2sketch not working with ellipses
+  *  e0ef642d2 - fix copy/paste error, add back 3 lines
+  *  f9212edc6 - Update Draft.py
+  *  e74a18f09 - Update Draft.py
+  *  0c4c04156 - Part: fix imports of Show.TempoVis
+  *  78f054f09 - Show: improve container support
+  *  0511284f0 - Show: toggle support for sketch clipping plane
+  *  7edfe0f26 - Show: fixes
+  *  ab478f947 - Sketcher: Section Command enabling the clipping planes
+  *  c3f0513cc - Sketcher: Section view artwork
+  *  bd442192f - Show: fix forgotten cmakelists
+  *  75ba52731 - Show: more fixes
+  *  1bf9da8a2 - TempoVis: Clip Plane Support
+  *  e4cea7f3c - fix possible stack overflow when finishing edit mode
+  *  9fb122008 - 2to3: port some missing print statements
+  *  ab3ec6cc7 - py2 fix: open doesn't accept encoding attribute
+  *  71dd8934a - add python syntax checker
+  *  c801808be - python syntax checker: remove some strange leading
+    characters
+  *  8e8d0d0cb - py3: Import: 2to3
+  *  25bd2d2ab - py3: tools: 2to3
+  *  ec22a9078 - py3: fem: fix gmsh bytes problem
+  *  4682b4fd2 - fix -Wparentheses-equality
+  *  2ef1d2f36 - FEM: geometric selection widget, more errors as popups,
+    better clear selection
+  *  253b3a523 - FEM: geometric selection widget, check to only allow to
+    select one geometric shpape type for the list
+  *  fa484c65d - FEM: default display mode, name it Default as it is
+    done in all other FEM obj where a Default display mode is needed
+  *  5ac8431a1 - FEM: selection observer, move class into selection
+    widgets module
+  *  c574fb276 - FEM: Python obj VP, code formating
+  *  964ede3f4 - FEM: Python geometry selection class, use it for
+    material obj
+  *  eb88c9045 - FEM: Python geometry selection class, use it for gmsh
+    mesh boundary layer
+  *  6a2ac85d5 - FEM: Python geometry selection class, use it for gmsh
+    mesh group
+  *  5f66ca215 - FEM: Python geometry selection class, adapt it to Solid
+    selection and use it for gmsh mesh region
+  *  366af6d77 - FEM: Python geometry selection class, use it for fluid
+    1D obj
+  *  faf6e5200 - FEM: Python geometry selection class, use it for
+    beamsection obj and rotation obj
+  *  c84077ba4 - FEM: Python geometry selection class, make it useable
+    for Vertex, Edge and Face
+  *  c20994358 - FEM: implement a geometry reference selection class,
+    use it for shell thickness obj
+  *  24452df93 - FEM: fenics #0003038: this fixes the CellFunction type
+    to get access to the measures correctly
+  *  50724bbe5 - FEM: some Python constraint VP, add import of FemGui to
+    get the icon in TreeView when there is no analysis and Fem is not
+    loaded
+  *  103371f57 - FEM: menue entries and tool bars, code formating
+  *  bf671db12 - FEM: menu entries, add one for electrostatic potetial
+  *  f06132d3e - FEM: result and gmsh mesh obj, do not load FEM wb on
+    double click. Only the analysis container should have this
+  *  c997755ad - FEM: Python object VP, add a pop up if a task panel is
+    open while another one will be opened
+  *  ae4a97d3d - FEM: Python constraints, do not open a new constraint
+    if another task panel is open
+  *  243fd83d9 - FEM: electrostatic potential objeckt, fix module title
+  *  c5a9fc5a0 - FEM: constraint gear and pulley VP, remove unnecessary
+    error logs
+  *  23089bea9 - FEM: result object, better grouping in result
+    properties, this does not break compatibility
+  *  eb1acda98 - FEM: unit tests, add some comment
+  *  0c6ed4db1 - Material: fix some units in various material cards
+  *  d47f29853 - FEM: commands, add recomputes and replace App and Gui
+    wie FreeCAD and FreeCADGui
+  *  a4bb93d55 - FEM: Python VP objects without task panel, proper
+    prevent edit mode
+  *  5f37a3023 - FEM: Python reference selection task panel, fix initial
+    selection and selection after delete an item
+  *  16e70d971 - FEM: Python constraints with ref shapes, add right
+    click to delete all ref shape at once
+  *  545ec31ad - FEM: gmsh mesh obj, implement drag and drop for its
+    childs
+  *  fa6bb2183 - FEM: gmsh mesh obj, fix initialization of mesh group
+    list
+  *  59c67f4b7 - FEM: C++ constraints, clear selection on unsetEdit,
+    same system as it is on Python constraints
+  *  fab0b4061 - FEM: Python constraints, hide meshes while constraint
+    task panel is opened
+  *  830d521e9 - FEM: python task panel with solid reference shapes,
+    make solids better visible on click if they are in Compound or
+    BooleanFragment
+  *  458a4be12 - FEM: meshtools and dependent modules, add error message
+    for retrieving solid elements if out of range
+  *  1e497ebd8 - FEM: code formating, no space after (
+  *  2e8a91962 - FEM: material task panel, use same name system for all
+    gemetrical elements
+  *  4dea888fd - FEM: python objects task panel, clear selection on task
+    panel close
+  *  f5fe86a39 - FEM: material task panel, add some TODO comment
+  *  48aa0ba3d - Fixed TC modality in post processor driver.
+  *  2dd0f1f8f - Export Diametric Dim to Dxf
+  *  b7f4fe936 - Export Radial Dim to Dxf
+  *  4a1b6601d - Export Angular Dim to Dxf
+  *  490b7fc19 - Export Linear Dim to Dxf
+  *  4f5e304d6 - Fixed wrong encoding in App.openTransaction
+  *  c039bfb01 - Sketcher: Snap polyline arcs to 45 degrees pressing
+    ctrl fixes #3472
+  *  7a09a5774 - More misc. typos
+  *  c4474f187 - Add source comment typo fix
+  *  ed1470e3d - whitespace cleanup
+  *  6e64b4f75 - Misc. typos
+  *  ac6ae007b - Remember background type in Tools->Save picture dialog
+  *  afdd30b13 - Fix delayed painting
+  *  09f607c5f - Remove debugging messages
+  *  a2e1826a9 - Fix DrawProjGroup Positioning
+  *  84c40aa69 - export TD Annotation to Dxf
+  *  fa28bf97e - Export Points to Dxf
+  *  622cb9d2f - Draft: added ConvertDraftSketches() convenience
+    function to convert App::Annotations to the new Draft Text object
+  *  8fd89533a - Select items already present in PropertyLinkList edit
+    dialog
+  *  46a91630b - Fix Dice3DS nested directory for non-installed build
+  *  39e3508b3 - Arch: Added combobox with presets in multimaterial
+    layer names
+  *  57b7f3389 - Fix selection when multiple pages
+  *  2a0c65137 - Fix message for empty detail area
+  *  89a7b2a92 - Fix selection for radius Dims
+  *  ea8733584 - Fix CCW ellipse arcs
+  *  7f965554b - Fixed abs usage for doubles - thanks to clang warnings.
+  *  4cb93bf66 - Draft: More streamlined console output
+  *  a71147455 - Draft: Show in-command shortcuts on buttons and in
+    console
+  *  891682a41 - Draft: Added 'Flatten' context menu entry to Draft
+    Wires
+  *  ea0df1e21 - Arch: Added CutMargin property to section planes
+  *  753f514d3 - proper fix to keep nodes order intact when exporting to
+    UNV format For more detailed information have a look here:
+    https://forum.freecadweb.org/viewtopic.php?f=10&t=27744&sid=9a966f15
+    219a156c83f12be7ac055791&start=70#p233460
+  *  0b3f02ec5 - Arch: Window placement now keeps orientation from last
+    face hovered. Much, much easier to place windows in walls now
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 27 May 2018 12:27:40 +0300
+
 freecad-daily (0.17+git13701-976369621-1) unstable; urgency=medium
 
   * Compile

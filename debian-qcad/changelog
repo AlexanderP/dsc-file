@@ -1,3 +1,50 @@
+qcad (3.20.0+git5562-dca21bcd3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: dca21bcd3ed6a78b6b024c7d5e392a95f6f96dbd
+  * Date: 1527258470
+  * git changelog:
+  *  dca21bcd3 - add minimal example
+  *  5d8831aac - add example for class derived from QWidget
+  *  351489be8 - update translations
+  *  717a92115 - update example plugins
+  *  b9b5e3d55 - add mouse over highlighting
+  *  30b66ecff - fix RPolyline::getArea return value
+  *  850c2a102 - set options toolbar to exact same height as other
+    toolbars
+  *  8663fdc2d - add layer list doc
+  *  9f0118f8a - fix FS#1757 - Modify > Auto Trim: on polyline, followed
+    by undo yields corrupt / invisible polyline
+  *  8b077ad54 - update script bindings
+  *  095f7ec67 - add RArcEntity::getSweep
+  *  7234c460d - revert polyline area to use numerical approximation
+    when arcs are involved
+  *  87ca3c4da - update script bindings
+  *  168b79f83 - update
+  *  61c64e411 - fix label formatting, never save escaped label
+    formatting with arc
+  *  c7bbe2b68 - correct label position when using arc above label
+  *  426d2b783 - move arc above dimension length measurement lower
+  *  cbf4dbe5a - clean up
+  *  72b29868f - fix FS#1753 - View > Property Editor: entity types in
+    property editor not translated
+  *  8adbea928 - set version to 3.20.1.5
+  *  28b653696 - Merge branch 'master' of github.com:qcad/qcad
+  *  042577b5c - simplify RVector::isZero
+  *  b7f4b0ac0 - fix erroneous bounding box of text entity
+  *  38eaf3a5a - Merge pull request #18 from melak/scriptbindings_5.9.5
+  *  92a167e22 - add script bindings for Qt 5.9.5
+  *  dba9d412c - init member
+  *  5fbbed33a - fix detection of Dimension.ui option
+  *  586a4bd78 - reset dim arc position when setting state
+  *  1ca2bd600 - clean up
+  *  ee01edcef - use parallel extension lines for arc dimensions < 90
+    degrees
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 27 May 2018 07:00:47 +0300
+
 qcad (3.20.0+git5532-11b88c320-1) unstable; urgency=medium
 
   * Compile

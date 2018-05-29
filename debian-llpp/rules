@@ -27,9 +27,10 @@ override_dh_strip:
 
 override_dh_auto_build:
 	mkdir $(CURDIR)/build-ocaml
-	#sed 's/^set\ \-eu/set\ \-eux/' -i build.bash
+	sed 's/^set\ \-eu/set\ \-eux/' -i build.bash
 	cd $(CURDIR)/ocaml && \
 	./configure -prefix $(CURDIR)/build-ocaml && \
 	make -j 3 world && make install
-	cd mupdf && make -j 3 build=native libs
-	PATH="$(CURDIR)/build-ocaml/bin:${PATH}" bash build.bash build man
+	#cd mupdf && make -j 3 build=native libs
+	PATH="$(CURDIR)/build-ocaml/bin:${PATH}" bash build.bash build doc
+

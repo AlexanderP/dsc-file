@@ -1,3 +1,314 @@
+llpp (27.0.0+git3462-b818b67-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://repo.or.cz/llpp.git
+  * Branch: master
+  * Commit: b818b6719cfcca60e29cc773fca876fe79827f84
+  * Date: 1527442362
+  * git changelog:
+  *  b818b67 - Remove pointless wsi special-casing
+  *  407cef5 - Update
+  *  34904c2 - Cosmetics
+  *  43cd1a4 - Shuffle
+  *  a48a0c4 - Move checkerstexid out of state
+  *  67a2199 - Move mupdf check before destructive updates
+  *  14098eb - Nothing ba about it + reset instead of checkout
+  *  544cefe - Remove mlis
+  *  bc12a8f - Targeted include list
+  *  e42452f - Update
+  *  a6f9cd6 - Cosmetics
+  *  2b0a69c - Consistency
+  *  9b327df - Co[nsistency|osmetics]
+  *  e717a3a - This sucks
+  *  c2943c5 - Bail out early
+  *  13a0c73 - Consistency
+  *  38e5332 - C-M-\
+  *  7cfc8d9 - Consistency
+  *  53a0fb1 - Shuffle
+  *  36241db - Consistency
+  *  41e8feb - C-M-\
+  *  a2b7b66 - Fix typo
+  *  c549a26 - Cosmetics
+  *  3d262a4 - Consistency
+  *  401d540 - Cosmetics
+  *  faa7ed7 - Cosmetics
+  *  11ea350 - Remove remnants of sun support
+  *  6de0f26 - Fail iff r32s is actually used
+  *  b3cb234 - failwith -> error
+  *  4716c0e - Update
+  *  88164aa - Always use llpp
+  *  6e3bb06 - Remove useless printf
+  *  75d8571 - Co[nsistency|smetics]
+  *  ac29155 - Update
+  *  76ffdeb - Remove redundancy
+  *  048e2b6 - Refactor
+  *  af89170 - Consistency
+  *  61aaf70 - -l is no more
+  *  2a316e9 - Cosmetics
+  *  21de45d - Co[nsistency|smetics]
+  *  eb5d70d - Cosmetics
+  *  d94f187 - https://news.ycombinator.com/item?id=1677363
+  *  462c4fe - Sigh
+  *  177d39d - Abort exercise in futility once again
+  *  7fb20a7 - -l is gone
+  *  4a2800f - Shuffle
+  *  3dfe0ba - Consolidate
+  *  a2fff17 - Unfixable
+  *  4cf130a - Remove -l
+  *  23c81f9 - Cosmetics
+  *  96d7822 - Tyranny of tuareg
+  *  e417a96 - Gnanoseconds
+  *  22a9c45 - Update
+  *  c26299c - Reword
+  *  afd2379 - Consistency
+  *  9b369d6 - Turn index into one-liner
+  *  4043ffa - Cosmetics
+  *  3922ca2 - Whoops
+  *  a2331b4 - Update
+  *  6850ad7 - Targeted deprecation diagnostic suppression
+  *  15408b5 - Cosmetics
+  *  bf38c8f - Quoting/progress
+  *  439e10e - Kill stray line
+  *  88b6295 - Update
+  *  d9497c4 - Rename
+  *  4f4c473 - Consistency
+  *  8be7293 - Update
+  *  462cc2a - Do not assume that versions are convertible to integers
+  *  b4267d5 - Nah
+  *  1a7bc73 - Remove completed entries
+  *  2da4a9d - Update
+  *  713a315 - Temporarily add -Wno-deprecated
+  *  4d6e564 - Remove closed items
+  *  cac782f - Compress
+  *  b784808 - Shellology
+  *  674e334 - Cosmetics
+  *  d7b0e81 - Whitespace
+  *  ec87fed - Hackaround for . on unreadable files
+  *  055b339 - Remove stray f assignment
+  *  0a6c357 - Fix some macOS issues
+  *  298eb8b - Whoops
+  *  0e8b0a6 - Cosmetics
+  *  d65d29c - Cosmetics
+  *  aae1998 - Bitrott
+  *  35e82f6 - Nomenclature
+  *  2b35c4e - Merge guarded blocks
+  *  16b90c7 - Vacuum
+  *  d3c44ab - Consistency
+  *  9c21346 - Save chars
+  *  bf36d3b - Remove extraneous empty lines
+  *  7e2478b - Expand
+  *  4ffa6e1 - Don't confuse asciidoc
+  *  6f382cb - Don't lie
+  *  4defe6a - Simplify
+  *  e14713f - Update
+  *  8facedb - Do not overdo it
+  *  730cad1 - Indentation
+  *  ee9ea51 - Remove unused (by llpp) stuff
+  *  41b43be - Remove
+  *  093dc23 - Remove
+  *  9de41cd - Cosmetics
+  *  e898ed4 - Remove TODO section
+  *  b8de0f4 - Condense
+  *  c0a3920 - Consistent capitalization
+  *  86bb1c1 - Shuffle
+  *  e65f950 - Ignore double-promotion globally
+  *  65779c3 - Move diagnostic pragmas where they belong
+  *  652add7 - Whoops
+  *  2196324 - Lower OCaml requirement
+  *  23961fc - Revert "Condense"
+  *  f3c381e - Condense
+  *  7bfeebf - Add _POSIX_SOURCE when building link.o
+  *  55ed870 - Expect more of gl.h
+  *  f474ddf - Remove EGL code
+  *  be7a6fa - Cleanup
+  *  469620a - Avoid overly long lines
+  *  8f536f9 - Refactor
+  *  a212fc2 - Once again try to remove reliance on _GNU_SOURCE
+  *  e57706e - Remove undef suppression
+  *  c7a659d - Cosmetics
+  *  6414263 - Move
+  *  75e0c39 - Initial
+  *  c8d7573 - Cosmetics
+  *  d490aab - Revert "Use TITUS Cyberbit Basic before falling back to
+    unifont"
+  *  112f323 - Apostolic
+  *  75c6299 - Use TITUS Cyberbit Basic before falling back to unifont
+  *  f338d1a - Remove unused environ declaration
+  *  553648d - Remove altivec specific memory clearing
+  *  a68aa7b - Move nindex to Ne
+  *  78f0a6e - Cosmetics
+  *  54bc1c4 - Add mplus
+  *  7537562 - Proper coverage
+  *  a5d32aa - Allow building with clang -std=c11
+  *  fe577f8 - Add Wextra
+  *  ca7d594 - Remove stray -O2
+  *  6563489 - No need to _-ide it
+  *  4ec3073 - Cosmetics
+  *  b6dde6c - Cosmetics
+  *  8f537fa - Cosmetics
+  *  1567702 - Avoid newlines
+  *  8edf439 - At least the hackishness is in the plain sight
+  *  628a74f - CRC over MD5
+  *  1de98c0 - Compress
+  *  10d09cb - Remove
+  *  19c67e0 - Cosmetics
+  *  45d0970 - Remove stray pipe
+  *  01dcdd9 - Conclude(?) help massage
+  *  ab3fbac - (WIP) help
+  *  33d0748 - Stringify properly
+  *  85d15ff - Cosmetics
+  *  e388042 - (WIP) help
+  *  699b082 - Help rejig (WIP)
+  *  1f5bd66 - Rename
+  *  c2a4121 - Cosmetics
+  *  7ec4f2b - Consitency
+  *  f3ae21c - Rejig no-optimize
+  *  04ba1d1 - Quoting
+  *  04362f7 - Nomenclature
+  *  3dbbc2e - Cosmetics
+  *  6bca2f1 - Cosmetics
+  *  aad4b1e - This likely became stale
+  *  1c95731 - Uhm...
+  *  06c728c - Remove unused field and fix tileh
+  *  2eee0be - -T was removed by mistake
+  *  a6bee8f - bash v3
+  *  e512261 - Cosmetics
+  *  79d414e - Move
+  *  5f117ba - Nomenclature
+  *  ddd7b7a - Remove 'z'
+  *  15eabc1 - Cosmetics
+  *  485e005 - Cosmetics
+  *  9134d21 - TODO
+  *  858cb4f - Expect c99 conformant compiler
+  *  3665ab8 - Remove stray variable
+  *  548959b - Remove unused headers
+  *  5b94e92 - Nomenclature
+  *  9f0b6dd - Whoops
+  *  2167c30 - Not generic enough
+  *  08b2e32 - Move utility functions into their own TU
+  *  f32cfe8 - Cosmetics
+  *  e84f55b - Shebang
+  *  be8da80 - Safety net and clone args
+  *  fd57bd0 - Make that vecho
+  *  79628b0 - Verbosity
+  *  882baa0 - Nothing ba about it
+  *  0f399a0 - Cosmetics
+  *  7f08f03 - Trim more fat
+  *  31f5724 - Add --init
+  *  72e988e - Simplify
+  *  3f22d53 - Throw in O2 for kicks
+  *  8135514 - Proper type for KeySym
+  *  5b50fd9 - Sync
+  *  beb31b9 - Remove rarely used optentries
+  *  e5f0245 - whitespace-cleanup
+  *  5848192 - Add El Messiri to cover Arabic
+  *  8e2690c - Hmmm...
+  *  2898c0e - cksum is in POSIX, sum is som eextension
+  *  c255782 - Move plist generator to the proper location
+  *  b3a5a60 - Cosmetics
+  *  f58fa36 - Deep copy
+  *  cc47e14 - Austerity
+  *  8d5a9f2 - Save lines/bytes
+  *  54d206f - Remove option help string
+  *  ecf262f - Remove crophack
+  *  aca5aaf - Remove unused field
+  *  1eb6171 - Remove useless newline
+  *  915020d - Reindent
+  *  31f4f02 - Reindent
+  *  3ddeda2 - Kill stray line
+  *  4b6d901 - Update
+  *  9ab6251 - WIP (config red-tape removal)
+  *  df78a90 - Cosmetics
+  *  1c3a741 - Shuffle
+  *  ce2e804 - Reject unknown OSes
+  *  dab86cb - Line length
+  *  a5a1124 - fetch
+  *  4a1ee0d - Untabify and indent
+  *  1532886 - Pull
+  *  52f3952 - Cosmetics
+  *  5b11832 - Back to basics
+  *  72e7c2e - Try try again
+  *  a247bbe - Off the edge
+  *  d2c57fd - Typo
+  *  c7bb71d - Back to the edge and unzip magic
+  *  52178f1 - Cosmetics
+  *  847bbe2 - Better
+  *  7da9bc1 - Rejig helpers
+  *  4fcd179 - Add -L to curl invocation
+  *  5459470 - Quote
+  *  add5d4b - Tell curl to follow redirects
+  *  0195d3c - Purge persistent* residue
+  *  7247d44 - Whoops
+  *  a752bad - Cosmetics
+  *  fe3fbfc - Remove persistent-location
+  *  eab030c - Remove "persistent bookmarks" option
+  *  1a675b5 - Add otc
+  *  6f8994d - Stop living on the edge
+  *  0035d13 - Shuffle
+  *  a5f771b - Add zsh completions
+  *  2ceacb0 - Reword
+  *  19f0caf - Use proper unzip command line option
+  *  9336e4b - Start living on the edge
+  *  9513532 - Rename
+  *  4d34b25 - E.a
+  *  f4af83c - Don't build unneeded stuff
+  *  1672ed7 - echoes/errors/exits/evals
+  *  299a8ee - Shuffle
+  *  996d37b - Condense
+  *  5af7851 - Don't lie
+  *  f547c94 - Remove ccache
+  *  71b91a2 - Refactor
+  *  4704f0b - Rename
+  *  b2639ab - Account for different doc types
+  *  71e11ed - Fix doc dependencies
+  *  31c88c6 - Remove stray variable
+  *  c96b331 - Condense
+  *  a226506 - Rename
+  *  3000718 - Digest outputs
+  *  de7b3d2 - Uhm
+  *  aace462 - Consistency
+  *  e0ef78e - build.bash is capable of building mupdf itself
+  *  c5ac256 - Update
+  *  93ef26b - out-of-treeness
+  *  976b04d - Typo
+  *  b063ce8 - Reduce LOC
+  *  6a0bc58 - Reminder
+  *  c3b68f0 - Cosmetics
+  *  19f8172 - Reduce cargo-culting
+  *  9b9b1c5 - Rename man target to doc
+  *  27dc713 - Whoops
+  *  36c0930 - Layering violation
+  *  9c36604 - Rmove X_ptr_cast
+  *  d777fa6 - Remove gtod error checking
+  *  05cb634 - Update
+  *  6614bbf - Kill stray space
+  *  8491a6b - Make use of all online CPUs while building mupdf/ocaml
+  *  980729f - Better naming
+  *  d66c403 - Remove pointless indirection
+  *  6d6bda9 - Better scoping of warning pragmas
+  *  7386f86 - Simplify creation of man pages
+  *  ecd79ae - Avoid duplication
+  *  5d190cc - Mov getmupdf script to misc
+  *  9e6bd93 - Cosmetics
+  *  0b40b40 - Remove pointless chdir
+  *  7a59af1 - Typo
+  *  dc7a8dc - deps.sh for fetching mupdf deps
+  *  046622d - Better naming
+  *  58c9654 - What
+  *  e62d01d - Minus one line
+  *  579d47f - Cosmetics
+  *  d01ba24 - Update
+  *  ed3bdd3 - Safety net
+  *  56955b5 - Use official nomenclature
+  *  f36d983 - Whoops
+  *  b2a3697 - Remove throttling
+  *  3fc1e7a - Comment
+  *  14bd8ae - Cosmetics
+  *  3e6525c - Move selstring to utils
+  *  b5e9626 - Hmm...
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 27 May 2018 21:02:08 +0300
+
 llpp (27.0.0+git3163-c230b67-1) unstable; urgency=medium
 
   * Compile

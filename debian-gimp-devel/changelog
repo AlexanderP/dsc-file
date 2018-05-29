@@ -1,3 +1,231 @@
+gimp-devel (2.10.2+git40921-ce5821639e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.gnome.org/gimp
+  * Branch: gimp-2-10
+  * Commit: ce5821639ee08be446abd35cb87a152ba99f21c5
+  * Date: 1527385507
+  * git changelog:
+  *  ce5821639e - app: output proper info message while fonts are
+    loading.
+  *  89c829a242 - Issue #1211: Load fonts in background after startup.
+  *  117beee244 - configure, desktop: update the bug report URL.
+  *  2511286e43 - po-windows-installer: technical fix to the Latvian
+    translation
+  *  2d19f29200 - app: various GimpAsync improvements
+  *  c96c6802e8 - app: add gimp_async_remove_callback()
+  *  52f8abbdbf - app: use gimp_parallel_run_async() when loading fonts
+  *  89e9c8d9b3 - app: add gimp_async_wait_until()
+  *  f9ae3ae014 - Issue #1490 - Crash when flattening an XCF file
+  *  448fa97b85 - app: fix progress text when applying shaped gradient
+    through PDB
+  *  1d6d054212 - app: in GimpOperationGradient, use sampler for reading
+    the distance buffer
+  *  7feacb1ecf - Update Spanish translation
+  *  b67c1e33f1 - app: use gimp_gegl_buffer_copy() all over the place
+  *  1878543cf8 - app: add gimp_gegl_buffer_copy()
+  *  a984d9c49d - NEWS: keep updated
+  *  a9636f7b1d - app: actually set the color frames to "not dirty"
+    after updating them
+  *  4a7d364062 - app: remove gimp_display_shell_draw_background()
+  *  07aa0b2615 - Updated Czech translation
+  *  16ff117b02 - Updated Spanish translation
+  *  37773c18e6 - Updated Spanish translation
+  *  378bcea50c - Updated Czech translation
+  *  681bd2435e - Update Finnish translation
+  *  87db3ce9a8 - Update Finnish translation
+  *  e74884f7a1 - Update Finnish translation
+  *  a48d9178e8 - Updated Italian translation
+  *  9e5eeefa81 - Installer: put back compatibility DLLs (for really old
+    plugins)
+  *  f74d1330aa - Installer: set compatibility options to run Python
+    plugins in high-DPI-aware mode
+  *  eb41014b47 - Installer: remove .dll files from plug-ins directory
+  *  5b600509ba - Installer: fix typos
+  *  bbca2b02b1 - Installer: Python fixes
+  *  0cae2f0445 - Update Romanian translation
+  *  c56440bbd7 - Update Romanian translation
+  *  a2902790cc - plug-ins: fix Windows distribution.
+  *  d6c80ef043 - configure.ac: post-release version bump to 2.10.3
+  *  be7f9b433a - configure.ac: release GIMP 2.10.2
+  *  d054c2b1dc - Update Polish translation
+  *  4591452007 - app: remove the gimp-2-6 session compatibility test
+  *  2e948d43d0 - Update Swedish translation
+  *  cadde8fbff - desktop: adding test-desktop.sh in EXTRA_DIST.
+  *  d568a23aae - docs, etc: regenerate the default gimprc and its
+    manpage
+  *  68c774daab - app: also special-case "undo-size" when generating
+    default docs
+  *  92c59316e1 - devel-docs: release-howto.txt: it's
+    org.gimp.GIMP.appdata.xml.in.in
+  *  c34eb2bf8f - desktop: clarify where the feature policy is relaxed:
+    "stable micro releases"
+  *  9667d2566d - icons: fix .gitignore in Symbolic-Inverted/
+  *  c9552d273d - Update Swedish translation
+  *  7a27d81eba - configure, desktop: fix desktop-file-validate test.
+  *  4b34dde0b7 - desktop: fix and uncomment the 2.10.2 <release> tag.
+  *  dca90f303b - NEWS: mention enum docs in libgimpbase
+  *  272ac3ba8f - libgimpbase: "document" the remaining enums in
+    libgimpbase
+  *  9ebf36f873 - configure.ac: require babl >= 0.1.50
+  *  5a6b00ea86 - Revert "depend on babl-0.1.50"
+  *  0aec661cda - depend on babl-0.1.50
+  *  1d3bd593c1 - app: nobody knows why this is needed, move along
+  *  c2362f1b6a - Revert "NEWS: keep up-to-date."
+  *  30ae981c23 - NEWS: keep up-to-date.
+  *  5f754c48dc - INSTALL: clean out some old (now useless) dependency
+    info.
+  *  d8085ab8a7 - Update Russian translation
+  *  db85a4fade - Update Swedish translation
+  *  89fbb6d9e2 - NEWS: update translations list
+  *  2439ae3acf - app: add new action "view-scroll-center" with shortcut
+    Shift+J
+  *  c6f07f5db2 - Updated Danish translation of gimp-windows-installer
+  *  7478a0ccdb - Updated Danish translation of gimp-plug-ins
+  *  f55712a57a - Updated Danish translation
+  *  7861ab83ae - Updated Danish translation of gimp-libgimp
+  *  ef2cf21f10 - Bug 796252 - Mouse wheel zooming should center on
+    cursor...
+  *  fcfb1263fc - libgimpbase: forgot to add "Since: 2.10" to new enums
+  *  c42330ccd2 - libgimpwidgets: "document" some enums in
+    gimpbaseenums.h
+  *  25c0d79eb8 - devel-docs: various clarifications in the first
+    sections.
+  *  517b5df70c - devel-docs: add all missing properties to XCF docs.
+  *  01176c8ce6 - devel-docs: add intro to XCF docs and use "pointer"
+    data type.
+  *  25490b0251 - app: implement GimpPickable::get_pixel_average() in
+    various classes
+  *  b98a04aadc - app: add GimpPickable::get_pixel_average() vfunc
+  *  d272368251 - app: add gimp_gegl_average_color()
+  *  93473b0334 - devel-docs: add missing functions to libgimpfoo-
+    sections.txt
+  *  fe06539873 - libgimpwidgets: fix value names in docs of
+    GimpColorSelectorModel
+  *  c48cbd1c16 - devel-docs: adding some links on how to find
+    implementation details...
+  *  5092a68b1c - devel-docs: update XCF docs about 64-bit pointers for
+    XCF 11 and over.
+  *  6cf1341c90 - devel-docs: update the XCF docs.
+  *  ad395cf02c - NEWS: keep up-to-date.
+  *  d35fecceb4 - configure.ac: remove the option to disable script-fu
+  *  7493991372 - Updated Italian translation
+  *  5930852544 - AUTHORS: regenerated
+  *  6c9ba16e11 - configure, libgimpwidgets: customizable default color
+    profile directory
+  *  7bad32cf33 - devel-docs: add info about "precision" field in XCF
+    header.
+  *  cdfb7fdddd - devel-docs: update the list of layer mode in XCF docs.
+  *  99decb674b - devel-docs: update xcf docs with zlib compression
+    info.
+  *  ea01de330f - NEWS: keep up-to-date.
+  *  a04334d55b - Update Latvian translation
+  *  f4659f64f7 - Update Latvian translation
+  *  8969e7c373 - Update Catalan translation
+  *  23e2ad5307 - Update Latvian translation
+  *  300d326ab2 - Update Latvian translation
+  *  75a08a85af - Updated French translations
+  *  e31058ef8d - Update Icelandic translation
+  *  b7a48281a8 - Update Icelandic translation
+  *  3cad6a1b1c - Update Icelandic translation
+  *  0f23bee5f4 - Update Icelandic translation
+  *  8ca4a2e621 - Update Icelandic translation
+  *  79594cb321 - Update Icelandic translation
+  *  4024c5ce72 - Updated Spanish translation
+  *  580576e702 - configure/app: depend on GEGL 0.4.2
+  *  64954afa4b - app: don't use the user context in GimpDeviceEditor's
+    container view
+  *  806d260601 - script-fu: in weave, improve context and undo
+    management
+  *  a69b8a25df - libgimpwidgets: in GimpEnumLabel use the value's nick
+    if there is no desc
+  *  23dab4311a - Bug 796153 - Airbrush doesn't paint on timeout, and
+    crashes with dynamics
+  *  320d23f964 - app: make sure all devices loaded from devicerc have
+    tool options
+  *  399ac63548 - build: cleaner flatpak building script.
+  *  c64c985726 - build: add HEIF support in flatpak nightly and gtk3.
+  *  a66f74d044 - Updated Spanish translation
+  *  071990da5e - NEWS: keep up-to-date.
+  *  2f629072f1 - Bug 787919 - Tool options are lost when switching
+    device
+  *  d6e0ca5054 - Bug 796090 - (wrong) true-color preview of GEGL filter
+    ops, ...
+  *  5c50fde7a4 - authors: adding Gil Eliyahu to authors list.
+  *  9fb1c28687 - plug-ins: properly free rectScreens after allocating
+    it.
+  *  e357e7118c - plug-ins: fixing various compilation warnings.
+  *  382d6c8ad5 - plug-ins: put the initial foreground window back after
+    a screenshot.
+  *  a0b28589ac - plug-ins: properly load user32.dll for
+    SetProcessDPIAware().
+  *  ae93b6db18 - Plug-ins: fix screenshot bugs in windows.
+  *  918f60836d - Bug 796073 - Zero-size selections affect movement of
+    pasted content...
+  *  a4940ae769 - Update Swedish translation
+  *  55429df954 - configure/app: depend on babl-0.1.48
+  *  d5150edff8 - Update Polish translation
+  *  5c7064fb9f - app: make gimp-atomic parameters volatile
+  *  d01bf70f86 - script-fu: in slide, use an undo group when working on
+    the initial image
+  *  316adffaae - script-fu: in fuzzy-border, add undo support for the
+    whole procedure
+  *  9c547e7d71 - Bug 795958 - Effect (like "old photo") does not group
+    undo information properly
+  *  fbcb43ef8b - NEWS: update
+  *  c3eff6e877 - NEWS: add info about new --with-bug-report-url option.
+  *  a36f47356a - Installer: missed a directory when removing cruft
+  *  aa7f602978 - Installer: use smaller compression dictionary (might
+    help prevent problems as in #795892)
+  *  f557b22d23 - Installer: clean up old .debug files during install
+    (they're useless)
+  *  391b81c9a4 - Installer: updated ghostscript
+  *  03141fc30a - app: don't use mask sampler in
+    gimp_pickable_contiguous_region_by_seed()
+  *  20f20dd7b1 - configure, app: encourage packagers to set custom bug
+    tracker.
+  *  84f224d614 - Update Greek translation
+  *  4d4881fe83 - plug-ins: in selection-to-path, use sampler object ...
+  *  2d421d7f07 - plug-ins: in smooth-palette, use sampler object ...
+  *  eece91eb06 - plug-ins: in file-html-table, use sampler object ...
+  *  a6bee79e0d - app: in gimp_pickable_contiguous_region_by_seed(), use
+    sampler object ...
+  *  3c95928031 - app: in GimpIScissorsTool, use sampler object ...
+  *  b7d95ad503 - app: in GimpOperationCageTransform, use sampler object
+    ...
+  *  1d30426102 - build: add a flatpak for the gtk3-port branch.
+  *  60f2566f6a - Update Swedish translation
+  *  e9f2e82cff - Bug 796071 - Clicking outside of a selection frame
+    creates a new, ...
+  *  b748dea801 - build: add my cron script to build dev flatpak
+    regularly.
+  *  6f2c92a8cc - Update Polish translation
+  *  6a10ad3416 - app: "validate" has the wrong meaning.
+  *  93064f4b2b - app: formatting in gimpfreeselecttool.h
+  *  b296496a65 - app: in gimp_atomic_slist_pop_head(), don't warn on
+    empty list
+  *  98b30f3a9a - Update Polish translation
+  *  5b7806e13c - app: in GimpHistogramEditor, clear update timeout
+    after validating
+  *  5ed79b65bb - app: in GimpHistogram, parallelize histogram
+    calculation
+  *  398474ff58 - app: add gimp-atomic
+  *  16a24ff081 - app: various GimpAsync improvements
+  *  a89dc87aec - Bug 795950 - Foreground selection tool requires use of
+    the Enter key.
+  *  4c767b4f03 - app: fix gimp-parallel shutdown
+  *  660926eb3d - desktop: add a desktop file test with `desktop-file-
+    validate` utils.
+  *  0492157dd2 - desktop: remove the double <releases> trick.
+  *  5b2dd00fab - app: put the call to gimp_gui_ungrab() back in
+    gimp_eek()
+  *  90aa8ad040 - libgimp: gimpimage_pdb.c got regenerated
+  *  69b2e84924 - Source and trivial typos
+  *  8d7f13be18 - Bug 795855 - File chooser dialogs do not show folders
+    or files for...
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 27 May 2018 07:16:02 +0300
+
 gimp-devel (2.10.0+git40759-1139c00721-1) unstable; urgency=medium
 
   * Compile

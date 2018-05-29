@@ -1,3 +1,51 @@
+deadbeef (0.7.2+git7717-ad2c5e09-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: ad2c5e096d3821d3e62770f71830a9e567ff47f6
+  * Date: 1527179596
+  * git changelog:
+  *  ad2c5e09 - streamer: prevent the same track playing again after
+    reshuffle in short playlists
+  *  cb1abbcf - streamer: fixed possible side effects from the track
+    change detection fix
+  *  b2029cbf - streamer: a better solution for detecting track
+    switching
+  *  d63a53bf - streamer: workaround for double-sending
+    DB_EV_SONGCHANGED
+  *  47a48c18 - pulse: default pulse server fix
+  *  cf9fca0c - pulse: fixed race condition causing audio thread hang
+    (fixes #1997)
+  *  c950bbc8 - streamer: thread-safe output plugin selection
+  *  f9723299 - junklib: erroneous const fix
+  *  97729e26 - cocoaui: fix initial seekbar state
+  *  d71a0fdc - gtkui: Ensure single-instance
+  *  b9af5013 - cocoaui: single value editing via multi-value UI
+  *  255b3f89 - cocoaui: update track properties after editing multiple
+    fields
+  *  fc22212e - cocoaui: cleanup and fix trkproperties to use the new
+    data store structure
+  *  63114d31 - cocoaui: trkproperties multiple value editing WIP
+  *  c8852b9d - alac: fixed samplerate and bps detection (fixes #2015)
+  *  25c59766 - cocoaui: multiple field editing for multiple selected
+    tracks WIP
+  *  d7d809fd - rg_scanner: clear memory before use
+  *  16dfc2ed - gtkui: move wingeom_restore call after window_init_hooks
+  *  13ebaf74 - main: explicit IPC stderr/stdout flag; fixes printing
+    current volume to stdout
+  *  2148732d - opus: fixed memory corruption bug; code cleanup
+  *  08e16286 - pluginfo: ignore the failure to build i686 binary
+  *  7a497b92 - travis: remove installing unneeded deps
+  *  29c848c0 - enable zlib and ssl support in libcurl static
+  *  8faecdbc - travis: disable i686 build
+  *  36eaebc3 - main: disable some unwanted log lines
+  *  e695e274 - [cocoaui] fixed a few refleaks and in-playlist drag-n-
+    drop (fixes #2011)
+  *  7088745a - streamer: fix signalling of DB_EV_PAUSED
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 26 May 2018 22:40:28 +0300
+
 deadbeef (0.7.2+git7690-7163099d-1) unstable; urgency=medium
 
   * Compile

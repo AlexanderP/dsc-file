@@ -1,3 +1,42 @@
+audacity (1:2.2.2+git8678-a3abacd55-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: a3abacd55da3836e9e4f3d638b03c6f21f78e49c
+  * Date: 1527247306
+  * git changelog:
+  *  a3abacd55 - Adjust for latency as you record, don't wait till after
+    stopping...
+  *  bbe54f47c - a null check would have fixed crash at 902e1ab0a1 when
+    recording...
+  *  0887d6d01 - When recording into region selection, stop it precisely
+  *  92d27c618 - Fixes for new ring buffers...
+  *  3e680852f - Update audacity.pot
+  *  ae908a9bc - Update Mac Build.txt (fixes bug 1878)
+  *  126ded7d9 - Update credits
+  *  fdf165d13 - Clarify comment
+  *  a2765d013 - Remove duplicate project pointer
+  *  41315dac9 - Make comment clearer
+  *  b3bf32189 - Rewrite threshold control of Truncate Silence as text
+    box, not a choice
+  *  a22be24ae - Bug 1863: Windows crash when resampling in WASAPI
+  *  318967f00 - Revert "If record overrides append because of channel
+    count, record unlimited"
+  *  1269fff8e - Ignore the time track during overdub recording.
+  *  4221549ec - NumericTextCtrl: fix minor bug with NVDA screen reader
+  *  32212d7fc - Dissallow OD loading for lossless copy projects
+  *  77a65a8a9 - Replace AIFF preset with WAV 24 on Windows + Linux
+  *  24ac6a2d2 - Fix crash if invalid [Export] format
+  *  419ecd411 - Save lossless copy of project
+  *  30f1fa58a - Disallow copy of project to overwrite
+  *  4ff319b0e - Merge branch 'master' of
+    github.com:SteveDaulton/audacity
+  *  522660c9c - Fix layout of dependency warning
+  *  87439b576 - Prompt before overwriting another project
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 27 May 2018 03:30:06 +0300
+
 audacity (1:2.2.2+git8655-a13e7191c-1) unstable; urgency=medium
 
   * Compile

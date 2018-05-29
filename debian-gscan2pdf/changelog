@@ -1,3 +1,46 @@
+gscan2pdf (2.1.2+git2833-fe6b3bbb-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: fe6b3bbb997b3f968a25ce3590e95dfe96fe77f3
+  * Date: 1527066707
+  * git changelog:
+  *  fe6b3bbb - Bumped version to 2.1.2
+  *  4e40a617 - perltidy a line
+  *  a17c8c08 - Fix bug causing config JSON file to be saved with
+    numeric locale, and therefore potentially corrupt
+  *  b32c5292 - Post-release commit
+  *  9b3619bd - Bumped version to 2.1.1
+  *  2081b999 - Update to Swedish translation
+  *  04af8bf4 - Update to Spanish translation
+  *  49742d91 - + application_activate_callback() to suppress warning
+    from GObject Introspection
+  *  b747ca02 - + support for dragging files from file managers (again)
+  *  e66d2fb8 - Factor out kill_threads()
+  *  ba3449be - Fix saving profile bug caused by deprecated Gtk2 API
+  *  e8e1c847 - Refactor PDF passwod code to satisfy P::C
+  *  3b5a6b43 - Move startup code from activate callback to startup
+    callback
+  *  f2e305cb - Post-release commit
+  *  fe58c3d4 - Prerelease commit
+  *  f04fdffb - Update to Ukranian translation
+  *  24a26f60 - Bump version to 2.1.0
+  *  b0e5a0b5 - Document closing bug preventing migration to Debian
+    testing
+  *  e2a9ac1e - Allow selection to be modified by dragging the edge or
+    corner
+  *  30f665c7 - Update cursor depending on edge of selection
+  *  70e61a90 - Support import of password-protected PDFs
+  *  0bf4bc12 - + Depends: libgtk3-perl (>= 0.028) as older versions do
+    not pass callback data from filechooser
+  *  495cecc3 - Document closes #294 (Hangs on "Setting Option Source"
+    When Changing Between Feeder and Flatbed)
+  *  085d8d61 - Fix skipping t/51_process_chain.t tests
+  *  d90fc08f - Fix minor typos
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 27 May 2018 04:49:52 +0300
+
 gscan2pdf (2.0.3+git2808-2ac6817d-1) unstable; urgency=medium
 
   * Compile
