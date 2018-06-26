@@ -1,3 +1,103 @@
+audacity (1:2.2.2+git8744-95ef41413-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 95ef41413c83fb6aea473ac8762313cf39a05d6a
+  * Date: 1529621678
+  * git changelog:
+  *  95ef41413 - Better fix for bug 1891
+  *  47665836c - Enh 1890:  Allow P&R when cursor is exactly at track
+    end...
+  *  a3312f4ae - Guard against negative values for P&R preferences
+  *  d76597287 - Need acquire ordering in RingBuffer::Clear() too; and
+    comments
+  *  fcdfd68d7 - Stricter memory ordering in RingBuffer
+  *  bd7e6f727 - Avoid false sharing of the two atomic variables of
+    RingBuffer
+  *  f145574dd - Fix for 1891 is specific to Mac / Linux
+  *  8a158c741 - String and dialog changes related to Punch and Roll
+  *  46fb2960c - Links to help for errors in usage of P&R
+  *  76282a1da - Simply "Pre-roll:" not "Pre-roll duration:"
+  *  cbe6c9eb4 - "Time shift for record" replaces "Track shift after
+    record"
+  *  3b1109376 - Change message for Punch and Roll when track selection
+    is inappropriate
+  *  af6250617 - Update pointer to our wxWidgets custom branch in build
+    texts
+  *  22f48d31e - Rewrite RingBuffer with standard atomics...
+  *  58fa401fa - Don't disable accessibility in Mac build of wxWidgets
+    for Audacity
+  *  6cff61535 - Fix bug 1891 (EQ crash)
+  *  5cdf64213 - Fix Travis build
+  *  5543dc884 - Update Sample Data Export to use file browser
+  *  5e219a031 - Fix Factory Preset for Nyquist file browser
+  *  c976630f4 - MacroCommandDialog: add accessibility name for details
+    text box
+  *  0c9dfc493 - More convenient shortcuts for selecting prev/next clip
+  *  60204730e - Update Sample Data Import to use file browser
+  *  c8c93319e - File browser widget for Nyquist plug-ins
+  *  d80d13441 - Revert the changes in ring buffers, which didn't work
+    for 24 bit format
+  *  a0bf2892f - Revert "Possibly correct some cases of clicky playback
+    or corrupt recording..."
+  *  8407ef1e6 - Revert "Fix compilation on Windows."
+  *  5803c3180 - Revert "Fixes for new ring buffers..."
+  *  66a87ecaa - Disallow punch and roll from t=0.0
+  *  ed34e6b02 - Vaughan to emeritus in AboutDialog credits.
+  *  2c7ca9709 - Reimplement change of color of playhead after pre-roll,
+    more simply
+  *  77779395c - Revert "Play head is green during pre-roll, then turns
+    red for real recording"
+  *  a72b8f98c - Bug1883, more: fix logic for choosing start & end times
+    of recording
+  *  14051f04c - Bug1887: crash or hang loop-playing with WASAPI;
+    libsoxr 0.1.3 to blame...
+  *  800ddf32e - Bug1884: fix crash when record to new track and fail to
+    open device
+  *  3051e9ce7 - Stop button works during punch and roll recording
+  *  ed660bdca - More apt argument name
+  *  8e51391b9 - Play head is green during pre-roll, then turns red for
+    real recording
+  *  e40420ba7 - Rewrite logic for choosing append-record tracks...
+  *  5fc210014 - Remove duplication in Audacity.pot
+  *  0880bef19 - Fix typos in the French translation
+  *  b54f56fba - Bug 1879 - Audacity resets project rate without
+    warning.
+  *  122607f18 - Fix selection contract left/right commands
+  *  0ac3ed845 - Update Sequence.cpp
+  *  a771faa49 - Scriptable GetInfo crashes when Type is preferences.
+  *  d09987da9 - Use 'Playing' and 'Recording' in Transport Menu.
+  *  0965e9fbd - Move the Punch and Roll item to the Record sub-menu
+  *  c0fb14025 - Fix crashes in resampling of capture during recording
+  *  9e2937fee - Punch and roll recording
+  *  2892dfd95 - menu item, tentative shortcut Shift+D ("do-over")
+  *  de230254b - Add to recording preferences for pre-roll and crossfade
+  *  11fd3dcc9 - Define EXPERIMENTAL flag
+  *  a0256e935 - Recording options allow crossfade data for start of
+    recording
+  *  f9cd5595d - Stop playback of pre-rolled tracks at the right time
+  *  35c60ac96 - Allow for preRoll in start-stream options
+  *  20f3f76e2 - Correct limit of record duration when track rate
+    differs from input
+  *  965a74cd9 - Merge pull request #211 from diddledan/patch-1
+  *  35a97e09e - Group arguments to StartStream, and a bit less of
+    #ifdef for MIDI play...
+  *  0635f8802 - Fix build
+  *  49899a561 - fix build
+  *  f355320e5 - Don't lose the fractional part of latency prefernce
+    setting!
+  *  f52b53fc5 - Factor ControlToolBar::OnRecord...
+  *  c7f97e773 - Bug1880: don't quantize DBL_MAX resulting in a negative
+    value.
+  *  0fc4c2de7 - Remove trailing comma
+  *  f32073412 - Fix precision of right edge of punch-in when not
+    overdubbing too
+  *  f0ebf5823 - Better punch-in precision: quantize start and end times
+    for rate...
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 23 Jun 2018 10:19:38 +0300
+
 audacity (1:2.2.2+git8678-a3abacd55-1) unstable; urgency=medium
 
   * Compile

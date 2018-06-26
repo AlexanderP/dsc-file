@@ -1,3 +1,26 @@
+librecad (2.1.2+git4424-ac524dbd-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: master
+  * Commit: ac524dbd17008f08e6995e6fe8b27094dd321d15
+  * Date: 1528813438
+  * git changelog:
+  *  ac524dbd - Merge pull request #990 from jirislaby/master
+  *  b88d49c6 - Merge pull request #986 from Daniel-Trevitz/master
+  *  6c392e90 - fix build with Qt 5.11
+  *  3ce3db27 - Merge pull request #977 from ayaromenok/00_RollOutBranch
+  *  3d8228a8 - Fall through warning
+  *  f0979fc7 - Fix missing break
+  *  ca9c2268 - SVG export fixes:  - crash on windows with Image Export
+    (great thanks to lordofbikes)  - use fabs instead of abs in baking
+    calculation to avoid issues on certain conditions with very small
+    dimentions  - slightly increased height of Export dialog to avoid
+    issues with displaying UI with some combination fonts/system (Ubuntu
+    16.04 with default fonts)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 24 Jun 2018 14:19:09 +0300
+
 librecad (2.1.2+git4416-e8a4a95c-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,33 @@
+deadbeef (0.7.2+git7730-b885a467-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: b885a4673952b6b2c7e226472a43b7c83e25a97d
+  * Date: 1529573784
+  * git changelog:
+  *  b885a467 - sc68: fixed typo in comments
+  *  cf8f23b5 - vtxfile: disable direct file IO code
+  *  39d4b150 - remove leftover debug code
+  *  4b14ff8a - gtkui: another round of transient-for fixes
+  *  c5ef697a - updated README.md
+  *  11212a52 - premake: added nullout
+  *  b63c5db2 - liboggedit: flush/close the output file handle before
+    testing file size and renaming -- fixes writing tags to small ogg
+    files
+  *  2d6cf9e8 - vfs_curl: get rid of emulate_trackchange option -- just
+    do it always, to ease scrobbler configuration
+  *  b247e129 - gtkui: use single-linked list for output device names
+  *  2be6d78d - playlist: better handling of directory paths with
+    trailing slashes
+  *  e86b1427 - playlist: fix crash when plt_insert_dir2 is called with
+    pabort=NULL
+  *  481e37b7 - gtkui: use unique OUTPUT_soundcard config variable name
+    for each output, instead of hardcoding ALSA
+  *  e200b36c - vorbis: fixed handling format changes in chained files
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 22 Jun 2018 22:20:38 +0300
+
 deadbeef (0.7.2+git7717-ad2c5e09-1) unstable; urgency=medium
 
   * Compile

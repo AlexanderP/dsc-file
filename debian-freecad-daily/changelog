@@ -1,3 +1,263 @@
+freecad-daily (0.17+git13983-8f1c6f77c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 8f1c6f77c090ae7d9c2bfd4f18811083b01a3eb2
+  * Date: 1529679072
+  * git changelog:
+  *  8f1c6f77c - Arch: Fixed RHS structural profiles
+  *  c5d589745 - Fix #3508 Missing Namespace in Templates
+  *  cd02be6fc - TD: provide gap between figure and ext lines
+  *  b20a99257 - Fix extension line direction in isometric views
+  *  5da2280cd - Arch: Added Frame and Offset properties to windows
+  *  fb0fc49a3 - Removed PathPreferences class and moved functionality
+    into the module interface.
+  *  b24e95b7c - Removed PathGeom class and moved functionality into
+    module interface.
+  *  fae0de585 - Arch: Fixed export of included windows to IFC
+  *  64fee7817 - Simple blocks now are possible as container.
+  *  ec16d82c9 - Add a new array type: PointArray.
+  *  70c190f5d - Merge pull request #1521 from easyw/master
+  *  60a0dff12 - updating new Icons
+  *  8e4dd8ca8 - Arch: Fixed bug in removing objects from section planes
+  *  9e7f406bd - Fix X,Y of anchor in Projection Group
+  *  f91cb2ab7 - Compatibility w/R12 and arrows for Angles
+  *  36a82c690 - Add support for full circles to PathGeom.
+  *  a59e87976 - Additional modules for Arch Linux added to
+    VTK_COMPONENTS
+  *  e3f578ee8 - Building the FEM module on Arch Linux requires some
+    additions to VTK_LIBRARIES
+  *  c0014cbd3 - Misc. comment typos
+  *  548511ac3 - Add support for Qt5 in ts update script
+  *  c8c10c117 - Fix Blender Navigation
+  *  3c3239ae2 - Aggregate base edges into wires for engraving.
+  *  8faf50ec0 - PartDesign::Clone maintain the colors of the original
+  *  0fcb378f0 - Arch/Draft: Fixed bugs in non-GUI mode
+  *  2f18182b6 - Updated travis build badge in Readme
+  *  15685136e - Add sew function to the draft facebinder. Besides
+    facebinder and patharray get their own icons in the tree view.
+  *  c6c4a0677 - Add sew function to the draft facebinder. Besides
+    facebinder and patharray get their own icons in the tree view.
+  *  1051f1049 - Material: main module, only use one material structure
+    list
+  *  f90cd4a56 - backport to occt < 6.9
+  *  f3ac51d9b - add Approximation option to TopoShape section
+  *  be96fcc62 - add Approximation option to FeaturePartSection
+  *  2410e5323 - fix typo
+  *  184a566da - Material: move materal property list into material
+    module and use this for material editor ui and writing of mat files
+  *  1e844d4f5 - Material, code formating, flake8 compatible code
+  *  1e37612a2 - Sketcher: Fix deleteall crash
+  *  9975c7588 - Fix #3419 Circles as Polygons
+  *  f571c1448 - Fix wrong point in Radius dim
+  *  7cb8520a8 - Make Dxf Dimensions compatible with ACAD
+  *  0f8eca3c1 - Make Dxf header compatible with ACAD
+  *  79e290ffb - Fix 3505 Special Chars in Path
+  *  6c4e4b35a - Ensure Correct Scale in DrawViewSection
+  *  a8daaf4a4 - fixes #0002725: Random color for features in
+    PartDesignNext
+  *  617dfa063 - Arch: survey: py3-fix
+  *  41b278a05 - fixes #0003256: additive elements do not use color of
+    Body
+  *  75a6c6818 - fix possible crash when reverting a document
+  *  c4fd48fb3 - explicit handling of English/en locale in setLocale and
+    supportedLocales
+  *  8f19b46d2 - Some fixes for PropertyEnumeration: + when reading an
+    enumeration ignore negative indexes and print a warning + raise an
+    exception when trying to get the current value of an invalid
+    enumeration
+  *  5ea211489 - add methods to set/get locales
+  *  cb1337674 - properly handle failure of loading a module
+  *  b77b77c0d - fix -Wmaybe-uninitialized
+  *  833c2c601 - add missing newlines
+  *  f0e6b6969 - Switched engrave to use path-geom tools
+  *  d6d26b6a8 - Sketcher: Wrong DoF reported - Fixes #3503
+  *  a91d9c5d1 - msvc2013 doesn't support default arguments in lambda
+    expressions
+  *  a5e85fd29 - Sketcher: Python interface to solveraid
+  *  830932db4 - Sketcher: Ability for SketchObject to create a list of
+    dependent geometric elements
+  *  556f5dc8f - FEM: source typo fixes
+  *  7d7a02e00 - FEM: add tool clipping plane tools
+  *  c3e64d286 - Material: editor, move poisson ration into mechanical
+    properties
+  *  e143e3f29 - Material: editor, move in ui hardcoded properties into
+    the editor module in a tuple
+  *  0b37a9259 - GCS: Improved point symmetry constraint
+  *  ed0c22cf5 - GCS: Add convenience point constructor
+  *  83dd39b4c - small flatmesh fix
+  *  08910e71e - Arch: Added pref option to base new walls on Draft
+    lines
+  *  05bee3aa1 - Materials: use material directory pref from FEM
+  *  1a4b2cb73 - FEM: pref general and material, change back the file
+    chooser to dir chooser
+  *  7c316ba01 - FEM: prefs, move material prefs from general tab into
+    an own tab in FEM
+  *  71a27731b - FEM: App Gui, sort headers and pref entries
+  *  01ecf9859 - FEM: cmake, sort files
+  *  d871555fe - FEM: ccx binary, better error message if ccx binary
+    exists but has problems to run, seen a lot on osx
+  *  51ad2b023 - FEM: command manager, use FEM wb icon as standard
+  *  9c628b870 - FEM: calculix writer, do not write integration point
+    results into dat file, because we do not have a reader for this ATM
+  *  8700597c8 - Merge pull request #1493 from WandererFan/update
+  *  334697fcd - Merge branch 'master' into update
+  *  8cd1cab68 - Fix wrong Pi literal on Win
+  *  e80b5678c - Arch: Survey: fix py3 unicode problems
+  *  8b4a2895a - Control Dxf Point export by preference
+  *  5d65ad799 - Implement thumbnail blocks for Dimensions
+  *  bf5589e2d - Position DPGI Dimensions correctly in Dxf file
+  *  9ec4d8368 - missing call to clear error indicator
+  *  9f7ac4221 - Support for individual edges and faces of an attached
+    shape string - fixed depth settings.
+  *  1b78a99dd - Fixed engrave gui updating Base and BaseShapes.
+  *  4641fafa0 - Added support for rotated 2d shapes for engraving
+    selection.
+  *  a3d864e59 - Added engraving support for attached ShapeStrings
+  *  b3d11842f - Fixed stock from base.
+  *  79c9e2d87 - Fixed selection of vertexes and faces - and added
+    support for faces as base objects.
+  *  32cb11172 - Filter out duplicate selections
+  *  60a49ede5 - Allow selection of edges for engraving.
+  *  13bce0960 - Suppport for engrave as part of a general job
+  *  aaa200f01 - Add support for BaseGeometry to Engrave, if the Job's
+    base object cannot be processed.
+  *  57a8fddba - Fem: fenics: py3-fixes
+  *  23f58f1af - Draft: Fixed Draft texts not appearing on file load
+  *  def225caa - Arch: Fixed bug in windows presets
+  *  15d2f9bb7 - Arch: Added toggleSubs command to context menu of arch
+    objects
+  *  d02d0da7d - Sketcher: Do not update point height when highlighted
+    i.e. (pre)selected
+  *  fc4726682 - fix memory leak in SMDS_MeshNode::getCoord()
+  *  e49a5af3a - Arch: separate properties creation in own methods and
+    check properties at file load
+  *  27e80d0c6 - Arch: Fixed Site properties
+  *  211a24507 - do not use deprecated class in OCCT 7.3
+  *  37b9fedaf - Arch: Fixed bug in preset doors
+  *  93eb05b1b - Draft: Support new-style Draft texts in TechDraw
+  *  22b0fe9df - Material: editor, some comments
+  *  76cb5f033 - Material: Editor, fix open the editor without mat
+  *  b643d0331 - Material: Editor, fix folders to look for mat cards
+  *  6ae0aa065 - Material: Editor and import, only use mat keys if they
+    have a value
+  *  bf11a5f23 - Material: Editor and import, fix openfile and savefile
+    if no filename is given, make open and save work the same way
+  *  428e9ea5e - Material: Editor and import, delete trailing white
+    spaces
+  *  c3954c2e1 - FEM: material task panel, remove matweb button and save
+    mat card button as they are tools implemented in FreeCAD material
+    editor
+  *  2d8ebcf00 - FEM: material task panel, quite some changes: - add
+    Material editor for editing material parameters as well as load and
+    save mat cards - distinguish between 'card name' and the 'material
+    name' - reorganising codeg
+  *  0bafa26b2 - FEM: elmer writer, fix heat source and add a comment
+    about units
+  *  5fd8bd0c2 - FEM: pyhton commands, some comment
+  *  e1ae500e8 - FEM: pyhton commands, do open the task panel on new
+    object creation in Gui
+  *  1035a032f - FEM: material editor, add command to open the editor ot
+    icon toolbar, use copy of Arch material group icon
+  *  f0964a9c0 - Implement R12 version of Polyline
+  *  6b6a0569b - Add 999 Application group code
+  *  ea5617ee0 - Initialize #pts for LWPolyLine
+  *  79a4aa3ef - Misc. typos
+  *  bf03c7bcb - Sketcher: Empty list means all geometry for Python
+    addCopy addRectangularArray and addMove
+  *  39e82c79f - Sketcher: New tool bar icon under the copy command to
+    move
+  *  7c586b6c1 - Sketcher: move icon art
+  *  cffa76b0c - Sketcher: Python support for moving Geometry
+  *  7df766777 - Sketcher: Moving Geometry Support
+  *  ec6eaa509 - Sketcher: Improved B-Spline creation
+  *  480592717 - Sketcher: Extend existing rendering order for lines to
+    points
+  *  dccb86a5d - Sketcher: Optional extended naming for constraints
+    widget giving first-second-third information
+  *  78b7510ee - fix inconsistent default parameters, fix warnings
+  *  4a8056478 - fix cmake warning due to inconsistent naming
+  *  3cb6890bc - suppress warning C4996
+  *  717abd0cf - fix string
+  *  d4354af79 - fix const correctness
+  *  63cefaf4a - fix const correctness
+  *  8d7622b4a - Sketcher: error message when trying to increase the
+    degree of not-a-bspline fixes #3471
+  *  bfef80f9c - Sketcher: bspline knot increase wrong string fixes
+    #3470
+  *  8a31a6c5b - Tests: Update test to remove redundants that failed to
+    be detected with the old solver
+  *  60a57107c - Sketcher: fix failure to notify solver issues, like
+    redundancies, when using setUpSketch in SketchObject
+  *  61b1a1552 - Fix MatrixIndexType
+  *  03c3539db - GCS: Improvement in redundant constraint detection
+  *  9e901dbc5 - GCS: Fix report view formating and duplicated endline
+  *  d75be15f6 - Sketch: DoF finder icon/resource file
+  *  f7a7d2bad - Sketcher Toolbar: Removing DoF finder from the toolbar,
+    as it can be accessed from the solver messages now
+  *  14c7349e2 - Sketcher: DoF finder command while using the default
+    SparseQR
+  *  1d63ed717 - Sketcher: Support for clickable DoFs to launch DoF
+    finder
+  *  992610564 - Solver: solver sketch level support for driven
+    constraints and parameters
+  *  858f4cb85 - GCS: Full detection of dependent parameters with Dense
+    Full Household pivoting QR decomposition
+  *  d531e98ea - GCS: Support for solver constraints to store
+    driven/driving status
+  *  ce4503ae4 - Sketcher: New Command to select geometric elements with
+    dependent parameters
+  *  6f7e06fa4 - GCS: Extension of solver geometric elements to store
+    whether they have dependent parameters
+  *  ed25902e1 - Solver: Solver Sketch level dependent parameters and
+    solver geometric element management
+  *  2e70d9c75 - GCS: Solver dependent parameters retrieval
+  *  8e2c682a3 - fix windows problem:
+    https://forum.freecadweb.org/viewtopic.php?f=4&t=29014
+  *  d38fabf26 - cmake:occt: add fallback
+  *  baed57f01 - conda: osx configuration
+  *  2c982e0c4 - Remove extra definition of obj.IntervalZ
+  *  262d7c0cd - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  2760dabb3 - Format Dxf Group Codes as 3 chars
+  *  009b18a55 - expose function to Python to get optimal bounding box
+  *  b8fca77c5 - respect settings of locatation navicube when creating a
+    new view
+  *  3b02ff2a9 - Fix typo in AddonManager
+  *  b54f0353b - revert commit d1588052ffe
+  *  73d597710 - Write Dimension Blocks to Dxf file
+  *  064a261cc - Add Header with version to dxf output file
+  *  a6e9eec5a - Avoid Qt warning re mdi window not in workspace
+  *  c96d72bd6 - Ignore selection changes while closing Page
+  *  6781a8167 - Correct small bug in CompoundFilter in command line
+  *  1a71777f5 - Fix base number of commits
+  *  0ea75683f - Fix #3477 Unintended Deletion
+  *  8b0b3df76 - PathSimulator, fix typo false->False
+  *  1a3996783 - Improve backwards compatibility
+  *  0c90118cb - Cleaning
+  *  3895c9a49 - Improved naming of the new parameters
+  *  1aa8601e0 - Add IgnoreAbove parameter to not generate ramp above
+    certain heights
+  *  432daa95c - simplify cmake-setup of netgen and occt using default
+    cmake-configs to access cmake-variables
+  *  6476cf4c6 - FEM: mesh netgen command, fix meshing while task panel
+    is opened
+  *  fbf96728b - FEM: material editor, add it to materials menue
+  *  24a21ce83 - FEM: menue entries, add submenue for materials
+  *  c7879c28f - FEM: selection widget module, fix console print message
+  *  be2874482 - FEM: Python VP, add return variable to unSetEdit
+    methods and improve reseting the edit mode
+  *  7512fb562 - FEM: material widget, add button to fix material
+    property editing
+  *  468946bcd - Sketcher: Fix crash on applying dimensional constraint
+    to external element
+  *  d1588052f - (tmp.) switch off Web module when building with Qt5
+  *  db902b462 - Add fedora spec and support files
+  *  0425c7f3c - fixes #0003493: Python Shape.isClosed() returns false
+    for any solid, including primitive Parts
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 26 Jun 2018 01:37:53 +0300
+
 freecad-daily (0.17+git13801-4b089f966-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,162 @@
+qcad (3.20.0+git5700-88a38cb5b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 88a38cb5be8893ecc5be2d4a093860ff53f41784
+  * Date: 1529696436
+  * git changelog:
+  *  88a38cb5b - port to Qt 4
+  *  40d628548 - port to Qt 4
+  *  c0463bc2e - update version
+  *  62121bbc0 - update splashscreens
+  *  297c0af1e - set version to 3.21.0
+  *  b44ef0f2e - fix compiler warnings
+  *  f9ad65bea - fix compiler warnings
+  *  34906eedf - fix compiler warnings
+  *  7e690bbd5 - fix compiler warnings
+  *  9c1c7821f - fix compiler warnings
+  *  993321605 - fix compiler warning
+  *  1eadfa195 - update user manual
+  *  c5ce40c04 - update user manual
+  *  50afc27c3 - fix compiler warnings
+  *  857a5dfcd - set version to 3.20.2
+  *  01160f1a5 - update script bindings
+  *  02c03158c - add RPolylineEntity::morph
+  *  9d19a03af - performance: show total length, area of polylines on
+    request only
+  *  3951fb903 - update handling of invalid vectors
+  *  65a05f3bd - return RVector of inserted node in
+    RPolyline::insertVertexAtDistance
+  *  23ceb7e76 - add factor to zoomIn / zoomOut
+  *  0e83415dc - add preference for middle mouse button zoom factor
+  *  ce9306877 - implement zooming with middle mouse button click
+  *  0a054ed4f - update unit test data
+  *  4f9c693e5 - explode circles into polylines with two arcs
+  *  cb08aeda6 - add workarounds for Qt 5.11.1 bugs
+  *  3b219107a - catch invalid numbers to prevent spatial index library
+    crash
+  *  762d41e94 - update translations
+  *  825f1efd1 - update user manual translations
+  *  10e2258ca - update user manual translations
+  *  d0fc3e68e - update user manual translations
+  *  4593966ae - update user manual translations
+  *  f359f7d92 - update user manual translations
+  *  1b8f03b3f - update user manual translations
+  *  1887a50f7 - update user manual translations
+  *  d37c369e6 - update user manual translations
+  *  61cfa63d2 - update user manual translations
+  *  5314bfd61 - update user manual translations
+  *  8d0c10890 - update script bindings
+  *  b7b013825 - add bulges to insertVertex
+  *  07f68acb7 - add addShapes to simple API
+  *  6d35630fa - set version to 3.20.1.7
+  *  99639249f - update user manual translations
+  *  84d0fc0b9 - update user manual translations
+  *  88e7dcc93 - update user manual translations
+  *  a389d384d - update user manual translations
+  *  b77ffb40c - update user manual translations
+  *  b54a6a103 - update user manual translations
+  *  3a685300c - update user manual translations
+  *  c0eccd512 - add script bindings for Qt 5.11.1
+  *  a6182aa48 - update user manual translations
+  *  3a8d3cccb - add support for requestable (slow) properties to
+    property editor
+  *  211a16392 - update script bindings
+  *  353edcd19 - update user manual translation
+  *  cabe4e353 - fix disabled main window on start
+  *  6e6962cd2 - update user manual translations
+  *  2007538b5 - update user manual translations
+  *  d6de88192 - update user manual translation
+  *  b1098b05f - spelling
+  *  ca9565bcb - fix property editor z coordinate display
+  *  c482ec032 - update
+  *  e624136f2 - update script bindings
+  *  0f01a453e - refactor hiding of Z properties
+  *  30b9ee51e - add elevation property as global z for all vertices
+  *  4cb1ca43c - add RPolylineData::setElevation, getElevation
+  *  7afcf8b66 - add RPolyline::isFlat
+  *  fee0eb0d6 - add Qt 5.11 workaround for enabling / disabling of app
+    win
+  *  a826caf27 - update user manual translations
+  *  d3018d964 - clean up
+  *  1c0b16de4 - clean up
+  *  41103e354 - add OverridePriority for plugins overriding application
+    name, splash and icon
+  *  8305ae9b5 - introduct plugin info property "SplashOverridePriority"
+    to make sure splash of most specialized product is shown
+  *  4688e7f84 - fix properties of linear dimensions (rotated, aligned)
+  *  1d3aa0c8e - make getProperty / setProperty virtual
+  *  c55b63ccf - make getProperty / setProperty virtual
+  *  5f8181e92 - update user manual translations
+  *  01ad4a058 - update user manual translations
+  *  78aab7198 - update user manual
+  *  2385ff512 - update user manual
+  *  32fc79c47 - update splashscreen
+  *  f6732088e - update user manual
+  *  7fadc3b6f - update user manual
+  *  ffc44e583 - update user manual
+  *  563aeaeeb - update tests
+  *  78894cdf5 - update script bindings
+  *  1d695ac77 - update user manual translations
+  *  08cd39a48 - update user manual translations
+  *  1195effb0 - update user manual translations
+  *  55cb2d039 - update user manual translations
+  *  4aa59580c - update user manual translations
+  *  f391f078c - update user manual translations
+  *  ee2b42560 - update user manual translations
+  *  d7730360e - update user manual translations
+  *  04d76e5b8 - update user manual translations
+  *  413081314 - update user manual translations
+  *  745e73673 - update user manual translations
+  *  f2d810611 - update user manual translations
+  *  abbb6dac8 - update user manual translations
+  *  9d0adc79e - update user manual translations
+  *  79451d482 - update user manual translations
+  *  34adced63 - update user manual translations
+  *  e6714d96f - update translations
+  *  a6788c62e - update user manual translations
+  *  13c624687 - update user manual translations
+  *  c495ca389 - update user manual translations
+  *  389ac8d28 - update user manual translations
+  *  0eb243f93 - update user manual translations
+  *  28258db0f - update user manual translations
+  *  8b5f4dae4 - update user manual translations
+  *  5fd1c3100 - update user manual translations
+  *  31c3b4c05 - update user manual translations
+  *  3d6c2bec0 - update translations
+  *  2dbaad086 - apply wacom bug workaround for Qt 5.11
+  *  131fa9ab3 - add script bindings for Qt 5.11.0
+  *  f8ee35b68 - update API doc
+  *  ad2f8792c - fix FS#1766 - Edit > Application Preferences: Tool
+    Settings: cannot add menus to Tool Matrix
+  *  1e0ce176d - update
+  *  6b86f7806 - add -ignore-script-files switch
+  *  b9522dbb3 - spell check
+  *  56135fdbc - make dump function const
+  *  707116296 - update splashscreen
+  *  7825b37b1 - add deleteObject
+  *  73f3018c5 - move eval to separate function (context) to avoid clash
+    of variable names in ECMAScript shell
+  *  2c3819296 - refactor handling of shift key / adding to selection
+  *  ebd9102ad - update translations
+  *  d90a2149f - use separate preference for defaults for layer 0
+  *  e6b24f0a6 - set version to 3.20.1.6
+  *  24dc15da4 - configurable default color
+  *  827247c6e - add preferences for default color / linetype of layer 0
+  *  a342ac363 - fix trimming of number string without decimal places
+  *  e2e446160 - add French translation for Misc menu
+  *  0038f396a - update spacing
+  *  353850c2f - update warning
+  *  fdc7375e6 - update spelling / layout
+  *  ce71734fd - update translations
+  *  52d3dbb74 - update output polyline vertices example
+  *  4eb78dbdd - allow exporter to change file version when saving file
+  *  ae2d2b6d8 - adjust height of first start dialog for longer
+    translated strings
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 24 Jun 2018 11:02:13 +0300
+
 qcad (3.20.0+git5562-dca21bcd3-1) unstable; urgency=medium
 
   * Compile

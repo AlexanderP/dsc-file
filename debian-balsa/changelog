@@ -1,3 +1,39 @@
+balsa (2.5.5+git8851-d51932d44-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/balsa
+  * Branch: master
+  * Commit: d51932d44ef3734db25499f7836f12aa8b4d772a
+  * Date: 1529661605
+  * git changelog:
+  *  d51932d44 - Updated Spanish translation
+  *  179102956 - mailbox-conf: Build with gpgme desabled
+  *  dadb8311d - assistant_page_directory: adapt to new API
+  *  e8d95b867 - Update Polish translation
+  *  422ba8b7d -  libbalsa/imap/meson.build: Fix the meson build
+  *  5ddce7604 - Add the new libnetclient files to the repo
+  *  bd95221b7 - Use Unicode apostrophes in new translatable strings
+  *  d964df60b - IMAP goes GIO
+  *  55aac7542 - address-book-rubrica: Fix a typo
+  *  1f1d4d7e9 - Do not seg fault on delayed exit
+  *  61886d24c - Release balsa-2.5.6
+  *  c4e98371f - Continue when icons are missing
+  *  0a846e056 - Use g_strcmp0() for NULL-safe comparisons
+  *  5aeab694b - filter-edit-callbacks: Do not leak new_item
+  *  102ed47c0 - balsa-index: Do not leak PipeData
+  *  90be134c7 - mailbox_imap: Do not leak ImapSearchData.
+  *  4178a422d - imap-handle.c: Do not leak ImapEnvelope.
+  *  93727ce9d - Mitigate EFail vulnerability for Webkit2
+  *  e6a952e82 - balsa-index: Count skipped messages only for list
+  *  9a54af0c1 - Update Polish translation
+  *  1ba79a9bf - balsa-index.c: Count and report skipped messages
+  *  506bfc907 - message-window.c: Manage "Reply to Group" action
+  *  88f31d7d1 - balsa-index: Emit "index-changed" more often
+  *  a5309385b - sendmsg-window: Check when replying to a list
+  *  a7854edbc - main-window: Manage "reply to group" action
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 24 Jun 2018 09:18:22 +0300
+
 balsa (2.5.5+git8826-910f3b1f-1) unstable; urgency=medium
 
   * Compile

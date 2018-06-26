@@ -1,3 +1,33 @@
+goaccess (1:1.2.0+git2740-d053647-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: d0536478da1fb1a6bec18dc726479987ed28a8b6
+  * Date: 1529892464
+  * git changelog:
+  *  d053647 - Added IPv6 anonymizer example to config file.
+  *  79ba63e - Merge pull request #1153 from da2x/patch-1
+  *  1482575 - Unset referrer header
+  *  315d1ad - Updated README.md why section.
+  *  d747668 - Fixed memory leak after config file path has been set
+    (housekeeping).
+  *  7288e06 - Added anonymize-ip option to the man page.
+  *  f2ab19a - Merge pull request #1134 from schoonc/patch-1
+  *  80851c0 - Update tpls.html
+  *  fc58487 - Updated anonymize-ip option comment on default config
+    file.
+  *  d26152b - Added anonymize-ip option to the default config file.
+  *  4aceaa7 - Ensure variable name reflect actual functionality (bcast -
+    > nwork).
+  *  c052d1e - Added --anonymize-ip command line option to anonymize ip
+    addresses.
+  *  bb7e6a5 - Merge pull request #1131 from millsjustin/html-min-fix
+  *  9d0669e - Make regular expressions POSIX compatible by removing non-
+    greedy operator and replacing [ \t] with [[:space:]]
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 25 Jun 2018 23:20:48 +0300
+
 goaccess (1:1.2.0+git2726-5ccc700-1) unstable; urgency=medium
 
   * Compile
