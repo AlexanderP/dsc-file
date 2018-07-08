@@ -49,7 +49,7 @@ endif
 
 override_dh_auto_configure:
 ifneq (,$(filter $(DEBIAN_CODENAME),stretch xenial artful))
-	sed -i '/^    omemoplugin/d' $(CURDIR)/src/plugins/dev/CMakeLists.txt
+	sed -i '/^    omemoplugin/d' $(CURDIR)/src/plugins/generic/CMakeLists.txt
 else
 	# no sed
 endif
