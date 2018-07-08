@@ -1,3 +1,39 @@
+clementine-qt4 (1.3.1+git1982-ge9a4db019-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: e9a4db01928db53faadf7454fdcdf152fa59c139
+  * Date: 1530955429
+  * git changelog:
+  *  e9a4db019 - Prevent closing of the RipCDDialog if the ripper is
+    running
+  *  10d4c502f - Set the parent to avoid a memory leak
+  *  3e53e23bb - Fix formatting
+  *  2c084e45b - Finnish immideately if there are no tracks to rip
+  *  059b5ed04 - Add Musicbrainz integration to the cd ripper
+  *  84f1b7bae - Load the audio cd in a separate thread
+  *  4458d4520 - Give the cd device some more time to spin up
+  *  b897651cd - Device fixes for MacOs (#6098)
+  *  4733185d0 - Added basic VGM format playback and tag reading.
+    (#6089)
+  *  fcf96cb6f -  Queue size and duration is now displayed in queue
+    manager && Album Cover Popup fixes (#6086)
+  *  e2f63e394 - Implemented SPC playback functionality.
+  *  a39787112 - Fix loading output/device setting
+  *  5dbdcca54 - Set empty string for sinks with default devices and
+    auto sink
+  *  083129f41 - Automatically formatted
+  *  465fa2ce8 - Clicking on songs in playlists via remote control now
+    respecting behavioural settings from GUI (either direct changes it
+    or enques it)
+  *  f3aab34d3 - Add ALSA Device Finder (#6079)
+  *  41ed50527 - Fix git revision string (#6083)
+  *  da648fd08 - Fix setting device on windows (#6081)
+  *  1b4955cc4 - Merge pull request #6076 from jonaski/taglib
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 08 Jul 2018 09:00:22 +0300
+
 clementine-qt4 (1.3.1+git1960-g925e74f90-1) unstable; urgency=medium
 
   * Compile

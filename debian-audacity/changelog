@@ -1,3 +1,46 @@
+audacity (1:2.2.2+git8768-29ec921c8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 29ec921c8b621c6df435a6bbebcda98a74509941
+  * Date: 1530799037
+  * git changelog:
+  *  29ec921c8 - Revert parts of e1b6091 involving effects, for .cfg
+    file compatibility
+  *  6c48be71f - Remove a compiler warning in Menus.cpp
+  *  bfec6f0aa - Spectral Selection toolbar: minor accessibility change.
+  *  7d9c82f47 - Output device should be changeable even when no input
+    devices...
+  *  7c544ace7 - Newer MSVC compiler allows alignas
+  *  3c657ea05 - Fix bug 1873
+  *  1be17fc7a - Fix bug 1894
+  *  a06e561cb - Support version strings in Nyquist plug-ins
+  *  356fdeba4 - Show Pin/Unpin button in red, if recording.
+  *  20178b15e - Fix some 'declaration hides' warnings.
+  *  3f9232154 - Appveyor build settings
+  *  c2bc21030 - Accessibility: stop NVDA always reading track 1 after
+    an undo or redo
+  *  3b7fdafca - Update AppVeyor for MSVC2013 -> MSVC 2017
+  *  d8b7e3d8a - Switch the default toolset from VS2013 to VS2017
+  *  68b7330b6 - Avoid MSVC trying to use wxTabTraversalWrapper's move
+    ctor.
+  *  6ae5bd46a - Rework locale VS project to use CustomBuildStep. Make
+    sure Clean, Build, and Build targets work. Use NuGet to provide
+    gettext for msgfmt.
+  *  75bc81a1d - Don't use a separate build script for optional files.
+  *  40ce9d6fc - portaudio-v19: Update for VS2015+
+  *  ee5609b8e - libsndfile: Update for VS2015+
+  *  2ebb34149 - libscorealign: Update for VS2015+
+  *  bd5b33378 - libnyquist: Update for VS2015+
+  *  8bf2071fd - lv2: Update for VS2015+
+  *  659f8cbc6 - Get rid of the Windows compatibility headers stdint.h
+    and inttypes.h. Microsoft provides their own these days.
+  *  8b87e18c6 - Accessibility: clean up track focus events after an
+    effect is applied.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 05 Jul 2018 19:44:30 +0300
+
 audacity (1:2.2.2+git8744-95ef41413-1) unstable; urgency=medium
 
   * Compile

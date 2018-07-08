@@ -1,3 +1,41 @@
+balsa (2.5.5+git8878-74981e9a7-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/balsa
+  * Branch: master
+  * Commit: 74981e9a7ad6dd5f8a756a06089ebb600dc682ad
+  * Date: 1530730056
+  * git changelog:
+  *  74981e9a7 - Update Brazilian Portuguese translation
+  *  baa4d641c - libnetclient private data fixes
+  *  5775eddd9 - src/mailbox-conf: Remove declarations
+  *  eedab1945 - mailbox-conf: Really build with gpgme desabled
+  *  162b1faf1 - net-client: Use G_DEFINE_TYPE_WITH_PRIVATE
+  *  d5d7fc9bb - main-window.c: Update the 'about' dialog
+  *  492601c56 - main-window: Keep application alive
+  *  12c6a4b87 - mailbox: Manage idle callbacks better
+  *  48eee1bcf - libbalsa-conf: Check that a key-file exists
+  *  b36178ac4 - imap_search: Keep handle alive while searching
+  *  afe6865e4 - Update POTFILES.in and POTFILES.skip
+  *  91959ab06 - Merge branch 'application-notification'
+  *  20d7e1c63 - Manage the closing notification
+  *  eb176e028 - libbalsa/information: Empty string means withdraw
+  *  13def2058 - imap-server: Check for NULL 'struct handle_info *'
+  *  5569d8e88 - main: Present the main-window, if it exists
+  *  d794a305a - Updated Spanish translation
+  *  20389acca - Migrate from libnotify to GNotification
+  *  836d956d0 - balsa-icons: Return NULL if icon-table is NULL
+  *  b329e38dc - mailbox-imap: Object-ref handle to keep it alive
+  *  9b844a6ea - main-window: Use GtkWindow API for the application
+  *  f678a5325 - Rename balsa.desktop to org.desktop.Balsa.desktop
+  *  01aaa1638 - main-window: Use GtkWindow API for the application
+  *  5858ab4e7 - Migrate new mail notification to GNotification
+  *  e6afd0dec - Plug leak
+  *  4244b41a9 - Use GtkApplication better
+  *  9cb36bd54 - Use GApplication features
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 05 Jul 2018 21:05:01 +0300
+
 balsa (2.5.5+git8851-d51932d44-1) unstable; urgency=medium
 
   * Compile

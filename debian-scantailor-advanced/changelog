@@ -1,3 +1,92 @@
+scantailor-advanced (1.0.14+git377-275ae37-2) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/4lex4/scantailor-advanced.git
+  * Branch: master
+  * Commit: 275ae372f785424e80d119e9c47e046a135bd6d7
+  * Date: 1530820243
+  * git changelog:
+  *  275ae37 - Version 1.0.15
+  *  38f114e - ~ Bump version.
+  *  8ad2034 - ~ Update translations.
+  *  9616b8f - ~ Fix a few issues with building.
+  *  a18100f - Add options to manage the quality and size of thumbnails.
+  *  2f55313 - Add order by completeness sort on the output stage.
+  *  420f040 - Some improvements for the thumbnail view.
+  *  de9afe6 - ~ Fix blink of the image view on Windows.
+  *  72811d2 - ~ Fix crash when Auto/Marginal dewarping mode enabled.
+  *  072ba73 - ~ [UI] Fix menu indicator position.
+  *  5af67be - ~ [UI] Convert from 'px' to 'em' units in the qss files
+    of Dark and Light schemes.
+  *  d5f8b49 - ~ [UI] Fix font of the DPI and Otsu adjustment labels.
+  *  4de793d - ~ [UI] Fix behavior of the filter widget.
+  *  057bfeb - ~ [UI] Make guides help selectable and copyable.
+  *  9b3bc02 - ~ [UI] Fix dark and light color schemes.
+  *  2047301 - Add native color scheme.
+  *  556c491 - ~ Improve boxes interaction at selecting content stage.
+  *  2c6cb4d - ~ Some fixes at selecting content stage.
+  *  81f5098 - ~ Return a value instead of a pointer to dynamically
+    allocated object where it does.
+  *  64b9b84 - ~ Fix several bugs appearing at page splitting stage.
+  *  df7bf9d - ~ Update README.
+  *  4a82305 - Navigating between selected pages.
+  *  b63f0c6 - Separate highlighting for selection leader in thumbnails.
+  *  f435643 - Save selection of pages on filter switch.
+  *  9e83a50 - ~ Add enum to determine foreground type into SplitImage.
+  *  02797cf - ~ Fix: don't allow content box to be out of image after
+    auto adjusting.
+  *  fb9b93d - ~ Improve image combination functions.
+  *  815d540 - ~ Follow the project code convention.
+  *  9086902 - ~ Get rid of naming pointers and references in variable
+    names specifically.
+  *  7e7be03 - ~ Add MODE_DISABLED into AutoManualMode enum.
+  *  67a7861 - ~ Reworked methods to setup and remove ui connections.
+  *  6755609 - ~ Update thumbnail on enabling page box.
+  *  12a0e62 - ~ Replace deprecated throw() with noexcept.
+  *  645f145 - ~ Reformat all the code.
+  *  44b2ffb - ~ Improve boxes interaction at selecting content stage.
+  *  bc650e7 - Fix some specific Linux issues:
+  *  339871c - Remove split layers if the mode was changed.
+  *  ee1ce6f - ~ Remove main window shortcuts from the translations.
+  *  491efb4 - ~ Guides: implement attaching to both the nearest
+    vertical and horizontal guides.
+  *  a82932b - Implement the guides feature.
+  *  a18b4a6 - ~ Guides: add help and update README.
+  *  d3ddde2 - ~ Guides: manage showing the hard margins rectangle.
+    [Part 4]
+  *  f8ab05a - ~ Change guides color and the moving key modifier.
+  *  f90e3b8 - ~ Guides: implement attaching content to the nearest
+    guide. [Part 3]
+  *  a3ffb5f - ~ Fix the interaction of a spline control point.
+  *  08cbe9b - ~ Guides: implement dragging the page. [Part 2]
+  *  1b40784 - ~ Guides: implement guide lines. [Part 1]
+  *  55706b9 - ~ Update the about dialog.
+  *  85f2bf7 - ~ [ui] Hide the slider handler when disabled.
+  *  420b95e - Change the way of the adjustment of the despeckle
+    strength.
+  *  595cba8 - Improve and return feature "Support for processing of
+    images with light content on dark background"
+  *  9df4927 - Added fill offcut option at the output stage.
+  *  9ec1c84 - ~ Fix README.
+  *  ce27849 - Improved the lasso mode on zone creation.
+  *  3c9fd14 - ~ [ui] Highlighting of focused elements (usually via TAB
+    key).
+  *  f1ad28f - ~ [ui] Save project message box: "Yes" and "No" buttons.
+  *  713f437 - Fixed a bug with filling at output.
+  *  1a39075 - ~ CMake code reformat.
+  *  1bab1d6 - ~ CMake: changed unix icon.
+  *  cbb5593 - ~ CMake: added uninstall target.
+  *  173f955 - ~ CMake: use CMake built-in FindThreads module instead of
+    a custom FindPThreads implementation.
+  *  5c15742 - ~ CMake code reformat.
+  *  f68c459 - Fixed portability issues and added CPack packaging
+    support.
+  *  2a5e019 - Add Castilian Spanish translation
+  *  1fcb0d3 - ~ Fix build with Qt 5.11
+  *  b69fee5 - ~ Code refactoring and fixes.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 08 Jul 2018 10:45:53 +0300
+
 scantailor-advanced (1.0.14+git311-f6dadc3-1) unstable; urgency=medium
 
   * Compile

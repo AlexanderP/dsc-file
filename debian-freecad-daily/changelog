@@ -1,3 +1,57 @@
+freecad-daily (0.17+git14016-5f63f9f23-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 5f63f9f23f10640b613cd894ed529eaf69a04aec
+  * Date: 1530881744
+  * git changelog:
+  *  5f63f9f23 - Add comment to clarify why replace() is used
+  *  9ea0cf5a3 - Add version info to window title
+  *  f0252c80c - Show color of object wrt to its transparency while
+    exporting SVG file.
+  *  bd4f48c95 - Fix #3525 Handle Global Position
+  *  e5dc8bfff - Implemented a global setting for marker size and
+    support of it for snapping in "Draft" workbench. In future this
+    setting can be used for other markers too, to be able to set them
+    all to comfortable size by just one global setting.
+  *  2f6fe2597 - Arch: Support of IfcBuildingElement and IfcPropertySets
+    in ifc import/export
+  *  a790510d8 - Material: material properties, add angle of friction
+  *  7a27e0e85 - Material: material properties, remove duplicate
+  *  f379e6125 - Material: material properties, add some links as
+    comments
+  *  3887161f4 - Material: material properties, better formating
+  *  527b3b35e - Material: add some thermal and mechanical properties to
+    material module
+  *  6442ac83d - Material: material module, add some comment
+  *  ce9e5d955 - Material: editor, add cards output and some comment
+  *  0f8566ef0 - FEM: principal stress calculation, fix for direction of
+    principal stress
+  *  1bd2463d9 - IMHO it looks like a bug...
+  *  6014fce39 - Arch: Fixed bug in windows
+  *  42efa3f72 - Arch: Fixed bug in restoring material objects
+  *  ab1520b87 - Arch: Fixed compatibility with 0.17
+  *  88729418b - fixed a crash on escape from Image Scaling WB
+  *  10dee3f42 - Draft: applied patch #1530 from easyw
+  *  1314210a4 - Arch: Handle cloning of BuildingParts
+  *  43bf3bc0c - Arch: Handle placement change in BuildingPart + view
+    management
+  *  082926c7d - Arch: Further work on BuildingPart
+  *  2bef80dcc - Arch: initial BuildingPart development
+  *  05c26826c - Arch: context menu option for material group to merge
+    duplicate materials
+  *  fafb19488 - Arch: Minor fix to IFC explorer
+  *  efdef0f63 - Arch: Fixed non-GUI mode bug
+  *  3f2cfa0a7 - Arch: Fixed OBJ export
+  *  fd5f1fae3 - Arch: Fixed IFC export of window openings
+  *  55db1feb2 - adding missing changes :)
+  *  13cbc0c25 - fixing py3 exceptions
+  *  87ee06b93 - Centering the Image Scaling Dialog
+  *  090211b63 - Adding Image Scaling Macro ti Image WB
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 07 Jul 2018 11:32:09 +0300
+
 freecad-daily (0.17+git13983-8f1c6f77c-1) unstable; urgency=medium
 
   * Compile

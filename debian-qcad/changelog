@@ -1,3 +1,146 @@
+qcad (3.20.0+git5833-9284e51e8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 9284e51e87d996532839107d251cd0a452c6c7c2
+  * Date: 1530885067
+  * git changelog:
+  *  9284e51e8 - update user manual
+  *  91d726424 - update user manual
+  *  c527c1d54 - update user manual translations
+  *  f0a1dea59 - update user manual translations
+  *  954d1ee45 - update user manual translations
+  *  1d91fc335 - update user manual translations
+  *  357526d9c - update user manual translations
+  *  b7670b959 - update user manual translations
+  *  5708884c3 - update menu order
+  *  04c4c35b3 - update user manual
+  *  d71e05c13 - update script bindings
+  *  923d85ce9 - nl translation: Beeld > Anzicht
+  *  286f51f42 - make sure argument handling can return undefined as
+    default
+  *  a73f8a6b6 - update translations
+  *  d88ea1b62 - set version to 3.21.2
+  *  d25f2afd7 - update script binding type conversions
+  *  5a9520a8b - fix include path
+  *  250b3897b - fix FS#1777 - Crash when pasting / importing drawing
+    with missing image
+  *  e29dfbaec - update script bindings
+  *  f7e644e50 - update user manual translations
+  *  8e0d0186d - update user manual translations
+  *  392e541b5 - add RGraphicsSceneDrawable::getDocument
+  *  c22dd60be - add metatype for const RSpatialIndex*
+  *  8b83e9a0f - move setDocument to cpp
+  *  75516b9b2 - add const getSpatialIndex
+  *  a9c6ce204 - update user manual translations
+  *  d27e29dd6 - update script bindings
+  *  53d5a2cd5 - update user reference manual translations
+  *  cf657d200 - fix selection of polylines with z!=0
+  *  b4148ec63 - update meta types
+  *  e4e4a02ec - update user manual translations
+  *  67a08127b - update user manual translations
+  *  ca0e540bd - update user manual translations
+  *  a91fd30d8 - update user manual translations
+  *  a8c33f61e - update script bindings
+  *  8daf87d8e - update user manual translations
+  *  6ac082921 - update user manual translations
+  *  e57cbe8d8 - update user manual translations
+  *  419f5d4b1 - update script bindings
+  *  3cce44765 - add easing to RPolyline::morph function
+  *  1911e9db5 - add easing enum
+  *  8ef8e423e - fix duplicate enums in script bindings
+  *  06bae1c8a - fix command conflict
+  *  1de0be946 - fix command conflict
+  *  6b1f24c44 - update
+  *  13bedde2b - fix command conflict
+  *  53fbad36c - set version to 3.21.1.1
+  *  9bd83251d - restructure menu
+  *  dc50ba898 - clean up
+  *  1095244fa - restructure menu
+  *  e579df5ab - restructure menu
+  *  740029097 - update translations
+  *  ad5f923e7 - update user manual translations
+  *  26cc09c11 - update user manual translations
+  *  baa166087 - update user manual translations
+  *  537958817 - update user manual translations
+  *  4c7259527 - update user manual translations
+  *  339586bf9 - update script bindings
+  *  ea4d304ee - refactor shortcut handling, fix shortcut preferences
+  *  f67955118 - update meta types
+  *  73d5dc873 - clean up
+  *  1da0d07c8 - move projection tools to modify submenu
+  *  0fd1f12d3 - move argument handling to RSettings
+  *  f91002a58 - update qrc
+  *  83b2eefba - allow RToolButton and QToolButton in tool matrix
+  *  4cb2a4f2a - fix tool matrix
+  *  01df531dd - avoid .. elements in include paths to main action
+    scripts (File, Edit, ...)
+  *  cda0e7fec - avoid .. elements in include paths to main action
+    scripts (File, Edit, ...)
+  *  a573010b3 - avoid .. elements in include paths to main action
+    scripts (File, Edit, ...)
+  *  13e97b97d - avoid .. elements in include paths to main action
+    scripts (File, Edit, ...)
+  *  21334f518 - avoid .. elements in include paths to main action
+    scripts (File, Edit, ...)
+  *  e2751edd1 - update user manual
+  *  bee09977e - update user manual
+  *  f13f7c35b - update user manual
+  *  6adc7739d - update translations
+  *  08c42b6d5 - avoid conflict of file names
+  *  d2f707c7d - update drawing preferenes icon
+  *  8813c89a4 - set icon for app preferences
+  *  eb16a5d88 - update user manual
+  *  e850e791b - update user manual
+  *  93cf1d326 - add app preferences icon
+  *  92cb146ef - clean up
+  *  23875930a - update file dialog name selection
+  *  f34d5e25b - always enable clipping for images (clip images to
+    viewport edge)
+  *  2a61faa26 - fix circle with tangents from segments from same
+    polyline
+  *  87de087f8 - set version to 3.21.1
+  *  7f0ef684e - update script bindings
+  *  e6beca30d - make RToolButton scriptable
+  *  850e218b1 - fix FS#1773 - File > PDF Export / SVG Export / Bitmap
+    Export: file name suggestion in file dialog is drawing file
+  *  a63f37a12 - update script bindings
+  *  227b132f5 - fix REllipse::getAngleAtPoint
+  *  90077d1ec - update user reference manual translation
+  *  da20113c0 - fix constness, add getAngleAtPercent
+  *  d728fb670 - Merge branch 'master' of github.com:qcad/qcad
+  *  3785b1189 - Merge branch 'master' of github.com:qcad/qcad
+  *  6d3f68856 - potential fix for windows unicode file path issue
+  *  4b1a9ea92 - fix circle, tangent to three segment of polyline
+  *  4a0e06787 - update transaction listener example
+  *  7838ad7ac - update user manual translations
+  *  ac4bc8fad - update user manual translations
+  *  ab86a0a44 - add preference to always show all properties
+  *  3fbc497ed - update translations
+  *  b905c06c5 - update user manual translations
+  *  18a4766e4 - update user manual translations
+  *  19880d814 - update user manual translations
+  *  4ece25712 - update user manual translations
+  *  75e7fc95e - update user manual translations
+  *  970fa6997 - update user manual translations
+  *  591781746 - update user manual translations
+  *  7951eb513 - update user manual translations
+  *  0591f8094 - only show hand cursor when panning starts
+  *  9827c77e0 - update meta types
+  *  22e187ab8 - Merge branch 'master' of github.com:qcad/qcad
+  *  5aa8bf0f5 - fix display of mixed value for orientation
+  *  3b5ffb66b - Merge branch 'master' of github.com:qcad/qcad
+  *  e5979b8ca - update meta types
+  *  5ab57c0fe - update URLs
+  *  127c40a77 - update user manual translations
+  *  76eea9497 - update strings
+  *  1506b6c95 - update translations
+  *  7b682f09c - Merge branch 'master' of github.com:qcad/qcad
+  *  1a3721fbe - add preference for pan threshold
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 06 Jul 2018 18:02:13 +0300
+
 qcad (3.20.0+git5700-88a38cb5b-1) unstable; urgency=medium
 
   * Compile

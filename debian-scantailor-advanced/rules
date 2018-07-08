@@ -30,3 +30,4 @@ override_dh_install:
 	test ! -f $(CURDIR)/debian/scantailor-advanced/usr/bin/scantailor-cli || \
 	mv $(CURDIR)/debian/scantailor-advanced/usr/bin/scantailor-cli \
 	$(CURDIR)/debian/scantailor-advancedl/usr/bin/scantailor-advanced-cli
+	rm -f $(CURDIR)/debian/scantailor-advanced/usr/share/applications/scantailor.desktop

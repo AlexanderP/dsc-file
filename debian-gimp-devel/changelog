@@ -1,3 +1,181 @@
+gimp-devel (2.10.2+git41300-6377e60e26-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 6377e60e2685d7ed7820727e477d8575cd09059d
+  * Date: 1531035266
+  * git changelog:
+  *  6377e60e26 - Update Romanian translation
+  *  d93b4437b7 - Installer: fix .svg MIME type in Registry (fixes
+    toolbox icons)
+  *  7acadffd47 - Update German translation
+  *  f9a71fb6de - app: work around GTK bug causing UI freeze during tree-
+    view operations
+  *  7b8d8a29a5 - Issue #1805 - Sample Points keep resetting themselves
+    to "Pixel"
+  *  58b71b412c - NEWS: kickstart the 2.10.6 news!
+  *  9a08f499c6 - Added Marathi translations
+  *  dccb2e3ead - Added Marathi translation
+  *  7a49f59021 - plug-ins: need to initialize "name" now in file-pat.c
+  *  038e9e711b - Installer: improved compile.bat
+  *  ff665da12b - app, pdb: use gimp_babl_is_valid() in more places
+  *  2ac529cb8c - Issue #1792 - Xcf file crashing gimp-console-2.10 ...
+  *  e25cccf049 - Updated Italian translation
+  *  abbe7c4e2f - Merge branch 'gimp-2-10' of
+    gitlab.gnome.org:GNOME/gimp into gimp-2-10
+  *  7ca3f1d406 - Updated Italian translation
+  *  f46cf260c5 - Issue #1730 - pat file that crashes gimp-2.10
+  *  cd5e1470c9 - app, plug-ins: move GIMP_BRUSH_MAX_SIZE to gimpbrush-
+    header.h
+  *  b9272f8b5e - app, plug-ins: clean up gimpbrush-header.h and
+    gimppattern-header.h
+  *  80adf883d2 - Update Spanish translation
+  *  e93895ca84 - Update Spanish translation
+  *  dd6efd79c9 - Update Spanish translation
+  *  74591e0598 - app: properly shut down gimp-parallel in stable
+    versions
+  *  4f20255675 - app: log actions upon activation before emitting
+    "selected" signal
+  *  7a63095582 - app: avoid CRITICAL when loading XCF with empty gimp-
+    text-layer parasite
+  *  18bab869a0 - app: avoid CRITICAL when loading XCF with empty
+    symmetry parasites
+  *  3a356db7c9 - libgimpbase: gracefully reject Exif/IPTC/XMP metadata
+    of invalid size
+  *  6d7d062099 - app: avoid CRITICAL when loading XCF with empty gimp-
+    image-metadata parasite
+  *  42c401dde9 - app: avoid CRITICAL when loading XCF with empty gimp-
+    image-grid parasite
+  *  9ab781bdce - app: avoid CRITICAL when writing 0-length data to XCF
+  *  26df575278 - libgimpconfig: allow writing empty data in
+    gimp_config_writer_data()
+  *  62c016543d - libgimpcolor, app: gracefully reject empty ICC
+    profiles
+  *  9da04d9655 - Issue #1783 - Xcf file crashing gimp-console-2.10 ...
+  *  d5e1af7d52 - Issue #1783 - Xcf file crashing gimp-console-2.10 ...
+  *  9f0f11f44e - app: fix potential segfault in
+    gimp_action_history_activate_callback()
+  *  324570712e - Installer: show progress while removing old .debug
+    files
+  *  16562649f3 - Installer: remove all obsolete 2.8 plugins
+  *  6ac4c48d9a - app: add gegl:stereographic-projection (little planet)
+    to the menus
+  *  9d53af65fd - configure.ac: require GEGL >= 0.4.5
+  *  363b03aa35 - Installer: more verbose debug messages
+  *  78fbf159a6 - Installer: include full version number in icon name
+  *  a296c92f7c - Installer: update python2 interpreter file
+  *  66ffab2cc1 - Update Spanish translation
+  *  76f7d6fa21 - Installer: remove Quick Launch icon
+  *  e5988ed940 - Installer: install debug symbols by default
+  *  ff66d3d218 - Installer: ignore version information on files
+    installed to {app}
+  *  04be184020 - Installer: include gdk-pixbuf-query-loaders.exe
+  *  b307c80381 - app: fix signature of gimp_parallel_run_async()
+    function template
+  *  ce47731997 - app: add mnemonic to the layer-group previews
+    prefrences option
+  *  a9435b9ed3 - app: fix drawable-preview offset
+  *  3c03fcbfbb - app: add active async-operations counter to the
+    dashboard
+  *  0d2d45c3ef - app: add config option to enable/disable layer-group
+    previews
+  *  a3883e5de7 - app: make dependent options insensitive when "promote
+    imported" is unchecked
+  *  0765d8882a - app: render drawable previews asynchronously
+  *  f993de75fe - app: add gimp_drawable_get_sub_preview_async()
+  *  fac91ddad4 - app: add gimp_parallel_run_async_{full,independent}()
+  *  fea8da130b - configure.ac: post-release version bump to 2.10.5
+  *  e9b646d5ce - Update Swedish translation
+  *  e384409fe5 - configure.ac: release GIMP 2.10.4
+  *  d20170ed6c - app: in gimp-parallel, fix async-thread shutdown
+  *  7b3ecb8080 - Updated Danish translation of gimp-plug-ins
+  *  bb34116ee3 - Updated Danish translation
+  *  165cedc1ae - NEWS: re-line-wrapped so I don't have to do that later
+    in the mail client
+  *  fa033aaa3f - docs, etc: regenerated default gimprc and its manpage
+  *  3679b08337 - desktop: 2.10.4 release is today, earlier than
+    planned!
+  *  39213c790e - NEWS: keep up-to-date.
+  *  964e5b4336 - configure.ac: require GEGL >= 0.4.4
+  *  521afbd09f - Update Russian translation
+  *  10dae0b2ea - Update Russian translation
+  *  1022a638e8 - Issue #1748 - Crash when parsing currupt tool preset
+  *  d70bf7653d - Issue #1719 - GIMP crashes with an invalid pluginrc
+  *  960494c591 - Update Spanish translation
+  *  e662b5a0ee - app: fix logic error in
+    tool_options_manager_paint_options_notify()
+  *  b4edec423c - app: move the improved paint property copying code to
+    GimpPaintOptions
+  *  a8b333a00e - app: indentation in gimp-tools.c
+  *  cf7f27390c - app: switch to using gimp-tool-options-manager
+  *  19260d87b8 - app: make sure the active tool options get saved in
+    devicerc
+  *  2a916b241c - app: more stuff in gimp-tool-options-manager.c
+  *  08d64c6eb8 - app: small fix in gimp-tool-options-manager.c
+  *  d03b31780b - app: add gimp-tool-options-manager.[ch]
+  *  d851a9f203 - app: prepare gimpdisplayshell-selection for
+    undeprecation
+  *  8ab76a42d8 - app: fix GimpMeter history-graph painting when clipped
+  *  7cdebe80a1 - Update Ukrainian translation
+  *  01e00a2afc - Update Ukrainian translation
+  *  c4e2763559 - Update Ukrainian translation
+  *  7b7dde84b0 - Update Ukrainian translation
+  *  66ce32c8cb - configure.ac: require babl >= 0.1.52
+  *  4569fdd34b - app: explicitly close output stream when saving
+    internal data
+  *  80efa4a70d - Update Spanish translation
+  *  85a4ede083 - Update Polish translation
+  *  2d6e47eef3 - Update Dutch translation
+  *  22cc731426 - Update Spanish translation
+  *  c2e1147ff5 - Sync USM menu entry to GEGL
+  *  b6c50c016c - app: on make check, search menu XML files in both
+    buildir and srcdir
+  *  6b42597d7b - Update Polish translation
+  *  6129f71a63 - Update Latvian translation
+  *  80bde0cb28 - Update Latvian translation
+  *  99ae1a9e09 - Update Hungarian translation
+  *  ef6354bf07 - Update Catalan translation
+  *  0a3d8ca0b2 - app: Prevent parallel builds for the tests
+  *  42af1846b0 - Update Hungarian translation
+  *  972f13c3de - Update Hungarian translation
+  *  50a4e4f81c - Update Hungarian translation
+  *  50db2b6655 - app: a few async font loading fixes
+  *  445e3a16d9 - INSTALL: add --enable-relocatable-bundle in options
+    list.
+  *  7eb195cdbf - Issue #1731: gbr file that crashes gimp-2.10.
+  *  de5b6b2a81 - Issue #1740: Move tool has two identical options for
+    selection mode.
+  *  3ebeef9fed - Issue #1563 - Dots instead of icons on Windows systems
+  *  ec1f1b3a45 - app: allow multiple variables as input to dashboard
+    group-meter LED
+  *  352ce20356 - app: even more Windows-specific fixes in
+    gimpdashboard.c
+  *  6fa454dd59 - app: more Windows-specific fixes in gimpdashboard.c
+  *  398d5e553a - libgimpbase: forgot to add gimp_pixpipe_params_free()
+    in gimpbase.def.
+  *  1b01e1311c - app: s/DAta/Data/ in gimpdashboard.c
+  *  b0dc4a58ae - Issue #1340 - Critical when editing input controllers
+  *  21f87d7d82 - app: fix jumping around of newly created images
+  *  7eee2614f9 - Update Swedish translation
+  *  ee25bfc8bd - libgimpbase: add gimp_pixpipe_params_free().
+  *  b585201e5e - Issue #1723: gih file that crashes gimp-2.10.
+  *  6580fae7b0 - devel-docs: update macOS support to OSX 10.10.
+  *  7fb7e05d67 - NEWS: keep up-to-date.
+  *  e96b05beed - plug-ins: lookup WMF fonts on same prefix when
+    relocatable bundle.
+  *  5824a3150f - configure: replace --enable-bundled-mypaint-brushes
+    with...
+  *  cede80c4eb - Update Swedish translation
+  *  ad3db88dfa - desktop: tentative release for 2.10.4 on 2018-07-07.
+  *  d2f57ee9ba - app: replace Carbon/Carbon.h by
+    CoreGraphics/CoreGraphics.h.
+  *  41807ace5c - Issue #1719 - GIMP crashes with an invalid pluginrc
+  *  f1ffb06ccb - Issue #1714 - When GIMP starts, default brush hardness
+    is always at 100
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 08 Jul 2018 11:13:25 +0300
+
 gimp-devel (2.10.2+git41174-a3040eec9e-1) unstable; urgency=medium
 
   * Compile

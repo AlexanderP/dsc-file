@@ -1,3 +1,33 @@
+deadbeef (0.7.2+git7742-32f517a5-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 32f517a5d49a9794b5ad2079c168bb737a15a884
+  * Date: 1530881035
+  * git changelog:
+  *  32f517a5 - obsolete DB_EV_SELCHANGED; better documentation of
+    DDB_PLAYLIST_CHANGE_SELECTION
+  *  77aae867 - cocoaui: convert from DB_EV_SELCHANGED to
+    DB_EV_PLAYLISTCHANGED
+  *  8a32bef0 - Revert "streamer: fix signalling of DB_EV_PAUSED"
+  *  0c6dcb9f - vorbis: cleaned up chained file handling
+  *  1122be90 - opus: fixed network stream and chained files playback
+  *  2d7b45be - vorbis: fixed streaming radio / chained vorbis file
+    playback
+  *  2b66f4ae - add information about system dir api
+  *  a5678298 - Use 'new' system directory API since get_plugin_dir is
+    deprecated
+  *  e1f8426e - vorbis: fixed a bitstream index initialization bug and
+    related unwanted track metadata updates
+  *  79e7b35e - cocoaui: fix crash when focusing on the current playing
+    track which doesn't belong to a playlist
+  *  5f19d3b8 - Makefile.am: Fix distcheck.
+  *  1ffd42cf - rebuild translation/plugins.c, and make sure the strings
+    are not marked as c-format
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 08 Jul 2018 08:38:26 +0300
+
 deadbeef (0.7.2+git7730-b885a467-1) unstable; urgency=medium
 
   * Compile
