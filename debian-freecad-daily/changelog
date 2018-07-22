@@ -1,3 +1,129 @@
+freecad-daily (0.17+git14109-4aa91d62e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 4aa91d62e2b5bf59371d0ffe1dbdd954e281e548
+  * Date: 1532128526
+  * git changelog:
+  *  4aa91d62e - Part: Added 'Wire from Edges' option to Part
+    ShapeBuilder
+  *  a91f9e981 - Arch: Enable materials hierarchy
+  *  a077a6d1a - Tweak Linear Dim Cosmetics
+  *  97ebbf27c - fixed mod Assembly for Qt 5.11
+  *  4249ddf64 - building fixes of mod Assembly
+  *  068073656 - fixes in mod Assembly for python3
+  *  473c86626 - Arch: misc improvements to IFC importer
+  *  e92d1018b - PEP8 cleanup
+  *  024ce84da - Using PropertyVectorDistance
+  *  c93ff200c - Part: Allow to disable progress bar in brep string
+    reader
+  *  cc0fb2a5a - Arch: Fixed bug in display of axis systems
+  *  0c33d00bf - Arch: Fixed visibility of BuildingPart
+  *  50a10a202 - Arch: Support of shared profiles in extrusions imported
+    from IFC
+  *  9bfd118f3 - Fix includes for M_PI on Win
+  *  9c60b4190 - Fix "use of deleted function" error on streams
+  *  0790e3c92 - Add support for Dxf Export R14 spec
+  *  24a9ab73a - Arch: Improved compression of IFC files
+  *  56c6e3f0f - Arch: Fixed wrong Floor height on IFC import
+  *  d940fd344 - Arch: Enable compression when exporting IFC files
+    (reuse similar vectors, colors, etc)
+  *  a7c8a4677 - Arch: Support for IfcGrid
+  *  fa32af702 - convert tabs to spaces
+  *  dc79a93dd - save current color so it can be reverted on cancel
+  *  1cb114e25 - handle user cancel color dialog
+  *  3d09e6543 - Fix for coverity CID 168953
+  *  2c74bcddd - Merge pull request #1553 from luzpaz/source-typo
+  *  49b3fbab5 - Source typo fix
+  *  07d1abb38 - Fixed import and coverity issue in rml_post.
+  *  7e781bcfd - Revise multiple solids message
+  *  c74ea1d99 - Fix PD Pocket Through All Unit Test
+  *  883a726d5 - Fix #3401 warning on multiple solid
+  *  c6b394970 - Arch: Building now derives from BuildingPart
+  *  be5e93ddf - Misc. typo & whitespace fixes
+  *  c9b29dc63 - Revert "Added support in DraftGui.todo.delay function
+    to accept any number of arguments."
+  *  63f085dd7 - Extended global marker size to be used for Sketcher
+  *  dc15e8f07 - Extended global marker size to be used for Path
+  *  348ae5177 - Extended global marker size to be used for other modes
+  *  101fac6c1 - Material: recreated materials files with the bash tools
+  *  4627ad585 - Material: properties, add ultimate strain
+  *  35b92641d - Material: properties, remove Elasticity because it is a
+    theory and not a property
+  *  3416a26d7 - FEM: analysis group meshing, deactivate by default
+  *  96ed5404a - FEM: material task panel, typo
+  *  d990fb15f - py3: <generator>.next -> next(<generator>) reported:
+    https://github.com/FreeCAD/FreeCAD_Conda/issues/16 ref1:
+    https://stackoverflow.com/questions/12274606/theres-no-next-function-
+    in-a-yield-generator-in-python-3
+  *  860ad6b91 - Use Stroker to generate Edge selection area
+  *  545bed8b1 - Fix arcs on outer angle dimensions
+  *  091482995 - Fix initial placement of linear dims
+  *  ae4961244 - Fixes for coverity CID 176063 and 176065.
+  *  062fd6735 - Detect OCCT at new Debian location
+  *  dc4fa6e80 - Added support in DraftGui.todo.delay function to accept
+    any number of arguments.
+  *  c4fc02cbc - Arch: fixed bug in non-GUI mode
+  *  74a399e6b - Arch: added IfcPRoperties to BuildingParts
+  *  b54661c09 - Arch: Added IFC properties editor to edit mode of all
+    Arch objects
+  *  0ff2c72ab - allow to disable version number in window title
+  *  5f63a7764 - Arch: using basic object names for all arch objects
+  *  d7d4489da - Change StepOver to PropertyPercent
+  *  097f73afc - Path: Surface op improvements for drop cutter algo
+  *  56cd69918 - Fix mod JtReader with python3
+  *  f469c9a2c - Another fix to compile against qt5 with python2
+    (detection of shiboken2)
+  *  1a952af89 - Make sure the offset wire is oriented predictably.
+  *  41ca2b3b6 - Changed OpTools and unit tests to not rely on Part.Face
+    creation to determine wire orientation.
+  *  d2efdc408 - Some tests to figure out Travis failures
+  *  c4426c28e - Fixed chamfer UI
+  *  c4c30fba9 - Renamed PathGeomOp to PathOpTools.
+  *  57ee12df6 - Prevent user from adding stock features to chamfer.
+  *  3652cee94 - Fixed holding tags unit tests.
+  *  c75fc99cf - Added chamfer selection guard to allow edges and faces.
+  *  ebf84ff15 - Fixed holding tags issue with Path's at the same height
+    as the tag top.
+  *  b8b1c6afe - More holding tags robustifying.
+  *  559d48045 - Fixed direction for offsetting holes.
+  *  664b2da2e - Fixed flipping of an arc if the arc is rotated.
+  *  1574d0bd4 - Robustify holding tags a bit.
+  *  c4ae92cf3 - Fixed open wire offsetting and orienting.
+  *  4a8653b1c - Refactored geom functions into PathGeomOp.
+  *  34aaeff31 - Extracted and added tests for chamfer tool depth and
+    offset calculations.
+  *  028d76f00 - More chamfer unit tests.
+  *  324a30831 - Fixed wire offsetting and orientation and added more
+    test cases.
+  *  bf7f0a69e - Corrected cutting edge angle input for v-bits.
+  *  ee56fc92d - Set default log level back to INFO for all modules.
+  *  c559544cd - Fixed missing stock exception in ProfileContour.
+  *  97ef1bb62 - Work around for offsetting a circle with Placement.
+  *  1b6d14a8d - Added basic chamfer test case for offsetting a wire.
+  *  a605b6ea7 - Fixed flipping of b-spline and enabled unit test for
+    it.
+  *  d101111f6 - Added flipping of edge to PathGeom.
+  *  8130b5794 - Moved functions out of class for simpler testability
+  *  135ede46f - Get the outline of the syntesized shape for PocketShape
+    before extruding. This greatly improves the robustness of the
+    algorithm and gives PathArea less chances to mess it up.
+  *  5fa725c18 - Always use climb milling for closed wires.
+  *  0a7074cd1 - Added join to chamfer properties and UI.
+  *  8657632d1 - Combined engrave ops in a command group.
+  *  6920a618d - Fixed chamfer depth and cleaned up properties.
+  *  ce7f28811 - Rebase chamfer op on engrave-base and enable path
+    generation.
+  *  57ff80fb0 - Split Engrave into base implementation and Engrave
+    specific pieces.
+  *  63200c00e - Offsetting edges for chamfer op.
+  *  ec0e9d1d9 - Basic chamfer op framework.
+  *  0c71bc9f9 - Consolidated path tool editor and added customized
+    support for endmill, drill and v-bit.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 22 Jul 2018 04:24:11 +0300
+
 freecad-daily (0.17+git14016-5f63f9f23-1) unstable; urgency=medium
 
   * Compile

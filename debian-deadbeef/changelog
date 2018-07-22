@@ -1,3 +1,35 @@
+deadbeef (0.7.2+git7758-9f05b6d4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 9f05b6d4c45198afd1bf507bec1e366474e222d6
+  * Date: 1532114313
+  * git changelog:
+  *  9f05b6d4 - vfs_curl: disable ssl support in static builds
+  *  ffaa977c - disable silent rules for travis diag
+  *  9ac1bd0f - vfs_curl: fix library linking order
+  *  ad3c044a - don't build 32 bit pluginfo
+  *  199a4a69 - static build script fix; fixed compiling static build on
+    ubuntu 18.04
+  *  b91eb650 - streamer: fixed error handling when content-type of a
+    network stream can't be obtained
+  *  26dba6d4 - Move fopen out of pl_lock in decoders (#2035)
+  *  0e6f6574 - fixed misleading comment about metacache_ref/unref
+  *  5be53473 - cocoaui: ignore SIGPIPE
+  *  fe65017e - gtkui: disable Edit menu item in trkproperties when
+    editing multiple tracks
+  *  e5e41729 - premake: define USE_GTK_APPLICATION for gtk3 ui
+  *  4e057f87 - gtkui: increase GtkBox config save buffer size
+  *  78fb8b22 - streamer: fixed stop after current album regression
+    (fixes #2033)
+  *  88a84159 - choose correct playlist on resume
+  *  9128ab94 - fixed deprecation macro
+  *  2cf587ff - renamed the non-implemented pre-0.5.0 function `quit` to
+    `do_not_call`, and marked as deprecated
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 22 Jul 2018 08:21:24 +0300
+
 deadbeef (0.7.2+git7742-32f517a5-1) unstable; urgency=medium
 
   * Compile

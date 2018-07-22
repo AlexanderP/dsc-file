@@ -1,3 +1,70 @@
+solvespace (2.3.0+git1265-8426992-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 8426992f27b62de8af753f656429a09a271cc60f
+  * Date: 1532061619
+  * git changelog:
+  *  8426992 - Eliminate blocking in Error() and Message() calls.
+  *  7017716 - I18n: add de-DE locale.
+  *  396cac5 - Add missing virtual destructors.
+  *  c37cddf - I18n: internationalise some messages that were missing
+    gettext calls.
+  *  fb138f4 - Add final qualifiers where applicable.
+  *  4f52167 - Use std::shared_ptr instead of std::unique_ptr for
+    Platform::TimerRef.
+  *  a738e3f - Eliminate imperative redraws.
+  *  738ac02 - Fix some strict GL ES 2 conformance issues.
+  *  02ec64e - Fix unaligned access in LoadStringFromGzip.
+  *  efc3da4 - CMake: add an ENABLE_CLI flag.
+  *  22a9705 - Win32: fix crash on application exit.
+  *  5853fa0 - Finish refactoring of platform code.
+  *  350d2ad - CLI: fix crash running the "thumbnail" command.
+  *  0fb9a4c - GUI: fix formatting of messages with only one sentence.
+  *  7630e0e - Make some dubious type conversions explicit.
+  *  c1f1c7c - Add a platform abstraction for 6-DOF input devices.
+  *  6b5db58 - Add a platform abstraction for file dialogs.
+  *  d796897 - Add a platform abstraction for message dialogs.
+  *  84bf37a - GTK: save boolean settings as JSON booleans.
+  *  26f3751 - macOS: rename application bundle to SolveSpace.
+  *  a93283d - macOS: put assertion message into crash reporter dialog.
+  *  eb5501e - Implement a platform abstraction for settings.
+  *  f324477 - Implement a platform abstraction for windows.
+  *  55baaf3 - Implement a platform abstraction for menus.
+  *  7ab87ca - Implement a platform abstraction for timers.
+  *  28f94dc - Start using C++ in-place member initialization.
+  *  501a482 - I18n: add fr_FR locale.
+  *  975b49f - Win32: offer to restart application on fatal errors.
+  *  8192c96 - Show degrees of freedom in property browser.
+  *  4fab5b7 - Appveyor: add IRC notifications.
+  *  595ae86 - I18n: update translations.
+  *  76561e3 - README: add Community section.
+  *  fb1065d - Travis: add a workaround for travis-ci/travis-ci#4704.
+  *  f54dabb - Clean up includes and include guards.
+  *  d471e65 - Implement splitting at point with "Split Curves at
+    Intersection".
+  *  9cd0044 - macOS: update instructions in README.
+  *  ba71dba - CMake: use correct gtkmm version constraint.
+  *  f2ecd7a - macOS: use correct format for connexionName field.
+  *  fa55577 - macOS: add CFBundleIdentifier to MacOSXBundleInfo.plist.
+  *  a16c204 - Allow using m (in addition to mm and inch) as base unit.
+  *  6ad5c68 - Avoid degenerate triangles when snapping to mesh.
+  *  025bb96 - Improve performance of mesh-forced assemblies.
+  *  c8fc033 - macOS: fix #include to work on case-sensitive filesystem.
+  *  9c99f69 - Clean up unused shader variables.
+  *  20a4a2b - Avoid using `tan` as identifier in shaders.
+  *  f37881a - macOS: bundle and statically link external dependencies.
+  *  03e479e - Ensure va_end() is always called in TextWindow::Printf().
+  *  771b415 - Fix various comment and UI string typos.
+  *  572869d - GTK: install MIME type specification.
+  *  c5a3b43 - CMake: support sanitizers on gcc builds, too.
+  *  49ff36f - Use a more rigorous check for library containing
+    backtrace().
+  *  8cedefc - Allow using non-ASCII format strings in Printf.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 21 Jul 2018 19:00:07 +0300
+
 solvespace (2.3.0+git1213-2b9ffd1-1) unstable; urgency=medium
 
   * Compile

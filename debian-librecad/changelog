@@ -1,3 +1,21 @@
+librecad (2.1.2+git4429-439d75dc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: master
+  * Commit: 439d75dc35381aae7ffe67505da9b93c596afb5b
+  * Date: 1531485978
+  * git changelog:
+  *  439d75dc - fixed #998, protect 4th vector when triangle solid is
+    modified (move(), rotate(), scale(), mirror())
+  *  0653ed64 - style: more re-formatting and style fixes in rs_solid.*
+    files to prepare fix of #998
+  *  e1124d28 - re-formatting rs_solid.* for readabillity
+  *  190a5a8a - fix: gcc7 warning 'misleading-indentation'
+  *  7dba9927 - fix: gcc7 warning 'varianbles may be used uninitialized'
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 21 Jul 2018 22:37:02 +0300
+
 librecad (2.1.2+git4424-ac524dbd-1) unstable; urgency=medium
 
   * Compile

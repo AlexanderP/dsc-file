@@ -1,3 +1,131 @@
+gimp-devel (2.10.2+git41389-77f3c8e404-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 77f3c8e404c95b72814e54e9843a8eb42a660d08
+  * Date: 1532100571
+  * git changelog:
+  *  77f3c8e404 - libgimpwidgets, icons: add gimp-color-space-non-linear
+    icon
+  *  8954a0e24c - Update Spanish translation
+  *  b72dc8abf1 - Issue #1874 - Critical error after selecting "Edit
+    Text on Canvas" ...
+  *  3e1138dd08 - Updated Italian translation
+  *  d5dd54c8ed - Updated Italian translation
+  *  29deb53727 - libgimpconfig: update some description comments.
+  *  a52473196f - INSTALL: add some recommended dependencies to GEGL.
+  *  d779302c74 - Update Greek translation
+  *  65daaeb876 - app: improve file-handler sorting
+  *  ed8f80bf4b - app: fix dynamics editor "fade" curve color
+  *  2540b4eff8 - app: indentation fix in gimppluginmanager-restore.c
+  *  dd91322ab9 - Issue #1825 - PSD files are loaded as merged by
+    default ...
+  *  c5c0f87310 - app, pdb: add gimp-register-file-handler-priority
+    procedure
+  *  dc29bfe362 - app: opaque in gimp_layer_new() is 1.0 not 255
+  *  7d897a451e - libgimpcolor: add gimp_color_profile_get_space()
+  *  75837694e6 - app: gimp:semi-flatten propagate babl space
+  *  0a2ec7c292 - app: gimp:threshold-alpha propagate babl space
+  *  9b4e8ee275 - app: gimp:set-alpha propagate space
+  *  a8a7c99389 - app: gimp:grow propagate babl space
+  *  739d72c562 - app: gimp:shrink propagate bable space
+  *  6a6ef0f2e1 - app: propagate babl space in pointfilter base class
+  *  df00af81b3 - app: gimp:flood propagate babl space
+  *  f4cd1f7970 - app: gimp:desaturate propagate babl space
+  *  3c49e43062 - app: gimp:compose-crop propagate babl space
+  *  b7ca5f1997 - app: gimp:border propagate babl space
+  *  e13eb13bc4 - app: update GimpToolCompass when display is
+    scaled/rotated
+  *  7ab213d918 - app: in GimpToolCompass, add visual distinction
+    between angle lines
+  *  241c8dd756 - app: keep display-enums.h (sort-of) alphabetically
+    sorted
+  *  9a77dc75a4 - Issue #1850 - Undoing the "straighten" operation in
+    the Measure tool ...
+  *  d26bde8f7a - Issue #1805 - Sample Points keep resetting themselves
+    to "Pixel"
+  *  bfa94216a9 - app: bind "orientation" measure-tool option to compass
+  *  dc2cdfe658 - Issue #1851 - Measure tool straighten rotation is
+    always to the horizontal.
+  *  fc4ca7fbcf - app: add "orientation" property to GimpToolCompass +
+    improvements
+  *  4cb91320a4 - app: fix line-angle constraint when xres != yres
+  *  88db1f8282 - Issue #1805 - Sample Points keep resetting themselves
+    to "Pixel"
+  *  6e86e2233e - app: move GimpColorFrameMode to the core and name it
+    GimpColorPickMode
+  *  513c71d1d2 - app: sort core-enums.h alphabetically
+  *  16df7fa941 - app: minor cleanup in gimpguide.c
+  *  34080f1188 - Update Polish translation
+  *  3abfd14d61 - app: add GimpAuxItem as base class for GimpGuide and
+    GimpSamplePoint
+  *  3c9de4b59e - app: turn GimpSamplePoint into a GObject, just like
+    GimpGuide
+  *  f585cf94a0 - app: some cosmetic cleanup in the guide code
+  *  a90619ff00 - app: rename enum GimpColorPickMode to
+    GimpColorPickTarget
+  *  bc312531fb - app: flush async-operations queue when setting async
+    thread count to 0
+  *  1c435f313b - app: disable parallel asynchronous operations when
+    GEGL_THREADS=1
+  *  1de48b2692 - gimptoolpolygon.c source typo
+  *  2883b8fb40 - Misc. comment typos
+  *  e747cbad6b - plug-ins, pdb: remove the unsharp-mask plug-in and add
+    a PDB compat proc
+  *  9e71fc0983 - Change a bazillion URLs to https://
+  *  7805a4cdbd - libgimpthumb: update the URL of the thumbnail spec
+  *  a7e98a33f5 - Update Brazilian Portuguese translation
+  *  c4ba9c36a6 - Issue #1841 - Export As... mng swaps width and height
+  *  9340b68e81 - Update Brazilian Portuguese translation
+  *  c743aed29d - app: relax precondition checks in
+    gimp_operation_config_get_type()
+  *  bfc3b5f780 - Update Spanish translation
+  *  5e3150b90e - app: small formatting fix in gimpfiltertool-widgets.c
+  *  87ef1d4d8f - Update Brazilian Portuguese translation
+  *  edd1d01b41 - Update Brazilian Portuguese translation
+  *  e7cfda7d9f - app: remove duplicate include in gimpcurvesconfig.c
+  *  127a982232 - Update Brazilian Portuguese translation
+  *  dadfced2af - app: don't process updates when clearing container-
+    tree-view context
+  *  6f04d06095 - Issue #1834 - (gimp-context-get-gradient) could return
+    a gradient name...
+  *  ea86c3be12 - Issue #1833 - (gimp-context-get-gradient-repeat-mode)
+    always warns...
+  *  f39d359bdf - Forgot some license links...
+  *  a88c0ffb93 - Change the license URL from
+    http://www.gnu.org/licenses/ to https://
+  *  db5b2e3433 - Updated Slovenian translation ...
+  *  512cb31d83 - Updated Slovenian translation ...
+  *  b52541a03b - Updated Slovenian translation ...
+  *  4711f8b791 - Updated Slovenian translation ...
+  *  657169377e - Merge branch 'gimp-2-10' of
+    gitlab.gnome.org:GNOME/gimp into gimp-2-10
+  *  f36bf556ca - Updated Slovenian translation ...
+  *  cf80265411 - More bugzilla -> gitlab in various files
+  *  0456c7c934 - Updated Slovenian translation
+  *  f0af65b65a - Updated Slovenian translation
+  *  d6e0587085 - po*: change Report-Msgid-Bugs-To URL to
+    gitlab.gnome.org
+  *  9c06f323e4 - Update Brazilian Portuguese translation
+  *  29094a5f0f - Update Brazilian Portuguese translation
+  *  6b096baf66 - Update Brazilian Portuguese translation
+  *  7e43757bf0 - Update Polish translation
+  *  a5437e4d0d - Update Spanish translation
+  *  b871c3602d - Update Spanish translation
+  *  5c20f279ed - Update Spanish translation
+  *  bfff811ec1 - Update Spanish translation
+  *  b4d0f298f2 - Update Brazilian Portuguese translation
+  *  b5c470698f - Update Polish translation
+  *  a09e016d32 - libgimpwidgets: forgot one s/H/h/ in LCh
+  *  748863ae2a - Update Polish translation
+  *  cc20410e80 - app, libgimp*: make user visible color model labels
+    consistent
+  *  5d11544b2c - app: make the rectangle options a bit narrower, still
+    too wide...
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 21 Jul 2018 23:39:48 +0300
+
 gimp-devel (2.10.2+git41300-6377e60e26-1) unstable; urgency=medium
 
   * Compile

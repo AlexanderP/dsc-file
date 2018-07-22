@@ -1,3 +1,32 @@
+ocrodjvu (0.10.4+git1180-94729e0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/jwilk/ocrodjvu.git
+  * Branch: master
+  * Commit: 94729e02a4cd428a35be73571c88c92b4948e21e
+  * Date: 1532162197
+  * git changelog:
+  *  94729e0 - private/build-source-tarball: refactor version
+    extraction.
+  *  705d1bb - setup: don't mention distribute.
+  *  6f33260 - Bump version to 0.10.5.
+  *  92e4224 - private/run-pyflakes: sanitize locale for grep.
+  *  1548f27 - Release 0.10.4.
+  *  2dbab49 - doc/changelog: fix typo.
+  *  bf9a789 - tests/coverage: update.
+  *  6616f9b - doc/changelog: update.
+  *  5ea8e98 - Update copyright notices.
+  *  4fbc4d7 - tests/djvu2hocr, tests/ocrodjvu: test non-ASCII input
+    paths.
+  *  5f9fbd7 - tests/tools: add require_locale_encoding().
+  *  579d1fd - tests/tools: add remove_logging_handlers().
+  *  2078ee5 - engines.dummy: add.
+  *  cbc8a99 - logger: never add more than one logging handler to the
+    same logger.
+  *  a5a6902 - utils: make smart_repr() return byte string.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 21 Jul 2018 18:56:09 +0300
+
 ocrodjvu (0.10.4+git1165-6c5aabb-1) unstable; urgency=medium
 
   * Compile

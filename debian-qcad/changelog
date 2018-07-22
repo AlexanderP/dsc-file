@@ -1,3 +1,115 @@
+qcad (3.20.0+git5929-40ce264b6-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 40ce264b6498486265b2e1091e1fbb52f1b4eeb5
+  * Date: 1532171668
+  * git changelog:
+  *  40ce264b6 - fix FS#1784 - View > Property Editor: Block attribute
+    labels with international characters
+  *  239ca985d - update script bindings
+  *  eec044225 - fix double-click / middle click
+  *  3ff4801d2 - add RPolyline::convertArcToLineSegmentsLength
+  *  8b6731fea - refactoring
+  *  325107ded - text along: support polyline segment as base shape
+  *  4d3720b91 - set version to 3.21.2.2
+  *  1a968bbbf - update user reference manual
+  *  f566673ed - add gui actions for submenus
+  *  4fb5f3ab6 - update translations
+  *  968ced092 - update user manual
+  *  c7c9050b0 - add RGuiAction for display order tools
+  *  c125a6c33 - update
+  *  73c2a90ba - missing ;
+  *  d84100339 - add support for processing ellipses
+  *  6835a4f7a - fix FS#1783 - RArc::splitAt(): fails in some cases
+  *  d8d4c8b0a - fix typo
+  *  977964c1f - update script bindings
+  *  c123d3c92 - add RSplineEntity::getBezierSegments
+  *  97023b257 - update
+  *  fe416f6e1 - print overlays
+  *  68e2540aa - add isLayerPlottable
+  *  0ff25c51e - add preference to show only plottable layers in print
+    preview
+  *  dda7cd41c - workaround for Qt/wacom bug
+  *  25641de43 - update script bindings
+  *  b1c961990 - rename foreground -> overlay
+  *  0de422e26 - fix getDirection1, getDirection2 for ellipses
+  *  83c14595a - auto assign keys to transaction listeners
+  *  75bbfe78d - Merge branch 'master' of github.com:qcad/qcad
+  *  8ff19d24c - update script bindings
+  *  9dfc50d76 - add z to painterpath export function
+  *  afa4b2d7f - update user manual translations
+  *  7f4e90e49 - update user manual translations
+  *  6c2dc58a1 - update user manual translations
+  *  5fffb328a - update user manual translations
+  *  c249ee2b2 - update user manual translations
+  *  5629e2beb - update user manual translations
+  *  a8245460c - update script bindings
+  *  196198c9b - add view category in toolbar menu
+  *  051cb69ab - clean up
+  *  3c5bfb6fb - return index of added transaction listener
+  *  3bc06f968 - update script bindings
+  *  b9e0e5cb4 - allow foreground to be linked to object IDs
+  *  34f1b4ad8 - spelling
+  *  399aed8ac - notify local transaction listeners on undo/redo
+  *  f670ac569 - update script bindings
+  *  5e0284148 - add support for local, document specific transaction
+    listener
+  *  35e5f0771 - fix getPointWithDistanceToStart/End for polylines
+    (along polyline)
+  *  102bffdc7 - add support for forgeground overlay to graphics view
+  *  d3bf58403 - fix alphanumerical sorting
+  *  04c024831 - disable QCollator use under Linux (crash)
+  *  2af5c75d0 - Merge branch 'master' of github.com:qcad/qcad
+  *  352955fa6 - disable alphanumerical sorting under linux (random
+    crashes)
+  *  2b308c335 - update
+  *  d7155060b - update splashscreen
+  *  1e9e0690f - set version to 3.21.2.1
+  *  72c52199d - update user manual translations
+  *  c9bc0eed8 - update user manual translations
+  *  1e0abf357 - update user manual translations
+  *  5b2d49bc9 - update user manual translations
+  *  d55982021 - update user manual translations
+  *  f9cea140a - clean up
+  *  c90fb0c55 - Merge branch 'master' of github.com:qcad/qcad
+  *  ad986247c - backport
+  *  da156998d - update user manual translations
+  *  542cdbac8 - update user manual translations
+  *  c2bc633e2 - update user manual translations
+  *  03df4ee53 - update user manual translations
+  *  03eba6349 - update user manual translations
+  *  d1dfc462f - update user manual translations
+  *  312813f43 - port to Qt 4
+  *  f7fc4f991 - update user manual
+  *  cb73e96a1 - update script bindings
+  *  d7f98293e - add Z linear parameter to morphing function
+  *  ffcaf9777 - update translations
+  *  6f95d51f5 - update user manual translations
+  *  6c566a166 - update user manual translations
+  *  f7690c113 - update user manual translations
+  *  98c71a390 - update user manual translations
+  *  9d086ff3d - update user manual translations
+  *  15a8e152d - update user manual translations
+  *  ececbbc14 - update user manual translations
+  *  13890801b - update user manual translations
+  *  cee4a1951 - update user manual translations
+  *  3de2418b0 - update user manual translations
+  *  a1ff146c7 - fix sorting
+  *  cf0183f04 - update script bindings
+  *  ceb4a6c4a - add RS::compareAlphanumerical
+  *  05cf4d8e5 - move alphanumerical sorter to C++ / RS class
+  *  d70e4c1a1 - update script bindings
+  *  6125288c9 - add RS::sortAlphanumerical
+  *  55adc4a2e - Merge branch 'master' of github.com:qcad/qcad
+  *  94c9805bf - remove unused enum values for easing
+  *  202056bc3 - port to Qt 4
+  *  7ef38ae4d - fix argument handling with undefined default value
+  *  c1695484f - update translations
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 21 Jul 2018 19:13:21 +0300
+
 qcad (3.20.0+git5833-9284e51e8-1) unstable; urgency=medium
 
   * Compile
