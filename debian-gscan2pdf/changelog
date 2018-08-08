@@ -1,3 +1,37 @@
+gscan2pdf (2.1.2+git2851-da84ae45-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: da84ae45c92dbffc4aabcb4b77b87b9f1db976b2
+  * Date: 1532898542
+  * git changelog:
+  *  da84ae45 - Bumped version to 2.1.4
+  *  f89cccf0 - Fix email functionality broken in v2.1.3.
+  *  277bca04 - Post-release commit
+  *  668f8d72 - Bumped version to 2.1.3
+  *  bbf34fb3 - Update to German translation
+  *  0b1824c1 - Fix test failures with file v5.33
+  *  a26d9ab9 - Fix setting date via calendar widget
+  *  13027209 - Refactor save functionality into Dialog::Save
+  *  563fd234 - Also include timezone and time information in metadata
+    of PDF or DjVU
+  *  c72b1642 - Fix P::C warning that application_activate_callback()
+    does not end with return
+  *  271ffe58 - Document how to customise colours of selection box
+  *  d7016e09 - Don't unnecessarily use tiffcp on single-page TIFFs
+  *  e38721bf - + messages to help debugging problems with imagemagick
+  *  219162b8 - Add note about GNOME using Perl as application name to
+    comment
+  *  dc13f92b - Note that trusty and precise cannot run v2 at present
+  *  7bee554a - Correct documentation on default filename for PDF or
+    DjVu files
+  *  85cdfa62 - Optionally also include timezone information in metadata
+    of PDF or DjVu
+  *  7b42f877 - Only run test if session file can be deserialised
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 02 Aug 2018 22:46:08 +0300
+
 gscan2pdf (2.1.2+git2833-fe6b3bbb-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,88 @@
+gimp-devel (2.10.2+git41444-71f37d417c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 71f37d417c306b4fdb53daf0cb6a439e63819f98
+  * Date: 1533380361
+  * git changelog:
+  *  71f37d417c - Issue #1974: Memory leak in gimpimage.c.
+  *  8909684b59 - Issue #1974: Memory leak in gimpimage.c.
+  *  53b07a92dd - Issue #1846 - "gitlab::" typo in the Windows installer
+  *  0edbb0586c - app: short-circuit GimpProjection bounds-changed
+    handler if disjoint
+  *  53afeb11ac - app: fix gimp_projection_projectable_bounds_changed()
+  *  a1d2c05f0f - app, libgimpbase: update vertical text labels
+    (shorten)
+  *  d8c0368a52 - app: avoid re-rendering group layers upon resizing
+  *  5eaa2f9091 - app: avoid re-rendering group layers upon translation
+  *  bcbc3c23e0 - app: use gimp_projectable_bounds_changed() when
+    resizing group layers
+  *  379d65e056 - app: stop idle projection rendering when flushing
+    group layers
+  *  adadd4bbbd - app: add "update" parameter to
+    gimp_drawable_set_buffer_full()
+  *  09d50449f2 - app: respond to GimpProjectable::bounds-changed in
+    GimpProjection
+  *  2ad7fe9763 - app: add GimpProjectable::bounds-changed signal
+  *  c0a4e12b3d - app: add gimp_tile_handler_validate_buffer_copy()
+  *  9ad3720271 - app: add gimp_tile_handler_validate_unassign()
+  *  cf0abb0ed9 - app: in GimpTileHandlerValidate, clear data when
+    allocating tile
+  *  82555e58b9 - Updated Slovenian translation
+  *  cb0bc3a0b6 - Updated Slovenian translation
+  *  3db71dc2b8 - Updated Slovenian translation
+  *  599f947a66 - Updated Slovenian translation
+  *  05803d8f6c - Updated Slovenian translation
+  *  0a2c03b667 - Update German translation
+  *  d2c45f3d03 - Updated Italian translation
+  *  c25aaaa0e0 - app, libgimpbase: update vertical text labels.
+  *  9ec12b6246 - app: minor coding-style cleanup.
+  *  8945f4b96d - Fixed when texttool popup is shown first, it does not
+    have current text direction.
+  *  f6ed6e6e72 - Fixed that anchor position of text is shifted when
+    text direction is changed.
+  *  552dc5f867 - INSTALL: update gettext requirement.
+  *  8e889fd10c - configure: making xgettext recommended version a
+    requirement.
+  *  8d2ade524e - app: add "cairo-ARGB32" to "R'G'B'A u8" in
+    gimp_babl_init_fishes().
+  *  e870c6c5da - po: fix validation of Desktop file because of Marathi
+    keywords.
+  *  daa12a1ebc - Issue #1884 - Incorrect font when export to png
+  *  ed631c842a - app: copy the is-color-managed status when duplicating
+    an image
+  *  84e55dde1e - Update Spanish translation
+  *  bb56a97a8b - Modified a comment in more detail.
+  *  ea12bc7a2b - NEWS: keep up-to-date.
+  *  ff13f75ebc - icons: update icons for new top-to-bottom text
+    feature.
+  *  e2958714d9 - MR !19: Add support for vertical text writing.
+  *  b43473d940 - Update Brazilian Portuguese translation
+  *  892515fad2 - Update Dutch translation
+  *  cb55faeb61 - Update Brazilian Portuguese translation
+  *  19e243e8e7 - Update Polish translation
+  *  47b3f5cc33 - NEWS: keep up-to-date.
+  *  d403f3313a - app: show relevant files only by default.
+  *  ed5432d58f - Issue #1160: file dialog view filter getting confused
+    with file...
+  *  88d126c31a - Issue #1160: file dialog view filter getting confused
+    with file...
+  *  efe72a8d56 - */Makefile.am: add *marshal.h files to BUILT_SOURCES
+  *  3a9025fd7f - Update Spanish translation
+  *  800a02a297 - Updated Spanish translation
+  *  b77c523c4e - Updated Spanish translation
+  *  f1bc66ce30 - app: fix segafult when halting filter-tool with
+    controller
+  *  dc7d2c357c - app: in prop-GUI, use "direction" UI-meta of angle
+    props for dial
+  *  49ce2422f9 - app: in GimpDial, add "clockwise-angles" property ...
+  *  c582023ef5 - icons: add missing gimp-color-space-non-linear.png
+    files
+  *  0aba1c0e76 - Update Polish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 05 Aug 2018 00:50:38 +0300
+
 gimp-devel (2.10.2+git41389-77f3c8e404-1) unstable; urgency=medium
 
   * Compile

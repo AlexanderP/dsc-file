@@ -1,3 +1,86 @@
+audacity (1:2.2.2+git8826-37018181a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 37018181a1c9546706906c6cbd276893f3683917
+  * Date: 1533197787
+  * git changelog:
+  *  37018181a - Merge pull request #290 from Paul-Licameli/rewrite-aud-
+    do
+  *  06eee27b9 - Rewrite commit 1bc0f0f without further changes to lib-
+    src...
+  *  0dddcf44c - Some uses of wxWindowRef, a weak pointer that won't
+    become dangling
+  *  703bf2b64 - Merge branch 'scripting-with-nyquist'
+  *  c21855bbc - Change ";type tool" to not iterate through tracks or
+    selection.
+  *  1bc0f0f4d - Make Nyquist support (AUD-DO)
+  *  b97595681 - Add re-entrancy checks to Nyquist
+  *  d554ea53d - Fix Travis build
+  *  f12362480 - Macro dialog: minor accessibility fixes
+  *  5f27ae905 - Changed misleading terminology in scrubber...
+  *  b33d3516f - Rename a function in AdornedRulerPanel...
+  *  8935fa106 - Replace deprecated std::mem_fun and mem_fun_ref with
+    mem_fn...
+  *  4d24c0249 - Use dB, not LUFS by default.
+  *  f13e621bc - Bug 1906 - Issues with dynamic Play-at-Speed
+  *  9cbb67acb - Fix too low loudness normalization levels.
+  *  487769d2b - Change more prompts when switching between LUFS and dB
+    in Normalize.
+  *  bcb60d1f6 - Fix initial display of dB/LUFS in Normalize Effect.
+  *  afcff49f1 - Merge pull #287 by Max Maisel, "Normalize fixes and
+    improvements"
+  *  e68ea1a27 - Added missing bias value in Normalize LUFS calculation.
+  *  0ed9b9d34 - Separated peak and LUFS normalization presets.
+  *  58929e4c6 - Fixed stereo track LUFS calculation according to EBU
+    R128.
+  *  b1598fd21 - Fix peak normalize regression introduced by refactoring
+    (bug #1908).
+  *  514c3f897 - Improved source reference for EBU R128 sampling rate
+    adaption.
+  *  98a72acfb - Remove unnecessary moves of return values
+  *  e3e2eb99a - Merge pull request #286 from mmmaisel/master
+  *  ed4118353 - Implement EBU R128 loudness normalization.
+  *  d16b4526c - Refactor Normalize extent calculation in preparation of
+    EBU R128 loudness normalization.
+  *  6655f6e38 - Fix normalize progress bar in case of stereo tracks.
+  *  d707f6818 - Expose "msg" parameter in Effect::TotalProgress().
+  *  473e561f5 - Add missing headers in Biquad.h/cpp.
+  *  9fcb83882 - Refactor Biquad in preparation of EBU R128 loudness
+    normalization.
+  *  1adf833d4 - Fix 4 warnings about missing override keyword
+  *  83e01fb43 - Remove 8 warnings about re-#define-d names, related to
+    SoundTouch
+  *  e432883de - Fix deprecation warnings with wxFont, wxPen, wxBrush
+    ctors...
+  *  0ea56874a - Comment out a debug message.
+  *  6325b443d - Possible fix for Bug 42 (Timer Record does not stop,
+    moonphase)
+  *  f71e36acf - Move check box items to foot of menus.
+  *  66e203cdc - Transcription Toolbar -> Play-at-Speed Toolbar
+  *  1403e7fa9 - Bug 1906 - Issues with dynamic Play-at-Speed (issues 5
+    & 6)
+  *  9e1291b2b - Improve initial and minimum widths of resizable
+    toolbars.
+  *  d99089023 - Update alpha manual URLs in mw2html scripts
+  *  f8da13f00 - Bug 1875 - wiki2htm.sh fails with https
+  *  f0637eeb8 - Bug 1906 - Issues with dynamic Play-at-Speed (Play
+    doesn't pop up)
+  *  5caa14e4f - Bug 1906 - Issues with dynamic Play-at-Speed (Shows as
+    Scrubbing)
+  *  2115e9b5a - Play at speed pop-up dialog changes speed dynamically
+    too.
+  *  85497ceef - Increase upper limits on slider widths in resizable
+    toolbars.
+  *  8b2fa68a8 - Make Mixer ToolBar resizable.
+  *  132986de1 - Make Transcription ToolBar resizable.
+  *  f5999954c - Fix crackle when playing at low speed.
+  *  17ca54ad4 - Bug 133 - Enh: Play-at-Speed slider: Change of playback
+    speed is no longer automatic
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 02 Aug 2018 21:44:16 +0300
+
 audacity (1:2.2.2+git8776-848b66f4f-1) unstable; urgency=medium
 
   * Compile

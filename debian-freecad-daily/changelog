@@ -1,3 +1,166 @@
+freecad-daily (0.17+git14224-8068150c6-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 8068150c64b71981ec2f12b5a718a86da46b9e54
+  * Date: 1533404269
+  * git changelog:
+  *  8068150c6 - [WIP] add box selection to select individual faces
+  *  70e5b9fec - fix explosion of face colors dialog if too many faces
+    are selected
+  *  272c89b00 - add protected default constructor of
+    SelectionFilterGate to simplifiy writing of sub-classes
+  *  123e9d210 - Draft: Allow to turn off Draft verbose output in
+    preferences
+  *  1d81fd66b - AddonManager: expand dialog window
+  *  48641c2b9 - replace Qt's OpenGL buffer with own implementation
+    based on Coin3d API
+  *  53c2058e0 - AddonManager: Support for Mario's template for
+    externally hosted macros
+  *  b40b50a30 - Arch: Fixed orientation of CTH profile
+  *  ee517cf18 - Draft: better tooltip for copy mode option
+  *  5d2a889a8 - Fixed issue #3506: Certain alias names with a number at
+    the end caused exceptions when deleting cells in a spreadsheet.
+  *  20d3ebca8 - Update Draft.py
+  *  5162f4e57 - Arch: support of stacked groups in IFC and added
+    Internal property to Spaces
+  *  269a4a558 - Arch: Fixed export to IFC of standalone axes
+  *  0865c8ae6 - Arch: small bugfix in material creation
+  *  d2f9ab6a1 - Spreadsheet: Fixed issue #3361.
+  *  13da3dd83 - Revert "fixes #0003361: Spreadsheet: Inserting Row
+    Cause Crash - FC Daily v0.17"
+  *  cd0b26a69 - Fix text position in Diamter Dim
+  *  4046b001b - Fix default Vertex color
+  *  ee607d36a - Fix iso View position in AutoDistribute
+  *  1f4ab25d9 - add option to resize datum planes manually
+  *  9c57ae56a - add cmake file for thumbnail provider
+  *  9a3f0bc25 - improve exception handling in
+    ViewProvider::eventCallback
+  *  36fa72488 - comment out unused icons (to fix C2603 MSVC error)
+  *  3d4c5eda2 - Sketcher: Fix typos
+  *  de7bab2f4 - Sketcher: Fix Radius/Diameter shortcut
+  *  c84fe5fa3 - Sketcher: Add diameter constraint to the menu and the
+    toolbar
+  *  26f93eef9 - Sketcher: Geometry Element Widget Support for Diameter
+    Constraint shortcuts
+  *  1414f986d - Sketcher: Constraint Widget support for the diameter
+    constraint
+  *  6ce8dcdfc - Sketcher: Support for editing datum dialog
+  *  314769101 - Sketcher: Diameter Constraint Property representation
+  *  a582da50b - Sketcher: New command to add a Diameter Constraint
+  *  1fbdc7c1d - Sketcher: Diameter constraint art
+  *  de3da8129 - Sketcher: ViewProvider representation of the Diameter
+    Constraint
+  *  2e33aba01 - Sketcher: Double arrow label for Diameter Constraint
+  *  f41c1a969 - Sketcher: Python SketchObject support
+  *  103260872 - Sketcher: Diameter support for Sketch Object
+  *  1e2df1054 - Solver: Support for Diameter constraint
+  *  424d68085 - GCS: Diameter constraint emulation through
+    ConstraintEqual
+  *  dcdb66470 - GCS: Extension of ConstraintEqual to allow for a
+    proportionality factor
+  *  4ae2692fe - Sketcher: Diameter Constraint Python support
+  *  4bbc7ea78 - Sketcher: New Sketcher Constraint Diameter
+  *  8ef330d19 - add missing export macro
+  *  1899987e8 - Sketcher: Add command to delete all constraints to menu
+  *  74a5a066c - Sketcher: UI command to delete all the constraints at
+    once
+  *  cd5aa8975 - Sketcher: Python command to delete all the constraints
+    at once
+  *  0024d1b0c - Sketcher: Python SketchObject implementation
+  *  527c814dd - Sketcher: SketchObject adaptation to Sketch Analysis
+  *  3dfb20238 - Sketcher: Make use of Sketch Analysis for Sketch
+    Validation - refactoring
+  *  de9e7cc94 - Part: Improvement to closest parameter determination
+    when the projection does not exist in the trimmer curve
+  *  97f375296 - Sketcher: Sketch Analysis tool and autoconstraining
+    algorithms
+  *  b40c1f16b - add a missing check for OCC version
+  *  3c049e44f - cleanup of defeaturing in Part Gui
+  *  d5db3ff58 - add OCC defeaturing to PartWB Gui
+  *  1f63d6a10 - add python binding of OCC defeaturing
+  *  4a0ea3c0e - add OCC defeaturing to TopoShape
+  *  e6658ed3f - expose methods to Python to change navi cube settings
+  *  c2ada8eac - Fix for issue #3541: Normalize xDir vector for Hole
+    feature to correct hole diameter.
+  *  2ca81da42 - fixes #0003538: MacOSX 10.13 not in the 'About FreeCAD'
+    dialog
+  *  23b30518b - PartDesign: fixes for Qt 5.11
+  *  c6c55cb6c - Change method of counting commits
+  *  9d419b8a4 - Add libspnav to fedora spec
+  *  61a6fbe6d - fix -Wunused
+  *  c2ab3f02c - remove undesired dependency of Mesh to Part module
+  *  039e972a4 - implement fast mesh rendering for Qt5 port (7x faster)
+  *  db4f47cf2 - Arch: other small bugfix in IFC exporter
+  *  ee154d920 - Arch: Fixed storey height bug in IFC export
+  *  057652414 - Misc. code comment typo fixes
+  *  4c188ec0f - Fixed DAE export of groups including sub-groups and sub-
+    parts
+  *  e267eac7b - Fix #3329 globalPosition in Stl export
+  *  e45a3674f - Arch: bugfixes in IFC exporter
+  *  c28f95d9f - Export DocObjectPy/TopoShapePy to Dxf (Import module)
+  *  6cc1524a0 - Mesh improvements: + support of Simple Model Format
+    (smf) + improve reading of STL files (reduce by ~70%)
+  *  98af9aabd - Draft: Snap to BuildingPart base points
+  *  78fea6704 - Arch: bugfix in IFC exporter
+  *  d4987d088 - add option to drag at cursor instead of view center
+  *  6e8b60589 - add brnading option to show full version number in
+    splash screen
+  *  6c51cdd66 - minor changes
+  *  fa89e3b95 - add url handler to handle certains protocols
+    differently
+  *  d3ef6905f - + add option to switch off precompiled header
+  *  08fcd58e9 - + raise exception instead of crashing when trying to
+    access curvature info via Python
+  *  6b9a3bf93 - fix possible crash in Quarter viewer
+  *  b7ac2807f - Merge branch 'master' of
+    https://github.com/FreeCAD/FreeCAD
+  *  65879dfe6 - + Improve mesh selection (precompute projection matrix
+    and use polygon bounding box)
+  *  2b04db09e - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  d034c0083 - Draft: Added variable to be able to start Move command
+    in copy mode
+  *  f6fdad4d0 - Part: Fixed wording in ShapeBuilder messages
+  *  1fcfbcf1a - + move implementation of Base::ifstream and
+    Base::ofstream to header and remove export macro.   This is needed
+    for VS 2013 to avoid that it exports methods of the base class and
+    thus causing linker errors for modules that link FreeCADBase
+  *  3b3e4fd4c - minor fix
+  *  806ad88c5 - + implement a faster method to multiply vector with
+    matrix + add convenience method to transform a point array
+  *  b298e63bc - + implement direct and queued mode in console class
+  *  b13f1562a - handling of UTF-8 in zipios++ on Win32
+  *  6b6bde1ba - use correct spelling of Windows header
+  *  188503613 - Arch: Added preference option for screen helpers color
+    (axes, grids, etc...)
+  *  111c0496b - Draft: Minor bugfix
+  *  64c760f53 - Added Standard Code property to all components
+  *  439486279 - Arch: Reorganizing structural profiles + added eurocode
+    timber sizes
+  *  7bac2a610 - Arch: minor bugfix
+  *  acf18c193 - Arch: Minor fixes in Materials
+  *  d37519e3e - Dxf Boilerplate files not installed
+  *  441850296 - Add ANSIB Template
+  *  2cc80b613 - Add preference settings
+  *  8ba4cd105 - Add support for alternate LineGroup file
+  *  5a39efa77 - Fix typo
+  *  d48d014eb - Fix Detail view orientation
+  *  2b08754c1 - Fixed default HideUnits option to FALSE
+  *  d7e5534d5 - Added code to strip units from display string
+  *  b9767f003 - Updated hide units GUI option with more text
+  *  f8327a009 - WIP. Moving to other machine.
+  *  4c2e36b64 - WIP. Added logic to not hide non-base units.
+  *  841dfeadb - WIP. Moved code to hide units to seperate function
+  *  da41c0071 - Add getPresentationValue function prototype
+  *  3f1216a58 - WIP. Added logic to hide units on distance dimensions.
+  *  5e3ce0331 - Added option to hide units in sketch
+  *  548f63fd0 - fix -Winconsistent-missing-override
+  *  8272abf5a - Arch: Added edit mode task panel to arch profiles +
+    added American Wide Flange (W) profiles
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 05 Aug 2018 02:21:58 +0300
+
 freecad-daily (0.17+git14109-4aa91d62e-1) unstable; urgency=medium
 
   * Compile
