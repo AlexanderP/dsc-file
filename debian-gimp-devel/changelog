@@ -1,3 +1,97 @@
+gimp-devel (2.10.4+git41513-024fb90fd4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 024fb90fd467fb46987cf5d9a622e8669b48594b
+  * Date: 1534585918
+  * git changelog:
+  *  024fb90fd4 - Updated Marathi translation
+  *  55a7872e1b - plug-ins: include the right python source in the
+    distribution.
+  *  8ec5f44f2f - po-python: skip copied Python files from POTFILES.
+  *  319b1efb4d - Update German translation
+  *  eb9789f241 - etc, docs: regenerate system gimprc and its manpage
+  *  8df7a258a4 - Update Brazilian Portuguese translation
+  *  7cc1bab361 - Update Brazilian Portuguese translation
+  *  f98dffce54 - NEWS: new long shadow filter was missing.
+  *  0b9a8af673 - NEWS: keep up-to-date.
+  *  035c785490 - Issue #788: also install all python plug-ins in their
+    own directory.
+  *  5682a01626 - plug-ins: fix individual install targets of common
+    plug-ins.
+  *  25f099344f - plug-ins: make plug-ins inside common/ to also install
+    in subfolders.
+  *  79961a6545 - plug-ins: install plug-ins in subfolder.
+  *  2c553da7eb - configure/app: depend on babl 0.1.56
+  *  91cb86d2ab - app: reorder function definitions/declarations.
+  *  39afd29b7b - NEWS: keep up-to-date.
+  *  c9d7618056 - app: open the Windows console a bit earlier.
+  *  91c139f4d0 - Issue #1809: update DLL directory for 32-bit plug-in
+    run from 64-bit...
+  *  ec79b5c9bc - INSTALL, configure: replace Jasper with OpenJPEG.
+  *  d49606ee83 - app: work with GIO in splash code.
+  *  1a28878943 - app, configure: add a --enable-win32-debug-console
+    build option.
+  *  c49afa4f84 - plug-ins: replace s/printf/g_printf/
+  *  d1d9eb17e5 - configure: GLIB_COMPILE_RESOURCES is wrong when cross-
+    compiling.
+  *  2587b85aaa - libgimpthumb: another missing link to libgimpbase.
+  *  0865e9db1f - tools: fix linking error.
+  *  a727131036 - NEWS: keep up-to-date.
+  *  3bbebaf6e0 - Issue #1999: Opening the Preferences dialogue triggers
+    Xcode warning.
+  *  c05bd7b6c9 - app: small code cleaning.
+  *  6bc992fc3a - Updated Slovenian translation
+  *  b1fbf1eb63 - Issue ##2000 - Linked and unlinked chain icons look
+    almost identical
+  *  23c877cb09 - Update Latvian translation
+  *  3cf34c7ab9 - Update Spanish translation
+  *  83c764817f - Update German translation
+  *  eeb942612e - Update German translation
+  *  b785d7752c - Update Swedish translation
+  *  dfe57b37cd - app: fix group layer drawable update during size
+    change
+  *  2f1041bed0 - app: fix projection update-area offset upon buffer
+    allocation/reisizing
+  *  895dd005b2 - Update Polish translation
+  *  e10d5852c1 - app: add gegl:long-shadow to the menus
+  *  e1e637c238 - app: keep sanity/blacklist gegl op lists
+    alphabetically sorted
+  *  cd086c94b3 - configure.ac: require GEGL >= 0.4.7
+  *  4409d5496d - Update Latvian translation
+  *  5f371bc84f - Updated Slovenian translation
+  *  03e95eb893 - Updated Slovenian translation
+  *  b17619399f - Update Latvian translation
+  *  02a4ce19d6 - Updated Slovenian translation
+  *  ee89bfad52 - Update Latvian translation
+  *  c27ba74e71 - Updated Slovenian translation
+  *  6c201827a7 - Update Swedish translation
+  *  b43a84c6fb - Update Swedish translation
+  *  ef1f98863a - Updated French translation for libgimp/plugins
+  *  af2a27f1c9 - Issue #1662 - GIMP crashes while using cage transform
+    when selection is active
+  *  6e656aedcb - Update Polish translation
+  *  d83fb5b9dd - Update German translation
+  *  b8ef5a8527 - Update German translation
+  *  338154ea0e - Update Spanish translation
+  *  3712e688f2 - configure/app: depend on GEGL 0.4.6
+  *  c1ec74badc - configure/app: depend on babl 0.1.54
+  *  b22c22a288 - desktop: preparing release for GIMP 2.10.6.
+  *  8b893bb817 - Update Swedish translation
+  *  7057490298 - Update Swedish translation
+  *  34b54971d8 - Fix file-pdf-save exports broken vertical text.
+  *  4d6074fe23 - Update Spanish translation
+  *  c7574ff02c - Update Spanish translation
+  *  5826a399b2 - Issue #1125 - Transform tools temporarily disables
+    layer mask
+  *  f6e7e9e633 - Update Spanish translation
+  *  34cb8fd231 - Update Polish translation
+  *  0bf695dc0f - Issue #1974: and again another memory leak.
+  *  51e5da1f93 - Issue #1974: another memory leak when saving a file.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 18 Aug 2018 14:43:11 +0300
+
 gimp-devel (2.10.2+git41444-71f37d417c-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,100 @@
+gimp-gtk3 (2.99.0+git42143-4c5cb92352-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 4c5cb92352754cf8ef27cd0d3413a253d2b99428
+  * Date: 1534524242
+  * git changelog:
+  *  4c5cb92352 - Update German translation
+  *  bcdd575124 - Issue ##2000 - Linked and unlinked chain icons look
+    almost identical
+  *  d65f5eb9de - Update Brazilian Portuguese translation
+  *  67cab0a9cf - Update Brazilian Portuguese translation
+  *  b4f7a90afe - app: reorder function definitions/declarations.
+  *  ff4ce6b70b - Update Turkish translation
+  *  d5b0f71b4c - app: open the Windows console a bit earlier.
+  *  624edf9017 - Issue #1809: update DLL directory for 32-bit plug-in
+    run from 64-bit...
+  *  3d464e03b4 - configure/app: depend on babl 0.1.56
+  *  fb57133d55 - INSTALL, configure: replace Jasper with OpenJPEG.
+  *  ddeff31476 - app, configure: add a --enable-win32-debug-console
+    build option.
+  *  0832bbd771 - plug-ins: replace s/printf/g_printf/
+  *  8e453330c9 - configure: GLIB_COMPILE_RESOURCES is wrong when cross-
+    compiling.
+  *  f8a1d574ee - libgimpthumb: another missing link to libgimpbase.
+  *  1461496999 - tools: fix linking error.
+  *  04bbe941d5 - Issue #1999: Opening the Preferences dialogue triggers
+    Xcode warning.
+  *  ae19441ddc - app: small code cleaning.
+  *  4818e93686 - Updated Slovenian translation
+  *  442e71dbfe - Updated Slovenian translation
+  *  b7d614b330 - Update Latvian translation
+  *  49cebcb643 - Update Spanish translation
+  *  a6c65fe05f - Update German translation
+  *  fabc0ceaf7 - Update German translation
+  *  29a05ccfac - Update Swedish translation
+  *  fc2c640ca2 - app: fix group layer drawable update during size
+    change
+  *  2d63bc6e0a - app: fix projection update-area offset upon buffer
+    allocation/reisizing
+  *  0380ac82bf - Update Polish translation
+  *  537bf4ec6a - app: add gegl:long-shadow to the menus
+  *  b6c56a6ae9 - app: keep sanity/blacklist gegl op lists
+    alphabetically sorted
+  *  d4ef45bdbd - configure.ac: require GEGL >= 0.4.7
+  *  0b075b5692 - Update Latvian translation
+  *  3c483321ee - Updated Slovenian translation
+  *  0a42267d1e - Update Latvian translation
+  *  0e6364d583 - Update Latvian translation
+  *  c210a1f097 - Updated Slovenian translation
+  *  bd2e7d1805 - Updated Slovenian translation
+  *  0d696efe89 - Updated Slovenian translation
+  *  01ae843589 - Updated Slovenian translation
+  *  6938d11716 - Issue #1997 - Colors not properly converted to image's
+    color space
+  *  753523c4d1 - Issue #1953 - Crashes during color profile conversion
+  *  ef60a04a53 - Update Swedish translation
+  *  bbd5b66d65 - Update Swedish translation
+  *  6798f7d4cd - app: add precondition checks to
+    gimp_gegl_convert_color_profile()
+  *  3ff2f28b94 - Update Spanish translation
+  *  49dfc6143d - Issue #1662 - GIMP crashes while using cage transform
+    when selection is active
+  *  0169d48165 - Update Polish translation
+  *  549d880847 - app: display extension long description in the details
+    widget.
+  *  ab1bad23e3 - Update German translation
+  *  a4e0a8f96e - app: extensions can now install themes.
+  *  7d611e713c - app: extensions can now install splashes.
+  *  c7b5977637 - app: work with GIO in splash code.
+  *  5331e40042 - Update Spanish translation
+  *  b3add5109c - app: fix small leak.
+  *  f6d1380fcd - app: removing gimp_get_icon_size() now unused.
+  *  d1372c6c24 - libgimpwidgets, app: change "stock-size" property
+    of...
+  *  343bfbf259 - desktop: preparing release for GIMP 2.10.6.
+  *  9530b5cea3 - Issue #1980 - Color picker wrong results when picking
+    from non-sRGB...
+  *  f14ace2116 - Update Swedish translation
+  *  05226763ba - Update Swedish translation
+  *  a2fe90aa54 - Issue #1980 - Color picker wrong results when picking
+    from non-sRGB...
+  *  f0e585e7ff - Fix file-pdf-save exports broken vertical text.
+  *  2ac91e0fc3 - Issue #1125 - Transform tools temporarily disables
+    layer mask
+  *  2b90231844 - Update Spanish translation
+  *  79bfcabc81 - Update Spanish translation
+  *  afc8066630 - Update Spanish translation
+  *  8226265b12 - Issue #1954 - GIMP-2.99 color changes when converting
+    between...
+  *  d9737ba156 - Update Polish translation
+  *  b3c9089ea2 - Issue #1974: and again another memory leak.
+  *  50221e1438 - Issue #1974: another memory leak when saving a file.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 17 Aug 2018 22:31:24 +0300
+
 gimp-gtk3 (2.99.0+git42074-2912fe7c17-1) unstable; urgency=medium
 
   * Compile

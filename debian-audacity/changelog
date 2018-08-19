@@ -1,3 +1,204 @@
+audacity (1:2.2.2+git8951-6fa5c93b8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 6fa5c93b8e19d9356cc7c66173d5406916f30854
+  * Date: 1534378847
+  * git changelog:
+  *  6fa5c93b8 - Fix typo in comment
+  *  5be7f7db0 - White space changes
+  *  18646a266 - Select Command dialog: minor focus fix
+  *  b2feab61a - TrackPanelHasFocus commands now always available to
+    Macros
+  *  8eef6dc3e - Fix bug 1938
+  *  0d9cd4b02 - Fix bug 1937
+  *  3480f5aa3 - Bug 1934 - Generate audio from Nyquist prompt crash
+  *  11da92d66 - Allow capture retries if time since Rescan() < 10s
+  *  aeba34b15 - Bug1930: should draw bottom channel when append-
+    recording...
+  *  542adefac - Bug1931:  more precautions, higher level and more
+    general...
+  *  328aa5896 - Bug1933: commit 2c28af05e8be98aa9ab609823d1ff1d27fb
+    needs null checks
+  *  932734c89 - Windows: don't crash if double-clicking on ruler during
+    playback
+  *  04a69f0a4 - Bug1931 -- Dbl-click ruler in Windows shouldn't violate
+    assertion...
+  *  835abd9be - bug 1885 Linux: Allow retries when opening capture
+  *  1d22ca578 - Improve error message when capture stream fails
+  *  90286acb6 - Update some translations
+  *  ea6e053f1 - Update sv.po (#259)
+  *  dc4ee28b1 - msgmerge -U pl.po audacity.pot to normalize line breaks
+  *  4bbeb502e - Updated pl.po -- Polish from Transifex
+  *  eb3fb0159 - Fix one format directive in it.po
+  *  3df5b0412 - fix typos and fuzzys in it l10n
+  *  dc603341e - Fix double space
+  *  263f4fe9f - Update to Lithuanian language
+  *  506f6c3a2 - Updated ko.po -- Korean from transifex, 90% complete
+  *  1ee2544a4 - More fixes to ru.po
+  *  2b8b92210 - Fix ru.po
+  *  3af1af5ec - Update ru.po
+  *  d55ca06db - Remove unused member
+  *  d59ed9026 - Bug 1890 - Enh: Punch and Roll fails when splice point
+    is at track end
+  *  3886113b9 - More efficiency in TrackTimeUpdate
+  *  ce1ce688f - Try to clarify real time / track time distinction in
+    comments...
+  *  72b71bbe0 - Use fixed play speed when note tracks are present
+  *  67b679b7d - Supply missing #includes that Travis build needs
+  *  ca694a1b2 - Bug 1854 - Un-warned export file overwrite danger in
+    2.2.2 Chains and 2.3.0 MacrosWindow
+  *  3c0ee4d3c - Change TrackPrefs Pinned/Unpinned display.
+  *  6126f2f62 - Make a one-time dynamic check that atomic<double>
+    doesn't use mutexes
+  *  3f1d9ab8c - P & R recording: change color of pin button, as for
+    play indicator
+  *  0d9972b3e - Some member functions of AudioIO can be const
+  *  f036700b0 - Make PlaybackSchedule::mTime atomic and rename some
+    functions...
+  *  8a78ae280 - Factor out a piece of the big callback
+  *  ee2d8c11c - Bug 1928 - Export Multiple with a label track present
+    defaults to export by tracks not labels
+  *  2d28b2e7e - Bug 1907 - Mac: Some buttons in effects dialogs have
+    non-transparent background
+  *  7f96f8567 - Add some Right-To-Left language workarounds.
+  *  c95532012 - Correctly update hot zones for quick-play cursor at
+    button up
+  *  4bf28412d - Manage Macros dialog: a couple of focus issues
+  *  9d396e331 - Bug 1925 - Applying <macroname> to current project
+    window: visual noise, and accessibility.
+  *  154f6d25d - Bug 1923 - Enh: Help buttons for Export Audio
+  *  072b71135 - Revert cc08cfc, it's unimportant to other work and it
+    made scrub clicky
+  *  5dab364f1 - Add Help button for Advanced Mixing Options
+  *  217c1267b - Add Help button to Export Multiple dialog
+  *  3d6f3f186 - Fix our custom NumericText controls are scrambled in
+    RTL layout.
+  *  ddd1494e7 - Fix crash from following NULL pointer
+  *  8c486b50f - Changes via History affect selection exactly as
+    undo/redo...
+  *  af81dfa10 - Bug1922: updating play indicator when looping with a
+    time track
+  *  871bc65c8 - Fix loop play again (error introduced at 46d7804)
+  *  6f7eaf774 - Fewer calls to GetActiveProject() in AudioIO.cpp
+  *  2472b128d - Fix compilation of
+    EXPERIMENTAL_AUTOMATED_INPUT_LEVEL_ADJUSTMENT
+  *  197122c7d - Collect initialization of playback schedule into a
+    function
+  *  6e4d11e5a - Fix loop play
+  *  cc08cfc9f - Restart of Mixer is same as Reposition at t0
+  *  46d7804cd - Group some of the fields of AudioIO into
+    PlaybackSchedule
+  *  adb33f466 - Bug 1494 - Strange Pause behaviour with
+    seeking/scrubbing
+  *  0fe2659a7 - Bug 1916 - Play at Speed - scrub widget appears
+    unnecessarily
+  *  175a47126 - Remove " == true"
+  *  fc8783bc7 - Put callback in a member function, remove many more
+    gAudioIO->
+  *  fc497368a - Remove needless gAudioIO-> in member functions (AudioIO
+    is singleton)
+  *  3353780bf - Bug 1918 - Right to Left (RTL) language cannot be
+    undone using preferences.
+  *  bf6b47dbb - Bug 1918 - Left to right (LTR) language selection
+    reverses elements that should not be reversed
+  *  0162badef - Fix Adjustable Fade preview for stereo tracks
+  *  0c73bc135 - Bug 1897 - Export corrupts/clears the Recent Files list
+  *  22f85f244 - Bug1917:  TrackPanel should keep focus after click or
+    drag...
+  *  3f0b3bf1b - Try to flash the pin even less at extreme positions
+  *  9eab948fb - Bug 1905 - Labels with more than 260 characters fail to
+    load (with no warning)
+  *  0022e0c06 - Bug 1844 - Nyquist effects move subsequent envelope
+    points by selection's length
+  *  511b810fd - Pinned play head can be dragged during transport; dbl-
+    click recenters
+  *  54807caa1 - Correct flashing of the pin when dragged to extreme
+    left or right
+  *  27dc8ffea - Draggable pinned play head, double click to re-center
+  *  616ff31d0 - Allow full screen of negative timeline during pinned
+    play/record...
+  *  1c5e523a1 - A preference governs where the pinned head goes, not
+    always exact center
+  *  b502d8828 - Better enum value name
+  *  3010d3aaa - More conservative rewriting of status as mouse moves
+    over panels
+  *  2c28af05e - Don't hit any TrackPanel or Ruler cells when mouse is
+    out of window
+  *  74efec9d3 - Bug1756 (shouldn't lose record status message) refixed
+    differently...
+  *  cf442759b - Add AUDACITY_FILE_SUFFIX_EVENT to ExportPCM
+  *  7a56858f3 - Bug 1893 - spurious plug-in reg error message for
+    VidPlayVST32 (and others)
+  *  901d684c3 - Add Max Maisel to contributors (in AboutDialog)
+  *  bf82eaa4c - Rewrite time ruler reusing CellularPanel; ESC aborts
+    drags in it...
+  *  7cfda551d - Move scrub click handling into a UIHandle, eliminate
+    OnMouseEvents...
+  *  153eb63b3 - Rest of quick play mouse handling is invoked from
+    UIHandle...
+  *  9491605cf - CellularPanel handles save/restore of focus for clicks
+    in ruler...
+  *  c85d2cdfa - UIHandle objects now implement the context menus for
+    the Ruler
+  *  0ae7f55fe - Manage showing and hiding of quick play guide in
+    CellularPanel base
+  *  af17e1ff9 - Quick-play handle object manages lifetime of
+    SnapManager
+  *  a70e2284b - Manage ruler status messages and tooltips in
+    CellularPanel base class
+  *  ba4ae4f7b - Manage ruler cursor changes in CellularPanel base class
+  *  ce48ac630 - Enable hit tests; let base class manage capture &
+    release of mouse...
+  *  a853b7a3b - Skeletal hit test and handle objects for quick play and
+    scrubbing
+  *  bccb135e3 - AdornedRulerPanel inherits from CellularPanel -- hit
+    testing, still to do
+  *  71005cf12 - Add File->Reset Menu Item (#ifdeffed out)
+  *  9357c90b4 - Bug 1859 - Macros on files - Save Project causes
+    overwrites. thus loses data
+  *  d3e6e9244 - Fix Sizer Error.
+  *  85074c338 - Factor base class CellularPanel from TrackPanel...
+  *  0fc474774 - CellularPanel handles leave and capture loss like other
+    transitions
+  *  ff98ca5a3 - CellularPanel saves and restores focus for each click-
+    drag-release...
+  *  7cbe85fac - Add CellularPanel::LastCell
+  *  4e1a80f5a - Move CellularPanel data members into a state structure
+    out of the .h file
+  *  f6609e5ff - Move class CellularPanel into its own files
+  *  7f84e7132 - Context menu handling is also in CellularPanel
+  *  c08c17eaf - Add a method to find the rectangle of a given cell...
+  *  062066eb7 - Split base class CellularPanel out of TrackPanel...
+  *  d76777bef - Each cell can define cursor, status, and tooltip in
+    default of hit tests
+  *  98514194a - ProcessUIHandleResult takes pointers to TrackPanelCell
+  *  aeece118e - Rewrite the handling of quick play indicators...
+  *  7395e5acb - Remove pTrack from FoundCell; new function hides some
+    casting
+  *  79067e43f - ProcessUIHandleResult is a member function of
+    TrackPanel
+  *  c94df5415 - Bug 1856 - Applying Macros to Files is no longer a
+    batch process
+  *  9f7fa4e1f - Bug 1914 - Enh: Clean install needed to update
+    effect/generate/analyze/tools menu for changed plug ins
+  *  dcd9368af - Don't load PluginTypeNone.
+  *  233b1677d - Bug 1914 - Enh: Clean install needed to update
+    effect/generate/analyze/tools menu for changed plug ins
+  *  4318cb678 - Bug 1886 - Sluggish behaviour caused by the large time
+    taken to draw the Track Control Panel
+  *  3ccdde8fd - Bug 1912 - Play/Stop and Set Cursor no longer sets the
+    cursor at the stopped play position
+  *  d7346751c - Bug 1900 - Sample Data Import/Export should both be in
+    the new Tools menu
+  *  e670ee1e0 - Bug 1903 - Sample Data Export has duplicate menu
+    entries: Tools & Analyze
+  *  119291446 - Fix duplication of Nyquist Prompt.
+  *  ecd09a19d - Preserve selection on exit from Nyquist prompt.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 17 Aug 2018 08:42:51 +0300
+
 audacity (1:2.2.2+git8826-37018181a-1) unstable; urgency=medium
 
   * Compile

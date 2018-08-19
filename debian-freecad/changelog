@@ -1,3 +1,34 @@
+freecad (0.17+git13541-9948ee4f1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: releases/FreeCAD-0-17
+  * Commit: 9948ee4f1570df9216862a79705afb367b2c6ffb
+  * Date: 1534399137
+  * git changelog:
+  *  9948ee4f1 - Fix build error on MacOS due to sed command usage
+  *  42e5f287e - Apply equivalent changes to FindPySide2Tools as
+    FindPySideTools.
+  *  fe7e6a3e2 - Fix typo in FreeCadMacros.cmake
+  *  91fd37648 - Quote paths used in FindPySideTools.cmake
+  *  cf20bdf10 - Fix ninja warnings about duplicate rules for
+    Mod/Web/Init.py
+  *  55f23fa67 - Fix ninja warnings about duplicate rules for
+    Mod/Path/Init.py
+  *  56f40a5a0 - Fix policy warning with CMake (regarding "no rules to
+    generate")
+  *  69277bce6 - Clean up and make FindPySideTools CMake module more
+    robust
+  *  a730446f4 - Add fc_target_copy_resource/fc_copy_sources build
+    message
+  *  47df62e31 - Clean up and fix generate_from_py and generate_from_xml
+    CMake macros
+  *  ed0578e2f - Clean up and improve fc_copy_sources and
+    fc_target_copy_resource CMake macros
+  *  f157a99d2 - Clean up and improve "COPY_IF_DIFFERENT" CMake macro
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 17 Aug 2018 22:36:52 +0300
+
 freecad (0.17+git13529-1bf6c6aa1-1) unstable; urgency=medium
 
   * Compile

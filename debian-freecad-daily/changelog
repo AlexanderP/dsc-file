@@ -1,3 +1,191 @@
+freecad-daily (0.17+git14345-9f9886691-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 9f9886691ba4c541ed057ddf01cb575d34347a5e
+  * Date: 1534535991
+  * git changelog:
+  *  9f9886691 - disable FREECAD_USE_EXTERNAL_KDL due to
+    incompatibilities with bundled version
+  *  2221820d7 - Various general bugs fixes and  _CommandStairs related
+  *  28e8d5e82 - Add HalfTurnRight 'basic' feature, Master Stairs to
+    accommodate differnt flight of stairs
+  *  171e65204 - fix -Wabsolute-value
+  *  b04ea2704 - do not show dialog of progress indicator for OCCT <
+    6.9.0
+  *  5ee9e1193 - nullify path on destruction and check if adding new
+    trajectories
+  *  4d9ee645c - use consistently cc_glglue functions in OpenGLBuffer
+    class
+  *  c842f0b8b - fix build failure if pch is on
+  *  a5515527e - move OpenGLBuffer class to core system
+  *  5039e4b0a - simplifiy code in SoFCIndexedFaceSet::GLRender, fix bug
+    in wireframe mode when panning/rotating
+  *  4f3d0149f - Add basic MultiEdgesLanding method
+  *  69fec24cb - Add AbsTop Property - Absolute Top Level of a
+    segment/flight of stairs; To enable 'multi-segment' stairs.
+  *  adb44fee5 - Add LastSegment Property - to enable 'multi-segment' /
+    'multi-flight' stairs; and fix some LandingDepth related bug.
+  *  e76488eb1 - FEM: post warp filter, try to better handle ui min max
+    values, but no success
+  *  88b605774 - FEM: post warp filter, add some comments and make code
+    better readable, no real changes
+  *  5d2d33b98 - FEM: post warp filter, small ui layout improvements
+  *  2772d1faa - FEM: post warp filter, better values for ui spinbox
+    values
+  *  c44ade696 - Fix build error on MacOS due to sed command usage
+  *  e290de07a - BOPAlgo supports progress indicator since version 6.9.0
+  *  d5c63cf21 - add progress indicator to BOP check task panel
+  *  2b02b0753 - let pass events of a progress dialog in event filter of
+    WaitCursor
+  *  56e6d5829 - add comment about regression in ProgressBar
+  *  ba7161ac4 - Add boost-python to fedora spec file
+  *  52a5cbe7c - Improve error report about missing boost components
+  *  9549f29f2 - fix MSVC warning: unreferenced local variable
+  *  99b077cf8 - use parallel mode of BOPCheck class
+  *  ff9339522 - Give FindNETGEN a path hint so that it ACTUALLY works
+    with the standard Fedora 28 netgen package.
+  *  e903690e0 - Give FindNETGEN a path hint so that it works with the
+    standard Fedora 28 netgen package.
+  *  9a6dcff1d - Give FindMEDFile a path hint so that it works with the
+    standard Fedora 28 med-devel package.
+  *  90a8b5420 - Add HalfTurnLeft landing stairs basic feature.  -
+    HalfTurnRight, stairs alignment etc. 'fix' added in 'later version'
+    in my local machine not yet in this commit
+  *  5f8f26824 - Apply equivalent changes to FindPySide2Tools as
+    FindPySideTools.
+  *  bf043fe68 - Fix typo in FreeCadMacros.cmake
+  *  f12c4092a - Quote paths used in FindPySideTools.cmake
+  *  32c40179d - Fix ninja warnings about duplicate rules for
+    Mod/Web/Init.py
+  *  25332ba03 - Fix ninja warnings about duplicate rules for
+    Mod/Path/Init.py
+  *  75c698d18 - Fix policy warning with CMake (regarding "no rules to
+    generate")
+  *  b844589cf - Clean up and make FindPySideTools CMake module more
+    robust
+  *  cf79125dd - Add fc_target_copy_resource/fc_copy_sources build
+    message
+  *  2ae238e3d - Clean up and fix generate_from_py and generate_from_xml
+    CMake macros
+  *  4ffc6c288 - Clean up and improve fc_copy_sources and
+    fc_target_copy_resource CMake macros
+  *  11d89c760 - Clean up and improve "COPY_IF_DIFFERENT" CMake macro
+  *  de282ad5c - Base: Make units of PropertyQuantity settable from
+    Python code
+  *  855f4ef2f - Fix globalPosition in Stl export
+  *  9602e22c3 - compute the actual placement to apply instead of
+    transforming the points twice
+  *  0f9eba7d9 - Fix double application of Placement
+  *  a097804cb - Add library for concurremcy in >= VS2015 revert
+    conditional in Points.cpp (i.e. reactivate parallel handling)
+  *  3c2e27cfc - 🚑🐛 Don't install doc/freecad.qch with no GUI
+  *  6eb2cd315 - Set Operation's view object proxy to 0 to let the
+    framework use the c++ implementation.
+  *  02a237637 - Use TC of last operation of a job - bring up dialog if
+    it's the first op of a job.
+  *  9f29693df - Fix Dimension update on DPG Scale Change
+  *  7028da17b - Expose findCentroid to Python
+  *  603c294d4 - Fix QGIVP boundingRect
+  *  5730aae4c - Allow circular BSplines to be dimensioned
+  *  874309b94 - Arch: Initial support to export quantities to IFC
+  *  57f2bf74a - Arch: Import/export Site data (longitude, latitude,
+    etc..) to/from IFC
+  *  21e00b6d7 - Arch: Support for IfcElementAssembly
+  *  d30cb7853 - Added vertical/horizontal support for
+    SurfaceOfRevolution.
+  *  a50727b59 - Fixed Cancel of job selection - abort op creation.
+  *  cf14ebf7e - Use the job that matches the current selection - iff
+    only one job fits that description.
+  *  18964c2e5 - Removed non-printable character at line 1
+  *  5e791f55a - 1. Fixed typo in previous commit (item 3) 2. Added URL
+    of discussion post / thread 3. Previous commit - Added Landing Depth
+    Control to ArchStairs
+  *  c33e247d9 - Add Control Landing Depth
+  *  880c8ccbf - avoid linker errors with >= VS 2015
+  *  1160e04af - Revert "Get the outline of the syntesized shape for
+    PocketShape before extruding."
+  *  2587864b5 - example using C++ API of FreeCAD in external
+    application
+  *  90ad84539 - for Qt5 no explict event processing after creating a 3d
+    view
+  *  2e35941ef - add some convenience methods for initialization process
+  *  1d83e15e3 - quit event loop after closing main window if not
+    started by an extern host application
+  *  34172c851 - improve handling as library if used by another
+    application
+  *  241f85569 - fix typo
+  *  71088bfb9 - suppress -Wcast-function-type for swig code
+  *  01c140be2 - fix warnings
+  *  a9c4bcb5d - remove kwd argument for functions only with flag
+    METH_VARARGS
+  *  0b40519f3 - Changed all catch types to references for polymorphic
+    exceptions.
+  *  1cbd5cc99 - Path.Area: add PocketLastStepover/LastStepover
+    parameter
+  *  3414c042b - FEM: clipping plane, fix bound box calculation for obj
+    with a property called Shape which is not a occt shape
+  *  436d04fe3 - ViewProviderDocumentObject: forbid recursive call of
+    updateView()
+  *  c961f8f6b - make Loop selection command available outside Path WB
+  *  f99940ff1 - Make drill location list sortable
+  *  2e1a887c4 - whitespace fixes
+  *  67aa3c4c3 - Source typo change
+  *  baa6d8932 - Typos and whitespace fixes
+  *  f991d89ec - FEM: icons, rename purge results icon
+  *  af61ca669 - FEM: icons, rename show result icon
+  *  4019cc346 - FEM: icons, rename sphere icon
+  *  1a1ce36f9 - FEM: icons, rename plane icon
+  *  eba0a6a6f - FEM: icons, rename iso surfaces icon
+  *  e0a8cd8f8 - FEM: icons, rename cylinder icon
+  *  b7680920d - FEM: icons, rename box icon
+  *  dab1ed770 - FEM: icons, rename warp filter icon
+  *  a799e0060 - FEM: icons, rename linearized stress icon
+  *  38ae615ed - FEM: icons, rename data at point icon
+  *  d9ed75d95 - FEM: icons, rename data along line icon
+  *  2b6ec4196 - FEM: icons, rename cut function icon
+  *  23d28268f - FEM: icons, rename clip scalar icon
+  *  cbcebb6d0 - FEM: icons, rename clip region icon
+  *  e16f1939e - FEM: icons, rename data icon
+  *  4e8574e91 - FEM: fenics #0003038: flake8
+  *  8df79bef5 - FEM: fenics #0003038: added overlap parameter and
+    removed assign_values from interfaces
+  *  bf4503059 - FEM: fenics #0003038: removed old fenics interface
+    classes
+  *  ee8a525c0 - FEM: Fenics interface: changed interface into different
+    classes for cell functions
+  *  122ea86ba - FEM: Fenics interface: flake8
+  *  193e69ad6 - FEM: Fenics interface: changed cell function and facet
+    function interface to be more convenient
+  *  baf26a3dc - FEM: analysis task, use analysis icon
+  *  6bef30010 - FEM: post filters task panels, use the right icons and
+    better names
+  *  90533ea4e - FEM: post warp task panel, small typos in uifiles combo
+    box
+  *  1c870cc89 - FEM: menue names, use better readable names and use
+    same typo system
+  *  9ce4111ce - py3: define more unicode for python3, see commit
+    7ad0c7f7
+  *  88aefc28e - backport to OCCT < 6.8
+  *  9faa7fc57 - fix exception raised on project load for invalid enums
+  *  7ad0c7f7f - py3: define unicode for python3
+  *  8f3cf6156 - PropertyPartShape: remove CopyShapeOnSave parameter
+  *  8548d7249 - App::Document: enable saving with binary brep
+  *  d65349f1f - PropertyPartShape: fix brep shape saving without copy
+  *  8018f2640 - PropertyPartShape: add parameter to disable copy on
+    save
+  *  dc54f67d0 - fix infinite recursion in case of non-DAG documents
+  *  917b95f72 - paralleization of transformation and bounding box
+    calculation
+  *  102fe30a7 - Arch: Discard faces without nornals in IFC exporter
+  *  2e4d2dff0 - fix possible UNICODE related build failure due to OCCT
+    cmake flags
+  *  5e63d3ded - fix build failure on Linux
+  *  e6b7bb18b - fix macOS build failure of MeshGui
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 18 Aug 2018 01:32:58 +0300
+
 freecad-daily (0.17+git14224-8068150c6-1) unstable; urgency=medium
 
   * Compile

@@ -1,0 +1,22 @@
+--- gimp-devel-2.10.2+git41510-319b1efb4d.orig/3rdparty/libmypaint/autogen.sh
++++ gimp-devel-2.10.2+git41510-319b1efb4d/3rdparty/libmypaint/autogen.sh
+@@ -127,6 +127,9 @@ echo -n "checking for automake >= $AUTOM
+ if ($AUTOMAKE --version) < /dev/null > /dev/null 2>&1; then
+    AUTOMAKE=$AUTOMAKE
+    ACLOCAL=$ACLOCAL
++elif (automake-1.16 --version) < /dev/null > /dev/null 2>&1; then
++   AUTOMAKE=automake-1.16
++   ACLOCAL=aclocal-1.16
+ elif (automake-1.15 --version) < /dev/null > /dev/null 2>&1; then
+    AUTOMAKE=automake-1.15
+    ACLOCAL=aclocal-1.15
+@@ -136,6 +139,9 @@ elif (automake-1.14 --version) < /dev/nu
+ elif (automake-1.13 --version) < /dev/null > /dev/null 2>&1; then
+    AUTOMAKE=automake-1.13
+    ACLOCAL=aclocal-1.13
++elif (automake --version) < /dev/null > /dev/null 2>&1; then
++   AUTOMAKE=automake
++   ACLOCAL=aclocal
+ else
+     echo
+     echo "  You must have automake $AUTOMAKE_REQUIRED_VERSION or newer installed to compile $PROJECT."
