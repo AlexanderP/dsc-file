@@ -1,3 +1,76 @@
+eiskaltdcpp-devel (2.2.10+git5061-763f53c7-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://github.com/eiskaltdcpp/eiskaltdcpp.git
+  * Branch: master
+  * Commit: 763f53c768fad44f112cc1e2066db4c0aaeaeacf
+  * Date: 1535754235
+  * git changelog:
+  *  763f53c7 - Add few extra configuration options for debugging.
+  *  b4f682a0 - Translations are updated from Transifex.
+  *  04a4123a - Translations are updated from Transifex.
+  *  819b4ed3 - Translations are updated from Transifex.
+  *  ca0478b3 - Update translations.
+  *  fed58a9c - Translations are updated from Transifex.
+  *  99d80f45 - Translations are updated from Transifex.
+  *  66cf459b - Disable build of eiskaltdcpp-daemon for macOS.
+  *  9841202c - Fix build in macOS.
+  *  fe607b8a - cmake: change default configuration options.
+  *  e35bcd07 - Core: add translatable strings.
+  *  8f7ee098 - Qt: improve logic of loading of translation files in all
+    systems.
+  *  878b7e9c - Cosmetic changes in ChangeLog:
+  *  6bda20c7 - Partially revert
+    461d1eb0055a2102e5a0888d1ebcadd71237788e:
+  *  5455649e - Update documentation.
+  *  c98ed43f - Translations are updated from Transifex.
+  *  0981970d - Tiny fix in documentation.
+  *  8d7a951a - Translations are updated from Transifex.
+  *  538b56c9 - Update documentation.
+  *  14c20a9e - Translations are updated from Transifex.
+  *  fc751ade - Translations are updated from Transifex.
+  *  2aa8f762 - Small cosmetic changes in text strings for translation.
+  *  a3bdb8a8 - Clear translation files from outdated data.
+  *  8085f9d3 - Update translations.
+  *  f283a71f - Qt: decrease the number of strings to translate:
+  *  b0c132b3 - Update translations (manually).
+  *  4e8a85c9 - Translations are updated from Transifex.
+  *  8fcc6e02 - Update translations.
+  *  2ad61374 - cmake: fix app bundle for macOS.
+  *  916ab67a - Qt: fix logic of loading of Qt translation files
+  *  22f51d42 - cmake: install translations of Qt libraries
+  *  5118d769 - Qt: macOS: fix reaction on mouse click on app icon in
+    dock
+  *  1c02537d - Update documentation.
+  *  1e0e19f7 - cmake: fix warnings about using "add_custom_target" with
+    incorrect names:
+  *  ac71b222 - Fixes for Linux builds after
+    e756a15d972cb43b00b11fbb046f67b3185ce035
+  *  eb80bd20 - Qt: fix detection and usage of application icons, user
+    icons,
+  *  0b790124 - cmake: cosmetic changes.
+  *  7065016f - Core: cosmetic changes.
+  *  e756a15d - cmake: cosmetic changes.
+  *  e2e7fbdb - cmake: small code refactoring:
+  *  109314d4 - Core: fix detection of locale/ directory in MS Windows
+    and macOS.
+  *  461d1eb0 - cmake: delete modules which are in standard cmake pack
+    now:
+  *  16f5ce6d - cmake: tiny code refactoring.
+  *  af69030a - macOS: tiny cosmetic changes in cmake toolchain file.
+  *  782ff054 - cmake: improve resource installation in macOS.
+  *  4ef2b7ad - macOS: rewrite build script.
+  *  caf04628 - Core: tiny code refactoring for macOS.
+  *  54d1fe1b - Qt: fix paths to application resources in macOS.
+  *  0b244fda - macOS: fix installMacHandlers() and update build script.
+  *  860a0bc5 - macOS: do not install mac handlers:
+  *  e84258ce - Update .gitignore
+  *  65531039 - macOS specific changes in build scripts.
+  *  a3bea5f6 - Update examples of build scripts for macOS.
+  *  d059d1be - Translations are updated from Transifex.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 02 Sep 2018 01:37:51 +0300
+
 eiskaltdcpp-devel (2.2.9+git5007-1e72256a-1) unstable; urgency=medium
 
   * Compile

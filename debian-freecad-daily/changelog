@@ -1,3 +1,246 @@
+freecad-daily (0.17+git14511-faf883448-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: faf8834484f4ffd5fdaed853e4d3a0883a7d4cdf
+  * Date: 1535834679
+  * git changelog:
+  *  faf883448 - py3.7 fix
+  *  591c1d32c - Add link button to Addon Manager to Macros dialog
+  *  7c048482b - Hiding all/most properties that are supposed to be
+    hidden on document restore again.
+  *  f094ae413 - Fixed logging for unit tests.
+  *  8054540af - Added button to stock dialog to recreate the stock
+    object.
+  *  5b39974bf - Only track stock from base's extent at creation time.
+  *  a8be139cb - Improve search for coin3d tag file
+  *  b79e1bfee - get rid of private function _PyImport_FixupBuiltin for
+    FreeCAD and FreeCADGui modules
+  *  8c08635d3 - get rid of private function _PyImport_FixupBuiltin for
+    __FreeCADBase__ module
+  *  1eeb19748 - Fix typo in search for OpenGL.
+  *  fb1a0be84 - exit application when running unit tests raised a
+    system exception
+  *  022653331 - Arch: Close base profile of Structures automatically
+    when needed
+  *  5f025587a - Draft: Fixed bug in WorkingPlaneProxy color
+  *  e381e6b73 - Remove unused Debian packaging files
+  *  682650b0b - Draft: Fixed adding points in Wires
+  *  3d70f9ed4 - number of used decimals in UnitsApi must already be set
+    when initializing App
+  *  c717d1121 - improve csg import
+  *  96771a07b - use a widget's current font as default in the list of
+    available families
+  *  28b7e0112 - YEAH 1000 commits for great FreeCAD project :-) ahh the
+    commit ... FEM: netgen mesh obj, typo in attribute description
+  *  d436630f5 - FEM: equation objects, add some comments for linear and
+    nonlinear equation
+  *  ff716f3d4 - FEM: mesh netgen and gmsh, use the same group and
+    description for mesh geometry object
+  *  26a255b38 - FEM: common test module, some comments
+  *  998b72324 - AddonManager: Fixes download of metadata.txt with Py3
+  *  b469c237b - Arch: cache svg calculations in section planes/techdraw
+    views for better performance
+  *  404b42d0a - unit tests of Arch and Draft require GUI, improve
+    output of units tests
+  *  559a5e6e5 - Arch: Added placement controls to section plane's task
+    panel
+  *  16e709a68 - do not explicitly use extesnion modules in
+    SelectionView::getModule
+  *  67b5ee093 - now each module registers its unit tests itself
+  *  8708da262 - Arch: Section plane is now created at center of
+    selected objects
+  *  6f0634563 - Draft: Fixed DXF support for new Draft texts
+  *  904aef555 - use abstract interface to access geometry in transform
+    dialog
+  *  2a6655e17 - Sketcher: UI option to enable/disable the automatic
+    redundant removal mechanism
+  *  8505b0eff - Sketcher: Automatic redundant removal mechanism
+  *  dc1bb7eb8 - Sketcher: Move autoremoveredundants method from
+    SketchAnalyser to SketchObject
+  *  96f6c4694 - GCS: Bug fixes
+  *  31750a750 - FEM: elmer, fix SIF variable output bug
+  *  31193039e - FEM: femtools/femutils.py typos and whitespace fixes
+  *  f8939d689 - FEM: vtk post, support multiple pipeline objects for
+    filters
+  *  d060cacfa - FEM: cpp commands sort constraints, temperature
+  *  144e54845 - FEM: cpp commands sort constraints, pulley
+  *  283f9dbe7 - FEM: cpp commands sort constraints, pressure
+  *  ffbeac03f - FEM: cpp commands sort constraints, plane rotation
+  *  c8ec1a756 - FEM: cpp commands sort constraints, initial temperature
+  *  38f868263 - FEM: cpp commands sort constraints, heat flux
+  *  79442a1f2 - FEM: cpp commands sort constraints, move gear
+  *  164ee520a - FEM: cpp commands sort constraints, move force
+  *  ab522431d - FEM: cpp commands sort constraints, move fluid boundary
+  *  33f749c96 - FEM: cpp commands sort constraints, move displacement
+  *  c97ed2db3 - FEM: cpp commands sort constraints, move contact
+  *  ba6976fd6 - FEM: cpp commands, use for command creation same order
+    as for command definition
+  *  6923a5221 - FEM: cpp commands, add some comments
+  *  e21476907 - FEM: cpp commands, comment analysis and solver command
+    as they are created in Python
+  *  8c30258db - FEM: cpp commands, code formating
+  *  1a08251a8 - FEM: vtk post, change order of commands and icons
+  *  a322cc349 - FEM: vtk post, small improvement in scalar clip gui
+  *  a02b35574 - FEM: objects module, rename result objects to post
+    processing ones
+  *  d8f65890d - FEM: objects module, delete recompute comments, the
+    user needs to take care of recomputes if he adds objects by Python
+  *  ce1be10f0 - FEM: vtk post, typo in Tranparency property
+  *  25bcbcbf2 - FEM: vtk post, sync tranparency on reopen of pipeline
+    task panel
+  *  2dc808985 - handle case if a B-spline is straight and thus maximum
+    curvature is zero
+  *  8740a3a56 - Whitespace formatting
+  *  55e93745f - Misc. typo fixes
+  *  69efa4737 - Selection: handle exception in observer callback
+  *  561be0821 - Part sweep now accepts compounds of edges that build a
+    wire
+  *  b2cefc460 - Part loft now accepts compounds of edges that build a
+    wire
+  *  fe2660b46 - issue #0003177: Part Design Pad should allow besides
+    'Up to face' something like 'Up to plane' as well
+  *  b656377e6 - Start: break too long thumb caption texts
+  *  f8f4cd76c - clear dict when invalidating Py object to fix possible
+    cyclic references
+  *  5eaf2e638 - fixes #0003564: Python objects: updateData calls to
+    proxy instance that should have been deleted
+  *  bb9d737ba - when adding a dynamic property to the editor then move
+    it to the correct group or create a new group
+  *  3f0dca638 - avoid that Datum plane is always touched when
+    automatically resizing it from within its own view provider
+  *  2b2b920c8 - Arch: python3 fix
+  *  988dc1127 - Start: additional py3 fixes
+  *  69d9a3f94 - Arch: Use the smallest face as profile when discovering
+    extrusions in IFC objects - thanks @geometrygym
+  *  f0d6a43d3 - Arch: Using transparent style during walls and structs
+    draw
+  *  af30700b1 - Draft: Fixed leftover scene callbacks in snapping
+  *  16e01ceaa - Start: misc improvements - Hide recent files section if
+    recent files prefs is set to 0 - Better filetype management - Better
+    tooltip on file thumbnails - Added notes section (enable in
+    preferences)
+  *  24579fff3 - Py3: fix PropertyStringListItem::setValue
+  *  93163b28d - Improve usability of expression dialog: + add signal
+    showFormulaDialog to QuantitySpinBox in order to indicate whether
+    the formula dialog opens or closes + when formula dialog opens then
+    hide the button box in the parent dialog, show it again when the
+    formula dialog closes
+  *  0252e491d - Start: Misc fixes to start page
+  *  6429707f7 - Allow user to suppress the initial tool change.
+  *  c17bcb130 - Enable option for grbl tool change command.
+  *  478829510 - If an edge cannot be flipped, issue a warning and
+    approximate it through straight line segments.
+  *  6e83baf1d - Fix railing height at starting point etc.
+  *  681c71766 - Add Railing Height and Offset
+  *  3927a2ed8 - reduce compile time after each time cmake configure is
+    executed (Version.h)
+  *  4211defb4 - reduce compile time after each time cmake configure is
+    executed
+  *  e5a1a9d35 - macro to check for different input and output file and
+    if needed replace output file
+  *  b9c24f8a9 - reduce compile time after each time cmake configure is
+    executed (swig)
+  *  afd524956 - add static function isVBOSupported to OpenGLBuffer to
+    check for the GL_ARB_vertex_buffer_object extension
+  *  83351faeb - Draft: Ability to set working plane from PartDesign
+    datum planes
+  *  952a9a4a8 - CMP0050: make Template module aware of cmake policy
+  *  67ddda714 - CMP0050: make Assembly module aware of cmake policy
+  *  172503b40 - CMP0050: make JtReader module aware of cmake policy
+  *  f4a21d3b6 - CMP0050: make Sandbox module aware of cmake policy
+  *  a84b84bf1 - CMP0050: make TechDraw module aware of cmake policy
+  *  8ff52568d - CMP0050: make Start module aware of cmake policy
+  *  c36bdb4e3 - CMP0050: make Start module aware of cmake policy
+  *  63bf0aaeb - CMP0050: make Fem module aware of cmake policy
+  *  681d22226 - CMP0050: make Robot module aware of cmake policy
+  *  fc8984ae7 - CMP0050: make Path module aware of cmake policy
+  *  d85309a76 - CMP0050: make Raytracing module aware of cmake policy
+  *  49ca698b3 - CMP0050: make Drawing module aware of cmake policy
+  *  0c95c9579 - CMP0050: make Drawing module aware of cmake policy
+  *  2455b5fe3 - CMP0050: make Sketcher module aware of cmake policy
+  *  104595d37 - CMP0050: make MeshPart module aware of cmake policy
+  *  ed5313d72 - CMP0050: make Inspection module aware of cmake policy
+  *  cdc507d9b - CMP0050: make PartDesign module aware of cmake policy
+  *  73e27458d - CMP0050: make Part module aware of cmake policy
+  *  f7f143a2b - CMP0050: make Points module aware of cmake policy
+  *  cda05c914 - CMP0050: make Import module aware of cmake policy
+  *  e3a783fd4 - CMP0050: make Import module aware of cmake policy
+  *  cad83384f - 'Multi-segment' continuos railing update following
+    Stairs' changes
+  *  fb388774e - Fix railing on 2 sides; Make continous railing for
+    'multi-segment' stairs; Group under 'Master Stairs'
+  *  6dafd51fa - Fixing Railing - Left & Right
+  *  8d4756015 - Start: Fix for py3
+  *  f09ccebbe - Start: Support for qss stylesheets
+  *  9df1166de - Start: More cosmetic fixes
+  *  e8811c0d3 - Start: cosmetic fixes
+  *  efae18742 - Start: Refined display + start with forum disabled
+  *  1007c822d - Start: Allow to not show start page on file open
+  *  36cd5a55c - Start: Added forum box with latest posts
+  *  5bc02545c - Start: Small fixes in preference page
+  *  ac6586a20 - Start: New start workbench
+  *  8236f158d - Web: Allow to use url queries
+  *  9e9e4dd7f - CMP0050: make Image module aware of cmake policy
+  *  a4390f547 - CMP0050: make ReverseEngineering module aware of cmake
+    policy
+  *  a0faa374c - CMP0050: make Mesh module aware of cmake policy
+  *  0b8631271 - CMP0050: make Spreadsheet module aware of cmake policy
+  *  cd5ee548f - CMP0050: make Surface module aware of cmake policy
+  *  8d4953ad8 - CMP0050: make Measure module aware of cmake policy
+  *  8d09cafc3 - CMP0050: make Test module aware of cmake policy
+  *  1c656b1cb - CMP0050: make Web module aware of cmake policy
+  *  16295d412 - CMake 2.8.12 and lower allowed the SOURCE signature in
+    add_custom_command In CMake 3.0 the policy CMP0050 was introduced
+    where it could be set to OLD to keep this behaviour while for NEW an
+    error was raised. Since CMake 3.5.2 a warning comes up when using
+    the OLD behaviour and that it will be removed in a future version.
+  *  bff245dae - add Mesh_Data target to handle scripts files
+  *  82b31d50e - clean up cmake macros add new macro
+    fc_target_copy_resource_flat
+  *  a1b0c2ff3 - Gui: Better visualization of the Active Object
+  *  55fb50834 - Fix StraightLanding connecting bit; other TreadDepth
+    RiserHeight issues etc.
+  *  0c918ba5d - 'Centralise' all cases use
+    MakeStraightStairsWithLanding method; further fix TreadDepth and
+    RiserHeight Enforce
+  *  773ca081f - Add TreadDepth & RiserHeight Enforce properties; Fix
+    MakeStair, MakeStraightLanding functions; Test Right Railing
+  *  dc4628767 - Fix MakeStairs, _CommandStairs functions; Testing
+    Railing (One side only)
+  *  07eea2e3a - remove ambiguous function setTolerance, use Tolerance
+    attribute instead
+  *  3ffd43552 - move cmake policy CMP0050 to new style
+  *  fc6e6a55e - fix broken generate_from_xml macro
+  *  68f6c82eb - fix -Wcast-function-type
+  *  557fee3dc - fix -Wignored-qualifiers
+  *  4686f27f6 - fix -Wimplicit-fallthrough
+  *  0bc5699b5 - fix -Wparentheses
+  *  fa99f792e - Py3: PartDesign: relative imports
+  *  03a28be4c - MSVC does not support keyword 'or'
+  *  f82012b68 - Remove const qualifier for Travis OCE version
+  *  baa960e1d - Coverity Fixes
+  *  086546891 - Add option for Dxf Version and forced Polyline
+  *  e757e4f7e - fix warning C4244: conversion from 'const double' to
+    'float', possible loss of data
+  *  e701f75c2 - generic wrapper/unwrapper for PySide and PyQt classes
+  *  de66ab3d1 - Coverity Fixes
+  *  368ba7a37 - Fix Travis Compile Warnings
+  *  0432ecdb8 - Fix propagation of Source property to children
+  *  1b1eaa5de - Turn off Operations visibility by default
+  *  04807fddd - Add UseOutline property to PocketShape in order to mill
+    full pockets and not have to add all sub-shapes.
+  *  321b159f2 - More typos
+  *  a981753d2 - Trailing whitespace fixes
+  *  781d00732 - Misc. typos
+  *  e31cac568 - revert changes of SMESH_Gen class interface of bundled
+    SMESH
+  *  3c999f563 - fix several reference counting bugs
+  *  271cdcb19 - clear selection node when destroying viewer
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 02 Sep 2018 07:24:21 +0300
+
 freecad-daily (0.17+git14345-9f9886691-1) unstable; urgency=medium
 
   * Compile

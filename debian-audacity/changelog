@@ -1,3 +1,156 @@
+audacity (1:2.2.2+git9053-1baf12d7b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 1baf12d7bc255cddc9350993b69b2197edf13b4f
+  * Date: 1535810186
+  * git changelog:
+  *  1baf12d7b - Bug1960: position of play head during scrub right to
+    left
+  *  3f7c639c3 - Make the 'wait for fade out' latency dependent.
+  *  9b728cfec - Update German Translation
+  *  8d1d6c2e8 - Update French translation against the latest fix
+  *  3e1e7db80 - Regenerate .po and .pot files.
+  *  8ed0edd59 - Fix two problems with Nyquist translation.
+  *  af276ac4f - Now implement scrubbing default to unpinned, see commit
+    ac1017e...
+  *  3eccdd9bd - Update fr.po
+  *  792fddbd2 - Bug 1962 - Nyquist effect dialog labels not translated
+  *  a6a283313 - Update German translation by Joachim Huffer.
+  *  45053087b - Regenerate .pot and .po files.
+  *  094c574e6 - Fixes for missing/problematic strings for translation.
+  *  e7e5de950 - Update fr.po
+  *  b5a764701 - Fix typo in fr.po
+  *  0efe25d94 - Update fr.po
+  *  40ab57944 - Bug 1957 - Overdub disabled when enabled in Transport
+    menu
+  *  0b0a8bcc6 - Update .pot and .po files.
+  *  81fe33548 - Updated translation script
+  *  7f738bd64 - Merge French translation update (pull request #296)
+  *  63b9bc7c8 - Update fr.po
+  *  052f5d355 - Update HelpText.cpp
+  *  ac87eddd6 - Update VampEffect.h
+  *  766d7f48a - Update fr.po
+  *  756338716 - Update fr.po
+  *  12f122db3 - Update fr.po
+  *  61626999c - Update fr.po
+  *  d050afb65 - Scrubbing calculation now needs clock precision greater
+    than sample rate
+  *  919571e79 - Bug 1950 - Pause mutes and stops head progressing, but
+    does not 'pause' audio.
+  *  41959d4d5 - Bug 1952 - Windows: Timer Record - debug failure msg
+  *  b5f9acefa - Fix some warnings in AudioIO.cpp
+  *  a5e9fb9e3 - Bug 1949: WASAPI playback stops before the end of the
+    selection
+  *  85c1eb472 - Fix GetInfo: Type=Labels counts channels rather than
+    tracks.
+  *  481370b7b - Fix ASSERT opening FFmpeg Options Dialog.
+  *  665650652 - Update POTFILES.in, audacity.pot and .po files.
+  *  0ea4ff139 - Add internationalization hints.
+  *  3da9af47a - Update .pot and .po files.
+  *  85f13b433 - Fix Linux build... uniform initialization not
+    implemented right in g++?
+  *  eae38b067 - Fix Linux build
+  *  c56dd71bf - Add missing files to POTFILES.in
+  *  de88c98a4 - Fixes for the "bounce" at start of scrub
+  *  9aad60d12 - Make polling loop period slightly shorter than Audio
+    thread loop...
+  *  bd88a0e48 - Rewrite scrub without mutex, condition variable, or
+    message queue...
+  *  e4e7a814c - FillBuffers won't quit too early priming the RingBuffer
+    for scrub
+  *  ba52753ff - Scrub options don't need starting time
+  *  9d17d335b - Poller thread leaves messages, Audio interprets; a
+    buffer not a queue
+  *  832bcef3a - Postpone work from ctor of ScrubState to the first call
+    of Update
+  *  a62cf5316 - Make AudioThread wake-ups as uniformly spaced as we can
+  *  0c0cc0768 - Define utility class MessageBuffer for inter-thread
+    messages
+  *  976e9aeec - Changes to the starting and stopping of scrub/seek/at-
+    speed...
+  *  4e461f875 - Explicit scrub shut-down signal replaces the "nudge"
+  *  303ac9367 - Start scrub polling before the PortAudio stream...
+  *  27ede251d - Don't collapse recorded tracks when Auto-fit enabled
+  *  878818a1a - Wording: "Duplex" -> "Overdub"
+  *  e31fe6b24 - Make AUD-DO return T or NIL as result status.
+  *  367d15a0b - Add a couple of helpers for parsing string
+  *  70467e152 - Enable (most) Nyquist property lists for tool scripts
+  *  bdf1cb32f - Some simplifications and renamings related to
+    ScrubState
+  *  550d514e0 - Changes of names and comments relating to scrub, don't
+    mention queue
+  *  4a98ba03d - Remove ScrubQueue compensation for Producer
+    overflowing...
+  *  8badb0a93 - Rewrite the insertion of silences into scrub, combining
+    queue entries
+  *  9727968b9 - move some functions
+  *  1bf192e5b - Split ScrubQueue into two queues...
+  *  69435c919 - Simplify ScrubQueue to involve only two threads...
+  *  81a3a7d33 - Use the TimeQueue to communicate play head position
+    updates for scrubbing...
+  *  389ab0c8d - Fewer calls to RingBuffer::Put in case of trailing
+    zeroes...
+  *  84c8aa0fc - Fix some cases where seeking (with mouse) let
+    RingBuffer go empty
+  *  b2df5e067 - Declare and allocate time value queue
+  *  e91918042 - Don't let the ring buffer empty when seeking past end
+    of track...
+  *  67a982343 - split out function AdvancedTrackTime; more caution
+    about termination
+  *  2806f40ab - Don't let the RingBuffer run dry when seek-drag is very
+    slow...
+  *  5cfbfd364 - Set the playback RingBuffer latency appropriately for
+    seeking
+  *  111d2c867 - Can specify a minimum to maintain in the playback
+    RingBuffer...
+  *  06fe9e843 - remove some casting
+  *  45231b8f6 - Consume equal amounts from play ring buffers in each
+    callback pass...
+  *  8a6351d9c - Guarantee cleanup of partial allocation on all error
+    return paths...
+  *  3a94acd63 - Remove unnecessary variable
+  *  03678eccb - use mRate not sampleRate
+  *  575e631d4 - line lengths
+  *  8e151aba8 - Split out AudioIO::AllocateBuffers
+  *  eeb5f1ec2 - Revert "Fix the hiccup at the start of scrub or play at
+    speed..."
+  *  d79c071d6 - Change 'mouse_move' to 'move_mouse'.
+  *  74d0420b9 - Bug 1763 - Clicks on starting/stopping playback.
+  *  b91300caf - Bug 1947 - Clicky play when dynamically changing number
+    of playing channels
+  *  f296f4239 - Fix misleading error message
+  *  ac1017ee1 - A preference checkbox for always scrubbing unpinned,
+    does nothing yet
+  *  c86a46dc9 - fix Mac build
+  *  9012b98ec - Init mOldGains
+  *  0ce83abbf - Bug 1940 - Clicky play when adjusting Pan or Volume TCP
+    controls
+  *  ac5b743dd - Bug 1944 - Many "scriptables" link to non-existent
+    pages or incorrect target pages
+  *  66df5786d - Make AUD-DO return a cons.
+  *  9b84deb43 - Bug 1946 - Nyquist ;type tool effects crash if
+    returning labels from Nyquist
+  *  e1ae05780 - Disable experimental loudness normalizing
+  *  4ec1393c2 - Error if Nyquist Prompt requires track election
+  *  94b3bf3c2 - Remove superfluous log message
+  *  b9ec43433 - Bug 1934 residual
+  *  06b5d2e94 - Bug1932 followup:  Times, not sample counts, in
+    scrubbing options...
+  *  ecb1cbdf3 - Play at speed slider: fix page up/down increments
+  *  805d7023e - TimeDialog: minor accessibility change
+  *  0df8c7e3a - Wording: "Latency compensation"
+  *  3bb48a21d - Bug 1932 - (Residual) Fix stopping behavior with Play-
+    At-Speed.
+  *  aaad7dd08 - Bug 1932 - Scrubbing (and Play-at-speed) with WASAPI
+    host (MSW only) or very short buffer preference (on Mac also) is
+    very clicketty
+  *  26f72b110 - Fix the hiccup at the start of scrub or play at
+    speed...
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 01 Sep 2018 22:38:00 +0300
+
 audacity (1:2.2.2+git8951-6fa5c93b8-1) unstable; urgency=medium
 
   * Compile

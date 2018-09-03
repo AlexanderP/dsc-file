@@ -1,3 +1,81 @@
+gimp-gtk3 (2.99.0+git42189-d03e5a90d3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: d03e5a90d3707ce3e88ec44a951e35db129173e1
+  * Date: 1535826177
+  * git changelog:
+  *  d03e5a90d3 - Update Brazilian Portuguese translation
+  *  b839263372 - Update Spanish translation
+  *  1a20253b0c - app: use gimp_gtk_container_clear() in GimpDashboard
+  *  b3d27555ec - app: remove unused function prototype in GimpDashboard
+  *  e98255efc1 - Issue #2124 - The origin of vertical, right to left
+    text does not...
+  *  2bec4b0a0c - INSTALL: also add gexiv2 dependency in requirement
+    table.
+  *  7a7de5c61c - desktop: add missing filter in <release> notes.
+  *  c04544c3db - Update INSTALL.in - gexiv2 required version
+  *  3bf1c6a571 - configure: Simplify libjpeg detection
+  *  072d6b0d12 - Issue #2120 - Segmentation fault while using Levels to
+    white balance a layer
+  *  5dcee9ad37 - file-jpeg: Fix the copyright and license notices of
+    jpeg-icc.*
+  *  be668697cb - Update Polish translation
+  *  547190faa8 - Issue #2116 - bug: Image guide creation by dragging
+    does not allow ...
+  *  d210199da5 - app: fix dashboard swap read-throughput desc.; add
+    translator comment
+  *  f0cb8a6f6f - Update Polish translation
+  *  4c9d82aaff - Update German translation
+  *  e563845174 - Issue #2095 - Filter wavelet-decompose error with
+    layer Group option active
+  *  bcf9c94358 - app: s/sprintf/g_snprintf/ in xcf_save_image()
+  *  ec80a88513 - app: explicitly clear GUI when halting a filter tool
+  *  fd64aae47b - app: add gimp_gtk_container_clear()
+  *  717c183a3e - app: make GimpDeviceInfo more rubust against broken
+    device listings
+  *  5d937a237b - icons: make the gap of the broken chain larger in the
+    Color theme
+  *  49fc5e3034 - tools: invert-svg build tool no longer necessary.
+  *  96dc7da000 - devel-docs: document new debugging option --enable-
+    win32-debug-console.
+  *  a1706bbd29 - app: use adaptive chunk size when rendering
+    projections
+  *  105ffc787d - app: don't chunk update area when rendering projection
+    synchronously
+  *  b8d4ab4808 - configure: reorder the dependency version list.
+  *  9420805525 - Issue 2052 - Crash when using the flip tool
+  *  668fee966a - libgimp: in GimpTileBackendPlugin, use
+    gegl_tile_backend_command()
+  *  17e37ddf24 - INSTALL: add appstream-glib in the dependency list.
+  *  11cee13f62 - configure: more explicit error message for gtk-encode-
+    symbolic-svg.
+  *  bc3b076caf - libgimp: disable tile command range check in plug-in
+    tile backend
+  *  de11e3532c - Issue #1970: Python-fu missing in 2.10.4.
+  *  b67d7c4413 - app: fix "Bad interpreter" error messaging.
+  *  f1ff239d68 - configure.ac: require GEGL >= 0.4.9
+  *  5446163e1d - app: show swap read/write throughput in the dashboard
+  *  cd54457d46 - app: add "queued" field to the dashboard swap group
+  *  b6e552a74b - app: add "compression" field to the swap dashboard
+    group
+  *  8313a40fb5 - app: show horizontal scrollbar in dashboard when
+    necessary
+  *  1d555018ed - desktop: GIMP 2.10.6 is now planned to be released on
+    2018-08-19.
+  *  0b73a1bc93 - icons: fix build with vector icons (default).
+  *  6ad5d74565 - configure/app: depend on GEGL 0.4.8
+  *  b810590b44 - plug-ins: include the right python source in the
+    distribution.
+  *  9bbe950c00 - po-python: skip copied Python files from POTFILES.
+  *  babf74a3db - icons: generate PNG symbolic icons with `gtk-encode-
+    symbolic-svg`.
+  *  8cfe2df866 - app: allow GUI config property for icon style
+    preference.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 02 Sep 2018 07:14:05 +0300
+
 gimp-gtk3 (2.99.0+git42143-4c5cb92352-1) unstable; urgency=medium
 
   * Compile

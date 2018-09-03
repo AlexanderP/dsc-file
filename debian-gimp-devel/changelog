@@ -1,3 +1,72 @@
+gimp-devel (2.10.4+git41552-370dd32147-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 370dd3214757f5ca4454e9d674912ac23b645dd1
+  * Date: 1535825449
+  * git changelog:
+  *  370dd32147 - Update Brazilian Portuguese translation
+  *  a2f1efc201 - app: use gimp_gtk_container_clear() in GimpDashboard
+  *  e74a241cdf - Issue #2124 - The origin of vertical, right to left
+    text does not...
+  *  806cb6e348 - Issue #2120 - Segmentation fault while using Levels to
+    white balance a layer
+  *  8c69f8cdd9 - Update Polish translation
+  *  8814852159 - Issue #2116 - bug: Image guide creation by dragging
+    does not allow ...
+  *  d015c3d632 - app: fix dashboard swap read-throughput desc.; add
+    translator comment
+  *  966b2fc75b - Update Polish translation
+  *  9feca3b094 - Update German translation
+  *  f8c23c3720 - Issue #2095 - Filter wavelet-decompose error with
+    layer Group option active
+  *  7baedf02d9 - app: s/sprintf/g_snprintf/ in xcf_save_image()
+  *  6c46891c4c - app: explicitly clear GUI when halting a filter tool
+  *  fba9de69ee - app: add gimp_gtk_container_clear()
+  *  7d9f79427f - app: make GimpDeviceInfo more rubust against broken
+    device listings
+  *  398d176855 - Installer: small fix for 32on64
+  *  cef2b7e72d - Merge branch 'gimp-2-10' of
+    gitlab.gnome.org:GNOME/gimp into gimp-2-10
+  *  b7a32ee848 - Installer: don't include unnecessary files, some more
+    fixes for new plugin paths
+  *  70d949eb0d - devel-docs: document new debugging option --enable-
+    win32-debug-console.
+  *  db0d3a4846 - app: use adaptive chunk size when rendering
+    projections
+  *  b09498cd7a - app: don't chunk update area when rendering projection
+    synchronously
+  *  6fceb041df - Installer: zlib1.dll has no version info, compare
+    timestamp when updating in System32
+  *  ab3ff790ab - Installer: plug-ins install changes
+  *  5ddccb0de4 - Installer: remove plugins from the lib\gimp\2.0\plug-
+    ins directory
+  *  0e3084a9d1 - Issue 2052 - Crash when using the flip tool
+  *  d3cab633de - libgimp: in GimpTileBackendPlugin, use
+    gegl_tile_backend_command()
+  *  bc4bf58be3 - configure.ac: require GEGL >= 0.4.9
+  *  fddf34dc87 - app: show swap read/write throughput in the dashboard
+  *  fa9b231679 - app: add "queued" field to the dashboard swap group
+  *  3ae8ff5c74 - app: add "compression" field to the swap dashboard
+    group
+  *  c335f78ee5 - configure.ac: post-release version bump to 2.10.7
+  *  c0ef24b818 - Update Russian translation
+  *  0a8173ffde - configure.ac: release GIMP 2.10.6
+  *  6837554376 - icons: make the gap of the broken chain larger in the
+    Color theme
+  *  90ed3c8d3a - libgimp: disable tile command range check in plug-in
+    tile backend
+  *  8f21c9483a - Issue #1970: Python-fu missing in 2.10.4.
+  *  87a9feb6d9 - app: fix "Bad interpreter" error messaging.
+  *  1e44cbd82c - desktop: GIMP 2.10.6 is now planned to be released on
+    2018-08-19.
+  *  7ed34fd920 - app: show horizontal scrollbar in dashboard when
+    necessary
+  *  b03709ab5e - configure/app: depend on GEGL 0.4.8
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 02 Sep 2018 06:34:59 +0300
+
 gimp-devel (2.10.4+git41513-024fb90fd4-1) unstable; urgency=medium
 
   * Compile
