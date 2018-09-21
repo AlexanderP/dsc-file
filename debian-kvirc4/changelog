@@ -1,3 +1,28 @@
+kvirc (4:5.0.0~git-7334-5183a5572-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 5183a5572e56d66bd72b4a1bdb6f2fa4ec5f717f
+  * Date: 1536276973
+  * git changelog:
+  *  5183a5572 - appveyor and translation updates - pull pos from
+    transifex - amend d40dae7dc624deeba40cc7baa27f255be885fd86 since
+    glibconfig.h isn't in the include path
+  *  4fc417a7f - more enchant windows things and perl updates - of
+    course i missed to amend the include location, fixed now - update to
+    ExtUtils::ParseXS 3.39 (no changes) - update to Devel::PPPort 3.42
+    and use the correct typemap
+  *  115c5721f - more enchant-2 changes for the windows build
+  *  d40dae7dc - try to fix the windows build - remove glib workaround,
+    this hasn't done anything for ages. - drycoded attempt to fix
+    enchant - update dicts
+  *  1c3bbfcc4 - KviHttpRequest: Fix potential null pointer dereference
+  *  c02e605eb -  KviHttp: support relative redirects; fix #2398
+    (#2399)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 15 Sep 2018 08:45:37 +0300
+
 kvirc (4:5.0.0~git-7328-abc7a305d-1) unstable; urgency=medium
 
   * Compile

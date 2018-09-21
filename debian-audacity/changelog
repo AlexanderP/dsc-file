@@ -1,3 +1,83 @@
+audacity (1:2.2.2+git9105-03ef66d07-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 03ef66d07043cc186899f787fa897a82a88d71eb
+  * Date: 1536963637
+  * git changelog:
+  *  03ef66d07 - Bug 1915 - Win: Audacity on Windows depends on
+    MSVCP140.dll and VCRUNTIME140.dll
+  *  f7545650f - Remove empty files src/LoadModules.* and all mention of
+    them
+  *  e77fc068b - Add missing header files to XCode project
+  *  20947efec - Remove more vestiges of pre-C++11 Mac library
+    workarounds
+  *  fe8176052 - Eliminate EXPERIMENTAL_OUTPUT_DISPLAY, again...
+  *  34cc1ff57 - Rename, rewrite, and simplify use of
+    FindPendingChangedTrack
+  *  a5c50a112 - more const in drawing functions
+  *  4b950927b - TrackList::GetGroupHeight is const
+  *  cbe778adb - Bug 1977 - Simpler rule for 'Default sample rate' and
+    'Project rate'.
+  *  98073f769 - Update Spanish translation
+  *  993cea506 - Revised fix for Bug 1977 - Using Spectrogram Settings
+    in TCP causes Audacity to reset Project Rate to default 44100 Hz
+  *  e990fd4f1 - Remove unnecessary #include
+  *  1b6cd725e - Use count of channels instead of boolean 'linked' in
+    GetInfo.
+  *  206305624 - Bug221 re-fixed with better exception safety: see
+    commit 1deff18...
+  *  a66d7442a - Bug 1977 - Using Spectrogram Settings in TCP causes
+    Audacity to reset Project Rate to default 44100 Hz
+  *  a6866f4b4 - Update Catalan translation
+  *  e54f8e615 - Create PULL_REQUEST_TEMPLATE.md
+  *  334c0d83b - Create CONTRIBUTING.md
+  *  e8abafdea - Create issue templates
+  *  94dbc2646 - Added CODE_OF_CONDUCT.md
+  *  1deff18c1 - Bug 231 - Cut Preview should play all selected/sync-
+    locked tracks, respecting Mute/Solo during preview
+  *  8e089f414 - Update Basque translation
+  *  b881b06b5 - When scrubbing backwards unpinned, scroll tracks by
+    whole panel width
+  *  f31a1a6f8 - Don't halt scrub playback with display paging at high
+    magnification
+  *  52ad43daa - Scrubbing at high mag, play head won't stray left of
+    track edge
+  *  03def8dba - Bug1967: scrub shouldn't be clicky...
+  *  e724ef079 - Bug 1970 - Missing tick marks in Timeline
+  *  47926c04f - Bug 1969 - Windows: no monitored sound for 15 secs with
+    software playthrough with default MME host
+  *  ff01d3960 - Undo Workaround for Bug 1969
+  *  942ddac70 - Update Greek translation
+  *  596feddfe - Workaround for Bug 1969 - Windows: no monitored sound
+    for 15 secs with software playthrough with default MME host
+  *  0f5c8d4d8 - Wording: "Duplex" -> "Overdub" (missing piece).
+  *  69fd56667 - Fix printing headers in Sample Data Export
+  *  ad19ca0fa - Fix for bug 1972
+  *  b8891702a - Update Catalan translation
+  *  f8c857f24 - Update Russian translation
+  *  1ecff6d5d - Bug 1971 - Linux: Scriptables screenshot command only
+    grab a small rectangle of window
+  *  f61989e92 - Part fixes for compilation of EXPERIMENTAL_SCOREALIGN
+  *  544c3b977 - spelling in comments
+  *  69bf7fd12 - remove unused function
+  *  2d67b97f3 - Update Dutch translation
+  *  bc016663c - Update Catalan translation
+  *  2758491a4 - Bug 1966 - Manage Macros: Import and Export buttons are
+    always inactive.
+  *  7d0839393 - Report selectedness of all tracks, not just WaveTracks.
+  *  1627194af - Update Portuguese translation
+  *  ad6962250 - Bug1958: shouldn't crash recording with playthrough
+  *  ae2bbb327 - AUD-GET-INFO function added to init.lsp
+  *  a56a5be30 - Replace _ with XO (won't affect generated audacity.pot)
+  *  52b6eb14e - Update Danish translation
+  *  44e862397 - Update polish translation from Transifex
+  *  a42c2ba39 - Update Ukrainian translation
+  *  610ab2a68 - Chinese Translation.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 15 Sep 2018 11:19:20 +0300
+
 audacity (1:2.2.2+git9053-1baf12d7b-1) unstable; urgency=medium
 
   * Compile

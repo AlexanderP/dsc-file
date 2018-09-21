@@ -1,3 +1,74 @@
+gimp-devel (2.10.4+git41595-99b4ee2082-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 99b4ee20824b005665b285a667a9463093962368
+  * Date: 1536950706
+  * git changelog:
+  *  99b4ee2082 - Update German translation
+  *  e88050fcc5 - Update Spanish translation
+  *  536af959f1 - Issue #2055: make save dialog compatibility
+    information understandable.
+  *  6952bbb1ad - app: add a reason string for internal zlib compression
+    in GIMP 2.10.
+  *  25ddcc6171 - Update Polish translation
+  *  8be8b201ca - Update German translation
+  *  d0ae9908de - Start tracking changes between 2.10.6 and 2.10.8
+  *  b1652b02d8 - app: don't change text-layer box mode after moving
+    using text tool
+  *  951c08efd5 - app: fix text tool frame position when undoing move
+    operation
+  *  925b7f2c60 - app: streamline text-tool drawing blocking/unblocking
+    logic
+  *  e2b54845bd - app: fix uninitialized variable warning in
+    gimptexttool.c
+  *  0d6acfdf1b - Updated Italian translation
+  *  2ff515b374 - app: avoid to rotate unattached vectors directory in
+    ...
+  *  3012738ace - Revert "app: make unattached vectors enable to
+    rotate."
+  *  21e1445db4 - Update Hungarian translation
+  *  468a4ad109 - app: more cleanup in GimpBacktrace
+  *  e7dde73f84 - app: GimpBacktrace Windows backend only available with
+    Dr. Mingw.
+  *  c6b3a8363a - Update Finnish translation
+  *  0fcf02a7c6 - app, tools: add "running" thread attribute to
+    GimpBacktrace/performance-log
+  *  9f1a0a65bd - app: add Windows backend to GimpBacktrace
+  *  21f708a297 - app: add source-location information to GimpBacktrace
+  *  06a22a9cf8 - app: more GimpBacktrace tidying
+  *  e8ef49ec68 - Update Hungarian translation
+  *  e69d7bff29 - Update Hungarian translation
+  *  2afb025939 - Update Hungarian translation
+  *  d8df237f8f - Update Spanish translation
+  *  7727c6f57c - app: make unattached vectors enable to rotate.
+  *  54f9d3ee7d - Issue #2064 - text along path not working with
+    vertical text.
+  *  d89930cac9 - app: remove unused #define in gimpbacktrace-linux.c
+  *  8a2126fc98 - app: s/char/gchar/ in last commit
+  *  499a8962b3 - app: don't use g_file_peek_path() in splash.c
+  *  14c3c33f1b - app: rename gimp_backtrace_get_symbol_info() to
+    ..._get_address_info()
+  *  af769588cd - app: in gimpbacktrace-none.c, fix
+    gimp_backtrace_get_frame_address()
+  *  dd1a17d67e - app: remove stray g_printerr() from gimpbacktrace-
+    linux.c
+  *  14addc12e8 - app: minor cleanup in GimpBacktrace
+  *  8cfd24107f - app: show error on attempt to subtract-from/intersect-
+    with empty selection
+  *  617577da27 - app: fix app/tests linking
+  *  a35a2eeb81 - po: add dashboard-commands.c to POTFILES.in
+  *  28ad1d0eba - app: add standard highlight colors to
+    gimphighlightablebutton.h
+  *  1122b3e492 - tools: add performance-log-related tools
+  *  40ac4f7bc0 - app, icons, menus: add performance-log recording to
+    the dashboard
+  *  536fc332e0 - app: add GimpBacktrace
+  *  14ce0763ce - app: add mnemonics to dashboard action labels
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 15 Sep 2018 18:28:31 +0300
+
 gimp-devel (2.10.4+git41552-370dd32147-1) unstable; urgency=medium
 
   * Compile

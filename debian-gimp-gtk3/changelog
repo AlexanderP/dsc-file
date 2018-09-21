@@ -1,3 +1,118 @@
+gimp-gtk3 (2.99.0+git42266-dc9a30446b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: dc9a30446ba9a27f10cc37c7627dfd11f6ac9c88
+  * Date: 1536996189
+  * git changelog:
+  *  dc9a30446b - devel-docs: add the package maintainers in the release-
+    howto.
+  *  ff56a3af8d - build: update the flatpak cron file.
+  *  d738d2f645 - Issue #2209: HEIF: Invalid input: No 'ftyp' box.
+  *  a654ecbd70 - build: assume yes to questions when updating flatpak
+    runtimes.
+  *  573d817539 - Issue #2055: make save dialog compatibility
+    information understandable.
+  *  0fa2ef9118 - app: add a reason string for internal zlib compression
+    in GIMP 2.10.
+  *  7448c7f811 - libgimpwidgets: do not assume a GimpFrame has a child.
+  *  ea67537d85 - app: conditionnally free new profile in
+    gimp_image_convert_precision().
+  *  6c6a7514a4 - app: some cleanup in gimppaintcore-loops
+  *  6fca9959c7 - plug-ins: migrate pagecurl to new iterator api
+  *  cc10af72cc - plug-ins: migrate screenshot-x11 to new iterator api
+  *  49c53568d7 - plug-ins: migrate print-draw-page to new iterator api
+  *  8edbc0d491 - plug-ins: migrate ifs compose to new iterator api
+  *  29f63616d2 - plug-ins: migrate file-tiff-load to new iterator api
+  *  3a2014984d - plug-ins: migrate psd plug-ins to new iterator api
+  *  ee48ec6877 - plug-ins: migrate gradient-map to new iterator api
+  *  4165a315d5 - plug-ins: migrate qbist to new iterator api
+  *  764085278f - plug-ins: migrate file-png to new iterator-api
+  *  b7633c722e - plug-ins: compose migrated to new iterator api
+  *  6ab12061b7 - plug-ins: colormap-remap migrated to new iterator api
+  *  754a3c5b18 - plug-ins: border-average migrated to new iterator api
+  *  22b4b647bd - plug-ins: decompose migrated to new iterator api
+  *  55b3438328 - app: migrate gimpoperationmaskcomponents to new
+    iterator api
+  *  c6d23add65 - app: migrate gimpoperationgradient to new iterator api
+  *  f03a84d607 - app: migrate gimpoperationcagetransform to new
+    iterator api
+  *  822f9f0d2b - app: migrate gimpoperationcagecoefcalc to new iterator
+    api
+  *  95358ca1fa - app: migrate operationbuffersourcevalidate to new
+    iterator api
+  *  cdda37f4ee - libgimpcolor: migrate to new iterator api
+  *  41e8035635 - modules: migrate display filters to new iterator api
+  *  6761da42b2 - modules: migrate aces-rrt filter to new iterator api
+  *  fb5d7832a8 - app: migrate paintcore loops to new iterator api
+  *  97ed7817d8 - app: migrate gimpmybrushsurface to new iterator api
+  *  46e9036578 - app: migrate brush core to new iterator api
+  *  ea9c5e6a49 - app: migrate ink paint core to iterator api
+  *  24fbdfb591 - app: migrate heal to new iterator api
+  *  beb4ecb238 - app: migrate iscissorstool to new iterator api
+  *  4b77831e03 - app: migrate gimp-gegl-mask to new iterator api
+  *  fcf113a39c - app: migrate gegl-mask-combine to new iterator api
+  *  567ffe94ff - app: migrate gegl-loops to new iterator api
+  *  d99cae4ab8 - app: gimpscanconvert: migrate to new buffer iterator
+  *  c56f543354 - app: pickable-contiguous-region migrated to new buffer
+    iterator
+  *  43c107aeab - app: palette-import migrated to new buffer iterator
+  *  9f481d3607 - app: image-convert-indexed migrated to new buffer
+    iterator
+  *  2c2d8d86fd - app: histogram migrated to new buffer iterator
+  *  972f232316 - app: gimpdrawable-transform migrated to new buffer
+    iterator
+  *  829ca6583d - Issue #2179: Make file_rawtherapee use the registry
+    value that is...
+  *  35c71348a9 - Update Spanish translation
+  *  2273ebd6dc - Update Polish translation
+  *  601c213c7a - app: don't change text-layer box mode after moving
+    using text tool
+  *  238c1035db - app: fix text tool frame position when undoing move
+    operation
+  *  a03183b266 - app: streamline text-tool drawing blocking/unblocking
+    logic
+  *  a1caa17531 - app: fix uninitialized variable warning in
+    gimptexttool.c
+  *  5483ea88e5 - app: avoid to rotate unattached vectors directory in
+    ...
+  *  1ff9487d00 - Revert "app: make unattached vectors enable to
+    rotate."
+  *  166c2c6a89 - Update Hungarian translation
+  *  b9f1ab8f53 - app: more cleanup in GimpBacktrace
+  *  644234e99d - app: GimpBacktrace Windows backend only available with
+    Dr. Mingw.
+  *  ad1f4f51bc - Update Finnish translation
+  *  c2666ae5b8 - configure, app: depend on babl-0.1.57
+  *  78adb7c900 - app, tools: add "running" thread attribute to
+    GimpBacktrace/performance-log
+  *  667efc221d - app: add Windows backend to GimpBacktrace
+  *  a6ec857123 - app: add source-location information to GimpBacktrace
+  *  422f6a55e4 - app: more GimpBacktrace tidying
+  *  2d415f53bf - app: make unattached vectors enable to rotate.
+  *  8dfe00fa17 - Issue #2064 - text along path not working with
+    vertical text.
+  *  c4d89bfe0b - app: remove unused #define in gimpbacktrace-linux.c
+  *  7ac87dc01e - app: rename gimp_backtrace_get_symbol_info() to
+    ..._get_address_info()
+  *  77746fd8fc - app: in gimpbacktrace-none.c, fix
+    gimp_backtrace_get_frame_address()
+  *  0d3647f854 - app: remove stray g_printerr() from gimpbacktrace-
+    linux.c
+  *  cb8dd047d0 - app: minor cleanup in GimpBacktrace
+  *  0e26525e65 - app: show error on attempt to subtract-from/intersect-
+    with empty selection
+  *  7a02859d32 - app: fix app/tests linking
+  *  0e04b77589 - po: add dashboard-commands.c to POTFILES.in
+  *  d7c74a615b - tools: add performance-log-related tools
+  *  36477bb287 - app, icons, menus: add performance-log recording to
+    the dashboard
+  *  80bf686c94 - app: add GimpBacktrace
+  *  a109a77db1 - app: add mnemonics to dashboard action labels
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 15 Sep 2018 18:53:13 +0300
+
 gimp-gtk3 (2.99.0+git42189-d03e5a90d3-1) unstable; urgency=medium
 
   * Compile
