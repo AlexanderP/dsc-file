@@ -1,3 +1,32 @@
+eiskaltdcpp-devel (2.2.10+git5090-f85ba8c0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://github.com/eiskaltdcpp/eiskaltdcpp.git
+  * Branch: master
+  * Commit: f85ba8c017c4feb6ad0cfcd13ac403e21d001c98
+  * Date: 1537218870
+  * git changelog:
+  *  f85ba8c0 - Update README.
+  *  6f393519 - Rewrite README.md + add README.html
+  *  d37d47d7 - Travis CI: update configuration options for MS Windows
+    builds:
+  *  e5f4b175 - cmake: delete subdirectory "boost" when LOCAL_BOOST is
+    set to "OFF".
+  *  e206da17 - cmake: update configuration options for MS Windows:
+  *  c1dbf52b - Travis CI: code refactoring in script for building for
+    MS Windows.
+  *  687aaa9b - Travis CI: rewrite config and all scripts:
+  *  8411a786 - Core, Qt: fix build for MS Windows.
+  *  99ab02a7 - Qt: cosmetic changes in SpellCheck.
+  *  e2f45b2c - Core, Qt: delete extra code.
+  *  c565c4b9 - Qt: fix build of SpellCheck for macOS.
+  *  7cc95fa4 - Qt: rewrite work with Aspell dictionaries.
+  *  2a3f7278 - Core: attempt to improve work of gettext based
+    translations.
+  *  2b14e4f0 - Travis CI: enable build for Windows using MXE.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 29 Sep 2018 02:15:22 +0300
+
 eiskaltdcpp-devel (2.2.10+git5076-8f00f6fb-1) unstable; urgency=medium
 
   * Compile

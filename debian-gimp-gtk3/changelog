@@ -1,3 +1,87 @@
+gimp-gtk3 (2.99.0+git42315-6ad3dbdb17-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 6ad3dbdb17d1cc419b15dbb84a144545d695bf4a
+  * Date: 1538166657
+  * git changelog:
+  *  6ad3dbdb17 - app: in performance-log-viewer.py, add undo support
+  *  e6b92dbbc6 - Update Polish translation
+  *  fb0b04e8d9 - build: bump some dependencies in nightly flatpak.
+  *  ba53a833b2 - desktop: prepare release of GIMP 2.10.8.
+  *  c1347a7f26 - app: construct tool-options GUI lazily
+  *  d33fb0e7b8 - tools: various improvements in gimp-performance-log-
+    viewer.py
+  *  9a2999a553 - plug-ins: in script-fu, don't query PDB procedures'
+    info on startup
+  *  72b80213bc - Update Brazilian Portuguese translation
+  *  a5baba5539 - Issue #2272 - Crash when using the intelligent-
+    scissors tool ...
+  *  53964dcb92 - Revert "app: add "perspective correction" option to
+    the measure tool"
+  *  bf2ea81fcc - app: use gimp_dialog_set_alternative_button_order()
+  *  24fb597196 - app: tweak focus behavior of GimpToolWidgetGroup when
+    removing widget
+  *  d31725a9cd - app: add "perspective correction" option to the
+    measure tool
+  *  95d2c92ff2 - app: in GimpToolWidgetGroup, improve focus behavior
+    when adding/removing widgets
+  *  5b217b3ad4 - app: in GimpToolWidgetGroup, calculate hover widget at
+    button press
+  *  20a6a3583b - app: confirm transforms that result in very large
+    items
+  *  2ae823ba2b - app: add gimp_drawable_transform_get_effective_clip()
+  *  2c52bba071 - app: indentation fix in gimpdrawable-transform.[ch]
+  *  51d9934942 - tools: in performance-log-viewer.py, right-align
+    backtrace frame number column
+  *  407e9f36ca - tools: in performance-log-viewer.py, set thread filter
+    search column
+  *  3f630378b0 - tools: in performance-log-viewer.py, add thread filter
+    to profile
+  *  a7afbe13ec - tools: in performance-log-viewer.py, defer UI updates
+    util needed
+  *  0245775346 - configure.ac: fix libbacktrace test
+  *  7cdd1ebeef - app: add source location information to the Linux
+    GimpBacktrace backend
+  *  2c8e3f8e0a - tools: only show object/source basename in performance-
+    log backtraces
+  *  c7a4eb4602 - tools: replace performance-log viewer call-graph
+    direction icons
+  *  c537341d35 - tools: a few improvements in performance-log-viewer.py
+  *  4dc45f9658 - libgimpmath: fix typo in various places:
+    s/orthognal/orthogonal/.
+  *  a1b08a503d - Revert "app: disable parallel asynchronous operations
+    when GEGL_THREADS=1"
+  *  6a5023a38a - Issue #2179: Get rid of the win32_use_hkcu flag.
+  *  f7ac033777 - libgimpwidgets: fix accidential double G_ADD_PRIVATE
+  *  a5c8dd5c73 - app: fix incompatible pointer type warning in
+    gimpviewrendererdrawable.c
+  *  a84b57e67e - app: fix unhandled enumeration value warning in
+    gimptextlayer.c
+  *  3b0040c043 - app, libgimp*, modules: don't use
+    g_type_class_add_private() ...
+  *  d5586ed9d0 - Updated Italian translation
+  *  7bfd22ca68 - Fixed small typo
+  *  ef8042e812 - icons: fix icons!
+  *  97247f41ea - app: don't sanity check for "gegl:matting-levin".
+  *  9560a653c5 - configure: check presence of "gegl:matting-levin" with
+    `gegl --exists`.
+  *  386587736f - Misc. typo fixes
+  *  64b00b5c7f - plug-ins: add the "msf1" brand for HEIF files.
+  *  f8dd444e98 - tools: in performance-log-viewer.py, fix profile
+    viewer search column
+  *  3601c9189b - tools: add performance-log-viewer.py and driver
+  *  7e186f3e5d - tools: add performance-log-deduce.py
+  *  87999d17db - Update Polish translation
+  *  4ad3993eca - Issue #2209: more accurate magic for HEIF files.
+  *  2c6b5c371e - app: add more information to performance logs
+  *  e8c1cd79ba - app: in gimpbacktrace-linux, use SA_RESTART for the
+    backtrace signal
+  *  6038f405bf - Updated Greek translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 29 Sep 2018 06:52:05 +0300
+
 gimp-gtk3 (2.99.0+git42266-dc9a30446b-1) unstable; urgency=medium
 
   * Compile

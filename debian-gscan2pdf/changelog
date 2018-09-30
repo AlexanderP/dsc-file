@@ -1,3 +1,44 @@
+gscan2pdf (2.1.6+git2871-34285890-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 34285890dd4f5108bb80c56f1d86e35a45c163e8
+  * Date: 1537471896
+  * git changelog:
+  *  34285890 - Bumped version to 2.1.6
+  *  7bbc36d2 - Fixed opening UDT and unpaper dialog windows
+  *  b2d056f8 - Fixed starting processes from tools menu
+  *  a156c889 - When converting to jpg, include quality in log
+  *  8ce319aa - Post-release commit
+  *  aa15480e - Bumped release date for 2.1.5
+  *  a8b7f27d - Bumped version to 2.1.5
+  *  68abf0b2 - Fixed test failure introduced in commit
+    78f19311f1071a7e34a9c87e77164aa6631ffb58
+  *  b5b5a15a - Update to German translation
+  *  552a2f39 - Update to Czech translation
+  *  c2889cee - Pass page data to thread just in time to process it,
+    rather than when the process is defined
+  *  397b3f06 - Refactor _hbox_with_apply_cancel_buttons() into
+    lib/Gscan2pdf/Dialog.pm to simplify button creation code
+  *  20f50bc2 - Take border-width of containers from parent
+  *  fc106d4d - Refactor more combobox calls
+  *  39083034 - Subclass lib/Gscan2pdf/Dialog.pm from Gtk3::Dialog, not
+    Gtk3::Window
+  *  91c1e842 - Refactor add_image_type(),
+    image_type_changed_callback(), add_quality_spinbutton(),
+    add_pdf_options() into lib/Gscan2pdf/Dialog/Save.pm to simplify
+    bin/gscan2pdf
+  *  0f79bc0f - Refactor combobox helper functions into
+    lib/Gscan2pdf/ComboBoxText.pm
+  *  fa4543c2 - Refactor get/set code for EntryCompletion into
+    lib/Gscan2pdf/EntryCompletion.pm
+  *  a7607cd0 - Refactor pagerange widgets into lib/Gscan2pdf/Dialog.pm
+    and metadata widgets into lib/Gscan2pdf/Dialog/Save.pm
+  *  5cfd826d - Update to Hungarian translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 29 Sep 2018 00:28:57 +0300
+
 gscan2pdf (2.1.2+git2851-da84ae45-1) unstable; urgency=medium
 
   * Compile

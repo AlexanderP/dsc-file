@@ -1,3 +1,138 @@
+gimp-devel (2.10.4+git41687-61367b3f39-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 61367b3f39f3fa67d47ddc9649ae24f7e0f40a43
+  * Date: 1538166660
+  * git changelog:
+  *  61367b3f39 - app: in performance-log-viewer.py, add undo support
+  *  45ee51c9ec - Updated Spanish translation
+  *  d8a4e810da - Updated Spanish translation
+  *  f5598dc746 - Update Polish translation
+  *  e736532637 - desktop: prepare release of GIMP 2.10.8.
+  *  c9510721c5 - app: construct tool-options GUI lazily
+  *  6bc2b330bb - tools: various improvements in gimp-performance-log-
+    viewer.py
+  *  97a29b1e9e - plug-ins: in script-fu, don't query PDB procedures'
+    info on startup
+  *  edeb1d2981 - Update Brazilian Portuguese translation
+  *  140e371d5a - Update Brazilian Portuguese translation
+  *  35bf5bcab7 - Updated Italian translation
+  *  49390462c8 - Issue #2272 - Crash when using the intelligent-
+    scissors tool ...
+  *  6e1d542128 - Updated Italian translation
+  *  6a8ece0fd5 - app: confirm transforms that result in very large
+    items
+  *  9ad52a2220 - app: add gimp_drawable_transform_get_effective_clip()
+  *  3fe077a74c - app: indentation fix in gimpdrawable-transform.[ch]
+  *  0f367371aa - app: tweak focus behavior of GimpToolWidgetGroup when
+    removing widget
+  *  693cea427a - app: in GimpToolWidgetGroup, improve focus behavior
+    when adding/removing widgets
+  *  f479711814 - app: in GimpToolWidgetGroup, calculate hover widget at
+    button press
+  *  54fbf1a8cb - tools: in performance-log-viewer.py, right-align
+    backtrace frame number column
+  *  fab6b4746d - tools: in performance-log-viewer.py, set thread filter
+    search column
+  *  b5d628bec2 - tools: in performance-log-viewer.py, add thread filter
+    to profile
+  *  ea17d18d1b - tools: in performance-log-viewer.py, defer UI updates
+    util needed
+  *  0207c9baa1 - configure.ac: fix libbacktrace test
+  *  b065ff7de7 - app: add source location information to the Linux
+    GimpBacktrace backend
+  *  cb26c31a96 - tools: only show object/source basename in performance-
+    log backtraces
+  *  e839794d36 - tools: replace performance-log viewer call-graph
+    direction icons
+  *  0a900542be - themes: fix arrow color of menu items with a submenu
+  *  c0e82c0381 - tools: a few improvements in performance-log-viewer.py
+  *  e1b85e1109 - Revert "app: disable parallel asynchronous operations
+    when GEGL_THREADS=1"
+  *  b4f4aa5bea - Replace de.po
+  *  2eb640e1e5 - Replace de.po
+  *  30cf61f877 - Updated Greek translation
+  *  2fa73961c7 - NEWS: add file-rawtherapee improvements (better
+    discovery).
+  *  1c993c44cb - Issue #2179: Get rid of the win32_use_hkcu flag.
+  *  fc4cb8443e - Issue #2179: Make file_rawtherapee use the registry
+    value that is...
+  *  c38b600546 - Update NEWS
+  *  07c134e673 - app: fix incompatible pointer type warning in
+    gimpviewrendererdrawable.c
+  *  6f83f69e9a - app: fix unhandled enumeration value warning in
+    gimptextlayer.c
+  *  31b369d09f - app, libgimp*, modules: don't use
+    g_type_class_add_private() ...
+  *  ee11477dc5 - app: some cleanup in gimppaintcore-loops
+  *  ef035fb297 - plug-ins: migrate pagecurl to new iterator api
+  *  a5bbf913a4 - plug-ins: migrate screenshot-x11 to new iterator api
+  *  8b3cd3057f - plug-ins: migrate print-draw-page to new iterator api
+  *  ccf682052e - plug-ins: migrate ifs compose to new iterator api
+  *  115c9070a4 - plug-ins: migrate file-tiff-load to new iterator api
+  *  01be5ca184 - plug-ins: migrate psd plug-ins to new iterator api
+  *  78b81a200a - plug-ins: migrate gradient-map to new iterator api
+  *  35713ad1ff - plug-ins: migrate qbist to new iterator api
+  *  a123c43a97 - plug-ins: migrate file-png to new iterator-api
+  *  ab1bb27129 - plug-ins: compose migrated to new iterator api
+  *  8e17056d15 - plug-ins: colormap-remap migrated to new iterator api
+  *  4baf61a2a0 - plug-ins: border-average migrated to new iterator api
+  *  9953fe57d9 - plug-ins: decompose migrated to new iterator api
+  *  6d9022f2e6 - app: migrate gimpoperationmaskcomponents to new
+    iterator api
+  *  5818585a8b - app: migrate gimpoperationgradient to new iterator api
+  *  925803f242 - app: migrate gimpoperationcagetransform to new
+    iterator api
+  *  fc222c8392 - app: migrate gimpoperationcagecoefcalc to new iterator
+    api
+  *  04517b842a - app: migrate operationbuffersourcevalidate to new
+    iterator api
+  *  33dd7daa30 - libgimpcolor: migrate to new iterator api
+  *  5531b53466 - modules: migrate display filters to new iterator api
+  *  e092765dfe - app: migrate paintcore loops to new iterator api
+  *  8aaa3a99f2 - app: migrate gimpmybrushsurface to new iterator api
+  *  4f46f92eb6 - app: migrate brush core to new iterator api
+  *  6a40b6c75e - app: migrate ink paint core to iterator api
+  *  645a945647 - app: migrate heal to new iterator api
+  *  8d5c00a80d - app: migrate iscissorstool to new iterator api
+  *  66dd9b119c - app: migrate gimp-gegl-mask to new iterator api
+  *  2910e872f2 - app: migrate gegl-mask-combine to new iterator api
+  *  3daafb09b6 - app: migrate gegl-loops to new iterator api
+  *  f2dd887fc0 - app: gimpscanconvert: migrate to new buffer iterator
+  *  969a028dcc - app: pickable-contiguous-region migrated to new buffer
+    iterator
+  *  1555f4c86a - app: palette-import migrated to new buffer iterator
+  *  244ddef844 - app: image-convert-indexed migrated to new buffer
+    iterator
+  *  957e0cd9cb - app: histogram migrated to new buffer iterator
+  *  84ac1148ac - app: gimpdrawable-transform migrated to new buffer
+    iterator
+  *  6484e91f82 - themes: in the Dark theme, use 'class "GtkWidget"'
+    instead of "*"
+  *  d7da2cb338 - Issue #1604 - Active layer name is hard to read
+  *  d7fa835cd3 - app: don't sanity check for "gegl:matting-levin".
+  *  5f088a95c3 - configure: check presence of "gegl:matting-levin" with
+    `gegl --exists`.
+  *  23648e753e - Misc. typo fixes
+  *  81bd873af5 - Updated Italian translation
+  *  e1cf340515 - plug-ins: add the "msf1" brand for HEIF files.
+  *  e4bff4c801 - Issue #2209: more accurate magic for HEIF files.
+  *  eb227b1d0e - devel-docs: add the package maintainers in the release-
+    howto.
+  *  e76d0941a9 - Issue #2209: HEIF: Invalid input: No 'ftyp' box.
+  *  3d24dfbc6e - tools: in performance-log-viewer.py, fix profile
+    viewer search column
+  *  cc18c2f890 - tools: add performance-log-viewer.py and driver
+  *  440695fa45 - tools: add performance-log-deduce.py
+  *  5b96fa6985 - Update Polish translation
+  *  64403d5fd8 - app: add more information to performance logs
+  *  896af012cb - app: in gimpbacktrace-linux, use SA_RESTART for the
+    backtrace signal
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 29 Sep 2018 06:31:17 +0300
+
 gimp-devel (2.10.4+git41595-99b4ee2082-1) unstable; urgency=medium
 
   * Compile

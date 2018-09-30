@@ -1,3 +1,448 @@
+freecad-daily (0.17+git14838-0d228bce0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 0d228bce02f3a4aa39f2b0f2bfbd5ca5eb2a6d4b
+  * Date: 1538161981
+  * git changelog:
+  *  0d228bce0 - Arch: Fixed edit mode of components
+  *  2cddbe5da - ArchPipe objects named as "Rail"
+  *  56378b5be - Add Property 'Width of Landing'; set width of different
+    'edge' of a Landing
+  *  e605d5f4b - fix build failure for oCCT 7.2 or later
+  *  27a4938d9 - move class ExportOCAF to own source files
+  *  95efad737 - fixes 0003491: Import.export not preserving placement
+    of Part Features in STP file export
+  *  02ab1c942 - fixes 0003165: Color information lost in STEP export
+  *  0812fb06d - improve Python call tips window
+  *  3d2d4bdfc - store Python attributes of all extension types in one
+    dict
+  *  1d1abb6d2 - fixes 0003311: SketchObjectPython - no addGeometry
+    addConstraints setDriving...?
+  *  830caf34c - fixes 0003547: Linear pattern, mirrored and polar
+    pattern feature not working on a hole just on pocket
+  *  13b45c9c7 - FEM: revert ac1b037, it is based on a change which is
+    not in master, not yet ;-)
+  *  19cd04041 - in linear pattern handle selected edge of a 2d part
+    object
+  *  a0ff62974 - FEM: vtk, post task boxes, add some comment
+  *  a905b6363 - FEM: vtk fix, task panels, some enumerations are no
+    longer set back on any open of the tp
+  *  de7ef263d - FEM: vtk, initialize the enums of piplines VP
+  *  5fc337baf - FEM: vtk fix, remove scaling of vtk results - only
+    displacements had been scaled, all other results remained untouched -
+    if the results should be scaled all results needs to be scaled -
+    this includes all possible result types with their units
+  *  b0f65e45b - FEM: SMESH, update internal version number
+  *  ac1b0371e - FEM: input filewriter base class, remove no longer
+    working mesh shape property, has been replaced by part
+  *  f054788a9 - Make Part_Measure_Clear_All icon more intuitive
+  *  7fc487ae6 - fixes 0003465: Groups breaking dependency graph
+  *  00bf21dc2 - fixes 0003618: FEM, GUI, mesh view provider,
+    highlighted node show wrong node number on selection
+  *  0c744f251 - FEM: fix an error handling issue, caused by an non
+    existing variable
+  *  fc0973857 - ArchStairs: Fix HalfTurnLeft error/bug
+  *  1e53a8f47 - Fix for crash on windows env.
+  *  27f9a69f2 - Path: Adaptive - small improvement
+  *  35f6a4fa7 - Path.Area: fix offset pocket mode
+  *  df0eb076a - Better error messages for bad selections
+  *  f9b9de42d - Add Peppino's ISO7200 templates
+  *  859fed207 - Fix double scaling in DPG AutoScale
+  *  3163c3d6f - Fix late repaint of secondary views
+  *  db593f216 - Suppress spurious message
+  *  6b9c1e89d - Show full width Edges around Section Face
+  *  57cc33c8e - fixes 0003427: Measurement tool measures wrongly
+  *  dd492d748 - fixes 0003373: 'Save a copy' of a document with a
+    spreadsheet mark the document as touched
+  *  ff0cacca0 - fixes 0003469: FreeCAD crashes on edge selection during
+    fillet edge operation on extruded geometry
+  *  dfd3d86b2 - fixes 0003333: Wrong behaviour of fuse operation
+  *  654fc12c8 - fixes 0003496: Can't delete spreadsheet if spreadsheet
+    is opened.
+  *  b112ac0ec - fixes 0003513: Can't open file - some exceptions are
+    shown in the log
+  *  b33095025 - fixes 0003611: Linear pattern: 'Select reference' does
+    near to nothing
+  *  fff2a3461 - expose method to Python to switch on/off event
+    redirection
+  *  a2d44d264 - fixes 0003521: Import of csv file into Spreadsheet does
+    not work if the path contains non ASCII characters
+  *  3653d7ed1 - fixes 0003148: PartDesign does not allow colouring of
+    single faces for non-primitives
+  *  8668296f9 - Hard Code QTFileDialog option
+  *  6bda4a53e - Gui::FileChooser respect Qt Dialog Flag
+  *  ac6eebe7b - Path: Adaptive - enhancements and bug fixes
+  *  b8cceb5f5 - make stepZ py3 compliant
+  *  8d2f8a3d9 - fixes 0003380: Involute gear should be created inside
+    of Body and respect Attachment
+  *  3c048904f - fixes 0003447: False PartDesign migration request
+  *  2fb62cf0a - improve whitespaces
+  *  f6b4ffb14 - fixes #0001672: Raytracing export to POV-Ray - respect
+    ASCII convention for I/O filenames
+  *  b5811a42b - fixes #0003582: ShapeBinder did not show correctly
+  *  75acfe898 - fixes #0003540: Body invisible after deleting Part
+    container
+  *  68bc66361 - set parent widget to message box when asking user to
+    delete content of a group
+  *  ac21bcc35 - fixes #0003597: PartDesign Additive and Subtractive
+    Loft features don't allow changing the first section after creation
+  *  198b047bd - clean-up work in TaskPipeOrientation
+  *  14b8579a6 - fixes #0003599: PartDesign Additive and Subtractive
+    Pipe features don't allow changing sections after creation
+  *  83c40da2a - issue #0003599: PartDesign Additive and Subtractive
+    Pipe features don't allow changing sections after creation
+  *  70918ba68 - ViewProvider: fix potential crash when exit editing
+  *  50ab6e292 - FEM: Python code formating, flake8
+  *  d6c6c4da6 - FEM: menues, delete the FEM before material menue
+    entries, just like all other entries
+  *  a20fa5108 - FEM: menues, move element geometry enties into sub
+    menue
+  *  7fdbc1d2b - inside display panel check if the property is part of
+    the view provider
+  *  047f91832 - do reselection whether 1 or 2 points selected
+  *  bc1cf4873 - relabel "Selected point(s)" to "Selected points"
+  *  96e2f44e2 - Path: Adaptive - fix for profiling operation
+  *  de5ad5241 - Path: Adaptive - enhancements and bug fixes
+  *  4a717a8a4 - Make destructors of all generated Py class protected
+    This is to avoid to create an object on the stack and thus to
+    clutter Python's reference counting mechanism
+  *  b214f606c - Misc. typo and whitespace fixes
+  *  8ab6ffa69 - fix -Wreorder
+  *  d978287af - fix CID 183848
+  *  24cf5d23b - fix possible crash when aborting geometry checker
+  *  17d36cecc - improve manual mesh filling
+  *  6b055ee89 - add verifier class to check the result of the polygon
+    triangulation
+  *  ff6ed27ba - replace boolean to check for inside/outside cutting
+    with enum values
+  *  4c8e70b9a - polish Mesh workbench
+  *  b05f234fa - fix overloaded methods SelectionSingleton::addSelection
+  *  0286a4e31 - exit measure distance tool with Esc
+  *  d0cd33b2b - always close task panel with ESC button
+  *  adc4b4a64 - remove limit to only allow vertexes of a model
+  *  5fc836875 - add convenience method addSelection(SelectionObject)
+  *  86df25384 - Qt5: fix build failure if spacenav is not used under
+    Linux
+  *  fc8d9f2bf - Add select point(s) option to Placement dialog
+  *  4b90bed74 - fix -Winconsistent-missing-override
+  *  adfdec3b9 - re-arrange headers to fix build failure with Qt4
+  *  e7a5bd0aa - SpaceNavigator on Linux: rearrange #includes
+  *  d63e29c3b - Replace Q_OS_UNIX with Q_OS_LINUX for spacenav
+  *  39b27ab9e - Port SpaceNavigator support on Linux to Qt5
+  *  189a72902 - extend QuantityFormat to set denominator independent of
+    user settings
+  *  92145e7e3 - Fractional inch setting now disabled when not in
+    Imperial building
+  *  77060a75a - Added support for fractional inch user setting.
+  *  b102e1556 - Now only storing the actual fractional denominator
+  *  00a11a636 - Added option to select minimum fractional inch
+    displayed
+  *  97ad1b687 - Renamed Path Chamfer op to Deburr.
+  *  a9e040eb1 - Fixed selection restore of entire object.
+  *  91371a6c6 - Added option to rotate multiple base objects as a
+    compound or individually.
+  *  041d80051 - Changed Rotate tool behaviour to rotate the entire
+    selection group instead of each one individually.
+  *  725d87417 - Don't force stock refresh on editor start
+  *  f9ca7d62c - fix compiler warning, fix build failure with older OCCT
+    versions
+  *  f6d9b692b - add a check to BSplineCurve.segment()
+  *  ee128a32f - Fix for compiler warnings
+  *  e9e27656b - Path: Adaptive - small enhancement
+  *  46cd140c8 - Path: Adaptive - performance optimization for larger
+    models
+  *  76638c7c3 - Return self in addProperty for interface compliance.
+  *  476a07ae2 - expose some more methods of ParameterGrp to Python
+  *  c8cfc15e3 - fix build failure on Linux
+  *  625ef4548 - addon manager py3 fixes
+  *  fa00718c2 - fix python3 issues
+  *  f809a50be - when loading file by drag and drop then create the
+    objects in the active document if no document exists then use i18n
+    to translate the document name
+  *  d1f1230ef - Typo and whitespace fixes
+  *  6d4938309 - Initial support of SpaceMouse Plus XT
+  *  c6df59969 - expose more methods of Geom_Curve to Python
+  *  295bb8fa8 - Fix Decoration positions on Views derived from DPG Base
+  *  dce4086d6 - fixes #0002908: stp file import name mismatch (due to
+    some limitation into UTF-8 support & naming convention)
+  *  161973b96 - add option to disable auto-deactivation of property
+    view for inactive document
+  *  18ed94f78 - Disable property editor if none of the selected objects
+    is in the active document.
+  *  62910898d - fixes #0003588: The path to the Addons does not allow
+    special characters
+  *  70cf68ab3 - restore old behaviour of AddonManager.get_macro_dir
+  *  3386567d9 - issue #0003588: The path to the Addons does not allow
+    special characters
+  *  02eb4a6fa - issue #0003588: The path to the Addons does not allow
+    special characters
+  *  38df1ae74 - Part, PartDesign, Attacher: fix a few problems with
+    infinite shapes
+  *  eb8629d07 - Part: Attacher: fix flip-sides for O-X-Y-like
+    attachment modes
+  *  88babaf60 - Ignore key events in dialogs and let parent task panel
+    handle them The affected dialogs are: * Texture mapping * Cross-
+    sections * Extrusion * Revolution
+  *  ba2cdde66 - move document mode command further uo in the View menu
+  *  2ce34d6d4 - fix regression wrt to bold text in multi-document mode
+    when activating document by tabs
+  *  5c40496cf - fixes #0003514: Program crashes when user try to add
+    (by mistake) the origin to a group
+  *  ac66048b8 - fixes #0002833: [Spreadsheet] Keyboard events are sent
+    to the wrong viewprovider
+  *  876339b88 - add method to activate 3d view when setting active
+    object list
+  *  23b0c89b8 - fixes #0003155: FEM to mesh conversion fails for shells
+  *  faad5ea27 - ignore key events in placement dialog and let parent
+    task panel handle them
+  *  8f3a53c24 - move check for grabbed node and releasing it from
+    ViewProviderDragger::unsetEditViewer to
+    View3DInventorViewer::resetEditingViewProvider
+  *  aae8062f1 - minor fixes: make QtCreator happy by removing const &
+    when connecting signal/slots fix typo in comment
+  *  3a81bd510 - PropertyEditor: improve editing experience
+  *  7cf8dc254 - Fixed minor bug in Rebar object.
+  *  a6a29467a - improve whitespaces
+  *  77e40f32f - Reformatted variable spacing.
+  *  10281ccc1 - Parameterized previously hardcoded fractional inch code
+  *  052d8a70e - Added collapse/expand option to the document tree view.
+  *  6359c26b5 - Changed tree view document hiding boolean to integer to
+    support arbitrary number of views.
+  *  03d4f084c - Added option to hide inactive documents in tree view.
+  *  f231871cb - replace epsilon to check for null vector
+  *  41102edf6 - fix bug in draft path array
+  *  712012678 - fix some MSVC & clang warnings
+  *  ba6132c4b - Path: Adaptive - fix for convetional mode detection
+  *  e69571dcf - Path: Adaptive - fix for offset glitches
+  *  40ff33d4a - PathSimulation - fix for memory consumption with
+    complex sim paths
+  *  9a451bbf3 - Path: Adaptive - fix for integration
+  *  43ee740ef - Path: Adaptive - prepping the PR
+  *  6db02838c - Path: Adaptive - typo
+  *  90cd7cb23 - Path: Adaptive -  fixes
+  *  78e6cb30b - Path : Adaotive - fix for finishing pass supression
+    outside stock
+  *  9bb3576f6 - Path: Adaptive  - fixes
+  *  f4dec2ece - Path: Adaptive - fix
+  *  7b1f38498 - Path: Adaptive -fix
+  *  202ace41a - Path: Adaptive - keep tool down ratio option + bugfixes
+  *  53bbbe3ec - Path: Adaptive - bug fixes
+  *  00085edd3 - Path: Adaptive - linking optimization - chaining by
+    distance
+  *  f24d66f96 - Path: Adaptive - fix for VS build
+  *  3c6d2094a - Path: Adaptive - fix for edge selections
+  *  3c7a88412 - Path: Adaptive - fix for keep tool down linking
+  *  af102ca1c - Path: Adaptive - linking optimizations
+  *  526aadfd8 - Path: Adaptive - path linking optimizations
+  *  4619f8a58 - Path: Adaptive - bugfix
+  *  cbecc2a49 - Path: Adaptive - keep tool down feature - alfa
+  *  929bf9de5 - Path: Adaptive - fix for cut direction
+  *  8ce1e811d - Path:Adaptive - fix
+  *  0cbc401f7 - Path: Adaptive - cleanup
+  *  743e95bca - Path: Adaptive - bug fix
+  *  3928b5c85 - Path: Adaptive - bugfix
+  *  a980d1e9f - Path: Adaptive - bugfix
+  *  0bfd6d7e8 - Path: Adaptive - fix for stock to leave for outside
+    region
+  *  365227a04 - Path: Adaptive - feature to clear from outside stock
+    bounday inwards
+  *  364daff4c - Path: Adaptive - bugfix
+  *  d578a546c - Path: Adaptive - bug fix
+  *  0fe43a932 - Path: Adaptive - fix for returning to clearence height
+  *  3bf7fb24e - Path: Adaptive -  support for cylindrical stock
+  *  4603f6166 - Path: Adaptive - fine tuning
+  *  51e339675 - Path: Adaptive - fix for stock to leave option
+  *  4d3f6bc82 - Path: Adaptive - fix for linking moves optimization
+  *  791435b08 - Path: Adaptive - added stock to leave option
+  *  547ebe4fb - Path: Adaptive - linking moves optimization
+  *  e24034a10 - Path Adaptive: fix for duplicate edge detection
+  *  b9f841094 - Adaptive: Fix for path nesting
+  *  3144de83c - fix for py3 error
+  *  b56cc96f3 - clean up
+  *  da62ad5bc - Fix for py3 import
+  *  2b395e07b - Adaptive - finer tolerances for path cleaning
+  *  29013240e - Adaptive path to allow selection of edges
+  *  754134302 - Fix for compiling with VS2013
+  *  f7773a1dc - fix for pybind11
+  *  7ca6f8375 - fix for pybind11
+  *  31cbf6f65 - Path adaptive operation added
+  *  dcedf9a4a - fix install locations for Raytracing and Start module
+  *  399c95ccc - Added icon to TaskPanel tab in CombiView to indicate if
+    an edit session is in progress.
+  *  e4dbc896d - Set focus to sketcher window when a new handler is
+    activated to ensure proper handling of keys, espcially Escape.
+  *  36faeb247 - Cosmetically change mentions of Teigha to ODA
+  *  37305f69f - Misc. typo and whitespace fixes
+  *  900a05bca - Fixed ProfileEdges for multi base models.
+  *  48d058dc7 - Fixed ProfileFaces for multiple base models.
+  *  8030e96e5 - Fixed dogbone support for CCW profiles.
+  *  6687ff2fd - Select potential base if it is the only candidate for a
+    base model
+  *  cc7abc59f - PathUtil fixes for adding ops with preselection.
+  *  bc871e2b8 - Support for converting existing jobs to multi base
+    model on loading.
+  *  7925da828 - Fixed merge issues
+  *  fffb9f265 - Removed obsolete adjustWirePlacement.
+  *  1ad7b8c32 - Added support for multi base model to Engrave.
+  *  3687224ce - Added support for multi base model to Surface op.
+  *  546cd7e2e - Added multi base model support to Pocket 3D op.
+  *  3d646ecd4 - Changed base model tab view to a tree view
+  *  e098c7f1f - Fixed merge issues
+  *  1f0bda27f - New approach to determine if an object is a solid -
+    based on it's volume.
+  *  dda6d4938 - Fixed typo
+  *  74bcc8b57 - Added support for multi base model to Chamfer op.
+  *  a7f3c5974 - Added multi base model support to MillFace.
+  *  cd4e3043e - Consolidated base model naming
+  *  f01eb0737 - Added multi base model support to CircularHoleBase op
+  *  e4e54729a - Added multi base model support to ProfileEdges op.
+  *  0a9ff5f3a - Fixed base geometry selection for multiple base models.
+  *  9479e27ab - Fixed Contour op to work with multiple base models.
+  *  39a73f4e7 - Preserve selection over moves and rotations
+  *  cc2ffc38a - Added jobs as a selection for the base models.
+  *  5d5afd8b0 - Added more placement tools for base models.
+  *  524380cd1 - Fixed unit tests to support multiple base models.
+  *  2480b45c8 - Alignment and orientation support for multiple base
+    models.
+  *  e0af0177c - Base model edit during job editor.
+  *  bcfd92d38 - Refactored job creation dialog to be re-used for model
+    selection dialog.
+  *  d78d65628 - Basic job creation dialog with multiple base models.
+  *  15df65280 - FEM: cpp commands post, do not use create, same like
+    constraints, data along line
+  *  f2422f1f7 - FEM: cpp commands post, do not use create, same like
+    constraints, scalar clip
+  *  c4e7ace30 - FEM: cpp commands post, do not use create, same like
+    constraints, linearized stress
+  *  2db040dd8 - FEM: cpp commands post, do not use create, same like
+    constraints, data at point
+  *  79e320d70 - FEM: cpp commands post, do not use create, same like
+    constraints, clip
+  *  2110292f3 - FEM: cpp commands sort posts, cut
+  *  1075c331f - FEM: cpp commands post, fix warning class and a typo
+  *  c95cdb13b - FEM: workbench, remove wrong spaces
+  *  d62f1cbfe - FEM: gui py class init, sort classes
+  *  1effc84eb - FEM: gui py class init, delete duplicates
+  *  08e2c4f07 - FEM: app py class init, sort classes
+  *  24c868686 - FEM: app py class init, add some spaces
+  *  c9e555117 - FEM: icons, add new line after add icons
+  *  6ac8df583 - FEM: icons, rename inp editor
+  *  0cdfc8bc4 - FEM: icons, rename element rotation 1d
+  *  45bf29e0f - FEM: icons, rename element geometry 2d
+  *  1fe8dc99f - FEM: icons, rename element geometry 1d
+  *  a8e34e566 - FEM: icons, rename element fluid 1d
+  *  316d99c86 - FEM: icons, rename sovler cfd
+  *  11d728a42 - FEM: icons, rename solver analysis frequency
+  *  211754d60 - FEM: icons, rename solver analysis thermomechanical
+  *  de165b9a6 - FEM: icons, rename solver analysis static
+  *  55759110e - FEM: icons, rename solver standard
+  *  e7ce85c6d - FEM: icons, rename solver control
+  *  83d4247b8 - FEM: icons, rename solver run
+  *  281eeb5fd - FEM: icons, rename solver elmer
+  *  4ca046a72 - PartDesign: Refine property for Boolean #3488
+  *  46621a85d - PartDesign: Refine property for primitives #3488
+  *  2cb1bad66 - GestureNavigationStyle: fix interaction with
+    SoClipPlaneManip
+  *  a93c893dc - fixes #0003583: Using the raytracing WB crashes FreeCAD
+  *  b6e871833 - fixes #0003586: App test cases require Part module
+  *  30f395761 - remove unused option FREECAD_MAINTAINERS_BUILD
+  *  63e8241e6 - fix inconsistencies between default action of context
+    menu and double-click
+  *  2dd876c08 - auto-expand/collapse a tree item when activating it
+  *  34a0c7bce - by default show highlighted object in bold text, a
+    document's active object is not in bold text any more
+  *  3b9a9e02b - close all top-level widgets when about to quit event
+    loop
+  *  a624fee2c - add GUI functions to flip orientation of input curves
+  *  864767221 - add boolean list to handle orientation of boundary
+    curves
+  *  fbcecfb13 - add missing header files
+  *  fd2befe7a - when leaving dragger edit mode make sure to release the
+    grabbed node
+  *  aa8feb79d - Use Face or 3D direction for View and ProjGroup
+  *  233ed49b2 - make copy constructor of Handle class private
+  *  0b846eee5 - consider global placement when exporting point cloud
+  *  7e3be9eb6 - take care of object's global placement when creating
+    point cloud of it
+  *  7d8e7b6d6 - add copy constructor for class PointKernel
+  *  138ddcbee - add method Placement::isIdentity
+  *  312310de6 - take care of global placement when exporting from Mesh
+    menu
+  *  b87d6e69f - copy image resource
+  *  9b42120c8 - Start: 1) replaced link element before li item in order
+    to make the whole box clickable 2) placed "New file" item as first
+    one so that it is always at the same place no matter what session or
+    recent files you have 3) created a thumbnail for "New file" item
+  *  506ed1ee9 - Start: fixed tabs border radius and reduced font weight
+    for file info
+  *  599e59059 - reduce line-length to 80 characters
+  *  b20d1bc09 - new style modules: print traceback as error and as log.
+  *  e0f8dede0 - Update commit count reference for shallow clones
+  *  36bd5a0ec - fix build failure for OCCT < 7.0
+  *  7a71cf188 - take care of global placement when creating mesh from
+    shape
+  *  d8c558156 - add optional parameters to copy method to copy topology
+    and/or triangulation
+  *  7d8e53aaa - add Const to ancestorsOfType
+  *  9e5b31fe2 - add missing comma separator in list
+  *  ef0fe5732 - Draft: Allow to switch the line of Draft Labels on/off
+  *  acbbcbcb0 - enable VBO support for Intel graphic drivers if UseVBO
+    is activated
+  *  b38538779 - enable VBO support for Intel graphic drivers if UseVBO
+    is activated
+  *  dda6672d4 - Fixed minor bug of custom spacing in Rebar object.
+  *  689765da1 - Revert unintended change
+  *  43d16fc87 - Add Duplicate button to Execute Macro dialog
+  *  299f68cda - add comment about using readLockNormalCache
+  *  4231194a3 - GLBuffer: fix isVBOSupported()
+  *  b5467b02a - MeshGui::SoFCIndexedFaceSet: fix missing normal cache
+    unlock
+  *  ad39b37b9 - Fixed whitespace error
+  *  ec8e97c26 - Fixed merge issues
+  *  67987cc91 - Added job export dialog to Job Editor.
+  *  ff54af4e9 - Redesigned ops defaults to use combo box for op
+    selection and only have one editor visibile at the time.
+  *  9cc08cee0 - Fixing unit tests for more conservative height
+    settings.
+  *  84b681eb2 - PathEdit integration of the setup-sheet editor.
+  *  795842b71 - Setting a property's tooltips in setup sheet editor.
+  *  c4340a757 - Fixed surface settings.
+  *  e833c5b32 - Fixed build for new files.
+  *  33e3a0083 - Turning off settings exception printing for
+    unregistered ops.
+  *  9d7d9e817 - Partial operation settings support for Surface op.
+  *  6c83a991e - Operation settings support for both engrave ops
+  *  3e1310ba7 - Operation settings support for Helix op.
+  *  7d8ed6fd7 - Operation setting support for all pocket ops.
+  *  ea84b18ae - Operation settings support for Drilling.
+  *  f4124b91b - Sorting of operation settings for UI purposes.
+  *  0824066c5 - Added operation setting support to profile ops.
+  *  74d3bf485 - Added support for property types required for
+    PocketShape settings.
+  *  954771ccb - Added automatic setting of operation values from the
+    setup sheet during creation.
+  *  ebe76319b - Added name parameter to operation proxy constructor.
+  *  a3cd80796 - Template export/import of operation settings.
+  *  5f5543da3 - Add properties to the setup sheet and initialise their
+    editor from there.
+  *  a5a44ecec - Property editor for enums.
+  *  ac84092e7 - Basic property editor framework
+  *  7b8165389 - Display setup sheet for each registered op.
+  *  ee49b9874 - Prototype objects for operations and the ability to
+    create them through the regular proxy instantiation.
+  *  070d17e4e - Add job as parameter to opSetDefaultValues
+  *  b93d39f70 - UI for operation's setup sheet.
+  *  660b9b38d - Added approximation for hyperbola curves.
+  *  853ad14a1 - Basic UI/editor for the SetupSheet.
+  *  cdff29e47 - Fixed stock creation with odd initial extent -
+    tessellate to the rescue.
+  *  c495ed43f - Fixed heights and introduced OpStockZMin/Max.
+  *  94fa64077 - Add eval() to distance line edit during scaling
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 29 Sep 2018 07:10:33 +0300
+
 freecad-daily (0.17+git14511-faf883448-1) unstable; urgency=medium
 
   * Compile

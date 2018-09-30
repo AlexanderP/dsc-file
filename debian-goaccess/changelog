@@ -1,3 +1,35 @@
+goaccess (1:1.2.0+git2774-1d15bdc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 1d15bdc5838adfa1b170b764aa1411d69619f70d
+  * Date: 1538101732
+  * git changelog:
+  *  1d15bdc - Updated multiple status codes example in README.md.
+  *  1992ec4 - Fixed memory leak when adding host to holder introduced
+    in c052d1ea.
+  *  648c5a2 - Fixed issue where log formats with pipe delimiter were
+    not propely parsed.
+  *  48d9968 - Added multiple status codes example to README.md
+  *  bc0a645 - Added missing function comment under gholder.c.
+  *  03bcd8a - Added missing function comment under gholder.c.
+  *  2789816 - Ensure add_data_to_holder() function is defined prior to
+    where is being called.
+  *  956c9f4 - Added macOS 10.14 Mojave to the list of OSs.
+  *  07b247a - Added OS X version numbers when outputting with --real-
+    os.
+  *  2b3625a - Ensure Safari has priority over most crawlers except the
+    ones that are known to have it.
+  *  4012a0e - Merge pull request #1234 from ZekeLee/master
+  *  beb51dc - The baiduspider's ua is "Mozilla/5.0 (Linux;u;Android
+    4.2.2;zh-cn;) AppleWebKit/534.46 (KHTML,like Gecko) Version/5.1
+    Mobile Safari/10600.6.3 (compatible; Baiduspider/2.0;
+    +http://www.baidu.com/search/spider.html)", but it is not Safari
+    browser.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 28 Sep 2018 21:11:59 +0300
+
 goaccess (1:1.2.0+git2762-6c03f9f-1) unstable; urgency=medium
 
   * Compile

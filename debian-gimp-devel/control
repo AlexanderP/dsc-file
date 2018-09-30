@@ -38,7 +38,6 @@ Build-Depends: debhelper (>= 9),
                librsvg2-dev (>= 2.14.0),
                libsm-dev,
                libtiff-dev,
-               libwebkitgtk-dev (>= 1.6.1),
                libwmf-dev (>= 0.2.8),
                libx11-dev,
                libxcursor-dev,
@@ -83,7 +82,7 @@ Build-Depends: debhelper (>= 9),
                valac, libmount-dev, 
                libgnutls28-dev, 
                libpng16-dev | libpng-dev, 
-               cmake, 
+               cmake, glib-networking,
                libopenjp2-7-dev, libcroco3-dev, gperf, python-lxml, python-six
 Homepage: http://www.gimp.org/
 
