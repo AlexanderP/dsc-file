@@ -1,3 +1,31 @@
+gscan2pdf (2.1.7+git2883-828289ce-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 828289cee3ea6ff0605a9583e19c246b05ee1921
+  * Date: 1539373040
+  * git changelog:
+  *  828289ce - Bumped version to 2.1.7
+  *  ba982c5b - Update to Ukranian translation
+  *  fa86cc6e - Log warning if IM cannot return image size
+  *  70de6e3a - Update page range before calling process (e.g. OCR,
+    crop, etc.)
+  *  34f5fafd - Update to Russian translation
+  *  2431ef8c - Update to Spanish translation
+  *  f8b1cc5b - Fixed saving PDFs with non-ASCII characters in the path
+    and no extension
+  *  a96c6ba5 - Tidy up a couple of test files
+  *  4befeeda - On selecting flatbed, force single-sided unless allow-
+    batch-flatbed is enabled
+  *  bb8d89e7 - Add %De for filename extension to default filenames
+    directives
+  *  34697b3e - Add note about checking policy.xml in case of
+    ImageMagick Exception 445
+  *  67411870 - Report PerlMagick errors to user
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 13 Oct 2018 16:33:13 +0300
+
 gscan2pdf (2.1.6+git2871-34285890-1) unstable; urgency=medium
 
   * Compile

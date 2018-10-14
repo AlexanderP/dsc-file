@@ -1,3 +1,197 @@
+audacity (1:2.3.0+git9259-555345392-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 555345392e7a041fc0da8b31a93ff1cedc7c2463
+  * Date: 1539356367
+  * git changelog:
+  *  555345392 - Fix Pa_IsFormatSupported query flood (from Max Maisel)
+  *  3ddb536a8 - Fix eu_ES.po revision date.
+  *  60b2dc720 - Fix incorrect wxASSERT
+  *  297f3b4d8 - Fix another mistake in iteration over channels in
+    src/commands
+  *  494ab4eaf - Make AudioIO::Callback() code shorter
+  *  939b96749 - Refactor AudioIO::Callback()
+  *  286bf5d5b - Additional comments in rms.ny for plug-in authors
+  *  37ec7da3c - Throw error if Nyquist *LOCALE* is malformed
+  *  e20a98588 - Replace pointless looping by 'if'
+  *  15a3ea776 - Bug 2010 - Scriptables: SelectTracks and Select
+    incorrect for stereo tracks
+  *  7e5a716e6 - Fix C4458 Warnings
+  *  657159d54 - Fix C4189 and C4100 Warnings
+  *  66c861315 - Exclude rms.ny from update_po_files.sh script
+  *  5fd95dd13 - Fix C4456 Warnings.
+  *  43402438f - Link with -latomic if using clang on Linux.
+  *  ac8273342 - Add 2.3.0 release information in appdata
+  *  242fa748a - Add component type in appdata
+  *  a7d34b174 - Correct Russian translation in rms.ny
+  *  297bf442a - Fix typo in 665e2d0
+  *  665e2d0e9 - Correction to translation of rms.ny
+  *  5d34d022a - Add rms.ny to Audacity bundle
+  *  14fe11f4d - Bug2008: There was error in stereo Contrast
+    calculation, at aee4005
+  *  3f928a25b - Bug2004: Opening Mixer Board with a Note track
+    crashed...
+  *  e6e4f44c8 - Bug1997: Split Stereo Track and Split Stereo to Mono
+    were doing nothing
+  *  b5a7b67cb - Fix some crashes in time-shift
+  *  92cceaf59 - Fix usage of InconsistencyException
+  *  90e2da7f1 - Fix uses of TrackList::GroupChannels in Mix and effect
+    preview
+  *  df1103822 - Don't crash in Nyquist tools with mOutputTracks
+    undefined
+  *  75918918c - Correct template parameters to std::iterator base of
+    TrackIter...
+  *  50f2b0e86 - Bug1995: Fix drawing of stereo tracks, bug introduced
+    at 0c0c2c0
+  *  8880e1b92 - Fix missing initialization from a17af37
+  *  cc74b0273 - Fix return of reference to temporary object (that's
+    bad!) ...
+  *  348e7868b - 1991: On Windows, nyquist effects and analysers slower
+    than on 2.2.2
+  *  0a55b27d2 - Bug1994: Crashes in append-record...
+  *  565fef2ba - Bug 1832: Fix adjusting time track when in logarithmic
+    scale
+  *  a17af37c1 - Fix bug 1992
+  *  526179b63 - Remove a use of c_str
+  *  81385d7eb - Track type switch safety; simplified iterations &
+    channel groupings...
+  *  8fcbbaeea - Encapsulate details of setting-up of channel groups in
+    TrackList...
+  *  32d767c7f - Track::SetLinked() and Track::SetChannel() are
+    private...
+  *  beebe648f - Remove more uses of Track::SetLinked() and
+    Track::SetChannel()
+  *  894f6f4f6 - Remove SetLinked() and SetChannel() from importers
+  *  b0c5f42b9 - Remove old iterators, type tests, GetLink(ed) from
+    Track's interface
+  *  7e6a54347 - Define TrackList::GroupChannels()
+  *  31d46ae62 - Importer functions return a vector of vector of
+    pointers to tracks...
+  *  2ee87082c - Track::GetLink and GetLinked are private, but SetLinked
+    isn't yet
+  *  b36c3efec - Track::GetKind is private
+  *  b5f52e7c1 - Remove old style track iterator classes
+  *  fbec3efa0 - Eliminate some unnecessary track type tests
+  *  7d55defde - Rewrite channel iterations that don't generalize to
+    more than two...
+  *  dbf44efc9 - Iterations over channels in remaining places that won't
+    generalize...
+  *  4aa990e83 - Remove GetLink(ed) in various other places
+  *  c107fb298 - Remove GetLink(ed) in channel manipulation menu items
+  *  ecc869bdb - Remove GetLink(ed) in TrackPanel resizing code
+  *  d2a18f01e - Remove use of GetLink(ed) in AudacityProject::OnPaste
+  *  7eadd7a36 - Iterations over channels involving third-party effects
+    libraries...
+  *  22c85dd99 - Rewrite GetLink(ed) in SBSMS
+  *  48ae1eb3c - Rewrite GetLink(ed) in SoundTouch
+  *  70f7b0f6e - Iterations over channels where more general messages
+    may be needed...
+  *  518df314e - Rewrite GetLink(ed) in vamp effects
+  *  a68184f81 - Remove GetLink(ed) in track panel drawing and refresh
+  *  46557a9a2 - Rewrite many track type switches, track and channel
+    iterations...
+  *  4c75175e4 - Remove GetLink(ed) in Normalize effect...
+  *  f276373f3 - Remove GetLink(ed) in clip-moving functions
+  *  356115431 - More rewrites of iterations over channels...
+  *  669054b4f - Remove many uses of GetLink in TrackPanel
+  *  0c0c2c0d1 - Rewrite iteration over visible tracks in TrackArtist...
+  *  51e0ae044 - Remove GetLink() in
+    AudacityProject::AddImportedTracks...
+  *  a7ca6db7c - Rewrite many iterations over tracks and channels, track
+    type tests...
+  *  968d63d5f - Rewrite many iterations over tracks and channels in
+    various places
+  *  fee0f284f - Rewrite many iterations over tracks and channels in
+    src/toolbars
+  *  3eee8b8cf - Rewrite many iterations over tracks and channels in
+    src/import, src/export
+  *  c7ab9f233 - Rewrite many iterations over tracks and channels in
+    src/commands
+  *  23a85893a - Rewrite some iterations over tracks and channels in
+    TrackPanel
+  *  aee400504 - Rewrite many iterations over tracks and channels in
+    src/effects
+  *  b94e8fec9 - Remove VisibleTrackIterator
+  *  ae2ce1ad9 - Rewrite many iterations over tracks and channels in
+    Project.cpp
+  *  d01013e0d - Rewrite many iterations over tracks and channels in
+    Menus.cpp
+  *  1e32309d2 - Rewrite MenuCommandHandler::HandleAlign
+  *  b6a6b8e73 - Rewrite iterations over sync-lock groups
+  *  bb3aa00f5 - Effect::CopyInputTracks was only called with two
+    values...
+  *  2e11844f6 - Effect::inputTracks() now gives only const access
+  *  1be3187b9 - Use TrackIterRange::Visit
+  *  17089d03b - Rewrite MenuCommandHandler::OnPaste with TypeSwitch and
+    new iterators
+  *  51842fc78 - Use TypeSwitch and track_cast
+  *  fd10ed26c - Use TypeSwitch and track_cast in TrackPanel
+  *  e17c4acd5 - Rewrite sorting of tracks
+  *  48f5bd735 - Rewrite details of Track, TrackList with new iterators
+    and track_cast
+  *  1a59ba633 - Simplify some internals of TrackList, don't assume at
+    most 2 channels
+  *  7ec734b08 - Rewrite TrackList::SwapNodes without GetLink(ed)
+  *  b05c32e2a - Remove some things from Track.h, replacing their uses
+    with new iterators
+  *  05ddfaf82 - Remove TrackList::Select
+  *  5c6fd64a0 - TrackList::GetPrev and ::GetNext are private
+  *  a0e15cfbb - Remove TrackListIterator::RemoveCurrent
+  *  89748cbe3 - Remove "skiplinked" argument of old track iterators
+  *  d19695022 - Add new-style track_cast, iterators, and TypeSwitch for
+    Track
+  *  52848e448 - Define Track::TypeSwitch for type-safe dispatching
+  *  a3cdb08ee - Classes and functions for type-safe iteration over
+    tracks
+  *  6a9f9d789 - Define track_cast, like dynamic_cast...
+  *  6930b6319 - Redo track kind as an enum class defined at global
+    scope
+  *  e7c4e8bde - Help intellisense find MenuCommandHandlers
+  *  5c5253e14 - More to remove with -j4.
+  *  9912fd677 - Remove -j4
+  *  aea04dcab - Reorganize time-shifting code, no behavior change
+    intended
+  *  4998a5cea - Rearrange some logic in TimeShiftHandle::Click
+  *  68eb24545 - More factoring of TimeShiftHandle::Drag
+  *  d81251397 - More factoring of TimeShiftHandle::Drag
+  *  fc5f7331d - More factoring of TimeShiftHandle::Drag
+  *  aa3c3a8d5 - More factoring of TimeShiftHandle::Drag
+  *  37b3968dd - Some factoring of TimeShiftHandle::Drag
+  *  b79f5d929 - Simplification and better comments relating to time-
+    shift...
+  *  4a55b0d0c - Remove unused functions
+  *  debf96028 - Provide missing piece of menu refactor, commit 9481587
+  *  45bccbe5f - Russian translation update
+  *  42a69f955 - Japanese translation update
+  *  0041e2fb6 - French translation update
+  *  920970c7c - Enable snapping to other tracks, time-shifting with
+    Shift key down...
+  *  2ff75acff - Remove transform_iterator and related, no clear need
+    for it yet
+  *  d6dea3d22 - Correct transform_iterator ?
+  *  7ab97c969 - Use std::numeric_limits<...>::lowest...
+  *  e456b5334 - Add and remove some private: and public:
+  *  af0669198 - casting of Track* to WaveTrack* happens at lower level
+    in OD manager
+  *  03dc815ae - Pointer downcasts should use static_cast not
+    reinterpret_cast
+  *  bba16b3b3 - Clarify the logic for drop of channels during playback
+  *  35f555521 - Track::mChannel has an enum type
+  *  998556205 - Replace wxWidgets arrays with std::vector
+  *  7c924012f - A redundant high-level GuardedCall around macro command
+    execution...
+  *  4710d69f4 - Bug1988: Don't lose data in unusual inter-project copy-
+    paste case
+  *  d852bd378 - Translated time (& freq & bandwidth) formats in numeric
+    controls...
+  *  9481587fa - Move menu handling functions out of class
+    AudacityProject
+  *  3ed43a9f1 - Up version number to 2.3.1
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 13 Oct 2018 15:31:03 +0300
+
 audacity (1:2.2.2+git9128-9a45c0200-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,26 @@
+librecad (2.1.2+git4443-d90dbd2b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: master
+  * Commit: d90dbd2bb8e4f5f2a9edfb672b24216bbc5e77fb
+  * Date: 1539325729
+  * git changelog:
+  *  d90dbd2b - removed forgotten debugging output
+  *  d779df21 - fixed #1016, '@' key press didn't activate command box
+  *  b8e2a3c4 - fixed #1019, angular dimensions failed to move, rotate,
+    mirror or scale
+  *  761ec267 - fixed #1008, added mouse button hint to clarify
+    properties tool handling
+  *  8d8c1545 - fixed #980, column width in layer list too big since
+    Ubuntu 18.04
+  *  16957f71 - Deselect entities on locking all layers
+  *  37d60156 - Lock/unlock all layers
+  *  aa4832c5 - fixed #940, sf599, Spline regression, where the
+    startpoint was at 0,0 by mistake
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 13 Oct 2018 21:50:51 +0300
+
 librecad (2.1.2+git4432-70f430e3-1) unstable; urgency=medium
 
   * Compile

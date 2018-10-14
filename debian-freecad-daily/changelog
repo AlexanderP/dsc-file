@@ -1,3 +1,205 @@
+freecad-daily (0.17+git14975-c6745d1b5-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: c6745d1b5b0af8284f8dd485046ec570c4ca68e0
+  * Date: 1539432123
+  * git changelog:
+  *  c6745d1b5 - fixes 0003610: App::PropertyFloatList not updating in
+    Spreadsheet
+  *  571f75204 - fixes 0003341: Undoing is missing steps
+  *  cb30a8296 - Fix #3634 Lost formatSpec on save/restore
+  *  715ab0596 - remove unused checkbox from Placement dialog
+  *  e1c18f015 - shorten placement dialog height so there is not so much
+    scrolling required
+  *  404f9e019 - placement task -- for user's convenience copy distance
+    or angle to clipboard when user shift+clicks Selected points button
+  *  7527c7d14 - fix -Wunused-variable
+  *  125f41e3e - Misc. typo fix
+  *  f6e9faa62 - Fix #3623 Display of Ft/In Dimensions
+  *  eaf987625 - Correct tree icon for Angle3Pt
+  *  a37328094 - Add @mario52's templates
+  *  22ddbe0f8 - fixes 0003632: Drawing lines on top of an image will
+    not save the work (Reason: ' &' in the file name)
+  *  68c644104 - implement mustExecute for Raytracing features
+  *  23d64fa7b - fixes 0003629: FEM, input file is not written if the
+    FreeCAD document name has none standard letters
+  *  ae7c53b95 - Py3: fix opening file
+  *  04faa8f49 - + fix cutting or selecting mesh in perspective
+    projection mode
+  *  ff05101b6 - Fixed FreeCAD crashes.
+  *  6178c7958 - implement Cut, Copy, Paste messages in SheetView
+  *  22513600d - implement cut/copy/paste in spreadsheet view
+  *  0e948db5a - Win32-specific optimization in Points module
+  *  e66849378 - Sketcher: Avoid transfering angle constraints
+  *  dc023afc8 - emit signal when starting and finishing to save a
+    document
+  *  4ac34d06a - minor fixes
+  *  1f3905810 - typo/grammar fixes
+  *  11a569b6b - Make document observer testcases work in cmd line mode
+  *  3e3bfbabf - Expose edit signals to Gui observer
+  *  a0de8c9a6 - Add python document observer for GUI documents
+  *  fb95e3247 - Expose dynamic property signals to python observer
+  *  7ec4fb357 - Improve document observer tests by checking parameters
+    of each call, not only the last one
+  *  f68e36de4 - Expose document property changes to python document
+    observer
+  *  e91de65df - Fix and test the new signals
+  *  238c8a856 - Expose onBeforeChange to python document observer
+  *  0edf6892b - Expose transaction events to document observer
+  *  2a15d8fc3 - Add signals for recomputed objects
+  *  64e9c4ea5 - travis: ccache compilation also requires xsltproc
+  *  c6b1bdd29 - travis: Install eigen3 via package from Ubuntu
+    repository
+  *  ba85adf78 - travis: Drop references to Ubuntu 12.04
+  *  ee3456fd8 - travis: Reduce number of packages installed via apt
+  *  876c65157 - issue 3443, suppress generation of new document when
+    documents are loaded via command line
+  *  84aa87c85 - keep corner of navi cube when changing language
+  *  8e084199d - improve trace support of Shape binder
+  *  84280330a - print warning also in release mode if an object is
+    still touched after recompute
+  *  be8b1b52c - fix ObjectStatusLocker and StateLocker to support
+    nested calls
+  *  3de3ac399 - Tweak makeRailing(None) to (re)-create Railing and
+    insert back to Stairs.Additions
+  *  c825cca14 - Default Stairs (i.e. without Base Dwire etc.) also have
+    Railings created
+  *  294100d95 - for inner loop use a different iterator variable than
+    for outer loop, remove superfluous argument from Message()
+  *  3d833e52d - placement dlg - do reselection prior to updating center
+    coordinates -- prevents other object moving if apply incremental
+    changes is not enabled
+  *  f84971fca - avoid throwing exception in intersectCC
+  *  f5befc75c - improve unicode handling when setting Start page
+  *  d9e4c727d - improve mesh decimation
+  *  795e261be - StartPage - handle should always return unicode
+  *  c159f9aba - py3: fix unicode problem
+  *  6848a3c11 - Removed experimental wb from build
+  *  78863e269 - Added comment about the correctness of cloning a clone -
+    lest I not attempt to /fix/ it again
+  *  0e9bbf401 - Cleaning up startEditing/finishEditing/isEditing
+  *  1a6665c0f - Changed view providers to use Gui.Document.setEdit to
+    start the editor for a new object.
+  *  2c0927776 - sketcher: clear selection after failed addExternal
+    geometry to prevent crash
+  *  48ec50db3 - fix segfault in ExpressionDelegate in case constraint
+    property is invalidated
+  *  a0916a9a6 - avoid re-throwing an exception in case normal is not
+    defined
+  *  7949cd84e - fix possible crashes in sketcher commands due to wrong
+    casts
+  *  abb56c35d - 0003544: Crash on creation of vertical dimension with
+    Shift + V
+  *  b7f7c16e6 - fix header include
+  *  5811bc5f2 - placement task  - align buttons better
+  *  a520eb634 - placement - show complementary angle as float
+  *  cc0dbb58e - Path: Adaptive - adjustments to path smoothing
+  *  da9c65278 - Start: Write test page in non-binary format
+  *  ebec4cd5e - fix freeze when editing empty sketch
+  *  93d9f1658 - in topologicalSort check for valid iterator
+  *  58b80f538 - Arch: bugfix in PanelCut
+  *  1dfdaca5d - Raytracing: Fixed search locations of povray
+  *  27c80884a - Start: Fixed freeze when trying to read corrupt fcstd
+    file
+  *  a6f7ca483 - Arch: Added a CutOffset property to PanelCut object to
+    be able to move the cut plane
+  *  8bf9d368a - avoid multiple spaces in property name
+  *  e2ddabf23 - returning a boolean from setEdit/unsetEdit of a Python
+    view provider indicates a handled edit mode, None indicates to
+    forward it to the C++ view provider
+  *  a4b0bdf33 - Fixed context menu for PathIconViewProvider
+  *  293ac5526 - Fixed path model double click
+  *  868baa6dd - Return NotImplemented on PythonFeature::setEdit if the
+    setEdit is implemented and returns True for one of the standard, not
+    Default, edit modes
+  *  5b85233a5 - remove useless methods
+    startEditing/finishEditing/isEditing from Python wrapper of view
+    provider add attribute to access document from view provider
+  *  41f0dc1fe - support of user defined Povray or Lux templates
+  *  39d072bf8 - fixes 0003621: Additive and subtractive loft preview
+    not showing during creation
+  *  a03f8b7e4 - improve whitespaces
+  *  b8c50dc0f - Fixed misplaced word
+  *  2de755186 - Misc. typo fixes
+  *  fae5b4f7f - Placement dialog - more consistent axis direction based
+    on order of selection
+  *  65dd09d5e - Sketcher: Grid visualization improvement
+  *  dedd66e7f - Sketcher: Axes visualization improvement
+  *  93f06f825 - fixes 0003410: 0.17 Regression: recompute will make
+    parts lose color and take a longer delay compared to FC0.16
+  *  4cab61c54 - AddonManager: Added Mario's macro execute button
+  *  a7942fc3e - Fixed path tool controller context menu
+  *  04568dc6e - Cleaned up path op context menu
+  *  317de14d2 - Fixed model edit
+  *  82b98588a - Fixed support for objects in the tree without a Proxy
+  *  840e904a1 - Fixed context menu for PathJob
+  *  dd2679bc4 - Fixed PathSetupSheet task panel and added doc strings
+    to the UI.
+  *  cf2799ccd - Refactored operation initialisation into separate
+    module so it can be called from the WB and the Job UI.
+  *  cc320aa80 - Handle Straight Line BSplines
+  *  b56912013 - Add 3Point Angle Dimension
+  *  1578b05a9 - Add option to reverse arrowheads on Dims
+  *  f5668c77a - Move dimText Prefix to FormatSpec
+  *  d2c2b35b6 - Add over/under Tolerance to Dimensions
+  *  1d3f3ab7e - AddonManager: Fixed macro copying and centre manager
+    dialog over FC window
+  *  0e6f14e86 - Arch: bugfixes in reference tool
+  *  6410c28dd - FEM: vtk, tools, better comments in header file
+  *  c7252e5ef - FEM: vtk, import and export FC result, better log
+    messages
+  *  dc4105574 - FEM: vtk, import and export FC result, get the FC
+    result properties for them from a seperate method
+  *  ffdfaafb9 - FEM: in out and vtk, make use of stats calculations for
+    vtk import
+  *  3d86b6965 - FEM: import tools, move stats calculation in separate
+    method
+  *  f56afed06 - FEM: vtk, import FC result, further code improvements
+  *  702b999e4 - FEM: vtk, import FC result, small code improvements
+  *  a6ae394c1 - FEM: vtk, import FC result, get rid of needless
+    essential property
+  *  e1b9ad289 - FEM: vtk, import FC result, move defs together
+  *  bc9de847f - FEM: vtk, export FC result, move defs together
+  *  23643f08d - FEM: vtk, import FC result, get rid of needles result
+    types
+  *  b05d61b39 - FEM: vtk, export FC result, small code improvements
+  *  99855a160 - FEM: vtk, export FC result, get rid of needless result
+    types - an result is an result, we just gone export what we have - a
+    vtk result can consists of all kind of result types
+  *  c3a834886 - fixes 0003571: Offset3D of volumes intersection is not
+    solid
+  *  caf78bbab - fixes 0003509: Create MultiTransform Feature from
+    existing Transform Feature forces document migration
+  *  46def65b4 - make DAG view behave more nicely in case of cyclic
+    graphs
+  *  dfe734f3f - fix infinite recursion when creating dependency graph
+    with loops
+  *  496df3436 - Arch: Finished base implementation of Reference object
+  *  1fec4d0c5 - Arch: Started implementing Arch Reference
+  *  64b9c78b9 - fix GeometryPy::setConstruction
+  *  47dacf30d - update resource file
+  *  e8c6007c8 - Replace fem-post-filter-data-at-point PNGicon
+  *  b73cbd739 - Sketcher: Correct checking of compatible equality
+    geometry
+  *  80e4b36f3 - Sketcher: No equality to be applied to external axes
+  *  d1eb5f19a - Path: Adaptive - Small adjustment to link path cleaning
+  *  9a2338a2c - Path: Adaptive - small performance improvement
+  *  a9dfb1699 - Path: Adaptive - improvements and bug fixes
+  *  96ea2d470 - use toDegrees
+  *  c78321f34 - ensure points.size() > 0 before accessing points[0],
+    update selected points message
+  *  55e6ee6d2 - add support for 3 picked points in placement dialog
+    (#1)
+  *  cfe088400 - add tooltip to apply axial button
+  *  6b44ba59b - add axial movement to placement dialog
+  *  17b568db1 - Start: Added pref option to use gradient icon for new
+    files
+  *  dc4691023 - fix crash when creating a copy of datum object
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 13 Oct 2018 23:50:52 +0300
+
 freecad-daily (0.17+git14838-0d228bce0-1) unstable; urgency=medium
 
   * Compile
