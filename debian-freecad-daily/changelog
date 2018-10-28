@@ -1,3 +1,124 @@
+freecad-daily (0.17+git15056-7ec3984cb-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 7ec3984cbe91f361c2fba63703e948786ee7273f
+  * Date: 1540592744
+  * git changelog:
+  *  7ec3984cb - Add support for dLabel.ViewObject.Line If it's false,
+    do not draw line (and arrow), text only
+  *  9543d5464 - Add arrows to dLabel getSVG, minor style cleanup
+  *  3a85a1fd4 - Add line for annotation (no arrow yet)
+  *  3391a5ea4 - Initial work, only text (no lines)
+  *  76590be8a - improve call tips window
+  *  4cff87ed5 - add functions to customize NaviCube
+  *  10cd4cc7a - Hide Draft tray toolbar
+  *  4fa707f46 - Respect "InvertZoom" parameter
+  *  9c1587cfa - Fix delayed rotation of DVP based Views
+  *  b2135da44 - Workaround for #3332
+  *  0660fd737 - Reverting partial commit 2a53eb043
+  *  33663d134 - make the methods
+    highlightSelection/unhighlightSelection virtual
+  *  41ca90d22 - Do not use a view provider's bounding box node when
+    handling BoundBox selection style because it leads to some
+    inconsistent behaviour. Instead let SoBoxSelectionRenderAction
+    render the bounding box.
+  *  b11ed19f8 - Arch: Make section planes claim their children in the
+    tree
+  *  f1e3ec88c - AddonManager: Fixed missing files in cmake
+  *  8ffd8c290 - Arch: Fixed bug in Site
+  *  b78a6b57f - Another typo fix
+  *  0500bcbda - Requested revision
+  *  2a53eb043 - Please review these and then I'll squash all in to one
+    commit
+  *  f976a4f73 - Misc. typos and whitespace fixes
+  *  968ce141d - [AddonManager] Fix Python 2 bug with list comprehension
+  *  2506f5b20 - [AddonManager] Strip whitespace from other_files
+  *  37b738f86 - [AddonManager] Add support for __Files__
+  *  bac786a8e - [AddonManager] separate the Macro class
+  *  cef825c56 - py3: OpenSCAD: make Mod/OpenSCAD python3 compatible
+  *  54f88cc75 - py3: Arch: fix import urllib2 problem
+  *  ae9786253 - PATH Fix bug on finding minimum Z on DressupRampEntry
+  *  d3df5d979 - py3: Arch: try to fix unicode problem
+  *  d449f7f8c - FEM: nonlinear material, small fix in setting solver
+    attributes
+  *  96f515748 - FEM: ccx solver task panel run, return error if
+    CalculiX has finished but there are errors in output. Happens on
+    nonpositive jacobians
+  *  341b72bea - FEM: ccx tools, small improvements if nonpositive
+    jacobians are in the mesh
+  *  a22a0d456 - FEM: file headers, fix .cpp and .h header text
+  *  733dae2b3 - Update context menu
+  *  650404c17 - Reduce unnecessary updates to QGraphicsScene
+  *  24f43527f - Use circles for circular BSplines
+  *  2004653fe - check for existence of PySide stuff when defining
+    convertWrapperToQuantity
+  *  36029e96d - restore shiboken wrapper for Base::Quantity
+  *  be586d089 - improve whitespaces
+  *  a53027342 - rework error handling mechanism
+  *  ea4fb69e4 - Arch: Prevent exporting materials as IFC objects
+  *  46b152669 - Draft: fixed bug in delay system when passing a
+    function with False as argument
+  *  3969400a1 - Draft: Don't show the Draft tray bar automatically
+  *  74a6bb425 - Updated Draft Dimension object.
+  *  c78ebdec4 - Draft: Set normal direction of dimensions to (0,0,1) by
+    default
+  *  75ee3e4c2 - suppress error message if while restoring a document
+    one of the lines or planes of an origin cannot be found
+  *  27615abce - implement a direct way to set single or double
+    precision when writing/reading properties using floating point
+    numbers
+  *  8678f74dc - allow to access NaviCube of 3d viewer
+  *  7c4ab45e3 - cache supported languages in order to make preferences
+    dialog open faster
+  *  409fec05c - improve whitspaces
+  *  70fef3934 - Path: Adaptive - finish depth option added
+  *  31a9ae655 - Fix crash on RevertDocument
+  *  13584d64f - py3: cannot take len() of zip() object directly
+  *  9f2ad88de - Upgrade test for BSpline is Line
+  *  3ca8eb098 - Use Page Label for Tab Text
+  *  8280d551a - Fix Rotation not applied after restore
+  *  8933374b4 - Linux: add XDG metadata files
+  *  44c2f19e3 - py3: Draft: use proper way to test if property is
+    available if the attribute is not available py3 raises: `<class
+    'AssertionError'>: The enum is empty`. For py2 hasattr simple
+    returns False. Similar changes should be applied also to other
+    places.
+  *  9bb360bb7 - fix bug in PropertyPlacementList::RestoreDocFile
+  *  1243b2543 - put USE_OLD_DAG around use of backlinks
+  *  a8b739080 - fixes 0003486: Improve VRML export for more complex
+    structures
+  *  c950d1f09 - improve whitespaces
+  *  7b8668167 - fixes 0003638: Importing CSV-files produces an empty
+    spreadsheet without the data
+  *  3a6afac8b - improve whitespaces
+  *  1e6818b6f - py3: arch: fix unicode problems #3590
+  *  a28183262 - Change tool from cylinder to prism
+  *  5eac50724 - Add conditional python-matplotlib requirement depending
+    on fedora ver
+  *  162dfe573 - Set revision and url in nightly builds
+  *  5e3b10c92 - FEM: code formating, cut lines with more than 200
+    diggits
+  *  40d0db317 - FEM: ccx solver, add gemetry check analysis
+  *  76cc1308e - FEM: print message, fix
+  *  5981cf07b - FEM: inout modules, delete not used and not needed
+    variable
+  *  f5523dd83 - FEM: Typos
+  *  d6d7b36ae - FEM: Grammar and organization fixes
+  *  1c1dfe221 - whitespace improvement
+  *  0b12ceec8 - make constraint validation consistent to evaluation
+  *  20298c45d - set the cloned shape the tip of the created body
+  *  0c63ab423 - remove unused shiboken wrapper for Base::Quantity
+  *  47536dcd3 - enable FREECAD_RELEASE_PDB by default, cleanup cmake
+    file, improve whiespaces
+  *  19b399015 - fix possible build failure if oCCT is not used
+  *  9d3ad415a - add option to save document directly to target file
+  *  e79a19828 - avoid to degenerate the view frustum if there is only a
+    single point in the scene
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 27 Oct 2018 16:12:07 +0300
+
 freecad-daily (0.17+git14975-c6745d1b5-1) unstable; urgency=medium
 
   * Compile

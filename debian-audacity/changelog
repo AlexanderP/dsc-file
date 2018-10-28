@@ -1,3 +1,197 @@
+audacity (1:2.3.0+git9403-ca4c9b81f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: ca4c9b81fcbb489adfad6e8c1be89677ab267f24
+  * Date: 1540455318
+  * git changelog:
+  *  ca4c9b81f - i18n hints and fix one missed translation
+  *  38f97349f - Don't form translated strings with concatenation
+  *  303553ae4 - Take class AdornedRulerPanel out of src/widgets...
+  *  492a44894 - Move MenuManager functions out of Project.cpp
+  *  7b67bc053 - Fix the P key to Pause
+  *  5eb670fd6 - Fix windows build: problem with path of an include.
+  *  cfbe5c0a2 - Replace MenuCommandHandler with many smaller classes
+    and source files
+  *  7c7aab164 - Cleanup of Menus.* after moving most things out of them
+  *  193c4ae4c - Remove unused things and obsolete comments in Menus.*
+    ...
+  *  06e40a26d - Move menu handling functions into many separate classes
+    and files
+  *  e048a4aac - Move a static function and an enumeration out of
+    MenuCommandHandler
+  *  800f6500b - No more member definitions of AudacityProject inside
+    Menus.cpp
+  *  64b6493be - Help Menus
+  *  574fc7f2e - Extra Menus
+  *  4a8a30f1a - Navigation Menus
+  *  c7521b211 - Window Menu for Mac
+  *  9759c6bd4 - Plugin Menus
+  *  1be1217d1 - Tracks Menus
+  *  903b42f84 - Transport Menus
+  *  c65fd0ebe - View and Toolbar Menus
+  *  fb8b5029e - Select and Clip Menus
+  *  2792faa11 - Edit and Label Menus
+  *  4d6cad8eb - File Menus
+  *  330805417 - 14 new, empty .cpp files in src/menus
+  *  b7410ed93 - Preparation for the moving of menu handlers into
+    separate classes
+  *  280e8d9ba - Some machinery to add more menu handler object
+    classes...
+  *  b7f35609a - Clarify inheritance of MenuCommandHandler
+  *  8ca9edc2a - Move some label editing functions into class LabelTrack
+  *  d1e2ec3b0 - Remove some uses of MenuCommandHandler outside
+    Menus.cpp...
+  *  7b422afda - Some further factoring of the menu building functions
+  *  5494185a8 - Dialog for the name of a label: positioning fixes
+  *  d716b61b1 - Increase precision for doubles/string conversion
+  *  df3c2a7b2 - Don't mutate uninitialized Maybe
+  *  48a1538b3 - Comment, to deter repeat of the mistake corrected in
+    the last commit!
+  *  2b8c4aa81 - Fix the binding of ngettext in XLisp
+  *  72fbf1b0f - Update Regular Interval Labels
+  *  388cf47a9 - Update SetLabelCommand.cpp
+  *  826353c81 - Update build.txt
+  *  d40dfa2de - More comments explaining the C++11 exotica
+  *  f70c76de8 - Break MenuCreator::CreateMenusAndCommands() into many
+    little pieces...
+  *  e4a39bd13 - Define tables for each menu and each Extra sub-menu and
+    more
+  *  78656f654 - Define table for Help menu
+  *  9e6f6a992 - Define tables for Extra menu & each of its sub-menus &
+    two non-menus
+  *  611ab0cc9 - Define table for ungrouped Extra commands...
+  *  2d0352476 - Define table for Extra Scriptables II menu
+  *  f8379e210 - Define table for Extra Scriptables I menu
+  *  700eca1c9 - Define table for Extra Track menu
+  *  b13e0e641 - Define table for Extra Cursor menu
+  *  9b3f1a133 - Define table for Extra Focus menu
+  *  237bf4d9a - Define table for Extra global commands...
+  *  5d4a7a76a - Define table for Extra Selection menu
+  *  17e6218bc - Define table for Extra Device menu
+  *  bbc2837d6 - Define table for Extra Seek menu
+  *  9e4e1ae69 - Define table for Extra Play at Speed menu
+  *  e84839081 - Define table for Extra Edit menu
+  *  0c9cf4518 - Define table for Extra Mixer menu
+  *  620640c7a - Define table for Extra Tools menu
+  *  434dcfa4b - Define table for Window menu (Mac only)
+  *  cac88ce4c - Define table for Extra Transport menu
+  *  4895dfdf7 - Define tables for Generate, Effects, Analyze, Tools
+    menus
+  *  8c0944d65 - Stub function for Extra menus, to be managed as sub-
+    tables...
+  *  4b7195002 - Define table for Tracks menu
+  *  032070a2d - Define table for Transport menu
+  *  a9512fe45 - Define table for View menu
+  *  dfc555e5f - Define table for Select menu
+  *  2c5f56b9a - A table of menu description factories; iterate it; but
+    it's empty...
+  *  3b997aa7e - Define table for Edit menu
+  *  298971b6e - Define table for File menu
+  *  e756f2e71 - Define classes and interpreter to be used in menu
+    definition tables
+  *  4cc92a26f - More preliminaries for making menus table-driven
+  *  5277584bb - Hide details of managing occult command items
+  *  01875db4b - Don't hold a dangling pointer to a menu bar in
+    CommandManager
+  *  fefc3bf35 - Don't call CommandManger::AddGlobalCommand, use an
+    option instead
+  *  c9d9871f6 - Remove a comment
+  *  4c62aafed - Various preliminaries before making menus table-driven
+  *  7f5e6d12b - Only one public CommandManager fn to begin a menu and
+    one to end...
+  *  32efcd43c - Simplify populating of Scrub menu
+  *  83ede1089 - Remove unused forward declaration
+  *  27aa59ed5 - AddItemList takes IdentInterfaceSymbol (untranslated)
+    ...
+  *  1b05ba9a7 - A compile-time constant for the number of align menu
+    items
+  *  474f80912 - Some functions can be static, don't need to be members
+    of MenuBuilder
+  *  b38af473c - Missing <wx/sizer.h> include
+  *  e8762a478 - Add 'Quick Fix' menu item to Help.
+  *  b7abde852 - Fix class/struct warning.
+  *  52672ed5e - More careful sorting of effects...
+  *  c067ad5b3 - Apply macro sub menu: ensure first letter selection
+  *  ac596554c - Fix a couple of duplicate access keys
+  *  f09bfbc21 - Small change of format for GetInfo Labels
+  *  9ad88e091 - Use weak pointers to simplify MenuCreator
+  *  c22c7b6fc - Update German translation
+  *  4bbced11c - Update Italian translation
+  *  aa81f9af5 - Fix Linux build
+  *  d46532623 - Fix build of mod-null
+  *  fcfc5d0f3 - Fix build of mod-null
+  *  efe59ef1f - Fix build of mod-null
+  *  1eb293b7b - Fix build of mod-nyq-bench
+  *  16ab48079 - Don't include CommandManager.h in other headers
+  *  8f5629a2a - Update three Nyquist plug-ins
+  *  9094750c5 - No more error-prone SetDefaultFlags in menu building...
+  *  fc1bc7994 - Remove CommandManager::SetDefaultFlags and related
+  *  a1bd9062a - Remove dead code; so that all remaining calls to
+    NewIdentifier...
+  *  63f20f340 - CommandManager::AddItemList requires flags
+  *  742e578d4 - Flags in AddItem (and AddCommand) may not be
+    NoFlagsSpecified
+  *  db997f8ec - Flags argument of AddItem (and AddCommand) is
+    obligatory
+  *  d46f3a9e6 - Simplify menu-building calls...
+  *  f6478acb1 - Just spaces
+  *  596eefe67 - CommandManager::Options also specified the long name
+  *  cfe7ddcf5 - struct CommandManager::Options lets us fold AddCheck
+    into AddItem
+  *  de4132d66 - Reorder accel argument and unify two overloads of
+    AddItem
+  *  c376ffb16 - Simplify calls to SetDefaultFlags: default mask to
+    equal flags
+  *  42aef9f3e - Mask != flags is unusual: simplify most
+    AddItem/AddCheck...
+  *  80437582d - Change comments that confused audacity.pot hints
+  *  399e2d099 - Fix spelling in an enum constant name
+  *  88c67c46f - Unify the two overloads of CommandManager::AddCheck
+  *  fef9e2aba - Remove some unused things
+  *  bb7b95023 - Bug 2009: Windows+Linux: Intermittent truncation of the
+    end of a recording
+  *  a7df004a8 - Don't include Project.h or ODTask.h needlessly in other
+    header files
+  *  2fafe5c32 - Fix Linux build
+  *  fc99f6194 - Fix compilation of mod-nyq-bench
+  *  ce9f2e253 - Include Menus.h directly, only where needed, not via
+    Project.h
+  *  a3fc5894f - Fix obsolete comments in Menus.cpp...
+  *  708cbe173 - Consitently use On<something> iff it is a direct menu
+    handler.
+  *  fc6570646 - MenuCommandHandler is not a base class of
+    MenuManager...
+  *  d693b36bd - Shorten AudioIoCallback::FillOutputBuffers()
+  *  45069794f - Reduce indentation in AudioIO
+  *  51b307678 - Fix include path
+  *  cb55164c4 - Add Project Rate to SetProjectCommand
+  *  6ca721b03 - Fix a string again...
+  *  ef97ce88c - Correct more double spaces
+  *  d2578b9ea - Remove some duplicated code in AudioIO
+  *  651957f8c - fix bug compiling on Linux/gcc-4.9 with wxwidgets 3.0.2
+  *  5dfff70f5 - Fix OpenMP build
+  *  b4f7946e9 - Remove some double space
+  *  218eb6731 - Fixed 4 spelling errors
+  *  6f546de92 - Updated the Norwegian translation quite heavily
+  *  cdf9d6376 - Bug 1979 - Activate Paul's fix for Windows too.
+  *  ffa67d2b1 - Split AudioIO into two classes
+  *  26086a414 - Split MenuCommandHandler into three classes.
+  *  529e1e2af - Bug1979 partial: Faster first-time save, if possible,
+    on Mac and Linux
+  *  cbe0ea84c - Define FileNames::HardLinkeFile, but nonfunctional on
+    Windows
+  *  04b5054ad - Reorganize commit/rollback of SetProject, prior to
+    fixing bug1979
+  *  e87e15f48 - Proper deferring of DirManager's commit steps when
+    saving-as
+  *  ec506ab52 - Define DirManager::ProjectSetter so that commit steps
+    can be deferred
+  *  0db0c6e0d - Reorganize some commit logic in DirManager::SetProject
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 27 Oct 2018 00:58:36 +0300
+
 audacity (1:2.3.0+git9259-555345392-1) unstable; urgency=medium
 
   * Compile

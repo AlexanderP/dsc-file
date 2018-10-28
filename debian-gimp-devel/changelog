@@ -1,3 +1,80 @@
+gimp-devel (2.10.4+git41784-8a5ee944f7-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 8a5ee944f74a0cb2ac37511ce97fe951a9f055f1
+  * Date: 1540613691
+  * git changelog:
+  *  8a5ee944f7 - Issue #2405 - Rotation center shifts by half a pixel
+    ...
+  *  f46de793ae - Update Russian translation
+  *  bd99d8e680 - Fix Russian translation
+  *  99e1de90a6 - Update Swedish translation
+  *  d7ba5f6b2c - Update Polish translation
+  *  02ccdf0f07 - Updated Russian translation
+  *  c7dd4d8dd3 - Issue #2235 - Color reset/swap keyboard shortcuts not
+    discoverable...
+  *  3f7ca2b28a - Update Ukrainian translation
+  *  7e77d3fc32 - Some small fixes in Italian installer translation
+  *  dde5de7340 - Installer: don't scan recursively for configuration
+    override files
+  *  43def2f1aa - Updated Italian translation
+  *  6cf04bef6d - Updated Italian translation
+  *  7dbb9fee3d - Fix compilation on Mac 10.6 and 10.7 (#2112)
+  *  62eabad7a9 - Update Polish translation
+  *  f6df603471 - app: use "step" blending function in "FG to BG
+    (Hardedge)" gradient
+  *  0462734ffb - Issue #2303 - Please add Constant type of gradient
+    interpolation ...
+  *  59682a1cb1 - Issue #2345 - Add xyY to color sample readouts
+  *  150b6c0501 - Update Polish translation
+  *  20a1a31fc4 - configure/app: depend on GEGL 0.4.12
+  *  360aee10d8 - app: Add option in the windows menu to hide the image
+    tab bar.
+  *  6564f4c713 - Issue #2386 - Pattern fill with selection is shifted
+    in 2.10
+  *  4e103be4e5 - Issue #2388 - CRITICAL: XMP Toolkit error 4: Invalid
+    UTF-8 data byte
+  *  7dc96c8f34 - Issue #2332 - Marching ants from one image displayed
+    on every tab
+  *  8e6c7c10df - tools: in performance-log-viewer.py, allow sorting
+    profile by function name
+  *  20420b338c - Updated Italian translation
+  *  4efd6dfdbc - Update Ukrainian translation
+  *  34f0cc3692 - tools: in performance-log-viewer.py, fix percentage
+    cell renderer
+  *  728534d416 - Update Italian translation
+  *  90fcfb0184 - Update Italian translation
+  *  f95af9e571 - docs, etc: regenerate system gimprc and its manpage
+  *  8da246b2a3 - Issue #1371 - Add title printf-like expando for export-
+    clean and export-dirty
+  *  b20bb29148 - Update Marathi translation
+  *  6b1ff0dd96 - Issue #1924: Tool options mysteriously lock up due to
+    DND/quartz issues.
+  *  54dc73192f - tools: in performance-log-viewer.py, visualize
+    percentage in profile viewer
+  *  c36b1d0523 - Small fix in Italian translation
+  *  56c8f8320d - Issue #2087 - Issues discovered by coverity scan
+  *  8bd365a109 - NEWS: update
+  *  21214d5dd1 - configure.ac: reorder the list of required versions in
+    2.10 too
+  *  02936d9303 - configure/app: depend on GEGL-0.4.10
+  *  793ae3f771 - configure/app: depend on babl-0.1.58
+  *  3adf4a4861 - Fix plugin focus issues on osx GTK/OSX does not
+    automatically assign focus to the new windows (upstream issue), so
+    activateIgnoringOtherApps is called. However, if it is called before
+    gtk initialized it may cause number of focus issues.
+  *  ee05ada0c4 - Update German translation
+  *  f0eabdc42f - Update Polish translation
+  *  d9ba60de4d - Updated Italian translation
+  *  60c49c5682 - Issue #2237 - export as, select file type (by
+    extention) list problem
+  *  7d0d74912e - Updated Danish translation
+  *  efd1aca6fa - Updated Danish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 27 Oct 2018 07:55:38 +0300
+
 gimp-devel (2.10.4+git41736-70611cb06a-1) unstable; urgency=medium
 
   * Compile

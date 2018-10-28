@@ -1,3 +1,80 @@
+gimp-gtk3 (2.99.0+git42412-c271992aa0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: c271992aa01dc8d565524ade8f511f4932c307fd
+  * Date: 1540613687
+  * git changelog:
+  *  c271992aa0 - Issue #2405 - Rotation center shifts by half a pixel
+    ...
+  *  fbee6a6582 - Update Swedish translation
+  *  7b2fb4a38c - Update Polish translation
+  *  ae9d84dd22 - Issue #2235 - Color reset/swap keyboard shortcuts not
+    discoverable...
+  *  231b82a7fe - themes: draw a wider border around GimpFgBgColor's
+    active color
+  *  8ba81c8848 - Some small fixes in Italian installer translation
+  *  bd48996933 - Fix compilation on Mac 10.6 and 10.7 (#2112)
+  *  1cc3c3e5a4 - Update Polish translation
+  *  7a146de71d - Update Polish translation
+  *  298cc57042 - Issue #2345 - Add xyY to color sample readouts
+  *  a39b4abfbc - configure/app: depend on GEGL 0.4.12
+  *  1ca2d74411 - app: Add option in the windows menu to hide the image
+    tab bar.
+  *  1915c17584 - Issue #2226 - Assigning wrong color profile results in
+    error reporting dialog
+  *  38dcb73bfc - Issue #2386 - Pattern fill with selection is shifted
+    in 2.10
+  *  8421221b60 - Issue #2388 - CRITICAL: XMP Toolkit error 4: Invalid
+    UTF-8 data byte
+  *  2880f08044 - plug-ins: fix some new strncpy() warnings
+  *  582c692010 - plug-ins: make curve-bend build again, and undeprecate
+    it a bit
+  *  6bb8c74a46 - plug-ins: kill GtkAlignment in all plug-ins which are
+    currently built
+  *  f8ce6b7440 - libgimpcolor: remove deprecated integer RGB <-> HSL
+    conversion functions
+  *  07f5527998 - plug-ins: stop using gimp_rgb_to_hsl_int(),
+    gimp_hsl_to_rgb_int()
+  *  40df58011f - libgimpcolor: remove gimp_rgb_to_hsv_int() and
+    gimp_hsv_to_rgb_int() cruft
+  *  befe80bd08 - plug-ins: don't use gimp_rgb_to_hsv_int() and
+    gimp_hsv_to_rgb_int()
+  *  075ba4eccc - Update Spanish translation
+  *  e8b2e0e103 - Update Spanish translation
+  *  1d43e2ff37 - Issue #2332 - Marching ants from one image displayed
+    on every tab
+  *  4664fa73fb - tools: in performance-log-viewer.py, allow sorting
+    profile by function name
+  *  27dc9b815d - tools: in performance-log-viewer.py, fix percentage
+    cell renderer
+  *  dac5be6108 - plug-ins: kill GtkAlignment in cml-explorer
+  *  0b99fc8194 - plug-ins, pdb: remove the fractal-trace plug-in and
+    add a PDB compat proc
+  *  643004af06 - plug-ins: kill some deprecated GtkAlignments
+  *  5866e48f8a - docs, etc: regenerate system gimprc and its manpage
+  *  2e4b3ae05a - Issue #1371 - Add title printf-like expando for export-
+    clean and export-dirty
+  *  f5f3573337 - plug-ins: kill deprecated GtkAlignment in file-xmc
+  *  ac282f2045 - Misc. typos
+  *  450843baa7 - Replace deprecated CGColorSpaceCopyICCProfile with
+    CGColorSpaceCopyICCData
+  *  26ea334825 - tools: in performance-log-viewer.py, visualize
+    percentage in profile viewer
+  *  2987f012f9 - Issue #2087 - Issues discovered by coverity scan
+  *  0f88830a00 - configure.ac: the list of required versions is now
+    alphabetically ordered
+  *  ac26671eb6 - Fix plugin focus issues on osx
+  *  0102ebe0ac - Update German translation
+  *  3a73fb848f - Update Spanish translation
+  *  e879343012 - Update Polish translation
+  *  d885ef34f5 - configure/app: depend on GEGL 0.4.10
+  *  e26a220a6f - Issue #2237 - export as, select file type (by
+    extention) list problem
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 27 Oct 2018 08:36:35 +0300
+
 gimp-gtk3 (2.99.0+git42368-7adb6c26e5-1) unstable; urgency=medium
 
   * Compile

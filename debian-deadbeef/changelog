@@ -1,3 +1,123 @@
+deadbeef (0.7.2+git7928-3b8b2fae-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 3b8b2fae56e43749cf46c42463e282548a73c315
+  * Date: 1540496650
+  * git changelog:
+  *  5f46de6b - updated osx/deps
+  *  e13feccb - vorbis: don't load empty tag fields
+  *  606325ae - sndfile: division by zero fix
+  *  2d4fa982 - opus: make sure the tempfile is flushed before renaming
+  *  2aca2383 - cocoaui: fix modified state after editing fields
+  *  02fcc33b - osx: deadbeef project schemes fix
+  *  06612475 - osx: test scheme name fix
+  *  d3fc2fd8 - playlist: added search support for multivalue fields;
+    fixed thread safety issue; added tests
+  *  3b08a646 - osx: enable tests on travis
+  *  fbf52857 - mp3parser: fixed xing header issues with network
+    streams; more tests
+  *  d8362602 - gtkui: don't use g_slist_free_full, for older glib
+    compat
+  *  d74af3c1 - updated po files
+  *  97959dae - configure.ac cleanup
+  *  991eede9 - disable autotools dependency tracking (fix make
+    distclean)
+  *  a0e51d39 - deadbeef.h cleanup / comments
+  *  24ff2b3b - update version table in deadbeef.h
+  *  452537a5 - alsa: fix another missing mutex unlock (#2057)
+  *  9ee538fa - mp3: regression fix
+  *  86cc58ee - mp3: fix average bitrate calculation (fixes #2030)
+  *  6bd85409 - alsa: fix another missing mutex unlock (#2057)
+  *  d2141c93 - mp3: regression fix
+  *  1dc01b05 - mp3: fix average bitrate calculation (fixes #2030)
+  *  d580f506 - vfs_stdio: compile fix when USE_STDIO is enabled
+  *  3493656b - mp3: fix compile error when only libmpg123 is enabled,
+    but not libmad
+  *  ab97f58f - vfs_stdio: compile fix when USE_STDIO is enabled
+  *  2416930f - mp3: fix compile error when only libmpg123 is enabled,
+    but not libmad
+  *  8bf1bcf6 - changelog for 1.8 WIP
+  *  95a07834 - 1.8.0-beta2
+  *  fb939e64 - cocoaui: fixed dark appearance support for Mojave
+  *  a66a44da - mp3: don't clip tail to totalsamples when estimate
+    duration flag is set
+  *  a0cba9d0 - mp3: cleanup and fixes for network streams
+  *  37462639 - sid: Songlengths.md5 support
+  *  66953fd3 - sid: less messy le_int16 rewrite
+  *  ade3aab1 - sid: fix sldb memory leak
+  *  db73b133 - sid: modernized SLDB code to handle larged
+    songlengths.txt (fixes #2045)
+  *  4cc18caa - mp3parser: new test cases and fixes to support the
+    finite length network streams
+  *  511da2cc - junklib: don't return -1 from *_get_leading_size
+  *  60cb7390 - cocoaui: fixed playlist repaing when window becomes
+    inactive
+  *  9dfc3187 - cocoaui: fixed a few issues with tab close button
+  *  94a3b8c0 - cocoaui: more tab fidelity improvements
+  *  0beb1d48 - cocoaui: images cleanup
+  *  2dd00667 - cocoaui: tabstrip scrolling buttons fix
+  *  686dc401 - cocoaui: fixed playlist redraw during column resizing
+  *  65357eac - cocoaui: fixed search window updating
+  *  375b8afc - cocoaui: improved rendering when dragging column headers
+  *  529c298f - cocoaui: better column resizing / dragging
+  *  73aa5735 - cocoaui: menu cleanup / added View menu
+  *  8379221d - cocoaui: improved tab close button positioning and
+    rendering
+  *  c5316025 - cocoaui: fixed playlist redraw issues
+  *  dd4a1442 - cocoaui: modernized rendering of the playlist header,
+    fix mojave compat and dark appearance
+  *  fd404453 - cocoaui: improved tab bar aesthetics
+  *  b58897aa - cocoaui: dark appearance support in tabs
+  *  c2075bec - cocoaui: convert tab bar into an acsessory view; new
+    rendering (experimental)
+  *  279f07ee - cocoaui: draw tab close button using bezier paths
+    instead of vector pdf
+  *  369bfa17 - cocoaui: darkmode impovements
+  *  604224f5 - cocoaui: fixed tab rendering when built with xcode 10
+  *  a8c5e2de - cocoaui: fixed dark appearance support for Mojave
+  *  7032910e - rename Looping and Order menus to Repeat and Shuffle,
+    respectively
+  *  a729cb50 - map docker build output folder to $ROOT/docker-artifacts
+    on the host
+  *  0d153f51 - premake: vfs_curl build fix
+  *  6b3c6956 - osx: fix building with xcode10
+  *  2b20bba8 - mp3parser: able to approximate duration for streams
+  *  d48bc9eb - gtkui: yet another revert of crashy menu code (fixes
+    #2049)
+  *  9c502a0c - cocoaui: don't append colons to config dialog labels
+  *  2da7317a - mono2stereo: remove colons from parameter names
+  *  aa619bee - gtkui: revert part of the wayland-related fixes, which
+    caused a crash when using group by from context menu (fix #2042)
+  *  eb804456 - premake fix
+  *  7e557d5e - flac: use dynamic buffer size to support flacs with
+    large block sizes over 100K (fixes #2039)
+  *  eafb3091 - gme: spc intro/loop parsing fix; enable fadeout for
+    tracks with finite length (fixes #2022)
+  *  2a0a2e3d - junklib: don't duplicate USLT Lyrics to TXXX; cleanup
+    and a more common field name
+  *  ccc697e2 - junklib: fixed/added USLT lyrics support
+  *  2951ec79 - mp3parser: added a test for the case of mp3 file with
+    garbage data in the middle, containing mpeg packet markers
+  *  3ee6ec6e - mp3parser: improved skipping invalid data in the middle
+    of mp3 streams
+  *  b121dfd8 - vfs_curl: added optional logging
+  *  2004b058 - cocoaui: prevent crash on logging invalid string
+  *  51106891 - updated ax_check_compiler_flags to solve a clang compile
+    issue
+  *  61d82bd3 - gtkui: fix starting/stopping spectrum analyzer drawing
+    bug
+  *  c22b9040 - fix plugin api version checking bug
+  *  92b74c3a - sid: Songlengths.md5 support
+  *  264c838c - sid: less messy le_int16 rewrite
+  *  1cdb9b9b - sid: fix sldb memory leak
+  *  6c385e16 - sid: modernized SLDB code to handle larged
+    songlengths.txt (fixes #2045)
+  *  0e1ed0dd - converter: fixed file move preset
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 26 Oct 2018 22:21:21 +0300
+
 deadbeef (0.7.2+git7801-e4bbbe58-1) unstable; urgency=medium
 
   * Compile
