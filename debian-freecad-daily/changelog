@@ -1,3 +1,178 @@
+freecad-daily (0.17+git15182-b65faeff7-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: b65faeff771b629d2598a3af8a26845de28e55d9
+  * Date: 1541808822
+  * git changelog:
+  *  b65faeff7 - fixes 0003627: Hole fails to restore from file
+  *  07cf5b10d - Sketcher: Trim support multiple intersections for
+    circles
+  *  084c48360 - Sketcher: Ellipse trim, handle multiple intersection
+  *  4245ae686 - Sketcher: Ellipse trimming with internal aligment
+    geometry
+  *  f10c28fb5 - Handle case of no points returned
+  *  4d0c856fa - Start: minor py3 fix
+  *  bd2bf371a - Arch: Fixed buggy import/export of objects based on
+    rectangles to IFC
+  *  a8fda8df0 - Arch: Fixed buggy import/export of 2D objects to IFC
+  *  3d8b81583 - by default disable old tree view & property view
+  *  847c6ef74 - fixes 0003652: Missing little expression icon
+  *  9fde41ff1 - Allow user to define a custom minimum deviation for the
+    tessellation
+  *  f6a9cfaad - fix -Wabsolute-value
+  *  d4461f351 - add function to retrive femmesh edges by a TopoDS_Edge
+  *  7d197ce82 - Start: Use default file icon if mime-based one is
+    unavailable for some reason
+  *  490b76f40 - Arch: Fixed py3 errors in IFC export
+  *  b56598428 - Arch: Disabled children claiming for Section Planes for
+    now (buggy)
+  *  fe033dee7 - make unit tests about document observer more reliably
+  *  24c33c0d9 - remove some more boost.signals leftover
+  *  36b9a1c45 - Add unit tests to check the new Prop_NoRecompute value
+  *  6186a310d - Add a new PropertyType enum Prop_NoRecompute to reduce
+    possible inconsistencies between touched and recomputed features.
+  *  1d72ee434 - Draft: Export of Arch Axes to DXF
+  *  daadba492 - add security checks when reading BMS files to avoid
+    possible crashes due to corrupted data
+  *  7fbd1c6be - remove some more boost.signals leftover
+  *  ba11c3a70 - FEM: commands, sort classes
+  *  fb531582f - FEM: print mesh info, rename it to display mesh info
+  *  798c0ea4a - FEM: z88 mesh, some changes: - add a much simpler
+    method to write a FemMesh to Z88 file format by Python - add a read
+    method which does not create a document object but just returns the
+    FemMesh
+  *  3408e5908 - minor Py3 issue fixed
+  *  f2ddb64fa - Path.Area: minor optimization
+  *  a345669b3 - Path.Area: fix default parameter initialization
+  *  2d3f94590 - Support for step down in deburr op.
+  *  64addcabd - Enable op base feature pre-selection for multiple base
+    models.
+  *  e4fc276ba - Maintain stock bound box extension values across
+    refreshs
+  *  fe8f172ce - Arch: Fixed bug in windows snapping
+  *  ff5d67b66 - Draft: fixed snapping to WPProxies
+  *  d03a11ead - Change the name of the Wire object
+  *  36124965d - add PS action to dumpToFile
+  *  fcdcb5d85 - Arch/Draft: Fixed py3 bugs in text rendering
+  *  fbb8e86cb - remove trailing spaces
+  *  768b1874d - + minor fix in Document unit tests
+  *  c1f19d385 - remove trailing spaces
+  *  dedf42102 - remove leftover of boost.signals headers
+  *  f71da8d76 - py3: Arch: fix TypeError exception
+  *  fb4460e52 - Added tool controller to custom op
+  *  fe8677fab - Also restore position of base op when dressup is
+    deleted.
+  *  bfcd21361 - Insert dressups at the same position in the operations
+    list as the parent op is/was
+  *  de5b785f6 - Moved Deburr out of experimental features.
+  *  2f2f5af4c - Path: PathSurface task panel update
+  *  511811874 - generalized optimization algorithm
+  *  c40060bc2 - Path: Optimize output of OCL dropcutter algo.
+  *  13f589a0a - Sketcher: Allow driven constraints when autoredundancy
+    removal and autorecomputes active
+  *  195c49299 - Part: Attacher: fix blocking error message
+  *  0a667889a - Sketcher: Trim bug
+  *  d779e5b4b - Sketcher: Fillet radius estimation improvement
+  *  6f42f3dac - Part: Geometry tangent with Vector3d overload
+  *  293e5732a - Sketcher: SketchObject Debug disabled by default
+  *  abc710111 - Sketcher: Add DEBUG macro to SketchObject
+  *  69d62787e - Sketcher: Intercurve fillet Improvement and delete
+    constraint on point fix
+  *  fe78c1a03 - Sketcher: Expose mass datum commands to python
+  *  2c41e70c9 - Sketcher: Mass operations on dimensionals
+  *  6a1aed66e - Sketcher: Refactor code relating to dimensional
+    constraint checks
+  *  8e2e5d7b6 - Sketcher: Made constraints aware of whether they are
+    dimensionals or not
+  *  071bc89cf - Indentation error solved
+  *  2765ed479 - Resolved issue: Exporting rectangular section to ifc
+  *  90a1f4ad1 - Draft: Fixed py3 bug in getSVG
+  *  c3014fc65 - fix blocking of SelectionObserver
+  *  4c2f2cd21 - Misc. typos and whitespace
+  *  5ff383b46 - fix gcc8 build failure
+  *  684b4ab03 - Draft: Fixed wrong Placement of Draft Wire - fixes
+    #3558
+  *  e4b1cfc43 - Fix COPR build and remove fedora specific xdg files
+  *  e86f7caea - Improve TaskAttacher dialog: + correct handling of
+    active document + properly handle case if the view provider or
+    document is deleted while the dialog is still open
+  *  347f99364 - add/extend helper classes to safely access documents,
+    document objects or view providers
+  *  40cec5f72 - add/extend helper classes to savely access document,
+    document objects or view providers
+  *  0c8da1c38 - add an assert to several Command methods to be notified
+    in debug mode if no active document exists
+  *  f898eafd6 - move from deprecated boost.signals to boost.signals2
+    library
+  *  3858b179c - improve whitespaces
+  *  e10068a64 - Sketcher: Trimming support bug
+  *  408c31634 - Fix BSpline/Circle conversion
+  *  f0420d6cb - Add formatter for gp_Pnt
+  *  2f4b61dac - fixes -Winconsistent-missing-override
+  *  cd34f3d12 - Path: Adaptive -  set as standard feature
+  *  976e804e2 - Path: Adaptive - fix for path cleaning
+  *  6e7beb1a0 - py3: OpenSCAD: fix type cast
+  *  1be9f18b5 - py3: OpenSCAD: use io.open more explicit
+  *  1538a14ec - leave license field and url of a Part container empty
+    to avoid possible confusion with imported 3rd-party STEP/IGES models
+  *  2b84be64c - Fix spurious error message
+  *  c2f2db8b5 - Path: Adaptive - finishing path improvements
+  *  1e7aa1bec - fix crash with Py3 when releasing memory buffer
+  *  42c5b2e9c - fixes 0003657: automatic rotation disabled by default
+  *  53ba33a80 - fix -Wunused-private-field
+  *  1d86a83b3 - Sketcher: Fillet UI command Improved exception handling
+  *  957c22a61 - Sketcher: Fillet extended CAD kernel information
+  *  044e0f6c2 - Sketcher: Use transparent exception mechanism for
+    fillets
+  *  7effa68ee - Part: Geometry use CADKernelError exception for OCCT
+  *  4b9d90321 - Sketcher: GUI command updated to support filleting of
+    bounded curves
+  *  f1a98c310 - Sketcher: Support for filleting bounded curves
+  *  649d115af - Part: Geometry New Bounded-Trimmed-curve inheritance
+  *  0ed7b1d69 - Part: Geometry - refactoring of intersection code
+  *  c946de8fb - Part: Geometry - intersection - checkendpoints
+  *  4d1e98113 - Part: Geometry GeomTrim Geomline segment type
+  *  396998467 - Part: Geometry intersect routines throw when OCCT
+    throws
+  *  7c1a21884 - Sketcher: Inter-trimmed-curve filleting
+  *  b1858f2cf - Part: Geometry Arcs inheriting from GeomTrimmedCurve
+  *  0aa3da513 - Sketcher: filleting arcofconic-arcofconic command
+  *  44c5f1a67 - Sketcher: Fillet support inter-conics
+  *  8b97a3137 - Part: Geometry refactoring
+  *  9e349c33a - Part: Geometry - improvements/bug fixes
+  *  f301feec3 - Part: New routines for curve intersection
+  *  4c9356f0f - Arch: Finished implementing color support for Arch
+    Reference
+  *  a3729d5ca - Arch: Support part colors in Reference
+  *  17c783051 - extend FreeCAD.getUserMacroDir to accept boolean to
+    either return actual or default macro directory
+  *  e517c00d9 - py3: Fem: remove extra b'ees
+  *  465152bcc - fix crash in debug mode in sketcher in case the
+    equation matrix has rank zero
+  *  4362ddc79 - Raytracing: Fixed search locations of povray
+  *  907cdb8fa - add module for Qt translation stuff
+  *  57726db47 - AddonManager: minor bugfix
+  *  7fabfde0e - py3 compatibility fixes
+  *  b6712e264 - fix crash with Py3 when releasing memory buffer
+  *  3b1e1f885 - remove trailing whitespaces
+  *  3443fd966 - replace deprecated failUnless with assertEqual
+  *  b262cf6e9 - Persistence: Incorporate review feedback
+  *  c60364772 - Persistence: Test cases for content dump It turned our
+    that the document could not be dumped as the xml specifier was used
+    as first element. As the dumping added the <content> element around
+    it was invalid. However, content is required to read properties.
+    Hence the xml element generation was moved.
+  *  f5fc291ec - Persistence: Avoid copy of data on binary restore
+  *  4a7d49f8b - Persistence: Enable binary dumps of properties
+  *  fd378bbc8 - Persistence: Implement dumping of binary content
+  *  2af5a983a - unit test for / operator of Quantity
+  *  83f61b437 - implement true divide handler of the number protocol
+    for Quantity
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 10 Nov 2018 07:18:10 +0300
+
 freecad-daily (0.17+git15056-7ec3984cb-1) unstable; urgency=medium
 
   * Compile

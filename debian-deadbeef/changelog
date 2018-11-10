@@ -1,3 +1,33 @@
+deadbeef (0.7.2+git7942-dc0f079a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: dc0f079ad6510a906d7aa4e5600bb029290a151f
+  * Date: 1541530648
+  * git changelog:
+  *  dc0f079a - mp3: force constant samplerate across a single file when
+    using libmpg123, to be able to play through corrupt frames without
+    buffer allocation issues
+  *  b2d61d2b - tests: reduce sleep amount for fakeout realtime mode
+  *  04c2c25b - tests: unified / renamed test files
+  *  eec05d0a - tests: fix free-after-use bug in Tagging tests; replace
+    manual threshold comparison with XCTAssertEqualWithAccuracy
+  *  d3ff62fd - cue: fixed regression causing crash
+  *  d39c5ea6 - mp3: fix infinite stream regression
+  *  327273d4 - revert autogen.sh change
+  *  20342649 - fix a few build issues in docker
+  *  47fbdb10 - coreaudio: react to system device changes
+  *  df4ec38f - fix ddb_listview_set_cursor_and_scroll not taking pinned
+    subgroups into account
+  *  4e2a979a - playlist: fix a regression causing infinite loop after
+    searching
+  *  b456424a - cocoaui: lock playlist while generating groups to avoid
+    potential race-condition
+  *  90dad53a - translators.txt email address fix
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 09 Nov 2018 21:11:37 +0300
+
 deadbeef (0.7.2+git7928-3b8b2fae-1) unstable; urgency=medium
 
   * Compile

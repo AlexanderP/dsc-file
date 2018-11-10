@@ -1,3 +1,31 @@
+librecad (2.1.2+git4478-ccf50e3e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: master
+  * Commit: ccf50e3eb46f9f8c2d28020e9584c59cf41baeb6
+  * Date: 1541700651
+  * git changelog:
+  *  ccf50e3e - fixed #1024, random LayerList icons issues on multi
+    layer block imports, many thanks to @xanderdin
+  *  6a0e9a9b - replaced invalid links to old website and contacts
+  *  6ad16fa2 - git ignore *.autosave files
+  *  60a9f5f5 - Fixed 2 segfaults causes
+  *  f40b4818 - Respect both tolerance and negative factor values on
+    block import. As suggested by Armin Stebich (lordofbikes).
+  *  c561e776 - Modified as suggested by Armin Stebich (lordofbikes)
+  *  a0e360d9 - Set factor to 1.0 if user inputs 0 on block import
+  *  d28a72cc - Fix: Factor value was ignored on block import
+  *  99f6ad3c - Fix: RowSpacing and ColSpacing values were swapped in
+    Insert properties dialog
+  *  e469c5e8 - fixed twice increment in --debug command line switch
+    handling
+  *  955be8a0 - bundle all plugin modifications into one undoCycle
+  *  ed90a197 - added LC_UndoSection class, a wrapper for RS_Undo
+    methods
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 10 Nov 2018 05:14:27 +0300
+
 librecad (2.1.2+git4460-3d878346-1) unstable; urgency=medium
 
   * Compile

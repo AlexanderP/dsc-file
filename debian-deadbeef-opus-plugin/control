@@ -1,0 +1,14 @@
+Source: deadbeef-opus-plugin
+Section: sound
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 9), deadbeef-dev, libopusfile-dev, libopus-dev, libogg-dev, libssl-dev
+Standards-Version: 4.1.4
+Homepage: https://bitbucket.org/Lithopsian/deadbeef-opus/overview
+
+Package: deadbeef-opus-plugin
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Ogg Opus plugin for DeaDBeeF-player
+ This plugin aims to implement the Ogg Opus decoder
+ for DeaDBeeF-player.

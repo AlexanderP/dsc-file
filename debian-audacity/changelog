@@ -1,3 +1,158 @@
+audacity (1:2.3.0+git9504-2d650fa0e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 2d650fa0e8d88e2133c21134a797bd0ea74b9ef6
+  * Date: 1541693299
+  * git changelog:
+  *  2d650fa0e - Rename LabelTrack::IsSelected so it doesn't shadow
+    Track::IsSelected
+  *  03b0d3f89 - Bug 2025: Windows: Wasapi: seek commands can cause
+    crash
+  *  03e67b9bc - Bug2026: drawing channel separator on Windows...
+  *  50cf2e9a1 - Give TrackArtist a back-pointer to TrackPanel
+  *  9bb235c27 - Preparations for scattering TrackArt functions to
+    better places
+  *  4ebfbd9c5 - Split class TrackArtist from namespace TrackArt...
+  *  fe3514646 - remove more TrackArtist arguments
+  *  99106e3ed - Carry more information in TrackPanelDrawingContext;
+    fewer arguments
+  *  c866ed4bf - Reimplement the logic for drawing label track selection
+    background
+  *  f8e0ffb31 - Make sure TrackArtist updates prefs on construction...
+  *  01329876c - Remove unnecessary #include
+  *  c4994ae9c - kTrackInfoWidth was misleadingly named...
+  *  4c76e598d - Fix command line options
+  *  bc60de2ff - Disable Scrub Ruler by default
+  *  472240494 - We can get only Unofficial/Vietnamese.islu for Inno
+    Setup 5.6.1
+  *  e2ad0bbc2 - We need libasound-dev to build on ubuntu 16.04
+  *  0524dc588 - A comment about Maybe resembling std::optional...
+  *  38005054f - Make TrackInfo a namespace, not a class...
+  *  b5d4a828d - More doxygen
+  *  648d7ddb7 - Move declarations in CellularPanel, keep abstract
+    functions together
+  *  370d3e633 - spelling in comments
+  *  7030c9fc4 - More doxygen
+  *  f9627864c - Steps in TrackPanel drawing correspond better with hit
+    subdivision...
+  *  55774fbb2 - When drawing, treat track plus separator BELOW as the
+    natural grouping...
+  *  3589aacd7 - Rewrite iteration over tracks in DrawEverythingElse
+  *  10bc061b0 - Pass rectangles to drawing routines excluding left &
+    right margins...
+  *  a2e392433 - Paint left and right margins of the whole TrackPanel
+    first
+  *  d0d88118c - Rectangle passed VRuler draw function agrees with hit
+    test rectangle...
+  *  e70b24033 - The ruler and sash draw functions treat their own
+    backgrounds
+  *  951e7d27d - The vruler and sash draw functions treat their own left
+    boundaries
+  *  0f17b309b - Fuse the two sash-drawing functions, pass a rectangle
+    not a track...
+  *  88c70f3c3 - Remove win/compile.txt which was accidentally re-
+    introduced.
+  *  fb15558a0 - Update XCode project for renamed header file
+  *  dccf5fcbf - Don't include "Quick Fix" in menus for 2.3.1.
+  *  7f8bfa0ac - Make microfades into a preference.
+  *  b07097df3 - Reorganize some track drawing code, no change of
+    appearance intended
+  *  8d02134d6 - Simplify the track rectangle calculations in
+    TrackArtist
+  *  49dd6002d - Simplify HighlightFocusedTrack
+  *  3e1d4a962 - Fix drawing of lower right corners of vertical rulers
+  *  e31669f55 - comment out unused function
+  *  c1b729822 - Remove unused arguments of some drawing functions
+  *  36933b5c5 - Show GStreamer in Doxygen too.
+  *  095c6d87e - More complete doxygen coverage
+  *  466e9c179 - Create ComponentInterface
+  *  c63dcbd3c - Oops, forgot the vertical rulers in the subdivision of
+    TrackPanel !
+  *  b7e1cc09a - TrackPanel, AdornedRulerPanel each define subdivision
+    in one place...
+  *  39fc20c5e - TrackPanelCellIterator is no longer needed
+  *  005abb06d - Replace uses of TrackPanel::Cells() with
+    CellularPanel::VisitCells()
+  *  01551913f - nonvirtual reimplementation of CellularPanel::FindRect
+    using nodes
+  *  cfa7afcb2 - nonvirtual reimplementation of CellularPanel::FindCell
+    using nodes
+  *  128ba93ae - Implement TrackPanel::Root()
+  *  08f88ebf2 - Implement AdornedRulerPanel::Root()
+  *  588c050bb - Define visitation procedure skeleton for subdivision of
+    CellularPanel
+  *  4fe97acbc - Define CellularPanel::Root
+  *  30d55f476 - Define abstract classes TrackPanelNode and
+    TrackPanelGroup
+  *  7549b9f99 - Correct mSeekShort to mSeekLong in a few places
+  *  5b01f5791 - Update comments about TrackPanel and TrackArtist...
+  *  6e75ff27c - Bug 2022 Mixer Board does not automatically update
+  *  912b24f21 - Revert "Small widening of the click-to-deselect area
+    below the tracks..."
+  *  3658032a8 - Update ru.po
+  *  e9d1dfb2d - more const arguments in TrackArtist
+  *  c101cf3b3 - Small widening of the click-to-deselect area below the
+    tracks...
+  *  4f964c359 - bug 2017 'offset' was used uninitialised
+  *  26abe0255 - Precautions also in TrackIterRange::StaringWith() as in
+    EndingAfter()
+  *  74a360f68 - Bug2020: Fix sync-lock groupings
+  *  793949aa2 - more comments about TrackIterRange operators
+  *  cc2c3dc2f - Bug 2016 - Multiple problems with Change Pitch
+  *  3be57fce4 - Bug2015: crash repeatedly append-recording with sync-
+    lock on
+  *  911840074 - Use tab character, not \t in translatable string in .ny
+    file...
+  *  79cf475c8 - Make update_po_files.sh run on macOS...
+  *  9c9bc70e9 - Fix sorting of effects below the separator...
+  *  46a3f91d5 - Add some useful path definitions for Nyquist
+  *  c79d65cde - Bug 2019 - Scriptables: Set Envelope allows envelope
+    points at zero which can cause NaNs
+  *  6a4663e19 - Use wxGetUTCTimeMillis in preference to
+    wxGetLocalTimeMillis
+  *  0fbea5f9e - Fix failure of Nyquist to translate some multiline
+    strings...
+  *  5dc4185ce - Leave arguments anonymous, remove unused variables in
+    menu code...
+  *  87592cc89 - Remove unused (and unintended) overload of Items
+  *  76166135d - Fix many MSVC compiler warnings.
+  *  6fe0c6dd4 - Slim AudacityProject some...
+  *  50f857947 - Move AudacityProject::DoTrackMute and DoTrackSolo...
+  *  51c354171 - Move AudacityProject::RemoveTrack
+  *  83f504e30 - Move AudacityProject::SetTrackPan and SetTrackGain
+  *  edd23e263 - Move AudacityProject::GetZoomOf*
+  *  b2ea8ab6e - Move AudacityProject::EditByLabel and
+    EditClipboardByLabel
+  *  95cca91eb - Move AudacityProject::Clear
+  *  0969d00b1 - Comment out an unused UpdatePrefs function
+  *  b4fc4b9ce - Proper initialization of menu handlers from preferences
+  *  cda9715ce - Fix TrackList event propagation
+  *  70fff4b28 -  History, Lyrics, Mixerboard windows listen for new
+    events...
+  *  012ea7613 - Moved mixer board update code out of class
+    AudacityProject...
+  *  723cecbea - Mixerboard uses events to detect start and stop of
+    playback
+  *  1fc4c5724 - MixerBoard no longer needs update at undo push...
+  *  ccc2bbe3e - MixerBoard listens for events for track sliders, mute,
+    solo, name
+  *  5ab2facee - MixerBoard listens to TrackList for insert, delete,
+    permute...
+  *  7150d4308 - MixerBoard listens to TrackList for selection changes
+  *  96d104cb3 - Lyrics panel listens; AudacityProject not responsible
+    for updating it
+  *  ad8fafa6a - History window listens for events
+  *  dbcf8ae59 - AudacityApp emits an event when the global clipboard
+    changes
+  *  cee0d35da - UndoManager emits events when state changes
+  *  4f7d308ca - Some inversion of control flow when popping Undo state
+  *  2741d5888 - TrackList emits more events for certain changes of
+    state of tracks...
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 09 Nov 2018 22:34:30 +0300
+
 audacity (1:2.3.0+git9403-ca4c9b81f-1) unstable; urgency=medium
 
   * Compile

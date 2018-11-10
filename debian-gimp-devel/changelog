@@ -1,3 +1,64 @@
+gimp-devel (2.10.4+git41820-3fd5b50f94-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 3fd5b50f948f9217400d6a11599f0f7eb7e8b9ed
+  * Date: 1541807143
+  * git changelog:
+  *  3fd5b50f94 - Installer: proper fix for libthai
+  *  e40a5b9d4c - Installer: remove Thai locale temporarily (causes
+    crash on Windows 7)
+  *  628a5ecb79 - Installer: include extra debug symbols, Ghostscript
+    9.25
+  *  8e1e6dfb83 - tools: add performance-log-coalesce.py to EXTRA_DIST
+  *  ee8f162151 - configure.ac: post-release version bump to 2.10.9
+  *  a967e8d2c2 - configure.ac: bump versions for the 2.10.8 release
+  *  3b07dc1f57 - devel-docs: another typo fix in performance-logs.md
+    TOC
+  *  f8dda0d8eb - devel-docs: fix typo in performance-logs.md TOC
+  *  679e341285 - Issue #2431: After coloring a selection and exporting
+    to PDF, file...
+  *  4cc0096450 - themes: fix Dark theme tree-view selected text color
+    during editing
+  *  e23ce84dc0 - devel-docs: fix typo in performance-issue screenshot
+  *  9cb1b66163 - Issue #2454: recent libwmf uses pkg-config.
+  *  5c51ecba31 - devel-docs: fix typo in performance-logs/Makefile.am
+  *  805c5cc8a8 - devel-docs: add performance-logs documentation
+  *  4e58d00eae - libgimpmath: fix typo in various places:
+    s/orthognal/orthogonal/.
+  *  b5e26f0399 - libgimpbase: just remove a small typo in a doc
+    comment.
+  *  fafeb7bf07 - app: a few improvements to the GimpBacktrace Linux
+    backend
+  *  9489b66eec - tools: a few improvements in performance-log-viewer.py
+  *  3fdb5b32f7 - tools: in performance-log-expand.py, preserve threads
+    with empty stacks
+  *  645e30e641 - app: a few fixes to performance-log backtrace output
+  *  7c7e7c6012 - desktop: update release date.
+  *  ee3c6a9323 - app: don't let image component mask affect channel
+    colors
+  *  bc3847e851 - app: avoid allocating empty tempbuf for drawable
+    previews
+  *  a4894b54ad - tools: in performance-log-viewer.py, show variable
+    descriptions
+  *  b8862acee9 - app: include variable descriptions in performance logs
+  *  5456226c99 - app: simplify drawable preview rendering
+  *  4f27efc4a0 - Issue #2436 - Crash after downsizing canvas
+  *  9dadd2ad9e - Update Spanish translation
+  *  c447de9717 - Update Spanish translation
+  *  911d3945eb - Issue #2160: Exporting to PCX results in a warped
+    file.
+  *  b5a8a1fb2b - Update Polish translation
+  *  a33a629bd9 - Issue #2379 - Crash on saving
+  *  ed7f9454c1 - devel-docs: add "step" blending function to GGR format
+    spec
+  *  7b4577a0e4 - file-pnm: Remove clamping when loading PFM files
+  *  f63a7b293f - Update Ukrainian translation
+  *  13ee89d491 - app: fix tests for new show-tabs option
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 10 Nov 2018 06:15:29 +0300
+
 gimp-devel (2.10.4+git41784-8a5ee944f7-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,55 @@
+gimp-gtk3 (2.99.0+git42443-c61138f8f0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: c61138f8f0c4273bd9c27fabed7e72d8417122d9
+  * Date: 1541748193
+  * git changelog:
+  *  c61138f8f0 - tools: add performance-log-coalesce.py to EXTRA_DIST
+  *  662636041c - devel-docs: another typo fix in performance-logs.md
+    TOC
+  *  5a077649f9 - devel-docs: fix typo in performance-logs.md TOC
+  *  ba98b98f58 - Issue #2431: After coloring a selection and exporting
+    to PDF, file...
+  *  49375a3def - devel-docs: fix typo in performance-issue screenshot
+  *  df4e35a846 - Issue #2454: recent libwmf uses pkg-config.
+  *  baa8aadc83 - devel-docs: fix typo in performance-logs/Makefile.am
+  *  a75c57f2cd - configure.ac: add devel-docs/performance-logs/Makefile
+  *  e3b6c8e877 - .gitlab: add "performance" issue template
+  *  fa9161e4f2 - devel-docs: add performance-logs documentation
+  *  a29d040db5 - app: a few improvements to the GimpBacktrace Linux
+    backend
+  *  0b2d41635a - tools: a few improvements in performance-log-viewer.py
+  *  fb95d3b86e - tools: in performance-log-expand.py, preserve threads
+    with empty stacks
+  *  eec1e1f189 - app: a few fixes to performance-log backtrace output
+  *  2c4831f90b - desktop: update release date.
+  *  56920dcdbf - app: don't let image component mask affect channel
+    colors
+  *  963322fdd4 - app: avoid allocating empty tempbuf for drawable
+    previews
+  *  21b36cd864 - tools: in performance-log-viewer.py, show variable
+    descriptions
+  *  646208eff0 - app: include variable descriptions in performance logs
+  *  8009ea342a - app: simplify drawable preview rendering
+  *  0cdbe91e5a - Issue #2436 - Crash after downsizing canvas
+  *  3dea26b6ee - Update Spanish translation
+  *  5d319b77bf - Issue #2160: Exporting to PCX results in a warped
+    file.
+  *  a181372795 - build: sync the nightly flatpak manifest with the
+    stable one.
+  *  6f31272c87 - Update Polish translation
+  *  34376c7abf - app: propagate space in gimp_layer_mode_get_format
+  *  c55f2308e1 - Issue #2379 - Crash on saving
+  *  026fe766cd - devel-docs: add "step" blending function to GGR format
+    spec
+  *  bfcb7fc593 - file-pnm: Remove clamping when loading PFM files
+  *  0fa2230e86 - Update Spanish translation
+  *  4113aaad69 - app: fix tests for new show-tabs option
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 10 Nov 2018 06:56:33 +0300
+
 gimp-gtk3 (2.99.0+git42412-c271992aa0-1) unstable; urgency=medium
 
   * Compile
