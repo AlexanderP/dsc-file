@@ -1,3 +1,53 @@
+goaccess (1:1.3.0+git2819-0f217e3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 0f217e3d8ab856df807b3cd0ff6ca1c99551101c
+  * Date: 1543072051
+  * git changelog:
+  *  7cfb9f7 - update ja.po
+  *  5af6ac5 - Updated goaccess po file.
+  *  a3a7c2d - Updated Chinese po file.
+  *  52b0666 - Updated Japaense po file.
+  *  2e04cca - Updated French po file.
+  *  d593286 - Updated i18n labels for Spanish lang.
+  *  16aa128 - Updated README.md RT screenshot source.
+  *  dcc4000 - Use /usr/local/etc/goaccess as the default config
+    directory.
+  *  f388d6a - Updated dark purple report title css.
+  *  e688a9d - Ensure index is compared against the actual value.
+  *  2432e47 - Added -b as shortcut to --browsers-file.
+  *  5c27e3c - Updated default browsers list spacing.
+  *  1dbe895 - Allow spaces for possible crawler on the user's browsers
+    list.
+  *  92fca80 - Updated ChangedLog for upcoming release.
+  *  efbacfd - Updated authors list to reflect latest contributors.
+  *  a470dc8 - Updated documentation for upcoming version.
+  *  66412d5 - Updated README.md download section.
+  *  7c5bc6d - Updated NEWS with latest changes.
+  *  4a02dbf - Version bumped to 1.3.
+  *  7b1be3f - Version bumped to 1.3 (configure.ac).
+  *  e3480fb - Added --browsers-file command line option to man page.
+  *  92c5552 - Set default HTML theme to new dark purple.
+  *  4fff177 - Added new purple theme to HTML report.
+  *  aa87e50 - Added --browsers-file command line option to default
+    config file.
+  *  dd77a81 - Ensure updated metrics can be sorted in the terminal
+    output.
+  *  a9c0781 - Added parsing mechanism to include unspecified
+    bots/crawlers.
+  *  84dd97c - Added --browsers-file command line option to load a list
+    of crawlers from a text file.
+  *  cec0645 - hotfix: Japanese lang file
+  *  ab16a66 - Changed wording from 'Bandwidth' to the proper term 'Tx.
+    Amount'.
+  *  39a336e - Fixed UNDEFINED time range in HTML report when VISITORS
+    panel was ignored.
+  *  00736fc - Removed unnecessary closing span tag from template.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 25 Nov 2018 08:32:47 +0300
+
 goaccess (1:1.2.0+git2786-5d0cad6-1) unstable; urgency=medium
 
   * Compile

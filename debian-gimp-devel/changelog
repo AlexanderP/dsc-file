@@ -1,3 +1,72 @@
+gimp-devel (2.10.8+git41861-fc7d61a6ea-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: fc7d61a6ea5d2188cdd8143056ab9bf748ffe124
+  * Date: 1543080699
+  * git changelog:
+  *  fc7d61a6ea - Updated Italian translation
+  *  90292953c3 - app: in gimp-parallel, boost priority of waited-upon
+    asyncs
+  *  8222124a96 - app: add GimpAsync::waiting signal
+  *  79a44eda6d - app: more gimp-parallel fixes
+  *  8fe6645950 - app: indentation fix in gimp-parallel.cc
+  *  d4312fd5f7 - app: remove gimp_parallel_distribute(); use
+    gegl_parallel_distribute()
+  *  ac4ded137f - configure.ac: require GEGL >= 0.4.13
+  *  63e86da6f3 - tests: OSX - activate GIMP window when tests are
+    running
+  *  9ae19eb8ec - tests: implement gimp_test_utils_synthesize_key_event
+    on OSX/QUARTZ
+  *  40a08dcf48 - tests: fix clang compilation error on test-eevl.c
+  *  4b647c52e1 - Issue #2553 - Can't Move Imported or Pasted Path
+  *  62c52742cd - do not activate OSX menu if tests are running to
+    prevent crash
+  *  d650e9f81f - add  to fix test link on OSX
+  *  a3b5a7fb32 - Update NEWS
+  *  465b4b10fb - Enable hires retina support for the GTK2/OSX build
+  *  0a39f362b5 - libgimpbase, libgimp, app: pass misc. GEGL config to
+    plug-ins
+  *  7de86c63e6 - libgimpbase: add _gimp_wire_{read,write}_int64()
+  *  4d542a4ba8 - libgimpbase: don't leak GPConfig::icon_theme_dir
+  *  46d4768699 - libgimpwidgets: install gimpspinbutton.h
+  *  ab48f12fd6 - Issue #2224 - Use the "Swap folder" setting for the
+    GEGL cache
+  *  5bab4a2c4a - Update Polish translation
+  *  dc7bbe971d - Update NEWS
+  *  70a1534842 - Help menu: various updates
+  *  6f61a7d431 - configure.ac: require babl >= 0.1.60
+  *  5b93eee52a - app: in scale tool, scale around center even when
+    using numeric input
+  *  4991603b2a - Installer: remove LIBTHAI_DICTDIR environment variable
+    (no longer needed, see
+    https://gitlab.gnome.org/GNOME/gimp/issues/2496#note_365235 )
+  *  fd2008c5c2 - NEWS: update.
+  *  84ce89a9be - Issue #2501: Confusing wording in "Export Image as
+    PDF" dialog.
+  *  cee9a1a1c6 - Update NEWS
+  *  cd55cb3102 - Issue #2489 - Gimp 2.10.8 layer menu text along path
+  *  ec300891d3 - Update Czech translation
+  *  920f66a420 - Update Ukrainian translation
+  *  936d952312 - Update Ukrainian translation
+  *  9ae2e4932d - configure.ac: escape backslash chars in compiler
+    version string
+  *  7ca3fe6576 - Issue #2473 - Transforming a layer doesn't properly
+    transform its mask
+  *  47103dc28f - Installer: remove lib\gegl-0.2
+  *  ed08c1eded - Installer: include debug symbols for babl/gegl DLLs in
+    lib\*
+  *  3a584ca151 - Issue #2470 - Spacing between grid lines does not stay
+    at 1px ...
+  *  d928ed7252 - libgimpwidgets: add GimpSpinButton
+  *  934d896fa8 - tools: in performance-log-viewer.py, fix "function()"
+    predicate ...
+  *  dd52d8d7a5 - app: in performance logs, add new-lines between
+    variable definitions
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 24 Nov 2018 20:50:56 +0300
+
 gimp-devel (2.10.4+git41820-3fd5b50f94-1) unstable; urgency=medium
 
   * Compile

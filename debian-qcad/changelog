@@ -1,3 +1,83 @@
+qcad (3.21.3.7+git6269-844ef95dc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 844ef95dcf621d74e4777d085a9cc3fa546878d9
+  * Date: 1542977913
+  * git changelog:
+  *  844ef95dc - sort attributes by prompt when inserting blocks with
+    attributes
+  *  b981d0d25 - clean up
+  *  71763eadd - set version to 3.21.3.9
+  *  0b2b57383 - fix error messages
+  *  d58b7cfd2 - update translation
+  *  142f99baa - use word verwijslijn for leader
+  *  1f8086266 - set version to 3.21.3.8
+  *  b5f7c904b - clean up
+  *  9b27d494a - add workaround API for non-scriptable QModelIndexList
+  *  6a28bdb48 - update script bindings
+  *  39729070d - add property attribute scale to indicate property is
+    scale value (e.g. 1:2)
+  *  0ec59381e - add property attribute scale to indicate property is
+    scale value (e.g. 1:2)
+  *  6799b7112 - fix disappearing reference points
+  *  3d675c4bd - spelling
+  *  15fe0d3bd - allow paste operation without any given offsets
+    (default to 0,0)
+  *  43847bd88 - allow splines from two fit points
+  *  b95961135 - update translations
+  *  de767c00e - fix matrix panel for misc draw
+  *  f41b0fa18 - update translations
+  *  6a4611296 - update credits
+  *  800f429db - update translations
+  *  104213fdc - update user manual
+  *  d91063ecf - update translation
+  *  d1dc0f643 - fix back icon in CAD toolbar
+  *  d15ba0264 - back port
+  *  8ec3c9726 - add Qt 5.12 script bindings
+  *  b5347fa0a - workaround for Qt 5.12 icon bug
+  *  41301affe - disable legacy code
+  *  b03a26775 - fix flushTransactions
+  *  f12ef1e3f - add workarounds for Qt 5.12 bugs
+  *  1ac697e73 - update
+  *  fb965cfc1 - update script bindings
+  *  f1f5dd839 - remove constness to allow access to document
+  *  badaa2906 - set version to 3.21.3.7
+  *  c3e8c177e - avoid duplicate property types
+  *  09ac3fe4e - update warning
+  *  7546b38b1 - remove obsolte translation marker
+  *  d06cd2619 - make view > toolbars and widgets > widgets / toolbars
+    translatable
+  *  8a4ce4acd - add preference pages to pro files (fix translation)
+  *  ca1fa5553 - make file dialog filter strings translatable
+  *  d777a7e4d - update translations
+  *  2406248bb - update translations
+  *  cbc496a46 - update translations
+  *  a421db5dc - update translations
+  *  7eaa4b042 - update translations
+  *  b6c55c0af - update translations
+  *  a0d94a25b - update Czech translation
+  *  407c940a9 - update example rendering file
+  *  5c5b0f624 - fix linetype scale when exporting
+  *  55a105f0c - fix linetype scale when exporting to bmp
+  *  2597443f7 - set version to 3.21.3.6
+  *  bdccda00c - update strings
+  *  0270c6e50 - update translations
+  *  cfbc398b7 - add standard warning
+  *  2b0f0125d - flip label with arrow
+  *  dd8eefa95 - update
+  *  2b9139243 - update API doc
+  *  d5ab867d0 - allow conversion from int in
+    RObject::getCustomDoubleProperty
+  *  979cda07a - fix restoring of QRadioButton from unit test
+  *  f54c2887f - update translations
+  *  fd69e65e6 - fix argument default value handling
+  *  6458f8201 - fix default value for int list argument
+  *  b0b29679b - clean up
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 24 Nov 2018 16:22:18 +0300
+
 qcad (3.21.3.2+git6206-9ab93a6fa-1) unstable; urgency=medium
 
   * Compile

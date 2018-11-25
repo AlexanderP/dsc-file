@@ -1,3 +1,81 @@
+audacity (1:2.3.0+git9554-7c0d05fc1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 7c0d05fc18df73789f8af0c89d75ff6fe5fadec5
+  * Date: 1542743551
+  * git changelog:
+  *  7c0d05fc1 - Fix for bug 2011 - Label Editor
+  *  85af1b981 - Fix for bug 2030 - Manage dialog
+  *  e65e1d39d - Fix for bug 2013
+  *  005299155 - 64 bit wxWidgets and Audacity builds for Mac...
+  *  296f84615 - Work around the other link problem, but I don't know
+    what consequences...
+  *  7c78a9177 - Fix one of the two 64 bit link errors
+  *  897f8bf0e - New configs now really 64 bit; they compile, almost
+    link...
+  *  bd31c0de6 - Must change compiler options to build sbsms for 64 bits
+  *  541f5ea99 - Must add command-line compiler option to build libmad
+    for 64 bits
+  *  781da7aba - Differences in some generated config headers for x86_64
+    lib-src build
+  *  2f8bdcd28 - Add mac/config/x86_64 duplicating the i386 subtree
+  *  a84bcfaf5 - New configurations and schemes for XCode...
+  *  407b7fab4 - build_wxwidgets now loops over two architectures;
+    change install path...
+  *  fe19c848b - Abstract out the architecture in build_wxwidgets script
+  *  93bf8d175 - Remove mac/scripts/build_wxwidgets2
+  *  a7583da34 - Include Experimental.h before a use of
+    EXPERIMENTAL_DA...
+  *  f4b209e4f - Eliminate warning building mod-null and mod-script-pipe
+  *  c33ae6624 - 0 Mac compile warnings; ignore deprecations; treat
+    warnings as errors
+  *  5578a0490 - MacOS build treats warnings as errors
+  *  d40d56a0f - MacOS build: don't warn about deprecated functions...
+  *  8f4da13a7 - lib-src changes to fix compiler warnings in Mac
+    build...
+  *  cd4fa7bdb - lib-src/libid3tag: remove warnings...
+  *  73452e96e - lib-src/libsndfile: fix warnings about bit-shifting
+    negative constant
+  *  449bd3847 - lib-src/libsndfile: fix warning about format argument
+    type mismatch
+  *  90b2e823e - lib-src/libscorealign: fix warning about vacuous self-
+    assignment
+  *  a3afdf80d - lib-src/libnyquist: fix warning about always-false
+    comparison...
+  *  a05812f7e - lib-src/libmad: fix warning...
+  *  03af971f8 - lib-src/portmidi/porttime: fix warning about macro
+    redefinition...
+  *  548f22189 - lib-src/twolame/libtwolame: eliminate warnings...
+  *  2fec472ba - lib-src/libnyquist: eliminate register local variables
+  *  14bd1cad2 - lib-src/libnyquist/nyquist/xlisp: fix duplicate "const"
+  *  a4f9de784 - lib-src/portsmf: extra parens around intentional
+    if/while assignments
+  *  263fbff02 - lib-src/portsmf: string literals as const char *, not
+    char *
+  *  7c25e555a - Fix warning about redefinition of a macro
+  *  6d679a65e - Fix 4 warnings related to Objective C++
+  *  6e14dab4f - Fix a clang compiler warning
+  *  53fcd07b7 - A few changes that will be needed for 64 bit Mac
+    compilability
+  *  41d0ac1b6 - reinterpret_cast not C-style cast.  (The cast value is
+    always 0).
+  *  7d0b4c582 - Make VSTControlOSX.mm compilable with _LP64
+  *  7c1216edc - Redo resource RAII without the dubious casts
+  *  cc34abea6 - bug 2018 - Equalization does not retain settings
+  *  520659f0d - Update VRulers after macro vzoom command
+  *  42e0cd7f2 - Add 'vzoom' and 'kind' to GetInfo Tracks
+  *  6c71e02d2 - Add 'Advanced Vertical Zooming' to 'View' menu
+  *  277473f0d - Add min and max VZoom to SetTrackInfoCommand
+  *  a18680647 - Allow Unicode filenames via mod-script-pipe commands
+  *  d9b5129e6 - Fix assert when mixing to new track
+  *  aceb34d78 - Add aud-do-support.lsp to Windows build
+  *  4ce666e09 - Add aud-do-support.lsp to mac build
+  *  26e19bfd5 - Add aud-do-support.lsp for Linux build
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 24 Nov 2018 12:21:04 +0300
+
 audacity (1:2.3.0+git9504-2d650fa0e-1) unstable; urgency=medium
 
   * Compile

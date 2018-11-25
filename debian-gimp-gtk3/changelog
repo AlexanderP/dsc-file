@@ -1,3 +1,126 @@
+gimp-gtk3 (2.99.0+git42513-7ce5abd35e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 7ce5abd35e6c02288196ab966a009fb4314ff6f3
+  * Date: 1543055925
+  * git changelog:
+  *  7ce5abd35e - plug-ins: remove now useless code under
+    GTK_CHECK_VERSION(3, 0, 0).
+  *  ec78a7e419 - app: gdk_test_simulate_key() Win32 replacement code
+    unneeded on master.
+  *  28d376ae3e - tests: OSX - activate GIMP window when tests are
+    running
+  *  7921b24a89 - tests: implement gimp_test_utils_synthesize_key_event
+    on OSX/QUARTZ
+  *  4e3441137e - tests: fix clang compilation error on test-eevl.c
+  *  0a123a81a3 - Issue #2553 - Can't Move Imported or Pasted Path
+  *  ea2c9eefb3 - app: do not activate OSX menu if tests are running to
+    prevent crash
+  *  53f0f93556 - add  to fix test link on OSX
+  *  eb042e6c87 - app: add "line-art-max-grow" property to the bucket
+    fill options.
+  *  dd3d9ab3dd - app: make sure we reset tool modifier state before
+    saving options.
+  *  5a4754f32b - app: properly (bucket) fill created splines and
+    segments in line art.
+  *  3467acf096 - app: replace gegl:watershed-transform with custom
+    algorithm.
+  *  8304d2b5b7 - Issue #1025 - Place taken by expanded "Advanced Color
+    Options"...
+  *  36c885a6df - app: fix a line art leak in bucket fill tool.
+  *  963eef8207 - app: priority map now unneeded for gegl:watershed-
+    transform.
+  *  c288b28ac8 - libgimpbase, libgimp, app: pass misc. GEGL config to
+    plug-ins
+  *  77c24ca16c - libgimpbase: add _gimp_wire_{read,write}_int64()
+  *  9afa42ab91 - libgimpbase: don't leak GPConfig::icon_theme_dir
+  *  b4e12fbbbb - app: add
+    gimp_pickable_contiguous_region_prepare_line_art_async() ...
+  *  663a6c7011 - app: in bucket-fill tool, cancel async on tool
+    destruction
+  *  62baffed98 - app: in gimp-parallel, boost priority of waited-upon
+    asyncs
+  *  965da12b35 - app: add GimpAsync::waiting signal
+  *  2e45c4c8c8 - app: in bucket-fill tool, fix potential leak when
+    computing line-art
+  *  4575949cdf - app: in the bucket-fill tool, avoid CRITICALs when
+    computing line-art ...
+  *  03a928409a - libgimpwidgets: install gimpspinbutton.h
+  *  79571231c5 - app: end point detection uses both the end point rate
+    and clamped value.
+  *  047265333c - app: better handle drawable and image update for line
+    art computation.
+  *  3f58a38574 - app: remove now useless erosion size option.
+  *  a29f73bd9a - Issue #2224 - Use the "Swap folder" setting for the
+    GEGL cache
+  *  9d34e9334f - Update Polish translation
+  *  b00037b850 - app: improve end point detection for smart
+    colorization.
+  *  287d90ba9e - app: force the image flush after a selection fill.
+  *  72c6749634 - Update Spanish translation
+  *  3821ce4bcd - configure.ac: require babl >= 0.1.60
+  *  786bfa5171 - app: in scale tool, scale around center even when
+    using numeric input
+  *  255f2e1cdf - app: fix uninitialized variables.
+  *  05a4437d9a - app: more gimp-parallel fixes
+  *  115fc174f2 - app: indentation fix in gimp-parallel.cc
+  *  2736cee577 - app: remove gimp_parallel_distribute(); use
+    gegl_parallel_distribute()
+  *  43e3939d4a - configure.ac: require GEGL >= 0.4.13
+  *  afe1de950f - Issue #2501: Confusing wording in "Export Image as
+    PDF" dialog.
+  *  969143c436 - app: recompute line art if needed after a bucket fill
+    commit.
+  *  824af12438 - app: edit the bucket fill tool options with new line
+    art options.
+  *  e1c4050617 - app: bucket fill tool with a "paint-style"
+    interaction.
+  *  a3cda4abbe - app: make line art pre-computation in threads.
+  *  f246f40494 - app: compute line art in advance.
+  *  b9de1076ed - devel-docs: small update for GEGL buffer leak
+    debugging.
+  *  93a49951a0 - app: fix line art labellization.
+  *  c4ff81540d - app: better use GeglBufferIterator!
+  *  f02993fb9c - app: directly update the mask buffer with
+    gegl_node_blit_buffer().
+  *  410c747509 - app: create a simple priority map for line art
+    selection flooding.
+  *  e905ea7ba2 - app: with recent gegl:watershed-transform, no need for
+    intermediate...
+  *  0c80f8a718 - app: use char array for temporary data (rather than a
+    GEGL buffer).
+  *  f975f15ec0 - app: use simpler allocated variables.
+  *  f19181dcf8 - app: make visited into single-level allocated array.
+  *  910d7934f5 - app: fix stroke labels in
+    gimp_lineart_estimate_stroke_width().
+  *  1822ea399a - app: use more GeglBufferIterator.
+  *  041a8f1eec - app: use GeglBufferIterator rather than
+    gegl_buffer_sample|set().
+  *  fcd038eb16 - app: babl types returned by choose_format() must be
+    float!
+  *  8502b4e743 - app: implement second step for line art
+    selection/filling.
+  *  8ed12b1b98 - app, libgimpbase: add GIMP_SELECT_CRITERION_LINE_ART
+    selection type.
+  *  85e6700aac - Help menu: various updates
+  *  a2da1cd596 - Issue #2489 - Gimp 2.10.8 layer menu text along path
+  *  0c20d2bf55 - Update Czech translation
+  *  c0b107531e - configure.ac: escape backslash chars in compiler
+    version string
+  *  45fc30caa7 - Issue #2473 - Transforming a layer doesn't properly
+    transform its mask
+  *  658d9f3a82 - Issue #2470 - Spacing between grid lines does not stay
+    at 1px ...
+  *  7ab9ee2686 - libgimpwidgets: add GimpSpinButton
+  *  84227fbfec - tools: in performance-log-viewer.py, fix "function()"
+    predicate ...
+  *  c7f1730702 - app: in performance logs, add new-lines between
+    variable definitions
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 24 Nov 2018 21:36:59 +0300
+
 gimp-gtk3 (2.99.0+git42443-c61138f8f0-1) unstable; urgency=medium
 
   * Compile

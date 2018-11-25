@@ -1,3 +1,116 @@
+freecad-daily (0.17+git15253-73df4e6fc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 73df4e6fc0ed90a30e5958232dbc737d8a47e492
+  * Date: 1542903937
+  * git changelog:
+  *  73df4e6fc - Arch: Fixed default axis bubble size
+  *  652e1dbdd - Material: Fixed encoding bug
+  *  9fc8446c9 - Notepad reliability
+  *  54dd7c621 - Draft: Fixed buggy ghost tracker
+  *  3f585f4cf - More readable splash image
+  *  608d42d3c - fix ViewProjMatrix::getProjectionMatrix
+  *  a3129d333 - Changed splash screen, to remind us of it...
+  *  024540dbb - Fixed coverity issues
+  *  36e3d5ef6 - Fix scan coverity issues: CID 184350:  Null pointer
+    dereferences
+  *  82fbdbb32 - Explicitly set CMake's CMP0072 to OLD.
+  *  3799b2a30 - Fixed coverity issues
+  *  b1d6770ff - Fixed coverity issues
+  *  ddb20468a - some additions to pR 1794: add a special
+    XMLAttributeError class to indicate an error when accessing a
+    missing attribute in PropertyContainer::Restore make error handling
+    more flexible
+  *  7216dba2f - remove forgoten exception
+  *  b6a37e153 - Example implementation
+  *  9a34a93db - Extension of XMLReader to facilitate partial restores
+  *  10b12dded - fix exception catching by reference
+  *  8db80c5c9 - Property: dropping isorderrelevant boolean member in
+    favour of bit in the status of the properties
+  *  1b152ee68 - Example code of propagating the result of the partial
+    restore
+  *  714604e58 - ZipStream: Change precision from 12 to 16 decimals
+  *  8176b7129 - SketchObject: Activate relevant propertylist order
+  *  d62e88640 - PropertyGeometryList: enable a partial recover on
+    certain errors
+  *  591718f91 - App:Geometry make LineSegments do a best effort for
+    recovering erroneus data
+  *  580bb268d - make App::Property aware of whether the order on the
+    list is relevant or not
+  *  a459ee3f2 - New Base::Exception type RestoreError
+  *  ddfa51056 - Fix View position in ClipGroup
+  *  7909ce83f - Fix #3699 ClipGroup Regression from v0.17
+  *  e67b84c5e - Fix #3698 Detail of Section View
+  *  893f03871 - improve whitespaces
+  *  570576308 - Sketcher: Improving group constraint preselection
+  *  6df9b895f - Sketcher: Fillet increase debugging verbose and disable
+    by default
+  *  fc5b6288c - Draft: re-added missing arcFrom2Pts function in
+    DraftGeomUtils
+  *  6d836ad7a - improve drag and drop in tree view
+  *  f89b99639 - Improvement and correction drags and drops in tree
+    views.
+  *  e62304976 - use more speaking variable names
+  *  e58f72933 - fix DocumentObject::isInInListRecursive and
+    DocumentObject::isInOutListRecursive
+  *  c009a206f - make _getInListRecursive much more efficient by
+    avoiding to process objects multiple times
+  *  547993689 - remove superfluous error messages in In/Out list
+    methods
+  *  b3721f861 - fix re-throwing an exception
+  *  af36a78f7 - harmonize settings for DAGView with other dockable
+    windows
+  *  d86c83d6c - Enable again the standalone tree and property view by
+    default
+  *  1458c2364 - fix file guards
+  *  23addab20 - fix exception message
+  *  7dc13bd2d - Replace Base::Exception with appropriate subclass
+  *  e02695b91 - Replace Base::Exception with appropriate subclass
+  *  b0247d184 - Replace Base::Exception with appropriate subclass
+  *  7acdb56d9 - Replace Base::Exception with appropriate subclass
+  *  56db19824 - Replace Base::Exception with appropriate subclass
+  *  f6205c6b9 - Selection view: only select search results when enter
+    is pressed
+  *  fc16bcbfc - Replace Base::Exception with appropriate subclass
+  *  f9e487e4b - Replace Base::Exception with appropriate subclass
+  *  c5a5eb6a8 - Replace Base::Exception with appropriate subclass
+  *  9d80db279 - Replace Base::Exception with appropriate subclass
+  *  560b415f1 - Replace Base::Exception with appropriate subclass
+  *  f34ec4534 - Replace Base::Exception with appropriate subclass
+  *  4f02b209f - fixes 0003689: Snap to grid checkbox in edit control
+    widget does not update
+  *  da09f7c3d - OpenSCAD: fix error in workaroundforissue128needed with
+    date formats (YYYYMMDD vs YYYY.MM.DD)
+  *  a7094210f - Fix scan coverity issues: CID 184294: Uncaught
+    exception CID 183597: Unchecked return value CID 175809: Dereference
+    before null check CID 175810: Logically dead code CID 133000:
+    Uninitialized scalar variable CID 133001: Uninitialized scalar
+    variable CID 183591: Explicit null dereferenced
+  *  735b0a18b - [AddonManager] Fix bug to install macros' other files
+  *  7e1acd756 - Restore removed rpkg.conf
+  *  b8ed93605 - Fix scan coverity issues: CID 184299:  Null pointer
+    dereferences  (FORWARD_NULL) CID 184297:  Error handling issues
+    (UNCAUGHT_EXCEPT) CID 184296:  Uninitialized members  (UNINIT_CTOR)
+    CID 184292:  Uninitialized members  (UNINIT_CTOR)
+  *  6a6ea0a5a - add search function to tree view
+  *  c18785fdb - Arch: fixed bug in Schedule
+  *  36f5421b3 - ship: repair hydrostatics-plotting for py2
+  *  de074ec4f - fixes 0003518: Expressions (fx) not updated
+  *  04005b5e4 - fixes 0003680: Export (Ctrl+E) doesn't check to make
+    sure that object being exported is a model at all
+  *  9d384bd74 - Fix #3674 inverted Detail from DPG
+  *  7ed7b7add - Use github api to find the total number of commits
+  *  9e2acc477 - When activating a part container in the tree view make
+    sure all parent items are expanded
+  *  442e2dd38 - add method to check if an open transaction is empty
+    This is needed to avoid to incorrectly abort a transaction if a
+    recompute was done between opening and closing an editor in the
+    property view
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 24 Nov 2018 22:18:53 +0300
+
 freecad-daily (0.17+git15182-b65faeff7-1) unstable; urgency=medium
 
   * Compile

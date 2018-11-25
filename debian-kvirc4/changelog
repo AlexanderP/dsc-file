@@ -1,3 +1,36 @@
+kvirc (4:5.0.0~git-7354-665fc15dd-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 665fc15dde8665e3fdec83b038000952296e63e0
+  * Date: 1542904285
+  * git changelog:
+  *  665fc15dd - SASL: Add support for EXTERNAL method. Closes #2258
+  *  958ec9fb7 - Travis: use sftp instead of scp to upload .dmg
+  *  32ff5147f - Travis: recreate both SSH keys, and store both
+    encrypted variables in .travis.yml
+  *  e4591ade4 - Travis: fix keys again
+  *  9e9a70ca6 - Travis: oops, wrong key
+  *  1bd754937 - Travis: Fix SSH for upload
+  *  77fa54b0a - AppVeyor: don't push another copy of CMakeCache.txt
+  *  48ddde812 - Travis: try to upload .dmg
+  *  c317a58eb - AppVeyor: try to upload .exe
+  *  2725220ee - Add anonymous namespace to build_detector.pl too.
+  *  0d9c27c1c - Add anonymous namespace around detector.cpp
+  *  e4a34cb9b - Apply all modernize-* fixes from clang-tidy except for
+    modernize-use-auto
+  *  3f98a2494 - Use C++14
+  *  17563d6d7 - Travis: use GCC 6
+  *  78a879686 - AppVeyor: Remove Qt5.9 workaround for 32-bit builds
+    since AppVeyor now uses Qt 5.9.7
+  *  95b08e0f5 - KviIrcView: Fix an issue with copying short text across
+    chunks
+  *  035125487 - Add a comment
+  *  d9555e14e - AppVeyor: Workaround for Qt5.9 bug
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 23 Nov 2018 20:12:24 +0300
+
 kvirc (4:5.0.0~git-7336-e73d79f75-1) unstable; urgency=medium
 
   * Compile
