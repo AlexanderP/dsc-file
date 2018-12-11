@@ -1,3 +1,48 @@
+gscan2pdf (2.2.1+git2908-a8ca6cc4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: a8ca6cc42cbd3982dfba7f002a9e52f8dcbd72d8
+  * Date: 1544133058
+  * git changelog:
+  *  a8ca6cc4 - Update to Czech translation
+  *  ea2485a6 - Update to German translation
+  *  16bcb10b - Bumped version to 2.2.1
+  *  e60ab7ab - Fix centering when zooming with mouse wheel
+  *  ca9a9c25 - Lock initial view of OCR output to image when switching
+    pages
+  *  cfa27bef - Ignore trailing whitespace in error messages when
+    filtering them
+  *  6322247b - Tidy t/351_unpaper.t
+  *  2f218d20 - Clear OCR output canvas when switching pages
+  *  61854323 - Fix unpaper test failure parsing error with page-UUID
+    and process name
+  *  361f7641 - Post-release commit
+  *  1107a86b - Bumped version to 2.2.0
+  *  60405087 - Lock panning of image and OCR output views
+  *  cb5ca297 - Use stock close button on message dialog
+  *  2eef1fbd - Update to Russian translation
+  *  7b7a4f0b - Update to German translation
+  *  1b81b047 - Use default text if the title of a group of scan options
+    is empty
+  *  083c8380 - Update _thread_throw_error() calls that were missing
+    page-UUID and process name arguments
+  *  10d02c26 - Be more tolerant of errors whilst fetching options
+  *  c784c6dd - Collect all warning and error messages in one dialog
+  *  7bfc582d - Fixed visibility of scan widgets when switching from
+    libimage-sane-perl to scanimage
+  *  b8753a04 - Fixed crash switching frontend option in
+    Edit/Preferences between libimage-sane-perl and scanimage
+  *  089f964e - Refactored flatbed_selected() into Scanner::Options
+  *  ebb77bc3 - Fix sporadic test failure
+  *  5f0ddd07 - Modify preference "Force new scan job between pages" to
+    only take effect when scanning from flatbed
+  *  a93ff0f2 - Check validity of device blacklist regex when applying
+    preferences
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 10 Dec 2018 15:40:13 +0300
+
 gscan2pdf (2.1.7+git2883-828289ce-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,31 @@
+clementine-qt4 (1.3.1+git2053-gb789e4b4e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: b789e4b4ee8ff0b5cd65883261f21c930bf40a26
+  * Date: 1544125648
+  * git changelog:
+  *  b789e4b4e - appdata.xml - Fix stray slash (#6232)
+  *  b57c5a77f - Use c++0x instead of 11 for backwards compat
+  *  66b0912db - Update appdata. (#6229)
+  *  95187ed0a - Fix encoding of GError messages when logging. (#6228)
+  *  6a37af7b4 - Remove ultimate lyrics parser (#6225)
+  *  2d1f6cd23 - Replace Q_OS_MACOS with Q_OS_MAC (#6223)
+  *  9f946a289 - Improvements to makefiles and make components optional
+    (#6221)
+  *  139bc1f5a - Convert NULL to nullptr (#6220)
+  *  587e72b8c - Fix library search queries on fts columns (#6219)
+  *  289ea31f8 - Fix saving geometry and fancytab settings (#6217)
+  *  122d28eab - Fix device loader error messages. (#6215)
+  *  3e48f7b15 - Fix libsoup DLL name
+  *  e20f0d255 - Do not include echonest dll
+  *  b788f07c6 - Include libsoup and libpsl DLLs
+  *  c583ddd9c - Explicitly find dynamic version of glew
+  *  0b54e1ff0 - Updated accessibility check logic to fix Mojave crash
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 10 Dec 2018 11:02:48 +0300
+
 clementine-qt4 (1.3.1+git2035-g2d07ea716-1) unstable; urgency=medium
 
   * Compile

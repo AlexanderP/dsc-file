@@ -1,3 +1,155 @@
+freecad-daily (0.17+git15363-9be3e6333-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 9be3e633328335f1172456f5857219b7a08c70a5
+  * Date: 1544280838
+  * git changelog:
+  *  9be3e6333 - mesh segmentation algorithm for surfaces
+  *  f8f85f007 - Improve "links go out of scope" message
+  *  f76f19732 - Use Global Scope for PathArray Links
+  *  bf3a1fdaa - Test for binormal == Z sb binormal parallel Z
+  *  305964676 - Fem: Elmer: rename function iterkeys -> keys
+  *  1476caf28 - py3: iteritems -> items, iterkeys -> keys
+  *  9d395235b - Comment out osx builds
+  *  2cbf323e8 - another py3 compatibility fix
+  *  bb226d197 - first step vs py3 compatibility
+  *  e48254d98 - Draft: allow cross-CS links for Clone
+  *  20fe77478 - mesh segmentation algorithm for surfaces
+  *  c507ab9ef - Arch: minor bugfix in arch reference
+  *  a92014a36 - rework mesh segmentation dialog
+  *  36447d71c - FEM: ccx tools, simplify member collection
+  *  1311bac12 - FEM: solver frame work ccx and z88, simplify member
+    collection
+  *  945497c73 - FEM: utils, add some defs to collect analysis group
+    member
+  *  80f2ccc30 - FEM: utils, rename get single member
+  *  592979b82 - FEM: utils, rename get member
+  *  e5c8c18e8 - FEM: elmer writer, use class methond instead of utils
+    method directly
+  *  5c4b28759 - FEM: solver tasks, delete duplicate methods
+  *  93e179ba0 - FEM: unit tests, extend commends to command for every
+    module test
+  *  0e26ce1f2 - Add id=PageName to exported Svg
+  *  14b780c0e - Add Parameter to Control Section Line Appearance
+  *  7b4bc50e5 - Make Edge Selection Area Adjustable
+  *  ac15cda1d - Add US Letter size blank template
+  *  990742280 - Display correct symbols for Minute/Second
+  *  00e6e376c - Add ImperialCivil Units Schema
+  *  eb9aa5c54 - Remove custom translation code
+  *  e40ce74f2 - FEM: unit tests, extend the FEM is derived from test to
+    more Trues
+  *  f3cee7243 - FEM: utils, get rid of duplicate defs
+  *  711d7f52b - FEM: utils, improve method to return the obj type
+  *  f9dd5f2b6 - FEM: utils, rename isOfTypeNew to is_of_type
+  *  e06a541fe - FEM: utils, rename typeOfObj to type_of_obj
+  *  d40b23a14 - FEM: unit tests, move object tests in separate test
+    module and class
+  *  72d6c48bb - FEM: unit tests, better name for unit test FreeCAD file
+    names
+  *  babd88866 - FEM: unit tests, better comments
+  *  5ccd715e3 - FEM: unit tests, rename common class
+  *  9519f122f - FEM: ccx tools, move helper into fem utils module
+  *  44bdb5f99 - FEM: calculix, fix obj type check
+  *  a2024d448 - FEM: z88, fix obj type check
+  *  f6b1ec440 - FEM: z88 writer, raise exception if element type is not
+    supported by Z88
+  *  ef002fdde - Arch: Fixed non-unified extrusion direction in
+    multisolid structures
+  *  8483d8d5c - Draft: Fixed dangling temp snap points
+  *  47fd9d335 - Arch: Fixed wrong extrusion of multisolid structures
+  *  7159d38e8 - Draft: Solved duplication problem - Fixed #2304
+  *  69328ae2f - if activating a workbench raises a general error then
+    add the name to the message
+  *  b12bcc44a - Draft: py3 bugfix
+  *  9a7f97c82 - Fix usage of Reference dialog: + fix memory leak by
+    using QDialog on the stack + open a transaction where needed when
+    making a copy to avoid mess with undo/redo + set proper title and
+    use main window as parent + replace class name Dialog with
+    PartDesignGui::DlgReference
+  *  a899a970c - Fix another 2 missing parentheses
+  *  ccc5ff53f - Fixed py3 sntax errors
+  *  da7b5199f - Some methods become Static, returnOutlines() become
+    more generic purpose etc.
+  *  51b3b3391 - Fix Typo - vbaseFollowLastSement -->
+    vbaseFollowLastSegment
+  *  c88a64e8e - Make Open vertices detection routine accesible to
+    Python
+  *  18e680f28 - Move Open vertices detection routine to SketchAnalysis
+  *  60c668231 - Arch: Fixed buggy display string of BuildingParts
+  *  7a279d776 - Arch: Fixed position of BuildingPart label on start
+  *  cc0949072 - Arch: Remember last wall alignment setting
+  *  4d4f01627 - only save setting if grid view is shown or not
+  *  e654e476f - Make show grid checkbox work again
+  *  6199c95fd - Draft/Arch: minor fixes
+  *  2e03d2f29 - cmake: revert changes for smesh
+  *  b022c7c01 - further cmake changes for conda
+  *  c0644b84e - cmake-changes for conda
+  *  5217b245b - Arch: Added pref option to set default MoveWithHost
+    property
+  *  79ba082c5 - Arch: Fixed IFC export of arch structures with several
+    solids / holes
+  *  bc53910ac - Arch: code cleaning
+  *  34cad5b81 - Draft: Better fix to buggy Move/rotate of Arch
+    BuilfingParts
+  *  0e3cab087 - Draft: Fixed snapping to sectionPlanes
+  *  bdbdf8c6b - FR1973 Draft ShapeString Ui
+  *  5c8a9d2e1 - py3: try to fix online doc problem
+  *  927b49682 - fix converting float list to string list in property
+    editor
+  *  9e870bec2 - Added encrypted chunk.io key to travis file
+  *  426bc0118 - add runtime option to choose between native and Qt file
+    dialogs
+  *  792bb8282 - Drags and drop with groups
+  *  e3de72b13 - Arch: Cosmetic fix to IFC prefs page
+  *  82fd0a8db - Gui: Gesture: add option to disable tilt
+  *  b09fb97ad - Gui: Gesture: fix tilt angle sign
+  *  46d0d4c80 - Gui: Gesture: QPinchGesture angle - sign, degrees, make
+    cumulative
+  *  623a1b5ce - Arch: Cosmetic fixes to arch material UI
+  *  e677afd5c - Arch: Refactored file detection code in Arch References
+  *  7d6e9c4f4 - Misc. typo fix in src/Mod/Arch/ImportIFC.py
+  *  1dded002c - Improve automatic search for matching Shiboken2 config
+    file
+  *  0939f17d6 - Arch: Added IFC export option to disable
+    IfcRectangleProfileDefs
+  *  03e7083dd - Draft: Fixed wrong moving of BuildingParts
+  *  0de83e8b9 - Arch: Reference object now uses file in current dir if
+    not found in stored path
+  *  8f62c85a6 - Arch: Fixed bug in BuildingPart placement
+  *  081e31882 - Arch: Fixed buggy view restore system in BuildingPart
+  *  4d6bcdcb0 - If option USE_QT_FILEDIALOG is used then for Qt5 we
+    still have to set QFileDialog::DontUseNativeDialog
+  *  c0567a599 - Draft: Fixed DXF import of texts
+  *  4dc201e08 - Misc. typo, grammar, and whitespace fixes
+  *  1dbbb4371 - Py3: Port Wizard shaft to Python 3
+  *  a27e33385 - Missing ExceptionProducer init for RestoreError
+  *  5ba794266 - FEM: results, initialize Stats with the appropriate
+    lenght on obj. creation
+  *  16ee13801 - FEM: results, fix stats setting
+  *  d7d52336b - Fix coverity CID 184293
+  *  6c3a4450e - Fix Arrowheads on vertical dimensions
+  *  ea66fcc55 - Arch: Fixed missing 'Create Group' option in
+    BuildingParts
+  *  7ceac311b - add specialized exception type for bad graphs
+  *  42b689b46 - show folder choosing file dialog for StartPage
+    preferences
+  *  c24ff1784 - FEM: special character, Python seams not to like the ü
+    of Jürgen even it is an comment
+  *  f3c5c9a70 - FEM: code formating, more format changes
+  *  0ed87a577 - FEM: code formating, flake8
+  *  72db8632a - FEM: code formating, print function
+  *  d150dec13 - FEM: make file headers title use the same schema in all
+    fem(gui)objects/
+  *  bf779155d - FEM: solver, make uniform copyright and developer info
+  *  432ae644e - FEM: solver, make file header title use the same schema
+    in all solver modules
+  *  29eeb6c2d - fix crash if origin feature doesn't exist when trying
+    to create dependency graph
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 09 Dec 2018 16:47:57 +0300
+
 freecad-daily (0.17+git15253-73df4e6fc-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,128 @@
+gimp-devel (2.10.8+git41938-df475195d4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: df475195d441512431d479de8b3256a02c3192c9
+  * Date: 1544469580
+  * git changelog:
+  *  df475195d4 - app: in gimp_widget_blink_cancel(), avoid redrawing
+    non-blinking widget
+  *  a8841a3c07 - app: in all tools, blink lock box when the current
+    item is locked
+  *  c237ee3c23 - app: add gimp_tools_blink_lock_box()
+  *  66a9dffa2e - app: in gimp_widget_blink(), cancel blinking of parent
+    widgets
+  *  ace9b12205 - app: in the paint tools, blink mode box when the
+    current mode is invalid
+  *  a42f2cb2e7 - app: in the transform tools, blink type box when
+    there's no item to transform
+  *  92c6f87391 - app: in the move tool, blink type box when there's no
+    item to move
+  *  02ccab9e7e - app: in the selection tools, blink mode box when the
+    current operation is invalid
+  *  95deaa7bf3 - app: clean up size group code in the preferences
+    dialog
+  *  acc15e614a - Issue #1299 - Add selection of default export file
+    type
+  *  e68fdd537d - Updated Italian translation
+  *  d797592223 - Update Polish translation
+  *  a2c20b1539 - Issue #2635 - Segfault when using measuring tool
+  *  ebe209f463 - Fixed term for unsharp mask in italian
+  *  18bc8b8933 - Updated Italian translation
+  *  bffe0c6965 - NEWS: update.
+  *  96d67fd1b2 - Issue #2495: many tablets broken by GIMP 2.10.8.
+  *  741a659a12 - webpmux: fix memory leak by calling WebPMuxDelete()
+  *  ab851924dd - plug-ins: make various usage of g_file_replace()
+    safer.
+  *  48e14ef3b9 - app, libgimpconfig: make various usage of
+    g_file_replace() safer.
+  *  c9da44bed3 - app: do no overwite XCF when an error occurred at
+    saving time.
+  *  61a181933c - app: in GimpProjection, fix reinit. of current row
+    when chunk height changes
+  *  09863478db - Revert "app: save images with fractional grid
+    coordinates as version-10 XCFs"
+  *  6ca294abe0 - app: save images with fractional grid coordinates as
+    version-10 XCFs
+  *  0a2aac7ce1 - libgimp: actually use the path expanded in the
+    previous commit
+  *  f6350e1b5a - libgimp: need to expand config->swap_path in
+    gimp_config()
+  *  b06ffe4334 - Issue #2604 - XCF saving bug in xcf_save_buffer()
+  *  9baae75c5c - Integrate the logic of profile saving with metadata
+    saving
+  *  4cdfbee64e - Update Russian translation
+  *  86fd5e3b67 - Update Russian translation
+  *  a865f5e83e - Issue #701 - Add the ability to embed the GIMP built-
+    in sRGB profile...
+  *  b25117376b - plug-ins: always save the color profile in file-psd
+  *  fa74fe78f9 - app: don't use direct-buffer fill when some components
+    are masked
+  *  03a4fafe30 - app: mark REPLACE and PASS_THROUGH modes as trivial
+  *  2f5bbe9416 - Issue #701 - Add the ability to embed the GIMP built-
+    in sRGB profile...
+  *  8a90d8b8b2 - Issue #1297 - Unhide the items hidden in the Advanced
+    drop-down file...
+  *  5b857dbb4b - libgimpcolor, app, modules, plug-ins: remove
+    GEGL_ITERATOR2 define
+  *  edbda43028 - app: add "direct" parameter to
+    gimp_projection_flush_now()
+  *  fb2db7fe29 - Update Polish translation
+  *  33a015abef - app: fix iterated-over area in gimp_gegl_clear()
+  *  98bf8319b6 - app: another fix to drawable direct-fill criterion
+  *  61b1e7a348 - app: fix drawable direct-fill criterion
+  *  8a131e97f1 - app: optimize simple whole-drawable fill/clear
+  *  5d536afded - app: add gimp_fill_options_fill_buffer()
+  *  2dda622a20 - app: add gimp_layer_mode_is_trivial()
+  *  c4e51b9a45 - app: add gimp_gegl_clear()
+  *  f7f4543416 - app: in GimpPaintCore, align copied undo rect to tile
+    grid
+  *  782d54a615 - app: align drawable undo rectangle to tile grid
+  *  6e82635d4f - app: use gimp_gegl_rectangle_align_to_tile_grid() in
+    gimp:buffer-source-validate
+  *  2b14355689 - app: add gimp_gegl_rectangle_align_to_tile_grid()
+  *  0568490929 - app: a few improvements to gimp-scratch
+  *  54e93cefb3 - Issue #1297 - Unhide the items hidden in the Advanced
+    drop-down file...
+  *  a30087e83e - app: sigh, another gimp-scratch link fix, in config/
+  *  1a6281961e - app: fix gimp-scratch linking in tests/
+  *  5b5027dee1 - app: fix gimp-scratch linking
+  *  806db2e64c - app: #include <string.h> in gimp-scratch.h
+  *  59a3b9e5c0 - app: fix definition signature of
+    gimp_scratch_get_total()
+  *  595218f1d4 - app: in Luminance mode, cache RGBA -> Y fish
+  *  963f036a4a - app: in Luminance mode, replace VLAs with gimp-scratch
+  *  c3ce696ce0 - app: add scratch-total variable to the dashboard
+  *  8593eb88fd - app: add gimp-scratch allocator
+  *  60c7c2e937 - Updated French translation
+  *  f217accbf4 - Update French translation
+  *  d86d017980 - app: in GimpBacktrace Linux backend, don't leak
+    backtrace when dropping threads
+  *  31acea2cf7 - app: in GimpBacktrace Linux backend, make
+    blacklisted_thread_names const
+  *  b493cb51f4 - app: use gimp_async_add_callback_for_object() in
+    various places
+  *  34cb63a048 - app: add gimp_async_add_callback_for_object()
+  *  9001d65804 - app: unref async when removing last callback if idle
+    is pending
+  *  d20efd357a - Update NEWS
+  *  b0b541d670 - app: use gimp_tile_handler_validate_validate() in
+    gimp:buffer-source-validate
+  *  378dc07c7b - app: use gimp_tile_handler_validate_validate() in
+    GimpProjection
+  *  a4fb3e11d6 - app: add gimp_tile_handler_validate_validate()
+  *  50b3c2b8ba - app: add GimpTileHandlerValidate::validate_buffer()
+    vfunc
+  *  cc81f66f12 - app: add
+    GimpTileHandlerValidate::{begin,end}_validate() vfuncs
+  *  18815512f2 - app: avoid starting the chunk renderer while finishing
+    drawing a projection
+  *  6ab3ecaca2 - app: avoid flushing bufferless projections
+  *  22b11da891 - Update Spanish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 10 Dec 2018 22:30:08 +0300
+
 gimp-devel (2.10.8+git41861-fc7d61a6ea-1) unstable; urgency=medium
 
   * Compile

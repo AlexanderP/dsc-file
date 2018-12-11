@@ -1,3 +1,29 @@
+kvirc (4:5.0.0~git-7365-11890eeaa-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 11890eeaa34f322a04171b41dad2953a1a7a7cb6
+  * Date: 1544357727
+  * git changelog:
+  *  11890eeaa - Remove redundant comments from CMakeLists
+  *  3e54ac6aa - Update build_detector.pl to improve consistency with
+    detector.cpp
+  *  f06b4f039 - Cmake: Specify source file encoding for MSVC
+  *  4d6b5b7d2 - Change MSVC compiler flags
+  *  3689a6d31 - AppVeyor: Remove unused variable, nuget_arch
+  *  86e7789d6 - KviTranslator: Fix incorrect signature in override of
+    translate.
+  *  4dff175cd - Fix compiler warnings in the code.
+  *  ac1830891 - Remove the keyword register from the code.
+  *  9e7188cf1 - SASL: Add option for aborting connection on SASL
+    failure
+  *  7e4dccb26 - Do not track Linux kernel version
+  *  76e98ea66 - KVS away: Do not require connection for all-networks
+    switch
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 10 Dec 2018 09:53:29 +0300
+
 kvirc (4:5.0.0~git-7354-665fc15dd-1) unstable; urgency=medium
 
   * Compile

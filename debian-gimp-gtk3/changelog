@@ -1,3 +1,142 @@
+gimp-gtk3 (2.99.0+git42597-5a2dee29d7-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 5a2dee29d76b3d65d41804875581dee30500f270
+  * Date: 1544469557
+  * git changelog:
+  *  5a2dee29d7 - app: in gimp_widget_blink_cancel(), avoid redrawing
+    non-blinking widget
+  *  5a157bf1ba - app: allow switching fill type with Alt even when
+    Pattern fill selected.
+  *  637105b962 - app: in all tools, blink lock box when the current
+    item is locked
+  *  9bdaec3a49 - app: add gimp_tools_blink_lock_box()
+  *  fe139e5662 - app: in gimp_widget_blink(), cancel blinking of parent
+    widgets
+  *  464bf1b0a9 - app: in the paint tools, blink mode box when the
+    current mode is invalid
+  *  17412aa234 - app: in the transform tools, blink type box when
+    there's no item to transform
+  *  c9bc3d7a09 - app: in the move tool, blink type box when there's no
+    item to move
+  *  f990e41609 - app: in the selection tools, blink mode box when the
+    current operation is invalid
+  *  0efa00932b - app: clean up size group code in the preferences
+    dialog
+  *  bfbad0a5ca - Issue #1299 - Add selection of default export file
+    type
+  *  d90b0024f0 - Update Polish translation
+  *  8868dc957d - Update POTFILES.in
+  *  ad831dbc6d - Issue #2635 - Segfault when using measuring tool
+  *  db18c679f3 - app: reorganize the line art code inside a GimpLineArt
+    object.
+  *  27aa87ba8e - Improve pixel format choice UI in PNG exporting
+    options
+  *  ce24e16083 - Issue #2495: many tablets broken by GIMP 2.10.8.
+  *  c9c2397b0d - app: in GimpProjection, fix reinit. of current row
+    when chunk height changes
+  *  411ddb7e48 - Revert "app: save images with fractional grid
+    coordinates as version-10 XCFs"
+  *  a90322278d - app: save images with fractional grid coordinates as
+    version-10 XCFs
+  *  a822603807 - plug-ins: port the GIF plug-in's UI file to GTK+ 3.x
+  *  799f6b14bb - libgimp: actually use the path expanded in the
+    previous commit
+  *  cc835e877d - libgimp: need to expand config->swap_path in
+    gimp_config()
+  *  2168d91cf7 - Issue #2604 - XCF saving bug in xcf_save_buffer()
+  *  c667fdc5c0 - Integrate the logic of profile saving with metadata
+    saving
+  *  7f9379cb32 - Issue #1297 - Unhide the items hidden in the Advanced
+    drop-down file...
+  *  a35b243f9b - plug-ins: always save the color profile in file-psd
+  *  83250eb57c - app: don't use direct-buffer fill when some components
+    are masked
+  *  f508ec8b89 - app: mark REPLACE and PASS_THROUGH modes as trivial
+  *  7ed93452e8 - Issue #1297 - Unhide the items hidden in the Advanced
+    drop-down file...
+  *  540cfa9611 - Issue #1297 - Unhide the items hidden in the Advanced
+    drop-down file...
+  *  92cd2a083b - Updated Slovenian translation
+  *  053e5edc93 - libgimpcolor, app, modules, plug-ins: remove
+    GEGL_ITERATOR2 define
+  *  dac9bfe334 - app: add "direct" parameter to
+    gimp_projection_flush_now()
+  *  62aae3f3a4 - Update Polish translation
+  *  06923d0f65 - app: fix iterated-over area in gimp_gegl_clear()
+  *  42b82419b1 - app: another fix to drawable direct-fill criterion
+  *  660f53d300 - app: fix drawable direct-fill criterion
+  *  dd8268c0a2 - app: optimize simple whole-drawable fill/clear
+  *  45fc4cb4f9 - app: add gimp_fill_options_fill_buffer()
+  *  8adec5fb3a - app: add gimp_layer_mode_is_trivial()
+  *  2e3eab7fbd - app: add gimp_gegl_clear()
+  *  861f356b63 - app: in GimpPaintCore, align copied undo rect to tile
+    grid
+  *  bb9dd049fb - app: align drawable undo rectangle to tile grid
+  *  ce3a6c4fd6 - app: use gimp_gegl_rectangle_align_to_tile_grid() in
+    gimp:buffer-source-validate
+  *  69e5f783c5 - app: add gimp_gegl_rectangle_align_to_tile_grid()
+  *  f27b38808f - app: a few improvements to gimp-scratch
+  *  67d595f651 - app: sigh, another gimp-scratch link fix, in config/
+  *  471fa632cd - app: fix gimp-scratch linking in tests/
+  *  ae6bebb981 - app: fix gimp-scratch linking
+  *  8c9eb1c743 - app: #include <string.h> in gimp-scratch.h
+  *  5d1a79a34f - app: fix definition signature of
+    gimp_scratch_get_total()
+  *  dbab0b557d - app: in Luminance mode, cache RGBA -> Y fish
+  *  70b7316ebc - app: in Luminance mode, replace VLAs with gimp-scratch
+  *  698d1af798 - app: add scratch-total variable to the dashboard
+  *  a8a8655285 - app: add gimp-scratch allocator
+  *  dcfbcc3da0 - Updated French translation
+  *  01f9409902 - app: in GimpBacktrace Linux backend, don't leak
+    backtrace when dropping threads
+  *  c749097dcc - app: in GimpBacktrace Linux backend, make
+    blacklisted_thread_names const
+  *  6103f0e5d0 - app: use gimp_async_add_callback_for_object() in the
+    bucket-fill tool
+  *  7c00cf498a - app: use gimp_async_add_callback_for_object() in
+    various places
+  *  49fd2847ac - app: add gimp_async_add_callback_for_object()
+  *  a779dd3849 - app: unref async when removing last callback if idle
+    is pending
+  *  4dd3e2197a - app: cache fishes per operation instance in layer-
+    modes
+  *  d71efdec20 - app: add the segment and spline max length options for
+    line art.
+  *  f7a4ce1051 - app: some code cleaning in gimplineart.
+  *  83dd94ba6a - app: use gimp_tile_handler_validate_validate() in
+    gimp:buffer-source-validate
+  *  d6f0ca5531 - app: use gimp_tile_handler_validate_validate() in
+    GimpProjection
+  *  82a60997d4 - app: add gimp_tile_handler_validate_validate()
+  *  0ad41cfe0c - app: add GimpTileHandlerValidate::validate_buffer()
+    vfunc
+  *  5a623fc54b - app: add
+    GimpTileHandlerValidate::{begin,end}_validate() vfuncs
+  *  8a47b68194 - app: avoid starting the chunk renderer while finishing
+    drawing a projection
+  *  b07f810273 - app: avoid flushing bufferless projections
+  *  48335f61c3 - Revert "Updated Spanish translation"
+  *  2298c7ab76 - Updated Spanish translation
+  *  e9200d2c00 - webpmux: fix memory leak by calling WebPMuxDelete()
+  *  5d4281944f - app: make GimpBucketFillTool a GimpColorTool.
+  *  744d67939d - app: flood isolated pixels in smart colorization fill.
+  *  6bec0bc82d - app: radius map actually not useful during smart
+    colorization grow step.
+  *  66ec467217 - plug-ins: make various usage of g_file_replace()
+    safer.
+  *  613bf7c5ab - app, libgimpconfig: make various usage of
+    g_file_replace() safer.
+  *  076b53511a - app: do no overwite XCF when an error occurred at
+    saving time.
+  *  d2f9549c9f - app: add possibility to antialias line art
+    colorization.
+  *  c32b0ecc92 - app: simpler code with gegl_node_blit().
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 11 Dec 2018 10:22:18 +0300
+
 gimp-gtk3 (2.99.0+git42513-7ce5abd35e-1) unstable; urgency=medium
 
   * Compile
