@@ -1,3 +1,124 @@
+gimp-devel (2.10.8+git42006-3d9ad63c34-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 3d9ad63c340acbc9858d78ed78970f612b600800
+  * Date: 1545346184
+  * git changelog:
+  *  3d9ad63c34 - Unified transform: enable Constraint:Scale by default
+  *  d70aeea550 - app: improve gradient color-sampling speed
+  *  3943530c50 - NEWS: add various recently merged changes.
+  *  36376b50e9 - Updated Italian translation
+  *  3e1791247b - Update POTFILES.in
+  *  3ef6c2fb96 - app, pdb: more gimp-2-10 only tweak for the smart-
+    colorization.
+  *  487c01f8d1 - app: fix type warning.
+  *  ef12064655 - app: allow setting line art spline and segment length
+    to 0.
+  *  2d409f2d0e - Issue #2664: add a tooltip to "better compression"
+    checkbox.
+  *  86b9738286 - app: do not make line art bucket fill a
+    GimpSelectCriterion anymore.
+  *  7ea2ca26ff - Issue #2495: different code for Windows and Linux on
+    duplicate devices.
+  *  e645cbb386 - devel-docs: 0 at end of layer and channel pointer list
+    is a pointer too.
+  *  fec11389cb - app: allow switching fill type with Alt even when
+    Pattern fill selected.
+  *  a68524d43b - app: reorganize the line art code inside a GimpLineArt
+    object.
+  *  4937d1d8d3 - app: use gimp_async_add_callback_for_object() in the
+    bucket-fill tool
+  *  b1236403cf - app: add the segment and spline max length options for
+    line art.
+  *  1471da20b7 - app: some code cleaning in gimplineart.
+  *  21e776b911 - app, pdb: more gimp-2-10 only tweak for smart
+    colorization.
+  *  73b348de1c - app: make GimpBucketFillTool a GimpColorTool.
+  *  439a44a613 - app: flood isolated pixels in smart colorization fill.
+  *  4fe5dc5d42 - app: radius map actually not useful during smart
+    colorization grow step.
+  *  c4988efdb0 - app: add possibility to antialias line art
+    colorization.
+  *  53fdd19d84 - app: simpler code with gegl_node_blit().
+  *  b00580d4b1 - app: add "line-art-max-grow" property to the bucket
+    fill options.
+  *  706fe079c2 - app: make sure we reset tool modifier state before
+    saving options.
+  *  19c1f2654e - app: properly (bucket) fill created splines and
+    segments in line art.
+  *  e5bea42b6f - app: replace gegl:watershed-transform with custom
+    algorithm.
+  *  e9b8122e18 - app: fix a line art leak in bucket fill tool.
+  *  2934293664 - app: priority map now unneeded for gegl:watershed-
+    transform.
+  *  3c0f1307cc - app: add
+    gimp_pickable_contiguous_region_prepare_line_art_async() ...
+  *  3e5e0e2d37 - app: in bucket-fill tool, cancel async on tool
+    destruction
+  *  1778943152 - app: in bucket-fill tool, fix potential leak when
+    computing line-art
+  *  e996020e19 - app: in the bucket-fill tool, avoid CRITICALs when
+    computing line-art ...
+  *  a83bbf8249 - app: end point detection uses both the end point rate
+    and clamped value.
+  *  4c3fcdb6bb - app: better handle drawable and image update for line
+    art computation.
+  *  6155889315 - app: remove now useless erosion size option.
+  *  c1c544f882 - app: improve end point detection for smart
+    colorization.
+  *  ee582784b7 - app: force the image flush after a selection fill.
+  *  8fb83d7751 - app: fix uninitialized variables.
+  *  fd0f5c50a5 - app: recompute line art if needed after a bucket fill
+    commit.
+  *  b6227b2787 - app: update gimp-2-10 for bucket fill changes for
+    smart colorization.
+  *  6b1d7969ed - app: edit the bucket fill tool options with new line
+    art options.
+  *  808cdc9880 - app: bucket fill tool with a "paint-style"
+    interaction.
+  *  0e1d8ef695 - app: make line art pre-computation in threads.
+  *  32f0a49ecc - app: compute line art in advance.
+  *  6dc959d376 - devel-docs: small update for GEGL buffer leak
+    debugging.
+  *  0cf524e351 - app: fix line art labellization.
+  *  4da35468bc - app: better use GeglBufferIterator!
+  *  8557cd8cfb - app: directly update the mask buffer with
+    gegl_node_blit_buffer().
+  *  8dc6bcafa3 - app: create a simple priority map for line art
+    selection flooding.
+  *  687d058416 - app: with recent gegl:watershed-transform, no need for
+    intermediate...
+  *  3b0a312e7e - app: use char array for temporary data (rather than a
+    GEGL buffer).
+  *  325398fcf9 - app: use simpler allocated variables.
+  *  95bbb26252 - app: make visited into single-level allocated array.
+  *  71ec6a9849 - app: fix stroke labels in
+    gimp_lineart_estimate_stroke_width().
+  *  b1a3792aae - app: use more GeglBufferIterator.
+  *  6dbd12a915 - app: use GeglBufferIterator rather than
+    gegl_buffer_sample|set().
+  *  13466ba7e7 - app: babl types returned by choose_format() must be
+    float!
+  *  239be8ecc8 - app: implement second step for line art
+    selection/filling.
+  *  bde56bdfdc - app, libgimpbase: add GIMP_SELECT_CRITERION_LINE_ART
+    selection type.
+  *  9a6aa31681 - app: show the layer mode dropdown list properly.
+  *  e17daf66e2 - app: add gtk_combo_box_set_wrap_width for scale menu
+  *  4e54ac9cdd - app: update definition of "{cache,swap}-compressed"
+    dashboard vars
+  *  deb20726f1 - Update Polish translation
+  *  7c9629c01f - Updated Italian translation
+  *  fd297f943b - app: in the warp tool, blink behavior combo when the
+    current behavior is invalid
+  *  6f4e233cf0 - app: in the warp tool, blink stroke frame when no
+    events are selected
+  *  a8ef7db616 - app: s/GEGL_WARP_BEHAVIOR/GIMP_WARP_BEHAVIOR/
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 22 Dec 2018 12:49:58 +0300
+
 gimp-devel (2.10.8+git41938-df475195d4-1) unstable; urgency=medium
 
   * Compile

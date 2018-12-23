@@ -1,0 +1,125 @@
+diff -crB myrulib-0.29.16/myrulib-0.29.16/sources/MyRuLib/controls/FbNotebook.cpp myrulib-0.29.16-patched/myrulib-0.29.16/sources/MyRuLib/controls/FbNotebook.cpp
+*** myrulib-0.29.16/myrulib-0.29.16/sources/MyRuLib/controls/FbNotebook.cpp	2017-05-01 16:37:34.665248914 +0300
+--- myrulib-0.29.16-patched/myrulib-0.29.16/sources/MyRuLib/controls/FbNotebook.cpp	2017-05-01 17:28:59.804199167 +0300
+***************
+*** 938,943 ****
+--- 938,960 ----
+      m_activeColour = colour;
+  }
+  
++ void WxAuiDefaultTabArt::DrawBorder(wxDC& dc,
++                                     wxWindow* wnd,
++                                     const wxRect& rect)
++ {
++     return;
++ }
++ 
++ int WxAuiDefaultTabArt::GetBorderWidth(wxWindow* wnd)
++ {
++     return 2;
++ }
++ 
++ int WxAuiDefaultTabArt::GetAdditionalBorderSpace(wxWindow* wnd)
++ {
++     return 2;
++ }
++ 
+  // -- WxAuiSimpleTabArt class implementation --
+  
+  WxAuiSimpleTabArt::WxAuiSimpleTabArt()
+***************
+*** 1380,1385 ****
+--- 1397,1419 ----
+      m_measuringFont = font;
+  }
+  
++ void WxAuiSimpleTabArt::DrawBorder(wxDC& dc,
++                                    wxWindow* wnd,
++                                    const wxRect& rect)
++ {
++     return;
++ }
++ 
++ int WxAuiSimpleTabArt::GetBorderWidth(wxWindow* wnd)
++ {
++     return 2;
++ }
++ 
++ int WxAuiSimpleTabArt::GetAdditionalBorderSpace(wxWindow* wnd)
++ {
++     return 2;
++ }
++ 
+  //-----------------------------------------------------------------------------
+  //  FbBaseTabArt
+  //-----------------------------------------------------------------------------
+diff -crB myrulib-0.29.16/myrulib-0.29.16/sources/MyRuLib/controls/FbNotebook.h myrulib-0.29.16-patched/myrulib-0.29.16/sources/MyRuLib/controls/FbNotebook.h
+*** myrulib-0.29.16/myrulib-0.29.16/sources/MyRuLib/controls/FbNotebook.h	2017-05-01 16:37:34.665248914 +0300
+--- myrulib-0.29.16-patched/myrulib-0.29.16/sources/MyRuLib/controls/FbNotebook.h	2017-05-01 17:31:50.030588240 +0300
+***************
+*** 74,79 ****
+--- 74,86 ----
+                   const wxAuiNotebookPageArray& pages,
+                   const wxSize& requiredBmpSize);
+  
++     void DrawBorder(wxDC& dc,
++                     wxWindow* wnd,
++                     const wxRect& rect);
++ 
++     int GetBorderWidth(wxWindow* wnd);
++     int GetAdditionalBorderSpace(wxWindow* wnd);
++ 
+  protected:
+  
+      wxFont m_normalFont;
+***************
+*** 162,167 ****
+--- 169,181 ----
+                   const wxAuiNotebookPageArray& pages,
+                   const wxSize& requiredBmpSize);
+  
++     void DrawBorder(wxDC& dc,
++                     wxWindow* wnd,
++                     const wxRect& rect);
++ 
++     int GetBorderWidth(wxWindow* wnd);
++     int GetAdditionalBorderSpace(wxWindow* wnd);
++ 
+  protected:
+  
+      wxFont m_normalFont;
+diff -crB myrulib-0.29.16/myrulib-0.29.16/sources/MyRuLib/controls/FbSearchCtrl.cpp myrulib-0.29.16-patched/myrulib-0.29.16/sources/MyRuLib/controls/FbSearchCtrl.cpp
+*** myrulib-0.29.16/myrulib-0.29.16/sources/MyRuLib/controls/FbSearchCtrl.cpp	2017-05-01 16:37:34.665248914 +0300
+--- myrulib-0.29.16-patched/myrulib-0.29.16/sources/MyRuLib/controls/FbSearchCtrl.cpp	2017-05-01 17:33:15.222418874 +0300
+***************
+*** 1194,1197 ****
+--- 1194,1207 ----
+      LayoutControls(0, 0, width, height);
+  }
+  
++ GtkEditable *FbSearchCtrl::GetEditable() const
++ {
++     return NULL;
++ }
++ 
++ GtkEntry *FbSearchCtrl::GetEntry() const
++ {
++     return NULL;
++ }
++ 
+  #endif // FB_SEARCH_COMBO_CTRL
+diff -crB myrulib-0.29.16/myrulib-0.29.16/sources/MyRuLib/controls/FbSearchCtrl.h myrulib-0.29.16-patched/myrulib-0.29.16/sources/MyRuLib/controls/FbSearchCtrl.h
+*** myrulib-0.29.16/myrulib-0.29.16/sources/MyRuLib/controls/FbSearchCtrl.h	2017-05-01 16:37:34.665248914 +0300
+--- myrulib-0.29.16-patched/myrulib-0.29.16/sources/MyRuLib/controls/FbSearchCtrl.h	2017-05-01 17:34:35.393161442 +0300
+***************
+*** 298,303 ****
+--- 298,306 ----
+      wxBitmap m_cancelBitmap;
+  
+  private:
++     GtkEditable *GetEditable() const;
++     GtkEntry *GetEntry() const;
++ 
+      DECLARE_DYNAMIC_CLASS(FbSearchCtrl)
+  
+      DECLARE_EVENT_TABLE()

@@ -1,3 +1,45 @@
+gimp-gtk3 (2.99.0+git42616-b8bf6b86e5-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: b8bf6b86e5ad59122c56e4c2856ada7fa227b08e
+  * Date: 1545346471
+  * git changelog:
+  *  b8bf6b86e5 - Unified transform: enable Constraint:Scale by default
+  *  93f4b18704 - app: improve gradient color-sampling speed
+  *  5a61959b74 - build: sync recent flatpak's stable manifest to the
+    nightly one.
+  *  182786b4fb - app: fix type warning.
+  *  6dfca83c2a - app: show the layer mode dropdown list properly.
+  *  a9a979b2d0 - app: add gtk_combo_box_set_wrap_width for scale menu
+  *  0a2d066168 - app: allow setting line art spline and segment length
+    to 0.
+  *  fda53f9c18 - app: update definition of "{cache,swap}-compressed"
+    dashboard vars
+  *  079c70cc0b - Update Polish translation
+  *  c3ac722995 - Issue #2664: add a tooltip to "better compression"
+    checkbox.
+  *  132a378bed - Fix Problem found in ./libgimpbase/gimpbase.def   the
+    following symbols are in the library,   but are not listed in the
+    .def-file:      + gimp_bucket_fill_area_get_type
+  *  e4e4422f5c - revert last commit of Danish translation -- file
+    incomplete
+  *  15049da94e - Updated Danish translation
+  *  7958387d54 - app: in the warp tool, blink behavior combo when the
+    current behavior is invalid
+  *  17cc44a7be - app: in the warp tool, blink stroke frame when no
+    events are selected
+  *  2085cb4a37 - app: s/GEGL_WARP_BEHAVIOR/GIMP_WARP_BEHAVIOR/
+  *  cd924f453a - app: do not make line art bucket fill a
+    GimpSelectCriterion anymore.
+  *  74a7a5d3e2 - Issue #2495: different code for Windows and Linux on
+    duplicate devices.
+  *  3e967ed02c - devel-docs: 0 at end of layer and channel pointer list
+    is a pointer too.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 22 Dec 2018 13:30:41 +0300
+
 gimp-gtk3 (2.99.0+git42597-5a2dee29d7-1) unstable; urgency=medium
 
   * Compile

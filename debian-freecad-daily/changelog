@@ -1,3 +1,176 @@
+freecad-daily (0.17+git15481-763b5c362-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 763b5c362fe4b98dca858f86f5d1353075224651
+  * Date: 1545428369
+  * git changelog:
+  *  763b5c362 - FEM: ccx tools, optimize imports
+  *  ba22f17a3 - FEM: ccx tools, add a method to find elments with no
+    material
+  *  3a9ada062 - FEM: ccx tools, typo in def name for non positive
+    jacobians
+  *  9bb617454 - FEM: ccx tools, split run def to be able to do every
+    fea task independent
+  *  d7e61d68b - FEM: ccx tools, small code improvements
+  *  356d24157 - FEM: ccx tools, solver typ check only for ccx tools
+    type
+  *  0ab6b3ec0 - Arch: fixed wrong WP when double-clicking an Arch
+    BuildingPart
+  *  1030e1cc6 - FEM: print some error if only one material object but
+    this one has a reference shape
+  *  9d13a1ab8 - FEM: ccx run, do not run ccx if input file writer
+    returned an error
+  *  07e7c2ef8 - FEM: revert f77c605 and use a better fix fir frd
+    reading of NaN floats
+  *  56e9e92fd - FEM: z88, delete not needed and not used variable
+  *  ab916fefe - [Testing] renaming COPYING file to LICENSE
+  *  583917dc1 - fix several bugs in LabelEditor to handle
+    PropertyStringList
+  *  4c67a5c3c - workaround to correctly render annotation flags if
+    NaviCube is shown
+  *  2e03d02a1 - Arch: Fixed crash on creating new BuildingParts
+  *  f77c605ca - FEM: frd file reader, fix for broken frd files
+  *  86c5113e0 - FEM: gmsh VP, Py3, remove more extra b'ees
+  *  0d8388a47 - FEM: code formating, pep8
+  *  e72bd857c - Sketcher: Tangency between arcofellipse and other
+    curves
+  *  f474900c0 - change default value of renderTriangleLimit to UINT_MAX
+  *  b918cbe14 - Arch: Fixed object transparency not adopting the
+    material's one
+  *  92a89d6c2 - Avoid overwriting of LDFLAGS for shared libs
+  *  8324b2ee1 - FEM: solver, move observer def into base class and use
+    decode for Py3 bytestrings
+  *  b73849bc3 - FEM: utils, add a def to decode bytestrings in Py3
+  *  0556a2ca6 - fixes 0002304: Duplicate multi selection of sketch
+    element produces many sketches
+  *  842672d96 - Arch: Fixed display bug in BuildingPart
+  *  ca7dd2e1c - Arch: Small refactor in arch reference
+  *  7aa4d2a9f - Arch: Fixed wrong elevation of imported IFC elements
+  *  cd1959a09 - Fix Detail highlight position for rotated DPGI
+  *  47443dfd8 - Improve debug info
+  *  2830f107a - Sketcher: Improve element widget name of external
+    geometry
+  *  69e3aeaa4 - Draft/getSVG: Fix missed variable gui, fix bad call to
+    getProj
+  *  47a38eceb - Arch: more thorough file search in arch references
+  *  b5a3b7d3d - Use same symbol for display and edit.
+  *  bde252895 - Handle negative angles in UnitsSchemaImperialCivil
+  *  c4866c834 - Removed unappropriate copyright note from license file
+  *  c5939d447 - Tools: cosmetic fix in translation scripts
+  *  91bb88fe1 - add App.Units.setSchema() python method
+  *  2557f07cb - Draft: minor bugfix
+  *  56aba4c9d - Arch: Allow to not zoom fit after importing IFC files
+  *  c43adafb1 - Sketcher: Respect general autoconstraints setting on
+    sketch creation
+  *  64cd6a908 - remove experimental string from VBO and sketcher
+    continue mode
+  *  bf1603b38 - improve mesh validation functions
+  *  5213f2684 - Draft: Fixed tolerance problem in snapping to
+    intersections
+  *  175566d55 - Arch: Fixed remaining bugs in Schedule - Fixes #3590
+  *  eb04b8ef0 - Arch: Fixed incomplete last commit
+  *  ea885fb65 - Arch: Stored if preferences pages are loaded or not
+  *  223eb6864 - Draft: Fixed wrong formatting of DXF importer url
+  *  08ce5a612 - FEM: objects module, add vtk post processing objects
+  *  41e56ef9d - FEM: unit tests, add FEM_VTK check and reactivate vtk
+    mesh test
+  *  ef34dd3a4 - Include getSVG.py into Draft_SRCS
+  *  8701a4d89 - made getLineStyle to accepts scale parameter
+  *  dc8d8fdb4 - move getDiscretized and getPattern outside of getSVG()
+  *  e1eae5e11 - move getProj outside of getSVG, make 'plane' explicit.
+  *  615d81fda - Move getLineStyle to a separate function
+  *  6ee6c677c - Move getSVG into a separate file to further
+    refactoring. All internal dependencies (getrgb, getType) are
+    reimported.
+  *  b530c7e57 - include cmath header for definition of M_PI
+  *  766383d41 - fixes 0003726: Property Editor Angle Fields Do Not
+    Respect Units
+  *  583aea5ae - fixes 0003732: Menu groups in Draft menu are not
+    translated even though translated strings exist
+  *  fec487dc7 - fix translate() function for Py2 & Qt5
+  *  c7883cd3c - fixes 0003733: FEM workbench menus are not translatable
+  *  5a028e457 - fixes 0003734: Image Scaling tooltip is untranslatable
+    and should be reworded
+  *  fd050c6f1 - minor changes
+  *  57b7142cd - Sketcher: Do not recompute on geometry deletion
+  *  cc0ea5571 - FEM: unit tests, deactivate vtk mesh test, because
+    travis runs without vtk
+  *  150bcfcd7 - FEM: mesh api, import of Abaqus inp mesh file with Fem
+    API
+  *  b441c0d3e - FEM: mesh api, import of z88 mesh file with Fem API
+  *  fffd4d49c - FEM: unit tests, add tetra10 vtk mesh read and write
+    test
+  *  3e247b32d - FEM: in out moduels, use print log instead of print
+    message
+  *  1421b35b8 - FEM: ccx tools, print error message if user trys to run
+    ccx in test mode
+  *  be23cf133 - Revert Erroneous Change to parser
+  *  7acdd87bf - fixes #3724
+  *  0c886a479 - Draft: Fixed wrong placement of edit dots in Draft
+    Stretch
+  *  981b15822 - Draft: Fixed nearest snap not snapping to the working
+    plane when required
+  *  497b85f68 - Arch: Fixed merged same-color IfcSurfaceStyles in IFC
+    export
+  *  fa658f2f3 - prepare for OCCT 7.3.1
+  *  5d5c4eb04 - Fix forget to add new postprocessor grbl_G81 in
+    CMakeLists
+  *  144fee091 - Draft: updated minimal version of dxf library to
+    include py3 fixes
+  *  44e8f9e9b - FEM: unit tests, reactivate new z88 mesh reader test
+    and mesh reading
+  *  a41d7a739 - FEM: Py3 fix, do not open file in binary mode if
+    writing strings
+  *  60581cff9 - prepare for OCCT 7.3.1
+  *  729b9e7af - add missing headers, prepare for OCCT 7.3.1
+  *  9683abfc3 - improve mesh healing functions
+  *  3b2c3b1d9 - PartGui: fix typo in pop-up message
+  *  72c4bd348 - First version of grbl_G81_post.py
+  *  5dee2fdfb - FEM: unit tests, temporary deactivate new z88 mesh
+    reader test and mesh reading
+  *  ce7565395 - FEM: unit tests, rename test tools to utils to
+    distinguish between test modules
+  *  5d105319d - FEM: unit tests, delete wrong comment command
+  *  a3ea67cea - FEM: unit tests, split common module into a new module
+    for result tests
+  *  8d88af380 - FEM: unit tests, rename test class names
+  *  ab6a3b34f - FEM: unit tests, small code improvement in mesh
+  *  b26a87392 - FEM: unit tests, add import status print
+  *  9d39000e3 - FEM: unit tests, mesh move tetra10 tests in separate
+    class
+  *  13441b653 - FEM: unit tests, improve mesh tetra10 test
+  *  8bb994dff - FEM: unit tests, z88 tetra10 read write test
+  *  f998547f8 - FEM: unit tests, comment in ccxtools test
+  *  0ac645151 - FEM: inp mesh reader, add def to return the FemMesh
+    only (no Document obj)
+  *  569715c1d - FEM: import z88 mesh, delete duplicate code
+  *  1e4733463 - FEM: z88 mesh import, get rid of not needed future
+    import and debugg print
+  *  1a77dc54c - FEM: in out modules, use console log instead of print
+  *  e01546b0a - FEM: mesh api, export of z88 mesh file with Fem API
+  *  25eb9a22e - fix MeshGeomFacet::IntersectWithPlane
+  *  3290c36d2 - Draft: preserving face colors and names when
+    downgrading/upgrading (splitFaces and makeShell only)
+  *  7fe115a3c - Add mesa-libEGL-devel for fedora >= 29 COPR builds
+  *  d901631f8 - a minor py3 fix
+  *  5eeff9d17 - Path: Adaptive - bugfix
+  *  081173e34 - FEM: solver run, fix method names
+  *  5d5ac035f - PartGui: fix error popup message
+  *  083954a0e - Arch: small optimization in Arch Reference
+  *  686688e00 - Arch: Ability to unload shape of Arch References
+  *  f56198dd3 - Tools: fixed translation of py files in Part
+  *  5633bd14d - Arch/Draft: Misc small fixes
+  *  d91e38962 - mesh segmentation algorithm for surfaces
+  *  7102ff26a - Remove reuse of variable-name.
+  *  d9d81ade8 - Clean up section line arrows
+  *  167b0d6d9 - Thumbnail generation
+  *  1d8cc22ed - Fix SectionLine preference location
+  *  0caa169eb - mesh segmentation algorithm for surfaces
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 22 Dec 2018 14:09:08 +0300
+
 freecad-daily (0.17+git15363-9be3e6333-1) unstable; urgency=medium
 
   * Compile
