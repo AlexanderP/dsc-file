@@ -1,3 +1,138 @@
+freecad-daily (0.17+git15577-1a8d3a703-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 1a8d3a7030eb75641459a03fbf35516d5fb55561
+  * Date: 1546810994
+  * git changelog:
+  *  1a8d3a703 - make handling more user-friendly if Sketch is outside
+    of Body object
+  *  013644540 - Fix medfile loction on different versions of fedora
+  *  744f381d5 - Tidy up BuildRequires in fedora spec
+  *  a07d1af08 - Add med to fedora spec file
+  *  a395c570f - respect transparency when setting color per face
+  *  ab1f4c442 - py3: AddonManager-macro: use unicode
+  *  2c3268f9f - Py3: use feature detection instead of version detection
+  *  381f08753 - Using fixed size images for qt5/4 compatibility
+  *  81729f662 - Setting fixed size for tool images
+  *  6e0a5580b - Fixed Queue import for py3
+  *  cd1ebb173 - Fixed indexing dictionary keys
+  *  d33098860 - Fix TabError for Python 3
+  *  ade267b8f - Arch: import ifc, code formating, flake8, only the most
+    important ones
+  *  bc31a9afc - Material: code formating, flake8
+  *  b3de953c1 - Material: code formating, file beginnings Python block
+    comment with space, flake8 E265
+  *  86c7a85e3 - FEM: code formating, flake8, make line breaks before
+    binary operator, it really reads better :-)
+  *  19cd5690e - XDGData: remove CMAKE_CURRENT_SOURCE_DIR
+  *  0177c8b64 - Linux mime: add icon
+  *  d9f8cfac1 - Arch: Fixed wire/edge bug in IFC import
+  *  41a9f5bba - Updated credits page
+  *  9f2904e8e - fix flake8 issues suggested by cclauss
+  *  56db51867 - FEM: ccx tools, better error handling on run ccx
+  *  37a2cceab - FEM: ccx tools, ccx run, set ret code to 0 for check
+    analysis and return ret code
+  *  76541ca1b - FEM: ccx tools, debug prints
+  *  2e6dac187 - FEM: code formating, flake8
+  *  3f443d226 - FEM: result reading, debugg prints
+  *  8a3fd0caf - Arch: IFC, print code formating in the regard of Py3
+  *  64fa8cb85 - improve handling of (raw) input in Python console
+  *  2c838bfc7 - fix typo in StartPage module
+  *  df3853738 - fix several Py3 issues
+  *  7afb54f49 - Undefined name: to --> 'to'
+  *  7ba92f96a - reduce code duplication
+  *  8358d7f87 - Qt5: don't use native color dialog
+  *  b8455531c - declare private intersect() function as static to make
+    clear it doesn't belong to a GeomCurve instance
+  *  2aa4f8c47 - Update copyright notice
+  *  9ea523a9e - fix intersectCC method missing some intersection points
+    for Geom2d curves
+  *  3ba0772d9 - handle C++ exception in Python interface
+  *  8526b0747 - Improve readability with some comments
+  *  309640eb7 - Only changes the ViewSystem if the user confirms
+  *  f1c6c549a - Cannot mix bytes and nonbytes literals in
+    OpenSCADUtils.py
+  *  8527b0228 - in test_python_syntax fix check for Py3
+  *  98ebeaa19 - Draft: fixed bug in arc tracker
+  *  5af993cb1 - Curvilinear Landing based on underlying curve edges
+    supported; found sortEdges() 'problem'
+  *  ddebf0d3c - FEM: gmsh tools, Py3, there still are extra b'ees to
+    remove
+  *  0a25f7fd5 - FEM: source comment typo fixes
+  *  0274e73a8 - setup: don't require the user to agree to GPL to
+    complete setup.
+  *  01367d21f - fix bytes vs. str issue on macOS
+  *  ccf99f57c - add slice apart command to sub-menu
+  *  06ef43c77 - Fix #3697
+  *  1f30c218e - remove signal blocker fixes 0003752:
+    Preferences/Sketcher: Changing Grid size default is not respected
+    upon creation of new Sketches
+  *  70aaf3e95 - fixes 0003756: Tooltips should not start with the
+    internal name of the tool
+  *  47fc80815 - fixes 0003757: Join icon menu in the Boolean toolbar
+    does not show command names nor tooltips
+  *  1a7d3d9a3 - Start: Don't switch workbenches if we're not in Start
+    anymore
+  *  41fee3bb3 - Fixed wording as notifed on crowdin
+  *  563d020b6 - improve error messages for Pocket, Hole and Groove
+    feature
+  *  fd9516e07 - fixes 0003755: Crash when using Part - Refine Shape on
+    certain files
+  *  6cdeab9c1 - Start: Fixed single quotes display
+  *  0bf6ca973 - Fixed translations of startpage
+  *  7e80a1f64 - add Qt5 translation files
+  *  e83c44200 - Start: Better handling of unicode on py2
+  *  91a61d481 - Material: Fixed py3/import issues
+  *  195c530c0 - Material: MaterialEditor migrate to model/view
+  *  be5796b2d - add method restoreFinished and reimplement it in
+    SketchObject
+  *  6cc2c1147 - do not make default suffix lower case
+  *  42e6650ac - Start: Fixed translation on py2
+  *  217e0fef0 - Import: Fixed import of some DXF R12 files
+  *  5d36da83e - add comment
+  *  4276b92e3 - Add Intensity
+  *  1d840261c - Point cloud display mode enumeration
+  *  79723fe3d - Arch: small cosmetic fix in material editor
+  *  f3a44bed8 - Arch: Lowered tolerance of planar profiles for Arch
+    structures
+  *  407dc25db - Part: add Slice Apart command
+  *  f275a9500 - PartGui: use icon in Compound viewprovider
+  *  c025a7779 - PartGui: add ExplodeCompound to menu and toolbars
+  *  3c23f2aa5 - PartGui: update icons
+  *  368f0f0cc - Part: "Explode compound" tool
+  *  fc5542b97 - Fixed translation of py commands in Image
+  *  cea09fd98 - fixed non-executable translation script
+  *  3e6e9ed69 - Part: Fixed translation issues
+  *  7044147ba - Path: source comment typo fixes
+  *  47f131b59 - fix bug in zipios::writeUint16
+  *  d5dd0973c - Draft: Added ON/OFF status to the tooltip of snapping
+    buttons
+  *  9c7128ea7 - fixes 0003729: REGRESSION: FreeCAD 0.17 does not export
+    color information with STEP files
+  *  8801726ed - Fix StartCell/EndCell handling
+  *  ffd980b27 - PartDesign: Up to face inclined plane limitation
+  *  33dfca95f - Improve messages when trying to detect HDF5
+  *  0f03f1e2b - Improve error-message if med.h is not found in CMake,
+    and write all commands in upper case, following the common syntax
+  *  dccf48d3f - On my Ubuntu setup, compilation failes when using
+    med.h, since libmedc is built with openMPI, while freeCAD selects
+    hdf5-serial.
+  *  2226da3a2 - Added support for arabic and vietnamese
+  *  2ea84272f - Updated translations from crowdin
+  *  3969dd52a - Use removeSplitter to get a single face for the removal
+    shape construction.
+  *  71a8e2668 - Fix GCC 8 warning: catching polymorphic type by value [-
+    Wcatch-value=]
+  *  94e392347 - Fix GCC 8 warning: type qualifiers ignored on cast
+    result type [-Wignored-qualifiers]
+  *  376a70bff - Remove u8 literals for Win compatibility
+  *  1b854e029 - Add support for DMS angles to Expressions
+  *  60b9936a3 - Use correct unicode symbols for DMS units
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 07 Jan 2019 03:26:49 +0300
+
 freecad-daily (0.17+git15481-763b5c362-1) unstable; urgency=medium
 
   * Compile

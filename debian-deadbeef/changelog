@@ -1,3 +1,24 @@
+deadbeef (0.7.2+git7956-06de3d0a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 06de3d0a2a22c7fa069fff13fcec393ae216ff5b
+  * Date: 1546023066
+  * git changelog:
+  *  06de3d0a - vfs_curl: account for in-stream icy headers when finding
+    icy metadata
+  *  62ac9248 - vfs_curl: better handling of weird headers / redirects;
+    prevent crash after invalid icy metadata
+  *  a95001de - mp3: pass track object to vfs sooner, to be able to
+    catch the http header info
+  *  3a3adf97 - aac: fix setting stream format metadata
+  *  73f97227 - mp3: fix handling some mp3 files with garbage packets
+  *  82501021 - mp3: fixed mp3parser performance regression
+  *  b15b32b0 - playlist: fix crash when aborting while adding cue
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 05 Jan 2019 09:47:48 +0300
+
 deadbeef (0.7.2+git7949-bb608662-1) unstable; urgency=medium
 
   * Compile

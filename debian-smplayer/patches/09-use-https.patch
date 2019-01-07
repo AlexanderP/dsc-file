@@ -1,0 +1,84 @@
+Description: use https at some points
+ - all links from links.h work fine with https
+ - sig.cpp work fine with https afaict
+ - youtube: set use_https_* to true by default
+ 
+
+Author: Alf Gaida <agaida@siduction.org>
+
+Last-Update: 2018-11-10
+
+--- a/src/links.h
++++ b/src/links.h
+@@ -19,8 +19,8 @@
+ #ifndef LINKS_H
+ #define LINKS_H
+ 
+-#define URL_HOMEPAGE "http://www.smplayer.info"
+-#define URL_FORUM "http://forum.smplayer.info"
++#define URL_HOMEPAGE "https://www.smplayer.info"
++#define URL_FORUM "https://forum.smplayer.info"
+ #define URL_TRANSLATORS URL_HOMEPAGE"/translators.php"
+ #define URL_FIRST_STEPS URL_HOMEPAGE"/first-steps.php"
+ #define URL_FAQ URL_HOMEPAGE"/faq.php"
+@@ -28,8 +28,8 @@
+ #define URL_THANK_YOU URL_HOMEPAGE"/thank-you.php"
+ #define URL_OPENSSL_INFO URL_HOMEPAGE"/openssl.php"
+ #define URL_DONATE URL_HOMEPAGE"/donate.php"
+-#define URL_CHROMECAST "http://chromecast.smplayer.info"
+-#define URL_YT_CODE "http://updates.smplayer.info/yt.js"
+-#define URL_VERSION_INFO "http://updates.smplayer.info/version_info.ini"
++#define URL_CHROMECAST "https://chromecast.smplayer.info"
++#define URL_YT_CODE "https://updates.smplayer.info/yt.js"
++#define URL_VERSION_INFO "https://updates.smplayer.info/version_info.ini"
+ 
+ #endif
+--- a/src/youtube/sig.cpp
++++ b/src/youtube/sig.cpp
+@@ -31,9 +31,9 @@
+ QString Sig::playerURL(const QString & player_name) {
+ #ifdef SIG_FROM_SMPLAYER_SITE
+ 	QString p = player_name.toUtf8().toBase64();
+-	return QString("http://updates.smplayer.info/ytsig/?e=%1&c=1").arg(p);
++	return QString("https://updates.smplayer.info/ytsig/?e=%1&c=1").arg(p);
+ #else
+-	return QString("http://s.ytimg.com/yts/jsbin/%1/base.js").arg(player_name);
++	return QString("https://s.ytimg.com/yts/jsbin/%1/base.js").arg(player_name);
+ #endif
+ }
+ 
+--- a/src/youtube/retrieveyoutubeurl.cpp
++++ b/src/youtube/retrieveyoutubeurl.cpp
+@@ -50,8 +50,8 @@
+ 	, set(0)
+ #endif
+ 	, preferred_resolution(R720p)
+-	, use_https_main(false)
+-	, use_https_vi(false)
++	, use_https_main(true)
++	, use_https_vi(true)
+ #ifdef YT_DASH_SUPPORT
+ 	, use_dash(false)
+ #endif
+@@ -133,7 +133,7 @@
+ 		video_url.startsWith("youtu.be") || video_url.startsWith("www.youtu.be") || 
+ 		video_url.startsWith("y2u.be") || video_url.startsWith("www.y2u.be"))
+ 	{
+-		video_url = "http://" + video_url;
++		video_url = "https://" + video_url;
+ 	}
+ 
+ 	//qDebug() << "RetrieveYoutubeUrl::getVideoID: fixed url:" << video_url;
+--- a/src/preferences.cpp
++++ b/src/preferences.cpp
+@@ -545,8 +545,8 @@
+ 	yt_resolution = RetrieveYoutubeUrl::R720p;
+ 	yt_user_agent = "Mozilla/5.0 (X11; Linux x86_64; rv:5.0.1) Gecko/20100101 Firefox/5.0.1";
+ 	//yt_user_agent = "";
+-	yt_use_https_main = false;
+-	yt_use_https_vi = false;
++	yt_use_https_main = true;
++	yt_use_https_vi = true;
+ 	yt_use_dash = true;
+ #endif
+ 

@@ -1,3 +1,166 @@
+gimp-gtk3 (2.99.0+git42712-823d4a0d24-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 823d4a0d2451b242d33dcd56adf661ed08597546
+  * Date: 1546810241
+  * git changelog:
+  *  823d4a0d24 - app: in bucket-fill tool, avoid calculating line art
+    when not in line-art mode
+  *  879ad52477 - Update Polish translation
+  *  d708ac0b21 - Issue #1437 - 2.10 Image Metadata "keywords" corrupt
+  *  889e2e26ee - app: remove gimp-scratch; replace with gegl-scratch
+  *  5fffadba54 - Issue #1793 - Move Guillotine tool to a different
+    position in menus...
+  *  99764000be - Issue #2260 - "Selection to Path Advanced Settings"
+    dialog not scrollable
+  *  08a31a01f8 - plug-ins: set a minimum height on the unit editor's
+    scrolled window
+  *  55219ffaf1 - Issue #2751 - Some Translated sentences appear as
+    Untranslated
+  *  7435be68cc - Update Japanese translation
+  *  d39ac2a3f0 - app: small fix to last commit
+  *  471efee769 - app: in GimpHistogramEditor, don't block when creating
+    bg histogram
+  *  626208b17c - app: write floating-point vars using C locale in
+    performance logs
+  *  a0263f40d0 - Issue #2446 - DPI information is not stored in
+    clipboard
+  *  b505f3a5c0 - libgimp: make sure plug-ins follow the core's theme
+  *  ce55cfa7b2 - pdb: remove gimp_get_theme_dir() and
+    gimp_get_icon_theme_dir()
+  *  53aa2bb211 - app: put the * { -gtk-icon-style: regular|symbolic; }
+    into theme.css
+  *  39406b83d3 - Issue #2136 - On-image UI for adjusting Linear Motion
+    Blur
+  *  5561da87e6 - app: in GimpHistogramEditor, cancel ongoing async upon
+    update
+  *  d56d663eaa - app: In GimpHistogram, align copied buffer region to
+    tile rect
+  *  0a1ecdf4ee - Issue #2540 - block width / height slider of the
+    pixelize filter don't...
+  *  fc4add7c2b - Issue #1538 - Crash when adding file to already opened
+    image and...
+  *  24233bc4ec - tools: fix perl warning about unescaped left brace in
+    gimp-mkenums
+  *  331b13277b - AUTHORS: regenerated
+  *  b9265e7cde - Issue #2685 - Crash when distributing layers
+    horizontally
+  *  9e82ace409 - Issue #2716 - Windows: Rawtherapee plugin cannot be
+    installed
+  *  be0d41e1ad - authors.xml: my name was in duplicate.
+  *  a89e503054 - Issue #2611: Cannot open certain .pdf files in GIMP.
+  *  ff2d22d915 - plug-ins: a lot of coding style cleanup in file-dds.
+  *  74c9d835e8 - Issue #2617 - Export to C image artifacts
+  *  e20930e1ff - po-python: add the new file-dds plug-in to
+    POTFILES.skip.
+  *  d1de204dbc - plug-ins: "Export as DDS" is translatable.
+  *  11ed7ee68b - po-plug-ins, po-script-fu: update for the DDS plug-in
+  *  948608e658 - plug-ins: get rid of "Show this dialog" checkbox in
+    file-dds.
+  *  7e68aa37c1 - plug-ins: s/Save as DDS/Export as DDS/
+  *  8f49fad3da - plug-ins: fix a few more warnings.
+  *  67a80c8667 - plug-ins: make the file-dds plug-in load correctly.
+  *  df8a20956b - plug-ins: make file-dds compile.
+  *  2f3504e06a - file-dds: mark some user-vsible messages for
+    translation, expose them to PO files
+  *  d25348ca24 - file-dds: support for DXT2/DXT4, initial build and
+    GEGL-related fixes
+  *  79bc2dc1ef - file-dds: add original source code of the DDS plug-in
+  *  291e84281a - app: fix canvas jumping because of the status bar
+    label being too wide
+  *  292903b78d - app: wrap some overly long lines in
+    gimpbucketfilltool.c
+  *  b2cb334b47 - app, libgimp: forgot to add /*< pdb-skip >*/ to enum
+    GimpBucketFillMode
+  *  07e46abb72 - app, libgimp*: move enum GimpBucketFillMode to the
+    core
+  *  368f2e596a - app, libgimpbase: move enum GimpBucketFillArea to the
+    core
+  *  78ed038fca - app: in GimpTileHandlerValidate, avoid
+    fetching/copying whole tiles
+  *  aa02d619f7 - plug-ins: in file-png, pass a more correct
+    SAVE_COLOR_PROFILE flag...
+  *  abd7cbfc8d - Issue #1788 - Inconsistency between FG color and
+    selected color in...
+  *  8a4aacb52f - Issue #2667 - When copying a text layer, paste should
+    create a new...
+  *  d873290915 - libgimp: use G_N_ELEMENTS() in
+    gimp_image_metadata_save_finish()
+  *  b24cc6e7fa - configure.ac: require babl >= 0.1.61
+  *  a338220fa6 - app: fix the layer formats of indexed images to
+    contain the space
+  *  dfe3e23622 - libgimp: fix gimp_drawable_get_format() to honor the
+    drawable's space
+  *  78f5d39e1a - app, libgimpcolor: handle palette formats across
+    babl_format_with_space()
+  *  070e10eda7 - app: show message when attempting to change layers
+    while there is a floating sel.
+  *  192bc9536c - plug-ins: in image-map, fix spin-scale adjustment
+  *  3351174ebe - app: more optimizations to gimp_gegl_mask_bounds()
+  *  819a5352f6 - app: optimize gimp_gegl_mask_bounds()
+  *  986a298a07 - app: optimize gimp_gegl_mask_is_empty()
+  *  8fd072dc29 - Update Swedish translation
+  *  ad5bf1dee7 - cursors: add -HiDPI variants of all cursors
+  *  26ae35fc3d - app: make GimpErrorConsole's icons HiDPI-aware
+  *  e3e2cdcbd2 - app: make GimpFgBgEditor and GimpStatusbar HiDPI-aware
+  *  20225a2268 - app: fix last gimpcursor.c commit: g_printerr() needs
+    a newline
+  *  eef735a49c - app: make a HiDPI-aware magenta fallback square in
+    gimp_widget_load_icon()
+  *  8ff8f1d442 - app: support cursors with a scale factor of 2 for
+    HiDPI
+  *  47ff7e1467 - app: pass a GdkWindow not GdkDisplay to
+    gimp_cursor_new()
+  *  3738ff3ffd - app: small fix to gimp_drawable_edit_fill()
+  *  e967e5fa9e - app: show error on attempt to clear/cut layer with
+    locked alpha channel
+  *  6384ff01b6 - app: in gimp_drawable_edit_fill(), make trivial alpha-
+    only fill a NOP
+  *  637270615b - Update Swedish translation
+  *  2847b1143b - Update Swedish translation
+  *  d9b4ffe09e - app: in gimp_gegl_apply_cached_operation(), intersect
+    cached rects with dest rect
+  *  e06c4643dc - app: in warp tool, crop filter to stroke bounds
+  *  b846ffed19 - app: in GimpDrawableFilter, only update crop/preview
+    area when updating whole drawable
+  *  5c27d14fdf - app: add gimp_drawable_filter_set_crop()
+  *  7534ae53d6 - app: rename gimp_applicator_set_preview() to
+    _set_crop(); add _get_crop()
+  *  093e017df8 - app: in GimpFilterTool, make region combo insensitive
+    when selection is empty
+  *  7949fd9a28 - app: in GimpFilterTool, show region combo for non-
+    point ops
+  *  b201f73562 - app: use GimpDrawableFilter in
+    gimp_drawable_apply_operation()
+  *  ab52dc6bca - app: in GimpApplicator, allow enabling cache/preview
+    after construction; remove preview cache
+  *  42dd3fd939 - Added OARS
+  *  cba4bc4781 - app: in gimp_drawable_merge_filter(), align undo rect
+    to tile grid
+  *  95393722cc - Revert "Bug 796090 - (wrong) true-color preview of
+    GEGL filter ops, ..."
+  *  3f45e893bf - app: cache result of floating selections
+  *  0560c5a6fe - app: use drawable format as floating-sel applicator
+    output format
+  *  8e57ee2265 - app: in GimpDrawableFilter, use the drawable format as
+    the cache format
+  *  b93df0311f - app: add gimp_applicator_set_output_format()
+  *  85e454bae8 - app: add GimpDrawable::format-changed signal
+  *  ef9b1f6694 - app: in GimpLineArt, use "invalidate-preview" signal
+    of input viewable
+  *  12e83350bf - app: remove gimp_applicator_dup_apply_buffer()
+  *  ed7ea51fb7 - app: remove "Edit -> Fade..."
+  *  10cdef9af1 - Update Polish translation
+  *  503775a5a0 - app: rename and merge the spline and segment length
+    properties...
+  *  cbee0ed5a3 - Update Polish translation
+  *  822f1b9090 - app: fix capitalization of the "Line Art Detection"
+    frame
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 07 Jan 2019 02:35:50 +0300
+
 gimp-gtk3 (2.99.0+git42616-b8bf6b86e5-1) unstable; urgency=medium
 
   * Compile

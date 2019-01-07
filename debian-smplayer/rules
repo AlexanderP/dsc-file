@@ -1,8 +1,11 @@
 #!/usr/bin/make -f
+DH_VERBOSE = 1
 
-QMAKE_OPTS = DEFINES+=NO_DEBUG_ON_CONSOLE
-BUILDDEBFLAGS= -- -Zxz -z9
+export LC_ALL=C.UTF-8
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
+include /usr/share/dpkg/architecture.mk
 
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
@@ -34,10 +37,23 @@ override_dh_auto_build:
 
 override_dh_auto_install:
 	dh_auto_install -- $(MAKE_OPTS) DOC_PATH=/usr/share/doc/smplayer
-	rm -f debian/tmp/usr/share/doc/smplayer/Copying.txt
+	$(RM) -f debian/tmp/usr/share/doc/smplayer/Copying_BSD.txt
+	$(RM) -f debian/tmp/usr/share/doc/smplayer/Copying.txt
+	$(RM) -f debian/tmp/usr/share/doc/smplayer/*/gpl.html
+	$(RM) -f debian/tmp/usr/share/doc/smplayer/Finding_subtitles.txt
+	$(RM) -f debian/tmp/usr/share/doc/smplayer/Portable_Edition.txt
+	$(RM) -f debian/tmp/usr/share/doc/smplayer/Watching_TV.txt
+	$(RM) -f debian/tmp/usr/share/doc/smplayer/Readme.txt
+	$(RM) -f debian/tmp/usr/share/doc/smplayer/Install.txt
+	$(RM) -f debian/tmp/usr/share/doc/smplayer/Not_so_obvious_things.txt
+	$(RM) -f debian/tmp/usr/share/doc/smplayer/dvdmenus.txt
+	$(RM) -f debian/tmp/usr/share/doc/smplayer/Copying_libmaia.txt
+	$(RM) -f debian/tmp/usr/share/doc/smplayer/Changelog
+	$(RM) -f debian/tmp/usr/share/doc/smplayer/Release_notes.txt
+	$(RM) -f debian/tmp/usr/share/doc/smplayer/Copying_openssl.txt
 
-#override_dh_builddeb:
-#	dh_builddeb $(BUILDDEBFLAGS)
+override_dh_missing:
+	dh_missing --fail-missing
 
 %:
 	dh $@ --parallel 

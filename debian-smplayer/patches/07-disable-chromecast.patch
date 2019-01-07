@@ -1,0 +1,35 @@
+Description: Disable Chromecast support to workaround security issues in Mongoose Simple web server
+Author: Reinhard Tartler <siretart@debian.org>
+Bug-Debian: http://bugs.debian.org/898943
+Last-Update: 2018-11-09
+
+--- a/Makefile
++++ b/Makefile
+@@ -21,7 +21,7 @@
+      DOC_PATH=\\\"$(DOC_PATH)\\\" THEMES_PATH=\\\"$(THEMES_PATH)\\\" \
+      SHORTCUTS_PATH=\\\"$(SHORTCUTS_PATH)\\\"
+ 
+-all: src/smplayer webserver/simple_web_server
++all: src/smplayer #webserver/simple_web_server
+ 
+ src/smplayer:
+ 	./get_svn_revision.sh
+@@ -29,7 +29,8 @@
+ 	cd src && $(LRELEASE) smplayer.pro
+ 
+ webserver/simple_web_server:
+-	cd webserver && make
++	#cd webserver && make
++	touch $@
+ 
+ clean:
+ 	if [ -f src/Makefile ]; then cd src && make distclean; fi
+@@ -46,7 +47,7 @@
+ 	-install -d $(DESTDIR)$(DOC_PATH)
+ 	install -m 644 Changelog *.txt $(DESTDIR)$(DOC_PATH)
+ 
+-	install -m 755 webserver/simple_web_server $(DESTDIR)$(PREFIX)/bin/
++	#install -m 755 webserver/simple_web_server $(DESTDIR)$(PREFIX)/bin/
+ 
+ 	-install -d $(DESTDIR)$(DOC_PATH)
+ 	tar -C docs/ --exclude=.svn -c -f - . | tar -C $(DESTDIR)$(DOC_PATH) -x -f -

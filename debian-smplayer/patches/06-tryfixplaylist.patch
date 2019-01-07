@@ -9,15 +9,15 @@ Forwarded: not-needed
 
 --- a/src/baseguiplus.cpp
 +++ b/src/baseguiplus.cpp
-@@ -427,10 +427,10 @@ void BaseGuiPlus::aboutToExitFullscreen(
+@@ -656,10 +656,10 @@
                                    #endif
                                    );
  
-+	playlistdock->setFloating( fullscreen_playlist_was_floating );
- 	if (fullscreen_playlist_was_visible) {
- 		playlistdock->show();
++		playlistdock->setFloating( fullscreen_playlist_was_floating );
+ 		if (fullscreen_playlist_was_visible) {
+ 			playlistdock->show();
+ 		}
+-		playlistdock->setFloating( fullscreen_playlist_was_floating );
+ 		ignore_playlist_events = false;
  	}
--	playlistdock->setFloating( fullscreen_playlist_was_floating );
- 	ignore_playlist_events = false;
  #endif
- }

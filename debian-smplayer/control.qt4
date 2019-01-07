@@ -15,8 +15,8 @@ Depends:
 Recommends:
  smplayer-themes,
  smplayer-l10n
-Description: complete front-end for MPlayer and MPlayer2
- Qt4 Mplayer front-end, with basic features like playing
+Description: Complete front-end for MPlayer and mpv
+ Qt4 front-end for mplayer and forks, with basic features like playing
  videos, DVDs, and VCDs to more advanced features like support
  for MPlayer filters and more. One of the most interesting features
  of SMPlayer: it remembers the settings of all files you play.
@@ -27,6 +27,7 @@ Description: complete front-end for MPlayer and MPlayer2
 
 Package: smplayer-l10n
 Architecture: all
+Section: localization
 Depends:
  smplayer (>= ${source:Version}),
  ${misc:Depends}
@@ -34,8 +35,8 @@ Replaces:
  smplayer (<< 0.5.62), smplayer-translations (<< 16.8.0)
 Breaks: 
  smplayer-translations (<< 16.8.0)
-Description: complete front-end for MPlayer and MPlayer2 - translation files
- Qt4 Mplayer front-end, with basic features like playing
+Description: Complete front-end for MPlayer and mpv - translation files
+ Qt4 front-end for mplayer and forks, with basic features like playing
  videos, DVDs, and VCDs to more advanced features like support
  for MPlayer filters and more. One of the most interesting features
  of SMPlayer: it remembers the settings of all files you play.

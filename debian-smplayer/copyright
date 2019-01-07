@@ -1,30 +1,212 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: SMPlayer
 Upstream-Contact: Ricardo Villalba <rvm@escomposlinux.org>
 Source: http://smplayer.sf.net
 
 Files: *
+Copyright: 2006-2018, Ricardo Villalba <rvm@escomposlinux.org>
 License: GPL-2+
-Copyright:
- 2006-2012, Ricardo Villalba <rvm@escomposlinux.org>
 
-Files: debian/*
+Files: src/findsubtitles/maia/*
+Copyright: 2007, Sebastian Wiedenroth <wiedi@frubar.net> and Karl Glatz
+           2010, Sebastian Wiedenroth <wiedi@frubar.net>
+License: BSD-2-clause
+
+Files: Copying_BSD.txt
+       src/qtsingleapplication/qtlocalpeer.cpp
+       src/qtsingleapplication/qtlocalpeer.h
+       src/qtsingleapplication/qtlockedfile.cpp
+       src/qtsingleapplication/qtlockedfile.h
+       src/qtsingleapplication/qtlockedfile_unix.cpp
+       src/qtsingleapplication/qtlockedfile_win.cpp
+       src/qtsingleapplication/qtsingleapplication.cpp
+       src/qtsingleapplication/qtsingleapplication.h
+       src/qtsingleapplication/qtsinglecoreapplication.cpp
+       src/qtsingleapplication/qtsinglecoreapplication.h
+Copyright: 2013, Digia Plc and/or its subsidiary(-ies)
+License: BSD-3-clause
+
+ 
+Files: src/mpcgui/mpcgui.cpp
+ src/mpcgui/mpcgui.h
+ src/mpcgui/mpcstyles.cpp
+ src/mpcgui/mpcstyles.h
+Copyright: 2008, matt_ <matt@endboss.org>
 License: GPL-2+
-Copyright:
- 2007, Cyril Breuil <cyrilbport@gmail.com>
- 2008-2012, Maia Kozheva <sikon@ubuntu.com>
- 2013-2015, Mateusz Łukasik <mati75@linuxmint.pl>
+ 
+Files: src/mpris2/mediaplayer2.cpp
+ src/mpris2/mediaplayer2player.cpp
+ src/mpris2/mpris2.cpp
+Copyright: 2006-2017, Ricardo Villalba <rvm@users.sourceforge.net>
+  2012, Bernd Buschinski <b.buschinski@googlemail.com>
+  2012, Eike Hein <hein@kde.org>
+License: GPL-2+
+ 
+Files: src/mpris2/mediaplayer2.h
+ src/mpris2/mediaplayer2player.h
+ src/mpris2/mpris2.h
+Copyright: 2006-2017, Ricardo Villalba <rvm@users.sourceforge.net>
+  2012, Eike Hein <hein@kde.org>
+License: GPL-2+
+ 
+Files: src/findsubtitles/maia/maiaObject.cpp
+ src/findsubtitles/maia/maiaObject.h
+Copyright: 2003, Frerich Raabe <raabe@kde.org> and
+  2007, Sebastian Wiedenroth <wiedi@frubar.net>
+License: BSD-2-clause
+ 
+Files: webserver/mongoose.h
+Copyright: 1991, 1993, The Regents of the University of California
+  2004-2013, Sergey Lyubka
+  2013-2016, Cesanta Software Limited
+License: BSD-3-clause
 
-Files:
- src/myslider.cpp
- src/myslider.h
-Copyright: 2006-2012, Ricardo Villalba <rvm@escomposlinux.org>
+Files: src/findsubtitles/filedownloader/main.cpp
+Copyright: 2004-2008, Trolltech ASA
+License: GPL-2+
+ 
+Files: src/shortcutgetter.cpp
+Copyright: 2006, FullMetalCoder
+  2006-2017, Ricardo Villalba <rvm@users.sourceforge.net>
+License: GPL-2+
+ 
+Files: webserver/mongoose.c
+Copyright: Steve Reid <steve@edmweb.com>
+  2014-2016, Cesanta Software Limited
+License: GPL-2+
+ 
+Files: src/shortcutgetter.h
+Copyright: 2006, FullMetalCoder
+  2006-2017, Ricardo Villalba <rvm@users.sourceforge.net>
+License: GPL-2+
+ 
+Files: src/filehash.cpp
+Copyright: 2006-2017, Ricardo Villalba <rvm@users.sourceforge.net>
+  Kamil Dziobek turbos11(at)gmail.com
+License: GPL-2+
+ 
+Files: src/mplayerprocess.cpp
+Copyright: 2000-2015, MPlayer Team
+  2006-2017, Ricardo Villalba <rvm@users.sourceforge.net>
+License: GPL-2+
+ 
+Files: src/skingui/volumecontrolpanel.h
+Copyright: 2010, Ori Rejwan
+License: GPL-2+
+ 
+ 
+Files: src/verticaltext.cpp
+       src/verticaltext.h
+Copyright: 2003-2004, Christian Esken <esken@kde.org>
+License: LGPL-2+
+
+Files: src/qrcode/qrcodegen.c
+       src/qrcode/qrcodegen.h
+Copyright: Project Nayuki. (MIT License)
+License: Expat
+
+Files: src/myslider.cpp
+       src/myslider.h
+Copyright: 2006-2018, Ricardo Villalba <rvm@users.sourceforge.net>
 License: LGPL-2.1+
 
-Files:
- src/verticaltext.cpp
- src/verticaltext.h
-Copyright: 2003-2004, Christian Esken <esken@kde.org>
+
+Files: debian/*
+Copyright: 2007, Cyril Breuil <cyrilbport@gmail.com>
+           2008-2012, Maia Kozheva <sikon@ubuntu.com>
+           2013-2017, Mateusz Łukasik <mati75@linuxmint.pl>
+           2018, Alf Gaida <agaida@siduction.org>
+License: GPL-2+
+
+License: BSD-2-clause
+ All rights reserved.
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+ IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+ TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+ PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-3-clause
+ All rights reserved.
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. Neither the name of the University nor the names of its contributors
+    may be used to endorse or promote products derived from this
+    software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS
+ BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+ BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+ OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining a copy of
+ this software and associated documentation files (the "Software"), to deal in
+ the Software without restriction, including without limitation the rights to
+ use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ the Software, and to permit persons to whom the Software is furnished to do so,
+ subject to the following conditions:
+ - The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+ - The Software is provided "as is", without warranty of any kind, express or
+   implied, including but not limited to the warranties of merchantability,
+   fitness for a particular purpose and noninfringement. In no event shall the
+   authors or copyright holders be liable for any claim, damages or other
+   liability, whether in an action of contract, tort or otherwise, arising from,
+   out of or in connection with the Software or the use or other dealings in the
+   Software.
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the
+ Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ Boston, MA 02110-1301, USA.
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/GPL-2'.
+
 License: LGPL-2+
  This program is free software; you can redistribute it and/or
  modify it under the terms of the GNU Library General Public
@@ -44,10 +226,6 @@ License: LGPL-2+
  On Debian GNU/Linux systems, the complete text of the GNU Library General
  Public License version 2 can be found in the file
  `/usr/share/common-licenses/LGPL-2+'.
-
-Files: src/findsubtitles/filedownloader/main.cpp
-Copyright: 2004-2008, Trolltech ASA
-License: LGPL-2.1+
 
 License: LGPL-2.1+
  This library is free software; you can redistribute it and/or
@@ -70,124 +248,3 @@ License: LGPL-2.1+
  On Debian GNU/Linux systems, the complete text of the GNU Lesser General
  Public License version 2.1 can be found in the file
  `/usr/share/common-licenses/LGPL-2.1'.
-
-License: GPL-2+
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
- .
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License
- along with this program; if not, write to the
- Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
- Boston, MA 02110-1301, USA.
- .
- On Debian systems, the full text of the GNU General Public
- License version 2 can be found in the file
- `/usr/share/common-licenses/GPL-2'.
-
-License: infozip
- This software is provided 'as-is', without any express or implied
- warranty.  In no event will the authors be held liable for any damages
- arising from the use of this software.
- .
- Permission is granted to anyone to use this software for any purpose,
- including commercial applications, and to alter it and redistribute it
- freely, subject to the following restrictions:
- .
- 1. The origin of this software must not be misrepresented; you must not
-    claim that you wrote the original software. If you use this software
-    in a product, an acknowledgment in the product documentation would be
-    appreciated but is not required.
- 2. Altered source versions must be plainly marked as such, and must not be
-    misrepresented as being the original software.
- 3. This notice may not be removed or altered from any source distribution.
- .
- This software is provided "as is," without warranty of any kind, express or
- implied. In no event shall Info-ZIP or its contributors be held liable for any
- direct, indirect, incidental, special or consequential damages arising out of
- the use of or inability to use this software.
- .
- Permission is granted to anyone to use this software for any purpose, including
- commercial applications, and to alter it and redistribute it freely, subject to
- the above disclaimer and the following restrictions:
- .
- Redistributions of source code (in whole or in part) must retain the above
- copyright notice, definition, disclaimer, and this list of conditions.
- .
- Redistributions in binary form (compiled executables and libraries) must
- reproduce the above copyright notice, definition, disclaimer, and this list of
- conditions in documentation and/or other materials provided with the
- distribution. Additional documentation is not needed for executables where a
- command line license option provides these and a note regarding this option is
- in the executable's startup banner. The sole exception to this condition is
- redistribution of a standard UnZipSFX binary (including SFXWiz) as part of a
- self-extracting archive; that is permitted without inclusion of this license, as
- long as the normal SFX banner has not been removed from the binary or disabled.
- .
- Altered versions--including, but not limited to, ports to new operating systems,
- existing ports with new graphical interfaces, versions with modified or added
- functionality, and dynamic, shared, or static library versions not from
- Info-ZIP--must be plainly marked as such and must not be misrepresented as being
- the original source or, if binaries, compiled from the original source. Such
- altered versions also must not be misrepresented as being Info-ZIP
- releases--including, but not limited to, labeling of the altered versions with
- the names "Info-ZIP" (or any variation thereof, including, but not limited to,
- different capitalizations), "Pocket UnZip," "WiZ" or "MacZip" without the
- explicit permission of Info-ZIP. Such altered versions are further prohibited
- from misrepresentative use of the Zip-Bugs or Info-ZIP e-mail addresses or the
- Info-ZIP URL(s), such as to imply Info-ZIP will provide support for the altered
- versions.
- .
- Info-ZIP retains the right to use the names "Info-ZIP," "Zip," "UnZip,"
- "UnZipSFX," "WiZ," "Pocket UnZip," "Pocket Zip," and "MacZip" for its own source
- and binary releases.
-
-License: Zlib
- Condition of use and distribution are the same than zlib :
- .
- This software is provided 'as-is', without any express or implied
- warranty.  In no event will the authors be held liable for any damages
- arising from the use of this software.
- .
- Permission is granted to anyone to use this software for any purpose,
- including commercial applications, and to alter it and redistribute it
- freely, subject to the following restrictions:
- .
- 1. The origin of this software must not be misrepresented; you must not
- claim that you wrote the original software. If you use this software
- in a product, an acknowledgment in the product documentation would be
- appreciated but is not required.
- 2. Altered source versions must be plainly marked as such, and must not be
- misrepresented as being the original software.
- 3. This notice may not be removed or altered from any source distribution.
-
-License: BSD-2-clause
- Redistribution and use in source and binary forms, with or without modification, are
- permitted provided that the following conditions are met:
- .
-    1. Redistributions of source code must retain the above copyright notice, this list of
-       conditions and the following disclaimer.
- .
-    2. Redistributions in binary form must reproduce the above copyright notice, this list
-       of conditions and the following disclaimer in the documentation and/or other materials
-       provided with the distribution.
- .
- THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED
- WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
- FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR OR
- CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
- CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
- SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
- ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
- ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- .
- The views and conclusions contained in the software and documentation are those of the
- authors and should not be interpreted as representing official policies, either expressed
- or implied, of the author.

@@ -1,0 +1,16 @@
+Description: Fix FTBFS with gcc-8 by disable -Werror
+Author: Mateusz Łukasik <mati75@linuxmint.pl>
+Bug-Debian: https://bugs.debian.org/898943
+Last-Update: 2018-06-08
+
+--- a/webserver/Makefile
++++ b/webserver/Makefile
+@@ -2,7 +2,7 @@ PROG = simple_web_server
+ MODULE_CFLAGS=-DMG_DISABLE_DAV_AUTH -DMG_ENABLE_HTTP_CGI=0 -DMG_ENABLE_THREADS=0
+ 
+ SOURCES = main.c mongoose.c
+-CFLAGS = -O2 -W -Wall -Werror -Wno-unused-function $(CFLAGS_EXTRA) $(MODULE_CFLAGS)
++CFLAGS = -O2 -W -Wall -Wno-unused-function $(CFLAGS_EXTRA) $(MODULE_CFLAGS)
+ 
+ ifeq ($(OS), Windows_NT)
+ CFLAGS += -lws2_32

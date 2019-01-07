@@ -19,24 +19,15 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid xenial buster yakkety zesty artful bionic)) 
-	CONTROL = control.qt5
-	CMAKEOPTS += -DQT5=ON
-else
-	CONTROL = control.qt4
-	CMAKEOPTS += -DQT5=OFF
-endif
+
+CMAKEOPTS += -DQT5=ON
+
 
 %:
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	cp debian/$(CONTROL) debian/control
 	dh_auto_configure -- $(CMAKEOPTS)
-
-override_dh_auto_clean:
-	cp debian/$(CONTROL) debian/control
-	dh_auto_clean
 
 get-orig-source:
 	wget -c "$(CUR_URL)" -O "$(PACKAGE)_$(CUR_VER).orig.tar.bz2"

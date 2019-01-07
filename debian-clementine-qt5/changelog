@@ -1,3 +1,33 @@
+clementine-qt5 (1.3.1+git2178-g4ff370ce1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: qt5
+  * Commit: 4ff370ce1ef41a8dc9b95a367c23eef43a918ad9
+  * Date: 1546441404
+  * git changelog:
+  *  4ff370ce1 - Fix build without Qt5DBus (#6187)
+  *  09538d84f - Fix Qt 5 build (#6246)
+  *  453270c8b - Fixes for compiling against qt5 on mac
+  *  1f87535c2 - Replace sha2 with QCryptographicHash (#6230)
+  *  f57942264 - Fix formatting
+  *  1d954f2eb - Fix USE_BUNDLE appearing twice
+  *  d260c8b6d - Fix saving playlist columns (#6222)
+  *  9f946a289 - Improvements to makefiles and make components optional
+    (#6221)
+  *  139bc1f5a - Convert NULL to nullptr (#6220)
+  *  587e72b8c - Fix library search queries on fts columns (#6219)
+  *  289ea31f8 - Fix saving geometry and fancytab settings (#6217)
+  *  122d28eab - Fix device loader error messages. (#6215)
+  *  3e48f7b15 - Fix libsoup DLL name
+  *  e20f0d255 - Do not include echonest dll
+  *  b788f07c6 - Include libsoup and libpsl DLLs
+  *  c583ddd9c - Explicitly find dynamic version of glew
+  *  0b54e1ff0 - Updated accessibility check logic to fix Mojave crash
+  *  2d07ea716 - Fix Fedora build
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 05 Jan 2019 11:39:59 +0300
+
 clementine-qt5 (1.3.1+git2152-g2affbafa9-1) unstable; urgency=medium
 
   * Compile

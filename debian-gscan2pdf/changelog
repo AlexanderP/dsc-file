@@ -1,3 +1,31 @@
+gscan2pdf (2.2.2+git2921-437af7ee-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 437af7ee79b0308c1aecca2c6c8139129e7c39a9
+  * Date: 1546254001
+  * git changelog:
+  *  437af7ee - Bumped version to 2.2.2
+  *  3e4f39a5 - Update to French translation
+  *  b2c70671 - Update to Italian translation
+  *  ba05eb75 - Update a _throw_error() call that was missing page-UUID
+    and process name arguments
+  *  02bdd291 - + xsm flags to a regex
+  *  42de19cd - Update to Ukranian translation
+  *  2b4dc24e - Update to Spanish translation
+  *  ca7e7d26 - Don't reapply buttons after reloading options
+  *  27927a96 - Use output image from user-defined tool even if it
+    throws an error
+  *  6cd73158 - Correct some more vbox() calls left over from gtk+-2
+  *  8aafc80b - Allow foreground colour of text of OCR output to be
+    themed
+  *  552c0138 - Documented closing bug #300
+  *  e66abc60 - Improved the error message when ImageMagick exceeds its
+    resources
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 05 Jan 2019 14:29:43 +0300
+
 gscan2pdf (2.2.1+git2908-a8ca6cc4-1) unstable; urgency=medium
 
   * Compile
