@@ -4,7 +4,6 @@ Upstream-Contact: Sergey Ilinykh <rion4ik@gmail.com>
                   Boris Pek <tehnick-8@yandex.ru>
 Source: https://github.com/psi-plus/psi-plus-snapshots/tags
  The orig.tar.gz is just renamed upstream tarball (without changes).
- See section get-orig-source in debian/rules file for details.
 
 Files: *
        admin/*
@@ -172,38 +171,38 @@ Files: themes/*
        sound/reminder.wav
        iconsets/system/default/psiplus/*
        iconsets/roster/default/typing.png
-       src/plugins/dev/pstoplugin/*
-       src/plugins/dev/omemoplugin/*
-       src/plugins/generic/attentionplugin/*
-       src/plugins/generic/extendedoptionsplugin/*
-       src/plugins/generic/qipxstatusesplugin/*
-       src/plugins/generic/autoreplyplugin/*
-       src/plugins/generic/screenshotplugin/*
-       src/plugins/generic/birthdayreminderplugin/*
-       src/plugins/generic/gomokugameplugin/*
-       src/plugins/generic/skinsplugin/*
-       src/plugins/generic/historykeeperplugin/*
-       src/plugins/generic/stopspamplugin/*
-       src/plugins/generic/chessplugin/*
-       src/plugins/generic/icqdieplugin/*
-       src/plugins/generic/storagenotesplugin/*
-       src/plugins/generic/cleanerplugin/*
-       src/plugins/generic/imageplugin/*
-       src/plugins/generic/translateplugin/*
-       src/plugins/generic/clientswitcherplugin/*
-       src/plugins/generic/jabberdiskplugin/*
-       src/plugins/generic/videostatusplugin/*
-       src/plugins/generic/conferenceloggerplugin/*
-       src/plugins/generic/juickplugin/*
-       src/plugins/generic/watcherplugin/*
-       src/plugins/generic/contentdownloaderplugin/*
-       src/plugins/generic/pepchangenotifyplugin/*
-       src/plugins/generic/extendedmenuplugin/*
-       src/plugins/generic/otrplugin/*
-       src/plugins/generic/httpuploadplugin/*
        src/plugins/deprecated/captchaformsplugin/*
        src/plugins/deprecated/gmailserviceplugin/*
        src/plugins/deprecated/yandexnarodplugin/*
+       src/plugins/dev/pstoplugin/*
+       src/plugins/generic/attentionplugin/*
+       src/plugins/generic/autoreplyplugin/*
+       src/plugins/generic/birthdayreminderplugin/*
+       src/plugins/generic/chessplugin/*
+       src/plugins/generic/cleanerplugin/*
+       src/plugins/generic/clientswitcherplugin/*
+       src/plugins/generic/conferenceloggerplugin/*
+       src/plugins/generic/contentdownloaderplugin/*
+       src/plugins/generic/extendedmenuplugin/*
+       src/plugins/generic/extendedoptionsplugin/*
+       src/plugins/generic/gomokugameplugin/*
+       src/plugins/generic/historykeeperplugin/*
+       src/plugins/generic/httpuploadplugin/*
+       src/plugins/generic/icqdieplugin/*
+       src/plugins/generic/imageplugin/*
+       src/plugins/generic/jabberdiskplugin/*
+       src/plugins/generic/juickplugin/*
+       src/plugins/generic/omemoplugin/*
+       src/plugins/generic/otrplugin/*
+       src/plugins/generic/pepchangenotifyplugin/*
+       src/plugins/generic/qipxstatusesplugin/*
+       src/plugins/generic/screenshotplugin/*
+       src/plugins/generic/skinsplugin/*
+       src/plugins/generic/stopspamplugin/*
+       src/plugins/generic/storagenotesplugin/*
+       src/plugins/generic/translateplugin/*
+       src/plugins/generic/videostatusplugin/*
+       src/plugins/generic/watcherplugin/*
 Copyright: 2009-2013 Sergey Ilinyh aka Rion <rion4ik@gmail.com>
            2009-2012 Evgeny Khryukin
            2009-2010 Virnik
@@ -242,7 +241,7 @@ License: Expat
 
 Files: cmake/modules/*
        iris/cmake/modules/*
-       src/plugins/dev/omemoplugin/cmake/*
+       src/plugins/generic/omemoplugin/cmake/*
 Copyright: 2016-2018 Psi+ Project
            2016-2018 Vitaly Tonkacheyev aka KukuRuzo
            2009 Vittorio Giovara <vittorio.giovara@gmail.com>

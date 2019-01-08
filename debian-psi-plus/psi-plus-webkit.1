@@ -1,23 +1,17 @@
-.TH PSI 1 "November  1, 2001"
+.TH Psi+ 1 "08 Aug 2018"
 .\" Please adjust this date whenever revising the manpage.
 .SH NAME
-psi \- jabber client
+psi-plus-webkit \- Qt-based XMPP client (WebKit version)
 .SH SYNOPSIS
-.B psi
+.B psi-plus-webkit
 .SH DESCRIPTION
-.B psi 
-is a free instant messaging application designed for the Jabber
-(XMPP) IM network (including Google Talk). It has full Unicode support, 
-and supports most important XMPP features like file transfer, group chat,
-encryption etc.
+.B Psi IM 
+is a capable XMPP client aimed at experienced users. Its design goals are simplicity and stability. Psi IM is highly portable and runs on MS Windows, GNU/Linux and macOS.
 .PP
-Psi relies on the qca2 library for its encryption features. Therefore,
-it's necessary to install libqca2-plugin-ossl for SSL (client-to-server)
-encryption and libqca2-plugin-gnupg for PGP (end-to-end) encryption.
+Psi IM is minimal but powerful. There are keybindings for just about everything, Unicode is supported throughout and contacts are cached offline. Security is also a major consideration, and Psi IM provides it for both client-to-server (TLS) and client-to-client (GnuPG, OTR, OMEMO).
 .PP
-A tutorial can be found on the web at http://psi-im.org/wiki/Tutorial
+WebKit version of Psi IM has few additional features (in comparing with basic version of Psi): support of animated emoticons, support of (adium) themes in private chats and group chats, support of previewing of images and videos in private chats and group chats, etc. But if you prefer old fashioned plain text chats from era of IRC heyday, then basic version of Psi IM is your obvious choice.
 .PP
-This version build whis webkit
+In 2009 a Psi IM fork named Psi+ was started. Project purposes are: implementation of new features, writing of patches and plugins for transferring them to upstream. As of 2017 all active Psi+ developers have become official Psi IM developers, but Psi+ still has a number of unique features. From developers point of view Psi+ is just a development branch of Psi IM which is hosted at separate git repositories and for which rolling release development model is used.
 .SH AUTHOR
-This manual page was written by Jan Niehusmann <jan@debian.org>,
-for the Debian GNU/Linux system (but may be used by others).
+This manual page was written by Boris Pek <tehnick-8@yandex.ru> for the Debian Project and may be used by others.
