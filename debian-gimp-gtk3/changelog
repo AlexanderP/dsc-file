@@ -1,3 +1,118 @@
+gimp-gtk3 (2.99.0+git42782-e269a837cd-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: e269a837cd4a7f86bdfec593742a79f705acda59
+  * Date: 1547918944
+  * git changelog:
+  *  e269a837cd - Issue #266 - Healing Tool - Sample Merged option does
+    not work
+  *  8dbd10b3c6 - app: brute force the session memorized size when
+    showing a window.
+  *  02d6478c24 - Update Japanese translation
+  *  ac5e4f4c33 - app: improve gimp_channel_clear()
+  *  de4e7b4770 - app: update drawable filter upon alpha-lock change
+  *  8571d7812f - app: parallelize
+    gimp_pickable_contiguous_region_by_color()
+  *  9719dff9c5 - app: convert gimppickable-contiguous-region to C++
+  *  0a952a3429 - app: fix a crash in bucket fill tool.
+  *  aa04258620 - app: improved fix to commit 036ccc70cf.
+  *  dec747a515 - Update Polish translation
+  *  08de4bf0af - plug-ins: small formatting fix in selection-to-path-
+    dialog.c
+  *  76302b6634 - Odd ` characters corrected as '.
+  *  b74c33db5c - tools: in performance-log-viewer.py, allow inverting
+    selection
+  *  f246a0197b - tools: in performane-log-viewer.py, change sample-
+    selection icon
+  *  c44f94f368 - Update Japanese translation
+  *  c71b4916af - app: add the concept of line art source to Bucket Fill
+    tool.
+  *  a5e2945b68 - libgimp: in GimpTileBackendPlugin, change default tile
+    multiplier to 1
+  *  5ffdb9aa41 - libgimp: in GimpTileBackendPlugin, don't read tile
+    data upon TILE_SET
+  *  41d5986a2b - Update Japanese translation
+  *  f4b93b75a2 - app: remove a junk signal signature from struct
+    GimpGuiConfigClass
+  *  036ccc70cf - Issue #2785: Fill by line art detection produces
+    Segmentation fault...
+  *  9833da3431 - app: clear priority rect when finishing projection
+    rendering
+  *  33c22ae2a3 - app: in filter tools, allow toggling on-canvas
+    controller visibility
+  *  f1a7abaef9 - app: add gimp_tool_widget_{get,set}_visible()
+  *  34e6c8734b - app: in GimpDrawTool, avoid CRITICAL on widget signal
+    if not active
+  *  a9883e98e3 - app: in GimpToolPath, use gimp_tool_message() instead
+    of _set_status() ...
+  *  265071f34b - app: handle GimpToolWidget::message in GimpDrawTool
+  *  00a06f94be - app: handle GimpToolWidget::message in
+    GimpToolWidgetGroup
+  *  1ac4b85ce0 - app: add gimp_tool_widget_message[_literal]()
+  *  749dc3c465 - app: in gimpdrawtool.c, s/rectangle/widget/ in tool-
+    widget signal handlers
+  *  250b9c033e - Update Polish translation
+  *  f9c170dfbd - Issue #2786: a few string issues.
+  *  42845c9462 - app: in gimp_projection_chunk_render_start(), properly
+    invalidate preview
+  *  0e5de95760 - app: in gimp_projection_chunk_render_start(), don't
+    leak empty region
+  *  f8cd5891ee - Update British English translation
+  *  942e1aa939 - app: fix gimp_chunk_iterator_set_priority_rect()
+  *  ee646716f4 - Update Polish translation
+  *  a61f29e30a - app: in gimpchunkiterator.c, #include <stdlib.h>
+  *  d0ae39f017 - Issue #440 - libgimp/gimptilebackendplugin.c provides
+    no pyramid
+  *  2256ab22f7 - app: in the gradient tool, halt gradient editor before
+    committing filter
+  *  f4750a0ae7 - app: in gimp_tile_handler_validate_buffer_copy(),
+    temporarily remove source handler
+  *  4110f7b7b1 - app: use GimpChunkIterator in
+    gimp_gegl_apply_cached_operation()
+  *  246e782858 - app: use GimpChunkIterator in GimpProjection
+  *  ba9ce34e10 - app: add GimpChunkIterator
+  *  005bc1406b - app: add link to Smart Colorization scientific paper.
+  *  388f6da1c4 - desktop: prepare GIMP 2.10.10 appdata.
+  *  f3972329e3 - Update Japanese translation
+  *  50696780fe - Update Japanese translation
+  *  a67ccc63f7 - Update Japanese translation
+  *  74df62034a - Annotation for translators.
+  *  6370147990 - app: make all pixbuf rendering in GimpViewRenderer
+    HiDPI-aware
+  *  aaf8b8b53c - Update POTFILES.in
+  *  9b25611857 - Issue #1824 - Crash on 2.10.4 using tablet
+  *  25cf13402c - Update Japanese translation
+  *  5f176172e6 - Update Japanese translation
+  *  496bc02b49 - app: push a temporary status when picking layer with
+    alt-midclick.
+  *  5c20d220dd - build: add "org.freedesktop.FileManager1" bus access
+    to flatpak.
+  *  4c13eee294 - Update Japanese translation
+  *  49e57f8d6e - app: in gimp_display_empty(), clear image of matching
+    contexts
+  *  b31729f821 - app: expect event == NULL in
+    gimp_device_info_get_event_coords().
+  *  fc55e7bd7f - Update Japanese translation
+  *  94384efb0c - Add Japanese translation
+  *  4c337353a0 - app: make layer picking a generic modifier of the
+    shell.
+  *  90e9eb3fca - app: alt-click to pick a layer will loop through
+    candidate layers.
+  *  3b59e6f61e - app: allow picking layer in paint tools on alt-click.
+  *  479fd5b24b - libgimpbase: more metadata fixes for tags that can
+    appear multiple times
+  *  62de94c7fd - Issue #763 - GTK3 GIT Set Keyboard Shortcut Broken
+  *  4b4fffbd0e - app: in bucket fill tool, don't calculate line art of
+    layer groups
+  *  19320235f1 - Issue #1004 - file-pdf-load crashes in lcms when
+    opening PDF with...
+  *  ee6b629fa3 - Issue #1358 - Increase default size of "extended input
+    device dialog"...
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 19 Jan 2019 23:48:48 +0300
+
 gimp-gtk3 (2.99.0+git42712-823d4a0d24-1) unstable; urgency=medium
 
   * Compile

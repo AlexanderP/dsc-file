@@ -1,3 +1,136 @@
+freecad-daily (0.17+git15671-28cbe2bd8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 28cbe2bd8986701bb7404842cf60138957e23ed6
+  * Date: 1547941549
+  * git changelog:
+  *  28cbe2bd8 - Spreadsheet: fix #3474 cross-CS drag-drop issue
+  *  2e0374057 - Fix Start WB behavior for missing examples dir in
+    Debian package
+  *  2a208f9da - FEM: file ending, use FCStd in FEM strings
+  *  d0d8b9930 - FEM: unit tests, add some comments to open test files
+    in FreeCAD
+  *  b8172a104 - FEM: test suite, use FCStd instead of fcstd, as it is
+    what FreeCAD does on saveing a file
+  *  969b8860f - FEM: white space
+  *  37389601e - FEM: tetgen exporter, code formating pep 8
+  *  90f4869ca - FEM: code formating, space in block comment
+  *  4b7ddfe40 - FEM: file types, sort them for im- and export
+  *  769632f33 - FEM: solver settings, sort setting
+  *  3c0193b79 - FEM: cmake, sort solver modules
+  *  5e2fbe18e - Crowdin: Remove apostrophe from
+    TechDraw/Gui/MDIViewPage.cpp translation
+  *  4f67fae9e - Refine TechDraw/Gui/CommandDecorate.cpp translation
+    string
+  *  7bd3bb837 - Fix Text Literals for Translation
+  *  ed06cbe62 - OpenSCAD: Fixed issue #3640
+  *  a60b6957d - Arch: Axis can now be referenced in sketches
+  *  ae95f77f5 - Draft: Fixed small bug in Snap Nearest command
+  *  42d7c7afd - disconnect boost signals when destroying tree view
+  *  de5390456 - fixes 0002706: Box selection does not select dimension
+    or text
+  *  d37dea9c7 - fixes 0001673: Assign already assigned keyboard
+    shortcuts without searching old assigned action
+  *  b852d1490 - add method to check if key sequence is none
+  *  c9b4f4ba6 - fix possible crash in PropertySheet when removing
+    dependencies
+  *  552ed9eab - fixes 0002793: tube as basic solid
+  *  e3ec8e700 - fixes 0003776: PartDesign Hole parameters Diameter
+    field is not unit aware
+  *  0cc8efa10 - simplify handling of locale specific with InputField
+    from Python
+  *  fdf8fe7bc - fixes 0003669: AddonManager should inform of the need
+    to restart FreeCAD for changes to take effect
+  *  f1c23e903 - Add new display mode Wireframe & Nodes to FEM
+  *  6e5369da3 - fix possible double destruction when removing a group
+    and its content from document
+  *  71d57b376 - Start: Handle addons with non-standard WB name
+  *  bdbea25d0 - issue 0003624: FEM, GUI, mesh VP, element colors
+  *  9f394aa53 - set name to Inventor node of display mode
+  *  d94fc4988 - fixes 0003683: FEM, GUI, incorrect display of
+    constraints symbols on reference shapes
+  *  3f51e25b2 - Start: Fixed image file paths
+  *  f86f5e927 - Crowdin: Experiment to remove obsolete translations
+    from .ts file
+  *  4257a4d8b - FEM: vtk tools, some comments, white spaces and changes
+    from message to log
+  *  16435205d - FEM: vtk Post, ensure correct data visuliation with non-
+    continious node id's, workaround for issue #3617
+  *  17a6a9889 - FEM: toolbarnames, fix wrong name for utilities toolbar
+  *  767c7365d - FEM: netgen mesh obj, make it a norecompute obj
+  *  24f1b023e - also set default view orientation when creating
+    document from Start workbench
+  *  dd7aba2f6 - Draft: small bugfix in trackers
+  *  c601f4cb6 - fixes 0003222: Invert zoom setting is not respected in
+    paper/page mode
+  *  85c7ac5ab - fix build failure with old Coin3d versions
+  *  53eb746e1 - fixes 0003700: Tree object deletion possible with
+    keyboard but not right-click menu in Part Design
+  *  632f9cf25 - fixes 0003515: Changing Name of Spreadsheet in History
+    Tree Does Not Trigger Name Update in Tab at Bottom of 3D Window
+  *  1382f8362 - fixes 0003222: Invert zoom setting is not respected in
+    paper/page mode
+  *  1f5059b5b - fix crash when removing from document and accessing
+    Python based feature
+  *  b357d530e - set non-modifying functions of Python wrappers as const
+  *  d0d2a0594 - Crowdin: cont...
+  *  0d022601f - Crowdin: more fixes
+  *  506741aee - [For v0.18] Crowdin fixes
+  *  15b854b2a - allow to set user-defined standard orientation
+  *  abe82e00f - harmonize functions to set camera orientations
+  *  7d8e56626 - Sketcher: fixes #3762
+  *  cec0cf913 - Fix #3763 Page Tab not removed on undo
+  *  0459122c1 - update PD example project
+  *  a32d93896 - Re-added linux thumbnailer utility that had been washed
+    out together with debian folder
+  *  033fce268 - support face colors when writing in OpenInventor format
+  *  6ccc239f9 - Arch: Small bugfix in ifc exporter
+  *  64a94ae0f - implement Isometric, Dimetric and Trimetric projection
+  *  a69abb3b7 - Py3 Fix to import Airfoil DAT files
+  *  a14af0f2b - AddonManager: Show warning for obsolete addons
+  *  356ecd5b1 - fixes #0003766: Closing and re-opening a TechDraw page
+    causes segfault
+  *  f9f5b34ba - Py3: fix saving sketch while in edit mode
+  *  896aaf575 - fix incorrect terminology in NaviCube, add support of
+    isometric view
+  *  9a7287113 - Arch: Fixed behaviour of alternative wall icon
+  *  511a9edae - matplotlib, PySide, Shiboken, six
+  *  fb08dce8d - Create requirements.txt
+  *  c70153106 - flake8 noqa a Python 3 syntax error
+  *  a17ca7dc0 - apply() was removed in Python 3
+  *  3d52e8a6b - Arch: Fixed recursion loop in windows
+  *  d37d7455d - fix double vs. float problem to solve problems in
+    Mesh.nearestFacetOnRay
+  *  89cf78b26 - Arch: Fixed Reference object that cannot be deleted
+  *  59731e95a - Undefined name: to --> 'to' (again)
+  *  e638705bc - Draft: Fixed grid not appearing on working plane setup
+  *  1ebcb3654 - Remove decode as returned object by translate()
+    function is a unicode oject
+  *  55a4f78ad - Add command to create coordinate system as datum item
+  *  6efd6de4c - Start: Show 'New' button even if recent files list is
+    empty
+  *  a7c0f4bc5 - Drop depencence on six module
+  *  51ab27f54 - Fix file, long, raw_input, and xrange for Python 3
+  *  fdb855e36 - minor fix on SVG import
+  *  3c4a5389d - Undefined name: Typo ‘newob‘ —> ‘newobj’
+  *  9af7b8353 - Missing import FreeCAD and/or FreeCADGui (again)
+  *  cf5a04579 - fast_finish: true
+  *  4ccdabd00 - macOS: drop the old osx_image: xcode7.3
+  *  05572ba49 - Also run the osx build in allow_failures mode
+  *  f50331413 - Travis CI: matrix: allow_failures: python: 3.7
+  *  b7ccf8da0 - Travis CI: The real Python 3.7 in a separate parallel
+    run
+  *  bdc050937 - python3 -m pip install flake8
+  *  53a2feb6c - Travis CI: Use flake8 to find Python syntax errors
+  *  59eb1735b - Arch: Fixed wrong movement of references on reload
+  *  e10e90516 - Draft: Fixed wrong Qt import
+  *  a9f1a0c4e - AddonManager: Don't overwrite displayed text after a
+    module install/removal
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 20 Jan 2019 10:05:11 +0300
+
 freecad-daily (0.17+git15577-1a8d3a703-1) unstable; urgency=medium
 
   * Compile
