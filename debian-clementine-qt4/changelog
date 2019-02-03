@@ -1,16 +1,30 @@
-clementine-qt4 (1.3.1+git2060-g6c159481e-1) unstable; urgency=medium
+clementine-qt4 (1.3.1+git2072-g9282c2c05-1) unstable; urgency=medium
 
   * Compile
   * URL: https://github.com/clementine-player/Clementine.git
   * Branch: master
-  * Commit: 6c159481ed9d7da7a0d11922737c6f848738560a
-  * Date: 1547586605
+  * Commit: 9282c2c059e7401282650b2c327d91c2c2ec182b
+  * Date: 1548721500
   * git changelog:
+  *  956df42ca - Add syntax to proto files
+  *  3256e8141 - Update about
+  *  c4d6424e9 - ultimate_providers.xml: now handles colon correctly for
+    genius.com (#6269)
+  *  0e52bd9d6 - Remove amazon cover provider (#6265)
+  *  eaac6672a - Update appdata (#6266)
+  *  7f9cff03b - Change default group by in library to album artist
+    (#6264)
+  *  d5eb07c6f - Remove echonest (#6263)
+  *  ed3d46267 - Fix memory leak and use ItemToIndex / IndexToItem
+    (#6262)
+  *  7e25a7c7e - Convert devices manager(model) to QAbstractItemModel
+    (#6260)
+  *  a82cc2f8a - Update lyrics.com lyrics provider
   *  6c159481e - Handle MTP connection failures more gracefully. (#6256)
   *  8d78dae9b - Quit thread before deleting the loader (#6254)
   *  681f986f0 - Fix global shortcuts using GSD D-Bus backend (#6251)
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 19 Jan 2019 09:34:35 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 01 Feb 2019 21:13:51 +0300
 
 clementine-qt4 (1.3.1+git2057-g35386a1af-1) unstable; urgency=medium
 

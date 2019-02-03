@@ -1,11 +1,158 @@
-freecad-daily (0.17+git15671-28cbe2bd8-1) unstable; urgency=medium
+freecad-daily (0.17+git15780-f94e76c11-1) unstable; urgency=medium
 
   * Compile
   * URL: https://github.com/FreeCAD/FreeCAD.git
   * Branch: master
-  * Commit: 28cbe2bd8986701bb7404842cf60138957e23ed6
-  * Date: 1547941549
+  * Commit: f94e76c1116ec3b818961ff65131b3d86fa5b95e
+  * Date: 1549053501
   * git changelog:
+  *  f94e76c11 - Arch: Fixed duplicate IfcSurfaceStyle names in IFC
+    export
+  *  ac18ec0d7 - Updated translations
+  *  27885764c - Tools: Use downloaded zip file from crowdin without
+    arguments
+  *  0bed2a9c5 - Git ignore crowdin zip file
+  *  0cd796a0f - Draft: Fixed UI focus in arc tool
+  *  7e9c09b77 - FEM: materials task panel, fix: if material editor was
+    canceled the material params were set to 0
+  *  cba29e6ce - FEM: unit tests, some defs to open the FreeCAD test
+    files
+  *  ce86fa436 - FEM: result tools, typo
+  *  e49098824 - FEM: result tools, improve stats handling
+  *  ebbe78177 - FEM: import tools, displacement abs, move calculation
+    and adding into result tools
+  *  52aa1b24c - FEM: frd reader, delete duplicate data container
+  *  de5fcf7c1 - FEM: result reading, use stress tuple for filling all
+    stress properties
+  *  a3612b4ac - FEM: import tools, move stats calculation into result
+    tools
+  *  e18ed72bd - FEM: import tools, remove duplicate code, node numbers
+    attribut has been set already
+  *  36c7d8740 - FEM: frd reader, move span calculation into fill result
+  *  546cadebb - FEM: frd reader, rename frd reading def
+  *  ea60b6551 - FEM: result reader, better identifier name
+  *  9604920b1 - FEM: Z88 result reader, typo in error message
+  *  10e8d1281 - Fix to take into account joining an object into a
+    closed wire.
+  *  84f68cc26 - Support splitting closed wires as well as open wires
+  *  dd3c9ccfe - Add beautiful icons thanks to bitacovir
+  *  0294b55bf - This type of tool only works on wires
+  *  09f134d56 - Add split tool
+  *  786786445 - Make join modifier actually talk about joining
+  *  46ffa77c3 - I think being explicit is clearer, and prevents the
+    liklihood of random falsy values
+  *  05ec6dbde - Add some docstrings for joinwires and jointwowires
+  *  5e6fb0911 - Now you can join multiple wires all at once
+  *  e25044d0e - Sorry I can't believe I committed and pushed that
+  *  882c4ca2f - Add new draft join tool
+  *  6e91ae956 - Draft: Reverted 5ccc656
+  *  a901f5798 - Draft: edit fix for wires works for bsplines too
+  *  49be948b4 - Adding new points on wires tests the edge you clicked
+    on instead of an overcomplicated curve parameter check
+  *  13622cd0b - FEM: Fix grammar
+  *  8a4af3b28 - Crowdin: Sketcher/App/SketchObject.cpp elaborated term
+    in string
+  *  69707228c - Crowdin: Sketcher/Gui/TaskSketcherValidation.cpp fixed
+    obsolete punct.
+  *  77102cae4 - Crowdin: Sketcher/Gui/CommandCreateGeo.cpp fix typos
+  *  103c118b8 - Crwodin: Sketcher/Gui/CommandConstraints.cpp
+    s/root/origin/
+  *  92622053a - Crowdin: Drawing/Gui/TaskOrthoViews.ui remove
+    whitespace
+  *  67fff1538 - Crowdin: Arch/ArchFloor.py grammar and refinement
+  *  26750deb0 - Documentation: uniformity
+  *  f11f2fb59 - Crowdin: Draft/Resources/ui/preferences-dxf.ui grammar
+    fix
+  *  e78fd828e - Crowdin: AddonManager/AddonManager.py fix some strings
+  *  06967e2b4 - Crowdin: StartPage/TranslationTexts.py grammatical fix
+  *  3b85a067b - Crowdin: Gui/qtcolorpicker.cpp refine string
+  *  3a32c314b - Crowdin: Draft/Draft.py fix grammar
+  *  3253de75e - Fix for a previous commits
+  *  177011740 - Crowdin: Tux/NavigationIndicatorGui.py grammar fix
+  *  582181af7 - Crowdin: Part/Gui/TaskAttacher.cpp superfluous
+    whitespace fix
+  *  845e77164 - Crowdin: Part/AttachmentEditor/TaskAttachmentEditor.py
+    whitespace fix
+  *  a07e675d9 - Crowdin: Gui/CADNavigationStyle.cpp refinements
+  *  4c33b114d - Crowdin: PartDesign/Gui/CommandBody.cpp grammar fix
+  *  bccfcfc5d - Crowdin: PartDesign/Gui/TaskFeaturePick.ui superfluous
+    whitespace
+  *  cf7585737 - Crowdin: Gui/NetworkRetriever.cpp superfluous
+    whitespace fix
+  *  adae9071e - Crowdin: Base/Exception.h uniformity fix
+  *  1db71c3c7 - Crowdin: Arch/ArchStairs.py missing paranthesis fix
+  *  d858a8609 - Crowdin: Sketcher/App/SketchObject.cpp uniformity fix
+  *  c65fce612 - Crowdin: Sketcher/App/SketchAnalysis.cpp remove
+    superflous whitespace
+  *  95f16814f - Crowdin: Sketcher/Gui/CommandConstraints.cpp grammar
+    fix
+  *  90841f72c - Crowdin: Sketcher/Gui/CommandCreateGeo.cpp typo fix
+  *  0df518db8 - Crowdin: Sketcher/Gui/SketchRectangularArrayDialog.ui
+    typo fix
+  *  16653a4be - Crowdin: Sketcher/Gui/SketcherSettings.ui whitespace
+    fix
+  *  83c2434bd - Crowdin: Sketcher/Gui/CommandConstraints.cpp
+  *  d5ea453f9 - Crowdin: Several more various fixes
+  *  e1446a0b9 - [WIP] Crowdin: fixes pre-0.18 release
+  *  0c5629870 - Hide n/a Rotation property
+  *  0f0040220 - Prevent selection of read only field
+  *  0b7c0b93d - Use regular 'w' mode when writing text files for py3
+    compatibility.
+  *  93dd00cc3 - Make startpage navigation buttons work initial load
+  *  763b4f3d8 - Update DraftTools.py
+  *  5caae5f43 - Fix chrash when clicking link to allow internetaccess,
+    and not having a open document
+  *  f2dc59c3a - add missing header file
+  *  d2ddce6a2 - remove Standard_OVERRIDE which is unknown for older
+    OCCT versions
+  *  dbc09e3a2 - fixes 0003020: 2D offset of circle are not in the right
+    place
+  *  9f96254e7 - improve whitespaces
+  *  bf24b7462 - Draft: Small fix to Edit tool
+  *  051454314 - Extend PySide2 wrapper to support QtUiTools
+  *  4079c9603 - fixes #0003788: Part-workbench extrude with taper angle
+    delivers a wrong shape
+  *  80f82b59d - Detection of NETGEN_VERSION is needed if using Netgen
+    package provided cmake file too.
+  *  4c38d81d9 - Netgen provided cmake file, has the include directories
+    to use in plural.
+  *  672b15a8d - FEM: constraint fluid boundary, fix bug of the delayed
+    redrawing for BoundaryType changed
+  *  2b3ea642d - Crowdin: More grammatical and whitespace fixes
+  *  28a23c23b - Set feed rates to constructs commands for a tags.
+  *  af4026bcd - Added support for feeds and speeds to to cmdsForEdge.
+  *  dedaa8076 - fixes 0003771: Memory leak in Part.Face.Surface
+  *  090fc6428 - Misc translation fixes from
+    https://forum.freecadweb.org/viewtopic.php?p=281670
+  *  eb08c67a7 - Draft: Fixed regression in snapping
+  *  96dee91d5 - fixes #3665 Applying patch from jurij
+  *  16ab8d3c8 - Fix source typos
+  *  86078f6ba - Path: Misc. comment typo and whitespace fixes
+  *  ba14668e1 - add method multVec to MatrixPy class for better
+    consistency
+  *  47a2296c6 - Remove abstract IFC entities (as per IFC4 Add2)
+  *  d7c22d92d - Fix Compile Warning
+  *  5a26558a9 - Fix out of scope warnings
+  *  13bf2c967 - Arch: Fixed missing UIDs in IFC import
+  *  3ade7b34a - Arch: Fixed multiple documents open bug in Reference
+    object
+  *  ca2e3c232 - Draft: Small cosmetic fix in edit points
+  *  041a55081 - handle also B-spline and Bezier curves in
+    GeomCurve::closestParameter
+  *  90fd3ae48 - Fix movement of Front View in ProjectionGroup
+  *  99c47b9bb - fixes 0003785: Incorrect extension FCstd instead fcstd
+  *  79a25ff6b - Arch: Prevision for forward compatibility
+  *  82d92280a - FEM: result and mesh, add compact result and mesh,
+    workaround for issue #2873
+  *  7fd16affe - Arch: Updated IFC property sets definitions
+  *  e385ed780 - add convenience functions to get element type to id and
+    vice versa
+  *  76c954000 - fix crash when accessing invalid group
+  *  873762ccd - Path: Remove obsolete code
+  *  ef8701843 - crowdin: fix whitespace
+  *  cb768d408 - Crowdin: Path/PathScripts/PathOp.py capitalize string
+  *  b7fbd7aef - Crowdin: Path/PathScripts/PathProfileBase.py capitalize
+    string
   *  28cbe2bd8 - Spreadsheet: fix #3474 cross-CS drag-drop issue
   *  2e0374057 - Fix Start WB behavior for missing examples dir in
     Debian package
@@ -129,7 +276,7 @@ freecad-daily (0.17+git15671-28cbe2bd8-1) unstable; urgency=medium
   *  a9f1a0c4e - AddonManager: Don't overwrite displayed text after a
     module install/removal
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 20 Jan 2019 10:05:11 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 02 Feb 2019 13:05:23 +0300
 
 freecad-daily (0.17+git15577-1a8d3a703-1) unstable; urgency=medium
 

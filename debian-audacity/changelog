@@ -1,14 +1,21 @@
-audacity (1:2.3.0+git9593-226851ab9-1) unstable; urgency=medium
+audacity (1:2.3.0+git9598-93f4e3bd6-1) unstable; urgency=medium
 
   * Compile
   * URL: https://github.com/audacity/audacity.git
   * Branch: master
-  * Commit: 226851ab91358886993e2e5bba430566bdee6032
-  * Date: 1547483153
+  * Commit: 93f4e3bd6617b0eab152c4a4ac0594f215d0ccaf
+  * Date: 1549049419
   * git changelog:
+  *  93f4e3bd6 - Bug2056: TrackPanel should keep focus after quick
+    play...
+  *  d3316173b - Fix unwrapped wxMessageDialog, small mistake in aee4005
+  *  38849cc90 - Null check in AudacityApp:OnExceptionInMainLoop
+  *  0941eaa0d - Bug2058: shouldn't lose data in original project when
+    saving-as...
+  *  b3dafcedd - Fix: bug 2054
   *  226851ab9 - Fix empty string a no-op for all Nyquist plug-ins
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 19 Jan 2019 12:10:03 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 01 Feb 2019 23:47:44 +0300
 
 audacity (1:2.3.0+git9592-5a7b6a732-1) unstable; urgency=medium
 

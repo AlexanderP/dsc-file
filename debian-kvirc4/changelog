@@ -1,11 +1,13 @@
-kvirc (4:5.0.0+git-7415-9403b352e-1) unstable; urgency=medium
+kvirc (4:5.0.0+git-7416-9b35d44fd-1) unstable; urgency=medium
 
   * Compile
   * URL: https://github.com/kvirc/KVIrc.git
   * Branch: master
-  * Commit: 9403b352edf76eda168203b0a514773ad4c8e1b0
-  * Date: 1547671214
+  * Commit: 9b35d44fd6eb216cf3587d00aeea52103b9111c3
+  * Date: 1548077054
   * git changelog:
+  *  9b35d44fd - uintUserListMinimumWidth: Reduce minimum due to account
+    for certain combinations of font and dpi
   *  9403b352e - KviControlCodes.cpp: Remove %16 when parsing colors
   *  2c9ba2643 - Replace KVI_OPTION_MIRCCOLOR usage with getMircColor
   *  0b1ea8aa9 - KviOptions.h: Add getMircColor
@@ -19,7 +21,7 @@ kvirc (4:5.0.0+git-7415-9403b352e-1) unstable; urgency=medium
     detection and add some new ones appveyor part mostly refs #2418 for
     build cache invalidation, update isn't really needed
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 18 Jan 2019 23:33:20 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 01 Feb 2019 20:28:02 +0300
 
 kvirc (4:5.0.0+git-7407-8a8cb2a00-1) unstable; urgency=medium
 

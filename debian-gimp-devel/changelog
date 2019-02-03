@@ -1,11 +1,98 @@
-gimp-devel (2.10.8+git42174-a94b1389ed-1) unstable; urgency=medium
+gimp-devel (2.10.8+git42240-eeeab8b209-1) unstable; urgency=medium
 
   * Compile
   * URL: https://gitlab.gnome.org/GNOME/gimp.git
   * Branch: gimp-2-10
-  * Commit: a94b1389ed8c9615717824e65c6b0f7f40e67fcb
-  * Date: 1547919180
+  * Commit: eeeab8b209512ab32b02bdc915dd13d099be99b8
+  * Date: 1549024883
   * git changelog:
+  *  eeeab8b209 - Add i18n support for python spyrogimp plugin
+  *  d2bc3eeb5d - plug-ins: in pygimp/plug-ins/Makefile.am, simplify
+    plug-in copy recipe
+  *  5f398c0888 - plug-ins: in pygimp/plug-ins/Makefile.am, re-copy plug-
+    ins upon change
+  *  301691b3ed - plug-ins: in pygimp/plug-ins/Makesfile.am, use tab-
+    width of 8
+  *  377cae8ecc - Update Japanese translation
+  *  297971e447 - app: fix CRITICAL when initializing the perspective-
+    clone tool
+  *  5e6378a7a3 - app: in perspective-clone tool, fix cursor presicion;
+    hide brush while adjusting
+  *  5c3532609f - app: add gimp_paint_tool_set_active()
+  *  028b0f39dd - app: fix cursor precision of source tools
+  *  b1c977e510 - app: fix cursor precision of various tools
+  *  b81723042e - plug-ins: add .gitignore file to file-dds
+  *  6f8c8ce56d - Update Japanese translation
+  *  61d2e8ad74 - Update Spanish translation
+  *  94d176d7f5 - Update Japanese translation
+  *  90d76267a7 - Updated Danish translation of gimp-plug-ins
+  *  0d950bd289 - Update Japanese translation
+  *  17e360e34b - Issue #2863 - Improve error reporting for scripts
+  *  316c47da6f - Update Hungarian translation
+  *  b70a37a33d - Update Hungarian translation
+  *  d11d094d02 - Issue #1119 - Unable to give a layer group as a
+    parameter to a python script
+  *  25d39eea9d - Update Japanese translation
+  *  69712634a1 - plug-ins: optionally define several float.h macros for
+    MinGW64.
+  *  dc01a613ff - Update Polish translation
+  *  d79916f598 - NEWS: keep up-to-date.
+  *  aaf5816695 - Undo some (unnecessary) changes.
+  *  0436dd1cb7 - (source modifs) Fix: Rename macros as it conflicts
+    with Mingw headers. * DATADIR -> GIMPDATADIR * SYSCONFDIR ->
+    GIMPSYSCONFDIR * DATADIR -> SYSDATADIR (tools/)
+  *  ffe2fb478c - app: new gimp_spin_scale_set_constrain_drag() and use
+    it on paint...
+  *  699933470a - libgimpbase: display thread id of the calling thread
+    as hexadecimal...
+  *  5a0e4554be - Update German translation
+  *  71fe5c00fd - plug-ins: avoid running pygimp plug-ins derived from
+    gimpplugin.plugin at each startup
+  *  9c6c064356 - Typo
+  *  7a0a3f47c7 - Update Swedish translation
+  *  ada21f2594 - Issue #2848: some sentences have no translation.
+  *  8361377b43 - app: in gimp:gradient, improve adaptive supersampling
+  *  14030fc930 - libgimpcolor: in gimp_adaptive_supersample_area(), use
+    scratch allocator
+  *  676936f9a7 - NEWS: update.
+  *  ead5e8e84b - desktop: add rewrite of the Spyrogimp in appdata
+    <release> tag.
+  *  8729f9a662 - plug-ins: clean the new Spyrogimp, rename it and
+    remove old version...
+  *  529583430d - plug-ins: Spyrogimp plugin rewrite.
+  *  18bcb41573 - desktop: check that no remaining TODOs are in appdata
+    file.
+  *  b0c0895b48 - desktop: reenable validity tests for appdata file.
+  *  ec09eaca8a - desktop: add <url> tags to <release>.
+  *  a5147bd49f - Added OARS
+  *  24598bb5b6 - desktop: add missing filter in <release> notes.
+  *  1bc7d5d01f - devel-docs: in performance-logs.md, fix markers-page
+    section number
+  *  34c732df1d - tools: in performance-log-viewer.py, add markers view
+  *  dcc4816770 - tools: in performance-log-viewer.py, some cleanup
+  *  2052de6c3d - devel-docs: fix performance-log profile-view function-
+    column description
+  *  e7ec1aa550 - app: allow more motion events with line art bucket
+    fill.
+  *  d317fc6dbe - Update Japanese translation
+  *  0ca82d41f3 - Update Swedish translation
+  *  9ad93d170b - Update Swedish translation
+  *  97b905dc0a - Update NEWS
+  *  2d2aef533a - Updated Danish translation of gimp-script-fu
+  *  e30011590e - Updated Danish translation of gimp-plug-ins
+  *  8b66cf0053 - Updated Danish translation of gimp-libgimp
+  *  aad44f0abf - Update Japanese translation
+  *  6a65e76267 - app: fix rectangle-select tool rounded-corners option
+  *  dbe80835ae - Updated Danish translation
+  *  9adf6c89ff - Issue #1942 - Smudge Tool with Sample Merged Option
+  *  bcc44a08b1 - app: fix indentation in gimpmaskundo.h
+  *  8324aeba82 - app: align mask-undo buffer to tile grid
+  *  78e9f09357 - NEWS: keep up to date.
+  *  10aa988afa - Issue #2828: Scrolling up with a mouse within a drop-
+    down list.
+  *  cbf5e7af7a - Issue #2828: Scrolling up with a mouse within a drop-
+    down list.
+  *  951a388cc3 - fixed typo in deprecation warning in gimpdrawable.h
   *  a94b1389ed - Issue #266 - Healing Tool - Sample Merged option does
     not work
   *  a16a95f430 - Update Japanese translation
@@ -108,7 +195,7 @@ gimp-devel (2.10.8+git42174-a94b1389ed-1) unstable; urgency=medium
   *  58e266ed8b - Issue #1358 - Increase default size of "extended input
     device dialog"...
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 19 Jan 2019 22:50:28 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 02 Feb 2019 08:14:18 +0300
 
 gimp-devel (2.10.8+git42104-0f2f95d97b-1) unstable; urgency=medium
 

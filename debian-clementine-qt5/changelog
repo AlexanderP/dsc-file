@@ -1,11 +1,26 @@
-clementine-qt5 (1.3.1+git2197-gf22e4acac-1) unstable; urgency=medium
+clementine-qt5 (1.3.1+git2212-g610566d25-1) unstable; urgency=medium
 
   * Compile
   * URL: https://github.com/clementine-player/Clementine.git
   * Branch: qt5
-  * Commit: f22e4acac6b5c6bde4607f41ee5b26decfab10b2
-  * Date: 1547781913
+  * Commit: 610566d25271c67d1625fd62041f6a27435b0a9d
+  * Date: 1548620795
   * git changelog:
+  *  956df42ca - Add syntax to proto files
+  *  3256e8141 - Update about
+  *  d8788d6a0 - Update qt5 branch
+  *  c4d6424e9 - ultimate_providers.xml: now handles colon correctly for
+    genius.com (#6269)
+  *  0e52bd9d6 - Remove amazon cover provider (#6265)
+  *  eaac6672a - Update appdata (#6266)
+  *  7f9cff03b - Change default group by in library to album artist
+    (#6264)
+  *  d5eb07c6f - Remove echonest (#6263)
+  *  ed3d46267 - Fix memory leak and use ItemToIndex / IndexToItem
+    (#6262)
+  *  7e25a7c7e - Convert devices manager(model) to QAbstractItemModel
+    (#6260)
+  *  a82cc2f8a - Update lyrics.com lyrics provider
   *  d772c8078 - Fix formatting
   *  89f40ee88 - Use QUrlQuery
   *  1d17bee44 - Merge with master and fix conflicts
@@ -17,7 +32,7 @@ clementine-qt5 (1.3.1+git2197-gf22e4acac-1) unstable; urgency=medium
   *  74fa386c9 - Try to obtain USB bus and device number from device
     name if unavailable in URI. (#6243)
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 19 Jan 2019 10:24:26 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 01 Feb 2019 21:57:13 +0300
 
 clementine-qt5 (1.3.1+git2178-g4ff370ce1-1) unstable; urgency=medium
 
