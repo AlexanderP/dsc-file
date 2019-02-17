@@ -1,3 +1,98 @@
+ocrodjvu (0.11.0+git1279-0caa208-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/jwilk/ocrodjvu.git
+  * Branch: master
+  * Commit: 0caa208f63455df7630ea9910f02ef2a13b852df
+  * Date: 1550084878
+  * git changelog:
+  *  0caa208 - ipc: remove unused variable.
+  *  4737fc4 - ipc: use category=RuntimeWarning for subprocess32
+    warning.
+  *  c9cdcd9 - doc/changelog: update.
+  *  7387336 - doc/ocrodjvu: document “-j auto”.
+  *  ab151de - cli.ocrodjvu: update help message for -j.
+  *  fec0e85 - cli.ocrodjvu: implement “-j auto”.
+  *  36fde02 - doc/ocrodjvu: fix wording.
+  *  b50fc9d - cli.ocrodjvu: fix typo.
+  *  0cffb48 - cli.ocrodjvu: include most important options in usage.
+  *  6a37578 - cli.ocrodjvu: refactor savers inspection.
+  *  d20c694 - cli.ocrodjvu: use argparse's mutually exclusive group.
+  *  02c204e - cli.ocrodjvu: rephrase message for missing default
+    engine.
+  *  135ad89 - Bump version to 0.11.1.
+  *  39c8113 - Release 0.11.
+  *  e1732c9 - doc/changelog: update.
+  *  1b2936c - private/examine-hangs: add rsz,vsz columns for ps(1).
+  *  957030e - private/examine-hangs: don't use multiple “=” for single
+    “ps -o”.
+  *  6fb688d - private/examine-hangs: don't use the -T for pstree(1).
+  *  069dce5 - private/examine-hangs: use etime,time columns for ps(1).
+  *  8ea8371 - private/examine-hangs: add.
+  *  9e72ecc - examples/scans2djvu+hocr: set -u.
+  *  3e4b573 - examples/scans2djvu+hocr: use uppercase for CLI metavars.
+  *  a14e5ba - tests/coverage: update.
+  *  41ef598 - private/update-coverage: ignore integration tests.
+  *  cbdd1bf - doc/changelog: update.
+  *  65b5458 - doc/dependencies: mention argparse is only for Python
+    2.6.
+  *  28acaf0 - doc/changelog: update.
+  *  9bb1cf4 - Update GOCR homepage URL.
+  *  70c90f8 - cli.ocrodjvu: hint -e when default engine was not found.
+  *  8aa1516 - cli.ocrodjvu: refactor -e/--engine parsing.
+  *  9c7a08e - lib.errors: print “error:” on fatal errors.
+  *  25eb641 - cli.ocrodjvu: discard OCR results after writing them to
+    sed file.
+  *  20a3f6a - doc/dependencies: document that subprocess32 is now
+    required.
+  *  197701f - ipc: add Debian package name for subprocess32 import
+    warning.
+  *  5b9a07a - Spawn threads even when with -j1.
+  *  b616dcb - Always warn against using non-thread-safe subprocess
+    module.
+  *  37eea58 - doc/changelog: update.
+  *  3ee091f - doc/ocrodjvu: fix typo.
+  *  e88ba88 - doc/ocrodjvu: update note about Tesseract slowness.
+  *  8ed589b - engines.tesseract: speed up OCR with character-level
+    details.
+  *  33cbd65 - doc/changelog: update.
+  *  aa944c3 - engines.tesseract: insert extra-args before config file
+    name.
+  *  6b5a3e0 - doc/changelog: update.
+  *  935fc7c - engines.tesseract: allow free-form language codes.
+  *  038998b - Bump version to 0.11.
+  *  512064a - Update copyright notices.
+  *  a27bd83 - Factor out default language handling.
+  *  ffb2ace - doc/changelog: update.
+  *  1d03d56 - Get rid of tessdata env var.
+  *  1ce9923 - doc/changelog: update.
+  *  5122011 - doc/ocrodjvu: fix typo.
+  *  b96a0c8 - doc/ocrodjvu: update documentation for -j.
+  *  8638a6b - doc/ocrodjvu: remove obsolete compat notes.
+  *  ffd03fa - Update copyright notices.
+  *  40f22ab - private/update-version: set -u.
+  *  1d6c8b3 - cli.ocrodjvu: set OMP_THREAD_LIMIT.
+  *  2ad0172 - utils: add get_thread_limit().
+  *  58c44da - tests/tools: add missing comparison functions.
+  *  99de670 - Don't spawn any threads when not needed.
+  *  8076ca4 - tests/test_ipc: remove unused imports.
+  *  64f1e7a - Update copyright notices.
+  *  547f0d0 - doc/changelog: update.
+  *  c0fc353 - cli.ocrodjvu: check for djvused early.
+  *  1972779 - tests/test_ipc: add test for which().
+  *  5e4d16d - ipc: add require().
+  *  a354c7d - tests/test_ipc: sort imports.
+  *  585d493 - cli.ocrodjvu: use errors.fatal().
+  *  3b0c3db - errors: add fatal().
+  *  81e505d - errors: add __all__.
+  *  15dafd9 - tests/test_ipc: add test for exception handling.
+  *  e35e4fe - tests/test_ipc: trim newline.
+  *  ac453a9 - ipc: remove duplicate filename from the exception
+    message.
+  *  d5b6118 - tests/coverage: rename.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 16 Feb 2019 02:53:34 +0300
+
 ocrodjvu (0.10.4+git1206-a3063b7-1) unstable; urgency=medium
 
   * Compile

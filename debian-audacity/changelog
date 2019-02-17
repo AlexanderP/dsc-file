@@ -1,3 +1,26 @@
+audacity (1:2.3.0+git9606-4ba373f2d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/audacity/audacity.git
+  * Branch: master
+  * Commit: 4ba373f2d97822fb92f62ce459806e216ba8c92b
+  * Date: 1550085420
+  * git changelog:
+  *  4ba373f2d - Failed open of block file gives correct error message
+  *  1d40f33eb - Rename 64 bit ffmpeg libs.
+  *  c912b1374 - Bug 2046 - LAME not found error on 64-bit Mac build
+    shows wrong library (32-bit one)
+  *  d4c8e9e7b - Bug2056 residual:  Linux only time ruler drags and
+    focus...
+  *  4e57a369b - Bug Fix 1979 and fix CreateHardLink arg conversion
+    errors
+  *  9d18263be - Bug2059: Save empty,record,save-as shouldn't delete old
+    _data folder
+  *  012d707a8 - Bug 2060: Windows: no access to microphone causes crash
+  *  807a763c9 - Increase space in OSX bundles for dylib filenames
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 15 Feb 2019 22:13:33 +0300
+
 audacity (1:2.3.0+git9598-93f4e3bd6-1) unstable; urgency=medium
 
   * Compile

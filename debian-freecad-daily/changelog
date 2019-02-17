@@ -1,3 +1,163 @@
+freecad-daily (0.17+git15892-645b397dd-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 645b397dda35b19ef6f2a4abd8cc94be19743159
+  * Date: 1550269818
+  * git changelog:
+  *  645b397dd - fixes 0003804: FC becomes unusable after double-cicking
+    on FEM elements while clip view is active
+  *  88228d6d2 - Fixes #3762
+  *  4ff899516 - Material: editor, white spaces
+  *  ef79d20bf - Material, mat card writer, do not write empty sections
+  *  07f7a04d6 - Material: card tools, update csv and ods
+  *  1e631eed1 - Material: mat cards, add unit to shear modulus
+  *  587b0a79e - Material: editor xml prop file, add shear modulus
+  *  44a1298b8 - Material: mat cards, fix a unit in an Aluminium
+  *  e9434d502 - in selection dialog also offer planar shape binders
+  *  60f91fbef - Draft: Fixed non-GUI issues - Fixes #3826
+  *  21353779d - Fix Dimension Text Color
+  *  9207e2ef7 - Fix Dim text position for some DistanceX
+  *  a2bca22fc - Fix #3800 Connect TD export to FC Gui Export
+  *  4ced49da8 - Fix update of children on parent LockPosition change
+  *  41ab00c11 - Restore secondary ortho view movement to v017 style
+  *  a0e3ab1a4 - Fix #3810 X/Y Property Update on Locked View
+  *  97614e034 - FEM: in out, add missing new line
+  *  ce5757e1a - FEM: material task panel, white space
+  *  b1efdf9c6 - Material: card templates, remove wrong shear modulus
+    name modulus of share and update materials csv and ods
+  *  ac0fc4d13 - Material: mat cards, fix shear modulus name in all
+    cards
+  *  43ef43c3e - Material: card templates, fix name of property shear
+    modulus
+  *  00007327c - Material: editor, get rid of duplicate unit definition -
+    in mat editor xml file and in FreeCAD unit system - remove it from
+    material editor xml file and get it from FreeCAD unit system
+  *  96a1007ea - Material: editor dict file, fix some units
+  *  57a0acffc - Units: add various Material stress properties
+  *  4bfe11ff4 - improve calltips windows for Py2
+  *  c648b0e87 - Material: Provisorily hide preview fields while mat
+    preview is not implemented
+  *  7d0e06c96 - only allow 7-bit ASCII for IGES and STEP header
+    information
+  *  1a68b75a4 - fix possible infinite loop when transcoding from/to UTF-
+    8
+  *  ad5118528 - print additional information to std::cout about ocaf
+    structure
+  *  43b081947 - Improved icon themes support
+  *  9e7c38494 - avoid possible errors with null labels
+  *  b4d2b9def - fix build failure on Ubuntu Bionic
+  *  3b708c7f8 - by default disable the option NoSystemBackground to
+    avoid possible OpenGL glitches
+  *  067768404 - copyObject should return the clone of the passed object
+    for recursive copies, not an arbitrary object
+  *  9dfbc8f79 - Py3: fix possible crash in call tips list
+  *  1081403d2 - Expose some standard units and quantities to Python
+  *  7f2ad7fbb - Material: mat card parser, there are two parsers in
+    FreeCAD, make some comments about the existance of each other
+  *  79b704133 - Material: tools adapt csv and ods
+  *  8223a5497 - Material: cards, fix CardName
+  *  1f70b27ba - Material: card steel generic, fix kg unit
+  *  33e40b584 - Material: mat cards, add some units to all cards where
+    missing
+  *  3b579190e - Material: card reader and writer, use file card name as
+    CardName property
+  *  e0be3e474 - Material: card reader, fix for values containing a =
+  *  76d1f0aa8 - Material: card writer, some comments
+  *  0310bf648 - Material: card writer, better attribute classification -
+    move Density from General to Mechanical - move Source from Meta to
+    General and call it SourceURL - add ReferenceSource to General -
+    move specific price, vendor and ProductURL into group cost
+  *  3c3d9bca5 - Material: card writer, do not handle source as comment
+    in mat card
+  *  22f59570c - Material: card writer, move FreeCAD version info behind
+    matcard info, std in original cards
+  *  b94ebbecc - Material: Py3, get rid of extra bees on printing
+  *  fb3720129 - fix build failures with newer compiler versions
+  *  b29209d52 - enhance capabilities to render text in splashscreen
+  *  aee5b0213 - improve exception handling if module to load a file
+    cannot be imported
+  *  0c3bfc4ff - fix minor issues
+  *  4e2ae6f40 - Part: Rearrange inheritance not to use ArcPy
+  *  a3b93ee0e - Part: expose geometry clone support to python
+  *  0ceae9ead - Part: Enable trimmed curves to set their parameter
+    range, from c++ and Python
+  *  6dd192eb1 - Part: Python Bounded Curve (bring in accordance with
+    c++)
+  *  51b32d75b - fix regression in German translation
+  *  397902c20 - split question text from warning text
+  *  604811596 - Crowdin: cont...
+  *  112f3de67 - Crowdin: Continuing to refine translation strings
+  *  110f6f74a - Use QString's multi-arg overload to save memory
+    allocations. [-Wclazy-qstring-arg]
+  *  92614e568 - Use QHash<K,T> instead of QMap<K,T> when K is a
+    pointer. [-Wclazy-qmap-with-pointer-key] Thanks Clazy!
+  *  fbdfe1646 - Use faster form of QFileInfo(filename).exists(). [-
+    Wclazy-qfileinfo-exists] Thanks Clazy!
+  *  082647b2d - Remove unused non-trivial variables. [-Wclazy-unused-
+    non-trivial-variable] Thanks Clazy!
+  *  317bcd59c - Use QString's multi-arg overload to save memory
+    allocations. [-Wclazy-qstring-arg] Thanks Clazy!
+  *  216106e40 - Material: Py3 fixes in mat card writer
+  *  0c37c7f5a - simplify creation of strings
+  *  9067d6a73 - simplify creation of string
+  *  b1d086463 - Fix theoretically possible format string vulnerability
+  *  2ac0851d4 - Draft: Small bugfix
+  *  ae3b57be3 - export Flattened SVG fixes for python 3
+  *  1401c00d6 - Update DraftTools.py
+  *  a23a9499b - Update DraftTools.py
+  *  4f7804dc1 - Update DraftTools.py
+  *  e3ab6a1e1 - Update DraftTools.py
+  *  27a467a44 - Fix missing DWG imports in ArchSectionPlane.getSVG
+  *  7ee0e4d43 - Updated master translation files
+  *  4a5cf9c52 - Tools: Updated translation scripts to handle only the
+    master (untranslated) ts files
+  *  f14633d18 - Added untranslated 'master' .ts files where missing
+  *  b2619e7eb - Tools: Discard obsolete strings in translation files
+  *  09da55e90 - Repair pythonopen in line 126 for Python3
+  *  cce889b21 - Fix missing door symbols in getSVG
+  *  d040a656b - Typos cont. + whitespace
+  *  4cfda0c3a - Misc. typos
+  *  140d08551 - Move hardcoded tab shortcut for cycling elsewhere in
+    prep for refactor
+  *  334a2a31d - Allow tabbing to cycle through objects to snap
+  *  18b5f238a - Arch: Fixed py3/encoding bug
+  *  f431226bb - Fix Right Align Railing Offset Bug
+  *  59f39e2a3 - file uri instead of relative path for images
+  *  ddc27357f - Fix Images Display Issues
+  *  c0e8a4f31 - FEM: mechanical result object, add comment in regard of
+    read only
+  *  38675fb0f - FEM: result tools, small code improvements
+  *  8c1c221f2 - Data: update FEM 3D example
+  *  d8d185fe1 - Data: update FEM 2D example
+  *  62264e69f - FEM: import tools, code improvements
+  *  2c0ed3c04 - FEM: import tools, some comments
+  *  50895db6c - Arch: Small bugfix in spaces
+  *  07910613d - Restrict removal of g0 to clearance height to the
+    engraving of the last base model.
+  *  550009be1 - Collada Export Py3 Fixes
+  *  e680c60de - Fixed error in hole sorting algorithm when some
+    locations have identical distances
+  *  c98407e28 - Fixed dragknife error if coordinate isn't set in
+    command.
+  *  dd98661de - Fixed py3 change of return type of
+  *  6a4422a9b - PartDesign: Shapebinder: fix placement
+  *  03d7b83ad - PartDesign: Shapebinder: use compound instead of fusion
+  *  ebc989351 - FEM: inout tools, add some comment in the regard of NaN
+  *  ebe1a2c4a - FEM: guiobject, fix forgoten defs on code refactor in
+    commit 80f2ccc fixes #3814
+  *  f05d8c314 - Material Editor: fix unit for specific heat, fixes
+    #3781
+  *  eba3b9543 - FEM: material task panel, fix assignment and cancel by
+    material editor
+  *  db9b125e0 - FEM: material task panel, check for None instead of not
+  *  1f79cd700 - FEM: material task panel, some comments
+  *  a4d5c02d3 - Arch: Fixed encoding bug in OBJ importer
+  *  2c0dfda7b - Arch: Small bugfix in IFC exporter
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 16 Feb 2019 07:47:14 +0300
+
 freecad-daily (0.17+git15780-f94e76c11-1) unstable; urgency=medium
 
   * Compile

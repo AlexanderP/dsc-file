@@ -1,3 +1,173 @@
+gimp-devel (2.10.8+git42348-83552620eb-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 83552620eb40b7bb6cfc801cd74388152a0490a7
+  * Date: 1550252412
+  * git changelog:
+  *  83552620eb - app: in gimp_gegl_apply_cached_operation(), don't dup
+    src buffer for point ops
+  *  bd67478b49 - app: add gimp_gegl_node_is_point_operation()
+  *  ace1229823 - Update Japanese translation
+  *  9a30591b1e - Update Polish translation
+  *  3847404db6 - app: #include <string.h> in gimpoperationreplace.c
+  *  d4976dfc61 - app: change behavior of REPLACE mode for fully-
+    transparent pixels
+  *  f844965455 - app: remove gimp_gegl_replace()
+  *  116e8a6d4b - app: remove gimp_drawable_replace_buffer()
+  *  0fef0a55f8 - app: gimp_edgel_region_area() may return < 0 for non-
+    closed zones.
+  *  daf7754e7a - Update Spanish translation
+  *  e24f9eec37 - Issue #2961: minor coding style fix.
+  *  648703b6f0 - Remap Linear Invert's mnemonic to I to remove a
+    duplicate with Levels
+  *  04052fe3a4 - app: in GimpOperationTool, add scrollbar width to
+    scrolled-window requisition
+  *  0a82bd1109 - app: in gimpbrushcore-loops, fix memory corruption in
+    clear_edges()
+  *  3ff2285ba8 - Setting the FileChooserbutton to a fixed width.
+  *  18d86cccbe - NEWS: update.
+  *  b409a781cd - app: out-of-gamut for grayscale images too in
+    GimpFgBgEditor.
+  *  e48c239459 - app: GimpFgBgEditor displays the out-of-gamut color
+    for indexed images.
+  *  3fd78441ba - app: pack color picker and hexadecimal entry on same
+    line in Color dock.
+  *  4774bd3b48 - app: s/plug-In/plug-in in a GUI-visible string.
+  *  b2fa4c6299 - app: clarify function to validate line art closure.
+  *  b2181d0fb2 - app: proper signedness for return value of
+    gimp_edgel_region_area().
+  *  f5225f2211 - app: error messages should happen on button press, not
+    initialization.
+  *  8e5e7306ca - Update Japanese translation
+  *  4cf6d12912 - Updated Italian translation
+  *  64d0e29e42 - plug-ins: remove stuff that is no longer needed from
+    file-pat
+  *  7ce90a19b4 - app, plug-ins: move pattern saving to the core
+  *  376b053129 - app: don't unref a NULL GimpTempBuf in
+    gimp_pattern_copy()
+  *  4c6b181371 - app: link tests against libappfile-data
+  *  cf76b7f73c - app: implement brush saving in the core
+  *  3dc01393eb - app: remove useless includes from gimppattern-save.c
+  *  88787d905b - m4macros: remove binreloc.m4 from EXTRA_DIST
+  *  ecc456556e - app: in gimppaintcore-loops, fix indentation in
+    DispatchPaintMaskToCompMask
+  *  62db4174dc - Update Japanese translation
+  *  0066a47013 - app: in gimp_paint_core_replace(), improve applicator
+    path
+  *  940197e2d7 - app: in gimp_paint_core_paste(), don't copy paint mask
+    when combining to canvas buffer
+  *  1c2fe3b51c - app: implement gimp_paint_core_replace() using
+    gimp_paint_core_loops_process()
+  *  f5222ce4d0 - app: in gimppaintcore-loops, add
+    {CANVAS_BUFFER,PAINT_MASK}_TO_COMP_MASK algorithms
+  *  d4cb2d57bd - app: in gimppaintcore-loops, make sure dest_buffer is
+    the primary iterator buffer
+  *  aa7de29f9e - app: in gimppaintcore-loops, add MaskBufferIterator
+    algorithm helper-class
+  *  5a4ffd4495 - app: in gimppaintcore-loops, add [Temp]CompMask
+    algorithm helper-classes
+  *  1a06fa0c0a - app: in gimppaintcore-loops, name algorithms more
+    consistently
+  *  470f760eee - app: in gimppaintcore-loops, allow specifying
+    dependencies to BasicDispatch
+  *  197ec919cd - app: in gimppaintcore-loops, add finalize[_step]()
+    algorithm functions
+  *  deda2699b9 - app: in gimppaintcore-loops, make CanvasBufferIterator
+    self-contained
+  *  9a13c66d96 - app: in gimppaintcore-loops, use dynamic iterator
+    indices
+  *  162250c3fb - Typo in Italian translation
+  *  5dc78980f4 - app: implement pattern saving in the core
+  *  1595f9f4e3 - Updated Italian translation
+  *  4f00422bd4 - app: add an "Open as Image" button to the brushes
+    dialog
+  *  2c53aa2067 - Update Polish translation
+  *  b3797079bc - app: move file-pat-load from the file-pat plug-in to
+    the core
+  *  616f5aac11 - app, plug-ins: start consolidating brush and pattern
+    loading/saving code
+  *  270bd71658 - app: add all missing festures from file-gbr-load to
+    the core brush loader
+  *  c05a700ccc - Update Spanish translation
+  *  c000c7a8a2 - Update Spanish translation
+  *  dfe1dbe0ad - Update Spanish translation
+  *  4a7988b9fa - Issue #2935 - GIMP 2.10 - options hidden in filter
+    dialogs
+  *  c1e84c494d - Update Hungarian translation
+  *  2465aecb4f - Update Japanese translation
+  *  b7c1664273 - Update Japanese translation
+  *  d501a28807 - Updated Italian translation
+  *  d115e1d777 - Update Polish translation
+  *  0f727e4f2f - libgimpwidgets: in GimpChainButton, emit "toggled"
+    signal when "active" changes
+  *  d815f355bb - Issue #2922: Some sentences appear untranslated.
+  *  95be8d0769 - po: fix msgctxt s/view-action/view-zoom-action/ for 5
+    strings.
+  *  7067c3add3 - Issue #2922: Some sentences appear untranslated.
+  *  7909409a03 - Update Hungarian translation
+  *  66803bc2b3 - po: fix the context (msgctx) for 2 strings.
+  *  5796cc46e4 - app: improve line art bucket fill by filling
+    unsignificant areas.
+  *  1825392dbe - Issue #2920: Dilate and Erode filters' tooltips are
+    untranslatable.
+  *  f5e652d762 - app, pdb: use compat formats for brushes/patterns in
+    plug-ins
+  *  57b81c424b - 2 sentences are marked as translatable.
+  *  29706cdc48 - libgimpbase: style cleanup of gimpreloc.c
+  *  6645cc7ba5 - app, libgimpbase: --enable-relocatable-bundle replaces
+    --enable-binreloc
+  *  a335eb0e6e - app: avoid unnecessary calls to
+    gimp_temp_buf_data_clear()
+  *  1e0530e730 - app: small fix in gimpbrushcore-kernels.h
+  *  d39634a914 - Issue #2372 - Reduced quality of the Parametric brush
+    in 2.10
+  *  8f31f8fa3c - app: add gimp_temp_buf_{lock,unlock}()
+  *  d4e87e4d51 - Update Japanese translation
+  *  99c59d92f3 - Update Japanese translation
+  *  c9f4735669 - libgimp: avoid libgimp tile-cache in the plug-in tile
+    backend
+  *  17f355e9f3 - Update Spanish translation
+  *  f936089bcb - Update Spanish translation
+  *  8878ff5f04 - app: in GimpRotateTool, improve fuzzy comparisons
+  *  a771662420 - libgimpwidgets: add
+    gimp_chain_button_{get,size}_icon_size() to gimpwidgets.def
+  *  b5caa2ea2e - po-python: add spyro_plus.py copy to POTFILES.skip
+  *  d368fabf8e - Update Hungarian translation
+  *  da6086636b - app: in GimpTransformGridTool, allow linking
+    forward/backward transforms
+  *  ca06990828 - app: in GimpTransformGridTool, allow simultaneous
+    forward and backward transforms
+  *  b869f1bf5a - libgimpwidgets: add GimpChainButton::active property
+  *  fcfe6997cd - libgimpwidgets: add GimpChainButton::icon-size
+    property
+  *  3ad945c3c8 - app: add GimpTransformToolClass::undo_desc field
+  *  b0ab2b6564 - app: improve rotate-tool undo description
+  *  054d441a8d - app: improve measure-tool undo description
+  *  b820d50827 - app: add GimpToolCompass::effective-orientation
+    property
+  *  6495b6d023 - app: fix CRITICALs in GimpMeasureTool
+  *  d6bb1efd77 - app: in gimp_transform_matrix_generic(), apply matrix
+    even if invalid
+  *  d74df14766 - app: in GimpTransformGridTool, fix layer hiding
+  *  08c540ebc1 - app: in GimpTransformGridTool, remove flip-tool hack
+  *  32c185c7ee - Issue #2906: Icon Theme bar strings have no
+    translations.
+  *  dc431bbcc1 - Update Spanish translation
+  *  79454e2bf3 - app: in the prefs dialog, warn that OpenCL support is
+    experimental
+  *  6be6ea0e92 - Issue #2898 - Gegl Operations - Color Wrap does not
+    fit the screen on...
+  *  b9a0bd4d62 - libgimpbase: add gimp_installation_directory_file() to
+    gimpbase.def
+  *  53de34230f - libgimpbase: add gimp_installation_directory_file().
+  *  a8f58acb9a - Issue #2867 - iso-codes location is not relocatable on
+    all platforms
+  *  48dba7a0e1 - Update Polish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 16 Feb 2019 06:29:39 +0300
+
 gimp-devel (2.10.8+git42240-eeeab8b209-1) unstable; urgency=medium
 
   * Compile
