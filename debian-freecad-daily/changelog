@@ -1,3 +1,175 @@
+freecad-daily (0.17+git16000-337c9c936-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 337c9c936f4c686fd476c5eeb3397d0d09f6b258
+  * Date: 1551477161
+  * git changelog:
+  *  337c9c936 - fix various flaws detected by PVS
+  *  9032c4c58 - Merged crowdin translations
+  *  5791c341b - fix -Winconsistent-missing-override
+  *  fcd3fe0a4 - fix -Winconsistent-missing-override
+  *  2ccffbe40 - fix -Winconsistent-missing-override
+  *  f9d30cdc7 - fix typo in German translation
+  *  59a0144a4 - fix saving view provider attributes for Copy&Paste or
+    Duplicate selection
+  *  979177deb - Fix cut an object with a plane feature translation
+  *  b0d83f3c5 - Optional ClearMenuBar parameter
+  *  10c745175 - support Del shortcut in several PD task dialogs
+  *  070a15375 - fixes 0003865: non-ASCII characters incorrectly
+    displayed in material cards The combination Py2+Qt5 already worked,
+    this change now fixes the combinations Py2+Qt4 and Py3+Qt5
+  *  29ae44e08 - fixing kicad StepUp wiki page link
+  *  d3e008e46 - fixes 0003860: Debian bug #920971 - C++ exception on
+    DXF import
+  *  be45d5e7b - Implement kb scroll and pan
+  *  1c209d423 - Implment ctl+/- zoomin on Page
+  *  f572207cd - FEM: ccx input writer, cut seconds output by 2 decimals
+  *  3a472131a - FEM: ccx tools task panel, use ccx tools method to find
+    ccx binary
+  *  972bb5ee1 - FEM: ccx tools solver task panel, switch to self.fea
+    instead of lots of fea instances
+  *  91a1a4b6d - FEM: ccx tools, find analysis if not given and there is
+    only one in document
+  *  3f8c52460 - FEM: ccx tools, do not run all init methods on fea init
+  *  21e1a89fc - FEM: ccx tools solver task panel, update to new ccx
+    tools working dir setting def
+  *  5e57de60d - FEM: ccx tools, do not create the working dir if it
+    does not exist
+  *  9ae07756c - FEM: ccx tools unit tests, explicit create the working
+    directory for all tests
+  *  13a4ccc38 - FEM: solver framework, fix pref group of working dir
+  *  18c9046ce - FEM: general prefs, some typos and better text
+  *  85da6c363 - make Del shortcut working again in Sketch edit mode
+  *  d3631968a - add method to Python interface to get reflect lines of
+    a shape
+  *  e3d63493c - fixes 0003061: 'Move object after other object'
+    function causes chaos
+  *  4e973324a - when restoring object then only expand single items,
+    not its parent items
+  *  a4e46d1fa - Undo/Redo of renaming an object via context-menu
+  *  0852dde40 - fixes 0003807: STEP export with BaseFeature does not
+    hide BaseObject
+  *  4765b7e2f - fixes 0003848: Preferences dialog not fully visible
+  *  bd89326d0 - avoid using hard-code precision when writing double to
+    streams
+  *  183cd1626 - Fix precision of NumberExpression when writing to a
+    string (reverts a3af2902ef) See also:
+    https://forum.freecadweb.org/viewtopic.php?f=3&t=34392
+  *  564d41d83 - fixes 0003524: The PartDesign hole feature should
+    respect the Reverse property and provide a checkbox in the panel
+  *  2631df09c - correctly handle again NotImplementedError in Python
+    view providers
+  *  77b22f4f3 - Fix bad highlight position in Detail from ProjGroup
+  *  8b8f96b93 - Fix Selection center marks
+  *  c940081de - Allow Section of unfused Source
+  *  b9b0a973e - fixes 0003819: no proper input for contact stiffness
+  *  f6d9ec856 - fix creation of filter list for export dialog
+  *  397418078 - Material: card tools, update csv and ods
+  *  638988f58 - Material: cards, some fixes in generic cards
+  *  2fcb7cb64 - fixes 0003805: After 'Create a hole with the selected
+    sketch' the model disappears
+  *  e55b718cd - fixes 0003694: Part->Boolean->Cut should show error
+    message if a non-solid (Shell, etc.) is selected
+  *  56fb560e4 - Material: cmake, add the new generic cards
+  *  0061ea743 - Material, card tools, update csv and ods
+  *  b686b43b9 - Material: cards, fix name and licence of the new cards
+  *  744ab5657 - Material: cards, add some new cards
+  *  9249db9f4 - Material: cards, add some properties to some cards
+  *  7fd66a11b - Material: card tools, add some cards and change
+    properties of some cards by adding csv and ods files
+  *  7249a1516 - Material: editor, sort cards in combo box
+  *  f8c6bc631 - Material: editor, some comments
+  *  cad3019da - Material: card parser, more important comments
+  *  e448ac66f - Material: template card, fix some properties
+  *  66da83ef9 - fixes 0003605: Scrolling on length inputs with Building
+    Euro unit system has max value
+  *  9d87d13dd - fixes 0003843: registration of pointer in navigation
+    cube/cluster is off, makes clicking difficult (fixed by garya)
+  *  2e8412f68 - fix position of version number in splash screen
+  *  21dc8c505 - Arch: Fixed remaining encoding problems - issue #3827
+  *  187988b64 - Draft: Fixed move/rotate of objects inside PArt
+    containers - fixes #3485
+  *  3fc17edb4 - Draft: Removed leftovers from DraftTools in DraftGui
+  *  c215a2aa2 - fix inheritance of PartPy
+  *  acdd4b097 - Update FreeCAD_WindowsInstaller.nsi
+  *  723f1cf2c - parameter for silent install was wrong
+  *  a6a9c15c4 - disable commit e3793e6c
+  *  afc44af3e - In boolean task panel show labels not internal names,
+    fix adding/removing bodies
+  *  997d1d7d5 - fixes 0003846: unexpected result in building
+    RuledSurface
+  *  dace2f39c - Fix ShapeString attachment to Face
+  *  99b289e54 - Start module Py2 encoding
+  *  dca9120de - Fix PDF orientation for ANSI B Landscape
+  *  764221495 - Material: card tools, update csv and ods
+  *  9c545b188 - Material: cards, remove non standard language info
+  *  b80d1887c - Material: cards, fix some card names inside the cards
+  *  7ab47cd6a - Material: cards, remove spcific price values
+  *  328c1a937 - Material: card template, fix card name
+  *  80af7c6b6 - Material: card template, add missing properties
+  *  1c44504a2 - Material: card template, delete duplicate property for
+    thermal expansion coefficient
+  *  a79624c6a - Material: mat card template, adapt units from FreeCAD
+    unit system
+  *  a1ba55030 - Material: card tools, add missing properties
+  *  899f3df2f - Material: card header, use the same header in all code
+    files
+  *  1b69cc58a - Material: tools, add def to read and write a bunch of
+    mat cards
+  *  e3793e6c8 - use format options when using repr() on a quantity
+  *  638845a6f - fixes 0003845: unwanted rounding for dimensions of
+    subtractive shapes in task dialog
+  *  60d6a2149 - Draft: better handling of non-closing paths in SVG
+    import - issue #2488
+  *  a12f4f364 - fixes 0003823: FEM, unusable material property changing
+    when using task panel
+  *  68e797515 - Icon themes support for draft tray and snap
+  *  90c80f83f - PVS: V522 There might be dereferencing of a potential
+    null pointer 'Py::Vector2d().getCxxObject()'
+  *  b84227438 - PVS: V783 Dereferencing of the invalid iterator 'b'
+    might take place.
+  *  f0320d954 - PVS: V629 Consider inspecting the 'col.red() << 24'
+    expression. Bit shifting of the 32-bit value with a subsequent
+    expansion to the 64-bit type.
+  *  2bb579756 - PVS: V595 The pointer was utilized before it was
+    verified against nullptr
+  *  1e343d339 - PVS: V779 Unreachable code detected. It is possible
+    that an error is present.
+  *  239c20b71 - PVS: V705 It is possible that 'else' block was
+    forgotten or commented out, thus altering the program's operation
+    logics.
+  *  493a14408 - PVS: The 'then' statement is equivalent to the 'else'
+    statement.
+  *  67020fffe - PVS: V735 Possibly an incorrect HTML.
+  *  ffaf1c9b7 - V1028 Possible overflow. Consider casting operands, not
+    the result
+  *  f160cc785 - PVS: V773 A memory leak is possible
+  *  3845350c0 - PVS: V773 A memory leak is possible
+  *  f581d5c8c - PVS: V560 A part of conditional expression is always
+    true
+  *  b52f8d1e1 - PVS: V730 Not all members of a class are initialized
+    inside the constructor
+  *  4e42e4295 - PVS: Not all members of a class are initialized inside
+    the constructor
+  *  a73b10203 - fixes 0003825: file location not stored when
+    opening/saving materials
+  *  b8da380ef - Set window visibility based on wall
+  *  5f4deea7c - fixes 0003794: Shortcut-Key is executed in edit field
+    of a constraint (Combo View)
+  *  36dc7b424 - issue 0003832: Editing thickness in Part or PartDesign
+    resets join type to always being Arc
+  *  7da9b674f - issue 0003832: Editing thickness in Part or PartDesign
+    resets join type to always being Arc
+  *  6704887af - fixes 0003838: missing tooltip in mesh preferences
+    dialog
+  *  506048a6f - fixes 0003837: missing tooltip in STEP preferences
+    dialog
+  *  04bc3f817 - fixes 0003840: Sketcher WB: units not completely hidden
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 02 Mar 2019 12:34:17 +0300
+
 freecad-daily (0.17+git15892-645b397dd-1) unstable; urgency=medium
 
   * Compile

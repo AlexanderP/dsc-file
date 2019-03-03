@@ -1,0 +1,208 @@
+sqlitebrowser (3.11.1-0) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream version
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 25 Feb 2019 21:49:36 +0300
+
+sqlitebrowser (3.10.1-2) unstable; urgency=medium
+
+  * Point VCS urls to Salsa
+  * Update system qscintilla2 library names
+  * Bump Standards-Version to 4.1.5, no changes
+  * Update to debhelper compat level 11
+  * Enable all hardening options
+
+ -- Arto Jantunen <viiru@debian.org>  Thu, 02 Aug 2018 21:10:47 +0300
+
+sqlitebrowser (3.10.1-1) unstable; urgency=medium
+
+  * New upstream version
+  * Upstream has fixed plots involving dates (Closes: #826878)
+  * Remove previous patches, add a new patch to use system qscintilla2
+  * Change priority to optional and bump Standards-Version
+  * Apply upstream patch to avoid focus issues with gnome shell
+    (Closes: #879926)
+
+ -- Arto Jantunen <viiru@debian.org>  Sat, 04 Nov 2017 13:55:35 +0200
+
+sqlitebrowser (3.9.1-2) unstable; urgency=medium
+
+  * Remove the menu file
+  * USe https url's in the Vcs fields
+  * Bump Standards-Version to 3.9.8.0
+  * Upgrade to Debhelper 10
+
+ -- Arto Jantunen <viiru@debian.org>  Sun, 25 Dec 2016 13:09:47 +0200
+
+sqlitebrowser (3.9.1-1) unstable; urgency=medium
+
+  * New upstream version
+  * Rebase patch
+  * Add patch to remove spaces from the CMake project name
+
+ -- Arto Jantunen <viiru@debian.org>  Thu, 10 Nov 2016 22:42:48 +0200
+
+sqlitebrowser (3.8.0-1) unstable; urgency=medium
+
+  * New upstream version
+  * Update patch 0001 to note that scintilla is now also used for the tests
+
+ -- Arto Jantunen <viiru@debian.org>  Sat, 06 Aug 2016 16:52:40 +0300
+
+sqlitebrowser (3.7.0-1) unstable; urgency=medium
+
+  * New upstream version
+  * Rebase patch
+  * Add build-dep on libqt5scintilla2-dev
+  * Remove most overrides, run tests using the new method
+
+ -- Arto Jantunen <viiru@debian.org>  Sun, 20 Dec 2015 13:06:23 +0200
+
+sqlitebrowser (3.5.1-3) unstable; urgency=medium
+
+  * Set LC_ALL instead of LANG when running tests (Closes: #787679)
+
+ -- Arto Jantunen <viiru@debian.org>  Fri, 05 Jun 2015 21:42:03 +0300
+
+sqlitebrowser (3.5.1-2) unstable; urgency=medium
+
+  * The "Yay Jessie!" release
+  * Upload to unstable
+
+ -- Arto Jantunen <viiru@debian.org>  Sun, 26 Apr 2015 12:10:15 +0300
+
+sqlitebrowser (3.5.1-1) experimental; urgency=medium
+
+  * New upstream version
+  * Remove patch 0002, included upstream
+  * Refresh patch 0001
+
+ -- Arto Jantunen <viiru@debian.org>  Sun, 15 Mar 2015 19:59:55 +0200
+
+sqlitebrowser (3.4.0-2) experimental; urgency=medium
+
+  * Apply patch from upstream to fix TestImport QCoreApplication
+    parameters
+
+ -- Arto Jantunen <viiru@debian.org>  Tue, 20 Jan 2015 17:55:09 +0200
+
+sqlitebrowser (3.4.0-1) experimental; urgency=medium
+
+  * New upstream version
+  * Rebase patches to fit the new version
+  * Add build-dep on qttools5-dev and qttools5-dev-tools
+  * Run post-build tests (Closes: #770604)
+  * Use system antlr for the tests as well
+  * Bump Standards-Version to 3.9.6.0, no changes
+
+ -- Arto Jantunen <viiru@debian.org>  Fri, 16 Jan 2015 19:13:26 +0200
+
+sqlitebrowser (3.2.0-1) unstable; urgency=medium
+
+  * New upstream version (Closes: #749591)
+  * Remove patches, superseded upstream
+  * Update build-deps for new version, add cmake, libantlr-dev and
+    libqcustomplot-dev
+  * Apply patch to use external qcustomplot and antlr
+  * Allow cmake to install the sqlitebrowser binary
+  * Remove outdated README.source
+  * Use the upstream desktop file and icon
+  * Apply patch to change the desktop icon path
+  * Update Standards-Version to 3.9.5.0, no changes
+  * Update upstream homepage
+  * Update copyright info to match current upstream
+  * Build against Qt5 instead of Qt4
+
+ -- Arto Jantunen <viiru@debian.org>  Fri, 25 Jul 2014 19:56:48 +0300
+
+sqlitebrowser (2.0.0~beta1+ds.1-3) unstable; urgency=low
+
+  * Use current alioth urls for Vcs-Browser and Vcs-Git
+  * Apply patch from Pablo Duboue to replace newlines with in the schema
+    browser (Closes: #520345)
+  * Update to debhelper 9
+  * Update Standards-Version to 3.9.3.0, no changes
+  * Add patch to fix qDebug() use in edittableform::renameTable()
+
+ -- Arto Jantunen <viiru@debian.org>  Thu, 22 Mar 2012 20:42:40 +0200
+
+sqlitebrowser (2.0.0~beta1+ds.1-2) unstable; urgency=low
+
+  * Take over as maintainer
+  * Apply patch from Grzegorz Bizon <grzesiek@ntsn.pl> to avoid segfaults when 
+    the user cancels instead of choosing a name for a new db (Closes: #617680)
+  * Add Vcs-Browser and Vcs-Git fields to control
+  * Change Section to database to match override
+  * Add patch to use QString::fromLocal8Bit when reading argv (Closes: #556649)
+  * Update Debian packaging parts of debian/copyright
+
+ -- Arto Jantunen <viiru@debian.org>  Thu, 19 May 2011 17:23:07 +0300
+
+sqlitebrowser (2.0.0~beta1+ds.1-1) unstable; urgency=low
+
+  * QA upload.
+  * New upstream release (Closes: #561643).
+    - Based on Qt4 (Closes: #604586).
+    - Fixes FTBFS of previous version (Closes: #551206).
+  * Set Maintainer to Debian QA Group.
+  * Change B-D to libqt4-dev and sqlite3-dev.
+  * Add a patch to use sqlite3 provided by Debian.
+  * Add a patch to initialize QStrings with an empty string instead of an
+    integer, thus avoiding a FTBFS.
+  * Bumped Standards-Version to 3.9.2. No changes required.
+  * Switch to source format 3.0 (quilt).
+  * Remove "Encoding" field in desktop file. Now it must be UTF-8.
+  * Improve package description (Closes: #505458).
+
+ -- Lisandro Damián Nicanor Pérez Meyer <perezmeyer@gmail.com>  Wed, 27 Apr 2011 18:53:00 -0300
+
+sqlitebrowser (1.3-2.3) unstable; urgency=low
+
+  [Jari Aalto]
+  * Non-maintainer upload.
+  * debian/control
+    - (Build-Depends): Add quilt due to patch.
+  * debian/rules:
+    - Add quilt.
+  * debian/patches
+    - (number 10): Add patch to fix Gcc 4.4 error: conflicting types
+      for getline (RC bug FTBFS serious; Closes: #552854).
+
+ -- Jari Aalto <jari.aalto@cante.net>  Sat, 16 Jan 2010 18:13:19 +0200
+
+sqlitebrowser (1.3-2.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * build against Debian libsqlite3. Wanting to use one or two internal
+    functions is no excuse for embedding the whole thing.
+    Closes: #441900
+
+ -- Thomas Viehmann <tv@beamnet.de>  Tue, 07 Oct 2008 22:17:48 +0200
+
+sqlitebrowser (1.3-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Applying patch by Thiemo Seufer to fix FTBFS on builds using sudo
+  (Closes: #495100)
+  * Fixing two minor lintian warnings:
+    * adding call to dh_desktop to debian/rules
+    * moving Homepage URL from Package description to proper frield in
+      debian/control
+
+ -- Alexander Reichle-Schmehl <tolimar@debian.org>  Tue, 07 Oct 2008 22:38:10 +0200
+
+sqlitebrowser (1.3-2) unstable; urgency=low
+
+  * source.lintian-overrides: added lintian overrides for CVS directories
+  * sqlitebrowser.desktop: fixed category
+  * menu: adhere to new the menu policy
+
+ -- François Févotte <francois.fevotte@ensta.org>  Sat, 01 Sep 2007 14:51:34 +0200
+
+sqlitebrowser (1.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #427080)
+
+ -- François Févotte <francois.fevotte@ensta.org>  Sat, 04 Aug 2007 23:15:39 +0200
+

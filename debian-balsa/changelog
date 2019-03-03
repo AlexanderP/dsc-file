@@ -1,3 +1,42 @@
+balsa (2.5.5+git9030-769609193-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/balsa
+  * Branch: master
+  * Commit: 7696091936370c07421e9a6243847b1194cf42c0
+  * Date: 1551369245
+  * git changelog:
+  *  769609193 - Simplify handling "mailto:" URLs
+  *  5821e9c50 - Updated Spanish translation
+  *  52a3b2a97 - Go back to weak ref
+  *  91abde280 - mailbox: Indentation and type fixes
+  *  b6e00eb5f - Preserve tab order of open mailboxes
+  *  0791ec1d6 - Fix some issues raised by scan-build
+  *  05e7c7ea7 - Deprecation cleanup: gtk_window_present()
+  *  572e3546e - html.c: simpler regular expression
+  *  78006803b - imap-util: Error in IMAP mailbox encoding
+  *  c399ee706 - html: fix some 'cid:' issues
+  *  f20371205 - mailbox-imap: Plug memory leaks
+  *  b4cc89b72 - Updated Spanish translation
+  *  0043ca0e1 - mime-widget-image: Avoid a scan-build palse positive
+  *  654e77ce0 - imap-handle: Guard against NULL pointer
+  *  51125b9ae - print-object-text: use structure assignment
+  *  73c8ac6a7 - send: Plug memory leak in error return paths
+  *  b9d58d6fe - address: Avoid a scan-build false positive
+  *  ef84d3ad0 - mailbox: initialize a view by struct assignment
+  *  90bbc9bc7 - address: Do not leak vcard string
+  *  5c264f532 - Cast weak-pointer-location to (gpointer *)
+  *  44eb5a632 - mailbox: Remove an unused function
+  *  b6515d6bc - mailbox-local: Do not leak LibBalsaMessage
+  *  38561e6c8 - imap-mbox-handle: Do not leak a GNode tree
+  *  75465410b - Update Polish translation
+  *  1c8f0622e - print-object-html: Actually add the new files
+  *  b9305282c - Relax secret key selection
+  *  40c59c357 - Fix broken decryption of s/mime IMAP messages
+  *  b33ac92f8 - Printing of HTML message parts
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 02 Mar 2019 01:33:56 +0300
+
 balsa (2.5.5+git9001-f1bfc0710-1) unstable; urgency=medium
 
   * Compile

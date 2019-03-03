@@ -27,7 +27,7 @@ ifneq (,$(filter $(DEBIAN_CODENAME),sid buster))
 	-DBUILD_QT5=ON \
 	-DPYTHON_CONFIG_SUFFIX="-python2.7.${DEB_HOST_MULTIARCH}" \
 	-DCMAKE_BUILD_TYPE="Release" \
-	-DOCC_INCLUDE_DIR="/usr/include/occt"
+	-DOCC_INCLUDE_DIR="/usr/include/opencascade"
 else
 	CONTROL = control.qt4
 	extra_flags += -DOCC_INCLUDE_DIR="/usr/include/oce"

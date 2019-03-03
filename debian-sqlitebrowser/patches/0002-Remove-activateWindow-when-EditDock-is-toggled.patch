@@ -1,0 +1,25 @@
+From: kehugter <cuatro@posteo.net>
+Date: Wed, 11 Oct 2017 22:54:06 +0200
+Subject: Remove `activateWindow()` when EditDock is toggled
+
+There's no need to set sqlitebrowser as active window when updating
+the main application window. The `activateWindow()` call prevents
+switching workspaces in GNOME and Cinnamon desktops.
+
+Fixes #934
+---
+ src/MainWindow.cpp | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/src/MainWindow.cpp b/src/MainWindow.cpp
+index 4e883d8..7f3cd60 100644
+--- a/src/MainWindow.cpp
++++ b/src/MainWindow.cpp
+@@ -838,7 +838,6 @@ void MainWindow::toggleEditDock(bool visible)
+ {
+     if (!visible) {
+         // Update main window
+-        activateWindow();
+         ui->dataTable->setFocus();
+     } else {
+         // fill edit dock with actual data

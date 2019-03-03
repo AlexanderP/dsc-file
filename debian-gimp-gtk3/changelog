@@ -1,3 +1,103 @@
+gimp-gtk3 (2.99.0+git43013-371e35eeb8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 371e35eeb84c195fde6aa397a799582854e00752
+  * Date: 1551468952
+  * git changelog:
+  *  371e35eeb8 - app: in gimp:mask-components, don't forward empty aux
+    when mask is fully set
+  *  f9ce0369a0 - Update Dutch translation
+  *  842a18f42c - Update Polish translation
+  *  a8a29312de - app: small fix to last commit
+  *  6419ed3246 - app: fix toggling-off of alpha channel
+  *  6166f9ae14 - app: disable spec. 8-bpp version of gimp:mask-
+    components for non-little-endian platforms
+  *  1ddb38f0fa - Update Dutch translation
+  *  4c15386441 - Update Dutch translation
+  *  f7692e99af - Update Dutch translation
+  *  1e739675a4 - Issue #3037 - Crash in transform tools after
+    transforming an out-of-bounds selection
+  *  dde7108584 - build,app: require GEGL-0.4.14
+  *  3e2d9e6b9e - build,app: require babl-0.1.62
+  *  ac4b0fe9f1 - app: add "Constrain handles", "Around center" options
+    to the perspective tool
+  *  cdc5782b3c - app: fix transform-grid center point for non-affine
+    transforms; use as pivot
+  *  a6c79770c3 - Issue #1554 - Select by Color tool does not select
+    pixel(s) or area(s) of pixel(s)
+  *  962b17de05 - Update Spanish translation
+  *  fe35294ee7 - build: add Korean translation to the Windows installer
+  *  ee49487cf2 - po-windows-installer: technical fix to the Korean
+    translations
+  *  a621060cd6 - Add Korean translation
+  *  ebf2c2fef1 - app: in gimp_gegl_create_flatten_node(), explicitly
+    set color node format
+  *  e83d8ac4f2 - app: merge layers in chunks, and show progress
+  *  914200f3ad - app: streamline action_data_get_foo() functions
+  *  fb5987fd57 - app: in GimpSmudge, avoid copying brush pixmap when
+    flow = 0
+  *  5b09af4390 - app: improve gimp_brush_core_color_area_with_pixmap()
+  *  0a1e62768a - app: accept a const GimpTempBuf in more temp-buf
+    functions
+  *  88685bcf0e - Update Polish translation
+  *  aee097fa97 - app: implement saving of GimpBrushPipes in the core
+  *  11defa4271 - Issue #2997 - Error importing PCX
+  *  bb645bae17 - app: add temp-buf-total varaible to the dashboard
+  *  cbf581d42f - Update Hungarian translation
+  *  c87020fb73 - Update Hungarian translation
+  *  7489f0aece - app: replace use of deprecated dont-cache/no_cache
+    with cache-policy
+  *  42975e52a5 - Update Polish translation
+  *  d878551e60 - devel-docs: clarify PROP_ITEM_PATH property.
+  *  8c96c3d1bb - app, libgimp: communicate dark-theme preference to
+    plug-ins through theme.css
+  *  569f3e1bc2 - app: use NON_LINEAR not PERCEPTUAL in file-pat-load
+    and file-gbr-load
+  *  52adaa1963 - app, plug-ins: move file-gih-load from the file-gih
+    plug-in to the core
+  *  4b456e6079 - app: some changes to GimpBrushPipe in preparation for
+    .git image loading
+  *  7aa99c8cf0 - app: cosmetic change in file_pat_load_invoker()
+  *  3b89ae40d0 - app: factor file_gbr_brush_to_layer() out of the brush-
+    to-image logic
+  *  7f05ec00cd - app: reimplement gimp_widget_flush_expose().
+  *  5719f9ac23 - Update Japanese translation
+  *  aa5e557adc - Update Spanish translation
+  *  b5a34c3190 - plug-ins: in file-dds, rename endian.h to endian_rw.h
+    ...
+  *  6fe57a946b - app: in gimppaintcore-loops, unsuppress
+    COMBINE_PAINT_MASK_TO_CANVAS_BUFFER algorithm
+  *  7c1429d1ff - app: in gimp:mask-components, handle half-precision
+    float formats
+  *  af2c7d1b33 - app: in GimpDrawableFilter, don't mask-out alpha
+    comonent for alpha-less drawables
+  *  1b900bfa16 - app: set/clear component-mask alpha-bit of alpha-less
+    drawables, to make mask uniform
+  *  90164c4951 - app, plug-ins: move brush (gbr) saving to the core
+  *  b71ebcea6d - plug-ins: forward the error message if file-pat-save-
+    internal fails
+  *  e513e9e054 - app: in gimppaintcore-loops, in
+    MaskComponents::finalize_step(), chain up
+  *  c7d8d9ba2e - app: use MASK_COMPONENTS algorithm in
+    gimp_paint_core_{paste,replace}()
+  *  08fa46ea41 - app: in gimppaintcore-loops, add MASK_COMPONENTS
+    algorithm
+  *  858f30a609 - app: in gimppaintcore-loops, add [Temp]CompBuffer
+    algorithm helper-classes
+  *  b717ead1ab - app: in gimppaintcore-loops, mark algorithms as
+    mandatory/suppressed
+  *  fc7ffc71a3 - app: in gimppaintcore-loops, add
+    {Mandatory,Suppressed}AlgorithmDispatch
+  *  95761db557 - app: in gimppaintcore-loops, remove individual-
+    algorithm functions
+  *  ee156b8fd6 - app: improve gimp:mask-components
+  *  a7f7a485bd - app: convert gimp:mask-components to C++
+  *  248477a125 - app: some small improvements in line art code.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 02 Mar 2019 08:37:33 +0300
+
 gimp-gtk3 (2.99.0+git42953-4b3986e61b-1) unstable; urgency=medium
 
   * Compile
