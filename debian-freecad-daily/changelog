@@ -1,3 +1,192 @@
+freecad-daily (0.17+git16119-51fcdd2c0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 51fcdd2c004784c42592aece420e51f6a53116e1
+  * Date: 1552657430
+  * git changelog:
+  *  51fcdd2c0 - in case object deletion fails then make sure to re-
+    enable updates of the main window
+  *  ca7770b80 - Document::breakDependency should handle exceptions to
+    avoid to leave document in an inconsistent state
+  *  45a04278f - Complete parameter comments
+  *  4c4fdbac5 - Correct paramter comments
+  *  0d56bcabf - PVS Fix
+  *  23ecb8eac - Fix #2034 with more precision attempt 2
+  *  de3b63e77 - An error happens when building with gcc8:
+  *  970af45ae - set 0.19 development version
+  *  bb6e4e6ad - fix mouse selection for high DPI screens
+  *  2f2d50535 - fixes 0003130: FreeCAD 0.17 Qt5 bugs with external
+    display
+  *  a14b99e77 - improve drawing of overlay pixmaps for high DPI screens
+  *  87bf7094a - PVS: V601 The bool type is implicitly cast to the
+    double type PVS: V668 There is no sense in testing pointer against
+    null, as the memory was allocated using the 'new' operator. The
+    exception will be generated in the case of memory allocation error
+  *  5f52bd7b4 - PVS: V728 An excessive check can be simplified
+  *  93f0d1bec - PVS: V1024 The 'file' stream is checked for EOF before
+    reading from it, but is not checked after reading. Potential use of
+    invalid data
+  *  d232164ba - PVS: V519 Variable is assigned values twice
+    successively
+  *  e392fc2f0 - PVS: V522 There might be dereferencing of a potential
+    null pointer
+  *  f611102db - PVS: V794 The assignment operator should be protected
+    from the case of 'this == ...'
+  *  51811e4bf - PVS: V688 A local variable possesses the same name as
+    one of the class members, which can result in a confusion
+  *  4e018c506 - extend mesh repair functions
+  *  51aeb5867 - PVS: fixes several issues
+  *  8f6bf8eaf - fixes 0003861: Sketch change plane when changing
+    Attachment Offset (UI quirk)
+  *  83545717d - PVS: fix several issues
+  *  32c527c5a - PVS: V547 Expression is always true/false
+  *  8d8255981 - PVS: V730 Not all members of a class are initialized
+    inside the constructor
+  *  96144560b - PVS: V530 The return value of function 'freopen' is
+    required to be utilized
+  *  51b6a0952 - fix problem that too large splash image make dialog too
+    large
+  *  690774c0e - Fixes Bug 2034. Made Part dimensional arrows
+    proportional to line length and radius
+  *  639a497c9 - FEM: in out VTK, return obj on vtk result import
+  *  eb171db37 - FEM: mesh tools, add method to find 2D zplane meshes
+  *  6a7085fe0 - FEM: material task panel, fix it when Poissons Ration
+    is given but empty
+  *  67a19b758 - FEM: inp file export pref widget, add missing tool tip
+  *  1a6771802 - FEM: vtk file import pref widget, fix tooltip, fixes
+    #3886
+  *  ec86db4bf - when saving parameters make sure document exists
+  *  194f5d779 - fixes 0003894: Part Thickness dialog thickness field
+    not Expressions enabled
+  *  6323069cb - AddonManager: fixed iconless button
+  *  568faf67a - 0003897: 'View Sketch' button doesn't account for
+    container transform
+  *  4a1c04e05 - keep selection order with Selection.getSelection()
+  *  3e713d918 - fixes FreeCAD segfaults when pressing 'Clear All' in
+    Measure tasks dialogue with no opened document
+  *  c1c5dd9bb - fix unicode issue on tab of StartPage
+  *  ba6092502 - Fix #3891 S/S Contents not displayed at load
+  *  6363c90a2 - PVS: V517 The use of 'if (A) {...} else if (A) {...}'
+    pattern was detected.
+  *  67df9f3a8 - PVS: V780 non-passive (non-PDS) type cannot be copied
+    using the memcpy function
+  *  0acb6eb23 - Updated offline documentation
+  *  00f2bd4e6 - PVS: fix some more coding flaws
+  *  9e86ff440 - add cmake_minimum_required to top of CMakeLists.txt and
+    increase minimum Version
+  *  3ad9ee6fa - python3.7 fix
+  *  b5c3ca208 - Fix derived class calls wrong parent method
+  *  7b5458b7f - Ensure ProjGroup is created before child
+  *  9a99a87a9 - Replace static_cast with dynamic_cast
+  *  7189b8ebc - Fix segfault on missing Anchor view
+  *  198c2258d - Remove superfluous updates
+  *  e21c28447 - FEM: ccx tools, add misisng new line in error output
+  *  6ebc2423b - FEM: ccx tools, more Python3 decode fixes
+  *  dcae6d027 - Updated translations
+  *  8f58abfd4 - Tools: Updated wiki download scripts
+  *  8a84875e0 - Arch: Minor bugfix in IFC exporter
+  *  13433f477 - fix invalid static_cast
+  *  10cdb56f2 - Add scroll area to Draft Toolbar
+  *  8d0187648 - Change hotkey of of cycle snap from tab to ` to prevent
+    clashes with current tab behaviour
+  *  87e47df06 - FEM: ccx tools, Py3 decode fix in get ccx version
+  *  fd326aebb - FEM: ccx tools, fix missing ccx setup
+  *  3f6149ad4 - FEM: elmer solver prefs, use elmer path for elmer grid
+    prefs
+  *  e40ee28c1 - FEM: frame work solver settings, delete duplicate code
+  *  2e1e942a9 - FEM: ccx tools solver task panel, fix editor prefs
+  *  c3fb5edc4 - allow to define custom background images
+  *  55160676d - fixes 0003880: list of languages is not sorted in the
+    preferences settings
+  *  19a62a44e - Material: editor code formating, white space and remove
+    new lines
+  *  b5bd2e340 - Image workbench missing icons
+  *  1daa0aa79 - improve Copy&Paste handling in Python console
+  *  56cc7e791 - FEM: analysis member, get rid of duplicate code in
+    getting the analysis mesh
+  *  e606062f4 - FEM: solver tasks, use FreeCAD instead of App
+  *  7a2398ee8 - FEM: solver framework, use small written modul import
+    names in tasks
+  *  79f9c2137 - FEM: analysis, allow result meshes to be analysis
+    member for making an analysis
+  *  e21423836 - FEM: purge results gui tool, make it active if only
+    result meshes are left in an analysis
+  *  185098a91 - FEM: result tools, delete result meshes on result
+    purging too
+  *  445f74737 - FEM: ccx tools, delete duplicate code
+  *  e8044ac2c - FEM: ccx tools solver task panel, add missing check
+    analysis type
+  *  0b5cc822e - FEM: examples, update solver obj of 3D example
+  *  f839b136d - FEM: examples, update solver obj of 2D example
+  *  56056a491 - FEM: unit tests, add tests for von mises and prinzipal
+    stress calculation
+  *  3ca714670 - Draft: Fixed failing dimension snap tool
+  *  16a84b960 - add some comments
+  *  f24bed170 - fix navigation with Tab or Shift+Tab in property editor
+  *  f29df543c - remove unused controls from General preference page
+  *  28b195d6e - PVS issues: consistently define copy constructor and
+    assignment operator remove superfluous casts initialize member
+    variables in constructor avoid double assignment
+  *  d28e6a6ae - hide some controls from preferences pages that are not
+    implemented yet
+  *  2b0d3477c - fix copy-constructor of Path::Area class
+  *  a604dab0b - cannot use null pointer as target for strcpy
+  *  b1909bff4 - PVS: V519 The 'keepExplicitPlacement' variable is
+    assigned values twice successively.
+  *  519849de8 - fix -Wmaybe-uninitialized
+  *  34e09b9af - fix document observer classes to allow to run unit
+    tests multiple times
+  *  9079de751 - Material: fix typos
+  *  ad28ba509 - Tools: Fixed bug in FreeCAD.ts generation
+  *  a70a82e19 - Revert "Merged crowdin translations" for investigation
+    due to some problems found in the translation files...
+  *  58aa9b183 - fixes 0003876: Spreadsheet WB does not respect number
+    of decimal settings fixes 0003875: Spreadsheet workbench does not
+    respect locale for decimal separator
+  *  039ed11e8 - Material: card tools, update ods and csv
+  *  ce4413e7a - Material: cards, add group sections to all cards, by
+    rewriting them once again
+  *  ac51fb35a - Material: cards, rewrite all cards with card writer
+  *  6a3a3f9f3 - Material: mat module, write all cards def, add a
+    parameter to not write the template card, which is active by default
+  *  93456fda4 - Material: card writer, get rid of double new line on
+    file end
+  *  e481af136 - Material: card writer, better meta comments
+  *  f8771be49 - Material, card writer, add parameter to switch off
+    group section writing (it is how material cards look like ATM)
+  *  83a40a327 - Material, card writer, move comment
+  *  1f2e0fb9e - Material: card writer, add white spaces around =
+  *  cf7df30f0 - Material: card template, add group sections
+  *  910753def - Material: card template, white space
+  *  34cd6733f - Material: card template, update some descriptions and
+    links
+  *  db027538d - Material: card template, move property link comment in
+    a separat line
+  *  4e788b40f - Material: card template, update localized property
+    comments
+  *  dfc4ac5ce - Material: card template, update unit description
+  *  49707de57 - Material: cards and templates, sort and move all
+    rendering and vector rendering group attributes
+  *  025ec48c8 - Material: cards and templates, sort and move all
+    architecture group attributes
+  *  c942ab71c - Material: cards and templates, sort and move all
+    thermal group attributes
+  *  6f6735f9a - Material: cards and templates, sort and move all
+    mechanical group attributes
+  *  68e23b681 - Material: cards and templates, sort and move all
+    general group attributes
+  *  d0098ff96 - Material: cards and templates, sort and move all cost
+    group attributes
+  *  90d789e39 - Material: card tools headers, add missing property
+    polish name
+  *  f8a5d278a - Material: card tools headers, delete old depretiated
+    property enlargen
+  *  8da09b30e - fix restoring sketch
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 15 Mar 2019 17:38:39 +0300
+
 freecad-daily (0.17+git16000-337c9c936-1) unstable; urgency=medium
 
   * Compile

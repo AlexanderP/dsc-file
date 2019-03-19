@@ -6,6 +6,8 @@
 	dh $@ --with python2
 
 override_dh_auto_install:
+	make install DESTDIR=debian/ocrodjvu PREFIX=/usr
+	make -C doc
 
 override_dh_auto_test:
 ifeq ($(filter nocheck,$(DEB_BUILD_OPTIONS)),)

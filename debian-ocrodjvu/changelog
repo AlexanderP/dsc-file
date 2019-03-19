@@ -1,3 +1,51 @@
+ocrodjvu (0.11.0+git1312-8e33fe9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/jwilk/ocrodjvu.git
+  * Branch: master
+  * Commit: 8e33fe9aa1bbdac51ea651586d8ba2eefd791944
+  * Date: 1551563572
+  * git changelog:
+  *  8e33fe9 - doc/changelog: update.
+  *  9027cfa - Bump version to 0.12.
+  *  f002bc9 - Remake the build system from scratch.
+  *  a246bec - engines.ocropus: redirect unused fds to /dev/null.
+  *  1d80921 - engines.gocr: redirect unused fds to /dev/null.
+  *  b2caca8 - engines.cuneiform: don't capture stderr when listing
+    languages.
+  *  3461438 - engines.cuneiform: redirect unused fds to /dev/null.
+  *  9bb9619 - engines.ocrad: redirect unused fds to /dev/null.
+  *  b38d98b - engines.tesseract: redirect unused fds to /dev/null.
+  *  295c283 - ipc: add DEVNULL.
+  *  a87a727 - engines.tesseract: be more zealous at filtering boring
+    stderr.
+  *  fe3a347 - engines.tesseract: refactor reading stderr.
+  *  519a3a3 - engines.tesseract: refactor printing errors from
+    Tesseract.
+  *  0ca41df - private/examine-hangs: fix pstree output parsing.
+  *  2f95f70 - doc: get rid of .txt extensions.
+  *  2a055a0 - MANIFEST: remove.
+  *  289c445 - travis: use “jobs”, not “matrix”.
+  *  27d20ce - travis: build manpage.
+  *  2ff1b89 - setup: remove manpage building code.
+  *  2e8141c - Update copyright notices.
+  *  5992164 - private/make-release-tarball: build from git without
+    distutils.
+  *  2ff66e6 - private/make-release-tarball: rename.
+  *  4c0b822 - private/check-rst: remove.
+  *  eaa1846 - travis: use doc/Makefile.
+  *  1c69b72 - doc/Makefile: add.
+  *  5b4a170 - private/update-version: bump date.
+  *  cdad200 - private/update-version: export in separate statment.
+  *  51b288f - private/update-version: set PS4.
+  *  313b668 - private/update-version: trap errors early.
+  *  d789174 - setup: don't fix date format.
+  *  7f4bc97 - doc/*.xml: add <date>.
+  *  2994966 - doc/ocrodjvu: fix punctuation in OCR engine list.
+  *  ccdac3b - doc/dependencies: trim newlines.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 15 Mar 2019 13:08:28 +0300
+
 ocrodjvu (0.11.0+git1279-0caa208-1) unstable; urgency=medium
 
   * Compile

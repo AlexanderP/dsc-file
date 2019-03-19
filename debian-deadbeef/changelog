@@ -1,3 +1,41 @@
+deadbeef (0.7.2+git8279-5a47cd6c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: master
+  * Commit: 5a47cd6c5add0b66f67292eb14d4732baed1101e
+  * Date: 1552863641
+  * git changelog:
+  *  5a47cd6c - tf: added tests for $swapprefix and $stripprefix
+  *  e3832128 - tf: implement $stripprefix and $swapprefix
+  *  b37fa8a3 - coreaudio: rewrote get_best_samplerate with better
+    algorithm and tests (fixes #2101)
+  *  6915506c - gtkui: fixed localizing of certain menu items (fixes
+    #2100)
+  *  998603ca - osx: add revision hash to about box in travis builds
+  *  e209c1e7 - cocoaui: fixed drawing portrait oriented album art in
+    groups taller than the image
+  *  12c785f6 - cocoaui: fixed column alignment UI; use the column
+    alignment setting for horizontal positioning of album art
+  *  d5ccfbd1 - cocoaui: fix drawing tall album art, where height is
+    greater than width (fixes #2096)
+  *  70a44d8a - cocoaui: fix album art column updating and rendering at
+    the correct position (fixes #2093)
+  *  053ce738 - cocoaui: fixed log window in dark mode (fixes #2092)
+  *  b3e29c75 - cocoaui: fixed a few darkmode issues (fixes #2092)
+  *  9b369519 - artwork: fixed crash when on configuration change (fixes
+    #2091)
+  *  3973c622 - coreaudio: fixed finding best output samplerate (fixes
+    #2090)
+  *  bc1b98dc - tf: don't force-reformat `track` fields into a numerical
+    value (fixes #2062)
+  *  12958d17 - cocoaui: fixed drawing tab close button
+  *  2cf222a3 - updated translations
+  *  a92d91a2 - Update WildMidi plugin to support ".midi" extension as
+    well as ".mid"
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 18 Mar 2019 07:24:50 +0300
+
 deadbeef (0.7.2+git8262-373f5564-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,146 @@
+gimp-devel (2.10.8+git42511-d67359f096-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: d67359f096e49df10067f656c4e321f1173518df
+  * Date: 1552582211
+  * git changelog:
+  *  d67359f096 - Updated Italian translation
+  *  28860c12dc - Update Icelandic translation
+  *  e3fe627faa - Update Polish translation
+  *  f8aec23e33 - app: avoid pushing undo while updating colormap
+    entries
+  *  68f5bc63b6 - app: more "Readjust" improvements
+  *  1b9fdddc78 - Update Icelandic translation
+  *  4d08f75978 - Update Icelandic translation
+  *  b3e34ccbae - Update Turkish translation
+  *  282adfd581 - Update Icelandic translation
+  *  3c68387e15 - Update Icelandic translation
+  *  581944253c - app: improve transform-tools readjustment
+  *  f6229c921a - app: in gimp_tool_gui_set_response_sensitive(), allow
+    non-existent ID
+  *  9ee3ee9aaa - Update Hungarian translation
+  *  c0be74d7f1 - Update Polish translation
+  *  942da1ad66 - Update Icelandic translation
+  *  0857c5025d - Update Icelandic translation
+  *  578ed98227 - Update Icelandic translation
+  *  90ee7635ce - Update Icelandic translation
+  *  9e64f4ac7d - Update Ukrainian translation
+  *  78877be607 - Tools presets -> Tool Pre_sets. Fixes #3092
+  *  1c143228f0 - Update Icelandic translation
+  *  790c4b002e - Update Icelandic translation
+  *  0f4b010199 - Updated Danish translation
+  *  3be1a98408 - libgimpwidgets: fix arithmetic-expression supprot in
+    GimpSizeEntry
+  *  914d06547d - Update Swedish translation
+  *  3e08bd7e22 - Update Polish translation
+  *  18a2f576bb - plug-ins: try to clarify "save-transp-pixels" argument
+    of tiff saving.
+  *  23ffa791f0 - Update Dutch translation
+  *  f27bf95e05 - Issue #2557 - Gimp Can't Rotate By More Than 180
+    Degree
+  *  2dad85b84f - libgimpwidgets, app, plug-ins: use GimpSpinButton
+    everywhere
+  *  633f6c1f94 - Update Marathi translation
+  *  1e725b3dbd - NEWS: keep up-to-date.
+  *  a0a7ead13f - plug-ins: tiff exporting can now support INDEXED*.
+  *  72e86545f0 - Issue #102: TIFF plugin doesn't handle indexed images
+    with alpha...
+  *  c4621601f6 - Update Marathi translation
+  *  34e41e9087 - Update Marathi translation
+  *  c6ef13d63f - Update Basque translation
+  *  8cf4b03868 - Update Basque translation
+  *  0ffebd18eb - Update Polish translation
+  *  1ecbb94b2c - app: take transform-grid handle size into account when
+    readjusting
+  *  127fc91603 - Issue #3087: error compiling for Windows.
+  *  628960ed22 - app: update fg/bg colors when committing a colormap
+    change.
+  *  d378f19390 - app: fix a critical on a colormap editor callback.
+  *  c91d37eff2 - Issue #3041: Color Picker no longer selects Colormap
+    entry.
+  *  eabe27421d - Issue #3041: Color Picker no longer selects Colormap
+    entry.
+  *  01990c4059 - app: direct on-canvas color preview when editing a
+    colormap color.
+  *  812a0f6689 - app: save the accurate color in the colormap palette
+    when possible.
+  *  ecd13f1456 - app: update the GimpFgBgEditor when image colormap is
+    updated.
+  *  7812aced5d - Issue #1256: Import damages colormap numbering.
+  *  bee8543f44 - Update Hungarian translation
+  *  1ff6d653a2 - Update Marathi translation
+  *  225b8ac920 - Update Marathi translation
+  *  114db4f60a - Update Dutch translation
+  *  ba3d090882 - Update Hungarian translation
+  *  79f030cf6c - app: fix mnemonic of transform-tools "Readjust" button
+  *  47a44106c2 - app: reset overall transformation in transform tools
+  *  21f76df21b - app: fix unused variable warning in
+    gimp_tool_gui_new()
+  *  ab060c110f - app: implement readjust() in various transform tools
+  *  a8292fedf2 - app: add "Readjust" function to transform-grid tools
+  *  8d20b7c665 - app: add gimp_tool_gui_add_button()
+  *  ffe71f6c5b - Update French translation
+  *  dfca360b66 - app: various fixes to last commit
+  *  977c4d0718 - app: allow canceling line-art computation
+  *  f73e13f49f - Update Turkish translation
+  *  c6f2ad1bce - Update Turkish translation
+  *  f84135e3d9 - Update Turkish translation
+  *  7eae8e8cda - Update Polish translation
+  *  8014fa6ba8 - Update Spanish translation
+  *  d918502aac - app: use gimp_gegl_buffer_copy() in various places
+  *  9bbcaac5d2 - Update Turkish translation
+  *  5f7d6951f7 - Update Turkish translation
+  *  44703c03ff - Update Turkish translation
+  *  cd159e4bd4 - app: fix indepndent-async thread priority on Windows
+  *  08be2affee - app: use independent async for resolving performance-
+    log symbol information
+  *  a3cd8c96d0 - app: add gimp_parallel_run_async_independent_full()
+  *  a465b9c341 - app: clean up last commit
+  *  c76076ec14 - app: fix segfault when closing an image with a
+    floating selection
+  *  4eda127c52 - Issue #3062 - Picking by hue using "Select by Color"
+    goes awry ...
+  *  9173e42274 - Update Turkish translation
+  *  51585bb802 - Update Turkish translation
+  *  71800dfd21 - Update Turkish translation
+  *  00c3c068d0 - Update Turkish translation
+  *  28232d166c - Update Turkish translation
+  *  07080d4540 - app: improve line art filling when clicking on a line
+    art closure.
+  *  03744e3012 - app: fixing the line art GimpBusyBox visibility.
+  *  a9ec675b77 - app: avoid useless line art closure recomputation.
+  *  4233d90961 - app: add a GimpBusyBox near the "Line Art Detection"
+    label in…
+  *  6ae957088a - app: improve warp-tool cropped-area calculation
+  *  2758a34b02 - desktop: update a bit the 2.10.10 appdata.
+  *  0ed30bd1eb - Update Spanish translation
+  *  1f641546a9 - Update Swedish translation
+  *  9b6604d011 - app: add "real-time preview" option to the warp tool
+  *  40a9b38b5c - app: properly implement "spacing" option in the warp
+    tool
+  *  579562f177 - app: improve warp-tool invalidated-area calculation
+  *  bf89b9a9bc - app: set warp-tool scroll-lock to TRUE
+  *  1c66573f4c - app: optimize gimp_layer_invalidate_boundary()
+  *  4ee74a11e6 - app, plug-ins: move brush pipe saving from the file-
+    gih plug-in to the core
+  *  2071f3bdc6 - app: factor file_gbr_drawable_to_brush() out of
+    file_gbr_image_to_brush()
+  *  d8aab75c09 - app: factor out gimp_brush_pipe_set_params() from
+    gimp_brush_pipe_load()
+  *  590f58abff - NEWS: keep up-to-date.
+  *  d50abef3a2 - #3050 - Four tooltips marked as translatable
+  *  15038f8f3d - Updated Danish translation of gimp-python
+  *  fe0cf5777c - Updated Danish translation of gimp-plug-ins
+  *  481cca3907 - Updated Danish translation of gimp-libgimp
+  *  92ec0bb6a3 - Updated Danish translation
+  *  1705333141 - libgimpwidgets: fix gimp_spin_button_new_with_range()
+  *  d81d857798 - app: in gimppaintcore-loops, improve
+    CanvasBufferIterator algorithm helper-class
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 15 Mar 2019 13:14:54 +0300
+
 gimp-devel (2.10.8+git42404-7f6e522a35-1) unstable; urgency=medium
 
   * Compile

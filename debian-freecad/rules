@@ -10,17 +10,42 @@ extra_flags += \
 -DCMAKE_C_FLAGS="-Wall -fpermissive $(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)" \
 -DCMAKE_SHARED_LINKER_FLAGS="$(shell dpkg-buildflags --get LDFLAGS)" \
 -DLIB_SUFFIX="" \
--DOCC_INCLUDE_DIR="/usr/include/oce" \
 -DCMAKE_INSTALL_PREFIX="/usr/lib/freecad" \
 -DCMAKE_INSTALL_DATADIR="/usr/share/freecad" \
 -DCMAKE_INSTALL_DOCDIR="/usr/share/doc/freecad-doc" \
-
-extra_flags += \
+-DCMAKE_INSTALL_LIBDIR="/usr/lib/freecad/lib" \
 -DBUILD_FEM_NETGEN=OFF \
 -DBUILD_FEM_VTK=ON \
 
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+ifneq (,$(filter $(DEBIAN_CODENAME),sid buster)) 
+	CONTROL = control.qt5
+	extra_flags += \
+	-DBUILD_QT5=ON \
+	-DPYTHON_CONFIG_SUFFIX="-python2.7.${DEB_HOST_MULTIARCH}" \
+	-DCMAKE_BUILD_TYPE="Release" \
+	-DOCC_INCLUDE_DIR="/usr/include/opencascade"
+else
+	CONTROL = control.qt4
+	extra_flags += -DOCC_INCLUDE_DIR="/usr/include/oce"
+endif
+
+override_dh_auto_clean:
+	echo $(DEBIAN_CODENAME)
+	cp debian/$(CONTROL) debian/control
+	dh_auto_clean
+
 override_dh_auto_configure:
-	dh_auto_configure -- $(extra_flags) -DCMAKE_CXX_COMPILER=/usr/bin/mpic++
+ifneq (,$(filter $(DEBIAN_CODENAME),sid buster)) 
+	patch -p1 < debian/patches/fix_gcc8_ftbfs.patch
+else
+	echo "no patch"
+endif
+	cp debian/$(CONTROL) debian/control
+	dh_auto_configure -- $(extra_flags)
 
 override_dh_compress:
 	dh_compress -X.qch -X.qhc
@@ -40,5 +65,3 @@ override_dh_icons:
 	install -m 644 debian/freecad/usr/share/freecad/freecad-icon-48.png debian/freecad/usr/share/icons/hicolor/48x48/apps/freecad.png
 	install -m 644 debian/freecad/usr/share/freecad/freecad-icon-64.png debian/freecad/usr/share/icons/hicolor/64x64/apps/freecad.png
 	install -m 644 debian/freecad/usr/share/freecad/freecad.svg debian/freecad/usr/share/icons/hicolor/scalable/apps/freecad.svg
-	install -m 644 debian/freecad/usr/share/freecad/freecad-doc.png debian/freecad/usr/share/icons/hicolor/64x64/mimetypes/application-x-extension-fcstd.png
-

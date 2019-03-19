@@ -1,0 +1,111 @@
+Source: freecad
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Section: science
+Priority: extra
+Build-Depends: cmake,
+               debhelper (>= 11~),
+               dh-exec,
+               dh-python,
+               libboost-date-time-dev,
+               libboost-dev,
+               libboost-filesystem-dev,
+               libboost-graph-dev,
+               libboost-iostreams-dev,
+               libboost-program-options-dev,
+               libboost-python-dev,
+               libboost-regex-dev,
+               libboost-serialization-dev,
+               libboost-signals-dev,
+               libboost-thread-dev,
+               libcoin-dev,
+               libopencv-dev | libcv-dev,
+               libeigen3-dev (>= 3.3~beta1),
+               libgts-bin,
+               libgts-dev,
+               libkdtree++-dev,
+               libmedc-dev,
+               libocct-data-exchange-dev,
+               libocct-ocaf-dev,
+               libocct-visualization-dev,
+               libproj-dev,
+               libpyside2-dev,
+               libqt5opengl5-dev,
+               libqt5svg5-dev,
+               libqt5webkit5-dev,
+               libqt5x11extras5-dev,
+               libshiboken2-dev,
+               libspnav-dev,
+               libvtk6-dev,
+               libx11-dev,
+               libxerces-c-dev,
+               libzipios++-dev,
+               lsb-release,
+               occt-draw,
+               pyside2-tools,
+               python-pyside2.qtcore,
+               python-pyside2.qtgui,
+               python-pyside2.qtsvg,
+               python-pyside2.qtwidgets,
+               python-dev,
+               python-ply,
+               python3-pyside2.qtgui,
+               python3-pyside2.qtsvg,
+               python3-pyside2.qtwidgets,
+               python3-dev,
+               python3-ply,
+               qtbase5-dev,
+               qttools5-dev,
+               swig,
+Standards-Version: 3.9.8
+
+Package: freecad
+Architecture: any
+Depends:
+ libfontconfig1-dev,
+ python-matplotlib,
+ python-pivy,
+ python-pyside2.qtcore,
+ python-pyside2.qtgui,
+ python-pyside2.qtsvg,
+ python-pyside2uic,
+ ${shlibs:Depends},
+ ${misc:Depends},
+ ${python:Depends}
+Recommends:
+ calculix-ccx,
+ graphviz
+Suggests:
+ freecad-doc,
+ python-collada,
+Description: Extensible Open Source CAx program (beta)
+ FreeCAD is a general purpose feature-based, parametric 3D modeler for CAD, MCAD,
+ CAx, CAE and PLM, aimed directly at mechanical engineering and product design but
+ also fits a wider range of uses in engineering, such as architecture or other engineering
+ specialties. It is 100% Open Source (LGPL2+ license) and extremely modular, allowing
+ for very advanced extension and customization.
+ .
+ FreeCAD is based on OpenCasCade, a powerful geometry kernel, features an Open Inventor-compliant
+ 3D scene representation model provided by the Coin 3D library, and a broad Python API.
+ The interface is built with Qt. FreeCAD runs exactly the same way on Windows, Mac OSX, BSD and
+ Linux platforms.
+
+Package: freecad-doc
+Architecture: all
+Section: doc
+Recommends:
+ freecad (= ${source:Version})
+Depends:
+ ${misc:Depends},
+ qt5-assistant
+Description: FreeCAD documentation
+ FreeCAD is a general purpose feature-based, parametric 3D modeler for CAD, MCAD,
+ CAx, CAE and PLM, aimed directly at mechanical engineering and product design but
+ also fits a wider range of uses in engineering, such as architecture or other engineering
+ specialties. It is 100% Open Source (LGPL2+ license) and extremely modular, allowing
+ for very advanced extension and customization.
+ For more details see http://www.freecadweb.org/
+ .
+ This package contains the FreeCAD documentation.
+ .
+ The documentation is provided in Qt's new help format;
+ the new help format version can be viewed in conjunction with Qt Assistant.
