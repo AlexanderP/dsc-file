@@ -1,3 +1,90 @@
+gimp-devel (2.10.8+git42567-f0b5080f83-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: f0b5080f83faa81cb9afb954eaf1e3d6441b7399
+  * Date: 1553849652
+  * git changelog:
+  *  f0b5080f83 - app: don't invalidate viewable preview when thawed
+    unless explicitly requested
+  *  c8ea2f45f9 - app: avoid risky alloca() in gimp_brush_save()
+  *  c347f8770c - app: avoid freezing image preview if drawable is not
+    attached
+  *  b9ca245736 - app: when freezing a drawable's preview, freeze
+    ancestors' previews
+  *  273a0c4395 - app: change antialias feature in fill by line art into
+    Feather Edges.
+  *  aa7fc3f08d - app: add GTK+ patch allowing controlling combo-box
+    popup style
+  *  1749fd995c - app: add GTK+ patch to fix list-style combo-box popup
+    width
+  *  7edbad3144 - app: include system gtkrc file in themerc
+  *  f19ebb6269 - app: revert combo-box drop-down changes
+  *  9063b937fe - app: use gimp:fill-source in gimp_drawable_edit_fill()
+  *  75822d3d7b - app: add gimp:fill-source operation
+  *  2341117517 - app: improve gimp_drawable_fill_buffer() for patterns
+  *  1416571389 - app: use compositing format for fill buffer
+  *  6e06e5e856 - app: in GimpDrawableFilter, set underlying operation
+  *  b5b5d71708 - app: use underlying operation in
+    gimp_gegl_apply_cached_operation()
+  *  5e212fe0dd - app: add
+    gimp_gegl_node_{set,get}_underlying_oepration()
+  *  3518ab9197 - app: add gimp_gegl_node_is_source_operation()
+  *  55569d512e - app: in gimp_drawable_apply_buffer(), work in chunks
+  *  7c6125ce67 - app: improve responsiveness of GimpChunkIterator
+  *  f81c1cac10 - app: preserve projection priority rect across
+    structure/bounds changes
+  *  6473daa05b - Update Ukrainian translation
+  *  bb747c58ed - Update Ukrainian translation
+  *  03c98739bd - Update Ukrainian translation
+  *  7d3b935327 - Update Ukrainian translation
+  *  b9375a3873 - Update Ukrainian translation
+  *  81afa73bf3 - Updated Greek translation
+  *  ebaf09e7cc - app: don't disable filter format conversion if !=
+    drawable format
+  *  269f2ca0fc - app: skip cache and format conversion when merging a
+    drawable filter
+  *  fef2c3423a - app: small fix to
+    gimp_gegl_mask_combine_ellipse_rect()
+  *  9ac360a125 - Issue #3142 - Filters on-canvas preview doesn't work
+    ...
+  *  8f3da0e8c4 - Allow compilation on MacOS 10.5 leopard: issues #2923,
+    #2924 and #2925
+  *  f540f6c0a5 - Updated Slovenian translation
+  *  6a38c58cda - Updated Slovenian translation
+  *  e5026997b9 - Updated Slovenian translation
+  *  f1c5b3978a - Updated Slovenian translation
+  *  041107f801 - Updated Slovenian translation
+  *  b8d94342ca - Issue #3134 - Deleting last layer of group not
+    updating image
+  *  dc8fad6ac6 - app: improve gimpchannel-{combine,select}
+  *  fa79923d4b - app: improve gimp_gegl_mask_combine_buffer()
+  *  9b76ea070d - app: improve gimp_gegl_mask_combine_ellipse[_rect]()
+  *  d0a3d81c4a - app: improve gimp_gegl_mask_combine_rect()
+  *  15e8b53f0c - app: convert gimp-gegl-mask-combine to C++
+  *  2a2ad4324d - app: add
+    gimp_babl_format_change_{component_type,linear}()
+  *  5c70b827d2 - app: add gimp_babl_is_bounded()
+  *  2675e944e3 - app: make gimp_prop_gui_chain_toggled() less error-
+    prone.
+  *  2ebf56850e - Issue #3133: Gimp freezes after selecting a filter
+    preset and...
+  *  199f9f13a5 - app: fixes g_object_unref: assertion 'G_IS_OBJECT
+    (object)' failed.
+  *  66c47ee23f - plug-ins: do not needlessly free/malloc() buffer of
+    same size.
+  *  4721643176 - Update Marathi translation
+  *  520b4fbf18 - Update Marathi translation
+  *  c15069797e - Update Marathi translation
+  *  2a83ce9abe - Update Marathi translation
+  *  9cf206f350 - Update Marathi translation
+  *  05e9bb7b3f - Update Marathi translation
+  *  b46d89257a - Update Marathi translation
+  *  6956a403d0 - Update Marathi translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 30 Mar 2019 13:17:20 +0300
+
 gimp-devel (2.10.8+git42511-d67359f096-1) unstable; urgency=medium
 
   * Compile

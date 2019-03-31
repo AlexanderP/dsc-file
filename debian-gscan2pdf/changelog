@@ -1,3 +1,83 @@
+gscan2pdf (2.5.1+git2980-a8ed38d1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: a8ed38d1a70b0cd48fc551937b9799ab7a1978f9
+  * Date: 1553363599
+  * git changelog:
+  *  a8ed38d1 - Update to Hungarian translation
+  *  e02a5b0b - Bumped version to v2.5.1
+  *  ce698718 - Fix warning message about pdftk
+  *  90cf9b01 - Post-release commit
+  *  799af46a - Update to Ukrainian translation
+  *  42a830fb - Update to Italian translation
+  *  b5f81288 - Round-tripped Hungarian translation
+  *  d88e5ea3 - Update to German translation
+  *  5c09b084 - Update to en_GB translation
+  *  4b6db578 - Bumped version to 2.5.0
+  *  59d56d69 - Fix tesseract UTF-8 test by using real words with
+    umlauts
+  *  c6f5197a - Fix tesseract tests failing due to h/n recognition
+  *  7639f23d - Skip appropriate tests if scanadf not installed
+  *  50d95c36 - Fix bug where toolbar crop always operates on first page
+  *  aa90c87d - Fix bug causing Edit/Select/Blank only to work on second
+    attempt
+  *  a8a52ff8 - Skip t/1163_save_multipage_pdf_as_ps.t if pdf2ps not
+    installed
+  *  1fe0109b - Clear up temporary files after tests
+  *  d7be5217 - Fix race condition when cancelling job
+  *  23a39664 - Refactor unnecessary '->'-symbols
+  *  c7025771 - Optionally encrypt PDFs
+  *  4d4c370d - Really optionally change the djvu access and
+    modification times to the metadata date.
+  *  6df75f75 - Update to Hungarian translation
+  *  7a68b7ca - Fix line endings in Italian translation
+  *  a96ff432 - Prerelease commit
+  *  1caded31 - Update to Italian translation
+  *  70519901 - Only display scan facing/reverse switch dialog after
+    finishing scanning pages, not every scan process
+  *  356d4e6c - + strftime to stopwords in PodSpelling
+  *  6eebd423 - Bumped version to 2.4.0
+  *  10382b69 - Update to Ukranian translation
+  *  3caa426d - Update to German translation
+  *  64144bd9 - Reset scan options to defaults before applying profile
+  *  566a9f92 - Fix saving as TIFF G3/4 if image not depth 1
+  *  d0ad20a3 - + crop to toolbar and RMB menus
+  *  6eccc744 - Document closing feature request #57
+  *  a5458f3c - Switched to GIMP-like controls - LMB for selecting and
+    MMB for panning
+  *  9ddd8e2b - + missing tests for different resolutions
+  *  262f3eba - Use Epson GT-1500 titles for x- and y-resolution options
+  *  9852785e - Reduce minimum zoom value for ImageView to avoid warning
+    from glib
+  *  e545b39f - + Split screen view for image and OCR output
+  *  b5886156 - Add logging while editing properties
+  *  2cdf103b - + Edit profile functionality to scan dialog
+  *  71701e38 - Correct comment for each_frontend_option
+  *  27ad7ba2 - Document closing feature request #101
+  *  5ead8779 - Offer to switch from Facing to Reverse after scanning
+    double-sided pages
+  *  234b3c72 -   * Corrected dates in debian/copyright   * Corrected
+    licence of gscan2pdf.appdata.xml in debian/copyright
+  *  e45a144c - Bumped version to 2.3.0
+  *  799b54d8 - Update to Ukrainian translation
+  *  b2355e20 - Update to Swedish translation
+  *  16cbed5e - Update to German translation
+  *  b0ce58ba - Update to English GB translation
+  *  94ca3e95 - Remember size of multiple message window
+  *  5ffa55bc - Make post-scan PNG conversion optional
+  *  d1813e96 - Support different resolutions in x and y directions
+  *  6a27d973 - Fix update of image viewer/OCR output after deleting a
+    page
+  *  b4a6db44 - Reduced "bouncing" effect when dragging OCR output
+  *  5157d7ed - Actually implement time in metadata
+  *  40563e08 - Tidy parse_arguments()
+  *  d2cd5655 - 2018->2019
+  *  d199d35b - Post-release commit
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 30 Mar 2019 09:33:35 +0300
+
 gscan2pdf (2.2.2+git2921-437af7ee-1) unstable; urgency=medium
 
   * Compile

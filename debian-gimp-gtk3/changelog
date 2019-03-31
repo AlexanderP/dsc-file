@@ -1,3 +1,97 @@
+gimp-gtk3 (2.99.0+git43166-9dabad4cb9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 9dabad4cb9d1cfc14cd07a6ac7c739033acdc622
+  * Date: 1553849647
+  * git changelog:
+  *  9dabad4cb9 - app: don't invalidate viewable preview when thawed
+    unless explicitly requested
+  *  24ed9dbdf5 - app: avoid risky alloca() in gimp_brush_save()
+  *  de36e33347 - app: avoid freezing image preview if drawable is not
+    attached
+  *  e2ea2e4a82 - app: when freezing a drawable's preview, freeze
+    ancestors' previews
+  *  d821b088e2 - app: change antialias feature in fill by line art into
+    Feather Edges.
+  *  1846764d3b - app: include system gimp.css file in theme.css
+  *  846d242f30 - app: revert combo-box drop-down changes
+  *  234f76b6fb - app: use gimp:fill-source in gimp_drawable_edit_fill()
+  *  6b0337e384 - app: add gimp:fill-source operation
+  *  3c1634ee0d - app: improve gimp_drawable_fill_buffer() for patterns
+  *  245a17c79f - app: use compositing format for fill buffer
+  *  b0dfc1e7c7 - app: in GimpDrawableFilter, set underlying operation
+  *  213b126c6e - app: use underlying operation in
+    gimp_gegl_apply_cached_operation()
+  *  eb5e473665 - app: add
+    gimp_gegl_node_{set,get}_underlying_oepration()
+  *  ff13e55c16 - app: add gimp_gegl_node_is_source_operation()
+  *  8f845d3a51 - app: in gimp_drawable_apply_buffer(), work in chunks
+  *  e904b71242 - app: improve responsiveness of GimpChunkIterator
+  *  9d80ccc3e6 - app: preserve projection priority rect across
+    structure/bounds changes
+  *  b2969a11e1 - Updated Greek translation
+  *  30da2f3d6f - app: don't disable filter format conversion if !=
+    drawable format
+  *  733a6ec01c - app: skip cache and format conversion when merging a
+    drawable filter
+  *  d4689441fe - app: small fix to
+    gimp_gegl_mask_combine_ellipse_rect()
+  *  106df3b794 - Issue #3142 - Filters on-canvas preview doesn't work
+    ...
+  *  23b5d503a8 - Updated Slovenian translation
+  *  2ec3ec98b7 - Updated Slovenian translation
+  *  369382c862 - Updated Slovenian translation
+  *  79e1c9668e - Updated Slovenian translation
+  *  d1e4969ec4 - Updated Slovenian translation
+  *  a712308f20 - Issue #3134 - Deleting last layer of group not
+    updating image
+  *  8e77347cac - app: improve gimpchannel-{combine,select}
+  *  a227c8e94d - app: improve gimp_gegl_mask_combine_buffer()
+  *  1044342393 - app: improve gimp_gegl_mask_combine_ellipse[_rect]()
+  *  8a6e1c907d - app: improve gimp_gegl_mask_combine_rect()
+  *  5198d3c32d - app: convert gimp-gegl-mask-combine to C++
+  *  ffaaa81c8a - app: add
+    gimp_babl_format_change_{component_type,trc}()
+  *  d7f12c9d26 - app: add gimp_babl_is_bounded()
+  *  9042e85f3c - app: make gimp_prop_gui_chain_toggled() less error-
+    prone.
+  *  03dc24455a - Issue #3133: Gimp freezes after selecting a filter
+    preset and...
+  *  af6760b3c9 - app: fixes g_object_unref: assertion 'G_IS_OBJECT
+    (object)' failed.
+  *  7cf06c3f60 - app: color widget updated properly when editing
+    colors.
+  *  4dcda7ffb8 - Issue #3129: Split sentence on gimpexport.c.
+  *  425eb83f8a - app: GimpColorDialog follows the user context active
+    image.
+  *  0b68ce8182 - plug-ins: do not needlessly free/malloc() buffer of
+    same size.
+  *  3dc820c017 - app: make active_image member a weak pointer in
+    GimpColorDialog.
+  *  1c6fb83308 - Update POTFILES.in
+  *  0ae3f38f52 - Issue #3122: gimp_color_dialog_constructed: 'colormap'
+    action group...
+  *  ed3bcf248e - plug-ins: remove old spyrogimp.
+  *  3b0e4d8760 - app: update padding color interactively.
+  *  edb90672fb - app: again properly disconnect signal handlers.
+  *  4a3da7d05e - app: properly disconnect signal handlers.
+  *  c2ab385207 - app: some cleanup in GimpColormapEditor.
+  *  6e84c47469 - app: use a GtkStack instead of GtkNotebook in
+    GimpColorDialog.
+  *  576e804ebf - app: make the active_image into a weak pointer.
+  *  6abb55c759 - app: GimpColorDialog should actually follow the user
+    context...
+  *  8ab04a2a3a - app: use the new GimpColormapSelection in
+    GimpColormapEditor.
+  *  94043529c8 - Issue #2938: Painting on indexed images counter-
+    intuitive.
+  *  8e8535ac5b - Updated Greek translation
+  *  feea2b3042 - Updated Greek translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 30 Mar 2019 14:03:18 +0300
+
 gimp-gtk3 (2.99.0+git43108-d5ea4c5653-1) unstable; urgency=medium
 
   * Compile

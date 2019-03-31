@@ -1,3 +1,20 @@
+clementine-qt4 (1.3.1+git2095-gd8e0e7e67-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: d8e0e7e67e9b796d744aa8c1525b8cf437c34dde
+  * Date: 1553593866
+  * git changelog:
+  *  5c2ceb349 - Fix several gstreamer object leaks.
+  *  ca8db288d - Free decoder bin if error occurs during setup.
+  *  577248c24 - Assume Cocoa support
+  *  102c529f8 - Fix potential use of streamer element after deletion.
+  *  5171150e4 - Fix spotify blob detection on win32
+  *  55edcf532 - Fix MoodbarPipeline crash on gstreamer error.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 29 Mar 2019 21:59:13 +0300
+
 clementine-qt4 (1.3.1+git2083-gbcc8c6258-1) unstable; urgency=medium
 
   * Compile
