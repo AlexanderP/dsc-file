@@ -1,3 +1,60 @@
+gimp-devel (2.10.8+git42602-1c3317db70-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 1c3317db707b6fc1fc7aa96a7b17f3f851ddcdc3
+  * Date: 1555082220
+  * git changelog:
+  *  1c3317db70 - plug-ins: GimpPrecision has no NON_LINEAR and
+    PERCEPTUAL values.
+  *  2608a7e2d6 - app: remove defines GIMP_BRUSH_FILE_VERSION and
+    GIMP_PATTERN_FILE_VERSION
+  *  dcc297b6f7 - Issue #3224: Fill by Line Art Detection Bug (Fatal
+    Error with Crash).
+  *  3ee3ca9c71 - Issue #3193: Wrong colors after exporting 8bpc RGB png
+    from 32f...
+  *  532866007d - Issue #1070: exporting to jpeg from 32-bit float
+    linear image...
+  *  1baba460db - Update Spanish translation
+  *  84bc29b77a - Update Indonesian translation
+  *  ed030168c2 - Update Indonesian translation
+  *  dd5c4458c9 - app: fix legacy .gpb parsing code in
+    gimp_brush_load_brush()
+  *  5eb033d30b - Update Spanish translation
+  *  e073e0c55f - Update Turkish translation
+  *  d1ee74b250 - configure.ac: post-release version bump to 2.10.11
+  *  596f855749 - configure.ac: bump versions for the 2.10.10 release
+  *  bdb2584b63 - etc, docs: regenerate default gimprc and its manpage
+  *  896a7b5a12 - NEWS: some fixes
+  *  6ec62f2d17 - desktop: prepare the GIMP 2.10.10 release.
+  *  054da85911 - po: always end the "Keywords" list with a semicolon!
+  *  ce2e7420a8 - Issue #2665 - Settings changes in Rectangle and
+    Ellipse selection don't "stick"
+  *  91642674ce - Update German translation
+  *  abc2726c06 - Updated Italian translation
+  *  69b056a0b5 - INSTALL: update info about libmypaint.
+  *  027e5ed5b0 - Updated Italian translation
+  *  8c7e2a9e03 - Issue #3025 - "File/New" doesn't honor "precision"
+    choice ...
+  *  7e26d66464 - Update Latvian translation
+  *  3c674c937c - Update Latvian translation
+  *  402c1f1f7b - Update Latvian translation
+  *  4204dab5f6 - Update Latvian translation
+  *  f810d59928 - Update Latvian translation
+  *  522e497457 - app: in GimpChunkIterator, avoid preparing rect before
+    merging
+  *  1cdd32955e - app: fix image-window UI-manager update while a
+    projection is being rendered
+  *  191c9812f3 - app: small fix to GimpChunkIterator
+  *  c5d34b2496 - app: in gimp:fill-source, align result to tile grid
+  *  9c9467e076 - Issue #2090 - Crash when using transform tools
+  *  4d2a5d1a94 - app: more responsiveness improvements to
+    GimpChunkIterator
+  *  1096bdfd53 - Update Polish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 13 Apr 2019 11:48:35 +0300
+
 gimp-devel (2.10.8+git42567-f0b5080f83-1) unstable; urgency=medium
 
   * Compile

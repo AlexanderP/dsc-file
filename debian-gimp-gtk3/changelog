@@ -1,3 +1,63 @@
+gimp-gtk3 (2.99.0+git43202-f0ff1adacc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: f0ff1adacc2942d7579e78e98530a261a7e6f753
+  * Date: 1555144969
+  * git changelog:
+  *  f0ff1adacc - Update POTFILES.in
+  *  ab2b6c0400 - Update Catalan translation
+  *  406279e4ef - app: new "gex" format (GIMP Extension).
+  *  5c9114aedf - app: allow core file procedure which don't return an
+    image.
+  *  aee6d44b61 - app: remove defines GIMP_BRUSH_FILE_VERSION and
+    GIMP_PATTERN_FILE_VERSION
+  *  5d5ced88a8 - Issue #3224: Fill by Line Art Detection Bug (Fatal
+    Error with Crash).
+  *  c5fae74ac1 - Issue #3193: Wrong colors after exporting 8bpc RGB png
+    from 32f...
+  *  8594275bb7 - Issue #1070: exporting to jpeg from 32-bit float
+    linear image...
+  *  6017683c87 - Update Spanish translation
+  *  d5a2c5cc91 - Update Indonesian translation
+  *  640bc17e63 - Update Indonesian translation
+  *  5d331a1f90 - Update French translation
+  *  40863bffdd - app: fix legacy .gpb parsing code in
+    gimp_brush_load_brush()
+  *  9fd8d65f98 - .gitlab: improve templates.
+  *  e0b958b22c - desktop: prepare the GIMP 2.10.10 release.
+  *  2da6cefa3f - Issue #2665 - Settings changes in Rectangle and
+    Ellipse selection don't "stick"
+  *  2e5d6a6b72 - Update German translation
+  *  e7b8a57bec - build: oups, shared module not included.
+  *  58e1a2ae47 - build: sync nightly flatpak with recent changes on the
+    stable one.
+  *  48b5f50a58 - build: remove unreleased <release> when building
+    flatpak nightly.
+  *  1028345b7b - INSTALL: update info about libmypaint.
+  *  b1133ef866 - plug-ins: updating deprecated enum names from libheif.
+  *  22e14e0b9b - Issue #3164: HEIC doesnt have color profile.
+  *  033082dd9a - Issue #3025 - "File/New" doesn't honor "precision"
+    choice ...
+  *  79225868e2 - Update Latvian translation
+  *  1f14c1eae0 - Update Latvian translation
+  *  14c954dff0 - Update Latvian translation
+  *  2e4a066a6b - Update Latvian translation
+  *  08be71fdd8 - Update Latvian translation
+  *  c95502266a - app: in GimpChunkIterator, avoid preparing rect before
+    merging
+  *  50aaeef6a0 - app: fix image-window UI-manager update while a
+    projection is being rendered
+  *  d182c41f8f - app: small fix to GimpChunkIterator
+  *  fa31854a66 - app: in gimp:fill-source, align result to tile grid
+  *  be7906c05c - Issue #2090 - Crash when using transform tools
+  *  91f4c809d8 - app: more responsiveness improvements to
+    GimpChunkIterator
+  *  5ab08b72a9 - Update Polish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 13 Apr 2019 17:02:01 +0300
+
 gimp-gtk3 (2.99.0+git43166-9dabad4cb9-1) unstable; urgency=medium
 
   * Compile

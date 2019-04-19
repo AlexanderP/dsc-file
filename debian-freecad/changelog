@@ -1,3 +1,39 @@
+freecad (0.18.1+git16111-0dc75267f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: releases/FreeCAD-0-18
+  * Commit: 0dc75267fee2af948c3085002a2cc61758cc5b30
+  * Date: 1554479033
+  * git changelog:
+  *  0dc75267f - fixes 0003913: libspnav crash on linux wayland during
+    startup
+  *  f7dccfaa9 - FEM: ccx tools, set back the assignment of linux and
+    osx ccx binary path
+  *  76542ae72 - FEM: osx: try to fix default ccx detection
+  *  55698377f - fix crash when checking an empty error message of an
+    exception
+  *  f21cbce8c - fix crash when checking an empty error message of an
+    exception
+  *  915270351 - FEM: Py3 fix in result reader
+  *  c264c76d8 - Linux/appdata: generate release info
+  *  d8f5560ca - Path:  per Werner, fixing bug for function removed from
+    string module in py3
+  *  442e411cf - Py3: make string concatenation to work with Py2 and Py3
+  *  55080952a - reset expressions of a property when removing it
+  *  f185504b4 - in case object deletion fails then make sure to re-
+    enable updates of the main window
+  *  2bc3daedc - Document::breakDependency should handle exceptions to
+    avoid to leave document in an inconsistent state
+  *  2cef63f8a - Fix #2034 with more precision attempt 2
+  *  81a7d937b - Fix for build failure on Ubuntu 16.04
+  *  64f3424ca - fix mouse selection for high DPI screens
+  *  64cb745dd - fixes 0003130: FreeCAD 0.17 Qt5 bugs with external
+    display
+  *  228876f8f - improve drawing of overlay pixmaps for high DPI screens
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 11 Apr 2019 23:11:38 +0300
+
 freecad (0.18+git16094-8ece48c70-1) unstable; urgency=medium
 
   * Compile

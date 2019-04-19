@@ -1,3 +1,424 @@
+freecad-daily (0.18+git16472-d02378a8b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: d02378a8b7e9b29bac35295f88fbe7ee7d0b1673
+  * Date: 1555016624
+  * git changelog:
+  *  d02378a8b - Arch: Allow for several IFC properties with same name
+    (in different psets)
+  *  86c11cde8 - Arch: Misc dynamic properties-related bugfixes to IFC
+    exporter
+  *  cfcaf7a3a - Arch: Support for multi-color objects and transparency
+    in IFC export
+  *  5562d919d - NaviCube: Improve the widget style
+  *  e13747c3c - Fix selection problem in Front view
+  *  ade224ca8 - Arch: Allow to switch IFC schema when using
+    ifcopenshell v0.6
+  *  5b44d3c46 - Gui: Added Gui.doc.view.viewer.setBackgroundColor() py
+    method
+  *  624e20e9a - Arch: Renamed property IfcRole to IfcType
+  *  9b3ffef57 - TestDraft: Fix testRotate and testOffset cases
+  *  584d5d431 - Integrate libvirt CoC
+  *  2e887355d - GH PR Template: Update with link to 0.19 Release Notes
+    forum thread for devs
+  *  c4537a597 - Arch: Minor bugfixes in IFC import
+  *  7dfdb609c - fix import of ply meshes with Vs 2017
+  *  8e8b93aab - Draft: Shape2DView can now fuse Arch Walls and
+    Structures
+  *  71dedf60d - Draft: re-added recomputes where needed in Draft GUI
+    tools
+  *  5db6da0ee - Split the command in two
+  *  5897e52d5 - Update DraftTools.py
+  *  c191e6192 - Update DraftTools.py
+  *  4b10f1d87 - Update DraftTools.py
+  *  4e4218e01 - Update DraftTrackers.py
+  *  8602c887d - Create CODE_OF_CONDUCT.md
+  *  f5b6f3a36 - fix -Wmaybe-uninitialized
+  *  725ffe521 - Fix several compiler warnings: fix -Wunused-parameter
+    fix -Winconsistent-missing-override fix -Wsometimes-uninitialized
+  *  2fabda160 - Sketcher: Constraint improvements
+  *  504a687ad - V1016 CWE-681
+  *  3926ea18c - V547 CWE-571
+  *  eebd4cecd - V560 CWE-570
+  *  5407d31c6 - Build with Multiple Processes, decreases the build time
+  *  7de2248bb - Draft: Fixed node selection in Draft Edit
+  *  4f19a6555 - Draft: Added 3-point arc command from BIM WB
+  *  2935cbb71 - Better vertices comparison
+  *  6de9183da - Fix findIntersection() can't find coincident points due
+    to overspecifying Precision by user
+  *  9bce6a483 - OffsetWire() - Seems has repeatedly sortEdges, remark
+    out here
+  *  7d142b16a - Fix connect() bug - If prev v2 had been calculated, do
+    not calculate again, just use it as current v1
+  *  e3e95e3ea - Fix offsetWire() bug - first edge vector should depends
+    on geometry (line or arc)
+  *  144ce0dba - Modify using FreeCAD.Vector.getAngle()
+  *  8e457a669 - Adding tool tips to pocket extension dialog
+  *  a19170ba6 - Python3 fix for iterating over dictionary keys
+  *  01b3f5708 - Fixed colour for visibility and changed selection model
+    to extended.
+  *  902298711 - Fixed ExtensionCorners initial value and added it to
+    setup parameters.
+  *  ae7ffd2be - Persiste ExtensionCorners state for consistent UI
+  *  d38a4087d - Use expression for pocket extension default length
+  *  b583439b2 - Added Show All pocket extension checkbox for better UX.
+  *  2fb419663 - Use colour to indicate pocket extension enablement
+  *  06bafa372 - Encapsulating swtich in _Extension class
+  *  0367c28fb - Added support for global extend corners
+  *  dcbe97144 - Maintain tree collapse state over extension refreshs
+  *  6df14de1e - Maintain extension selection over update.
+  *  6fb98ed5c - Fixed update of extensions when length changes
+  *  b01d10055 - Switched extension UI to tree view dependent on the
+    base objects.
+  *  f52a99f75 - Fixed Path WB icon path
+  *  9f618d5dd - Restore pocket selection behaviour
+  *  9002cd135 - Use start point proximity to determine which wire to
+    select for the extension.
+  *  10428fd3c - Using offset2D for properly creating the extension
+  *  58f5cfa5a - Disabling length and direction columns for now.
+  *  fbdc3dad5 - Fixed UI to update dirty state correctly
+  *  cfe27f7d3 - Add extension faces to removal shape generation.
+  *  1b214515d - Cleanup so artifacts on task panel close.
+  *  1c74eee9d - Simple visualisation of removal shape extensions.
+  *  c8dc0e344 - Added extracting the wire of an extension
+  *  159f5ae93 - Basic UI to add extension features.
+  *  068c0724e - Basic UI for editing pocket shape extensions.
+  *  79def8b23 - Added UI page pocket extension; changed selection
+    agent.
+  *  9346d76aa - fix bug when checking for str type in
+    PropertyEnumeration::setPyObject
+  *  35ecc15a8 - Draft: Limit preferences precision value to max 10
+  *  7660c428a - removed all document recompute calls
+  *  40d9a1305 - DrawBalloon clean up
+  *  cfb1f0e7a - Fix segfault from dynamic_cast w/o check
+  *  afe21f739 - Add default parameter for Page Scale
+  *  827f6c420 - Fix search for subShapes
+  *  1f6b2daef - Fix coverity CID 151722
+  *  175966a6f - Improve error messages for invalid shapes
+  *  8f8473a21 - add search function to parameter editor
+  *  870ad71f9 - fixes 0003913: libspnav crash on linux wayland during
+    startup
+  *  847035cbd - Path:  New post for simple laser cutter.
+  *  264a91e6f - path: smoothie post modified for python3
+  *  c6915a24e - tool tips, Gui cleanup
+  *  993d179e7 - icon for inactive
+  *  d5edb6ed2 - Path: Make a command and icon to toggle op active
+    status
+  *  1bbb5c245 - Path: GUI for fixture support working
+  *  ae1aeb5a0 - Path: ordering works reasonably well Splitting works
+    reasonably well
+  *  388a671ac - Path:  UI changes to job edit
+  *  684ac9db9 - make colors of measurements customizable
+  *  af914363c - add methods to convert colors between rgb and hex
+    values
+  *  473f7ff01 - pybind11 mod
+  *  aff8a7f80 - replace endl with std::endl
+  *  7b4949ee6 - Update Draft.py
+  *  a0868f6f0 - Update Draft.py
+  *  0fabc7fbe - Add files via upload
+  *  a4e6b4655 - Update Draft.py
+  *  7a4c0f6e0 - Add RiserThickness feature
+  *  45a5bb6a1 - use a combo box to choose between Qt's webkit and
+    WebEngine modules
+  *  67a9e861a - Make QtWebKit the default package to look for and add
+    build switch to force QtWebEngine.
+  *  100ab0f7b - FEM: unit tests, add a method to get all test methods,
+    add them to test modul to simply copy them
+  *  55e75bc0f - FEM: solver run, fix missing imports
+  *  1555ea829 - Arch: Wall blocks can now show only rows or columns
+  *  d4f01c440 - pre-select job base model if there is only one choice
+  *  0ba57765c - Fixed segfault on shutdown
+  *  ac7946902 - Fix tree view editor for qt5
+  *  b09f6faf3 - Always enable spin box and live cross update of spin
+    box and check box
+  *  873c73728 - Compact display of models in job editor.
+  *  cc7ee9918 - Enable multiple copies of a model as base object for a
+    job
+  *  1f791eb65 - FEM: working dir, add error messages to the error calls
+  *  e942d471a - workaround in case SoInput.setBuffer raises an
+    exception
+  *  a7e82e861 - Fix Text position error on some Dims
+  *  80bba4f0d - Add Indicator for PositionLocked state
+  *  7370ac8ad - Add default parms for Arc Centers
+  *  2f0b56333 - FEM: ccx tools, ccx binary handling improved
+  *  0acd2cf69 - FEM: ccx tools, set back the assignment of linux and
+    osx ccx binary path
+  *  5d7534e92 - FEM: osx: try to fix default ccx detection
+  *  d8b261016 - FEM: solver writer base, check if really a mesh object
+    was given
+  *  c0ee45e2c - FEM: elmer, use console print and delete not needed
+    prints in unit test
+  *  1842ab28a - FEM: solver writer base, possibility to instantiate the
+    class without dir parameter
+  *  5adaa8673 - FEM: examples, move meshes in sparate directory
+  *  07f1bd40b - FEM: mesh tools, resort some methods and add comments
+  *  2d6f004a1 - FEM: anylysis output, improve prints
+  *  443393c89 - FEM: prints, use FreeCAD Console prints on lot of
+    places
+  *  7e86a3f4c - FEM: solver frame work, move get dir setting to
+    snake_case
+  *  ef374e640 - FEM: solver frame work, move get custom dir to
+    snake_case
+  *  0ffa6de8b - FEM: solver frame work, move get binary to snake_case
+  *  9358daed7 - FEM: solver settings, add methods to retrieve the
+    comments writing preference parameter
+  *  8f760d1c3 - FEM: solver settings, code improvements
+  *  0b64374fe - FEM: solver writer and tasks, code formating
+  *  b5613b2bd - TechDraw: add Balloons
+  *  2551c1741 - TechDraw: transfert mousePressEvent from QGIPrimPath to
+    parent
+  *  99b476595 - TechDraw: datumLabelDragged now include a modifier
+    value
+  *  8d5d25da2 - fix crash when checking an empty error message of an
+    exception
+  *  ac265261b - fix build failure with Py2.7 under macOS
+  *  de44a747f - fix crash when checking an empty error message of an
+    exception
+  *  b7d263e60 - make PCL check quiet in case PCLConfig.cmake file is
+    missing
+  *  925cffc15 - Linux/appdata: generate release info
+  *  ac5836778 - Fix Direction of Draft Arrows in TechDraw
+  *  e7489c079 - More misc. typos
+  *  c985f9ee7 - Misc typos and whitespace fixes
+  *  6bc555c9b - Fix for build failure on Ubuntu 16.04
+  *  881756079 - MeshToSolid: progress indicator and slightly modified
+    sewing tolerance dialog
+  *  106d3461f - FreeCAD: Application: removed banner in Cmd RunMode
+  *  2b856e084 - Add information about Linux GFX environnement in FC
+    info
+  *  7b03eff1b - FEM: solver settings, small code improvements and some
+    comments
+  *  36fb597ad - FEM: solver settings, binary path print log and print
+    message
+  *  1c05f73e6 - FEM: solver settings, use FreeCAD instead of App
+  *  406498273 - FEM: fix in solver settings, use a standard value if
+    binary could not be read
+  *  9f689bef4 - FEM: unit tests, do not use join on module import test
+  *  7dfeb801a - FEM: Py3 fix in result reader
+  *  a599ac5b4 - FEM: import tools, some error message and comment
+  *  1167b4fba - FEM: vtk tools, code fix
+  *  c0627aba5 - FEM: ccx tools, code formating
+  *  9ac7c7d6f - FEM: typos
+  *  bcbe82de7 - FEM: ccx tools task panel and solver run, use new ccx
+    tools class init without analysis
+  *  9b4a6f743 - FEM: ccx tools solver, allow to open the task panel
+    even if the analysis is not active
+  *  a918d9e02 - FEM: unit tests, add some comments
+  *  f3c7b7f3b - FEM: result tools, delete not used imports
+  *  b51ef01e9 - FEM: run, improvements in error messages
+  *  c7bbfca56 - FEM: run, use Error at the end of exception class
+  *  76555307f - FEM: result tools, simplified calculation of abs
+    displacement
+  *  f4300f30c - FEM: unit tests, add test for displacement abs
+  *  7b65f3668 - FEM: result tools, better variable names
+  *  b6e4d3fc4 - FEM: result tools, von mises, use a simplified
+    calculation formula
+  *  6a4f68a1b - FEM: z88 writer, cut writing time at second diggit
+  *  83c5093c7 - FEM: ccx tools, add a class to make it very easy to run
+    analysis py python
+  *  bb69ace9f - FEM: ccx tools, add solver search if no analysis was
+    given
+  *  dad3e9de7 - FEM: ccx tools, fix getting the analysis if solver is
+    given but no analysis
+  *  6a3f0dc93 - FEM: solver run, add method to run fem solver and use
+    in commands and example module
+  *  caacf9457 - FEM: examples, add this new package and the module for
+    ccx cantilever
+  *  972e29b4a - FEM: utils, do not mix FreeCAD and App on imports
+  *  581a78bbc - FEM: imports, use small character for fem utils imports
+  *  4844c72b2 - FEM: input file writer, use join from os package
+  *  6bd837f92 - FEM: ccx tools, use working dir prefs from solver
+    framework
+  *  1d05f1bd9 - FEM: utils, add a method to get the solver working dir
+  *  fa851c869 - FEM: unit tests, use join from os package
+  *  0a8b67cef - Sketcher: Fix bug in curvature graph
+  *  6e28178c2 - use STATUS in message command as otherwise in the GUI
+    of cmake output will be in red and thus might be confusing
+  *  82cb0dac8 - Make a report after you run cmake to show the different
+    status of the libraries that might be used. This should make it
+    easier for new persons to build FreeCAD. Some of the detection
+    routines might output error messages doing different ways if
+    detection, so finding the real error that causes cmake to fail can
+    be hard. Can also be usefull for future bug-reports.
+  *  1036a9eea - Detect QT5 by using REQUIRED flag instead of checking
+    if QT5Core is present at the end. If Qt5WebKitWidgets for instance
+    fails, we end up with build-success, but runtime-loading errors due
+    to unresolved symbols and views not working.
+  *  f442568a9 - Use CMAKE_CXX_STANDARD instead of adding details to
+    CMAKE_CXX_FLAGS.
+  *  ddd550c41 - Commit 30f395761abbc98c7f75dcfc0f37d1db269360a1 "remove
+    unused option FREECAD_MAINTAINERS_BUILD" removed the very last
+    mention eigen2
+  *  ee29960c7 - Git commit ea0cc96c15f37e36a4a5fd5c1e0b7c8ac6f92283
+    forgot to remove CMakeList information about ANN when removing the
+    library.
+  *  3db319759 - If COIN3D is not found with pkg-config, but with manual
+    search, the only output seen on the screen is an error message. Add
+    a success-message!
+  *  f9884c507 - When using cMake find_package_handle_standard_args(),
+    we might aswell give it the version number detected aswell
+  *  228102b6e - Spelling error in variable name, caused the setting to
+    never be applied: SPANV_LIBRARY vs SPNAV_LIBRARY
+  *  b66a6fa31 - path: use XMax/YMax for sorting shapes in PathAreaOp
+  *  423830ba8 - Path: sort shapes in PathAreaOp before executing
+  *  64df37ae1 - use the pcl cmake config file to configure pcl
+  *  370606912 - enable qt5 support if qt5core.lib is found
+  *  893e76fa7 - Enhance url addressbar, toggle hide from action
+  *  f827ab776 - Implement url adress widget
+  *  954c19836 - Add viewsource for QWebKit
+  *  3807bc295 - Fix for Qt4 and QWebKit
+  *  26f7428c9 - Fix local paths for windows
+  *  cf23508ea - Cleanup
+  *  a4e549b7f - Favicon stuff
+  *  f6643bd19 - Documentation
+  *  7fcf399bb - Fix chrash on local *.py links, thread issue
+  *  60a26e744 - Add back/forward automatic activation
+  *  5991c2790 - Make zoom work, zoom everything not just text
+  *  75fd7231e - Support QWebEngine BrowserView, QWebkit still
+    suppported through cmake option
+  *  17e44f79b - Draft: Better tooltip for Draft precision pref settings
+  *  7c760259a - Arch: Wall, structure, window and panel tools now
+    remember and keep last used values
+  *  3370d0902 - Add Preference for Dimension Format
+  *  87ffd1201 - Fix TD Dfx export - spline conversion
+  *  45d878711 - Add pref for new Dxf Exporter
+  *  8ea5b43f8 - Fix unnecessary update on Save
+  *  2ba683078 - Fix missing offside arrow tail
+  *  bab0401f9 - Arch: Fixed IFC misc export issues, support for objects
+    inside App Parts
+  *  ddb335cfe - Arch: Store last used wall thickness and height values
+  *  ea0342159 - Arch: Fixed missing files in cmake
+  *  741533941 - fix handling of OCC exceptions, fix -Wunused-but-set-
+    variable, fix -Wunused-parameter
+  *  763c2b22f - make 3d view creation working with Qt 5.12
+  *  dbcf39abd - suppress VS2917 warnings: C4267
+  *  e4be0cb36 - fix VS2917 warnings: C4091, C4477, C4302, C4311
+  *  3c7d5bc15 - Improve project on surface dialog: make function
+    undo/redoable work on document that was active when the dialog was
+    opened handle case when object or document is deleted while dialog
+    is open
+  *  64957a55e - transform sub shapes to global position
+  *  1ff37ee99 - improve creating the edges/wire in parametric space
+  *  313a0be20 - make a face copy
+  *  79af25d0a - make a explicit copy
+  *  b186aea9b - imrove the projection algorithm
+  *  54e7ab332 - Change the vector type to non const
+  *  14b78d95e - add gp_dir include
+  *  1c5ee376e - add new feature "Projection on surface"
+  *  d3351496d - first working ui
+  *  e1be0fb45 - Bump spec version to v0.19
+  *  749e8aaf1 - Fix OCC error handling
+  *  a8686cdb8 - Fix broken texture loading for PY 3 builds
+  *  50c82c2b9 - Misc. source comment typos
+  *  e04ba4e4a - Add some more user-facing typo fixes
+  *  dfb2389ca - Issue 3866: Partial fix for inaccurate tooltips
+  *  8fb61fe09 - Crowdin: cont...
+  *  a979c1ec4 - Crowdin: follow-up to previous commit
+  *  953df125a - Crowdin: continuing translation string
+    refinements/fixes
+  *  09731554c - Add option to fill cut shapes with material colors
+  *  4a41c27cd - Arch: Fixed materials not updating their dicts
+  *  c3b213e50 - fix issue 0003885
+  *  251a9bff1 - Draft: minor bugfix
+  *  b533c6436 - Arch: Fixed IFC export of rebars
+  *  20f3c124f - Draft: Fix for translation
+  *  a7d22096c - Allow move base to work for rotation too
+  *  75fefb53c - Add warning if there are multiple parents for a base in
+    statusline and in console
+  *  778b489e7 - Draft: do not try to move object base if it has no base
+  *  348a1777a - Add a move base property that moves the base object
+    instead of the object itself if true.
+  *  0c1137f5b - Fix to Build Curve Segment Railing Wire To Follow Curve
+    Landing
+  *  327162dbc - Revert "Build Curve Segment Railing Wire To Fit
+    Landing"
+  *  176c0d4e7 - Build Curve Segment Railing Wire To Fit Landing
+  *  bb1d54afb - FEM: constraint displacement object, some comments and
+    code sorting
+  *  26d59e4ca - FEM: unit tests, typo in comment
+  *  9cda3a94d - FEM: examples, update result object in 2D FEM example
+  *  ca4cd9df3 - FEM: examples, update result object in 3D FEM example
+  *  7ae56b15c - FEM: unit tests, fix von mises and principal stress
+    calculations
+  *  30d3347ae - FEM: update solver framework example
+  *  5642ffbb3 - FEM: vtk tools, use own names for vtk result object
+    pipe
+  *  844ae7e92 - FEM: restult task panel, add automatic displacement
+    factor
+  *  5e86f6ae8 - FEM: result reader, remove eigenmode result scaling
+  *  fc3d2a9f1 - FEM: results, remove stressvectors and strainvectors
+    from result obj, adapt code elsewhere
+  *  53d2b30dc - FEM: result tools, small changes for better code
+    reading
+  *  932fe224e - FEM: results, move principal and shear calculation from
+    result reader to result tools and use new result stress float lists
+  *  d87e12c01 - FEM: results, move vonMises from result reader to
+    result tools and use new result stress float lists
+  *  988e40758 - FEM: vtk result, add all stress strain components to
+    vtk result creation
+  *  b03e06976 - FEM: result task panel, make all stress strain
+    components in user defined equation available and adapt ui
+  *  a151b9dc7 - FEM: inout result reader, fill res obj stress and
+    strain components with data
+  *  1bf147886 - FEM: mechanical result object, add float lists for all
+    stress and strain components
+  *  1f1f9b70a - FEM: stress and strain components, use more comon order
+    and notation
+  *  347ee59f9 - FEM: inout, read all strain values
+  *  43072c12e - FEM: vtk tools, small code change and comment in the
+    regard of FreeCAD.Vector length
+  *  55d1f4b89 - FEM: solver frame work, some code formating for better
+    readable code
+  *  792293a19 - FEM: unit tests, solver frame work, typo in ccx solver
+    test
+  *  094dda590 - Path:  per Werner, fixing bug for function removed from
+    string module in py3
+  *  8f2dd0012 - add unit test to verify that removing a property alo
+    removes a dependency
+  *  347156403 - Py3: make string concatenation to work with Py2 and Py3
+  *  3cf15c014 - Fixed six.py2 -> PY2
+  *  de18975c1 - Fixed six.py2 -> PY2
+  *  d9ca64ad5 - Fixed six.py2 -> PY2
+  *  25f7fb299 - six.text_type --> six.string_types
+  *  d136be173 - Remove a stray 'not'
+  *  e3545c8c0 - Unicode fixes for Python3
+  *  0453ee71e - Fixed Python3 build, Python slots Qt slots clash
+  *  2d5fd706f - Fix Windows build
+  *  c6882e8de - Spacemice support refactored to use a common base class
+  *  91b2a3cff - Fix Windows build
+  *  9c2578de7 - Copyright notices added
+  *  edb213844 - Not used for SpaceNavigator devices, no change
+    necessary
+  *  0d3c67078 - Use std::vector to copy Spacemouse data from helper
+    class to Application
+  *  46aa5fb0a - x11EventFilter must be overridden for Qt4
+  *  e98780109 - Fixed compilation of 3Dconnexion/libspacenav wit Qt4
+  *  8489864d5 - Use QSocketNotifier for the libspnav polling interface
+  *  f7fdc52de - GuiNativeEventLinux* compiles again after changes for
+    Mac
+  *  f95d23611 - Mac build of new Spacenavigator class works
+  *  3799b6059 - Blind update for Windows code
+  *  48b305cd7 - The platform dependant stuff is in different files
+    chosen by the build system. Building on Linux/Qt5 works without
+    libspacenav, with the X11 interface and the polling interface. All
+    run. Spacemouse works with the polling interface and should work
+    with the X11 interface under a real X system.
+  *  2acb6996b - Spacemouse platform dependent code is moved to
+    different classes. Compiles and works for Linux
+  *  b7fbbd97b - X11 independant implementation for USB SpaceNavigator,
+    works with Wayland
+  *  7cff64643 - Path: fix grbl_post preamble parameter handling
+  *  b38da0afa - Path: fix grbl_post postamble parameter handling
+  *  891988f4f - Fix PVS-studio error
+  *  a7919b63d - PVS: V703 It is odd that the 'previewFaceSet' field in
+    derived class 'ViewProviderPrimitive' overwrites field in base class
+    'ViewProviderAddSub'
+  *  805ccd8de - reset expressions of a property when removing it
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 12 Apr 2019 12:43:50 +0300
+
 freecad-daily (0.17+git16119-51fcdd2c0-1) unstable; urgency=medium
 
   * Compile

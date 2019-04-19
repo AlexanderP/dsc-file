@@ -1,3 +1,72 @@
+eiskaltdcpp-devel (2.2.10+git5321-010ceb8d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://github.com/eiskaltdcpp/eiskaltdcpp.git
+  * Branch: master
+  * Commit: 010ceb8de42e8e673c9f23ca03ebd53837c924d9
+  * Date: 1555020617
+  * git changelog:
+  *  010ceb8d - [DHT] Code refactoring related to ba1d5cec.
+  *  ae4cd1cb - [Core] Code refactoring.
+  *  d0c7549b - [Core] Enable REQUIRE_TLS by default.
+  *  e8f155c8 - [Core] Fix Socket::udpPort after ba1d5cec.
+  *  6315b761 - [Core] Code refactoring.
+  *  e53ea0a6 - [Common] Small code refactoring.
+  *  46ffd21f - Update ChangeLog.
+  *  1f6f67af - [Core] Code refactoring.
+  *  979a5226 - [Core] Delete currently unused debug code.
+  *  0019dd7d - [Core] Tiny code refactoring.
+  *  bcb74f83 - [Core] boost < 1.48.0 is not supported anymore.
+  *  b50f694a - [Qt] Decrease usage of boost.
+  *  344712a4 - cmake: set DO_NOT_USE_MUTEX to OFF in builds for MS
+    Windows.
+  *  3ecb1522 - Revert c35de2bcf356af155b78e5b9673448ad2e05c43f.
+  *  9d172bd0 - [Core] Tiny code refactoring.
+  *  c35de2bc - Delete configuration option DO_NOT_USE_MUTEX:
+  *  e6099fc0 - [Core] Stop support of boost < 1.48.0.
+  *  8e5f781c - [Core] Use std::mutex in builds for MS Windows.
+  *  ee9f85e1 - [Core] Code refactoring.
+  *  4f936bbf - [Core] Decrease usage of boost.
+  *  9bcca4e5 - [Core] Tiny code refactoring.
+  *  515639fb - Update desktop files.
+  *  de4023c8 - Improve update-translations script.
+  *  d50640a8 - Update documentation.
+  *  b11a1647 - Translations were updated from Transifex.
+  *  fce204a5 - [Core] Fix cppcheck notes with severity "error":
+  *  8c41d106 - Translations were updated from Transifex.
+  *  068bf92e - Translations were updated from Transifex.
+  *  c85f0c53 - Update translations.
+  *  555e1f7e - Update desktop files.
+  *  f7dcf151 - Improve update-translations script.
+  *  ba1d5cec - [Core] Code refactoring.
+  *  d1fd55f1 - [Core] Code refactoring.
+  *  c4205626 - [Core] Code refactoring.
+  *  f8b45949 - [Core] Code refactoring.
+  *  bf19e406 - [Core] Fix cppcheck notes with severity "error":
+  *  67b0b365 - [Core] Code refactoring.
+  *  0fe24190 - [Core] Fix cppcheck warnings:
+  *  aa5c042e - [Core] Code refactoring.
+  *  c0003751 - [Core, GTK+] Code refactoring.
+  *  3aabeeb5 - [Core] Disable ALPN for OpenSSL < 1.0.2
+  *  daab31b4 - [Core] Code refactoring.
+  *  b087f2c4 - [Core] Code refactoring.
+  *  b4877b74 - [Core, Qt, GTK+] Code refactoring.
+  *  0381543d - [Core] Delete unused file.
+  *  cb888048 - [Core] Code refactoring.
+  *  a41d49f2 - [Core] Revert few changes from af12efcc.
+  *  96f8fe00 - [Qt] Update list of fake ADC client tags in Favorite Hub
+    settings.
+  *  e1aca6c0 - [Core] Fix fake client ID feature on ADC hubs
+  *  b3b400e8 - [Core] Fix tags of DC clients on ADC hubs.
+  *  e194a9ec - [Core] Initial support for ALPN.
+  *  9180ecd3 - [Core] Fix program version for ADC hubs.
+  *  af12efcc - [Core] Code refactoring.
+  *  11e59d13 - [Qt] Add easter egg.
+  *  e3f1a4ad - [Core] Code refactoring.
+  *  1186e58d - [Core] Code refactoring.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 12 Apr 2019 22:06:14 +0300
+
 eiskaltdcpp-devel (2.2.10+git5265-3b6ac809-1) unstable; urgency=medium
 
   * Compile

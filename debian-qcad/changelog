@@ -1,3 +1,177 @@
+qcad (3.22.0.5+git6811-3c1791661-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 3c179166164fa1be8ef328d8739b1a9685058355
+  * Date: 1555088942
+  * git changelog:
+  *  3c1791661 - update translations
+  *  40724c095 - Translated using Weblate (French)
+  *  41f2628ac - use d prefix for document variables from measured
+    distances
+  *  ccb4ae1ed - update user manual
+  *  8c86a980a - update translations
+  *  e9dcfc955 - add support for auto terminate
+  *  2f4968b7b - update script bindings
+  *  74edbfca8 - allow disabling of no state in action
+  *  734ac92e7 - add support for document variable substitution to
+    command line input
+  *  b7abd496f - update script bindings
+  *  e13607111 - add to2D to block reference class
+  *  e8d1791c5 - add support for calls from RMathLineEdit context menu
+  *  2d9cbb6c9 - add support for auto termination, updating
+    RMathLineEdit with result
+  *  b4265b6c8 - update
+  *  d454ac61e - call initMathLineEdit for RMathLineEdit widgets
+  *  9f0143732 - eval using document with document variables
+  *  bd9f72305 - add support for auto variables
+  *  a720e5797 - fix command line info color in dark mode
+  *  7acbfe0da - update translations
+  *  a8078174b - set version to 3.22.0.7
+  *  ee09fbfba - update icons
+  *  37c80103b - update qrc
+  *  895f0dae1 - update script bindings
+  *  5da9cb83d - fix FS#1871 - View > Block List: Renaming current block
+    does not update block list
+  *  8625f5819 - add key modifiers to RMoveReferencePointOperation API
+  *  3a1949b6d - update script bindings
+  *  c96661e40 - add unit tests for image resizing
+  *  c608b314f - update script bindings
+  *  9b0b8458d - update
+  *  1c0968dab - update scaleByReference API
+  *  c7cf0d636 - move ortho restriction from shift to alt
+  *  2588d4901 - fix zoom in was triggerd with Cmd-left click
+  *  df140f449 - set version to 3.22.0.6
+  *  fa8d93517 - fix layer list updates
+  *  d297932d4 - fix exception if default action has not init
+  *  72e901af1 - Translated using Weblate (Russian)
+  *  b4e0be391 - update translations
+  *  3d629b273 - Translated using Weblate (Spanish)
+  *  b5ea6653b - Translated using Weblate (Portuguese)
+  *  1eac4448b - Translated using Weblate (Italian)
+  *  15b9117f5 - Translated using Weblate (German)
+  *  5ddaa3e57 - Translated using Weblate (French)
+  *  95d3a45e2 - Translated using Weblate (English)
+  *  574ad5f70 - Translated using Weblate (Dutch)
+  *  4a15525b7 - add test files
+  *  a42964ca6 - fix translations (undo / redo) for image
+    transformations
+  *  6789f6167 - update translations
+  *  aea3370f6 - clean up
+  *  235553f1f - update translations
+  *  d3b281760 - Translated using Weblate (Russian)
+  *  036047384 - fix bitmap export with no weight margin option
+  *  8d8bb453a - fix undo / redo for image entities
+  *  3723ca422 - fix round corners for polylines (in bitmap export)
+  *  cbf2b8056 - fix translatable string
+  *  56f247c9f - fix FS#1864 - File > Print Current View: multiple pages
+    printed
+  *  31867ca4c - update translations
+  *  9813b2e94 - update translations
+  *  da5fb75ab - Translated using Weblate (Russian)
+  *  2c2287216 - Translated using Weblate (French)
+  *  c7d7430ae - update translations
+  *  5551f9fa6 - Translated using Weblate (Russian)
+  *  7f1fbdd27 - Translated using Weblate (English)
+  *  d4fdf4244 - fix font
+  *  2860df441 - fix font
+  *  687b1d180 - fix import of numbers with exponents (e.g. -1e-06)
+  *  5fb3a8ad6 - update auxiliary lines for fonts
+  *  3f1fd96d4 - update user reference manual
+  *  982f1201f - Translated using Weblate (Spanish)
+  *  1bdab7ab7 - Translated using Weblate (Portuguese)
+  *  0da936530 - Translated using Weblate (Italian)
+  *  8f39d6593 - Translated using Weblate (German)
+  *  bc6e20949 - Translated using Weblate (French)
+  *  3c8565b71 - Translated using Weblate (Dutch)
+  *  ab24ba35c - update translations
+  *  d7b6611e9 - update script bindings
+  *  ad686559c - call init on default action
+  *  608f9c478 - only trigger blockChangeEvent if block affected is not
+    current block
+  *  eec1b896f - performance: use blockEntityMap where appropriate
+  *  e0aee5acc - add aux line positions support (used when editing CXF
+    fonts)
+  *  369c73ab5 - clean up
+  *  be9af430c - clean up
+  *  a9b8e10a6 - update user message to apply to drawings and fonts
+  *  a3f60f8eb - add auxiliary lines info
+  *  3fd9f58c4 - update qrc
+  *  67449b27b - update qrc
+  *  2bf1c9fe6 - add unit tests
+  *  1659659b4 - add underline support
+  *  2d90a9863 - update script bindings
+  *  43eb64349 - add underline support
+  *  598830b04 - add underline support
+  *  706a8c830 - add underline support
+  *  175980dd5 - add underline support
+  *  0c561bc44 - add underline support
+  *  35910f625 - remove destructors
+  *  92e766197 - update translations
+  *  90271c782 - Translated using Weblate (Russian)
+  *  5aef85de5 - Translated using Weblate (Russian)
+  *  579db5c8a - fix FS#1865 - Scaling polyline with width by negative
+    factor removes width
+  *  3b65cd8ab - Translated using Weblate (Russian)
+  *  c2c9d9a66 - update script bindings
+  *  eb1fb6b5c - ortho snap with Shift key
+  *  6c725c394 - set version to 3.22.0.5
+  *  1cb02c3d2 - update translations
+  *  32f88776d - Translated using Weblate (Russian)
+  *  4629f62eb - Translated using Weblate (Russian)
+  *  97f2b8632 - Translated using Weblate (Russian)
+  *  5392decae - Translated using Weblate (Russian)
+  *  12c93942a - Translated using Weblate (Russian)
+  *  3f57b9c84 - update translations
+  *  4c7dc3281 - Translated using Weblate (French)
+  *  c430943b2 - fix regeneration of entites on layer change
+  *  3b57abde1 - Translated using Weblate (Russian)
+  *  b20ec74a0 - update translations
+  *  61e391f5e - update script bindings
+  *  ed022b04a - workaround for Qt 5.13 bug
+  *  71efa07c3 - pass layer IDs with updateLayers signal
+  *  469d4ffc6 - speed up look up of layers based on names
+  *  9f614d02e - pass layer IDs with updateLayers signal
+  *  b38bfceb4 - fix FS#1861 - Modify > Stretch: block references inside
+    stretch box are not moving
+  *  7e549819a - add block ref to stretch test
+  *  aecad39bb - Translated using Weblate (Russian)
+  *  19ae8d2f0 - Translated using Weblate (Russian)
+  *  5406ceeb2 - Translated using Weblate (Russian)
+  *  a926a94da - update about dialog in dark theme
+  *  5501dc958 - update about dialog
+  *  6d9724258 - fix tooltip shortcut color in dark theme
+  *  acae75b4e - update translations
+  *  44e571627 - Translated using Weblate (Russian)
+  *  24083991c - Translated using Weblate (Russian)
+  *  be694e45d - Translated using Weblate (Russian)
+  *  3c7c07aa3 - set version to 3.22.0.4
+  *  b77b7d5a5 - update script bindings
+  *  53ee116db - update CXF fonts
+  *  dc67fb58c - update test data
+  *  5b371f89c - add polyline support for original shapes in painter
+    path
+  *  56a03afd8 - add support to polylines in CXF fonts
+  *  ad600d206 - improve performance when setting current block
+  *  452ff22a6 - fix unit test
+  *  8fc69a288 - add bright close button for tabs to tabbar
+  *  506022857 - Translated using Weblate (Finnish)
+  *  fdad94330 - clean up font
+  *  b684a782c - update script bindings
+  *  188a44a2b - remove QCollator
+  *  14f34a040 - add support for hex numbers when sorting (e.g.
+    "0x00a1")
+  *  f3d2c070d - export blocks in order
+  *  feeca1589 - suggest appropriate file type in save as dialog
+  *  e004af615 - make text dialog text edit white in dark mode
+  *  68ebe67e3 - make text edit background darker for dark theme
+  *  1c6a360b3 - add conversion for QChar
+  *  b1cc4d4c0 - add getGlyphNames
+  *  e11470105 - adjust command / warning colors for dark theme
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 13 Apr 2019 08:24:08 +0300
+
 qcad (3.22.0.2+git6646-f4e5c6b12-1) unstable; urgency=medium
 
   * Compile
