@@ -11,7 +11,7 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid xenial yakkety zesty buster artful bionic)) 
+ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid xenial yakkety zesty buster artful bionic disco)) 
 	CONTROL = control.qt5
 	export QT_SELECT=5
 	export DEB_BUILD_MAINT_OPTIONS = hardening=+all

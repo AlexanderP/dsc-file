@@ -20,7 +20,7 @@ endif
 	dh $@ --parallel 
 
 override_dh_auto_build:
-#ifneq (,$(filter $(DEBIAN_CODENAME), sid buster artful bionic)) 
+#ifneq (,$(filter $(DEBIAN_CODENAME), sid buster artful bionic disco)) 
 #	patch -p1 < debian/patches/005-fix-ftbfs-gcc-7.diff
 #else
 #	echo "no patch"
