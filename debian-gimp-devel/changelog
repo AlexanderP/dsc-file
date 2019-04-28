@@ -1,3 +1,83 @@
+gimp-devel (2.10.8+git42653-dd2632bc85-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: dd2632bc85af9c083afc4319f39f08aa145d5bd4
+  * Date: 1556264239
+  * git changelog:
+  *  dd2632bc85 - app: flush image when committing free-select tool
+  *  ee7419cb01 - Update Hungarian translation
+  *  38c1ee315d - Update Hungarian translation
+  *  469ce04f83 - Update Hungarian translation
+  *  30788227cc - app: increase GimpSelectionTools idle priority to
+    avoid flickering
+  *  03cb47f871 - app: fix dirty mask/action in the rectangle- and free-
+    select tools
+  *  95f468fec2 - Issue #2328 - Free Select tool should create
+    preliminary marching ants selection
+  *  9cc8d2403d - app: factor-out common free/fg-select logic into
+    GimpPolygonSelectTool
+  *  67f44f3e34 - app: add GimpToolPolygon::change-complete signal
+  *  c161b0cccb - app: add gimp_tool_polygon_is_closed()
+  *  7d4ea79a98 - app: allow passing NULL pointers to
+    gimp_tool_polygon_get_points()
+  *  fb1e552acd - app: remove unused field from
+    GimpPolygonSelectToolPrivate
+  *  655af1dd44 - app: move undo/redo logic for GimpRectangleSelectTool
+    to GimpSelectionTool
+  *  ee3bc11e61 - Issue #3129: Split sentence on gimpexport.c.
+  *  45784e9f50 - Issue #3220 - "How to Use Dialogs" does not open any
+    page.
+  *  776e2cba8f - plug-ins: Move layer option up in TIFF dialog
+  *  95ea4e4272 - Issue #3284 - Wrong layer renamed when switching
+    images
+  *  7780f6169d - Update Polish translation
+  *  7ef388a511 - Update Russian translation
+  *  6de686bd50 - Issue #3275 - Crash when opening an image after
+    closing existing image
+  *  49f3319f19 - app: don't leak curve in
+    gimp_curves_config_save_cruft()
+  *  023a6f7900 - Fix a terminology in zh_CN translation
+  *  5684d5f85f - Update zh_CN translation of po-script-fu
+  *  9a1663fac5 - Update zh_CN translation of po-tips
+  *  7d1656d079 - Update zh_CN translation of po-libgimp
+  *  a6501e4ba2 - Update zh_CN translation of po-tags
+  *  da0183a516 - app: fix spin-button width in the Curves tool
+  *  f8eddc8696 - app: fix last commit
+  *  168fa15091 - app: fix Curves tool numeric-entry range/precision for
+    > 8-bpc images
+  *  001acb7d18 - app: add smooth/corner curve-point types
+  *  f473af3c46 - Issue #1528 - Allow precise or numeric input in color
+    curves tool
+  *  9861ea8e87 - app: add "selection-changed" signal to GimpCruveView
+  *  b5da9918f1 - app: streamline GimpCurve
+  *  f141fc4064 - app: fix gimp_operation_levels_map_input() for
+    negative values
+  *  1158c0c10f - Update zh_CN translation of po-windows-installer
+  *  0a05a2354e - Update zh_CN translation
+  *  345a9a89fa - Update French translation
+  *  65a2a2fd8b - app: in GimpCurveView, snap to curve when holding Ctrl
+  *  1ecb868821 - app: in GimpCurveView, use relative motion when
+    dragging point
+  *  8e9034cab8 - Update Turkish translation
+  *  7cb6df0db6 - Update Turkish translation
+  *  a0948e8164 - Update Turkish translation
+  *  27f20dd99a - Update Turkish translation
+  *  e17860fada - Update Turkish translation
+  *  0ee8e5f17a - app: add incremental mode to the Dodge/Burn tool
+  *  8009f62a77 - Update German translation
+  *  9335c26b68 - plug-ins: Add layer support to TIFF writing
+  *  d1d0022500 - plug-ins: export linear WebP if and only if the work
+    image was 8-bit...
+  *  ec132fa396 - plug-ins: export linear JPEG if and only if the work
+    image was 8-bit...
+  *  bfe24a3b50 - Issue #3253: exporting to webp from 32-bit float
+    linear image...
+  *  b9ed4a7f14 - Update German translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 28 Apr 2019 03:25:04 +0300
+
 gimp-devel (2.10.8+git42602-1c3317db70-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,146 @@
+deadbeef (1.8.0+git8442-ef9d6db2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: 1.8
+  * Commit: ef9d6db2c9cd92f813ef1dc4c5d84fab0f33cf01
+  * Date: 1556456424
+  * git changelog:
+  *  ef9d6db2 - 1.8 Changelog update
+  *  f724c8a6 - 1.8.1-rc1
+  *  bb6ed0b3 - translation update
+  *  d72d3f32 - gtkui: scale album art to largest dimension
+  *  c40c19cc - set version to devel
+  *  95c2376e - sync to osx/deps submodule
+  *  21185525 - supereq: fixed reentrancy bug
+  *  e30f7f5a - flac: extra space typo in configdialog prop name
+  *  9c2059b9 - flac: added options to ignore stream corruption errors
+  *  47319275 - gtkui: use gtk_widget_get_preferred_size instead of
+    gtk_widget_get_preferred_width/height in
+    _ddb_splitter_fix_proportion
+  *  27818561 - gtkui: removed #define TEST left over by accident
+  *  02fce4e5 - portaudio: property title fix
+  *  d7933900 - gtkui: fixed regression in loading layouts with
+    splitters
+  *  dabc9123 - 1.8.1-beta2
+  *  8dd20f21 - 1.8.1 Changelog update
+  *  4a0a9562 - osx: fix crashing tests because of NULL id in fake
+    output plugin
+  *  67798881 - gtkui: prevent splitter handle movement out of window
+    edges (fixes #2064)
+  *  3254fcd6 - artwork: fixed initializing config variables which were
+    left NULL when local covers were disabled (fixes #2129)
+  *  f3b186ed - cocoaui: change the Track Number column type to use
+    %tracknumber%
+  *  6d7618db - cocoaui: reinit audio tab every time preferences window
+    is displayed, to refresh audio dev list
+  *  d08ca9d6 - cocoaui: added default output selection
+  *  b89fa6b5 - cocoaui: sound settings polish
+  *  789a20ce - cocoaui: implemented samplerate configuration
+  *  ce28a892 - cocoaui: added output plugin selection
+  *  d8015a97 - gtkui: corrected alsa plugin id
+  *  c52b92f5 - plugins: use output id instead of name for selecting
+    output plugin
+  *  7afccd0d - cocoaui: removed unimplemented appearances settings;
+    added sound settings, implemented audio device selection
+  *  d081f354 - coreaudio: added sound device enumeration and selection
+  *  e44bc6d5 - gtkui: cleanup a few unused globals
+  *  761a98d1 - cocoaui: fixed rounding of total playtime
+  *  31a8dc61 - gtkui: fixed rounding of total playtime
+  *  87f40963 - gtkui: remove --sync option support
+  *  51fa6ede - osx: added pltbrowser gtk plugin
+  *  eccb8c3f - osx: added hotkeys plugin for use with GTKUI
+  *  2fa111f4 - osx: added gtkui support on mac via xcode
+  *  0ebf9d7b - osx: added a mac target without cocoaui
+  *  fbc96436 - update po files
+  *  eac6b4c5 - updated translation/plugins.c
+  *  6d0fa20e - gtkui: updated hotkey action names for Repeat and
+    Shuffle options
+  *  b7bd39ce - updated translation/plugins.c
+  *  b77ca478 - gtkui: updated hotkey action names for Repeat and
+    Shuffle options
+  *  c28315a4 - gtkui: localize total playtime
+  *  bf67a695 - gtkui: localize total playtime
+  *  35cce749 - updated translations
+  *  73835560 - gtkui: improved generating UI for vertically oriented
+    sliders, mainly for supereq
+  *  47cc056d - supereq: set slider keyboard step to 0.5
+  *  e95e121b - gtkui: improved generating UI for vertically oriented
+    sliders, mainly for supereq
+  *  ded318bb - supereq: set slider keyboard step to 0.5
+  *  ac0623f6 - premake: c99 fix
+  *  3c638298 - added nested groups info to the changelog
+  *  a63f7e0e - 1.8.1-beta1
+  *  0ad5856b - 1.8.1 Changelog
+  *  bf2aef85 - translation update
+  *  b38203ff - wildmidi: AM_CFLAGS -> *_la_CFLAGS
+  *  cbd59d67 - update osx deps
+  *  a74025f9 - switch to devel version
+  *  30bbe75a - gtkui: fixed localization of statusbar (fixes #2113)
+  *  db62f389 - removed the broken and unmaintained sndio plugin (fixes
+    #2079)
+  *  90a29ae1 - artwork: load external cover before embedded, for more
+    predictable results (fixes #2080)
+  *  8c1d05e0 - oggedit: write Album Artist field as ALBUMARTIST (fixes
+    #2118)
+  *  24c168f7 - cocoaui: cleanup tab strip text bounds calculation and
+    fix playlist renaming in fullscreen (fixes #2104)
+  *  856271c8 - streamer: fix reconfiguring shuffle queue after manually
+    activated tracks (fixes #2123)
+  *  ff41a84f - m3u: don't attempt loading files from relative paths,
+    and go directly to converting them to absolute (fixes #2125)
+  *  badc3a69 - sort: disambiguated playlist item count access
+  *  a2be5c6b - wma: fixed uninitialized variable access and invalid
+    buffer handling
+  *  e3492c03 - wildmidi: remove bogus free of nullptr
+  *  0d494b0a - vfs_zip: cleanup unused code
+  *  06c88f3d - sc68: fixed misuse of open with O_CREAT flag
+  *  1da3ce0b - rg_scanner: improved error handling
+  *  f0ec52ca - psf: fixed uninitialized memory access
+  *  3e59b908 - tf: improved clarity of function argument count access
+  *  07fe5ae2 - utf8: cleanup unused stuff
+  *  0abf4a9e - opus: fix memory leak
+  *  98ae3206 - mms: error handling
+  *  19164d9a - m3u: cleanup unused stuff
+  *  c559db26 - mp4ff: fixed memory errors
+  *  bfb44817 - ape: cleanup and fixed uninitialized memory access
+  *  37e4d587 - sync to latest osx deps
+  *  4177af25 - wildmidi: fixed double static typo
+  *  6bab51b2 - wildmidi: make most global variables static
+  *  e903cdeb - tests: added image+cue test
+  *  75185a91 - streamer: fixed nullptr dereference regression
+  *  af812f56 - cocoaui: fixed encoder preset window autoresizing
+  *  fe2c07c5 - threading_pthread: fixed potential memory leaks
+  *  b7eef1a9 - tf: fixed zero-length VLA
+  *  dee96df0 - streamer: fixed possible null pointer dereference
+  *  ab5fbcdc - sort: fixed uninitialized variable warnings
+  *  755ef496 - premix: fix uninitialized variable warnings
+  *  157345dc - better error checking
+  *  72047367 - playlist: better error checking
+  *  b58e4ee9 - junklib: better error checking
+  *  d6d6ae62 - cocoaui: fixed potential garbage memory access
+  *  fd456e66 - wma: fixed garbage memory access
+  *  fc12c4ef - mms: fixed uninitialized value
+  *  2df54f6e - vtx: fixed garbage memory access
+  *  9607eac2 - ape: fixed garbage memory access
+  *  1934933c - mms: fixed freeing released memory and a snprintf bug
+  *  e46d2d38 - streamer: don't attempt to seek dummy streams (fixes
+    #2120)
+  *  7ac83fb2 - tf: prevent buffer overflow when handling legacy pre-0.6
+    tf %@xyz@ expressions
+  *  e7c56a08 - osx: change to new target name in travis config
+  *  ad9b540f - libmms: replicate fallback_io_tcp_connect from mms.c
+    into mmsh.c (fixes #2111)
+  *  b3693c29 - updated README.md to reflect macOS app bundle name
+    change
+  *  8471185d - streamer: Don't retain/release reference on a track in
+    stream reader, on the assumption that either streaming_track or
+    playing_track would guarantee it's alive. This prevents
+    streamereader from the need to obtain playlist lock. (fixes #2109)
+  *  eeeff4e7 - osx: change the app bundle name to DeaDBeeF.app
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 28 Apr 2019 17:55:56 +0300
+
 deadbeef (1.8.0+git7946-8717fbbb-1) unstable; urgency=medium
 
   * New upstream version

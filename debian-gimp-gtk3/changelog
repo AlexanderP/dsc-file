@@ -1,3 +1,93 @@
+gimp-gtk3 (2.99.0+git43261-02b2867134-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 02b28671341ff55c9ea1391cf6cf8d854403869e
+  * Date: 1556347851
+  * git changelog:
+  *  02b2867134 - Update Catalan translation
+  *  3ce4fbdac1 - Update Catalan translation
+  *  d0529dc5d0 - Update Catalan translation
+  *  71c624c5ab - app: flush image when committing free-select tool
+  *  2ee1ceb21f - Update Hungarian translation
+  *  0af3be5600 - Update Hungarian translation
+  *  abbf4d157d - Update Hungarian translation
+  *  01f258faec - Issue #3309: Translation of gimp installer for MS
+    Windows.
+  *  3369958525 - app: increase GimpSelectionTools idle priority to
+    avoid flickering
+  *  3db167083a - build: bump nightly flatpak manifest to GNOME 3.32
+    runtime.
+  *  062195117c - plug-ins: fix TIFF linear export.
+  *  6a2bea733b - app: fix dirty mask/action in the rectangle- and free-
+    select tools
+  *  476833b553 - Issue #2328 - Free Select tool should create
+    preliminary marching ants selection
+  *  afab7deaa3 - app: factor-out common free/fg-select logic into
+    GimpPolygonSelectTool
+  *  134ff92fe0 - app: add GimpToolPolygon::change-complete signal
+  *  f84f1d89dc - app: add gimp_tool_polygon_is_closed()
+  *  e8c915af93 - app: allow passing NULL pointers to
+    gimp_tool_polygon_get_points()
+  *  eda421e852 - app: remove unused field from
+    GimpPolygonSelectToolPrivate
+  *  4612105e52 - app: move undo/redo logic for GimpRectangleSelectTool
+    to GimpSelectionTool
+  *  cf892ba2f0 - Issue #3220 - "How to Use Dialogs" does not open any
+    page.
+  *  8ee11d8d75 - build: update various deps in flatpak manifest.
+  *  f8389c1d02 - Update Catalan translation
+  *  5ddfe36d96 - plug-ins: Move layer option up in TIFF dialog
+  *  bb8648a2e9 - Issue #3284 - Wrong layer renamed when switching
+    images
+  *  fb0b4330e4 - Update Polish translation
+  *  b01113741e - Issue #3275 - Crash when opening an image after
+    closing existing image
+  *  eda8b717d5 - app: don't leak curve in
+    gimp_curves_config_save_cruft()
+  *  b65aeaf034 - Fix a terminology in zh_CN translation
+  *  0eb3ef2634 - Update zh_CN translation of po-script-fu
+  *  f02a1f880e - Update zh_CN translation of po-tips
+  *  9ee3a8a08b - Update zh_CN translation of po-libgimp
+  *  99976fbcb0 - Update zh_CN translation of po-tags
+  *  edb6767ed9 - Update zh_CN translation
+  *  8fc94184a8 - app: fix spin-button width in the Curves tool
+  *  f6d76ff342 - app: fix last commit
+  *  be719f9070 - app: fix Curves tool numeric-entry range/precision for
+    > 8-bpc images
+  *  33e47c85a2 - app: add smooth/corner curve-point types
+  *  5140d903b8 - Issue #1528 - Allow precise or numeric input in color
+    curves tool
+  *  91ecca7e10 - app: add "selection-changed" signal to GimpCruveView
+  *  b6d829a1b2 - app: streamline GimpCurve
+  *  dc6ca2cf9a - app: fix gimp_operation_levels_map_input() for
+    negative values
+  *  4f8a5e02d7 - Update zh_CN translation of po-windows-installer
+  *  a9e147aec3 - Update zh_CN translation
+  *  91c69b782c - app: null the pointer after destruction.
+  *  8357c9ad64 - app: in GimpCurveView, snap to curve when holding Ctrl
+  *  0b9737a3ed - app: in GimpCurveView, use relative motion when
+    dragging point
+  *  62f7f2775e - Update Turkish translation
+  *  8bdb27d85a - Update Turkish translation
+  *  fbc8893465 - Update Turkish translation
+  *  df1b5c8cbb - Update Turkish translation
+  *  2522df0d2f - Update Turkish translation
+  *  d2f6f19758 - Update Turkish translation
+  *  83184d1626 - app: add incremental mode to the Dodge/Burn tool
+  *  6532a7e529 - Update German translation
+  *  7584969453 - plug-ins: Add layer support to TIFF writing
+  *  b9458f8a6e - plug-ins: export linear WebP if and only if the work
+    image was 8-bit...
+  *  5f4cf53519 - plug-ins: export linear JPEG if and only if the work
+    image was 8-bit...
+  *  7a4b313b12 - Issue #3253: exporting to webp from 32-bit float
+    linear image...
+  *  862bf4af60 - Update German translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 28 Apr 2019 04:14:27 +0300
+
 gimp-gtk3 (2.99.0+git43202-f0ff1adacc-1) unstable; urgency=medium
 
   * Compile

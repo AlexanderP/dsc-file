@@ -1,3 +1,102 @@
+freecad-daily (0.18+git16540-554985ded-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 554985dede771f9a6694baba2372cc60db86f17b
+  * Date: 1556275049
+  * git changelog:
+  *  554985ded - Add SVG Patterns from NCCALCADA
+  *  408ac9441 - Fix handling of orphan objects during Page delete
+  *  a0250a7be - Fix Error messages for bad references
+  *  1af80236f - Fix Error handling Measurement module
+  *  61f94d4b7 - Draft: Fixed DXF import with sketch mode on
+  *  bd4f4a576 - Arch: Fixed wrong wall blocks when wall has an offset
+  *  e58086441 - Arch: Fixed issue with empty properties in IFC import
+  *  fbc542738 - Fix Error when OCC projection returns nothing
+  *  ede3bd221 - Fix crash on Dimension with corrupted References
+  *  95ad7dcee - MSVC2013 constexpr to const
+  *  d21cf68b8 - GCS: Partial refactoring of diagnose() and debug
+    improvements
+  *  5f42b8216 - Sketch: Verbose to console output malformed constraints
+    that are ignored by the solver
+  *  a1c83e715 - Sketcher: Comment out very specific debug code
+  *  e104304a9 - Sketcher: Make PointPos modifiable from Python
+  *  875197f4a - Base::Console avoid magic numbers and enable external
+    string size checks
+  *  af9492b79 - GCS: use at for map reading
+  *  d7bd0b6d6 - improve the check for collapsing edges to avoid to
+    introduce non-manifolds into a mesh
+  *  ad88b6af7 - Material, editor and main module, code formating
+  *  3cabefdae - FEM: material task panel, fix finding of cards on
+    return of material editor
+  *  935f70652 - FEM: material task panel, fix finding of cards without
+    thermal properties on reopen
+  *  872f45607 - FEM: material task panel, split card methods from task
+    panel methods
+  *  1234e08ee - FEM: material task panel, code formating, line length,
+    prints
+  *  fb6357a90 - FEM: material task panel, do not change mat card if mat
+    editor was canceled
+  *  82c46ab56 - Material: editor, code formating, line length, prints,
+    add some comments
+  *  95aaa7338 - Material and FEM: card reader and writer, make sure to
+    import the same in all modules
+  *  50c363c2f - Material: editor, sort cards in combo box
+  *  659ac1357 - Material: redundant card reader and writer, add some
+    print messages
+  *  80bf21c3d - Material: import card module, code formating, comments
+    and prints
+  *  bb558a4b5 - Material: editor, small ui layout improvements
+  *  79f3e1c57 - Draft: Fixed crashing editTracker
+  *  8dde128b1 - py3 compatibility fix
+  *  0b905fade - Update the arc3points
+  *  5c713119a - Cubic BezCurve small fix
+  *  2ea552a7b - Draft: Fixed error in DXF import
+  *  2579cd242 - Draft: Fixed inverted 2D/3D modes of Draft Texts
+  *  dde241bb3 - FIX:TD-If "Show units" is off degree symbol is missing
+    on angular dimensions + Remove space between dimension value and
+    degree symbol
+  *  6474e49b8 - Fix missing arc on 3pt angle
+  *  06962535f - Fix missing radius/dia on ft-in dimensions
+  *  c3dc74870 - Arch: Added default preferences options for spaces
+  *  ea0c7694c - Arch/TechDraw: TD Arch views now have a 'fillSpaces'
+    property to show Arch spaces as color-filled areas
+  *  9d296194e - Fix Detail Highlight when Detail has no Geometry
+  *  0679d7309 - Fix non-Delete of Graphic on DocObject delete
+  *  b46dfc4d2 - Fix Center/Section Line Length
+  *  b34b029e2 - Fix duplicate User Types
+  *  f7a1705c5 - Arch: Enabled clone icon for spaces
+  *  fbdeb442d - Arch: Added right-click option to BuildingParts to
+    clone level and contents
+  *  612f5206c - Arch: Added right-click option to BuildingParts to
+    reorder children
+  *  b5f542150 - Draft: Added area property to 'closeable' Draft objects
+  *  09459a1fb - Update QGIViewBalloon.cpp
+  *  bae567c42 - FIX:TD-fixed baloon cursor hotspot to be on arrow tip
+  *  aaea6420a - Py3: fix reading/writing from/to OBJ file
+  *  f65eba4f9 - Arch: Fixed IFC export of object attributes
+  *  e33472c05 - Arch: Misc fixes in Arch spaces
+  *  bbd9fbf89 - TechDraw: force user to place its balloon
+  *  13c82aa67 - TechDraw: add separator for Rectangle balloons
+  *  c779f34fe - FIX: Prevent situation where default format entered in
+    preferences, overwrites prefixes on eg. circular dimensions
+  *  02f192726 - improve mesh repair functions
+  *  45dae4795 - Draft: Exposing the Normal property of dimensions
+  *  843644fde - Draft: Fixed wrong display of Draft texts on restore
+  *  cd4269e6a - rename BUILD_uSE_PCH to FREECAD_USE_PCH to be
+    consistent with other build options
+  *  3e510505b - rename MP_COMPILE_FLAG to FREECAD_USE_MP_COMPILE_FLAG
+    to be consistent with other build options
+  *  debcb9570 - make the /mp compile flag optional
+  *  ab2338d9a - Arch: Minor bugfixes in IFC export
+  *  88f637d8f - Py3 fix: correctly convert a Python str to const char*
+  *  5d211d870 - Fix Draft.getSVG for TechDraw DraftView
+  *  746997e48 - improve mesh repair functions
+  *  57287e8ca - Arch: Mix attribute fixes in IFC import
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 27 Apr 2019 06:04:10 +0300
+
 freecad-daily (0.18+git16472-d02378a8b-1) unstable; urgency=medium
 
   * Compile

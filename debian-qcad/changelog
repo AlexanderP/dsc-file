@@ -1,3 +1,71 @@
+qcad (3.22.0.5+git6869-4452e9544-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 4452e95440894f538db2050dbcf62d72319d84c6
+  * Date: 1556281291
+  * git changelog:
+  *  4452e9544 - derive from EAction
+  *  68f09a099 - prevent potential exception
+  *  2100e12d7 - fix dialog title when moving tool options to dialog
+  *  b6d84b51f - set version to 3.22.0.9
+  *  1f28c3e4b - update translations
+  *  fbc82eaa0 - prevent potential exception
+  *  358566dc7 - clean up
+  *  07a6c0155 - update
+  *  881e719ee - update user manual
+  *  b25250dbf - ignore %% in simple text
+  *  0def770ae - update debug info
+  *  455b0e2ba - update translations
+  *  93a54538d - render %% in simple text as nothing
+  *  d464d0f8b - render %% in simple text as nothing
+  *  633118db7 - update translatable strings
+  *  9a63d4e80 - add support for selected layers
+  *  31be553e1 - Translated using Weblate (Russian)
+  *  1ff63ea3c - clear command line if unknown command is entered
+  *  69da83ab2 - update qrc
+  *  887cc30db - add terminate mode to angle measuring tool
+  *  d45392bde - clean up
+  *  00968d445 - fix setting text color if RMathLineEdit is in combo box
+  *  adf4b1be7 - add icon for misc category
+  *  f9b8a3070 - fix checked back button
+  *  2f14fa187 - use RMathComboBox
+  *  3dd1aaa5d - use RMathComboBox
+  *  6ec9933cf - imitate API of RMathLineEdit
+  *  6e3844174 - add support for RMathComboBox
+  *  6a935b397 - update script bindings
+  *  ca8987112 - add script bindings for RMathComboBox
+  *  6d65e273a - add RMathComboBox support
+  *  e657bbaad - clean up
+  *  b41a7a1ea - fix include
+  *  5ab317cbd - init RMathComboBox context menu
+  *  c763a058f - add RMathComboBoxPlugin for RMathComboBox
+  *  baadb282b - add RMathComboBox
+  *  f048768f8 - set version to 3.22.0.8
+  *  d2a03575f - update translations
+  *  c3b7bb315 - add support for selecting multiple layers
+  *  1a4b16430 - update translations
+  *  c1ec3e275 - update script bindings
+  *  be86a1b71 - add previousLayerId for setCurrentLayer notification
+  *  4bf213af3 - update selection combo even if there are only changes,
+    no new selections
+  *  84a1e8bab - add previousLayerId for setCurrentLayer notification
+  *  869b5342d - suppress warning for missing english translations
+  *  9823c529a - expose all selected layers to property editor
+  *  18780d318 - add querySelectedLayers
+  *  0fc68ab68 - add querySelectedLayers
+  *  c2946e677 - remove obsolete isSelectedForPropertyEditing
+  *  c9d77dcad - add selection status for layers
+  *  a275ff94d - make isSelected virtual
+  *  112c4812c - add selected flag for objects
+  *  4873a6743 - Translated using Weblate (Slovak)
+  *  d65ed1254 - Translated using Weblate (Slovak)
+  *  11768442d - fix FS#1876 - Edit > Convert Drawing Unit: block array
+    spacing
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 27 Apr 2019 22:56:19 +0300
+
 qcad (3.22.0.5+git6811-3c1791661-1) unstable; urgency=medium
 
   * Compile
