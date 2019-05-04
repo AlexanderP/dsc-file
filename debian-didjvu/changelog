@@ -1,0 +1,196 @@
+didjvu (0.8.2-2) unstable; urgency=medium
+
+  * drop python-libxmp from deps throughout (Closes: #921747).
+
+ -- Daniel Stender <stender@debian.org>  Wed, 27 Feb 2019 05:34:17 +0100
+
+didjvu (0.8.2-1) unstable; urgency=medium
+
+  * New upstream release:
+    + unfuzz block-pyexiv2-backend.patch.
+  * deb/copyright: bump copyright span of upstream.
+  * deb/rules: remove empty endline.
+
+  [ Ondřej Nový ]
+  * d/control: Remove ancient X-Python-Version field
+
+ -- Daniel Stender <stender@debian.org>  Sat, 04 Aug 2018 11:21:51 +0200
+
+didjvu (0.8.1-3) unstable; urgency=medium
+
+  * deb/control: bump standards to 4.1.3 (no changes needed).
+  * deb/copyright: expand copyright span.
+  * add deb/gbp.conf.
+
+  [ svn-git-automigration ]
+  * deb/control: update Vcs fields (moved to salsa).
+
+ -- Daniel Stender <stender@debian.org>  Wed, 07 Mar 2018 18:15:14 +0100
+
+didjvu (0.8.1-2) unstable; urgency=medium
+
+  * use debhelper level 10 (changes in deb/control and deb/compat).
+  * deb/control:
+    + bump standards version to 4.0.0 (no further changes needed).
+  * deb/copyright:
+    + use https in Format field.
+    + expand copyright span.
+  * deb/watch: watch github.com/jwilk/didjvu.
+
+ -- Daniel Stender <stender@debian.org>  Fri, 14 Jul 2017 21:36:20 +0200
+
+didjvu (0.8.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * deb/control:
+    + update maintainer email address.
+    + bump standards to 3.9.8 (no changes needed).
+  * deb/copyright:
+    + update source URL (project moved to Github).
+    + extend copyright span.
+    + update my email address.
+
+ -- Daniel Stender <stender@debian.org>  Fri, 18 Nov 2016 20:02:07 +0100
+
+didjvu (0.8-2) unstable; urgency=medium
+
+  * deb/control:
+    + bumped Standards-Version to 3.9.7 (no changes needed).
+    + use HTTPS for Vcs-Browser.
+    + removed Testsuite field (deprecated).
+  * deb/copyright: expanded copyright span for debian/*.
+  * deb/tests/control: added deps for gexiv2/python-gi.
+
+ -- Daniel Stender <debian@danielstender.com>  Fri, 19 Feb 2016 19:46:42 +0100
+
+didjvu (0.8-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Daniel Stender <debian@danielstender.com>  Tue, 01 Dec 2015 21:52:29 +0100
+
+didjvu (0.7-1) unstable; urgency=medium
+
+  * New upstream release:
+    + updated block-pyexiv2-backend.patch.
+    + deb/control: added deps for new GEvix2 XMP backend.
+  * deb/copyright: updated Source.
+
+ -- Daniel Stender <debian@danielstender.com>  Sat, 03 Oct 2015 22:01:17 +0200
+
+didjvu (0.6.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Temporarily don't depend on python-pyexiv2 (Closes: #797077),
+    added deb/NEWS containing info on this, and block-pyexiv2-backend.patch.
+
+ -- Daniel Stender <debian@danielstender.com>  Fri, 28 Aug 2015 10:22:59 +0200
+
+didjvu (0.6-1) unstable; urgency=medium
+
+  * New upstream release.
+  * deb/control: updated Depends (python-pil).
+
+ -- Daniel Stender <debian@danielstender.com>  Fri, 29 May 2015 08:43:05 +0200
+
+didjvu (0.5-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Daniel Stender <debian@danielstender.com>  Tue, 19 May 2015 14:32:32 +0200
+
+didjvu (0.4.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * deb/control:
+    + added build-dep on locales-all and python-libxmp.
+    + added Testsuite element.
+  * deb/tests/control: added deps on locales-all and python-libxmp.
+
+ -- Daniel Stender <debian@danielstender.com>  Thu, 14 May 2015 11:12:26 +0200
+
+didjvu (0.4-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #784888).
+  * Fixed upstream-signing-key.
+  * deb/control:
+    + added dh_python, python-pil, python-gamera, and djvulibre-bin
+      to build deps.
+    + dropped unnecessary dep versions.
+    + bumped standards to 3.9.6 (no changes needed).
+  * deb/copyright: expanded copyright span.
+  * deb/rules: added DEB_BUILD_OPTIONS export line.
+  * deb/watch: watch pypi.debian.net.
+  * Added DEP-8 test suite.
+
+ -- Daniel Stender <debian@danielstender.com>  Tue, 12 May 2015 13:08:56 +0200
+
+didjvu (0.2.8-1) unstable; urgency=low
+
+  * New upstream release (Closes: #743677).
+  * bumped standards to 3.9.5 (no changes needed).
+  * deb/copyright:
+    + changed maintainer email address.
+    + expanded copyrights to 2014.
+  * deb/rules:
+    + changed maintainer email address.
+  * deb/watch: added pgpsigurlmangle (also added deb/upstream-signing-key.pgp).
+
+ -- Daniel Stender <debian@danielstender.com>  Thu, 19 Jun 2014 11:16:42 +0200
+
+didjvu (0.2.7-1) unstable; urgency=low
+
+  [ Daniel Stender ]
+  * New upstream release (Closes: #683581).
+  * Bumped debhelper level to 9 (deb/control and deb/compat).
+  * Added deb/docs to include doc/credits.txt.
+  * deb/control:
+    + bumped standards to 3.9.4 (no changes needed).
+    + added pyexiv2 to Suggests and b-p.
+    + changed Python dependencies (cf. #707807).
+  * deb/copyright: expanded copyrights to 2013.
+  * deb/rules:
+    + removed override for dh_installchangelogs (not needed).
+    + added execution of tests.
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+ -- Daniel Stender <daniel@danielstender.com>  Mon, 03 Jun 2013 17:47:57 +0200
+
+didjvu (0.2.3-2) unstable; urgency=low
+
+  * Renamed and moved dep on xmp-toolkit from Depends to Suggests
+    (now: python-libxmp, Closes: #660572).
+  * Bumped standards to 3.9.3 (no changes needed).
+
+ -- Daniel Stender <daniel@danielstender.com>  Sat, 25 Feb 2012 20:01:15 +0200
+
+didjvu (0.2.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Changes of debian/control:
+    + Bumped standards to 3.9.2 (no changes needed).
+    + Wraped-and-sorted.
+    + Removed Breaks.
+    + Moved dep on Minidjvu from Recommends to Depends (following
+      doc/dependencies.txt).
+    + Added dep on python-xmp-toolkit.
+  * Changes of debian/copyright:
+    + Changed DEP5 URI.
+    + Changed Source URL.
+    + Expanded copyright to cover 2012.
+    + Removed spurious blank lines.
+    + Removed spurious commas.
+  * Changes in debian/rules:
+    + Removed dh_auto_install and override_dh_link (added debian/install
+      and links).
+    + Added override for dh_installchangelogs.
+
+ -- Daniel Stender <daniel@danielstender.com>  Mon, 20 Feb 2012 00:32:40 +0200
+
+didjvu (0.2.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #601781).
+
+ -- Daniel Stender <daniel@danielstender.com>  Mon, 07 Feb 2011 01:46:55 +0200

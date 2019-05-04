@@ -1,0 +1,46 @@
+Source: didjvu
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Section: graphics
+Priority: optional
+Build-Depends:
+ debhelper (>= 10),
+ dh-python,
+ djvulibre-bin,
+ locales-all,
+ python-all,
+ python-all (>= 2.7.3-5~) | python-argparse (>= 1.2.1-2~),
+ python-gamera,
+ gir1.2-gexiv2-0.10 (>= 0.10.3), python-gi,
+ python-nose,
+ python-pil, xsltproc, libxml2-utils, docbook-xsl, docbook-xml
+Standards-Version: 4.3.0
+Homepage: http://jwilk.net/software/didjvu
+Vcs-Git: https://salsa.debian.org/python-team/applications/didjvu.git
+Vcs-Browser: https://salsa.debian.org/python-team/applications/didjvu
+
+Package: didjvu
+Architecture: all
+Depends:
+ djvulibre-bin,
+ minidjvu,
+ python (>= 2.7) | python-argparse,
+ python-gamera,
+ python-pil,
+ ${misc:Depends},
+ ${python:Depends}
+Suggests:
+ gir1.2-gexiv2-0.10 (>= 0.10.3), python-gi
+Description: DjVu encoder with foreground/background separation
+ The DjVu graphics format is very effective because it uses
+ multiple layers which are differently compressed. For the
+ derivation of the bitonal foreground layer ("mask") of
+ (scanned document) images ("segmentation") didjvu uses the
+ Gamera framework.
+ .
+ In the same process didjvu encodes the foreground mask together
+ with the background counterpart into DjVu. That's also possible
+ for a stack of images which can be processes into a bundled DjVu
+ container very easily. The results are suitable for getting high-
+ quality OCR data even from problematic scans from old documents.
+ Furthermore, didjvu is capable of processing bitonal segmentation on
+ colour scans.

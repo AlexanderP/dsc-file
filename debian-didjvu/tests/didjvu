@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e -u
+export PYTHONWARNINGS=d
+cd tests
+pyversions -i | tr ' ' '\n' | xargs -I {} env {} -m nose --all-modules --verbose 2>&1

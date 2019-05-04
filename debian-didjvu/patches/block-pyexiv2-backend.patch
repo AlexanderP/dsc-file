@@ -1,0 +1,18 @@
+Description: temporarily block pyexiv2 backend because
+ of bug in exiv2/0.25-2, see https://bugs.debian.org/797119
+Author: Daniel Stender <stender@debian.org>
+Bug: https://bugs.debian.org/797077
+Forwarded: not-needed
+Last-Update: 2018-08-04
+
+--- a/lib/xmp/__init__.py
++++ b/lib/xmp/__init__.py
+@@ -37,7 +37,7 @@ if backend is None:  # no coverage
+ 
+ if backend is None:  # no coverage
+     try:
+-        from . import pyexiv2_backend as backend
++        from . import pyexiv2_backendBLOCKED as backend
+     except ImportError:
+         pass
+ 
