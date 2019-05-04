@@ -14,7 +14,7 @@ export QT_SELECT := 5
 override_dh_auto_configure:
 	dh_auto_configure -- \
 	        CONFIG+=chinese_conversion_support \
-	        CONFIG+=CONFIG+=zim_support
+	        CONFIG+=CONFIG+=zim_support goldendict.pro
 
 override_dh_install:
 	pod2man debian/goldendict.pod debian/goldendict.1
