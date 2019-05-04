@@ -1,0 +1,67 @@
+Source: jbig2enc
+Section: text
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends:
+ debhelper (>=10),
+ dh-python,
+ libleptonica-dev,
+ python-all,
+ zlib1g-dev
+Standards-Version: 4.3.0
+Homepage: https://github.com/agl/jbig2enc
+
+Package: jbig2enc
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${python:Depends},
+ ${shlibs:Depends}
+Description: JBIG2 encoder
+ JBIG2 encodes bitonal (1 bpp) images using a number of clever tricks to get
+ better compression than G4. This encoder can:
+ .
+  * generate JBIG2 files, or fragments for embedding in PDFs,
+  * generic region encoding,
+  * perform symbol extraction, classification and text region coding,
+  * perform refinement coding and,
+  * compress multipage documents.
+
+Package: libjbig2enc0
+Architecture: any
+Section: libs
+Depends:
+ ${misc:Depends},
+ ${python:Depends},
+ ${shlibs:Depends}
+Description: JBIG2 encoder (shared library)
+ JBIG2 encodes bitonal (1 bpp) images using a number of clever tricks to get
+ better compression than G4. This encoder can:
+ .
+  * generate JBIG2 files, or fragments for embedding in PDFs,
+  * generic region encoding,
+  * perform symbol extraction, classification and text region coding,
+  * perform refinement coding and,
+  * compress multipage documents.
+ .
+ This package contains the shared library parts of jbig2enc.
+
+Package: libjbig2enc-dev
+Section: libdevel
+Architecture: any
+Depends:
+ libjbig2enc0 (= ${binary:Version}),
+ ${misc:Depends},
+ ${python:Depends},
+ ${shlibs:Depends}
+Description: JBIG2 encoder (development files)
+ JBIG2 encodes bitonal (1 bpp) images using a number of clever tricks to get
+ better compression than G4. This encoder can:
+ .
+  * generate JBIG2 files, or fragments for embedding in PDFs,
+  * generic region encoding,
+  * perform symbol extraction, classification and text region coding,
+  * perform refinement coding and,
+  * compress multipage documents.
+ .
+ This package contains the development files of jbig2enc.
