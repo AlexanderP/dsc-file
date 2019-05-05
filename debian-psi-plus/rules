@@ -19,7 +19,6 @@ CMAKEOPTS = -DBUNDLED_IRIS=ON \
             -DUSE_HUNSPELL=ON \
             -DUSE_ENCHANT=OFF \
             -DUSE_KEYCHAIN=ON \
-            -DUSE_WEBENGINE=OFF \
             -DUSE_CCACHE=OFF \
             -DONLY_PLUGINS=OFF \
             -DBUILD_DEV_PLUGINS=OFF \
@@ -27,10 +26,10 @@ CMAKEOPTS = -DBUNDLED_IRIS=ON \
             -DVERBOSE_PROGRAM_NAME=ON
 
 OPTSSTEP1 = -DENABLE_PLUGINS=ON \
-            -DENABLE_WEBKIT=OFF
+            -DCHAT_TYPE=basic
 
 OPTSSTEP2 = -DENABLE_PLUGINS=OFF \
-            -DENABLE_WEBKIT=ON
+            -DCHAT_TYPE=webkit
 
 ifneq (,$(filter $(DEBIAN_CODENAME),xenial))
 	CMAKEOPTS += -DUSE_KEYCHAIN=OFF

@@ -1,11 +1,6 @@
 #!/usr/bin/make -f
 
-PACKAGE = psi-plus-l10n
-
-DEBIAN_PATH := $(abspath $(dir $(MAKEFILE_LIST)))
-USCAN_REPORT = $(shell uscan --noconf --report --dehs $(DEBIAN_PATH))
-CUR_VER = $(shell echo "$(USCAN_REPORT)" | sed -n 's/.*<upstream-version>\(.*\)<\/upstream-version>.*/\1/p')
-CUR_URL = $(shell echo "$(USCAN_REPORT)" | sed -n 's/.*<upstream-url>\(.*\)<\/upstream-url>.*/\1/p')
+TRANSLATIONS_DIR=$(CURDIR)/debian/psi-plus-l10n/usr/share/psi-plus/translations/
 
 export QT_SELECT=qt5
 
@@ -16,17 +11,9 @@ override_dh_auto_build:
 	./update-translations.sh make
 
 override_dh_auto_install:
-	mkdir -p $(CURDIR)/debian/$(PACKAGE)/usr/share/psi-plus/translations/
-	cp out/*.qm $(CURDIR)/debian/$(PACKAGE)/usr/share/psi-plus/translations/
+	mkdir -p $(TRANSLATIONS_DIR)
+	cp out/*.qm $(TRANSLATIONS_DIR)
 
 override_dh_auto_clean:
 	dh_clean
 	rm -rf out/ translations.pro
-
-override_dh_builddeb:
-	dh_builddeb -- -Zxz
-
-get-orig-source:
-	wget -c "$(CUR_URL)" -O "$(PACKAGE)_$(CUR_VER).orig.tar.gz"
-
-.PHONY: override_dh_auto_configure override_dh_auto_test

@@ -3,15 +3,12 @@ Debianized-By: Boris Pek <tehnick-8@yandex.ru>
 Debianized-Date: Sat, 06 Feb 2010 03:43:21 +0300
 Upstream-Name: EiskaltDC++
 Upstream-Contact: Boris Pek <tehnick-8@yandex.ru>
-                  Eugene Petrov <dhamp@ya.ru>
-                  Pavel Vatagin <pavelvat@gmail.com>
-                  Andrey Karlov <dein.negativ@gmail.com>
 Source: https://github.com/eiskaltdcpp/eiskaltdcpp
 
 Files: *
 Copyright: 2009-2012 Andrey Karlov <dein.negativ@gmail.com>
            2009-2014 Eugene Petrov <dhamp@ya.ru>
-           2009-2017 Boris Pek aka Tehnick <tehnick-8@yandex.ru>
+           2009-2019 Boris Pek aka Tehnick <tehnick-8@yandex.ru>
            2010-2017 Pavel Vatagin <pavelvat@gmail.com>
            2010-2014 Alexandr Tkachev <tka4ev@gmail.com>
 License: GPL-3+ with OpenSSL exception
@@ -25,7 +22,7 @@ License: GPL-3+ with OpenSSL exception
  PARTICULAR PURPOSE. See the GNU General Public License for more details.
  .
  You should have received a copy of the GNU General Public License along with
- this program. If not, see <http://www.gnu.org/licenses/>.
+ this program. If not, see <https://www.gnu.org/licenses/>.
  .
  On Debian systems, the complete text of the GNU General Public License
  can be found in `/usr/share/common-licenses/GPL-3'.
@@ -58,7 +55,7 @@ Files: dcpp/*.h
        extra/freespace.*
        extra/stacktrace.h
 Copyright: 2001-2012 Jacek Sieka <arnetheduck@gmail.com>
-           2008-2010 Big Muscle (http://strongdc.sf.net)
+           2008-2010 Big Muscle (http://strongdc.sourceforge.net/)
            1996-2002 Florian Schintke
            2003-2006 RevConnect (http://www.revconnect.com)
            1997 Makoto Matsumoto and Takuji Nishimura <matumoto@math.keio.ac.jp>
@@ -88,12 +85,11 @@ Files: update-translations.sh
        data/examples/deadbeef.ru_RU.UTF-8.sh
        eiskaltdcpp-qt/qtscripts/amarok_nowplay/amarok.sh
        eiskaltdcpp-qt/qtscripts/clementine_nowplay/clementine.sh
-       macosx/build-universal-binary.sh
-       macosx/build.sh
-       tests/travis/*.sh
+       macos/*
+       tests/travis-ci/*.sh
 Copyright: not-applicable
 Comment: Authors:
-         2011-2017 Boris Pek <tehnick-8@yandex.ru>
+         2011-2019 Boris Pek <tehnick-8@yandex.ru>
          2010 Uladzimir Bely (WiseLord) <wiselord1983@gmail.com>
          2010 Vovochka404 <vovochka13@gmail.com>
          2011 Mark Lutring
@@ -155,7 +151,7 @@ License: GPL-3 or LGPL-2.1 or Qt-Commercial-License
  Foundation and appearing in the file LICENSE.LGPL included in the
  packaging of this file.  Please review the following information to
  ensure the GNU Lesser General Public License version 2.1 requirements
- will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+ will be met: https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
  .
  In addition, as a special exception, Nokia gives you certain additional
  rights.  These rights are described in the Nokia Qt LGPL Exception
@@ -167,7 +163,7 @@ License: GPL-3 or LGPL-2.1 or Qt-Commercial-License
  Foundation and appearing in the file LICENSE.GPL included in the
  packaging of this file.  Please review the following information to
  ensure the GNU General Public License version 3.0 requirements will be
- met: http://www.gnu.org/copyleft/gpl.html.
+ met: https://www.gnu.org/copyleft/gpl.html.
  .
  If you have questions regarding the use of these files, please contact
  Nokia at <qt-info@nokia.com>.
@@ -181,9 +177,9 @@ Files: eiskaltdcpp-gtk/src/*
 Copyright: 2004-2010 Jens Oknelid <paskharen@gmail.com>
            2009-2010 freedcpp <freedcpp@narod.ru>
            2009-2010 Leliksan Floyd <leliksan@Quadrafon2>
-           2010-2014 Boris Pek <tehnick-8@yandex.ru>
+           2010-2019 Boris Pek <tehnick-8@yandex.ru>
            2010-2014 Eugene Petrov <dhamp@ya.ru>
-           2003 Bastien Nocera <hadess@hadess.net>
+           2003-2017 Bastien Nocera <hadess@hadess.net>
            2010 Mank <mank@besthub.eu>
 License: GPL-2+
 
@@ -195,11 +191,6 @@ License: GPL-2+
 Files: eiskaltdcpp-cli/*
 Copyright: 2011 Dmitry Kolosov <onyx@z-up.ru>
 License: BSD-2-clause
-
-Files: upnp/miniupnpc/*
-Copyright: 1991-1993 The Regents of the University of California
-           2005-2012 Thomas Bernard (http://miniupnp.free.fr/)
-License: BSD-3-clause
 
 Files: json/jsoncpp/*
 Copyright: 2007-2011 Baptiste Lepilleur
@@ -217,7 +208,7 @@ Copyright: 2004-2013 Sergey Lyubka
 License: Expat
 
 Files: debian/*
-Copyright: 2010-2017 Boris Pek <tehnick-8@yandex.ru>
+Copyright: 2010-2019 Boris Pek <tehnick-8@yandex.ru>
 License: GPL-2+
 
 License: GPL-2
@@ -231,7 +222,7 @@ License: GPL-2
  GNU General Public License for more details.
  .
  You should have received a copy of the GNU General Public License
- along with this program. If not, see <http://www.gnu.org/licenses/>.
+ along with this program. If not, see <https://www.gnu.org/licenses/>.
  .
  On Debian systems, the complete text of the GNU General
  Public License can be found in `/usr/share/common-licenses/GPL-2'.
@@ -248,7 +239,7 @@ License: GPL-2+
  GNU General Public License for more details.
  .
  You should have received a copy of the GNU General Public License
- along with this program. If not, see <http://www.gnu.org/licenses/>.
+ along with this program. If not, see <https://www.gnu.org/licenses/>.
  .
  On Debian systems, the complete text of the GNU General
  Public License can be found in `/usr/share/common-licenses/GPL-2'.
@@ -263,7 +254,7 @@ License: GPL-3
  PARTICULAR PURPOSE. See the GNU General Public License for more details.
  .
  You should have received a copy of the GNU General Public License along with
- this program. If not, see <http://www.gnu.org/licenses/>.
+ this program. If not, see <https://www.gnu.org/licenses/>.
  .
  On Debian systems, the complete text of the GNU General Public License
  can be found in `/usr/share/common-licenses/GPL-3'.
@@ -279,7 +270,7 @@ License: GPL-3+
  PARTICULAR PURPOSE. See the GNU General Public License for more details.
  .
  You should have received a copy of the GNU General Public License along with
- this program. If not, see <http://www.gnu.org/licenses/>.
+ this program. If not, see <https://www.gnu.org/licenses/>.
  .
  On Debian systems, the complete text of the GNU General Public License
  can be found in `/usr/share/common-licenses/GPL-3'.
@@ -295,7 +286,7 @@ License: LGPL-3+
  PARTICULAR PURPOSE. See the GNU General Public License for more details.
  .
  You should have received a copy of the GNU General Public License along with
- this program. If not, see <http://www.gnu.org/licenses/>.
+ this program. If not, see <https://www.gnu.org/licenses/>.
  .
  On Debian systems, the complete text of the GNU Lesser General Public License
  can be found in `/usr/share/common-licenses/LGPL-3'.
@@ -310,7 +301,7 @@ License: LGPL-3
  PARTICULAR PURPOSE. See the GNU General Public License for more details.
  .
  You should have received a copy of the GNU General Public License along with
- this program. If not, see <http://www.gnu.org/licenses/>.
+ this program. If not, see <https://www.gnu.org/licenses/>.
  .
  On Debian systems, the complete text of the GNU Lesser General Public License
  can be found in `/usr/share/common-licenses/LGPL-3'.
