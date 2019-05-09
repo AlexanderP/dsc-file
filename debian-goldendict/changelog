@@ -1,3 +1,46 @@
+goldendict (1.5.0~rc2+git20190502-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/goldendict/goldendict.git
+  * Branch: master
+  * Commit: 3ca6cbec25ed54b19fd907c7e46678145b0dbdc2
+  * Date: 1556819150
+  * git changelog:
+  *  3ca6cbe - Update tr_TR.ts
+  *  c3ff15f - Fix one more crash under Qt 5.12
+  *  d62b2d6 - Fix build on FreeBSD
+  *  052f849 - XDXF: A little more handling for <ex> tag (issue #1135)
+  *  ade20fc - Support "[!a-x]" like construction while handling
+    wildcards via QRegularExpression
+  *  b61863b - Use QRegularExpression instead of QRegExp in dictionary
+    headwords dialog under Qt 5.12 and later
+  *  5fb4ff1 - Fix some more possibly crashes with Qt 5.12
+  *  cf2ca57 - Win-specific: Fix possibly crashes after dictionaries
+    initialization
+  *  465f90a - Set Qt style sheets immediately before main window show
+  *  6bc4088 - Fix save/restore geometry for some dialogs under Qt 5.12
+  *  247a076 - XDXF: Fix indexing of the dictionaries with empty
+    "abbreviation" field (issue #1132)
+  *  7ef50ba - Added AppData manifest file for modern package managers.
+  *  f962f0e - Safety menu sequence in dictionaries order window
+  *  9bae6d2 - Wiki: Fix urls in "srcset" attribute (issue #1096)
+  *  ed69414 - Updated Finnish translations
+  *  d82320c - Don't expand symlinks while load dictionaries
+  *  e6710a6 - Remove artificial 1000-pixel CompletionList width limit
+  *  503de64 - Qt5: improve repeated zooming performance
+  *  7abaf07 - Fix build under Linux/MacOS
+  *  68fc27b - Win-specific: Add global hotkeys handling via low-level
+    keyboard hook
+  *  7a9d97a - Sync scan popup's size policies with main window
+  *  4736191 - Allow reducing width of group comboboxes
+  *  ec96d6a - Allow shrinking scan popup's toolbar height
+  *  c887741 - Remove unused form groupselectorwidget.ui
+  *  ebfeb37 - Undef common words defined in X11 headers
+  *  a9fc823 - Avoid duplicate currentGroupChanged() connection
+  *  92e8c85 - Fix behavior while words list font resizing (issue #1109)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 04 May 2019 21:33:08 +0300
+
 goldendict (1.5.0~rc2+git20190117-1) unstable; urgency=medium
 
   * Compile
