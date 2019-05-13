@@ -1,3 +1,25 @@
+deadbeef (1.8.0+git8450-15c9af49-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: 1.8
+  * Commit: 15c9af499705dd304aea34119a72a0e35a000d9d
+  * Date: 1557082419
+  * git changelog:
+  *  15c9af49 - streamer: fix regression caused by the previous commit
+    (fixes #2136)
+  *  0e1790f8 - streamer: ignore Repeat -> One Track for user-triggered
+    next track (fixes #2136)
+  *  dce38576 - streamer: remove the code changing current playing track
+    after decoder fails to initialize (potentially fixes #2138)
+  *  9aef3c7f - change version to devel
+  *  1deb4d6a - 1.8.1-rc2
+  *  558d14cb - 1.8.1 changelog update
+  *  f966f2cf - junklib: fix typo in the apev2 replaygain info writer
+  *  873ca547 - plmeta: remove replaygain fields when clearing metadata
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 11 May 2019 13:39:09 +0300
+
 deadbeef (1.8.0+git8442-ef9d6db2-1) unstable; urgency=medium
 
   * Compile

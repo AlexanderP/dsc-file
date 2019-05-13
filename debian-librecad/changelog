@@ -1,3 +1,46 @@
+librecad (2.1.2+git4531-9236667f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: master
+  * Commit: 9236667fa02412c9240ac033556a2cb3e48093fa
+  * Date: 1557675321
+  * git changelog:
+  *  99f52fb0 - - Ignore Visual Studio project files.
+  *  db499031 - - Removed the Visual Studio project files from source
+    control. - These will need to be generated with the Qt Visual Studio
+    Tools in order to get correct path info from custom.pro
+  *  af1983bb - - Accidentally submitted my personal custom.pro in the
+    last commit.
+  *  8021d43c - - Issue #914 "cannot find some files, while
+    LibreCAD2.1.3 is compiled by VS2015 and Qt5.7.1" - Refactor types
+    used by jwwlib due to conflicting stream operator definitions with
+    MSVC - Removed the remainder of the previous MSVC specific hacks -
+    Issue #930 "LibreCAD source code compile problem" - Fixed some
+    string handling for a char/wchar compile issue
+  *  06657fbb - Issue #930 "LibreCAD source code compile problem" -
+    Fixed several char vs wchar problems preventing successful compile
+    with _UNICODE flag.  Should be able to compile either way now. -
+    Spot tested math expressions using a few shapes like Circle: center,
+    radius.  Seems ok so far.
+  *  be75b9dc - Print Preview: Limit paper movement.
+  *  664464a5 - dxf2pdf: tiled printing support added.
+  *  f2f93458 - dxf2pdf: margins support added.
+  *  bd7c5893 - New action: Calculate number of pages.
+  *  17ca3ccc - Tiled printing.
+  *  43cd70fd - Printing respect paper margins.
+  *  21930edd - Print Preview shows paper margins.
+  *  913218d2 - Page margins and page preview.
+  *  96a61c94 - Apply scroll direction inversion to Trackpad
+  *  6da10f56 - Optional inversion of zoom direction
+  *  5d2a61e4 - RS_Modification::changeAttributes() rewritten,
+    implemented Block-deep Undo
+  *  1f72af4b - Exclude only INSERTs from Undo on Block-deep attributes
+    modification
+  *  f9fd5616 - Fix for #1080 and #755
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 13 May 2019 14:27:55 +0300
+
 librecad (2.1.2+git4508-c8c5948b-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,34 @@
+qt-box-editor (1.09+git20190508-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://github.com/zdenop/qt-box-editor.git
+  * Branch: master
+  * Commit: 75a68b466868ba41ba2886caa796057403fe1901
+  * Date: 1557325437
+  * git changelog:
+  *  75a68b4 - fix crash: tesseract4 has assert if LC_ALL is not set to
+    "C"
+  *  2b52ab9 - fix QT4 build
+  *  3ed77dc - [ImgBot] optimizes images
+  *  5c33c8c - Update macOS support
+  *  4306580 - fix "syntax error: identifier 'QRegExpValidator'"
+  *  92bf116 - qt-box-editor.pro: add 'QT += widgets' for QT >= 5 (not
+    QT >= 6)
+  *  4034d7a - qt-box-editor.pro: move use of 'tesseract305' libs under
+    win32
+  *  cf08273 - fix versions info
+  *  e9d4e4d - add info about used tesseract version
+  *  73e0642 - fix type
+  *  92fc7e5 - fix msvc build
+  *  7468359 - fix msvc build
+  *  f6d6bc1 - use c++11
+  *  3150d28 - adds comments about the Xcode requirement
+  *  0e9ef6f - adds mention of libleptonica-dev which was needed an not
+    installed on my ubuntu derivative
+  *  1dfd846 - adds section on building with a mac
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 12 May 2019 22:10:40 +0300
+
 qt-box-editor (1.09+git20160530-2) unstable; urgency=medium
 
   * rebuild

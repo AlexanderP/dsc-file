@@ -1,3 +1,52 @@
+gimp-devel (2.10.8+git42682-25721e39e6-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 25721e39e6d30a780ca1cb23b9f3b04938fd7139
+  * Date: 1557566072
+  * git changelog:
+  *  25721e39e6 - app: in GimpBrushCore, free old paint buffer before
+    allocating new one
+  *  3097978f4e - app: in GimpDashboard, improve legend logic
+  *  e7d9344880 - app, libgimp, pdb: s/procesures/procedures/
+  *  ce92efa82e - Add a few more misc. source comment typos
+  *  9a60382f69 - Misc. typos
+  *  6c1199a4d4 - desktop: prepare an AppData release tag for 2.10.12.
+  *  616838e1c6 - Update Catalan translation
+  *  168080fc5c - Update Catalan translation
+  *  635b33837e - Update Catalan translation
+  *  89495f457d - app: add tile-alloc-total variable to the dashboard
+  *  cb4e9b92bc - app: in GimpDashboard, don't show legend for groups
+    with no meter
+  *  ec067b83ad - configure.ac: require GEGL >= 0.4.16
+  *  2d91f1ca02 - Issue #3353 - Gimp 2.10.10 freezes while changing
+    Background color ...
+  *  7b1af1f0cb - app: round curve point position when displaying it as
+    int.
+  *  5a3e9d1f00 - Issue 1878: Eyedrop tool doesn't work when screen
+    composing (KWin)...
+  *  a7fcbf6122 - Issue #835: warnings building with Clang.
+  *  c5f7bac2ba - plug-ins: follow the assigned profile TRC.
+  *  eec0983e5d - Update German translation
+  *  d85f3f7a1e - Update German translation
+  *  2d2eed34cd - Issue #3251 - Windows menu shows doc's old name not
+    new
+  *  f16f3b56d4 - app: don't dereference NULL image pointer
+  *  2548dd1acf - tools: in performance-log-viewer.py, fix deprecation
+    warnings
+  *  aa9d16a822 - Issue #3306 - Memory leak using Crop tool
+  *  504a632433 - Issue #3304 - Invalid write when halting filter tool
+    with controller
+  *  3e2738e944 - app: in gimp-gegl-nodes, set underlying operation
+  *  a0f1f93e85 - Update Polish translation
+  *  3e1e1f2d1b - Issue 2949: Newly Installed Fonts not Registering.
+  *  c03f16caf2 - Issue #3309: Translation of gimp installer for MS
+    Windows.
+  *  c009de14ac - plug-ins: fix TIFF linear export.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 11 May 2019 19:05:26 +0300
+
 gimp-devel (2.10.8+git42653-dd2632bc85-1) unstable; urgency=medium
 
   * Compile

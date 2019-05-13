@@ -1,3 +1,60 @@
+gimp-gtk3 (2.99.0+git43295-bea1a44672-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: bea1a44672f864a46d7d743d64a350436fd6307d
+  * Date: 1557566064
+  * git changelog:
+  *  bea1a44672 - app: in GimpBrushCore, free old paint buffer before
+    allocating new one
+  *  088827e563 - app: in GimpDashboard, improve legend logic
+  *  d7a4d5c6a8 - Issue #3140 - Export as DDS dialog does not have an
+    Export button
+  *  45f37b9b63 - app, libgimp, pdb: s/procesures/procedures/
+  *  1c91b8d97e - Add a few more misc. source comment typos
+  *  86edc31b11 - Misc. typos
+  *  f4c6fd0ee4 - desktop: prepare an AppData release tag for 2.10.12.
+  *  0f6654dad3 - Update Catalan translation
+  *  9c97fb6b16 - Update Catalan translation
+  *  cf54f790fd - app: add tile-alloc-total variable to the dashboard
+  *  8434ae42a3 - app: in GimpDashboard, don't show legend for groups
+    with no meter
+  *  29d575c033 - configure.ac: require GEGL >= 0.4.16
+  *  c7a29e5f98 - Issue #3353 - Gimp 2.10.10 freezes while changing
+    Background color ...
+  *  a761ed3ae8 - app: round curve point position when displaying it as
+    int.
+  *  b29d1ea6ff - Issue 1878: Eyedrop tool doesn't work when screen
+    composing (KWin)...
+  *  90bc9e10f1 - Issue #835: warnings building with Clang.
+  *  417f2c873f - plug-ins: follow the assigned profile TRC.
+  *  a6f50a6bc4 - Update German translation
+  *  c9b10ff3bf - Issue #3251 - Windows menu shows doc's old name not
+    new
+  *  75acae40e3 - app: make sure the labels of our GtkImageMenuItem
+    replacements get updated
+  *  3bf2a3c166 - app: don't dereference NULL image pointer
+  *  b1077a903e - tools: in performance-log-viewer.py, fix deprecation
+    warnings
+  *  14d9606c04 - app: allow undoing extension removal in the GUI.
+  *  09ca1e8962 - app: add undo_remove ability to the extension manager.
+  *  5febc9a5d4 - Update Catalan translation
+  *  84e183e5ed - Issue #3306 - Memory leak using Crop tool
+  *  068df34a27 - Issue #3304 - Invalid write when halting filter tool
+    with controller
+  *  928e5957e3 - app: in gimp-gegl-nodes, set underlying operation
+  *  f760a333a1 - app: have the extension GUI listen to manager
+    install/remove events.
+  *  50aa7233b2 - app: add extension installation in
+    GimpExtensionManager.
+  *  f7e483dd64 - app: add ability to remove an extension.
+  *  15a62eea8e - Update Polish translation
+  *  88f97aedef - Issue 2949: Newly Installed Fonts not Registering.
+  *  11e8ba0f51 - build: add Wayland support to nightly flatpak.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 11 May 2019 20:13:21 +0300
+
 gimp-gtk3 (2.99.0+git43261-02b2867134-1) unstable; urgency=medium
 
   * Compile

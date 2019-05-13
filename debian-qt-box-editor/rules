@@ -31,7 +31,7 @@ override_dh_auto_configure:
 	dh_auto_configure -- $(Q_OPTS)
 
 override_dh_install:
-	cp qt-box-editor-* qt-box-editor
+	cp release/qt-box-editor-* qt-box-editor
 	dh_install
 	rm qt-box-editor
 

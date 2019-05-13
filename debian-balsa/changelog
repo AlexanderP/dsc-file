@@ -1,3 +1,26 @@
+balsa (2.5.5+git9066-909de8408-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/balsa
+  * Branch: master
+  * Commit: 909de840841124d26ef6fd6d899809c527f03554
+  * Date: 1557688544
+  * git changelog:
+  *  909de8408 - Fix “Johnny you are fired” vulnerabilities
+  *  c17243427 - balsa-app: Check for NULL outbox
+  *  dc9d66ac6 - Fix issue #15: NULL-pointer deref in pop3 code
+  *  fb795d482 - balsa-message: Connect to "search-changed" signal
+  *  c75bad001 - main-window: Clear the view filter
+  *  aae4051b9 - main-window: Port the sos search to GtkSearchEntry
+  *  029162f6d - balsa-message: Port the find bar to GtkSearch*
+  *  671a784e1 - main: Use g_get_monotonic_time()
+  *  18403bb74 - mailboxlocal: Use g_ptr_array_new_with_free_func()
+  *  bdd52e14b - mailbox: Use g_ptr_array_new_with_free_func()
+  *  1168053d6 - mailbox-mbox: Use g_ptr_array_new_with_free_func()
+  *  315a78661 - Update Brazilian Portuguese translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 13 May 2019 12:22:49 +0300
+
 balsa (2.5.5+git9054-6f3efd4c5-1) unstable; urgency=medium
 
   * Compile

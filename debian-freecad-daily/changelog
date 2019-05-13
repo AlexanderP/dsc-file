@@ -1,3 +1,180 @@
+freecad-daily (0.18+git16703-9adc1a351-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 9adc1a351ca80323e5afd8ffcb50399e7462eaeb
+  * Date: 1557533015
+  * git changelog:
+  *  9adc1a351 - Draft: General cleanup of the Draft UI
+  *  ed386410b - Merged latest translations from crowdin
+  *  19d38abce - Tools: small fix in update script
+  *  c65bf365a - Updated master translation files
+  *  e484a52e9 - hide taskbar progress when required
+  *  284a69c80 - make Qt5WinExtras package optional
+  *  a26e05bd4 - use ifdef QT_WINEXTRAS_LIB to make sure the code is
+    only used in windows build with qt5 version 5.2 and higher
+  *  8644b61e3 - make sure QWinTaskbarProgress and QWinTaskbarButton is
+    only used in windows compiles
+  *  3f367f829 - add QWinTasbarProgress to windows build
+  *  cd74f2e92 - py3/py2: use exec as function
+  *  2def6fb27 - gui.nsh: change license page
+  *  dc0748824 - README.md: update
+  *  5ccae9692 - new Windows installer for FC
+  *  320952b4a - added try,except for OpenCamLib test
+  *  53d632c7a - added try,except for OpenCamLib test
+  *  ff1fb11af - Arch: Site: Migrated the compass properties to the
+    ViewObject
+  *  070e4c125 - Arch: Fixed color of windows transparent parts
+  *  8b4d6c0e6 - Arch: Better behaviour and tooltips on section plane
+    task panel buttons - fixes #3643
+  *  9e91c8d69 - Draft: Fixed py3 issues in Draft Label - fixes #3941
+  *  f5681479e - Add test script for leader line and RTA
+  *  cacf07096 - Fix QGEPath selection area
+  *  2876e82fa - Arch: Added IFC pref option to automatically export IFC
+    objects as Standard Cases when possible
+  *  af0cb4068 - Arch: Removed Floor dependency of Site
+  *  2177f4437 - Arch: Fixed solar diagram for py3
+  *  dc284e4d4 - Fix scale command and simplify UI, add support for
+    scale subelements
+  *  fc24bf144 - Add subelement ghosts in scale command, and minor code
+    cleanup
+  *  fd4992cb9 - Implement rotation with optional copy of draft
+    subelements
+  *  91438c168 - Add subelement support for rotating individual vertices
+  *  bc3af1afb - Code simplification of move subelements command
+  *  850137711 - Support copying subelements
+  *  547851ccf - If wires are merged, deleted, or otherwise had graph
+    changing operations while edit mode is active, don't complain
+  *  69646518d - Show draft objects as an x-ray view, and edit bases if
+    they exist.
+  *  be65fbf8f - Fix move edge to work on closed wires
+  *  985dbaead - Clear existing preselects when setting a new preselect
+  *  7da48b330 - Actually highlight preselected objects upon the
+    selectionchange event, otherwise it only triggers on mousemove event
+  *  7ecc9cfb2 - Add python binding for setPreselect function via
+    Selection.SetPreselection()
+  *  ba1f04506 - Make movement vector a class variable of the move
+    command, show error for unmovable elements, and move action into a
+    commit to allow undo/redo.
+  *  60fa857b4 - Add subelement mode to draft move command to allow
+    movement of vertices and nodes
+  *  6e6bdc04a - Create functions for moving vertex and edges
+  *  d392daefd - Fix typo
+  *  9e619d0e4 - Make ghostTracker support showing nodes as well
+  *  4c04d8ee9 - Add new edit tool icon, shortcut, and basic modes.
+  *  5eb38b0b5 - Use icons from resource file
+  *  b03aa051a - Arch: Fixed error in roof - Fixes #3864
+  *  9eef1b3e4 - Arch: Fixed missing cmake/qt stuff for Arch Fence
+  *  750d80891 - Clip sections when too long
+  *  41a4ef667 - Add Arch Fence builder
+  *  9cfb84d86 - Extract Path Array logic into separate functions
+  *  aaae82970 - Path: Integrate 4th-axis feature to PathPocketShape and
+    3D Surface ops (#2114)
+  *  2d2b5f3e1 - When using fcbt.py to generate a python module, use
+    FreeCAD.getUserAppDataDir() rather than FreeCAD.getHomeDir() to
+    specify the module icon
+  *  49ed29cd0 - Update DraftGui.py
+  *  c17a89973 - Draft GUI setfocus if lengthValue is not visible
+  *  fa1a42936 - src/Tools/updatets.py: modernization tweeks
+  *  519bbfe50 - Misc. source comment typo and whitespace fixes
+  *  f7b89fdbe - don't build ship and plot by default
+  *  2cc733035 - AppVeyor: Enable atime to auto clean older accessed
+    cache objects
+  *  d078f901c - Pass font/fontsize to RT editor
+  *  6c699887c - Leader and RichText block improvements
+  *  7f07195f9 - Text Leader initial version
+  *  ed7e4df27 - Appveyor: reset cache stats before each build
+  *  42c403310 - AppVeyor: Remove PDB
+  *  a29759004 - AppVeyor: disable msbuild filetracking for clcache
+  *  cd418a6a1 - Appveyor: enable clcache
+  *  6bd378b0e - Path: refactor PathEngrave.py
+  *  6a7649d2f - fix stpZ file exporting (six & py3 issue)
+  *  dd62a3e66 - fixing locale issue for Image WB
+  *  8d237da7c - Draft: Keep using the already set working plane, if
+    existing
+  *  fad8fa407 - importDXF draftWPlane Fix
+  *  222ae7305 - revert 3a133ee0 to fix build failure
+  *  df3810201 - PCH: Part GUI
+  *  3a133ee0c - Path: Add libarea to PCH
+  *  5866306ef - Path: PathSimulator PCH
+  *  1bb08559d - PCH: Path GUI
+  *  b22d59c0a - PCH: Path App
+  *  c373a5874 - fix warning
+  *  d4ed08f75 - Start: Fixed bad default icon in start page
+  *  f94cdfd79 - Arch: Fixed export of sites to IFC
+  *  5c700f76e - Arch: Fixed wrong exported objects in IFC export
+  *  e98bb1fc2 - Draft: Fixed 0.18.1 bug in DXF importer
+  *  107fa5ae2 - Arch: Fixed export of windows colors to IFC
+  *  0493d23d8 - Arch: Fixed bug in arch windows creation
+  *  bd7aa678f - Draft: Fixed Draft text justification
+  *  23d914b3e - AddonManager: allow to add custom repositories
+  *  550149ef8 - Travis: filter out
+  *  8aab96b20 - deleted commented code
+  *  6e5fac08f - fix for edit tracker draw styles
+  *  acf12ee8f - Crowdin: experiment to fix crowdin 'ghost' strings
+  *  25c3310fb - Crowdin: fix grammatical error + whitespace
+  *  b72bca549 - Travis: Move building to external batch script (#2131)
+  *  23c2f2f1e - Travis: Use & between vars sourcing and msbuild
+  *  c0e4b6931 - Travis force wait 60 minutes
+  *  7ea456425 - msbuild verbose and logo
+  *  120cfc5a9 - respect user settings for dialog used in merge-document
+    command
+  *  7e25a4233 - disable travis clcache debug
+  *  edab9f350 - Travis: enable clcache debug
+  *  4b33a3e44 - Travis windows build (#2110)
+  *  dc32a0685 - Sketcher: GUI PCH
+  *  e82c154d1 - PartDesign: PCH GUI
+  *  95788dde7 - Sketcher: PCH
+  *  a415ad72e - PartDesign: 3rdParty to PCH
+  *  a56658489 - Part: Make 3rd party libraries into PCH
+  *  43bdef67d - continue PCH on Part module
+  *  bf06b51e7 - add comment
+  *  e80af8b4f - PCH for Sketcher/PartDesign
+  *  a733dc6dd - Arch: ifc properties, Py3 fix
+  *  3f42ee766 - Part: Missing PCH header
+  *  0238906d3 - Misc. typo and whitespace fixes
+  *  33861e075 - Update DraftTools.py
+  *  1b421dcd0 - Update DraftTools.py
+  *  129ed37b0 - Update DraftTools.py
+  *  350a7a58c - Update DraftTools.py
+  *  accc8815e - Improved node selection
+  *  fa8c7fd48 - More fine-tuning in README
+  *  5bf83c52d - Minor fixes to README
+  *  70965a32b - Readme: remove html content
+  *  6afe45eac - Readme: improve overview section with contents from
+    website
+  *  b0ad64e81 - Readme: make logo a little bit smaller
+  *  bec97f0ae - Readme: align screenshot horizontally in center
+  *  ea3e32533 - Readme: add gitter, build and translation badges on top
+  *  0c9034964 - Readme: add links to website, docs, forum, bug tracker
+    on top of README
+  *  af4eb01ac - Readme: add logo and description one-liner from website
+  *  eaf4be7cf - Readme: upgrade build badge
+  *  aa67d5636 - Units: add AngleOfFriction as another parameter with
+    Angle unit
+  *  90dadd19c - Arch: ifc export, ifc roof does not have a predefined
+    type in IFC 2x3
+  *  66b091e62 - Fix handling of Visibility property on Restore
+  *  7c263899e - Arch: Allow to make a rebar without host object from
+    the GUI
+  *  d5432fcf2 - Arch: fixed error when opening 0.14 files
+  *  df57424c8 - Scale the compass based on the site area
+  *  9a741c086 - Arch: Add property to switch to true north
+  *  f27f27ba4 - Add property to calculate declination
+  *  fa99516e6 - Add compass to Arch Site
+  *  fe56e51e0 - add a python method to cut holes in a Part.Face, from a
+    list of wires
+  *  962e04b09 - Arch: rebar, make it possible to create a rebar without
+    existence of a Structure
+  *  cb205437f - CMake: add new line before summary report
+  *  3ffdf3acc - Arch: ifc export, fix export to 2x3 schema
+  *  9a64f3fad - Arch: Added 'Clip' property to section planes to clip
+    the rendered contents to the plane limits
+  *  0ed5b7791 - activate pCH on Part module
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 11 May 2019 03:46:32 +0300
+
 freecad-daily (0.18+git16540-554985ded-1) unstable; urgency=medium
 
   * Compile

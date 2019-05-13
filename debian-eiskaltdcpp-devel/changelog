@@ -1,3 +1,64 @@
+eiskaltdcpp-devel (2.2.10+git5405-cb987f22-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://github.com/eiskaltdcpp/eiskaltdcpp.git
+  * Branch: master
+  * Commit: cb987f22aa3049252da7b15932b3e600fd320770
+  * Date: 1557571874
+  * git changelog:
+  *  cb987f22 - [Qt] Tiny code refactoring.
+  *  1cde1315 - [Qt, Daemon, DHT, Extra] Small code refactoring.
+  *  2b38b58e - [Core] Add one more hublist server.
+  *  17a6b034 - Translations were updated from Transifex.
+  *  de6a6eea - Update translations.
+  *  0d7647bf - cmake: enable translation of text strings from dht/
+    subdir.
+  *  e866d738 - Delete configuration option DO_NOT_USE_MUTEX:
+  *  5a320874 - cmake: set DO_NOT_USE_MUTEX to OFF in builds for Haiku.
+  *  05c600e2 - Update ChangeLog.
+  *  cb4a6f8b - [Core] Fix build in Debian GNU/Hurd.
+  *  0126ed4e - [Core] Fix path to "locale/" dir in macOS and Haiku.
+  *  d8e52d06 - Update README.
+  *  0520ec20 - [Core] Refactor next protocol to a typed enum.
+  *  1c67e4d6 - [Core] Switch ALPN based on expected protocol.
+  *  c76cc8e1 - Translations were updated from Transifex.
+  *  3ef0211a - Update translations.
+  *  bbc0b7ce - [Qt] Fix path to emoticons in Haiku.
+  *  88707d18 - cmake: cosmetic changes.
+  *  09e0b64d - cmake: change path to locale dir in Haiku.
+  *  0b6d896a - cmake: disable USE_JS by default.
+  *  48635581 - [Qt] Code refactoring related with paths to resources
+  *  6fc13a86 - macOS, Windows: update build scripts and documentation.
+  *  60ad4b4e - Rename html manual files.
+  *  44d78302 - cmake: explicitly set the names of make targets.
+  *  d32306be - [Qt] Fix build for MS Windows after 6683f6f8.
+  *  6683f6f8 - cmake: set PROJECT_NAME_GLOBAL to EiskaltDC++ in Haiku
+    and MS Windows.
+  *  d94d183d - [Qt] Set name of executable to EiskaltDC++ in Haiku and
+    MS Windows.
+  *  69c2e228 - [Qt] Fix paths to resources in MS Windows after
+    df837e43.
+  *  a4cf6283 - [Qt] Fix build for MS Windows and Haiku after df837e43.
+  *  c1a70461 - [Qt] Rename "resources" subdir to "client-res".
+  *  df837e43 - [Qt] Update installation paths of resources
+  *  a5aeb328 - Windows: update qt.conf
+  *  718f3939 - [Qt] Change installation path of translations
+  *  5a64bdff - [Qt] Fix path to translations in Haiku.
+  *  3992b89d - [Core] Fix build in Haiku after 6ccd44a5.
+  *  348ca0b5 - [Qt] Fix loading of translations in MS Windows.
+  *  3ba09f5c - Windows: update list of files to install.
+  *  0b226783 - Windows: update build scripts: add more documentation.
+  *  f09bb15e - Windows: add more documentation.
+  *  5a3addcb - Update manuals.
+  *  91aca875 - Windows: update build scripts.
+  *  594d8540 - Windows: update build scripts.
+  *  c34cbf2d - Windows: update build scripts.
+  *  57f64acb - Windows: update build scripts.
+  *  f967513c - Windows: improve install-deps script.
+  *  8325ca72 - Windows: update build scripts.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 11 May 2019 18:39:04 +0300
+
 eiskaltdcpp-devel (2.2.10+git5358-a00d7793-1) unstable; urgency=medium
 
   * Compile
