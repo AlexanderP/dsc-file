@@ -1,3 +1,97 @@
+gimp-gtk3 (2.99.0+git43350-b1c113c444-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: b1c113c444f94a7f95da5c9febb47fa782693cb8
+  * Date: 1559169577
+  * git changelog:
+  *  b1c113c444 - Issue #3119 - Two tooltips were marked as translatable
+  *  df8bad7a44 - Issue #3105 - "Maximum Image Size" changed to "Maximum
+    new image size"
+  *  476cf19747 - Issue #2986 - Input controller configuration window is
+    too small by default
+  *  04b69e2494 - Issue #263 - Add a "Save Keyboard Shortcuts Now"
+    button...
+  *  a6393e6c55 - app: add support for offset buffers in
+    gimp_gegl_apply_[cached_]operation()
+  *  a701032b4e - app: fix symmetry transform in Clone/Heal tools when
+    brush is cropped
+  *  60a3965020 - app: implement gimp_symmetry_get_operation() in terms
+    of gimp_symmetry_get_matrix()
+  *  3895dc07a9 - app: add gimp_gegl_create_transform_node()
+  *  117734f45f - app: use gimp_symmetry_get_matrix() in GimpInk
+  *  cd7bcd081b - app: add gimp_symmetry_get_matrix()
+  *  86f4d4d41d - app: don't add fg color to history in GimpEraser
+  *  890b554230 - libgimpcolor: better error messages in
+    GimpColorProfile and GimpColorTransform
+  *  0be3fce4fb - Issue #3132 - Missing accelerator on "Export Image as
+    JPEG" dialog
+  *  679fd5f231 - Issue #2794 - Gimp crash just on File Open and Edit
+    Preferences
+  *  4ac4820a54 - libgimpcolor: space invade
+    gimp_color_profile_get_lcms_format()
+  *  0710051e2b - app, plug-ins: make sure a GIH brush's spacing is
+    preserved
+  *  01dd1c62ab - Update Polish translation
+  *  901350ba20 - app: use g_clear_pointer() in more places
+  *  9fa49af470 - app: display the screenshot in the extension details
+    GUI.
+  *  cc7af306b6 - app: new gimp_extension_get_screenshot() screenshot.
+  *  f67ac0f0ca - app: improve extension list widget.
+  *  400b564648 - app: do not crash when an extension has no description
+    tag.
+  *  024bc4cd3f - Issue #886 - Artifacts symmetry painting with big
+    brushes
+  *  1e07f00a95 - Issue #3067 - "Make New from Visible" produces wrong
+    results
+  *  765abcd316 - Issue #3398 - colour map picker isn't positioned on
+    the correct...
+  *  97b1200b38 - app: forgot to remove comment in
+    color_area_color_clicked()
+  *  ebb6b08e62 - app: add gimp_dialog_factory_position_dialog()
+  *  39e1a6dfea - app: fix Ink tool symmetry transform
+  *  c1cba759f8 - app: minor formatting fixes in gimpdrawable-bucket-
+    fill.c
+  *  aba4eef916 - app: derive GimpEraser from GimpPaintbrush
+  *  3b56bd7a9a - app: add symmetry-transform support to the Ink tool
+  *  b63af476bd - app: use gimp_symmetry_get_transform() in paint code
+  *  e0f2a6f1be - app: add gimp_symmetry_get_transform()
+  *  8d3e2dc30c - Update German translation
+  *  cf37d1ae56 - plug-ins: follow the assigned profile TRC in PNG
+    export.
+  *  31b90638cb - build: sync our nightly flatpak manifest with stable
+    one.
+  *  5b1f8cb4d0 - libgimpbase: add hygon cpu detection and enable
+    MMX/SSE support
+  *  a3f2d734a7 - depend on babl-0.1.64
+  *  1f57675a46 - Issue #3124 - layer mask pastes as a greyscale
+    layer/grayscale layer...
+  *  e931895f7c - Issue #3364 - make check fails with a linker error
+  *  1a691f77e6 - Issue #1220 - Text tool has color from previous
+    line...
+  *  e249a42226 - Issue #3343 - Some translated tooltips are appearing
+    untranslated
+  *  c2021d3c5b - app: disregard composite space in source-only trivial
+    layer modes
+  *  a5962e4049 - app: disregard composite space in non-union alpha-only
+    layer modes
+  *  2a48a5f868 - plug-ins: big formatting and indentation cleanup in
+    file-dds
+  *  1c91578bb2 - app: don't show result-size warning when transforming
+    a selection
+  *  04f9281bdd - configure.ac: improve compiler version string escaping
+  *  853d91b8e4 - app: initialize GimpBacktrace earlier on
+  *  86a7c053cc - app: fix indentation in gimppaintbrush.h
+  *  edc99531e6 - app: in GimpPaintbrush, reuse existing paint buffer
+  *  fcd19a2aeb - app: add gimp_brush_core_get_brush_pixmap()
+  *  f24bca5156 - app: don't modify paint buffer when pasting to canvas
+  *  669bd398a7 - Update Spanish translation
+  *  6310582b36 - Update Spanish translation
+  *  e94cca3b42 - Update Polish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 30 May 2019 05:02:42 +0300
+
 gimp-gtk3 (2.99.0+git43295-bea1a44672-1) unstable; urgency=medium
 
   * Compile

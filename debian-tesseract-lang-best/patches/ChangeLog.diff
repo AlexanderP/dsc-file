@@ -2,9 +2,13 @@ Description: Add git ChangeLog
 Author: Alexander Pozdnyakov <almipo@mail.ru>
 Last-Update: 2018-02-17
 
---- /dev/null	2018-06-02 09:29:50.452009679 +0300
-+++ tesseract-lang-best-4.00~git25-f8c4449/ChangeLog	2018-06-02 12:54:43.956601433 +0300
-@@ -0,0 +1,17 @@
+--- /dev/null	2019-05-22 12:17:54.240649801 +0300
++++ tesseract-lang-best-4.0.0+git31-e9f1588/ChangeLog	2019-05-22 18:36:34.630041057 +0300
+@@ -0,0 +1,21 @@
++2019-05-21 - Fix extra intra-word spacing for Thai (GitHub issue #991) (commit: ea00692)
++2019-05-21 - Fix extra intra-word spacing for Japanese (GitHub issue #991) (commit: 80b4d76)
++2019-05-21 - Fix extra intra-word spacing for Chinese (GitHub issue #991) (commit: 5075f27)
++2018-10-23 - Improve documentation (commit: 2d25578)
 +2018-05-28 - Remove parameter textord_tabfind_vertical_horizontal_mix (commit: 786983d)
 +2018-04-25 - correct name kur_ara to kmr - Kurmanji (Latin script) (commit: 788e2fe)
 +2018-04-09 - Fix config file for Korean, remove `tessedit_load_sublangs chi_tra` (commit: c7c86bb)

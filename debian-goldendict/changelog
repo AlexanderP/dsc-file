@@ -1,3 +1,19 @@
+goldendict (1.5.0~rc2+git20190515-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/goldendict/goldendict.git
+  * Branch: master
+  * Commit: 13a321190fd32f7125aedded8843a8831717bb86
+  * Date: 1557907760
+  * git changelog:
+  *  13a3211 - Don't construct scan popup twice at startup
+  *  abcabb7 - Initialize scanPopup window after setting of Qt style
+    sheets (issue #1144)
+  *  462218d - Linux-specific: Qt::Dialog -> Qt::Window pinned scan
+    popup flags
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 27 May 2019 12:14:56 +0300
+
 goldendict (1.5.0~rc2+git20190502-1) unstable; urgency=medium
 
   * Compile

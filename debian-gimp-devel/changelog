@@ -1,3 +1,92 @@
+gimp-devel (2.10.8+git42736-7b4ef46fe4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 7b4ef46fe485ad9ccdfb5f907367416ae9840935
+  * Date: 1559169722
+  * git changelog:
+  *  7b4ef46fe4 - Issue #3119 - Two tooltips were marked as translatable
+  *  fb03526f92 - Issue #3105 - "Maximum Image Size" changed to "Maximum
+    new image size"
+  *  159a0a779f - Issue #2986 - Input controller configuration window is
+    too small by default
+  *  b5159905e0 - Issue #263 - Add a "Save Keyboard Shortcuts Now"
+    button...
+  *  92bec259ac - app: add support for offset buffers in
+    gimp_gegl_apply_[cached_]operation()
+  *  df06c062cd - app: fix symmetry transform in Clone/Heal tools when
+    brush is cropped
+  *  c75ba806be - app: implement gimp_symmetry_get_operation() in terms
+    of gimp_symmetry_get_matrix()
+  *  3868733ea3 - app: add gimp_gegl_create_transform_node()
+  *  2025bbed65 - app: use gimp_symmetry_get_matrix() in GimpInk
+  *  a474e69573 - app: add gimp_symmetry_get_matrix()
+  *  bf6489f727 - app: don't add fg color to history in GimpEraser
+  *  fa173b9675 - libgimpcolor: better error messages in
+    GimpColorProfile and GimpColorTransform
+  *  788c09259c - Issue #3132 - Missing accelerator on "Export Image as
+    JPEG" dialog
+  *  d968eff2f6 - Issue #2794 - Gimp crash just on File Open and Edit
+    Preferences
+  *  54a383685e - app, plug-ins: make sure a GIH brush's spacing is
+    preserved
+  *  1b0a17c0ec - Updated Italian translation
+  *  aea7f8e943 - Update Polish translation
+  *  de568a0f61 - app: use g_clear_pointer() in more places
+  *  4208ff8147 - Issue #886 - Artifacts symmetry painting with big
+    brushes
+  *  7a6926a50b - Issue #3067 - "Make New from Visible" produces wrong
+    results
+  *  23c1e0328a - Issue #3398 - colour map picker isn't positioned on
+    the correct...
+  *  eb99c1a82f - app: add gimp_dialog_factory_position_dialog()
+  *  6a98b28a00 - app: fix Ink tool symmetry transform
+  *  6fa861cec6 - app: minor formatting fixes in gimpdrawable-bucket-
+    fill.c
+  *  b2dac69b7e - app: derive GimpEraser from GimpPaintbrush
+  *  eaef7dcf44 - app: add symmetry-transform support to the Ink tool
+  *  e961b13ae6 - app: use gimp_symmetry_get_transform() in paint code
+  *  85340f4b30 - app: add gimp_symmetry_get_transform()
+  *  80e426b65b - Update German translation
+  *  72c5d24fe9 - plug-ins: follow the assigned profile TRC in PNG
+    export.
+  *  5c80a2e600 - libgimpbase: add hygon cpu detection and enable
+    MMX/SSE support
+  *  e51d7b122d - depend on babl-0.1.64
+  *  52a182eaed - Issue #3124 - layer mask pastes as a greyscale
+    layer/grayscale layer...
+  *  3cacebd06a - Issue #1220 - Text tool has color from previous
+    line...
+  *  d16c69ddf3 - Issue #3343 - Some translated tooltips are appearing
+    untranslated
+  *  7a8d0c4afb - app: disregard composite space in source-only trivial
+    layer modes
+  *  7313686192 - app: disregard composite space in non-union alpha-only
+    layer modes
+  *  9501d63b20 - plug-ins: big formatting and indentation cleanup in
+    file-dds
+  *  275c2f9978 - app: don't show result-size warning when transforming
+    a selection
+  *  12b101b31c - Update Catalan translation
+  *  0b6c0b38f2 - Update Catalan translation
+  *  28a0d91fd5 - configure.ac: improve compiler version string escaping
+  *  0fdf6c2289 - app: initialize GimpBacktrace earlier on
+  *  b0f6996e61 - app: fix indentation in gimppaintbrush.h
+  *  eb8ab63462 - app: in GimpPaintbrush, reuse existing paint buffer
+  *  ea693288d3 - app: add gimp_brush_core_get_brush_pixmap()
+  *  24e956714c - app: don't modify paint buffer when pasting to canvas
+  *  a526bacbad - Update Catalan translation
+  *  6d6bf8ec72 - Issue #3140 - Export as DDS dialog does not have an
+    Export button
+  *  071b560fee - Update Polish translation
+  *  64f67894eb - Update Turkish translation
+  *  31ee6864bd - Update Turkish translation
+  *  ae7f794335 - Update Turkish translation
+  *  692e09c119 - Update Turkish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 30 May 2019 03:54:47 +0300
+
 gimp-devel (2.10.8+git42682-25721e39e6-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,45 @@
+gscan2pdf (2.5.1+git3021-6c6b1e08-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 6c6b1e08d286e51f871e65907f90d9296ef5833f
+  * Date: 1558371138
+  * git changelog:
+  *  6c6b1e08 - Bumped version to 2.5.3
+  *  e138a7c0 - Documented fixing bug #324
+  *  1947af0f - Update to Ukrainian translation
+  *  6e8f4037 - Update to Italian translation
+  *  3c8128b0 - Update to German translation
+  *  7c4b6bc2 - Don't reset to defaults if no scan options set
+  *  8efac830 - + Gscan2pdf::Document::_font_can_char()
+  *  15d94ff3 - Removed owner password, as it does not encrypt
+  *  1cfb6e22 - Moved font discovery to program start to accelerate
+    display of save dialog
+  *  fb8f129a - Use GTK's FontChooserDialog for selecting font for OCR
+    output in PDF
+  *  08fea680 - Trap invalid dates in metadata
+  *  7e70cf5c - Fix some test warnings about GtkDialog mapped without a
+    transient parent
+  *  8e6579db - Refactor parts of show_message_dialog() into
+    Gscan2pdf::Dialog::MultipleMessage::add_message() and
+    store_responses()
+  *  25b27585 - Split up messages from unpaper. Fix display of split
+    messages
+  *  d055edb0 - Move message munging to
+    Gscan2pdf::Dialog::munge_message() to allow us to filter the
+    messages afterwards
+  *  1d4e38e7 - Tidy some code
+  *  9e83ccc5 - Move message logic into
+    Gscan2pdf::Dialog::MultipleMessage
+  *  712832b3 - Split up gimp messages to allow them to be ignored more
+    easily
+  *  eefd2ffa - Fix test failures in Bionic and Xenial, mostly due to
+    Imagemagick not being authorised to process PDFs or PS files
+  *  714ab214 - Post-release commit
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 26 May 2019 12:10:22 +0300
+
 gscan2pdf (2.5.1+git3001-01bf1a60-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,226 @@
+freecad-daily (0.18+git16878-50f91840d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 50f91840d677ba77d3a938d9ac0aa73f6a9f12d4
+  * Date: 1559074784
+  * git changelog:
+  *  50f91840d - FEM: unit tests, mesh element reader writer, simplify
+    tests
+  *  ac41a773b - FEM: in out, z88, resort methods, add comments
+  *  a39a33aad - FEM: in out, add missing returns of document objects
+  *  1ba3b1fe0 - FEM: in out, fix guarding FreeCADGui in fenics import
+  *  d682d3ea6 - FEM: code formating, line length < 100, there still
+    where some left
+  *  63f345318 - FEM: code formating, max line length < 100, fem mesh
+    modules, we are done in FEM :-)
+  *  40d5cad69 - FEM: unit test, fix comment
+  *  fad4db330 - TechDraw: Fix font size issues when exporting to SVG
+  *  8f50b057d - Increase tool count limit to 99999
+  *  5a4373a3c - Gui: GestureNavigationStyle: logging option
+  *  6d7400f0e - Revert "Gui: GestureNavigationStyle: remove logging"
+  *  d15745c4b - FEM: code formating, max line length < 100, fem
+    toolsmodules
+  *  d40dc9b1e - FEM: unit tests, objects, add some comments an new
+    lines
+  *  5d698058b - FEM: code formating, max line length < 100, fem in out
+    modules
+  *  f2bbb8918 - FEM: code formating, fenics import
+  *  ae0a16479 - FEM: importFenicsMesh: GuiUp code inserted
+  *  540ad16eb - improve usability of 'Add triangle' function
+  *  da4946d33 - Travis winpty  (#2214)
+  *  f0b10ec85 - fixes 0003986: Changing view attributes does not
+    trigger 'File changed' status
+  *  32949b63b - FEM: code formating, max line length < 100, fem test
+    modules
+  *  2ea971d8a - FEM: code formating, add some new lines
+  *  e7236d722 - issue 0003986: Changing view attributes does not
+    trigger 'File changed' status
+  *  6462005da - fix some compiler warnings
+  *  fe0fd5512 - FreeCAD_trunk.sln to FreeCAD.sln
+  *  16727b5e0 - add option to force different build directory than
+    source directory
+  *  ab23ac4f0 - (-) fix appveyor build
+  *  b9ac1fa23 - CMake: generalize start build message
+  *  2a197bc7d - CMake: no need to set compiler definition _OCC64 twice
+  *  91a2b5da7 - CMake: remove dead code
+  *  d3ea5e032 - CMake: fix checking if variable is set
+  *  98210cfc5 - CMake: remove dead code
+  *  4d3c206fd - CMake: cmake module path is assumed to be a list
+  *  78fe9b570 - CMake: setting CCache before calling the project
+    command
+  *  487544d39 - CMake: setting CMake policies should be done before
+    anything else
+  *  10ce1470c - CMake: remove _trunk from project name
+  *  f53d8956c - Make python-pivy conditional for fedora
+  *  a0ea8b656 - Fix Balloon Next Index Persistance
+  *  da047abdd - Add Fork arrowhead option
+  *  e480d8f5a - harmonize whitespace and case-sensitivity
+  *  e2d273406 - fix and improve handling of BUILD_QT5 option
+  *  d88773582 - Windows: Add libpack dependency install support
+  *  c0cf2c1ce - AddonManager: source comment typo and whitespace fixes
+  *  d5c52d285 - fix warning C4930: prototyped function not called
+  *  4072b2c9d - move includes to repsect PCH option
+  *  bf38ae958 - Fix point edit when attach point changed
+  *  94b167f3a - Add Midpoint and Quadrant Cosmetic Vertex
+  *  59e47de50 - Initial version addCosmeticVertex
+  *  a0497f42f - FEM: in out, return obj on import
+  *  3c82ffca7 - Material: white space
+  *  cafe4ad11 - FEM: code formating, max line length < 100, make
+    objects module
+  *  1b5df7c72 - [TD] Fix cursor behavior
+  *  04705812a - cmake: manually add dynamic_lookup flag to area-target
+  *  9369816f3 - cmake: add option to disable linking of python
+    extension modules to python-libraries
+  *  81ae5688d - replace raw string with normal C string to fix build
+    failure
+  *  6f2a611b6 - Adding Part_BoxSelection.svg icon to Part Menu
+  *  243aebf2d - TechDraw: Place diameter label better
+  *  73c1a9c9a - AddonManager: Misc fixes from forum feedback
+  *  36d341f3d - [TD] Add TaskPanel for Balloons
+  *  81bae3108 - Added python virtual environment initialization, if
+    present.
+  *  1eca20de3 - FEM: unit tests, main module, add some comments
+  *  2a9bd6d0e - AddonManager: Allow to restart FreeCAD directly from
+    the addon manager after installing/updating addons
+  *  abb253aaa - Add Russian localization to desktop file
+  *  5aff1c918 - handle eventual system error messages
+  *  ade1c5d19 - improve whitespaces
+  *  9d24d19ee - [TD] Rewrite balloon placing method
+  *  eafe889f6 - adding Part_BoxSelection.svg icon
+  *  95cac520d - adding Part_BoxSelection icon
+  *  fc3705321 - FEM: solver calcuix task panel, fix panel
+  *  00e14ab35 - Arch: IFC explorer migrated to BIM WB
+  *  0e17c22e3 - Py3: make fcbt scripts working
+  *  d2d8a30cb - Draft: Disbled by default the use of the Support
+    property in Draft objects
+  *  2f14667ce - Set working plane immediately upon clicking the set
+    working plane button if you have a face selected
+  *  d05feb2f4 - missing headers (external smesh)
+  *  a6fca7957 - increased default snapRange from 5 to 8
+  *  2f94302bb - FEM: code formating, max line length < 150, all FEM
+    python
+  *  1d507364b - FEM: code formating, max line length < 100, fem solver
+  *  454729f12 - FEM: solver calculix writer and solver writer base, use
+    small character for import identifier
+  *  adac097c4 - FEM: code formating, max line length < 100, fem results
+  *  08c83d3b5 - FEM: code formating, max line length < 100, fem
+    examples
+  *  77f0571ac - FEM: code formating, max line length < 100, fem
+    commands
+  *  7171d20dd - FEM: code formating, max line length < 100, fem objects
+  *  5ca75ca7e - FEM: code formating, max line length < 100, fem gui
+    objects
+  *  8ef3f13fb - Fix regression in LeaderLine initial position
+  *  b17a784e3 - generate minumum number of points from an edge
+  *  51c317dc9 - FEM: inout tetgen converter, code formating
+  *  06fffbd6a - FEM: inout tetgen converter, guard Gui commands to be
+    able to load the module in CMD mode without problems
+  *  41c828a3b - [Sketcher] Fix initial autoconstraints behavior
+  *  15f440525 - Fix loss of formatting when edit existing text
+  *  249d7f2e9 - Remove Surplus VP properties
+  *  7e90fcfd9 - Draft: Fixed regression in move tool
+  *  a2c491261 - FEM: fix buildfailure on gcc
+  *  11f4f30a3 - Misc. typo fixes
+  *  af2d85d91 - minimum degree of 1 for curve on mesh
+  *  ec5720d51 - fix FEM build failure
+  *  4a3b81861 - PCH: Fem Gui Enable
+  *  241c370f5 - PCH: Fem Gui
+  *  e4b181dab - PCH: Enable Fem App PCH
+  *  676a4f045 - PCH: Fem App
+  *  2e616a474 - Draft: Removed annoying an unuseful verbose command
+    line output
+  *  bff34a36e - Draft: Fixed regression bug in Rotate
+  *  a2d3b12a5 - add option to disable approximation of splines when
+    creating curve on mesh
+  *  b547373f3 - fix Part build failure
+  *  8550ce91e - PCH: Enable PartGui PCH
+  *  8b477e605 - fix Path build failure
+  *  4c63bd49e - fix Sketcher build failure
+  *  604f8296e - PCH: Path GUI PCH Enable
+  *  bb38abd6d - PCH: Sketcher GUI PCH Enable
+  *  74b3169db - fix PartDesign build failure
+  *  55a5f652e - PCH: PartDesign GUI PCH Enable
+  *  ab986d9a0 - Fix Leader point edit
+  *  4223f3c06 - fix -Winconsistent-missing-override
+  *  2d1f6ab1a - Arch: import IFC, improve import of colors
+  *  bbb7200ab - Arch: import IFC, some code formating, no code changes!
+  *  2be258104 - Arch: Added door mode to window command
+  *  76cf1ceb3 - Draft: Enhancements to Working Plane selection UI
+  *  b82eef770 - Optimize buildFence method
+  *  84169efee - Add missing "Part" import to Arch Fence
+  *  8fb066841 - Arch: Remember values for precast concrete presets
+  *  1e426ced8 - Arch: Refactor of Structure's Column/Beam modes and
+    fixed rotation issues
+  *  b50ac8606 - Arch: Fixed bug in precasts + addressing recursive wall
+    length issue
+  *  96ee6fb50 - Fix build with boost 1.65.1 on ubuntu 18.04
+  *  fc674fae4 - Draft: Small bugfix in bezier curves
+  *  6d2aee2c5 - Draft: Updated icon for cubic bezier tool
+  *  c05bc0990 - Arch: Further fix in solar diagram
+  *  5aeb15db0 - [Draft] Insert the arc group in the draft toolbar
+  *  792a25383 - removed unused view lookup
+  *  968faa511 - MRTE License & remove copy to install dir
+  *  02b689a1f - Fix RichAnno positioning for Scale != 1
+  *  a537e3407 - Fix duplicate child claiming
+  *  e753e642f - Gui: GestureNavigationStyle: add statemachine diagram
+  *  24e45023a - Gui: GestureNavigationStyle: remove logging
+  *  8a9978547 - Gui: GestureNavigationStyle rewrite
+  *  c60658f3f - add method to project shape on mesh
+  *  d52aa2074 - FEM: material task panel, use quantity unit checks on
+    leave task panel and return from material editor
+  *  2046f81b1 - FEM: unit tests, test values and units of known
+    quantities from all build in solid materials
+  *  13af9ab88 - FEM: unit tests, known material parameter unit test
+  *  b753d771f - FEM: unit tests, add modul for material tests
+  *  14eaa95bb - Material: card utils, add some code comments for new
+    added methods
+  *  8698ed56c - Material: card utils, add methods for quatity unit
+    checks
+  *  09a0a6f95 - Material: card utils, add a parameter to ignore
+    template mat on import materials
+  *  565811978 - Material: card utils, example code comments fixes
+  *  71b645d76 - Material: templatematerial, make FractureToughness a
+    float - it unit is not possible with FreeCAD unit system
+  *  a7cb6ed62 - Draft: Allow to set the working plane from a section
+    plane
+  *  184a39267 - Arch: Added option to not import FreeCAD parametric
+    model from IFC
+  *  6cf4c2596 - Arch: Added  Footprint display mode to Spaces
+  *  c6a272c95 - Arch: Ability for BuildingParts to control visual
+    aspects of their children
+  *  7d2498d65 - Draft: Fixed Part primitives mode of Draft tools
+  *  75d43757c - Fix crash on malformed python script
+  *  d42c79c14 - Fix #3695 Frame toggle sync
+  *  ef912cfea - Improve radius/diameter dims for ellipse,spline
+  *  3c68d1e0c - Arch: Fixed some flat objects not appearing in techdraw
+  *  0644ed8e6 - fix mesh cross-section to respect placement
+  *  0e86b2a73 - also copy placement when copying a mesh
+  *  ae1723b94 - add method to project shape on mesh
+  *  e44884a01 - make curve-on-mesh working for meshes with placement
+  *  6f53d0e9d - hide taskbar progress when required
+  *  8d5fbd947 - FIx some user and non-user facing typos
+  *  f6ee90557 - also support shapetype parameter in
+    Part.makeRevolution() if first argument is an edge
+  *  cfd04ac6a - Draft: Fixed minor bug in Circle tool
+  *  3bf6c1bc3 - fix -Winconsistent-missing-override
+  *  9ab8915c9 - fix -Woverloaded-virtual
+  *  f999709e1 - fix gcc build failure
+  *  012698b38 - do some code refactoring
+  *  7803460f7 - replace insecure use of eval() with proper use of units
+  *  42aa09515 - fix -Winconsistent-missing-override
+  *  4e152e074 - Enable cutter and FC to OCL cutter translation
+  *  bfba3a6b9 - Updated master translation files (minor changes)
+  *  8987bd1df - Arch: Re-added support for older pysolar
+  *  60fae525b - Arch: Fixed wrong structures drawn in beam mode using a
+    metal profile
+  *  ab6e30b93 - Arch: Fixed translation issues in wall and structure +
+    make use of line task dialog
+  *  9d416bf38 - Draft: allow to use different snapping task dialogs
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 29 May 2019 08:55:17 +0300
+
 freecad-daily (0.18+git16703-9adc1a351-1) unstable; urgency=medium
 
   * Compile

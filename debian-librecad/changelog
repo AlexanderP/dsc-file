@@ -1,3 +1,21 @@
+librecad (2.1.2+git4535-e38b7088-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: master
+  * Commit: e38b70889f41536ea24b224d940069a897a896f0
+  * Date: 1558039579
+  * git changelog:
+  *  206fb7c2 - Bugfix #1102 modfiy image refresh
+  *  7ac6be61 - - fix #981 [2.2.0 Release Candidate] Negative numbers
+    are not accepted for Copy/Move input points - reverses a commit
+    authored by webmite from 10 May 2017:  Update rs_math.cpp eval fn to
+    allow Imperial shorthand - Issue #878, Pull Request #885 - this
+    string editing approach appears to be bug-prone; a better solution
+    would be to apply some pre-evaluation of the terms
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 30 May 2019 02:50:58 +0300
+
 librecad (2.1.2+git4531-9236667f-1) unstable; urgency=medium
 
   * Compile

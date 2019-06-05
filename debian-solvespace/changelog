@@ -1,3 +1,77 @@
+solvespace (3.0.0~git1362-9ac55f3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 9ac55f392aeac6839e1ad2252848f520f1420939
+  * Date: 1559142385
+  * git changelog:
+  *  9ac55f3 - Win32: fix build with -DOPENGL=1.
+  *  6352405 - Deselect entities with Ctrl-LMB.
+  *  bd84bc1 - Replace entity map implementation with
+    std::unordered_map.
+  *  406c55e - Instead of creating an exact copy of existing constraint,
+    select it.
+  *  09ca442 - Commit missing parts of cf2f0e5d.
+  *  eb7e12b - Make sure file from a recent menu exists before using it.
+  *  beea444 - Move logic for handling allowRedundant out of System.
+    NFC.
+  *  cf2f0e5 - In TryConstrain(), reject redundant constraints in
+    overconstrained groups.
+  *  5495659 - Skip creating an automatic H/V constraint if it would be
+    redundant.
+  *  394c1f6 - Remove forceDofCheck parameter from SolveRank(). NFC.
+  *  88879d3 - Show Degrees of Freedom → Show Underconstrained Points
+  *  9d1c295 - Add a setting to format constraint labels using SI
+    prefixes.
+  *  9faa7cb - Fix commit cc107887.
+  *  6c167db - Add an explicit mirror checkbox for Paste Transformed.
+  *  df6777a - Warn on broken extrusions, like on broken polygons.
+  *  43a59e2 - Work around MSVC bug 746973.
+  *  9f2077b - Explain how forceDofCheck in System::Solve works. NFC.
+  *  cc10788 - Remove the last use of memmove. NFC.
+  *  fabffba - Get rid of FreeTemporary. NFC.
+  *  ac7b82d - Allow configuring the amount of digits displayed after
+    decimal point.
+  *  d01f715 - CLI: accept --chord-tol as an option to regenerate.
+  *  50c004b - Add a button to hide construction entities.
+  *  e67f967 - Implement turntable (SketchUp-like) mouse navigation.
+  *  c2c26e9 - Make minor errors visible at a glance in the group list.
+  *  260769c - Win32: Restore Windows XP Compatibility
+  *  31f5873 - Add a few asserts. NFC.
+  *  e243396 - Three.js: with a window-sized canvas, resize canvas with
+    the window.
+  *  ffef006 - Add a .clang-format file - not for bulk use!
+  *  c9397ea - Make help text for image and TTF request creation reflect
+    reality.
+  *  3296474 - Rework tooltip implementation to track tip area.
+  *  f6484c7 - macOS: fix a crash at startup introduced in 75a09c8b.
+  *  e9b9dca - Win32: use native OpenGL drivers, if available.
+  *  0921296 - Update copyright statement in about box.
+  *  25b6eba - Adjust angle label margin similarly to eda294ef.
+  *  9500487 - Fix an edge case with fps measured as infinite.
+  *  39c3480 - Add CountIf method to IdList to simplify some call sites.
+    NFC.
+  *  43c9cba - Reduce Vector::Element calls in SKdNode::SnapToVertex.
+    NFC.
+  *  f885daf - Simplify. NFC.
+  *  75a09c8 - Minor cleanups. NFC.
+  *  7f75148 - Win32: ignore WM_MOUSEWHEEL events that are forwarded to
+    other window.
+  *  5dbe090 - Win32: do not insert windows with parents after
+    HWND_TOPMOST.
+  *  be0dc7e - Win32: silence a GetProcAddress-related warning.
+  *  e11e234 - Win32: remove dead code in keyboard event handling.
+  *  bda3b80 - GTK: fix last remains of legacy event handling code.
+  *  f43954c - Adjust GL1 and GL3 ReadFrame to take pixel ratio into
+    account.
+  *  11c5cdc - Adjust GL3 ReadFrame() for GL ES 2.1 compatibility.
+  *  c18deb2 - test harness: Identify build host system in CMake to use
+    for path separator.
+  *  62aba39 - Move two members of Vector to be inline.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 29 May 2019 23:05:53 +0300
+
 solvespace (3.0.0~git1314-201e15e-1) unstable; urgency=medium
 
   * Compile
