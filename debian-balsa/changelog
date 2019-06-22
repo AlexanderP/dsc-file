@@ -1,3 +1,59 @@
+balsa (2.5.5+git9136-911243985-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/balsa
+  * Branch: master
+  * Commit: 9112439856943716637f68062a3baf898a969acb
+  * Date: 1560460322
+  * git changelog:
+  *  911243985 - Update Hungarian translation
+  *  2308670f2 - Use g_{,s}list_free_full()
+  *  90ba3f1ff - abook-completion: Add a second argument
+  *  fc8b695c5 - gmime-gpgme-signature: Fix the build
+  *  8bbf6ebaa - meson.build: add -Wignored-qualifiers
+  *  64f101af8 - Use more compiler warnings
+  *  566da3e93 - imap-server: remove redundant declarations
+  *  cfdf70de7 - rfc2445: remove redundant declarations
+  *  ce89dfa36 - address: Fix some scan-build false positives
+  *  db904e5a3 - address-book-ldif: Fix a use-after-free
+  *  270de344b - Fix format string error
+  *  fd2f689fc - Implement VCalendar stuff using G_*_TYPE()
+  *  9a3814a91 - Update Polish translation
+  *  933d19552 - Declare LibBalsaVfs final
+  *  799277e9f - Declare LibBalsaServerCfg final
+  *  cf459eb19 - Declare LibBalsaSmtpServer final
+  *  20494f10d - Declare LibBalsaImapServer final
+  *  74c669c2b - Declare LibBalsaServer derivable
+  *  e0dc81d28 - Remove unused declarations
+  *  dcd19aff1 - gmime-filter-header: Use provided parent-class
+  *  a5bc05060 - gforest: ???
+  *  5f37f1b95 - completion: Add NULL guards
+  *  2469a94e1 - Fix the build
+  *  063ec189e - address.[ch]: Add guards
+  *  c9b5daa71 - address-book-text: Return NULL instead of 0
+  *  7f9004dbd - address-book-rubrica: No guard on static functions
+  *  67d8d71eb - address-book-ldap: Add guards
+  *  72ee44273 - address-book-extern: Add guards
+  *  c31bd968b - address-book: Ensure gboolean values are Boolean
+  *  c77e5e52f - Remove redundant declarations
+  *  f62d88c43 - Declare LibBalsaIdentity final
+  *  d206c4a90 - gmime-filter-header: Declare it final
+  *  313d154f1 - cell-renderer-button: Fix the build
+  *  765aee742 - Declare LibBalsaCellRendererButton final
+  *  584646ba7 - Declare LibBalsaAddressView final
+  *  62db441ae - abook-completion: Simplify
+  *  b2972d05e - Drop unused address_compare()
+  *  9a1df358d - address-books: Drop redundant NULL checks
+  *  0a0ae4078 - address: Avoid possible use-after-free
+  *  132a3db85 - address-book-rubrica: Drop redundant NULL checks
+  *  2bbe5bdb7 - address: Use g_strv_length()
+  *  c2a5b2597 - Declare LibBalsaAddress final
+  *  bb928a11a - GMimeGpgmeSigstat: use modern macros
+  *  7a0a4fe32 - Make GpgME/E2EE support a hard requirement
+  *  713d66e3b - libnetclient: use G_DECLARE*
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Jun 2019 17:31:40 +0300
+
 balsa (2.5.5+git9091-a2943629a-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,30 @@
+librecad (2.1.2+git4548-10d502db-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: master
+  * Commit: 10d502db66527ea64a2a012add2e57059e2409f0
+  * Date: 1560206051
+  * git changelog:
+  *  d0a0ef28 - fix for GCC 9 build issue, as reported in #1111 and
+    #1117
+  *  3110f6e8 - - Previous commit broke Save As; now fixed
+  *  19d4d9ba - - Add File > Save All and File > Close All actions +
+    icons - Some refactoring/enhancement of the MDI functionality to
+    make this easier
+  *  52652be8 - - Fix #1108 Improve User Experience while working with
+    multiple drawings - Fix #515 DWG zoom position on opening
+  *  b5e21c59 - - fix #1085 Zoom panning can only be used once and must
+    then be reactivated again - restored a disambiguation needed for
+    proper handling of middle-mouse vs toolbar panning
+  *  621e1dc0 - - a little cleanup
+  *  92dbb51f - - fix #1107 Create a preference to toggle Free Snap mode
+    when SPACE BAR is pressed - Created a new "Keyboard settings" group
+    in Options > Application Preferences > Defaults - Also moved
+    Evaluate on SPACE preference into this category
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Jun 2019 06:34:34 +0300
+
 librecad (2.1.2+git4535-e38b7088-1) unstable; urgency=medium
 
   * Compile

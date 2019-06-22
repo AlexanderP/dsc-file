@@ -1,3 +1,125 @@
+gimp-gtk3 (2.99.0+git43424-47d2b685a6-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 47d2b685a6579f95419b4794fb108fd1ce8dc594
+  * Date: 1560369391
+  * git changelog:
+  *  47d2b685a6 - Offset tool: mark forgotten messages for translation
+  *  b3dcb5aaac - build: depend on babl-0.1.66
+  *  5335f313d9 - app: fix unit test.
+  *  6786343909 - desktop: Update gimp-data-extras.metainfo with gimp's
+    new appstream ID
+  *  3ebad22539 - authors.xml: add Oleksii Samorukov and Yoshio Ono.
+  *  de866d8815 - plug-ins: get rid of compilation warning.
+  *  5d95040a9d - Issue #3264 - Wrong colors from opening and exporting
+    non-sRGB tiffs...
+  *  cdfca0b420 - plug-ins: tiff-load initialize a variable before using
+    it
+  *  37d1aff4ce - Update Swedish translation
+  *  84ffcddaef - Issue #3264 - Wrong colors from opening and exporting
+    non-sRGB tiffs...
+  *  8f2f54deaa - Update Swedish translation
+  *  236a33a927 - Update Swedish translation
+  *  a9b36245c9 - tools: fix windows file handling in gimp-test-
+    clipboard.c
+  *  fa6b57cfbd - desktop: give 2.10.12 release date.
+  *  bd701e7b35 - Update Dutch translation
+  *  b090bc5213 - Issue #3493: GIMP changes R-channel, when it should
+    not.
+  *  aa1171ada2 - Issue #2194: Action search dialog behaves as a full
+    window using a...
+  *  1dd3d7e91e - app: clean up Luminance blend function
+  *  65f85e7078 - Make luma_lighten/darken_only blend modes work in
+    AnyRGB
+  *  4a20a75dc3 - Issue #3484 - While moving a nested layer group, some
+    area isn't updated
+  *  3e5cbb03d9 - app: add gimp_drawable_update_all()
+  *  19e74f0e28 - app: make luminance blend mode depend on space
+  *  5c5f6018ab - Update Polish translation
+  *  8e90468308 - app: add GeglOperation *operation argument to
+    GimpLayerModeBlendFunc
+  *  24ed5870ad - plug-ins: PNG export TRC chosen similarly to TIFF.
+  *  8cd3f5a853 - plug-ins: simplify code a bit by removing useless
+    variable.
+  *  9cbc6d0304 - app: disable overlay scrolling for preferences pages
+  *  8c1567f901 - app: indentation fix in gimp:offset
+  *  533091055e - app: in gimp:offset, fix OFFSET_TRANSPARENT fast-path
+    for chunked input
+  *  0461022198 - plug-ins: add the 8-bit linear with no assigned
+    profile exception...
+  *  26ba915ca5 - plug-ins: remove the "Advanced Options" expander in
+    WebP export dialog.
+  *  6712228e5e - plug-ins: fix profile writing in save_animation() in
+    WebP export.
+  *  96e37dfdaf - plug-ins: add a "Save color profile" checkbox in WebP
+    export.
+  *  2a1eabc177 - plug-ins: improve decision on exported data format in
+    Webp.
+  *  5428e5e384 - app: gimp:desaturate, improve indentation and reduce
+    overhead
+  *  762fd66d28 - Desaturate to Luminance using AnyRGB
+  *  8d9e70011d - plug-ins: improve decision of exported data format in
+    TIFF export.
+  *  42d4255262 - app: avoid duplicate offset actions
+  *  e962e8b3de - icons: fix symbolic gimp-tool-offset icons
+  *  066827e23c - app: add GimpFilterTool::region_changed() virtual
+    function
+  *  428ee0e2ad - app: in gimp_filter_tool_get_drawable_area(), don't
+    return empty area
+  *  30429e30e2 - app: various fixes/cleanups to last commits
+  *  3a4a00c71e - Issue #40 - Layer offset tool
+  *  5b2f3980bd - app: implement gimp_drawable_offset() in terms of
+    gimp:offset
+  *  40fefb6076 - app, libgimpbase: add gimp:offset operation
+  *  8831ef2ea0 - plug-ins: in file-tiff, don't leak image when not
+    saving layers
+  *  2da5cb562d - app: update drawable when committing Warp tool
+  *  df0c659f8b - configure.ac: also check for gtk-update-icon-cache-3.0
+  *  a14834e336 - Issue #2057 - All tool presets change FG, BG and
+    Pallete color...
+  *  8d1c36d9ce - app: remove redundant assignment in gimptoolpreset.c
+  *  3c2c85950c - Update Polish translation
+  *  d928a80b7f - app: avoid unnecessarily updating drawable after
+    merging filter
+  *  6d781ec41f - Update Hungarian translation
+  *  e6364ffa81 - Issue #2194 - Action search dialog behaves as a full
+    window...
+  *  2f925e7277 - libgimpwidgets: keep gimpwidgetsenums.h in
+    alphabetical order
+  *  a1aa179436 - Issue #2643 - Conversion to grayscale fails with
+    artifacts
+  *  6425bf820a - app: add "alpha" propertry to gimp:mask-components
+  *  3766af9ac9 - Revert "app: avoid NULL output in layer-mode ops"
+  *  8fcac3298c - app: avoid NULL output in layer-mode ops
+  *  a26ade92a0 - app: use GTK_RESPONSE_CLOSE in image-properties-dialog
+  *  792264ba6a - app: add gimp_suggest_trc_for_component_type()
+  *  317b09c90f - app: rename gimp_rec_rm() to
+    gimp_file_delete_recursive()
+  *  eec1df23a5 - app: clean up most "non-linear" vs. "perceptual"
+    confusion
+  *  3cad4aa4c2 - Issue #3057 - Retain last user-chosen ICC profile
+    information...
+  *  add4500a16 - app: don't generate profiles from built-in profiles
+  *  710cfc1f47 - app: fix undoing image parasite attach/detach to emit
+    the right signals
+  *  07ffef38c3 - app: make sure builtin profiles *really* don't get
+    attached to images
+  *  8251406b40 - app: add the dialog buttons after creating the
+    GimpColorDialog instance
+  *  e7307194cf - app: use the DEFAULT_USE_PATTERN define instead of
+    TRUE in GimpPreset
+  *  f946a5268d - libgimp: use the dialog header bar in
+    GimpProcBrowserDialog
+  *  8ef461bb70 - app: s/gimp_list_compare()/gimp_g_list_compare()/
+  *  08ebcce2fa - app: fix memory leak in previous commit
+  *  1e95481feb - app: allow moving an intersecting pair of guides with
+    the Move tool
+  *  c4ce70a2d3 - app: add gimp_list_compare()
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Jun 2019 22:54:04 +0300
+
 gimp-gtk3 (2.99.0+git43350-b1c113c444-1) unstable; urgency=medium
 
   * Compile

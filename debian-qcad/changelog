@@ -1,3 +1,62 @@
+qcad (3.22.0.5+git6971-c6eff6bb1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: c6eff6bb1b7ba722d0805d0ef81324aad95d8bc8
+  * Date: 1560516874
+  * git changelog:
+  *  c6eff6bb1 - update script bindings conversions
+  *  c430f0264 - add RShape::getPointCloud
+  *  6524a7412 - update translations
+  *  79929d5cf - update script bindings
+  *  075669022 - update RPolylineEntity API
+  *  7d7a02930 - add REntity::isTextBased
+  *  c42cac4ac - fix FS#1899 - View > Auto zoom: zoom to invisible
+    entities in blocks
+  *  2ed4c7cb4 - port to Qt 4
+  *  6ff45ecee - update credits
+  *  98bf83e42 - update comments
+  *  b294a0c2b - update
+  *  e3ca321b6 - set version to 3.22.1.2
+  *  24f233648 - Translated using Weblate (Russian)
+  *  3513befa4 - Translated using Weblate (Finnish)
+  *  f7f5a044c - update translations
+  *  6d81b8ccc - Translated using Weblate (Spanish)
+  *  827304582 - Translated using Weblate (Portuguese)
+  *  6e4188c7f - Translated using Weblate (Italian)
+  *  af7de4dd7 - Translated using Weblate (German)
+  *  8b2de45b8 - Translated using Weblate (French)
+  *  83d2ecf3e - Translated using Weblate (English)
+  *  3a094b225 - Translated using Weblate (Dutch)
+  *  1e6ce7215 - update script bindings
+  *  246fc5c6b - improve contains for polylines in polyline
+  *  5cb06a561 - update translations
+  *  917a318ce - update translations
+  *  878b8c14b - Translated using Weblate (Italian)
+  *  38e1d4f1c - fix FS#1894 - File > Bitmap Export: points rendered too
+    big
+  *  5e3540f4d - add system ID for macOS 10.15 Catalina
+  *  d37ab04dd - ignore text rendering code \pxsm#;
+  *  57c8ccc37 - fix language switch in first start dialog
+  *  8dcd96d1f - Translated using Weblate (Italian)
+  *  6f1b82410 - Translated using Weblate (Finnish)
+  *  173ce7eb1 - Translated using Weblate (Finnish)
+  *  c2c513a04 - Translated using Weblate (Finnish)
+  *  2050c98e2 - Translated using Weblate (Finnish)
+  *  27c464c24 - update script bindings
+  *  8465877e1 - add support for adding circle to polyline
+  *  f4fb5a58b - update constness
+  *  410d0bc35 - introduce RPluginLoader::initTranslations
+  *  1150a4af9 - fix language switching in first start dialog
+  *  ce6051d50 - use RMathComboBox
+  *  9880573bd - use RMathComboBox
+  *  aa3b38f67 - use RMathComboBox
+  *  05b138395 - fix error color handling
+  *  8cf286411 - update object name
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Jun 2019 17:55:10 +0300
+
 qcad (3.22.0.5+git6923-a618c3c40-1) unstable; urgency=medium
 
   * Compile

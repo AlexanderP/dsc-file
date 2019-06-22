@@ -75,7 +75,6 @@ Recommends:
  calculix-ccx,
  graphviz
 Suggests:
- freecad-doc,
  python-collada,
 Description: Extensible Open Source CAx program (beta)
  FreeCAD is a general purpose feature-based, parametric 3D modeler for CAD, MCAD,
@@ -88,24 +87,3 @@ Description: Extensible Open Source CAx program (beta)
  3D scene representation model provided by the Coin 3D library, and a broad Python API.
  The interface is built with Qt. FreeCAD runs exactly the same way on Windows, Mac OSX, BSD and
  Linux platforms.
-
-Package: freecad-doc
-Architecture: all
-Section: doc
-Recommends:
- freecad (= ${source:Version})
-Depends:
- ${misc:Depends},
- qt5-assistant
-Description: FreeCAD documentation
- FreeCAD is a general purpose feature-based, parametric 3D modeler for CAD, MCAD,
- CAx, CAE and PLM, aimed directly at mechanical engineering and product design but
- also fits a wider range of uses in engineering, such as architecture or other engineering
- specialties. It is 100% Open Source (LGPL2+ license) and extremely modular, allowing
- for very advanced extension and customization.
- For more details see http://www.freecadweb.org/
- .
- This package contains the FreeCAD documentation.
- .
- The documentation is provided in Qt's new help format;
- the new help format version can be viewed in conjunction with Qt Assistant.

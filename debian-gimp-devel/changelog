@@ -1,3 +1,111 @@
+gimp-devel (2.10.8+git42803-ad7434bb48-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: ad7434bb48b266dabe0f2cf58c5baafa61745627
+  * Date: 1560536831
+  * git changelog:
+  *  ad7434bb48 - Installer: install 64-bit Python on 64-bit Windows
+  *  cd8192ad5b - Installer: changes for 2.10.12
+  *  f17e3b157d - Remove <U+FEFF> character before shebang header, OSX
+    is very strict on that
+  *  73a0ad7c31 - configure.ac: post-release version bump to 2.10.13
+  *  3d8535b55f - configure.ac: bump versions for the 2.10.12 release
+  *  9b205f1583 - NEWS: formatting, typos
+  *  3809645bc5 - NEWS: create news section for GIMP 2.10.12.
+  *  4938615236 - Update Russian translation
+  *  fa87116fe6 - Offset tool: mark forgotten messages for translation
+  *  add350f335 - AUTHORS: regenerated
+  *  4abf2306b3 - build: depend on babl-0.1.66
+  *  e70c08cdd0 - app: add missing parameter in test-xcf.c
+  *  aedee5ef82 - desktop: Update gimp-data-extras.metainfo with gimp's
+    new appstream ID
+  *  4c8c4c7e96 - authors.xml: add Oleksii Samorukov and Yoshio Ono.
+  *  76f1a02631 - plug-ins: get rid of compilation warning.
+  *  b7b275f908 - Update Swedish translation
+  *  4fe8a76f9b - Update Swedish translation
+  *  e8f7b3575d - Update Swedish translation
+  *  727b83cbe6 - tools: fix windows file handling in gimp-test-
+    clipboard.c
+  *  bf3ea7539e - desktop: give 2.10.12 release date.
+  *  0667fd27c6 - Issue #3493: GIMP changes R-channel, when it should
+    not.
+  *  6a854e45fa - Issue #2194: Action search dialog behaves as a full
+    window using a...
+  *  33aada6b6f - Update Spanish translation
+  *  9c8e1704c4 - Issue #3484 - While moving a nested layer group, some
+    area isn't updated
+  *  854374b2ce - app: add gimp_drawable_update_all()
+  *  1f0abe57cc - Update Polish translation
+  *  d66e7dccac - app: add GeglOperation *operation argument to
+    GimpLayerModeBlendFunc
+  *  c897aabcc8 - plug-ins: PNG export TRC chosen similarly to TIFF.
+  *  e7cd743b05 - plug-ins: simplify code a bit by removing useless
+    variable.
+  *  39672c8559 - plug-ins: add the 8-bit linear with no assigned
+    profile exception...
+  *  bb9571db60 - plug-ins: remove the "Advanced Options" expander in
+    WebP export dialog.
+  *  5c8860bd49 - plug-ins: fix profile writing in save_animation() in
+    WebP export.
+  *  0aad97cc18 - plug-ins: add a "Save color profile" checkbox in WebP
+    export.
+  *  1bdac39a92 - plug-ins: improve decision on exported data format in
+    Webp.
+  *  a11cc8a63d - plug-ins: improve decision of exported data format in
+    TIFF export.
+  *  7acb6f36ab - app: indentation fix in gimp:offset
+  *  618b6a62bd - app: in gimp:offset, fix OFFSET_TRANSPARENT fast-path
+    for chunked input
+  *  257e35dda1 - app: avoid duplicate offset actions
+  *  0d7a57d782 - app: add GimpFilterTool::region_changed() virtual
+    function
+  *  3af7c508ad - app: in gimp_filter_tool_get_drawable_area(), don't
+    return empty area
+  *  175e3ea7d9 - app: various fixes/cleanups to last commits
+  *  ca4612cc43 - Issue #40 - Layer offset tool
+  *  003b138ee6 - app: implement gimp_drawable_offset() in terms of
+    gimp:offset
+  *  f7a1aec1e9 - app, libgimpbase: add gimp:offset operation
+  *  fce4e98097 - plug-ins: in file-tiff, don't leak image when not
+    saving layers
+  *  186236ff35 - app: update drawable when committing Warp tool
+  *  eae506a9da - Updated Italian translation
+  *  e905f84a52 - Issue #2057 - All tool presets change FG, BG and
+    Pallete color...
+  *  46f94d2c75 - app: remove redundant assignment in gimptoolpreset.c
+  *  bf18c3162f - Update Polish translation
+  *  645d987e07 - Issue #2957 - Gimp crashes when I attempt to change
+    the icon size
+  *  9db555149f - app: avoid unnecessarily updating drawable after
+    merging filter
+  *  99ae9a32da - Update Hungarian translation
+  *  a624010931 - Issue #2194 - Action search dialog behaves as a full
+    window...
+  *  dd3529c0e9 - libgimpwidgets: keep gimpwidgetsenums.h in
+    alphabetical order
+  *  ef6bb9d4ad - Issue #2643 - Conversion to grayscale fails with
+    artifacts
+  *  fe9c1732b9 - app: add "alpha" propertry to gimp:mask-components
+  *  e457ddf993 - Revert "app: avoid NULL output in layer-mode ops"
+  *  818570d6cc - app: avoid NULL output in layer-mode ops
+  *  c8fb30ab3c - Issue #3057 - Retain last user-chosen ICC profile
+    information...
+  *  8d05d01820 - app: fix undoing image parasite attach/detach to emit
+    the right signals
+  *  29ef374228 - app: make sure builtin profiles *really* don't get
+    attached to images
+  *  20b47618d0 - app: use the DEFAULT_USE_PATTERN define instead of
+    TRUE in GimpPreset
+  *  0c4c1f1a8c - app: s/gimp_list_compare()/gimp_g_list_compare()/
+  *  80ea17d90b - app: fix memory leak in previous commit
+  *  38e954ba25 - app: allow moving an intersecting pair of guides with
+    the Move tool
+  *  4dd3e73aaa - app: add gimp_list_compare()
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Jun 2019 21:43:09 +0300
+
 gimp-devel (2.10.8+git42736-7b4ef46fe4-1) unstable; urgency=medium
 
   * Compile
