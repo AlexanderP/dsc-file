@@ -38,6 +38,9 @@ override_dh_auto_clean:
 	cp debian/$(CONTROL) debian/control
 	dh_auto_clean
 
+override_dh_auto_install:
+	dh_auto_install --destdir=debian/tmp
+
 override_dh_auto_configure:
 ifneq (,$(filter $(DEBIAN_CODENAME),sid buster disco)) 
 	patch -p1 < debian/patches/fix_gcc8_ftbfs.patch

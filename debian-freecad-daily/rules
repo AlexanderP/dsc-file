@@ -52,7 +52,10 @@ override_dh_compress:
 
 override_dh_installchangelogs:
 	dh_installchangelogs ChangeLog.txt
-	
+
+override_dh_auto_install:
+	dh_auto_install --destdir=debian/tmp
+
 override_dh_installmime:
 	dh_installmime
 	dh_install debian/mime/freecad-daily-thumbnailer usr/bin
