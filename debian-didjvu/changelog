@@ -1,3 +1,32 @@
+didjvu (0.8.2+git940-69b5c31-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/jwilk/didjvu.git
+  * Branch: master
+  * Commit: 69b5c31aa695ae8131ad9a23d902a75a23a6f473
+  * Date: 1560889159
+  * git changelog:
+  *  69b5c31 - travis: move PATH adjustments to before_install.
+  *  3650b27 - lib.gamera_support: don't fiddle with GC if
+    sys.getrefcount() is missing.
+  *  9d2a516 - tests/test_utils: run GC explicitly.
+  *  d7783f3 - lib.cli: disable Pylint's disable=raising-bad-type.
+  *  f4d12e2 - pylintrc: disable logging-not-lazy.
+  *  f21e63b - pylintrc: disable no-init.
+  *  7fdd2b5 - pylintrc: sort tags.
+  *  dd648ef - Don't use old-style classes.
+  *  5cc84fb - pylintrc: bump min-similarity-lines.
+  *  a1607e1 - pylintrc: add.
+  *  029694c - lib.timestamp: update copyright notice.
+  *  ec5ce92 - lib.timestamp: del unused variables.
+  *  654db25 - lib.cli: shorten very long lines.
+  *  884fce8 - lib.cli: wrap very long lines.
+  *  e13310e - Refactor compression info code.
+  *  8b4330d - travis: switch to Ubuntu 16.04 LTS “Xenial Xerus” by
+    default.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 30 Jun 2019 16:23:16 +0300
+
 didjvu (0.8.2+git924-7df0a4c-1) unstable; urgency=medium
 
   * Compile

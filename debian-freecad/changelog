@@ -1,3 +1,25 @@
+freecad (0.18.2+git16130-0572853db-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: releases/FreeCAD-0-18
+  * Commit: 0572853dbd18739b99ffb62a7db62972eeca8aca
+  * Date: 1561711745
+  * git changelog:
+  *  0572853db - Sketcher: Fix Carbon copy leads to unsolvable sketch
+  *  2f0c3a79f - Sketcher: Fix carbon copy construction points
+  *  0f29891a9 - fixes #0003993: Memory leak with Python3
+  *  3eaf87b2d - code simplification in PythonWrapper
+  *  60fd668d5 - issue #0003984: Creating a Path Job object fails with
+    'PySide2.QtWidgets.QDialog' object has no attribute 'templateGroup'
+  *  435105850 - Fixes bug #4008: removes phantom path cause
+  *  f2f4b4479 - Fix crash in case encoding of Python paths fails
+  *  90ff921ef - [Material] Respect unicode filenames
+  *  662aebd88 - BrowserView: fix QWebEngine crash
+  *  d2f0c4f33 - Py3: no __builtin__ module available
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 28 Jun 2019 21:03:31 +0300
+
 freecad (0.18.1+git16120-b80d000af-1) unstable; urgency=medium
 
   * Compile

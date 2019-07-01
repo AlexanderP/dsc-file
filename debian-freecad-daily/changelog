@@ -1,3 +1,377 @@
+freecad-daily (0.18+git17167-9e174f111-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 9e174f1115ebd312c3245b2b4a364de798f00e62
+  * Date: 1561735578
+  * git changelog:
+  *  9e174f111 - AddonManager: Fixed wrong file name
+  *  287d763ee - AddonManager: Added Render icon
+  *  89b8ab612 - [AddonManager] Correct the name of the CfdOF workbench
+    icon
+  *  4d7d46b4e - [AddonManager] Add Geomatics WB logo
+  *  3abffaea3 - src/App/MaterialPyImp.cpp: fix source code typos
+  *  e0377f8e4 - Misc. typo and whitespace fixes
+  *  ffd001906 - Fix for ac2eb3 + general unifromity fix
+  *  49067725c - AddonManager: Fixed image links
+  *  115ff0191 - improve projection of points onto mesh
+  *  c5e400cd3 - Add methods to get intersections of mesh edges, project
+    point on edge
+  *  5fb22278e - Arch: Removed log message in DAE exporter
+  *  ac2eb3604 - [AddonManager] Add DynamicData WB Logo
+  *  e7e355090 - [Draft] Cleaned code in arc 3Points preview
+  *  87225f0a6 - [Draft] Fixed a bug in arc editing and added preview
+  *  04ce90c4f - [Draft] Arc Tracker by 3points method
+  *  cdcc64745 - [AddonManager] Improve handling of Wb Readme images
+  *  f58c20afe - Fix some problems with ArchFence
+  *  99a816699 - Fix possible colorization problem
+  *  41d54eb25 - Fix offsetWire() to treat wire with 1 edge (circle e.g)
+    correctly (no need to connect())
+  *  0944d2f45 - FEM: flake8, lgtm, try to get them both quiet
+  *  251a3b1ff - FEM: gui objects, catch a syntax error, if the user
+    triggers the OK button with a wrong input
+  *  b6fa7bd78 - FEM: gui objects, fix problems because off different
+    Attribute names of part to mesh in mesh objs
+  *  441b3d517 - FEM: utils, add a method to get the Part to mesh
+  *  ece1b7ecb - FEM: gui, commands, typo the second one :-)
+  *  c1d9087d0 - add method to project points on mesh
+  *  916fe7ced - [TD]Remove tracker on Cancel
+  *  9a3fe1fb7 - TaskCheckGeometry -- log geometry check errors to
+    report view
+  *  961ffce93 - TaskCheckGeometry settings panel with runBOPCheck
+    option
+  *  0bab39339 - BrowserView: fix QWebEngine focus problem
+  *  7f67c1310 - [AddonManager] Add Inventor Loader logo to icons/
+  *  e0db5b62b - workaround in PyCXX classes due to removed support of
+    old-style classes
+  *  76953d933 - FEM: gui commands, typo in comment
+  *  72d4c36f2 - FEM: gmsh tools, comment not used variable
+  *  73d8b31b5 - FEM: mesh tools, quad4, fix mesh area (this has been
+    wrong for years :-()
+  *  c06178bf2 - FEM: lgtm, red rid of unnecessary assignments
+  *  79016e088 - Materials: code formating, flake8
+  *  f445e34fb - FEM: vtk post processing, fix result type names in
+    linearization plot
+  *  499703b26 - FEM: gmsh mesh tools, do not use error message to print
+    some log
+  *  5f6352c6e - FEM: gmsh mesh tools, add some comments
+  *  3c205946e - fixes #0003993: Memory leak with Python3
+  *  78c21009a - suppress warnings caused by netgen
+  *  da6155d0a - Fix a couple of gcc compiler warnings: -Wint-in-bool-
+    context -Wunused-function
+  *  85270f5cd - Fix a couple of clang compiler warnings: -Wunused-
+    variable -Winconsistent-missing-override -Wdelete-non-virtual-dtor -
+    Wunused-private-field -Wformat
+  *  b9417938c - Sketcher: Fix Carbon copy leads to unsolvable sketch
+  *  81f37959a - fix -Winconsistent-missing-override
+  *  e72b48e0c - ViewProviderAttachExtension: check for attach extension
+  *  62975d2fc - Part Gui: Update attachment icon on attach extension
+    change
+  *  511bb070b - PartDesign Gui: Extend ViewProviderDatum with
+    Part::ViewProviderAttachExtension
+  *  85c37aa6c - PartDesign Gui: Extend ViewProvider with
+    Part::ViewProviderAttachExtension
+  *  680364b17 - Part Gui: New ViewProvider extension for overlaying
+    icons related to Part::AttachExtension
+  *  415048813 - Gui::Add mergeoverlay function to ViewProviderExtension
+  *  db5ef314b - Gui: BitmapFactory new static function to make icon
+    overlays with pixmaps
+  *  7602d39dd - Pixmap: Make bigger attachment icon
+  *  2ac570707 - PartDesign: Refactor set/remove tip in the new
+    Gui::ViewProvider mechanism
+  *  321e9215d - PartDesign: Extend Datums ViewProvider to overlay
+    attachment status
+  *  b0fdf138b - Gui: Extend ViewProvider to enable merging of overlays
+    on icon
+  *  e632e9feb - Sketcher: Fix carbon copy construction points
+  *  063582241 - Sketcher: Polyline snap arc to 45 degrees bug fix
+  *  933ed45e1 - code simplification in PythonWrapper
+  *  cabb73396 - issue #0003984: Creating a Path Job object fails with
+    'PySide2.QtWidgets.QDialog' object has no attribute 'templateGroup'
+  *  3810381d9 - Sketcher: fixes no horizontal/vertical on segment after
+    horizontal/vertical alignment
+  *  f22d1393c - Sketcher: Toolbar - add toggle deactivated state
+    command
+  *  2822381d4 - Sketcher: ViewProvider representation of deactivated
+    constraints
+  *  8b5ee49db - Sketcher: Settings - Deactivated constraints color
+    selection
+  *  70081d739 - Sketcher: Constraints' widget deactivated constraints
+    commands and representation
+  *  4de857a47 - Sketcher: GUI command to activate/deactivate
+    constraints
+  *  7e3fd1a34 - Sketcher: Update icon resources
+  *  76097838d - Sketcher: Art - Toggle Active Constraint icon
+  *  f45d0e54c - Sketcher: Python interface to SketchObject constraint
+    state
+  *  e06e03dcc - Sketcher: Extend SketchObject to handle constraint
+    state
+  *  20a83b82f - Sketcher: Solver interface of activated state
+  *  7fad31561 - Sketcher: Python interface to contraints' activated
+    state
+  *  7cd3dd7dc - Sketcher: Extend Constraints to have an activated
+    boolean state
+  *  b55c210f3 - remove unnecessary imports. normalize debug log levels
+  *  4a984de24 - Path: normalize proxy stratements remove bare
+    exceptions
+  *  4a0be9d3b - BrowserView: fix QWebEngine crash
+  *  0b8baab4c - PartDesign: Extend context menu when right-clicking on
+    3d view in PD workbench
+  *  d7b6d4dba - [AddonManager] Keep AddonManager.qrc alphabetized
+  *  4035abc3c - [Crowdin] Fix typo in TechDraw/Gui/CommandAnnotate.cpp
+  *  ee09850c4 - [Crowdin] Fix typo in Draft/Resources/ui/preferences-
+    draft.ui
+  *  3fe94ea7c - [Crowdin] string fix + misc. typo and whitespace fixes
+  *  54c6537a2 - Set QMdiArea tabs movable
+  *  8be521797 - For divide-by-zero issues write an error message intead
+    of raising an exception
+  *  1031644fa - improve doc string of Part.sortEdges
+  *  332bfb505 - Fixes bug #4008: removes phantom path cause
+  *  97f42a619 - Fix functionality of manual override of Final Depth
+  *  2e0861bab - `proxy` to `obj.Proxy` partial conversion
+  *  8b3c4ac0e - Fixes bug #4008: removes phantom path cause
+  *  75b52c85b - [Material] Respect unicode filenames
+  *  798a91026 - FEM: icons, fix clipping of reinforced material icon
+  *  4e4631707 - Fix crash in case encoding of Python paths fails
+  *  fbb138653 - Path:  fix proxy error
+  *  f8de98d03 - Fix functionality of manual override of Final Depth
+  *  7d8f084ae - `proxy` to `obj.Proxy` partial conversion
+  *  2ed1f19b4 - IDF: code formating, replace tabs with spaces
+  *  236f89086 - Merged translations from crowdin
+  *  32b30bbd7 - AddonManager: Fixes for translation
+  *  2713078b2 - Tools: Prefer using Qt5 translation tools over Qt4
+  *  d890b4ec1 - Updated master ts files
+  *  1186bf45e - Tools: Added AddonManager to translation scripts
+  *  33ce0f3f2 - AddonManager: cosmetic fixes + prevision formacro icons
+  *  d99a1e3fb - AddonManager: Added BIMBots icon
+  *  faca7f7dc - [AddonManager] Add YAML Workspace logo
+  *  0dca7b31f - [Draft] Wavy Object Fix for Point
+  *  123381780 - [Crowdin] [Arch] Resources/ui/preferences-ifc.ui typo
+    fix
+  *  1f85a189b - Fix SVG export issue
+  *  f81e9a0bd - Fixes: heigh - width replace
+  *  4dfeb1d46 - Sections added: RHS (added more/all)
+  *  e2a0779d5 - Sections added: CHS, UC, UB
+  *  f2fd45e6e - Draft: Added missing cmake entry from last commit
+  *  c351b9094 - [Draft] Update DraftEdit PR with Yorik suggestions
+  *  a4e2df115 - Separate Draft Edit
+  *  4fda9e7d4 - AddonManager: grammatical fix
+  *  0f56ec413 - Arch: small bugfix in automatic IFC properties
+  *  aa76cb9b5 - Py3: no __builtin__ module available
+  *  d4a311de1 - Path:  PEP8 and Proxy changes.
+  *  4b89ed341 - make UpToLast option for pad working again
+  *  87b46e3fb - GCS: Refactor and additional debug information
+  *  d26daa51d - FEM: code formating, still more of them
+  *  1b39fe3d2 - FEM: codeformating, another small one
+  *  3ae428307 - FEM: code formating, improve imports, get rid of E402
+    error
+  *  8eb807d29 - FEM: code formating
+  *  d8b28a111 - FEM: code formating, delete commented code:
+  *  823f4b664 - FEM: code formating in unit tests
+  *  9453e68e2 - Misc. source comment typo and whitespace fixes
+  *  3590b65b3 - issue #0003921: Crash when opening document with datum
+    point intersecting line and plane
+  *  3c03e159e - FEM: ccx tools, pre checks for reinforced material
+    object
+  *  2761a363c - FEM: concrete, add task panel to select matrix and
+    reinforcement material
+  *  49329919a - Materials: cards, recreate new cards and update csv and
+    ods
+  *  874fc2278 - Materials: cards, add concrete matrix and reinforcement
+    materials
+  *  f7f9dfcde - FEM: concrete, rho calculation unit test
+  *  7d7df3b82 - FEM: add reinforced concrete 2D wall example
+  *  b7c2378a3 - FEM: concrete results, use the new concrete result
+    reading methods on result reading
+  *  3950dc7a2 - FEM: concrete results, new methods for calculating
+    results for concrete materials
+  *  09e3ddb38 - FEM: vtk tool, change the results exported to vtk
+  *  db493ee0d - FEM: result properties, add new lists to hold concrete
+    results
+  *  264d5e91e - FEM: reinforced material, add a GUI command
+  *  f162da6d9 - FEM: reinforced material, add icon (thanks to
+    bitacovir)
+  *  2172e08b3 - FEM: reinforced material, add object, including all FEM
+    object unit tests
+  *  e730dd94e - Automatic visibility handling of axis cross
+  *  e529871eb - AddonManager: Use workbenches icons
+  *  972ec50f2 - fixes #0003979: Pocket with mode 'up to face' doesn't
+    work correctly
+  *  88d16c149 - Add support for PartDesign:Body colors
+  *  34292991d - Add option to colorize ArchFence
+  *  caef4b6c6 - AddonManager: Misc fixes from forum testers
+  *  0620caea3 - Arch: Minor bugfixes, better doctrings and fixed
+    transparency in OBJ exporter
+  *  77d1f8968 - Delete disabled code blocks
+  *  4cff62746 - added missing self.stockBB instantiation
+  *  5ea062f66 - use ShapeBinder to create a copy from Origin feature
+  *  18183bc79 - extend ShapeBinder to also handle Origin features
+  *  9177b4057 - remove dependency of datum element if creation of copy
+    fails
+  *  588c26529 - Improve handling of null pointers in link properties
+  *  f48f8bfaa - [AddonManager] create Resources/icons dir with SVG
+    icons for WBs
+  *  ff7975291 - Draft: QPixmap.fill expects a QColor, not an int or
+    long
+  *  5fb2dfedd - clean-up CMake file
+  *  236e1daeb - Isolate FreeCADGui dependency
+  *  fb94e46db - improve exception handling Shape.distToShape
+  *  4b104c470 - Remove reference to removed file: grbl_G81_post.py
+  *  c1970aa5e - Remove unnecessary comment
+  *  4df89e0e3 - Misc. fixes
+  *  a160aab48 - Fixes for depths and AttemptInverseAngle
+  *  bbfecfb7c - Handle FreeCADGui module with IF: case
+  *  f89a78f6d - revert to current FC master version
+  *  4c69b48dc - Improve code structure; correct 4th-axis depth issues
+  *  419df14b2 - Corrected test: Only 4 dogbones created
+  *  338861f2d - Integration of 4th-axis feature to PathProfileFaces
+  *  4ec63d537 - Fix for 'reposition of job model' error
+  *  72dc30c21 - Improve 4th-axis integration
+  *  4960cfcd2 - [Path] Replace old grbl_post.py with new
+    grbl_G81_post.py. (#2255)
+  *  1406c03d1 - fixes #0004000: Ability to suppress console output when
+    running under python
+  *  1b2617358 - use INCH instead of IN when setting units for STEP or
+    IGES export
+  *  aa43a2814 - AddonManager: small bugfix
+  *  c1c3dab5f - AddonManager: solved missing FreeCAD import
+  *  b4ddf6318 - Arch: Adapted IFC, OBJ and DAE exporters to support
+    external color information when running in non-GUI mode
+  *  b60a736c0 - fixes 0004010: Box Selection + Part -> MakeCompound
+    will crash FreeCAD
+  *  3e65306a9 - AddonManager: New UI
+  *  1cd8f2625 - TechDraw: SVG export refactoring - Fix russian
+    templates rendering
+  *  dab8a3c02 - TechDraw: SVG export refactoring - Change tspan
+    replacement strategy
+  *  044fe7954 - SVG Refactor - minor cleanups
+  *  ca5051a79 - Remove xml:space=preserve from templates
+  *  bf5433a10 - TechDraw: SVG export refactoring - Fix DLL
+    export/import issue
+  *  5f0be3cac - Add QtXmlPatterns to CMake lists
+  *  28b2df05d - TechDraw: SVG export refactoring - Keep correct font
+    sizes
+  *  f4ca09f98 - TechDraw: SVG export refactoring - All XML
+    modifications via DOM
+  *  a1ac85bf3 - FEM: contact constraint task panel, fix build failure
+  *  b795896a3 - FEM: contact constraint task panel, better reference
+    handling
+  *  37cf408f7 - FEM: in out unit test, fix yml mesh test
+  *  fbafd698a - determine edge parameters where curve point will be
+    projected onto a mesh edge
+  *  c883cd6cc - FEM: calculix writer and unit tests, fix reaction force
+    writing
+  *  fb11d2385 - FEM: unit tests, temporary deactivat yaml mesh test
+  *  3abd3fcc2 - Materials: white space
+  *  5e454da2e - FEM: solver elmer tasks, Py3 decode fix
+  *  c12054927 - Path: improve AreaPy exception handling
+  *  5ee4c4dbd - Path: fix Area tolerance problem
+  *  6ef0f86fa - Fix missing recompute in Draft ShapeString
+  *  0e8487fda - More TC ui import cleanup
+  *  de3715908 - Fix uncommanded format change & font size display
+  *  b564189f7 - Path: remove unnecessary imports
+  *  6ccb0cf32 - Path: post processor cleanup
+  *  795442a85 - Path: remove obsolete code
+  *  4cbdf7883 - Path: lgtm Cleanup
+  *  1405778c2 - Fix print function calls in CMakeLists for py3
+  *  93cbc5250 - Path: handle PathAreaOp object migration
+  *  58608df23 - TechDraw: Templates for the Russian State standard for
+    technical documentation
+  *  11b1a8e15 - Arch: Added IFC pref option to export without adding a
+    default building
+  *  b3de11dbe - FEM: gmsh tools, fix bracket error
+  *  d818a9638 - Arch: Fixed small bug in Wall task panel
+  *  6380b28e2 - Materials: card reader, delete not needed variable
+  *  d78f5a115 - FEM: added import/export of mesh as YAML/JSON
+  *  c1d0c9854 - FEM: calculix writer, add reaction forces for
+    constraint fixed
+  *  2b1a235c4 - FEM: vtk post, fix scalar clip task panel reopen values
+  *  f68958cd0 - Material: card reader, do not break reading if saved
+    with depretiated writer
+  *  530101387 - Material: card utils, do not fail to return card dicts
+    if reading a card fails
+  *  6bb8f19b2 - Fix misleading error messages in ProjGroup test
+  *  aa9cd0d91 - Partial Restore: ensure line segment length when x
+    coordinate is exactly zero
+  *  f5495502a - PATH:  Inspect editor now preserves last size and
+    position
+  *  f8b715aa7 - extend MeshPart.projectShapeOnMesh to allow list of
+    points for projection, support keywords
+  *  4494d384a - Fix overlap of dimension selection area
+  *  3874ddab3 - Arch: Added preferences to enable/disable automatic
+    adding of default Site and Storey at IFC export
+  *  6b55e0fae - Arch: Use ifcopenshell.guid.new() to generate IFC UUIDs
+  *  89e18244e - Remove Qt Creator file
+  *  d74e30146 - FEM: calculix writer, move some comments
+  *  3e0452417 - Cosmetic CL for Section and Detail
+  *  f25826bba - Change Face centerline command name and icon
+  *  93431edfb - Initial version of Cosmetic Eraser
+  *  e0bf0b966 - Handle multiple face selection
+  *  656e1654f - Initial working version Face Centerline
+  *  58ebf3cbd - FEM: ccx tools, some brackets where missing too ...
+  *  760b5b76f - FEM: ccxtools, fix a syntax error, I wonder why flake8
+    did not find it ...
+  *  39e748229 - Draft: Renamed DWire to Polyline
+  *  5ee99ca4e - Draft: Introduced Layers system (former VisGroup)
+  *  9161a8785 - FEM: solver run, add newline in error message
+  *  28efbd2e7 - Materials: editor, improve comments
+  *  48f9ec37c - FEM: material task panel, fix opening of material
+    editor with material attributes without card
+  *  dd6802273 - FEM: in out, z88 mesh, small improvements
+  *  960d61254 - disable ESC button support in
+    View3DInventor::keyEvent() for Qt5 because changing MDI view mode
+    causes rendering artifacts
+  *  57b3ca6f7 - set Qt::AA_ShareOpenGLContexts for Qt5.9
+  *  2a1dd8415 - Qt WebEngine seems to be initialized from a plugin.
+    Please set Qt::AA_ShareOpenGLContexts using
+    QCoreApplication::setAttribute before constructing QGuiApplication
+  *  0117bcd08 - Hide nonGui Property ShowFrames
+  *  5cea2f83b - Fix "trails" on dim lines when zoomed in
+  *  7d6bc8d92 - Clean up Scale retrieval
+  *  8e6dd25ad - Fix overlap of line ends and arrowheads
+  *  3a988baac - Arch: Fixed Site not grouping correctly
+  *  e2f65ef01 - Draft: Fixed regressions in Scale tool + reimplemented
+    Clone mode
+  *  b9bcffda0 - Draft: Now uses general FreeCAD shape colors instead of
+    defining its own
+  *  6e5ec327c - Materials: card writer, add whitspace between FreeCAD
+    and version string
+  *  25c100767 - Recognise gridColor config as an unsigned type
+  *  687b2778d - Add draft grid color setting
+  *  61625b4bf - Let getSupport() check if WP mode is set to auto before
+    changing WP needlessly
+  *  95378e5c6 - Fix draft missing line tracker when snapper detects an
+    object without any snap targets
+  *  1c243cfc5 - Add customisable in-command shortcut keys rather than
+    hardcoding them
+  *  3789a2601 - add define to inactivate some code blocks if needed
+  *  bd8fc5527 - Travis: Make winpty failure not fail the build
+  *  642919b48 - AppVeyor: Configuration for VS2017
+  *  13480d6d9 - do some security checks to make sure Py::Module is
+    valid
+  *  feff5fa9f - when trying to access ViewObject attribute check that
+    FreeCADGui is already loaded
+  *  285efa337 - Dressup gui import cleanup
+  *  71a369089 - More FreeCADGui removal from Path model classes.
+  *  e472693c8 - Removed obsolete gui import
+  *  8197bca04 - Remove unqualified gui import
+  *  9bed47a18 - Split ToolController into model and gui.
+  *  fb62e3940 - Moved FreeCADGui dependency from PathUtils into
+    PathUtilsGui
+  *  5415b3520 - Removed FreeCADGui dependency if Gui is not up
+  *  ed47e962d - Py3: fix crash if class is not part of a module any
+    more
+  *  0c429e3bc - Fix regression in Caption handling
+  *  71a095360 - Hide Caption property where not applicable
+  *  aedb888ae - Path: source comment typo fixes
+  *  7c1490c04 - Misc. typo and whitespace fixes
+  *  be257182b - Fix Abandon Edit
+  *  74737f71f - Fix "tick" arrow style in directional mode
+  *  a6e410dae - Set placement of bottom Stirrup
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 29 Jun 2019 03:03:23 +0300
+
 freecad-daily (0.18+git16878-50f91840d-1) unstable; urgency=medium
 
   * Compile

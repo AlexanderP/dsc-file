@@ -87,24 +87,3 @@ Description: Extensible Open Source CAx program (beta)
  BRep formats and meshes in STL, BMS, AST and Wavefront OBJ formats.
  Editing and modeling features are currently somewhat limited.
 
-Package: freecad-daily-doc
-Architecture: all
-Section: doc
-Recommends:
- freecad-daily (= ${source:Version})
-Depends:
- qt4-dev-tools,
- ${misc:Depends}
-Description: FreeCAD documentation
- FreeCAD is an Open Source CAx RAD based on OpenCasCade, Qt and Python.
- It features some key concepts like macro recording, workbenches, ability
- to run as a server and dynamically loadable application extensions and
- it is designed to be platform independent.
- For more details see http://sourceforge.net/projects/free-cad
- .
- This package contains the FreeCAD documentation.
- .
- The documentation is provided in Qt's new help format;
- the new help format version can be viewed in conjunction with the Qt Assistant
- found in the qt4-dev-tools package.
-

@@ -1,3 +1,104 @@
+gimp-devel (2.10.12+git42864-90d0fb4a6e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 90d0fb4a6e28dab1acf7d6f71a17bc5df04dad0f
+  * Date: 1561819392
+  * git changelog:
+  *  90d0fb4a6e - app: get rid of manual object type registration
+  *  5cf40570cf - libgimpwidgets: don't use g_type_class_add_private()
+    in GimpColorButton
+  *  ccca743406 - Issue #3553: Cannot export TIF as G3/G4 fax
+    compression.
+  *  390029020f - libgimp: add GIMP_EXPORT_NEEDS_OPAQUE_LAYERS export
+    capacity.
+  *  2909514ace - Issue #3093 - Invalid characters in Open Location
+    dialog crashes GIMP
+  *  9ef3ce4c90 - libgimp: forgot to deprecate
+    gimp_drawable_preview_draw_region()
+  *  190296b47b - plug-ins: port nl-filter to GEGL, 8 bit only
+  *  dd48c7862b - plug-ins: port film to GEGL
+  *  12b8d75ff1 - app: add gegl:bayer-matrix and gegl:linear-sinusoid to
+    the menus
+  *  2de397791f - plug-ins: port fractal-explorer to GEGL, 8 bit only
+  *  88068b0dfc - plug-ins: port flame to GEGL, 8-bit only
+  *  69aeb9a2b3 - plug-ins: replace gimp_datafiles_read_directories() by
+    GFileEnumerator
+  *  2d9539ed79 - Update Dutch translation
+  *  88b7e42f0b - Update Dutch translation
+  *  a6bccb5022 - Update Dutch translation
+  *  803e5bfb81 - pygimp: argh...
+  *  85117940ab - pygimp: replace gimp_drawable_get_tile2() by
+    gimp_drawable_get_tile()
+  *  5ed0a6dab0 - plug-ins: replace gimp_drawable_get_color_uchar() by
+    manual code
+  *  4b46bdd6f4 - plug-ins: port blinds to GEGL
+  *  142105e0e2 - Issue #3435 - GIMP encountered an error: GIMP-
+    CRITICAL:...
+  *  fbee275946 - plug-ins: port jigsaw to GEGL
+  *  34df5ecfe4 - plug-ins: fix comment typo in file-png
+  *  199995bb6b - plug-ins: cleanup, copyright headers, formatting in
+    the openexr-wrapper
+  *  9fe8bacf19 - plug-ins: improve JPEG and EXR comment validation
+  *  0c2bad823c - app: allocate GimpCurve's points with g_new0() and not
+    just g_new()
+  *  7b7e2ebecf - Issue #3503 - Display Preset names on Filter Dialogs
+  *  ecf96efe4f - plug-ins: improve/fix metadata handling in file-exr
+  *  e918a937d5 - configure.ac, plug-ins: make file-heif build with
+    older libheif again
+  *  0806588b56 - Issue #3532 - Wrong color profile on nikon taken
+    photos, it's...
+  *  a4b151759f - plug-ins: updating deprecated enum names from libheif.
+  *  1c0761053d - Issue #3164: HEIC doesnt have color profile.
+  *  96713a30c9 - Update Polish translation
+  *  86c858cc53 - app: some formatting in the edit non-visible layers
+    code
+  *  a8b9dfbc3f - Issue #3560: "Screenshot delay: __ seconds" item lacks
+    mnemonic.
+  *  a5cc4c8dfd - Add woob to the authors list
+  *  4afc11580a - app: Add initial support for configurable editing of
+    non-visible layers (Issue #2713)
+  *  89ff122e01 - Update Turkish translation
+  *  3a7ebc0ec7 - Update Turkish translation
+  *  f73e31571a - Issue #3500 - Preferences option to convert to
+    Preferred RGB profile...
+  *  f97464f7bf - Revert "Issue #3164: HEIC doesnt have color profile."
+  *  f09fbbda3f - Revert "plug-ins: updating deprecated enum names from
+    libheif."
+  *  28b20af6b2 - Issue #3532 - Wrong color profile on nikon taken
+    photos, it's...
+  *  85a196e711 - plug-ins: updating deprecated enum names from libheif.
+  *  bbe3911c80 - Issue #3164: HEIC doesnt have color profile.
+  *  cfd5d5038c - Issue #3493: GIMP changes R-channel, when it should
+    not.
+  *  da33bb5107 - app: consolidate all metadata syncing code into
+    gimpimage-metadata.c
+  *  11dfa49b44 - libgimpconfig: fix previous commit to return the right
+    error token
+  *  7a2ffc1a2c - enhancement: validate reference argument of
+    gimp_scanner_parse_string before using it
+  *  c7867017e4 - NEWS: keep up-to-date.
+  *  6dd2475bf8 - Foreground-select Tool: new Preview Mode and color
+    selector for "On color" preview
+  *  d01dd612e7 - app: add missing space to a tooltip of the new feather
+    feature
+  *  327b40792b - app: commit the free selection before floating it.
+  *  f948aaa939 - Issue #3514: Free Select tool: Alt-Ctrl|Shift not
+    working unless...
+  *  45aaa3a45d - app: some files were missing from the previous commit
+  *  a65042aebf - Issue #3512 - feather selection doesn't work at edges
+    of images
+  *  ddb704634e - Update Polish translation
+  *  c71a146220 - Installer: forgot about .xcf extension
+  *  e8ac2ed19b - Installer: minor fixes
+  *  fa1d71f714 - Installer: ported install script to Inno Setup 6, add
+    per-user install support
+  *  8623119e7a - Update French translation
+  *  538156f715 - Update French translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 29 Jun 2019 18:08:36 +0300
+
 gimp-devel (2.10.8+git42803-ad7434bb48-1) unstable; urgency=medium
 
   * Compile
