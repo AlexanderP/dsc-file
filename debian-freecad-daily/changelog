@@ -1,3 +1,233 @@
+freecad-daily (0.18+git17352-ec0049921-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: ec0049921b813ee78c1fd4ea304e70904a3208f7
+  * Date: 1562938575
+  * git changelog:
+  *  4a466c466 - [TD] Improve CenterMark handling on print
+  *  4e7e9a55e - 4th-axis rotation analysis Z-orientation fix
+  *  7eccda34d - Arch: Lightweight mode for Arch References
+  *  c79fc5ce2 - [Draft] source comment typo fix
+  *  0a893e8b8 - [Arch] typo fixes
+  *  752e74c39 - Misc. typo fixes
+  *  747a2823e - Set Move as default drop action
+  *  0d4106541 - Draft: Fixed clone bugs
+  *  0871fb49c - make print preview working for > Qt 5.9
+  *  334222540 - AddonManager: Provisions to support different git
+    hosting platforms than github
+  *  b51bf9a7f - FEM: unit tests, fix round failure on windows by
+    setting fix float numbers
+  *  4fc91dcc7 - AddonManager: Handled exception when unable to download
+    from url
+  *  fec5f2a67 - Fixed indent
+  *  804293ff3 - [AddonManager] Added CurvedShapes WB Logo
+  *  eaa36b033 - pylint3 cleanup of unit tests
+  *  fb0a5c8fa - pylint3 cleanup of (most) post processors
+  *  861432cfa - Added pylint3 exceptions for PathSimulatorGui and
+    PathSurface due to their noisiness.
+  *  5659a0ecc - Cleaned up Path op utilities
+  *  32ce6cc76 - Added tooltips to depths transfer buttons.
+  *  cf18161dc - Draft: discard unsupported curve types in intersection
+    snap
+  *  45367edb6 - Arch/Draft: Fixed remaining bugs from latest commits
+  *  7c53cbf92 - Draft: Added button to working plane task panel to
+    orient the view to the WP
+  *  78239e48a - Arch: panel layers with negative thickness are not
+    drawn
+  *  81988d6b9 - Arch: wall layers with negative thickness are not drawn
+  *  6797fa615 - save&restore standard meshing parameters
+  *  4efa7c674 - [Draft] Bezcurve fix to display length
+  *  7de89cf62 - improved import/export compatibility w prop cads
+  *  265faf6c5 - Draft: General grid fixes
+  *  ee2306d08 - Arch: Fixed bug in ArchIFC
+  *  dadd8a858 - Draft: Fixed ghost not appearing in scale tool
+  *  385771153 - Arch: Added message to inform user of workaround
+    against non-editable wall baselines
+  *  802b3b62b - Arch: Fixed bug in Join Walls command
+  *  afed22ef0 - Draft: Fixed bug in edit mode - Fixes #4047
+  *  87154d67d - Draft: Fixed wrong units display in snapping dimensions
+  *  f86044eaf - Arch: Allow to load and save full GuiDocument data from
+    non-GUI mode
+  *  08a7eef99 - show version info when using external smesh library
+  *  787f5184e - Parametric refinement feature
+  *  6d02fa540 - automatically redirect to tip object in case body
+    display mode is set to Tip and a face was selected to create a new
+    sketch
+  *  8177fe34b - Fixed import of ocl
+  *  7b90ed097 - fix false-positive in workbench unit tests
+  *  0efa8c5b8 - return boolean to indicate whether workbench could be
+    activated
+  *  4893dee1c - Arch: Wording fixes
+  *  68f4eccc5 - Arch: Added View clipping abilities to BuildingParts,
+    like SectionPlanes
+  *  7b031e2b2 - Added default shortcut to Toggle Edit mode command
+  *  169c975e1 - Draft: Remember Offset copy mode separately from Move
+    copy mode
+  *  122dfd4a6 - Draft: Set global copy mode to False by default
+  *  4bbee73f8 - Arch: Bugfixes in IFC exporter
+  *  07d3423ad - Arch: Misc bugfixes
+  *  20bdfee01 - Arch: Material improvements (dynamic icon + button to
+    invert composition of multimaterials
+  *  8f0876c22 - FEM: code formating, unit tests, objs
+  *  2a6aa3a9f - FEM: fluid 1D obj, typo
+  *  87ff58815 - FEM: unit tests, result stats, fix principal and shear
+    stats
+  *  0bbb2b611 - FEM: unit tests, result stats, fix sabs for frequency
+    results
+  *  7cd8d7d5b - FEM: unit tests, result stats, fix compare method and
+    reactivate tests
+  *  6e44433b8 - activate/create 3d view when setting or getting active
+    objects
+  *  e07fe6376 - Improve OBJ mesh export in case output format is not
+    explicitly specified
+  *  be1cc9ca9 - FEM: unit test, fix stats compare calls and method,
+    temporary deactivate some stats tests
+  *  e56574f2a - FEM: unit test, delete not needed pass
+  *  efc6d4f85 - add zh_CN template sag files
+  *  bbbab316c - create README file in  TechDraw Template zh_CN
+  *  5a352ea63 - FEM: solver fenics, fix fenics import test
+  *  126cb4321 - FEM: element flow 1D, deactivate not supported fluid
+    types
+  *  217d96e37 - FEM: ccx writer, typo in var name
+  *  9ba307ff9 - Add files via upload
+  *  9152ca725 - for standard meshing algorithm copy color from face to
+    segment
+  *  830ddc75c - Add command to show mesh segments
+  *  4c842f0e0 - Store color information per segment
+  *  4c63541a0 - Draft: Proper support for layers in DXF import/export
+    (py exporter)
+  *  325321b5d - FEM: gui commands, get rid of duplicate code
+  *  641d10728 - FEM: gui commands, rename all classes: - delete Fem
+    since we are in FEM workbench we only have FEM commands - delete
+    Command since we are in Python command module we only have Command
+    classes - this will simplify gui object creation
+  *  d07c08c3a - FEM: gui commands, rename some classes
+  *  8da553bd6 - Add new property to SetupProperties()
+  *  5bc05c28e - Draft: Support of layers in DXF import
+  *  f705f6f40 - Path: add helix start radius
+  *  d5356d2c3 - Fix `EnableRotation` property
+  *  3203ace26 - simplify handling of static Python libs
+  *  622eadc80 - StartPage: thumbnails for image formats, + use
+    freedesktop thumbnails if available
+  *  f60f8946e - FEM: unit tests, temporary deactivate one results stats
+    test
+  *  4c5bcf3dc - FEM: objects, use same name system no matter if C++ or
+    Python object
+  *  3765de9ed - FEM: vtk result pipeline, use log instead of message
+    for debug
+  *  68f3ffbf3 - FEM: result tools, use log instead of message for debug
+  *  431b0b017 - FEM: in out, z88 mesh, fix string replacements
+  *  6a7cd2c40 - Fixed import of PostUtils
+  *  4527f7651 - Fixed Job creation
+  *  d6a20be99 - Fixed typo and py3 exception printing
+  *  ba6a6d63e - [StartWB] Re-added example files with saved thumbnails
+    in their icons
+  *  7777c8c01 - [AddonManager] Add 3D Printing Tools WB logo
+  *  bc04b6778 - [Arch] Pipe : correctly orient profile on bezier curves
+  *  13563bdc7 - [Draft] Edit: Fix bug in Bezcurve editing preview
+  *  3f8cd4a2a - added UR_'s bugfix
+  *  18e39b5d9 - fix bug in uninstalling macro
+  *  2d7d6cfef - FEM: view provider electrostatic potential, use value
+    error instead of bare except
+  *  95f332598 - Materials: delete duplicate import
+  *  4883bd501 - FEM: view provider calculix, get rid of a bare except
+  *  f0df2aa65 - FEM: view provider material, use value error instead of
+    bare except
+  *  fd5df98b6 - FEM: result tools, check for NAN instead of bare except
+  *  56918fdd4 - FEM: mesh api, add comment
+  *  71ff3123e - improve unicode support for Abaqus export
+  *  db28dfbfb - update bounding box if the placement of a geometry
+    changes
+  *  4dff5bb40 - FEM: frd result reader, fix principal stress
+    calculation if pure frd file was opened
+  *  43061bc8a - FEM: frd result reader, fix compact mesh for multiple
+    result sets if not compacted
+  *  ce0fe2ec8 - FEM: code formating, flake8 and white spaces
+  *  6a8f6e2ac - Materials: Py2 fix
+  *  4b468ebed - call updateData of base class for ViewProviderDragger
+    and ViewProviderGeometryObject
+  *  af825250d - Fix SetupProperties() property syntax issue
+  *  c5c976f20 - Addressed pylint warnings for PathGeom
+  *  ed8911c9b - Addressed pylint warnings for PathAreaOp
+  *  fe9e34183 - Fixing additional warnings after merge
+  *  2a2599348 - Catching new warnings due to merge
+  *  f34ac8926 - switched to pylint3 and fixed additional warnings
+  *  04b4db1d8 - Addressed pylint warnings for PathDressups
+  *  f16703e94 - Addressed pylint warnings for PathPost
+  *  b55285302 - Addressed pylint warnings for PathPreferences
+  *  71994e55f - Addressed pylint warnings for PathProfileFaces
+  *  68f839d86 - Fixed pylint warnings for PathGui family
+  *  4e46bbf81 - Fixed pylint warnings for PathUtil family
+  *  7518226d0 - Cleanup of PathLog for pylint warnings
+  *  fad9f7702 - Cleanup of PathJobGui for pylint warnings
+  *  aaec4c0b3 - Cleanup of PathMillFaceGui for pylint warnings
+  *  b7ace8534 - Cleanup of PathIconViewProvider for pylint warnings
+  *  253f35628 - Cleaned up pylint warnings for PathGetPoint
+  *  aef9969b1 - Addressed pylint warnings for PathTool family
+  *  c870d3388 - pylint warnings for PathSelection
+  *  80e991a05 - addressing pylint warnings for PathProfile family
+  *  7abb49614 - addressed pylint warnings for PathPocket family
+  *  3098d7507 - pylint cleanup for path setup sheet
+  *  2a97d558e - pylint warning for PathDeburr
+  *  8896a8437 - More dogbond pylint cleanup
+  *  a9b2e8e96 - Cleaned up warnings for PathEngraveBase
+  *  8769618ca - Fixed pylint warnings for PathDressupDogbone
+  *  c17989fed - Fixed pylint warnings for PathDressupTag
+  *  ef7436514 - Fixed pylint warnings for PathSetupSheet
+  *  64bd8105a - Some more pylint warning cleanup
+  *  6f52808e9 - fixed pylint warning for PathOp
+  *  83581d704 - fixed pylint warning for PathJob
+  *  f45a11f4c - Enabled all warnings in addition to errors for path
+    linter
+  *  ecc399433 - path: LGTM cleanup post processors
+  *  02b68f36f - Path: lgtm cleanup PathAreaOp
+  *  6ef06eaee - Path: quiet lgtm about test imports
+  *  20b78fca9 - FEM: result reading, fix eigenmode number reading
+  *  123dab7bb - FEM: result gui, get rid of duplicate code
+  *  07d868ccb - FEM: result gui, fix user defined equation, but better
+    fix would be cool
+  *  f479f26ff - FEM: result gui, some code formating and a comment
+  *  1ac8f4cfe - 4th-axis update (#2311)
+  *  e9f3551f8 - Sketcher: Mode filter of Elements Widget
+  *  5c9e3ac18 - FEM: code forating, solver fenics tools, get rid of not
+    needed indent
+  *  91ed55451 - FEM: in out, get rid of not needed exception
+  *  e31b086bc - FEM: bare Python exceptions, fix the Import ones
+  *  757fa0658 - FEM: unit tests, set up documents without a try except
+  *  4fc39dfb3 - PathDrilling 4th-axis integration
+  *  e67fc4e70 - 3D Pocket: Upgrade to collective face processing!
+  *  36bc48c9b - Draft: Better positioned layers button popup + new
+    layer entry
+  *  3132dfbf5 - ProfileFaces: Fix obj.processPerimeter feature (#2306)
+  *  fe91c4450 - FEM: code formating, max line length in unit test
+    module
+  *  1a67ec6c2 - FEM: flake8 and lgtm, dummy usage of imports in unit
+    test module
+  *  507c40669 - Draft: Turned autogroup button into layers selector
+    (added pref option to restore old groups-based system)
+  *  68939608e - Properly deal with deleted objects when cleaning up the
+    extension visualisation.
+  *  aa15a6cf4 - Cover entire hole if pockeet extension is bigger than
+    hole.
+  *  4fb0b04a3 - Fixed extensions for round holes.
+  *  05249b212 - Removed redundant log message
+  *  9c5fa124c - Fixed extension selection
+  *  70d8be5b3 - Fixed document restoration logic.
+  *  fe3cb2f0e - Moving OfflineRenderingUtils.py from Draft to Arch
+  *  677823202 - Draft: Added Offline rendering utils module
+  *  44b9929d8 - Draft: Fixed SelectPlane command not working when an
+    object is selected
+  *  d19470a97 - FEM: ccx writer, lgtm, Nested for statement uses loop
+    variable 'femobj' of enclosing for statement
+  *  06f42de79 - FEM: lgtm, various improvements
+  *  4bcf2446a - FEM: lgtm, do not test if for a constant, because it
+    will give the same result in any case
+  *  accf578dd - [TD] Fix TaskPanel comboBox values
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 12 Jul 2019 17:42:56 +0300
+
 freecad-daily (0.18+git17167-9e174f111-1) unstable; urgency=medium
 
   * Compile

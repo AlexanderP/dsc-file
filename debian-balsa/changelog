@@ -1,3 +1,34 @@
+balsa (2.5.5+git9172-76e30816e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/balsa
+  * Branch: master
+  * Commit: 76e30816ef7d33bc12924bf015d79d443a8c4ffe
+  * Date: 1562866346
+  * git changelog:
+  *  76e30816e - message: Declare it final
+  *  62e7adedd - Use more consistent macro name
+  *  8d86b04b5 - mailbox-imap: Do not cast local mailbox to IMAP
+  *  d43d5fc08 - Update Brazilian Portuguese translation
+  *  8155d2c8b - Update Polish translation
+  *  fb4324ce0 -   Fix some scan-build reports
+  *  33ef92f82 - mailbox-{remote,imap}: Simplify dispose() methods
+  *  8f46a31d0 - mailbox-pop3: Add guards to accessors
+  *  99cf02a02 - mailbox-pop3: Declare it final
+  *  2d54e1755 - mailbox-imap: Declare it final
+  *  0e5135c90 - mailbox-remote: declare it derivable
+  *  ae3d3d81c - mailbox-mh: Declare it final
+  *  4984fd6ed - mailbox mh: Declare it final
+  *  a442eb1fd - mailbox-mbox: Declare it final
+  *  f7ca4bd47 - mailbox-maildir: Declare it final
+  *  0b9fbc45f - mailbox-local: Declare it derivable
+  *  362d76faa - Declare LibBalsaMailbox derivable
+  *  bfbcc0df8 - Small LDAP address book improvements
+  *  381556104 - Migrate print objects to new scheme
+  *  3516da54f - Fix build error on Buster
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 12 Jul 2019 09:08:50 +0300
+
 balsa (2.5.5+git9152-73d6c7aba-1) unstable; urgency=medium
 
   * Compile

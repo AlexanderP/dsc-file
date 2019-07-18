@@ -1,3 +1,32 @@
+deadbeef (1.8.1+git8480-fe8ffd2d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: 1.8
+  * Commit: fe8ffd2db0ef8d7349cbdf5feedeecea8c8ca8d8
+  * Date: 1563015852
+  * git changelog:
+  *  fe8ffd2d - 1.8.2-rc1
+  *  f0636733 - Revert "gtkui: (temporary) fix for restoring last
+    filechooser path"
+  *  7b84bc01 - nullout: add sleep to prevent blocking UI when consuming
+    the data is too fast (fixes #2159)
+  *  7258a08b - dsp: fixed potential buffer overflow bug
+  *  a52151e4 - vfs: handle zero size read error, before it reaches vfs
+    plugins, to prevent possible division by zero error (fixes #2160)
+  *  9159b5cc - devel version
+  *  04e382b8 - 1.8.2-beta1
+  *  d6d42e07 - tf: clarify the meaning of DDB_TF_CONTEXT_MULTILINE
+  *  3238cd5d - flac: map ALBUMARTIST to ALBUM ARTIST (fixes #2118)
+  *  5a7bd991 - flac: fixed writing multivalue fields (fixes #2163)
+  *  4c0285cf - volume command line argument supports increment format
+    #2005
+  *  13ab2964 - gtkui: fix missing bits since switching from name to id
+    for output_plugin config item
+  *  1dd0d060 - devel version
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 13 Jul 2019 23:20:32 +0300
+
 deadbeef (1.8.1+git8467-a54da4f8-1) unstable; urgency=medium
 
   * Compile

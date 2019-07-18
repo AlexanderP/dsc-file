@@ -1,3 +1,24 @@
+solvespace (3.0.0~git1373-b3f739f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: b3f739f2c4f75cbdb2613e1fe9cb7fff9b880143
+  * Date: 1562930608
+  * git changelog:
+  *  b3f739f - Improve layout for reference axes with very vertically
+    small windows.
+  *  b2af9ce - Use the fact that handles are now less-than comparable.
+    NFC.
+  *  5efb09e - Use the new equality/inequality operators of handles to
+    reduce references to .v. NFC.
+  *  7bd4b14 - Traits work for handles to permit sharing functionality
+    and operators. NFC.
+  *  346f004 - Brighter blue and yellow in text window for higher
+    contrast/readability.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 14 Jul 2019 01:36:43 +0300
+
 solvespace (3.0.0~git1368-02d7f0c-1) unstable; urgency=medium
 
   * Compile

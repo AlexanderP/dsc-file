@@ -1,3 +1,124 @@
+gimp-devel (2.10.12+git42942-ab39b6acc7-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: ab39b6acc741f4d3cc1f6e95b5b575cf19d12f6e
+  * Date: 1563055670
+  * git changelog:
+  *  ab39b6acc7 - plug-ins, pdb: remove the edge-neon plug-in and add a
+    PDB compat procedure
+  *  568b1aff1a - Update NEWS
+  *  4464f31d6d - plug-ins: port twain to GEGL, 8-bit port only
+  *  827d415a4f - plug-ins: port destripe to GEGL, stupid 8-bit port
+    only
+  *  0fdf11bfbb - plug-ins: port cml-explorer to GEGL, stupid 8-bit port
+    only
+  *  6490a34e3c - plug-ins: properly free return values of
+    gimp_image_get_layers()...
+  *  1039f54b58 - plug-ins: port sparkle to GEGL, stupid 8-bit port only
+  *  e3f5b385f4 - NEWS: keep up-to-date.
+  *  ecd86145e0 - plug-ins: clean up a bit file-pdf-save.
+  *  7278663a98 - Issue #1002: Fix for layer groups in PDF export
+  *  465bedf699 - app: salvage loaded group and text layer of dimension
+    0.
+  *  8bc234616d - app: don't abandon immediately XCF loading at first
+    layer load failure.
+  *  a24f75f4bd - plug-ins: hot's dest_buffer can have another format
+    than src_buffer
+  *  f837e3c458 - plug-ins: port hot to GEGL, stupid 8-bit port only
+  *  80a34d16a6 - Update NEWS
+  *  1ad7cbbb73 - plug-ins: port contrast-retinex to GEGL, stupid 8-bit
+    port only
+  *  c484a0c17b - Issue #3641: gimp-drawable-offset does no longer work
+    in script-fu...
+  *  d7668fb0bd - plug-ins: port sphere-designer to GEGL, stupid 8-bit
+    port only
+  *  59c47bb842 - Update NEWS
+  *  3242eeb527 - Issue #2685: Crash when distributing layers
+    horizontally.
+  *  8637d61c04 - authors: add houz!
+  *  0aded5156f - plug-ins: port despeckle to GEGL, stupid 8-bit port
+    only
+  *  44d8580f46 - pdb, libgimp, app: add
+    gimp_drawable_get_thumbnail_format()
+  *  13f8ee76f7 - Update NEWS
+  *  6274bc2d96 - Update NEWS
+  *  0df4376aa4 - plug-ins: port grid to GEGL, stupid 8-bit port only
+  *  03e2cd0cfa - plug-ins: port lighting to GEGL
+  *  c4991cbdbd - NEWS: keep up-to-date.
+  *  dac6943b48 - plug-ins: port map-object to GEGL
+  *  2f2067a5aa - Issue #3630 - postscript plugin crashes
+  *  bd91ddce8b - plug-ins: forgot one deprecated call in sample-
+    colorize
+  *  9dbabb8ac6 - plug-ins: port sample-colorize to GEGL, stupid 8-bit
+    port only
+  *  c7c7a7d6a9 - Installer: fix for issue 3226
+  *  a7a8fddafe - plug-ins: port curve-bend to GEGL, stupid 8-bit port
+    only
+  *  4415d76102 - plug-ins: a ton of cleanup in curve-bend
+  *  d3dc0d82a4 - Update Croatian translation
+  *  c97408c134 - plug-ins: port tile-small to GEGL, stupid 8-bit port
+    only
+  *  f4b836c68d - plug-ins: replace calls to GimpRegionIterator
+    functions
+  *  b15f0ff687 - plug-ins: port checkerboard to GEGL, stupid 8-bit port
+    only
+  *  aa08ff28a6 - Update Polish translation
+  *  4a16bd1bc3 - Update Croatian translation
+  *  101d48c73b - Update Croatian translation
+  *  75445c04f5 - Update Croatian translation
+  *  e8f76920eb - Update Croatian translation
+  *  93b924e896 - Update Croatian translation
+  *  5f227fc721 - Add Croatian translation
+  *  f5854be7cb - Add Croatian translation
+  *  ee40487cc9 - Update British English translation
+  *  17338b9630 - Update British English translation
+  *  04d5eaee39 - Update British English translation
+  *  bcf6859b01 - plug-ins: merge some more warning fixes from master
+  *  5e5060d598 - plug-ins: port gradient-flare to GEGL, stupid 8-bit
+    only
+  *  5397dac21b - plug-ins: some WIP undeprecating curve-bend
+  *  d9349a5730 - app: get rid of a few more GtkAction warnings, and a
+    little cleanup
+  *  9f3823ca6b - plug-ins: space invasion leaked into 2.10 file-heif,
+    but incompletely
+  *  9c0085c7ec - app: don't warn in
+    gimp_action_history_action_activated()
+  *  29d765a0bd - Issue #3610 - Documentation: missing item in built-in
+    documentation...
+  *  e00bb6e0b1 - Issue #1725 - "Open location..." can't open internet
+    URIs due to GLIB/GIO
+  *  ff7ca87c09 - app: GtkAction -> GAction madness part two
+  *  0146ce354b - Update Spanish translation
+  *  55bc6b345a - Update Spanish translation
+  *  d674160067 - Update Spanish translation
+  *  c2f4a47f4d - plug-ins: fix two harmless compiler warnings
+  *  c40d9ae0f6 - NEWS: keep up-to-date.
+  *  262d2023fa - plug-ins: some cleaning in HEIF plug-in.
+  *  4ea2e469d4 - plug-ins: improve a bit HEIF export dialog.
+  *  f93eb567ea - plug-ins: add a "Save color profile" checkbox in HEIF
+    export.
+  *  1849ed9a34 - Issue #3093: Invalid characters in Open Location
+    dialog crashes GIMP.
+  *  ae35061fab - plug-ins: implement our profile export policy for
+    HEIF.
+  *  29b300378d - Issue #3599 - Crash when creating channel
+  *  a1a8f00617 - app: change all action callback signatures to use
+    GimpAction
+  *  345acca1c8 - Issue #3597: Free selection: CRITICAL when double
+    clicking on a handle.
+  *  4a8417fa4c - app: fix some warnings in gimpactiongroup.c
+  *  417d0dccd7 - app: start porting away from GtkAction and friends
+  *  5801ee048f - Update Polish translation
+  *  a381387662 - issue 3082: screenshot plugin crashes when
+    cancelling...
+  *  e6e342e58f - NEWS: keep up-to-date.
+  *  dc23facb17 - libgimp, plug-ins: get rid of
+    GIMP_EXPORT_NEEDS_OPAQUE_LAYERS capacity.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 14 Jul 2019 05:32:38 +0300
+
 gimp-devel (2.10.12+git42864-90d0fb4a6e-1) unstable; urgency=medium
 
   * Compile
