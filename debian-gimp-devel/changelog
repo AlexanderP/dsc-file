@@ -1,3 +1,72 @@
+gimp-devel (2.10.12+git42982-9f529d6164-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 9f529d616474c9ae16289030fd006dd1389eaef7
+  * Date: 1564051837
+  * git changelog:
+  *  9f529d6164 - app: make sure the display is not rotated by a very
+    small angle
+  *  1af8d2a2c7 - libgimp*: use more g_clear_pointer()
+  *  50e6d6ae20 - libgimpwidgets: fix docs for GimpBusyBox:message
+  *  adf308d10e - app: remove gimp_display_shell_filter_new(), it's
+    empty and useless
+  *  520c5f4b69 - libgimpwidgets: add more docs
+  *  65cda467d6 - libgimpwidgets: declare GimpHintBox with public
+    instance and class
+  *  ec2b566fbb - Update NEWS
+  *  8630302fbd - Update NEWS
+  *  850a14733c - Updated Greek translation
+  *  ac70d2346c - libgimpbase: always allocate
+    GimpPixPipeParams.placement, add docs
+  *  ff1e645c2f - libgimp*: lots of doc fixes and new docs for structs
+    and enums
+  *  f020569caa - app: add assigned-threads variable to the dashboard
+  *  f974cdb5d7 - devel-docs: update docs with missing symbols and types
+  *  f81d7d2f0b - devel-docs: update the libgimpconfig and libgimpbase
+    docs
+  *  07bf8c025c - app: reduce time complexity of layer-group translation
+  *  f5e6812131 - plug-ins: somehow common/Makefile.am wasn't properly
+    generated/merged
+  *  b7f22216e9 - file-svg: Use rsvg_handle_new_from_gfile_sync()
+    instead of GIOChannel
+  *  38e87c2d16 - Issue #2561: Fix computation of SVG image sizes
+  *  8d609ecfa4 - plug-ins: use global gegl_init() in file-pdf-load
+    run() function.
+  *  8164d7f26d - plug-ins: babl_init|exit() for non-interactive "file-
+    pdf-load" too.
+  *  9de16da01c - plug-ins: link file-pdf against GEGL/babl
+  *  b3bba49002 - plug-ins: babl_init|exit() needs to be run for "file-
+    pdf-load-thumb".
+  *  d578aa67f5 - plug-ins: clean up the file-dds GUI, remove the
+    "Advanced" expander
+  *  67bb165792 - Update Polish translation
+  *  65fb2859c4 - app: add active-thread variable to the dashboard
+  *  91c20c783a - app: fix gradient dithering
+  *  408129b331 - plug-ins: port gimpressionist to GEGL, stupid 8-bit
+    port only
+  *  ae493acbe9 - plug-ins: remove the oilify plug-in and add a PDB
+    compat procedure
+  *  a5e1eb85d8 - plug-ins: port imagemap to GEGL
+  *  5b5374c8fb - app: add gegl:mean-curvature-blur to Filters -> Blur
+  *  c923f24357 - plug-ins: port warp to GEGL, stupid 8-bit port only
+  *  c6ea2760b5 - pdb, plug-ins: remove the newsprint plug-in and add a
+    PDB compat procedure
+  *  3fc13bd4e7 - app: improve gegl:newsprint's GUI a lot
+  *  d503212f9d - app: add gegl:newsprint to Filters -> Distorts
+  *  a47e3cb152 - plug-ins: port depth-merge to GEGL, stupid 8-bit port
+    only
+  *  5de0271b3f - plug-ins: port van-gogh-lic to GEGL
+  *  14bc3ab400 - plug-ins: port animation-optimize to GEGL, stupid 8-
+    bit port only
+  *  878409bd4e - Update Polish translation
+  *  6f5f466321 - plug-ins, pdb: remove the contrast-normalize plug-in
+  *  4bdb8792b5 - Issue #360 - scripts that require brushes that GIMP no
+    longer installs
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 25 Jul 2019 16:48:44 +0300
+
 gimp-devel (2.10.12+git42942-ab39b6acc7-1) unstable; urgency=medium
 
   * Compile

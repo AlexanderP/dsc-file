@@ -1,3 +1,38 @@
+balsa (2.5.7+git9196-d35411b94-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/balsa
+  * Branch: master
+  * Commit: d35411b941dbfa9cce166057db27e86e910acae2
+  * Date: 1563937371
+  * git changelog:
+  *  d35411b94 - filter-run: Make filter-run.h private
+  *  5c21cd66a - filter-run-dialog: Declare it final
+  *  be2cf198f - Cleanup after using G_DECLARE_FINAL_TYPE()
+  *  346c09ffe - libbalsa-gpgme-widgets: Plug a leak
+  *  fbc8a342b - balsa-message: Plug leak
+  *  b861479a9 - balsa-message: Use modern macros
+  *  20ab49a01 - mailbox-mbox: Guard against NULL pointer
+  *  648faa08a - balsa-mblist: Use modern macros
+  *  0f29d82fb - main-window: Oops!
+  *  3b18f10c0 - balsa-index: Another convenience function
+  *  08624e8c0 - balsa-index: Cosmetics
+  *  995fa8ad7 - balsa-index: Do not dereference NULL mailbox-node
+  *  b6e1265fc - send.c: Fix the build
+  *  c49800e19 - balsa-index: Add a convenience function
+  *  5e7a81b50 - balsa-mblist: Oops!
+  *  3b55346f7 - balsa-index: Use modern macros
+  *  76396dc1d - filter-file: Fix loading filters
+  *  ab31ab612 - balsa-cite-bar: Declare it final
+  *  584403517 - ab-window: Use modern macros to declare and define
+  *  7f3df7e1d - mailbox_maildir: do not unref a NULL GMimeMessage
+  *  d161ee225 - gmime-part-rfc2440: use g_str_has_prefix()
+  *  6815dbc23 - mime-stream-shared: Use modern macros
+  *  71a0a5bde - Fix some Valgrind-detected issues
+  *  8ab10b41a - balsa-message: Pass message headers to handler
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 25 Jul 2019 10:18:19 +0300
+
 balsa (2.5.5+git9172-76e30816e-1) unstable; urgency=medium
 
   * Compile

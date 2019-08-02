@@ -1,3 +1,31 @@
+gscan2pdf (2.5.5+git3046-7afc8579-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 7afc8579af231020e4042e21d9f582163f3dad83
+  * Date: 1563568633
+  * git changelog:
+  *  7afc8579 - Bumped version to 2.5.5
+  *  f35a5a8b - Update to Spanish translation
+  *  7b584a39 - Update to German translation
+  *  825be36e - + option tolerance to cover buggy backends that return
+    inexact options without setting SANE_INFO_INEXACT
+  *  c6332832 - If a device throws an error when opening it, add it to a
+    session blacklist
+  *  10609943 - When saving current settings as new profile, actually
+    set the profile
+  *  522371d4 - Fix bug applying paper after profile set
+    SANE_INFO_INEXACT
+  *  5bf88c62 - xz compress log file if xz available
+  *  0304f963 - Update OCR view switching between pages with and without
+    OCR output
+  *  517b2a84 - Only set paper to Manual if not applying profile
+  *  d6e57f2b - Fix occasional error messages when clearing all pages
+  *  bb06e852 - Update to Hungarian translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 25 Jul 2019 10:16:21 +0300
+
 gscan2pdf (2.5.4+git3034-ca33f7cc-1) unstable; urgency=medium
 
   * Compile

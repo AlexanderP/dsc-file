@@ -1,3 +1,199 @@
+gimp-gtk3 (2.99.0+git43671-febc1a843d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: febc1a843d23566e86696d9996d166d21a1524c8
+  * Date: 1564064587
+  * git changelog:
+  *  febc1a843d - libgimp: add gimp_plug_in_info_set_callbacks().
+  *  8aaf517db4 - devel-docs: add screenshots of more widgets
+  *  23ade7b80b - build, app: require babl-0.1.68 or newer
+  *  7ddf40b78b - app: make sure the display is not rotated by a very
+    small angle
+  *  c144cf69de - libgimp*: use more g_clear_pointer()
+  *  692272e580 - libgimp: add some comment documentation to Gimp*Proc
+    callback types.
+  *  c260b4d50d - libgimp: add correct annotation for gimp_main().
+  *  6389bb4b58 - libgimp, libgimpbase: both introspectable under same
+    namespace Gimp.
+  *  0c75cd7fc4 - configure, libgimpbase, m4macros: first steps into API
+    introspection.
+  *  fe75ef28ad - libgimpwidgets: fix docs for GimpBusyBox:message
+  *  ec18b969a3 - app: remove gimp_display_shell_filter_new(), it's
+    empty and useless
+  *  42a7d17d1a - app: add missing include to gimpdisplayshell-filter.c
+  *  572775a60b - devel-docs: update the libgimpwidgets docs with new
+    widget shots
+  *  dcbd83cafc - devel-docs: undeprecate doc-shooter and add a few more
+    widgets
+  *  9e88105ee6 - libgimpwidgets: add more docs
+  *  f67e607395 - libgimpwidgets: declare GimpHintBox with public
+    instance and class
+  *  7f39be196a - devel-docs: rename to doc titles to "GIMP 3"
+  *  997730a69d - libgimpbase: remove obsolete members from struct
+    GimpPixPipeParams
+  *  fbee862c50 - devel-docs: remove gegl-porting-plan.txt, what was in
+    there is done
+  *  f28ec4bf86 - libgimpbase: always allocate
+    GimpPixPipeParams.placement, add docs
+  *  8bd4a4fac9 - pdb: fix typo in the gimp-context-set-line-dash-
+    pattern docs
+  *  1a7ea992f3 - pdb, libgimp: generate some useless API docs for enums
+    extracted from app/
+  *  c2a38f0631 - devel-docs: various documentation and build fixes
+  *  aca5f806c4 - libgimp*: lots of doc fixes and new docs for structs
+    and enums
+  *  b9a4fdd1e0 - configure.ac: build the devel-docs again
+  *  8b22b3ab35 - libgimpwidgets: fix some glitches noticed when
+    updating docs
+  *  0131c96e1d - devel-docs: undeprecate doc-shooterm but just so it
+    builds
+  *  55fc774ca9 - devel-docs: fix and update the libgimp docs
+  *  0155eccbf2 - devel-docs: fix and update the libgimpthumb docs
+  *  d2d9e47390 - devel-docs: fix and update the libgimpwidgets docs
+  *  ff7467f6dd - devel-docs: fix and update the libgimpmodule docs
+  *  29e1d9e7cf - devel-docs: fix and update the libgimpmath docs
+  *  41d1ad26a4 - devel-docs: fix and update the libgimpcolor docs
+  *  e92732f7cf - app: add assigned-threads variable to the dashboard
+  *  79e40b1945 - devel-docs: update docs with missing symbols and types
+  *  a05205b576 - devel-docs: fix the libgimpconfig docs
+  *  c249ffe3ea - devel-docs: change the libgimpbase docs to
+    "libgimpbase3"
+  *  4e58a15816 - libgimpbase: forgot to remove the GimpDatafileData
+    typedef
+  *  696691efbd - app: fix tests by using the right value in sessionrc-
+    expected-multi-window
+  *  e7e0064bd7 - Updated Greek translation
+  *  ebb3ec4925 - app: reduce time complexity of layer-group translation
+  *  16660c5928 - file-svg: Use rsvg_handle_new_from_gfile_sync()
+    instead of GIOChannel
+  *  b2027c40b7 - Issue #2561: Fix computation of SVG image sizes
+  *  6bb03dc21a - plug-ins: revive animation-play, and draw stuff with
+    cairo
+  *  ef3c13c6c5 - plug-ins: use global gegl_init() in file-pdf-load
+    run() function.
+  *  443c171f8d - plug-ins: babl_init|exit() for non-interactive "file-
+    pdf-load" too.
+  *  f4b88c0a9e - plug-ins: link file-pdf against GEGL/babl
+  *  e0a24a27de - plug-ins: babl_init|exit() needs to be run for "file-
+    pdf-load-thumb".
+  *  5d2dbfe2e8 - app: gdk_threads_(enter|leave)() deprecated since GDK
+    3.6.
+  *  b9b8879ba0 - plug-ins: some GTK3 undeprecation in imagemap
+  *  8e809160f0 - plug-ins: port file-dds to GtkGrid
+  *  618fbc6b17 - plug-ins: clean up the file-dds GUI, remove the
+    "Advanced" expander
+  *  7208fba663 - plug-ins: don't use deprecated icon API in compose
+  *  82cdd69e0c - plug-ins: completely undeprecate curve-bend
+  *  98f9205faa - plug-ins: completely undeprecate sample-colorize
+  *  b347cc73a1 - plug-ins: don't use GtkStyle in ifs-compose, it's
+    deprecated
+  *  d223522b8b - plug-ins: suppress deprecation warnings from the
+    OpenEXR headers
+  *  32d789e355 - plug-ins: port imagemap to named icons from a resource
+  *  d88b90d026 - app: fix render cache artifacts when resizing the
+    canvas
+  *  3a453fa918 - plug-ins: gfig-icons.c doesn't need an i18n include
+    any longer
+  *  8cf7eb3108 - Update Polish translation
+  *  60fc4a0aca - Update POTFILES.in
+  *  a7a7cd7710 - plug-ins: fix VPATH build.
+  *  2cc77e6927 - app: add active-thread variable to the dashboard
+  *  d3400542f2 - plug-ins: port map-object to icon names too
+  *  f6b60e08f2 - plug-ins: port lighting from stock icons to using a
+    resource
+  *  91f27dfc02 - plug-ins: replace stock icons in gfig by a resource
+  *  05d552e634 - libgimp: cleanup in GimpTileBackendPlugin
+  *  ee79eb999f - libgimpbase: minor cleanups while grepping for
+    DEPRECATED
+  *  b2f660ae43 - app, pdb, libgimp: remove the "plug-in precision-
+    enabled" API and logic
+  *  3811a65218 - plug-ins: remove unused declaration of a GimpDrawable
+    variable
+  *  3b17c750ec - libgimp: use one memcpy() between gimp and gegl tiles
+    if possible
+  *  7ad25c17b5 - libgimp: remove the tile_mul code from
+    GimpTileBackendPlugin
+  *  aafb55fa02 - libgimp: remove GimpDrawable and GimpTile
+  *  6a59ccf840 - libgimp: remove GimpTile from the public API, and kill
+    the tile cache
+  *  e22fcc8942 - app: fix gradient dithering
+  *  60554eaed9 - libgimp: remove GimpPixelRgn, it's now completely
+    unused, yay!
+  *  23f373e916 - plug-ins: remove filter-pack without any replacement
+  *  c46044534a - libgimp: remove gimp_drawable_preview_draw_region()
+  *  3914e04722 - plug-ins: port gimpressionist to GEGL, stupid 8-bit
+    port only
+  *  b7cf850671 - plug-ins: remove the oilify plug-in and add a PDB
+    compat procedure
+  *  3c73d42e97 - plug-ins: port imagemap to GEGL
+  *  68afcf7001 - libgimp: remove deprecated GimpPixelRgn functions
+    which are now unused
+  *  ed64fda6e5 - app: add gegl:mean-curvature-blur to Filters -> Blur
+  *  5fce763612 - pdb: fix wrong default value on gimp-plug-in-emboss
+    compat proc.
+  *  3864e9c782 - libgimp: remove gimp_tile_ref() and gimp_tile_unref()
+    from the API
+  *  d944a7b9a4 - plug-ins: port warp to GEGL, stupid 8-bit port only
+  *  eca4ca8c8c - app: fix wrong default value on gimp-plug-in-emboss
+    compat proc.
+  *  8a51993e3f - pdb, plug-ins: remove the emboss plug-in and add a PDB
+    compat procedure
+  *  31fc338ab0 - pdb, plug-ins: remove the newsprint plug-in and add a
+    PDB compat procedure
+  *  ce44b04005 - app: improve gegl:newsprint's GUI a lot
+  *  d718da27a8 - app: add gegl:newsprint to Filters -> Distorts
+  *  fb3007edef - plug-ins: get rid of babl_format() in file-heif too.
+  *  4f1ac48dd3 -  plug-ins: get rid of babl_format() in file-jpeg.
+  *  9d54d81a8c - plug-ins: get rid of babl_format() in file-webp.
+  *  03f645cd2d - Issue #3070: CRITICAL when converting to Indexed
+    image.
+  *  786686a541 - Issue #3070: CRITICAL when converting to Indexed
+    image.
+  *  74abdfa377 - plug-ins: improve a bit the space invasion code.
+  *  7cd78f436d - plug-ins: port depth-merge to GEGL, stupid 8-bit port
+    only
+  *  d93e928703 - app: fix crash in the newly added GimpDisplayShell
+    render_cache code
+  *  4c1677078e - plug-ins: port van-gogh-lic to GEGL
+  *  c393eff089 - app: use CAIRO_OPERATOR_SOURCE in
+    gimp_display_shell_scroll()
+  *  2061cc0077 - app: fix gimp_display_shell_render() to draw alpha
+    correctly
+  *  85cf3630c2 - app: make use of display_config->zoom_quality
+  *  0ce73236b0 - app: add a "Zoom Quality" control to preferences ->
+    display
+  *  9aa6aa1f04 - app: make display update much faster again
+  *  fd9b6ab834 - plug-ins: remove the colorify plug-in without any
+    replacement
+  *  9d33a9a9ca - plug-ins: port animation-optimize to GEGL, stupid 8-
+    bit port only
+  *  acea533a9a - plug-ins: remove the sharpen plug-in without
+    replacement
+  *  496b5ab9b4 - plug-ins: remove color-cube-analyze without
+    replacement
+  *  4074cec138 - plug-ins: remove the blur plug-in without replacement
+  *  dd89f4a3d5 - plug-ins: remove the max-rgb plug-in without
+    replacement
+  *  2ead56096d - plug-ins, pdb: remove the softglow plug-in and add a
+    PDB compat procedure
+  *  a0ae31d337 - plug-ins, pdb: remove the edge-dog plug-in and add a
+    PDB compat procedure
+  *  798d5571e1 - Update Polish translation
+  *  8fcccf3f88 - plug-ins, pdb: remove the contrast-normalize plug-in
+  *  3d049f565a - Issue #360 - scripts that require brushes that GIMP no
+    longer installs
+  *  8b08f958ba - plug-ins, pdb: remove the edge-neon plug-in and add a
+    PDB compat procedure
+  *  12bed7be5b - plug-ins: port twain to GEGL, 8-bit port only
+  *  98be067874 - plug-ins: port destripe to GEGL, stupid 8-bit port
+    only
+  *  f9e149dc1e - plug-ins: port cml-explorer to GEGL, stupid 8-bit port
+    only
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 25 Jul 2019 17:57:30 +0300
+
 gimp-gtk3 (2.99.0+git43550-6d4a11a261-1) unstable; urgency=medium
 
   * Compile
