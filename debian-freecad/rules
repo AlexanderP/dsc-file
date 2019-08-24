@@ -21,7 +21,7 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),sid buster disco)) 
+ifneq (,$(filter $(DEBIAN_CODENAME),sid bullseye buster disco)) 
 	CONTROL = control.qt5
 	extra_flags += \
 	-DBUILD_QT5=ON \
@@ -42,7 +42,7 @@ override_dh_auto_install:
 	dh_auto_install --destdir=debian/tmp
 
 override_dh_auto_configure:
-ifneq (,$(filter $(DEBIAN_CODENAME),sid buster disco)) 
+ifneq (,$(filter $(DEBIAN_CODENAME),sid bullseye buster disco)) 
 	patch -p1 < debian/patches/fix_gcc8_ftbfs.patch
 else
 	echo "no patch"

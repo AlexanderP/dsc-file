@@ -11,7 +11,7 @@ else
 	BUILDDEBFLAGS= -- -Zxz -z9
 endif
 
-ifneq (,$(filter $(DEBIAN_CODENAME),buster sid stretch)) 
+ifneq (,$(filter $(DEBIAN_CODENAME),buster bullseye sid stretch)) 
 	CONTROL = control.sid
 else
 	CONTROL = control.jessie

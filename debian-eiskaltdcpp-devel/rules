@@ -35,7 +35,7 @@ CMAKEOPTS = -DUSE_ASPELL=ON \
             -DCHECK_GTK_DEPRECATED=OFF \
             -DREPLACE_VERSION="$(DEB_VERSION_UPSTREAM)"
 
-ifneq (,$(filter $(DEBIAN_CODENAME),sid stretch buster zesty artful bionic disco))
+ifneq (,$(filter $(DEBIAN_CODENAME),sid stretch buster bullseye zesty artful bionic disco))
 	CONTROL = control.sid
 	export QT_SELECT=qt5
 	CMAKEOPTS += -DUSE_QT=OFF -DUSE_QT5=ON -DUSE_QT_QML=OFF
