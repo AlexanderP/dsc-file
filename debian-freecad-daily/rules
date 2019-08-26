@@ -1,10 +1,11 @@
 #!/usr/bin/make -f
 %:
-	dh $@ --buildsystem=cmake --parallel --with python2
+	dh $@ --buildsystem=cmake --parallel --with python3
 
 DEB_BUILD_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 
 extra_flags += \
+-DBUILD_QT5=ON \
 -DFREECAD_BUILD_DEBIAN=ON \
 -DCMAKE_CXX_FLAGS="-Wall -DHAVE_SWIG=1 -fpermissive $(shell dpkg-buildflags --get CXXFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)" \
 -DCMAKE_C_FLAGS="-Wall -fpermissive $(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)" \
@@ -16,27 +17,9 @@ extra_flags += \
 -DCMAKE_INSTALL_LIBDIR="/usr/lib/freecad-daily/lib" \
 -DBUILD_FEM_NETGEN=OFF \
 -DBUILD_FEM_VTK=ON \
-
-DEBIAN_CODENAME = $(shell echo $$DIST)
-ifeq "$(DEBIAN_CODENAME)" ""
-	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
-endif
-ifneq (,$(filter $(DEBIAN_CODENAME),sid bullseye buster disco)) 
-	CONTROL = control.qt5
-	extra_flags += \
-	-DBUILD_QT5=ON \
-	-DPYTHON_CONFIG_SUFFIX="-python2.7.${DEB_HOST_MULTIARCH}" \
-	-DCMAKE_BUILD_TYPE="Release" \
-	-DOCC_INCLUDE_DIR="/usr/include/opencascade"
-else
-	CONTROL = control.qt4
-	extra_flags += -DOCC_INCLUDE_DIR="/usr/include/oce"
-endif
-
-override_dh_auto_clean:
-	echo $(DEBIAN_CODENAME)
-	cp debian/$(CONTROL) debian/control
-	dh_auto_clean
+-DPYTHON_EXECUTABLE="/usr/bin/python3" \
+-DCMAKE_BUILD_TYPE="Release" \
+-DOCC_INCLUDE_DIR="/usr/include/opencascade"
 
 override_dh_auto_configure:
 ifneq (,$(filter $(DEBIAN_CODENAME),sid bullseye buster disco)) 
@@ -44,7 +27,6 @@ ifneq (,$(filter $(DEBIAN_CODENAME),sid bullseye buster disco))
 else
 	echo "no patch"
 endif
-	cp debian/$(CONTROL) debian/control
 	dh_auto_configure -- $(extra_flags)
 
 override_dh_compress:
@@ -63,9 +45,8 @@ override_dh_installmime:
 	dh_install debian/mime/freecad-daily.schemas etc/gconf/schemas
 
 override_dh_icons:
-	install -m 644 debian/freecad-daily/usr/share/freecad-daily/freecad-icon-16.png debian/freecad-daily/usr/share/icons/hicolor/16x16/apps/freecad-daily.png
-	install -m 644 debian/freecad-daily/usr/share/freecad-daily/freecad-icon-32.png debian/freecad-daily/usr/share/icons/hicolor/32x32/apps/freecad-daily.png
-	install -m 644 debian/freecad-daily/usr/share/freecad-daily/freecad-icon-48.png debian/freecad-daily/usr/share/icons/hicolor/48x48/apps/freecad-daily.png
-	install -m 644 debian/freecad-daily/usr/share/freecad-daily/freecad-icon-64.png debian/freecad-daily/usr/share/icons/hicolor/64x64/apps/freecad-daily.png
-	install -m 644 debian/freecad-daily/usr/share/freecad-daily/freecad.svg debian/freecad-daily/usr/share/icons/hicolor/scalable/apps/freecad-daily.svg
-
+	install -m 644 debian/tmp/usr/lib/freecad-daily/share/icons/hicolor/16x16/apps/freecad.png debian/freecad-daily/usr/share/icons/hicolor/16x16/apps/freecad-daily.png
+	install -m 644 debian/tmp/usr/lib/freecad-daily/share/icons/hicolor/32x32/apps/freecad.png debian/freecad-daily/usr/share/icons/hicolor/32x32/apps/freecad-daily.png
+	install -m 644 debian/tmp/usr/lib/freecad-daily/share/icons/hicolor/48x48/apps/freecad.png debian/freecad-daily/usr/share/icons/hicolor/48x48/apps/freecad-daily.png
+	install -m 644 debian/tmp/usr/lib/freecad-daily/share/icons/hicolor/64x64/apps/freecad.png debian/freecad-daily/usr/share/icons/hicolor/64x64/apps/freecad-daily.png
+	install -m 644 debian/tmp/usr/lib/freecad-daily/share/icons/hicolor/scalable/apps/freecad.svg debian/freecad-daily/usr/share/icons/hicolor/scalable/apps/freecad-daily.svg

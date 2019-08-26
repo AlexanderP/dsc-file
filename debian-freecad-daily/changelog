@@ -1,3 +1,802 @@
+freecad-daily (0.18.3+git17887-e6e940755-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: e6e94075518efaad2ccd3a2a3feda9682144c5c7
+  * Date: 1566661381
+  * git changelog:
+  *  742b708d0 - rename icon file
+  *  b1551934b - Add parameter to suppress touching a document when a
+    view provider has been modified
+  *  1e19ef5be - issue #0004088: Visibility of origin feature of Part
+    container changes when undocking the 3d view
+  *  c4e34ed9b - Fix bug in MainWindow::setActiveWindow
+  *  6dae8f371 - add missing parameter group and name for
+    'UseMaterialColor' check box
+  *  1d7d3436b - improve error search when parameter group or name of a
+    PrefWidget is not set
+  *  4683c267b - Remove CMakeLists.txt.user from repo
+  *  d6fdaefb6 - Arch: Fixed windows symbol position
+  *  5806fc64b - [TD]Restore context menu after leader edit
+  *  3c4700d05 - [TD]fix BRect on empty text items
+  *  178520fb4 - [TD] fix stale pointer in scene
+  *  5a3de6c3d - [TD]Add welding symbol directory preference
+  *  f0155052f - [TD]Welding Symbol Editor alpha release
+  *  0d0174409 - [TD]Clean up Welding Symbol creation
+  *  992ef1b07 - [TD]Welding Symbol creation
+  *  f046a0e65 - [TD]Fix CosmeticEraser multiple item delete
+  *  b5464ccf4 - [TD]Add uuid tags for cosmetics
+  *  0f714e00f - AddonManager: Added function to check for updates for a
+    specific addon
+  *  4d12917b5 - Refactor preferences into injected object instead of
+    global.
+  *  31d6d5fa7 - Cleaned up grbl_post and added tool-change option,
+    which was lost in last update
+  *  945e76d91 - [Robot] treeiksolvervel_wdls.cpp: Fix compil warns
+  *  c6748d8d0 - [Robot] jacobian.cpp: Fix compiler warnings
+  *  7b265bee1 - [Robot] chainiksolverpos_lma.cpp: Fix compil warng
+  *  ad73247e9 - [Robot] svd_eigen_Macie.hpp: Fix compiler warnings
+  *  372f572d0 - add TestPathHelix.py to CMake
+  *  66804ae99 - Unit test helix based on a clone
+  *  5a4fc83fe - More helix unit tests
+  *  221893eee - Fixed PathHelix assert statements
+  *  915a7ae22 - Added basic test case for PathHelix
+  *  736d34d90 - update CMakeList to include new Darker stylesheets
+  *  218d84935 - use GNU directory structure on non-Windows systems
+  *  7d8c2060a - do not force CMAKE_INSTALL_LIBDIR to be an absolute
+    path
+  *  699114610 - Stylesheets: typo and uniformity fixes
+  *  d3ade5520 - Draft: DraftFillet, changed some things about the
+    implementation.
+  *  0f686edf8 - Draft: added Draft_Fillet.svg as an icon, as a
+    variation of the Sketcher fillet icon. Add it to Draft.qrc.
+  *  d5ca09c77 - Draft: added DraftFillet.py to the sources, also
+    InitGui.py, Draft.py, DraftTools.py, and CMakeLists.txt
+  *  46c73062f - TechDraw: Radius drawing refactored - ASME support
+  *  93b5481c6 - Arch: Optimization in SVG generation code
+  *  509570377 - add missing std:: namespace to build on Debian 10
+  *  f93a986b5 - Arch/TD: Added Coin mode to TD arch views
+  *  2a9205119 - add missing std:: namespace to build on Debian 10
+  *  bf5923c0f - add missing std:: namespace to build on Debian 10
+  *  ba297ec96 - Arch: Fixed remaining bug in IFC importer
+  *  78360cab9 - Arch: export IFC helper, do not use multiple line
+    imports
+  *  cb6f7ce3e - Arch: import and export IFC, add licence text and make
+    it pep8 kompatible
+  *  8c4856ebe - Arch: import IFC, move methods used by import and
+    export to helper
+  *  2390a219c - Arch: import IFC, get back description of empty
+    relation tables
+  *  d038968b6 - Arch: import IFC, split relation table method
+  *  13ce0bddc - Arch: import IFC, pep8, indent
+  *  8fad7c40e - Arch: import IFC helper, fix imports
+  *  017caac68 - Arch: import IFC helper, white spaces and new lines
+  *  e634209c1 - Arch: import IFC, pep8, add and delete some spaces
+  *  a56d3c435 - Arch: import IFC, white spaces and new lines
+  *  0477ecee0 - Arch: import IFC, add comment
+  *  5a004191a - Gui: Do not use hard-coded blue color in tree
+  *  b32f09482 - Arch: Further cleaning of IFC importer - moved aux
+    functions to importIFCHelper
+  *  851e3d984 - add missing std:: namespace to build on Debian 10
+  *  b4fc354d2 - Arch: Moved building of IFC relationship tables into
+    separate function
+  *  181cceddb - Arch: Moved recycler class to exportIFC helper
+  *  7ec43fcb5 - OpenSCAD fix missing icons
+  *  eb0ee0184 - typo fixed
+  *  d6352bb1b - New Darker stylesheet
+  *  b61aa576f - update to v2.20: - minor fixes - new background icon
+  *  a2f359b9a - new background icon
+  *  afe9f03f4 - add missing icon for light themes
+  *  18727135d - Draft: _PointArray, removed the tabs, and replaced with
+    four spaces; mixing spaces and tabs may cause a syntax error in
+    Python 3
+  *  cc6ea681c - AddonManager: Add workfeature icon
+  *  d9e60c047 - Draft Edit: enable Part::Line editing
+  *  a1e6019f8 - Draft Edit: enable editing Part::Box
+  *  5d75d68f6 - Draft Edit: bugfix when Draft is activated without
+    document
+  *  ec3a6ba0d - [Draft] Small bugfix in bezcurve editing
+  *  9aac2df1a - [Draft] Draft Edit: completed subcommand key event
+  *  13e605912 - [Draft] Draft Edit - various fixes (fixes #3537)
+  *  12dc2e914 - work around to fix build failure with clang 3.4
+  *  ada37401b - Add undefined IFC type data - this is special to
+    freecad and not part of the IFC spec
+  *  ad4f4f071 - Convert old json files to include more metadata as per
+    IFC4 standard
+  *  bdfdf77ff - Add contexts file for IFC2X3
+  *  89961a33d - Draft: removed degub message
+  *  ea97b4349 - Arch: workaround to make Arch loading without errors,
+    but still this needs to be fixed
+  *  7e6063123 - add missing header and forward declaration
+  *  32b0f8616 - Ensure the tool parameters are saved
+  *  7022f41bb - Fix clang compiler warnings: + fix -Winconsistent-
+    missing-override + fix -Wunused-private-field
+  *  3759b83b7 - Fix clang compiler warnings: + fix -Winconsistent-
+    missing-override
+  *  a73156666 - Fix clang compiler warnings: + fix -Winconsistent-
+    missing-override
+  *  4c648caaa - Fix clang compiler warnings: + fix -Winconsistent-
+    missing-override
+  *  67b06d7a3 - Fix clang compiler warnings: + fix -Winconsistent-
+    missing-override + fix -Wpessimizing-move (Geometry::clone: moving a
+    temporary object prevents copy elision -> remove std::move call
+    here)
+  *  5172c3bc0 - Fix clang compiler warnings: + fix -Winconsistent-
+    missing-override + fix -Wunused-variable + fix -Wbraced-scalar-init
+    + fix -Wparentheses (View3DInventorViewer::checkGroupOnTop: operator
+    '?:' has lower precedence than '+'; '+' will be evaluated first) +
+    fix -Wundefined-bool-conversion (MainWindow::updateActions) +
+    suppress -Woverloaded-virtual but fix later
+  *  3e6ae0d02 - Fix clang compiler warnings: + fix -Winconsistent-
+    missing-override + fix -Wunused-private-field + suppress -
+    Woverloaded-virtual but fix later
+  *  7e70438ae - fix -Winconsistent-missing-override
+  *  9c69c886a - fix MSVC compiler warnings
+  *  1995f9d0b - fix msvc build failure
+  *  cf5438fbe - Gui: sort property by name in property view
+  *  20c628fc0 - Gui: fix tree view selection focus problem
+  *  0a2d8dc5c - App: do not throw on recursive recompute
+  *  dd8c4d84a - Gui: fix missing de-highlight when (pre)selection is
+    disabled
+  *  8162c9b67 - Draft: fix PathLinkArray
+  *  e9a4f9715 - Import: fix version header path
+  *  5509a9b43 - Draft: fix Link(Path)Array
+  *  54a8136d5 - App: fix rollback of dynamic property changes
+  *  c555a8222 - TechDraw: fix face based projection direction detection
+  *  62423cb79 - TechDraw: fix projection group editing update
+  *  f243db0d5 - TechDraw: fix drawing update on undo/redo
+  *  d0ca893b3 - Command: disable auto transaction if triggering editing
+  *  78ce18ace - TreeView: update status on manual object touch
+  *  d4f066f4e - TreeView: fix selection sync problem
+  *  4ba326fae - Draft: fix for python2
+  *  a228f3c11 - App: fix xml indentation in PropertyContainer::Save
+  *  75f974b1a - Gui: fix selection change handling in PropertyView
+  *  5a96db648 - App: fix property type matching in transaction
+  *  e047b8764 - TreeView: fix potential crash on deleting object
+  *  61df79ab9 - Gui::Document: fix saving of camera setting
+  *  0d77bcdd8 - TreeView: fix bug in selection sync
+  *  05433f714 - Gui: fix crash on editing PropertyLinkList
+  *  022e6c6fb - Sketcher: auto undo when canceling constraint editing
+  *  2cb69603b - Gui: fix auto view switching of editing object
+  *  f78f05ade - Sketcher: fix external editing
+  *  9e3a981d3 - Base: fix duplicated exception message
+  *  d3500ecfa - App: fix Python object leak in PropertyListT
+  *  3fcb3e677 - PropertyContainer: skip saving trasient dynamic
+    property
+  *  ce30645b3 - Fix typos pathes -> paths
+  *  4aba7e2f5 - Fix more typos
+  *  ef2947dce - Fix extra grammar issue in src/App
+  *  039d6eac0 - Fix typos in various src/Mod directories
+  *  0f67e8ddf - Fix typos in src/Gio
+  *  5b74dc8b0 - Fix typos in src/Base
+  *  8825c9572 - Fix typos in src/App
+  *  088c282e2 - PropertyEditor: fix bug when constructing context menu
+  *  673d035bb - PropertyContainerPy: modified getPropertyByName()
+  *  aaf0f2c80 - Link: rename _LinkRecomputed to _LinkTouched
+  *  c0d015078 - ViewProviderLink: fix visual of linked object with
+    scale
+  *  a738c7faf - TreeView: fix missing update on item expansion
+  *  26dad093f - ExpressionCompleter: fix missing init() call
+  *  e0799e2bb - Expression: fix python object evaluation
+  *  9b3351399 - App::Document: fix file extension case sensitive
+    problem
+  *  9223f08b4 - Fix build for older gcc
+  *  1d274f669 - Test cases changes
+  *  de66e563e - Draft/Arch related changes
+  *  d93259e23 - Path changes
+  *  435815ccc - Fem: minor changes
+  *  11a93a057 - PartDesign changes
+  *  e911b6976 - Spreadsheet changes
+  *  32ad54c9e - Import: add new implementation of STEP
+    importer/exporter
+  *  d26f77203 - TechDraw: Link related changes
+  *  6da72b985 - Part: changes to Part Module
+  *  d833e19e0 - App/Gui: Changes to application Python init script
+  *  9634c1999 - Gui: add some icons
+  *  51ab8caac - Gui: improve deletion handling in origin feature
+  *  bc2682083 - Gui: Placement/DatumCS view provider changes
+  *  a9b866caa - Gui: ActiveObjectList API changes
+  *  08f0511b1 - Python feature/observer related changes
+  *  c93741d72 - Gui: add box geometry element selection command
+  *  c18bf1182 - Gui: refactor tree view
+  *  2bd4795e8 - Gui: property view related changes
+  *  2a6bd5e46 - Implementation of Link
+  *  a59caf4a1 - Improve Version.h handling
+  *  bd2f5191c - Gui: Application/Document/MainWindow changes following
+    App namespace
+  *  00bcef061 - Gui: support in-place editing
+  *  aa3e81f4f - Base::Reader: support reading child element with the
+    same name as parent
+  *  8227103ce - Gui: AutoSaver and recovery changes
+  *  c8891be85 - Gui: add coinRemoveAllChildren to work around Coin3D
+    bug
+  *  c744157e9 - Gui: add support of selection context
+  *  49b6944a2 - Gui: Selection API changes
+  *  b1c0de8da - Gui: Command API changes
+  *  f5d92fdae - ViewProvider(DocumentObject): new APIs for context
+    aware selection
+  *  2c12e1d3a - Gui: add ViewParams class
+  *  a75c955d3 - ViewProvider/ViewProviderExtension: various new APIs
+  *  bce47d23c - Gui: add convenient smart pointer CoinPtr to manager
+    coin node
+  *  29eb1a429 - App: GeoFeature/ComplexGeoData API changes
+  *  c5112ecdc - (GeoFeature)GroupExtension: track children visibility
+  *  94c228973 - App: API changes for document
+    recompute/save/restore/import/export
+  *  b19647862 - DocumentObject: API implementation change of In/OutList
+  *  161ad0578 - DocumentObject: add
+    allowDuplicateLabel/onBeforeChangeLabel()
+  *  34ed8a8e0 - Spreadsheet: convert PropertySheet to link type
+    property
+  *  93e60caa3 - PropertyExpressionEngine: convert to link type property
+  *  e85bf9cd0 - PropertyLinks: refactor property link API
+  *  1cb2e190b - App: transaction related API changes
+  *  f4205130a - App: Property related API changes
+  *  ff1d1cd34 - App: add New APIs for future Link function
+  *  3fcbf71fb - Base: misc patches
+  *  59417068f - Base: improve exception
+  *  aa7d780f5 - Base::FileInfo: fix left overs in transient directory
+  *  50cefc510 - Console: improve console logging facility
+  *  c168a7d14 - Arch/TD: Support for Arch BuildingParts in TD ArchView
+  *  33cb9ce0b - Draft: Shape2Dview now supports buildingparts
+  *  d9cfd3500 - Arch: misc small fixes to buildingpart
+  *  e94af7ff5 - FEM: code formating, command manager, more formating
+  *  008f9a63c - FEM: code formating, command manager, fix indents
+  *  3970ba04d - FEM: code formating, commands, some new lines
+  *  2ed7936c1 - FEM: code formating, commands, use double quotes
+    instead of single ones
+  *  fbba0bbd3 - FEM: code formating, small ones
+  *  4bb32ae8d - FEM: ccx tools, small indent code formating
+  *  03b4fe50e - Gui: Added viewer.setName() python method
+  *  be45c2496 - Arch: Reorganized view properties of buildingParts
+  *  46a1d1d25 - Arch: Minor fixes to IFC export
+  *  36d418349 - Arch: make new property to use shape color instead of
+    material color working for all Arch objs
+  *  a937461d6 - Arch: Merge of PR #2259 - Fix ifc project
+  *  ce943982e - Arch: Fix missing cache value for SectionPlane
+  *  a66c8a313 - Draft: importSVG, commit 2a139a89 accidentally
+    introduced blady merged code that produced syntax errors; then
+    537a011a tried to fix it by removing the syntax errors; however a
+    large block of text needs to be removed as well; this was supposed
+    to happen in pull request #2418; however, that pull request no
+    longer merges cleanly so it was withdrawn; this commit finally fixes
+    the problem.
+  *  bd985feef - [AddonManager] Add CADExchanger workbench icon
+  *  c02fb5f6b - [AddonManager] Add ThreadProfile WB icon
+  *  2469dacf7 - Fix issue in previous commit
+  *  050ac16f1 - Fix misc. typos
+  *  f7587c30d - Draft: DraftTrackers.py, the docstrings need triple
+    quotes and be next to the method or class name so they are correctly
+    picked up by Doxygen or Sphinx to generate documentation; this
+    complies with PEP 257
+  *  a72d78507 - Draft: DraftTools.py, the docstrings need triple quotes
+    and be next to the method or class in order to be picked up by
+    Doxygen or Sphinx; this complies with PEP 257.
+  *  09046c98b - Draft: Draft.py, the docstrings need triple quotes and
+    be next to the method or class in order to be picked up by Doxygen
+    or Sphinx; this complies with PEP 257
+  *  cf368ac2b - Draft: DraftLayer, the docstrings need triple quotes
+    next to the method or class name so they are correctly picked up by
+    the Doxygen or Sphinx program to generate the documentation
+  *  445538c7d - Draft: WorkingPlane, improved Pythonic style, line
+    length < 79 characters; shorter variables to save space and have
+    line lengths < 79 characters; added whitespace to comments and used
+    the self.__repr__() method to shorten the impression to the
+    terminal; broke the line inside parentheses to make the line
+    shorter; inside alignToSelection() test for faces first to use
+    alignToFace(), which actually works; leave alignToCurve() for later,
+    as it doesn't actually do anything at the moment; improved
+    docstrings in isOrtho(), the orthogonality is tested for u, v, and
+    axis, on the global axis +Y only; removed wrongly placed comment in
+    restore() method; improved file docstring at the top.
+  *  a2103d814 - Draft: DraftGui.py, the docstrings need triple quotes
+    and be next to the method or class in order to be picked up by
+    Doxygen or Sphinx; this complies with PEP 257
+  *  3f9944660 - [AddonManager] Added RebarAddon icon. Issue link:
+    https://github.com/amrit3701/FreeCAD-Reinforcement/issues/24
+  *  534014042 - Draft: importDWG.py, use FreeCAD.Console.Print, instead
+    of basic Python print()
+  *  b0df1a6f2 - Draft: importDWG.py, moved documentation text; added
+    test for ODAFileConverter
+  *  0804564d8 - Draft: importDWG.py, improve Pythonic style, maximum
+    line length; also translate the console messages
+  *  12d59b76d - Draft: importDWG.py, improve Pythonic style, spacing
+    around commas
+  *  0056edb6c - Draft: importDWG.py, added proper docstrings to the
+    functions
+  *  e4132f580 - Multi-Width to support Sketch with multiple wires
+  *  cce9d0721 - Make the z traverse height equal to the stock z max
+    plus the clearance height. This should help avoid fixtures and such.
+  *  16c26cb3b - Draft: Reorganizing DraftEdit and future Draft command
+    modules
+  *  537a011a1 - Draft: Fixed leftover from badly merged commit
+  *  a210ec373 - Arch: fixed wrong copy/paste, duh...
+  *  347b81807 - AddonManager: Check that the addon folder actually
+    contains files before declaring it installed
+  *  683397b18 - Arch: Allow to turn off material color and object color
+    syncing
+  *  cf4804ebc - Improve irregular hole detection.
+  *  3148d92d6 - Changed hole diameter detection to avoid tessilation
+    inaccuracies in more cases.
+  *  641d946fa - [TD]Allow Aligned & Uniform Conventions on Radius Dims
+  *  f704340f2 - Enhance Radius dimension drawing
+  *  1800f29f4 - Set transparency of base model clones to 80
+  *  1d4b03545 - Auto complete job template name if naming convention
+    isn't met
+  *  0cc292086 - remove /EHs or /EHsc option only for release builds,
+    add /bigobj to release builds
+  *  a4a7bc72b - Arch: IFC import, add some comment
+  *  fd8045d08 - Arch: IFC import, move recycler class around
+  *  ea4a7fdde - Arch: IFC export, move into separate module
+  *  8c9a9767e - Draft: Fixed typo
+  *  b630dd773 - Remove extra indentation from webGL template.
+  *  99f1798fa - [Arch] Bugfix - Unknown command 'Draft_Edit'
+  *  b6c8052bf - Update translate in no GUIup case
+  *  3e11cc596 - Draft: importSVG.py, commented out or removed unused
+    variables. Quality of code checked with flake8 --
+    ignore=E226,E266,E401,W503
+  *  277038742 - Draft: importSVG.py, use auxiliary variables to reduce
+    the length of the lines, particualrly the lines with regular
+    expressions which search quantities in strings
+  *  68f380076 - Draft: importSVG.py, use auxiliary variables to reduce
+    the length of the lines, and make the code more readable
+  *  b554cb5df - Draft: importSVG.py, use auxiliary variables to reduce
+    the length of the lines, avoid too many nested parentheses, and make
+    the code more readable
+  *  7e45fd35d - Draft: importSVG.py, test for FreeCAD.GuiUp to confirm
+    that the interface is up; the old check doesn't work; show the Qt
+    dialog only if the interface exist, otherwise assume 96 dpi
+  *  9424c114e - Draft: importSVG.py, improved spacing, used auxiliary
+    variables to reduce the line length and clean up the code
+  *  79dfd6167 - Draft: importSVG.py, improved spacing, used auxiliary
+    variables to reduce the line length and clean up the code
+  *  5c10b7eb5 - Draft: importSVG.py, 4 space indentation, 8/8
+    translateVec, getMatrix
+  *  908ccde34 - Draft: importSVG.py, 4 space indentation, 7/?
+    characters, endElement, applyTrans
+  *  b17912f94 - Draft: importSVG.py,  4 space indentation, 6/? circles,
+    texts, symbols
+  *  a4cd4bea2 - Draft: importSVG.py,  4 space indentation, 5/? lines,
+    polylines, ellipses
+  *  ab420f3f1 - Draft: importSVG.py,  4 space indentation, 3/? rects
+  *  64ce130f7 - Draft: importSVG.py,  4 space indentation, 3/? paths
+  *  74d6b8f7d - Draft: importSVG.py,  4 space indentation, 2/?
+  *  81480a6dc - Draft: importSVG.py,  4 space indentation, 1/?
+  *  cf40dabaa - Draft: importSVG.py, improved Pythonic style, 4 space
+    indentation instead of 8
+  *  696cbeca4 - Draft: importSVG.py, improved Pythonic style, 4 space
+    indentation instead of 8
+  *  822327ca0 - Draft: importSVG.py, improved Pythonic style, 4 space
+    indentation
+  *  dec7bd91b - Draft: importSVG.py, improved Pythonic style, 4 space
+    indentation
+  *  59eb93a70 - Draft: importSVG.py, improved Pythonic style, spaces
+    and comments
+  *  330746d12 - Draft: importSVG.py, improved Pythonic style, 4 space
+    indentation
+  *  e180d28ea - Draft: importSVG.py, fixed indentation that causes an
+    error
+  *  96046379b - Draft: importSVG.py, improved Pythonic style, 4 space
+    indentation
+  *  3d7995da7 - Draft: importSVG.py, improved Pythonic style, 4 space
+    indentations
+  *  2068c0346 - Draft: importSVG.py, improved Pythonic style, 4 space
+    indentation
+  *  80ebb72c9 - Draft: importSVG.py, improved Pythonic style, spacing
+    around mathematical operators and commas
+  *  c9440078a - Draft: importSVG.py, improved Pythonic style, 4 spaces
+    instead of 8
+  *  023b28803 - Draft: importSVG.py, improved Pythonic style, 4 spaces
+    instead of 8
+  *  dacb262f6 - Draft: importSVG.py, improved Pythonic style, 4 spaces
+    instead of 8
+  *  945eee8f8 - Draft: importSVG.py, improved Pythonic style, 4 spaces
+    instead of 8
+  *  0e2c28813 - Draft: importSVG.py, improved Python style, spacing
+    around commas
+  *  a7b305056 - Draft: importSVG.py, improved Python style, spacing
+    around commas
+  *  3f653bf9f - Draft: importSVG.py, improved Python style, spacing and
+    indentation
+  *  227dfc8a3 - Draft: importSVG.py, improved docstrings, and comments
+  *  fe409d5d8 - Draft: importSVG.py, improved docstrings, and comments
+    in the svgHandler class
+  *  22e0a19f1 - Draft: importSVG.py, improved docstrings, and comments
+    in the functions
+  *  6c2a0cc55 - Draft: importSVG.py, improved docstrings, and comments
+  *  d4d3e7fd2 - Draft: importSVG.py, improve the docstrings, and
+    indentations
+  *  7c2dd7754 - Draft: importOCA.py, open the file to write as text,
+    not to write in binary
+  *  3777e8f7f - Draft: importOCA.py, print to the FreeCAD console
+    (report view), and also allow translating the text
+  *  a8532d645 - Draft: importOCA.py, as of 2019 this file format is
+    practically obsolete, and this module is not maintained
+  *  0de37f509 - Draft: importOCA.py, improved Pythonic style, checked
+    the code with flake8 and Spyder, which uses various code analyzers
+  *  7d7d45ce2 - Draft: importOCA.py, improved Pythonic style, changed a
+    few variables; checked the code with flake8
+  *  5d63f8c0a - Draft: importOCA.py, improved Pythonic style, added
+    spaces around operators and commas
+  *  d9bb428d6 - Draft: importOCA.py, added proper docstrings to the
+    functions
+  *  78cad087c - Draft: importAirfoilDAT, Pythonic style. Checked with
+    flake8. This module is mostly unmaintained.
+  *  9251151f7 - Draft: importAirfoilDAT, use 4 space indentation
+    instead of 8 space
+  *  7c60f49e6 - Draft: importAirfoilDAT, removed excessive whitespace
+  *  673a6cdd7 - Draft: importAirfoilDAT, improved spacing around
+    operators
+  *  b97824834 - Draft: importAirfoilDAT, removed all tabs, and used 4
+    spaces instead
+  *  0b22d1c34 - Draft: importAirfoilDAT, changed entire code to use
+    Linux end of lines, LF, instead of Windows end of lines CRLN
+  *  c63b9d798 - Draft: importAirfoilDAT, added proper docstrings to
+    public functions
+  *  4b4ed9c80 - Draft: DraftVecUtils, position of the Doxygen comments
+  *  c64f8fc50 - Draft: DraftVecUtils, improved docstrings and comments
+  *  c143aee78 - Draft: DraftVecUtils, improved docstrings and comments;
+    check the isColinear() function, it tests for colinearity between
+    vector differences, and not the vectors themselves.
+  *  93e284c18 - Draft: DraftVecUtils, improved docstrings; check the
+    isColinear ffunction, because the test succeeds when there are only
+    two vectors, no matter if they are colinear or not
+  *  7417c7cd6 - Draft: DraftVecUtils, improved docstrings, particularly
+    those with code examples; make sure they only list one return value;
+    the description of that return indicates possible values
+  *  fc8a60658 - Draft: DraftVecUtils, improved docstrings
+  *  bab307204 - Draft: DraftVecUtils, improved docstrings
+  *  bb656df73 - Draft: DraftVecUtils, improved docstrings
+  *  65c46a24e - Draft: DraftVecUtils, improved docstrings
+  *  a927bc309 - Draft: DraftVecUtils, improved docstrings; there is a
+    strange condition, the result is calculated only if the square of
+    the magnitude of a vector is NOT 15, why is this?
+  *  f49d19eb2 - Draft: DraftVecUtils, improved docstrings
+  *  21e9f9984 - Draft: DraftVecUtils, improved the docstrings
+  *  50cc1fef5 - Draft: DraftVecUtils, improved the docstrings
+  *  40fbd9177 - Draft: DraftVecUtils, better docstrings; removed the
+    last comma at the end of the list of vectors
+  *  7088b14ba - Draft: DraftVecUtils, added docstrings; the test
+    doesn't do anything because the variable doesn't change value
+  *  c0d3ab173 - Draft: DraftVecUtils, use docstrings, shorter lines
+  *  87a635716 - Draft: DraftVecUtils, improved Pythonic spacing, and
+    docstring
+  *  0eb660a14 - Draft: DraftVecUtils, improved Pythonic spacing and
+    variable name
+  *  03ffcb35f - Draft: DraftVecUtils, improved Pythonic spacing around
+    commas and operators
+  *  b44d96698 - Draft: DraftVecUtils, improved Pythonic style, spacing
+    and commas
+  *  753cc6855 - Draft: DraftVecUtils, improved Pythonic style, spacing
+    and commas
+  *  2d9da934f - [AddonManager] Rename Part-o-magic icon
+  *  5e8945f6c - [AddonManager] Fix A2plus icon name in .qrc file
+  *  fd4d81bd2 - [AddonManager] Fix AirPlaneDesign logo name
+  *  4225125fd - [AddonManager] Rename MOOC workbench icon
+  *  3799aff97 - [AddonManager] Add LCInterlocking icon
+  *  1769b6d7f - Draft: WorkingPlane, Pythonic style, improved the
+    docstrings, use a shape of type Part.Face
+  *  bbf22c6a4 - Draft: WorkingPlane, Pythonic style, improved the
+    docstrings; moved the description of the points within the parameter
+    section
+  *  12ef13e5f - Draft: WorkingPlane, Pythonic style, improved the
+    docstrings
+  *  ee4a06793 - Draft: WorkingPlane, Pythonic style, improved the
+    docstrings
+  *  bbc37d553 - Draft: WorkingPlane, Pythonic style, improved the
+    docstrings
+  *  e844e7b4b - Draft: WorkingPlane, Pythonic style, improved the
+    docstrings
+  *  14c7f4361 - Draft: WorkingPlane, Pythonic style, improved the
+    docstrings; added the other getLocalRot() and getGlobalRot() related
+    functions to the 'See also' sections; need to verify their operation
+    as some of these methods seem to just return the original point
+  *  05cb2cb4c - Draft: WorkingPlane, Pythonic style, improved the
+    docstrings; added a graphic to explain the type of point that the
+    functions return; maybe getLocalCoords() should be named
+    getRelativeCoords(), as the return value is a relative vector
+    referred to the plane.
+  *  023cf12c5 - Draft: WorkingPlane, Pythonic style, improved the
+    docstring; why does the projection invert the direction of the
+    component, that is, -x instead of x, if the angle between the
+    vectors x and u is larger than 1 radian? Why specifically 1 radian?
+  *  ad74402d9 - Draft: WorkingPlane, Pythonic style, improved the
+    docstrings
+  *  ee09fc323 - Draft: WorkingPlane, Pythonic style, improved the
+    docstrings
+  *  34c2dcb27 - Draft: WorkingPlane, Pythonic style, improved the
+    docstring
+  *  53ef53e0c - Draft: WorkingPlane, Pythonic style, improved the
+    docstring
+  *  2bdf33478 - Draft: WorkingPlane, Pythonic style, improved the
+    docstrings
+  *  f13529dea - Draft: WorkingPlane, Pythonic style, improved the
+    docstrings
+  *  cf430bf75 - Draft: WorkingPlane, Pythonic style, improved the
+    docstring
+  *  8ac3b21ca - Draft: WorkingPlane, Pythonic style, improved the
+    docstring; these methods only work when 'FreeCAD.GuiUp' is True; it
+    should print a message to the console indicating that.
+  *  5a4ca2a4f - Draft: WorkingPlane, Pythonic style, improved the
+    docstring; setup() only works when 'FreeCAD.GuiUp' is True,
+    otherwise it fails silently. This should be change to print a
+    message to the console.
+  *  17f39fc41 - Draft: WorkingPlane, Pythonic style, improved the
+    docstrings; alignToSelection() only works when
+    'FreeCADGui.Selection' is available, that is, when the graphical
+    interface is loaded.
+  *  97a02d879 - Draft: WorkingPlane, Pythonic style, improved the
+    docstrings; alignToSelection() only really works with Faces because
+    it calls alignToFace(); it doesn't work with Edges nor Wires because
+    alignToCurve() isn't fully implemented.
+  *  7b91cbce3 - Draft: WorkingPlane, Pythonic style, improved the
+    docstrings
+  *  51e6f9182 - Draft: WorkingPlane, Pythonic style, improved the
+    docstring, although alignToCurve is not yet implemented so it
+    doesn't do anything
+  *  1a328e58f - Draft: WorkingPlane, Pythonic style, improved the
+    docstring.
+  *  04a0c0bbf - Draft: WorkingPlane, Pythonic style, improved the
+    docstring.
+  *  2d294994a - Draft: WorkingPlane, Pythonic style, improved the
+    docstrings.
+  *  9b3aba60b - Draft: WorkingPlane, Pythonic style, improved the
+    docstrings, in particular offsetToPoint(); I have some doubts about
+    the implementation in 3D space as it seems to calculate a projected
+    distance, and not the real distance; I don't think this is very
+    helpful when the direction is different from perpendicular (normal);
+    perpendicular distance is certainly the most common case, so I don't
+    know if there is any problem at all in practice.
+  *  59f66dcf8 - Draft: WorkingPlane, Pythonic style, docstring of the
+    initialization of the plane class
+  *  dbbb84b44 - Draft: WorkingPlane, Pythonic style, docstring of the
+    plane class
+  *  89b9e6478 - Draft: WorkingPlane, Pythonic style, docstring of the
+    plane class
+  *  15b11b8cb - Draft: WorkingPlane, Pythonic style, added whitespace
+  *  1161cbb9b - Draft: WorkingPlane, moved document docstring to the
+    top
+  *  f54cbb968 - Draft: WorkingPlane, Pythonic style, added spaces after
+    commas, and removed trailing whitespace
+  *  ba5ba2af6 - Draft: WorkingPlane, Pythonic style, added spaces after
+    commas
+  *  cdde9a4df - Draft: WorkingPlane, Pythonic style, added spaces after
+    commas
+  *  0decb4118 - Draft: WorkingPlane, Pythonic style, added spaces
+  *  92797bc97 - Draft: WorkingPlane, Pythonic style, add spaces
+  *  4ecb10709 - Draft: WorkingPlane, removed excessive indentation
+  *  d3a41be66 - Draft: WorkingPlane, removed unnecessary semi-colons
+    and indentation
+  *  c6e11c4ac - Arch: IFC import, inform user if material color !=
+    shape color
+  *  6d64c2b2c - OpenSCAD/OpenSCAD2Dgeom.py: source comment typo fix
+  *  d94f8635f - Arch/ImportIFC.py: fix source comment typo
+  *  eb595acfe - Fix misc. source comment typos
+  *  362d523e0 - Arch: IFC import, use inverse attributes for reading
+    properties
+  *  ad8a81642 - Arch: IFC import, only merge materials if they have
+    same name and color
+  *  7c48ad754 - SMDS_VolumeTool.cpp: Fix compilation warning
+  *  7b315d3a1 - DlgSettingsGeneral.ui: hide unused option from dialog
+  *  c1ab62af6 - TaskSketcherGeneral.ui: save horizontal space
+  *  b3e5fe56c - use shiboken version number to check for existence of
+    Shiboken::ObjectType::typeForTypeName
+  *  9b3102a70 - if SEH option is activated remove compiler flags /EHsc
+    or /EHs to avoid compiler warnings (D9025)
+  *  9873ec6d5 - do not allow Python to re-define snprintf and vsnprintf
+    for VS 2015 or above to fix build failure with boost 1.69 or later
+  *  6ab7d261c - fix regression of previous commit and implement an
+    alternative way to avoid MSVC compiler bug
+  *  b23589d6a - avoid including bitset header and Qt 5.12's qfloat16.h
+    in the same compilation unit Hints: qfloat16.h is included through
+    PySide2 headers        There is a compiler bug in VS 2017 so that
+    the build stops (https://bugreports.qt.io/browse/QTBUG-72073)
+  *  cc59222aa - workaround for a weird behaviour of
+    Shiboken2Config.cmake that may explicitly set CMAKE_BUILD_TYPE to
+    Release
+  *  0795b6633 - Make Deburr Pannel rasonably sized
+  *  b013624ba - Tools: added --gui option to fcinfo tool
+  *  6b1be38f3 - add relative permittivity to Air and Water
+  *  1919659fa - Tools: Small additional fix in fcinfo tool
+  *  b351c3da5 - Tools: More options to fcinfo tool
+  *  e1b581a0a - AddonManager: Don't check addons for updates if they
+    have already been checked for updates
+  *  47f1213f7 - Re-enable Final Depths below hole bottom
+  *  730efb9da - Fix: SetupProperties() syntax correction
+  *  03054e8b9 - [AddonManager] add cadquery addon logo
+  *  f98d03bfd - [AddonManager] Use the correct case-sensitive name for
+    external addons/wbs
+  *  364e3927c - Draft: improved the style of the code, checked with
+    flake8
+  *  edaf03b0a - Draft: improved Python style, checked with flake8
+  *  110649621 - handle projects without sites gracefully
+  *  0dd7aaaea - Arch: populate and read compass rotation from and to
+    IFC RC true north
+  *  be661ad94 - Arch: fix IFC import for groups with non-ascii names
+  *  572229416 - [AddonManager] rename logos so they mirror their WB
+    name
+  *  767450206 - [Draft] ImportSVG apply suggested changes
+  *  3db7496eb - [Draft] ImportSVG - Set DPI automatically where
+    possible
+  *  fc7675d6e - Follow up fixes
+  *  c32056cf8 - preferences-ifc.ui; some more requested whitespace
+    fixes
+  *  b6da0b810 - preferences-ifc.ui: requested whitespace fixes
+  *  91db04846 - add, update and uniform tooltips for Arch preferences
+  *  f2221e8d5 - ProfileFaces: fix "HandleMultipleFeatures" set to
+    individually
+  *  96b74022e - Arch: ifc import, move getting the property relation
+    table in separate method
+  *  e1cb4f209 - Arch: ifc export, move get property data out of FreeCAD
+    property schema in separate method
+  *  1ab46c2e2 - Arch: ifc import, move reading ifc attributes in
+    separate method
+  *  590c7fd9d - Arch: ifc, some new lines
+  *  8a3434676 - PathAdaptive:  bugfix
+  *  6ddab6e20 - MillFace: add feature - exclude raised areas
+  *  506886f38 - [TD]Fix Svg Export Scaling issue
+  *  df0584021 - handle gimbal lock when converting between quaternion
+    and Euler angles (issue #0004062)
+  *  2212a4e4d - Auto prefix job template filename
+  *  082c44464 - 3D Pocket: upgrade to adaptive start and finish
+  *  bd7dd045b - Test: Allow WBs to know they are being run under test
+    environment
+  *  07a80bc24 - update and reshape tooltips for FEM import-export
+    settings
+  *  f1a7ef6a7 - show only filename in macro editor tab rather than full
+    path, fixes issue #4063
+  *  b47729490 - DlgSettingsMeshView.ui: fix a wrong '&' char
+  *  669f4bd5a - DlgSettingsMeshView.ui: add and improve tooltips
+  *  f54df863d - add tooltips for meshing dialogs
+  *  61e965863 - TaskAttacher.ui: clarification and add tooltip
+  *  53f51db8a - eliminate some bad old-style casts which hide an
+    obscure error
+  *  3cc93d196 - [enable report view on warnings/erros] add
+    reportoutputobserver class, manage report view visibility via
+    QDocketWidget toggleViewAction() rather than directly with show(),
+    remove unnecessary variables
+  *  50908da85 - remove whitespace
+  *  b20dd0da1 - Show report view on all warnings or errors by default,
+    can be disabled in preferences
+  *  5e7fa0d37 - Fix some regressions of PR 2330 fix file chooser in
+    macro dialog do not remove GUI text from translation remove friend
+    class declaration, use Qt's introspection mechanism create dialogs
+    on the stack because they are modal some minor optimizations
+  *  ffeb83870 - [macros toolbar walkthrough] Use command manager to
+    check for existing macro action rather than looking through user
+    parameters
+  *  eac812dd1 - [macro toolbar walkthrough] change dialog parent to
+    this instead of main window, for  avoiding warning message when
+    closing macro execute dialog
+  *  1aab80785 - [macros toolbar walkthrough]
+  *  302b9e4da - [toolbar walkthrough] add more error checking to
+    prevent potential crash if customize dialogs change.  Remove final
+    messagebox about switching workbenches to apply changes and add that
+    information to the first messagebox.
+  *  1c6af88fb - Walkthrough for adding macros to custom global toolbar
+  *  e239994b9 - pre-select name filter in import/export file dialog
+  *  741dddf25 - [TD]Fix Inverted Y coord for midpoint and quad
+  *  82c17b35c - use same button to start/stop animation of turntable
+  *  517b11ee3 - [TD]Fix crash on same end points
+  *  3aa6fa19c - [TD]Py functions for CenterLines and formatting
+  *  81863659a - Re-tweak previous Doxygen tweak
+  *  21efae348 - [TD]Fix #4017 Crash on bad hatch scale
+  *  82dd7f034 - Arch: Add right-click option to schedules to
+    (re)generate result spreadsheet
+  *  4c52b1236 - [TD]Fix LockPosition icon location
+  *  310485482 - [TD]Add Show/Hide invisible lines tool
+  *  e406b2f3e - [TD]Remove NoLine option from dialogs
+  *  ecac855b3 - Arch: Keep Schedule dialog above FreeCAD window
+  *  d74cc3f50 - Arch: Schedule UI moved to floating dialog
+  *  125380ddd - Arch: Added Area property to walls
+  *  057c79c11 - Doxygen tweaks
+  *  521fc29ea - Draft: minor fixes to Label tool
+  *  b6f964ede - Arch: Misc improvements to Schedule tool
+  *  5c9b0f90a - Arch: Material improvements
+  *  50c851339 - Arch: Bugfixes to Site's solar diagram
+  *  ed22aad08 - Arch: Improvements to OfflineRenderingUtils (ability to
+    generate shadows)
+  *  ff1a7fd0a - Fix typos
+  *  a2fa902fe - add and uniform general preferences tooltips
+  *  f6e04f182 - uniforms option names and add tooltips for sketcher
+  *  470349533 - update, fix and uniform draft tooltips
+  *  4b4e48d55 - add missing tooltips for part import/export
+  *  8048f9362 - Cleanup in doxygen stuff
+  *  0d5639742 - [TD]fix master merge conflict
+  *  0434a44c8 - [TD]Remove extra template dir
+  *  941968b37 - [TD]Edge and Vertex center lines
+  *  358314123 - [TD] Fix Centerline position
+  *  f65585719 - [TD] fix context menu
+  *  621b66be1 - [TD]Add Properties for Cosmetic persistence
+  *  b561190d4 - [TD]Add restore invisible lines
+  *  3d2edd0f7 - [TD]Add line appearance editor
+  *  11d8aaed6 - [TD]Add CenterLine edit function
+  *  39e556fb3 - [TD] Add Centerline Shift/Rotate
+  *  7199c9525 - Cleanup dangling debug code
+  *  5970e91ef - [TD]Py Cosmetic Vertex, Line, Circle Arc
+  *  6053c08c2 - Downgrading debug msg
+  *  931aa851b - Return diameter 0 for invalid holes in order to let the
+    UI initialize completely
+  *  f9e23d21e - Make Helix op robust against features that don't exist
+    anymore
+  *  468ee048b - Create FUNDING.yml
+  *  0091dd27b - MSVC complains about missing header
+  *  ea050c9cf - MSVC also fails to automatically move if no elision
+    possible
+  *  9fb2606c8 - Enable RVO for any other than old GCCs like 4.8
+  *  614a03181 - GeometryExtensions: Add override when overriding
+    virtual functions (EMCPP Item 12)
+  *  143f69731 - GCC 4.8 brace initializer requires double braces
+  *  1a401a6a5 - MSVC2013 c++11 has make_unique pointer definition, so
+    do not overload it.
+  *  cf813ea89 - Clang complains of the specialisation after implicit
+    instantiation with the inversed order
+  *  3b4cfcff1 - GCC 4.8 fails to covert lvalue during RVO optimization
+  *  a30114526 - old GCC C++11 specialisation in a different namespace
+    and moving template instantiations after all specialisations
+  *  a41de781c - Sketcher: GeometryExtension and
+    ExternalGeometryExtension
+  *  3554cd983 - Base: Move std::make_unique to Base
+  *  5a435f8d8 - Part: geometry extensions minor code clean up
+  *  42bc27994 - Part: geometry extensions several memory leak fixes
+  *  a43c29ccd - Part: Default geometry extensions for boolean and
+    double
+  *  33620d212 - Part: Geometry extension set with unique id (type+name)
+    and list based getExtensions python
+  *  11793ba0b - Part Geometry: get an extension from type or name, also
+    from python
+  *  afbe1df32 - Part:: Geometry container extend hasExtension to type
+    and name
+  *  854452e2e - Part: Geometry - methods to remove extensions by name
+    and type
+  *  8b5e9b55c - Part: Default geometry extensions make sure built-in
+    types are initialised
+  *  dece5aa81 - Part: Command to show list of extensions from Python
+  *  234d542c1 - Part: Fix assignment after reserve of weak_ptr causes
+    segfault
+  *  beec44918 - Part: Extend Geometry Extension to have a name
+  *  5f46862ca - Part: correct long parsing in GeometryIntExtensionPyImp
+  *  41ad1fe0a - Part: Geometry extension const correctness
+  *  c670ef979 - Part: Move default geometry extension for int to
+    internally use long
+  *  69c3b7d4f - Part: Default geometry extension template encapsulate
+    value
+  *  fb5e8b4df - Part: GeometryDefaultExtensions template
+  *  9bb2210c9 - Part: Geometry extensions set interface
+  *  460bb5932 - Geometry extensions: remove unnecessary smart pointer
+    deletion
+  *  b5f5d1c32 - Part: GeometryStringExtension to extend a geometry by a
+    string
+  *  9cb2863a2 - Part: Expose GeometryIntExtension python type
+  *  7828c34ff - Part: Standard geometry extension adding an integer
+    value
+  *  1e2c627f2 - Part: Excise GeometryExtension from Geometry
+  *  9b65a4885 - Sketcher: Excise SketchGeometryExtension outside of
+    SketchObject
+  *  8688dbceb - Sketcher: Python implementation of Sketcher geometry
+    extension
+  *  ef30cc252 - Part: Geometry Python interface to get/set an extension
+  *  2c65c5681 - Part:: Bug fix in geometry set extension
+  *  718d79fa9 - Part: Geometry Extension Python object
+  *  b778e21b4 - Sketcher Geometry Extension
+  *  aedfb6a6a - Geometry Extension based on smart pointers
+  *  f977f47de - Geometry: Extensions - release any allocated dynamic
+    memory
+  *  26d3d906c - Sketcher: Add Sketcher Geometry Extension
+  *  2400d63d7 - Part: Geometry Extensions
+  *  348160d4e - Gui: Gesture: stop reacting to gestures on Macs
+  *  4617e5484 - Add basic ability that PartDesign doesn't switch to
+    Task panel when activated => Add a 'SwitchToTask' boolean parameter
+    to Mod/PartDesign and set to 'false' to prevent switching
+  *  2b81f045f - lgtm configuration file
+  *  f39ffe570 - Change ArchWall WidthsOfWall attribute to OverrideWidth
+  *  589a2ac4f - ArchWall_DraftGeomUtils Multi-Width support added
+  *  e5c823bf3 - AddonManager: Better support of non-github addons
+  *  ea5a1393f - PathHelix: Add simple x,y path sorting
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 24 Aug 2019 19:32:17 +0300
+
 freecad-daily (0.18+git17352-ec0049921-1) unstable; urgency=medium
 
   * Compile
