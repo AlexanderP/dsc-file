@@ -1,3 +1,41 @@
+solvespace (3.0.0~git1398-22e4011-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 22e4011cb67e3eca150f74e47695ebb859215598
+  * Date: 1566743437
+  * git changelog:
+  *  22e4011 - use std::vector in helix operations instead of fixed
+    length array. Remove limit on number of sections. Delete definition
+    of Revolved struct.
+  *  e22c522 - use std::vector in lathe operations instead of fixed
+    length array
+  *  2dd50d0 - Only allow lathe, revolve and helix for 2d sketches.
+  *  13820bf - Revert "IdList::RemoveTagged switch to std::remove_if
+    from iteration. NFC."
+  *  b284e80 - Improve NextAfter. NFC.
+  *  533ca61 - Fix a manual manipulation of List::n. NFC.
+  *  dd738dd - Add Last(). NFC.
+  *  610e35f - Improve Clear(). NFC.
+  *  b9d035c - Improve MoveSelfInto. NFC.
+  *  9fd09dd - Add IdList::AllocForOneMore() based on List. NFC.
+  *  0bfbbe2 - Improve implementation hiding in IdList/List. NFC.
+  *  482f0e8 - Replace qsort with std::sort and lambda. NFC.
+  *  1b97a00 - Add and use List<T>::IsEmpty, range-for, etc. NFC.
+  *  0bb6a34 - IdList::RemoveTagged switch to std::remove_if from
+    iteration. NFC.
+  *  3ea077b - Reduce scopes and placate clang-tidy. NFC.
+  *  60fdac1 - Simplify IdList::Add(). NFC.
+  *  3340392 - Add and use LowerBound methods in IdList. NFC.
+  *  0c941ae - Revise IdList::Tag to reduce code duplication. NFC.
+  *  5ada4db - Add and use IdList::IsEmpty. NFC.
+  *  b5f36a4 - Provide cbegin(), cend() in containers. NFC.
+  *  86f20cc - Convert many loops to range-for or std algorithms. NFC.
+  *  97c8cb7 - Make sure changing color of a group does not reset alpha.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 26 Aug 2019 23:26:42 +0300
+
 solvespace (3.0.0~git1376-d9081b0-1) unstable; urgency=medium
 
   * Compile

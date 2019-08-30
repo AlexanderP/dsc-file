@@ -1,3 +1,27 @@
+balsa (2.5.7+git9226-bf8bf6fe8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/balsa
+  * Branch: master
+  * Commit: bf8bf6fe8a07c198eaf0a961842f962e874b34d2
+  * Date: 1566513873
+  * git changelog:
+  *  bf8bf6fe8 - imap-handle: Drop the last redundant clear
+  *  d78c7667f - imap-handle: Use modern macros for ImapMboxHandle
+  *  c30add420 - balsa-message: Use consistent names
+  *  0fac3366c - balsa-message: Add the attach-button to the struct
+  *  c09370239 - rfc 2445: Set a struct as GObject-data
+  *  13047c10b - mailbox-imap: Store cache-manager in the object
+  *  ae0161ec8 - mailbox: Store message/partial ids in the object
+  *  cb64244da - Drop redundant dynamic cast
+  *  e946cc340 - Unref structure members in a dispose method
+  *  b2fa84baa -  Do not cast signal data using G_OBJECT(data)
+  *  fc5fde4bb - In calls to g_signal*, do not cast first argument
+  *  287c5191d - Do not cast argument to g_object_unref()
+  *  fed3c1568 - Do not cast argument of g_object_ref()
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 24 Aug 2019 11:39:34 +0300
+
 balsa (2.5.7+git9213-64cc296ea-1) unstable; urgency=medium
 
   * Compile

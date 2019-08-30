@@ -1,3 +1,34 @@
+freecad-daily (0.18.3+git17906-57ef3dfdf-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 57ef3dfdf4cba46eacb36fefba38fe750d56d60a
+  * Date: 1566935332
+  * git changelog:
+  *  57ef3dfdf - Part.BSplineSurface.buildFromPolesMultsKnots(): Fix
+    'Truth value of an array ... use a.any() or a.all()' when explicit
+    knots or weights provided
+  *  efba264ff - Arch: import IFC, helper, improve getting the color
+    table
+  *  ffcac528d - TechDraw: Middle button panning
+  *  7927c7f3c - Arch: import IFC, remove not needed return value of
+    colors method
+  *  3dac114f9 - Arch: Solved bug in Structure
+  *  e9cbbb38f - Draft: Fixed tooltips
+  *  92895f794 - Draft: Fixed regression in snapping
+  *  d60a03d9c - Refactor exportIFC to not use global preferences
+  *  c49918435 - [Gui]Add options for page size, lineWidth and
+    background
+  *  1002ea9ad - add CMakeLists.txt.user to ignore list
+  *  473d98b07 - cleanup top-level CMake file
+  *  ed0eff024 - TechDraw/Arch: Added new Coin Mono rendering mode to TD
+    ArchViews
+  *  59ac90897 - Draft: fixed color buttons dialogs not starting with
+    the right color
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 28 Aug 2019 00:05:10 +0300
+
 freecad-daily (0.18.3+git17887-e6e940755-1) unstable; urgency=medium
 
   * Compile
