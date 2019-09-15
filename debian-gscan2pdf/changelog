@@ -1,3 +1,45 @@
+gscan2pdf (2.5.5+git3069-09825571-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 09825571e35c029445b8132da351071b930aaa9b
+  * Date: 1568219249
+  * git changelog:
+  *  09825571 - Prerelease commit
+  *  d4757c25 - Bumped version to 2.5.6
+  *  dcca1595 - Fix bug storing responses from multiple message window
+    when no responses had been stored before
+  *  b540d531 - Update to Czech translation
+  *  0cb7842f - Ghost scan button while scan options are being loaded
+    and scanning
+  *  9700cabb - Use gtk-3 cursors for ImageView widget
+  *  e55925c8 - Set 'wait' cursor while scan options are being loaded
+    and 'progress' cursor while scanning
+  *  9b45bc92 - Fix printing
+  *  424e15f7 - Document closing bug #242
+  *  3900e0a2 - Fix updating extended page numbering on scan dialog
+    after changing document. Refactor update_start(), reset_start(),
+    update_number() into Gscan2pdf::Dialog::Scan to be able to test them
+  *  a2a6a8e9 - Fix --import option
+  *  ab767c86 - Don't use tiff2pdf to create temporary PDF to check for
+    pdftk
+  *  5955b58b - Refactor two system() calls to open3()
+  *  cbd05f60 - Tidy previous commit
+  *  99f3ecf8 - Improve layout of multiple message dialog
+  *  5e6ba434 - Don't blacklist empty device name
+  *  a4a43904 - Don't try to compress log file if it wasn't created
+  *  035726c9 - Extended edit profile functionality in scan dialog to
+    current scan options, when no profile selected
+  *  1534dd34 - Document closing merge request 26. Make similar change
+    in _thread_gocr()
+  *  fe60e999 - Apply Threshold in one step
+  *  dd4188fb - Document closing merge request 25
+  *  8dd4b623 - Prevent Negate from changing the alpha channel
+  *  84b63296 - Post-release commit
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 12 Sep 2019 02:26:06 +0300
+
 gscan2pdf (2.5.5+git3046-7afc8579-1) unstable; urgency=medium
 
   * Compile

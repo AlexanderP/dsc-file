@@ -1,3 +1,39 @@
+solvespace (3.0.0~git1419-7f9117b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 7f9117b2bf0636a594eb1f1ba76b9dbe0e8a4e83
+  * Date: 1568198290
+  * git changelog:
+  *  7f9117b - Calculate area of selected faces, if any.
+  *  915f55a - Show volume of current group alongside total volume.
+  *  a0e9923 - Clean up virtual, override, default, and void params.
+    NFC.
+  *  ae417fc - Use emplace_back. NFC.
+  *  34dccbf - Don't call static methods through an instance. NFC.
+  *  219df31 - Linux: add support for building snap packages.
+  *  b1e280e - Fix undefined behavior in IdList::end().
+  *  ec13839 - Modify clang-format config to avoid single-line things.
+    NFC.
+  *  bedea1e - Avoid undefined behavior from out-of-range access. NFC.
+  *  b8ee0e9 - Remove extraneous semicolon. NFC.
+  *  78819ff - Fix "virtual function without virtual destructor"
+    warning. NFC.
+  *  c959af1 - Fix a comment. NFC.
+  *  3e566d7 - Remove std::move from trivially-copyable types. NFC.
+  *  c0904e2 - Use IsEmpty() or .empty() to check if a container is
+    empty. NFC.
+  *  61c0167 - Fix TTF iteration in case of an empty list.
+  *  15838dc - For loop cleanup. NFC.
+  *  231dff6 - Add and use List::Last(). NFC.
+  *  c5f3cd1 - Use the same @todo hot comment style everywhere.
+  *  d514a26 - Fix use-after-free in revolve and helix.
+  *  a4c0022 - Fix a warning about a virtual destructor.
+  *  43b2261 - CLI/testsuite: do not crash if a dialog is displayed.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 12 Sep 2019 04:55:35 +0300
+
 solvespace (3.0.0~git1398-22e4011-1) unstable; urgency=medium
 
   * Compile
