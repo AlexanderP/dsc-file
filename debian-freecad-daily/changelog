@@ -1,3 +1,145 @@
+freecad-daily (0.18.3+git18323-af2e97da7-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: af2e97da7b21d4e5ffef587c97f3ab99e720cd59
+  * Date: 1569534133
+  * git changelog:
+  *  af2e97da7 - clean-up FreeCADLibpackChecks.cmake
+  *  3bc979fbc - Reverted FreeCadMacros.cmake to what is in master.
+  *  35ef6732a - Cleaned up a debug message and removed legacy file.
+  *  63c45d3ba - Move logic out of CMakeLists.txt
+  *  cfc25626a - FEM: use femexample setup simple box static for solver
+    framework unit test
+  *  40a4850f9 - FEM: frd reader, fix analysis identifier
+  *  2873e535f - FEM: examples manager, small fix
+  *  c3976011a - FEM: example simple box static and frequency, add them
+    to the example manager
+  *  bc29bcf6f - FEM: examples simple box static and frequency, move
+    mesh from unit tests to fem examples
+  *  3acb7d937 - FEM: move setup simple box static and frequency example
+    from unit tests to fem examples
+  *  ef72550c2 - FEM: ccx unit tests, improve prints
+  *  1f8c68603 - FEM: examples, flow 1d, improve variable names
+  *  253891b44 - FEM: example thermomech flow1d, add it to the example
+    manager
+  *  bad8f9a30 - FEM: example thermomech flow1d, move mesh from unit
+    tests to fem examples
+  *  587612f21 - FEM: move setup flow 1D thermomech example from unit
+    tests to fem examples
+  *  d0422fa91 - FEM: examples, some improvements
+  *  f33aa0cba - FEM: example multimaterial two boxes, add it to the
+    example manager
+  *  b1765cfdd - FEM: example multimaterial, move mesh from unit tests
+    to fem examples
+  *  927011175 - FEM: move setup multimaterial example from unit tests
+    to fem examples
+  *  1d8a58672 - FEM: example thermomech spine, add it to the example
+    manager
+  *  0f2fc0887 - FEM: example thermomech spine, move mesh from unit
+    tests to fem examples
+  *  a4b3506b2 - FEM: move setup thermomech example from unit tests to
+    fem examples
+  *  145e3a60f - add missing include to Precompiled.h
+  *  a07cc9f48 - add missing header
+  *  d40b4f66a - improve whitespaces
+  *  64e7cd2d9 - Exclude some packages from fedora 29 builds
+  *  1966238d4 - Update fedora spec as per sopwith
+  *  b75398d76 - Complete remake of drawing dimensions
+  *  29e7f695d - Polish classes in Tools2D
+  *  db8ec7c10 - fix mesh cutting
+  *  bc131c3b0 - support to show color per face
+  *  e16c197db - support to load mtl files
+  *  bd6da5699 - extend texture mapping to meshes
+  *  c8be77f89 - Fix regression in Approximation::AddPoints
+  *  2a1eb36d3 - FEM: utils, fix working dir
+  *  b30021dcb - FEM: pep8 code formating
+  *  c5595e2e7 - FEM: some typos
+  *  44833137b - FEM: Add documentation to run module
+  *  688a6ddf0 - FEM: Add documentation to setting module
+  *  a5843cc7f - FEM: in out modules, Replace print with Console.Print*
+    calls
+  *  80270c7bb - FEM: typos
+  *  b2483c0a1 - FEM: unit tests, fix comments
+  *  f96c805db - FEM: Restructure python test modules/packages
+  *  f5e67238e - FEM: Make view proxy optional on object creation
+  *  d0b7472ab - FEM: Make temp directory default for solver
+  *  708ef0cd6 - FEM: Redirect ElmerGrid output to /dev/null
+  *  9c728a03c - FEM: Add documentation to femutils module
+  *  8b9dfab46 - fix cutting of points
+  *  88637aeb2 - FEM: Add documentation for Fem::Constraint
+  *  3b71a7107 - FEM: Add documentation to Analysis.h
+  *  27675f1e8 - FEM: Remove unnecessary overrides from Analysis
+  *  9a8294629 - SubWCRev out ot source build fix by sopwith
+  *  7407fe9ff - cross-section of meshes
+  *  019198a30 - [TD][SS]Fix 4131 SS formatting in TD View
+  *  054936627 - [TD]Apply filters to PropertyFile
+  *  d4d9cd093 - avoid several implicit conversions, replace several old
+    C-casts with static_cast, do some optimizations
+  *  81d2ff358 - [App][Gui]Add Filter for PropertyFile in PropertyEditor
+  *  e8928898a - avoid several implicit conversions, replace several old
+    C-casts with static_cast
+  *  6d5ebdeaf - fix some MSVC warnings
+  *  a2b1fd29f - fix possible segfault in
+    SoQTQuarterAdaptor::convertOrtho2Perspective
+  *  dbf0644b6 - [Gui]Fix Py SyntaxError on " in PropertyStringList
+  *  c8a0c2c81 - FEM: gmsh tools, make it easier to use an own working
+    dir
+  *  08d9d6dff - FEM: gmsh tools, fix tmp file creation
+  *  eb099c33c - FEM: result tools and ccx tools, improve method
+    documentation
+  *  7695106ff - FEM: code formating replace lines of # with lines of *
+  *  5a83dc2c8 - avoid several implicit conversions, replace several old
+    C-casts, other minor changes
+  *  2e5e340f7 - add function to update texture of cut mesh
+  *  5c54af1e0 - FEM: small changes in coding conventions
+  *  a94448da8 - Arch: ArchBuildingPart, fix obj.Height.Value in
+    onChanged()
+  *  91a11452b - FEM: code formating
+  *  a8b1c56fe - fix misc. source comment typos
+  *  a243b9520 - fix -Wpedantic
+  *  a1e6fce88 - FEM: ccx tools, improve class documentation
+  *  080f70b61 - FEM: result task panel, fix use equations
+  *  378de3c8a - fix -Wcatch-value=, fix -Wpedantic
+  *  d0d92b080 - force strict ISO C++ (-Wpedantic) for Fem, Import,
+    PartDesign, Robot, Sketcher, TechDraw
+  *  a247b7e6a - force strict ISO C++ (-Wpedantic) for Drawing, Image,
+    Inspection, Mesh, MeshPart, Part, Path, Points, Raytracing,
+    ReverseEngineering, Spreadsheet, Start, Surface, Web
+  *  f7c3cba41 - fix possible vulnerability
+  *  c04a823d2 - [TD]Fix mishandling of escaped html in Templates
+  *  b50b21576 - core system force strict ISO C++ (-Wpedantic) TODO:
+    still a lot of variadic macros are not valid ISO C++
+  *  f4bc889b4 - fixes #0004103: Black screen when using rubberband
+    selection
+  *  f76e74d2c - [TD]Fix Annotation font size and descenders
+  *  4556d3f19 - [TD]Fix section line unfilled arrow heads
+  *  ee0bcc095 - [TD]Check first/last geom points exist
+  *  006e1198d - use NaN for invalid quantities instead of DOUBLE_MIN
+  *  1f3d2389b - start to replace old C-style casts with static_cast or
+    reinterpret_cast, avoid implicit casts
+  *  3af5d97e9 - FEM: coding conventions, add documentation info
+  *  13e2fbf0f - FEM: ccx tools, use python documentation style
+  *  b46856d02 - FEM: result task panel, do not activate greyed buttons
+  *  9dfcdb983 - fix possible memory leak
+  *  4f2894169 - fix possible memory leak
+  *  1bfe0f3be - fixes #0004125: MDIViews not accessible correctly
+  *  4631b26d4 - fix crash in polyline tool
+  *  a374ecc8e - FEM: delete file which was added by acident
+  *  9472edbd2 - FEM: result task panel, fix if restore result is True
+    but some results are missing
+  *  585211c33 - FEM: white spaces
+  *  d563d9012 - Arch: use IfcType undefined for building parts, is
+    annotation or actuator ATM
+  *  32153e6ae - FEM: calculix solver task panel
+  *  727ba5a17 - support to load old project files with PD draft object,
+    restore handling with constraints
+  *  ecd4038d3 - [PartDesign] Draft angle property change from
+    App::PropertyFloatConstraint to App::PropertyAngle
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 27 Sep 2019 07:00:08 +0300
+
 freecad-daily (0.18.3+git18220-79a722830-1) unstable; urgency=medium
 
   * Compile

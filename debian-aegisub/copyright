@@ -1,4 +1,4 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Source: http://ftp.aegisub.org/pub/releases/
 
 Files: *
@@ -16,29 +16,27 @@ Copyright: 2004-2010 Rodrigo Braz Monteiro
            2009      Grigori Goronzy
            2009-2010 Thomas Goyne
 License: BSD-3-clause
- Redistribution and use in source and binary forms, with or without
- modification, are permitted provided that the following conditions
- are met:
- .
- Redistributions of source code must retain the above copyright notice,
- this list of conditions and the following disclaimer.
- Redistributions in binary form must reproduce the above copyright notice,
- this list of conditions and the following disclaimer in the documentation
- and/or other materials provided with the distribution.
- Neither the name of the Aegisub Project nor the names of its contributors
- may be used to endorse or promote products derived from this software
- without specific prior written permission.
- .
- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
- AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
- IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
- FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
- DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
- SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
- CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
- OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
- OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Files: libaegisub/*
+Copyright: 2010 Amar Takhar <verm@aegisub.org>
+           2010-2014 Thomas Goyne <plorkyeran@aegisub.org>
+License: ISC
+
+Files: libaegisub/include/libaegisub/exception.h
+Copyright: 2009 Niels Martin Hansen
+License: BSD-3-clause
+
+Files: libaegisub/lua/modules/lpeg.*
+Copyright: 2014 Lua.org, PUC-Rio
+License: MIT
+
+Files: libaegisub/common/cajun/elements.cpp
+       libaegisub/common/cajun/reader.cpp
+       libaegisub/include/libaegisub/cajun/elements.h
+       libaegisub/include/libaegisub/cajun/reader.h
+       libaegisub/include/libaegisub/cajun/visitor.h
+Copyright: 2009-2010 Terry Caton
+License: BSD-3-clause
 
 Files: src/avisynth.h
 Copyright: 2002 Ben Rudiak-Gould et al.
@@ -78,61 +76,149 @@ License: GPL-2+ with special linking exception
  License in version 2.0 can be found in the /usr/share/common-licenses/GPL-2
  file.
 
-Files: src/md5.c src/md5.h
-Copyright: 1999-2002 Aladdin Enterprises
-License: Zlib
- This software is provided 'as-is', without any express or implied
- warranty.  In no event will the authors be held liable for any damages
- arising from the use of this software.
- .
- Permission is granted to anyone to use this software for any purpose,
- including commercial applications, and to alter it and redistribute it
- freely, subject to the following restrictions:
- .
- 1. The origin of this software must not be misrepresented; you must not
-    claim that you wrote the original software. If you use this software
-    in a product, an acknowledgment in the product documentation would be
-    appreciated but is not required.
- 2. Altered source versions must be plainly marked as such, and must not be
-    misrepresented as being the original software.
- 3. This notice may not be removed or altered from any source distribution.
-
-Files: src/subtitle_format_ebu3264.cpp src/subtitle_format_ebu3264.h
-Copyright: 2011 Niels Martin Hansen <nielsm@aegisub.org>
+Files: src/ass_attachment.cpp
+       src/ass_attachment.h
+       src/ass_entry.cpp
+       src/ass_file.cpp
+       src/ass_info.h
+       src/ass_karaoke.cpp
+       src/ass_karaoke.h
+       src/audio_karaoke.cpp
+       src/audio_karaoke.h
+       src/audio_marker.cpp
+       src/audio_marker.h
+       src/ass_parser.cpp
+       src/async_video_provider.h
+       src/dialog_shift_times.cpp
+       src/project.cpp
+       src/project.h
+       src/subtitle_format_ssa.h
+       src/retina_helper.h
+       src/resolution_resampler.cpp
+       src/subs_controller.cpp
+       src/audio_provider_factory.h
+       src/subtitle_format_ass.cpp
+       src/crash_writer.h
+       src/subtitle_format_ass.h
+       src/audio_timing_karaoke.cpp
+       src/ass_parser.h
+       src/colour_button.cpp
+       src/colour_button.h
+       src/command/vis_tool.cpp
+       src/command/command.cpp
+       src/command/command.h
+       src/dialog_dummy_video.cpp
+       src/dialog_export_ebu3264.cpp
+       src/dialog_export_ebu3264.h
+       src/dialog_fonts_collector.cpp
+       src/dialog_manager.h
+       src/dialog_progress.cpp
+       src/dialog_progress.h
+       src/dialog_resample.cpp
+       src/dialog_search_replace.cpp
+       src/dialog_search_replace.h
+       src/dialog_selected_choices.cpp
+       src/dialog_selection.cpp
+       src/dialog_spellchecker.cpp
+       src/dialog_styling_assistant.cpp
+       src/dialog_styling_assistant.h
+       src/dialog_translation.cpp
+       src/dialog_translation.h
+       src/factory_manager.h
+       src/font_file_lister.cpp
+       src/font_file_lister.h
+       src/font_file_lister_fontconfig.cpp
+       src/format.h
+       src/async_video_provider.cpp
+       src/gl_wrap.cpp
+       src/gl_wrap.h
+       src/hotkey.cpp
+       src/hotkey_data_view_model.cpp
+       src/hotkey_data_view_model.h
+       src/include/aegisub/menu.h
+       src/include/aegisub/spellchecker.h
+       src/include/aegisub/toolbar.h
+       src/include/aegisub/hotkey.h
+       src/include/aegisub/context.h
+       src/audio_provider_factory.cpp
+       src/libresrc/libresrc.cpp
+       src/libresrc/libresrc.h
+       src/menu.cpp
+       src/mkv_wrap.h
+       src/pen.cpp
+       src/pen.h
+       src/persist_location.cpp
+       src/persist_location.h
+       src/placeholder_ctrl.h
+       src/preferences.cpp
+       src/preferences.h
+       src/preferences_base.cpp
+       src/preferences_base.h
+       src/spellchecker.cpp
+       src/spellchecker_hunspell.cpp
+       src/spellchecker_hunspell.h
+       src/context.cpp
+       src/crash_writer.cpp
+       src/dialogs.h
+       src/subtitle_format_ebu3264.cpp
+       src/subtitle_format_ebu3264.h
+       src/subtitles_provider.cpp
+       src/subtitles_provider_csri.h
+       src/subtitles_provider_libass.h
+       src/text_file_reader.cpp
+       src/text_file_reader.h
+       src/text_file_writer.cpp
+       src/text_file_writer.h
+       src/thesaurus.cpp
+       src/thesaurus.h
+       src/toolbar.cpp
+       src/validators.cpp
+       src/validators.h
+       src/crash_writer_minidump.cpp
+       src/vector2d.cpp
+       src/vector2d.h
+       src/video_frame.cpp
+       src/video_frame.h
+       src/video_out_gl.cpp
+       src/video_out_gl.h
+       src/video_provider_cache.cpp
+       src/video_provider_manager.cpp
+       src/video_provider_manager.h
+       src/visual_tool.cpp
+       src/visual_tool.h
+       src/visual_tool_clip.cpp
+       src/visual_tool_clip.h
+       src/visual_tool_cross.cpp
+       src/visual_tool_cross.h
+       src/visual_tool_drag.cpp
+       src/visual_tool_drag.h
+       src/visual_tool_rotatexy.cpp
+       src/visual_tool_rotatexy.h
+       src/visual_tool_rotatez.cpp
+       src/visual_tool_rotatez.h
+       src/visual_tool_scale.cpp
+       src/visual_tool_scale.h
+       src/visual_tool_vector_clip.cpp
+       src/visual_tool_vector_clip.h
+       src/dialog_autosave.cpp
+       src/dialog_video_properties.cpp
+       src/grid_column.cpp
+       src/initial_line_state.cpp
+       src/initial_line_state.h
+       src/options.h
+       src/resolution_resampler.h
+       src/search_replace_engine.cpp
+       src/search_replace_engine.h
+       src/subs_controller.h
+       src/text_selection_controller.h
+       src/grid_column.h
+       src/selection_controller.cpp
+       src/subtitle_format_ssa.cpp
+       src/text_selection_controller.cpp
+Copyright: 2011-2014 Thomas Goyne <plorkyeran@aegisub.org>
+           2009-2010 Amar Takhar <verm@aegisub.org>
+           2011 Niels Martin Hansen <nielsm@aegisub.org>
 License: ISC
-
-Files: src/boost/*.hpp
-Copyright: 1998-1999 Beman Dawes,
-           1998-1999 Greg Colvin,
-           2001-2003 Peter Dimov,
-           2001-2003 Multi Media Ltd.,
-           2002      David Abrahams,
-           2003      Daniel Frey,
-           2003      Howard Hinnant
-License: BSL-1.0
- Boost Software License - Version 1.0 - August 17th, 2003
- .
- Permission is hereby granted, free of charge, to any person or organization
- obtaining a copy of the software and accompanying documentation covered by
- this license (the "Software") to use, reproduce, display, distribute,
- execute, and transmit the Software, and to prepare derivative works of the
- Software, and to permit third-parties to whom the Software is furnished to
- do so, all subject to the following:
- .
- The copyright notices in the Software and this entire statement, including
- the above license grant, this restriction and the following disclaimer,
- must be included in all copies of the Software, in whole or in part, and
- all derivative works of the Software, unless such copies or derivative
- works are solely in the form of machine-executable object code generated by
- a source language processor.
- .
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT
- SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE
- FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
- ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
- DEALINGS IN THE SOFTWARE.
 
 Files: src/gl/*.h
 Copyright: 1991-2004 Silicon Graphics, Inc.
@@ -164,7 +250,11 @@ License: SGI-FreeB
  not been independently verified as being compliant with the OpenGL(R)
  version 1.2.1 Specification.
 
-Files: universalchardet/*
+Files: vendor/luabins/*
+Copyright: 2009-2010 Alexander Gladysh <agladysh@gmail.com>
+License: MIT
+
+Files: vendor/universalchardet/*
 Copyright: 1998-2005 Netscape Communications Corporation
 License: MPL-1.1 or GPL-2.0 or LGPL-2.1
  The contents of those files are subject to the Mozilla Public
@@ -192,6 +282,59 @@ License: MPL-1.1 or GPL-2.0 or LGPL-2.1
 Files: automation/autoload/cleantags-autoload.lua automation/include/cleantags.lua
 Copyright: 2007-2009 Muhammad Lukman Nasaruddin
 License: MIT
+
+Files: automation/demos/*.lua
+Copyright: public domain
+License: public-domain
+ These scripts are given to the public domain.
+ .
+ You can use and modify them freely, also without credit, although the authors
+ would appreciate some.
+
+Files: debian/*
+Copyright: 2012 Sebastian Reichel <sre@debian.org>
+           2019 Aniol Marti <amarti@caliu.cat>
+License: ISC
+
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ Redistributions of source code must retain the above copyright notice,
+ this list of conditions and the following disclaimer.
+ Redistributions in binary form must reproduce the above copyright notice,
+ this list of conditions and the following disclaimer in the documentation
+ and/or other materials provided with the distribution.
+ Neither the name of the Aegisub Project nor the names of its contributors
+ may be used to endorse or promote products derived from this software
+ without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: ISC
+ Permission to use, copy, modify, and/or distribute this software for any
+ purpose with or without fee is hereby granted, provided that the above
+ copyright notice and this permission notice appear in all copies.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+License: MIT
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
  in the Software without restriction, including without limitation the rights to
@@ -209,28 +352,3 @@ License: MIT
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
-
-Files: automation/demo/*.lua automation/demo/auto3/*
-Copyright: public domain
-License: public-domain
- These scripts are given to the public domain.
- .
- You can use and modify them freely, also without credit, although the authors
- would appreciate some.
-
-Files: debian/*
-Copyright: 2012 Sebastian Reichel <sre@debian.org>
-License: ISC
-
-License: ISC
- Permission to use, copy, modify, and/or distribute this software for any
- purpose with or without fee is hereby granted, provided that the above
- copyright notice and this permission notice appear in all copies.
- .
- THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
- WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
- MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
- ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
- WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
- ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
- OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.

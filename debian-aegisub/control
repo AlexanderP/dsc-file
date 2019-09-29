@@ -10,40 +10,43 @@ Build-Depends: debhelper (>= 9~), dh-autoreconf, intltool, libasound2-dev [linux
  libboost-system-dev, libboost-thread-dev, libffms2-dev, libfftw3-dev,
  libfontconfig1-dev, libfreetype6-dev, libgl1-mesa-dev | libgl-dev, ccache,
  libglu1-mesa-dev | libglu-dev, libhunspell-dev, libicu-dev, libpulse-dev,
- libwxgtk3.0-dev, quilt, libboost-locale-dev,
+ libwxgtk3.0-dev, quilt, libboost-locale-dev, libopenal-dev, libuchardet-dev,
  libboost-chrono-dev, libavresample-dev, liblua5.2-dev | liblua5.3-dev, lua5.2 | lua5.3,
  luajit, git, autoconf-archive
 
 Package: aegisub
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
 Suggests: aegisub-l10n
-Description: Advanced subtitle editor
+Description: advanced subtitle editor
  Originally created as tool to make typesetting, particularly in anime
- fansubs, a less painful experience, Aegisub has grown into a fully fledged,
- highly customizable subtitle editor.
+ fansubs, a less painful experience, Aegisub has grown into a fully
+ fledged, highly customizable subtitle editor.
  .
  It features a lot of convenient tools to help you with timing, typesetting,
- editing and translating subtitles, as well as a powerful scripting
- environment called Automation (originally mostly intended for creating
- karaoke effects, Automation can now be used much else, including creating
- macros and various other convenient tools).
+ editing and translating subtitles, as well as a powerful scripting environment
+ called Automation (originally mostly intended for creating karaoke effects,
+ Automation can now be used much else, including creating macros and various
+ other convenient tools).
 
 Package: aegisub-l10n
 Section: localization
 Architecture: all
-Depends: ${misc:Depends}, aegisub (>= ${source:Version}), aegisub (<< ${source:Version}.1~)
-Description: Aegisub language packages
+Depends: ${misc:Depends},
+         aegisub (>= ${source:Version}),
+         aegisub (<< ${source:Version}.1~)
+Description: aegisub language packages
  Originally created as tool to make typesetting, particularly in anime
- fansubs, a less painful experience, Aegisub has grown into a fully fledged,
- highly customizable subtitle editor.
+ fansubs, a less painful experience, Aegisub has grown into a fully
+ fledged, highly customizable subtitle editor.
  .
  It features a lot of convenient tools to help you with timing, typesetting,
- editing and translating subtitles, as well as a powerful scripting
- environment called Automation (originally mostly intended for creating
- karaoke effects, Automation can now be used much else, including creating
- macros and various other convenient tools).
+ editing and translating subtitles, as well as a powerful scripting environment
+ called Automation (originally mostly intended for creating karaoke effects,
+ Automation can now be used much else, including creating macros and various
+ other convenient tools).
  .
- This package contains language packages for the following languages: ca,
- cs, da, de, el, es, fa, fi, fr, hu, id, it, ja, ko, pl, pt_BR, pt_PT, ru,
+ This package contains language packages for the following languages:
+ ca, cs, da, de, el, es, fa, fi, fr, hu, id, it, ja, ko, pl, pt_BR, pt_PT, ru,
  sr_RS, vi, zh_CN, zh_TW

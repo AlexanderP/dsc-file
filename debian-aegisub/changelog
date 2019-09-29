@@ -1,3 +1,83 @@
+aegisub (2:3.2.3~git7891-6d4dd60ce-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Aegisub/Aegisub.git
+  * Branch: master
+  * Commit: 6d4dd60ce8c52251435bd1a8c0f0cef989833c38
+  * Date: 1569199265
+  * git changelog:
+  *  6d4dd60ce - Handle video flip and rotate metadata in ffms2
+  *  57ee580c0 - Fix lagi_thes unit tests on Windows
+  *  336745cdb - In Properties dialog, create the button first
+  *  10f7458b5 - Fix PCM provider bugs
+  *  1122c0880 - Fix failing unit tests on Windows
+  *  dd59fc988 - Fix gtest setup.bat on Windows
+  *  896011f53 - Search user fonts in GDI font lister
+  *  7a1756a26 - In tagless_find_helper only tag before start should be
+    ignored
+  *  6732179a8 - Fix wrong memset usage
+  *  72d0457bc - Fix Move Down button in Export dialog
+  *  073c06d81 - Add .webm to extension list, add .eac3 as an audio
+    format
+  *  06798f2ca - Recognize .opus as an audio format, .h264 .hevc as
+    video formats
+  *  b3f0cb895 - Don't internally reset the selection after collected
+    fonts
+  *  9ed381f49 - Remove extra semicolon
+  *  b42964500 - visualSubToolBar now use same style as other toolbars
+  *  0a2a07ba7 - Use absolute distance when scrolling audio box with
+    mouse wheel
+  *  716c2eae0 - Remove the usage of dummy wxTimerEvent
+  *  bb5090ac3 - Detect EBML magic number to skip encoding detection for
+    MKV
+  *  d7139c40c - Remove call to wxSizer::CalcMin and
+    wxSizer::RecalcSizes
+  *  73ca9ace1 - Change the default fontsize and the list of resolutions
+  *  38046516b - Fix FFT first sample location
+  *  698c41afe - Fix iconv ConversionFailure on long path
+  *  293673fef - Divorce stored TPP lead-in/out values from config
+  *  241161715 - Properly ignore ASS whitespace characters in character
+    counter
+  *  af5d34cc1 - Add configuration options for colors in visual
+    typesetting tools
+  *  1ce72a6d6 - Update default config to modern standards
+  *  ebea3905c - Use FFMS2 constant in place of magic number
+  *  4f870f9c2 - Ignore VS build files
+  *  f2ca259a8 - Pass 0 to FFMS_Init
+  *  04a193de4 - Point users at a functional bug tracker
+  *  63d267d35 - Fix line order when splitting after current frame
+  *  b2dd50e91 - Use proper event for DoubleUpdater
+  *  66a3748f9 - Remove dead forums link
+  *  bc649b606 - Make translation assistant skipping whitespace an
+    explicit setting
+  *  30286e703 - Remove Force BT.601 option and update color matrix
+    guessing
+  *  d660f7f2b - Add support for setting status bar text from Lua
+  *  d0c05fbcd - Update about dialog
+  *  17215edc3 - Fix build warnings
+  *  faad82e1e - Fix overflow bound
+  *  5d4973a5f - Fix millisecond to centisecond convertion
+  *  d89c1ce90 - Change some text box size to make it looks better on
+    HiDPI
+  *  489790528 - Install autopoint on travis
+  *  7c43c757c - don't be too pedantic on the OpenAL checks
+  *  547b17fc2 - Fix crashing when picking language
+  *  c3c446a8d - Fixes for Boost 1.69.0
+  *  7094bd1e2 - Add configure option to enable portable builds on Linux
+  *  565b7cb86 - Added Belarusian Localization
+  *  0847acc53 - Add missing AM_GNU_GETTEXT_VERSION macro
+  *  67d9fd9aa - DataBlockCache: Fix crash in cache invalidation (#142)
+  *  cb0af6ca3 - Fix crash on right click due to no spell checker
+  *  0418d0b5b - Desktop file: make Keywords translatable
+  *  eeb3e17b7 - Update desktop file
+  *  7ea2c09af - make_pot.sh: Check presence of xmlstarlet and jq
+  *  c3a4a9122 - Integrate AppData file with build system
+  *  0a1b93860 - Add AppData file template
+  *  42552e5ef - Correctly handle memory free using Lua GC
+  *  3782b906d - Fix travis-ci build script
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 27 Sep 2019 20:32:22 +0300
+
 aegisub (2:3.2.3~git7834-2cb92a5f7-2) unstable; urgency=medium
 
   * Rebuild
