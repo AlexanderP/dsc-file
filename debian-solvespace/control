@@ -29,16 +29,6 @@ Description: parametric 2d/3d CAD
   * plane and solid geometry — replace hand-solved trigonometry and
     spreadsheets with a live dimensioned drawing.
 
-Package: solvespace-dbg
-Architecture: any
-Section: debug
-Priority: extra
-Depends: solvespace (= ${binary:Version}), ${misc:Depends}
-Description: parametric 2d/3d CAD (debugging files)
- SolveSpace is a parametric 2d/3d CAD.
- .
- This package contains the debugging symbols for solvespace.
-
 Package: libslvs1
 Section: libs
 Architecture: any
@@ -49,7 +39,7 @@ Description: SolveSpace geometric kernel
  kernel of SolveSpace, built as a library.
 
 Package: libslvs1-dev
-Section: libs
+Section: libdevel
 Architecture: any
 Multi-Arch: same
 Depends: libslvs1 (= ${binary:Version}), ${misc:Depends}
@@ -59,13 +49,4 @@ Description: SolveSpace geometric kernel (development files)
  .
  This package includes development files for libslvs.
 
-Package: libslvs1-dbg
-Architecture: any
-Section: debug
-Priority: extra
-Depends: libslvs1 (= ${binary:Version}), ${misc:Depends}
-Description: SolveSpace geometric kernel (debugging files)
- SolveSpace is a parametric 2d/3d CAD. libslvs contains the geometric
- kernel of SolveSpace, built as a library.
- .
- This package contains the debugging symbols for libslvs1.
+

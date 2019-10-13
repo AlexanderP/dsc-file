@@ -1,3 +1,82 @@
+qcad (3.23.0+git7162-eb05ec454-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: eb05ec45408b1691252a05a69ad4e5ff98a65ce6
+  * Date: 1570779889
+  * git changelog:
+  *  6dcb9d513 - Translated using Weblate (Dutch)
+  *  b2d241c20 - update qrc
+  *  a346fa3a7 - add preference to use native menu bar
+  *  79198fc28 - update FlexPainter from forum
+  *  543df2f89 - update script bindings
+  *  e98e10e53 - add maximum lineweight
+  *  df29afcc3 - make substitution optional
+  *  fbd7b6332 - fix assert, substitution of Standard font
+  *  13518afb4 - add test data
+  *  c2f70f76a - port to Qt 4
+  *  f3c3317d3 - update qrc
+  *  54b17fc59 - update script bindings
+  *  10dfaa2a5 - avoid invisible thin lines in PDF output
+  *  7608c9dc3 - add getMinimumLineweight
+  *  ecb703e9b - set version to 3.23.0.3
+  *  ee4255966 - update translations
+  *  dff0c312b - update script bindings
+  *  b69ee0a9d - non-uniform scaling
+  *  5675a26f1 - add hasArcSegments
+  *  23a79aae5 - non-uniform scaling of arcs, circles, ellipses
+  *  3b8f0082c - render viewport transformations
+  *  f29a7f370 - non-uniform scaling of blocks
+  *  d2044ddb7 - add warning on stack imbalance
+  *  0b7068391 - non-uniform scaling of arcs / arc segments
+  *  78f966804 - non-uniform scaling of polylines with arc segments
+  *  04ffdac75 - add arc transformations
+  *  659a0c811 - move transformArc and ellipseToArcCircleEllipse to
+    RShape
+  *  3fd6303aa - move inscribed ellipse calculation to REllipse
+  *  65b431f44 - create circle for square
+  *  edb0b8b77 - allow shared pointer as argument in shapeToEntity
+  *  05d6736b4 - add REllipse::createInscribed
+  *  201a874dd - update qrc
+  *  2ff3529d3 - update script bindings
+  *  21fb348b4 - compile fix
+  *  db4f7508d - update test data
+  *  c33fc7d0f - update exploding of blocks with transforms
+  *  7b22d7ee0 - add support for exporting block transforms individually
+    as translation, rotation and scale
+  *  8a6989cc1 - fix font name when importing through dxflib
+  *  dfc57206d - clean up
+  *  f13331cec - add support for exporting block transforms individually
+    as translation, rotation and scale
+  *  c28613af5 - avoid zero length segment when breaking out segment
+    from ray
+  *  66610ace5 - drop ray with only one cut point at start
+  *  4aa9c953d - refactor argument detection
+  *  8b56e8b4a - fix RVector type detection
+  *  087e0c92f - typo
+  *  55239a033 - Translated using Weblate (Finnish)
+  *  97a25fb0c - Translated using Weblate (Finnish)
+  *  fa44e7011 - update
+  *  5513f14f0 - typo
+  *  ba68e28d3 - update comments
+  *  0b8b16b88 - clean up
+  *  2456e73f0 - clean up
+  *  909f23ebd - clean up
+  *  83b9e64e6 - clean up
+  *  7c7e10de7 - add RLine::isParallel
+  *  7178d81a3 - fix FS#1944 - Block toggle switch for visibility fails
+  *  6871e4089 - fix background MDIs visible through transparent
+    scrollbars
+  *  b7904d794 - add graphics view multithreading preference
+  *  f7ffbd959 - add RS::getIdealThreadCount
+  *  da68fa932 - update
+  *  e90ea9106 - fix FS#1942 - Draw > Circle > Two tangents and point:
+    fails for case with point on bisector
+  *  43b755869 - fix layer visibility
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 11 Oct 2019 17:24:33 +0300
+
 qcad (3.23.0+git7097-2d0a33fa4-1) unstable; urgency=medium
 
   * Compile

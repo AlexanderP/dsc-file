@@ -2,6 +2,7 @@
 DH_VERBOSE = 1
 
 # see EXAMPLES in dpkg-buildflags(1) and read /usr/share/dpkg/*
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/default.mk
 
@@ -11,24 +12,12 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),trusty)) 
-	CONTROL = control.trusty
-	CMAKEOPT += -DCMAKE_C_COMPILER=/usr/bin/gcc-5 -DCMAKE_CXX_COMPILER=/usr/bin/g++-5
-else
-	CONTROL = control.sid
-endif
 
 %:
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	cp debian/$(CONTROL) debian/control
 	dh_auto_configure -- $(CMAKEOPT)
-
-
-override_dh_strip:
-	dh_strip -psolvespace --dbg-package=solvespace-dbg
-	dh_strip -plibslvs1 --dbg-package=libslvs1-dbg
 
 override_dh_install:
 	cd $(CURDIR)/debian/tmp/usr/share/solvespace && \
@@ -36,7 +25,3 @@ override_dh_install:
 	gzip -d $${i} && gzip -n $${i%???}; \
 	done
 	dh_install
-
-override_dh_auto_clean:
-	cp debian/$(CONTROL) debian/control
-	dh_auto_clean

@@ -1,3 +1,56 @@
+clementine-qt5 (1.3.1+git2348-g664c5a31f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: qt5
+  * Commit: 664c5a31f9cf519af5a4c3adcb30dbbc73d037d6
+  * Date: 1570206239
+  * git changelog:
+  *  664c5a31f - Setup qt5 build with Bionic
+  *  c355b5ca2 - Add Fedora 30 to workflow
+  *  43b4ee796 - Fix copy_rpm_artifacts params
+  *  4bd2e9035 - Add Fedora 30 build
+  *  33980dac7 - Only upload artifacts on master
+  *  5d599a89f - Typo'd output directory
+  *  5a575e38d - Add ALSA and DBus dependencies
+  *  73d6137cc - Disable mac job for now
+  *  64189662b - oops
+  *  374b62b9b - Remove concurrency from rpmbuild
+  *  e79f578e1 - Manually create rpmbuild directory
+  *  5b1cbcf3f - Add make to fedora build
+  *  caee3b1a6 - Actually checkout the code
+  *  3c92b908e - Fix workflow for Fedora 29
+  *  e4666e426 - Add Fedora 29 builder
+  *  bdd5180f0 - Use gcp context
+  *  2875ef822 - Do not block upload on mac build
+  *  d28b226bf - Do not use environment for macos
+  *  adcc89c7c - Also make install for mac
+  *  55c0667dd - Add mac circleci config
+  *  09f680a25 - Set service account name
+  *  9bf8e75a4 - Fix creating output directory
+  *  0c5143a54 - Persist artifacts in workspace for upload
+  *  ff20bceaa - Fix path for disco artifacts
+  *  d50645ea2 - Upload all artifacts at end
+  *  bf5e074ef - Upload artifacts to GCP
+  *  43febfaf2 - Fix dependency for disco
+  *  335c8a5a9 - Update Bionic dependencies
+  *  fe84eebae - Update disco dependencies
+  *  dc8561459 - Add bionic & disco to workflow
+  *  321bceb4b - Add bionic and disco builds
+  *  cab5ebc95 - Fix cmake_debian
+  *  cc80754f9 - Bump circleci version for commands
+  *  2cd6fcabd - Build 32-bit & 64-bit xenial debs
+  *  49428d9a8 - Store debian artifact
+  *  efce3603e - Add git and ssh as dependencies
+  *  8581e22e2 - Non-interactive apt-get install
+  *  a0c3eb823 - Build from base ubuntu image
+  *  4df8c2098 - Add CircleCI config
+  *  e2bc2eee9 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 11 Oct 2019 12:43:51 +0300
+
 clementine-qt5 (1.3.1+git2293-g88131ec5f-1) unstable; urgency=medium
 
   * Compile

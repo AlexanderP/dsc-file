@@ -1,3 +1,270 @@
+freecad-daily (0.18.3+git18513-fd352c14f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: fd352c14f13ecdef7b8d4005c987d2f449c69430
+  * Date: 1570749275
+  * git changelog:
+  *  fd352c14f - expose Roation.slerp to Python
+  *  1d83fa7d9 - Draft: renamed the command Draft_Edit_Improved to
+    Draft_SubelementModify because the previous name was confusing; also
+    provide a new icon
+  *  b0882de73 - fix indent
+  *  9ed08a813 - avoid adding extra newlines when writing user.cfg
+  *  2736597eb - AddonManager: Show installed path in addon description
+  *  77550e0de - AddonManager: Fixed crash when quickly clicking through
+    addons
+  *  97933a5b5 - AddonManager: Fixed vanishing icon when uninstalling
+  *  8f1147cc7 - AddonManager: Add Assembly4 icon to dialog
+  *  04f87588b - Arch: Fixed tab indents im importOBJ
+  *  f66023a64 - AddonManager: Better error catching in HTML parsing
+  *  6d7da2430 - Addon manager: Fixed wrong marking of addons that begin
+    with same letters
+  *  ca30dfeb2 - Tweak meshing parameters (lower triangles count)
+  *  d56d17ccf - Improve Wavefront export by: - Switching from regular
+    tesselate computation to MeshPart - Adding Vector Normal output -
+    Support New assembly placement
+  *  0602c518f - avoid explicit term FreeCAD in user interface to avoid
+    breaking branding
+  *  34ee9afa7 - Docs: Update Prefs > General > Macro dialog tooltips
+  *  bfe968138 - Gui: avoid unecessary visibility change when update
+    view provider
+  *  363fe1b63 - App: fix wrong python function type in FreeCAD.open()
+  *  8d9e0c2c9 - Arch: IFC import, better import of small assemblies for
+    nonparametric arch and part shape mode
+  *  3bc85bcc6 - FEM: unit test, fix due to example renaming
+  *  c3df99e98 - FEM: examples, move dev in manager
+  *  d780f7a35 - 'FEM: examples, better file names for meshes
+  *  1b3c41bca - Draft: Added property to hide lines in dimensions
+  *  326ea342d - FEM: examples, manager, add recomputes
+  *  e8bc34430 - FEM: examples, delete not needed comment
+  *  1ec2a9621 - FEM: examples, better var name for solver type
+  *  128358baa - FEM: examples, rename multi material example
+  *  84c8652ee - FEM: fem exapmles, add nonlinear material example to
+    show peeq strain
+  *  9763b52a2 - FEM: frd reader, delete not needed import
+  *  d96468734 - Draft: Better fix of copy mode
+  *  71c54272a - Fix various Py::Object leak
+  *  78999b471 - Spreadsheet: fix test case
+  *  07975595b - fix build failure on Windows due to conflicting define
+    of GDI API
+  *  3006466a3 - fix build failure with std::isdigit on Windows
+  *  8f72e1fde - fix typo
+  *  059b2d425 - Gui: change default tree view document mode to
+    Expand/Collapse
+  *  f55da9329 - Gui: improve scale handling in SoFCCSysDragger
+  *  23d42421d - Gui: fix ViewProviderLink dragger behavior with scale
+  *  289679137 - App: fix getSubObject() in Link
+  *  6afe7071c - Gui: fix tree view option sync placement
+  *  3de3f696e - App: fix PropertyXLink file path update
+  *  fbfad66d2 - Gui: expose link actions to toolbar
+  *  4eadbd038 - App/Gui: add ObjectStatus::NoAutoExpand
+  *  0d181d0dd - App: allow link properties for all App::Link
+  *  5c3e7d092 - Gui: fix missing tree view sync after drag and drop
+  *  183333935 - App: add ScaleVector property to Link
+  *  472d114c0 - App: fix Document::isTransactionEmpty()
+  *  92c00e732 - Gui: improve array element color override in
+    ViewProviderLink
+  *  4c2647393 - Part: add missing API
+    ViewProviderPartExt::getElementColors()
+  *  7c76d2f3c - Part: fix TopoShape::getElementTypes()
+  *  714d20895 - Gui: fix tree view lingering sub element selection
+  *  c4fec26aa - Gui: improve PropertyXLink display in property view
+  *  998f801d3 - App: migrate old SubElements in Link
+  *  1e69eb0d8 - Gui: improve SelectionSingleton::setVisible()
+  *  f57283f59 - Link: change sub-element linking mechanism
+  *  4042d8336 - App: allow multiple subname in PropertyXLink
+  *  a03b84750 - App: null pointer check in
+    ComplexGeoData::noElementName()
+  *  d8adbca94 - Gui: minor fix of tree view drag move
+  *  e03e6d9a4 - Gui: expose link selection and navigation command
+  *  68a9a847c - Gui: improve Std_LinkSelect command
+  *  9e2bdd6ea - Gui: assign default guesture to Std_SelBack/Forward
+  *  845fa8471 - Gui: add class GroupCommand help with grouped command
+  *  e97b89b4c - Gui: output Cmt type macro line as comment in python
+    console
+  *  5c5ca1f52 - Gui: add document to Command and Selection
+  *  5c26b7a3b - Gui: add toolbar button for toggling selection bounding
+    box
+  *  45fd865fc - Gui: refactor bounding box selection style
+  *  a0adbd5e2 - Travis - remove workaround due to more time granted
+  *  1987e97fe - Draft: added missing file Draft_Dimension_Tree.svg
+  *  7157a4ac4 - TechDraw - Fix Annotation and Symbol international
+    characters mangling
+  *  91ae52577 - Arch: IFC import, better debug message for skipped objs
+    in non parametric import mode
+  *  617e8b5f9 - Draft: Fixed copying of windows
+  *  59c15ebbc - Arch: Adjust height of objects inside groups
+  *  2e0e1da2f - Gui: fix ui file, introduced with c171764
+  *  38740a0e4 - add method RotationPy.toMatrix()
+  *  ccbd5792e - improve RotationPy::number_power_handler: make
+    computation more efficient and less prone to round-off errors
+  *  67562acbe - Draft circular array
+  *  e482ceeee - Circular Array
+  *  c171764a5 - Docs: Update Prefs > General > 'General' tooltips
+  *  db17426a1 - [Draft] Wire To BSpline fix to show new object
+  *  24b07312c - Draft: DraftTools, place the CubicBezCurve tool before
+    the BezCurve, as the cubic curve is more used.
+  *  0c18f5e25 - Draft, makeBezCurve(), changed parameter Degree to
+    degree, preferred lowercase
+  *  41387fd99 - App: fix dynamic property undo/redo
+  *  890bc90b0 - Base: add RotationPy.RawAxis
+  *  533bbf8a8 - App: add DocumentObjectPy.evalExpression()
+  *  29f5ac736 - Gui: sync expression change in property editor
+  *  be951cc0d - Gui: fix missing expression highlight in property
+    editor
+  *  da19c8489 - Gui: fix missing auto update when edit property
+    expression
+  *  f14dfd41c - Gui: fix ExpLineEdit::apply()
+  *  a230d0d9a - Gui: fix ExpressionBinding::apply()
+  *  bda372be8 - Spreadsheet: add test case for operation on
+    matrix/placement/rotation
+  *  006f685db - Spreadsheet: column/row select on right click
+  *  976952db6 - Spreadsheet: improve cyclic dependency exception
+    handling
+  *  44354b808 - App: add Expression built-in function
+    mscale/minvert/create
+  *  12000cd49 - Base: fix __pow__ operator in
+    MatrixPy/PlacementPy/RotationPy
+  *  43e0d9616 - Base: remove VectorPy right multiplication to
+    matrix/placement/rotation
+  *  7a7409343 - Replace use of Matrix.inverse() with inverseGauss()
+  *  a53c57145 - removed trailing whitespace
+  *  e325f2e57 - fixes issue aligning workplane to a face
+  *  fcda0934c - Draft: relax Part::Feature type checking for Link
+    support
+  *  2f06decce - Arch: ArchCommands, change the color of the vertices of
+    the subcomponent when using Arch Remove, just like the line color
+    and shape color are changed.
+  *  834f97715 - App: add argument 'hidden' to
+    FreeCAD.new/openDocument()
+  *  d30e32ec1 - Draft: modify the permissions of the icons (755), so
+    that they don't have the execute permission (644)
+  *  6383de2ee - Draft: new icon for Draft_Dimension in the tree view in
+    SVG, instead of XPM
+  *  aebb0edd6 - Draft: re-order alphabetically the resources in
+    Draft.qrc to be easier to spot missing files
+  *  f1004248c - AppImage - support for embedded documentation
+  *  6663d625a - Gui: add new API
+    ViewProviderDocumentObject::allowOverride()
+  *  4775def51 - Part: deactivate and remove the remaining XPM icons,
+    and use SVG icons instead
+  *  022442ca7 - Part: rename the icons to start with Part_
+  *  c6d1684e2 - TechDraw - Put BOM on beginning of exported SVG
+  *  cf721089a - TechDraw - SVG changes via DOM manipulation instead of
+    Regex replace
+  *  0717b4fc2 - Gui: fix DlgSettings3DView.ui, remove bold tags <b>
+  *  c80ecc4a7 - Source typo fix (includes file rename)
+  *  5f8d274f7 - Crowdin: Fix creative common license name
+  *  8589f7ec6 - Part: new icon for Part::Part2DObject, in SVG, instead
+    of using a generic XPM
+  *  e13eb0ba6 - Part: re-order the resources in Part.qrc, and removed
+    the PNGs
+  *  e7530218e - FIx typos and grammar
+  *  0a7d8d125 - Remove curl verbose mode ... (remove data exchange
+    between europe and us client/server, reduce latency issue)
+  *  9e8be2e45 - Create bucket in the case it is not yet available
+    within the storage server
+  *  3939e4543 - cmake: pyside2: we also need headers from shiboken and
+    pyside2
+  *  da6091ab9 - fix to flush stdout after unit test execution
+  *  691085239 - Modify Version and Release in fedora spec
+  *  fff903c14 - Sketcher: ordered two items inside Sketcher.qrc
+  *  52a851286 - Sketcher: modify the permissions of the icons (755), so
+    that they don't have the execute permission (644)
+  *  f56d56699 - Revised VBO tooltip per @realthunder's feedback
+  *  2648da647 - Fix typo in previous commit
+  *  921103245 - ...Add Render Caching tooltip
+  *  3e5ec67d3 - Docs: Update Prefs > Display > '3D View' tooltips
+  *  af4f8b284 - fix crash on macOS when opening OpenSCAD Workbench
+  *  c314edcaf - replace Eigen::Index with auto to support older Eigen3
+    versions
+  *  5e93a7193 - fix build failure for Qt4
+  *  ea171b5e0 - fix typo
+  *  e1b0df938 - remove PCH from header file
+  *  7b7797f4f - Fix various (doxy) typos and whitespace issues
+  *  1f871035f - Arch: very small typo
+  *  2134086d4 - fix further file names vulnerabilities in TechDraw
+    module
+  *  21f59ecb6 - fix crash in SymbolChooser in case it's empty and Ok is
+    clicked
+  *  3aa043242 - fix further file names vulnerabilities in modules
+  *  f9ca1b18a - add function to escape special characters in strings
+  *  0aa0f1c31 - fix build failure: add export mscro, add header
+  *  d2be4f115 - fix further file names vulnerabilities in core system
+    and Image module
+  *  bed78b0b7 - [SS]Fix Integer Formatted Value
+  *  ff5a9783d - [TD]Fix #4085 Win File Rename Fail
+  *  55778c745 - [TD]Section dialog revisions & editor
+  *  303c84e90 - [TD]Prevent crash in Section if BaseView deleted
+  *  d9fa2b326 - [TD]Correct section view alignment
+  *  58cf8587e - [TD]Add dumpCS function to DrawUtil
+  *  3ccba4c64 - when cloning a 3d view then also set the new view into
+    edit mode in case the original view is
+  *  f24c097a5 - make sure resetting a document while closing it works
+    independently of the activw view
+  *  28a915d82 - when closing a 3d view check if itÄs in edit mode to
+    avoid to leave a view provider in a broken state
+  *  2a3d398a9 - change order of beforeDelete() and clearing selection
+    inside Application::slotDeleteDocument to prevent crashes in case
+    resetting a view provider touches the selection
+  *  e1e095da3 - Added copyright notice to source files.
+  *  84b23d3e9 - Add BoundBox property to Path, usable without a gui.
+  *  66e9cf900 - Split walking and segmenting a path into its own class
+    so it can be used by other algorithms, not just visualisation
+  *  19ac3ecfc - fix crash when switching to fullscreen, back to normal
+    and closing the sketcher
+  *  12335c7d5 - [TD]Fix Arrowhead Fill in Dims & Leaders
+  *  d7dabeb88 - [TD]Fix Dimension Color Regression
+  *  5f619c674 - [TD]Fix Integer display in s/s image
+  *  5de6763ed - add escape sequence when executing as Python string
+  *  426674f22 - add function to escape special characters in file names
+  *  fb7a03a04 - fix exception handling in
+    _ViewProviderFemResultMechanical
+  *  6b6c0a503 - App: fix QuantityPy __add__ and __sub__
+  *  83284a3cd - Base: add Python number protocol support to
+    Placement/Rotation
+  *  8dec78747 - Spreadsheet: fix test cases due to change in error
+    message
+  *  a1417c5ff - App: extend Expression syntax
+  *  22fede14d - App: add list/tuple() function to Expression
+  *  ea7eee806 - Expression: split Expression.h to ExpressionParser.h
+  *  d14197570 - App: use Python number protocol in Expression
+  *  783947ecd - Base: improve base python object number protocol
+  *  7a38b1ca8 - Draft: DraftEdit.py now gets PickRadius from user
+    preferences
+  *  81a3a3233 - src/App/Application: Improve FC CLI help output
+  *  03a17b156 - cmake: pyside2 config fix
+  *  4ffe07654 - TaskSketcher_xxx.ui: use sensible minimal heights to
+    avoid scaling problems
+  *  4607cbb9c - remove unnecessary whitespace from general sketcher
+    dialog
+  *  6495902fc - [Spreadsheet] Excel File Import fix Py3 bug
+  *  1a2370cd9 - do not use an int but an enum to handle different modes
+  *  b450f5a5c - App: improve exception handling in FeaturePython
+  *  0f2915550 - App/Gui: unify NotImplementedError handling in python
+    features
+  *  68aca247e - Gui: remove FC_TREEPARAM, add document for class
+    TreeParams
+  *  cdd31fb10 - Gui: fix tree view auto expand
+  *  450cc894b - Fixed first screen on job creation
+  *  6e38c1086 - Prevent endless loop through negative step down values
+    in engraver.
+  *  4230fe5f9 - Fixed engrave for non-closed wires for multi step down
+    ops
+  *  65a4b2704 - Added unit tests for orientWire.
+  *  7c9e04419 - Fixed updateCommand definition for python
+  *  b4846d45b - Copy files from libpack to build or install directory:
+    Windows- copy plugins/styles and plugins/printsupport to bin copy
+    libpack/bin/QtWebEngineProcess.exe and libpack/bin/qt.conf to
+    build/bin copy assistant.exe to build/bin
+  *  24e13bc89 - FEM: solver frame work unit tests, improvements
+  *  506ab243e - FEM: unit tests, solver framework, separate tests for
+    each solver
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 11 Oct 2019 07:44:31 +0300
+
 freecad-daily (0.18.3+git18323-af2e97da7-1) unstable; urgency=medium
 
   * Compile
