@@ -1,3 +1,40 @@
+gscan2pdf (2.5.5+git3090-5c0a62e5-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 5c0a62e5136f359c42378d87a8838c747bc6cf31
+  * Date: 1570866600
+  * git changelog:
+  *  5c0a62e5 - Prerelease commit
+  *  a58ec118 - Bumped version to 2.5.7
+  *  875783a4 - Update to Ukrainian translation
+  *  67afd5ad - Update to Russian translation
+  *  0cefb652 - Update to Italian translation
+  *  8f6deb35 - Update to German translation
+  *  37698ea8 - Update to en_GB translation
+  *  3699fa1e - Simplify Gscan2pdf::Dialog::Scan::update_start_page()
+  *  9ab0676b - Fix infinite loop scanning reverse pages
+  *  d0d6f70c - Don't return non-integer values from pages_possible()
+  *  6cdcf03a - Allow tool processes to immediately continue working on
+    subsequent pages despite errors on previous ones
+  *  46bd636f - Close device when switching frontends so as not to block
+    SANE for the new frontend
+  *  034074b3 - Bumped debhelper-compat to 12, removing legacy
+    debian/compat file (still needed for xenial)
+  *  d2b71025 - Extended edit profile functionality in scan dialog to
+    frontend options
+  *  6fe62585 - Use option name as label for those options with no title
+  *  cf84afc6 - Recognise 'Document Table' as flatbed for imagescan
+    backend
+  *  bd59b6c7 - Fix a couple of tests failing due to -12 timezone
+  *  d9e9bf6f - Corrections to appstream xml file
+  *  74add3ed - Corrected Debian Vcs-git field
+  *  5eccf838 - Bumped Debian standards to 4.4.0
+  *  3f9c6495 - Post-release commit
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 26 Oct 2019 01:43:24 +0300
+
 gscan2pdf (2.5.5+git3069-09825571-1) unstable; urgency=medium
 
   * Compile

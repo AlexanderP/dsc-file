@@ -1,3 +1,165 @@
+freecad-daily (0.18.3+git18628-eb3dafb56-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: eb3dafb56b773e403fe115cf13b3bc3d57f75aac
+  * Date: 1572014169
+  * git changelog:
+  *  eb3dafb56 - AddonManager: Fixed missing 'update available' header
+  *  c9402696f - Draft: fix double translation in Draft._PointArray
+  *  d57cc0c33 - Draft: set the Autoconstraint view property only if the
+    interface is up (FreeCAD.GuiUp)
+  *  210dfbf13 - Draft: change DisplayMode only if the interface is up
+    (FreeCAD.GuiUp)
+  *  1bc33025d - LGTM:  various fixes for using string operator instead
+    of numeric
+  *  e4c8890d5 - Arch: Dice3DS/dom3ds.py LGTM fix
+  *  892db1a77 - Draft: whitespace fix [skip-ci]
+  *  bec8e1bef - Draft:  use string operator instead of numeric LGTM fix
+  *  cf854a52a - Draft: DraftEdit.py use string operator instead of
+    numeric LGTM fix [skip ci]
+  *  6084bbfb1 - Draft: Draft.py missing translate() context LGTM fixes
+    [skip ci]
+  *  5c1cae14b - Arch:  use string operator instead of numeric LGTM fix
+  *  95af9ed20 - Arch: ArchSectionPlane.py LGTM incorrect variable fix
+    [skip ci]
+  *  0c038dfbe - Arch: ImportOBJ.py LGTM fixes [skip ci]
+  *  a801ff5a2 - Travis - delete LibPack to preserve more space
+  *  efd55884a - [TD]fix regression in multi source selection
+  *  f3ae1aaf4 - [TD]prevent bleed through on angled details
+  *  789733d69 - [TD]fix Detail orientation from DPG source
+  *  5bb659e7e - [TD]Transition to on demand page updates ph1
+  *  820ad876c - Fix  bad object allocation which was creating a crash
+    on linux and strangly was working on MacOS
+  *  42987f861 - Gui: fix ViewProviderPythonFeature getDetail()
+  *  842144312 - fix -Winconsistent-missing-override
+  *  8e17c8c4b - fix -Wimplicit-fall-through, -Wpedantic
+  *  7222b32cd - cmake: pyside2: try other solution
+  *  7767103f9 - Arch: Added option to allow import of invalid IFC
+    geometry
+  *  1c981e8f1 - Fix typos and misc. formatting [skip ci]
+  *  d87e6324e - [Draft] Edit: pick radius according to user preferences
+    (issue #4162)
+  *  b58019c36 - add comment
+  *  7ea1a7e45 - Fix regression found in obsolete addon function
+  *  4fe9cb393 - AddonManager: Tweak UI to return friendlier HTML
+    formatted responses
+  *  c6b79dd23 - Removed tabs
+  *  bbff21935 - [Draft - DraftGeoUtils] Refine isReallyClosed() : Part
+    of ArchWall / DraftGeomUtils Multi-Width Support Improvement
+    Proposal
+  *  c331ce29f - Fix editing of OffsetStart of rebar object
+  *  544e85ff3 - Fix editing of single rebar object
+  *  c77937e6c - Added LGTM quality badge
+  *  762f0656e - for the moment uncomment changes of commit bf7e50d803
+  *  8d5bc7eb0 - [skip ci] remove unused variable
+  *  d7ca604c9 - Support for Frequency in quantity parser
+  *  c6cd65916 - [TD]Avoid Spanish char issue in SVG Export (4170)
+  *  5021f3777 - [TD]Fix Dimension prefix/suffix
+  *  3500451a0 - Basic support for Frequency as unit
+  *  b858757bb - Fix -Wdeprecated-copy warnings (rule of 5/3/0)
+  *  e31f84f5d - Remove py2/qt5 build, disable py3.7/flake8 build
+  *  ccb5787ed - move OpenSSL and curl checks from Mod directory to
+    Cloud module
+  *  9fad0a768 - Fix linuxbuild
+  *  d63b29458 - DocumentObjectGroup: do not touch group on child change
+  *  4ea320062 - Gui: fix box selection
+  *  f98446e5c - restore old behaviour of Python wrapper of Console
+    class to increase flexibility when using in worker threads
+  *  3613d834f - in RedirectStdOutput/RedirectStdError/RedirectStdLog
+    only flush when last character is newline to avoid garbled output in
+    log file
+  *  867f22d3c - fix regressions in SplashObserver::SendLog and
+    ReportOutput::SendLog
+  *  f94bf69a3 - fix -Winconsistent-missing-override
+  *  aa011746e - minor optimization in ConsoleObserverFile, if prefix is
+    unknown then still write passed message
+  *  f27e4590a - Refactor and rename ConsoleObserver...
+  *  bf7e50d80 - cmake: pyside2: use imported targets if available
+  *  c903de8af - Adjust unit test of deleting a parameter group to new
+    behaviour
+  *  788a50918 - Doxygen: Base/Parameter.h description
+  *  4614eb92a - fix gcc/clang build failure
+  *  f8f52e6fc - replace some old C style casts with static_cast or
+    reinterpret_cast
+  *  ee912a5f1 - change deletion order in parameter editor to avoid that
+    a parameter group isn't deleted
+  *  81b615bfb - fix several memory leaks in ParameterGrp when removing
+    nodes from DOM document
+  *  736511e5b - + implement a correct cleaning of a parameter group
+    without creating ghost instances of ParameterGrp
+  *  9a6824a3f - + before creating element in DOM document check if the
+    group node still has the correct name
+  *  a1de871e9 - [TD]Fix duplicate Arbitrary dim text
+  *  5512d5490 - [IMP]Fix Dxf handle conflict on export
+  *  c4a2be3a1 - OpenSCAD: fix py syntax error
+  *  f91179604 - Fix auth base64 computation when HMAC return string
+    contains \0 character
+  *  d0e1305ac - Add Content-MD% into the header as to be able to
+    retrieve it from the ETag answer of the server
+  *  b39e642ae - Fix mistackes done during refactoring
+  *  42717d3b3 - Refactor code to prepare Amazon s3 v4 API support We do
+    support currently only v2 which will be EOL in june 2020 according
+    to Amazon
+  *  c2c41bf65 - several installer fixes and improvements:
+  *  6eacb17b3 - Update swigpyrun.in for Python 3.8
+  *  443b948a6 - Draft: clone icon with the light comming from above
+    left
+  *  f3f15b1a9 - [Draft] Edit: preview node with mouseover
+  *  d599de41d - AddonManager: Add DesignSPHysics workbench icon
+  *  1d0bf0e5b - [Arch] Add Section plane context menu for CutView
+  *  2d5ecbd28 - Make the OpenSCAD Workbench dropdown tooltip more
+    verbose for beginners
+  *  879c81440 - Swap http:// for https://
+  *  3532b9152 - More code format fixes
+  *  9603a9e63 - Adjust whitespace, convert double quotes to single
+  *  753053712 - OpenSCAD: Add IncreaseToleranceFeature icon to toolbar
+  *  387885aa2 - Draft: Fixed non-appearing texts in TechDraw views +
+    support for ShowLine property
+  *  eb6a405c1 - abort hyperbola creation when angles are NaN
+  *  432d4f255 - AddonManager: Fixed bug in non-git update
+  *  895230608 - PartDesign: fix Body getSubObject()
+  *  453f80f71 - Added support for copying holding tags from another
+    holding tags dressup.
+  *  fa5d34508 - obj transparency fix d->Tr and its value/100
+  *  2b2210543 - [TD]Fix slow GC of QGIPrimPath
+  *  ee63c324c - Add an XSD validation scheme and implement
+    ParameterManager::CheckDocument(), function is used in the parameter
+    editor
+  *  e4f8d9807 - add new CMake macro generate_from_any and extend
+    PythonToCPP script to create source file from any text file
+  *  a785660f5 - [Arch] Introduce Refine attribute to Select whether or
+    not and the method to remove splitter
+  *  61435b30f - [Arch] suggested feature: add the ability to choose
+    whether an Arch BuildingPart transmits its height value to children
+  *  1b044e91d - Draft: DraftGui, use boolean values to set up an option
+    instead of numeric values 1 and 0
+  *  a9bf9ba26 - tooltip: rename python-git to GitPython
+  *  7f696bd60 - AddonManager: tooltips and minor code formatting
+  *  4dc50edf5 - Fixed holding tags restore
+  *  641f615bf - Restrict loading of ocl and PathSurface to enabling
+    experimental features.
+  *  891f8953f - improve strict ISO C++11 (-Wpedantic)
+  *  1f5f00e65 - remove the built-in tree widget from the tessellation
+    task panel
+  *  c98549a40 - Gui: fix python documents in Gui.Selection methods
+  *  bf27b115c - Gui: fix SelectionSingleton::checkSelection()
+  *  bea009c1d - fix description of 'resolve' in Selection
+  *  9ba5d3505 - fix -Winconsistent-missing-override -Wunused-variable
+  *  e0bb5701f - expose Placement.slerp to Python
+  *  a431cf7d2 - Arch: IFC import, fix Axis system placement
+  *  3da76af1f - Base: Placement: change argument order of slerp() in Py
+  *  f1a8dc4b2 - Spreadsheet: fix tests to use fuzzy placement
+    comparison
+  *  23e708323 - Base: Placement: expose ScLERP to python
+  *  63d0435a9 - Base: ScLERP placement interpolation
+  *  867a09f73 - [Draft] ShapeString Task Panel Allow Windows...
+  *  90fad8180 - [TD]Improve tolerance formatting
+  *  4db8cac67 - [TD]fix Front lock icon in DPG
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 25 Oct 2019 18:08:51 +0300
+
 freecad-daily (0.18.3+git18513-fd352c14f-1) unstable; urgency=medium
 
   * Compile
