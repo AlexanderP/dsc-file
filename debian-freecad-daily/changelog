@@ -1,3 +1,106 @@
+freecad-daily (0.18.3+git18702-aab61f3e1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: aab61f3e151e65975e370b4d8ff3611d6355730c
+  * Date: 1573163950
+  * git changelog:
+  *  aab61f3e1 - [TD]Fix wrong default for parameter
+  *  9802d362e - [TD]fix duplicate name in parent & derived
+  *  c773e20bf - [TD]Always show degree symbol
+  *  f3fcabdcc - [TD]fix balloon colors
+  *  acd6cb005 - [skip ci] tmp. disable viewer selection for several
+    interactive commands in Mesh workbench
+  *  72a30f2bb - [skip ci] fix tooltip
+  *  dd120ef50 - add convenience method to 3d viewer to disable
+    selection
+  *  9a07b12d3 - Gui: remove SelectionStyle from
+    ViewProviderGeometryObject
+  *  c3ba04183 - Arch: import IFC, add import of layer
+  *  85883712b - Arch: import IFC, fix if imported in non Gui mode
+  *  5b63ac5a7 - [TD]CL removal
+  *  37fdcec6c - [TD]ensure default edge avail for geom copy
+  *  805d701aa - [TD]Allow skip restore cosmetics
+  *  4027c780a - [TD]Avoid double delete on cosmetic items
+  *  fcf5435b4 - [TD]Save geometry and tag with centerline
+  *  900a7c6bd - [TD]use UUID for CosmeticEdges instead of indices
+  *  f0cdad7f7 - [skip ci] fix possible crash in DelaunayTriangulator
+  *  7415e3602 - improve detection of OpenSCAD executable to print a
+    more appropriate error message in case of failures
+  *  157251906 - Added PathBoundary task panel tool tips and tab order.
+  *  4a897d3f4 - Fixed typo in onDelete
+  *  eb35e8a55 - Added new boundary dressup files to CMakeLists
+  *  421e50ae8 - PathBoundary editor filled with life.
+  *  a27a00064 - Added boundary dressup to restrict path to another
+    shape.
+  *  d5be41d82 - make BrowserView::onLinkHovered() working with QtWebKit
+  *  3cd487064 - make PythpnToCPP script Py2 compliant
+  *  0347a4b7a - Draft: TestDraft, refactor unit tests, 66 in total.
+  *  69b98c48e - Explicitly specify encoding in PythonToCPP.py
+  *  5c2b7be97 - fix encoding problem when clicking a link on StartPage
+    if application is installed into a directory with non-ASCII
+    characters
+  *  0b1b9160a - ThumbnailProvider: update MSVC solution file
+  *  18028d18a - [TD]fix Balloon text positioning
+  *  5476ab4b6 - fix building of thumbnail dll for msvc 2017 or higher
+  *  2f5b2bc83 - Win-installer README.md: improvements and fix a mistake
+  *  953b802f8 - [TD] Command.cpp: fix indentation
+  *  42742db54 - [TD] Command.cpp: uniform menu names
+  *  33844f876 - DrawViewAnnotation: add transformation procedure for
+    changed properties
+  *  3a34cf134 - TD annotation: use more suitable properties
+  *  64cf85c21 - Arch: import IFC, fix crash if IfcProject is not found
+    in ifc file
+  *  28daf3595 - TD Workbench.cpp: add submenus
+  *  c2851ae4b - [TD]fix Quadrant/Midpoint selection
+  *  6ada9e96a - [TD]using namespace clean up
+  *  34a083b15 - handle possible exceptions for FreeCAD.Units.Unit(input
+    string)
+  *  0b47fb6de - support quantities in a string of the form: value /
+    unit
+  *  adccd0d3f - DlgPrefsTechDraw.ui: uniformity and tooltip
+    improvements
+  *  286926d0c - [TD] DrawView.cpp: better tooltips
+  *  f3c6db990 - [TD]fix ShowAll on DPG
+  *  f1e9c1967 - [TD]fix py2 unicode/string handling
+  *  5cab111a6 - [TD]Implement unique tags for Cosmetic Vertex
+  *  a7d9661b1 - [TD]Extent Dimensions
+  *  d276cc8d7 - reset define NETGEN_PYTHON to avoid hard dependency to
+    pybind11
+  *  223d41c67 - Fix Apple build
+  *  5e1ee0920 - DlgSettingsMeshView.ui: add missing unit suffix
+  *  3d7b6b354 - add pybind11-dev dependency necessary for netgen-
+    headers
+  *  1aeea67f4 - Introduce support of multiple entries bucket directory
+    list Needed for FreeCAD files which generate thousands of BRep files
+    (most of the time assemblies or STEP)
+  *  c6c761b81 - Added <last> as an option to the workbench selection.
+  *  813b529f5 - Arch: Fixes PanelCut action
+  *  5a055fec0 - [path] Fix ignoreWasteFlag option
+  *  95f18a750 - Arch: Allow OfflineRenderingUtils module to run without
+    pivy
+  *  481870be2 - [TD]Simplify Section cut surface formatting
+  *  1b4d2d48a - [TD]fix Section frame paint
+  *  5d6c5312c - [TD]fix const-ness of CS routines
+  *  266b5cfdb - [TD]fix default svg hatch file retrieval
+  *  2251f53eb - trigger update of action when activating MDI view
+  *  5fd5db9ae - add method to sketch object to get index by user-
+    defined name
+  *  d6fc794ac - Arch: import IFC, add guid to non parametric arch
+    import
+  *  e243c6e94 - ...small comment clarification [skip ci]
+  *  3d532321d - AddonManager: Add WebTools icon to dialog
+  *  01fb3e03d - add toolbar icon to create mesh from shape
+  *  ccd0c4eba - [TD]fix selection issue for View and ProjGroup
+  *  3124323b2 - [TD]improve handling of Assembly4 Models
+  *  a8ee33a75 - [TD]hide uneditable properties for DPGI
+  *  6e6fdb88f - [TD]fix Orientation of Detail of Section of DPG
+  *  523d8d71f - FEM: coding conventions, add linkt to lgtm
+  *  bb1aec9e6 - fix crash when restoring a corrupted project fails
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 08 Nov 2019 12:06:57 +0300
+
 freecad-daily (0.18.3+git18628-eb3dafb56-1) unstable; urgency=medium
 
   * Compile

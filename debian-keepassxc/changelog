@@ -1,17 +1,56 @@
-keepassxc (2.4.3-1) unstable; urgency=medium
-
-  * New upstream release
-
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 16 Jun 2019 10:09:24 +0300
-
-keepassxc (2.4.1-2) unstable; urgency=medium
+keepassxc (2.5.0-2) unstable; urgency=medium
 
   * Non-maintainer upload.
-  * Bacports from PPA https://launchpad.net/~phoerious/+archive/ubuntu/keepassxc
+  * Backports from ppa:~phoerious/keepassxc
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 13 Apr 2019 17:28:55 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 09 Nov 2019 22:59:13 +0300
 
-keepassxc (2.4.1-1ppa1~cosmic1) cosmic; urgency=medium
+keepassxc (2.5.0-1ppa1~bionic1) bionic; urgency=medium
+
+  * New release 2.5.0
+
+ -- KeePassXC Team <team@keepassxc.org>  Sat, 26 Oct 2019 22:04:34 +0200
+
+keepassxc (2.4.3-1ppa1~bionic1) bionic; urgency=medium
+
+  * Fix library loading issues in the Snap and macOS releases [#3247]
+  * Fix various keyboard navigation issues [#3248]
+  * Fix main window toggling regression when clicking the tray icon on KDE [#3258]
+  * Add documentation for keyboard shortcuts to source code distribution [#3215]
+
+ -- KeePassXC Team <team@keepassxc.org>  Wed, 12 Jun 2019 02:18:19 +0200
+
+keepassxc (2.4.2-1ppa1~bionic1) bionic; urgency=medium
+
+  * Improve resilience against memory attacks - overwrite memory before free [#3020]
+  * Prevent infinite save loop when location is unavailable [#3026]
+  * Attempt to fix quitting application when shutdown or logout issued [#3199]
+  * Support merging database custom data [#3002]
+  * Fix opening URL's with non-http schemes [#3153]
+  * Fix data loss due to not reading all database attachments if duplicates exist [#3180]
+  * Fix entry context menu disabling when using keyboard navigation [#3199]
+  * Fix behaviors when canceling an entry edit [#3199]
+  * Fix processing of tray icon click and doubleclick [#3112]
+  * Update group in preview widget when focused [#3199]
+  * Prefer DuckDuckGo service over direct icon download (increases resolution) [#2996]
+  * Remove apply button in application settings [#3019]
+  * Use winqtdeploy on Windows to correct deployment issues [#3025]
+  * Don't mark entry edit as modified when attribute selection changes [#3041]
+  * Use console code page CP_UTF8 on Windows if supported [#3050]
+  * Snap: Fix locking database with session lock [#3046]
+  * Snap: Fix theming across Linux distributions [#3057]
+  * Snap: Use SNAP_USER_COMMON and SNAP_USER_DATA directories [#3131]
+  * KeeShare: Automatically enable WITH_XC_KEESHARE_SECURE if quazip is found [#3088]
+  * macOS: Fix toolbar text when in dark mode [#2998]
+  * macOS: Lock database on switching user [#3097]
+  * macOS: Fix global Auto-Type when the database is locked [#3138]
+  * Browser: Close popups when database is locked [#3093]
+  * Browser: Add tests [#3016]
+  * Browser: Don't create default group if custom group is enabled [#3127]
+
+ -- KeePassXC Team <team@keepassxc.org>  Tue, 11 Jun 2019 20:56:41 +0200
+
+keepassxc (2.4.1-1ppa1~bionic1) bionic; urgency=1
 
   * Fix database deletion when using unsafe saves to a different file system [#2889]↲
   * Fix opening databases with legacy key files that contain '/' [#2872]↲
@@ -39,9 +78,9 @@ keepassxc (2.4.1-1ppa1~cosmic1) cosmic; urgency=medium
   * Add .gitrev output to tarball for third-party builds [#2970]↲
   * Add WITH_XC_UPDATECHECK compile flag to toggle the update checker [#2968]
 
- -- KeePassXC Team <team@keepassxc.org>  Sat, 13 Apr 2019 00:50:30 +0200
+ -- KeePassXC Team <team@keepassxc.org>  Sat, 13 Apr 2019 00:50:04 +0200
 
-keepassxc (2.4.0-1ppa1~cosmic2) cosmic; urgency=medium
+keepassxc (2.4.0-1ppa1~bionic2) bionic; urgency=medium
 
   * New Database Wizard [#1952]
   * Advanced Search [#1797]
@@ -72,9 +111,9 @@ keepassxc (2.4.0-1ppa1~cosmic2) cosmic; urgency=medium
   * Browser Integration Enhancements [#1497, #2253, #1904, #2232, #1850, #2218, #2391, #2396, #2542, #2622, #2637, #2790]
   * Overall Code Improvements [#2316, #2284, #2351, #2402, #2410, #2419, #2422, #2443, #2491, #2506, #2610, #2667, #2709, #2731]
 
- -- KeePassXC Team <team@keepassxc.org>  Mon, 25 Mar 2019 15:31:49 +0100
+ -- KeePassXC Team <team@keepassxc.org>  Mon, 25 Mar 2019 15:21:12 +0100
 
-keepassxc (2.3.4-1ppa1~cosmic1) cosmic; urgency=medium
+keepassxc (2.3.4-1ppa1~bionic1) bionic; urgency=medium
 
   * Show all URL schemes in entry view [#1768]
   * Disable merge when database is locked [#1975]
@@ -89,7 +128,7 @@ keepassxc (2.3.4-1ppa1~cosmic1) cosmic; urgency=medium
   * Add settings button to toolbar, Donate button, and Report a Bug button to help menu [#2214]
   * Enhancements to release-tool to appsign intermediate build products [#2101]
 
- -- KeePassXC Team <team@keepassxc.org>  Thu, 23 Aug 2018 19:42:26 +0200
+ -- KeePassXC Team <team@keepassxc.org>  Thu, 23 Aug 2018 19:44:28 +0200
 
 keepassxc (2.3.3-1ppa1~bionic1) bionic; urgency=medium
 
