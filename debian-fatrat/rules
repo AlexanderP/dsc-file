@@ -7,11 +7,13 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),jessie, trusty,xenial))
-	BITTORRENT=ON
-else
+
+ifneq (,$(filter $(DEBIAN_CODENAME),jessie trusty xenial))
 	BITTORRENT=OFF
+else
+	BITTORRENT=ON
 endif
+
 
 CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
 CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(CPPFLAGS)
