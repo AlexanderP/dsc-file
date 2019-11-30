@@ -1,3 +1,94 @@
+clementine-qt5 (1.3.1+git2460-g23d0f3514-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 23d0f3514d97081370a648ebbd592d2285ee34c7
+  * Date: 1574094016
+  * git changelog:
+  *  23d0f3514 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  7db052ca8 - Fix and update snap
+  *  d8c020281 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  9bc73f21c - Update README.md
+  *  f71e99360 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  209076805 - Fix a few more gst plugins
+  *  019afdcc2 - Add missing gstreamer plugin
+  *  0d6f01e7f - Add missing gstreamer plugin
+  *  a359d0be0 - Include Qt SVG dll
+  *  4ee4c192e - D'oh
+  *  dbd9a23e8 - Update DLL list
+  *  ccf2fcec9 - Don't use env as ~ isn't expanded
+  *  755895c46 - Up parallelism of FC31 build
+  *  b571e6b65 - Upload windows artifacts
+  *  add836a05 - Add qt platform plugin
+  *  367b18223 - Update bundled DLL list
+  *  27e7174e6 - Copy winpthread dll
+  *  e395387ba - Try building installer
+  *  3af1fe92a - Add KillProc nsis plugin
+  *  1890cd9a1 - Add osversion nsis plugin
+  *  dad41fed3 - Add nsisplugins directly
+  *  773179acb - Include mingw in builds
+  *  c7470c20c - Revert "Disable other builders temporarily"
+  *  58c863aa2 - Disable other builders temporarily
+  *  3a13615b7 - Add circleci mingw builder
+  *  8b765a525 - Remove qtsparkle support
+  *  6377f297b - Now using mingw-w64 pthreads
+  *  e2ab832ca - Only check for dbus on x11
+  *  fd3686500 - Revert "Update taglib"
+  *  265dc1a40 - Use AWS mirror for eoan & disco too
+  *  e985bd780 - Fix edit tag dialog
+  *  cdfc059cb - Change remaining group by defaults to album artist
+  *  7285c5af7 - Try using us-east Ubuntu mirror
+  *  ba9617449 - Fix formatting
+  *  40be3331e - Update taglib
+  *  44c111941 - Fix updating song count
+  *  79e7c2a1f - Add check for valid birthTime()
+  *  c23a251ec - Fix setting mtime/btime in tagreader
+  *  6accd1e3d - Fix formatting
+  *  8d75f321d - Fix updating compilations
+  *  cd3d481ed - Remove an unused file that had been left in the qt5
+    branch
+  *  589824119 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  ca18a5584 - Fix formatting
+  *  fd35f20d2 - Remove watch for removed subdirectories
+  *  1b35d3f6a - Dont clear pixmap cache on model reset
+  *  796fa285f - Fix formatting
+  *  04baa9ec0 - Remove album from pixmap cache when song is removed
+    from library model
+  *  83c4c91a2 - Make concurrency match CircleCI machine types
+  *  63ba95d2f - Remove travis integration
+  *  4d624e3a2 - Add Fedora 31 support
+  *  c6f5ea19e - Add build for Ubuntu Eoan
+  *  e6dbb8a1c - Xenial's qt5 is too old
+  *  ba9eded6f - Install tzdata non-interactively
+  *  da4478bf8 - More Fedora dependencies
+  *  65f0d6603 - Remove qt4 dependency
+  *  09a437280 - Add more Fedora dependencies
+  *  a58481cfd - Add back more Linux builds
+  *  2a2a71281 - Switch to queue2 for probe queue and set properties
+  *  e3c191b75 - Version agnostic paths in macdeploy
+  *  37742e2bb - Only build mac on `master` due build time limits
+  *  8d9334999 - Use version agnostic paths for mac deps
+  *  789b22b24 - CircleCI: build and deploy from master branch
+  *  3f9b6b119 - Fix formatting
+  *  344023e6d - Fix formatting
+  *  ba31c755e - Replace all uses of QSignalMapper with C++11 lambda
+    expressions
+  *  2aa372c62 - Fix formatting
+  *  9519829d1 - Fix formatting
+  *  d09c27f71 - Remove extra ';'
+  *  0da490a5e - Replace QString::null with QString()
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 21 Nov 2019 19:23:57 +0300
+
 clementine-qt5 (1.3.1+git2369-gf9627c208-1) unstable; urgency=medium
 
   * Compile

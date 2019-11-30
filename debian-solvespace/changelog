@@ -1,3 +1,33 @@
+solvespace (3.0.0~git1437-690f87c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 690f87cf4a908d89238dccb3165059b913f8dd63
+  * Date: 1574528255
+  * git changelog:
+  *  690f87c - On GNU-compatible compilers, avoid embedding paths into
+    binaries.
+  *  14e095c - Don't show unusable fonts in font selector.
+  *  e74137d - Fix misuse of glTexImage2D (again).
+  *  2fe17a4 - Remove prototype for an unimplemented function.
+  *  38f4287 - Remove an integer cast.
+  *  93184c5 - Use standard std::count_if. NFC.
+  *  8c750ce - Freeze the scrollbar while editor is open in property
+    browser.
+  *  f035955 - Recompute property browser viewport on resize.
+  *  54015b6 - Call glGetError() after glFinish(), not glFlush().
+  *  9b61f98 - macOS: Don't use offscreen rendering.
+  *  e386d40 - Make some arguments const/const references, where
+    possible. NFC.
+  *  65d0bdf - Split Canvas::FinishFrame out of Canvas::FlushFrame.
+  *  ec30567 - Simplify UNION and DIFFERENCE boolean operations.
+  *  b5ccf5a - macOS: fix CMake Xcode generator.
+  *  0dcc8f3 - Fix Xcode auto-fixable issues
+  *  74aa80b - Fix misuse of glTexImage2D.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 23 Nov 2019 22:34:36 +0300
+
 solvespace (3.0.0~git1421-5d78f99-2) unstable; urgency=medium
 
   * Rebuild 

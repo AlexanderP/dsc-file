@@ -1,3 +1,87 @@
+freecad-daily (0.18.3+git18761-1ec670151-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 1ec6701519f964e2c4182c1400590d7392ebf7d9
+  * Date: 1574287078
+  * git changelog:
+  *  1ec670151 - handle nested name spaces in Python generation script
+  *  ef73ab5f3 - [skip ci] minor changes
+  *  fb64a860e - Fix -Wredundant-move warnings, 2nd try
+  *  91dd12751 - Win inssaller: cleanup and support for thumbnails
+  *  4b5ca3114 - Fix -Wclass-memaccess warning
+  *  71dae0e63 - handle some more warnings: -Wkeyword-macro -Wdeprecated-
+    declarations -Wextra-semi
+  *  a5019828c - [skip ci] fix more -Wgnu-zero-variadic-macro-arguments
+  *  c0a80e1a9 - set -Wpedantic for clang
+  *  e11767992 - [skip ci] suppress -Wgnu-zero-variadic-macro-arguments
+  *  c0d58b8f3 - [skip ci] fix more -Wgnu-zero-variadic-macro-arguments
+  *  a3e88a399 - Arch: relax Part::Feature type checking
+  *  962904a96 - [Arch] fix invalid IFC export for annotations
+  *  c43cca325 - Set QT settings before creating QCoreApplication.
+  *  d506192b1 - Arch: test for viewprovider before modifying rebar
+  *  c6a5bbcf9 - [skip ci] fix more -Wgnu-zero-variadic-macro-arguments
+  *  d4a1eb0cc - [skip ci] improve documentation
+  *  1a21e8d1e - simplify 2 tool names as suggested
+  *  15e5b29c2 - TD renaming tools, part 2/2
+  *  914edfc2c - TD renaming tools
+  *  6a7ee4f0f - add test command to demonstrate new template functions
+  *  2bfffd202 - add (variadic) templates to replace (non-strict ISO
+    C++11 compliant) macros
+  *  f65a72deb - fix syntax error
+  *  fc7890cf1 - [TD]fix Compound of Edges as Source for View
+  *  e3530f969 - set platform-specific doCommand() to fix more -Wgnu-
+    zero-variadic-macro-arguments
+  *  7758509bd - fix and suppress some more -Wgnu-zero-variadic-macro-
+    arguments
+  *  d0339c567 - Arch, export IFC, do not export attributes with no
+    values
+  *  2637280c1 - restore old definition of doCommand macro due to msvc
+    failure
+  *  4291a087b - [skip ci] fix more -Wgnu-zero-variadic-macro-arguments
+  *  1e7628f43 - convert enum to enum class to fix -Wgnu-redeclared-enum
+  *  33b0b1351 - [skip ci] suppress -Wgnu-zero-variadic-macro-arguments
+    for some headers
+  *  d2032da93 - Enhabce TypePy: add convenience method getAllDerived()
+    support TypePy asrgument in getAllDerivedFrom() and isDerivedFrom()
+    return TypePy instead of str in getAllDerivedFrom()
+  *  d61bf15c4 - declare getAllDerivedFrom as static method
+  *  e1f85cd09 - export typeid system to Python
+  *  5c7bef0ad - add support of static and class methods in Python
+    wrappers
+  *  0c99d32dd - [TD]Add getEdges Py functions
+  *  c021ff70d - Draft: rename SubelementModify to SubelementHighlight
+  *  7adca7be3 - [Draft] Edit: allow multiple objects editing
+  *  c9522a6e6 - [Draft] Edit: fix bug #4187
+  *  6dcf9ff8f - [Arch] Test : if Sketch, fuse solid; otherwise, do
+    makeCompound
+  *  720d40a04 - [Arch] - To allow exportIFC.py to work properly on
+    sketch, which use only 1st face / wire.
+  *  eecb2651f - Fixed circular dependency for boundary dressup
+  *  a7ad04ba4 - [TD]const-ness for dump function parameter
+  *  b0c932543 - App: fix PropertyXLink file path saving
+  *  a85ce1976 - add method to get wires of mesh boundaries
+  *  17831b793 - [skip ci] line width must be explicitly set in NaviCube
+    and SoFCSelectionRoot to avoid that an inappropriate value is used
+    when set from somewhere else
+  *  fd9054b3b - [skip ci] support of style sheet in branding framework
+  *  86b22fe3f - Gui: force dynamic property item background and text
+    color
+  *  b36c94643 - support of transparent image planes
+  *  a47dd26e0 - [skip ci] make mesh/points cutting working for nested
+    view providers
+  *  e3046be32 - [skip ci] tmp. disable selection when switching to
+    curvature or inspection info modus
+  *  c4093373c - [skip ci] for curvature and inspection objects set
+    default selection style to BBOX
+  *  f2bd624c6 - make mesh picking working for view providers underneath
+    a Part container
+  *  ac4e23012 - [skip ci] remove Standard_Handle.hxx to still support
+    older OCC versions
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 21 Nov 2019 13:00:34 +0300
+
 freecad-daily (0.18.3+git18702-aab61f3e1-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,37 @@
+goaccess (1:1.3.0+git2933-c427e13-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: c427e13fc86c0a2b77475fa24fb8a44a7d031455
+  * Date: 1574465776
+  * git changelog:
+  *  c427e13 - Added the ability to parse server cache status and a new
+    panel to display metrics.
+  *  67ba112 - Updated code formatting.
+  *  5c962ea - Updated code formatting.
+  *  fa0d48b - Makefile: only generate resource headers if needed
+  *  0e6c953 - silence implicit conversions and overflows found by ubsan
+  *  765de72 - configure: update formatting
+  *  2a4c79c - add FALLTHRU comments
+  *  717b862 - remove old-style function definition
+  *  7ea7552 - ignore intermediate resources in git
+  *  d474ac1 - fix several -Wcast-qual warnings
+  *  d166437 - initialize GHTMLPlot members chart_key,chart_lbl to null
+  *  91e3000 - drop unused GPanel member function lookup
+  *  c54ebe0 - update compiler warnings in Makefile
+  *  e0a12bf - add format attribute to set_dbparam
+  *  5f5a643 - make bin2c more cautious
+  *  3cf19d0 - travis: treat all compiler warnings as errors
+  *  524cba6 - set length to print for non nul-terminated char arrays
+  *  ab9e9d0 - silence alignment warnings by intermediate void casting
+  *  c25553c - configure: print utf-8 support
+  *  dfa89c0 - configure.ac: bump required gettext version to 0.19
+  *  184da11 - configure.ac: run autoupdate
+  *  e74c344 - update travis configuration
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 23 Nov 2019 22:23:11 +0300
+
 goaccess (1:1.3.0+git2909-19e0fbd-1) unstable; urgency=medium
 
   * Compile
