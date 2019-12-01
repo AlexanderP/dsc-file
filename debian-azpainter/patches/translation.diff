@@ -1,6 +1,6 @@
---- azpainter-2.1.4.orig/AUTHORS
-+++ azpainter-2.1.4/AUTHORS
-@@ -2,27 +2,28 @@
+--- azpainter-2.1.5.orig/AUTHORS
++++ azpainter-2.1.5/AUTHORS
+@@ -2,17 +2,17 @@
  -------------------
  
  be
@@ -10,8 +10,8 @@
  en
 -    Alexey Dokuchaev <danfe@nsu.ru>, 2017-2018
 -    Eugeniy Fedirets <evgeniy_fedirets@ukr.net>, 2017-2018
-+    Alexey Dokuchaev <danfe@nsu.ru>, 2019
-+    Eugeniy Fedirets <evgeniy_fedirets@ukr.net>, 2019
++    Alexey Dokuchaev <danfe@nsu.ru>, 2017-2019
++    Eugeniy Fedirets <evgeniy_fedirets@ukr.net>, 2017-2019
  
  es_ES
      David
@@ -20,7 +20,9 @@
 -    lbs <uselessmailplease@free.fr>, 2018
 +    lbs <uselessmailplease@free.fr>, 2019
  
- pt_BR
+ it
+     Nihiles <nihiles@keemail.me>, 2019
+@@ -21,11 +21,12 @@ pt_BR
      Adriano Duarte
  
  ru
@@ -31,12 +33,11 @@
 +    Alexandre Prokoudine <alexandre.prokoudine@gmail.com>, 2019
  
  uk
--    Eugeniy Fedirets <evgeniy_fedirets@ukr.net>, 2017
+-    Eugeniy Fedirets <evgeniy_fedirets@ukr.net>, 2018
 +    Eugeniy Fedirets <evgeniy_fedirets@ukr.net>, 2019
  
  zh_CN
--    SenlinOS (森林OS) <comics2008@gmail.com>, 2017-2018
-+    SenlinOS (森林OS) <comics2008@gmail.com>, 2019
+     SenlinOS (森林OS) <comics2008@gmail.com>, 2017-2019
 --- azpainter-2.1.4.orig/translation/be
 +++ azpainter-2.1.4/translation/be
 @@ -76,10 +76,10 @@
@@ -536,99 +537,3 @@
  
  ### edit - Меню "Редагування(E)"
  2000=Відмінити(&Z)
---- azpainter-2.1.4.orig/translation/zh_CN
-+++ azpainter-2.1.4/translation/zh_CN
-@@ -204,6 +204,8 @@
- +=变暗
- +=变亮
- +=差值
-++=发光(相加)
-++=发光(减淡)
- 
- #----------------
- # 缩放类型
-@@ -355,7 +357,7 @@
- +=移动复选图层到此组(&V)
- 
- #--------------------------
--# 画笔 - 尺寸列表 
-+# 画笔 - 尺寸列表
- 
- [1006]
- 0=添加(&A)
-@@ -487,6 +489,7 @@
- +=Alpha
- +=透明(自动抗锯齿)
- +=画布颜色
-++=透明 (A=0)
- 
- #---------------
- # 图章
-@@ -546,10 +549,10 @@
- 
- 100=滚动视图
- +=滚动画布
--+=更改缩放倍率(上下拖动)
-++=上下拖动更改缩放率
- 
- 200=滚动
--+=更改缩放倍率(上下拖动)
-++=上下拖动更改缩放率
- +=吸管 (前景色)
- +=吸管 (背景色)
- 
-@@ -755,6 +758,8 @@
- +=行距
- +=直排
- +=抗锯齿
-++=使用屏幕DPI值
-++=浊点合成
- 100=默认
- +=无
- +=标准
-@@ -764,6 +769,9 @@
- 120=正常
- +=斜体
- +=倾斜
-+130=不合成
-++=替换为合成文字
-++=替换+横写合成
- 
- #-----------------------
- # 快捷键设置
-@@ -805,10 +813,10 @@
- +=选择下一个画笔
- 
- 1100=用偏好画笔手绘
--+=用偏好画笔绘手绘(最大笔压)
--+=更改缩放倍率(上下拖动)
--+=更改画笔大小(左右拖动)
--+=更改偏好画笔的画笔大小(左右拖动)
-++=用偏好画笔绘手绘 (最大笔压)
-++=更改缩放倍率 (上下拖动)
-++=更改画笔大小 (左右拖动)
-++=更改偏好画笔的画笔大小 (左右拖动)
- +=从单击的两个点创建中间色
- +=颜色替换 (吸管颜色为前景色)
- +=颜色替换 (吸管颜色为透明)
-@@ -1018,8 +1026,8 @@
- +=边缘颜色
- +=原样
- 
--1110=画笔(抗锯齿)
--+=画笔(无抗锯齿)
-+1110=画笔 (抗锯齿)
-++=画笔 (无抗锯齿)
- +=1px 点线
- 
- 
-@@ -1097,8 +1105,8 @@
- +=保存副本(&D)...
- +=最近所用文件(&R)
- +=退出(&X)
--
- +=清除历史记录(&C)
-++=最小化(&M)
- 
- ### 编辑
- 2000=还原(&Z)
