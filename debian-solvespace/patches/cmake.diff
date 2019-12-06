@@ -1,0 +1,11 @@
+--- solvespace-3.0.0~git1447-0b786e6.orig/CMakeLists.txt
++++ solvespace-3.0.0~git1447-0b786e6/CMakeLists.txt
+@@ -7,7 +7,7 @@ if(CMAKE_SOURCE_DIR STREQUAL CMAKE_BINAR
+             "    mkdir build && cd build && cmake ..")
+ endif()
+ 
+-cmake_minimum_required(VERSION 3.7.2 FATAL_ERROR)
++cmake_minimum_required(VERSION 3.5.1 FATAL_ERROR)
+ if(NOT CMAKE_VERSION VERSION_LESS 3.11.0)
+     cmake_policy(VERSION 3.11.0)
+ endif()
