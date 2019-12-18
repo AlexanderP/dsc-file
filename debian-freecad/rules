@@ -2,20 +2,25 @@
 %:
 	dh $@ --buildsystem=cmake --parallel --with python2
 
+CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS) -Wall -fpermissive
+CFLAGS:=$(shell dpkg-buildflags --get CFLAGS) $(CPPFLAGS)
+CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(CPPFLAGS)
+LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
+
 DEB_BUILD_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all,+bindnow
 
 extra_flags += \
 -DFREECAD_BUILD_DEBIAN=ON \
--DCMAKE_CXX_FLAGS="-Wall -DHAVE_SWIG=1 -fpermissive $(shell dpkg-buildflags --get CXXFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)" \
--DCMAKE_C_FLAGS="-Wall -fpermissive $(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)" \
--DCMAKE_SHARED_LINKER_FLAGS="$(shell dpkg-buildflags --get LDFLAGS)" \
+-DCMAKE_C_FLAGS="$(CFLAGS)" \
+-DCMAKE_SHARED_LINKER_FLAGS="$(LDFLAGS)" \
+-DCMAKE_CXX_FLAGS="$(CXXFLAGS) -I/usr/include/python2.7" \
 -DLIB_SUFFIX="" \
 -DCMAKE_INSTALL_PREFIX="/usr/lib/freecad" \
 -DCMAKE_INSTALL_DATADIR="/usr/share/freecad" \
 -DCMAKE_INSTALL_DOCDIR="/usr/share/doc/freecad-doc" \
 -DCMAKE_INSTALL_LIBDIR="/usr/lib/freecad/lib" \
--DBUILD_FEM_NETGEN=OFF \
--DBUILD_FEM_VTK=ON \
 
 DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
@@ -26,11 +31,14 @@ ifneq (,$(filter $(DEBIAN_CODENAME),sid bullseye buster disco eoan))
 	extra_flags += \
 	-DBUILD_QT5=ON \
 	-DPYTHON_CONFIG_SUFFIX="-python2.7.${DEB_HOST_MULTIARCH}" \
-	-DCMAKE_BUILD_TYPE="Release" \
-	-DOCC_INCLUDE_DIR="/usr/include/opencascade"
+	-DCMAKE_BUILD_TYPE="RelWithDebInfo" \
+	-DOCC_INCLUDE_DIR="/usr/include/opencascade" \
+	-DFREECAD_USE_PYBIND11=ON 
 else
+	
 	CONTROL = control.qt4
-	extra_flags += -DOCC_INCLUDE_DIR="/usr/include/oce"
+	extra_flags += -DOCC_INCLUDE_DIR="/usr/include/oce" \
+	-DCMAKE_BUILD_TYPE="RelWithDebInfo"
 endif
 
 override_dh_auto_clean:

@@ -1,3 +1,114 @@
+freecad-daily (0.18.3+git18841-004d6061e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 004d6061e013023966160b063d0c335ce62739c5
+  * Date: 1575654182
+  * git changelog:
+  *  004d6061e - Fix copy/paste objects through temp file
+  *  63edea3ea - Do not reserve memory when copy/paste objects through
+    file
+  *  653a5e430 - DlgUnitsCalculator: tweaks requested by vocx-fc and
+    luzpaz
+  *  58967193b - DlgUnitsCalculatorImp.cpp: some cleanup
+  *  fafbe533b - Fix the broken UnitsCalculator dialog
+  *  0e96abb89 - Improve Inkscape version parsing in SVG import
+  *  008ef2f1e - PartDesign: rename icon, and organize resource file
+  *  a61a779a2 - Gui: PartDesign: remove execute bit from icons, now 644
+  *  8e4685fb2 - Draft: support linked transform and color override in
+    link array
+  *  68f998c6d - fix broken XML syntax in .ui file
+  *  f533e3bf8 - fix broken XML syntax in .ui files
+  *  e7ee5fe77 - Tooltips: added missing tooltips + refined pre-existing
+  *  186d52ffd - [TD]fix dim text for multi value schemas
+  *  ad8668a9f - fix -Wformat-pedantic
+  *  85ba41027 - [TD]Prevent crash when base view deleted
+  *  8c9d67c2c - Draft: signal icon change in Layer
+  *  d77b569c9 - Draft: fix Layer for Python2
+  *  0c71537a6 - [TD]Annotation icon to standards
+  *  afc2da43a - [TD]fix jumping Rich Text Annotation
+  *  0935aa9f5 - [TD]fix Jumping Dimensions
+  *  379d04166 - Fix typos and some trailing whitespace
+  *  e583b2a46 - DrawViewBalloon: add units there as well
+  *  7ef0d476b - DrawViewAnnotation: also call the
+    handleChangedPropertyType of the base class
+  *  deac1d859 - TechDraw: add units for position
+  *  e1d1f0199 - Set feed rate on vertical boundary moves.
+  *  bf4bf624a - for restored view providers of a redo again call
+    handleChildren3D() to update scene graph
+  *  73aa2a23f - fetch undo/redo stack for active MDI view, not active
+    document
+  *  5e36da5c5 - Fix some regressions in Python editor: * show again
+    asterisk when modifying the content * show still only filename in
+    tab when modifying from outside
+  *  ead9c5c67 - Build option: do not force PCL to be always enabled on
+    Win32, add option to allow to disable it
+  *  b80986702 - Improve Python compatibility
+  *  0a8c73f32 - Fix bad 'pt' unit definition
+  *  98b61485a - InstallerStructure: update according to current state
+  *  37ca8cb3b - Travis - re-enable incremental ccache builds
+  *  d2bcb7be7 - Travis - create a unique cache entry
+  *  fab86e6d3 - Travis - upgrade to GCC 9 and Clang 9
+  *  83ecb8a5e - set default deflection of 0.01 when exporting shape as
+    STL
+  *  281a2772f - Add option to copy required plugins from LibPack to
+    build directory
+  *  f7be6933f - fix typo in German translation
+  *  58fdbdc4d - pivy: avoid possible segfault when setting None to an
+    SoSFImage field
+  *  2efd9a133 - [TD]fix "override" compiler warnings
+  *  ba28f959a - [TD]fix assembly CS has wrong XDir
+  *  fff0029de - [TD]correct face detection to avoid ghost faces
+  *  90702da53 - [TD]Add geometry debugging tool
+  *  cefb719b6 - [TD]Add Scale to Section gui
+  *  a2390cb33 - [TD]TaskSectionView minor tune up
+  *  acc7686b8 - [TD]Section Line position
+  *  54d9e0430 - [TD]use XDirection to align DPGI in DPG
+  *  9381d4cb9 - [TD]Handle missing XDirection on old files
+  *  cd2764fcb - [TD]let DVD fail gracefully
+  *  4323ca24e - [TD]Fix detail position
+  *  92dfecea7 - [TD]correct alignment of Section & Detail with Base
+  *  333b67026 - [TD] add CS3 dump
+  *  51d4c16e4 - [TD]Section UI changes
+  *  9898f3b24 - travis - extend library search path in order to find
+    libnglib.so at runtime
+  *  c5ac5e0e1 - Travis - satisfy runtime dependencies
+  *  79cd59723 - need further PySide2 modules for unit tests
+  *  fb43b0050 - [skip ci] fix SyntaxWarning: 'is not' with a literal.
+    Did you mean '!='?
+  *  298b80c53 - need PySide2.QtCore for Py3 for unit tests
+  *  84752715e - Travis - fail build on unit tests failure
+  *  831376e45 - Travis - move instead of copy and preserve space
+  *  ffe017363 - Travis - size information
+  *  cbe161b4e - set build dependency to netgen package
+  *  f55cf3ef1 - remove superfluous quotes
+  *  b9fd533ca - Fix cmake report to show correct Qt version
+  *  5cbf18b8b - for point clouds set default selection style to
+    bounding box
+  *  9e93e621f - command to create a structured points object from a
+    unstructured points object
+  *  29cd90513 - when using pcl do not allow it to override compiler
+    flags
+  *  8bc5b585c - Used single quotes for single character in string::find
+    algorithm, more efficient
+  *  e9814d918 - used in-built methods instead of external algoritms
+  *  f13a7627a - used make_shared and make_unique for creating shared
+    pointers
+  *  bbbabf99a - removed useless std::move on const and unmovable
+    objects
+  *  5ee4a2e87 - Draft: PySide should be available already
+  *  e951094af - use emplace_back instead of push_back where justified
+  *  079808b81 - Mesh: support multiple context in OpenGLMultiBuffer
+  *  9ca9b6f3e - Gui: fix SoFCSelection rendering when no shading
+  *  4b07117a2 - Mesh: fix material leaking when using VBO
+  *  df0366a6f - Part: reduce memory usage in SoBrepFaceSet
+  *  95f20b9d8 - MeshPart: support link in Tessellation
+  *  9ee436f27 - Gui: fix ViewProviderLink::getElementPicked() when
+    linked to group
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 07 Dec 2019 01:03:26 +0300
+
 freecad-daily (0.18.3+git18761-1ec670151-1) unstable; urgency=medium
 
   * Compile
