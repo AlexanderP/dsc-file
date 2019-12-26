@@ -1,3 +1,36 @@
+clementine-qt5 (1.3.1+git2480-gfb51e7733-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: fb51e7733c4bad53a87971ad51634e68fcbe66db
+  * Date: 1576504511
+  * git changelog:
+  *  fb51e7733 - Remove reference to buildbot
+  *  90a237716 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  715da8909 - Fix resuming playback position on startup
+  *  a7ad66d02 - Fix issues reported by clang-format
+  *  397145d21 - Remove obsolete forced setting of XDG_CONFIG_HOME.
+  *  ca2c6771f - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  7ef917008 - Fix formatting again
+  *  344989785 - Fix multiple triggers of shortcut actions Also properly
+    connect/disconnect from DBus signal upons register/unregister.
+  *  2307c1522 - Fix style
+  *  f5ec88b52 - Add support in GetConfigPath() for /pixmapcache
+    directory
+  *  ab2f7c03e - Use QStandardPaths to define Path_Root and
+    Path_CacheRoot.
+  *  a3531d749 - Actually fix formatting
+  *  0b6519bad - Fix build with DBus disabled
+  *  8cab8fe18 - Fix formatting
+  *  24a571769 - Initial KGlobalAccel support
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 22 Dec 2019 11:07:26 +0300
+
 clementine-qt5 (1.3.1+git2462-g440ac6dda-1) unstable; urgency=medium
 
   * Compile

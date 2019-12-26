@@ -1,3 +1,194 @@
+freecad-daily (0.18.3+git19034-b2ffebf1c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: b2ffebf1c0ecee57bf5329f4d2546fd98f3f6399
+  * Date: 1576972829
+  * git changelog:
+  *  b2ffebf1c - Sketcher: [skip ci] fix header uniformity
+  *  53bb216b5 - Part: [skip ci] fix header uniformity
+  *  d38f18af2 - PartDesign: [skip ci] fix header uniformity
+  *  1baf5da3c - FEM: [skip ci] fix header uniformity
+  *  7fe10182a - [skip ci] fix header uniformity
+  *  0c6786d4b - Templates: fix header uniformity
+  *  cbdba0b5b - TD: fix header uniformity
+  *  15944dde6 - Gui: change DAG view selection behavior
+  *  5a32181b6 - Gui: fix DAG view property link update
+  *  af4fb7d37 - Gui: fix DAG view icon sync problem
+  *  df548bf82 - Gui: fix Document::signalInEdit
+  *  1cbec1a60 - Gui: fix Std_Transform tool
+  *  b79516266 - allow to choose a custom units schema in calculator
+  *  98dfe7c38 - add posibility to use a unit schema other then the
+    system schema to represent a quantity
+  *  04b54cd6a - Base: [skip ci] replace raw pointers of UnitsSchema
+    with unique_ptr
+  *  4bcb43ebd - Base: [skip ci] make UnitSystem an enum class
+  *  702ae025c - Gui: [skip ci] reduce confusion m vs. mm in units
+    calculator
+  *  43e5933e3 - Base: [skip ci] handle acceleration and force m/s^2
+  *  492af81db - extend units calculator
+  *  b6ae12235 - Gui: set/get number of decimals of a quantity spin box
+  *  07549653c - UnitsCalculator fixes
+  *  af011dabd - Gui: [skip ci] use defined font when creating text
+    editor
+  *  d969581ff - Gui: allow to set font family and size and syntax
+    highlighting
+  *  99e5beded - Mod: gitattributes, add some more comments
+  *  6f68bf627 - Mod: some comments in gitattributes
+  *  50036da5e - Complete: file endings, normalize them and let git
+    manage them
+  *  210d3cffb - Idf: file endings, normalize them and let git manage
+    them
+  *  75b7cab2d - OpenSCAD: file endings, normalize them and let git
+    manage them
+  *  003235303 - Show: file endings, normalize them and let git manage
+    them
+  *  fa25f974f - Tux: file endings, normalize them and let git manage
+    them
+  *  7a652357f - line endings, better handling in module directory
+  *  228f89638 - Python: change generation of callback functions for
+    class or static methods
+  *  df25aed14 - Base: [skip ci] fix block comment in lexer file
+  *  2949afb55 - add mJ and kW
+  *  f1cd9c05f - Test: [skip ci] add new tests for quantities
+  *  317dd26a7 - correct Unit::Work conversions
+  *  f5f0728a9 - take care of the UnitsCalculator
+  *  1ffaaf100 - generate QuantityLexer.c
+  *  82dc8e88f - add the following units:
+  *  ba688b05f - Arch: IFC export, add building parts with undefined ifc
+    type to building structure
+  *  d98e95816 - Arch: add gitattributes file to let git manage file
+    endings and normalize them
+  *  8f7220da5 - Draft: add gitattributes file to let git manage file
+    endings and normalize them
+  *  3db86602e - AddonManager: add gitattributes file to let git manage
+    file endings and normalize them
+  *  e499f3842 - [TD]fix SectionFace hatch on SVG Export
+  *  c05ad5c87 - [TD]add Tolerance size factor to preferences
+  *  92e714726 - [TD]remove duplicate line
+  *  6a3179560 - [TD]improve presentation of tolerance text
+  *  537620aa3 - Arch: export IFC, add missing debug prints
+  *  2315cc5f7 - Arch: export IFC, fix building parts export with ifc
+    type set to Undefined
+  *  c251caa93 - FEM: gmsh, small changes in comments and update of
+    comments in unit test file
+  *  97b6c3eb0 - FEM: gmsh, new interpolation parameter, fix unit test
+  *  597de362c - Draft: Fixed regression in Rotate tool
+  *  a00769beb - LGTM: remove unnecessary 'pass' statements
+  *  d49edcc98 - Revised per feedback from review
+  *  fc52c2e59 - Follow-up typo and whitespace fixes
+  *  06cf1d5b7 - Fix various typos [skip ci]
+  *  2ff80fa47 - [AddonManager] Improve Non GitPython Error..
+  *  ed8ba392c - Sketcher: Constraint_Parallel, new icon, with the
+    parallel lines of different lenghts, so that the constraint isn't
+    mistaken for the equal lengths constraint.
+  *  92fa38152 - Gui: better icon for the Origin object
+  *  fa73d29d8 - Draft: move the TestDraft unit tests to separate
+    modules
+  *  fff55c7ae - [Arch] export IFC: assign space to storey as
+    aggregation
+  *  4a6d68f35 - [Arch] export IFC: last modification date is mandatory
+    even on creation
+  *  8db24f9b6 - [Arch] IFC export: some points and vectors should be
+    2D, not 3D
+  *  e7be69e9c - FEM: gmsh, new interpolation parameter, add missing
+    code (thanks to _UR)
+  *  57bfc2e38 - [TD]fix Svg hatch on export
+  *  b33e1687b - TechDraw: [skip ci] fix 'copy-constructor' of
+    CenterLine
+  *  0935a6bab - FEM: gmsh, add linear nodes interpolation parameter
+    (thanks to _UR)
+  *  6af98e080 - Part: [skip ci] fix two little copy&paste errors
+  *  cbe19e396 - Part: fixup (to make gcc happy)
+  *  693130d86 - Part: fix memory leak in distToShape
+  *  3186d4753 - [TD]fix Py2 errors
+  *  a04d0f257 - [TD]Py routines for CenterLines
+  *  1ad2d35bc - [TD]Python routines and extension for line formating
+  *  08f23b84f - [TD]Python routines and extension for Cosmetic Edges
+  *  d9e0c2e45 - [TD]Python routines & extension for CosmeticVertex
+  *  502202690 - Mesh: [skip ci] handle visbility changes of mesh
+    defects view provider due to side-effects caused in implementation
+    of base class
+  *  2c13387ce - issue #0004225: FreeCAD crash when making draft in
+    PartDesign [skip ci]
+  *  00b3aa5cf - SpreadSheet: [skip ci] fix crash when changing data
+    inside a spread sheet
+  *  fed1e79ba - FEM: solver run, fix besides dir
+  *  1f53e8b39 - FEM: py3 fix in selection widget
+  *  f1a3a628c - FEM: selection widgets, add some error prints
+  *  91535bc1d - FEM: fix missing error classes
+  *  d662c20fe - FEM: typo
+  *  7d960163f - FEM: equations, fix reset edit mode
+  *  50d8adcfe - creating the temp .stp file in a temporary dir
+  *  31ac21e06 - Mesh: [skip-ci] Fixed wrong Coin3d off-screen renderer
+    backround color type object SbColor -> SbColor4f
+  *  91f6a5e5e - Mesh: [skip ci] Add static method to get list of
+    supported input/output mesh formats
+  *  0175008ce - [skip ci] Implement AcceptMode for FileChooser to also
+    allow to define an output file
+  *  19127f3f7 - Arch: Fixed wrong export of objects of undefined IFC
+    type
+  *  2c0daad48 - Arch: store last double-clicked building part
+  *  96b2f131c - FEM: code formating, remove to much empty lines
+  *  5c9b11731 - Arch: place buildingparts at WP origin upon creation
+  *  39ee1654f - Draft: fixed minor bug
+  *  c6702814f - FEM: code conventions, add some text for LF line
+    endings
+  *  bafadd544 - Material: add gitattributes file to let git manage file
+    endings and normalize them
+  *  12c31ab05 - FEM: add gitattributes file to let git manage file
+    endings and normalize them
+  *  15f72b916 - Draft: fixed regression in rotations
+  *  13db5b056 - Add GUI command to insert a text document into the
+    active document
+  *  1a8735428 - [skip ci] fix some warnings: -Wunused-parameter -
+    Winconsistent-missing-override
+  *  f4e79ed26 - FEM: Remove debug print output from test module
+  *  b4a310020 - FEM: utils, changes and some comments for working dir
+  *  a9c19ca6d - FEM: Restore path functions of run module
+  *  f86cf8aba - FEM: code conventions, fix link
+  *  20788d16c - FEM: code conventions, add info in the regard of
+    slashes
+  *  0b6e79be3 - FEM: code formating do not use to many slashes
+  *  7fe9beff0 - FEM: code formating in a header
+  *  36bd2f987 - fix usability regression of Mefisto mesher cuased by
+    95f20b9d The maximum edge length for the Mefisto mesher is always
+    set in the accept() method so that effectively user input is always
+    ignored. There is now a button Estimate to guess a good default
+    value. And user input is no longer ingored
+  *  d17b3c68d - Mesh: In ViewProviderMesh::getVisibleFacets replace
+    SoFCOffscreenRenderer with SoQtOffscreenRenderer to due issues with
+    Indirect GLX on recent Linux systems [skip ci]
+  *  e1e9c7e7b - [TD]add ability to filter obvious geometry errors
+  *  17b61adf1 - [TD]soft fail on bad geometry error w/ polygon algo
+  *  78e686112 - TD: DrawProjGroup: add units for spacing
+  *  42196ead3 - implement algorithmic solution to determine whether
+    triangle is visible
+  *  46792a91a - Update ArchCutPlane.py
+  *  c95779554 - Added Linecut function
+  *  3490adf7d - [skip ci] when converting from SoSFImage to QImage
+    check that the internal buffer is not null
+  *  09cd15122 - Part: fix Compound2 placement lost after restore
+  *  4a0ddd0a9 - handle possibly set Python error flag in
+    DocumentPy::recompute() to avoid crash in debug mode
+  *  fd741e433 - check returned value of PyUnicode_AsUTF8() before
+    passing to a std::string to avoid possible segfaults
+  *  8516c6fbe - Gui: fix Gui.addCommand() in Python3
+  *  13fd54a42 - App: fix pyObjectToAny() in Python3
+  *  22e9133dd - FEM: code formating in some headers
+  *  0721f7f1e - TD: DrawView.cpp: add routine for PropertyDistance
+    change
+  *  50f4c012b - Gui: change tree view select all behavior
+  *  719c11e71 - Gui: track editing object placement change
+  *  ceeb776ff - [TD]DrawViewBalloon OriginX/Y to PropertyDistance
+  *  efed66da1 - [TD]fix merge resolution error
+  *  c1f177b52 - Edit A4
+  *  de1be3b38 - TD: add units for line widths
+  *  2fa9369d4 - TechDraw: add unit for rotation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 22 Dec 2019 07:34:36 +0300
+
 freecad-daily (0.18.3+git18841-004d6061e-1) unstable; urgency=medium
 
   * Compile
