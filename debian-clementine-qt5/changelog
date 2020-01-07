@@ -1,3 +1,78 @@
+clementine-qt5 (1.4.0~git49-g008c90ff2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 008c90ff294c7b7562c65f269848908e53a6494d
+  * Date: 1578269522
+  * git changelog:
+  *  e98c11fe6 - Use QImage::sizeInBytes() with Qt 5.10 and above
+  *  6b50d5140 - Fix formatting
+  *  e63c1edbb - Fix formatting
+  *  341a4d142 - Replace QTime with QElapsedTimer
+  *  959a957a5 - Replace QModelIndex::child() with
+    QAbstractItemModel::index()
+  *  099120908 - Revert "Add an option to specify a gpodder server."
+  *  257e1be43 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  1b23417a9 - Use QWidget::screen() to fix compile with Qt 5.14
+  *  52180a748 - Fix layouts with duplicate name in
+    SmartPlaylistSearchTermWidget
+  *  5eb32b33c - Replace QSet::toList() with QSet::values()
+  *  b4fc6d96b - Fix formatting
+  *  35a0beb8a - Replace use of QtMac::toCGImageRef with
+    QImage::toCGImage
+  *  ddc8a5f01 - Initialize QObject in constructor and add explicit
+  *  7f6e7f8b3 - Fix formatting
+  *  f81a3aa8d - Replace use of QString::sprintf with QString::asprintf
+  *  a70537b83 - Replace use of QStyleOptionFrameV3
+  *  39cdb7fc3 - Add fallthrough comment where fallthrough is intended
+  *  4c157a95d - Replace use of QPalette::background with
+    QPalette::window
+  *  28bbb74c2 - Replace use of QColor::dark with QColor::darker
+  *  9e3461f81 - Fix formatting
+  *  6a8f70285 - Replace all uses of QDesktopWidget with QScreen
+  *  39934dc30 - Fix songs stuck in various artists
+  *  651965b90 - Fix formatting
+  *  250b5ca0a - Remove pixmap cache and pending art when removing
+    parent nodes instead
+  *  a4a8726dd - Fix formatting
+  *  30413767c - Fix macOS filesystem listener (library watcher)
+  *  af62df4db - Add project to CMakeLists
+  *  590d7f382 - Add an option to specify a gpodder server.
+  *  c24614295 - Update to libmygpo-qt 1.1.0.
+  *  2aa81af6c - 1.4 rc1
+  *  ba6879e90 - Copy all release artifacts to one dir for ghr
+  *  702d69ee0 - Upload all artifacts on release
+  *  eec38a64d - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  a164a5dff - Fix smart playlist crash.
+  *  963b272c4 - Don't crash if smartplaylist wizard plugin is not
+    found.
+  *  e32ba7eac - Gpodder login cleanup.
+  *  a1da06700 - Reset gpodder session cookies on logout.
+  *  eeb9f7e30 - Use a newer version of go for ghr
+  *  7d44268c0 - Use proper git/ssh versions
+  *  3a3113b78 - Create github release on tag
+  *  d0ea1033a - Build source tarball (#6486)
+  *  51c5939ba - Set version
+  *  5ee0a63a4 - Try unlinking python2 first
+  *  36179a719 - Fix gpodder sync memory leaks in success cases.
+  *  8f0f24f39 - gettext & sqlite seem to already be installed
+  *  9e73aae82 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  0d6279c98 - Try running builds for tags
+  *  5e7e57df7 - Set a 30 second timeout for gpodder requests.
+  *  77d5d8bde - Add a timeout option to NetworkAccessManager.
+  *  82b185c08 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 06 Jan 2020 11:21:46 +0300
+
 clementine-qt5 (1.3.1+git2480-gfb51e7733-1) unstable; urgency=medium
 
   * Compile

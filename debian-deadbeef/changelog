@@ -1,3 +1,202 @@
+deadbeef (1.8.2+git8777-3233cb7a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: 1.8
+  * Commit: 3233cb7a91fb21ffa3d06c5cb84a5cf2f795c986
+  * Date: 1577536124
+  * git changelog:
+  *  3233cb7a - 1.8.3-alpha1
+  *  98a47792 - 1.8 Changelog
+  *  fe514eeb - gtkui: fix add location regression (fixes #2294)
+  *  e68eaeeb - shellexec: test cleanup
+  *  b860ddc7 - shellexec: fixed missing include and function
+    declaration
+  *  eb6e99ac - shellexec: added tests; fixed off-by-one error causing '
+    character to not be escaped correctly (fixes #1996)
+  *  875ab6ef - shellexec: fix use of uninitialized variable; warning
+    fixes
+  *  7172677e - osx: added shellexec and shellexecui plugins for gtk3
+    build
+  *  f34deffc - gtkui: allow splitter to be as close to the edge as
+    possible (fixes #2292)
+  *  d52dd797 - vfs_curl: cleanup unused code
+  *  9027857f - tf: better test data for $progress2 with multiple
+    unicode chars
+  *  3e4c9449 - tf: added test for unicode and multiple characters in
+    $progress2
+  *  972601ec - junklib: cleanup / code duplication fix
+  *  1872828c - junklib: convert large macro into a function
+  *  e8a771c6 - tf: fix a few memory bugs and warnings
+  *  ec3c345a - 11.8.3 changelog
+  *  47d267ca - junklib: don't write rating to TXXX
+  *  cb69fe7d - tf: fixed unicode support in $progress and $progress2
+  *  34f36f3b - junklib: duplicate code cleanup
+  *  ffd321c4 - junklib: add POPM reader and writer (fixes #2282, fixes
+    #1143)
+  *  dc29368d - junklib: fix stackoverflow bug in id3v1 writer
+  *  32c0af1e - junklib: cleanup, fix warnings
+  *  48cd2301 - streamer: fix a bug causing playpos to reset to zero
+    when changing shuffle mode and after unpause (fixes #2286)
+  *  49a1a688 - cocoaui: fix replaygain time elapsed time formatting,
+    and align status text with gtkui (fixes #2217)
+  *  4274a17e - rg-scanner: time calculation bug fixed #2217
+  *  ea61e1f7 - replaygain: fix default rg processing flags
+  *  bb7c2c42 - core: remove deprecation attribute from
+    ddb_playback_state_t (fixed #2289)
+  *  8b37adf2 - junklib: change id3v2 tag mapping for TLAN and TMED
+    (fixes #2284)
+  *  0a3a0319 - streamer: avoid re-queue if not buffering next track
+    (fixes #2274)
+  *  8ad89ddf - gtkui: improved remove from disk feature
+  *  9e43988f - cocoaui: fixed initializing group by window
+  *  1163a5e4 - cocoaui: implemented group by -> custom
+  *  c0f8f2d9 - cocoaui: cleanup EditColumnWindowController
+  *  63a2c9b4 - cocoaui: update playlist content frame on columns change
+  *  9580296b - cocoaui: edit column window in separate XIB; fixed
+    editing search window columns
+  *  0a22264f - opus: don't adjust header gain, unless replaygain info
+    is present (fixes #2232)
+  *  4923ad6b - wrap the new ddb_playback_state_t in DDB_API_LEVEL check
+  *  df441929 - new ddb_playback_state_t enum, deprecating the use of
+    output_state_t
+  *  a50e5719 - streamer: re-queue buffered track after repeat/shuffle
+    change
+  *  790168f6 - streamer: flush buffering queue if the queued tracks are
+    deleted (fixes #1178)
+  *  e96d0397 - hotkeys: added checks to prevent seeking out of bounds
+    (fixes #2174)
+  *  b7eede1a - streamer: if the current track is not in playlist, next
+    will be taken from the current playlist (fixes #1245)
+  *  55bba472 - gtkui: warning fixes in trkproperties.c
+  *  704efa1e - cocoaui: aligned multivalue field separation with gtkui
+  *  a3de4411 - gtkui: fixed intepreting semicolon-separated multiple
+    values in track properties dialog (fixes #2198)
+  *  5ed44288 - streamer: fix allocation size
+  *  c2d5cfdf - cocoaui: better touchbar support - seekbar, play/stop
+  *  2eb8c10a - streamer: double-free fix
+  *  8d1e02be - streamer: moved output buffer to heap
+  *  b83cb8a7 - streamer: temp buffer allocation moved to heap
+  *  5fb020e1 - streamer: pop manually triggered track to the top of the
+    shuffle queue, to make sure reversing will revisit it in the same
+    order
+  *  4680b28f - cocoaui: modernised cocoautil and moved user plugins to
+    ~/Library/Application Support/Deadbeef/Plugins
+  *  e838bed3 - fixed a bunch of bugs in the new
+    vfs_abort_with_identifier system
+  *  74ef2b56 - streamer: fix crash when fileinfo->file is NULL
+  *  b31f9809 - vfs, vfs_curl, streamer: new API and vfs_curl
+    implementation for ID-based stream interruption, which doesn't rely
+    on pointer uniqueness (fixes #2267)
+  *  014791c2 - VfsCurlTests: fixed typo in test name
+  *  4ea3ffaa - vfs_curl: added some tests to icy header processing
+  *  bff7946c - vfs_curl: cleanup http_curl_write
+  *  932b7ff7 - vfs_curl: cleanup
+  *  01eafa6e - mp3parser: reduced max allowed number of invalid bytes
+    in network stream
+  *  b2578186 - vfs_curl: fixed handling of in-stream headers (fixes
+    #2237)
+  *  b21d7260 - better and tested relative path fix for windows
+  *  3479ea4f - disable the use of deprecation attribute when using
+    GCC<6.0
+  *  819bb35a - cocoaui: modernised converter sheets
+  *  eeecbd12 - cocoaui: modernised file add progress sheet
+  *  bb473ab7 - cocoaui: modernise sort custom sheet
+  *  3c2e0b15 - cocoaui: modernised replayGain sheets
+  *  fcf11b9f - cocoaui: modernised sheets in trackProperties
+  *  bc9d630d - cocoaui: addLocation, scriptableEditor and
+    trackProperties sheets modernisation
+  *  f218ce92 - cocoaui: modernised ddbTabStrip rename playlist sheet
+  *  acf1e405 - cocoaui: modernised add/edit column sheets
+  *  a00dfd6d - cocoaui: trackProperties progressPanel modernisation
+  *  4d9d2710 - osx: deprecation fixes
+  *  3e0dfd72 - fix a few deprecations in deadbeef.h
+  *  1d0d68ac - gcc compile fix
+  *  aabeaa12 - playlist: fixed a wrong assignment of modification_idx,
+    which causes gtkui to not redraw playlist after changes (fixes
+    #2264)
+  *  a94b08c6 - gcc compile fix
+  *  e9fe2c00 - streamer: remove unused event
+  *  56c4220f - new implementation and API for repeat and shuffle
+    properties
+  *  713d7113 - TrackSwitchingTests: mark position fix
+  *  d03108ac - track switching tests in their own suite
+  *  a264bfd9 - streamer: cleanup and tests for
+    streamer_get_current_track_to_play
+  *  b0fe8f7e - streamer: fix playing first track when no selection
+  *  39135272 - streamer: fix a few issues with switching to
+    previous/next track
+  *  16e08faf - streamer: shuffle was invoked by accident when there's
+    no previous track in non-shuffle mode (fixes #2261)
+  *  0407215c - mp3parser: added performance statistics and fixed early-
+    out when seeking (fixes #2140)
+  *  ff8aa976 - playlist: better name for is_relative_path
+  *  52352d71 - playlist: fixed relative path detection for win32;
+    refactored and made tests for both posix and win32 version
+  *  c88ed4f3 - gtkui: make autosort playlist menu item insensitive when
+    no playlist was selected
+  *  4dd68e10 - gtkui: fix memory leak when activating duplicate
+    playlist action
+  *  f32af7bd - gtkui: fix memory leak when activating playlist context
+    menu
+  *  301596a8 - gtkui: fix segfault when opening playlist menu from
+    empty space
+  *  15823ac7 - osx: bumped deployment target to 10.12 for all targets
+  *  f3b0f5d6 - cocoaui: new multimedia key handler using
+    MPNowPlayingInfoCenter/MPRemoteCommandCenter
+  *  5b53ba19 - removed bogus FIXME
+  *  be38cc9f - added information about the necessity of calling
+    plt_modified, near the pl_save_all declaration
+  *  4b33d4b7 - documented plt_modified
+  *  1e45932a - gtkui: fix replaygain scanner not triggering playlist
+    save after scan/remove (#2257)
+  *  6db284b0 - cocoaui: fix replaygain scanner not triggering playlist
+    save after changing file tags, also fix a typo in plt_save (#2257)
+  *  8204a9ad - gtkui: actionhandlers warning fixes and save the
+    intended modified playlist instead of current
+  *  56320c4c - gtkui: save playlist after delete nowplaying track
+    action (fixes #2215)
+  *  c4d0cc2a - gtkui: fix deleting files in playlist context (fixes
+    #2215)
+  *  a16b5edd - gtkui: fix crash on macos
+  *  ea0f680a - streamer: fix playback stuttering bug, caused by
+    improper skipping of deleted files (fixes #2254)
+  *  4988d0ab - cocoaui: alloc+init -> new
+  *  c64a7e5b - cocoaui: remove custom dock tile
+  *  d1c56eb1 - cocoaui: objc code modernization
+  *  7b4a5a05 - cocoaui: modernize setNeedsDisplay:YES ->
+    needsDisplay=YES
+  *  5fa05def - cocoaui: fix redraw after sort
+  *  feb7a1ba - premake5: add missing wcwidth
+  *  ee8d7be2 - mp3: revert a change from signed to unsigned, since it
+    causes deadlocks
+  *  f627aa00 - playlist: don't log playlist loading errors
+  *  6335dedb - mp3: detect and ignore freeformat mp3s (fixes #2253)
+  *  87db55ac - logger: typo fix
+  *  1f833ddb - gtkui: added a menu option to scan Track Gain for all
+    unscanned files In playlist
+  *  70339732 - Use AM_GNU_GETTEXT([external]) for better compatibility
+  *  96df19ca - logger: accumulate info log and pass to listeners
+    plugins: log plugin load failures as info messages, to prevent popup
+    (fixes #2193)
+  *  07ac334d - gme: fixed missing snprintf argument
+  *  690403e0 - gtkui: fixes crash when removing playlist widget from
+    layout
+  *  abd65c29 - gtkui:  fix GTK3 support in start hidden feature (fixes
+    #2231)
+  *  2685b41e - gtkui: fix wingeom_save regression, causing window
+    position to not be correctly restored after clicking tray icon
+  *  22323a6a - aac: fix crash caused by closing an already closed file
+    handle (fixes #2246)
+  *  df927c7b - plug_is_relative_path windows condition fix
+  *  7ae844b1 - aac: close filehandle before returning (fixes #2227)
+  *  a45c034b - playlist: fixed relative path detection, added tests
+    (fixes #2241)
+  *  5bfcd23d - cocoaui: call -[NSApp terminate:] from UI thread
+  *  a05a2a75 - osx: deadbeef.xcschemes update
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 05 Jan 2020 09:28:12 +0300
+
 deadbeef (1.8.2+git8484-030ec022-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,147 @@
+freecad-daily (0.18.3+git19145-c43315728-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: c43315728cc643c6a382af0bba5b596407bbaf26
+  * Date: 1578169922
+  * git changelog:
+  *  0ef89a9e5 - [TD]fix Section label
+  *  81f809cfc - Removed dead code for debugging shortcut warnings.
+  *  487cfd1a6 - Fixed removal of 2d objects from engrave ops
+  *  80e57ebcc - Added support for BaseShapes back into Engrave op
+  *  af4519291 - Added support for flipping a BezierCurve edge
+  *  06007c6bb - Fixed engraving support for generic b-spline curves
+  *  a33af45aa - Fixed extension generation for arcs if the length is
+    larger than the arc radius and the direction is an inset.
+  *  b8e92ba95 - Fixed segfault if some extensions end up being not
+    valid.
+  *  f7527927c - Enable loop detection if it /could/ succeed but don't
+    actually calculate it until activated.
+  *  4d88018ed - Sorting edges before making a wire is required for all
+    edges to be included, issue #4219
+  *  a0d7174a3 - Allow deletion of dressup even if model is not setup
+    correctly.
+  *  edd46bc7d - Deletion of dogbone dressup should not rely on the
+    model being properly setup.
+  *  ca939e2f7 - FEM: result task panel, some more comments
+  *  e1f5c989d - FEM: result mesh reset, some comments
+  *  3b69f8bcd - FEM: result task panel, some comment for restore
+    resutls
+  *  3c3e946f7 - [skip ci] issue #0004164, issue #0004237: macOS crash
+    when opening project from 'Recent files'
+  *  4df637345 - fixes #0004158: FreeCAD crashes when deleting spline
+    [skip ci]
+  *  ec18f070d - Spreadsheet: [skip ci] fix regression when pressing
+    Return/Enter when completion list is shown
+  *  7e3197abe - [TD]fix Dimension selection issues
+  *  40ed5df69 - Spreadsheet: [skip ci] fix inconsistent German
+    translation
+  *  d5a4996d2 - App: fix Expression _moveCells()
+  *  6562946e3 - Gui: fix ViewProviderDocumentObject display mode
+    restore
+  *  36d158ac1 - [TD]support Pyramid in Balloon
+  *  3c97d0b9e - [TD]support pyramid arrow in leader
+  *  ac680bf9b - [TD]add arrow style - Pyramid
+  *  dcc279083 - [TD]fix potential nullptr while restoring
+  *  977f5c28f - PartDesign: [skip ci] replace int with proper enum type
+  *  c9f6e5c37 - PartDesign: improve SubShapeBinder transformation cache
+  *  474d87495 - Part: add TopoShape::getSub(Topo)Shapes()
+  *  7dffaf43c - PartDesign: fix SubShapeBinder lost of placement
+  *  28d67eba2 - Issue ID 0004230 : Fixing a crash in chamfer command.
+    Putting a null check for the function return value [skip ci]
+  *  ae7ebde4e - [skip ci] Update Fem_ru.ts
+  *  c0ebcbee4 - fix brick01 file name
+  *  a9f820470 - fix some const correctness
+  *  e33a90dc5 - [TD]adjust symbol location for font and text
+  *  4cca918a7 - [TD]fix #4234 initial display of section label
+  *  eb4e2d2c5 - Gui: add virtual method containsViewProvider to MDIView
+    and re-implement it in some sub-classes Improve
+    Document::setActiveView to not always switch to the first 3D view
+    but check the currently active view before
+  *  ad9521912 - set explicit utf-8 encoding for some Python modules
+  *  e90038425 - declare getMDIView and getMDIViewPage as const
+  *  6a4dd8241 - TechDraw: [skip ci] fix -Winconsistent-missing-override
+  *  d4954837d - [Draft] Edit, changed endEdit
+  *  510e15cf2 - [Draft] Edit Documentation
+  *  f2ed9054f - Draft: fix CMakeLists to install files in directories
+  *  4318375a5 - Gui: allow user to set an expression for property
+    editor of vectors
+  *  ba95cc73a - Base: [skip ci] do not normalize axis when changing
+    angle of a Rotation object
+  *  ec602a093 - [TD]update property name in Balloon test case
+  *  c50491dca - [TD]fix overload warning
+  *  ccd107f1c - [TD]fix Balloon placement issues
+  *  134f9d4f2 - Arch: Fixed bug in materials merging
+  *  5442dfbbc - Sketcher: [skip ci] force redraw after using rubberband
+    selection
+  *  bd36bcb22 - [skip ci] scale grabbed image to defined width
+  *  9e4710d67 - Gui: [skip ci] allow to pass multi-sampling in Python
+    wrapper
+  *  71154715e - Draft: add GuiCommandBase class to serve as the parent
+    class of all DraftTools
+  *  a7a11341f - Gui: [skip ci] show navi cube also when rendering as
+    framebuffer or GL image
+  *  e7796c049 - Gui: [skip ci] add option to grab 3D view as is
+  *  ae7cb9e30 - Draft: [skip ci] Fix header uniformity
+  *  e78e468e0 - TechDraw: [skip ci] fix warnings -Wunused-private-field
+    and -Winconsistent-missing-override
+  *  668e23788 - Draft: fix array restore
+  *  51a23bd77 - Use DraftVecUtils.tup only two times.
+  *  b22c33ab6 - Fix the Draft Array polar type. Rotate first global and
+    then object own rotation(spin) of placement.
+  *  0d17b6faa - [Draft] ImportDXF Bug upgrading from 0.16
+  *  8fb5c6573 - Arch: [skip ci] fix header uniformity
+  *  c7f987442 - ReverseEngineering: [skip ci] Fix header uniformity
+  *  9d4b58ae8 - Robot: [skip ci] fix header uniformity + trailing
+    whitespace
+  *  699286363 - [Draft] Edit further cleanup
+  *  df846aaea - [Draft] Edit _ code cleanup
+  *  99f9aa42f - [Draft] Edit: improved Draft Circle editing
+  *  edca1b4af - [Arch] Added Draft Edit Command to toolbar
+  *  4fc3af139 - [Draft] Edit _ improved rectangle editing
+  *  8dd2b328f - [Draft] Edit: general refactor
+  *  aef11c1f8 - Arch: division including a float to obtain correct
+    result
+  *  4a736b773 - [TD]fix Py2/Qt4 errors
+  *  d9d440bb6 - [TD]format RichAnno frame
+  *  1e48af0fb - [TD]make symbol text adjustable
+  *  e7a0cd4df - [TD] remove obsolete code
+  *  c05f2268a - [TD]fix Leader position override by QGIView
+  *  f252aaff6 - [TD]add static routine for default line weights
+  *  b5f12376a - [TD]fix LeaderLine point edit
+  *  c766d7579 - [skip ci] replace German comments
+  *  d92379894 - [skip ci] Fix header uniformity for Import, Mesh,
+    Points, Raytracing
+  *  bfdd6d8a2 - Units: [skip ci] restore translations of unit schema
+    names
+  *  f11783a49 - src/Gui: [skip ci] fix header uniformity
+  *  6f11ed298 - src/Base: [skip ci] fix header uniformity
+  *  4f308dc03 - src/App: [skip ci] fix header uniformity
+  *  72065b0d3 - [skip ci] MPH already defined
+  *  ce56205ed - more fixes for the UnitsCalculator
+  *  6aeb0910b - cosmetics to keep the overview
+  *  cd8b63028 - missing parts from from commit d9d903faea
+  *  7dbc30901 - Manual dimension centers the plane's view
+  *  0af2e760a - Arch: Fixed minor colorbug in IFC export
+  *  d9d903fae - Units: extend parser to accept mph, sqft and cft. Fix a
+    bug in imperial civil schema
+  *  fad1badd0 - Fix typo in templateClassPyExport.py [skip ci]
+  *  82c84c4d9 - changes according to vocx-fc's annotations
+  *  f07e97b81 - DlgUnitsCalculator: some tweaks
+  *  9c707479a - also add unit THz as requested
+  *  63bc9c568 - add units Mpsi, cal and kcal
+  *  89a5226b8 - Arch: Added option to export IFC files in imperial
+    units
+  *  3f514b08b - Draft: Layer, more code formating
+  *  6c8875e58 - Draft: Layer, code formating
+  *  a0e88dfba - Draft: Layer, Separate Line color and shape color
+    override
+  *  2eb208cab - reduce size of units calculator
+  *  a056d85f7 - Gui: implement size hint for quantity spin box
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 05 Jan 2020 06:29:23 +0300
+
 freecad-daily (0.18.3+git19034-b2ffebf1c-1) unstable; urgency=medium
 
   * Compile

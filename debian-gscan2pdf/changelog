@@ -1,3 +1,50 @@
+gscan2pdf (2.5.5+git3123-02918b66-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 02918b6635dfc5787b900e8cee2e9392dc4c2caf
+  * Date: 1574891979
+  * git changelog:
+  *  02918b66 - Bumped version to 2.6.2
+  *  82cc9c5c - Add compatibility with combination of scanimage frontend
+    and SANE 1.0.28
+  *  f26b4691 - Removed unnecessary module import
+  *  cd7dbfff - Update to Ukrainian translation
+  *  9856d4b1 - Update to German translation
+  *  376662a9 - Update to English translation
+  *  18b43c04 - Update to Czech translation
+  *  aa4c7fca - Fix another crash importing metadata
+  *  b03b5fb2 - Fix test failing with reprotest
+  *  4b64213e - Fix importing UTF-8 in DjVu text layer
+  *  883f2cb0 - Bumped version to 2.6.1
+  *  1ba99104 - Fix crash importing metadata
+  *  1709fe7a - Postrelease commit
+  *  43933317 - Prerelease commit
+  *  b7c80aae - Fix unreliable test failure
+  *  6bdf004f - Update licence for icons
+  *  4faf4ba7 - Bumped version to 2.6.0
+  *  fc25619e - Update to Ukrainian translation
+  *  02f95e56 - Update to French translation
+  *  a32cad60 - Fix test failures in unusual environments (reprotest)
+  *  f0a84f8d - Fixed reload-recursion bug triggered by unusual
+    environment (reprotest)
+  *  38a8348f - Fix a couple of tests failing due to -12 timezone
+  *  9c5ea6e3 - Corrections to appstream xml and desktop files
+  *  0d3e929f - Fix test failures in chroot
+  *  5cf11218 - Increment/decrement date on save dialog with +/- keys
+  *  278da47e - import metadata when opening PDF or DjVu files
+  *  6588ce42 - Document closing bug #334
+  *  bfccec02 - document --import-all option
+  *  23858c0d - + new rotate 180° icon
+  *  87ab158f - + --import-all option
+  *  172dc95f - Improve tooltip for 'Allow batch scanning from flatbed'
+    preference
+  *  8bdccf79 - Fix crash closing multiple message dialog via x-icon
+  *  d28ef1ec - Postrelease commit
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 05 Jan 2020 15:45:08 +0300
+
 gscan2pdf (2.5.5+git3090-5c0a62e5-1) unstable; urgency=medium
 
   * Compile
