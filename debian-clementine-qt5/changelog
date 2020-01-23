@@ -1,11 +1,29 @@
-clementine-qt5 (1.4.0~git49-g008c90ff2-1) unstable; urgency=medium
+clementine-qt5 (1.4.0~git68-g0d1a976b6-1) unstable; urgency=medium
 
   * Compile
   * URL: https://github.com/clementine-player/Clementine.git
   * Branch: master
-  * Commit: 008c90ff294c7b7562c65f269848908e53a6494d
-  * Date: 1578269522
+  * Commit: 0d1a976b62eb64754b1a6eb29090b72a20161c36
+  * Date: 1579215998
   * git changelog:
+  *  4bb7d41ec - Fix mtp and gphoto2 device mounts from gvfs.
+  *  5efba58f0 - Decode gvfs uris.
+  *  6a9276ec0 - Fix LibraryModel async query crash.
+  *  acda1bc1d - Add mac style plugin
+  *  f817e0de4 - Prevent deletion of LibraryModel object while async
+    query is running.
+  *  2f41a969c - Use qt5 version of liblastfm dev package for Debian and
+    Ubuntu builds.
+  *  dbe67bf32 - Fix closure timing hole.
+  *  a97080a80 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  8a88a0a57 - Properly handle connect errors when initiated from
+    properties dialog.
+  *  79b7e3fe1 - Fix abort from Mtp loader thread.
+  *  3f4c78833 - Fixed lastfm workflow with "now playing" and scrobbling
+    feature
+  *  39e75071b - Remove unhelpful debug message.
   *  e98c11fe6 - Use QImage::sizeInBytes() with Qt 5.10 and above
   *  6b50d5140 - Fix formatting
   *  e63c1edbb - Fix formatting

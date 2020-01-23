@@ -1,13 +1,111 @@
-scantailor-advanced (1.0.14+git450-8126d49-1) unstable; urgency=medium
+scantailor-advanced (1.0.14+git470-a152b61-1) unstable; urgency=medium
 
   * Compile
   * URL: https://github.com/4lex4/scantailor-advanced.git
-  * Branch: develop
-  * Commit: 8126d49408650296d2e96283b41ec587035c00b5
-  * Date: 1566916250
+  * Branch: master
+  * Commit: a152b61c7380b2776062e8e601057ed69184efdb
+  * Date: 1579291907
   * git changelog:
+  *  a152b61 - Add the button to switch between single and multi
+    thumbnails display to the panel
+  *  011b5c7 - ~ Update .clang-format and remove blank lines before a
+    return statement
+  *  19f7d73 - ~ Consistent naming of local variables
+  *  1155d59 - Improvements on the thumbnails view and navigation:
+  *  2f87f97 - ~ Update README
+  *  4a90288 - ~ Implement multi selection mode feature and a question
+    on canceling multi page selection
+  *  d8b3392 - ~ Implement Go To Page feature
+  *  0f71c9a - ~ Implement UI for go to page and multi selection mode
+    features
+  *  95fd6ec - ~ Remove ABSOLUTE entry from file(GLOB ..)
+  *  36f6a18 - ~ Set Boost_COMPILER to compile Boost of version 1.7x on
+    MinGW x64
+  *  5a2e41d - ~ Make some TODOs
+  *  f42cfd7 - ~ Use QRegularExpression instead of QRegExp
+  *  bb73adc - ~ Replace deprecated auto_unit_test.hpp with
+    unit_test.hpp
+  *  e4125b6 - ~ Remove a deprecated value from the .desktop file
+  *  5fa9994 - Fix possible crash at output stage
+  *  18673c8 - ~ Refactor MainWindow code
+  *  b8eb005 - Don't cd up the initial dir of the project file dialog
+  *  d67364f - Fix bug when batch processing changed the settings of the
+    page from which it started
+  *  f7e6835 - Fix detection of second chance components
+  *  8498ef2 - ~ Use using instead of typedef
+  *  4ccd9a4 - ~ Consistent naming of local variables and #define guards
+  *  67e8365 - Create scantailor_pt.ts
+  *  7dba18e - ~ Fix untranslated strings
+  *  f4bc41d - ~ Fix styled buttons
+  *  ad29971 - ~ Group page box and select content ui boxes
+  *  28990fe - Fix deleting auto zones
+  *  e97c318 - Fix translation system and update translations
+  *  e49c017 - ~ Return add_definitions due to compatibility issues
+  *  87020b1 - ~ Remove QtSignalForwarder
+  *  6bb269a - ~ Move constants into foundation module
+  *  88cc1cb - ~ Fix cmake version extraction
+  *  7d96359 - ~ Fix cmake list_items_prepend function
+  *  c0b8fc4 - ~ Make copyright notice more compact
+  *  d8a3dc0 - Fix some stuff of the dark and light themes
+  *  11c8637 - Update dark and light themes icons
+  *  d7f6343 - Implement new icon system and add new scalable icons
+  *  7b030fc - ~ Add app info to win executable
+  *  be7b223 - ~ Add the ApplicationSettings class wrapping QSettings
+  *  e6045fa - ~ Use make_<pointer> functions to create unique and
+    shared pointers
+  *  3ebb2eb - Fix: applying the manual split mode didn't work if the
+    split line(s) was set manually with the auto split mode
+  *  d5a136d - ~ Apply the content mask before mapping the color image
+    in ColorSegmenter
+  *  d25b391 - ~ Remove duplicating black on white detection code from
+    the BackgroundColorCalculator
+  *  67b0e03 - ~ Add FilterData::grayImageBlackOnWhite method to make
+    the code clearer
+  *  e3251fa - ~ Convert image to supported format on loading
+  *  7073961 - ~ Improve RenderParams
+  *  3b9c1c8 - ~ Refactor OutputGenerator
+  *  60bc3c3 - Fix dewarping post-deskew feature
+  *  c69df91 - Remove original background image if the option has been
+    disabled
+  *  9e950a7 - Ignore too low skew angles to avoid unnecessary image
+    transformations
+  *  187540c - ~ Fix warnings
+  *  b82e6ee - ~ Ensure the default compiler flags are written into
+    cmake cache once and enable some gcc warnings
+  *  1c80e81 - Fix bug when an whole image could've been filled in spite
+    of its content area or sometimes the application just crashed at the
+    output stage
+  *  30d4bf9 - ~ Fix unsigned/signed mismatch warning
+  *  b1f3f70 - ~ Refactor the observers into listeners
+  *  a3074dc - ~ Improve property set:
+  *  ffad6d4 - ~ Don't copy AUTO zone category property
+  *  a53add3 - ~ Add cast functions for intrusive_ptr
+  *  f4f7da2 - Rework split output and fix color segmentation
+  *  89611fd - ~ Improve ref_countable
+  *  10e78b5 - ~ Rename EmptyTaskStatus to NullTaskStatus
+  *  79c2f84 - ~ Decouple Zone from the output sub-module
+  *  ce73cca - ~ Use static_cast for Application*
+  *  67650d6 - ~ Move filter_dc files
+  *  1c84206 - ~ Define colors in the color schemes with string
+  *  9dc7eab - ~ Refactor ColorScheme components
+  *  3a3f1c8 - ~ Update singletons implementation
+  *  d589457 - ~ Use factory for creating a color scheme
+  *  200ad86 - ~ Register metadata loader implementations in
+    ImageMetadataLoader rather then the main method
+  *  fea18db - ~ Fix: some libraries are missing when copying to the
+    build dir in the debug configuration
+  *  c043209 - ~ Convert qss units on loading
+  *  4788baa - ~ Relocate the sources
+  *  7e746b6 - ~ Enable AUTOUIC
+  *  e670374 - ~ Remove source_group
+  *  74d9095 - ~ Fix dependencies between the internal components
+  *  96108b3 - Update build system to support for Boost and Qt installed
+  *  2b5510b - ~ Add Qt::Svg dependency
+  *  12e8545 - ~ Reformat cmake code.
+  *  745f884 - UI fixes
+  *  92683b4 - Add option for single column thumbnail display
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 05 Jan 2020 14:30:34 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 18 Jan 2020 12:36:50 +0300
 
 scantailor-advanced (1.0.14+git391-5e0068f-1) unstable; urgency=medium
 

@@ -1,11 +1,23 @@
-gscan2pdf (2.5.5+git3123-02918b66-1) unstable; urgency=medium
+gscan2pdf (2.5.5+git3132-3be28c38-1) unstable; urgency=medium
 
   * Compile
   * URL: git://git.code.sf.net/p/gscan2pdf/code
   * Branch: master
-  * Commit: 02918b6635dfc5787b900e8cee2e9392dc4c2caf
-  * Date: 1574891979
+  * Commit: 3be28c38900a5ceff8f20e0799c0ec0f7f268c49
+  * Date: 1578345789
   * git changelog:
+  *  3be28c38 - Prerelease commit
+  *  b96e8129 - Make rtl test compatible with float gray levels
+  *  421cc3f1 - Bumped version to 2.6.3
+  *  3fa16ee7 - Fix importing metadata from PDFs when timezone has
+    format like GMT-14
+  *  e4591717 - Bump copyright year to 2020
+  *  803a039f - Set program name to RDN ID to allow Gnome to add
+    gscan2pdf as a favorite
+  *  49b5ad5b - Detect GraphicsMagick in ImageMagick compatibility mode
+  *  7e64d4db - Fallback to core PDF font if requested font cannot be
+    loaded
+  *  afd4a4f9 - Update to Hungarian translation
   *  02918b66 - Bumped version to 2.6.2
   *  82cc9c5c - Add compatibility with combination of scanimage frontend
     and SANE 1.0.28
@@ -43,7 +55,7 @@ gscan2pdf (2.5.5+git3123-02918b66-1) unstable; urgency=medium
   *  8bdccf79 - Fix crash closing multiple message dialog via x-icon
   *  d28ef1ec - Postrelease commit
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 05 Jan 2020 15:45:08 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 18 Jan 2020 12:47:05 +0300
 
 gscan2pdf (2.5.5+git3090-5c0a62e5-1) unstable; urgency=medium
 

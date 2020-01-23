@@ -1,11 +1,218 @@
-freecad-daily (0.18.3+git19145-c43315728-1) unstable; urgency=medium
+freecad-daily (0.18.3+git19303-d62eda51d-1) unstable; urgency=medium
 
   * Compile
   * URL: https://github.com/FreeCAD/FreeCAD.git
   * Branch: master
-  * Commit: c43315728cc643c6a382af0bba5b596407bbaf26
-  * Date: 1578169922
+  * Commit: d62eda51d63c492a94378386c0fb601fbcf7c0c8
+  * Date: 1579299982
   * git changelog:
+  *  d62eda51d - Import: [skip ci] fix bug when checking if std::map is
+    empty
+  *  fbd51918f - Gui: [skip ci] add method to get bounding boxes of the
+    fixed and movable groups of manual alignment
+  *  298b1d49a - Gui: [skip ci] clear language combo box when loading
+    settings
+  *  1a8df1ab0 - Gui: [skip ci] in Gesture style handle release instead
+    of press events for the keys: H, PgUp, PgDown
+  *  a285e89b2 - FEM: unit tests, improve ccx tests
+  *  ab3941af1 - [TD]fix potential crash if page deletes self
+  *  841a673bb - [TD]improve export error message
+  *  60ca94d7c - fem: use time.process_time instead of removed
+    time.clock()
+  *  a6ef39b2e - FEM: code formating
+  *  9a607f136 - FEM: examples, improve shell contact
+  *  416eac6ce - FEM: unit test, add shell contact inp file writing
+  *  cb8feb0d0 - FEM: examples, add shell contact
+  *  cac66de2a - FEM: extend contact constraint to support shell
+    elements
+  *  2f0d34e0f - FEM: examples, set input splitted input file writing to
+    False
+  *  0b2b1e3a5 - CMake: [skip ci] report which C++ standard is required
+  *  f34776514 - [TD]fix crash on Section apply
+  *  05577c267 - [TD]Balloon ends and kink
+  *  e6b3fad6e - Gui: allow to dump only the visible part of the scene
+    graph Gui.ActiveDocument.ActiveView.dump("scene.iv", True) The
+    second parameter is optional and by default False
+  *  8b2e318f1 - [TD]fix parenting in Tree
+  *  e290e9c4c - [TD]fix RTA text size handling
+  *  6cb31ac91 - [TD]Cleanup dead code in TaskRichAnno
+  *  3af513986 - Draft: only try to import FreeCADGui, coin and QtGui if
+    FreeCAD.GuiUp is true
+  *  e52bd1770 - [Stylesheets] fix selection background color for Darker
+    theme
+  *  88405ae71 - [ArchWindow] Fix getIcon() problem if base is
+    SketchObjectPython
+  *  b52ac5fc6 - Draft: move translate function to translate module
+  *  25b3cfc17 - issue #0004188: Editing a subtractive box in PartDesign
+    doesn't show the shaded box
+  *  bff7369e5 - fixes #0004188: Editing a subtractive box in PartDesign
+    doesn't show the shaded box
+  *  5afd6a964 - Gui: fix screentshot
+  *  1f05c8fa6 - FEM: make sure results are loaded into the correct
+    document
+  *  1da11e4e5 - [TD]fix #4170 Unicode in Svg export on Win
+  *  61daa6e2b - Fixed openscad
+  *  6d2742c07 - Update Ply to 3.11
+  *  59d3a277b - make clear that is is the local coordinate system
+  *  af0485b75 - [proposal] rename rotation angles
+  *  3844c4cf8 - Refactor comments
+  *  42b6fafd5 - Refactor if statement
+  *  36c831509 - Add comment about M01 gCode.
+  *  539a9f23a - Add basic Max Computer GmbH nccad9 postprocessor
+  *  2ab75d7f2 - Draft: move todo static class to the todo module
+  *  d64d6a7c6 - [TD]fix leader line display attributes
+  *  c4ca00a1d - Increment year in copyright notice
+  *  3fadbb3cb - [Stylesheets] fix https for FreeCAD forums
+  *  a8a54e109 - [Stylesheets] typo in FreeCAD website
+  *  65d751613 - fix https protocol for FreeCAD website
+  *  09727b9f1 - fix const correctness
+  *  7dc81c76c - fixes #0004193: ViewProviders do not inform observers
+    about Proxy property change
+  *  e5d23469f - Gui: add function to observe before changing a property
+  *  127ae92e6 - TechDraw: [skip ci] fix -Winconsistent-missing-override
+  *  00c69a9c6 - [TD]fix LeaderLine noshow on doc load
+  *  acd3cd901 - Gui: [skip ci] add missing export macro
+  *  748473804 - Gui: fix screenshot with opaque background
+  *  20c85d9cc - Gui: fix screenshot
+  *  a46e3b373 - Gui: add SoShapeStyleElement.h to InventorAll.h
+  *  43115aced - [TD]fix inconsistent override warnings.
+  *  513f3b55c - [TD]embed geom hatch file in document
+  *  8d117827b - [TD]embed Svg hatch file in Document
+  *  e81171147 - [TD]use new PropertyFileIncluded.isEmpty()
+  *  60c1855d1 - [App]add isEmpty method to PropertyFileIncluded
+  *  d82395279 - [TD]embed section hatch file(s) in Document
+  *  e4cd11e4e - [TD]correct PropertyFileIncluded handling in Welding
+  *  1432dc1d5 - Gui: Qt4/Qt5 neutral change in Placement class [skip
+    ci]
+  *  2d752745c - Gui: [skip ci] fix -Wreturn-type
+  *  5673d299f - implementation classes don't inherit from UI classes
+  *  f97eb7026 - fixes #0004182: Segfault when clicking constraints from
+    a different viewport [skip ci]
+  *  49e4e45ff - [TD]fix compile error on Win re M_PI
+  *  8d1e1e407 - Gui: [skip ci] rename Location classes
+  *  fa6513d7c - Arch: import IFC, add commen to True North calculation
+  *  9270322d2 - Mod: [skip ci] implementation classes don't inherit
+    from UI classes any more
+  *  19c37012d - Mesh: [skip ci] refactor MeshTexture class to avoid
+    code duplication
+  *  7dd808ac6 - Draft: SVG import, encode fix
+  *  93b711f62 - fixed QGroupBox checkboxes and minor other fixes.
+    Updated to v2.21
+  *  4b5f91f4c - Draft: test_offset, test wire and closed shape
+    (rectangle)
+  *  885046b1c - [DraftGeomUtils]  OffsetWire() to accept input as Face
+    as previously did.
+  *  feaf9b24d - [Arch] fix true north handling on IFC import and export
+  *  ce2441c0b - Draft: new module for GUI utility functions
+  *  cd764c6dd - Remove trailing whitespace
+  *  d7d88da29 - Add Proxy to Addon Manager with UI
+  *  683fbffe4 - FEM: frd result reading, improve error handling
+  *  379018cde - [skip ci] fix superfluous workarounds
+  *  d70074405 - fixes 0004059: Tooltips for Gui::QuantitySpinBox not
+    showing [skip ci]
+  *  a03244fa1 - Gui: [skip ci] when changing expression of a widget
+    then set tooltip only for the label child but not for the widget
+    itself this allows that a custom tooltip can be set
+  *  4df8233ec - Gui: [skip ci] avoid weird acronyms in function names
+  *  222a84423 - Gui: [skip ci] avoid weird acronyms in function names
+  *  1f9253588 - PartDesign: [skip ci] set explicit encoding of Python
+    files for backward compatibility
+  *  4d6f531aa - Gui: [skip ci] reduce size of image settings dialog
+  *  67f84faa0 - fix Qt4 build failure
+  *  625d252cb - Gui: implementation classes don't inherit from UI
+    classes any more
+  *  97fef55d6 - fixes #0004244: Std_SetAppearance always appears on a
+    corner of the secondary monitor
+  *  36026f0ee - Gui: [skip ci] DlgDisplayPropertiesImp doesn't inherit
+    from its UI class any more
+  *  8cd289c37 - Gui: [skip ci] restore bottom margin of group box in
+    placement dialog
+  *  c00af0684 - FEM: console messages line break improvements
+  *  004fda205 - Gui: [skip ci] fix Qt4 build failure
+  *  2fcfa4827 - Gui: [skip ci] reduce height of Placement dialog
+  *  c0aedf29d - Gui: [skip ci] adjust content to size after hiding
+    bottom button row
+  *  2e31417aa - Gui: [skip ci] fix regression of placement dialog
+  *  b7190a8b5 - [TD]refix Dim select area problem
+  *  b9fc008e2 - [ArchWall] Remove remarks about Werner's earlier commit
+  *  5ea31c6b3 - [ DraftGeomUtils ] -  Fix Indent as commented on Github
+  *  1ca234177 - [ArchWall] Write back Werner's code in commit 58fdbdc -
+    check tex.image is not None
+  *  145f44377 - [DraftGeomUtils] - Add per edge Align support
+  *  d0ac80e9e - [ArchWall] - Add per edge Align feature, and other
+    complementary enabling codes
+  *  d1c983a0d - Attachment dialog improvements
+  *  1a15ae6b9 - Arch: add missing Arch_CutLine icon
+  *  111822bfe - Arch: add missing Arch_CutLine tool from 43c5f27
+  *  9478fe040 - [Draft] Edit cleanup
+  *  c87bc0a8e - [Draft] Edit: add support for arc editing in App::Part
+  *  18350dbf9 - [Draft] Edit: improved context menu and fix for arc
+    editing
+  *  796a3259d - [Draft] Edit bugfix
+  *  bee078418 - [Draft] Edit cleanup
+  *  89d843d63 - [Draft] Edit: set shortcut to D,E
+  *  717fc0685 - [Draft] Edit: context menu for Bezcurve editing
+  *  c687d43ba - [Draft] Edit bugfix
+  *  e5b700942 - [Draft] Context menu for EditTrackers
+  *  1666b2883 - Change IF(...LESS...) into IF(...VERSION_LESS...)
+  *  17ed2b196 - [Cmake] Update FindPySide2Tools for PySide2 5.14 -
+    issue #4229
+  *  692fa7e70 - Draft: new module for utility functions
+  *  5143369fc - Draft: add new command for Draft CircularArray
+  *  b1189aef6 - Gui: override QOpenGLWidget::paintGL() in sub-class
+    [skip ci]
+  *  8e5151002 - Gui: set image creation method in settings dialog
+  *  31e2bbe3a - Fem: variable name 'children', not 'childs'
+  *  8004fc8b6 - FEM: small code improvements (got forgotten on parent
+    commit)
+  *  1ac9099e7 - FEM and Part: check if catched exception has an error
+    message
+  *  2504247d6 - Arch: import IFC, fix possible devision by zero
+  *  6f52e8425 - Part: compound filter, fix gui object delete if obj has
+    no Base anymore
+  *  cec0339cd - sort angles in the attacher dialog
+  *  65acf2371 - QuantitySpinBox: add function to set/change tooltip at
+    runtime
+  *  8af503e33 - Placement.ui: avoid unnecessary vertical white space
+  *  3d1f5ffec - Placement improvements:
+  *  35ba5aa2a - Gui: improve ViewProviderLink transform editing
+  *  66354b3c5 - add units Gauss, Weber and Oersted
+  *  dfea8535b - importDWG: remove comments
+  *  e2e7659ef - importDWG: use subprocess.Popen instead of .call
+  *  e8109204a - importDWG: use libredwg's dwgtodxf converter if
+    available
+  *  7498ba157 - Add event catching so Status Bar action button (View
+    menu) keeps sync with real status bar visibility
+  *  b630772af - python: add option INSTALL_TO_SITEPACKAGES
+  *  fa44c7ae2 - Draft: new command for Draft PolarArray
+  *  cb1fb09d2 - [DraftGeomUtils] isReallyClosed():  Add back support to
+    test if wire is Circle / Ellipse
+  *  a53b23760 - FEM: writer base, log improvements
+  *  f190884bd - FEM: writer base, sort imports
+  *  220d45c1d - FEM: writer base, add missing prints for force
+  *  1b2a9a968 - FEM: mesh tools, fix not found vertex for reference
+    shape point search
+  *  c07538067 - FEM: result task panel, use same names as vtk results
+  *  a8af7ad18 - FEM: improve logs
+  *  4f56a64ac - FEM: result task panel, reset result mesh on task panel
+    init
+  *  beb34b706 - FEM: result task panel, really reset result mesh
+  *  018d5d8d6 - FEM: mesh view provider, expose some C++ methods to
+    Python
+  *  c1adfa76f - FEM: result mesh task panel, add comment
+  *  eab5a6aa6 - FEM: result task panel, reset mesh color on exit
+  *  58017f02a - FEM: gmsh tools, code formating
+  *  50c76181a - Material: code formating, spaces
+  *  dee8a4075 - Draft: workaround for error on document loading
+  *  ed922537b - FEM: material task panels, add some newlines on logs
+  *  1276920fe - [Sketcher] Better ToggleActiveConstraint icon by
+    @bitacovir
+  *  e88eecc75 - [Sketcher] Improve ToggleActiveConstraint icon (mainly
+    increase disambiguation with ToggleConstraint icon)
+  *  61c88918b - Rename Sketcher icons
+  *  ca07b05fa - ExpressionParser.l: fix a typo
+  *  b4f9e3c88 - Quantity.cpp: fix spacing
+  *  05dadb4c7 - add the units Ohm and Siemens
   *  0ef89a9e5 - [TD]fix Section label
   *  81f809cfc - Removed dead code for debugging shortcut warnings.
   *  487cfd1a6 - Fixed removal of 2d objects from engrave ops
@@ -140,7 +347,7 @@ freecad-daily (0.18.3+git19145-c43315728-1) unstable; urgency=medium
   *  2eb208cab - reduce size of units calculator
   *  a056d85f7 - Gui: implement size hint for quantity spin box
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 05 Jan 2020 06:29:23 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 18 Jan 2020 07:13:44 +0300
 
 freecad-daily (0.18.3+git19034-b2ffebf1c-1) unstable; urgency=medium
 
