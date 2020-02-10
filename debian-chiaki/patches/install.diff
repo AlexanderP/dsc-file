@@ -1,5 +1,5 @@
---- chiaki-1.1.1.orig/gui/CMakeLists.txt
-+++ chiaki-1.1.1/gui/CMakeLists.txt
+--- chiaki-1.1.3.orig/gui/CMakeLists.txt
++++ chiaki-1.1.3/gui/CMakeLists.txt
 @@ -103,7 +103,7 @@ set_target_properties(chiaki PROPERTIES
  		RESOURCE "${RESOURCE_FILES}")
  
@@ -9,5 +9,4 @@
 +		RUNTIME DESTINATION games
 +		BUNDLE DESTINATION games)
  install(FILES chiaki.desktop DESTINATION share/applications)
--install(FILES chiaki.png DESTINATION share/icons/hicolor/512x512)
-+install(FILES chiaki.png DESTINATION share/icons/hicolor/512x512/apps)
+ install(FILES chiaki.png DESTINATION share/icons/hicolor/512x512/apps)

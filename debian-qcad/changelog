@@ -1,3 +1,59 @@
+qcad (3.24.0+git7433-3f286af93-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 3f286af93cba911ded66c135397c8a3c640dc2b6
+  * Date: 1581083371
+  * git changelog:
+  *  3f286af93 - update translations
+  *  c5583a061 - update
+  *  56909a4af - fix output precision
+  *  af9c421ef - fix deselection of projected output
+  *  a9a528513 - set version to 3.24.2.4
+  *  14fca7763 - update translations
+  *  88a7b101c - set version to 3.24.2.3
+  *  f9ce4ed01 - fix test
+  *  31796bc79 - update
+  *  43d9056d6 - fix crash with huge number of segments
+  *  d13c07573 - update script bindings
+  *  e075065ff - fix FS#2038 - Cannot snap arc / circle reference points
+    inside blocks
+  *  55f9aadb0 - progress debug info
+  *  e283a1dbc - clean up
+  *  1de529d45 - set version to 3.24.2.2
+  *  ad6dbea19 - always export combined and separate transforms
+  *  3f56b0695 - always export combined and separate transforms
+  *  4edbec040 - update script bindings
+  *  31766b41d - add noInfiniteEntities parameter to
+    queryIntersectedShapesXYFast
+  *  d83732fb6 - project solid fills
+  *  7fcc0b89a - update
+  *  7a5922b0e - fix FS#2035 - Linetype scale in viewports
+  *  bc41708ff - compile fix
+  *  3edb4fa29 - tolerate formatting with multiple | tolerate floating
+    point numbers ending in .
+  *  27d5b8de4 - add support for meta data in image header
+  *  d343f7a1d - fix predictability of getPointOnEntity
+  *  ee8100e56 - add missing project file
+  *  b9151b76e - fix FS#2032 - Draw > Circle > Three Tangents: Cannot
+    select third tangent
+  *  96a13b724 - update translation
+  *  deeec7814 - add Qt script bindings for Qt 5.14.0
+  *  a59070cb0 - update qrc
+  *  a717f573d - add unit tests
+  *  b2aa7a785 - disable arrow positions for ordinate dimensions
+  *  11e5cc9d4 - include origin in ordinate dimension bounding box
+  *  dd647d625 - allow stretching of ordinate dimension origin
+  *  cafd5203f - cancel dragging when double-clicking
+  *  c118cbbab - fix FS#2030 - Cannot snap to points of mirrored blocks
+  *  fde926a98 - fix stretching of ordinate dimension if origin not
+    inside stretch area
+  *  681bd3450 - add preference to disable alt-click to select
+    overlapping entities
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 08 Feb 2020 12:41:08 +0300
+
 qcad (3.24.0+git7394-8e275d650-1) unstable; urgency=medium
 
   * Compile

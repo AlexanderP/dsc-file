@@ -1,3 +1,246 @@
+freecad-daily (0.18.3+git19503-bb189d540-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: bb189d540cb958e63af44347a244188fae217e93
+  * Date: 1581028607
+  * git changelog:
+  *  bb189d540 - FEM: thermomech bimetall, add it to the unit test
+  *  74ba3e7d2 - FEM: thermomech bimetall, add it to the examples
+  *  c21a01540 - Addons manager - check if icon file exists [skip ci]
+  *  5b2f9a395 - FEM: result mechanical, resmoothing slider response
+  *  7387f3201 - FEM: examples, manager, add missing examples to run all
+  *  e3e319790 - FEM: contact shell example, small improvement
+  *  342695ac3 - FEM: contact solid example, fix obj names
+  *  e0f1079f1 - Sketcher: [skip ci] explicit command to stop current
+    operation
+  *  78039eb0d - Arch: IFC import, fix regression included with 5da9197b
+  *  3e3f2b57c - Added to grbl_post optional bCNC block header for every
+    job operation
+  *  0532df493 - [TD]fix Preferences
+  *  992dc49ec -  Do not throw error when open an already opened
+    document
+  *  428c9005a - Part: fix various commands on selection detection
+  *  3ccffc1b3 - Draft: add README files to explain the new structure
+  *  e66f86c66 - introducing user parameters: BaseApp->Preferences->View-
+    >NaviFontStretch  BaseApp->Preferences->View->NaviTextFront  BaseApp-
+    >Preferences->View->NaviTextRear  BaseApp->Preferences->View-
+    >NaviTextTop  BaseApp->Preferences->View->NaviTextBottom  BaseApp-
+    >Preferences->View->NaviTextLeft  BaseApp->Preferences->View-
+    >NaviTextRight
+  *  3e5806cd6 - introducing user parameter: BaseApp->Preferences->View-
+    >NaviWidgetSize
+  *  8c1076a84 - Rename GDML Workbench icon
+  *  b5a92b656 - [Draft] Bugfix for new users opening Shapestring
+  *  b5b32c8aa - Addons manager close button
+  *  7d6f0f362 - [Draft] Toolbar, remove option from preferences
+  *  ad977bb80 - Draft: disable the Toolbar mode of Gui commands
+  *  461309df2 - Draft - Toolbar mode input size issue
+  *  73604044a - FEM: temporary deactivate contact unit test
+  *  d68fcb8cc - [TD]Fix rich text size/position in Svg export
+  *  e6a29986e - Mesh: [skip ci] add method to get all facet indices
+    from given point indices
+  *  c5bc1722e - FEM: py code formating
+  *  efff32cbb - Material: typos
+  *  325c90b61 - Material: update fluid material and correct 2 value
+    errors
+  *  2103448fd - Fem: remove unused icon which belong to Cfd mod
+  *  13ea18d4d - Fem: bugfix for FluidMaterial does not show in
+    FemMaterialTaskPanel
+  *  ae107ac2c - FEM: mech result VP, code formating
+  *  23839facd - ViewProviderFemResultMechanical Slider Displacement
+    with finer scale to support large scale deformations with needed
+    magnification less than 1.0 supprt magnification from 0.1 to
+    1000000.0
+  *  a5fe80976 - [TD] DlgPrefsTechDrawx.ui: improve layout, wording and
+    tooltips
+  *  40fb83207 - [TD] DlgPrefsTechDrawx.ui: improve layout, wording and
+    tooltips
+  *  658fd9b43 - [TD] further SVG fix
+  *  a87a52d1e - [TD] Command.cpp: restore menu names
+  *  f5835dc6c - FEM: contact solid example, improve geometry creation
+  *  fb5f8497f - FEM: nonlinear material fix for Py2 and reactivate unit
+    test
+  *  7e0111620 - FEM: node sets, return sorted with unique values
+  *  7dcc02d27 - FEM: ccx tools pre check, better error messages
+  *  8c571f90a - Implemented SendToPythonConsole FreeCAD-wide (edit and
+    context menu)
+  *  da7171989 - FEM: constraint contact, move retrieving the face ids
+    in writer base class
+  *  285d8547d - FEM: constraint contact ccx writer, use name to
+    identify constr data in writer file
+  *  efe534bfc - FEM: get pressure faces ids, some better comments and
+    very small code improvement
+  *  82c89e176 - FEM: ccx tools unit test, fix file save name
+  *  9b5bbb697 - fix flaws to add PreCompiled.h inside normal header
+    files
+  *  390a0a2c5 - Gui: [skip ci] handle possible division by zero in
+    NaviCube
+  *  b2aaa95a7 - Update copyright information [skip ci]
+  *  e4be9e43d - TechDraw: [skip ci] user visible text should be
+    translated
+  *  61005608c - [TD] TaskRichAnno tr to fix Qt4 build
+  *  72e55ca8a - fix missing namespaces in SVG files
+  *  1583f3c30 - [TD] correct icon name
+  *  a92e157a9 - [TD]sync icon names and menu entries
+  *  fe2c802ed - [TD] fix 2 typos
+  *  3a991afe7 - [TD] update menu name to fit into the current naming
+    scheme
+  *  6001172f5 - FEM: unit test, fix comments
+  *  2a396025c - Part: Restore parametric refine function
+  *  ba5e50ada - Mesh: alternative method for cylinder fit using
+    Levenberg-Marquardt algorithm
+  *  f8b8e4a10 - FEM: meshtools, some commets for ccxelement faces
+    binary search
+  *  74680b8a1 - Mesh: [skip ci] approximation of cylinder and sphere
+    using WildMagic lib
+  *  eae645517 - Mesh: [skip ci] fix crash in mesh segmentation
+  *  230c1c930 - FEM: change example contact shell shell name
+  *  3310d52f7 - FEM: add contact solid solid unit test
+  *  ae3f75004 - FEM: add constraint contact solid solid example
+  *  fa635035d - add missing placeholder text as in #2968
+  *  cf8fee41b - * also update 2 tooltips (the dialog already shows the
+    current length unit)
+  *  99baface0 - [TD] set default text size for RichAnno dialog
+  *  6c59182d5 - Arch: Fix in material reader
+  *  94575bcd3 - FEM: utils, better print message for ref shape check
+  *  6763c1461 - FEM: ccx tools test, sort imports
+  *  b18b8a8f5 - FEM: unit test, reactivate nonlin mat unit test for Py3
+  *  84aa3bbcc - FEM: examples, copy code to run to module top
+  *  b0902dbcb - Mesh: [skip-ci] add method to get curvature info
+    directly from mesh object
+  *  6d109cd62 - Mesh: [skip-ci] fix wrongly computed curvature values
+    for meshes in analysis tool
+  *  f70a267d7 - issue #0004258: FreeCAD crashes on "Edit datum" in
+    PartDesign when datum in Part [skip-ci]
+  *  cc5e5f97e - [TD] add missing update when changing WeldSymbol
+    parameter
+  *  d3ee55646 - [SK]change coincident point icon
+  *  31bd5ce1e - FEM: ccx writer, small code formating
+  *  899854ac5 - FEM: unit test objects, add some prints and obj count
+    tests
+  *  a31435bb8 - FEM: unit test objects, improve code
+  *  1ba764709 - FEM: icons, fix constraint initial temperature
+  *  ebf0f9da0 - [TD]Default color and weight for markup lines
+  *  a10527228 - [TD]fix missing parm save/restore
+  *  8512c5e8a - [TD]fix EdgeCapStyle default
+  *  4142fb90f - Part: make reverse function parametric
+  *  1350da3f2 - Draft: Use proper multi-line text editor for Draft Text
+    tool
+  *  e43ec37a9 - Arch: Support for per-face colors in
+    OfflineRenderingUtils
+  *  15dea4f89 - Inspection: multi-threaded calculation
+  *  ddc1555f4 - Fix sign of long/lats
+  *  380340623 - [Draft]fix circular array python2
+  *  202d10078 - [Draft] Context menu bugfix
+  *  1550d26af - FEM: ccx writer, fix typo in contact surface writer
+  *  b758b2217 - [TD] fix regression with line width I introduced today
+  *  94280f15c - Inspection: [skip-ci] const correctness
+  *  f95c87a75 - [TD] disable the frame parameters if there is no frame
+  *  42e6aeb14 - [TD] improve RichAnno and LeaderLine dialog
+  *  1991a08ff - Gui: [skip-ci] disable cancel button of progress dialog
+    if operation cannot be aborted
+  *  d2b943e8b - OpenSCAD: Fixed cmake file
+  *  630fc040a - OpenSCAD: Add warning if PLY module is not found
+  *  7c6b707cc - Add GDML Workbench to AddonManager
+  *  0b623cbf0 - Remove ply from OpenSCAD directory as installed as part
+    of FreeCAD
+  *  5da9197bc - Import transparent and IFC4 colours
+  *  647f3c0f4 - Reduce demo icon theme
+  *  cacd3d9c6 - Draft: plane proxy by default saves the state and view
+  *  ac8ae43a7 - [TD]add missing letter to parameter string
+  *  5bd9ac0dc - [TD]paint on RTA feature change
+  *  bd1a46213 - [TD]update VP property changes immediately
+  *  f5d66c5e8 - [TD]update leaderline immediate when props change
+  *  b8e2ebde8 - FEM: unit tests, temporary deactivate nonlinear
+    material writing test
+  *  02ebcd13c - FEM: ccx writer, delete space in input file
+  *  2beca6df6 - FEM: sort icons resources file
+  *  985417d7f - FEM: fenics export, remove u from print messages
+  *  90af18eb8 - FEM: mesh: XML fenics mesh export fixed
+  *  338774dd4 - [TD] Use PropertyLength for LineWidths
+  *  0e015dad5 - [TD]delete extraneous definition
+  *  c28292406 - [TD]Preferences: reorganize and add missing
+  *  3ea761dbc - [TD]fix LeaderLine tooltipe
+  *  1f54e153c - [TD]fix AutoHorizontal not applied after creation
+  *  7240de9b2 - make some header include adoption for open cascade
+    7.4.0
+  *  d63789594 - [Draft] Autogroup bugfix
+  *  1bca53917 - Find uic and rcc on openSUSE
+  *  bdf4bfe30 - Improve TabBar stylesheets support
+  *  37c896d41 - Sketcher - improve text readability on dark themes
+  *  fbef5ab1f - [Draft] Reorganize menu & toolbars
+  *  7771f57f5 - Fix XPM height of 'Not attached' overlay icon
+  *  67e6b81a6 - [NaviCube]Add 'NaviStepByTurn' parameter to 'View'
+    preferences
+  *  232987d0e - [NaviCube]Fix error when 'NaviStepByTurn' parameter
+    value leads to non-integer angle increment step
+  *  2edabee0f - FEM: solver elmer, workaround for result reading
+  *  fa40b5056 - [TD] reduce scaling increment
+  *  a9d402312 - Path: fix missing header
+  *  a226801f1 - [Gui]fix missing #includes
+  *  26aed44d4 - Gui: activate ProgressDialog
+  *  4b85928b6 - Gui: [skip-ci] fix several problems with ProgressBar
+    when using in a thread because the slots of its base class are
+    invoked instead
+  *  5c17f71a2 - Gui: [skip-ci] rename Sequencer to SequencerBar
+  *  f7d032955 - Gui: [skip-ci] allow user to sort elements in parameter
+    editor by name/type/value
+  *  f320766f0 - Path: small fix for Python 2 syntax
+  *  ec10b5e62 - Path: add some diagnostic trace in Area
+  *  28b98f752 - Path: change wire discretization method used in Area
+  *  91f91f458 - [TD]support Horiz/Vert Dims in Dxf export
+  *  7b9048953 - [IMP]Support Horiz/Vert Dims in DXF export
+  *  96bdea2f5 - [TD]fix LeaderLine autoHorizontal
+  *  9e7360951 - FEM: nonlinear material, fix selection for adding one
+  *  c5321691d - Part: [skip ci] implement methods getBasisCurve of
+    Surface of Revolution/Extrusion
+  *  6fee2cda2 - Start: Added settings button and allow to turn tips off
+  *  4ea300777 - [NaviCube] Add user parameter 'NaviStepsByTurn' to make
+    customizable the rotation step increment
+  *  0fb698f0b - [Stylesheets] fix vertical Selector Toolbar width
+  *  ce039fc00 - [Stylesheets] Missing SVG for vertical toolbars added
+  *  c857dfef8 - Draft: ShapeStringTaskPanel add parameter
+    DontUseNativeFontDialog
+  *  ebbd36699 - AddonManager: add CFD inkscape icons (96DPI)
+  *  887256ba3 - [Draft] Edit addpoint with both chamfer and fillet
+    enabled
+  *  dc2347f27 - [Draft] Edit, bugfix on addpoint to filleted polyline
+  *  7a30f0e8b - [ArchWindow] getSubVolume() Bug - When the Window is a
+    Clone, HoleWire in original is ignored
+  *  98dfa25de - [ArchWindow] getSubVolume() Bug - When HoleDepth is set
+    but the Window is a Clone, no opening is created
+  *  a322effce - [ArchWall]  Typo
+  *  d562b9f01 - [ArchWall] Use OverridenWidth/Align when ArchSketch
+    getWidths/Aligns() not implemented
+  *  6364d4f26 - FEM: workbench gui, sort lupdate entries
+  *  431639197 - FEM: examples, small code improvements
+  *  1b198453b - Remove TechDraw_Tree_Annotation.svg
+  *  bfdb124dc - FEM: ccx unit tests, sort methods by abc
+  *  4c786b56a - FEM: ccx unit tests, remove numbers from test names
+  *  785e4b1ef - FEM: ccx unit tests, improve multiple material test
+    name
+  *  57dcf7e23 - FEM: ccx unit tests, small code improvements
+  *  085bce377 - FEM: ccx unit tests, add material nonlinear input file
+    writing test
+  *  1250b38b7 - Fix units in dynapath post processor.
+  *  44a521f7c - [Draft] Autogroup: better support for App::Link
+  *  120b69c74 - App: add methods to change import/export module of a
+    registered filetype
+  *  a3622ee49 - [TD] rename some Draw* elements - try 2
+  *  6866397c1 - Py2: [skip ci] provide time._process_time
+  *  1ad0d00ab - FEM: unit test, ccx tools, use methods for all the rest
+    tests
+  *  6b81d39b1 - FEM: unit test, ccx tools, use methods for
+    thermomechanical test
+  *  a9a67ccbf - FEM: unit test ccx tools, better var name
+  *  269647757 - FEM, unit test, ccx tools, move result reading in own
+    def
+  *  6fe6461dc - FEM, unit test, improve ccx tools Flow1D unit test
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 07 Feb 2020 02:08:30 +0300
+
 freecad-daily (0.18.3+git19303-d62eda51d-1) unstable; urgency=medium
 
   * Compile

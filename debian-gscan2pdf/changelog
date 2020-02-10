@@ -1,3 +1,34 @@
+gscan2pdf (2.5.5+git3148-892b17ea-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 892b17ea86a5b696d77d4a0b004b6d04b8ee042e
+  * Date: 1580994658
+  * git changelog:
+  *  892b17ea - Bump version to 2.6.4
+  *  ea17c589 - Don't allow dialog offering to switch from Facing to
+    Reverse after scanning double-sided pages to block scanner thread
+  *  297f4343 - Update to Ukrainian translation
+  *  14154e63 - Update to Swedish translation
+  *  31c0f2ca - Update to German translation
+  *  5d64d449 - Update to English (GB) translation
+  *  5a44c115 - Update to Czech translation
+  *  699f4671 - Fixed frequent layout/output-pages mismatch in unpaper
+    dialog
+  *  d244dc3b - Fix running post-save hook on filenames with UTF-8
+  *  ebfd35db - Support opening from pdf file right-click menu
+  *  e4ff5fb6 - + 'Ignore duplex capabilities of scanner' preferences
+    option
+  *  97fb8547 - Fix useless interpolation of literal string
+  *  0710092e - Improve responsiveness with OCR output
+  *  5d9f3ac8 - Remove unnecessary comment
+  *  c5ae0fbd - Fix scan dialog if no devices found (again)
+  *  481a4e85 - Limit the number of pages to scan when switching between
+    scanning facing and reverse pages
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 08 Feb 2020 03:14:03 +0300
+
 gscan2pdf (2.5.5+git3132-3be28c38-1) unstable; urgency=medium
 
   * Compile

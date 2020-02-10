@@ -1,3 +1,87 @@
+deadbeef (1.8.2+git8838-e40f4eec-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: 1.8
+  * Commit: e40f4eec2f2542b30787127226ba62952ec1fba4
+  * Date: 1580971650
+  * git changelog:
+  *  e40f4eec - travis: don't upload packages for devel builds
+  *  6fba08de - mp3parser: fix EOF detection regression
+  *  a2f95a60 - mp3parser: fixed duration calculation from CBR file size
+    (fixes #2309)
+  *  c19042b7 - update translations
+  *  ce75f3a1 - 1.8.3-beta3
+  *  9923a5d7 - alsa: pause/unpause device when setting format (fixes
+    #2192)
+  *  8e26ca0d - configure: typo
+  *  b3478bbc - configure: add __EXTENSIONS__ global define
+  *  4330b322 - artwork-legacy: add fallback to *.png
+  *  ad202a7d - cocoaui: use numbers with NSNumberFormatters instead of
+    strings
+  *  1fb2e91a - 1.8.3-beta2
+  *  b3762536 - cocoaui: fixed eq enable label
+  *  de544759 - cocoaui: load/save/import eq presets
+  *  5390b889 - artwork-legacy: accept APIC with type=0 for cover art
+    (fixes #2325)
+  *  a9aca342 - increased warning level and fixed some of the issues
+  *  5020c528 - streamer: fix shuffle albums handling after manually
+    triggered track (fixes #2306)
+  *  f379e11a - gtkui: eliminate crash when deinitializing cover art
+  *  22d0aad9 - Revert "gtkui: fixes crash when removing playlist widget
+    from layout" (fixes #2326)
+  *  cc233130 - gtkui: fixed delete from disk track enumeration (fixes
+    #2327)
+  *  49c1f8ae - streamer: move streamer_reset to after output->stop
+    (fixes #2192)
+  *  bb92591b - gtkui: fix handling repeat/shuffle menu item changes
+    (fixes #2308)
+  *  a92394b2 - eqpreset: include fixes
+  *  aba6e1c5 - fixed more issues highlighted by compiler warnings
+  *  1557aa6d - increased warning/error level and fixed a bunch of
+    issues
+  *  82765253 - cocoaui: fix controller cleanup chain for playItem leak
+    detection
+  *  0aa5013b - cocoaui: PlaylistContentView code cleanup
+  *  2e1e0d7c - cocoaui: corrected drag-drop with option key (fixes
+    #2322)
+  *  105700e8 - cocoaui: playlist code refine into multiple classes, and
+    slight cleanup
+  *  a417cbc8 - gtkui: fix crash after deleting multi-track file from
+    disk (fixes #2321)
+  *  774641ed - dca: display the channels correctly (fixes #2323)
+  *  3bd5c776 - dca: warning cleanup
+  *  504c29e7 - cocoaui: improved EQ UI, using hbox and vertical sliders
+  *  748abbde - gtkui: build fix
+  *  9c9fd5fa - cocoaui: added equalizer window
+  *  9240d853 - eqpreset: include fix
+  *  3095fb9c - gtkui: eqpreset build fix; warning fixes
+  *  7074c49f - osx: add Tests scheme
+  *  debc764b - gtkui: fix missing include
+  *  3fba9491 - gtkui: moved eq preset code to shared module
+  *  e457e8d1 - gtkui: supereq load/save preset code refactor
+  *  4ee004d8 - updated for new static-deps
+  *  b47f8c67 - 1.8.3-beta1
+  *  f381dde3 - make V=1 for travis debug
+  *  ba8a7987 - update for new static-deps
+  *  48ad2cbb - gme: fix out of bounds buffer access (fixes #2312)
+  *  43b34790 - gtkui: fix buffer overflow bug when building a group
+    format string
+  *  4bbaafec - gtkui: improved remove playlist feature (#1974)
+  *  7f55a74f - ffmpeg: use avformat_close_input to release file handles
+    (fixes #2303)
+  *  fa627a38 - gtkui: fix GtkBox memory leak
+  *  2d29a25e - gtkui: mark an unfixable GTK memory leak
+  *  98c5199d - gtkui: fix memory leak in plcommon.c
+  *  ad163fe8 - gtkui: fix memory leak in ddblistview
+  *  997cced5 - gtkui: fix memory leak in gdkdrawing.c
+  *  25f59e65 - streamer: remove debug printf
+  *  b75ee77c - gtkui: fix GTK resource leak of ddbtabstrip
+  *  0f01040a - gtkui: fix GdkGC memory leak in ddbtabstrip
+  *  89fb8582 - gtkui: remove unnecessary window hide calls from rg.c
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 08 Feb 2020 02:37:05 +0300
+
 deadbeef (1.8.2+git8777-3233cb7a-1) unstable; urgency=medium
 
   * Compile

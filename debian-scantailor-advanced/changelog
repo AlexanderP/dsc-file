@@ -1,3 +1,62 @@
+scantailor-advanced (1.0.14+git502-35ecbcc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/4lex4/scantailor-advanced.git
+  * Branch: master
+  * Commit: 35ecbcc6ff8488b5c1b4c1d747b9b579ae3dbdb7
+  * Date: 1581103057
+  * git changelog:
+  *  35ecbcc - ~ Add CMake DEVELOPER_VERSION option to enable the
+    internal debug features
+  *  5c1edd0 - ~ Fix a possible lag on switching filter on large
+    projects
+  *  df443d0 - Change the key combination for dragging a guide to
+    Ctrl+Alt+LMB
+  *  a00ab48 - Allow dragging the page in lasso zone creation mode by
+    pressing any modifier key (Shift, Ctrl, Alt) with LMB
+  *  6901fd0 - Add shortcut to manually reload page (F5 key)
+  *  79c5ecd - Reprocess output if the source image has been modified
+  *  5f29684 - Fix visual glitches around thumbnails at the margins
+    stage
+  *  b14bb3a - Improvements and fixes in deviation highlighting feature:
+  *  c0941c9 - ~ Remove the unused font from ui files
+  *  9934d48 - Add buttons to scale thumbnails to the thumbnails panel
+    and respective shortcuts
+  *  c88dd7e - Add deviation highlighting button to the thumbnail panel
+  *  1d7e950 - ~ Disable drawBase property of QTabBar in the themes
+    stylesheet
+  *  3d71d36 - ~ Don't use hard-coded enum values as keys for
+    ColorParams to conform open-closed principle
+  *  dd2e191 - Fix: horizontal original alignment was incorrectly parsed
+    from XML
+  *  87fdbaf - ~ Remove all the info listeners when ImageView hidden
+  *  7f0b087 - ~ Refactor content mask feature
+  *  8d5a1b2 - ~ Consistent naming of local variables
+  *  6ac0b41 - Improvements and new features on zones interaction
+  *  2498333 - ~ Fix: CMAKE_POSITION_INDEPENDENT_CODE and
+    CMAKE_INSTALL_RPATH_USE_LINK_PATH weren't in cache
+  *  1c507bb - Fix warnings on launching
+  *  abc086a - ~ More clearly visible broken chain icon
+  *  5889358 - Fix the bug with guides misplaced when the source images
+    had different DPI.
+  *  fadc751 - The feature to sort thumbnails in reverse order
+  *  f01e39c - ~ Prompt on canceling selection only if it's a user
+    action
+  *  9b159f5 - ~ Fix fixDpiInPlace function
+  *  7dcdf36 - ~ qss: explicitly set QMenu indicator in selected and
+    unchecked state due to a bug in Qt 5.12
+  *  57adae2 - ~ Use CMAKE_POSITION_INDEPENDENT_CODE instead of setting -
+    fPIC flag
+  *  2c5f817 - ~ Implement ConnectionManager to reduce repeating code
+    and ease its maintenance
+  *  0954938 - Allow to choose separate mode for horizontal and vertical
+    alignment
+  *  0f15345 - Improve auto alignment mode feature
+  *  61f4e97 - ~ Refactor auto save project feature
+  *  4ae9c74 - ~ Consistent naming of local variables
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 08 Feb 2020 12:05:54 +0300
+
 scantailor-advanced (1.0.14+git470-a152b61-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,42 @@
+clementine-qt5 (1.4.0~git102-g7e915648e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 7e915648eb697052ffd0d4b304268367c57814ea
+  * Date: 1580775934
+  * git changelog:
+  *  7e915648e - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  d45a9f5c5 - Enable debug logging for GstEnginePipeline by default.
+  *  66f354f81 - Remove executable flags from source files.
+  *  011b36b64 - Remove unsupported distros
+  *  4b37e0c57 - Use qLogCat for GLog handler.
+  *  a2d285088 - Add a new qLogCat macro to specify category.
+  *  203d6425f - Fix nomenclature in logging functions.
+  *  d3d6c1ff3 - Fix UNC paths.
+  *  f67484743 - Use HTTPS
+  *  feaca363a - Remove directory by id.
+  *  1c6e43509 - Cancel scan when directory is removed.
+  *  fcd147b57 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  c40a1f773 - Pass album_art map to ImageForSong as pointer instead
+    of reference.
+  *  4ebd3c8c0 - Add ability to cancel scan per directory.
+  *  83d756356 - Delete DeviceLister worker thread.
+  *  52c3ce70e - Pass a Directory reference to ScanTransaction instead
+    of a directory id.
+  *  1484afb03 - Prevent runaway cover art searches.
+  *  9e40c5e1a - Fix hung progress indicator on device disconnect.
+  *  34a2e86b4 - Handle FileSystemWatcherInterface::AddPath errors.
+  *  26e12f500 - Support newlines in error dialog.
+  *  fe84ad4e6 - Return boolean from FileSystemWatcherInterface::AddPath
+    to indicate success.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 06 Feb 2020 00:56:11 +0300
+
 clementine-qt5 (1.4.0~git68-g0d1a976b6-1) unstable; urgency=medium
 
   * Compile
