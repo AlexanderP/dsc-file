@@ -4,11 +4,6 @@ DH_VERBOSE = 1
 DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/default.mk
 
-PREFIXDIR=$(CURDIR)/debian/tmp2/usr/lib/gimpdevel
-BABLOPT= --prefix="$(PREFIXDIR)" --disable-docs
-GEGLOPT= --prefix="$(PREFIXDIR)" --disable-docs
-MYPAINTOPT= --prefix="${PREFIXDIR}"
-GIMPOPT= --prefix="${PREFIXDIR}" --disable-docs --disable-python
 ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 endif
@@ -28,50 +23,13 @@ ifeq "$(DEBIAN_CODENAME)" "jessie"
 	CFLAGS += -std=gnu11
 endif
 
+PREFIXDIR=$(CURDIR)/debian/tmp2/usr/lib/gimpdevel
+
 %:
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	sed "s/MYPAINT_BRUSHES_DIR/\"\/usr\/lib\/gimpdevel\/share\/mypaint-data\/1.0\/brushes\"/g" -i app/config/gimpcoreconfig.c
-#libmypaint = 1.3
-	cd $(CURDIR)/3rdparty/libmypaint && \
-	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
-	PATH=$(PREFIXDIR)/bin:${PATH} \
-	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
-	./autogen.sh && ./configure $(MYPAINTOPT) && \
-	make -j$(NUMJOBS) && \
-	make install
-#mypaint-brushes = 1.3
-	cd $(CURDIR)/3rdparty/mypaint-brushes && \
-	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
-	PATH=$(PREFIXDIR)/bin:${PATH} \
-	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
-	./autogen.sh && ./configure $(MYPAINTOPT) && \
-	make -j$(NUMJOBS) && \
-	make install
-#babl
-	cd $(CURDIR)/3rdparty/babl && \
-	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
-	PATH=$(PREFIXDIR)/bin:${PATH} \
-	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
-	./autogen.sh $(BABLOPT) && \
-	make -j$(NUMJOBS) && \
-	make install
-#gegl
-	cd $(CURDIR)/3rdparty/gegl && \
-	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
-	PATH=$(PREFIXDIR)/bin:${PATH} \
-	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
-	./autogen.sh $(GEGLOPT) && \
-	make -j$(NUMJOBS) && \
-	make install
-#gimp
-	PKG_CONFIG_PATH=$(PREFIXDIR)/lib/pkgconfig:$(PREFIXDIR)/share/pkgconfig:${PKG_CONFIG_PATH} \
-	PATH=$(PREFIXDIR)/bin:${PATH} \
-	LD_RUN_PATH=$(PREFIXDIR)/lib:${LD_RUN_PATH} \
-	./autogen.sh $(GIMPOPT) && \
-	make -j$(NUMJOBS) && \
-	make install
+	bash debian/rules.sh $(NUMJOBS)
 
 override_dh_auto_build:
 	
@@ -105,11 +63,7 @@ override_dh_install:
 	mv $(CURDIR)/debian/gimp-devel/usr/bin/gimp-console-devel.sh $(CURDIR)/debian/gimp-devel/usr/bin/gimp-console-devel
 
 override_dh_shlibdeps:
-ifneq (,$(filter $(DEBIAN_CODENAME),jessie xenial))
-	#dpkg-shlibdeps: error: couldn't find library libpoppler.so.73
-	LD_LIBRARY_PATH=$(PREFIXDIR)/lib:$${LD_LIBRARY_PATH} LD_RUN_PATH=$(PREFIXDIR)/lib:$${LD_RUN_PATH} dh_shlibdeps -ldebian/gimp-devel/usr/lib/gimpdevel/lib/
-else
+	LD_LIBRARY_PATH=debian/gimp-devel/usr/lib/gimpdevel/lib:$${LD_LIBRARY_PATH} \
+	LD_RUN_PATH=debian/gimp-devel/usr/lib/gimpdevel/lib:$${LD_RUN_PATH} \
 	dh_shlibdeps -ldebian/gimp-devel/usr/lib/gimpdevel/lib/
-endif
-	
 
