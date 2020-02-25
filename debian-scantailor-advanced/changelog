@@ -1,3 +1,21 @@
+scantailor-advanced (1.0.14+git507-bc36e9c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/4lex4/scantailor-advanced.git
+  * Branch: master
+  * Commit: bc36e9c3045230c3b0f07030927b9a8a661d16e1
+  * Date: 1582134961
+  * git changelog:
+  *  bc36e9c - Make some shortcuts work on different keyboard layouts
+  *  c907634 - ~ Inline some short methods to increase performance
+  *  b70fa25 - ~ Implement ConnectionManager to reduce repeating code
+    and ease its maintenance
+  *  2c2bd6b - ~ Don't use unique_ptr for QObject* members with this
+    parent
+  *  09fc0df - ~ Use std::shared_ptr instead of intrusive_ptr
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 23 Feb 2020 04:45:09 +0300
+
 scantailor-advanced (1.0.14+git502-35ecbcc-1) unstable; urgency=medium
 
   * Compile

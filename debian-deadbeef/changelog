@@ -1,3 +1,44 @@
+deadbeef (1.8.2+git8865-f3c9361e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: 1.8
+  * Commit: f3c9361e03f99e1ba2e4fe2d477395a0a771db63
+  * Date: 1582369659
+  * git changelog:
+  *  f3c9361e - 1.8.3-beta4
+  *  231a0a41 - streamer: fixed streamer staying in buffering mode after
+    cycling through entire playlist of missing files
+  *  818b3e25 - gtkui: don't rotate labels in vertical layout sliders
+    (issue #2179)
+  *  9b131553 - vfs_curl: SHOUTcast server support
+  *  b98e2f0d - cocoaui: fix leading anchor of postprocess-aligned
+    checkboxes
+  *  baa04f55 - cocoaui: only allow checkboxes expand beyond the label
+    offset
+  *  6ed24353 - cocoaui: fixed a few autolayout issues, including
+    clipping of the labels
+  *  3a941426 - cocoaui: improved preferences property sheets
+  *  8f9d684b - cocoaui: dsp preset configuration autolayout
+  *  abf96051 - cocoaui: DSP tab autolayout
+  *  c8cbfecb - cocoaui: added flippedImage impl without deprecated
+    methods
+  *  2fca0dfd - cocoaui: PlaylistContentView autolayout
+  *  2615e741 - cocoaui: convert Playlist and Search views to use the
+    new DesignableViewController
+  *  b1b6ed1c - cocoaui: mainwindow autolayout; designable stuff WIP
+  *  5eb4ba03 - cocoaui: increased property sheet labels hugging prio
+  *  6ba02915 - cocoaui: autolayout conversion for property sheets now
+    supports stack views
+  *  85ac1c47 - eqpreset: license fix
+  *  310e93c6 - cocoaui: PropertySheet conversion to autolayout WIP
+  *  d4903453 - cocoaui: converter plugins preferences to autolayout
+  *  05e9c7d3 - cocoaui: convert Playback preferences tab to autolayout
+  *  bcccb82a - streamer: warning fixes
+  *  72a051b6 - Build fixes for SVR4-like UNIX systems
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 23 Feb 2020 00:16:28 +0300
+
 deadbeef (1.8.2+git8838-e40f4eec-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,2396 @@
+gimp-gtk3 (2.99.0+git45307-76bd8450b9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 76bd8450b9697469d52b12d4ce186cf9375f11f9
+  * Date: 1582482153
+  * git changelog:
+  *  76bd8450b9 - Update Finnish translation
+  *  5b54632716 - Update Finnish translation
+  *  9046c758e7 - Add Finnish translation
+  *  455054be43 - Update Finnish translation
+  *  fcc7b6916a - 2.10.18: update appdata to match recent changes
+  *  9fe77d42c7 - Update Basque translation
+  *  29dcb31a14 - Update Basque translation
+  *  a5ea6d6b9b - app: use GIMP_BUILD_PLATFORM_FAMILY instead of
+    GIMP_BUILD_PLATFORM.
+  *  1b6191d176 - plug-ins: in file-psd, use scratch allocator for
+    temporary CMYK buffers; cleanup
+  *  d868247fd9 - app: in the Preferences dialog, allow horizontal
+    scrollbars in all tree-views
+  *  dfa6d26189 - Update Polish translation
+  *  fb1c086097 - app: draw border around FG/BG-editor color areas
+  *  69359ef572 - Update Swedish translation
+  *  63df5602a2 - app: suspend layer-group size updates while loading
+    XCF
+  *  aa9ae1c65c - Issue #4634 - Pass-through groups bounding-box is not
+    properly updated ...
+  *  8c81c6e153 - app: fix layer group effective mode for different mask
+    modes
+  *  7f53cf9c55 - app: fix layer bounding box for different mask modes
+  *  b2a1a7cb01 - app: fix layer effective mode for different mask modes
+  *  646c804c04 - app: fix compositing of layers with masks, outside the
+    mask bounds
+  *  3a1aec3051 - 2.10.18: update appdata
+  *  1462a91d86 - plug-ins: Convert CMYK u8 .psd to R'G'B' float on load
+  *  0f07f1baa5 - app: in paint tools, fix cursor position in line mode
+    when snapping to angle
+  *  ae6f6ba42a - app: fix incorrect drawable format after applying a
+    filter that resizes the drawable
+  *  d53e701daa - app: avoid use-after-free when loading an XCF with
+    corrupted layers
+  *  2eaaa950a5 - app: in gimp:replace, add fast path when compositing a
+    layer over itself
+  *  401745e62a - Makefile.am, meson.build: require GEGL >= 0.4.23
+  *  514b466fd7 - Update Catalan translation
+  *  ab5ed1575c - meson,app,autotools: depend on GEGL-0.4.22
+  *  bb144065c7 - app: s/getenv/g_getenv/ in
+    gui_restore_after_callback()
+  *  3a36ae49de - app: fix indentation in gui_restore_after_callback()
+  *  52f5a9f654 - plug-ins: improve PSD loading speed
+  *  2f2ea26c2f - Update Hungarian translation
+  *  0eb614c3e0 - Update Polish translation
+  *  15438c58d2 - Issue #4627 - memory corruption when open crafted sgi
+  *  2ed889394d - plug-ins: in file-sgi, convert tabs to spaces
+  *  4fe8217898 - plug-ins: in screenshot, keep image dirty; keep
+    history clean
+  *  3d756e136c - Update Swedish translation
+  *  41fec41353 - Fixes and improvements for 2.10.16 appdata
+  *  bb8d933033 - devel-docs: add missing functions to libgimpfoo-
+    sections.txt
+  *  cf574c44fb - data: in Makefile.am, make sure to uninstall gimp-
+    release
+  *  75838a59a8 - libgimpmath: fix unsorted line in gimpmath.def
+  *  ea729f6d02 - app: fix brush outline position when snapping to
+    stroke
+  *  8bc92fd0ed - Fix the 2.10.16 release date in appdata
+  *  2d6e15caa5 - Update appdata for upcoming 2.10.16 release
+  *  b79e147923 - meson, data: create/install gimp-release file with
+    meson too.
+  *  f98e506712 - configure, data: create/install the gimp-release file.
+  *  ded382f8b7 - app-tools: fix the meson file.
+  *  87e9ebcfad - app: store the revision number in a data file.
+  *  7029c3570c - Update German translation
+  *  365afc829b - Update German translation
+  *  1c90461e21 - Update Polish translation
+  *  1a587a371b - Update Hungarian translation
+  *  3e6763a50a - Update Hungarian translation
+  *  61d04a93d6 - Update Swedish translation
+  *  6cd3c8bc74 - app: increase the maximal airbrush stamp FPS
+  *  30e925065f - app: fix gimp_brush_mipmap_get_memsize()
+  *  f09e940cac - Update Swedish translation
+  *  0a02e6c726 - Update Spanish translation
+  *  6932c513ee - Update Spanish translation
+  *  47c3035ecd - l10n: Updated Vietnamese translation
+  *  364ebc1d78 - Update Swedish translation
+  *  b41594023f - Update Swedish translation
+  *  042385d0b4 - Update Swedish translation
+  *  0a5af889f9 - Issue #175 - Allow the erase every other row plugin to
+    skip a different number of rows
+  *  f797f688ad - app: reorganize #includes in gimpbrush-
+    {mipmap,transform}.cc
+  *  ee39f0ec13 - app: use mipmaps when downscaling raster brushes
+  *  2dddf59dbf - app: add gimp_brush_transform_get_scale()
+  *  e0e1ad5e2a - app: fix brush-transform resampling
+  *  da4228f6b2 - Update Swedish translation
+  *  52a12742b4 - Update German translation
+  *  611f5b66e7 - Updated Danish translation
+  *  4648b4e3dd - Update Hungarian translation
+  *  da73d35520 - Update Hungarian translation
+  *  cee6a9ea4c - Update Hungarian translation
+  *  d228498997 - Update Hungarian translation
+  *  cc9a15de97 - app: do not update a finalized dialog.
+  *  ed77830381 - app: only show a "Last checked" date when we did at
+    least 1 check.
+  *  495889630a - Update British English translation
+  *  52cb2edd9e - Issue #4605 - Invalid abr brush crashes GIMP
+  *  782e209a33 - app: in abr_rle_decode(), avoid freeing NULL scratch
+    buffers
+  *  07f95291a5 - app: improve ABR brush loading speed
+  *  a5a7df5eb9 - Update Icelandic translation
+  *  771c37bf9f - Update Icelandic translation
+  *  a55a8ee010 - Update Icelandic translation
+  *  9987e4b9a5 - Update Icelandic translation
+  *  d11eef1be5 - Update German translation
+  *  19d56cf546 - Update Polish translation
+  *  dad963c257 - Update German translation
+  *  ccc07f449d - Update German translation
+  *  2900f2a868 - app: always show the "Check for updates" button in the
+    About dialog.
+  *  d244a079ca - app: improve brush outline position when not snapping
+    to stroke
+  *  893990afce - Issue #4584 - Segfault when closing an image with a
+    layer group ...
+  *  0891f1275a - app: add
+    gimp_container_remove_handlers_by_{func,data}()
+  *  5a9b5c1670 - Revert "Updated Danish translation"
+  *  40bb5d30ee - Updated Danish translation
+  *  db678ad212 - app: in polynomial_odd_roots(), fix derivative array
+    size
+  *  f9f4538358 - app: don't show "Check for updates" button in
+    Preferences when option...
+  *  7b3f696d9d - app: accept "revision" and "date" fields to be absent
+    on a build...
+  *  0c1205f4c5 - meson.build: store GIMP_BUILD_REVISION as an int
+    macro.
+  *  7b5fff7861 - app: now also process the build revision when checking
+    for updates.
+  *  89d6ee2f34 - meson: same option for meson -Dcheck-update=false as
+    previous commit.
+  *  315665592c - app, configure: new --disable-check-update option at
+    configuration.
+  *  5cc9af09b0 - app: respect brush-outline preferences in the Warp
+    tool
+  *  272fa300aa - app: initialize GimpPaintTool::snap_brush field
+  *  499834a1cb - app: add "Snap brush outline to stroke" option to the
+    preferences
+  *  251d758771 - app: set the default 3D Transform tool mode to
+    rotation
+  *  3a8725a409 - app: add missing file to last commit
+  *  9f298f767f - app: don't reject toolrc files due to missing
+    experimental tools
+  *  626e5b9b14 - app: increase GimpDrawTool update rate
+  *  666d0845e1 - Issue #4174 - Crash when using the Foreground Select
+    tool with an offset drawable
+  *  ea864e2d5c - app: in GimpCanvasBufferPreview, take strong ref on
+    buffer
+  *  43f8a5199f - app: in GimpCanvasBufferPreview, add support for
+    offset buffers
+  *  d920569771 - app: add support for offset buffers in GimpScanConvert
+  *  24534338e7 - app: add support for offset buffers in
+    gimp_channel_select_buffer() ...
+  *  285ef0b7fc - Issue #4285 - [Free Select Tool] functionality bug
+    with Ctrl/Shift combination
+  *  59ec1d0074 - app: reorganize GimpPolygonSelectTool functions
+  *  57eaf91fbc - app: improve empty-selection check in
+    GimpSelectionTool
+  *  4ced806a0a - Update Spanish translation
+  *  b8aba199a0 - app, po: don't translate gimppanedbox.c
+  *  46079587e2 - app: "You can drop dockable dialogs here" no more!
+  *  df19401fb3 - app: fix GimpToolEditor visibility-toggle state update
+  *  6cc4217ff3 - Update Polish translation
+  *  3cda972100 - app: add a "Use tool groups" option to the toolbox
+    preferences
+  *  2caa518b19 - app: add GimpTreeProxy
+  *  c4cc015c43 - app: add gimp_container_search()
+  *  ee9661237e - app: add GimpToolItem::shown property
+  *  30d833d00f - app: use a weak pointer for tool-manager active group
+  *  2145f4301c - app: fix a super secret segfault
+  *  00b756d2da - app: move tool-activation upon tool-group active-tool
+    change to GimpToolManager
+  *  bae9f2d880 - app: various fixes to last commits
+  *  fa53e1433f - etc: add a default toolrc file, using tool groups to
+    oragnize the tools
+  *  f2c7f49b12 - app: reduce toolbox color-area size
+  *  e1398c0306 - app: in GimpToolPalette, allow single-column layout
+  *  4b1a1fc901 - app: use GimpToolButton in GimpToolPalette
+  *  282108ec91 - app: add GimpToolButton
+  *  ffe4f8a068 - app: add gimp_tool_info_get_action_name()
+  *  2255d62891 - app: don't register action for GimpOperationTool
+  *  d1084c5816 - app: add tool-group support to GimpToolEditor
+  *  20747e365c - app: add hierarchical dnd support to
+    GimpContainerTreeView
+  *  dcea2348c6 - libgimpconfig: allow calling gimp_scanner_new_string
+    (NULL, -1, ...)
+  *  cd2adfbede - app: add support for tool groups in toolrc
+  *  a63bf32310 - app: don't merge similarly-named objects during
+    GimpContainer deserialization ...
+  *  d4db85d926 - app: update tool-group active tool in response to tool
+    changes
+  *  49196140e2 - app: add GimpToolGroup as a subclass of GimpToolItem
+  *  77111ba045 - app: add GimpToolItem; derive GimpToolInfo from it
+  *  12a03d3c95 - Update Japanese translation
+  *  0336f924b8 - Update Japanese translation
+  *  54a20f698c - Updated Spanish Translation
+  *  09f87f6299 - Updated Spanish Translation
+  *  8528759834 - app: better error management.
+  *  425e6daf41 - Update Polish translation
+  *  eca8076be6 - Issue #4532: tests fail due to app/gimp-update.c not
+    in POTFILES.
+  *  1f75d2e34a - app: update gimp-update to new gimp_versions.json
+    format.
+  *  ed6517f094 - app: Fix Mandala Symmetry Kaleidoscope mode - brush
+    transform and stroke order
+  *  b99a2631ef - app: avoid deleting empty layer groups when
+    downscaling image
+  *  885d4fb1cb - icons: replace gimp-visible symbolic icon again
+  *  864ed16435 - icons: replace symbolic gimp-visible icon (aka the eye
+    icon)
+  *  18870975b8 - app: restrict whole-drawable updates to groups with
+    filters
+  *  8be0e646bc - app: always update full drawable region if it has
+    filters
+  *  1e26ce8a60 - app: don't emit GimpImage::linked-items-changed for
+    non-attached items
+  *  1cee6521b4 - Update Polish translation
+  *  5d0b0ad467 - Fix meson build on macos
+  *  d24713349d - app: add "Preview linked items" option to transform
+    tools
+  *  7d6737fe9a - app: add GimpImage::linked-items-changed signal
+  *  fcc1c3d380 - app: suspend tile validation while setting extent of
+    validate-handler buffer
+  *  203bc9d893 - app: disable transform clipping for layer groups
+  *  ab7c119c07 - meson,app,autotools: depend on babl 0.1.74 and GEGL
+    0.4.20
+  *  10a528ed2f - app: use gimp_gegl_node_get_key() in GimpFilterTool
+  *  cfcf38e119 - plug-ins/screenshot: fix compilation on macOS
+  *  1a2039da65 - pdb: add missing change to last commit
+  *  6b5d1a0d46 - Fix reference from gimp_param_spec_duplicate to
+    gimp_config_param_spec_duplicate
+  *  85a19da868 - Issue #4366 - Color-to-alpha unnecessarily grayed out
+    for grayscale images
+  *  50b655de27 - Issue #1975 - Color to alpha now requires an alpha-
+    channel ...
+  *  d61a541475 - app: in GimpFilterTool, consolidate drawable-filter
+    option setup
+  *  bed825ab3d - app: add gimp_gegl_node_get_key()
+  *  5e1eba68e2 - app: add GimpDrawable::supports_alpha() vfunc
+  *  0103fe2c19 - app: silence warning in gimp_transform_resize_crop()
+  *  52cd27f0d3 - app: add "Synchronous preview" option to transform
+    tools
+  *  d39822bcd7 - app: in GimpTileHandlerValidate, fix tile-data pointer
+    for negative coords
+  *  a335827896 - app: add "Composited preview" option to transform
+    tools
+  *  2e26603a55 - app: freeze drawable preview in transform tools
+  *  006f300fff - libgimpmath: add gimp_matrix3_equal()
+  *  b9a801f7d4 - app: add
+    gimp_drawable_filter_set_override_constraints()
+  *  1f81c31405 - app: add gimp_drawable_filter_set_add_alpha()
+  *  cb5a63e260 - app: calculate drawable bounding box according to
+    graph by default
+  *  4a4359d3da - libgimp: (meson) build GIR file silently.
+  *  7f84f10154 - app: implement GimpPickable::flush in GimpGroupLayer
+  *  bb8ee0e686 - app: handle GimpTileHandlerValidate::invalidated in
+    gimp:buffer-source-validate
+  *  3ea391602e - app: add GimpTileHandlerValidate::invalidated signal
+  *  ba6040bbcd - app: allow calling
+    gimp_tile_handler_validate_validate() with a NULL rect
+  *  3e78c674d8 - Return FALSE on gimp_osx_focus_window to avoid endless
+    loop
+  *  0271f4c861 - libgimpmath: add version annotations to new matrix
+    functions
+  *  469f8d6193 - icons: fix PNG 3D-transform icons in makefile
+  *  ec9dbd8115 - libgimpwidgets, app, plug-ins: fix last GIR warnings.
+  *  44300b134f - Update Japanese translation
+  *  ccdb91e713 - Update Polish translation
+  *  f823538f9e - Update Japanese translation
+  *  64b971f096 - Update Japanese translation
+  *  2116f587eb - Update Russian translation
+  *  d8aa0d36a0 - Add macOS support for the GIMP dashboard
+  *  36dd48aea6 - Issue #4484: Add reflection option for mandala
+    symmetry
+  *  a195dcaccc - Update Japanese translation
+  *  d97f54dd07 - Update Japanese translation
+  *  7b2e6b7595 - app: clip transform-tools preview according to
+    clipping mode
+  *  d79ef34f87 - app: fix spacing in gimptooltransform3dgrid.c
+  *  30132fc2da - app: add unified interaction mode to the 3D Transform
+    tool
+  *  bcaaa453c4 - app: in 3D Transform tool, fix rotation direction when
+    rotating arouns local Z axis
+  *  05d6b8a591 - Move comment to match the description
+  *  0de790137e - Move macos menu init to the gui related code and
+    reparent it with a main window.
+  *  58d04375c9 - app: improve placement of new tools with existing
+    toolrc
+  *  0ca59165ff - Update Turkish translation
+  *  9c6fc184f2 - Update Turkish translation
+  *  0e4e236167 - Update Turkish translation
+  *  9fe33702fb - Issue #4354 - When using color to fade dynamics and
+    gradient with transparency ...
+  *  4a59c8919d - Update Japanese translation
+  *  8d534dfde0 - app: snap spin scale to page increments when holding
+    Ctrl
+  *  ac8bf47fa6 - libgimpwidgets: control GimpSpinButton scroll
+    increments using modifiers
+  *  90022de2f4 - Update Japanese translation
+  *  b89aff0064 - Update Japanese translation
+  *  f1c448e0f4 - app: fix integer overflow when reporting operation
+    progress
+  *  32da86b6ed - menus: add the 3D Transform tool to the Tools menu
+  *  a3cbf6bc13 - icons: add pivot icons to meson
+  *  c93e5a2eae - app: fix wrong fix to gimpbacktrace-windows.c
+  *  095e8299a0 - icons: install the new icons on meson build too.
+  *  376aa86515 - Update Japanese translation
+  *  e74994feaf - pdb: in plug_in_compat.pdb, set underlying op nodes
+  *  8b7bafa43a - Issue #4204 - "Add Bevel" Has No Effect
+  *  49221167c3 - app: fix indentation in gimppivotselector.h
+  *  9d015b7b1a - libgimpmath: add new matrix functions to .def file
+  *  5646e03eb3 - app, icons: add 3D Transform tool
+  *  615035c101 - app, cursors: add GimpToolTransform3DGrid tool widget
+  *  4ddf1afb44 - app: add a protected
+    gimp_tool_transform_grid_get_handle() function
+  *  0f697b897f - app: add GimpTransformGridTool::dynamic-handle-size
+    property
+  *  0eae8a47ea - app: in GimpToolTransformGrid, add NONE function
+  *  d84789dcb7 - app: add gimp-transform-3d-utils.c
+  *  e3bc877a42 - libgimpmath: add various GimpMatrix4 functions
+  *  edfc837e7d - libgimpmath: add various GimpMatrix2 functions
+  *  c0552de62b - app: add a pivot selector to the Rotate tool
+  *  46e01d37db - app, icons: add GimpPivotSelector widget
+  *  ac74326ec7 - app: reduce dialog size of Unified Transform tool and
+    friends
+  *  b0e9639684 - app: in GimpTransformGridTool, compress successive
+    undo steps
+  *  ee425f88d8 - app: in GimpTransformGridTool, avoid unnecessarily
+    flushing image when pushing undo
+  *  24add95e0a - app: fix indentation in gimptoolsheargrid.c
+  *  a9e357d72d - libgimpwidgets: fix percentage use in size-entry
+    arithmetic when lower-bound != 0
+  *  38cccaac49 - Issue #4203 - Wavelet decomposition only on RGB images
+  *  c39d8fde33 - Issue 2862 - Error message. Unable to decode abr...
+  *  bb660c5821 - Issue #3588 - Add Yu'v' (CIE 1976 UCS) to GIMP color
+    picker
+  *  a11ada4ce2 - app: expand functionality of merge-down button
+  *  f539fc78c0 - app: consolidate UI for merging down and anchoring
+    layers (issue #1184)
+  *  97bbd4773e - libgimp: fix writing empty array GValues in
+    gimp_value_to_gp_param()
+  *  2679d66ffb - Update Japanese translation
+  *  653484df0b - Issue #4467 - (pagecurl) CRITICAL **: g_object_unref:
+    assertion...
+  *  c33e1263fa - Issue #4461 - Spinning Globe fails in gimp-2.99
+  *  a1939247fb - Update Japanese translation
+  *  29554e6f68 - Update Japanese translation
+  *  afe19ff393 - libgimp: GimpProcedureDialog: next time save before
+    committing...
+  *  f2cf791a25 - libgimp: document GimpProcedureDialog's properties
+  *  bffb753558 - Issue #4458 - gimp-console-2.99 -b '(gimp-quit 1)'
+    segfaults
+  *  4dfcffe4f7 - Remove all checks for finite() and isfinite()
+  *  5adde64753 - Issue 4456: CRITICAL **...: g_object_unref: assertion
+  *  157a5dc8b7 - Fixes to Catalan translation
+  *  39f7dd269d - gitlab-ci: run unit tests for meson builds.
+  *  b2c41bc1f9 - app: forgot to localize a string.
+  *  0a28534a90 - app: fix a segmentation fault crash.
+  *  5b664ecbec - app: properly pass the last release version and date
+    to gimp-debug-tool.
+  *  2cd765c000 - plug-ins: variable used after being freed.
+  *  189da39805 - plug-ins: return value of
+    gimp_procedure_config_begin_export() freed…
+  *  109ad86db2 - gitlab-ci: test a CLang build.
+  *  2f379494a7 - app: debug dialog will now advise to update when
+    relevant.
+  *  d5febf6e62 - app: parse the release date for the last release.
+  *  df492fa898 - gitlab-ci: port our main CI to Debian testing.
+  *  89ed6ae8ee - devel-docs: update the stats script.
+  *  24a0b0c53a - plug-ins: also omit hidden layer groups in PDF export.
+  *  34f05750d0 - plug-ins: forgot to look missing font duplicates
+    recursively.
+  *  1b06067164 - Issue #4425: Saving to PDF changes text's font and
+    size.
+  *  ff32fe9f5d - Issue #2227 - GIMP 2.10.6 crashes with assertion
+    GIMP_IS_TAGGED in...
+  *  8f87277653 - libgimpbase: same fix as previous commit to other
+    static types.
+  *  0eb6ff41cf - libgimpbase: fix wrong sizeof in
+    gimp_param_object_array_get_type
+  *  26db691197 - Update French translation
+  *  5ec22b6720 - app: fix missing const qualifier.
+  *  f51886b853 - app-tools: meson build was not installing gimp-debug-
+    tool.
+  *  4b07c62cbc - Issue #4338 Plug-in file-header exporting to format C
+    header wrong output.
+  *  a4e65ac836 - app: also localize LC_TIME to GUI language.
+  *  1f6629f4b6 - app: allow snapping GimpPolar to 15 degree intervals
+  *  2367e985a4 - app: allow snapping GimpDial to 15 degree intervals
+  *  6b237b90fd - app: show the About dialog at startup when a new
+    version is available.
+  *  827473fd88 - app: add alternative "Check for updates" button in the
+    About dialog.
+  *  826ece3b86 - app: show new version availability in About dialog.
+  *  b874cadfad - app: make gimp_versions.json parsing easier to test.
+  *  45ad58dff4 - Issue #2674 - File/Open Recent opens the wrong
+    document
+  *  7cd99086ba - libgimp: some documentation fixes and improvements
+  *  9a054fc248 - libgimpbase: document the members of GimpArray,
+    GimpStringArray
+  *  1856990c2b - libgimp*: check all return values of
+    g_param_spec_internal()
+  *  bb7f229b97 - app: fixes int overflow warning.
+  *  4fa7d078d0 - plug-ins: install Python plug-ins in rwxr-xr-x.
+  *  9399c937df - Issue #4392: Gimp Segmentation Fault triggered by Glib
+    GParamSpec...
+  *  44a7adfd9d - Fixes to Catalan transation
+  *  ad590b0207 - Update Spanish translation
+  *  1f149b15ab - plug-ins: correctly renaming plug-ins/gfig/gfig-
+    examples/smily to smiley
+  *  2a1713c008 - plug-ins: rename plug-ins/gfig/gfig-examples/simily to
+    smiley
+  *  494f1ab811 - Update Japanese translation
+  *  45a85dc081 - Update Esperanto translation
+  *  ee655ee661 - Update Japanese translation
+  *  8e278130d9 - Update POTFILES.in
+  *  6331cf7ae1 - Update Catalan translation
+  *  7c6a147ffb - plug-ins: allow "html" extension for colorxhtml.
+  *  2e40b8d674 - meson, autototools: install colorxhtml ported in
+    previous commit.
+  *  a3544fec6f - Port pygimp colorxhtml plugin to python 3
+  *  cd9115beef - GIMP registry is deprecated
+  *  b314437d4d - build: additional patch for OpenBlas (fix startup
+    hang).
+  *  f89692c25f - meson: add json-glib as dependency in meson files too.
+  *  506a0476f4 - app: check last GIMP release from
+    gimp.org/gimp_versions.json.
+  *  bed5fe37d8 - tools, fix implicit declaration of function atoi
+    warning
+  *  0dd4feaafd - meson: new build id and revision also in meson
+    configuration.
+  *  73c09ebb32 - app, configure: add configure option for a build id
+    and revision.
+  *  1b03513fc6 - Update Catalan translation
+  *  a43f7409c7 - Update Catalan translation
+  *  468f3e84d8 - Fix cast to pointer from integer of different size
+    warning on gimpbacktrace-windows.c
+  *  c6a494e5d8 - Update Catalan translation
+  *  39e6670c7c - gitlab-ci: job renaming.
+  *  c8ec0ae7fa - gitlab-ci: add a Windows 32-bit CI.
+  *  e54467a8fa - plug-ins: (meson) install Python plug-ins with
+    execution permission.
+  *  b0ae5f1351 - plug-ins: minor fixes to spyrogimp plugin.
+  *  9a4d1f0277 - Issue #4209: Animation optimize for GIF moves layers
+    to top left corner.
+  *  a76012991b - gitlab-ci: do not wait for all jobs from
+    "dependencies" stage.
+  *  d48dcc1252 - gitlab-ci: move to Fedora 31 image for the Win32 CI
+    build.
+  *  44df9f2193 - meson: use explicitly python3 when calling it.
+  *  cd54a8fee9 - Windows backtrace: VEH must use stdcall
+  *  4b8bb5e057 - meson: Warn when git is missing in non-dist builds
+  *  8b5060349a - meson: allow non-dist non-git builds but mark them
+    unsupported.
+  *  370499676f - build: add a patch for OpenBlas on Windows.
+  *  05896b4e2f - libgimpbase: rename and reorder the values of enum
+    GimpSelectCriterion
+  *  0141a28419 - libgimpbase: remove enum value
+    GIMP_FOREGROUND_EXTRACT_SIOX
+  *  0e5a03605a - libgimpwidgets: remove enum value
+    GIMP_CONVERT_PALETTE_REUSE
+  *  1be4ec2100 - libgimpbase: remove enum GimpBlendMode, it's not used
+    any longer
+  *  c287fb6239 - libgimpwidgets: reorder enum GimpIntStoreColumns
+  *  876199a03f - devel-docs, libgimp: update some .gitignore files
+  *  9a043d0fc9 - Issue #4251: (meson) dbus-glib-1 not required.
+  *  5f2a6940e3 - app, devel-docs: remove dangling DBUS_GLIB_*
+    variables.
+  *  ea379ef5a9 - meson: fix CC_VERSION.
+  *  e4c7fc2334 - Change logic to detect .git directory on repositories
+    (or file on submodules)
+  *  9cd0584e90 - Add script to install files in the dist tarball. Add a
+    check inside Meson to detect if we're building from a git clone or a
+    dist tarball. (in thie later, don't generated INSTALL.in and git-
+    version.h)
+  *  86c5720375 - Use variables for minvers, partly fixes #4132.
+  *  6124be59b7 - configure: fix typo which was breaking the build.
+  *  54020c2597 - Updated Greek translation
+  *  324d62c863 - meson: update the broken libheif test (similarly to
+    autotools).
+  *  f051e6d238 - Issue #4185: Plug-in “file-heif.exe” crashes exporting
+    HEIF/HEIC.
+  *  d1bb192d7d - Fix make check by replacing metadata-tags.h with
+    metadata.c as spotted by grem
+  *  f9752f39b0 - meson: add a libmypaint < 1.4.0 warning.
+  *  5da252ca18 - Issue #2543: gimp doesn't open on debian stretch
+    (libmypaint crash).
+  *  59dcd29f1e - meson: fix HAVE_LIBHEIF_1_4_0 macro.
+  *  41285813a5 - configure: improve libheif detection and output.
+  *  1032632e63 - build: update flatpak nightly manifest.
+  *  053fbd7da5 - po: fix missing semicolon in Basque translation.
+  *  b6e558ae89 - Updated Danish translation of gimp-plug-ins
+  *  24cadf8589 - plug-ins: port file-mng-save to GimpProcedureConfig
+    and propwidgets
+  *  0a5a363ceb - Update German translation
+  *  0e29fc1b21 - Issue #4218 - Color>Invert doesn't work on saved
+    selection channel ...
+  *  2a292b02e3 - app: in GimpHistogram, don't initialize n_bins to 256
+  *  0c899394b4 - Issue #4205 - The histogram dock scale is incorrect
+    when an image is opened
+  *  c297131d37 - Update Catalan translation
+  *  8356a4d98c - Update Catalan translation
+  *  417bf199c8 - Issue #4194: resolution passes from 300ppi to 72ppi
+    after saving.
+  *  79df3dd1e3 - plug-ins: port file-pnm-save to GimpProcedureConfig
+  *  7229b842bf - app: image-cmds.c was regenerated
+  *  9772b7162c - meson: remove duplicate line.
+  *  2cb0493b2f - Replace finite() with isfinite() by default
+  *  00106b1d45 - Revert finite() fix as it needs to be done in pdb and
+    configure
+  *  235b40e965 - Issue #4189: Missing warnings on meson build.
+  *  669b4e92fc - Fix "finite() is depricated" warning on macOS
+  *  6592671e21 - desktop: set appdata release date of 2.10.14 to today
+  *  bf599067ce - plug-ins: meson change for previous commit.
+  *  31cbc7e0e6 - plug-ins: clean all warnings on metadata plug-in.
+  *  024a919c77 - plug-ins: clean out some warnings.
+  *  fdf5c7edce - meson: add -Wformat to common cflags.
+  *  557fd172e3 - Update Swedish translation
+  *  cc21ec304f - libgimpmath: Use G_DEFINE_BOXED_TYPE()
+  *  a551043ffe - libgimpbase: Use G_DEFINE_BOXED_TYPE()
+  *  cb0ae619d1 - app: Use G_DEFINE_BOXED_TYPE()
+  *  89f692cd73 - libgimpcolor: Use G_DEFINE_BOXED_TYPE()
+  *  9cf4b20a7a - Updated Spanish Translation
+  *  bfc06737ce - Updated Spanish Translation
+  *  2315bc3fa0 - Update Catalan translation
+  *  c033b3498f - app: reorder alphabetically file list in meson build.
+  *  05f0f217e3 - Propagate 0ddd3330b8b30091e39ba2b758f26dbd84db0a12 to
+    meson build system.
+  *  43a1c33ecf - app: add "show all" support to the Bucket Fill tool in
+    line-art mode
+  *  02654b0ac0 - app: (re-)add GimpDisplayShell::show-all property
+  *  c8b5c81a41 - app: in GimpLineArt, ref input pickable
+  *  bce96eb690 - app: in GimpLineArt, add support for arbitrary buffer
+    extents
+  *  0e02795128 - app: in GimpImageProxy, implement GimpPickable
+  *  8d8cc12f40 - app: rename GimpImageViewable to GimpImageProxy
+  *  0ddd3330b8 - app: rename gimpimageviewable.[ch] to
+    gimpimageproxy.[ch]
+  *  74009c8b1e - app: add gimp_image_get_preview_format()
+  *  4374fc3ff0 - Update Japanese translation
+  *  8135a81db2 - Update Japanese translation
+  *  12bc46ce14 - Set required variables if is running from Apple
+    application bundle
+  *  38fff3b6b3 - Issue #4172 - Gimp doesn't store negative values
+    between sessions (Text Tool)
+  *  236d68c44f - Update Turkish translation
+  *  c55b4d358a - Update Turkish translation
+  *  e58dbb4d3b - Update Turkish translation
+  *  84023a01d8 - Update Turkish translation
+  *  85c004edcc - Add missing -lm to file-psd plug-in
+  *  672b77dedb - devel-docs: update the XCF docs.
+  *  cffb86cc6f - build: sync flatpak nightly manifest with stable one.
+  *  5a37be083a - libgimp: doc fixes and improvements in procedure
+    subclasses
+  *  1caff42c30 - app: add missing space in gimp-mkenums command in
+    config/ and display/
+  *  a5cf3e9506 - plug-ins: port file-gif-save to begin_export() and
+    end_export()
+  *  0da5f0ae7e - libgimp: make GimpProcedureConfig handle the image
+    comment automatically
+  *  d97dd6413a - configure.ac: fix escaping of backslashes in compiler
+    version string
+  *  288b4097b5 - devel-docs: fix and update the libgimp docs
+  *  6ea003902d - meson: fix last commit
+  *  0ce7c25dd4 - meson: improve host cpu detection
+  *  c8bf85cc54 - pdb: item.pdb: '3,0' is not a version, it's '3.0'
+  *  d217028032 - app: fix typo in gimptoolrectangle.c
+  *  f0077265b4 - configure, meson, app: depend on gegl-0.4.18
+  *  91db910aca - Updated Slovenian translation
+  *  5319e44008 - Updated Slovenian translation
+  *  549a606b2f - app: don't use the deprecated GTimeVal in gimp-test-
+    session-utils.c
+  *  6b87e2f90c - configure.ac: add AC_MSG_RESULT() for color-profile
+    directory check
+  *  dbd1bb1f90 - gitlab-ci: no need to specify explicitly -
+    Dbuildtype=debugoptimized.
+  *  f7c487f535 - meson: use "debugoptimized" as the default build type
+  *  010a4fe058 - gitlab-ci: move the prefix to root for simpler paths
+    in artefacts.
+  *  7fdd78c6ea - gitlab-ci, build: add a wrapper for GIMP binary to
+    Win32 CI result.
+  *  6f6358bef6 - Updated Danish translation of gimp-script-fu
+  *  6c96ce3a56 - Updated Danish translation of gimp-python
+  *  27c86f7bb6 - Updated Danish translation of gimp-libgimp
+  *  a0a6039e5c - Updated Danish translation
+  *  2baeb87b3a - gitlab-ci: use debugoptimized built type for the Win32
+    CI build.
+  *  ce761ccc95 - build: add DrMingw in the Windows CI build.
+  *  4d8a61af34 - CID 225792 Resource leak in script-fu-server.c
+  *  94852a3957 - build: (Win32 CI) cairo as dependency of GEGL.
+  *  3da8b9cc18 - build: mask glib and pango from pre-built Win32
+    package for the CI.
+  *  126a2352cd - gitlab-ci: (Win32) add install prefix to artifacts.
+  *  e112141836 - Update Polish translation
+  *  211b7de729 - app: add babl version info to $ gimp -v
+  *  286de59494 - meson: wrong pangocairo minimum requirement.
+  *  dad65000e1 - plug-ins: port file-raw-save to GimpProcedureConfig
+    and propwidgets
+  *  db6a0c6841 - po-libgimp: update POTFILES.in
+  *  ba77ce58c7 - plug-ins: use begin_export() and end_export() in file-
+    xbm
+  *  c25778c882 - plug-ins: use begin_export()/end_export() in file-
+    csource
+  *  e21f78e577 - plug-ins: add an aux "comment" argument to file-png-
+    save
+  *  f7c7924564 - libgimp: automatically handle the image comment in
+    GimpProcedureConfig
+  *  991703a7ee - plug-ins: minor cleanups in file-jpeg, no porting to
+    new stuff yet
+  *  c7c0397fbe - libgimp: add gimp_procedure_find_argument(),
+    aux_argument(), return_value()
+  *  6adf77e13a - app, menus: add gegl:normal-map to Filters -> Generic
+  *  0b81e4d056 - CID: 228176 Fix a Resource leak
+  *  eb6f544c18 - app: avoid spurious channel switch in histogram editor
+    when switching drawbles
+  *  8bd4ae34f5 - app: fix gimp_hisotgram_n_components() for empty
+    histograms
+  *  fc17f0ed0c - app: streamline GimpHistogram; avoid spurious channel
+    switch in histogram view
+  *  2f01751907 - Issue #4119: GIMP main window not restored from
+    Taskbar under MS Windows
+  *  ca77fb2c95 - plug-ins: mktables.c in file-dds is unused.
+  *  5fe20497c5 - libgimp: (meson) set GIMP_DISABLE_DEPRECATED for
+    introspection.
+  *  371f9578cb - CID 225808 Arguments in wrong order
+  *  303ba93c5e - 225614 Copy-paste error
+  *  93a0b640d2 - CID 228074: Missing varargs init or cleanup in file-
+    tiff-io.c
+  *  61f7eb768c - Checking wrong sizeof in gimpmetadata.c
+  *  0f8b9ed4aa - CID 228155: Resource leak in file-tga.c
+  *  da6c2f890c - CID 227971: Resource leak
+  *  6dcdbf652b - CID 228166: Resource leak in file-raw-data.c
+  *  4150bbb59f - libgimpwidgets: (meson) a whole list of headers were
+    not introspected.
+  *  b8d8424ae0 - app, libgimp*: (meson) fix all the generated `*-
+    enums.c`.
+  *  5d79fba823 - libgimpwidgets: (meson) fix gimpwidgetsenums.c
+    generation.
+  *  fb0ea13626 - meson: add a big fat "experimental" warning at end of
+    meson configure.
+  *  4312dc8a53 - Update Latvian translation
+  *  fef9b1d2a3 - Issue #4068: default pixel density should be 72.0 for
+    loaded images.
+  *  30e7be6db1 - plug-ins: fix usage of gimp_file_save() in py-
+    slice.py.
+  *  fca64f5f66 - meson: add an `install-icons` meson target.
+  *  16d9c1f00d - Issue #4049: Colour fill on Line Art Detection
+    misaligned when…
+  *  d6fa772f22 - icons: (meson) gimp-frame and gimp-texture were not
+    installed.
+  *  9dcdf37ab3 - libgimpwidgets: check error return for
+    gtk_icon_theme_load_icon().
+  *  1046430df1 - meson: add a special target `install-libgimp*` for all
+    libgimp*.
+  *  7b2af5b064 - Update Basque translation
+  *  7ab55fbd1e - Update Basque translation
+  *  1a4fbf0c8a - Update Basque translation
+  *  5eb5ee76cb - Update Basque translation
+  *  9c39602485 - Update Basque translation
+  *  0789315b59 - Update German translation
+  *  9e830c0c30 - plug-ins: fix goat-invasion plug-ins installation.
+  *  69e993b24e - libgimp: remove duplicate gimpprocedureconfig.c
+    (meson).
+  *  b3f641028e - Update Basque translation
+  *  92cba86ac2 - FIxed typos in app/
+  *  3ca179283e - Update Turkish translation
+  *  0f035d83d0 - Update Icelandic translation
+  *  1ba506b574 - Update Icelandic translation
+  *  cf6dae6f83 - libgimp: fix a type cast warning (win32).
+  *  f59b0db0c8 - app, libgimp: fix more unused function warning
+    (Win32).
+  *  ba5f63efb8 - Update Spanish translation
+  *  2b89aafe80 - Update Spanish translation
+  *  590681434b - libgimp: sync autotools and meson to the same list of
+    introspectable…
+  *  8cf4b7a43a - libgimp: reduce GObject Introspection warnings.
+  *  9326f4a76c - plug-ins: rename all boolean comment arguments to
+    "save-comment"
+  *  2409b6f219 - libgimp: manage boolean "save-comment" properties
+    automatically
+  *  1c7028aaaa - app, libgimp: add boolean "export-comment" gimprc
+    property
+  *  0b3c496968 - devel-docs: updates and fixes
+  *  7f2995d568 - libgimp: improve docs for
+    gimp_image_metadata_save_prepare()/finish()
+  *  b5f10b6eda - plug-ins: port file-heif and file-webp to the new
+    export stuff
+  *  8a2f4c9157 - plug-ins: port file-png-save to
+    begin_export()/end_export()
+  *  8219092a6c - libgimp: start integrating image export with
+    GimpProcedureConfig
+  *  9b328167ab - libgimp: fix unused function (Win32).
+  *  c809e221ec - app: fix "Result is not floating-point
+    (UNINTENDED_INTEGER_DIVISION)".
+  *  204df59474 - Issue #4054 - Missing closing brackets for some BMP
+    saving names
+  *  93bfd6f154 - plug-ins: port file-aa to GimpProcedureConfig
+  *  4be4d828ad - plug-ins: port file-xbm-save to GimpProcedureConfig
+  *  95a36c8e47 - Update Spanish translation
+  *  e1e179a96c - Update Spanish translation
+  *  b4c08d66c2 - Update Spanish translation
+  *  714aea5b15 - Update Spanish translation
+  *  21b5b6b1aa - plug-ins: port file-html-table to GimpProcedureConfig
+  *  d4cdf164df - Update Polish translation
+  *  a3d74fa09f - Update Latvian translation
+  *  bdfd0055e0 - Update Latvian translation
+  *  4213dffd4e - Update Latvian translation
+  *  5b0e45aa41 - Update Latvian translation
+  *  8e9a4ef8f1 - Update Latvian translation
+  *  d84d42c835 - plug-ins: rename procedure file-gtm-save to file-html-
+    table-save
+  *  a59c13b724 - plug-ins: port file-csource to GimpProcedureConfig
+  *  6660dc540d - plug-ins: port file-tga-save to GimpProcedureConfig
+  *  f9ddf6ea03 - Issue #4008 - Ellipsis missing in File -> Page Setup
+  *  076d9b2a28 - app: restore behavior of gimp_gegl_apply_operation()
+    with NULL src_buffer
+  *  8976370bce - app: forgot to follow API changes in test-config.c
+  *  51ecb9929c - plug-ins: port file-psp-save to GimpProcedureConfig
+  *  efb6ea9ceb - plug-ins: port file-fli to GimpProcedureConfig
+  *  886d0cae9d - Update Spanish translation
+  *  90591dc7ed - gitlab-ci: new build organization.
+  *  aa611bea84 - gitlab-ci: set GIT_DEPTH to 1.
+  *  5c7f1ce571 - gitlab-ci: improve artifacts settings.
+  *  d27b7a27e0 - gitlab-ci: do not export SHELL env variable before
+    crossroad.
+  *  2963933695 - gitlab-ci: fix crossroad and dnf caching.
+  *  9aec05266a - Updated Slovenian translation
+  *  2665a6c7a6 - app: don't extend layers with no alpha channel when
+    applying filters
+  *  1c67395c21 - app: clip floating selection to layers with no alpha
+    channel
+  *  783b475b7b - app: update drawable bounding box when detaching
+    floating selection
+  *  11629fde66 - app: avoid dropping cached data when committing
+    filters
+  *  50b8adc715 - plug-ins: port file-fits to GimpProcedureConfig
+  *  d02d97e310 - libgimpwidgets: add
+    gimp_prop_int_radio_frame,box_new()
+  *  68f9b540c7 - libgimp: fix all GIMP_PROC_ARG,AUX_ARG,VAL_FOO()
+    macros
+  *  871a31f70c - plug-ins: remove ddsplugin.h and add ddsread.h and
+    ddswrite.h
+  *  42564c076a - plug-ins: port file-dds-save to GimpProcedureConfig
+  *  ec6bbd1937 - app: update drawable bounding box when floating-
+    selection bounding box changes
+  *  d17dc3112f - libgimp: fix segfault in
+    gimp_procedure_config_load_default() with NULL error
+  *  1e9bf288ba - app: fix CRITICAL when translating selected content
+  *  64b979c2f3 - Issue #2837 - Floating selection is clipped to base
+    layer
+  *  6ed6cd78d8 - app: don't resize layer when applying filter if its
+    position/size are locked
+  *  aa02f1f35c - app: fix use of Clone tool with "sample merged" across
+    images
+  *  ffd6c2eda2 - app: add GimpPaintTool::paint_prepare() vfunc
+  *  35f55ef07a - devel-docs: update a reference to 32-bit pointers.
+  *  75396106d1 - plug-ins: port file-dds-load to GimpProcedureConfig
+  *  e2ec4e0bd2 - plug-ins: more file-dds cleanup
+  *  6b8ffd419d - app: add missing SET_SENSITIVE() for new filter
+    actions
+  *  e65639ecc3 - plug-ins: generated rc files depends on git-version.h.
+  *  203509fe46 - gitlab-ci: run gdk-pixbuf-query-loaders.
+  *  f87ae8cc6c - libgimp: fix meson build.
+  *  e17efb7a07 - build, gitlab-ci: add a script to cross-build GIMP
+    with Gitlab CI.
+  *  d3cfae2795 - plug-ins: same cleanup in the DDS load dialog
+  *  b10bdf88fd - plug-ins: prepare file-dds for GimpProcedureConfig
+    porting
+  *  de03dbed44 - Update Spanish translation
+  *  88c6f8296d - Issue #3994 - Artifacts when committing half-cached
+    filters
+  *  49cd319b60 - Update Polish translation
+  *  67b3d78911 - Updated Slovenian translation
+  *  8bb1c6eff3 - Updated Slovenian translation
+  *  711aa71e7a - Updated Slovenian translation
+  *  e1a9b9242e - libgimp: remove underscores from the procedure conifig
+    load/save functions
+  *  b6b77feae2 - plug-ins: port file-bmp to GimpProcedureConfig and
+    propwidgets
+  *  68c3574569 - plug-ins: clean up file-bmp-save in preparation for
+    GimpProcedureConfig
+  *  24731851e4 - app: add missing change to last commit
+  *  a6ebbfe317 - app: avoid updating image bounding box multiple times
+    when reordering layer
+  *  2a753170b9 - app: update image bounding box when moving layer
+    inside/outside of group
+  *  1b48c687ca - plug-ins: port file-webp to GimpProcedureConfig
+  *  04280690b2 - app: fix offset handling in spiral gradients
+  *  2e18a91916 - plug-ins: saner argument name in blinds
+  *  5cccad9867 - plug-ins: move around and clean up some code in file-
+    webp
+  *  80e2e0a508 - Issue #3990: make the status of the XCF docs a bit
+    clearer (hopefully).
+  *  ab16f001e0 - Update Catalan translation
+  *  eb0703430b - Updated Slovenian translation
+  *  5c966343a0 - Updated Slovenian translation
+  *  8829a728d8 - Updated Slovenian translation
+  *  44ad1a6740 - Updated Slovenian translation
+  *  2ea77e8780 - Updated Slovenian translation
+  *  45e96a0ff4 - libgimp: improve handling of procedure default values
+    a lot
+  *  e4acb969ba - plug-ins: port file-xpm to GimpProcedureConfig
+  *  9cb62f5f9a - libgimp: move "image" and "run_mode" from
+    gimp_procedure_config_end_run()
+  *  1f7c823a90 - libgimpwidgets: remove the gimp_radio_group_*()
+    functions
+  *  e8ed263e63 - plug-ins: port file-sunras to GimpProcedureConfig
+  *  505473ab76 - plug-ins: gih_save(): file-gih-save-internal takes a
+    GFile now
+  *  cb40cfd10e - Issue #3983 - gimp_get_images returns NULL pointer
+    whilst num_images > 0
+  *  9593121431 - app, libgimpwidgets: return visible widgets from all
+    gimp_prop_foo_new()
+  *  1099aea726 - plug-ins: rename all "save-profile" args to "save-
+    color-profile"
+  *  58bf1d431d - libgimp: add a "status" parameter to
+    gimp_procedure_config_end_run()
+  *  1793a08548 - plug-ins: port file-png to GimpProcedureConfig and use
+    propwidgets
+  *  8b53d25eb9 - po-libgimp: update POTFILES.in
+  *  d257c7ba91 - plug-ins: remove second parameter of gimp_ui_init() in
+    all non-C plug-ins
+  *  81cbc3edb7 - plug-ins: port file-heif to GimpProcedureConfig
+  *  f94a241931 - plug-ins: minor cleanup in file-pat
+  *  191fcdf884 - libgimp: add macros for adding aux args to
+    gimpprocedure-params.h
+  *  c3efeae31d - libgimp: add the concept of "Auxiliary arguments" to
+    GimpProcedure
+  *  70ac0e9d9a - libgimp: fix gimp_image_metadata_save_prepare()'s
+    check for IPTC flags
+  *  e34ffbff81 - plug-ins: port file-sgi to GimpProcedureConfig
+  *  aeef726044 - libgimp: implement GimpProcedure::create_config() in
+    all subclasses
+  *  e80c90e17d - libgimpwidgets: change gimp_int_store_new()'s
+    signature
+  *  f3eef8fe83 - plug-ins, app: port file-pat to GimpProcedureConfig
+  *  104ddb1374 - plug-ins: minor follow-up cleanup in file-gbr
+  *  247f99ce22 - libgimp: change GimpProcedureDialog's "OK" with the
+    procedure type
+  *  b8fb09d330 - plug-ins, app: port file-gbr to GimpProcedureConfig
+  *  243042730e - libgimp: add "image" parameters to
+    gimp_procedure_config_begin,end_run()
+  *  29e8527877 - Add Persian translation
+  *  3d30a036de - libgimpconfig: relax precondition check in
+    gimp_config_type_register()
+  *  88158db78c - Updated Spanish Translation
+  *  68eab009ea - Update Spanish translation
+  *  2c6e21b1e7 - plug-ins: fix another cast warning.
+  *  6bd5deea89 - app: add offset support to shaped gradients
+  *  c9ccc16a97 - Update Catalan translation
+  *  edd824ddef - libgimp: disable GObject Introspection generation when
+    cross-compiling.
+  *  47a8560bae - Fix meson build error
+    ../../gimp/app/widgets/gimplanguagestore-parser.c:339:33: error: #if
+    with no expression 339 | #if ENABLE_RELOCATABLE_RESOURCES
+  *  d10a4cb83d - app: support smooth scroll events in GimpTagPopup
+    widget.
+  *  beeaec5670 - po: add gimpcompressioncombobox.c to POTFILES.in
+  *  5cc289b642 - libgimpbase, libgimp, app: inherit swap-compression in
+    plug-ins
+  *  1664ecbf1d - app: add "Swap compression" option to the preferences
+  *  e30a24273d - app: add missing NULL in call to gimp_directory_file()
+  *  0567bb2e71 - plug-ins: fix some more cast of different size
+    warnings.
+  *  a2c92c576d - app, plug-ins: (Win32) fix calls to ShellExecute().
+  *  6bc6a07b7e - libgimpbase, plug-ins: fix all warnings to g_stat()
+    calls.
+  *  44d10e458c - Fix various typos
+  *  3ce2c7e3f9 - libgimp: s/filename/file/ in docs
+  *  bfe7bb1d05 - libgimpconfig: fix doc typo
+  *  142002446e - plug-ins: fix a type warning.
+  *  1bca89163d - libgimpbase: remove gimp_personal_rc_file()
+  *  7806021a41 - meson: minor formatting fixes.
+  *  aeaae6bff2 - app: (meson) fix main executables linking when
+    building for Windows.
+  *  c77c903c8d - plug-ins: fix C goat-exercise build/installation in
+    meson.
+  *  738dab0fce - meson: fix relocatable-bundle feature and mypaint-
+    brushes dependency.
+  *  2b67a54b15 - Update Polish translation
+  *  a4775d5b2d - libgimpbase: remove gimp_gtkrc()
+  *  dbd793d631 - libgimpconfig: get rid of filenames in all config
+    related APIs
+  *  b327e0ff2f - meson: fix several checks.
+  *  b8c34c41f1 - meson: fix glib-networking check when cross-compiling.
+  *  693984e235 - app, libgimpwidgets: use the new parasite
+    (de)serialization API
+  *  82b11c361a - libgimpconfig: add function which (de)desialize
+    from/to a GimpParasite
+  *  3c1871680c - Update Russian translation
+  *  396d227436 - libgimp: fix typo and libgimpui build.
+  *  9ac117b143 - meson: iso-codes is an optional dependency.
+  *  b834fdb64a - plug-ins: remove unused variable.
+  *  df8d5b02ae - libgimp, plug-ins: remove the "preview" parameter from
+    gimp_ui_init()
+  *  aa41baef1e - libgimp: add gimp_procedure_config_get_procedure()
+  *  f62665ad31 - plug-ins: use GimpProcedureDialog in despeckle
+  *  bfb7f43dbc - libgimp: add GimpProcedureDialog, the new dialog class
+    for plug-ins
+  *  df62d08798 - plug-ins: as a proof-of-concept, port despeckle to
+    GimpProcedureConfig
+  *  b441d100ff - libgimp: add GimpProcedureConfig which implements the
+    GimpConfig interface
+  *  31bf04a610 - libgimpconfig: fix precondition checks in
+    gimp_config_type_register()
+  *  d52316741f - devel-docs: remove duplicate </SECTION> that broke
+    quite some stuff
+  *  e7479cad47 - app: add "show all" support to "Layer -> New from
+    Visible"
+  *  6ef21ed1f0 - app: handle buffers with arbitrary origin in
+    gimp_layer_new_from_gegl_buffer()
+  *  71f42f6675 - app: add gimp_display_shell_get_canvas_pickable()
+  *  7d2e872f4f - app: in Rectangle/Ellipse tools, update selection when
+    clicking inside existing one
+  *  fdb46684f8 - app: revert `#pragma once` to macro guards in meson
+    build.
+  *  791b2a12d4 - Update Brazilian Portuguese translation
+  *  9f85efd825 - Issue #1283 - Artifacts in filters when aux input
+    depends on filter result
+  *  0029760e2e - plug-ins: add some missing types to
+    script_fu_marshal_procedure_call()
+  *  9ebaecdffb - desktop: use better wording by prokoudine in Appdata
+    file.
+  *  46e96a413d - desktop: fix the AppData release listing.
+  *  5c7d6da1c3 - libgimpconfig: allow gimp_config_type_register() with
+    0 pspecs.
+  *  642e47efaa - plug-ins: fix warning.
+  *  8edb75d78f - Update Polish translation
+  *  ccd6f6385b - libgimpconfig: turn some comments into actual docs
+  *  8cdcaa4ef1 - desktop: update release note in AppData.
+  *  7c79fcc3ce - libgimpmodule: annotate gimp_module_get_file()
+  *  3598722020 - libgimpconfig: add gimp_config_type_register()
+  *  832e7fafc1 - libgimpconfig: gimp_config_param_spec_duplicate()
+    support GFile
+  *  ccc8224aa9 - plug-ins: mask the 3 "Converts *" procedure from file-
+    dds plug-in.
+  *  8fa7b5bc74 - tools: clean up patch from merge request !36.
+  *  283ec1da0f - issue #2221: gimptool should install plug-ins into
+    subfolders
+  *  a94a286576 - app: fix GStatBuf warning on gimpconfig-file.c
+  *  c98edaf101 - app: behave as if "show all" is disabled in
+    GimpCanvasPassePartout when keeping padding
+  *  f418ac3e2d - app: behave as if "show all" is disabled in
+    GimpCanvasGrid when keeping padding
+  *  c9fc2862f8 - app: behave as if "show all" is disabled in the
+    navigation dockable when keeping padding
+  *  3cef5b52ac - app: behave as if "show all" is disabled in
+    edit/buffers/DnD actions when keeping padding
+  *  2d6e80b8ed - app: behave as if "show all" is disabled in
+    scroll/zoom actions when keeping padding
+  *  235a20b65e - app: add option to keep canvas padding in "show all"
+    mode
+  *  f7798bcd9a - Update POTFILES.in
+  *  7777c5fa0c - plug-ins: port gradients-save-as-css to Python 3 + new
+    API.
+  *  b942682280 - fix ``` ../../gimp/plug-ins/common/file-psp.c: In
+    function 'load_image': ../../gimp/plug-ins/common/file-
+    psp.c:1930:25: warning: passing argument 2 of 'g_stat' from
+    incompatible pointer type [-Wincompatible-pointer-types]  1930 |
+    if (g_stat (filename, &st) == -1)       |
+    ^~~       |                         |       |
+    struct stat * In file included from ../../gimp/plug-ins/common/file-
+    psp.c:44: C:/msys64/mingw64/include/glib-2.0/glib/gstdio.h:134:31:
+    note: expected 'GStatBuf *' {aka 'struct _stat64 *'} but argument is
+    of type 'struct stat *'   134 |                  GStatBuf    *buf);
+    |                  ~~~~~~~~~~~~~^~~
+  *  8e74a22ce7 - tools: improve the install-* meson targets.
+  *  cf276ed972 - libgimp: fix introspection of PDB functions in meson
+    build.
+  *  ac8c7770d7 - Update Swedish translation
+  *  5495689180 - plug-ins: fix Python plug-ins installation.
+  *  716a996dcd - Update Swedish translation
+  *  44f3630574 - libgimpconfig: support more types in
+    gimp_config_param_spec_duplicate()
+  *  6fad257693 - libgimpconfig: more nested if() in
+    gimp_config_param_spec_duplicate()
+  *  918f66c8c1 - libgimpconfig: support GimpParamSpecConfigPath
+  *  a06d33f4af - libgimpconfig: clean up
+    gimp_config_param_spec_duplicate()
+  *  8cdab31393 - app, libgimpconfig: move gimp_param_spec_duplicate()
+    to libgimpconfig
+  *  f73f813e1f - app: gimp_param_spec_duplicate(): don't warn
+  *  3f84fbee1e - app: don't use the deprecated GTimeVal in file-
+    remote.c
+  *  755fa92f34 - Update Dutch translation
+  *  287c8ffd5d - Update Dutch translation
+  *  8cdb315017 - Update Dutch translation
+  *  c512dbff55 - Update Dutch translation
+  *  81ff4941a0 - libgimpmodule: clean up GimpModule and GimpModuleDB
+  *  65530b6aa7 - Issue #3925 - Gimp from git master segfaults when
+    showing preview of exported JPEG file
+  *  4fc345183b - app, meson.build: fix a bunch of warnings in C++ files
+  *  077e596dfc - plug-ins: fix wrong g_free() in jpeg-save
+  *  2791328e41 - configure: fix LUA test.
+  *  f0a8a5b67b - tools: add mnemonic-clashes to EXTRA_DIST
+  *  a2a7fc993c - tools: add mnemonic-clashes tool
+  *  63e0e7679b - plug-ins: fix "film" to not crash on repeat
+  *  73cd120a4c - Issue #3912 - Object proxy management not happy with
+    bindings
+  *  f1a13b4904 - plug-ins: fix optional common/ plug-ins in meson build
+  *  25f6198cc8 - devel-docs: update the libgimp docs
+  *  7fa730b1c7 - app: make tests build again after file_open_image()
+    signature change
+  *  83a936b8fe - pdb: rename all functions in the "plug_in" group
+  *  6de4af4ade - pdb: change paths and URIs in the "plug_in" group to
+    GFiles
+  *  2fa9b8f030 - pdb: forgot to change an URI to GFile in
+    gimp_file_load()
+  *  77731d1e8e - pdb: change the URIs in the color profile API to
+    GFiles
+  *  14af676b51 - pdb, libgimp: change "filename" to "file" in
+    gimp_pdb_dump()
+  *  6468fa06c7 - pdb, plug-ins: change gimp_temp_name() to
+    gimp_temp_file()
+  *  4118fb6a76 - Resolve implicit declaration of function 'getpid'
+  *  6bca8c4f89 - pdb, app, libgimp, plug-ins: replace most PDB
+    filenames/URIs by GFile
+  *  a5ac3e45fe - libgimpbase, libgimp, app: add libgimp support for
+    passing GFiles
+  *  5d365352ca - Issue !125: avoid conflict with win32 macro.
+  *  d710e96d81 - Issue #3781 - Display artifacts on HiDPI when render
+    cache is invalidated
+  *  c20a8b732c - Enforce libbacktrace tests. Add missing dep in app
+  *  a2b74147c9 - Fixing error on Windors meson build
+  *  3bfbf9972a - tools: fix install-* meson targets.
+  *  035802c5a6 - gitlab-ci: our CI base system (Arch) fixed their
+    libmypaint package.
+  *  1f20b72a45 - Fix gitlab-ci : Archlinux fixed the bug upstream.
+  *  ba6973e791 - Fix Meson some changes not pulled from Autotools
+  *  eb229fe2dc - disabling Twain plug-in until it's fixed
+  *  db8922738f - Add meson_install_subdir script
+  *  184abdfc94 - Print warnings at the end of configuration
+  *  65eff6f150 - Meson port.
+  *  a97bad1cbe - Update gitlab-ci
+  *  793c9588bf - Add meson to gitignore
+  *  f3fb3d1a57 - Remove the second "raw-filename"/"raw-uri" parameter
+    from file procedures
+  *  6115d34fe8 - Rename the "fileops" PDB group to just "file"
+  *  7c5cb29ca6 - pdb: move the file procedure register API from
+    "fileops" to "pdb"
+  *  fee551810b - app: fix adding file procedures from pluginrc
+  *  56fee73441 - pdb: reorder stuff in the "pdb" group to make more
+    sense
+  *  21ff9999e4 - app: remove gimppluginmanager-file-procedure.[ch]
+  *  ff9b469808 - app: move the file procedure registering functions
+    into gimpplugin-proc.c
+  *  fba010a642 - libgimp: more GimpPlugIn docs
+  *  cc5149565a - plug-ins: remove unused variables from plugin-
+    browser.c
+  *  26a744f44d - plug-ins: register thumbnail procedures before load
+    procedures
+  *  5621de52fc - libgimp: have both annotations for GObject
+    Introspection and gtk-docs.
+  *  1b3c1fb9cb - app: fix CRITICAL in GimpNavigationEditor
+  *  49640ebfee - plug-ins: fix warning on JavaScript goat exercise.
+  *  183f00baf9 - libgimp: fix GimpPlugInClass methods introspection.
+  *  b73519830e - app: gimp-register-magic-load-handler renamed in a
+    previous commit.
+  *  2c9a8a567b - app: clear navigation editor when last image is closed
+  *  0745043ddb - pdb, libgimp: remove _gimp_register_load_handler()
+  *  b1683ce692 - app: remove all check for the <Load> and <Save> menu
+    prefixes
+  *  a20fb094d9 - libgimp: remove gimp_plug_in_create_procedure() from
+    the API
+  *  34489d1b13 - libgimp: add section docs for GimpPlugIn with general
+    information
+  *  005143a43e - libgimp, devel-docs: fix docs for GimpPlugInClass and
+    its members
+  *  36d6896a92 - Fix INSTALL.in
+  *  46f706a403 - [libgimp,app] add missing includes for windows
+  *  0792cb65f4 - [devel-docs] move version file to deduplicate code
+  *  a60ac57207 - Missing mnemonics on several file dialogs
+  *  d93fefb174 - Issue #3876 - The tool options of some transform tools
+    are vertically centered ...
+  *  a88aa27942 - app: use GError in all gimpplugin-proc.[ch] functions,
+    not gimp_message()
+  *  b587740a10 - libgimp: make sure the GimpPlugIn and GimpPDB
+    singletons get destroyed
+  *  32c764dc60 - Update Spanish translation
+  *  bde70bcdab - pdb: avoid duplicate argument names in gimp-plugins-
+    query
+  *  d745dc86c5 - libgimp: warn on attempts to install or uninstall a
+    GimpPDBprocedure
+  *  41fa670434 - Rename all "nparams" and "nreturn_vals" members in the
+    wire protocol
+  *  64572b00f5 - app: clean up gimp_plug_in_handle_proc_install()
+  *  22a780c9d1 - pdb: add gimp_pdb_set_proc_documentation() and
+    _attribution()
+  *  5a57256a24 - libgimp: no need to set NULL strings on
+    GimpPDBProcedure
+  *  5f60f5422b - app: remove some procedure code duplication
+  *  5341c42852 - app: remove "help_id" from GimpGeglProcedure
+  *  6b0486174d - app, pdb: split GimpProcedure's "strings" into "help"
+    and "attribution"
+  *  26c8286675 - app, pdb: take "deprecated" out of GimpProcedure's
+    "strings" API
+  *  1716666bd1 - app: keep the help_id in GimpProcedure not
+    GimpPlugInProcedure
+  *  f6dc18a516 - app: remove code duplication in gimpplugin-proc.c
+  *  453b4f4aa2 - pdb: add gimp_pdb_set_proc_menu_label()
+  *  33c84ceb08 - plug-ins: don't set a NULL menu label in
+    script_fu_script_install_proc()
+  *  2a62287439 - pdb: add gimp_pdb_set_proc_image_types()
+  *  d75a25c565 - app: move the plug-in procedure setters to gimpplugin-
+    proc.[ch]
+  *  303ccbedad - pdb: move gimp_plugin_icon_register_invoker() from
+    "plugin" to "pdb"
+  *  d89adebff8 - pdb: move gimp_plugin_menu_register() from the
+    "plugin" to the "pdb" group
+  *  7a9517c261 - plug-ins: fix film to succeed again and not always do
+    nothing
+  *  e82c80bf5f - pdb: rename all procedure query procedures to gimp-pdb-
+    get-proc-foo
+  *  388776df07 - Simplify the plug-in query API and fix plugin-browser
+  *  f2db331fb7 - Update Polish translation
+  *  d7e69b2bbb - libgimp: show the newly introspectable stuff in
+    GimpProcView
+  *  5c16fc205d - libgimp: use the new API in GimpPDBProcedure
+  *  48692e58c3 - pdb: add pdb API to get a procedure's image types,
+    menu label and menu paths
+  *  a85ad31da0 - app: change gimp_plug_in_procedure_add_menu_path()
+    again
+  *  b06f119288 - Update Hungarian translation
+  *  5cab6c816a - Update Hungarian translation
+  *  dbacef4fe2 - plug-ins: revert temp hack in
+    gimp_plug_in_procedure_add_menu_path()
+  *  a63779e5a8 - app: remove obsolete check from
+    gimp_plug_in_menu_register()
+  *  4da47e2596 - plug-ins: it's "darktable" not "placeholder"...
+  *  64a49c374a - Update Hungarian translation
+  *  883740d452 - Update Hungarian translation
+  *  85704c6c46 - pdb: add $since info to gimp-image-merge-layer-group
+  *  643279bd31 - Issue #3893 - Error message when exporting to to TIF
+    if there is a layer mask on a group
+  *  62a6023b27 - pdb: add gimp-image-merge-layer-group procedure
+  *  184762cd81 - app: fix empty mask when duplicating a group layer
+  *  44cc7d239e - Issue 3100: cage transform tool -> always blurred
+    without any action
+  *  32afd4cb3e - Issue 2873 - Missing menu text on Image Map filter
+  *  19c693a937 - app: add "show all" support to the Perspective Clone
+    tool
+  *  c5bf595fe6 - app: add "show all" support to the Clone tool
+  *  84656cb3d4 - app: add "show all" support to the Smudge tool
+  *  2523808e4a - app: add
+    gimp_paint_core_{set_show_all,get_image_pickable}()
+  *  6f4122b7b9 - Issue #3655 - Cannot edit long lines of metadata (no
+    scroll bar)
+  *  8ef87b0922 - libgimp: fix crash introduced in commit bfe4a2f9
+  *  0a1e9d1190 - Issue 2206: Error message when opening "MULTICHANNEL"
+    PSD...
+  *  7486028ec9 - Missing mnemonics on Preferences
+  *  7880711fef - Allow full range to Hue-Saturation Lightness slider
+  *  b6b8e2c28d - Revert the *enums.c part of the last commit
+  *  2e766f67d4 - Missing mnemonics on several dialogs
+  *  90053e477f - devel-docs: update libgimp and libgimpbase docs
+  *  e902871926 - libgimpbase: fix docs
+  *  0123bb3389 - libgimp: make sure gimpparamspecs-body.c gets
+    introspected
+  *  bfe4a2f9dd - app, libgimp: add _gimp_gp_params_free() to
+    gimpgpparams
+  *  8acff481a3 - app: add missing procedure argument types to pluginrc
+  *  0f7f322fa5 - libgimp: _gimp_gp_params_to_value_array() remove
+    "gboolean full_copy"
+  *  17f8cff6f6 - app: add "show all" support to the bucket-fill tool in
+    "fill similar colors" mode
+  *  99759a57e8 - app: in gimp_pickable_contiguous_region_by_seed(), add
+    support for arbitrary buffer extents
+  *  6df0be91ba - app: in gimp_gegl_mask_bounds(), add support for
+    arbitrary buffer extents
+  *  ddbff867a1 - app: fix gimp_gegl_mask_bounds()
+  *  ee86e5630e - libgimp: don't leak the GPParam array after writing
+    procedure return values
+  *  b812d6241a - app, libgimp: make two functions of gimpgpparams
+    private
+  *  46608393c3 - pdb, libgimp: add a HORRIBLE hack to make sure objects
+    arrays don't leak
+  *  3dc354e848 - libgimp: _gimp_gp_param_to_value() must ref object
+    array elements
+  *  c10f5b2d68 - plug-ins: port film and guillotine to objects arrays
+  *  c59eaa5e3d - libgimp: fix copy/paste errors in
+    GIMP_VALUES_FOO_OBJECT_ARRAY()
+  *  3a2f8d422a - plug-ins: use the newly added GET_FOO_ID() macros
+  *  81ee690bbf - libgimp: add convenience macros
+    GIMP_VALUES_GET_FOO_ID()
+  *  0c83f4a96d - plug-ins: file-svg: follow
+    gimp_vectors_import_from_file() change
+  *  f764fd0f82 - pdb, libgimp: change all generated ID array return
+    values to object arrays
+  *  ccd516c569 - libgimpbase: update gimpbase.def
+  *  34f848bb69 - libgimp: actually unref the global GimpPDB and
+    GimpPlugIn instances
+  *  747fce7260 - libgimp: gimp_plug_in_destroy_proxies() never checked
+    for too much refs
+  *  7d3427e91d - libgimp: gimp_pdb_run_procedure_array() was leaking
+    proc_run.params
+  *  b4f698e78c - libgimp: add object array convenience macros to
+    gimpprocedure-params.h
+  *  56772d4f4d - libgimp: add support for object arrays to gimpgpparams-
+    body.c
+  *  85591eb799 - libgimpbase: add support for arrays of object IDs to
+    gimpprotocol
+  *  0fefb7e922 - libgimpbase: add GimpObjectArray and
+    GimpParamSpecObjectArray
+  *  738b17063a - libgimpbase: add an own struct for GimpStringArray
+  *  582930aa61 - app: update image-projection priority rect when
+    switching displays
+  *  43e91d632e - app: make "show canvas boundary" insensitive when
+    "show all" is disabled
+  *  19817877a5 - app: various fixes in
+    gimp_display_shell_set_show_all()
+  *  aab9f0ee10 - app: fix a few compilation warnings
+  *  b7674faef8 - app: fix transform-tool preview/bounds in show-all
+    mode when transforming entire image
+  *  32dd8d2d2e - app: add support for show-all mode in
+    GimpCanvasPassePartout
+  *  1e621680f1 - app: add support for show-all mode in GimpCanvasGrid
+  *  23617c943b - app: add gimp_canvas_item_untransform_viewport()
+  *  cf3638391d - app: add support for color picking in "show all" mode
+  *  02943e22f6 - app: fix gimp_projection_get_pixel_at() for general
+    bounding boxes
+  *  da701ffc3a - app: fix out-of-bounds rendering when alpha channel is
+    invisible
+  *  915bdffb5a - app: in GimpEditSelectionTool, freeze moved items'
+    previews
+  *  a33f549896 - app: show full image contents in GimpNavigationEditor
+  *  f90da765b5 - app: handle GimpImageViewable in GimpViewRendererImage
+  *  bce4d32d75 - app: add GimpImageViewable class
+  *  a64dc8d618 - app: defer GimpViewable::size-changed signal emission
+    while frozen
+  *  e2f31852fb - app, menus: add "show canvas boundary" display option
+  *  a1717a90a9 - app: improve display scroll/zoom-related behavior in
+    "show all" mode
+  *  788b136bbf - app: add "clip" parameter to
+    gimp_display_shell_untransform_viewport()
+  *  86dc451bce - app, menus: add "show all" mode to GimpDisplayShell;
+    "View -> Show All" toggle
+  *  a9d0643992 - app: in preferences dialog, add "show sample points"
+    toggle
+  *  4e8fa88705 - app: in preferences dialog, swap position of default-
+    appearance columns
+  *  697ab6a91a - app: in GimpImage, ignore "show all" when image used
+    as pickable
+  *  1f9d0d275c - app: add gimp_image_invalidate_all()
+  *  7f629a630c - app: add "show all" mode to GimpImage
+  *  bcf2b937d9 - app: notify GimpProjection::buffer when freeing the
+    projection's buffer
+  *  49bbf13911 - app: in GimpProjection, avoid invalidating preview on
+    flush while rendering
+  *  564afeda8b - app: in gimp_gegl_buffer_set_extent(), clear full OOB
+    region
+  *  7019eaa56b - app, libgimp: share the code of
+    libgimp/gimpparamspecs.c with app/
+  *  18bdf52a0b - libgimp: remove redundant validation code from
+    gimpparamspecs.c
+  *  b92dd2c8e3 - app: split GimpDisplay in two classes: GimpDisplay and
+    GimpDisplayImpl
+  *  b3b3d8160c - app, libgimp: don't duplicate
+    _gimp_gp_param_def_to_param_spec()
+  *  3fd3344f80 - plug-ins: script-fu lost all support for images,
+    layers etc.
+  *  5e00decc13 - pdb, libgimp: use GIMP_VALUES_GET,DUP_FOO() in the
+    libgimp PDB wrappers
+  *  c6082b37f8 - libgimp: add missing stuff to gimpprocedure-params.h
+  *  cb24709916 - pdb: remove the "id" field from all pdb types, it's
+    now unused
+  *  90f9d551dc - pdb, libgimp: use GIMP_VALLUES_GET_ENUM() in libgimp
+    PDB wrappers
+  *  feaf96735f - pdb: don't return any strings from
+    _gimp_pdb_proc_info()
+  *  d0f00bb76d - devel-docs: update the libgimp and libgimpbase docs
+  *  a351ce9126 - Remove the entire old plug-in interface
+  *  7257cc8abc - plug-ins: port curve-bend to GimpPlugIn... IT'S DONE
+    YEAH
+  *  f405b45058 - plug-ins: port sample-colorize to GimpPlugIn
+  *  bdbe1ee06d - plug-ins: port sparkle to GimpPlugIn
+  *  5c5b4642b1 - plug-ins: port warp to GimpPlugIn
+  *  4ded322edf - plug-ins: port map-object to GimpPlugIn
+  *  9e3359c659 - plug-ins: port lighting to GimpPlugIn
+  *  5154b27108 - plug-ins: port depth-merge to GimpPlugIn
+  *  0785dd17a5 - plug-ins: port sphere-designer to GimpPlugIn
+  *  71ccaa21ee - pdb, libgimp: remove double API generation from PDB.
+  *  a4637b0d69 - plug-ins: remove deprecated API support from
+    common/mkgen.pl
+  *  29687012c4 - plug-ins: port tile to GimpPlugIn
+  *  8245102bbd - plug-ins: print: fix missing argument to
+    GIMP_PROC_ARG_IMAGE()
+  *  80340f2d47 - libgimp: remove the last manual compat wrappers
+  *  6ba3fb3bd1 - plug-ins: port curve-bend to libgimp oobjects. THE
+    LAST ONE \o/
+  *  adfe5ee390 - plug-ins: port sphere-designer to libgimp objects
+  *  0b98a3e2e8 - plug-ins: blind port of twain to libgimp objects
+  *  9e771d8cd5 - libgimp: remove more deprecated API
+  *  660ad6c41a - libgimp: use the new get_by_id() functions
+  *  45d60acb65 - plug-ins: use the new item-type specific get_by_id()
+    functions
+  *  1f4a5d4004 - plug-ins: port map-objects to libgimp objects
+  *  fd5740e70b - libgimp: add
+    gimp_layer,chanel,vectors,etc,_get_by_id()
+  *  71f767efc0 - plug-ins: port lightning to libgimp objects
+  *  add31e2976 - plug-ins: fix a glitch in the script-fu unique
+    argument name logic
+  *  ff1663b559 - Update POTFILES.in
+  *  86a99a942f - libgimp: GimpProcedure args and return values must
+    have have unique
+  *  6e0185b976 - plug-ins: make sure script-fu arguments have unique
+    names
+  *  a1343ee89c - plug-ins: fix duplicate argument name in file-gih-save
+  *  2d50192c08 - plug-ins: port smooth-palette to GimpPlugIn and
+    libgimp objects
+  *  f68bf39a09 - plug-ins: port van-gogh-lic to GimpPlugIn and libgimp
+    objects
+  *  3f44a21b11 - plug-ins: port despeckle to GimpPlugIn
+  *  3b65365982 - plug-ins: port gradient-flare to GimpPlugIn
+  *  650d4b57ed - libgimp: add a doc comment to
+    gimp_drawable_get_sub_thumbnail_data().
+  *  1c0fb800e5 - app, pdb: fix gimp_item_id_is_vectors().
+  *  3c6360a373 - plug-ins: port spyro-plus to Python 3 + new API.
+  *  e70137d80f - plug-ins: port gimpressionist to GimpPlugIn
+  *  0a1a9fce5b - plug-ins: port qbist to GimpPlugIn
+  *  7bd9f2d2b5 - plug-ins: port tile-small to GimpPlugIn
+  *  bba67bf6cc - libgimp: don't request tiles beyond the drawable
+    extents
+  *  d7f76fbba0 - app: better error messages when killing a plug-in for
+    invalid tile access
+  *  49dedbf716 - Revert "po-python: update POTFILES.in"
+  *  7fe136c638 - plug-ins: port flame to GimpPlugIn
+  *  4721f9843d - plug-ins: port hot to GimpPlugIn
+  *  dcc89fb611 - plug-ins: port crop-zealous to GimpPlugIn
+  *  d67eb6f438 - libgimp: remove all deprecated stuff from
+    gimpimage.[ch]
+  *  61131f6584 - plug-ins: port cml-explorer to GimpPlugIn
+  *  e4c0e9cf4c - plug-ins: port animation-optimize to GimpPlugIn
+  *  0228d4c079 - plug-ins: change the port of depth-merge slightly
+  *  4cb23666db - plug-ins: port warp to libgimp objects
+  *  9e5f802ab9 - plug-ins: port depth-merge to libgimp objects
+  *  4ce5728d3a - plug-ins: port gradient-map to libgimp objects
+  *  2395776215 - plug-ins: port gimpressionist to libgimp objects
+  *  499e57d5f6 - Update British English translation
+  *  9afc7cad3d - plug-ins: port tile to libgimp objects
+  *  7b099b0568 - plug-ins: port tile-small to libgimp objects
+  *  dfe73bf4ba - plug-ins: port some simple plug-ins to libgimp objects
+  *  a66945342d - libgimp: remove some old API that is no longer needed
+  *  2fd35e77b5 - Revert "libgimp: API with new object classes are since
+    3.0."
+  *  cecd7e3aae - plug-ins: port sample-colorize to libgimp objects
+  *  b407d33259 - plug-ins: port flame to libgimp objects
+  *  02e27bdbc3 - libgimp: fix gimp_item_combo_box_changed()
+  *  e24375e64a - libgimp: API with new object classes are since 3.0.
+  *  f4b97e740c - plug-ins: port nl-filter to GimpPlugIn
+  *  c5745ad922 - plug-ins: port jigsaw to GimpPlugIn
+  *  26ab882223 - plug-ins: port grid to GimpPlugIn
+  *  138b99032e - plug-ins: port destripe to GimpPlugIn
+  *  f4d0c8834a - plug-ins: port contrast-retinex to GimpPlugIn
+  *  cf6b65b71b - plug-ins: port checkerboard to GimpPlugIn
+  *  749ad22c05 - plug-ins: port blinds to GimpPlugIn
+  *  4364b78446 - libgimp: remove the GIMP_DISABLE_COMPAT_CRUFT define
+  *  5567a89347 - plug-ins: add missing GIMP_ITEM() cast in curve-bend
+  *  8a78203aed - Properly prefix the values of enum GimpPDBProcType
+  *  967cbb4fad - app: use the GParamSpec's name in gimp_pdb_dump()
+  *  f8b8d99aca - po-python: update POTFILES.in
+  *  e095af2ee4 - plug-ins: port gradient-map
+  *  73298481f1 - plug-ins: oops, file-glob is not an image procedure
+  *  ca1ef132c3 - plug-ins: port file-glob
+  *  2524e9685e - plug-ins: port guillotine.
+  *  2a640713e7 - libgimp: fix GIMP_VALUES_(SET|TAKE)_*_ARRAY() macros.
+  *  1ee7cc867a - plug-ins: port wavelet-decompose
+  *  bb0321fe5d - libgimp: allow GObject plug-in parameters for known
+    libgimp classes.
+  *  21a87d2b78 - libgimp: too many arguments to g_error_new().
+  *  6e43d793ae - plug-ins: port decompose
+  *  c765fb2b6a - plug-ins: port compose
+  *  37897b13fe - libgimp: fix legacy plug-ins, which I broke with the
+    big ID removal
+  *  33601f7a87 - libgimp: argh, broke most plug-ins...
+  *  e9b4b7fa0d - libgimp: update .gitignore
+  *  a47772bd93 - devel-docs: update libgimp docs
+  *  392f00baf5 - app, libgimp: get rid of all ID GTypes and ID param
+    specs
+  *  d68ef36974 - Update POTFILES.in
+  *  02d06bb354 - plug-ins: help and help-browser don't need libgimp
+    class porting.
+  *  22857b5408 - plug-ins: port busy-dialog.
+  *  34c6e8744c - plug-ins: port py-slice to new API.
+  *  1b992e98d3 - plug-ins: port border-average to new API.
+  *  f75b63fa80 - plug-ins: port align-layers to new API + libgimp
+    objects.
+  *  8d7d2e5f1d - plug-ins: port imagemap to foo and bar, why do I
+    bother...
+  *  55a53ef1a4 - plug-ins: port ifs-compose to GimpPlugIn and libgimp
+    objects
+  *  8eb099a24c - plug-ins, app: port selection-to-path to GimpPlugIn
+    and libgmp objects
+  *  f6a97c178c - libgimp: remove
+    gimp_layer_new_from_surface_deprecated()
+  *  cce5bbc344 - plug-ins: port the core of foggify plug-in.
+  *  605f349137 - plug-ins: port web-browser to GimpPlugIn
+  *  9d01b03490 - Add British English translation
+  *  115b75d025 - Update British English translation
+  *  eae484e54a - plug-ins: port web-page to GimpPlugIn and libgimp
+    objects
+  *  91d9e4d08f - libgimp: remove deprecated metadata functions
+  *  b6b84f7afa - plug-ins: port the metadata plug-ins to GimpPlugIn and
+    object
+  *  1178f54522 - plug-ins: port script-fu to libgimp objects
+  *  fb9b315fd4 - libgimp: fix type names:
+    s/FooParamSpecString/FooParamString/
+  *  eb311be120 - libgimp: add some debug code to warn about broken
+    proxy handling
+  *  f57725a96a - libgimp: add instance-private struct to all new
+    objects
+  *  96c1f754ba - libgimp: remove a ton of deprecated API that is unused
+  *  96ac0d0802 - libgimp: remove the remining file procedure register
+    API
+  *  e1e048a823 - Issue #3852: Error compilation gimpimagecombobox
+    MSYS2.
+  *  c940ca8f8a - plug-ins: port file-mng to GimpPlugIn and libgmp
+    objects
+  *  7963462429 - libgimp: clean up some warnings when building with
+    MSYS 64bit.
+  *  2599d79292 - libgimp: remove gimp_register_magic_load_handler()
+  *  10b798c198 - plug-ins: port file-dds to GimpPlugIn and libgimp
+    objects
+  *  3d7c044181 - plug-ins: port file-pdf-save to GimpPlugIn and libgmp
+    objects
+  *  2adfa90cc4 - plug-ins: somehow killed file-aa's attribution, put it
+    back
+  *  0b3e02be10 - libgimp: again, redo all APIs returning list of
+    images, items, children
+  *  6391b2bcff - Issue #3263: fix critical error on bucket fill tool.
+  *  72d865daa0 - Updated Slovenian translation
+  *  8b7a2c5012 - Updated Slovenian translation
+  *  087b4ca9c2 - Updated Slovenian translation
+  *  f0ef00b23b - Updated Slovenian translation
+  *  d37fa2d576 - Updated Slovenian translation
+  *  bf79896db1 - plug-ins: port (hopefully) missing Win32 screenshot
+    code.
+  *  18edd41319 - Update British English translation
+  *  7402d5e514 - Update Catalan translation
+  *  6e96490012 - plug-ins: port file-aa to GimpPlugIn and libgimp
+    objects
+  *  0ee329bd44 - plug-ins: port file-gegl to GimpPlugIn and libgimp
+    objects
+  *  5dd8add77a - plug-ins: port file-fli to GimpPlugIn and libgimp
+    objects
+  *  bc1e611bf0 - plug-ins: port file-sunras to GimpPlugIn and libgimp
+    objects
+  *  24af759483 - pdb: update a bunch of docs where s/-1/%NULL/
+  *  13ea5caec2 - plug-ins: port file-openraster to Python 3 + new API.
+  *  ac1c0ae3ce - libgimp, pdb: annotate arguments with none_ok as
+    (nullable).
+  *  74143024a8 - Update Hungarian translation
+  *  b194ce1e07 - Issue #3840: Arch added a mypaint-brushes1 package.
+  *  7bc4e6eb6b - plug-ins: port file-jp2-load to GimpPlugIn and libgimp
+    objects
+  *  a9481d2e43 - Updated Slovenian translation
+  *  8cd5c76cef - Updated Slovenian translation
+  *  b04c96afb3 - Updated Slovenian translation
+  *  72df7883ef - plug-ins: port file-dicom to GimpPlugIn and libgimp
+    objects
+  *  8265cb8f9d - plug-ins: port file-psp to GimpPlugIn and libgimp
+    objects, untested
+  *  cd4fbb6213 - plug-ins: port file-pcx to GimpPlunIn and libgimp
+    objects
+  *  7f65383ad4 - plug-ins: port file-xpm to GimpPlugIn and to libgimp
+    objects
+  *  0ae833b0e0 - plug-ins: port file-tga to GimpPlugIn and libgimp
+    objects
+  *  9847072978 - plug-ins: port file-faxg3 to GimpPlugIn and libgimp
+    objects
+  *  e6322e319c - plug-ins: port file-fits to GimpPlugIn and libgimp
+    objects
+  *  71d56d8e6f - plug-ins: port file-bmp to GimpPlugIn and libgimp
+    objects
+  *  16abb690fd - libgimp: remove gimp_register_file_handler_remote()
+  *  2fd17029f4 - plug-ins: port file-cel to GimpPlugIn and libgimp
+    objects
+  *  44ebcee901 - plug-ins: port file-xwd to GimpPlugIn and libgimp
+    objects
+  *  d7fb408267 - plug-ins: port file-gif-save to GimpPlugIn and libgimp
+    objects
+  *  33d7faf064 - libgimp: don't iterate NULL hash tables in
+    gimp_plug_in_pop_procedure()
+  *  cb01f15f8c - libgimp: gimpexport.c: must not unref proxy objects
+  *  ed041bff39 - plug-ins: port file-html-table to GimpPlugIn and
+    libgimp objects
+  *  5428cc60b0 - plug-ins: port file-header to GimpPlugIn and libgmp
+    objects
+  *  037e8a6e49 - plug-ins: port file-csource to GimpPlugIn and libgimp
+    objects
+  *  55049488dc - plug-ins: port file-pnm to GimpPlugIn and libgimp
+    objects
+  *  56c8735f6f - libgimp: remove gimp_register_load_handler()
+  *  ee5a93f368 - plug-ins: port file-raw-data to GimpPlugIn and libgmp
+    objects
+  *  3636541b42 - plug-ins: port file-webp to GimpPlugIn and libgimp
+    objects
+  *  9f3bc2bd7a - plug-ins: port file-xbm to GimpPlugIn and libgimp
+    objects
+  *  e1c2150f64 - plug-ins: port file-heif to GimpPlugIn and libgimp
+    objects
+  *  23197cfa9b - plug-ins: port file-pix to GimpPlugIn and libgimp
+    objects
+  *  75e708b319 - libgimp: remove gimp_register_thumbnail_loader()
+  *  3bef94d56f - plug-ins: port file-jpeg to GimpPlugIn and to libgimp
+    objects
+  *  18c95e6fac - libgimp: g_object_get() wants a pointer to the
+    variable, gah...
+  *  773586f0c4 - libgimp: make gimpgpparams-body.c identical for app/
+    and libgimp/ again
+  *  7201d48231 - Get rid of capitalized "ID" in function and variable
+    names
+  *  75bf3865b8 - libgimp: memory/lifecycle manage the new libgmp proxy
+    objects
+  *  e3fdf254e0 - Update Swedish translation
+  *  de7447d828 - libgimp: update def files.
+  *  e8bbf42eba - Issue #3841: double mnemonics.
+  *  4942acbc46 - plug-ins: animation-play ported to new
+    GimpImage/Drawable objects.
+  *  753434369b - plug-ins: port file-svg to libgimp objects.
+  *  858ab51f44 - plug-ins: port file-gif-load to new libgimp objects.
+  *  5e87258067 - plug-ins: plugin-browser and procedure-browser don't
+    need porting.
+  *  f9582f1a2f - plug-ins: port file-pdf-load to libgimp objects.
+  *  fe3e945154 - configure,app: depend on babl-0.1.72
+  *  2211e4eb0e - plug-ins: port file-wmf to libgimp objects.
+  *  54dab3285d - plug-ins: update/fix the 3 non-C goat-exercise.
+  *  883fbd7b65 - plug-ins: fixing automake warnings about source in
+    subdirectories.
+  *  a04e287966 - libgimp: fold gimpplugin-private.c into gimpplugin.c
+  *  e1fe044779 - plug-ins: minor follow-up to the icon include fix two
+    commits below
+  *  e146e4747a - plug-ins: port file-xmc to GimpPlugIn and new API
+    objects
+  *  211e5f51a5 - plug-ins: do not #include c autogenerated sources
+  *  3b5bc9f0b7 - gitlab-ci: don't use mypaint-brushes from Archlinux.
+  *  899cf96ec5 - libgimp: make sure gimp_item_get_by_id() allocates the
+    right class.
+  *  2d0584dc91 - plug-ins: port file-psd to GimpImage/GimpDrawable.
+  *  6e68f18685 - plug-ins: port file-ps to GimpImage/GimpDrawable.
+  *  bbf90b3ba5 - plug-ins: port film to GimpImage/GimpDrawable.
+  *  3e06295adf - plug-ins: port pagecurl to GimpImage/GimpDrawable.
+  *  00e750776a - plug-ins: port print to GimpImage/GimpDrawable/etc.
+  *  962e8b995e - plug-ins: port gfig to GimpImage|Drawable.
+  *  7838c7f2b2 - plug-ins: port fractal-explorer to GimpImage|Drawable.
+  *  6db115e475 - plug-ins: unit-editor does not need GimpImage porting.
+  *  e6b141ffe4 - plug-ins: port file-tiff to
+    GimpImage|Drawable|Vectors, etc.
+  *  adc4f8e589 - plug-ins: port mail to GimpImage/GimpDrawable.
+  *  8f34af49b7 - plug-ins: port file-png to GimpImage/GimpDrawable.
+  *  9f0dbb5759 - plug-ins: port screenshot to GimpImage/GimpDrawable.
+  *  0b64395fa6 - plug-ins: port colormap-remap to
+    GimpImage/GimpDrawable.
+  *  1b6e6b9b53 - plug-ins: port file-exr to GimpImage/GimpDrawable.
+  *  3d4bf19bae - plug-ins: port file-sgi to GimpImage/GimpDrawable.
+  *  08849a584c - libgimp: GimpItem now also belong to libgimp.
+  *  d15388c8c9 - libgimp:
+    s/gimp_display_new_by_id/gimp_display_get_by_id/
+  *  cfd30ec62a - libgimp:
+    s/gimp_image_new_by_id()/gimp_image_get_by_id()/
+  *  8559cee053 - plug-ins: improve parameter creation on Python 3 goat-
+    exercise.
+  *  c95e9334d1 - plug-ins: port file-raw plug-ins to
+    GimpImage/GimpDrawable.
+  *  e29cb0329c - plug-ins: port file-compressor to
+    GimpImage/GimpDrawable.
+  *  3e636ba0c6 - plug-ins: port file-desktop-link to
+    GimpImage/GimpDrawable.
+  *  0cb995e8a4 - plug-ins: port file-gih to GimpImage/GimpDrawable.
+  *  d6365c778e - plug-in: port file-gbr to GimpImage/GimpDrawable.
+  *  abd4d6fab8 - plug-ins: port file-pat to GimpImage/GimpDrawable.
+  *  0fa09282f2 - plug-ins: port file-ico to the new
+    GimpImage/GimpDrawable objects.
+  *  7f91f6bc25 - libgimp: GimpImageProcedure now uses
+    GimpImage/GimpDrawable too.
+  *  ee8b467e9f - libgimp: GimpSaveProcedure() now uses
+    GimpImage/GimpDrawable object...
+  *  a1eeca490f - libgimp: support all GimpItem subclasses as argument
+    and return values.
+  *  75f8a3804d - libgimp: nicer API for functions returning a list.
+  *  c409829be5 - libgimp, pdb: no need to create deprecated versions
+    for private API.
+  *  5e6d4d8fbd - libgimp: fix the non-generated API with the new class
+    types.
+  *  8c95499e14 - pdb, libgimp: now make all ID types classes of their
+    own.
+  *  292b697f3e - plug-ins: use GimpDrawable class in Python goat-
+    exercise.
+  *  9b8f6089ce - plug-ins: port JavaScript goat-exercise to new
+    GimpImage API.
+  *  52811edcee - plug-ins: C goat-exercise now ported to new
+    GimpImage/GimpDrawable.
+  *  8249afe2fc - libgimp: allow object GParamSpec for GimpItem and
+    child classes.
+  *  433fcd4334 - plug-ins: ported a few plug-ins to new
+    GimpImage/GimpDrawable classes.
+  *  3f1491e572 - libgimp: update non-generated API using
+    GimpItem/GimpDrawable/GimpLayer.
+  *  79b319cf9d - libgimp, pdb: add GimpItem > GimpDrawable > GimpLayer
+    classes.
+  *  793cba6675 - libgimp: allow object GimpImage as procedure
+    parameter.
+  *  e0d50aa121 - plug-ins: keep building all plug-ins with old API.
+  *  09f0530dab - libgimp: update non-generated API to allow old and new
+    API.
+  *  fec6034c7a - pdb: keep both the old and new API alive.
+  *  17a40b049f - libgimp: generate functions both for old and new
+    GimpImage APIs.
+  *  688c3230d0 - libgimp: create and use gimp_image_new_by_id().
+  *  bb72504ea9 - libgimp: change all non-generated API to use
+    GimpImage.
+  *  4db8cda24e - app, pdb, libgimp: add a new GimpImage class for plug-
+    ins.
+  *  699b3c5c02 - refactoring of the gitlab-ci.yml
+  *  583d965773 - Fix typo in configure warning re: luajit
+  *  115f9fc873 - Remove Bugzilla from the desktop file
+  *  0340c4a904 - libgimp/ documentation typo fixes
+  *  2b310999fc - plug-ins: port file-wmf to GimpPlugIn
+  *  4c3f3c451b - plug-ins: port file-pdf-load to GimpPlugIn
+  *  0f273a5959 - app, libgimp: also UTF-8-validate all elements of PDB
+    string arrays
+  *  6ed2d03c73 - libgimp: use the new macros in all non-generated files
+  *  4cb4b3ef3a - plug-ins: port all plug-ins to the new macros
+  *  09eaf0295a - libgimp: add a gazillion of macros to gimpprocedure-
+    params.h
+  *  1253faaab3 - plug-ins: change all ported thumbnail loaders to
+    GimpThumbnailProcedure
+  *  c4a973c30a - libgimp: add GimpThumbnailProceudre
+  *  fab806089a - app, libgimp: UTF-8 validate all string arguments and
+    return values
+  *  d62e75a41f - Move GimpParamSpecString from libgimp back to app
+  *  de121374ef - Change the "handles uri" flag of file procedures to
+    "handle remote"
+  *  9cabc8c8d0 - libgimp, plug-ins: use the new macros everwhere
+  *  471285bda9 - libgimp: add gimpprocedure-params.h
+  *  64920f01eb - plug-ins: port file-svg to GimpPlugIn
+  *  1e49befef3 - plug-ins: link file-svg against GEGL, it uses it
+    indirectly
+  *  045d03a3de - plug-ins: some very minor style (alignment) fixes.
+  *  4799619bbc - plug-ins: fix various plug-ins ported to
+    GimpImageProcedure.
+  *  5b3e8e1f05 - plug-ins: fix pagecurl arguments order after
+    GimpImageProcedure port.
+  *  011ae15460 - plug-ins: canonicalize curve-bend.
+  *  81bb3237ef - libgimpconfig: add weird hack to
+    gimp_scanner_parse_float()
+  *  b444954d03 - plug-ins: port file-ps to GimpPlugIn
+  *  5a09042b6d - Update Polish translation
+  *  17648ead86 - plug-ins: port file-fig-load to GimpPlugIn
+  *  b250af33e1 - devel-docs: some doc updates
+  *  ea4fe02a6d - libgimpwidgets: some docs fixes
+  *  d7e42b28e3 - libgimp: move the GimpProcedure icon API next to the
+    menu API
+  *  15019fef52 - plug-ins: port many plug-ins from GimpProcedure to
+    GimpImageProcedure
+  *  d89e6ca7e9 - plug-ins: port goat-exercise-c to GimpFileProcedure
+  *  98bfe065e8 - libgimp: add GimpImageProcedure with (run_mode, image,
+    drawable) args
+  *  f480d02823 - libgimp: add precondition checks for
+    gimp_is_canonical_identifier()
+  *  11ce199cea - app: stop canonicalizing procedure names
+  *  b610475122 - libgimp: remove gimp_register_file_handler_priority()
+  *  293d909cf4 - plug-ins: port file-psd to GimpPlugIn
+  *  93cd5b0b29 - Update Korean translation
+  *  f705bfb395 - libgimpbase: return 0 for GIMP_UNIT_PIXEL in
+    gimp_unit_get_factor().
+  *  91bde62b08 - plug-ins: make mail more robust.
+  *  f22290e0a2 - libgimpwidgets: fix a warning.
+  *  9e9e6f0e9a - app: fix a warning.
+  *  515dcbb1ee - libgimp: remove gimp_get_pdb_error()
+  *  dcf648ddad - Update Swedish translation
+  *  253a163c3f - plug-ins: port file-tiff to GimpPlugIn
+  *  a4fb6b9ae9 - Update Swedish translation
+  *  732d7c6a27 - plug-ins: port file-png to GimpPlugIn
+  *  d6b33f9951 - build: .gitlab-ci.yml: GEGL is switching to meson
+    exclusively
+  *  4900dde0dc - gitlab-ci: build with --with-lua=force.
+  *  0abdbebaad - plug-ins: fix and install the Lua goat-exercise.
+  *  bbfa8f8e3e - plug-ins: Lua goat-exercise now showing its own source
+    too.
+  *  a09b7a9c92 - plug-ins: add a Lua goat-exercise.
+  *  ef5c091e58 - plug-ins: add Python and JavaScript files to the DIST.
+  *  1320a22fd8 - libgimpbase: update the def file.
+  *  284ba5c870 - libgimpconfig: Prevent GIR conflicts in
+    GimpConfigWriter
+  *  ebc09985b0 - plug-ins: port file-sgi to GimpPlugIn
+  *  7edd28706f - file-exr: use gimp_pdb_get_last_error() instead of
+    gimp_get_pdb_error()
+  *  c6fa23c22c - plug-ins: port file-exr to GimpPlugIn
+  *  449e84c108 - pdb: use guint for tatoo, guide, sample point, which
+    they are
+  *  0e1f7457b9 - app: s/INT32/INT/ in error messages when installing
+    plug-in procedures
+  *  4fa08458e8 - pdb: remove int16 from the PDB types and rename int8
+    to uchar
+  *  652fd75891 - Rename GIMP_TYPE_INT8_ARRAY to GIMP_TYPE_UINT8_ARRAY
+  *  350abba213 - Remove GIMP_TYPE_INT16 and GimpParamSpecInt16
+  *  5a09523214 - Remove GIMP_TYPE_INT32 and GimpParamSpecInt32
+  *  1bf90ec77f - Remove GIMP_TYPE_INT8 and GimpParamSpecInt8
+  *  1bfa52b692 - libgimp: remove gimp_plugin_icon_register()
+  *  b3a05a9f1d - plug-ins: port colormap-remap to GimpPlugIn
+  *  5c4fa2de51 - plug-ins: port screenshot to GimpPlugIn
+  *  1a5243b34d - Update Catalan translation
+  *  b007269729 - Use g_strlcpy() instead of strncpy() everywhere
+  *  31bee77be9 - libgimp: s/gimpdb-private.h/gimppdb-private.h/
+  *  bb8d18ed39 - plug-ins: port mail to GimpPlugIn
+  *  2cc080cf60 - libgimp, devel-docs: why bother having docs for
+    gimplegacy.[ch]
+  *  f8895f7f22 - Revert "libgimp: gimpdb-private.h was removed."
+  *  e67c922b00 - libgimp: gimpdb-private.h was removed.
+  *  b6ca0c4433 - plug-ins: port unit-editor to GimpPlugIn
+  *  ff5dd3f3cf - plug-ins: port animation-play to GimpPlugIn
+  *  996564116d - libgimp: gimp_pdb_temp_name() can also go, bye...
+  *  6801857b9c - libgimp: remove all support for temp procs from
+    gimplegacy.[ch]
+  *  5b076e990d - libgimp: remove legacy support from
+    gimpbrush,pattern,..select.c
+  *  30c3fd4de5 - plug-ins: port fractal-explorer to GimpPlugIn
+  *  0b5f5bf70a - plug-ins: port gfig to GimpPlugIn
+  *  037421dee0 - plug-ins: port film to GimpPlugIn
+  *  0246f34183 - libgimp: remove some more cruft that is no longer
+    needed
+  *  0bfc4cf7b2 - plug-ins: port all file-raw plug-ins to GimpPlugIn
+  *  aba2eea17c - libgimp: remove gimp_run_procedure() and
+    gimp_destroy_params()
+  *  966c49d08e - plug-ins: remove some crack code from curve-bend
+  *  10f1fcf066 - plug-ins: port file-ico to GimpPlugIn
+  *  29165fde7f - plug-ins: port file-gih to GimpPlugIn
+  *  35fb6ca716 - libgimp: deal with NULL arrays in
+    _gimp_value_to_gp_param()
+  *  91ecb6317a - libgimp: remove more cruft that is now unused
+  *  358bbd932c - plug-ins: port print to GimpPlugIn
+  *  bc5cfaea25 - plug-ins: port file-compressor to GimpPlugIn
+  *  a5cb30173c - libgimp: don't call g_file_new_for_uri() on a path
+  *  7e99aa59f5 - Add other misc. typo fixes
+  *  c1585d609b - Misc typo fixes in plug-ins/
+  *  1577174739 - app: update projection-buffer extent when projectable
+    size changes
+  *  b4ee9ff055 - app: add
+    gimp_tile_handler_validate_buffer_set_extent()
+  *  90610ac87e - app: add gimp_gegl_buffer_set_extent()
+  *  b8ee717269 - libgimp: gimp_procedure_validate_args() support
+    GIMP_PARAM_NO_VALIDATE
+  *  1e717a0dc6 - plug-ins: port file-gbr to GimpPlugIn, and clean up
+    file-pat a bit
+  *  5c30acd5de - app: gimp_procedure_get_arguments(), _return_values():
+    use defaults
+  *  d2add325bb - libgimp: remove more legacy API that isn't used any
+    longer by any plug-in
+  *  298f38434b - app: fix writing of GP_PARAM_DEF_TYPE_FLOAT and
+    _STRING in pluginrc
+  *  12cafbfe6e - libgimp: refer to new API in GimpProcedure docs
+  *  0491f653fa - plug-ins: port help-browser to GimpPlugIn
+  *  21649c5eaa - Issue #3341 - Add Bevel doesn't work for high
+    thickness values
+  *  79d92a5d05 - libgimp: remove a lot of cruft because script-fu is
+    ported now
+  *  103a7e4fc3 - plug-ins: port script-fu to GimpPlugIn
+  *  85d9a291a2 - script-fu: undeprecate slide.scm
+  *  8222d3ffad - pdb: don't pass nodes with parents to
+    gimp_drawable_apply_operation()
+  *  dcb6a2c064 - app: re-use the generated gimp_enums_init() code from
+    libgimp
+  *  3d935b0bb0 - libgimp: don't unref() the GParamSpecs of a
+    GimpPDBProcedure
+  *  42e8a344ab - libgimp: don't use G_IS_FILE() and g_file_get_path()
+    on a NULL GFile
+  *  b33c3086a9 - libgimp: allow to call gimp_procedure_add_menu_path()
+    on installed procs
+  *  9582cf7717 - app: differentiate tooltips of image/layer arbitrary-
+    rotation actions
+  *  76d1ad414d - Update POTFILES.in
+  *  dbeed89858 - libgimp: remove gimp_pdb_dump() and
+    gimp_pdb_proc_exists()
+  *  ae824dcab5 - pdb, libgimp: remove the now unused
+    gimp_pdb_proc_arg() and _proc_val()
+  *  533e947f50 - libgimp: stop using gimp_pdb_proc_arg() and proc_val()
+  *  b35dbf0d77 - libgimp: change the remaining "author" strings and
+    variables to "authors"
+  *  1c9b3c7055 - libgimp: add gimp_pdb_get_last_error() and
+    _get_last_status()
+  *  78c7d46ad9 - devel-docs: update the libgimp docs
+  *  6622cf0dc4 - libgimp: add and fix docs, reorder GimpParamData and
+    remove d_boundary
+  *  7fbf33869c - Update Polish translation
+  *  d067441c31 - libgimp: rename GimpLoad,SaveFunc to
+    GimpRunLoad,SaveFunc
+  *  fc065f8add - pdb, libgimp: add
+    gimp_load_procedure_set_thumbnail_loader()
+  *  84629cc1d0 - pdb, libgimp: move the old file proc registering API
+    to gimplegacy.[ch]
+  *  0477e60200 - libgimp: update gimp.def
+  *  cd836e9d96 - libgimp: add gimp_file_procedure_set_handles_uri()
+  *  f042d21989 - plug-ins: port file-desktop-link to GimpLoadPocedure
+  *  8bff415f59 - app, menus: add "Image -> Transform -> Arbitrary
+    Rotation..." action
+  *  52ad37a2aa - app: use gimp_transform_tool_set_type() in tools-
+    rotate-arbitrary action
+  *  f651db52fb - app: add gimp_transform_tool_set_type()
+  *  e4990bee7b - app: add "Image" transform type to transform tools
+  *  9f823c396a - app: indentation fixes in the transform tools
+  *  6023f97509 - app: use a pickable instead of a drawable in
+    GimpCanvasTransformPreview
+  *  539d666ae2 - app: add gimp_display_shell_show_image()
+  *  c45f1b4148 - app: add gimp_image_transform()
+  *  ae080f06f9 - app: add gimp_image_flip_full()
+  *  d13c6ce3e0 - app: fix sample-point OOB check in
+    gimp_image_resize[_with_layers]()
+  *  c377644ba5 - plug-ins: port file-pat-save to GimpSaveProcedure
+  *  a79eaaf503 - libgimp: add GimpFileProcedure, GimpLoadProcedure and
+    GimpSaveProcedure
+  *  4a56f1d9cc - Update POTFILES.in
+  *  299d657ff1 - libgimpbase: change gimpprotocol GPParamDefInt's
+    members to gint64
+  *  4bafbeca1b - devel-docs: doc updates, more doc modules without any
+    warnings
+  *  e6d662e352 - libgimp*: various doc fixes
+  *  6cb027f402 - devel-docs: update the libgimp docs
+  *  60b6f34737 - pdb, libgimp: fix various doc issues found by gtk-doc
+  *  7e504a0ddd - libgimpconig: fix indentation in gimpscanner.h
+  *  2182efddfb - devel-docs: update the libgimpconfig docs
+  *  b6d39a4f3f - devel-docs: update libgimpbase docs
+  *  ae7dfba2c4 - libgimpwidgets: fix some typos.
+  *  6fe24fcb0b - libgimp: fix missing installed headers.
+  *  1743f474e5 - app/widgets: Use G_DECLARE_INTERFACE()
+  *  d3e9e5617d - app/core: Use G_DECLARE_INTERFACE()
+  *  a0ba37649d - libgimpcolor: colormanaged: Use G_DECLARE_INTERFACE()
+  *  aefb40c82a - libgimpconfig: Ensure G_PARAM_STATIC_STRINGS
+  *  ce6dfd3194 - pdb: fix image-mask transforms
+  *  33a389cd0c - app, pdb: use gimp_item_get_clip() everywhere
+  *  d5cdcc6c02 - app: add gimp_item_get_clip()
+  *  f9fb3e6fad - app: fix layer-mask offset when applying filter to
+    layer without clipping
+  *  ba5a583a5d - gitlab-ci: configure with --with-javascript=force.
+  *  10c10e16b1 - libgimp: add libgimp_built_sources inside
+    libgimp_introspectable.
+  *  c9b22def51 - libgimpconfig: update gimpconfig.def
+  *  354ce5f742 - pdb, libgimp: one more annotation for
+    gimp_enums_get_type_names()
+  *  6d24eb9bb2 - pdb, libgimp: annotate gimp_enums_get_type_names()
+  *  f9f144b4bc - configure: add a check for gjs (JavaScript interpreter
+    with GI binding).
+  *  b1662443af - m4macros, configure: add and use
+    AM_PYTHON_CHECK_PYGOBJECT() macro.
+  *  96a33277d4 - gitlab-ci: configure GIMP with --with-python=force.
+  *  8e938e0960 - configure: also look for pygobject-3.0 runtime
+    dependency.
+  *  c1f28f7e8c - plug-ins: rename the C goat exercise to goat-exercise-
+    c.
+  *  d0be3d3e0c - plug-ins: get rid of getCurrentPath() in goat-exercise-
+    gjs.js.
+  *  9ed4dd5dde - plug-ins: add a goat-exercise-py3.py.
+  *  b45c2a6f78 - libgimpcolor: rudimentary docs for
+    gimp_adaptive_supersample_area()
+  *  9454567e8c - plug-ins: pre-load Babl module in Python console.
+  *  31b8ea4a90 - libgimpbase: add lots of const to GimpEnumDesc and
+    GimpFlagsDesc APIs
+  *  55940b733b - libgimpwidgets: add a GDestroyNotify for
+    gimp_help_connect()'s user_data
+  *  ebddecd696 - libgimpwidgets: more docs and annotations
+  *  4add4c6645 - libgimpbase: add a GimpStringArray typedef and use it
+  *  8f79ddbfe0 - libgimp: add some (nullable) annotation and fix some
+    comments.
+  *  d3d621b502 - libgimpconfig: add a GimpScanner typedef and make it a
+    boxed type
+  *  41fb552988 - libgimp: more docs and annotations
+  *  8cfef5e60d - libgimpwidgets: more docs and annotations
+  *  d28af77fc2 - libgimp: make GimpProcBrowserDialog work both with the
+    old and new API.
+  *  4cef17c7cf - Issue #3758: fixes the build on mingw-w64.
+  *  fd55514416 - plug-ins: eek, twain calls gimp_main() directly
+  *  155bc75a75 - libimp*, app: get rid of inline pixbufs in the API and
+    in pluginrc
+  *  244b52bf0d - pdb, libgimp: make the "pdb" PDB group private
+  *  25ec0a0381 - libgimp: GObject Introspection now depends on Babl-0.1
+    introspected lib.
+  *  6ffd25b9f7 - plug-ins: use new procedure.set_icon_name() in
+    JavaScript demo.
+  *  f49f1b587a - libgimp: improve GimpProcedure icon functions.
+  *  9339741135 - libgimp: unnecessary (out) annotation on return value.
+  *  376552fbfc - libgimp: fix the build.
+  *  2dde79b3e7 - libgimp*: move GObject Introspection into libgimp/.
+  *  16cd3014c8 - Update bug.md
+  *  baf3bfee49 - gitlab-ci: add gobject-introspection dep for babl and
+    gegl
+  *  35ead93a8f - libgimp: simplify gimp_pdb_run_procedure_valist() a
+    lot
+  *  0ac2cf6171 - libgimpbase: some minor improvements to the previous
+    commit
+  *  30d63111c3 - libgimp*, pdb: gimp_value_array_new_from_types*()
+    takes (type, value)
+  *  dd8bf71f96 - libgimp: make "pdb" a construct-only property of
+    GimpPDBProcedure
+  *  88ff7ca258 - plug-ins: nearly-complete goat-exercise in JavaScript.
+  *  f625e2ddfb - menus, plug-ins: move script development related plug-
+    ins in a...
+  *  d156028c8a - libgimp*, app: add the help-id to the wire protocol
+  *  0aa2dcfadb - libgimp: replace gimp_pdb_dump() and gimp_pdb_query()
+    by new API
+  *  00bf76752c - libgimpwidgets: more docs and annotations for
+    GimpUnitComboBox
+  *  5d80b74204 - libgimp: more docs and annotations for GimpPDB
+  *  169f98f915 - libgimpwidgets: add GDestroyNotify to
+    gimp_int_combo_box_connect()
+  *  e1276e2eda - libgimp: help_func is (scope async)
+  *  67455a4ea7 - libgimpwidgets: add GDestroyNotify to all enum widgets
+    callback_data
+  *  6b2624f021 - libgimp: don't connect a NULL destroy notify
+  *  1afb7a8b32 - libgimpwidgets: add GDestroyNotify to
+    gimp_widget_track_monitor()
+  *  b4bccc9808 - libgimpbase: some annotation and doc fixes
+  *  c6bcb3114f - libgimp: add GDestroyNotify for image and item combo
+    box data
+  *  cbefd8e5bb - libgimpwidgets: add GDestroyNotify for
+    gimp_query_foo_box() user_data
+  *  b2582e80f6 - libimp: merge public gimppixbuf functions into
+    gimplayer and gimpdrawable
+  *  c08186e6fe - libgimp*: fix some parameter inconsistencies to
+    silence GI warnings
+  *  f90e19091d - libgimpconfig: make GimpConfigWriter a boxed type
+  *  faf2db71cd - plug-ins: improve Makefile.am of python/ subdir.
+  *  863c0849c8 - desktop, plug-ins, tools: update various .gitignore.
+  *  6584839bf2 - pdb: add "lib_private" on procedures too, to make them
+    private
+  *  e437e00adf - pdb, libgimp: hide gimpunit_pdb.h and gimpplugin_pdb.h
+    from the API
+  *  7f0c801559 - plug-ins: link goat-exercise against GTK
+  *  3f5b435941 - Update POTFILES.in and POTFILES.skip
+  *  39e4aa3c57 - app/core: Use NULL for "simple" signals
+  *  07b7d63a7d - app: limit color-history palette size
+  *  e60829767e - Issue #3718 - Large colorrc file causes lag when
+    painting with a new color
+  *  6ed3b4898c - plug-ins: goat-exercise improved to show a dialog.
+  *  fc620ee67e - libgimp: read and write channel should be boxed
+    properties.
+  *  0ef65bc647 - pdb: move gimp_plugin_set,get_pdb_error_handler() to
+    gimplegacy.[ch]
+  *  1e6abab1d3 - libgimp: name parameters "procedure_name" not just
+    "name"
+  *  6b17c942cf - plug-ins: adding a hello-world plug-in in javascript.
+  *  7b58cb1d28 - libgimp: move most old gimp_pdb functions to
+    gimplegacy.[ch]
+  *  64d880f1fe - libgimp: add gimp_pdb_temp_procedure_name() and hide
+    the PDB wrapper
+  *  2599c6e071 - libgimp: add some const to input parameters, like
+    const GimpValueArray*
+  *  fc33489223 - plug-ins: move goat-exercise to a goat-exercises/
+    directory.
+  *  877a116667 - libgimp: fix typo in G_OS_WIN32 code
+  *  500a840f50 - libgimp: forgot to add gimplegacy-private.h
+  *  3a943f4853 - po-python, po-script-fu: update for new python plug-
+    ins
+  *  f16ad87f2d - plug-ins: add .gitignore files.
+  *  cc5e9240d2 - libgmp: move the remaining legacy code to gimplegacy,
+    even PLUG_IN_INFO
+  *  3c001a6123 - libgimp: separate legacy from GimpPlugIn wire
+    communication
+  *  caa61eef4f - libgimp, pdb: remove gimp_run_procedure_with_array()
+    from gimp.[ch]
+  *  c2e5374845 - pdb, libgimp: make all PDB wrappers use GimpPDB to run
+    procedures
+  *  9a027140c8 - libgimp: add read- and write-channel construct
+    properties to GimpPlugIn
+  *  c65b507416 - Update Russian translation
+  *  b20aab0236 - libgimp: add annotations to
+    gimp_pdb_run_procedure_array().
+  *  d6d987ebac - plug-ins: port plugin-browser to GimpPlugIn
+  *  84cb07f995 - libgimp: add more comfortable ways to run procedures
+    to GimpPDB
+  *  8860d78979 - libgimp: more progress on the GimpPDB object
+  *  bfda31a67e - configure: fix the Python checks.
+  *  079027fd03 - m4macros: fix python3dev.
+  *  dc8f9dd168 - plug-ins: add interactive run mode for palette-offset.
+  *  d8640d5b59 - plug-ins: port procedure-browser to GimpPlugIn
+  *  61c11b04c1 - m4macros: Windows may have a versioned directory for
+    headers.
+  *  4d74452444 - fix gtk version
+  *  468276e4d2 - pdb: remove the section docs from unit.pdb
+  *  05baadcd1d - pdb: rename the "procedural_db" PDB group to just
+    "pdb"
+  *  450a9f90b4 - libgimp: add a GimpPDB class and subclass
+    GimpProcedure as GimpPDBProcedure
+  *  82ada55b99 - plug-ins: port palette-offset to Python 3.
+  *  dca353f8cd - plug-ins: port palette-offset to new API.
+  *  35d4b68edc - plug-ins: add a "palette" argument to palette-to-
+    gradient.
+  *  718941a567 - Update Esperanto translation
+  *  17eb4c551f - Revert "libgimpbase: fix/improve docs/annotations."
+  *  eacda4bb50 - libgimp: remove includes and add "Since: 3.0" in
+    gimpprocecure.c
+  *  eaefe4f9d9 - libgimp: fail gimp_procedure_new() on non-canonical
+    procedure names
+  *  2f3a83754f - libgimpbase: add gboolean
+    gimp_is_canonical_identifier()
+  *  550ec68cff - libgimp: reorder functions and members of
+    GimpProcedure
+  *  e93a20e7ac - Issue #3112 - Missing mnemonics.
+  *  6cf1ec8200 - libgimp: separate more new from old code by
+    duplicating more logic in GimpPlugIn
+  *  814ff02ab4 - INSTALL: add GObject Introspection dependencies.
+  *  ddd726e253 - libgimpwidgets: add some annotations.
+  *  c90287ecf5 - Issue #3746: Problem with automake creating
+    directories $(top_srcdir).
+  *  4a6b58507b - libgimp, libgimpmath, libgimpwidgets: update def
+    files.
+  *  f4f63dad9c - libgimpmath: remove gimpmath.h from introspection.
+  *  fead2f7d9d - libgimpbase: fix broken annotation.
+  *  d999248d70 - libgimpbase: fix/improve docs/annotations.
+  *  aa6a1d369c - plug-ins: use GtkSettings values to determine whether
+    to use header bar.
+  *  f4b2cda964 - Issue #3753 - Gimp master don't build on mingw-w64
+    errors on...
+  *  d5fbbf3f49 - libgimp: #include <sys/types.h> in gimp-debug.c
+  *  254271971e - libgimp*: more docs and annotations
+  *  515bfe94e3 - libgimpbase: add annotations to several functions.
+  *  c6236ac140 - pdb, libgimp: more docs and annotations
+  *  0af32861e7 - plug-ins: GimpProcBrowserDialog with "use-header-bar"
+    in Python-console.
+  *  a76c9305bb - libgimp: run the first search of GimpProcBrowserDialog
+    in init().
+  *  acbe229427 - libgimp: make gimp_proc_view_new() show both new- and
+    old-style args
+  *  6c18492668 - app, libgimp: support GParamParam as a GParamSpec
+  *  7764f8b34b - libgimpbase: add support for GParamParam in GPParamDef
+    too
+  *  a6516e5097 - app, libgimp: support GParamUInt on the wire
+  *  8f828d1899 - plug-ins: WebP: save_dialog() before gimp_export()
+  *  9969dd8b03 - authors.xml: add Niels De Graef
+  *  c8f38810d1 - pdb: add gimp_procedural_db_proc_argument() and
+    _return_value()
+  *  aa505b43dc - app, libgimp*: add protocol support for GValues
+    holding a GParamSpec
+  *  e77382ee75 - docs: Fix warnings for annotations
+  *  32823f1709 - libgimpbase: reorder types and structs in
+    gimpprotocol.h
+  *  21d63d6c65 - pdb: fix the names of the oilify compat PDB wrappers
+  *  8c1a43dff7 - libgimp: move the debug code to new private files gimp-
+    debug.[ch]
+  *  a74f4de81e - libgimp: some random minor cleanups
+  *  888c42fbb8 - libgimpbase: remove the gimp protocol mutex and
+    gp_lock()/gp_unlock()
+  *  5ac8b70e47 - pdb: generate the (array length=foo) annotation with
+    less hacks
+  *  360314eda7 - pdb: fix generation of "Returns:" to not line-wrap
+    annotations
+  *  3f5595aadc - Update German translation
+  *  1c317a739b - libgimp: forgot to actually add gimp-shm.[ch]
+  *  ca1cb056fc - libgimp: move the shm code to new private files gimp-
+    shm.[ch]
+  *  454822e58f - data: add python.env to set up the GI_TYPELIB_PATH to
+    Gimp-3.0.typelib
+  *  d34bc03229 - libgimp: don't leak the temp callback name in the data
+    select impls
+  *  fad59611bc - libgimp: port gimpprogress to the new plug-in API,
+    untested
+  *  026cc0f149 - libgimp: fix s/m_float/m_enum/ for
+    GP_PARAM_DEF_TYPE_ENUM.
+  *  89feeecc96 - libgimp: make GimpFontSelectButton interpret NULL as
+    the current font
+  *  ae7fa2a1de - libgimp: clean up the instance private code in all
+    select buttons
+  *  b6033684ff - plug-ins: add all brush, pattern etc. select buttons
+    to pagecurl
+  *  6e80a2324f - libgimp: port gimp*select.[ch] to the new plug-in API
+  *  224af7e42f - Update Polish translation
+  *  1661aab620 - plug-ins: link dds plugins against libm
+  *  0f8747f10a - app: avoid GIMP_TYPE_INT32 with
+    gimp_pdb_execute_procedure_by_name()
+  *  4962428440 - app: relax GIMP_TYPE_INT32 checks in
+    gimp_pdb_execute_procedure_by_name()
+  *  c822350fb3 - plug-ins: forgot to change run() signature to new API
+    in python-console.
+  *  cc8fc0f90f - libgimp*: add GI's .dirstamp to .gitigore
+  *  9549be2539 - libgimp: kill the plug-in when old API is used while a
+    GimpPlugIn exists
+  *  529aa743dd - Start using g_object_notify_by_pspec()
+  *  910828bf51 - app: better error reporting in
+    gimp_pdb_dialog_run_callback()
+  *  38089bb61f - libgmp: more useless includes
+  *  e705ab050e - libgimp: remove useless includes
+  *  eaf5c792bf - plug-ins: port pagecurl to the new API, to have a GUI
+    plug-in to test
+  *  20d04e029f - app, libgimp: support normal GParamInt for plug-in
+    procedures
+  *  5b8deb68b4 - libgimp: make sure GimpProcedures always get all their
+    arguments
+  *  5cd09366e1 - libgimp: fix gimp_procedure_add_*_from_property().
+  *  ad8dcff199 - libgimp: add _gimp_plug_in_read_expect_msg()
+  *  3dd79f42c3 - Revert "libgimp: move _gimp_read_expect_msg() back to
+    gimp.c"
+  *  992f4b0e8a - libgimp: add gimp_get_plug_in() which returns the
+    GimpPlugIn singleton
+  *  5f92ced1f3 - Add (nullable) if applicable
+  *  1dda60154c - Use "Returns:" to annotate return values
+  *  746a72b956 - Make sure to use % for constants
+  *  b6e6f0b71b - libgimp: gimplegacy not introspected anymore.
+  *  58b3ca816a - plug-ins: port python-console to new API.
+  *  6a1df5be31 - libgimpwidgets: fix a copy-paste bug in function docs.
+  *  04598b1522 - plug-ins: use new gimp_procedure_add_*_from_property()
+    in Python.
+  *  2c4a8c89ed - libgimp, app: allow usage of GParamSpecString
+    procedure arguments.
+  *  0787510810 - libgimp: add
+    gimp_procedure_add_(argument|return_value)_from_property().
+  *  95429ad704 - Issue #3723 - Symmetry Painting with random colour
+    isn't symmetrical
+  *  219fa33eb2 - libgimp: create the GimpPlugIn much later in
+    gimp_main_internal()
+  *  a50069e176 - libgimp: change the return values of
+    GimpPlugIn::init_procedures()
+  *  e3374e7d4e - libgimp: make gimp_close() static to gimp.c again
+  *  05d47f197a - build: require babl-0.1.70
+  *  366047f423 - libgimp: move _gimp_read_expect_msg() back to gimp.c
+  *  856fe16070 - libgimp: add _gimp_plug_in_run() and copy the main
+    plug-in loop to GimpPlugIn
+  *  bc7b358802 - libgimp, plug-ins: remove n_procedures from
+    (init|query)_procedures().
+  *  3945701bd6 - plug-ins: localization calls must happens inside
+    query().
+  *  ed619d9ebd - libgimpbase: add documentations on gimpparasite public
+    functions.
+  *  1e2efcf95e - libgmp: reorder GimpPlugIn's query(), init(), quit()
+  *  5f8d0ef27b - libgimp: add gimp_plug_in_extension_enable() and
+    _extension_process()
+  *  19fbb1d9a8 - libgimpwidgets: add documentation for many functions
+    and fix...
+  *  3a4b17e8b5 - libgimpmath: make GimpVector[23] boxed types.
+  *  0411c7ef97 - libgimp: fix some annotations.
+  *  512d2279af - libgimp: fix various docs typos or small errors.
+  *  17667b7ddf - plug-ins: start porting palette-to-gradient to new
+    GimpPlugIn API.
+  *  ed86de48d2 - app, libgimpbase: s/author/authors/ here too
+  *  f86279fd1f - libgimp: more GimpPlugIn and GimpProcedure docs and
+    annotations
+  *  0bec2bcdec - libgimp: add gimp_procedure_set_menu_label() and
+    _set_documentation()
+  *  d1d56f136e - libgimp: set a procedure's arguments and return values
+    to defaults
+  *  b511cf34cf - libgimp: add gimp_procedure_set_attribution()
+  *  53ca87d693 - libgimp: cleanup and more docs for GimpProcedure
+  *  82afcf5c85 - plug-ins: help: use gimp_procedure_extension_ready()
+  *  eaec9443c3 - app: in GimpFilterTool, add "clipping" option
+  *  b7f53262fc - app: add gimp_drawable_filter_set_clip()
+  *  89a9cf7e49 - app: add "clip" parameter to
+    gimp_drawable_merge_filter()
+  *  35729ee02a - app: in gimp_gegl_apply_cached_operation(), copy
+    cached result *before* rejigging graph
+  *  998f89e3cb - app: in gimp:replace, implement
+    GeglOperation::get_bounding_box()
+  *  89c97bcf26 - app: in gimp:layer-mode, implement
+    GeglOperation::get_bounding_box()
+  *  9900fb74f2 - app: in gimp:mask-components, implement
+    GeglOperation::get_bounding_box()
+  *  332f662cda - app: in gimp:compose-crop, fix x/y properties lower
+    bound
+  *  ad1f3d20fb - app: calculate bounding box of group layers
+  *  8ff43942d6 - app: add support for projectables with an arbitrary
+    bounding box
+  *  7a05d15f7e - app: implement GimpDrawable::get_bounding_box() for
+    GimpLayer
+  *  153cb33eec - app: maintain drawable bounding box separately from
+    its logical boundary
+  *  3afdd7c5c2 - app: in GimpDrawable::set_buffer(), take bounds rect
+    instead of offset only
+  *  0601b7f9a8 - libgimp: add gimp_procedure_extension_ready()
+  *  a841e0fb06 - libgimp: add gimp_procedure_set_image_types()
+  *  e0a6eb38da - libgimp: add run_data and run_data_destroy parameters
+    to procedure_new()
+  *  71d0251d2c - app: do not assume procedures always have a run mode.
+  *  c059839e78 - libgimpbase: use g_try_new0() when allocating the
+    parameters.
+  *  0cfaeb7a90 - pdb: remove the section docs for the plug-in group
+  *  67a0451ac5 - libgimp: transfer ownership of @error parameter to...
+  *  254dee3b11 - devel-docs: update the libgimp docs
+  *  c9d6f93188 - devel-docs: update the libgimpbase docs
+  *  c12c031f2d - pdb, libgimp*: add (out caller-allocates) to all
+    GimpRGB* return values
+  *  bdac38a854 - libgimpwidgets: add and fix some annotations
+  *  ea53089545 - libgimpwidgets: add a bunch of missing (transfer)
+    annotations.
+  *  9926e3fd96 - app: forgot to add support for GP_PARAM_DEF_TYPE_UNIT
+    to plug-in-rc.c
+  *  498d478b61 - libgimp: fix annotation for
+    gimp_procedure_add_argument()
+  *  bbf4270437 - libgimpcolor: fix "Since:" on
+    gimp_param_spec_rgb_get_default()
+  *  d66b845bac - libgimpbase: capitalize some docs section titles
+  *  0ec7534607 - devel-docs: update the libgimpcolor docs
+  *  acf36738b6 - devel-docs: update the libgimpbase docs
+  *  0ccb40f89b - pdb, libgimp: hide more functions that have new API in
+    gimplegacy.[ch]
+  *  1627aacaa5 - libgimp, libgimpbase: add some documentation for new
+    functions.
+  *  e7f041492a - libgimpwidgets: fix a doc glitch in GimpStringComboBox
+  *  83ecbc8e39 - libgimpwidgets: fix GimpScaleEntry annotations
+  *  1099d609af - libgimpmodule: annotate one function, now warning-free
+  *  3016dfb347 - libgimpwidgets: add many missing (transfer)
+    annotations.
+  *  6fe2508301 - libgimp*: fix various missing (transfer) annotations.
+  *  8c978f4301 - libgimpcolor: some more (transfer) annotations.
+  *  f7fbdc89b1 - libgimpwidgets: add a bunch of (transfer) values.
+  *  ac0c3cf532 - pdb: remove some formerly manually added annotations.
+  *  a87104fffb - pdb, libgimp: fix missing colons at end of
+    annotations.
+  *  05e68da4d4 - pdb, libgimp: add (array length=foo) annotations for
+    out args
+  *  a40f139fdc - pdb, libgimp: annotate input arrays with (array
+    length=foo)
+  *  e73916eab8 - pdb, libgimp: annotate input arrays with (element-type
+    foo)
+  *  1ab62fa220 - po-plug-ins, po-python: skip/add new python plug-in
+    files.
+  *  4a0f60d265 - libgimp: fix GimpPlugin virtual method documentation.
+  *  f02a218356 - pdb, libgimp: add (out) annotations to everything
+    returned via pointers
+  *  e8c6ab7ce9 - pdb: add (element-type foo) annotations to all
+    returned arrays
+  *  5b6cfd9863 - pdb, libgimp: generate (transfer full) annotations for
+    libgimp
+  *  1291769cc7 - libgimp: some fixes in GimpPlugin.
+  *  cd1ba1cd17 - pdb, libgimp: add proper support for multiline section
+    comments
+  *  076fc4ed23 - Update Catalan translation
+  *  32c6c2ae43 - libgimp: add some annotations.
+  *  826c09b629 - libgimp: keep gimplegacy as introspectable, at least
+    temporarily.
+  *  63695b4b21 - libgimbase: merge gimpparam.h into gimpparamspecs.h
+  *  16043cec5e - Revert "pdb, libgimp: append _pdb for gtk-doc SECTION
+    names of pdb files."
+  *  c4ff1d085a - Update Spanish translation
+  *  a198b5a948 - libgimpwidgets: fix annotation.
+  *  833666d462 - pdb, libgimp: append _pdb for gtk-doc SECTION names of
+    pdb files.
+  *  8c4f73df8d - app, libgimp: add copyright notices to the new stuff,
+    minor cleanup
+  *  7dec3aa792 - libgimp: move gimp_plugin_icon_register() to
+    gimplegacy.[ch]
+  *  7201be78d9 - libgimp: add gimp-private.h for private stuff shared
+    between files
+  *  c1499f873e - libgimp: move more stuff to gimplegacy.c
+  *  a42cb8051e - libgimp: forgot the disable-single-include guard in
+    gimplegacy.h
+  *  6f8e063bbb - libgimp: reindent gimp.h
+  *  e9c0732595 - libgimp: move old plug-in and procedure
+    registering/calling code to gimplegacy.c
+  *  7b7c518782 - libgimp: move the old plug-in and procedure api to
+    gimplegacy.h
+  *  6a0ef1f7fe - plug-ins: help: remove the temp proc using new API
+  *  46cacb5ebd - plug-ins: help: use new API to call the help browser
+  *  941165961d - plug-ins: port help to the new plug-in API, to test
+    temp procs
+  *  1c650801e8 - plug-ins: follow gimp_procedure_new() API change in
+    goat-exercise
+  *  d64c0ebd30 - libgimp: change GimpPlugIn and GimpProcedures so temp
+    procs work
+  *  0a02855a59 - Revert "pdb, libgimp: fix some annotations in gimp.c
+    and gimp_pdb.c."
+  *  b687f111f6 - pdb, libgimp: fix some annotations in gimp.c and
+    gimp_pdb.c.
+  *  2331b88d7d - app: fix #include in gimpdrawable.c
+  *  fb679f9efa - app: guarantee fully-COWed copies in more cases in
+    paint code
+  *  2d80d4d138 - app: use gimp_gegl_buffer_dup() everywhere
+  *  5798cefe1b - app: add gimp_gegl_buffer_dup()
+  *  69ce5e7e02 - app: in gimp_gegl_buffer_copy(), allow tiles outside
+    the abyss to be COWed
+  *  ab94251ae9 - app: remove gimp_gegl_rectangle_align_to_tile_grid()
+  *  1e10cfc53f - plug-ins: register an icon for goat-exercise
+  *  7a9e0d984e - libgimp: add more registering API to GimpPlugIn and
+    GimpProcedure
+  *  a001ce29a5 - build: .gitlab-ci.yml: change babl build to meson
+  *  271c656e2d - pdb, libgimp: fix enum type generation in the libgimp
+    PDB wrappers
+  *  a47789fcb8 - plug-ins: and in ifs-compose too...
+  *  2d471ce049 - libgimpconfig: fix float parsing in
+    gimp_config_deserialize_fundamental() too
+  *  84ff060ffa - libgimp: GValue of type GEnum not possible.
+  *  67f33cb6ec - plug-ins: add button mnemonics.
+  *  c0fb66254e - Use g_ascii_dtostr() instead of g_ascii_formatd()
+  *  82cfa9c25f - libgimpwidgets: fix annotations in GimpDialog.
+  *  e36028d2ac - app, libgimp, libgimpbase: forgot to support
+    GIMP_TYPE_UNIT on the wire
+  *  65a8ae2c91 - libgimpbase: make the GimpParamSpecUnit struct public
+  *  82dd46580b - app: use g_ascii_dtostr() in plug-in-rc.c it's locale-
+    independent
+  *  2c97bc8327 - libgimpconfig: make gimp_scanner_parse_float() less
+    strict
+  *  f1351df9eb - plug-ins: replace
+    set_alternative_button_order_from_array() by the...
+  *  9691d73058 - libgimpwidgets: make a proper function out of the
+    macro...
+  *  62d87f15d9 - plug-ins: port python-console to new GObject-
+    introspected API.
+  *  afe0bcbc58 - libgimpwidgets: introspect libgimpwidgets.
+  *  1a8d300994 - pdb: remove an obsolete snippet from lib.pl
+  *  af5c587e21 - pdb, libgimp: port lib.pl to the new GType based
+    libgimp API
+  *  a0ee939dff - pdb: "gtype", "dup_value_func" and "take_value_func"
+    to all PDB types
+  *  ee0b06cbf1 - libgimp: remove all validation code from
+    gimp_value_set_foo_id()
+  *  e9443b2561 - libgimpbase: add gimp_value_array_new_from_types()
+  *  9e50f1ed8f - libgimpbase: NULL-terminate the result of
+    gimp_value_dup_string_array()
+  *  aab75bb1d0 - plug-ins: install the pygimp.interp file.
+  *  9e844ae1d7 - app: when interpreter not found in interpreter DB,
+    leave shebang as-is.
+  *  9a547c14d5 - libgimp: add preliminary function
+    gimp_run_procedure_with_array()
+  *  39ee40b1f0 - libgimp: pass the GimpValueArray to
+    gimp_set_pdb_error()
+  *  0402313e60 - libgimp: forgot to enable one commented-out
+    gimp_value_array_unref()
+  *  0a6f157d58 - app, libgimp, libgimpbase: big plug-in API refactoring
+    part three
+  *  f74320d4dc - Makefile: libgimpui also introspected.
+  *  404ab1da46 - po-python: deactivate pot generation on VPATH builds.
+  *  732852a471 - build: adding a .gitlab-ci.yml file for automated
+    GitLab pipeline builds
+  *  41d3b478a2 - configure.ac:
+    s/GOBJECT_INTROSPECTION_CHECK/GOBJECT_INTROSPECTION_REQUIRE/
+  *  c63ae2f945 - plug-ins: one more missing backslash.
+  *  ee4e9bfee5 - plug-ins: missing backslash broke EXTRA_DIST.
+  *  7e23ed454a - libgimp: fix gimp.def.
+  *  94b7348777 - tools: port defcheck.py to Python 3.
+  *  f049267f15 - m4macros: fixing Makefile.
+  *  0f0cf4df87 - po-python: install again localization for Python plug-
+    ins.
+  *  7444b8eb9c - libgimpthumb: do not scan gimpthumb-enums.c for
+    introspection.
+  *  01e958422b - libgimpthumb: argh! Copy paste error which broke the
+    build.
+  *  ebc797a64e - libgimp: update gimp.def.
+  *  65fb7536e1 - plug-ins: port Python plug-in palette-to-gradient to
+    introspected API.
+  *  521ff83cba - configure: some Python test cleanup/improvements.
+  *  872aa50c56 - Re-enable Python in the build, but requiring Python
+    >3.6.0 since...
+  *  6b442a1ba3 - app, pdb, libgimp: fix annotations of some PDB
+    functions.
+  *  3a9ae8cc69 - libgimp: API to create GimpParam from values.
+  *  624d091887 - libgimpbase: use _gimp_write_read_color() and
+    _write_color()
+  *  32ea28b6b1 - app, libgimp, libgimpbase: plug-in and PDB protocol
+    refactoring part two
+  *  83d485d9c6 - Update Catalan translation
+  *  5a500b4a12 - app: use longer iteration inteval (= bigger chunks)
+    when applyng an op
+  *  f6c4e4912a - app: add gimp_gegl_node_is_area_filter_operation()
+  *  a1f676aabd - app: in the gradient tool, set the graph's underlying
+    node
+  *  ab6783902e - libgimpbase: more (transfer) and (element-type)
+    warnings fixed.
+  *  74a0da9aa0 - libgimpconfig: fix a few more warnings.
+  *  4e99c25902 - libgimpconfig: fix introspection in gimpcolorconfig.c.
+  *  c67fa791be - GOI: add more introspected libraries as dependencies
+    to ours.
+  *  fb4c86a660 - libgimp*: make more libgimp* libraries introspected.
+  *  3597e92a20 - libgimpcolor: add gimp_param_spec_rgb_get_default()
+  *  597f3e0916 - Update Polish translation
+  *  a375a744c7 - Update Catalan translation
+  *  2e03300eb7 - desktop: new <release> appdata tag for GIMP 2.10.14.
+  *  0093487d33 - libgimp: include the new file in gimp.h
+  *  427b01a634 - libgimp: add GType and GParamSpec types for all IDs,
+    like image, drawable
+  *  d74ae12781 - app: oops these two files were not meant to be pushed
+    just yet
+  *  76ee0f6559 - app, libgimpbase: move lots of GValue and GParamSpec
+    types to libgimpbase
+  *  5c7134f3a5 - app, pdb: rename GIMP_TYPE_COLOR_ARRAY to
+    GIMP_TYPE_RGB_ARRAY
+  *  6cb8a59501 - app: fix gimp_value_set_drawable(), set_channel()
+  *  4a5f0508e9 - libgimp: remove GimpParamRegion, it was never used
+  *  8a462e867d - libgimp: add a GimpProcedure class
+  *  f2d399b17b - libgimp: add initial version of a GimpPlugIn class
+  *  771d415b5f - app: rename "On color" matting preview mode to
+    "Color".
+  *  e7af081b05 - libgimpbase: fix docs of struct
+    GimpParamSpecValueArray
+  *  c20645054c - libgimp: update annotations for
+    gimp_install_procedure() and...
+  *  74c69ae3c2 - libgimp: update the def.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 23 Feb 2020 21:45:44 +0300
+
 gimp-gtk3 (2.99.0+git43671-febc1a843d-1) unstable; urgency=medium
 
   * Compile

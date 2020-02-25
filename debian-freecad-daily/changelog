@@ -1,3 +1,254 @@
+freecad-daily (0.18.3+git19694-288456ee4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 288456ee4beb9e8dc27d50a7984c40c45467161f
+  * Date: 1582304458
+  * git changelog:
+  *  288456ee4 - [FEM] fix special Dlg issue with deletion
+  *  3574182c1 - TaskFemConstraintForce.ui: add tooltips and remove
+    unnecessary spacer
+  *  6cc0e3580 - [FEM] fix direction handling in Force dialog
+  *  361acd5a8 - [PD] enable selection of fillets etc. using arrow keys
+    in Dlg
+  *  f14beae5d - FEM: commands, add some comments
+  *  edc134ce4 - FEM: code improvement in command manager
+  *  39402958b - FEM: code formating
+  *  f4dcd0a5f - Cloud: [skip ci] add build option to compile Cloud
+    module
+  *  a3bf3d194 - Mesh: add gmsh for remeshing a mesh created from CAD
+  *  274b74b30 - FEM: pep8
+  *  de517b6e9 - FEM: Add ElectricInfinity- and CapacitanceMatrix-
+    boundary condition for Elmer
+  *  325b31aae - FEM: change behavior of Force dialog to the one of all
+    other constraint dialogs
+  *  4db7fc91e - [TD]fix application of SectionLine preference
+  *  d0f749b56 - FEM: result task panel use single quotes instead of
+    double ones
+  *  eb014166a - FEM: result task panel, pep8
+  *  97fed2998 - FEM: result obj, pep8
+  *  b34f0aef3 - App/Gui: implement a lightweight weak_ptr like class to
+    work with Document, DocumentObject and ViewProvider
+  *  e3b5b0b17 - [Part]Handle CJK font names for ShapeString
+  *  66c1bfdd9 - FEM: writer base, add some comment for elemnt faces
+    constraints
+  *  0e3701180 - FEM: constraint tie, get the faces data in writer base
+    class
+  *  4fcf01991 - FEM: constraint tie, add input file writing unit test
+  *  6b2720f67 - FEM: constraint tie, add example
+  *  c3864c16f - FEM: constraint tie, add Gui command, icon, implement
+    task panel
+  *  0bd03643f - FEM: constraint tie, implement object and ccx writer
+  *  66e8e2949 - FEM: member tools, comment fix
+  *  92463075b - Part: add script to create the primitive shapes
+  *  389b26c48 - PartDesign/Fem: [skip ci] when handling Del key make
+    sure that deleteAction is instantiated
+  *  97de09ad6 - [FEM] add shortcut to delete constraints from list in
+    dialog
+  *  d4d4998f7 - FEM: result task panel, comment
+  *  e4cdb2fcc - FEM: ResultMechanical add migration code f0r old result
+    objects Stats containing (min, avg, max) converted to (min, max) Add
+    Messagebox if histogram requested, but not available
+  *  453370795 - FEM: solver writer, use member class as parameter for
+    writer class instaed of all separate fem objs
+  *  822832e67 - FEM: member tools, pep8 and a comment
+  *  5bafb18a7 - FEM: solver writer and tasks and ccx tools, use a new
+    member class to collect the analysis member
+  *  1752a947a - FEM: new member tools, move some analysis member
+    methods from utils
+  *  19148d305 - PartDesign: [skip ci] add missing header
+  *  cc3b21fa0 - improve code as suggested by Werner
+  *  69f97014e - [PD] missing changed from commit d4be4a02
+  *  62808e95f - Turn SEH on Win, let FreeCAD crash during tests
+  *  84229b430 - Gui: [skip ci] correctly set size when selection
+    resolution of 10000 x 10000
+  *  a5ecaf1a7 - Gui: [skip ci] most of the resolutions shouldn't be
+    marked for translation
+  *  c4d98d410 - FEM: code formating, pep8
+  *  a2249c3c6 - FEM: adapt unit tests on deleting of avg values
+  *  c2a57b3e4 - FEM: result task panel, Histograms added to result
+    object instead of average stats values
+  *  bf9e646eb - [TD] LeadlerLine dialog beautifications
+  *  119a12aa0 - FEM: result task panel, add comment to equation
+  *  7f7693866 - FEM: unit tests, fix comments
+  *  fc9c8a4fe - FEM: elmer writer, fix by HoWil
+  *  01e8e7f77 - try to squash GCC compile error
+  *  b86d97b9b - catch case that users tries to delete all items in the
+    dialog list
+  *  316a8840b - remove unnecessary code and comment
+  *  0a7d82b0b - enable selection in the dialog item list
+  *  702b37aa0 - improve fillet dialog logic
+  *  757cfce10 - conda: fix conda build failure because
+    CMAKE_SYSTEM_PROCESSOR is not defined
+  *  71ce2156f - Part: [skip ci] simplify using Wire.approximate() by
+    supporting keyword arguments and making all arguments optional
+  *  48744aa9b - Part: [skip ci] check for mults of inner knots when
+    creating B-Spline curve/surface
+  *  9cefd8858 - Part: [skip ci] fix crash in
+    BRepOffsetAPI_MakeOffsetFix
+  *  45d9660f9 - [PD] rename buttons
+  *  983baa782 - FEM: typos in comments
+  *  b7d8e98bf - FEM: replace fem utils method with FreeCADs obj method
+  *  d0f0ad2a0 - Path: Added option to select direction (CW, CCW) in
+    Deburr Op
+  *  7aad85e9c - PartDesign: [skip ci] workaround for ambiguous Delete
+    key event
+  *  a8bf9bb06 - FEM: delete not needed imports
+  *  3d8c040ef - FEM: tokes module, some but not all pep8 codeformating
+  *  97ee30df0 - FEM: code formating, python
+  *  3e292813f - FEM: solver frame work tasks container, do not collect
+    mesh
+  *  db6aa7c83 - FEM: solver frame work, better error handling on run
+    button
+  *  acaeaf9ad - FEM: solver frame work task panel, add space to error
+  *  1c8d0d1d8 - Base: [skip ci] support of __round__ of QuantityPy
+  *  177afc7b9 - PartDesign: [skip ci] fix possible segmentation fault
+    in destructors of dressup task panels
+  *  a7589418a - FEM: elmer writer, potential could be 0.0
+  *  e8417c626 - [TD]fix LL edit when no MDI
+  *  3988824b6 - [TD]fix RTA edit when no MDI
+  *  d0215f763 - [TD]fix variable name
+  *  1c276115c - [TD]use "continuous" for solid lines
+  *  17bad8504 - PartDesign: [skip ci] do forward declaration if
+    possible to reduce build timw
+  *  a2eecf305 - TaskDressUpParameters: GCC compile fix
+  *  d40eb2dbf - [PD] add feature to highlight references in some
+    dialogs
+  *  a76bc63e4 - Draft: angle dimension icon saved as plain SVG
+  *  0bef3cdee - Patch for MIPS64 Architecture
+  *  5f7856df1 - add file info to the FreeCADCmd.exe
+  *  9985ec6d2 - delete very outdated manifest files
+  *  62251e3b3 - Get cmake to find pythonlibs 3.x when python 2.7 is
+    present
+  *  88d1dbb64 - Gui: block more events when ProgressBar is shown
+  *  91f8c84cd - Fem: [skip ci] activate expression parser and disable
+    call of eval()
+  *  5aa15e7d7 - [PD] spread the fix from commit fa963d36d1 to 3 other
+    affected dialogs
+  *  fa963d36d - PartDesign: add/remove features to list view in linear
+    pattern panel
+  *  902cd411f - Gui: [skip ci] add user option to disable to open a
+    transaction on manual document recompute
+  *  802ca4e0c - Draft: new view provider icon for the angle dimension
+  *  eab48f615 - [skip ci] Preferences names or paths must not be set to
+    translatable strings!
+  *  5e08ba54c - FEM: mechanical result object, add comment
+  *  f192ac8ea - FEM: Migrate older result objects FemResultMechanical
+    due to renaming property "StressValues" to "vonMises"
+  *  a10a0d9e0 - fix logic
+  *  3877e18e0 - [PD] enable to de/selecet several entities at once
+  *  6af211fbd - Restore manual override of FinalDepth values
+  *  27771fc6e - App: restore external linked documents in dependency
+    order
+  *  5eb15e421 - App: do not save external dependency
+  *  0a608e941 - App: fix Link document restore
+  *  8b68ab74b - FEM: use a more precise object name "vonMises" instead
+    "StressValues"
+  *  a2a59b884 - Travis - add PLY runtime dependency
+  *  af27a06fa - Main: copy icon.ico to build directory
+  *  4a6656d97 - add missing version info for Win builds see
+    https://forum.freecadweb.org/viewtopic.php?f=8&t=43099&p=367607#p367
+    607
+  *  e97336f21 - App: add proxy execute support to Link
+  *  e77ab5e2c - [TD]fix Qt4 compile error re QTextCursor
+  *  48fc14efc - [TD]2 pass autoscale for DVD, DVS
+  *  3a42205cb - [TD]fix autoscale for DPG
+  *  b4943c1f0 - [TD]fix HiddenLine style pref
+  *  d6f9a6ddf - [TD]trap wrong selection for ArchSection
+  *  9ed64bf3e - [TD]fix hatch file not found message
+  *  bcbca4c14 - [TD]fix initial font size display
+  *  f00fca547 - [TD]use plain text for Svg export
+  *  3a9002217 - PartDesign: fix FeatureDressUp base checking
+  *  469614eb1 - PartDesign: support transformed pattern in
+    FeatureDressUp
+  *  88a60f91e - PartDesign: use QKeySequence::Delete instead of a
+    QString
+  *  5ca8b490f - [PD] add shortcut to context menus
+  *  91d84472f - Travis - enable ccache for GCC builds
+  *  53bbf09bf - Fem: [skip ci] use ply parser instead of insecure
+    eval() function (not yet enabled)
+  *  cd7fb70d1 - Gui: fix crash on Document resetEdit
+  *  3691f68e3 - Part: fix Sweep path selection
+  *  52c64d8a8 - Implement and test extension events
+  *  9960b6739 - FEM: gmsh tools, get rid of useless unv related warning
+  *  a199adcd5 - Travis - fixes for Windows build
+  *  3cbe30933 - Part: determine tangent intersection of two 2d curves
+  *  b799996c2 - FEM: fix cmake
+  *  3ad0fb571 - FEM and OpenSCAD: add some hint and remove not needed
+    line
+  *  20dcae5f5 - FEM: result task panel, small code improvements
+  *  36f4439d4 - FEM: result task panel, separate hints for user defined
+    equations
+  *  c02b72b7e - FEM : Correct writer.py at line 1623 and replaced
+    ccx_elset by elset_data
+  *  20c0a7c1e -  Addons manager - check if macro icon path exists [skip
+    ci]
+  *  b94b404e2 - Arch: use init_tools to create Draft toolbars
+  *  5827d16ae - Arch: explicitly import modules in the initialization
+  *  4dc774c03 - DlgPropertyLink.cpp: fix compilation
+  *  9a7964ce3 - Path: fix drill job creation
+  *  1024344bb - TechDraw: remove duplicated fix
+  *  cbaee7e4e - Gui: add more options to DlgPropertyLink
+  *  c4be6c8b2 - App: add class TransactionLocker
+  *  3cd84fc2d - TechDraw: fix build for qt4
+  *  0633abb70 - Gui: refactor link property editor
+  *  24d935096 - Gui: fix missing property editor transaction closing
+  *  3364911d6 - App: add PropertyXLinkList
+  *  e4a2d9fc4 - App: fix PropertyXLink invalid external link
+  *  e707ba834 - App: fix PropertyLinkSub(List) unicode handling
+  *  c182425ec - App: remove unncessary exception catch
+  *  39959f950 - App: add new convenient class SubObjectT
+  *  5d60f3af0 - DlgPrefsTechDraw1.ui: revert unwanted change
+  *  117405139 - [TD] some wording improvements
+  *  aea13305b - Path: allow boundaryDressup negative Exts
+  *  4881b43d4 - Path: fix boundaryDressup Apply button enable
+  *  f6c764887 - Mesh: [skip ci] add methods to create empty KD tree or
+    to add further points
+  *  8deed98ac - Add DigitalOcean support notice
+  *  97c40204a - [ArchWall, DraftGeomUtils] fix bug: ArchWall with
+    Offset Attribute set and based on Sketch fails at some cases
+  *  136c7c32d - [Draft] Move and rotate bugfix to handle
+    App::DocumentGroup
+  *  3ed0df5a5 - Draft: override text in dimension only when GUI is up
+  *  814c97b70 - Draft: standardized module to build messages
+  *  a80ba2589 - Draft: disable the excessive output in the ToDo class
+  *  b6baaa72e - [Path] Add GCode documentation of Path Workbench
+  *  01df7c0a6 - Draft: added init_tools to create the toolbars
+  *  0cb62a9e4 - Draft: explicitly import modules in the initialization
+  *  708db0930 - FEM: ccx writer, revert copy accident from 4eb6344
+  *  4eb634448 - FEM: ccx writer, add comment about solver type
+  *  c01c1f7fd - Sketcher: add option to disable leaving sketch with Esc
+    button
+  *  1e7e45953 - Sketcher: [skip ci] fix -Wunused-private-field
+  *  c944aafc5 - fix missing HorizFeed in boundaryDressup
+  *  16b2b9a86 - Sketcher: split huge settings page into two pages
+  *  85aeef938 - Gui: ComboView always must be created because it
+    includes the task view.
+  *  7308db633 - Gui: [skip ci] fix naming inconsistency and rename
+    'combi' to 'combo'
+  *  832d17537 - Gui: fix naming inconsistency and rename 'combi' to
+    'combo'
+  *  a8e048ec1 - Gui: fix tree view mode option in general preference
+  *  3089ffd43 - Update Libpack link
+  *  c420de0f9 - Option to opt-out from using a Linux desktop icon
+    theme.
+  *  5abb3e57c - Part: [skip ci] use the right value from the user
+    settings to set point size
+  *  c3eb6d900 - ResultShow.ui improved labels concerning user defined
+    equations
+  *  8462c43a0 - [TD]add Hatch limit parameters
+  *  e983ca391 - [TD]fix Preference dialog keys
+  *  8125657da - FEM: result mechanical task panel, typo in obj
+    attribut, thanks ur_0
+  *  f22607a61 - Sketcher: [skip ci] add create polygon command to
+    sketcher menu
+  *  f2c83ac46 - remove program-specific SVG namespaces
+  *  f3a78196d - Gui: also sort parameter groups in ascending order
+    [skip ci]
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 22 Feb 2020 04:33:42 +0300
+
 freecad-daily (0.18.3+git19503-bb189d540-1) unstable; urgency=medium
 
   * Compile

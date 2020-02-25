@@ -1,3 +1,64 @@
+gimp-devel (2.10.12+git43697-197bd743c8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 197bd743c8485e71127f3cf6bd41c16899bbc849
+  * Date: 1582452765
+  * git changelog:
+  *  197bd743c8 - 2.10.18: update NEWS
+  *  25e3c899e0 - Update Basque translation
+  *  ceaf9a8657 - Update Basque translation
+  *  f8b07bd8b5 - icons, tools: add Symbolic high-contrast variants
+  *  6bed57abe2 - configure.ac, app: temporarily revert GEGL dependency
+    to 0.4.22 for release
+  *  696bb3fa21 - app: use GIMP_BUILD_PLATFORM_FAMILY instead of
+    GIMP_BUILD_PLATFORM.
+  *  6e6366e53c - plug-ins: in file-psd, use scratch allocator for
+    temporary CMYK buffers; cleanup
+  *  49b12b58af - app: in the Preferences dialog, allow horizontal
+    scrollbars in all tree-views
+  *  7b7ff8e152 - Update Polish translation
+  *  38a9e80821 - app: draw border around FG/BG-editor color areas
+  *  1432f5ca4f - Update Swedish translation
+  *  878f222233 - app: suspend layer-group size updates while loading
+    XCF
+  *  b495475ad9 - Issue #4634 - Pass-through groups bounding-box is not
+    properly updated ...
+  *  3e9276eae7 - app: fix layer group effective mode for different mask
+    modes
+  *  983698ecc1 - app: fix layer bounding box for different mask modes
+  *  603d0a6274 - app: fix layer effective mode for different mask modes
+  *  3c702fbc1c - app: fix compositing of layers with masks, outside the
+    mask bounds
+  *  644f14da45 - 2.10.18: update appdata
+  *  1054fc4488 - configure.ac: bump versions for the 2.10.18 release
+  *  17de63d732 - Update NEWS for 2.10.18
+  *  9faef1b7ad - Add naive support for CMYK u8 PSD files
+  *  5d1c6039e0 - app: in paint tools, fix cursor position in line mode
+    when snapping to angle
+  *  b0a6cd6412 - app: fix incorrect drawable format after applying a
+    filter that resizes the drawable
+  *  42b865561d - app: avoid use-after-free when loading an XCF with
+    corrupted layers
+  *  7df04317ed - icons: bump the symbolic theme contrast just a little
+    due to popular complaint
+  *  d91ccf85e8 - Update Spanish translation
+  *  39ba4c409e - app: in gimp:replace, add fast path when compositing a
+    layer over itself
+  *  0b80a0d068 - Makefile.am: require GEGL >= 0.4.23
+  *  22585fdde9 - Update Ukrainian translation
+  *  e572f7c010 - Update Catalan translation
+  *  1f73ac9b96 - Update Catalan translation
+  *  cab0e49f1b - Updated Danish translation
+  *  8c75baee1e - Updated Danish translation of gimp-script-fu
+  *  c99a415923 - Updated Danish translation of gimp-python
+  *  6149c81042 - app,autotools: depend on GEGL-0.4.22
+  *  e018c743b6 - configure.ac: post-release version bump to 2.10.17
+  *  fe60c0ffac - configure.ac: bump versions for the 2.10.16 release
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 23 Feb 2020 17:20:15 +0300
+
 gimp-devel (2.10.12+git43660-65b6f7cc6f-1) unstable; urgency=medium
 
   * Compile
