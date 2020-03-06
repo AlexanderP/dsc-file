@@ -1,3 +1,54 @@
+clementine-qt5 (1.4.0~git132-ga8f656a93-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: a8f656a933d4c85f0e23d200af7b52e09291739b
+  * Date: 1582474085
+  * git changelog:
+  *  a8f656a93 - Shortcut settings page cleanup.
+  *  2179027a6 - Prevent global shortcut crash on wayland.
+  *  60d343532 - Remove obsolete workarounds
+  *  bb736d115 - Prevent accidental usage of /usr/bin/data
+  *  e1c872666 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  85651dd37 - Fix assertion when deleting multiple queued items from
+    playlist.
+  *  2f36b34c3 - Remove some user info from logs.
+  *  4f9b81459 - Remove leading / from google file id.
+  *  f81533bb5 - Handle Google Drive get file errors.
+  *  06ed4a823 - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  9116dfde7 - Remove query string that may include auth info.
+  *  5983ecfac - Scrub gstreamer error strings for url query strings.
+  *  5dd6d6725 - Add a function that scrubs URL queries from strings.
+  *  a0bb8ab3a - Replace closures with new Qt functor variant of
+    connect.
+  *  58e59adcf - Pass correct type to FetchContentUrlFinished.
+  *  b86b8a45c - Fix dropbox json parsing.
+  *  941e139a1 - Replace closures with connect variant.
+  *  b3ec030ae - Fix songkicks queries.
+  *  61de3c6e9 - Convert remaining QJsonValue::isUndefined usage.
+  *  52fd6ffad - Add a logging category to log all network requests.
+  *  a5db937d2 - Fix itunes search.
+  *  415e4aa2e - Don't attempt to resolve URL if not relative.
+  *  e7b066719 - Fix loading songs on portable setup.
+  *  b9f57c574 - Add QString version of GetRelativePathToClementineBin.
+  *  ba4320859 - Change LibraryDirectoryModel to take shared backend
+    pointer.
+  *  bc99ff80a - Move LibraryDirectoryModel out of LibraryModel.
+  *  18a08e87c - Add a directory_model accessor to Application class.
+  *  057343f4a - Automatic merge of translations from Transifex
+    (https://www.transifex.com/projects/p/clementine/resource/clementine
+    player)
+  *  efb4f8a15 - Handle errors from icecast directory requests.
+  *  213231087 - Display message to user when IntergalacticFM channel
+    list fails.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 24 Feb 2020 00:54:53 +0300
+
 clementine-qt5 (1.4.0~git102-g7e915648e-1) unstable; urgency=medium
 
   * Compile
