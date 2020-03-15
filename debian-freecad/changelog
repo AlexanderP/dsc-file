@@ -1,14 +1,18 @@
-freecad (0.18.4+git16156-d13e777b2-1) unstable; urgency=medium
+freecad (0.18.4+git16158-783e1346c-1) unstable; urgency=medium
 
   * Compile
   * URL: https://github.com/FreeCAD/FreeCAD.git
   * Branch: releases/FreeCAD-0-18
-  * Commit: d13e777b2825c160ca4929e21c778732858a73c4
-  * Date: 1581024300
+  * Commit: 783e1346c7a078f5265c3f0c6a927d09a8c1fe70
+  * Date: 1582676121
   * git changelog:
+  *  783e1346c - Fem: fix segmentation fault when opening contraint
+    transform panel Fix Python code
+  *  5fd5d40d8 - Part: the number of domains returned by
+    TopoShape::getDomains must match with number of faces
   *  d13e777b2 - apply fixes from master when building with occt 7.4
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 21 Feb 2020 22:30:58 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 06 Mar 2020 00:59:26 +0300
 
 freecad (0.18.4+git16155-9ae129705-1) unstable; urgency=medium
 

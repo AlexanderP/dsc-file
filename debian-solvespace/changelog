@@ -1,11 +1,12 @@
-solvespace (3.0.0~git1460-8ef3cac-1) unstable; urgency=medium
+solvespace (3.0.0~git1461-fcb2757-1) unstable; urgency=medium
 
   * Compile
   * URL: https://github.com/solvespace/solvespace.git
   * Branch: master
-  * Commit: 8ef3cacc332c004a364e1e65c308e2892058905f
-  * Date: 1582207411
+  * Commit: fcb2757d5d18e8ad7a82b4ecf4dd48529dab70b9
+  * Date: 1582533705
   * git changelog:
+  *  fcb2757 - Win32: Drastically reduce stack usage at startup. NFC?
   *  8ef3cac - Fix a bug with 3Dconnexion: SpaceMouse
   *  f6a774d - Fix some trivial warnings found by MSVC. NFC.
   *  bae84b2 - snap: Fix missing extension for cli
@@ -14,7 +15,7 @@ solvespace (3.0.0~git1460-8ef3cac-1) unstable; urgency=medium
   *  65ab595 - snap: Build snaps on Travis without remote-build & drop
     i386 + armhf
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 23 Feb 2020 09:07:03 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 06 Mar 2020 15:37:04 +0300
 
 solvespace (3.0.0~git1454-3ed1719-1) unstable; urgency=medium
 

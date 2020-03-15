@@ -1,11 +1,225 @@
-freecad-daily (0.18.3+git19694-288456ee4-1) unstable; urgency=medium
+freecad-daily (0.18.3+git19858-dbe292496-1) unstable; urgency=medium
 
   * Compile
   * URL: https://github.com/FreeCAD/FreeCAD.git
   * Branch: master
-  * Commit: 288456ee4beb9e8dc27d50a7984c40c45467161f
-  * Date: 1582304458
+  * Commit: dbe292496b56147c081761084774f42bda56ea90
+  * Date: 1583431073
   * git changelog:
+  *  dbe292496 - ReverseEngineering: [skip ci] fix minor compiler
+    warning
+  *  b0cecc469 - FEM: ccx tools solver calculix, use add attributes
+    method from framework solver calculix
+  *  c577b44be - FEM: framework solver calculix, move adding attributes
+    in separate method
+  *  f8d90c252 - handle Leaders, Welds, Tiles and RichAnnos
+  *  398bf689e - [TD] catch the case a page has the template as only
+    object
+  *  3be2e0974 - TechDraw: [skip ci] fix -Winconsistent-missing-override
+  *  593f02db6 - ReverseEngineering: improve workflow of fitting of B-
+    spline surface
+  *  0c1289282 - Merged latest translations from crowdin
+  *  33f489e91 - ReverseEngineering: manual mesh segmentation
+  *  6c7a473c9 - [skip ci] AddonManager: Add Silk workbench icon
+  *  13fd3470f - Draft: Draft_Arc_3Points using the new arc function
+  *  a8712edb5 - Draft: arc by 3 points function
+  *  062d78223 - FEM: Python object base classes, some tweaks
+  *  9d311b2b1 - Part: [skip ci] add method to project point on surface
+  *  cda6628f1 - ReverseEngineering: improve mesh segmentation
+  *  2cda87f23 - ViewProviderProjGroup: handle the case that items have
+    section or detail views that would be broken by the deletion
+  *  ead6cfea7 - handle now also section view, detail view and view
+  *  941ce9c43 - CanDelete is necessary for dimensions
+  *  dc94f25fd - ViewProviderDimension: remove unused function
+  *  76daaf186 - ViewProviderTemplate.cpp: remove unused include
+  *  5a61baf07 - [TD] handle object deletions better
+  *  b38ba6e11 - Draft: lowercase use_link option for arrays
+  *  fc1ae5a9e - FEM: more code formating
+  *  5620122ae - FEM: code formating and unifor licence header in Python
+    modules
+  *  c460f08cb - FEM: use python base constraint class, mesh gmsh
+  *  a47d33b5e - FEM: python base constraint, add Object attribute
+  *  7e2814e5b - Fixed coolant with dressup
+  *  4545cf34b - Added coolant support to grbl_post
+  *  8b3c31170 - ReverseEngineering: implement mesh segmentation
+    workflow
+  *  432ae7c79 - [Draft] Edit bugfix: closed wire check for point lying
+    in the face plane
+  *  b1a71f4a5 - Draft: new Draft_OrthoArray command
+  *  f95dc3588 - Mesh: change MeshSegmentAlgorithm::FindSegments to
+    accept shared instead of raw pointers
+  *  7464c81db - ReverseEngineering: [skip ci] improve segmentation
+    based on point clouds
+  *  9d6cf324e - [ImageWB] Fix image scaling dialog for HighDPI
+    displays.
+  *  5e3ffcff9 - Stop the spindle before tool changes.
+  *  354e63ddb - Handle coolant for ops using dressups
+  *  c36048e76 - skip inactive operations
+  *  9c0d0e94c - FEM: Python objects and guiobjects, code formating
+  *  65b5cb7f3 - FEM: use python base constraint class, solver calculix
+  *  62fa28fc6 - FEM: use python base constraint class, mesh result mesh
+  *  36118fb59 - FEM: use python base constraint class, result
+    mechanical
+  *  95a411d95 - FEM: use python base constraint class, mesh region
+  *  0e029666e - FEM: use python base constraint class, mesh group
+  *  85712261b - FEM: use python base constraint class, mesh boundary
+    layer
+  *  5ea922c8b - FEM: use python base constraint class, material obj
+  *  659da1973 - FEM: use python base constraint class, material
+    reinforced
+  *  83880da92 - FEM: use python base constraint class, beam rotation
+  *  974ab58b9 - FEM: use python base constraint class, fluid section
+  *  ab2c0a39d - FEM: use python base constraint class, beam section
+  *  a00dddffe - FEM: use python base constraint class, shell thickness
+  *  0aad1a016 - FEM: use python base constraint class, constraint tie
+  *  d4f60113c - FEM: use python base constraint class, material non
+    linear
+  *  6ccc140a1 - FEM: use python base constraint class, constraint self
+    weight
+  *  175e7f206 - FEM: Python base constraint view provider, extend
+    methods
+  *  130e16a6f - ReverseEngineering: implement mesh segmentation
+    workflow
+  *  9b7211d02 - [Draft] Edit bugfix: closed wire check for point lying
+    in the face plane
+  *  3d2fb0127 - Draft: new Draft_OrthoArray command
+  *  2a857dcd8 - Mesh: change MeshSegmentAlgorithm::FindSegments to
+    accept shared instead of raw pointers
+  *  aa422bf7d - ReverseEngineering: [skip ci] improve segmentation
+    based on point clouds
+  *  24d64c71e - [ImageWB] Fix image scaling dialog for HighDPI
+    displays.
+  *  fefc72590 - Fixed coolant with dressup
+  *  aa5b05078 - FEM: elmer equation objects, better type checking
+  *  5a5753af8 - FEM: element geometry types, same name type system as
+    Python constraints
+  *  d52cde9b8 - FEM: mesh tools, better type checking
+  *  51c1897a3 - Added coolant support to grbl_post
+  *  b73cc1ac3 - [Draft] Change boolean If statement
+  *  edc7e3ed8 - [Draft] WireToBSpline Fix makeWire Placement
+  *  f043f465c - [Draft] WireToBSpline Fix Placement of makeWire
+  *  27eb8bebe - App: fix Link appLinkExecute
+  *  64cc58e35 - Travis: get Pivy for Python 2 and 3
+  *  62406e0ce - Add ability to remember which workbench is active for
+    each tab of the viewport
+  *  eac01576a - Arch Component: triple quotes for the docstring
+  *  ac0268c90 - Export Arch Structure as Ifc Brep if not a simple
+    extrusion
+  *  6ae04900b - Fix use of Sketch as a Base for Arch Structure extruded
+    along a Tool
+  *  25a2837bb - Draft: upgrade patterns to PlainSVG and 96dpi
+  *  08471b59b - Draft: ugrade icons to PlainSVG and 96dpi
+  *  b8f459db3 - Draft: translate functions with the context set to
+    Draft
+  *  9dc24a9d4 - Draft, Arch: group the array tools
+  *  e0eda0de5 - [TD]expose dimension arrow position to Python
+  *  be293cdfc - Stop the spindle before tool changes.
+  *  e3cca6c24 - Handle coolant for ops using dressups
+  *  3e9ae6c77 - skip inactive operations
+  *  24f10a34e - Fem: add missing comma
+  *  99c9bdaaf - Path: use round() to force to show only one decimal
+    when converting to string
+  *  b45276045 - FEM: objects, code formating, new lines
+  *  a34cd6912 - PartDesign: [skip ci] fixes #0004276: Loading a project
+    takes much more time compared to previous versions
+  *  b1a95ff07 - FEM: mesh tools, better logging
+  *  3f399736d - FEM: unit test, add ccx canti faceload hexa20 writing
+  *  eeb97b36d - FEM: examples, add ccx cantilever with hexa20
+  *  2d6aa10b6 - FEM: meshtools, fix regression introduced with 63f34531
+  *  b32296975 - Gui: fix FreeCADGui.loadFile()
+  *  74c9ed8cd - FEM: fix unit tests because of 9c154f70
+  *  b7a9d2dc3 - Part: fix crash in TopoShape::makEFace()
+  *  4768fa01f - FEM: trailing white spaces
+  *  27395bbba - [FEM] spread the fixes from commit a5be62b8 to the
+    other dialogs
+  *  d388ca626 - FEM: ccx tools, move pre requisite checks in separate
+    module
+  *  871d66099 - FEM: only define analysis types for calculix solver
+    once
+  *  c165edd52 - Base: [skip ci] implement method Quantity.toStr() to
+    control string representation
+  *  5947a5bad - Gui: add possibility to connect to remote Python
+    debugger
+  *  6ec33d50a - FEM: ccx writer, fix in tie for splitted file writing
+  *  53999ea73 - MeshGui: [skip ci] remove wrong export macro
+  *  9c154f705 - Base: [skip ci] improve repr() for quantity
+    https://forum.freecadweb.org/viewtopic.php?f=10&t=43718
+    https://forum.freecadweb.org/viewtopic.php?f=10&t=43431&p=369556#p36
+    9575
+  *  1cb4625bf - MeshPart: add gmsh as another option to create mesh
+    from shape
+  *  549b424e1 - App: [skip ci] add further constructor to SubObjectT
+  *  eb4c1019c - [TD]Add GOST Welding Symbols
+  *  4f48b2e42 - Mesh: [skip ci] refactor RemeshGmsh to use it for other
+    purposes
+  *  e61f88883 - FEM: post result mesh, better log
+  *  ea5356314 - Mesh: replace stacked widget of meshing panel with
+    tabbed widget
+  *  8533527af - [TD] Landmark Dim minor clean ups
+  *  233453c18 - [TD]Add pref for loose 2D objects
+  *  33e87d5b2 - Mesh: change pointer to mesh object when copying or
+    swapping segments
+  *  9ab7f4954 - FEM: small update in coding conventions
+  *  72d3a94ce - FEM: better help messages at self weight
+  *  802832f1d - FEM: do not guard module imports if the module will be
+    imported in gui mode only
+  *  0e62b053f - FEM: use numerical data type for gravity
+  *  a3d18bc01 - FEM: change gravity in unit tests files to the new
+    gravity constant
+  *  80439638c - FEM: fix import
+  *  ab0df09a1 - FEM: more Python import cleaning
+  *  e68221c63 - FEM: Python imports coding conventions
+  *  1458f7e88 - FEM: pep8
+  *  3d4013bf4 - FEM: constants, use new module in elmer and ccx
+  *  dbbab7aeb - FEM: constants, add new module
+  *  f9f5a7de3 - FEM: improve imports
+  *  e4e4d9fec - Removed version info 2
+  *  3a3620006 - Removed version info
+  *  6693ea723 - TechDraw: [skip ci] fix -Wextra-semi -Winconsistent-
+    missing-override
+  *  a5be62b86 - Fem: [skip ci] fix several coding flaws: * improve
+    implementation of TaskFemConstraintForce::onButtonDirection * use
+    QSignalBlocker to tmp. suppress signals instead of dis- and re-
+    connecting * directly access object from SelectionObject * don't do
+    type checks by class name but by typeid
+  *  1b57cd3ae - Fem: [skip ci] improve implementation of
+    TaskFemConstraintForce::onButtonDirection
+  *  e2d210199 - [FEM] highlight also selected transformable surfaces
+  *  c1e7bb3a0 - FEM: transform task panel, use doc identifier instead
+    of App.ActiveDocument
+  *  e82b24550 - ProfileEdges: New feature - profile open edges
+  *  43e6be902 - Part: [skip ci] the number of domains returned by
+    TopoShape::getDomains must match with number of faces
+  *  a6b22b325 - FEM: transform task panel, pyton fix
+  *  78040f771 - Fem: [skip ci] fix segmentation fault when opening
+    contraint transform panel
+  *  0825e5ece - [TD]Support Landmark Dim in Section and Detail
+  *  96e8f752b - [TD]Landmark Dims initial impl
+  *  03dc6edb9 - Mesh: [skip ci] improve writing mesh formats in ASCII
+    format
+  *  c8ea17681 - FEM: constraint VP, comments
+  *  520cfd895 - [FEM] constraint  contact: sort out already available
+    function
+  *  75d082cb1 - FEM: move errors in own module
+  *  fba86d171 - Gui: [skip ci] fix regression in Document::setEdit()
+  *  d222f7b55 - Change backup policy
+  *  9466fdff9 - App: refactor code to support various backup policies
+  *  d19d5b5fc - FEM: constraint dialogs: sort out commonly used
+    function
+  *  f13db9f63 - FEM: gmsh tools, typo
+  *  6ffef47ee - remove doubled code
+  *  af7941a55 - TaskFemConstraintFluidBoundary.cpp: squash GCC compiler
+    warning
+  *  d6f3c794c - [FEM] make the Fluid Boundary dialog behave like the
+    other dialogs
+  *  bdd8d257d - PartDesign: [skip ci] optimize when removing items from
+    dress-up features
+  *  da6352c43 - [PD] only recompute once per deletion action
+  *  c6bb53354 - PartDesign: fix DressUp base shape checking
+  *  883235680 - Part: [skip ci] add option to set two-side rendering of
+    Part shapes
+  *  f43391524 - Fix saving values for Infinity and Capacitance BCs
+  *  3afa603a1 - [FEM] TaskFemConstraintForce.cpp: squash GCC warning
   *  288456ee4 - [FEM] fix special Dlg issue with deletion
   *  3574182c1 - TaskFemConstraintForce.ui: add tooltips and remove
     unnecessary spacer
@@ -23,6 +237,7 @@ freecad-daily (0.18.3+git19694-288456ee4-1) unstable; urgency=medium
     boundary condition for Elmer
   *  325b31aae - FEM: change behavior of Force dialog to the one of all
     other constraint dialogs
+  *  461624e18 - Rearranged deburr GUI
   *  4db7fc91e - [TD]fix application of SectionLine preference
   *  d0f749b56 - FEM: result task panel use single quotes instead of
     double ones
@@ -31,6 +246,8 @@ freecad-daily (0.18.3+git19694-288456ee4-1) unstable; urgency=medium
   *  b34f0aef3 - App/Gui: implement a lightweight weak_ptr like class to
     work with Document, DocumentObject and ViewProvider
   *  e3b5b0b17 - [Part]Handle CJK font names for ShapeString
+  *  f750c7398 - Added GUI support to PathDeburr for directions
+    selection
   *  66c1bfdd9 - FEM: writer base, add some comment for elemnt faces
     constraints
   *  0e3701180 - FEM: constraint tie, get the faces data in writer base
@@ -247,7 +464,7 @@ freecad-daily (0.18.3+git19694-288456ee4-1) unstable; urgency=medium
   *  f3a78196d - Gui: also sort parameter groups in ascending order
     [skip ci]
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 22 Feb 2020 04:33:42 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 06 Mar 2020 06:36:50 +0300
 
 freecad-daily (0.18.3+git19503-bb189d540-1) unstable; urgency=medium
 

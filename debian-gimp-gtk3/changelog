@@ -1,3 +1,46 @@
+gimp-gtk3 (2.99.0+git45328-84ff130e18-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 84ff130e1815cf6ba0617bf56c0aa9b6ee8539e2
+  * Date: 1583491026
+  * git changelog:
+  *  84ff130e18 - tools: in performance-log-viewer.py, handle markers
+    with > INT_MAX timestamps
+  *  287adbd1e6 - icons: in Symbolic theme, fix gimp-curve-point-
+    {corner,smooth} PNGs
+  *  b7b30ca3cb - icons: in Symbolic theme, fix media-record and gimp-
+    marker icons
+  *  274b677923 - icons: clean up the crop tool icon by redoing it
+  *  de7d6537e6 - icons: redo the gimp-zoom-follow-window icon for it
+    was broken
+  *  ce7f59ec3e - icons: fix the dashboard icon by removing empty
+    rectangle
+  *  601a555321 - icons: in Symbolic theme, fix gimp-curve-point-
+    {corner,smooth} icons
+  *  3d0606a9be - libgimp: fix range of "opacity" parameter in brush-
+    select callback
+  *  11efe64736 - Issue #4734 - GIMP crashed while using Unified
+    Transformation Tool
+  *  34f00e8a7a - icons: convert some rectangles to outlines, fixes
+    #4672
+  *  3b66895273 - Update Basque translation
+  *  ddf940e11e - Update Spanish translation
+  *  70d71757a3 - Update Polish translation
+  *  a31d83a4e6 - Update Hungarian translation
+  *  0ce993c4b9 - Issue #4663 - "Error loading PSD file: No error" while
+    trying to open a PSD
+  *  be7cace74e - plug-ins: in file-psd, make offset/size fields
+    unsigned
+  *  b969a322fa - Update Catalan translation
+  *  b8b5c915aa - Update Dutch translation
+  *  36372ca1f2 - Update Dutch translation
+  *  3e8ffef4bd - Update Swedish translation
+  *  ac289461ae - app: add Finnish translation to the Windows installer
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 07 Mar 2020 03:41:32 +0300
+
 gimp-gtk3 (2.99.0+git45307-76bd8450b9-1) unstable; urgency=medium
 
   * Compile

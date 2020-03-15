@@ -1,11 +1,48 @@
-qcad (3.24.0+git7443-480ee7395-1) unstable; urgency=medium
+qcad (3.24.0+git7474-da6b4eb7c-1) unstable; urgency=medium
 
   * Compile
   * URL: https://github.com/qcad/qcad.git
   * Branch: master
-  * Commit: 480ee73959f0aae125741fa669ed48373cfff738
-  * Date: 1581774279
+  * Commit: da6b4eb7c0270f45d25c7ed462356eb88993d071
+  * Date: 1583484946
   * git changelog:
+  *  594a83533 - Translated using Weblate (French)
+  *  04e0a42ab - Translated using Weblate (French)
+  *  e8fafe776 - fix FS#2051 - Window selection of rotated and aligned
+    dimensions with large extension line offset
+  *  271c2b8d9 - allow editing values in property editor in imperial
+    architectural or engineering format
+  *  75093f688 - trigger restart warning when changing preferences
+  *  981a8c07a - fix initialization of RSettings before first call to
+    RSettings
+  *  635f5df7c - switch off leader arrow based on dimension scale
+  *  8a067e5ff - allow user extensions to patterns, linetype, etc in
+    QCAD config dir
+  *  2cc7b8476 - remove obsolete theme resources
+  *  fb8167e00 - update tooltip
+  *  fe8000e92 - define dark theme in plugin
+  *  74c63d7fc - only load theme plugins if configured theme matches
+  *  284925cc0 - if theme requires plugin: only load theme if theme
+    plugin is available
+  *  374a12594 - typo
+  *  2e0baaf4b - fix attributes when projecting
+  *  75952c2c7 - use readTextFile to load CSS
+  *  a06a0ea4e - remove QFrame sunken frame for dark theme
+  *  c5b42e1d9 - set version to 3.24.2.7
+  *  663ba322d - fix alt-click to select overlapping entities
+  *  e93a75a90 - update script bindings
+  *  a355b3170 - use configured default lineweight
+  *  0c019cdc5 - add noDefault parameter
+  *  4875e35a8 - add noDefault property to lineweight combo box
+  *  e867f62f5 - move default lineweight preference
+  *  46d4fb15a - rename preference for layer defaults
+  *  75e5fed49 - fix recursion
+  *  15c4dac73 - refactor, fix DIMADEC defaulting to DIMDEC
+  *  8c3d7159e - configurable tolerance for double-click to select
+    contour
+  *  62f36b3b5 - update copyright
+  *  2dbf3d260 - only apply global scale for model space, not for
+    viewports or other blocks
   *  480ee7395 - update
   *  9020526b6 - update
   *  7d34e16ca - add / update hatch patterns
@@ -17,7 +54,7 @@ qcad (3.24.0+git7443-480ee7395-1) unstable; urgency=medium
   *  b1c92302f - set version to 3.24.2.5
   *  a2c620b4a - increase max number limits
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 23 Feb 2020 09:44:20 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 06 Mar 2020 16:10:09 +0300
 
 qcad (3.24.0+git7433-3f286af93-1) unstable; urgency=medium
 

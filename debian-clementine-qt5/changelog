@@ -1,3 +1,24 @@
+clementine-qt5 (1.4.0~git139-g902522f4d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 902522f4d36b6e451526f208a2ba4f328fc55de9
+  * Date: 1583548916
+  * git changelog:
+  *  902522f4d - Fix Qt generated log messages.
+  *  09723d516 - Use a template for CreateLogger to allow different
+    QDebug derivatives.
+  *  4fe845c2c - Use reference on a const loop var to avoid copy
+  *  b762987cd - Add missing mapToSource() in
+    MainWindow::PlaylistRightClick
+  *  79ac16afe - Move unneeded declarations and macros from logging
+    header.
+  *  90cf4988e - Fix crash when searching playlist.
+  *  531cd052c - use QT's High DPI attribute
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 07 Mar 2020 08:29:51 +0300
+
 clementine-qt5 (1.4.0~git132-ga8f656a93-1) unstable; urgency=medium
 
   * Compile
