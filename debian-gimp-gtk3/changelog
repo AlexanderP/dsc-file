@@ -1,3 +1,58 @@
+gimp-gtk3 (2.99.0+git45364-92fd5675b1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 92fd5675b16916d09957f43c1d053e52209909e7
+  * Date: 1584636264
+  * git changelog:
+  *  92fd5675b1 - gitlab-ci: enabling make check on master CI.
+  *  2c1efdedf0 - app: do not free non-allocated DBus manager.
+  *  450ebd5e2b - App gimptooleditor fix tooltip text
+  *  ee2a65af0d - Issue #4827 - Modified settings requiring a restart
+    aren't saved
+  *  f6e9c6ee6f - gitlab-ci: add missing dependencies.
+  *  707d3c6f64 - libgimp: fix wrong assert in
+    gimp_procedure_config_set_values().
+  *  489c5c9d05 - Update Ukrainian translation
+  *  6df7a948b4 - Update Ukrainian translation
+  *  cc55af7b95 - Update Ukrainian translation
+  *  0108d7e214 - Change order of CFLAGS for SSE tests
+  *  8fd2f1e0e3 - Issue #4745: make check test-desktop failed.
+  *  3c6cf7fb3f - Meson add suggested warning flags from Massimo
+  *  9032df515b - meson: change option relocatable-bundle =
+    yes|no|platform-default
+  *  564d35fd2e - meson: relocatable-bundle should not be a feature
+  *  bed95ebca7 - Revert "build: fix json-c cross-build for Windows."
+  *  8d5afa76e7 - issue 4669
+  *  a928452eba - Fix typos
+  *  7a4254dda1 - m4macros: update ax_gcc_func_attribute.m4 to serial 12
+  *  2b2a6b03ed - build: fix json-c cross-build for Windows.
+  *  505967c4d2 - gitlab-ci: fix recently broken CLang compilation.
+  *  a701e6224a - Update Polish translation
+  *  3a0af1f50a - Issue #4618: support Canon CR3.
+  *  0e735d1dc6 - Add Kabyle translation
+  *  64bf77aed8 - app: render layer-group preview in chunks
+  *  919ddce773 - app: speed up layer-group preview rendering
+  *  faf6acfb67 - app: add "chunked" parameter to
+    gimp_tile_handler_validate_validate()
+  *  30f509c84d - app: allow waiting on idle asyncs
+  *  fe82ee54e8 - app: white-space fix in gimp-utils.c
+  *  10fe3009ed - app: avoid duplication in
+    gimp_drawable_get_sub_preview_async()
+  *  fee159e6b4 - Issue #4793 - Layer-group preview-update blocks UI
+    when adding/removing layers
+  *  6733b153cc - app: add gimp_idle_run_async[_full]()
+  *  f25a8934fa - app: rename GimpParallelRunAsyncFunc to
+    GimpRunAsyncFunc
+  *  48d71bf6ab - Issue #4094 - Corrects some tools descriptions
+  *  51e4549d5c - configure.ac: fix last commit
+  *  52ae7d180a - configure.ac, meson: require glib >= 2.56.2
+  *  27e78849a2 - Issue #4328 - Distorted path of an open/imported
+    circle...
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 21 Mar 2020 05:02:29 +0300
+
 gimp-gtk3 (2.99.0+git45328-84ff130e18-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,66 @@
+librecad (2.1.3+git4583-51b21cc7-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: master
+  * Commit: 51b21cc7011e9a277c58e7ec2bf2b90018ecb4dc
+  * Date: 1584284367
+  * git changelog:
+  *  51b21cc7 - added more digits to extension lines lenth input box
+    (#1203)
+  *  49a607df - Print Preview behaves as other windows.
+  *  5f242515 - Sync options visibility with window focus.
+  *  a1997541 - Print Preview not closing.
+  *  01f8295e - fixed more links, mostly HTTP to HTTPS
+  *  a4f918c0 - eliminate warning about unused variable
+  *  c2697cb7 - little clean up after merge of #1147
+  *  e5aab73a - fix #1085 Zoom panning can only be used once and must
+    then be reactivated - Right clicking with the mouse now exits the
+    toolbar panning mode.
+  *  61355504 - fix: allow Save As for unmodified files
+  *  f37b83ec - fix: Save As could not create new files
+  *  a02e7987 - - ifdef'd the qt_ntfs_permission_lookup; this is only
+    available on Windows platforms
+  *  940d0b23 - - Fixes an endless loop that occurred when trying to
+    save a write-locked file -- (present save as dialog if the file is
+    not writable) - Fixes a bug preventing Print Preview window from
+    closing, except by closing it's parent window - Fixes a windows-
+    specific file permission checking issue (enable support for NTFS
+    security in Qt)
+  *  9830e2e1 - - Move EntityTypeList typedef to rs_snapper - Reverse
+    font changes from previous commit
+  *  eb2e1465 - - Propose alternative solution for fix #1111, #1117 -
+    commit d0a0ef2 causes Compiler Error C2797 in Visual Studio
+  *  3d84165f - convert connect() to newer syntax; minor style fixes
+  *  7d8cb17b - fix: using shift key to select has deselected
+    layers/blocks between after mouse button release
+  *  a1c4a56c - Toggle actions adjustments for Layer/Block Lists
+    multiselection feature.
+  *  faa5c2fc - Multiple blocks selection, toggling, deletion.
+  *  8148c309 - Respect Layer List Filter on layers removal
+  *  6449ab7c - New feature: multiple layers selection and deletion.
+  *  9fb6ef7a - Repairs issue described at:
+    https://github.com/LibreCAD/LibreCAD/issues/1145 Adds "hold shift"
+    feature to mirroring entities
+  *  29cdebba - Extension of the previous commit.
+  *  a740bb6f - Extension of the previous commit
+  *  513ced09 - Fit to whole page.
+  *  522bc0d2 - Do not highlight selection on Print Preview
+  *  bac8ceaf - Print Preview: Line width scaling
+  *  c7de85e1 - Reorder Users Documentation
+  *  69a43e46 - When drawing a line by a mouse and holding the "Shift"
+    key during placing the line endpoint, one can move the cursor only
+    along certain angles (0°, 15°, 30°, 45°, etc.). This commit enables
+    this feature also for moving and copying entities. I. e. when the
+    reference point is selected and the entity is moved, by pressing the
+    "Shift" key one can move the reference point (and the entity) only
+    along the certaing angles (0°, 15°, 30°, 45°, etc.) measured from
+    the original reference point position.
+  *  cfc8ff50 - Make layout of the Divide plugin independent of pixel
+    density
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 21 Mar 2020 02:28:11 +0300
+
 librecad (2.1.2+git4548-10d502db-1) unstable; urgency=medium
 
   * Compile

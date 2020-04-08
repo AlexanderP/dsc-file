@@ -1,3 +1,46 @@
+gscan2pdf (2.5.5+git3167-23c2828d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 23c2828d4b2a219c06866a7e19d255c57444bcfc
+  * Date: 1583511379
+  * git changelog:
+  *  23c2828d - Bumped version to 2.6.5
+  *  3b779368 - log traceback if find_page_by_uuid() passed undef
+  *  43e182be - Respect 'Use timezone from locale' option when setting
+    file system timestamp
+  *  b80932c3 - Test invocation for different unpaper versions
+  *  42921267 - Update to Ukrainian translation
+  *  2c111989 - Update to Spanish translation
+  *  d8cb072c - Update to German translation
+  *  c9f0e837 - Show "waiting" cursor for longer to prevent scans from
+    being started before all options applied
+  *  9499f7ad - Select # pages = all when switching from reverse->facing
+  *  1f4c8fd9 - Ensure # pages button active when num-pages > 0
+  *  e208fe46 - Improve responsiveness with OCR output (again) by
+    drawing all boxes in individual idles and not just the parent
+  *  a22bb6be - Improve responsiveness with OCR output (again) by
+    keeping track of idles with hash instead of array in order to only
+    remove those which have not finished, and removing the idle when
+    finished by passing the appropriate return code.
+  *  3c439c69 - Fix program name when creating app
+  *  42c71547 - Fix warning message about pdftk (again) by making sure
+    that user-defined tmp directory is available in time
+  *  5090a5ea - Call pdfinfo with --isodates option to work around bug
+    when called from reprotest
+  *  d90ad370 - Use the "Don't show these messages again" checkbox to
+    switch the checkboxes for the individual messages. Set the button
+    inconsistent if the states are not all the same
+  *  47a12bc1 - Use a scrolled window in the multiple message dialog to
+    prevent it from Use a scrolled window in the multiple message dialog
+    to prevent it from
+  *  03b5e5dc - Fixed bug when editing page number causing page to
+    deselect and thumbnails to scroll to top of list
+  *  a9423c57 - Update to Hungarian translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 20 Mar 2020 04:21:30 +0300
+
 gscan2pdf (2.5.5+git3148-892b17ea-1) unstable; urgency=medium
 
   * Compile

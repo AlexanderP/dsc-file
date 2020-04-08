@@ -1,3 +1,21 @@
+solvespace (3.0.0~git1466-e355a09-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: e355a095c4c3456487be8bc48675757ab79d44d3
+  * Date: 1584241404
+  * git changelog:
+  *  e355a09 - Force vendor zlib, png, and FreeType on Win32, too
+  *  7e33d2d - Update ANGLE to 8776e911bf71f68518ddd1995ce09d80db8c1216
+  *  a6c34bb - Fix a crash when trying to show an error with bad
+    separator.
+  *  6017ecd - Fix two trivial implicit double to int conversion
+    warnings. NFC
+  *  c29624f - Update flatbuffers, fixing build on Clang trunk
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 20 Mar 2020 05:57:51 +0300
+
 solvespace (3.0.0~git1461-fcb2757-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,48 @@
+gimp-devel (2.10.18+git43749-942a1e4e97-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 942a1e4e97eafa1282515483d533318da3faf83d
+  * Date: 1584660525
+  * git changelog:
+  *  942a1e4e97 - Update Swedish translation
+  *  3c845ec433 - Issue #4827 - Modified settings requiring a restart
+    aren't saved
+  *  0463cbfaff - Update Ukrainian translation
+  *  fcb161c3f8 - Change order of CFLAGS for SSE tests
+  *  3616734faf - Issue #4745: make check test-desktop failed.
+  *  83da81f308 - Fix typos
+  *  d46812839c - m4macros: update ax_gcc_func_attribute.m4 to serial 12
+  *  34fc10f014 - Update Spanish translation
+  *  1af8ad8905 - app: in plug-ins, fix invalid parameter names instead
+    of rejecting procedure
+  *  e4d3d88ac6 - Update Polish translation
+  *  cb4f0de066 - Issue #4618: support Canon CR3.
+  *  fbaf3c4290 - app: render layer-group preview in chunks
+  *  cd4c81133a - app: speed up layer-group preview rendering
+  *  422452b5da - app: add "chunked" parameter to
+    gimp_tile_handler_validate_validate()
+  *  24db85bef6 - app: allow waiting on idle asyncs
+  *  552c9565e4 - NEWS: mention #4793 fix
+  *  2460322522 - app: white-space fix in gimp-utils.c
+  *  42bfadd5c8 - app: avoid duplication in
+    gimp_drawable_get_sub_preview_async()
+  *  d4b79fdcf1 - Issue #4793 - Layer-group preview-update blocks UI
+    when adding/removing layers
+  *  d0d43ce252 - app: add gimp_idle_run_async[_full]()
+  *  a787d61fbc - app: rename GimpParallelRunAsyncFunc to
+    GimpRunAsyncFunc
+  *  f8fb958fde - NEWS: some forgotten bits for 2.10.20
+  *  2ab72aac3f - NEWS: start tracking 2.10.18 -> 2.10.20 changes
+  *  a1af934d9d - Issue #4094 - Corrects some tools descriptions
+  *  5528c660af - configure.ac: fix last commit
+  *  bf8f004b15 - configure.ac: require glib >= 2.56.2
+  *  3f2e17ca6e - Issue #4328 - Distorted path of an open/imported
+    circle...
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 21 Mar 2020 03:50:40 +0300
+
 gimp-devel (2.10.18+git43722-f70d24784c-1) unstable; urgency=medium
 
   * Compile
