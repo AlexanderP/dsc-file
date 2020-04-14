@@ -1,3 +1,114 @@
+gimp-devel (2.10.18+git43826-3c3f239852-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 3c3f2398527824045b86c652b59a43ac7157b457
+  * Date: 1586477246
+  * git changelog:
+  *  3c3f239852 - Update Russian translation
+  *  3a3a5ff1ec - NEWS: update.
+  *  7e673f4e52 - plug-ins: add support for exporting 16-bit PSDs
+  *  5fa235c192 - Update Catalan translation
+  *  bb030f4584 - NEWS: update.
+  *  f31f9b5e21 - Issue #4919: PDF: Order of pages reversed when opening
+    and closing.
+  *  f02ca95b47 - Update Spanish translation
+  *  ba7d2f4f87 - app: rename "Fade" section of GimpFilterTool to
+    "Blending Options"
+  *  8d08f4a672 - app: in filter tools, remember state of the fade and
+    color-options expanders
+  *  a643fc2ad1 - app: add "Fade" options to filter tools
+  *  1a41acecf2 - app: apply common operation settings when reapplying a
+    filter
+  *  bdbce2d235 - app: in GimpFilterTool, store common settings in
+    GimpOperationSettings
+  *  9e5fabf8a0 - app: add GimpOperationSettings
+  *  6c0326a4fa - app: add gimp_gegl_node_has_key()
+  *  2bd0b77ad0 - app: use gimp_drawable_supports_alpha() in
+    GimpDrawableFilter
+  *  80fd7386e2 - app: use gimp_drawable_filter_get_format() in
+    GimpFilterTool
+  *  9906efd28a - app: add
+    gimp_drawable_filter_get_{drawable,operation,format}()
+  *  58e5b57492 - Update Chinese (Taiwan) translation
+  *  a813c0db3a - Update Chinese (Taiwan) translation
+  *  6d442eb76e - Update Chinese (Taiwan) translation
+  *  63ca72c84f - Update Swedish translation
+  *  4af498496a - Fixes to Catalan translation
+  *  d332b1bd8d - Update Polish translation
+  *  ebd89523bb - Update Ukrainian translation
+  *  c82bf2978a - app: make version + revision string translatable.
+  *  d942908a3b - Updated Italian translation
+  *  2484871cbc - plug-ins: do not use strcpy() when src and dest
+    overlap.
+  *  19618a5b82 - NEWS: update.
+  *  7665228bdb - Issue #4487: change "Save color values from
+    transparent pixels"…
+  *  168426a7b0 - Issue #4904: GIMP startup SLOW due to failed access
+    to…
+  *  64603c2ce6 - Issue #4895 - Crash when dragging a dockable dialog
+  *  ace03e5bc0 - Updated Italian translation
+  *  927cea860a - Updated Italian translation
+  *  b5e88ab95a - app: regenerate config-enums.c
+  *  17e14487b8 - app: add missing change to gimpdrawablefilter.c
+  *  c3f93e5fef - app: run gtk_widget_show() on the new checkbox.
+  *  d35f8c67e7 - app: add missing changes to last commits
+  *  122d4b6f05 - app: don't detroy cached data when disabling filter-
+    tool preview
+  *  1da36f32a1 - app: add gimp_drawable_filter_set_preview()
+  *  98e1f6a846 - app: rename gimp_drawable_filter_set_preview() to
+    _set_preview_split()
+  *  3d727809da - app: add gimp_applicator_set_active()
+  *  9f04d96d9b - Updated Italian translation
+  *  281b480d62 - Update Ukrainian translation
+  *  825b2a7c91 - NEWS: update.
+  *  16678f4db0 - app: make new feature delete-pixels in Crop tool FALSE
+    by default.
+  *  d5fc3e8009 - app: leave locked pixels alone when cropping
+  *  824a5a4580 - app: make deletion of cropped pixels in crop tool
+    optional
+  *  3689332483 - Update Ukrainian translation
+  *  f2e46deb73 - NEWS: update.
+  *  b8c4e936eb - Issue #4871: Plug-ins not translated.
+  *  1b14b13e40 - app: no generic comment when no revision comment set.
+  *  6cd49b8e6e - Fix GTK+3 only code from commit 6d0886032dd.
+  *  3c50032a7b - app: do not free non-allocated DBus manager.
+  *  e0f3a9d834 - app-tools, app: gimp-debug-tool crashing with NULL
+    release_date.
+  *  e3d83fb8e5 - app: fix minor indentation bugs.
+  *  6d0886032d - app: GUI improvements to the update display in About
+    dialog.
+  *  0badb9d468 - app: display revision number in About dialog if > 0.
+  *  108f782f5e - app: let's display the release comment in update
+    notification…
+  *  9d03027fb3 - app: show time of last version update check.
+  *  0521e58006 - Update Ukrainian translation
+  *  4d847c9f06 - App gimptooleditor fix tooltip text
+  *  dd4cec577d - app: print gimp_versions.json parsing error on stderr.
+  *  6154099e3c - Update Polish translation
+  *  e6c6c6f51f - Update Catalan translation
+  *  a0fa771568 - Update Ukrainian translation
+  *  7685c16a1e - Issue #4846 - Symmetry origin is wrong when painting
+    on offset drawable
+  *  83fd8c6500 - app: fix string in config-enums.h
+  *  04d17b7829 - app: add option to show tool-button menu on hover
+  *  327b3fb772 - app: in GimpToolButton, select active tool in menu
+  *  3041a51f5b - Installer: add Croatian and Marathi language
+  *  a8fb741246 - Installer: rearrange install order of files, should
+    make installing slightly faster
+  *  888efb220a - Installer: file-mng builds on 32-bit Windows, stop
+    special-casing it
+  *  ad85b13498 - Issue #4858 - Duplicated image shows NULL in warning
+    when closing it
+  *  b6a777cb9d - app, menus: add gegl:bloom to Filters -> Light and
+    Shadow
+  *  8fcd187bf5 - Update Russian translation
+  *  0e8b995ba0 - app: apply spin-scale gamma to input, not output
+  *  f6120257cd - Update Ukrainian translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 10 Apr 2020 06:34:36 +0300
+
 gimp-devel (2.10.18+git43749-942a1e4e97-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,27 @@
+vacuum (1.3.0+git20200407-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Vacuum-IM/vacuum-im.git
+  * Branch: master
+  * Commit: dec5f7b21d5b5fd4863f516554317d28a7be11f6
+  * Date: 1586240756
+  * git changelog:
+  *  dec5f7b2 - Only manual builds, github upload do weird tags.
+  *  549505ff - Add appveyor for currently tag build only.
+  *  6777022b - Fix for UB in random char generation. Use
+    QRandomGenerator for Qt 5.10+
+  *  7e7007a1 - MainWindow.cpp: FCentralVIsible = flase before creating
+    any widgets
+  *  f3437b77 - Bundled zlib updated to version 1.2.11
+  *  b35c4b6e - Correct SCRAM-SHA checks in xmppStanzaIn. SCRAM-SHA-224
+    added.
+  *  a3532f02 - SCRAM-SHA-384 dkLen fix.
+  *  966da700 - SCRAM-SHA-256/384/512 support. But 384 doesn't work on
+    https://lightwitch.org/ for some unknown reasons.
+  *  eaa19126 - Опция сворачивания окна ростера вместо закрытия #911
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 09 Apr 2020 04:39:55 +0300
+
 vacuum (1.3.0+git20200320-1) unstable; urgency=medium
 
   * Compile
