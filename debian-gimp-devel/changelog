@@ -1,3 +1,65 @@
+gimp-devel (2.10.18+git43862-39ca21218e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 39ca21218e0c61edaaf3e55e44aa229c77a52fba
+  * Date: 1587471353
+  * git changelog:
+  *  39ca21218e - app: fixes string format argument types on Windows 32-
+    bit.
+  *  fc9a6600c9 - app: gimp_sigfatal_handler() must not be declared on
+    Win32 without…
+  *  a4a6e8cebf - build: removing OpenBlas patches.
+  *  038de4d3ef - libgimpwidgets: fix logarithmic transform in
+    gimp_scale_entry
+  *  1709bbde73 - Update Korean translation
+  *  2335d5590d - app: fix cast bug.
+  *  a6c095b02d - app: make sure to update the display-shell
+    title/statusbar when closing image
+  *  2cbb08595c - Issue #4968 - Newly opened image not visible in image
+    window ...
+  *  59115b4cad - NEWS: update.
+  *  f1d102bece - plug-ins: remove last usage of GTimeVal and
+    g_get_current_time().
+  *  2229b735bb - plug-ins: fix more abs().
+  *  164fa3494f - plug-ins: fix abs() on long int.
+  *  aaa55f9042 - plug-ins: fix some build warning.
+  *  75aac15343 - plug-ins: fix various other warnings on the Windows
+    build CI.
+  *  b78fcb5dc9 - plug-ins: fix signedness warning with different
+    expectation Win/Linux.
+  *  21ce9d6b8f - Issue #4967 - Crash when cancelling filters with aux
+    inputs
+  *  556397cba1 - Update Swedish translation
+  *  1878313511 - app: maintain common settings when editing Brightness-
+    Contrast/Levels as Levels/Curves
+  *  c2ee2553ce - app: reset common settings when resetting Curves tool
+  *  cd1f531cde - app: when copying GimpCurve, don't overwrite points
+    from samples
+  *  d7200ae55e - NEWS: update.
+  *  d059b7c9a3 - app: cleanup previous commit from !31.
+  *  cc6e21e05b - app: add color index label to the palette editor.
+  *  2dd2ba1bfb - plug-ins: file-psp.c fix incompatible pointer type
+  *  97549081fd - gitlab-ci: libspiro is needed to run `gegl`.
+  *  8e5e268bf6 - .gitlab-ci: sync the gimp-2-10 CI with master.
+  *  a66f88287c - app: add missing includes for windows
+  *  b26dfb6fb6 - Update Ukrainian translation
+  *  78983e4b59 - app: apply "linear" setting when repeating curves and
+    levels
+  *  f5e4b1770e - .gitlab-ci.yml: remove pygtk from GIMP dependencies
+    list
+  *  05e8e98a2e - plug-ins: screenshot-win32.c forbids mixed
+    declarations and code
+  *  192efa80e8 - Update Polish translation
+  *  1b3c945488 - app: don't grab keyboard focus when showing tool-
+    button menu on hover
+  *  91e49e0111 - Update Turkish translation
+  *  573efb3fbc - Update Catalan translation
+  *  a7191ba7ca - Fixes to Catalan translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 25 Apr 2020 15:01:08 +0300
+
 gimp-devel (2.10.18+git43826-3c3f239852-1) unstable; urgency=medium
 
   * Compile

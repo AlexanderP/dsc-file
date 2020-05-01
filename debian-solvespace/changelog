@@ -1,3 +1,26 @@
+solvespace (3.0.0~git1480-f36ac50-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: f36ac500a14da169c2017947710fc6e13b712c4e
+  * Date: 1587764275
+  * git changelog:
+  *  f36ac50 - Add rotated face from point entity type. Fixes issue 585,
+    problems constraining to Revolve and Helix ends. (#586)
+  *  700b5d6 - Allow Revolve and Helix end surface selection and
+    constraints. (#584)
+  *  45eb246 - Eliminate some entity copies in lathe groups. Eliminates
+    a crash due to copy numbers going over 1000. May break some older
+    files with constaints on lathed entities. (#582)
+  *  b55dac7 - Don't create extra copies of entities in Revolve and
+    Helix groups.
+  *  e51fdf6 - Use handles instead of pointers in GenerateAll(). NFC.
+  *  f5415b3 - snap: Upgrade from gnome-3-28 extension to gnome-3-34
+  *  13b461d - snap: Use symlink instead of bind-mount for layout
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 25 Apr 2020 10:14:58 +0300
+
 solvespace (3.0.0~git1473-72635df-1) unstable; urgency=medium
 
   * Compile

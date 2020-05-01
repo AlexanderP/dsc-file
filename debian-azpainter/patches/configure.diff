@@ -1,0 +1,16 @@
+--- azpainter-2.1.6.orig/configure
++++ azpainter-2.1.6/configure
+@@ -202,10 +202,10 @@ for opt;do
+ 	--no-check-lib)
+ 		cf_check_lib=no ;;
+ 	*=*)
+-		eval "$opt" ;;
++		tmp2=`expr "X$opt" : 'X\([^=]*\)=.*'`
++		eval $tmp2=\'$tmp1\' ;;
+ 	*)
+-		echo "unknown option: $opt"
+-		exit 1 ;;
++		echo "unknown option: $opt" ;;
+ 	esac
+ done
+ 

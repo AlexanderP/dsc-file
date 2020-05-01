@@ -1,3 +1,379 @@
+freecad-daily (0.18.3+git20795-8beef0566-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 8beef0566d6dd37676c05223630a16f5e5a15099
+  * Date: 1587755373
+  * git changelog:
+  *  8beef0566 - FEM: ccx writer, move some methods around
+  *  4b38a6d51 - [TD]Qt4 fixes
+  *  0c57730cd - [TD]trap potential crash on app close
+  *  0a3f7ae31 - [TD]handle ProjectionAngle changes
+  *  e80c57624 - [TD]Centralize preference getters
+  *  a2b8aa6b2 - FEM: ccx writer, use better var name because of typo
+  *  45dac6721 - FEM: ccx input writer, move mesh writing code in
+    separate method and merge one file and splitted file writer methods
+  *  05c0f6b53 - FEM: ccx input writer, delete not needed code line
+  *  8d4ed6178 - Arch: Fixed regression in wall
+  *  3acc1c667 - remove obsolete policy stuff
+  *  b66732b26 - push cmake minimum version up
+  *  e6652aaac - Draft: move Mirror GuiCommand to gui_mirror module
+  *  b259d9412 - Draft: move Draft_Clone GuiCommand to gui_clone module
+  *  f1ca3c945 - Draft: small changes to the taskpanels for arrays
+  *  3cf7ea0da - Draft: small changes to the view providers for arrays
+  *  dc2c103fe - Draft: rename Circular, Ortho, and Polar arrays
+  *  0fb2d9cf7 - Draft: small changes to the loading of the array
+    modules
+  *  cc26565b3 - Draft: move PointArray GuiCommand to gui_pointarray
+    module
+  *  720dc919c - Draft: move PathLinkArray GuiCommand to gui_patharray
+    module
+  *  f58212c07 - Draft: move PathArray GuiCommand to gui_patharray
+    module
+  *  4b8dda155 - Draft: move LinkArray GuiCommand to gui_array_simple
+    module
+  *  82efd3358 - Draft: move Array GuiCommand to gui_array_simple module
+  *  d4c699c84 - Draft: move Draft2Sketch GuiCommand to gui_draft2sketch
+    module
+  *  6f060d513 - Draft: move Shape2DView GuiCommand to gui_shape2dview
+    module
+  *  8643025d4 - Draft: move WireToBSpline GuiCommand to gui_wire2spline
+    module
+  *  4ed80cdf8 - Draft: move Drawing GuiCommand to gui_drawing module
+  *  868435bfd - Draft: move Scale GuiCommand to gui_scale module
+  *  81d77e2ca - Draft: move Trimex GuiCommand to gui_trimex module
+  *  418bafe6e - Draft: move Downgrade GuiCommand to gui_downgrade
+    module
+  *  c3221222b - Draft: move Upgrade GuiCommand to gui_upgrade module
+  *  a9688f7d0 - Draft: move Split GuiCommand to gui_split module
+  *  cb5aa765f - Draft: move Join GuiCommand to gui_join module
+  *  8ea1358dc - Draft: move Stretch GuiCommand to gui_stretch module
+  *  eb21502d0 - Draft: move Offset GuiCommand to gui_offset module
+  *  5cf9dadd6 - Draft: move Rotate GuiCommand to gui_rotate module
+  *  bad30329d - Draft: move ApplyStyle GuiCommand to gui_styles module
+  *  5f11802bc - Draft: move Move GuiCommand to gui_move module
+  *  3370e870f - Draft: move SubelementHighlight to its own module
+  *  c0aa89e7a - FEM: ccx input writer, splitted, improve heatflux
+    constraint
+  *  b2dbd8c07 - FEM: ccx input writer, splitted, improve pressure
+    constraint
+  *  8a7642142 - FEM: ccx input writer, splitted, improve force
+    constraint
+  *  021c25a78 - FEM: ccx input writer, splitted, improve node sets for
+    fixed constraint
+  *  cacf620e1 - FEM: ccx input writer, splitted, improve node sets for
+    displacement constraint
+  *  b8d063f5b - FEM: ccx input writer, splitted, improve node sets for
+    planerotation constraint
+  *  11ef01fee - FEM: ccx input writer, splitted, improve node sets for
+    temperature constraint
+  *  1f5d2fca3 - FEM: ccx input writer, splitted, improve node sets for
+    transform constraint
+  *  b1623c441 - FEM: ccx writer, splitted writer, improve surface sets
+    for tie and contact
+  *  531e18304 - change from radio button to checkbox per feedback
+  *  ba616697e - Display 00:00:00 when the cycle time is 0 seconds
+  *  e99cf9b66 - ensure the getCycleTime function returns a value
+  *  0c96f7718 - Arch: Added Truss tool
+  *  3802e07f5 - Draft: fixed regression in snapper
+  *  028926ee9 - FEM: ccx writer, splitted writer, make include names
+    class attributes
+  *  03629634a - FEM: ccx writer, fix indent and white spaces
+  *  865f0cc69 - remove debug print
+  *  be14fb85e - Add CycleTime Attribute to PathJob
+  *  ca35d67f7 - Add cycleTime Attribute to PathOp
+  *  b2756bb10 - Add getCycleTime method to Path::ToolPath
+  *  683e78c57 - FEM: ccx writer, improve new lines and comments
+  *  5b3fea59e - Draft: Annotation editor
+  *  948977646 - LGTM: Fix 'testing equality to None'
+  *  ae728e63a - Work towards adding references to the objects passed in
+    python class methods.
+  *  c11ebcd43 - Rewrote the function and method docstrings in an
+    imperative style.
+  *  14283ea3e - Moved __init__ docstrings into the class docstring
+  *  5f0438fb9 - Removed incorrect apostrophies.
+  *  7490f3fc4 - Comparison with None is now using 'is' operator
+  *  f6ffd123d - Removed extra colon.
+  *  118483fd4 - Added reference to the depreciation of the ArchFloor
+    module.
+  *  0c9fde600 - Moved all module docstrings to the top of the file.
+  *  34275a239 - Fixed non-ascii quote character
+  *  8cf975d83 - Fixed docstring allignment for a function
+  *  d3f6d8d5c - Spellcheck
+  *  0dd278fcb - Fixed docstrings straying too far right, after
+    indentation was fixed.
+  *  1e5356ba3 - Work on adding docstrings for archsite
+  *  eda726041 - Added docstrings for arch project, and corrected some
+    doc mistakes.
+  *  0c3e513c3 - Added docstrings for ArchFloor
+  *  5a382d0dc - Added docstrings to _Wall, and remaining parts of
+    ArchWall
+  *  15abfc23f - Added docstrings for Arch IFC files
+  *  3a5555f67 - Finished arch component docstrings
+  *  002782875 - Docstrings for ViewProviderComponent
+  *  918daad31 - Fixed syntax error
+  *  f868ff36e - Made recommended formatting changes.
+  *  8f910713d - More work on ArchComponent docstrings
+  *  ac16e173f - Added docstrings to all of the Component class's
+    methods.
+  *  90812a05a - [skip ci] Fix typos
+  *  b5a389030 - Work on ArchComponent docstrings
+  *  07605ff85 - Best efforts on arch wall for now.
+  *  28ecdbac0 - Work on adding docstrings to ArchWall
+  *  4c1c6635b - [skip-ci] AddonManager: Add ModernUI to AddonManager
+  *  18cfafeed - Draft: reintroduced grid button in snap toolbar
+  *  d59224a4b - [Draft] Correct Draft Edit Tooltip in preferences
+  *  ace8c98aa - Draft: move Label GuiCommand to gui_labels module
+  *  d3646b057 - Draft: move Facebinder GuiCommand to gui_facebinders
+    module
+  *  4c297587c - Draft: move Point GuiCommand to gui_points module
+  *  afd941b66 - Draft: move ShapeString GuiCommand to gui_shapestrings
+    module
+  *  44be76758 - Draft: move Dimension GuiCommand to gui_dimensions
+    module
+  *  bec9d0105 - Draft: move Text GuiCommand to gui_texts module
+  *  66055ebf1 - Draft: move Ellipse GuiCommand to gui_ellipses module
+  *  0e089e998 - Draft: move Polygon GuiCommand to gui_polygons module
+  *  59c41fab3 - Draft: move Circle GuiCommand to gui_circles module
+  *  ea31a7d45 - Draft: move Arc GuiCommand to gui_arcs module
+  *  0d891a85e - Draft: move Rectangle GuiCommand to gui_rectangles
+    module
+  *  689324fe2 - Draft: move CubicBezCurve GuiCommand to gui_beziers
+    module
+  *  17281a250 - Draft: move BezCurve GuiCommand to gui_beziers module
+  *  b6cdf9f55 - Draft: move BSpline GuiCommand to gui_splines module
+  *  529ec1e1a - Draft: move Wire GuiCommand to gui_lines module
+  *  934d0f375 - Draft: move Line GuiCommand to gui_lines module
+  *  89928ef1f - FEM: ccx writer, splitted file writting, only write
+    object headers if there are objects
+  *  81be62cae - FEM: ccx writer, splitted inp file, code improvements,
+    but no changes in file writing
+  *  25e300402 - FEM: ccx writer, splitted inp file, code moveing, but
+    no changes in file writing
+  *  9cd69ed7b - FEM: ccx writer, better analysis type checks for
+    analysis member
+  *  1f595291a - FEM: ccx writer, better object existance checks
+  *  be47670c6 - Mesh: [skip ci] implement initial guess of cylinder
+    axis
+  *  71414fca9 - Arch: Also skip default storey when importing IFC with
+    'replace by group' option
+  *  6e712f601 - Arch: Added IFC import option to replace project,site
+    and building with a group
+  *  b8d7f8df5 - [Draft] Fixed scale multiplier for text object
+  *  982a0fdd9 - Draft: move Modifier class to gui_base_original module
+  *  9f5e21575 - Draft: move Creator class to gui_base_original module
+  *  181c5cb60 - Draft: import Part module where necessary for the tools
+  *  9b3096353 - Draft: move the base DraftTool class to its own module
+  *  0ba89d166 - Draft: move DraftTools utilities to another module
+  *  dd41c1a49 - Draft: GuiCommandSimplest to serve as base of simple
+    Gui Commands
+  *  6f2fd0451 - Draft: Fixed further regressions
+  *  dc742e852 - Draft: Fixed broken backwards compatibility with
+    annotations
+  *  1090da622 - NaviCube fix compiler warning
+  *  bd669a603 - Copy all path operations in selection
+  *  477f0c913 - Toggle active state of all path operations in selection
+  *  e8e67e8c5 - Adding FreeCAD liberapay account
+  *  2ce452c65 - Fixed bad conflict merge in PArtDesign
+  *  0c326f094 - [skip ci] fix documentation typos
+  *  bf643bb6e - Fix indent and double "or"
+  *  16d44f115 - Add initial link support
+  *  33999badb - [Part] color preferences: add missing tooltips
+  *  c85775446 - [Draft] Further cleanup of the branch
+  *  81df9b76a - [Draft] Snapper cleanup
+  *  64db72199 - [Draft] Snap improvement and statusbar cleanup after
+    rebase
+  *  be75f4feb - [Draft] Statusbar widgets, preferences to disable draft
+    statusba
+  *  480216b25 - [Draft] rough implementation of new preference dialog
+    for interface
+  *  a23224da8 - [Draft] Added Draft Snap Statusbar
+  *  55e537d79 - [Draft] Improved Snapper Toolbar Behaviour
+  *  add624353 - Converted class names from private to public, per
+    feedback from pull request
+  *  1123e271a - Converted class names from private to public and
+    corrected docstring formatting, per feedback from pull request
+  *  1eef7064f - Initial addition of fcsprocket feature. This is a
+    PartDesign tool that allows for the simple creation of ANSI standard
+    roller chain sprockets.
+  *  7c3fe2f25 - remove hard coded locale from path ui
+  *  45aef7b02 - FEM: meshtools, init empty node numbers in face search
+  *  9dc688ff3 - FEM: result task panel, avoid zero float division
+  *  a020dc2af - FEM: meshtools, fix element names in face search
+  *  8a7ebe6fa - [TD]Piecewise Detail Algo
+  *  1025ef4da - [TD]Piecewise Sectioning Algo
+  *  32ac8929b - Added radio button that links the movement of stock and
+    model when using the set x, y, or z to 0 in Path workbench
+  *  a8c03357b - remove duplicate signal
+  *  d0d9888b9 - Hide the join type.
+  *  532e86904 - don't hide the join type
+  *  ba34cc6a9 - FEM: mesh export, add export to Python module
+  *  656087fb9 - FEM: mesh tools, better logs
+  *  4555a7766 - Draft: Annotation styles editor
+  *  1b887fa0f - Draft: [WIP] Annotation styles editor
+  *  1c5b2c8e2 - [TD]fix crash on bad centerline selection
+  *  b899d6c8b - Path: Optimization for open edges update
+  *  1318a7364 - Mesh: [skip ci] add sphere and cylinder fitting
+    algorithms
+  *  5e9869aae - Spreadsheet: [skip ci] add generated Imp files to
+    repository to avoid possible build failures
+  *  6c890c196 - Draft: move array commands to DraftTools
+  *  2021d0bec - Draft: move AddPoint and DelPoint to
+    gui_line_add_delete module
+  *  1a2e79ecb - Draft: move Draft_Arc_3Points to gui_arcs module
+  *  1f3a88f1c - Draft: move Draft_AddConstruction to gui_groups module
+  *  68119de02 - Draft: move Draft_AutoGroup to gui_groups module
+  *  60f315565 - Draft: move Draft_Slope to gui_lineslope module
+  *  8aeb33f20 - Draft: move Draft_FlipDimension to gui_dimension_ops
+    module
+  *  ed55c6e82 - Draft: move Draft_Heal to gui_heal module
+  *  8c177c7fe - Draft: move Draft_ToggleGrid to gui_grid module
+  *  1ed3df9df - Draft: add base class for Snap commands
+  *  11206b1d3 - Draft: move Draft_ShowSnapBar to gui_snaps module
+  *  9eab03b59 - Draft: add correct docstring to old Array tools
+  *  ef3ad5121 - Draft: move SelectGroup command to gui_groups module
+  *  d05a786e5 - Draft: move AddToGroup command to gui_groups module
+  *  8d94a0e33 - Draft: new utility toolbar with some useful commands
+  *  14352677c - Draft: move DisplayMode command to gui_togglemodes
+    module
+  *  9758d983e - Draft: move mode commands to gui_togglemodes module
+  *  7189d3de0 - Draft: move line GuiCommands to gui_lineops module
+  *  017226e80 - Draft: GuiCommandSimplest to serve as base of simple
+    Gui Commands
+  *  a104ece52 - Draft: update InitGui with context commands
+  *  131961c2a - [Draft] Cleanup splitted annotatation objects
+  *  0745f760a - [Draft] Removed annotation styles objects
+  *  8e3dfe7c2 - [Draft] Dimension styles improvements
+  *  164bbabbd - [Draft] Cleanup of Annotation style branch
+  *  85bf45937 - [Draft] Splitted object Text and Label from Draft.py
+  *  f45314c9b - [Draft] Updated cmake with splitted annotation objects
+  *  88612bee7 - [Draft] Dimension Style cleanup
+  *  4855564bb - [Draft] Group object for dimension styles
+  *  33f6d0119 - [Draft] Split angular dimension
+  *  6d8fe0731 - [Draft] Annotation refactor and Cleanup
+  *  530e8b6c5 - [Draft] Split Dimension object and reorganize of
+    annotation objects
+  *  1b7058fa3 - [Draft] New Icons for Annotation Style
+  *  34cf98102 - [Draft] Dimension style object
+  *  0e097ae7f - Draft: add init_draft_statusbar to CMakeLists
+  *  e3ea589d5 - [Draft] Annotation scale, support for imperial custom
+    scale input
+  *  08d949b08 - [Draft] Rearrange annotation properties groups
+  *  116052cff - [Draft] Annotation Scale bugfix
+  *  ff3bdf86b - [Draft] Improved Autogroup to handle Draft Annotations
+  *  1d7b62e6e - [Draft] First implementation of annotation scale
+  *  e65c61036 - [Draft] Annotation scale support and statusbar widget
+  *  dc8befa47 - Path: Move more common methods to PathSurfaceSupport
+    module
+  *  28abb95ea - Path: Add new support module for 3D Surface and
+    Waterline
+  *  4cd4b2e87 - Path: Comment cleanup; adjust messages; set 2 default
+    values
+  *  cb796ca2c - Path: Implement new module PathSurfaceSupport; Add
+    `Spiral` cut pattern
+  *  aaf1eee7c - Path: Preparation for making property defaults readable
+    through class
+  *  eb354c3a1 - Path: Improve backwards compatibility capabilities
+  *  ed85341cd - Path: Improve property visibility in Data tab
+  *  a0cecce62 - Path: Expose operation's property details to access via
+    class
+  *  9e9d5ce96 - Path: Fix weakness in face analysis for unique
+    OuterWire cases
+  *  01e95b2ac - Path: Add missing tooltips
+  *  aa1261dc7 - Path: Waterline fixes(5), new IgnoreOuterAbove, and
+    code simplification
+  *  c0a5a8c97 - Path: Improve Tasks editor interaction
+  *  341da1092 - Path: Move more common methods to PathSurfaceSupport
+    module
+  *  0bd0d52ba - Path: Simplify `if ... is True:` statements.
+  *  ccfd52477 - Path: New class - PathGeometryGenerator; new CutPattern
+    - Offset
+  *  f6ad7101c - Path: Create shared support  module for 3D Surface and
+    Waterline
+  *  fd34891c9 - Path: Improve compatibility between file versions
+  *  a6cb530d5 - Path: Fix weakness in face analysis for unique
+    OuterWire cases
+  *  f41ec732e - Path: Added `Spiral` cut pattern; Adjusted tooltip
+    language
+  *  b5048f4f0 - Path: Multiple fixes; code optimizations and cleanup
+  *  15e1fa7bb - Path: Added missing tooltips and added new Cut Pattern
+    options
+  *  c6b9adec2 - Path: GUI improvement - swap setEnabled() for show()
+    and hide()
+  *  98aaad5fb - [TD]fix KB lockout in dialogs
+  *  070099daa - fix some typos in recent lazyloader implementation
+  *  97fbda9b4 - Arch: Fixed bug in IFC export of furniture
+  *  232b701b3 - fix a typo
+  *  ac82f6ca4 - give all preferences dialogs a clear name
+  *  79f7986eb - This commits splits the "General" dialog to "General"
+    and "Colors".
+  *  57328a136 - [TD] split too long preferences dialogs
+  *  f1a2063a1 - Remove conditionals for older fedora versions from
+    freecad.spec
+  *  8fbfeffe1 - Switch freecad.spec from OCE to opencascade (OCCT)
+  *  f0061fade - FEM: group meshing, fix retriving group elements in
+    rare cases
+  *  9dac36eec - FEM: self weight object, set to not shown in property
+    editor
+  *  843d39495 - Tools: [skip ci] move import of requests module into
+    try/except block
+  *  2d29ac5fc - [TD]Fix Detail dragger for ProjGroup
+  *  7d9cfeb2c - Sketcher: Fix trim
+  *  a150f8a54 - Arch: Fixed IFC4 export of surface styles
+  *  7bd2ec425 - add docstring to __init__.py
+  *  855fa1adc - Arch: Support App::Parts in IFC export
+  *  4104a0e26 - [TD]Use PropertyXLinkList for external Sources
+  *  30e07229e - [App]convenience getter for PropertyXLinkList
+  *  66c362a8b - Draft: Fixed div by zero error in snapping
+  *  3eff81df3 - Arch: Fixed louvre width/spacing property
+  *  97c8eff82 - Draft: warn the user if offset direction is not set
+  *  2c11e0f4c - TechDraw: [skip ci] fix -Winconsistent-missing-override
+  *  890809bcb - [skip ci]: make SubWCRef not to fail if internet
+    connection is blocked
+  *  940af87f6 - [Arch] split IFC dialog
+  *  d91bd53e1 - Part: [skip ci] include missing header file
+  *  7fe094ac0 - add lazyloader support
+  *  9e57caf2e - [TD] sanitize Detail view dialog
+  *  e537972ef - [TD]GlobalPlacement for loose 2D objects
+  *  27a475d84 - Tools: [skip ci] implement method to get commit number,
+    date and branch name from sha
+  *  c2a2effac - Resolve SyntaxWarning literal comparison in py3.8
+  *  f692494ad - Use "simpler" naming convention per user request
+  *  8afb0379b - Draft: dwg-export: allow overwriting of files
+  *  75623131f - Draft: new ShapeString icon for the tree view
+  *  7dc60feab - Path: fix path sort
+  *  4045b2fa3 - [TD]"<" symbol embedded in html
+  *  dd7e3ec72 - Ensure join type is shown
+  *  15318f495 - Deburr: signal for update when values are changed
+  *  a05ffd499 - [TD]apply global placement
+  *  bc9569515 - Add size parameter for syntax highlighting of GCode
+    editor
+  *  ba7b32e6b - [Draft]support BSplineCurve in getNormal
+  *  aed8c9140 - Arch: Export ortho arrays to IFC
+  *  4d0c0d2d7 - Draft: parameters to control array options in the task
+    panel
+  *  e1c31bf92 - Draft: polararray .ui file, Link array by default
+  *  c5e5f901e - Draft: gui_ and task_polararray cleanup
+  *  da066410a - Draft: orthoarray .ui file, Link array by default
+  *  48619ad6e - Draft: gui_ and task_orthoarray cleanup
+  *  8cbb59920 - Draft: circulararray .ui file, Link array by default
+  *  13cc36e73 - Draft: gui_ and task_circulararray cleanup
+  *  b2a7cb930 - [TD]expose SymbolScale preference
+  *  186af3d05 - [TD]fix preference key for SectionEdges
+  *  fda11ed71 - Draft: Added convenience methods to the Draft Working
+    Plane to set top, front and side positions
+  *  f956a00ba - add getCommandInfo() rename getShortcut to
+    getCommandShortcut
+  *  94215c171 - [skip ci] Add getShortcut(string) command to Gui,
+    returns string value representing shortcut key accelerator for this
+    command
+  *  5afce788c - Draft: move WorkingPlaneProxy to separate module
+  *  cb7bf768c - Draft: add WorkingPlaneProxy button to the toolbar
+  *  2ede46764 - Draft: move SelectPlane task panel to a separate module
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 25 Apr 2020 00:03:05 +0300
+
 freecad-daily (0.18.3+git20496-ff9c3be72-1) unstable; urgency=medium
 
   * Compile

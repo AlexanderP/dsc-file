@@ -1,3 +1,63 @@
+gimp-gtk3 (2.99.0+git45463-ffc7db84d1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: ffc7db84d1834a8720fcf2b6109b97c3a0e3adf7
+  * Date: 1587473271
+  * git changelog:
+  *  ffc7db84d1 - build: build OpenEXR plug-in.
+  *  7e7d48a7ac - app: fixes string format argument types on Windows 32-
+    bit.
+  *  430f40d00b - app: gimp_sigfatal_handler() must not be declared on
+    Win32 without…
+  *  0aca033370 - build: removing OpenBlas patches.
+  *  5dc1572b01 - libgimpwidgets: fix logarithmic transform in
+    gimp_scale_entry
+  *  8caef4ea0b - app: fix cast bug.
+  *  37065ccf6f - app: make sure to update the display-shell
+    title/statusbar when closing image
+  *  4e560f2ff0 - Issue #4968 - Newly opened image not visible in image
+    window ...
+  *  eafe90fa7c - libgimp, po-python: fix missing header in
+    distribution…
+  *  19c0d43c25 - Issue #4967 - Crash when cancelling filters with aux
+    inputs
+  *  e0851680ac - build: more dependencies for the Windows builds.
+  *  3a43e05936 - gitlab-ci: porting the Windows cross-build CI to a
+    Debian image.
+  *  c280cb9da7 - plug-ins: fix various other warnings on the Windows
+    build CI.
+  *  e854de73ee - plug-ins: fix signedness warning with different
+    expectation Win/Linux.
+  *  e1a11504cd - gitlab-ci: remove useless build dependencies.
+  *  8398c83c23 - build: use msys2 packages as source for the Windows
+    CI.
+  *  b948ff932d - build: fix the Windows CI.
+  *  987447f18f - app: maintain common settings when editing Brightness-
+    Contrast/Levels as Levels/Curves
+  *  88689515ab - app: reset common settings when resetting Curves tool
+  *  56693a8393 - app: when copying GimpCurve, don't overwrite points
+    from samples
+  *  05556457df - plug-ins: remove last usage of GTimeVal and
+    g_get_current_time().
+  *  db35080e75 - Update Ukrainian translation
+  *  f6dd30f3a8 - plug-ins: fix more abs().
+  *  fddaa77218 - plug-ins: fix abs() on long int.
+  *  b71754f2a7 - plug-ins: fix some build warning.
+  *  ea0cc27c01 - app, libgimp, pdb: update gimpfile PDB functions'
+    documentation.
+  *  60854c8668 - gitlab-ci: libspiro is needed to run `gegl`.
+  *  afd2b81dbf - build: proper libmypaint v1 development branch is now
+    libmypaint-v1.5.x.
+  *  0096e563f6 - app: apply "trc" setting when repeating curves and
+    levels
+  *  202012ba73 - plug-ins: screenshot-win32.c forbids mixed
+    declarations and code
+  *  472069779a - Update Polish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 25 Apr 2020 16:15:38 +0300
+
 gimp-gtk3 (2.99.0+git45432-60b6c06638-1) unstable; urgency=medium
 
   * Compile

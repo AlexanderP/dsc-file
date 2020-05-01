@@ -30,4 +30,5 @@ override_dh_install:
 	rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/ru.mtr
 	rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/uk.mtr
 	rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/be.mtr
+	rm -rf $(CURDIR)/debian/azpainter/usr/share/azpainter/doc/
 	dh_install
