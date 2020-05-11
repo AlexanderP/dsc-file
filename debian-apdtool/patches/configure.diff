@@ -1,0 +1,12 @@
+--- apdtool-1.0.1.orig/configure
++++ apdtool-1.0.1/configure
+@@ -205,8 +205,7 @@ for opt;do
+ 		tmp2=`expr "X$opt" : 'X\([^=]*\)=.*'`
+ 		eval $tmp2=\'$tmp1\' ;;
+ 	*)
+-		echo "unknown option: $opt"
+-		exit 1 ;;
++		echo "unknown option: $opt";;
+ 	esac
+ done
+ 

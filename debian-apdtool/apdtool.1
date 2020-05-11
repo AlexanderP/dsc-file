@@ -1,0 +1,133 @@
+.\" 20200502
+.TH "apdtool" "1" "May 2, 2020"
+.SH "NAME"
+apdtool \- APD and ADW file tool
+.SH SYNOPSIS
+.B apdtool
+.RI [ options ] " file"
+.SH "DESCRIPTION"
+.B apdtool
+is APD(AzPaineter)/ADW(AzDrawing) file tool.
+.PP
+.SH OPTIONS
+A description of each of the supported options is included below.
+.TP
+.B \-o,\-\-output=[DIR or FILENAME]
+Specify the image output directory or output file name.
+Output to the current directory by default.
+
+ <blend image>
+ If it is not an existing directory path name, it will
+ be treated as an output file name.
+ If the output file name is specified, the output format
+ is determined from the extension.
+ If a directory is specified, the output file name will
+ be "input file name + extension".
+
+ <Layer output>
+ The directory is always specified.
+.TP
+.B \-i,\-\-info
+Outputs layer information. No image output is performed.
+.TP
+.B \-f,\-\-format=[TYPE]
+Specify the output format of the composite image or layer
+image. default:png
+
+png/bmp/psd
+.TP
+.B \-G,\-\-gray
+Outputs in grayscale for blend image. In the case of
+PNG/PSD, it becomes 8-bit grayscale color.
+.TP
+.B \-M,\-\-mono
+
+For blend image, it is output in monochrome. In the
+case of PNG/PSD, it is 1bit grayscale color.
+.TP
+.B \-l,\-\-layer
+Outputs the layer image in RGBA color. By default,
+all layers except folders are targeted.
+
+By default, the output file name is "input file
+name + '_' + serial number + extension".
+.TP
+.B \-p,\-\-layer-prefix=[PREFIX]
+Specify the prefix of the output file name when outputting
+layers. * Specify the output directory with --output.
+
+The output file name will be "PREFIX + serial number +
+extension". If you specify an empty string with '-p ""',
+you can use only the serial number.
+.TP
+.B \-n,\-\-layer-no=[n,n1-n2,...]
+When outputting a layer, specify multiple index numbers of
+the target layer.
+
+The numbers start at 0 and can be specified as a single
+unit, such as "0,1,2", or as a range, such as "0-5,10-20".
+Separate each value with ','.
+
+The layer index number can be checked with --info.
+.TP
+.B \-z,\-\-layer-no-tex
+Does not apply the layer texture to the image when
+outputting layers.
+.TP
+.B \-s,\-\-texpath-sys=[PATH]
+Specify the directory path of the system texture image.
+
+The default is the current directory.
+.TP
+.B \-u,\-\-texpath-user=[PATH]
+Specify the directory path of the texture image of the user.
+
+The default is "~/.azpainter/texture".
+.TP
+.B \-T,\-\-texlist=[FILENAME]
+
+Outputs the path of the layer texture of all input files
+to a text file.
+
+FILENAME is the name of the text file to be output.
+No image is output.
+.TP
+.B \-t,\-\-texcol=[FILENAME]
+(When outputting blend image or layer)
+
+Load texture path and color information from FILENAME text
+file.  If the layer texture used in the A16bit/A1bit layer
+matches the path,  replace the line color of the layer with
+the specified color and invalidate the texture.
+
+Use when you want to convert a tone image to a grayscalecolor.
+
+In the text, a leading ';' is treated as a comment.  One line
+describes the texture path and the color information to be
+replaced.  There are two types of color specification.
+
+path/file@[0-100] : Density(%). 0=white,100=black
+
+path/file#[0-255] : 8bit color. 0=black,255=white
+
+Ex: tone/60_20.png@20
+
+This is valid only when the end of the line is a single-byte
+number and  there is an @ or # within 4 characters from the end,
+and the other lines are ignored (color replacement is not performed).
+
+[※important point]
+
+If the layer images to be replaced overlap in multiple layers,
+the lighter colors may be displayed on the darker colors unless
+the darker texture layers are arranged in order from the top.
+In that case, change the order of the layers in the original file.
+.TP
+.B \-V,\-\-version
+Displays version information.
+.TP
+.B \-h,\-\-help
+Displays help.
+
+.SH "AUTHORS"
+This manual page was written by Alexander Pozdnyakov <almipo@mail.ru>,

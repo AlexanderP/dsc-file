@@ -1,0 +1,88 @@
+Source: labplot
+Section: math
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper,
+ cmake (>= 3.2.0),
+ gettext,
+ pkg-kde-tools (>= 0.15.16),
+ pkg-config,
+ qtbase5-dev (>= 5.6.0),
+ libqt5svg5-dev,
+ libqt5serialport5-dev,
+ extra-cmake-modules (>= 1.3.0),
+ libkf5archive-dev (>= 5.16.0),
+ libkf5completion-dev (>= 5.16.0),
+ libkf5config-dev (>= 5.16.0),
+ libkf5configwidgets-dev (>= 5.16.0),
+ libkf5coreaddons-dev (>= 5.16.0),
+ libkf5crash-dev (>= 5.16.0),
+ libkf5doctools-dev (>= 5.16.0),
+ libkf5i18n-dev (>= 5.16.0),
+ libkf5iconthemes-dev (>= 5.16.0),
+ libkf5kio-dev (>= 5.16.0),
+ libkf5newstuff-dev (>= 5.16.0),
+ libkf5parts-dev (>= 5.16.0),
+ libkf5service-dev (>= 5.16.0),
+ libkf5syntaxhighlighting-dev (>= 5.16.0),
+ libkf5textwidgets-dev (>= 5.16.0),
+ libkf5widgetsaddons-dev (>= 5.16.0),
+ libkf5xmlgui-dev (>= 5.16.0),
+ bison,
+ libcfitsio-dev,
+ libgsl-dev,
+ libnetcdf-dev,
+ libfftw3-dev,
+ libhdf5-dev,
+ libcerf-dev,
+ zlib1g-dev,
+ liblz4-dev,
+ xauth,
+ xvfb, cantor-dev
+Standards-Version: 4.4.1
+Homepage: https://edu.kde.org/applications/science/labplot/
+
+Package: labplot
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ labplot-data (= ${source:Version}),
+Description: interactive graphing and analysis of scientific data
+ LabPlot provides an easy way to create, manage and edit plots.  It allows you
+ to produce plots based on data from a spreadsheet or on data imported from
+ external files.  Plots can be exported to several pixmap and vector graphic
+ formats.
+ .
+ Features include:
+  - project-based management of data
+  - project explorer for management and organization of created objects in
+    different folders and sub-folders
+  - spreadsheet with basic functionality for manual data entry or for
+    generation of uniform and non-uniform random numbers
+  - import of external ASCII data into the project for further editing and
+    visualization
+  - export of spreadsheet to an ASCII file
+  - worksheet as the main parent object for plots, labels, etc; supports
+    different layouts and zooming functions
+  - export of worksheet to different formats (PDF, EPS, PNG, and SVG)
+  - great variety of editing capabilities for properties of worksheet and its
+    objects
+  - cartesian plots, created either from imported or manually created data
+    sets or via mathematical equation
+  - definition of mathematical formulas is supported by syntax highlighting
+    and completion and by the list of thematically grouped mathematical and
+    physical constants and functions
+  - analysis of plotted data is supported by many zooming and navigation
+    features
+  - linear and non-linear fits to data, several fit-models are predefined and
+    custom models with arbitrary number of parameters can be provided
+
+Package: labplot-data
+Architecture: any
+Depends: ${misc:Depends}
+Description: data files for labplot
+ LabPlot provides an easy way to create, manage and edit plots.  It allows you
+ to produce plots based on data from a spreadsheet or on data imported from
+ external files.  Plots can be exported to several pixmap and vector graphic
+ formats.
+ .
+ This contains the data files for labplot.
