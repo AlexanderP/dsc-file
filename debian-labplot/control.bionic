@@ -38,7 +38,10 @@ Build-Depends: debhelper,
  zlib1g-dev,
  liblz4-dev,
  xauth,
- xvfb, cantor-dev
+ xvfb, 
+# cantor-dev | wget, 
+ libpoppler-qt5-dev, 
+ libpoppler-dev
 Standards-Version: 4.4.1
 Homepage: https://edu.kde.org/applications/science/labplot/
 
