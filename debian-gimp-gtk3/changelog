@@ -1,3 +1,140 @@
+gimp-gtk3 (2.99.0+git45564-a8e6412ee6-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: a8e6412ee6539b9315c3ac5bc74e6fcf3ad68ffc
+  * Date: 1589367345
+  * git changelog:
+  *  a8e6412ee6 - Issue #5073: just skip all plug-ins/pygimp/ from
+    POTFILES.
+  *  06014e9df0 - Updated Greek translation
+  *  6eb14fcdac - Update Romanian translation
+  *  ec7db847d0 - docs: libgimp3: Add missing GimpProgressVtable*Func
+  *  b537a2ab39 - Update Swedish translation
+  *  2afcca4e13 - gimpcurve: Use g_object_notify_by_pspec
+  *  64c5ce71ee - Update Ukrainian translation
+  *  5992a42231 - gimpthrobber: Get rid of g_type_class_add_private()
+  *  97b714d428 - Issue #3533 - Tool preset doesn't restore opacity and
+    paint mode
+  *  0d9716a0a8 - patternselect: Document pattern_name parameter
+  *  7ac6f0a22e - viewable: Use GET_PRIVATE() before precondition checks
+  *  88b9359efc - viewable: Use g_object_notify_by_pspec()
+  *  bd69747014 - viewable: Get rid of unused "stock-id" property
+  *  ddfae277cb - meson: Cleanup and fix issues using libapp_dep
+  *  8b0dfb99d5 - app/test-xcf: include necessary headers for close()
+  *  5f117d0561 - meson: Fix envvar in tests
+  *  3a167243b9 - meson: Fix building of tests
+  *  ed4e2a3790 - Update Ukrainian translation
+  *  ae34e778fc - meson: Use libgimp(ui)_dep in plug-ins meson files
+  *  904a2e422d - meson: Declare internal libgimp(ui) dependency
+  *  7025039b93 - app: in UI strings s/Precision/Encoding/
+  *  fa467ff573 - Update Swedish translation
+  *  96c795bebe - Update Swedish translation
+  *  f4c6d4bb79 - gimplist: Don't use sort_func field directly
+  *  7a8a300adc - gimpconfig-iface: Use G_DECLARE_INTERFACE
+  *  65b12c108d - libgimpwidgets: UnitStore: Fix conflicting names
+  *  25ecef0dc3 - build: fix cross-compiled meson builds.
+  *  ce17f2c10b - Add Romanian translation
+  *  30be314465 - .gitlab-ci.yml: expire all dependencies in 2 hours,
+    and all builds in 1 day
+  *  69c5fd02d4 - GimpHelpFunc: don't annotate (closure)
+  *  4f46c9298e - gimpintstore: Mark iter (out) annotations
+  *  aa6079fe8a - scrolledpreview: Add missing gir annotations
+  *  4b6362c0bd - gir: Mark more (out) annotations
+  *  57d3837e40 - gir: More missing annotations
+  *  f23ada8c77 - zoompreview: Add (array) gir annotation
+  *  09f8a3c922 - zoompreview: Fix gtk-doc identifier
+  *  86478fe78a - gimppropwidgets: Add (nullable) annotation for label
+  *  7aee2d1ea5 - gir: Fix typo nulllable → nullable
+  *  ed310dd48d - Fix some gtk-doc comments and GIR annotations
+  *  a8de828195 - gimpwidget: Correct gtk-doc docs wrt GtkHBox
+  *  59f3b07c5f - app: remove ANTI_ERASE from filter mode set
+  *  693eeae96b - gimpprogress: Add arg descriptions to vfuncs
+  *  2f94513df4 - libgimp: Make sure GIR includes the right header
+  *  58c41d9fdc - Fixed translation
+  *  f00df8f773 - Update ddswrite.c
+  *  fca6371e29 - app: clear the clipboard after storing its contents,
+    upon quitting.
+  *  b680945752 - gir: Make use of typedefs for GimpProgressVtable
+    vfuncs
+  *  4729fc8dec - Use GIMP_TYPE_RGB instead of G_TYPE_POINTER
+  *  82e945d945 - Add GIR annotations to bilinear utils
+  *  58fecd7f8c - gir: Make sure the GIR file includes the correct
+    header
+  *  97fcc8ca0f - gir: Mark gimp_dialog_new() parent nullable
+  *  29b1d91b76 - devel-docs: update debugging-tips with GEGL's meson
+    option names.
+  *  50d9886c82 - Update Ukrainian translation
+  *  e0a5aaeb22 - Issue #4992 - Modifiers change Free Select tool mode
+    while active
+  *  6cf9badefd - gitlab-ci: cppcheck does not need to wait for previous
+    stages to occur.
+  *  2baf8a3be1 - gitlab-ci: babl requires now vapigen for Vala binding.
+  *  93602a3973 - Issue #4326 - Add visual tab to spyrogimp plugin
+  *  83d6764e0e - gir: Add (closure) tags
+  *  7f58f2d6e5 - gir: Add more missing (array) and (out) annotations
+  *  f428667fff - .gitlab-ci.yml: set artifact expiry time for Linux
+    builds to 2 days
+  *  36f620012d - Fix typos
+  *  9c9e310a67 - gir: Add missing annotations
+  *  cf41d1fdf8 - colorselector: Rename signal emitters
+  *  f6c7bb997d - .gitlab-ci.yml: change artifact expiry to 2 hours for
+    dependencies and 1 day for MS Windows builds
+  *  99a7d5f7dd - gir: Found some more missing (out) annotations
+  *  52a146604b - gir: Add some missing (array length) annotations
+  *  db0493aa0d - gir: Add more (out) annotations
+  *  8d1ad63f3a - Use %NULL instead of NULL in gtk-doc comments
+  *  5f1598f63d - gir: Add more (out) tags when appropriate
+  *  8c7a2b42e6 - gir: (optional) tag requires a (out) annotation
+  *  24a8fd8377 - gitlab: removing added label since code it is broken
+  *  0941782fa4 - gitlab: remove label in bug template
+  *  f3f8d3a54e - Issue #3405 - Color component decompose crash for CMY
+  *  9adf2d19f8 - Issue #3949 - Image Map plug-in selects wrong areas
+  *  452924dbe9 - Issue #5009 - Possible array overrun in d_draw_ellipse
+  *  97e0322ebb - Issue #5010 - Setting twice value pcvals.paper_invert
+    in paper_store
+  *  80664c8e6e - app: do not snap white/black when making 2 color
+    palette
+  *  85d9730936 - Add some missing (nullable) annotations
+  *  d4387987b5 - app: when creating palette only snap to black/white
+    when present
+  *  9bb3ff42d7 - app: make generated indexed palettes possibly contain
+    pure black/white
+  *  fc0d2d9ce7 - Fixed copy paste error in gimp_vector3_copy
+  *  43b538bf1b - gitlab-ci: ignore a bunch of directories.
+  *  1e8923e184 - Issue #4721 - Ordering of default MyPaint Brushes
+    directories...
+  *  50257e9f7e - Issue #4696 - Keyboard shortcuts for layer opacity are
+    not working
+  *  fdcf74ea72 - libgimp: add gimp_param_spec_get_desc() in gimp.def.
+  *  5ecc36891b - gitlab-ci: add an analysis stage with cppcheck code
+    analysis stage.
+  *  15bedc9bf9 - libgimp: revive parameter range descriptions in the
+    procedure browser
+  *  2678bafca2 - Issue #5002: compare pointer to NULL, not 0.
+  *  362b828a03 - Issue #4996 - Wrong propagate_mode parameter handling
+    in plug-in-vpropagate
+  *  a7f562e7cd - Update Spanish translation
+  *  be8be1cb27 - app: don't leak event_blurb in
+    gimp_controller_editor_edit_clicked()
+  *  d7c995153d - app: in Unified Transform tool, avoid moving pivot
+    when locked
+  *  aa1a1f0a0c - app: add GimpTransformGridTool::apply_info() vfunc
+  *  9f6af7dbd3 - app: unlink transform directions on tool halt; make
+    chain button insensitive
+  *  a1fc6144da - gitlab-ci: fix Windows CI builds.
+  *  49351777b6 - Issue #3884: missing libgtk-3-dev leads to configure
+    syntax error.
+  *  2d4de85fe3 - plug-ins: in file-psd, use normal channel order
+  *  281188e169 - Issue #189 - Store channel colors when saving as PSD
+  *  ac19f6413b - plug-ins: in file-psd, fix indentation in psd-save.c
+  *  953a3ad479 - plug-ins: in file-psd, remove unused member of
+    DisplayInfoNew
+  *  251ce5126e - plug-ins: in file-psd, fix u8 channel format
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 13 May 2020 14:29:16 +0300
+
 gimp-gtk3 (2.99.0+git45463-ffc7db84d1-1) unstable; urgency=medium
 
   * Compile

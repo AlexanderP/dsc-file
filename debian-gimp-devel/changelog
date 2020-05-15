@@ -1,3 +1,68 @@
+gimp-devel (2.10.18+git43901-63a749721f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 63a749721fc65ac6b4de850cab8178c7ce2804d2
+  * Date: 1589314216
+  * git changelog:
+  *  63a749721f - Update Ukrainian translation
+  *  546309b7a2 - Update Romanian translation
+  *  e9e4421787 - Update Romanian translation
+  *  4aad8599f1 - Update Romanian translation
+  *  f274b139fc - Issue #3533 - Tool preset doesn't restore opacity and
+    paint mode
+  *  2dbd3a951c - Update Swedish translation
+  *  bdd0a88783 - Update Ukrainian translation
+  *  d0074985cc - app: in UI strings s/Precision/Encoding/
+  *  4d2b82f0d3 - Update Romanian translation
+  *  fd52dfd55e - Add Romanian translation
+  *  c6103998d4 - Update Romanian translation
+  *  acd6c2b5f5 - app: remove ANTI_ERASE from filter mode set
+  *  a92270fe73 - Fixed translation
+  *  ef217108a6 - app: clear the clipboard after storing its contents,
+    upon quitting.
+  *  694ce3fd54 - devel-docs: update debugging-tips with GEGL's meson
+    option names.
+  *  c35572f0c1 - gitlab-ci: babl requires now vapigen for Vala binding.
+  *  06049c3ac5 - Update ddswrite.c
+  *  25112a5355 - Issue #4992 - Modifiers change Free Select tool mode
+    while active
+  *  cdc38639f5 - Issue #3405 - Color component decompose crash for CMY
+  *  25873aa4df - Issue #3949 - Image Map plug-in selects wrong areas
+  *  56a361f55a - Issue #5009 - Possible array overrun in d_draw_ellipse
+  *  c5da8d1c95 - Issue #5010 - Setting twice value pcvals.paper_invert
+    in paper_store
+  *  a0f03c0e37 - app: do not snap white/black when making 2 color
+    palette
+  *  51955b2115 - app: when creating palette only snap to black/white
+    when present
+  *  a3f4bbbac9 - app: make generated indexed palettes possibly contain
+    pure black/white
+  *  14098bb081 - Update NEWS
+  *  46e4f40fd6 - Issue #4721 - Ordering of default MyPaint Brushes
+    directories...
+  *  8ee5095248 - Issue #4696 - Keyboard shortcuts for layer opacity are
+    not working
+  *  459a816786 - Issue #4996 - Wrong propagate_mode parameter handling
+    in plug-in-vpropagate
+  *  cfe528f376 - Update Spanish translation
+  *  92e07ed6a2 - app: don't leak event_blurb in
+    gimp_controller_editor_edit_clicked()
+  *  916d8bb66d - app: in Unified Transform tool, avoid moving pivot
+    when locked
+  *  7746da33de - app: add GimpTransformGridTool::apply_info() vfunc
+  *  a4296bb6bb - app: unlink transform directions on tool halt; make
+    chain button insensitive
+  *  9ee2b6685e - plug-ins: in file-psd, use normal channel order
+  *  3424a0844c - Issue #189 - Store channel colors when saving as PSD
+  *  5bef0b9588 - plug-ins: in file-psd, fix indentation in psd-save.c
+  *  0ef52b7d9e - plug-ins: in file-psd, remove unused member of
+    DisplayInfoNew
+  *  ccc9bd1849 - plug-ins: in file-psd, fix u8 channel format
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 13 May 2020 12:58:13 +0300
+
 gimp-devel (2.10.18+git43862-39ca21218e-1) unstable; urgency=medium
 
   * Compile

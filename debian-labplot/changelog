@@ -1,3 +1,27 @@
+labplot (2.7.0+git7248-f77924bf6-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: f77924bf69b01be955be359b4f7ff731b5a75729
+  * Date: 1589320003
+  * git changelog:
+  *  f77924bf6 - Fix compilation with clang
+  *  d0d28faaa - [column] Calculate pow() more efficiently
+  *  512a90a17 - [spreadsheet] fixed the normalization of the standard
+    deviation and added Turkey's trimean to the column statistics.
+  *  c51999644 - [spreadsheet] properly invalidate the column statistics
+    and other properties when data changes are undone/redone.
+  *  f330cfc85 - Revert "[spreadsheet] removed unneeded header refreshes
+    in SpreadsheetView as"
+  *  2d2e33409 - [windows] try to fix color-scheme installation
+  *  35e312546 - [analysis] improved the layout for padding values in
+    XYSmoothCurveDock.
+  *  34c17d91c - [spreadsheet] added the missing "Rescale to [a,b]"
+    normalization method in the context menu again.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 13 May 2020 19:35:08 +0300
+
 labplot (2.7.0+git7240-1688a5424-1) unstable; urgency=medium
 
   * Compile

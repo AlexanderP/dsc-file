@@ -1,3 +1,54 @@
+solvespace (3.0.0~git1511-70ec7cc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 70ec7cc257acaaa0580b9c948343e42cebedb36f
+  * Date: 1589323165
+  * git changelog:
+  *  70ec7cc - Improve triangle mesh (splitting of quads based on
+    angle).
+  *  23dfd97 - Fix use-after-free in Lathe, Revolve, and Helix. Issue
+    #611.
+  *  0be42a8 - Rename our isnan() function to IsReasonable().
+  *  771086f - Use C++ instead of C versions of standard library
+    headers.
+  *  e84fd46 - Use omp critical to simplify parallel triangulation. NFC.
+  *  c355a47 - Split quads based on angle.
+  *  1930602 - UI: split "union assemble" and "difference intersection"
+    on two lines.
+  *  9b07aaf - UI: Fix the logic for switching between union/assemble
+    and difference/intersection
+  *  6245c63 - Intersection boolen in triangle mesh mode is properly
+    implemented
+  *  3888909 - NURBS: Add intersection boolean operation.
+  *  c95a07a - Win32: when building with MSVC, require VS2015.
+  *  cd30e04 - Expand "edit newly added dimensions" to edit "Length
+    Ratio" and "Length Difference"
+  *  01af666 - Fix typo. NFC.
+  *  e29f71f - Update changelog
+  *  d857e3e - Various header cleanups. NFC.
+  *  e00d486 - Refactor dbp. NFC.
+  *  9951da8 - macOS: ignore spurious `-psn_` command line argument.
+  *  1442ee5 - Refactor InitPlatform.
+  *  9c1804b - Get rid of MemAlloc/MemFree.
+  *  521473e - Win32: use CRT heap instead of our own.
+  *  74103ee - CMake: expand sanitizer support to include TSan.
+  *  47e8279 - CMake: detect OpenMP and use if available.
+  *  b4e1ce4 - Use OpenMP for triangulation
+  *  7baf585 - No message if cached points to don't converge. Quiet the
+    terminal.
+  *  a7e0a17 - Don't create redundant edges in UvGridTriangulate into.
+  *  05aa649 - Update changelog
+  *  a52d88b - Less work in AssembleContour
+  *  88a0e55 - Eliminate infinite loop AssemblePolygon
+  *  7366a6c - Bernstein polynomials with no branching. (#591)
+  *  76b3efb - Travis: allow Snap arm64 to fail
+  *  3544829 - README: update Linux-to-Windows cross-compilation
+    instructions.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 13 May 2020 12:10:48 +0300
+
 solvespace (3.0.0~git1480-f36ac50-1) unstable; urgency=medium
 
   * Compile

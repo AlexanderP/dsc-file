@@ -1,3 +1,124 @@
+goaccess (1:1.3.0+git3042-3fbb1c4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 3fbb1c4671f26988724940306daa14c78c54343b
+  * Date: 1589248294
+  * git changelog:
+  *  3fbb1c4 - Prettified initial processing time from secs to HH:MM:SS
+    in HTML output.
+  *  40d46fc - Fixed typo on HTML report option.
+  *  b8ff5eb - Added additional option to set a max number of items per
+    page to 3.
+  *  7a3ae5a - Fixed issue where HTML report wouldn't update the tables
+    when changing per page option.
+  *  7e6821a - If built with --enable-debug, do not minify app.js and
+    chart.js.
+  *  4331bda - Added a widescreen layout to the HTML report (e.g.,
+    TV/KPI Dashboard).
+  *  2268ebe - Ensure no child data is appended to dashboard if --
+    no_ip_validation is used.
+  *  7500652 - Fixed issue where it wouldn't find either the user's or
+    global config file.
+  *  3d95021 - Updated Storage Built-in label.
+  *  0f1efe5 - Ensure we have a valid global hash container before
+    freeing it.
+  *  c14b257 - Ensure we have a valid module hash container before
+    freeing it.
+  *  2ed35b3 - Fixed issue where overall date range wasn't showing the
+    right start/end parse dates.
+  *  3eccf58 - Ensure we use cache to pull min max data metrics
+    (counters).
+  *  e3bc218 - Ensure we use cached to pull overall data metrics
+    (counters).
+  *  2364f2d - Ensure valid requests counter is not affected on
+    duplicate when restoring data.
+  *  12e6dda - Removed unnecessary dependency from snapcraft.yaml.
+  *  9b1a909 - Fixed websocket issue returning a 400 due to request
+    header size.
+  *  3980edd - Removed unused function declarations from header file.
+  *  9588cf8 - Fixed quoting issue on HTML output.
+  *  4c957ac - Minor CSS updates to HTML report.
+  *  dc0dbac - Minor updates to Autoconf configure.ac.
+  *  bff3995 - Updated i18n textual ~PO files with the latest changes.
+  *  09b2004 - Added a caching mechanism to avoid hitting storage
+    tables.
+  *  c5c0226 - Added new Edg token to the list of browsers.
+  *  22a9e3d - Added a caching storage to improve parsing raw data.
+  *  c41bf05 - Minor update to debug message under raw data parse.
+  *  af53ad2 - Ensure visitors panel shows in descending order.
+  *  36b542a - Minor update to CLI help section.
+  *  91bf145 - Improved performance when parsing raw data and when
+    fetching a hash table.
+  *  a445e2a - Removed unused LOG_DEBUG from parser.c.
+  *  20ca2db - Fixed issue where tailing a file could potentially re-
+    parse part of the log.
+  *  f06659c - Removed unnecessary TC calls from parser.c.
+  *  68ebb72 - Removed unnecessary TC include.
+  *  37f2524 - Removed unnecessary TC include.
+  *  8e1c22d - Removed unnecessary TC include and dep.
+  *  446a9f9 - Removed unnecessary TC include.
+  *  6a89239 - Removed unnecessary TC include.
+  *  3344ef3 - Fixed removal of unnecessary TC include.
+  *  bb35013 - Removed unnecessary TC include.
+  *  b4dd87f - Fixed typo on gslist.c function comment.
+  *  0b5e521 - Added some additional comments about how the storage
+    works.
+  *  0ae49c3 - Increased MAX_LINE_CONF so a JSON string can be properly
+    parsed.
+  *  54b4269 - Increased slightly maximum line length for the entire
+    codebase.
+  *  3ef453f - Refactored how dated data is stored so it can easily be
+    destroyed.
+  *  ec6bd07 - Add missing va_end
+  *  8f930e7 - Add format and noreturn function attributes
+  *  906e048 - Moved time setting from tm struct to its own routine.
+  *  5f3fec1 - Moved date setting from tm struct to its own routine.
+  *  a44644c - Added missing date/time structure for the 'x' specifier.
+  *  8cb3041 - Replaced bitmap when keeping UNIQMAP count and instead
+    use a single key-value counter.
+  *  45d74e4 - Updated code formatting on recently committed code.
+  *  960923e - Added on-disk persitence options to default config file.
+  *  035121b - Fixed implicit declaration of function ‘setgroups’;.
+  *  d4413fd - Clean up uniqmap by key instead of iteratating over the
+    whole table.
+  *  ffefbc1 - Replaced UNIQMAP key-value (string-uint32_t) for a
+    uint32_t-bitmap structure.
+  *  cc89420 - Drop permissions first thing.
+  *  2e4dc41 - Fixed formatting on __attributes.
+  *  2eb6549 - Add option user-name=username
+  *  6540ffa - These sources use va_list and thus require stdarg.h
+  *  b305943 - Cleaned up some unused code from CLI dashboard.
+  *  520a0da - Removed tokyo cabinet options from config file.
+  *  7efb8fe - Removed unused configured option from --version output,
+  *  a73ce45 - Added --persist and --restore options to persist to disk
+    and restore a dump from disk.
+  *  69505df - Ensure module index is reset on each iteration.
+  *  1b24d4b - Check for uninitialized data to avoid crash
+  *  b7cfca1 - Add noreturn function attribute to help static analyzers
+  *  feff408 - Improve function format attribute
+  *  a00348b - Removed -Winline to avoid max-inline-insns-single limit
+    reached.
+  *  3455963 - Use dist: xenial on travis.yml.
+  *  d0e6968 - Use dist: trusty on travis.yml.
+  *  a0514ba - Removed unused commented code from previous on-disk
+    storage.
+  *  0f19932 - Use dist: trusty on travis.yml.
+  *  8f0c110 - Version bumped to 1.4.
+  *  635ef28 - Use dist: bionic on travis.yml.
+  *  16f2dce - Make clang happy and indicate a parameter is a printf-
+    style format using the __attribute__.
+  *  a161ec5 - Updated braces formatting on func definition.
+  *  3c50096 - Updated travis yml to reflect latest storage.
+  *  8445b92 - Version bumped to 1.4.
+  *  fa249c5 - Updated copyright years on each file.
+  *  d7ebd9d - Replaced TokyoCabinet storage for a non-dependency in-
+    memory persistent storage.
+  *  de872e8 - Fix build with GCC 10
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 13 May 2020 08:25:48 +0300
+
 goaccess (1:1.3.0+git2952-f62848c-1) unstable; urgency=medium
 
   * Compile

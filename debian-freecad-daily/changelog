@@ -1,3 +1,261 @@
+freecad-daily (0.18.3+git21019-ea8bcb8e6-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: ea8bcb8e6e07abf6d590bb33e5f535da3c61da70
+  * Date: 1589212969
+  * git changelog:
+  *  ea8bcb8e6 - FEM: pep8 code formating
+  *  0621cfa9d - remove deprecated std::unary_function
+  *  618089d6d - remove deprecated std::binary_function
+  *  4d8db6474 - Doc: [skip ci] fix check for doxygen
+  *  85f0edddd - [TD]minor py fixes
+  *  37340eef0 - [TD]Dimension Py Routine fixes
+  *  f54eba784 - FEM: calculix writer, fix regression added with
+    45dac67211
+  *  cc82cf3e5 - Added chamfer angle support to PartDesign.
+  *  29c5528fd - [TD]oblique section lines
+  *  b3290e035 - [TD]show section face pat hatch on restore
+  *  24139bf25 - [TD]load images at correct size
+  *  92dfdf605 - [TD]prevent extra recompute on X,Y change
+  *  fdd99d2b2 - [Gui]fix canConvert for Qt4
+  *  9b8b128a0 - [Sketcher] Project full circle, impl. missing cases
+  *  bdea1ec0f - App: [skip ci] remove duplicate check
+  *  9c4c8acb6 - App: fix some property's setPathValue()
+  *  45d9c23c2 - Translate user messages
+  *  c9dc4963d - Use PathLog for user notices
+  *  8c9cdef2a - Gui: [skip ci] use a widget's text property instead of
+    casting to a specific subtype
+  *  ba4d70e7a - [Expression] Default to current 'constant' value when
+    editing if no expression set yet ; fixes #4298
+  *  38a47daca - PathOp PEP8 Formatting Fixes
+  *  0f1bdd30e - PathJob PEP8 Formatting Fixes
+  *  e906192d2 - Clean up unused code and comments
+  *  1d9c1f89b - reword feedrate error when no tool controller is
+    selected
+  *  526328dca - Change feedrate error to warning.
+  *  9a43391b3 - remove job level warning for cycle time error
+  *  88fe95201 - Reword property description to reflect job rather than
+    op
+  *  b4b16fef4 - Adding HEIDENHAIN CNC Mill post-processor for
+    PathScript
+  *  a3ca5341e - ReverseEngineering: improve manual segmentation
+  *  00ba1c43d - ReverseEngineering: improve manual segmentation
+  *  916a42397 - Arch: Added SHP importer
+  *  a6ea85ae9 - [AddonManager] Backu=out CheckGitBinary fn
+  *  d5983ff58 - [AddonManager] Backout of Git Binary Version Lookup
+  *  35b50ba4a - PEP8 formatting fixes
+  *  cdb3b669c - clean up comments and unused code
+  *  95fb17438 - Simulation - only load active operations
+  *  c2818d915 - Mesh: IDTF export, resource name used should exactly
+    match name of existing resource
+  *  3dca72e0f - Mesh: [skip ci] improve cylinder fit
+  *  33aafd1e3 - Mesh: [skip ci] improve cylinder fit
+  *  68a429438 - Fixed error in print statement
+    Arch.OfflineRenderingUtils
+  *  f1fe97e96 - Draft: import the missing Gui module in the mirror
+    function
+  *  81d559fcc - Draft: add description of draftfunctions package
+  *  52e1f03da - Draft: add description of draftmake package
+  *  12db1a6cd - Draft: update description of draftviewproviders package
+  *  24c89f337 - Draft: update description of draftobjects package
+  *  b69d76aa1 - Draft: update description of drafttaskpanels package
+  *  3a14908c4 - Draft: update description of draftguitools package
+  *  e39c45d8e - Draft: update description of drafttests package
+  *  fee81e829 - Draft: correct description of draftutils package
+  *  58dc5c6d7 - Gui: fix 'Recursive repaint' warning when switching 3D
+    views
+  *  9e116801e - Change Std Bottom orientation (x ->right; y ->down)
+  *  baf21815b - FEM: writer base, extend error message
+  *  3b8b0451b - AddonManager: [skip-ci] Change reference from "Addons
+    Manager" to "Addon
+  *  817d0947d - Mod: [skip ci] fix Python example code
+  *  7f2fdbbb4 - Fixed bug in
+    OfflineRenderingUtils.buildGuiDocumentFromGuiData.
+    binascii.unhexlify throwing error
+  *  ceb23799c - Fix various typos
+  *  2747ab1d1 - remove a file accidentally added with commit 021c25a78
+  *  65dcdf151 - Try and catch errors when getting the tool profile
+  *  15a1d34b6 - Clean up debug prints
+  *  ef4074a6a - check the toolbit shape is valid
+  *  2c3a72fa8 - use the tool resolution to determin face position
+  *  ee541db39 - Remove and silence some debug prints
+  *  30aa633e8 - Extract the shape of the tool from the solid shape
+  *  2b4655f4d - use the tool resolution to determin face position
+  *  697ea501e - Remove and silence some debug prints
+  *  73f031b23 - Extract the shape of the tool from the solid shape
+  *  ba2d263da - use the tool resolution to determin face position
+  *  c013fbf1b - Remove and silence some debug prints
+  *  980d9a929 - Extract the shape of the tool from the solid shape
+  *  54e4b8a05 - Allow passing the tool shape from python
+  *  8994829a1 - pass the tool shape to the CSimTool and handle the
+    shape internally
+  *  7cb814129 - Handle Legacy and Toolbits in simulation fixes #4326
+  *  e323d98d8 - improve cylinder fit [skip ci]
+  *  99ec5924d - [AddonManager] Added reconstruction Wb to PY2ONLY
+  *  ab223a006 - [AddonManager] Added flamingo Wb to PY2ONLY
+  *  7e7101889 - [AddonManager] Removed two unnecessary import re..
+  *  834c85716 - [AddonManager] Add Python 2 Awareness..
+  *  08211490f - [AddonManager] Utilities add Check Git Binary
+  *  a0455c24d - Arch: pipe, fix ifc type for ifc 2x3
+  *  a2aab9d17 - Fix OpenMPI detection pkg_search_module lets us know if
+    ompi-cxx was found. MpidotH is never used.
+  *  0fe0f2a31 - Arch: fix wall's addDefault call
+  *  da413bd2c - Draft: small improvements to the todo module
+  *  14423df83 - Draft: show the error message of the ToDo class in the
+    terminal
+  *  ad92c9966 - Draft: fixed edit for dimension objects
+  *  cbeca1b4a - Draft: fix ScaleMultiplier on annotation objects
+  *  130d8413b - Draft: split extrude from Draft.py
+  *  7683fdf22 - Draft: split downgrade from Draft.py
+  *  f95981232 - Draft: split cut from Draft.py
+  *  52d4749ba - Draft: split upgrade from Draft.py
+  *  b2180873a - Draft: split draftify from Draft.py
+  *  223c81a4f - Draft: split fuse from Draft.py
+  *  bedb026c1 - Draft: split heal from Draft.py
+  *  fd6d3da0b - Draft: split mirror from Draft.py
+  *  677865b68 - Draft: split offset from Draft.py
+  *  2edb34b2f - Draft split Split from Draft.py
+  *  4b61a1bf7 - Draft: split scale related functions from Draft.py
+  *  77ea3a1a8 - Draft: split join functions from Draft.py
+  *  ad0a400da - Draft: split isClosedEdge form Draft.py
+  *  ac13cced0 - Draft: split rotate from Draft.py
+  *  25ae2dc92 - Draft: split Move from Draft.py
+  *  8157b8662 - Draft: split FilterObjectsForModifiers from Draft.py
+  *  2b7986927 - Draft: delete makeWire from Draft.py
+  *  54fad8e46 - Draft: split makeCopy from Draft.py
+  *  494a85a34 - Path: Fix `extrude()` fails with zero vector
+  *  e6fc15559 - Gui: check object existence before SelBack/Forward
+  *  8be2c0814 - partdesign: fix failing tapered hole test
+  *  94dfab7be - Editor preferences rearrangement to eliminate the need
+    to scroll down
+  *  84f9b9dec - Mesh: [skip ci] allow to pass target number to Python
+    function Mesh.decimate()
+  *  1d0664d93 - Mesh: add GUI to perform mesh decimation
+  *  2ac739e49 - Mesh: add overloaded mesh decimation to set target
+    number of triangles
+  *  3ad15343e - [Sketcher] Ensure datum edit dialog is fully shown over
+    the main window
+  *  56bf2d5fa - Gui: [skip ci] fixes: "Text document" renaming crash
+  *  b21cb8abb - [Sketcher] Harmonize points selection order for
+    symmetry constraint ; fixes #3746
+  *  684c43205 - Path: remove fstrings to maintain xenial compatibility
+  *  42c56d9fe - Gui: fix restoring of geo feature group
+  *  419e8f7a9 - [skip ci] fixes #0004309: The behavior of the
+    Std_DrawStyle command is inconsistent when there are multiple 3D
+    views for the active document.
+  *  d5d16de06 - Gui: [skip ci] implement function to rename parameter
+    group
+  *  6306dc027 - Base: [skip ci] Parameter Editor: Rename group creates
+    new group
+  *  40468da28 - Gui: [skip ci] fixes: Std_DrawStyle button image:
+    confusing update behavior
+  *  c26c50e04 - [Draft]PathArray TangentVector & gimbal lock
+  *  ae159ed44 - Gui: [skip ci] fixes #0004310: Std_FreezeViews command:
+    The settings of frozen views resulting from loading a *.cam file
+    will not be saved in a new *.cam file.
+  *  76559e9c9 - Gui: [skip ci] fixes: Parameter Editor: Problem
+    resizing columns in right panel
+  *  3bfa795d2 - Gui: [skip ci] fixes: Std_DlgCustomize: 2 shortcuts can
+    be assigned to macro
+  *  4518d7ddc - Gui: [skip ci] do some code refactoring in
+    DlgCustomKeyboardImp to reduce code duplication
+  *  607c3a639 - Gui: [skip ci] fixes: Std_DlgCustomize: commands can
+    get dropped from custom toolbars
+  *  daa633086 - [TD]crash loading old development models
+  *  fc8841dce - Place v-bit tool tip at origin
+  *  51b20f685 - Place endmill tool tip at origin
+  *  686e22180 - Place drill tool tip at origin
+  *  b3ddc9b8b - Place bullnose tool tip at origin
+  *  1acc6b275 - Place ballend mill tool tip at origin
+  *  52344f650 - [skip ci] part Qt embedding test application to Py3 and
+    implement workaround for Qt5
+  *  f900bdf11 - Gui: [skip ci] fixes #0004330: The Std_WhatsThis
+    command does not work for 2 submenus of the View menu.
+  *  3fd9d4869 - Draft: fix to statusbar import on wb Activated and
+    Deactivated
+  *  ea19060f6 - Draft: fix bspline and bezcurve viewproviders
+  *  5b330f765 - Gui: add sWhatsThis to Std_DrawStyle
+  *  383bca9fd - Gui: change string from Document to Documentation
+  *  d8b41f70d - [skip-ci] Fix typos in Draft, Mesh, and src/Tools
+  *  a1ab4bb3f - Gui: [skip ci] remove superfluous word
+  *  fd151857b - Draft: add view provider for Bezier curve object
+  *  dfece4752 - Draft: add view provider for BSpline object
+  *  a5ee5819e - Fixed ToolBit template generation and adapted TC unit
+    test to deal with Tool and ToolBit.
+  *  d7a9f2ebf - Draft: workaround to be able to import Draft
+  *  bd86e1cb6 - Gui: [skip ci] fix locking keyboard when showing
+    progress bar on Linux systems
+  *  28b51cf28 - Merged crowdin translations
+  *  693e374f9 - Updated source ts files
+  *  9e94a4d03 - Mesh: [skip ci] improve cylinder fit
+  *  94a222610 - Arch: import the os module to find the paths
+  *  491ed28e1 - Draft: change the icon depending on the Link array type
+  *  1a2c9adbf - Draft: change the icon depending on the array type
+  *  a82f16598 - Draft: Small bugfix in DraftGeomUtils.getNormal
+  *  7c12c8688 - Arch: Curtain wall
+  *  e42a26fba - Arch: [WIP] Curtain Wall tool
+  *  582a4c0d8 - Draft: split Shape2DView from Draft.py
+  *  091204606 - Draft: split Block from Draft.py
+  *  a4f802847 - Draft: split Shapestring from Draft.py
+  *  bea4431b1 - Draft: split makeSketch from Draft.py
+  *  00ec299e0 - Draft: split Facebinder from Draft.py
+  *  b94ba1bf4 - Draft: split WorkingPlaneProxy from Draft.py
+  *  d450c20f0 - Draft: split Ellipse from Draft.py
+  *  2d99a2f34 - Draft: split Point from Draft.py
+  *  e4bfb0b21 - Draft: split clone from Draft.py
+  *  f1eaa0b93 - Draft: split wire related tools from Draft.py
+  *  4eab0bb78 - Draft: split Polygon from Draft.py
+  *  96b2dde9b - Draft: split rectangle code from Draft.py
+  *  a34ca76a4 - Draft: split circle from Draft.py
+  *  8b1510850 - Draft: compatible super for AngularDimension object
+  *  43f6721c6 - Draft: parent classes of all Draft objects
+  *  09005766f - Gui: [skip ci] print warning if Assign button cannot be
+    activated
+  *  ef6e5d175 - Gui: [skip ci] when clearing ambiguous shortcut also
+    remove the entry from the user parameters
+  *  299368b1b - Workaround for messy SHIBOKEN_MICRO_VERSION definition.
+  *  227246e01 - Gui: [skip ci] avoid to override the format settings of
+    the quantity after validating the input text
+  *  a74137146 - Gui: [skip ci] fix size hint of QuantitySpinBox by
+    setting text margins of 2px
+  *  28227f32d - Removed some printf
+  *  1fc2e755d - [TD]Handle ProjGroup in TaskCosmeticVertex
+  *  f2f7d22b8 - [TD]Coordinate inversion for CosmeticVertex
+  *  83cff478a - Sketcher: Default solver information font size to
+    system
+  *  0ec3cb16c - Remove hard-coded font families
+  *  5e0223337 - change intra-operation travels back to clearance
+    height, then rapid to safe height
+  *  bc107eacc - Mesh: [skip ci] fix computation of standard deviation
+  *  d3c2d11fa - Arch: Fixed copy-paste leftover
+  *  1a3285219 - App: [skip ci] handle types long and unsigned long in
+    PropertyFloat::setPathValue()
+  *  b21006665 - [Arch] Fix regression in ArchProject.py...
+  *  ff5a90325 - Support for grouped dragging of dockwidgets
+  *  3509f1a72 - Add AxisReference property to Draft Array
+  *  27e01dd2f - [fedora.spec] Replace qt5-devel metapackage with direct
+    package names
+  *  06a1099e2 - [skip-ci] Fix typos
+  *  884cbe852 - Sketcher: update XPM icon for PointOnPoint constraint
+  *  7069d9abb - App: fix lost of Link when renaming linked file
+  *  b32ec19a5 - Add Ose3dPrinter_workbench_icon.svg icon
+  *  cc75bf91d - Draft: change super() so it is compatible with Python 2
+  *  b25f7f42f - FEM: elmer tasks, fix result and output creation
+  *  d1ccfa7a0 - FEM: ccx writer, small code improvement
+  *  714d9fecc - Added some comments
+  *  049ea0ecf - change dogbone test to not check for the number of
+    dogbones, just location. Due to the path changing
+  *  29dfb5b65 - Path: Fix `ZigZag` pattern; Remove some comments
+  *  d3eb2ce92 - remove retraction to clearance height for intra-
+    operation travels
+  *  b8a262be8 - fix detect of 0,0 start point
+  *  396f03ea9 - pass endVectorin PathAreaOp and clean up gcode
+    generation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 11 May 2020 20:38:00 +0300
+
 freecad-daily (0.18.3+git20795-8beef0566-1) unstable; urgency=medium
 
   * Compile
