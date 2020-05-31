@@ -17,10 +17,10 @@ Build-Depends: cmake (>= 2.6),
                libgstreamer1.0-dev,
                libgstreamer-plugins-base1.0-dev,
                libimobiledevice-dev,
-               liblastfm-dev,
+               liblastfm5-dev,
                libmtp-dev,
                libplist-dev,
-               libprojectm-dev,
+               libprojectm-dev | p7zip,
                libmygpo-qt-dev,
                libqt5opengl5-dev,
                libqt5webkit5-dev,
@@ -31,8 +31,8 @@ Build-Depends: cmake (>= 2.6),
                qtbase5-private-dev,
                qttools5-dev,
                libprotobuf-dev, protobuf-compiler,
-               libqca2-dev,
-               libfftw3-dev,
+               libqca2-dev | aria2,
+               libfftw3-dev, libasound2-dev,
                libgpod-dev, libpulse-dev, libqt5x11extras5-dev
 Standards-Version: 4.1.4
 Homepage: http://www.clementine-player.org/
@@ -45,8 +45,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends},
          gstreamer1.0-plugins-base,
          gstreamer1.0-plugins-good,
          gstreamer1.0-plugins-ugly,
-         libqt5sql5-sqlite,
-         projectm-data (>= 2.0.1+dfsg-6)
+         libqt5sql5-sqlite
 Recommends: gstreamer1.0-alsa | gstreamer1.0-pulseaudio
 Suggests: gstreamer1.0-plugins-bad
 Description: modern music player and library organizer

@@ -1,3 +1,59 @@
+goaccess (1:1.3.0+git3079-514618c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 514618cdd69453497fbf67913ccb37a0a0b07391
+  * Date: 1589911471
+  * git changelog:
+  *  514618c - Removed unnecessary include from parser.c so it builds
+    macOS.
+  *  a35443f - Removed unused variables from app.js
+  *  cab0218 - Updated Changelog with latest changes for v1.4.
+  *  ea10ccb - Updated man page with latest changes for v1.4.
+  *  e78fd2f - Updated README.md with the latest changes for v1.4.
+  *  47adf81 - Updated NEWS with latest v1.4 changes.
+  *  25bef63 - Updated ChangeLog with latest v1.4 changes.
+  *  37de5a5 - Updated README.md. with latest version changes
+  *  afe26c1 - Removed some old browsers from the default curated list.
+  *  71b0313 - Added 'facebookexternalhit' to the default crawler list.
+  *  398a5a7 - Strip trailing spaces.
+  *  fdd5b3c - Updated README.md with latest changes.
+  *  4bce812 - Updated README.md with latest changes.
+  *  55b31cf - Updated command line help section formatting.
+  *  668eed5 - Added --keep-last=<numdays> option to to config file.
+  *  501b182 - Removed accumated time option from config file as is now
+    default.
+  *  e8df18a - Updated config file to reflect latest GeoIP database
+    changes.
+  *  3335368 - Fixed memory leak when fetching country/continent while
+    using LIBMAXMINDDB.
+  *  82a9269 - Changed Geo Location panel display default to show only
+    if db is provided (LIBMAXMINDDB).
+  *  785c621 - Changed accumulated time to work by default on --persist
+    and --restore.
+  *  3bebb7d - Updated documentation for the upcoming release.
+  *  78c0d24 - Updated documentation for the upcoming release.
+  *  7282235 - Updated documentation for the upcoming release.
+  *  7ce603f - Updated documentation for the upcoming release.
+  *  c600049 - Updated documentation for the upcoming release.
+  *  48c372b - Updated documentation for the upcoming release.
+  *  39da969 - Updated documentation for real-time HTML report through
+    Docker.
+  *  32817de - Updated documentation for upcoming version.
+  *  cdde035 - Updated NEWS with latest changes.
+  *  b8a728f - Updated Makefile.am with additional data resource.
+  *  a09f90c - Updated list of collaborators for upcoming version.
+  *  d1ba353 - Updated documentation for upcoming version.
+  *  da849b5 - Updated po files.
+  *  92e68d1 - Updated man page for the upcoming version.
+  *  dfbbe8b - Ensure we're within the static array bounds when getting
+    a hash table.
+  *  5fe8be0 - Updated function comments on src/gkhash.c.
+  *  3e7cd62 - Updated function comments on src/gkhash.c.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 24 May 2020 19:28:39 +0300
+
 goaccess (1:1.3.0+git3042-3fbb1c4-1) unstable; urgency=medium
 
   * Compile

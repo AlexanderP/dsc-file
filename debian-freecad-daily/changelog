@@ -1,3 +1,258 @@
+freecad-daily (0.18.3+git21228-8ac6b12ee-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 8ac6b12ee56bbe3087358706a725101c493c0706
+  * Date: 1590315499
+  * git changelog:
+  *  8ac6b12ee - PartDesign: [skip ci] fix wrong property values in UI
+    file set step size of angle property to 1.0
+  *  00be985c9 - PartDesign: [skip ci] set group name for chamfer
+    properties
+  *  53dbc5fc2 - PartDesign: [skip ci] set minimum width of labels to
+    align the spin boxes properly in the chamfer panel
+  *  3b9729997 - FEM: writer base, improve warning
+  *  2dde97c0c - FEM: add some comments to material and calculix solver
+    object
+  *  7638fa724 - FEM: typo
+  *  5bdb40d50 - PartDesign: [skip ci] set an alias
+    PartDesign_Body_Create_New.svg for PartDesign_Body.svg
+  *  8d821fe5f - Sketcher: [skip ci] do not rename object identifier of
+    an expression on undo/redo
+  *  5f46999f9 - [Draft]Post-review changes
+  *  bdc9b6d45 - [Draft]Trap missing ViewObject attribute
+  *  ff323ebdb - [Draft]Additional modes for PathArray
+  *  f90a88ce3 - FEM: add methods to to edit mesh groups: - add
+    addGroup, addGroupElements, removeGroup to C++ mesh class - expose
+    the methods to Python - add a unit test class - update test commands
+    file - add test to fem test app module
+  *  3ec7cf95c - FEM: unit tests, add print to test command creation
+    method
+  *  6bd1cbe7f - FEM: writer base, change print from error to warning
+  *  aa368eefe - FEM: unit test information, update
+  *  e4a5d8b86 - PartDesign: Chamfer feature corrections and
+    improvements
+  *  e1240fb18 - PartDesign: Chamfer direction flipping support
+  *  d2d26ab8d - PartDesign: Chamfer icon art - flip icon
+  *  de02063f0 - PartDesign: Chamfer - updated parameter validation
+    code.
+  *  262841bb3 - PartDesign: Chamfer with multiple creation modes
+  *  3231bac1c - FEM: cmake, fix file move
+  *  68aefb88b - FEM: move test informations and test commands into
+    femtest
+  *  477f4d2bd - FEM: unit tests, code improvements
+  *  5dcd19872 - FEM: unit test, fix not closed documents
+  *  815f60ff7 - FEM: test informations, update
+  *  a81436d53 - FEM: test commands, update and improvements
+  *  8b534e129 - FEM: test informatins, improve formating
+  *  4ddc5a322 - FEM: test app, move all comments in separate file
+  *  f6147e1ff - FEM: material task panel, code formating
+  *  ee440bea6 - FEM: material task panel, make use of the new input
+    field update method
+  *  74f70b9a6 - FEM: material task panel, add method to update input
+    field values
+  *  ac46d8c82 - FEM: fix unit for volumetric thermal exapnsion
+    coefficient
+  *  5da01ab8b - Base: add VolExpansionCoeff and complete
+    KinematicViscosity unit
+  *  6074ffa69 - FEM: fix unit test
+  *  a3a61c334 - FEM: normalise license headers
+  *  245660676 - FEM: solver base, fix regression added with 0df3490801
+  *  803da57e1 - FEM: unit tests, add separate tests for Gui
+  *  4c9c66015 - FEM: unit tests, add app to test fem module name
+  *  f3f43208c - FEM: cmake, some formating
+  *  0d416c807 - FEM: unit tests, import py modules, do not import
+    taskpanel in cmd mode
+  *  cf607d011 - FEM: migrate modules, small fix
+  *  c90db6418 - Gui: [skip ci] wheel event filter for combo boxes
+  *  97c95134f - unit tests, deacitvate contact solid solid
+  *  8ebf3b246 - FEM: unit tests, fix syntax error
+  *  a787395ca - FEM: unit tests, reactivate unit test, do not run the
+    test which do not pass on Python 2
+  *  5a2fcf83e - FEM: Py2, deactivate migration modules
+  *  04fc036bd - FEM: unit tests temporary deactivate testst due to
+    Python2 problem
+  *  0944b5994 - FEM: unit tests, add test class to read old document
+    objects
+  *  d3f22e0ce - FEM: guiobjects directory, add a readme
+  *  fa398b885 - FEM: python base constraint VP, rename class and module
+  *  067659c23 - FEM: python base VP, rename class and module
+  *  d911361e0 - FEM: python base object, rename class and module
+  *  40251a621 - FEM: material common, rename class and module
+  *  e1e705f13 - FEM: solver ccx tools, rename class and module
+  *  df63d4cfc - FEM: result mechanical, rename class and module
+  *  b74ec6515 - FEM: mesh result, rename class and module
+  *  a9127e5c4 - FEM: mesh region, rename class and module
+  *  4d241b1a1 - FEM: mesh group, rename class and module
+  *  3b48c5a63 - FEM: mesh gmsh, rename class and module
+  *  b0772362d - FEM: mesh boundary layer, rename class and module
+  *  06eae6d9b - FEM: material reinforced, rename class and module
+  *  04463cdc3 - FEM: material mechanical nonlinear, rename class and
+    module
+  *  141afdfce - FEM: element rotation 1D, rename class and module
+  *  e2970232a - FEM: element geometry 2D, rename class and module
+  *  90d9b439a - FEM: element geometry 1D, rename class and module
+  *  19ff30518 - FEM: element fluid 1D, rename class and module
+  *  f84905682 - FEM: constraint tie, rename class and module
+  *  f6c6ff49d - FEM: constraint self weight, rename class and module
+  *  6c1020276 - FEM: constraint initial flow velocity, rename class and
+    module
+  *  bb30b3551 - FEM: constraint flow velocity, rename class and module
+  *  97fb2344e - FEM: constraint electrostatic potential, rename class
+    and module
+  *  a0e5cac54 - FEM: constraint body heat source, rename class and
+    module
+  *  693d0d00e - FEM: preparation for moveing objects
+  *  de9b3fb43 - FEM: unit test open doc obj, small improvements
+  *  61d767a6d - FEM: material object, change type
+  *  3b4b2dc2e - FEM: make objects module, change standard names for
+    material solid and fluid
+  *  719a6a715 - FEM: migrate gui, fix module name
+  *  8f758ecce - FEM: test fem, remove comment line added by accident
+  *  dd3eaaff6 - FEM: cmake, remove line added by accident
+  *  43a9dfa67 - FEM: unit tests, add test class to read saved document
+    objects
+  *  2c8174bb9 - FEM: unit test, separat method to create a doc with all
+    FEM objects
+  *  6ca63214d - FEM: elmer solver writer, fix indent and some code
+    formating
+  *  10fdcf57b - FEM: constants, fix the fix ;-) for unit of permitivity
+    of vacuum
+  *  7d0277fd6 - FEM: constants, fix unit of permitivity of vacuum
+  *  049a34054 - FEM: objects create module, change solver calculix name
+  *  b00dc8c79 - FEM: objects make module, small code formating
+  *  ea63c2d1c - FEM: migrate modules, fix class names
+  *  0df349080 - FEM: solver taskpanel, rename and move to solver
+    framework
+  *  38d6201a0 - FEM: selection widgets, rename and move module
+  *  29b61616a - FEM: solver z88, change object type
+  *  88457108a - FEM: solver elmer, change object type
+  *  3517490f1 - FEM: solver calculix, change object type
+  *  22a585fba - FEM: solver ccxtools, change object type
+  *  15b096551 - FEM: solver ccx tools, change standard name
+  *  64172d9f2 - FEM: result mechanical, change standard name
+  *  291f525b6 - FEM: material nonlinear, change standard name
+  *  813925ff7 - FEM: make objects module, add some comment
+  *  ad405545e - [TD]handle new identifier for Draft objects
+  *  5950d0d45 - Web: [skip ci] implement blocking tcp server
+  *  e47515beb - PySide: [skip ci] add minimal example of embedding
+  *  37c21cfb1 - [skip ci] Port glib embedding example to Py3 and Gtk3
+  *  1389d8605 - Added Amrit3701 to github sponsoring list
+  *  848db84c8 - Part: update the part_test_objects script
+  *  40600a55c - Arch: Misc improvements to curtain wall - Can be based
+    on an edge like normal wall - Now has a 'host' property to embed
+    into another object (tree only) - Mullions have different height and
+    width properties - Mullions or panels can be disabled
+  *  8fcd436de - + fix Enumeration::contains: the current index is
+    irrelevant when searching for an entry in the enumeration + only
+    print a warning if the enumeration is not empty but the restored
+    index is < 0
+  *  a724961ca - FEM: migrate, improve migration class
+  *  3a877c51e - FEM: cmake, sort modules
+  *  193b6ad2b - FEM: objects create, sort methods
+  *  b0df61ab6 - Arch: Fixed Pipe positioning
+  *  6945e3763 - Arch: Fixed regression in compound walls
+  *  146a17537 - Arch: Removed wrong warning in walls
+  *  1d8235c23 - Part: [skip ci] get n-th derivative of a surface via
+    Python
+  *  a4367d058 - Draft: activate new array make functions
+  *  681b33dab - Draft: move circular, ortho, and polar make functions
+  *  021b07b7b - Draft: restructure the draft test script
+  *  deadd6d3e - [AddonManager] Fix bug when Multiple Wbs updated
+  *  5d7ae69c5 - Draft: fix Statusbar snap and scale if Draft is the
+    default startup wb
+  *  05c250d7b - Arch: fix regression in SectionPlane
+  *  4a765e12a - Draft: check GUI in upgrade function before using
+    viewprovider
+  *  07245dbf0 - Draft: check GUI in downgrade before using viewprovider
+  *  10f839782 - Draft: check GUI before touching the ViewObject in cut
+  *  51cd5e042 - Draft: fix button and icon spacing in
+    AnnotationStyleEditor
+  *  0d9ae239a - Draft: cleanup code of AnnotationStyleEditor
+  *  94cff2135 - Extend fix to `updateVisibility()` call
+  *  a17645aa0 - [path] Small fix in PathOpGui
+  *  7b970ab3b - Part: [skip ci] get n-th derivative of a curve via
+    Python
+  *  6e90d8e10 - Path: LinuxCNC postprocessor scalability
+  *  ff0e556b5 - Part: [skip ci] add methods to determine continuity
+  *  a5ab09aa0 - [TD]minor code clean ups
+  *  718dd707f - [TD]Getters/Setters for CosmeticVertex attribs
+  *  add17980b - [TD]Eliminate replace fcns for Cosmetic objs
+  *  1533ea01b - [TD]Simplify Cosmetic List & PyObject handling
+  *  31bb4d84b - Gui: improve property editor status update
+  *  6e0e7580f - FEM: add modules to migrate old FEM app and gui objects
+  *  13ff930e0 - FEM: python base view provider, improve error handling
+  *  75d1b97b9 - FEM: gmsh mesh obj, automaticlly add all properties
+  *  9a4d4c245 - FEM: materialobject, automaticlly add all properties
+  *  f0e246f86 - Part: [skip ci] copy visual attributes of reversed
+    shape
+  *  34ebb0ecc - fixes #0004316: PartWB, "Reverse shapes" command reset
+    position [skip ci]
+  *  e9baea434 - Draft: update snake_case for unit tests
+  *  50c2f31f6 - Draft: use snake case functions in draft_test_objects
+    script
+  *  cc5d531a5 - Draft: small additions to the draft_test_object script
+  *  125d0ca84 - Draft: various cleanup
+  *  2c4de8813 - Draft: moved ConvertDraftText to utils.py
+  *  95fe3076b - Draft: split DrawingView from Draft.py
+  *  b1e2574f1 - Draft: move get_DXF to utils.py
+  *  3a44b4e2c - Draft: moved getrgb to utils.py
+  *  ccad0fed3 - Draft: cleanup of Array properties after splitting
+  *  79ef4d991 - Draft: split Array from Draft.py
+  *  052fd1750 - Draft: cleanup of Draft.py
+  *  26e8adaee - Draft: split PointArray from Draft.py
+  *  dfee68d05 - Draft: split Path Array and viewprovider Array from
+    Draft.Py
+  *  1f88ef3a6 - Draft: split array function from Draft.py
+  *  006a1a403 - Draft: Split DraftLink from Draft.py
+  *  eb59836ae - Draft: updated ocumentation of Draft Scale function
+  *  5e8f94d7d - Draft: split sub_object_move from Draft.py
+  *  59c0bf1c3 - Draft: split sub_object_move from Draft.py
+  *  4f36c23cb - Arch: Allow to skip import of IFC types from python
+  *  ffc353f29 - Path: Fix for `.extrude()` vector roughly zero
+  *  a679356b4 - Path: Add `if edge:` test clause
+  *  58ba0e1c3 - Path: Fix related to `linkStockAndModel` checkbox.
+  *  b5beab8f8 - FEM: code conventions, update flake8 command
+  *  8796d7bc1 - FEM: App and Gui init script: - improve imports - add
+    comments - some code formating
+  *  4fa967b24 - Arch: Fixed export of non-ortho extrusions to IFC
+  *  e6f4a1797 - Gui: reset model transformation scaling in
+    SoAutoZoomTranslation
+  *  dd42bfbc9 - Draft: migrate individual properties
+  *  16d8986ff - Draft: use onDocumentRestored to migrate the Fillet
+  *  d438aec82 - Draft: remove old DraftFillet class, and make it a
+    redirect
+  *  68e6d8d16 - Draft: activate both Fillet commands to test
+  *  c17546557 - Draft: add new Gui Command for Fillet
+  *  d43724292 - Draft: split Fillet code into various modules
+  *  fc4e83ad6 - setting Datum Line size manually
+  *  17c79f19e - Gui: [skip ci] rename Std_ExportGraphviz to
+    Std_DependencyGraph
+  *  dc007c189 - [TD]Highlight colour set in wrong class
+  *  5e0165bc4 - [TD]Fix wrong scale in Section
+  *  99ab82ed0 - Mesh: [skip ci] cleanup cylinder fit
+  *  6b022b277 - PartDesign: [skip ci] fix ambiguous widget name
+  *  4669b6c88 - Fixed issues introduced in #3456
+  *  1f1d329fd - [TD]fix vertical section line and scale
+  *  1bd131250 - TechDraw: [skip ci] fix -Wconstant-logical-operand
+  *  b9fc0fb8d - Arch: Fixed IFC export of Part Extrusions
+  *  64619a615 - Draft: Bugfix to getCloneBase after objects splitting
+  *  6df820118 - Fix typos [skip-ci]
+  *  f433d7f63 - Draft: bugfix in Snapper
+  *  8d0350ef0 - Draft: small updates to the Annotation class
+  *  5bff654a7 - Draft: update ViewProviderWire properties
+  *  be1412831 - Draft: update ViewProviderDraft properties
+  *  de9c9a6be - Draft: move arc_3points to the make package
+  *  8043b4bb8 - Draft: remove repeated _DraftObject class in Draft.py
+  *  65fc2a74d - Arch: unit test pep8, do not import multiple modules in
+    one line
+  *  4f8004c79 - Arch: add unit test for Pipe
+  *  e46d7c599 - Arch: add unit test for Equipment
+  *  42103271d - Arch: Equipment, fix for ifc 2x3
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 24 May 2020 15:42:07 +0300
+
 freecad-daily (0.18.3+git21019-ea8bcb8e6-1) unstable; urgency=medium
 
   * Compile

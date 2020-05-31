@@ -1,3 +1,150 @@
+labplot (2.7.0+git7327-49e131d54-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 49e131d5427e199328b2c906dacd220f189a0145
+  * Date: 1590347643
+  * git changelog:
+  *  49e131d54 - [spreadsheet] use smart pointer when sorting
+  *  2bc4a27d5 - [spreasheet] improve sorting
+  *  3523e3bb3 - [spreadsheet] add a new row when hitting RETURN in the
+    current last row in the spreadsheet.
+  *  6841add18 - [spreadsheet] fix copy-paste bug
+  *  99b834a71 - [spreadsheet]  use KConfig instead of KConfigShared in
+    Spreadsheet::init(). The later seems to require the restart for new
+    values to become re-read and active.
+  *  9b8457d7c - Allow to delete objects in the project exlorer via the
+    DEL key.
+  *  ad1905ca2 - [worksheet] re-added the null-pointer check in
+    CartesianPlot::childAdded() that was removed in
+    ac864f9400bc53e5cf43270a02492cc7c6adfb8a.
+  *  c9555e6fb - [fit] use default precision for R^2 and R_adj^2
+  *  fd6e8c49c - [fit] improved start parameter A for gaussian and
+    friends
+  *  ac864f940 - [worksheet] 1. consistently apply the theme settigs
+    also for for histogram filling and for the color of curve values
+    labels. 2. simplified the logic for applying the theme settings for
+    newly added objects in the plot.
+  *  f639a7ebd - merge clean up
+  *  ff6b9d9d7 - More enum class clean up
+  *  0f7e9f5c1 - Fix build with MQTT enabled
+  *  c2c8e8611 - Fix build with MQTT enabled
+  *  89e8ac3aa - [worksheet] theme reset in Histogram.
+  *  354912b30 - Minor layout improvements in "drop values" and "random
+    values" dialogs.
+  *  1f77f8ee0 - Fixing the build with MQTT enabled.
+  *  a2923a2e8 - More enum class clean up
+  *  3b46c5c7e - [worksheet] properly handle the numeric and datetime
+    formats in case a custom column is used for value labels in xy-curve
+    and in histogram.
+  *  2162dccdf - enum class TextLabel::Type and TextLabel::BorderShape
+  *  ac893c932 - [histogram] properly show/hide the values format
+    related widgets in the histogram properties dock widget.
+  *  4755fad08 - enum class Matrix::HeaderFormat
+  *  006718f65 - Fix the build with MQTT enabled.
+  *  5b215ba7b - enum class WorksheetPrivate::TreeModelColumn
+  *  a45d9c2f5 - enum class SpreadsheetModel::CustomDataRole
+  *  accfd8d76 - enum class PluginLoader::PluginStatus
+  *  1cdb8a677 - Fix tests for previous commit
+  *  61778c21d - enum class AbstractColumn::ColumnMode
+  *  4676a801b - [xycurve] improve basic math functions
+  *  cebf657ad - enum class AbstractColumn::Properties
+  *  183875fcd - [worksheet] don't crash when changing the values type
+    in XYCurve with no data source columns set yet.
+  *  26e8a2c39 - [spreadsheet] properly update the widgets in the column
+    dock related to the column mode (precision, etc.) on column mode
+    changes.
+  *  6da9a5a03 - minor change
+  *  020316cd1 - Added the entry "All supported files" to the open file
+    dialog and remember the last selected filter in this dialog.
+  *  39899b9a4 - [fit] fix setting model degree limits when using a
+    curve as data source
+  *  2a320c7c7 - [worksheet] allow to change the position/order of plots
+    also for worksheets having an active layout.
+  *  7abb6852b - [histogram] allow to use smooth rough data as the
+    source for the histogram.
+  *  a1f24278e - Simplified the logic for handling the key events in
+    Matrix and Spreadsheet views - handle the key events directly
+    instead of registering/unregistering shortcuts. This also solve the
+    problem with spreadsheet and matrix not reacting on delete/backspace
+    keys when being child of a workbook.
+  *  c56626e65 - [fit] limit degree for Fourier fit depending on
+    available data points
+  *  2ad85a971 - [analysis] Simplify getting valid data
+  *  478d31545 - [fit] simplify getting available data
+  *  f9e3ba394 - * add availableRowCount() for Column to get number of
+    valid and non-masked rows * [fit] limit polynomial order (degree) by
+    number of available data points
+  *  ee0180832 - [fit] Fix problem with manual specified zero evaluation
+    range
+  *  c6ebba63d - Allow to delete the selected cells in spreadsheet and
+    in matrix via the backspace key.
+  *  463857700 - [worksheet] theme reset in XYCurve and Axis.
+  *  980d997fb - [fit] Fix switching between different fits
+  *  8855deeeb - [fit] Fix parameter detection for custom model
+  *  67d8739ed - [worksheet] simplified the handling of theme properties
+    in worksheet and plot area.
+  *  e46788bc9 - [worksheet] selection of the theme "Default" should
+    really reset the properties to the default ones. Implemented this
+    logic for worksheet and plot area. This also needs to be done for
+    all other children of the plot now.
+  *  4e9e3c2de - [analysis] data reduction with DateTime x-data.
+  *  c21921221 - Fix build with JSON test
+  *  4ab5ac2bd - Fixed the build with enabled MQTT.
+  *  e750af0fd - enum class PlotDesignation
+  *  48b196fc3 - enum -> enum class
+  *  d5d4e2e5a - [spreadsheet] when doing the revers of values in the
+    column, determine the last row containing a valid value and ignore
+    all following rows. This works for numeric columns only at the
+    moment.
+  *  24a5903c9 - [spreadsheet] reverse values also for integer and big
+    integer columns.
+  *  0956aa359 - [spreasheet] when selecting a column in the
+    spreadsheet, properly deselect all its parents to avoid multiple
+    selection in the project explorer.
+  *  b8b747852 - GIT_SILENT coding style
+  *  90a75f559 - use strongly typed enum
+  *  1fd02d495 - [spreadsheet] properly drop/mask values also for
+    integer and big integer columns.
+  *  598bad414 - Update Generic Name (T12810)
+  *  b8d47623f - GIT_SILENT minor change
+  *  67ae94229 - Use enum with switch-case instead of int if-else
+    comparisons in DropValuesDialog and proper padding for the class
+    members.
+  *  6ea5b06d0 - [worksheet] improved the handling of the offset for
+    axis tick labels (absolute distance to the axis line + tick length).
+  *  89a96dcd8 - [fit] Fix crash when fit fails
+  *  931569ecc - [analysis] properly initialize the pointer to the rough
+    data vector in XYSoothCurve so we don't crash when recalculating the
+    already saved smooth and rough data.
+  *  16a7a31c9 - [worksheet] added additional handling for export of
+    worksheet to png.
+  *  e2b58e66b - Fix the windows build.
+  *  3d3cc78b7 - [spreadsheet] minor fixes in DropValuesDialog: 1. fixed
+    the wording 2. save and load the last used operator and properly
+    show the relevant widgets on dialog open.
+  *  c973b7449 - Minor layout fix in XYSmoothCurveDock.
+  *  f8a6dc9c0 - [analysis] calculate and expose the rough values as the
+    result of a smooth (data = smooth + rough).
+  *  3eab84d65 - In PlotDataDialog call CartesianPlot::dataChanged()
+    instead of CartesianPlot::scaleAuto() to cope with cases where the
+    min and max values of the new curves to be added are equal to the
+    current plot ranges, otherwise no curve retransform is called and
+    the curves are not shown.
+  *  ad7fbeebb - Don't allow to click the Ok-button and to close the
+    export dialogs if the specified directory is not existing.
+  *  85764f236 - Fix previous commit: no isnan for integer; they are
+    always valid
+  *  b59699f82 - [smooth] Fix maximum number of points for datetime data
+  *  5ce3f2d80 - [spreadsheet] notify the user if wrong export path was
+    provided in the export dialog.
+  *  1234717a8 - Fix compilation
+  *  1eac5e149 - [spreadsheet] show the trimian also in the statistics
+    dialog.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 24 May 2020 23:21:44 +0300
+
 labplot (2.7.0+git7248-f77924bf6-1) unstable; urgency=medium
 
   * Compile

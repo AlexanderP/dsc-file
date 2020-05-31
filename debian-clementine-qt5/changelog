@@ -1,3 +1,64 @@
+clementine-qt5 (1.4.0~git230-gc934fef63-2) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: c934fef6376849fa8a07a8a0df667041b5afea4c
+  * Date: 1590335161
+  * git changelog:
+  *  c934fef63 - Only create release on master branch
+  *  0433f04c9 - Create non-draft releases
+  *  d89ee1fae - Remove CircleCI config
+  *  9fdb83c82 - Checkout & get all artifact files
+  *  6e95b6569 - Build source tar
+  *  d01530556 - Add release action
+  *  0fc0dcdb7 - lyrics: Add 30s timeout for lyrics provider requests
+  *  6675b1b63 - lyrics: Add debug info for lyric server replies
+  *  02a1fc9a0 - lyrics: Use lambda for UltimateLyricsProvider requests
+  *  40575e854 - Fixed one indent
+  *  0f2e8946d - Made parameter const
+  *  86b48c22a - Minor fixes
+  *  c8eaafb0a - Switch from std::string to QString
+  *  fb262022f - Switch from std::string to QString
+  *  be60c1243 - Guess artist and title (fourth attempt)
+  *  9b580e4a5 - Guess artist and title from filename (third attempt)
+  *  ddbde9188 - Guess artist and title from filename (second attempt)
+  *  7378e5b14 - gstengine: Clean up buffer references in error cases
+  *  407a99b2f - gstengine: Use proper free function for gstreamer
+    object
+  *  949c20abd - Compress PNGs (second attempt)
+  *  7caf200ef - Added CBC Podcasts
+  *  157a9d1d1 - Only run once for PRs
+  *  a17f968b4 - Trigger workflow for PRs
+  *  879dfa3d7 - icecast: free backend on exit
+  *  8f56fbb83 - Fix timer errors on exit
+  *  5b918a70a - Add an optional delete function for Lazy pointers.
+  *  912589439 - Add bionic builder
+  *  bc1674700 - Add buster builder
+  *  833f8256c - Add debian stretch github job
+  *  f46241e75 - Add eoan github job
+  *  18497dcb6 - Add Fedora 32 build
+  *  d7c143119 - Add Fedora 31 job
+  *  6a5cb0712 - gstengine: Fix gtreamer request pad leak
+  *  2b91bbe97 - Add mingw job
+  *  e1f82b24a - Add focal build
+  *  4da609d45 - Add mac workflow
+  *  baea2d488 - Revert "Revert "Updated GLEW headers.""
+  *  ade1e7f30 - Revert "Revert "Use newer compiler than C++98.""
+  *  43a171512 - Revert "Revert "Fix deprecated comparison.""
+  *  38207e4ea - Replace deprecated std::auto_ptr with new
+    std::unique_ptr.
+  *  823aed98a - Fix narrowing issues preventing MacOS build.
+  *  58569d9d0 - Remove fetcher list from OutgoingDataCreator class.
+  *  83fc376b0 - subsonic: Consolidate read song code
+  *  ddba21a46 - subsonic: Move ReadSong method to SubsonicService.
+  *  5efcae398 - subsonic: Use correct URL query params to fetch cover
+  *  ce4ce6ce3 - Revert "Updated GLEW headers."
+  *  dcf078acc - Revert "Use newer compiler than C++98."
+  *  0782489fe - Revert "Fix deprecated comparison."
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 24 May 2020 19:36:57 +0300
+
 clementine-qt5 (1.4.0~git182-g96a17c9f4-1) unstable; urgency=medium
 
   * Compile

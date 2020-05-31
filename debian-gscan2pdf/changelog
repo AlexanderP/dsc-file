@@ -1,3 +1,50 @@
+gscan2pdf (2.6.5+git3203-0dcf6157-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 0dcf61573c6da1f6c29c83e21f54accf8c025d64
+  * Date: 1588922200
+  * git changelog:
+  *  0dcf6157 - Bumped debhelper-compat to 13
+  *  996a8128 - Bumped version to 2.7.0
+  *  ee8aa6db - Use GTK functionality instead of xdg-open for launching
+    file viewer.
+  *  90e1bcfb - Update to French translation
+  *  ece36d23 - Use only xdg-email for creating email
+  *  6bbb7548 - Zoom to text when editing OCR
+  *  f57c2934 - Use binary search before linear search to index OCR text
+  *  a8360b74 - Replace linear with binary search when sorting OCR test
+    by confidence
+  *  ab99fd32 - + buttons to navigate between OCR text boxes, sorted by
+    confidence level
+  *  d0a1ead8 - Removed recommends: sane, as saneadf doesn't offer any
+    advantage over scanimage
+  *  6a8d20c4 - Remove source dependency on libgail-common left over
+    from gtk+2
+  *  00fec29c - Fix error running File/Compress temporary files
+  *  6408e251 - If opening a device returns an error $windows can end up
+    being an empty hash, so additionally check that it has keys
+  *  fbd89a93 - Remove unnecessary Gscan2pdf::Document:: from slurp()
+    call
+  *  a1027781 - When editing OCR text, display bounding box on image and
+    allow it to be adjusted
+  *  e4f6f3f3 - Fix UTF8 encoding when importing metadata from PDF or
+    DjVu
+  *  917802e0 - Use UTF8 in logs, fixing "wide character in print"
+    warnings
+  *  aa270e08 - Use daylight savings time from document date when
+    setting timezone
+  *  468bb0b1 - Don't import if pagerange callback returns undef
+  *  88c44bb7 - Update History to note closing bug #346
+  *  9d593476 - Fixed bug importing file with non-ASCII characters in
+    filename from file browser
+  *  27c592e0 - Fix bug updating switch widgets in scan options
+  *  b60b2a10 - Cache device list to speed up first display of scan
+    dialog
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 24 May 2020 21:37:47 +0300
+
 gscan2pdf (2.6.5+git3180-e01b41ac-1) unstable; urgency=medium
 
   * Compile
