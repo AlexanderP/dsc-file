@@ -16,20 +16,28 @@ BUILDDIR2 = $(CURDIR)/debian/builddir2
 DESTDIR   = $(CURDIR)/debian/tmp
 
 CMAKEOPTS = -DBUNDLED_IRIS=ON \
-            -DUSE_HUNSPELL=ON \
-            -DUSE_ENCHANT=OFF \
-            -DUSE_KEYCHAIN=ON \
-            -DUSE_CCACHE=OFF \
+            -DDEV_MODE=OFF \
+            -DONLY_BINARY=OFF \
             -DONLY_PLUGINS=OFF \
-            -DBUILD_DEV_PLUGINS=OFF \
-            -DSEPARATE_QJDNS=OFF \
+            -DINSTALL_EXTRA_FILES=ON \
+            -DINSTALL_PLUGINS_SDK=ON \
+            -DPRODUCTION=OFF \
+            -DUSE_ASPELL=OFF \
+            -DUSE_CCACHE=ON \
+            -DUSE_DBUS=ON \
+            -DUSE_ENCHANT=OFF \
+            -DUSE_HUNSPELL=ON \
+            -DUSE_XSS=ON \
             -DVERBOSE_PROGRAM_NAME=ON
 
-OPTSSTEP1 = -DENABLE_PLUGINS=ON \
-            -DCHAT_TYPE=basic
+OPTSSTEP1 = -DCHAT_TYPE=BASIC \
+            -DENABLE_PLUGINS=ON \
+            -DBUILD_DEV_PLUGINS=ON \
+            -DBUILD_PSIMEDIA=ON
 
-OPTSSTEP2 = -DENABLE_PLUGINS=OFF \
-            -DCHAT_TYPE=webkit
+OPTSSTEP2 = -DCHAT_TYPE=WEBKIT \
+            -DENABLE_PLUGINS=OFF \
+            -DBUILD_PSIMEDIA=OFF
 
 ifneq (,$(filter $(DEBIAN_CODENAME),xenial))
 	CMAKEOPTS += -DUSE_KEYCHAIN=OFF
@@ -38,7 +46,10 @@ else
 endif
 
 %:
-	dh $@ --buildsystem=cmake --parallel
+	dh $@ --buildsystem=cmake
+
+override_dh_dwz:
+	dh_dwz || true
 
 override_dh_auto_configure:
 ifneq (,$(filter $(DEBIAN_CODENAME),stretch xenial artful))
@@ -59,7 +70,10 @@ override_dh_auto_test:
 
 override_dh_auto_install:
 	dh_auto_install -B$(BUILDDIR1) --destdir=$(DESTDIR)
+	ln -s psi-plus.png $(DESTDIR)/usr/share/pixmaps/psi-plus-webkit.png
 	cp -a $(BUILDDIR2)/psi/psi-plus-webkit $(DESTDIR)/usr/bin/
-	cp -a $(CURDIR)/debian/psi-plus*.desktop $(DESTDIR)/usr/share/applications/
-	cp -a $(CURDIR)/skins $(DESTDIR)/usr/share/psi-plus/
-	cp -a $(CURDIR)/themes $(DESTDIR)/usr/share/psi-plus/
+	cp -a $(BUILDDIR2)/psi-plus-webkit.desktop $(DESTDIR)/usr/share/applications/
+	# Move psimedia plugin to separate package:
+	mkdir -p $(CURDIR)/debian/psi-plus-plugin-psimedia/usr/lib/psi-plus/plugins/
+	mv $(DESTDIR)/usr/lib/psi-plus/plugins/libmediaplugin.so \
+	   $(CURDIR)/debian/psi-plus-plugin-psimedia/usr/lib/psi-plus/plugins/

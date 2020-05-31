@@ -19,7 +19,7 @@ Files: *
 Copyright: 2001-2008 Justin Karneges <justin@karneges.com>
            2003-2009 Michail Pishchagin <mblsha@users.sourceforge.net>
            2001-2008 Remko Troncon
-           2010-2013 Sergey Ilinykh aka Rion <rion4ik@gmail.com>
+           2010-2020 Sergey Ilinykh aka Rion <rion4ik@gmail.com>
            2006-2007 Kevin Smith <kevin@kismith.co.uk>
            2006-2008 Martin Hostettler
            2006-2008 Joonas Govenius
@@ -32,7 +32,9 @@ Copyright: 2001-2008 Justin Karneges <justin@karneges.com>
            2011 Evgeny Khryukin
            2011 Artem Izmaylov <artem@aimp.ru>
            2010 senu
+           2013 Ivan Romanov <drizt@land.ru>
            2017 Vitaly Tonkacheyev aka KukuRuzo
+           2020 Boris Pek <tehnick-8@yandex.ru>
 License: GPL-2+ with OpenSSL exception
  This program is free software: you can redistribute it and/or modify it under
  the terms of the GNU General Public License as published by the Free Software
@@ -84,6 +86,26 @@ Copyright: 2008-2009 Barracuda Networks, Inc.
            2010 Vitaly Tonkacheyev aka KukuRuzo
 License: LGPL-2.1+
 
+Files: plugins/generic/psimedia/*
+Copyright: 2008-2009 Barracuda Networks, Inc
+           1999-2000 Erik Walthinsen <omega@cse.ogi.edu>
+           2001 David A. Schleef <ds@schleef.org>
+           2001-2004 David Schleef <ds@schleef.org>
+           2002 Thomas Vander Stichele <thomas@apestaart.org>
+           2004-2008 Zaheer Abbas Merali <zaheerabbas at merali dot org>
+           2007-2009 Pioneers of the Inevitable <songbird@songbirdnest.com>
+           2004-2007 Wim Taymans <wim.taymans@gmail.com>
+           2005-2008 Nokia Corporation
+           2007-2008 Collabora Ltd
+           2006-2008 Justin Karneges <justin@affinix.com>
+           2005 Sebastien Moutte <sebastien@moutte.net>
+           2007 Ali Sabil <ali.sabil@tandberg.com>
+           2007-2008 Ole Andre Vadla Ravnås <ole.andre.ravnas@tandberg.com>
+           2007 Haakon Sporsheim <hakon.sporsheim@tandberg.com>
+           2005 Sebastien Moutte <sebastien@moutte.net>
+           2006 Remko Troncon
+License: LGPL-2.1+
+
 Files: src/tools/crash/crash_sigsegv.*
 Copyright: 2003-2007 Justin Karneges <justin@karneges.com>
            2003 Juan F. Codagnone <juam@users.sourceforge.net>
@@ -93,7 +115,7 @@ Files: src/tools/tunecontroller/plugins/winamp/third-party/wa_ipc.h
 Copyright: 1997-2008 Nullsoft, Inc.
 License: zlib-License
 
-Files: src/plugins/deprecated/noughtsandcrosses/tictac.*
+Files: plugins/deprecated/noughtsandcrosses/tictac.*
 Copyright: 1992-2000 Trolltech AS.
 License: public-domain
  This files are part of an example program for Qt. This example program may be
@@ -153,7 +175,6 @@ Copyright: 1998 Gilles Vollant
 License: zlib-License
 
 Files: themes/*
-       skins/*
        sound/attention.wav
        sound/chess_finish.wav
        sound/chess_start.wav
@@ -165,45 +186,14 @@ Files: themes/*
        sound/reminder.wav
        iconsets/system/default/psiplus/*
        iconsets/roster/default/typing.png
-       src/plugins/deprecated/captchaformsplugin/*
-       src/plugins/deprecated/gmailserviceplugin/*
-       src/plugins/deprecated/yandexnarodplugin/*
-       src/plugins/dev/pstoplugin/*
-       src/plugins/generic/attentionplugin/*
-       src/plugins/generic/autoreplyplugin/*
-       src/plugins/generic/birthdayreminderplugin/*
-       src/plugins/generic/chessplugin/*
-       src/plugins/generic/cleanerplugin/*
-       src/plugins/generic/clientswitcherplugin/*
-       src/plugins/generic/conferenceloggerplugin/*
-       src/plugins/generic/contentdownloaderplugin/*
-       src/plugins/generic/extendedmenuplugin/*
-       src/plugins/generic/extendedoptionsplugin/*
-       src/plugins/generic/gomokugameplugin/*
-       src/plugins/generic/historykeeperplugin/*
-       src/plugins/generic/httpuploadplugin/*
-       src/plugins/generic/icqdieplugin/*
-       src/plugins/generic/imageplugin/*
-       src/plugins/generic/jabberdiskplugin/*
-       src/plugins/generic/juickplugin/*
-       src/plugins/generic/omemoplugin/*
-       src/plugins/generic/otrplugin/*
-       src/plugins/generic/pepchangenotifyplugin/*
-       src/plugins/generic/qipxstatusesplugin/*
-       src/plugins/generic/screenshotplugin/*
-       src/plugins/generic/skinsplugin/*
-       src/plugins/generic/stopspamplugin/*
-       src/plugins/generic/storagenotesplugin/*
-       src/plugins/generic/translateplugin/*
-       src/plugins/generic/videostatusplugin/*
-       src/plugins/generic/watcherplugin/*
+       plugins/deprecated/*plugin/*
+       plugins/generic/*plugin/*
 Copyright: 2009-2013 Sergey Ilinyh aka Rion <rion4ik@gmail.com>
            2009-2012 Evgeny Khryukin
            2009-2010 Virnik
            2006-2007 Maciej Niedzielski
            2009-2012 Kravtsov Nikolai
            2009-2010 VampiRus
-           2009-2010 Ivan Borzenkov <ivan1986@list.ru>
            2010-2017 Ivan Romanov aka taurus <drizt@land.ru>
            2011-2017 Aleksey Andreev
            2003 Justin Karneges <justin@karneges.com>
@@ -218,24 +208,20 @@ Copyright: 2009-2013 Sergey Ilinyh aka Rion <rion4ik@gmail.com>
            2004-2008 Nikita Borisov
            2007-2011 Timo Engel <timo-e@freenet.de>
            2008-2009 Alexander Kazarin <boiler@co.ru>
-           2013-2019 Boris Pek <tehnick-8@yandex.ru>
+           2013-2020 Boris Pek <tehnick-8@yandex.ru>
            2013 Georg Rudoy
            2016 rkfg
            2018 Vyacheslav Karpukhin
 License: GPL-2+
 
-Files: src/plugins/generic/screenshotplugin/qxt/*
+Files: plugins/generic/screenshotplugin/qxt/*
 Copyright: 2006-2011 Qxt Foundation <foundation@libqxt.org>
            2011 Marcin Jakubowski <mjakubowski@gmail.com>
 License: BSD-3-clause
 
-Files: src/plugins/dev/ripperccplugin/qjsonwrapper.*
-Copyright: 2014 Uwe L. Korn <uwelk@xhochy.com>
-License: Expat
-
 Files: cmake/modules/*
        iris/cmake/modules/*
-       src/plugins/generic/omemoplugin/cmake/*
+       plugins/generic/omemoplugin/cmake/*
 Copyright: 2016-2018 Psi+ Project
            2016-2018 Vitaly Tonkacheyev aka KukuRuzo
            2009 Vittorio Giovara <vittorio.giovara@gmail.com>
@@ -261,12 +247,12 @@ Copyright: 2011-2015 Tim Wood, Iskren Chernev and Moment.js contributors
 License: Expat
 
 Files: generate-single-repo.sh
-Copyright: 2012-2019 Boris Pek <tehnick-8@yandex.ru>
+Copyright: 2012-2020 Boris Pek <tehnick-8@yandex.ru>
 License: GPL-2+
 
 Files: debian/*
 Copyright: 2009-2011 Ivan Borzenkov <ivan1986@list.ru>
-           2011-2019 Boris Pek <tehnick-8@yandex.ru>
+           2011-2020 Boris Pek <tehnick-8@yandex.ru>
 License: GPL-2+
 
 License: GPL-2+

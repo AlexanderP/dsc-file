@@ -4,6 +4,10 @@ Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: cmake,
                debhelper (>= 9),
+               libgstreamer-plugins-bad1.0-dev,
+               libgstreamer-plugins-base1.0-dev,
+               libgstreamer1.0-dev,
+               libhttp-parser-dev,
                libhunspell-dev,
                libidn11-dev,
                libminizip-dev,
@@ -18,85 +22,113 @@ Build-Depends: cmake,
                libtidy-dev,
                libxss-dev,
                qt5keychain-dev,
+               qtbase5-dev,
                qtmultimedia5-dev,
                zlib1g-dev
 Homepage: https://psi-plus.com/
-Standards-Version: 4.3.0
+Standards-Version: 4.5.0
 
 Package: psi-plus
 Architecture: any
 Depends: libqca-qt5-2-plugins,
          libqt5sql5-sqlite,
-         psi-plus-common (= ${source:Version}),
+         libsasl2-modules,
+         psi-plus-common,
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: psi-plus-l10n, psi-plus-plugins, psi-plus-sounds, sox
-Suggests: xdg-utils
+Recommends: psi-plus-l10n,
+            psi-plus-plugin-psimedia,
+            psi-plus-plugins,
+            psi-plus-sounds,
+            sox
+Suggests: libgnome-keyring0, xdg-utils
 Description: Qt-based XMPP client (basic version)
  This package contains basic version of Psi+. Use it if you prefer old
  fashioned plain text chats from era of IRC heyday.
  .
- Psi IM is a capable XMPP client aimed at experienced users. There are
- keybindings for just about everything, Unicode is supported throughout,
- contacts are cached offline. Security is also a major consideration, and
- Psi IM provides it for both client-to-server (TLS) and client-to-client
- (GnuPG, OTR, OMEMO).
+ Psi is a cross-platform powerful XMPP client designed for experienced users.
+ User interface of program is very flexible in customization. For example,
+ there are "multi windows" and "all in one" modes, support of different
+ iconsets and themes. Psi supports file sharing and audio/video calls. Security
+ is also a major consideration, and Psi provides it for both client-to-server
+ (TLS) and client-to-client (OpenPGP, OTR, OMEMO) via appropriate plugins.
  .
- Psi+ is a development branch of Psi IM. Project purposes are:
- implementation of new features, writing of patches and plugins for
- transferring them to Psi IM.
+ Psi+ is a development branch of Psi with rolling release development model.
+ Users who wants to receive new features and bug fixes very quickly may use
+ Psi+ on daily basis. Users who do not care about new trends and prefer
+ constancy may choose Psi as it uses classical development model and its
+ releases are quite rare.
  .
- Full list of features you may found at: https://psi-plus.com/wiki/en:features
+ List of supported XEPs you may found at:
+ https://github.com/psi-im/psi/wiki/Supported-XEPs
+ .
+ List of supported features you may found at:
+ https://psi-plus.com/wiki/en:features
 
 Package: psi-plus-webkit
 Architecture: any
 Depends: libqca-qt5-2-plugins,
          libqt5sql5-sqlite,
-         psi-plus-common (= ${source:Version}),
+         libsasl2-modules,
+         psi-plus-common,
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: psi-plus-l10n,
+            psi-plus-plugin-psimedia,
             psi-plus-plugins,
-            psi-plus-skins,
             psi-plus-sounds,
             sox
-Suggests: xdg-utils
+Suggests: libgnome-keyring0, xdg-utils
 Description: Qt-based XMPP client (WebKit version)
  This package contains WebKit version of Psi+. In comparing with basic Psi+
  version it has few additional features: support of animated emoticons, support
  of (adium) themes in private chats and group chats, support of previewing of
  images and videos in private chats and group chats, etc..
  .
- Psi IM is a capable XMPP client aimed at experienced users. There are
- keybindings for just about everything, Unicode is supported throughout,
- contacts are cached offline. Security is also a major consideration, and
- Psi IM provides it for both client-to-server (TLS) and client-to-client
- (GnuPG, OTR, OMEMO).
+ Psi is a cross-platform powerful XMPP client designed for experienced users.
+ User interface of program is very flexible in customization. For example,
+ there are "multi windows" and "all in one" modes, support of different
+ iconsets and themes. Psi supports file sharing and audio/video calls. Security
+ is also a major consideration, and Psi provides it for both client-to-server
+ (TLS) and client-to-client (OpenPGP, OTR, OMEMO) via appropriate plugins.
  .
- Psi+ is a development branch of Psi IM. Project purposes are:
- implementation of new features, writing of patches and plugins for
- transferring them to Psi IM.
+ Psi+ is a development branch of Psi with rolling release development model.
+ Users who wants to receive new features and bug fixes very quickly may use
+ Psi+ on daily basis. Users who do not care about new trends and prefer
+ constancy may choose Psi as it uses classical development model and its
+ releases are quite rare.
  .
- Full list of features you may found at: https://psi-plus.com/wiki/en:features
+ List of supported XEPs you may found at:
+ https://github.com/psi-im/psi/wiki/Supported-XEPs
+ .
+ List of supported features you may found at:
+ https://psi-plus.com/wiki/en:features
 
 Package: psi-plus-common
 Architecture: all
 Depends: ${misc:Depends}
 Multi-Arch: foreign
 Description: common files for Psi+
- This package contains common files for Psi+.
+ This package contains common files for basic and webkit versions of Psi+.
  .
- Psi IM is a capable XMPP client aimed at experienced users. There are
- keybindings for just about everything, Unicode is supported throughout,
- contacts are cached offline. Security is also a major consideration, and
- Psi IM provides it for both client-to-server (TLS) and client-to-client
- (GnuPG, OTR, OMEMO).
+ Psi is a cross-platform powerful XMPP client designed for experienced users.
+ User interface of program is very flexible in customization. For example,
+ there are "multi windows" and "all in one" modes, support of different
+ iconsets and themes. Psi supports file sharing and audio/video calls. Security
+ is also a major consideration, and Psi provides it for both client-to-server
+ (TLS) and client-to-client (OpenPGP, OTR, OMEMO) via appropriate plugins.
  .
- Psi+ is a development branch of Psi IM. Project purposes are:
- implementation of new features, writing of patches and plugins for
- transferring them to Psi IM.
+ Psi+ is a development branch of Psi with rolling release development model.
+ Users who wants to receive new features and bug fixes very quickly may use
+ Psi+ on daily basis. Users who do not care about new trends and prefer
+ constancy may choose Psi as it uses classical development model and its
+ releases are quite rare.
  .
- Full list of features you may found at: https://psi-plus.com/wiki/en:features
+ List of supported XEPs you may found at:
+ https://github.com/psi-im/psi/wiki/Supported-XEPs
+ .
+ List of supported features you may found at:
+ https://psi-plus.com/wiki/en:features
 
 Package: psi-plus-plugins
 Architecture: any
@@ -104,70 +136,115 @@ Depends: psi-plus (=${binary:Version}) | psi-plus-webkit (=${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Description: plugins for Psi+
- This package contains main plugins for Psi+:
- \* Attention Plugin
- \* Autoreply Plugin
- \* Birthday Reminder Plugin
- \* Chess Plugin
- \* Cleaner Plugin
- \* Client Switcher Plugin
- \* Conference Logger Plugin
- \* Content Downloader Plugin
- \* Enum Messages Plugin
- \* Extended Menu Plugin
- \* Extended Options Plugin
- \* GnuPG Plugin
- \* Gomoku Game Plugin
- \* History Keeper Plugin
- \* HTTP Upload Plugin
- \* ICQ Must Die Plugin
- \* Image Plugin
- \* Image Preview Plugin
- \* Jabber Disk Plugin
- \* Juick Plugin
- \* Message Filter Plugin
- \* OMEMO Plugin
- \* Off-the-Record Plugin
- \* PEP Change Notify Plugin
- \* QIP X-Statuses Plugin
- \* Screenshot Plugin
- \* Skins Plugin
- \* Stop Spam Plugin
- \* Storage Notes Plugin
- \* Translate Plugin
- \* Video Status Plugin
- \* Watcher Plugin
+ This package contains officially supported plugins for Psi+:
+ \* Attention
+ \* Autoreply
+ \* Birthday Reminder
+ \* Chess
+ \* Cleaner
+ \* Client Switcher
+ \* Conference Logger
+ \* Content Downloader
+ \* Enum Messages
+ \* Extended Menu
+ \* Extended Options
+ \* Gomoku Game
+ \* History Keeper
+ \* Image
+ \* Image Preview
+ \* Jabber Disk
+ \* Juick
+ \* Message Filter
+ \* OMEMO
+ \* OpenPGP
+ \* Off-the-Record
+ \* PEP Change Notify
+ \* QIP X-Statuses
+ \* Screenshot
+ \* Stop Spam
+ \* Storage Notes
+ \* Translate
+ \* Video Status
+ \* Watcher
  .
- Psi IM is a capable XMPP client aimed at experienced users. There are
- keybindings for just about everything, Unicode is supported throughout,
- contacts are cached offline. Security is also a major consideration, and
- Psi IM provides it for both client-to-server (TLS) and client-to-client
- (GnuPG, OTR, OMEMO).
+ Psi is a cross-platform powerful XMPP client designed for experienced users.
+ User interface of program is very flexible in customization. For example,
+ there are "multi windows" and "all in one" modes, support of different
+ iconsets and themes. Psi supports file sharing and audio/video calls. Security
+ is also a major consideration, and Psi provides it for both client-to-server
+ (TLS) and client-to-client (OpenPGP, OTR, OMEMO) via appropriate plugins.
  .
- Psi+ is a development branch of Psi IM. Project purposes are:
- implementation of new features, writing of patches and plugins for
- transferring them to Psi IM.
+ Psi+ is a development branch of Psi with rolling release development model.
+ Users who wants to receive new features and bug fixes very quickly may use
+ Psi+ on daily basis. Users who do not care about new trends and prefer
+ constancy may choose Psi as it uses classical development model and its
+ releases are quite rare.
  .
- Full list of features you may found at: https://psi-plus.com/wiki/en:features
+ List of supported XEPs you may found at:
+ https://github.com/psi-im/psi/wiki/Supported-XEPs
+ .
+ List of supported features you may found at:
+ https://psi-plus.com/wiki/en:features
 
-Package: psi-plus-skins
+Package: psi-plus-plugins-dev
 Architecture: all
-Depends: psi-plus | psi-plus-webkit, psi-plus-plugins, ${misc:Depends}
-Multi-Arch: foreign
-Description: skins for Psi+
- This package contains skins for Psi+.
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: development files for Psi+ plugins
+ This package contains header files and cmake modules which are necessary
+ for building of Psi+ plugins which are developed outside of Psi+ project.
  .
- Psi IM is a capable XMPP client aimed at experienced users. There are
- keybindings for just about everything, Unicode is supported throughout,
- contacts are cached offline. Security is also a major consideration, and
- Psi IM provides it for both client-to-server (TLS) and client-to-client
- (GnuPG, OTR, OMEMO).
+ Psi is a cross-platform powerful XMPP client designed for experienced users.
+ User interface of program is very flexible in customization. For example,
+ there are "multi windows" and "all in one" modes, support of different
+ iconsets and themes. Psi supports file sharing and audio/video calls. Security
+ is also a major consideration, and Psi provides it for both client-to-server
+ (TLS) and client-to-client (OpenPGP, OTR, OMEMO) via appropriate plugins.
  .
- Psi+ is a development branch of Psi IM. Project purposes are:
- implementation of new features, writing of patches and plugins for
- transferring them to Psi IM.
+ Psi+ is a development branch of Psi with rolling release development model.
+ Users who wants to receive new features and bug fixes very quickly may use
+ Psi+ on daily basis. Users who do not care about new trends and prefer
+ constancy may choose Psi as it uses classical development model and its
+ releases are quite rare.
  .
- Full list of features you may found at: https://psi-plus.com/wiki/en:features
+ List of supported XEPs you may found at:
+ https://github.com/psi-im/psi/wiki/Supported-XEPs
+ .
+ List of supported features you may found at:
+ https://psi-plus.com/wiki/en:features
+
+Package: psi-plus-plugin-psimedia
+Architecture: any
+Depends: gstreamer1.0-plugins-base,
+         gstreamer1.0-plugins-good,
+         gstreamer1.0-plugins-ugly,
+         psi-plus | psi-plus-webkit,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Replaces: psimedia
+Description: plugin for Psi+ for audio and video calls
+ Media plugin provides functionality required for Audio/Video calls and can
+ also replace some parts of QtMultimedia.
+ .
+ Current implementation is based on GStreamer.
+ .
+ Psi is a cross-platform powerful XMPP client designed for experienced users.
+ User interface of program is very flexible in customization. For example,
+ there are "multi windows" and "all in one" modes, support of different
+ iconsets and themes. Psi supports file sharing and audio/video calls. Security
+ is also a major consideration, and Psi provides it for both client-to-server
+ (TLS) and client-to-client (OpenPGP, OTR, OMEMO) via appropriate plugins.
+ .
+ Psi+ is a development branch of Psi with rolling release development model.
+ Users who wants to receive new features and bug fixes very quickly may use
+ Psi+ on daily basis. Users who do not care about new trends and prefer
+ constancy may choose Psi as it uses classical development model and its
+ releases are quite rare.
+ .
+ List of supported XEPs you may found at:
+ https://github.com/psi-im/psi/wiki/Supported-XEPs
+ .
+ List of supported features you may found at:
+ https://psi-plus.com/wiki/en:features
 
 Package: psi-plus-sounds
 Architecture: all
@@ -176,17 +253,24 @@ Multi-Arch: foreign
 Description: sound files for Psi+
  This package contains sound files for Psi+.
  .
- Psi IM is a capable XMPP client aimed at experienced users. There are
- keybindings for just about everything, Unicode is supported throughout,
- contacts are cached offline. Security is also a major consideration, and
- Psi IM provides it for both client-to-server (TLS) and client-to-client
- (GnuPG, OTR, OMEMO).
+ Psi is a cross-platform powerful XMPP client designed for experienced users.
+ User interface of program is very flexible in customization. For example,
+ there are "multi windows" and "all in one" modes, support of different
+ iconsets and themes. Psi supports file sharing and audio/video calls. Security
+ is also a major consideration, and Psi provides it for both client-to-server
+ (TLS) and client-to-client (OpenPGP, OTR, OMEMO) via appropriate plugins.
  .
- Psi+ is a development branch of Psi IM. Project purposes are:
- implementation of new features, writing of patches and plugins for
- transferring them to Psi IM.
+ Psi+ is a development branch of Psi with rolling release development model.
+ Users who wants to receive new features and bug fixes very quickly may use
+ Psi+ on daily basis. Users who do not care about new trends and prefer
+ constancy may choose Psi as it uses classical development model and its
+ releases are quite rare.
  .
- Full list of features you may found at: https://psi-plus.com/wiki/en:features
+ List of supported XEPs you may found at:
+ https://github.com/psi-im/psi/wiki/Supported-XEPs
+ .
+ List of supported features you may found at:
+ https://psi-plus.com/wiki/en:features
 
 Package: psi-plus-icons-nonfree
 Architecture: all
@@ -211,14 +295,21 @@ Description: additional icons for Psi+
  This package contains additional icons for Psi+. Due to issues with thier
  licenses they cannot be included into primary Psi+ tarballs.
  .
- Psi IM is a capable XMPP client aimed at experienced users. There are
- keybindings for just about everything, Unicode is supported throughout,
- contacts are cached offline. Security is also a major consideration, and
- Psi IM provides it for both client-to-server (TLS) and client-to-client
- (GnuPG, OTR, OMEMO).
+Psi is a cross-platform powerful XMPP client designed for experienced users.
+ User interface of program is very flexible in customization. For example,
+ there are "multi windows" and "all in one" modes, support of different
+ iconsets and themes. Psi supports file sharing and audio/video calls. Security
+ is also a major consideration, and Psi provides it for both client-to-server
+ (TLS) and client-to-client (OpenPGP, OTR, OMEMO) via appropriate plugins.
  .
- Psi+ is a development branch of Psi IM. Project purposes are:
- implementation of new features, writing of patches and plugins for
- transferring them to Psi IM.
+ Psi+ is a development branch of Psi with rolling release development model.
+ Users who wants to receive new features and bug fixes very quickly may use
+ Psi+ on daily basis. Users who do not care about new trends and prefer
+ constancy may choose Psi as it uses classical development model and its
+ releases are quite rare.
  .
- Full list of features you may found at: http://psi-plus.com/wiki/en:features
+ List of supported XEPs you may found at:
+ https://github.com/psi-im/psi/wiki/Supported-XEPs
+ .
+ List of supported features you may found at:
+ https://psi-plus.com/wiki/en:features
