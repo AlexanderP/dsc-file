@@ -1,3 +1,142 @@
+gimp-devel (2.10.18+git44018-00840a15ec-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 00840a15ecf5d0064fa4a87e3ad8cba215539836
+  * Date: 1591445738
+  * git changelog:
+  *  00840a15ec - Update Polish translation
+  *  990e6ed08d - Update Swedish translation
+  *  4309bfc4d8 - Update Romanian translation
+  *  2b90b1b7b1 - Update Romanian translation
+  *  d4ce6c5453 - plug-ins: in twain, unify 8- and 16-bit data transfer
+  *  f358bd5cd2 - plug-ins: another fix to last commit
+  *  a28b865a80 - plug-ins: fix last commit
+  *  f35df5503d - Issue #4941 - TWAIN 16-bit greyscale/rgb scan always
+    loaded as 8-bit
+  *  63a242ce7e - Update Ukrainian translation
+  *  5bee8eb79f - Update Russian translation
+  *  bb65d26133 - Add the list of changes in 2.10.20 to the appdata
+  *  580e4b813a - plug-ins: fix last twain-plug-in commit
+  *  b68ff3b7aa - Update Romanian translation
+  *  090891c037 - Update Romanian translation
+  *  f32730c718 - Update Romanian translation
+  *  005003e5e5 - Update Romanian translation
+  *  47298614f7 - Issue #4210 - GIMP reports errors on scanning ...
+  *  3c61965075 - app: misc cleanup in prop-gui range creation
+  *  c82b894cd3 - app: fix prop-gui static range visibility
+  *  28c7a813e8 - Update Ukrainian translation
+  *  b6e0333aa0 - app: in _gimp_prop_gui_new_generic(), use "range-
+    label" pspec key as range label
+  *  0a82815aeb - app: improve gegl:focus-blur prop-gui constructor
+  *  8da94a5751 - app, menus: add gegl:lens-blur to Filters -> Blur
+  *  8e6a601a80 - app: use special prop-gui widget for luminance ranges
+  *  69b0d86713 - app: add gimp_prop_range_set_ui_limits()
+  *  e5916c81cc - app: allow setting handle-bar limits explicitly
+  *  0c65fce18c - app: add gimp_prop_range_new()
+  *  a974e71702 - app: add gimp_gtk_adjustment_chain()
+  *  74f96d626d - Update Romanian translation
+  *  4c924c1cb8 - app: in gimp_accel_label_set_action(), emit notify
+  *  89f8dc095d - Update Romanian translation
+  *  ae75f5de8f - Update Ukrainian translation
+  *  ffb0175a8c - Update Swedish translation
+  *  252cd8f100 - app: fix parsing of GUM cross-property references
+  *  5605e8484c - app: in gimp_prop_eval_string(), don't leak result
+    upon trailing tokens
+  *  35d6d9e529 - app: list all tool-group tools in tool-button tooltip
+  *  a54704bcdc - app: add GimpAccelLabel
+  *  bf2dae8f7f - Update Romanian translation
+  *  a403a7d72f - Update Dutch translation
+  *  2b2b033ae5 - Update Romanian translation
+  *  c52980110c - Update Romanian translation
+  *  92ccf522eb - Update Romanian translation
+  *  a04e9c92bf - Update Romanian translation
+  *  8e6560c232 - Update Romanian translation
+  *  b9da817ecc - Update Romanian translation
+  *  8bb4b722c8 - Compare counter value instead its pointer address
+  *  32ed52216c - app: some small improvements in line art code.
+  *  dc8a9f3643 - Update Dutch translation
+  *  ba2ff0184d - Update Spanish translation
+  *  5dacdcd409 - Updated French translation
+  *  74d6cc2717 - Updated Italian translation (fix the previous commit)
+  *  303ce20e99 - Update Romanian translation
+  *  1e372bd3f5 - Updated Italian translation
+  *  5438170760 - Update Croatian translation
+  *  ca17c69807 - Update Croatian translation
+  *  b339f81833 - Update Croatian translation
+  *  a13c4f6e01 - Update Croatian translation
+  *  af8eb9076c - Update Croatian translation
+  *  1726d4cec1 - Update Croatian translation
+  *  fbf36b4547 - Updated Danish translation of gimp-plug-ins
+  *  cb55b09d3a - Updated Danish translation
+  *  f001fac473 - Update Turkish translation
+  *  118bb9470d - Update Romanian translation
+  *  b517431da3 - Update Romanian translation
+  *  40902bcf46 - Update Romanian translation
+  *  4b9d58da22 - NEWS: add more fixed bugs
+  *  1b5374a7ce - Update NEWS
+  *  670078dba8 - build,app: depend on babl-0.1.76
+  *  c9e551d9f0 - Update British English translation
+  *  625ec2b9d5 - Update British English translation
+  *  b717d0550f - Update Turkish translation
+  *  d20317ce20 - Update Turkish translation
+  *  695ca1facd - Update Turkish translation
+  *  390edf86b6 - Update Spanish translation
+  *  e02d5965d2 - Update Spanish translation
+  *  a6dcab4c0c - plug-ins: use G_GOFFSET_FORMAT to fix a long int vs.
+    long long int format warning
+  *  0c4e6f1ef3 - app: update tool widgets on display-shell changes more
+    granularly
+  *  cf80b43b03 - app: fix compiler warnings in GimpToolWidget
+  *  52f57251bf - Issue #1439: reverse the construction of the
+    "selection to path" plugin.
+  *  6113abc175 - Update NEWS
+  *  07b0a178f4 - Update German translation
+  *  efb97fa7bd - app: implement GimpColorManaged for GimpImageProxy
+  *  b742cc0a0d - Update Catalan translation
+  *  5667dd2b97 - Update and denaphtalinize Russian translation, part 1
+    of many
+  *  5771393379 - app: zero-out transparent pixels when converting to
+    indexed
+  *  3e61ef9ae6 - app: fix alignment of generic pixel buffers
+  *  81fb595ca0 - app: do not try to copy a buffer result from a
+    canceled GEGL operation.
+  *  3ebcf8d31a - Update Romanian translation
+  *  7c8c2c0d69 - app: don't leak text-tool UI manager
+  *  b5353eb2eb - app: in GimpPanedBox, don't accept drag contexts with
+    unsupported targets
+  *  b8dfa31a88 - Update Romanian translation
+  *  7361e2d8c3 - Update Swedish translation
+  *  1e9b8b32c7 - Update Polish translation
+  *  f000e40590 - Revert "app: update display-enums.c"
+  *  bd892491f4 - app: fix CRITICAL when using "show all" by default
+  *  3899d75a98 - app: update display-enums.c
+  *  cebcd49b3a - Updated Greek translation
+  *  60db24b655 - app: another fix in GimpToolFocus
+  *  03fcb782a6 - app: various fixes in GimpToolFocus
+  *  60a4248ebf - Update Ukrainian translation
+  *  991626f62e - Updated Greek translation
+  *  765a427ac8 - Updated Greek translation
+  *  92baa76e11 - app: fix signature of gimp_canvas_limit_new()
+  *  3bc1d6a31a - app: add gegl:focus-blur to Filters -> Blur
+  *  8e96c6c1b2 - app, menus: add gegl:variable-blur to Filters -> Blur
+  *  85259b3faf - app: add FOCUS controller to gegl:vignette
+  *  5295a1121e - app: add FOCUS prop-gui controller
+  *  36b3745d10 - app: add GimpToolFocus tool widget
+  *  d9ef974d43 - app: add gimp_tool_widget_add_group()
+  *  24a7a3d27b - app: add gimp_display_shell_constrain_angle()
+  *  ecf131ed0c - app: add GimpCanvasLimit canvas item
+  *  bd00527fe5 - app: in GimpDrawTool, update widget on tool resume
+  *  c4061c01aa - app: pause/resume active tool when rotating canvas
+  *  2bfc4fc476 - app: allow arbitrary aux inputs in GimpOperationTool
+  *  10ca1d8cd3 - Update Romanian translation
+  *  abdd94583d - Update Ukrainian translation
+  *  cd1c842cd5 - plug-ins: fix duplicate mnemonic in one string in
+    ddswrite.c
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 06 Jun 2020 16:30:03 +0300
+
 gimp-devel (2.10.18+git43901-63a749721f-1) unstable; urgency=medium
 
   * Compile

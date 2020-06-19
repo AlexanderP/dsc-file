@@ -1,3 +1,301 @@
+gimp-gtk3 (2.99.0+git45793-c69467b6c4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: c69467b6c4b49f01aa40c76b32026fb473d4cc1f
+  * Date: 1591445759
+  * git changelog:
+  *  c69467b6c4 - Update Polish translation
+  *  5092a32e75 - gimpparamspecs: Add GIR annotations
+  *  6c8cadfd56 - Update Romanian translation
+  *  a9a61d963d - Add url to code so that Source button actually does
+    what it is supposed to do.
+  *  94747df92e - NEWS: add some "Known issues" section to 2.99.2 notes.
+  *  86569b9ae3 - plug-ins: in twain, unify 8- and 16-bit data transfer
+  *  093d19c87c - Update Ukrainian translation
+  *  6d4712edb9 - plug-ins: another fix to last commit
+  *  f4058d47a2 - plug-ins: fix last commit
+  *  00e1172a54 - Issue #4941 - TWAIN 16-bit greyscale/rgb scan always
+    loaded as 8-bit
+  *  a276f26b6c - po-plug-ins: Add Vala plug-in to POTFILES.in
+  *  ff7d927d47 - Update Ukrainian translation
+  *  24f45e327b - po: add vector-toolpath-actions.c to POTFILES.in
+  *  6def9e59fb - plug-ins: fix last twain-plug-in commit
+  *  288177d279 - Update Romanian translation
+  *  fd15a7926c - Update Romanian translation
+  *  d26ce5bb54 - Update Romanian translation
+  *  b203a8f11a - Update Romanian translation
+  *  9a1d43c978 - Issue #4210 - GIMP reports errors on scanning ...
+  *  6dcac81634 - Update Ukrainian translation
+  *  ca351d3520 - app: misc cleanup in prop-gui range creation
+  *  c7599626f4 - app: fix prop-gui static range visibility
+  *  4492f61df4 - app: in _gimp_prop_gui_new_generic(), use "range-
+    label" pspec key as range label
+  *  438babea6b - app: improve gegl:focus-blur prop-gui constructor
+  *  323355a708 - app, menus: add gegl:lens-blur to Filters -> Blur
+  *  8eb752b194 - app: use special prop-gui widget for luminance ranges
+  *  ce8235e977 - app: add gimp_prop_range_set_ui_limits()
+  *  fa5dd99559 - app: allow setting handle-bar limits explicitly
+  *  e03b8e597b - app: add gimp_prop_range_new()
+  *  45e5c2231a - app: add gimp_gtk_adjustment_chain()
+  *  fbf7072972 - Update Romanian translation
+  *  c2562c4bc5 - Update Ukrainian translation
+  *  0ac2aa5130 - app: in gimp_accel_label_set_action(), emit notify
+  *  4a97dd10db - Update Romanian translation
+  *  8139836d5d - app: fix parsing of GUM cross-property references
+  *  ae801871e5 - app: in gimp_prop_eval_string(), don't leak result
+    upon trailing tokens
+  *  4d83c7a3fc - app: list all tool-group tools in tool-button tooltip
+  *  2259ad5fcc - app: add GimpAccelLabel
+  *  6449dd7c14 - devel-docs: add a tip for testing an older GIMP
+    version with flatpak.
+  *  3991220a9d - Updated Italian translation
+  *  08a1f16b95 - Update Romanian translation
+  *  f8be175c21 - Update Dutch translation
+  *  101cc32018 - Update Romanian translation
+  *  ec782cadc8 - Updated Italian translation
+  *  4b77ac4c0f - Updated Italian translation
+  *  74033f9291 - Update Romanian translation
+  *  fb0e4dd97a - Update Romanian translation
+  *  9bcca65dc5 - Updated Italian translation
+  *  b58b9e6bd9 - Updated Italian translation
+  *  2d70cc14c0 - Update Ukrainian translation
+  *  f86329bb30 - .gitlab: update the merge request template.
+  *  be5d23bf98 - Compare counter value instead its pointer address
+  *  4ad1a68c3a - Fix a typo: All selected_items
+  *  736aee4a17 - Update Catalan translation
+  *  300d946418 - Update Dutch translation
+  *  f275798442 - Update Romanian translation
+  *  63d2595897 - Update Romanian translation
+  *  fdca56c94a - CI: use custom docker images for dependencies and GIMP
+    builds
+  *  30ad5cad68 - ci: Remove some unused deps
+  *  63647ee187 - Update Romanian translation
+  *  155250f568 - Update Romanian translation
+  *  1037afae61 - Update Romanian translation
+  *  b95ec68c87 - Update Turkish translation
+  *  c45c7fdbe4 - Update Turkish translation
+  *  864bc49176 - Update Turkish translation
+  *  e1aebbac3b - app: CI cache now configured in GNOME gitlab.
+  *  1cfcb392bc - Update Catalan translation
+  *  fd95575bf3 - Fixes to Catalan translation
+  *  a5c06816a1 - Update Ukrainian translation
+  *  647ebffe7b - app: GimpTransformTool multi-layer aware.
+  *  2056abf9fb - Updated Greek translation
+  *  a97a46e707 - Update Catalan translation
+  *  d7d0c046f0 - app,build: depend on babl-0.1.76
+  *  603f0dc375 - Update Spanish translation
+  *  faeaaa30c7 - Update Spanish translation
+  *  6d14822994 - Update Catalan translation
+  *  2a4196b88f - Update Swedish translation
+  *  6984665477 - Update Swedish translation
+  *  3927401a80 - app: Simplify the logic for the GimpToolPath popup.
+  *  23d5ef2546 - vala: Fix some metadata warnings
+  *  5398d15b55 - app, pdb: fix build warning because of discarded
+    'const' qualifier.
+  *  151b01e530 - Update Catalan translation
+  *  acf50009f8 - Allow building vala plugins
+  *  2799a709ea - Update Ukrainian translation
+  *  4fb00298e1 - Update Ukrainian translation
+  *  1a23448e1b - Update Ukrainian translation
+  *  1827f55410 - Update Spanish translation
+  *  e5b5515038 - Update Spanish translation
+  *  b8eef4e859 - app: fix check for XCF 14.
+  *  6f4fd52c86 - NEWS: some more changes.
+  *  cf4aba1800 - Update Spanish translation
+  *  24d062d7c7 - NEWS: kick start the NEWS file for GIMP 2.99
+    development branch.
+  *  b00bb346a9 - plug-ins: more complete naming for Python|Script-Fu
+    consoles.
+  *  ab172872ce - plug-ins: fix python-console after GimpUi
+    instrospection separation.
+  *  b05fc6950d - app: create and use gimp_image_item_list_linked().
+  *  7233464664 - app: Alpha to Selection will warn when the resulting
+    selection is empty.
+  *  03af9da83b - app: GimpTool multi-drawable aware.
+  *  661f057603 - app: add gimp_image_equal_selected_drawables().
+  *  8bf8eb9dc0 - plug-ins: use G_GOFFSET_FORMAT to fix a long int vs.
+    long long int format warning
+  *  10f9ee63c6 - app: don't leak UI manager in GimpToolPath
+  *  18d747611c - app: forward tool get_popup() to widget get_popup() in
+    GimpDrawTool
+  *  4b1c8f9ec7 - app: fix precondition return values in
+    gimp_tool_widget_get_popup()
+  *  afda774f44 - app: update tool widgets on display-shell changes more
+    granularly
+  *  ec69083354 - app: fix compiler warnings in GimpToolWidget
+  *  8839cb58bb - pdb: update autogenerated files.
+  *  22784727f4 - pdb: implement gimp-vectors-stroke-reverse
+  *  c10778fa03 - app: implement a few more functions for the ToolPath
+    context menu.
+  *  f6f180c5cb - app: Add basic infratructure for a vector tool popup
+    menu.
+  *  44a7e92967 - app/vectors: implement stroke_reverse and
+    stroke_shift_start
+  *  185dd8ba2e - Update German translation
+  *  d73a6a5cec - Update Ukrainian translation
+  *  3222381199 - Update Catalan translation
+  *  1bb229a6d0 - Update Catalan translation
+  *  258c8454d5 - app: implement GimpColorManaged for GimpImageProxy
+  *  d9f5558977 - app: update core-enums.c
+  *  febc5cc6e6 - Revert "Don't forget to include <glib-object.h>"
+  *  4bc328af8e - Update Ukrainian translation
+  *  25e535b5e0 - Fix missing includes
+  *  ae4abbabfd - app: layers-merge-group multi-layer aware.
+  *  9fce4757ce - Don't forget to include <glib-object.h>
+  *  842dc7535f - gir: (skip) functions with varargs
+  *  95fa7bc68c - Issue #5109: "gimp-win64" CI artifact is missing
+    gegl:npd support.
+  *  62798efd34 - Update Ukrainian translation
+  *  5c221df99f - app: layers-blend-space-* & layers-composite-
+    space|mode-* multi-layer…
+  *  338ac504df - app: "layers-mask-selection-*" multi-layers aware.
+  *  081ebf19f0 - app: more accurate undo names.
+  *  09870d4b15 - app: zero-out transparent pixels when converting to
+    indexed
+  *  32740ac0de - app: improve alpha to selection with multiple items.
+  *  a90f59d961 - app: fix alignment of generic pixel buffers
+  *  7412c4be6f - app: use G_GINT64_FORMAT to fix a long unsigned int
+    vs. long long int format warning
+  *  8fa9221fb8 - app: don't leak text-tool UI manager
+  *  e38010b2d1 - app: in GimpPanedBox, don't accept drag contexts with
+    unsupported targets
+  *  93a43ce0fd - Update Romanian translation
+  *  65c5232e01 - Update Ukrainian translation
+  *  abc0348f6d - Update Ukrainian translation
+  *  c2d4e7d265 - gir: Fix some missing (out) annotations
+  *  09094fe66f - gimpenumwidgets: Apply (transfer none) annotation
+  *  645d80123a - app: make "Alpha to Selection" multi-layer aware.
+  *  2dcd38c586 - app: gradient tool multi-drawables aware.
+  *  2b764c6542 - app: do not try to copy a buffer result from a
+    canceled GEGL operation.
+  *  2956873740 - app, libgimp, pdb: fix gimp_selection_float() usage.
+  *  73096b9a04 - app: make the text tool multi-layer aware.
+  *  5e960ad56b - app: fix gimp_item_tree_get_insert_pos() with
+    GIMP_IMAGE_ACTIVE_PARENT.
+  *  a7c59277fb - app: quick on-canvas copy-paste multi-layer aware.
+  *  bb7f94ce3b - libgimp: add new functions to gimp.def.
+  *  5498adf50a - app, libgimp, pdb: color picker multi-layer aware.
+  *  6f5fbe4022 - app: scroll automatically only when none of the
+    selected items…
+  *  5cf71f3220 - app: test-ui multi-layer aware.
+  *  f0557e93f8 - app: Layer Selection Advance (up/down) now multi-layer
+    aware.
+  *  0ab91b9b55 - app: "Import Palette" multi-layer aware.
+  *  28112bbf9e - app: layer pick through canvas click multi-layer
+    aware.
+  *  83d8fcdd06 - app: GimpCanvasLayerBoundary to show all selected
+    layers area.
+  *  e3094b4c86 - app: Crop tool now multi-layer aware.
+  *  5964f72cea - app, pdb: layers-merge-layers* and image-merge-layers
+    multi-layer aware.
+  *  0ae4686172 - pdb: proper conversions for object arrays in PDB.
+  *  9dc6b2e9fe - app: various "select-*" were already multi-layer
+    aware.
+  *  98603c69c9 - app, libgimp, pdb: "edit-copy" multi-layer aware.
+  *  0534e077b7 - app: selection were not displayed when multi-layers
+    selected.
+  *  cb03fa1f08 - app: Move tool multi-layer aware.
+  *  22a86c44ca - app: layers-select-* multi-selection aware.
+  *  8f22f12ee7 - app: layers-lock-content and layers-lock-position
+    multi-layer aware.
+  *  80b74ce9e9 - app: raise-layers* and lower-layers* actions multi-
+    selection aware.
+  *  8a65b9c3b0 - app: allow shift-click on GimpContainerTreeView
+    expanders.
+  *  c3e9aeff8c - app: multi-layer awareness for layers-new-group and
+    layers-new.
+  *  c1f68c02cf - app: fix some GimpContainerTreeView mouse
+    interactions.
+  *  7cdf85693a - app: multi-layer aware layers-mask-add and layers-mask-
+    add-button.
+  *  6501c3961d - app: multi-layer awareness for layers' lock-alpha,
+    opacity and mode.
+  *  6916edde0c - app: make layers-color-tag-* multi-layer aware.
+  *  a029ef3f97 - app: layers-mask-show and layers-mask-disable multi-
+    layer aware.
+  *  9c277e078c - app: make layers-mask-apply and layers-mask-delete
+    multi-layer aware.
+  *  b5c8a259c8 - app: make layers-mask-add-last-values multi-selection
+    aware.
+  *  b2c11f8e95 - app: layers-duplicate now also multi-selection aware.
+  *  65e2738053 - app: add an info label above GimpItemTreeView item
+    list to indicate…
+  *  86af7c3fa2 - app: make "layers-new-last-values" multi-selection
+    aware.
+  *  7e0adbc282 - devel-docs: update XCF docs with XCF 14 changes.
+  *  592cea6b87 - app: actually implement XCF multi-layer selection
+    saving/loading.
+  *  d3139e0f7c - app: support saving/exporting with multi-selection.
+  *  795e18b9c9 - app: fix running procedures with parameter array types
+    in code code…
+  *  9bd530a2b1 - app: add gimp_image_get_selected_drawables().
+  *  ac56b1ed14 - app, libgimp, pdb: add PDB function
+    gimp_image_get_selected_layers().
+  *  45a87e62ff - app: fix double-click tree view cell editing.
+  *  bcacf6e2ae - app: "active item" concept => "selected items".
+  *  309ccf71b4 - app: allow multi-item drop on GimpContainerView
+    buttons.
+  *  f5dcfbacbb - app: better logics to remove multiple layers.
+  *  dbae0e436c - app: new function gimp_item_is_ancestor().
+  *  c2023f3aa1 - app: s/insert_item_after()/insert_items_after() in
+    GimpContainerView.
+  *  5b4c2dac7a - app: implement multi-selection code for channels and
+    vectors.
+  *  cc51c05b80 - app: group undo steps when doing multiple layer drops.
+  *  5e008eb92f - app: show number of dragged layers in dnd box for
+    multi-layer drags.
+  *  e11245b1d8 - app: button press on a non-selected item changes
+    selection.
+  *  f7b86c9062 - app: fix selection after a drag'n drop move.
+  *  83b3d9e52e - app: make drag'n drop multi-drawable selection aware.
+  *  48410d9ea4 - app: actually enable multi-selection.
+  *  5621182d87 - app: do not notify of "active-item" change in
+    GimpItemTree.
+  *  3bc1d09c30 - app: do not lose multi item selection when dragging or
+    right-clicking.
+  *  288bec3b79 - app: add a "select-items" signal to GimpContainerView.
+  *  15113782fd - app: warp tool also only works on single layers.
+  *  1f733bcb1f - app: make paint tools multiple-draware aware.
+  *  178f32f6a5 - app: adds multi-selection support to "layers-delete"
+    action.
+  *  0593cf4c9e - app: add concept of multi-selected layers in
+    GimpImage.
+  *  b487087429 - app: add concept of selected items in GimpItemTree.
+  *  68ab11b813 - Update Polish translation
+  *  0a06294af7 - app: fix CRITICAL when using "show all" by default
+  *  bc13dc80dd - app: update display-enums.c
+  *  1171798ca6 - app: another fix in GimpToolFocus
+  *  2fcf667efd - app: various fixes in GimpToolFocus
+  *  80f2d293f7 - Update Ukrainian translation
+  *  b14b93de14 - Split GIR into Gimp-3.0 and GimpUi-3.0
+  *  f55acc1d65 - app: fixed oversight in the canvashandle bounding box.
+  *  000bc5fff4 - gimptoolpath: use drop shaped handle to indicate the
+    start of a stroke.
+  *  44352cb769 - gimpcanvashandle: implement drop shaped handle
+  *  4394b92c71 - Issue #1439: reverse the construction of the
+    "selection to path" plugin.
+  *  484e9afb22 - app/text: Fix const warning
+  *  9fe589734b - app: fix signature of gimp_canvas_limit_new()
+  *  60d4d25b93 - app: add gegl:focus-blur to Filters -> Blur
+  *  721f2d8c27 - app, menus: add gegl:variable-blur to Filters -> Blur
+  *  f6f0a8a2d8 - app: add FOCUS controller to gegl:vignette
+  *  3a62c53009 - app: add FOCUS prop-gui controller
+  *  5e005a762c - app: add GimpToolFocus tool widget
+  *  1a8f0b6cd6 - app: add gimp_tool_widget_add_group()
+  *  8c1a277007 - app: add gimp_display_shell_constrain_angle()
+  *  06a2b4f338 - app: add GimpCanvasLimit canvas item
+  *  c73710e410 - app: in GimpDrawTool, update widget on tool resume
+  *  cd5e4e99dd - app: pause/resume active tool when rotating canvas
+  *  1bf9d1ba53 - app: allow arbitrary aux inputs in GimpOperationTool
+  *  32bd008a1e - Updated Greek translation
+  *  0352559efa - meson: Allow running tests headless
+  *  b11e529316 - app: fix a few warnings.
+  *  c687c5631d - Update Romanian translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 06 Jun 2020 17:31:08 +0300
+
 gimp-gtk3 (2.99.0+git45564-a8e6412ee6-1) unstable; urgency=medium
 
   * Compile

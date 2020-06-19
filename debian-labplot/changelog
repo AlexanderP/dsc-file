@@ -1,3 +1,166 @@
+labplot (2.7.0+git7422-54febcd61-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 54febcd61d34754bf5f13a6f67540315a4457731
+  * Date: 1591391435
+  * git changelog:
+  *  54febcd61 - [fit] fixed copying of the fit results to the
+    clipboard.
+  *  5bce29d58 - [spreadsheet] deactivated "normalize selection"
+    functionality. It's not complete and not useful.
+  *  d2c5de528 - Properly handle the derived XYAnalysisCurve classes in
+    TreeViewComboBox.
+  *  bd3e89ff2 - [MQTT] minor fixes
+  *  acf8dec6a - Avoid warning in release build
+  *  c8d67282d - XYCurve enum part 2
+  *  42b7d0de1 - Properly invalidate and calculate the column statistics
+    if masking was changed.
+  *  4444186b6 - XYCurve enum
+  *  59feaebe5 - [analysis] in the comboboxes for curve data sources
+    allow to select analysis curves as data sources for analysis curves
+    (e.g. to do a smooth of a smooth, etc.).
+  *  add5dfcfe - More enum changes
+  *  2a809f18a - CartesianPlot enum
+  *  8564b049b - [fit] improve loading from project
+  *  7b87cf22a - PlotDataDialog::PlotType
+  *  f2281a98d - Fix usage of Orientation enum
+  *  35ccdaa32 - Axis enums
+  *  423c6edbf - Axis enum class
+  *  c749a63f7 - Use Qt::Orientation
+  *  cd148ff1a - Fix previous commit
+  *  e011e6d48 - Fix compiling
+  *  387c4632e - [spreasheet] simplified the logic in ColumnDock for the
+    handling of format widgets for different column modes. The code is
+    more closer now to a similar logic in XYCurveDock or value labels
+    format. This change also allows to change the datetime format in the
+    combo box directly by modifying the text and wihout hitting RETURN.
+  *  d126301ca - Add missing member
+  *  ac2de9f12 - Avoid infinite resize event FitParametersWidget.
+  *  f13e5ec4e - [spreadsheet] avoid unwanted changes in Column during
+    the initialization in ColumnDock.
+  *  2e55d7c82 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  0ece9ed83 - WorksheetView and DatapickerImage View enum class
+  *  d5e9b4ab2 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  0fe338755 - GIT_SILENT made messages (after extraction)
+  *  da061daa9 - [fit dock] Minor ui changes
+  *  2dec19032 - [fit] use two columns only for the goodness of the fit
+    to save place in the properties widget.
+  *  55d722032 - [worksheet] new signal-slot syntax in
+    CartesianPlotDock.
+  *  0e3d593b4 - Fixed the broken layout in CartesianPlotDock that make
+    the properties explorer expanding to big sizes.
+  *  7a36e74ea - [fit] similar to the previous commit, also fix the
+    minimum size of the table in FitsParameterWidget.
+  *  f461683f5 - [fit] in the fit parameters widget show the vertrical
+    scrollbar if we have more than 5 rows and limit the max size to 5
+    rows.
+  *  73e13ecd6 - [fit] propertly calculate the size of the table widget
+    FitParametersWidget on size changes.
+  *  705dd0921 - [worksheet] fixed the reset to the default theme for
+    axis line properties.
+  *  66708dde1 - [worksheet] fixes in CartesianPlotLegend: 1. fixed the
+    save/load of border corner radius property 2. fixed the reset to the
+    default theme 3. more usage of macros in load() from xml.
+  *  8b968210d - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  e3d6d29d8 - WorksheetView enum class
+  *  bc74d004c - Use Qt enum
+  *  056d7d258 - Several enum class changes
+  *  591da9cb1 - In the fit parametes widget set the size of the table
+    to the minimum possible.
+  *  dc9d1a03d - In the properties explorer hide widgets for line
+    properties that are not relevant for analysis curves.
+  *  f1e8a0f48 - use QRandomGenerator in Qt >= 5.10
+  *  42afb20ae - [spreadsheet] improve sorting single columns and add
+    tests for it
+  *  f878fd9f7 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  dfab0c88a - [worksheet] fixed the usage of the enum Qt::Orientation
+    and react on text changes and not on return press in
+    ReferenceLineDock.
+  *  de1d49c06 - [tests] use portable qrand()
+  *  4ceed9ab4 - [tests] fix unknown random()
+  *  b58c479e6 - [spreadsheet] improve sorting speed and add performance
+    test
+  *  c18044571 - [worksheet] better initial values for the axis grid
+    settings and simplified logic to initialize the default plot types.
+    This also fixes the problem with the reset to the default theme and
+    the grid lines not taking the proper properties.
+  *  a613935b6 - CartesianPlot enum class
+  *  647e0d694 - [worksheet] introduced the property "default" for axes.
+    This property will be used in the code to decide whether we have one
+    of the default axes created when a plot is created or one of the
+    axes manually added by the user.
+  *  838f4ae7f - [spreadsheet] added "cube" to Tukey's power ladders and
+    reversed the order of action in the menu for power transformations.
+  *  72098539b - [fit dock] enable horizontal stretch of last section
+  *  a9c188c39 - [fit dock] improve expanding goodness table
+  *  264ffecde - [spreadsheet] implemented Tukey's ladder of powers
+    tranformation in the spreadsheet.
+  *  c612e6c4b - [worksheet] layout improvements in xy fit properties
+    widget.
+  *  cce12a35c - When switching between the different properties
+    widgets, scroll up to the top so the user always sees the settings
+    of the currently selected widget.
+  *  b10d94bca - [workshete] don't use the backing store image of the
+    plot when exporting to a file, draw directly with the painter. This
+    fixes the problem with non-rasterized results when doing the export
+    to vector graphics formats SVG and PDF.
+  *  a6345d02d - CartesianPlot enum fixes
+  *  8e04ced0b - XYAnalysisCurve enum class
+  *  15076e2f1 - XYInterpolationCurve enum class
+  *  a7cffd520 - Replace enum with Qt::Orientation
+  *  8a82787dd - [worksheet] properly handle the position wrapper when
+    changing properties of multiple selected labels in one step. Modify
+    only the relevant part of the wrapper for every single label.
+  *  8e916498d - Fixed couple of minor inconsistency issues in UI.
+  *  f4db60212 - [tests] add datetime sorting in spreadsheet
+  *  db22aa755 - Minor layout fix in LabelWidget.
+  *  acfdf0601 - Drag&drop of workbook children in the project explorer
+    doesn't work at the moment. Disalow this for now.
+  *  f013c1207 - [spreadsheet] Improve sorting with empty/invalid values
+  *  9035ded8c - [worksheet] show the line styles in the combo box for
+    the plot cursor line.
+  *  353210d87 - [spreadsheet] fix corner cases when sorting
+  *  2afd14590 - GIT_SILENT Extend code style
+  *  7f70be34a - Fix composing file paths for Windows
+  *  a294abc2d - Minor improvements in dock widgets.
+  *  520c8ad14 - [spreadsheet] use Count instead of Size in the
+    statistics dialog to be more consistent with the usage of this word
+    in other places in the spreadsheet.
+  *  cd76287f5 - [worksheet] show the properties explorer by double-
+    clicking on a worksheet element if it's not shown currently.
+  *  5ca176ec7 - [test] sorting spreadsheet columns
+  *  5d2395328 - Typo
+  *  16927a0a8 - [windows] fix saving LastOpenDir
+  *  70d23f7da - Improved the logic in the plot data dialog to set the
+    current object in the project explorer after the curves are created:
+    * if more than two curves are produced, select the parent plot of
+    the last added curve in the project explorer * if a custom fit is
+    being done, select the last created fit curve independent of the
+    number of created curves
+  *  940e70397 - [fit] consistent submenu name
+  *  c62027e92 - Symbol and CoordinateSystem enums
+  *  f36ee3251 - Root filter enums
+  *  229b87c5a - Fix test for previous commit
+  *  1fd9a27a6 - enum class in AbstractFileFilter
+  *  c1bab50c2 - [spreadsheet] improve export path
+  *  9dbc2ba19 - [spreadsheet] when updating the column data defined via
+    a formula, avoid circular dependencies. The current column cannot be
+    part of the variable columns.
+  *  498332907 - Filter enum class changes
+  *  5b097ecf1 - Debugging and minor fixes
+  *  03d2b0df5 - [spreadsheet] when loading Column, read the autoUpdate
+    attribute only if available. Older project files created with <2.8
+    don't have it.
+  *  b77086596 - [enum class] PlotArea.h
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 06 Jun 2020 10:12:59 +0300
+
 labplot (2.7.0+git7327-49e131d54-1) unstable; urgency=medium
 
   * Compile

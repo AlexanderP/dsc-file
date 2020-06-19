@@ -1,3 +1,69 @@
+qcad (3.24.0+git7669-52a2fec2a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 52a2fec2a4ad8de9f7559b880c97eaf3e85df60e
+  * Date: 1591376628
+  * git changelog:
+  *  52a2fec2a - update script bindings
+  *  ca75079ed - add getDimLeaderBlockId, setDimLeaderBlockId
+  *  59183c8e8 - fix font setting for Qt 5.13+ builds
+  *  ff7c8c3f6 - add script bindings for
+    QTextCharFormat::setFontFamilies
+  *  828df3a38 - update
+  *  7f3c8ca67 - clean up
+  *  897455d03 - update translations
+  *  31b6bbe33 - update licenses
+  *  0fed7c681 - update
+  *  0dae9cf97 - expose number format to user for max flexibility
+  *  cdf08f8ad - update qrc
+  *  5febd15a9 - refactor counter, support padding and precision
+  *  11bf571ac - add numeral lib
+  *  f1055e0f5 - always use color correction override if set
+  *  2c513c8b8 - always apply color correction override
+  *  ce8f9861c - port to Qt 4
+  *  49cb04ebe - update translations
+  *  25e9c7014 - Translated using Weblate (French)
+  *  11b2d6990 - update
+  *  4dead74ea - Translated using Weblate (English)
+  *  f2b8da0f4 - update translations
+  *  e05ed8053 - update
+  *  9db7b7e42 - added width for zero padding
+  *  29040f955 - update
+  *  714a4003f - fix FS#2082 - File > Print / PDF Export: Handling of
+    block references on non-plottable layer
+  *  da6d25c09 - set version to 3.24.3.8
+  *  592eae9d6 - update qrc
+  *  2c41a66ec - create bitmap file with depth 1 for monochrome bitmaps
+    without antialiasing
+  *  114834ac4 - set relative zero to center of selection on Edit > Copy
+    / Cut
+  *  e5491e279 - default PDF version to 1.4
+  *  53ca20b2f - port to Qt < 5.10
+  *  370a16ec4 - port to Qt < 5.10
+  *  9b87c6d34 - add tests
+  *  10e007807 - FS#2080 - Modify > Stretch: Hatch moves instead of
+    stretching
+  *  b57fe3e61 - update translations
+  *  ea0986d98 - Translated using Weblate (Portuguese)
+  *  846578436 - Translated using Weblate (Dutch)
+  *  224405ec3 - Translated using Weblate (Italian)
+  *  2041d2352 - Translated using Weblate (French)
+  *  cdeeb48a6 - Translated using Weblate (Spanish)
+  *  d2f2e93ea - Translated using Weblate (English)
+  *  2cd534bf8 - Translated using Weblate (German)
+  *  406d914ab - update translations
+  *  42e4cea42 - add support for PDF/A-1B output
+  *  7ad9df49f - fix FS#2078 - Draw > Hatch: Small gap tolerated by
+    QCAD, not by DXF/DWG
+  *  70ecb8a93 - insert small bridge element when creating hatch with
+    gap in boundary
+  *  cb17acf49 - add imperial patterns
+  *  73a5e38f5 - update translations
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 06 Jun 2020 11:22:27 +0300
+
 qcad (3.24.0+git7621-65a6b9838-1) unstable; urgency=medium
 
   * Compile

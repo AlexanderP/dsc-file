@@ -1,3 +1,327 @@
+freecad-daily (0.18.3+git21501-457dba4fe-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 457dba4fee90410d682f47300afda6e0a10c4fc1
+  * Date: 1591374476
+  * git changelog:
+  *  457dba4fe - App: [skip ci] avoid that Origin makes persistent any
+    properties of its extension
+  *  1521b256b - App: [skip ci] implement the private class
+    OriginExtension to simulate a geometric group behaviour
+  *  229e8dd37 - App: implement the private class OriginExtension to
+    simulate a geometric group behaviour
+  *  1aa5b755a - Arch: Fixed non-GUI mode of exporters
+  *  c700dc5d0 - Draft: improve handling of Part::Vertex when used with
+    PointArray
+  *  565f2b35b - Draft: move make_text function to its own module
+  *  d652b5eaf - Fixed ImportNURBS icon
+  *  ea9c61869 - fix resize
+  *  a54996019 - Add workbench icon
+  *  f333d9ca0 - resize
+  *  7597dd056 - Draft: move more functions to draftgeoutils.general
+  *  3bdd1310b - Draft: move functions to
+    draftgeoutils.circles_incomplete
+  *  3476c73b3 - Draft: move functions to draftgeoutils.circle_inversion
+  *  0ba43a993 - Draft: move functions to
+    draftgeoutils.circles_apollonius
+  *  627e665c5 - Draft: move more functions to draftgeoutils.circles,
+    part 2
+  *  6ec6fb2ca - Draft: move functions to draftgeoutils.circles, part 1
+  *  7eee6ae4f - Draft: move more functions to draftgeoutils.arcs
+  *  7caa8d4dc - Draft: migrate older properties of PathArray
+  *  f2f22e155 - Draft: rename PathArray properties
+  *  f1bcffbc1 - Draft: hide properties not used in the PathArray
+  *  572788edd - Draft: set the properties of PathArray through
+    functions
+  *  9dd1c2efa - Draft: cleanup logic of PathArray proxy object code
+  *  835f4b424 - Draft: clean up code, PEP8, and docstrings in PathArray
+  *  b2882c699 - Fix qt5:5.15.0 build.
+  *  16a65cc72 - Path: Add `opUpdateDepths()` method to fix FinalDepth
+    guess
+  *  e78c1e664 - Path: Improve FindUnifiedRegion class
+  *  a167f2229 - Path: Fix vertical face handling;  Correct `if ... is
+    not False` usage
+  *  fabe64cbc - Path: Fix `_makeIntersectionTags()` for very short
+    edges
+  *  7ce076b34 - Mesh: [skip ci] fix regression in
+    PlaneSurfaceFit::Initialize
+  *  08e3f0b0d - Path: PathOpGui - Fix Base Geometry import feature
+  *  3df91974b - Gui: [skip ci] fix unicode handling when showing units
+    in status bar
+  *  6974598dc - [TD]Improve section face display
+  *  3aba2721d - gcc: [skip ci] fix -Waddress
+  *  8f35f7aa1 - Arch: Added Profile command
+  *  3f2f8ce03 - Gui: fix crash on selecting removing object
+  *  86759ddfb - FEM: constraint electrostatic potential, better
+    addition of attributs
+  *  c82dc128c - Path: Fix for single selected non-planar face
+  *  0f4bb388b - Path: Fix error with multi-language usage of QComboBox
+    inputs
+  *  155f83baa - Path: Fix duplication of gcode for Single-pass layer
+    mode..
+  *  9ca855476 - Path: Clean up messaging and add `translation()` usage
+  *  4e139d5a1 - Path: Fix failure to create model STL when selecting
+    faces
+  *  1d3557391 - Path: Fix paths through model
+  *  bebdf2d00 - Path: Simplify creation of debug objects
+  *  523089bef - Path: Make missing connections between UI panel and
+    operation
+  *  a1d7cffae - Path: Add missing cut patterns and organize the
+    enumeration lists
+  *  b2ddb576c - FEM: fluid task panel, use log for a log
+  *  2b3faa15d - FEM: mechanical result task panel, small improvements
+  *  b7282284d - FEM: gmsh view provider, small improvements
+  *  9f2d325ea - FEM: ccx tools task panel, add comment
+  *  a9a3294fa - FEM: import module unit test, add missing packages
+  *  1a9247cc4 - FEM: migrate gui, move to gui utils
+  *  aedc4c6fd - FEM: move task panel in separate module, constraint
+    initial flow velocity
+  *  fa4e548f6 - FEM: move task panel in separate module, mesh region
+  *  aa4108088 - FEM: move task panel in separate module, mesh group
+  *  416ec56a2 - FEM: move task panel in separate module, mesh boundary
+    layer
+  *  92b570b55 - FEM: move task panel in separate module, material
+    reinforced
+  *  c755c1211 - FEM: move task panel in separate module, material
+    common
+  *  3d0ae3495 - FEM: move task panel in separate module, element
+    rotation 1D
+  *  8dc2eec23 - FEM: move task panel in separate module, element
+    geometry 2D
+  *  2cfee8bf5 - FEM: move task panel in separate module, element
+    geometry 1D
+  *  74722733e - FEM: move task panel in separate module, element fluid
+    1D
+  *  3e53bb1f6 - FEM: move task panel in separate module, constraint tie
+  *  ac8e5e397 - FEM: move task panel in separate module, constraint
+    flow velocity
+  *  4916fa8ac - FEM: move task panel in separate module, constraint
+    electrostatic potential
+  *  93ebf400f - FEM: move task panel in separate module, gmsh mesh
+  *  a78cc759e - FEM: move task panel in separate module, solver
+    ccxtools
+  *  c80355f14 - FEM: move task panel in separate module, result
+    mechanical
+  *  5bd3f191b - FEM: prepare separation of task panels
+  *  0fdcebe2d - FEM: ccx writer, newline because of pep8
+  *  3beb1bff2 - App: improve FunctionExpression forward compatibility
+  *  63bdb75a3 - FEM: ccx writer, changes in element sections
+  *  21cbceba5 - Sketcher: Fix solver failure when setting datum results
+    in wrong solver information
+  *  eede55f75 - [Sketcher] Solver message updated when toggling driving
+    in datum dialog
+  *  294b753f5 - FEM: add missing cmake entry
+  *  8b1e2201b - FEM: code conventions small updates
+  *  bbb082329 - Gui: [skip ci] automatically save & load settings of
+    PrefFontBox widgets
+  *  54e9ad9d4 - Draft: move functions to draftgeoutils.cuboids
+  *  7791ebe89 - Draft: move more functions to draftgeoutils.faces
+  *  f740fde96 - Draft: move more functions to
+    draftgeoutils.intersections
+  *  7b3052fd7 - Draft: move more functions to draftgeoutils.geometry
+  *  85321f28d - Draft: move more functions to draftgeoutils.wires
+  *  66bc10597 - Draft: move more functions to draftgeoutils.edges
+  *  b77d47747 - Draft: move more functions to draftgeoutils.general
+  *  0a445d9e5 - PartDesign: replace unicode characters with simple
+    hyphens
+  *  075943666 - Arch/Draft: minor fixes
+  *  f56c4fa67 - Draft: separate the placement functions from the Array
+    class
+  *  7df2bb33c - Draft: hide properties of other array types in Array
+    class
+  *  d6fba74d2 - Draft: set the properties of the Array through
+    functions
+  *  bde91ccf1 - Draft: clean up code, PEP8, and docstrings for Array
+    class
+  *  5c273e759 - Draft: clean up code, PEP8, and docstrings for
+    DraftLink
+  *  66959b268 - Draft: clean up CircularArray code
+  *  33d3fb1fa - Draft: clean up PolarArray code
+  *  5dcb4ea10 - Draft: clean up OrthoArray code
+  *  8573bc01e - Draft: clean up make_array function
+  *  2b3b61827 - Update digital ocean citation
+  *  a0692b14c - [DON'T MERGE]read.me digitalocean
+  *  20deabfa3 - [Gui] DlgSettings3DView.ui: fix a tooltip
+  *  9919849de - Draft: migrate PointList property to PointObject in
+    PointArray
+  *  31c8f4946 - Draft: add new options to the make_point_array function
+  *  1a277967e - Draft: add additional displacement property for
+    PointArray
+  *  4b6544011 - Draft: clean up code, PEP8, and docstrings for
+    PointArray
+  *  6ace3e96e - Gui: fix qt5 ProgressBar modal checking
+  *  516a005ce - App: fix PropertyXLinkList/SubList::getValues()
+  *  e0199b3a8 - App: fix PropertyXLink(Sub) python input/output
+  *  92804a79d - Gui: fix property link editor for PropertyLinkSubList
+  *  fcddee292 - Gui: [skip ci] avoid that scrolling over a spin box
+    steals the focus
+  *  5348f5b0c - Gui: [skip ci] do not superfluously call
+    StdCmdStatusBar::activated at start
+  *  b7e27f5af - FEM: ccx writer, add comment
+  *  ab0965872 - FEM: ccx writer, fix output number formating
+  *  dafd10259 - Gui: [skip ci] add font combo box class to widget
+    factory
+  *  1acaa5ead - Path: Respect meshing tolerance settings for 3d
+    surfaces
+  *  f50dc1293 - Path: Fix reference to label in UI panel
+  *  47c9f01d2 - Gui: [skip ci] handle unicode in tool tips of tree view
+  *  25d419e1c - [Draft]Path Array tangent rotation direction
+  *  c7b963d99 - Sketcher: Avoid PointOnObject Autoconstraint on BSpline
+  *  11f9c249e - [Part Design] fix refine feature in Hole feature
+  *  369f86099 - Draft: Added Area and Offset properties to Facebinder
+  *  811327620 - Draft: Fixed translation regression
+  *  0553e440b - Arch: Movig utils functions from importIFC to
+    importIFCHelper
+  *  fa7ae69da - Gui: [skip ci] set working directory when using
+    QUiLoader so it can find its resources
+  *  c5193ec6f - Draft: add use_instead function to warn users about old
+    functions
+  *  78d7616dd - Draft: add find_object function to find objects by
+    label in a document
+  *  fea82942d - Draft: clean up the utils module a bit, PEP8, style
+  *  6665799aa - Arch: IFC import, implementation of IfcIndexedPolyCurve
+  *  8fb5da86b - Gui: [skip ci] in QuantitySpinBox first set pendingEmit
+    to false before actually emitting the signals
+  *  f08658001 - Sketcher: Make setposition text unpickable
+  *  e09f824b1 - Gui: [skip ci] add spin box classes to widget factory
+  *  15c964400 - Gui: [skip ci] make QuantitySpinBox to handle disabled
+    keyboard tracking
+  *  254c03c29 - Path: New feature - import base geometry from existing
+    operations in Job
+  *  28222fe06 - Sketcher: Fix undo on moving geometry
+  *  cc8428751 - Path: Opt into automatic git newline normalization
+  *  c405349e8 - [TD]export Svg hatch as bitmap (PDF)
+  *  4a3bd2387 - [Part]use BSpline for makeWireString instead of Bezier
+    curves.
+  *  b77991018 - Path: Add new `Face Region` boundary option.
+  *  4cd519107 - Path: Extend `ClearEdges` to `Perimeter` boundary
+    usage.
+  *  024d23bf3 - Path: Code cleanup
+  *  3b5d2d2e7 - Path: Add missing `Setup()` properties;  Visual
+    organization
+  *  6cfc208db - [TD] TaskDetail: omit problematic slot issue
+  *  2330eef82 - FEM: fix failing unit test in Elmer meshing
+    (SecondOrderLinear)
+  *  08dca736e - Gui: let each coordinate use its own unit to avoid that
+    the displayed values can become very huge
+  *  0821649a7 - Gui: implement a static function schemaTranslatePoint
+    to avoid code duplication
+  *  b0084cd43 - [FC] Status bar preselection coordinates are aware of
+    user unit setting ; fixes #4148
+  *  2cb9b147f - Import: handle OCC versions 7.4.1 and earlier
+  *  063515f65 - [import] Hotfix for build failure from bad debug code
+  *  66e546042 - Gui: [skip ci] move handling of parameter ShowAxisCross
+    from Document to View3DInventor
+  *  90bc7789d - Improve Axis Cross behavior and expose parameter to 3D
+    View preferences
+  *  a9b718d1e - [TD]Export Svg hatch as bitmap
+  *  08854bcc7 - Sketcher: Fix for failure of constraint substitution
+  *  0b912f7c8 - Draft: further cleanup of Draft Edit.
+  *  547b9e4e2 - Draft: small fix for older PathArray objects
+  *  9346dfa4f - Arch: importIFCHelper: Fix crash on unsupported entity
+  *  ce0a4db59 - Draft: move functions to draftgeoutils.linear_algebra
+  *  7a764fb67 - Draft: move functions to draftgeoutils.offsets
+  *  65bd869b2 - Draft: move functions to draftgeoutils.fillets
+  *  0e862cfa9 - Draft: move functions to draftgeoutils.arcs
+  *  e7b586ead - Draft: move functions to draftgeoutils.wires
+  *  7b94a6122 - Arch: Handle rectangle-and circle-based profiles in IFC
+    import/export
+  *  66d7583e4 - Start: Fixed loading of non-FCStd files from Start page
+  *  da4baa74e - Fix typo in credits
+  *  221f07be9 - [fedora.spec] Add openmpi-devel to BuildRequires
+  *  7822daf1f - Part: Parallelize tessellations in TopoShape
+  *  0c5fc74e3 - Sketcher: Fixing Driving constraint apparent redundancy
+  *  9f3bb0519 - Travis exclude Clang build job for PR
+  *  25ea264cd - [Gui] Part TaskCheckGeometry change Error to Log..
+  *  2415f1809 - Import: [skip ci] degrade output in STEP importer to
+    log messages
+  *  34825731a - Arch: Added Wind Rose diagram to Arch Site
+  *  0f5254a4a - Mesh: [skip ci] perform initial plane fit inside
+    PlaneSurfaceFit::Initialize
+  *  99a99f48e - FEM: pref dialog, really set analysis group meshing
+    default to False
+  *  6822ef361 - FEM: analysing group meshing, set default to False
+  *  24bb210a0 - Python: [skip ci] change order of supported arguments
+    in UnitPy::PyInit
+  *  c457ce613 - Sketcher: ViewProvider Grid control
+  *  1efe9c920 - Part: Gui ViewProvider2D Grid Management
+  *  da33ffc06 - [Sketcher] Grid is displayed in 3D view only if sketch
+    is visible
+  *  811a44643 - [Sketcher] Local settings are correctly restored ;
+    fixes #3952,#4058
+  *  9d9aaf680 - [Sketcher] Grid snapping is enabled only if grid is
+    shown
+  *  6a6c34480 - [Sketcher] 'Avoid redundant autoconstraint' is
+    processed only if 'Autoconstraints' is active
+  *  286a692ca - [Sketcher] Move general settings widget enable/disable
+    logic in TaskSketcherGeneral so ...
+  *  399f5de90 - [Sketcher] Fix catching of rendering order change
+  *  4c9fc11cb - [Sketcher] Fix saving/loading of rendering order
+  *  9862670cf - [Sketcher] Simplify general settings management
+  *  5b76419d5 - [Sketcher] Fix grid size initialization ; fixes #4055
+  *  cd2f5a00e - [Sketcher] Add missing 'Auto remove redundant' to
+    preferences
+  *  974648d37 - Path: Add .flake8 config for path module
+  *  43c4f9af3 - Draft: Added a border around the Draft grid (can be
+    disabled in prefs)
+  *  f4736e0dd - FEM gmsh mesh, set SecondOrderLinear standard to False
+  *  38d77a804 - FEM: material task panel, resize input widgets if task
+    panel is resized
+  *  8752bc126 - Arch: Fixed use of IfcOpenShell serializer
+  *  ff3cdfaf7 - Python: [skip ci] exception handling in PyInit to avoid
+    to close application
+  *  6f3160db3 - Sketcher: Enable undo when trimming
+  *  078432af4 - gcc: suppress gcc warnings in smesh code
+  *  4de7acff6 - Sketcher: Root point selected when endpoint in external
+    geometry point
+  *  5421ea002 - FEM: fix some Python object task panels if ther is no
+    analysis
+  *  de847a553 - gcc: suppress gcc warnings in smesh code
+  *  a3a7ef8de - FEM: material common obj, fix category attribute
+  *  a337653d2 - Path: Add missing `CoolantMode` input to GUI
+  *  3233dc1f4 - clang: [skip ci] fix -Wfinal-dtor-non-final-class
+  *  31865b60a - FEM: elmer electric force object, change type
+  *  8198208c9 - FEM: electic force object, add unit tests
+  *  8e7bf3eb2 - CMake: [skip ci] add some links
+  *  dfdcd5351 - FEM electric force equation object, implement in elmer
+    writer
+  *  52da15b81 - FEM: add elmer electric force equation object
+  *  300e88748 - Handle clang 10 warnings: + fix -Wtautological-bitwise-
+    compare + fix -Wimplicit-int-float-conversion + fix -Wmisleading-
+    indentation + fix -Wrange-loop-construct + suppress -Wdeprecated-
+    copy of 3rd party libs
+  *  fe2664ec6 - [Gui] Material, Appearance, make Chrome colour..
+  *  6d4dc1c83 - Draft: Edit arc by 3 points bugfix
+  *  b6b48b43e - Draft: bugfix on Edit BezCurve
+  *  f4a47d0ec - Draft: Edit bugfix in Wire/BSpline curve editing
+  *  caf6606d5 - Draft: Edit support for Part Sphere
+  *  d9e2f4f46 - Draft: Edit support for Part Cone
+  *  1b263a6a8 - Draft: reordered supported edit objects and support for
+    PartCylinder
+  *  a98e2076d - Draft: Edit reordering 1
+  *  61dd57407 - Draft: Split Draft Edit into 4 modules
+  *  8d23cd676 - Draft: Cleanup of Draft Edit
+  *  035a63c68 - Draft: move functions to draftgeoutils.geometry
+  *  339be2f4b - Draft: move functions to draftgeoutils.faces
+  *  63800d7aa - Draft: move functions to draftgeoutils.sort_edges
+  *  632b72e7c - Draft: move functions to draftgeoutils.intersections
+  *  c995ce562 - Draft: move functions to draftgeoutils.edges
+  *  add48977f - Draft: move general functions to draftgeoutils.general
+  *  bd02e1bb9 - [ArchWall]  Fix Align Right with Multi-Material invalid
+    case problem
+  *  85bfe116e - win: fix path to freecad library
+  *  d4ea5b891 - Use newer Eigen to suppress warnings
+  *  472a29f73 - Travis suppress excessive Clang/Eigen warnings
+  *  c17d5ae32 - Travis upgrade to GCC 10 and Clang 10
+  *  c1ca01b0e - Sketcher: projection - remove unused variables and
+    function
+  *  2017eb46a - Added corner cases
+  *  74bd67623 - First test of ellipse projection
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 06 Jun 2020 00:47:29 +0300
+
 freecad-daily (0.18.3+git21228-8ac6b12ee-1) unstable; urgency=medium
 
   * Compile

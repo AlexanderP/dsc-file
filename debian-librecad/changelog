@@ -1,3 +1,41 @@
+librecad (2.1.3+git4639-38c3f94b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: master
+  * Commit: 38c3f94b58cad366ae39532411896f7d604049b2
+  * Date: 1591388985
+  * git changelog:
+  *  282f779a - fix for #962, export black/white with black background
+    used black pen too
+  *  09072e4e - alternativ fix for pull request #1232, allow to call
+    setBackground() with Qt::GlobalColor
+  *  e8d9114c - fixed some more issues with paper size, NPageSize is no
+    paper size, localize paper size names
+  *  0de519c9 - additional fix for #1201, equidistant polylines had the
+    correct layer, but not the layers properties
+  *  cf298bb3 - Unhighlight entity after exiting Orthogonal Line tool.
+  *  79136f4a - Use std::sort instead of qSort (deprecated since Qt5.2)
+  *  409e379f - Remove useless operator=() for RS_VectorSolutions
+  *  e1cb7f6c - Remove useless operator=() for DRW_Coord
+  *  61f52df7 - Fix issues with DL_Extrusion
+  *  ad7b375b - Remove useless operator=() for DL_Attributes
+  *  5fed3c66 - Fix deprecated usage of QString::null
+  *  b24e26a6 - fixed .travis.yml, applied new access token on Travis
+    for static analyzer reports
+  *  20c77c8d - fix .travis.yml, install Qt dependency libgl-dev, build
+    machine has only 2 cores
+  *  0dab398b - update .travis.yml, use bionic image, llvm 3.9 and
+    Qt5.12
+  *  0729c801 - fix null pointer dereference in main window
+  *  50d0591a - Manual merged pull request #1177 from
+    baranovskiykonstantin/blocklistforblock
+  *  3e4696c8 - Page sizes cleaned up, added ANSI
+  *  8dc3f8bd - Test
+  *  f19f1400 - Update qg_commandedit.cpp
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 06 Jun 2020 15:21:59 +0300
+
 librecad (2.1.3+git4594-39300516-1) unstable; urgency=medium
 
   * Compile
