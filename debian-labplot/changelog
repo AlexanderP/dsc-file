@@ -1,3 +1,116 @@
+labplot (2.7.0+git7481-1a47853a6-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 1a47853a678dadd68f8f634c2fcb2e1c23562e2e
+  * Date: 1592657844
+  * git changelog:
+  *  1a47853a6 - [histrogram] improved the handling in the histogram
+    properties widget for text field where numeric values are entered.
+  *  3b782adb6 - [cartesian] simplify code
+  *  438b50a42 - Improve using basic math functions
+  *  874938891 - Improved the handling of the focus in the project
+    explorer.
+  *  56a05bf58 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  65b74da26 - GIT_SILENT made messages (after extraction)
+  *  507b1614a - [xycurve] code style
+  *  b6502d30c - [histogram] fixed setting the auto bin range option and
+    the update of the bin ranges in the properties widget.
+  *  259eb5ca8 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  2e4b2a41d - GIT_SILENT made messages (after extraction)
+  *  ec044d25b - [histogram] fixed the positioning of the drop lines
+    also for the horizontal orientation.
+  *  5fa71f84d - [histogram] fixed the positioning of the drop lines.
+  *  5305e0d1d - [spreadsheet test] improve code style
+  *  2ab788c3d - [fit] CI is the same for all parameter
+  *  865e2f764 - [spreadsheet] deactivated the shortcut INS for the
+    action "insert row below" since it's colliding with the logic in the
+    event filter to handle the addition of new columns.
+  *  687bc8829 - [xycurve] minor improvements in plotting
+  *  e87621eb0 - [histogram] react on mouse press and hover events only
+    if the actual shape of the histogram is intersected and not its
+    bounding rectangular.
+  *  08695d8c5 - [spreadsheet] resize the newly added columns to fit the
+    content.
+  *  5ba663ffe - [spreadsheet] resize header sections to fit the content
+    if column names or plot designation was changed.
+  *  57200bb33 - [worksheet] improved the wording for some actions in
+    the worksheet and plot toolbars to save space in case the text is
+    shown alongside the icons.
+  *  71a26f74c - [histogram] improved the algorithms for the calculation
+    of the filling polygon for zoomed histograms. This should fix all
+    glitches with the polygon not being calculated/closed correctly when
+    the user zooms or moves the histogram.
+  *  3450562e1 - [xycurve] code style and avoid rounding problems
+  *  ecc31cb0c - [fit] more digits for confidence interval
+  *  ad9925fc8 - [spreadsheet] deactivated "fill selection with" actions
+    in the context menu - this feature is not complete and doesn't fit
+    to our current column-based workflows.
+  *  b59bdeb4a - [spreadsheet] faster clearing of the cell content if
+    the whole column is selected - clear the column directly instead of
+    iterating over the row values.
+  *  830474556 - [spreadsheet] minor improvements and debugging
+  *  afbb10a7b - [coverity] CID 202495.
+  *  7244fbeb6 - [coverity] CID 185453.
+  *  6bf6c66a1 - Added missing null-pointer member initializations.
+  *  244ea3ce0 - Re-set the focus in the project explorer after an
+    object was selected there (focus is set to the properties widget
+    after this) so we can react of key events.
+  *  0b0ebfc6f - [histogram] don't crash if the min value of the bin
+    range is bigger or equal to the max value.
+  *  18ef3df12 - [spreadsheet] allow to add a new column by pressing INS
+    key if a column is currently selected in the spreadsheet.
+  *  07d2d2c53 - [fit] fix model selection for context fitting
+  *  3b6c4e8d0 - [fit] use double value for confidence interval
+  *  626c3d965 - More deprecated warnings fixed
+  *  c590e659e - QFlags::Zero is deprecated in Qt 5.15.0, use default
+    constructor
+  *  c6340685e - [spreadsheet] deactivate the "Clear masks" action for
+    the spreadsheet if there are no masked cells in the spreadsheet.
+  *  659192327 - Don't show any scrollbars in the plot data dialog if
+    one single column was selected for the histogram.
+  *  d073c3ed5 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  47473da88 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  c5040a4e1 - GIT_SILENT made messages (after extraction)
+  *  43a960873 - [spreadsheet] when using "go to cell" use one single
+    dialog to provide the coordinates instead of two input dialogs.
+  *  774145d68 - [spreadsheet] minor wording improvements for the
+    actions in the spreadsheet context menu.
+  *  712a8f819 - [spreadsheet] fixed the log10 power transformation.
+  *  477aff269 - [spreadsheet] INSERT key shortcut to add a new row
+    below the current row.
+  *  474ea2d98 - [fit test] Fix F value accuracy
+  *  92a54da3a - [fit] Correct F test and fit tests
+  *  c065ae7e4 - [fit] Fix F test
+  *  12c4a945b - GIT_SILENT typo
+  *  84dcfb827 - Update all available template handlers in all
+    properties widgets when changing the tool button style (icon only,
+    text only, etc.).
+  *  52f2d02a9 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  a2afe5186 - [spreadsheet] don't crash if columns of different
+    column modes were selected and the mode is changed. Don't allow such
+    changes at all if columns of different modes are selected.
+  *  ef58d455a - static casts in connect can be replaced with QOverload
+  *  2c7a440f9 - [fit] Add configurable confidence interval
+  *  851ab78d1 - Implemented context menu in the tempate handle to
+    change the position of the text on the tool buttons (icon only, text
+    only, etc.).
+  *  3b547749b - [fit] split confidence interval in result table
+  *  e83141a19 - [fit] CTRL+C copies only the last cell in the selection
+    in the result tables. We want to copy the whole selection. Install
+    event filters to handle CTRL+C key events properly.
+  *  6c7f5af9b - [fit] when copying the results to the clipboard, copy
+    the header of the parameters table if we copy everything in this
+    table.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 20 Jun 2020 17:55:29 +0300
+
 labplot (2.7.0+git7422-54febcd61-1) unstable; urgency=medium
 
   * Compile

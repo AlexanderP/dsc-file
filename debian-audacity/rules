@@ -15,7 +15,6 @@ configure_flags := \
 	--with-libsoxr=system \
 	--with-libtwolame=system \
 	--with-libvamp=system \
-	--with-lv2=system \
 	--with-midi=system \
 	--with-portaudio=local \
 	--with-portsmf=system \
@@ -33,11 +32,25 @@ ifneq (,$(filter $(DEBIAN_CODENAME), jessie))
 else
 	configure_flags += 	--with-libflac=system
 endif
+ifneq (,$(filter $(DEBIAN_CODENAME), jessie stretch buster xenial bionic eoan)) 
+	configure_flags += 	--with-lv2=local
+	
+else
+	configure_flags += 	--with-lv2=system
+endif
+
+ifneq (,$(filter $(DEBIAN_CODENAME), sid bullseye focal)) 
+	CONTROL = control.sid
+else
+	CONTROL = control.stretch
+endif
+
 
 %:
 	dh $@ --parallel --with autoreconf
 
 override_dh_auto_configure:
+	cp debian/$(CONTROL) debian/control
 	git show -s --format="#define REV_LONG \"%H\"%n#define REV_TIME \"%cd\"%n" | tee $(CURDIR)/src/RevisionIdent.h
 	dh_auto_configure -- $(configure_flags)
 
@@ -54,5 +67,6 @@ override_dh_auto_install:
 	rm debian/tmp/usr/share/doc/audacity/LICENSE.txt
 
 override_dh_auto_clean:
+	cp debian/$(CONTROL) debian/control
 	[ ! -f $(CURDIR)/src/RevisionIdent.h ] || rm -f $(CURDIR)/src/RevisionIdent.h
 	dh_auto_clean

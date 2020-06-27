@@ -1,3 +1,171 @@
+deadbeef (1.8.3+git9059-f9e02bb2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: 1.8
+  * Commit: f9e02bb23b883d3c15a5cb2a31000888907d3d47
+  * Date: 1592246548
+  * git changelog:
+  *  f9e02bb2 - 1.8.4-beta2
+  *  19dea257 - Revert "m3u: don't attempt loading files from relative
+    paths, and go directly to converting them to absolute (fixes #2125)"
+  *  9383e3a5 - streamer: fix error handling of failed network streams
+  *  11152c3c - cocoaui: fix preferences content-type mapping
+    initialization
+  *  ce417772 - static analyzer fixes
+  *  b5f7f7c7 - aac: fix handling the condition when FAAD2 incorrectly
+    detects an AAC stream with 0 channels (fixes #2353)
+  *  ffa47e3c - aac: fix potential memory leak
+  *  0568d798 - 1.8.4-beta1
+  *  0d286b24 - translations update
+  *  21beb8b1 - junklib: fix a regression causing id3v2 writing to crash
+    when junk_iconv returns -1 (fixed #2396)
+  *  8b99af10 - cocoaui: fix the initial enabled state of retagAfterCopy
+    checkbox in converter dialog
+  *  9f4e40a1 - tf: tf_eval doc fix
+  *  037fbabe - cueutil: skip unknown cuesheet fields (fixes #2389)
+  *  029d383c - mp3parser: improve heuristics used to detect freeformat
+    mp3 files (fixes #2392)
+  *  32eef4d4 - mp3parser: fix a typo resulted from previous commit
+  *  01b3e074 - mp3parser: handle the case when packets are different in
+    length, even if bitrate doesn't change (fixes #2390)
+  *  a6ac4521 - cue: don't allow cuesheets to reference other cuesheets
+    (fixes #2375)
+  *  6c886368 - plmeta: ignore empty metadata fields (fixes #2385)
+  *  c6aac320 - streamer: fix heap buffer overrun bug
+  *  bcb64e15 - expose _with_override family of metadata accessors to
+    plugins; fix lastfm scrobbling of shoutcast streams (fixes #2387)
+  *  90149b82 - cocoaui: fixed aborting drag-dropped file adding using
+    cancel button
+  *  92bae5a9 - shellexec: windows-specific changes
+  *  934243c2 - playlist: Return windows-acceptable paths for title
+    formatting 1.0
+  *  133993ae - premake5-win: Add shellexec
+  *  ec67ea5c - premake5-tools: Set PORTABLE_VERSION to date
+  *  2757f14b - libwin: add utf8 compatible rmdir and mkdir wrappers.
+    (#21)
+  *  e7a5656f - libwin: add copyright and licence notices
+  *  8bd7433c - premake: add tta plugin
+  *  bdfefd8a - portaudio: fix for ending stream 'drain'
+  *  fb7048c7 - mp4ff: fix mp4ff_get_decoder_config() wrong return value
+  *  40dfac89 - pulse: added migration for the pulse server address
+    (fixes #2371)
+  *  fed4bfc1 - pulse: change server address cvar name, since it's not
+    fully compatible with older releases
+  *  2d9fca99 - scriptable_encoder: clear encoder preset before
+    initializing
+  *  bd39d353 - tf: fixed stack overflow bug in
+    calculate_tint_ranges_from_string
+  *  a09ff1c9 - mp3parser: fixed CBR seeking performance (fixes #2266)
+  *  fa197b25 - artwork: don't load *.jpg/png, respect configured file
+    mask (fixes #2200)
+  *  0227fee1 - vfs_zip: ignore leading '/' character in zipped file
+    names (fixes #2317)
+  *  1257b955 - mp3parser: fixed buffer overflow error
+  *  79557593 - remove libpango dependency from deb control file (fixes
+    #2369)
+  *  ae51dd83 - converter: undo an accidental version change (fixes
+    #2367)
+  *  509e8243 - dsppreset: fix stack overflow bug
+  *  fe9c2268 - Add last_modified title format keyword
+  *  3d7977cd - cocoaui: remove DSP mentions from
+    ScriptableNodeEditorView.xib
+  *  ec3d9377 - cocoaui: fix property sheet background color (fixes
+    #2364)
+  *  8bf4eb66 - osx: fix tests
+  *  cb56e129 - scriptable: linux compile fix
+  *  fcd45c76 - scriptable: fixed a bug causing scriptables to be saved
+    during initialization
+  *  5ac628bc - cocoaui: remember selected preset index after reload
+  *  9179d1c4 - cocoaui: error viewer for converter encoder & dsp
+    presets
+  *  328108c1 - cocoaui: disable add button for readonly scriptables
+  *  e3875051 - cocoaui: fix remembering selected converter dsp preset
+  *  f2ce8142 - cocoaui: fixed converter to use encoder and dsp preset
+    via scriptables
+  *  f2de078e - scriptable: added renaming hooks
+  *  5d8c919f - scriptable: encoder preset saving
+  *  20215d65 - cocoaui: fix popup button value vs index in property
+    sheets
+  *  57c4869d - cocoaui: selectable text in read-only preset UI
+  *  d13d2615 - cocoaui: fixed a glitch caused by duplicate detection if
+    the editing resulted in the same name
+  *  7dfb61d9 - cocoaui: fix editability of scriptable item names
+  *  d3472aa7 - scriptable: added pass-through built-in dsp preset
+  *  edea4274 - cocoaui: implemented creating new encoder presets, and
+    auto-scrolling to the newly created ones
+  *  b23ee1a4 - cocoaui: read-only item property sheet handling
+  *  eafdda49 - cocoaui: improved UI for read-only and non-renameable
+    scriptable items
+  *  3dc64e93 - cocoaui: scriptable preset segmented buttons enabled
+    state handling
+  *  62357012 - cocoaui: save/restore selected converter encoder and dsp
+    preset
+  *  0c74d33e - cocoaui: converter transition to scriptable
+  *  8fe50899 - main: bogus comment remove
+  *  de47a9c6 - removed a few FIXME's
+  *  11d1ab89 - cocoaui: scriptable encoder presets WIP
+  *  121f375d - cocoaui: scriptable duplication UI
+  *  7c3349a4 - cocoaui: dsp preset selector XIB name
+  *  04bf24b8 - cocoaui: converter dialog to autolayout
+  *  5411a8e0 - cocoaui: dsp preset selector in converter dialog
+  *  00134463 - cocoaui: don't ship a source code README
+  *  63c1f977 - premake: add soundtouch plugin
+  *  b1443798 - windows_postbuild: fix for directory creation
+  *  1164c589 - osx: fix libzip dependency
+  *  2ee412d2 - osx: include soundtouch in GTK3 build
+  *  4628508f - osx: build fix
+  *  8f1ba11a - osx: folder fixes in xcode project
+  *  8e78ddb4 - osx: soundtouch codesign fix
+  *  a20ada4b - soundtouch: include in the linux builds
+  *  c8c321b1 - docker smoke test using ubuntu 14.04
+  *  77d32ee2 - soundtouch: update to 2.1.2 and use more stable
+    parameters to prevent asserts
+  *  a7c1ae46 - soundtouch: cleanup and osx target
+  *  1df51cf7 - scriptable: fixed applying dsp parameters
+  *  a8fff727 - scriptable: empty line tolerance when loading dsp
+    presets
+  *  1096e30d - cocoaui: scriptable drag-drop cleanup
+  *  9f2be1c1 - cocoaui: added code for saving dsp nodes to string
+  *  40a4dc34 - cocoaui: fixed insert positions of new scriptable items
+  *  074b84c9 - cocoaui: error message support in the preset editors
+  *  c323c195 - cocoaui: added basic preset name validation
+  *  b2866351 - cocoaui: detecting duplicate names when creating a new
+    dsp preset from current config
+  *  49c02c04 - cocoaui: fixed a crash caused by scriptable item
+    ownership issue
+  *  c59ca144 - cocoaui: fixed a bug causing a wrong preset to be edited
+    instead of selected one
+  *  156c72e7 - cocoaui: atomic writing of dsp presets
+  *  c8d9a691 - cocoaui: dsp preset saving
+  *  cb2eeaec - cocoaui: don't display menu when there's only one option
+    to create a new scriptable
+  *  73d3fe52 - cocoaui: disable reordering in preset list, fixed
+    hardcoded values
+  *  9bb4e346 - cocoaui: selecting dsp presets
+  *  4cabac59 - cocoaui: synchronize views after deleting preset
+  *  528a285f - cocoaui: naming of new dsp preset WIP
+  *  2acb09d8 - scriptable: cleanup
+  *  8980b391 - cocoaui: saving current DSP chain as a preset WIP
+  *  de9333c7 - cocoaui: ScriptableNodeEditorView to autolayout
+  *  740396bc - cocoaui: dsp preset renaming
+  *  7f318296 - cocoaui: preset ui conversion to view-based tableview,
+    and fixed drag-drop
+  *  0ea58f02 - cocoaui: fixed loading, displaying and editing the
+    loaded DSP preset list
+  *  385f5838 - cocoaui: seekbar color tweaks
+  *  99d0d1bb - osx: build settings warning fix
+  *  6b9092bc - cocoaui: fix macos 10.13 compatibility bug, which was
+    breaking seekbar functionality (fixes #2357)
+  *  d4a95a44 - cocoaui: preset editing WIP
+  *  8a457bb1 - osx: bump deployment target to 10.13
+  *  7706951e - cocoaui: ddbseekbar cleanup
+  *  c6e68b2a - cocoaui: draw column sort indicator
+  *  06cecf06 - cocoaui: remove test code
+  *  55056e14 - remove travis IRC notifications
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 20 Jun 2020 04:41:03 +0300
+
 deadbeef (1.8.3+git8870-1bea5b4b-1) unstable; urgency=medium
 
   * Compile

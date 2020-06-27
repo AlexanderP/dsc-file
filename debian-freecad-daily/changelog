@@ -1,3 +1,337 @@
+freecad-daily (0.18.3+git21713-ffe957cef-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: ffe957cef48c194f299933f04d1d0bb70388c047
+  * Date: 1592587927
+  * git changelog:
+  *  58046eb24 - Main: [skip ci] replace QThread with std::thread as it
+    won't start without an event loop
+  *  70b2d4955 - Gui: [skip ci] fix Gui.subgraphFromObject and improve
+    error text if wrapping fails
+  *  0cb4d4eb9 - Better description and more screenshots in freedesktop
+    app description
+  *  31f64d3a3 - [TD]Fix jumping section view
+  *  2e3f3dd6c - Arch: importIFC: Allow faster inserts
+  *  ca13b2467 - [Spreadsheet] add visible alias check
+  *  4e106902f - Draft: add onChanged method in the derived annotation
+    classes
+  *  b9d4e6884 - Draft: improve setting of properties of dimensions,
+    labels, and texts
+  *  3f75dc7c6 - Draft: clean up the ViewProviderDraftAnnotation class
+  *  270e4b100 - Draft: move default annotation style properties to
+    utils module
+  *  27ab0b8f3 - Path: Format and add DocStrings and comments
+  *  40faed1b7 - Path: Fix timing of `updatePanelVisibility()` call
+  *  f323e635b - Path: Add new `Slot` operation
+  *  33a180405 - Path: Add icons to feature tabs
+  *  56f673692 - Path: Add icon reference to UI panel
+  *  e1cfaf129 - Gui: [skip ci] handle case if an absolute path to a qss
+    file is set
+  *  87c0365ad - Cloud: [skip ci] add missing closing curly brace
+  *  521b0e46c - Path: Add operation's label to task panel window title
+  *  b110ea281 - Path: Cleanup and simplify code
+  *  939ac2e11 - Path: Add `ExpandProfile` feature
+  *  0f393e209 - Path: Add operation's label to task panel window title
+  *  0a9170494 - Path: Fix error when selection includes vertical faces.
+  *  86a182c2b - Path: Add `opUpdateDepths()` method as in 3D Surface
+  *  26d121de0 - Path: Fix broken `InternalFeaturesCut` processing
+  *  1ef278b06 - Path: Fix initial guess for FinalDepth with no Base
+    Geometry
+  *  6b3815a76 - [path] Implement Ramer-Douglas-Peucker line
+    simplification
+  *  f05253f88 - Draft: snapper.getPoint() does not return object
+    anymore if no snapped object
+  *  575df2443 - Retab
+  *  b393cf67d - Add Amazon v4 API support as to take into consideration
+    the end of life of SHA1 signing from OpenSSL which is used by v2 API
+  *  94bfa8af9 - Introduce ComputeDigestAmzS3v4 and BuildHeaderAmzS3v4
+    into the Cloud code (WIP)
+  *  cf230c930 - Add SHA256 sum function
+  *  1883bf560 - Add Amazon protocol version as a parameter as to smooth
+    the transition from SHA-1 to SHA-256 signing
+  *  96d81c77b - Draft: add prototype function to AngularDimension to
+    link objects
+  *  4ef206371 - Draft: organize execute code of the dimension classes
+  *  c042eb745 - Draft: set properties of the Dimension class through
+    functions
+  *  287787031 - Draft: new make_radial_dimension function for more
+    precision
+  *  984de3b3d - Draft: new make_linear_dimension functions for more
+    precision
+  *  e81ca586a - Draft: move make_dimension function to its own module
+  *  9d0e4259c - Draft: clean up the internal DraftAnnotation class
+  *  dd526ef40 - Draft: fix FlipDimension for LinearDimension
+  *  86dd7cbe0 - Draft: adjust text of tooltip in arrays
+  *  927379c17 - Draft: fix small warning for the DraftLink class used
+    in arrays
+  *  0460279ce - Coin3D version 4 is needed (same version as for python3-
+    pivy). Fixes broken nightly builds on Fedora.
+  *  ddf0cf313 - [TD] code optimization for DrawViewPart
+  *  d804eb6ec - Arch: Added timing in IFC import
+  *  33d1d281e - Path: Convert `SetupProperties()` to dynamic code
+  *  f4e522c95 - Path: Initialize OCL_Tool class and implement in OCL-
+    based operations
+  *  81fdb6483 - Path: Fix available inputs for engraver tool type
+  *  31ae323e7 - Path: Add `ShapeName` property to ToolBit objects
+  *  76aac3a22 - boost: [skip ci]  fix for boost < 1.60
+  *  b7a448dad - [TD]fix 4335 section line pos on rotated base
+  *  8a9ea0cae - [TD]clear svg hatch on delete
+  *  c19fae2cb - [TD]Treat Imperial1/USCustomary as single value schema
+  *  6632921e3 - [TD]change misleading prop name - Shape
+  *  9fb162f5b - [TD]missing prefix/suffix for compound schema
+  *  f3b460e42 - boost: fix for boost < 1.60
+  *  02a4ba3bc - boost: [skip ci] prepare fix for boost < 1.68
+  *  1c7c3b3d9 - Arch: Export wall axes to IFC
+  *  15c948988 - Draft: Implemented annotation styles
+  *  6632580ab - get rid of unnecessary UI specifications
+  *  b292194cc - [TD] remove frame from pref dialogs
+  *  d2bc4a66b - [TD] add missing update for Projection Group
+  *  4db767694 - FEM: gui tools, code formating
+  *  69ad80663 - FEM: gui tools, sort icons and menues
+  *  2ef6f1049 - FEM: constraint fluid boundary, add comment
+  *  59ed70874 - Draft: fixes #4100 Problems with Points command
+    callbacks
+  *  720b0b96d - Fix typos [skip ci]
+  *  cf7c241ca - [Draft] add more patterns
+  *  7cbed5235 - Arch: importIFCHelper: Fix spurious message
+  *  8679bdbda - Draft: separate target into object and subelements in
+    make_label
+  *  466ae17a4 - Draft: hide properties not used in the Label object
+  *  bbdd9abcd - Draft: combine two types of labels using functions
+  *  d3d904e38 - Draft: organize the execute code of the Label in a
+    function
+  *  40e707ef4 - Draft: set the properties of the Label class through
+    functions
+  *  c7eab9c65 - Draft: move make_label function to its own module
+  *  a71985905 - Draft: adjust the text size for Labels with
+    format_object
+  *  2a15bd18f - Draft: reset the list of strings in the Label
+    viewprovider
+  *  7a87f8f88 - Arch: Fix placement of Space objects imported from
+    ArchiCAD
+  *  4a6467942 - Gui: [skip ci] show program version a file was created
+    with in project information dialog
+  *  f5a5bf790 - Sketcher: [skip ci] fix -Winconsistent-missing-override
+  *  d26e60fb3 - [skip ci] code cleanup
+  *  76f818d01 - Sketcher: [skip ci] add security checks before
+    accessing pointer
+  *  58e459cde - TaskDlgEditSketch: Remove unnecessary recompute
+  *  7ae2fc7b0 - Sketcher: ViewProviderSketch delay updateData on
+    undo/redo transactions
+  *  8ef32eab8 - Sketcher: onUndoRedoFinished implementation and request
+  *  df4a8eb7a - Document/DocumentObject: onUndoRedoFinished()
+  *  c6c549cc6 - [TD] use KeyboardTracking for section view dialog
+  *  fc6a449fb - [TD] remove hatch property DirProjection
+  *  0313f485d - DlgPrefsTechDrawGeneral.ui: get rid of explicit font
+    family
+  *  1822fcc35 - [TD] some wording fixes
+  *  1ae69d2ac - code simplification
+  *  79b267a3d - [TD] fix hatch color issue
+  *  7eaa0497c - Gui: [skip ci] add missing include to precompiled
+    header
+  *  8ed90c858 - Py2: fix Python 2 build failure
+  *  9fdd17675 - boost 1.73.0: The practice of declaring the Bind
+    placeholders (_1, _2, ...) in the global namespace is deprecated
+  *  033ddff08 - cast between incompatible function types from
+    'PyObject* (*)(PyObject*, PyObject*, PyObject*)' {aka '_object*
+    (*)(_object*, _object*, _object*)'} to 'PyCFunction' {aka '_object*
+    (*)(_object*, _object*)'} [-Wcast-function-type]
+  *  ce7c3a421 - replace use of deprecated function ftime with
+    gettimeofday
+  *  ab36a05fc - Fix -Wdeprecated-copy
+  *  c53588145 - Qt5: Replace deprecated functions of QString: 'QString&
+    QString::vsprintf(const char*, __va_list_tag*)' is deprecated: Use
+    vasprintf(), arg() or QTextStream instead [-Wdeprecated-
+    declarations] 'QString& QString::sprintf(const char*, ...)' is
+    deprecated: Use asprintf(), arg() or QTextStream instead [-
+    Wdeprecated-declarations]
+  *  6d0a136aa - Qt5: 'void Q[Plain]TextEdit::setTabStopWidth(int)' is
+    deprecated [-Wdeprecated-declarations]
+  *  0ca65a509 - Qt5: QDialog extension/orientation is deprecated [-
+    Wdeprecated-declarations]
+  *  81f815d3f - Qt5: 'void
+    QFileDialog::setNameFilterDetailsVisible(bool)' is deprecated: Use
+    setOption(HideNameFilterDetails, not enabled) instead [-Wdeprecated-
+    declarations]
+  *  ec5547aae - Qt5: 'void QFileDialog::setConfirmOverwrite(bool)' is
+    deprecated: Use setOption(DontConfirmOverwrite, not enabled) instead
+    [-Wdeprecated-declarations]
+  *  66cbcdec7 - Qt5: 'QVariant qVariantFromValue(const T&)' is
+    deprecated: Use QVariant::fromValue() instead. [-Wdeprecated-
+    declarations]
+  *  eced0cb56 - Qt5: QDesktopWidget is deprecated use QScreen [-
+    Wdeprecated-declarations]
+  *  deb39c432 - Qt5: 'QModelIndex QModelIndex::child(int, int) const'
+    is deprecated: Use QAbstractItemModel::index [-Wdeprecated-
+    declarations]
+  *  2c113442a - Qt5: 'void QTime::start()' / 'int QTime::elapsed()
+    const' / 'int QTime::restart()' are deprecated: Use QElapsedTimer
+    instead [-Wdeprecated-declarations]
+  *  1ee3d79d7 - Qt5: 'int QFontMetrics::width' is deprecated since Qt
+    5.11: Use QFontMetrics::horizontalAdvance [-Wdeprecated-
+    declarations]
+  *  db3f9008c - boost: remove broken define that causes a warning: ISO
+    C++11 requires whitespace after the macro name
+  *  4ec45b545 - boost 1.73.0: The practice of declaring the Bind
+    placeholders (_1, _2, ...) in the global namespace is deprecated
+  *  3f212ad8a - Porting Py3.8/Py3.9: Since Py3.3: 'Py_ssize_t
+    PyUnicode_GetSize(PyObject*)' is deprecated [-Wdeprecated-
+    declarations] Since Py3.9: 'PyObject*
+    PyEval_CallObjectWithKeywords(PyObject*, PyObject*, PyObject*)' is
+    deprecated [-Wdeprecated-declarations] Since Py3.9: 'void
+    PyEval_InitThreads()' is deprecated [-Wdeprecated-declarations]
+  *  97701e3a7 - Py3.8: [skip ci] missing initializer for member
+    '_typeobject::tp_vectorcall' [-Wmissing-field-initializers]
+  *  d14e17c55 - Py3.8: [skip ci] missing initializer for member
+    '_typeobject::tp_vectorcall' [-Wmissing-field-initializers]
+  *  6c80d8df0 - Qt5: 'QString QFileInfo::readLink() const' is
+    deprecated: Use QFileInfo::symLinkTarget() instead [-Wdeprecated-
+    declarations]
+  *  3cbec199a - Qt5: 'static QPixmap QPixmap::grabWidget(QObject*,
+    const QRect&)' is deprecated: Use QWidget::grab() instead [-
+    Wdeprecated-declarations]
+  *  b143194f9 - Qt5: 'static bool QPixmapCache::find(const QString&,
+    QPixmap&)' is deprecated: Use bool find(const QString &, QPixmap *)
+    instead [-Wdeprecated-declarations]
+  *  eced6aaed - Qt5: 'int QImage::byteCount() const' is deprecated
+    since Qt 5.10: Use sizeInBytes [-Wdeprecated-declarations]
+  *  58f148a72 - Qt5: 'static void QCoreApplication::flush()' is
+    deprecated since Qt 5.9 [-Wdeprecated-declarations]
+  *  f027c9b6e - Qt5: 'void QTreeWidgetItem::setTextColor(int, const
+    QColor&)' is deprecated: Use QTreeWidgetItem::setForeground()
+    instead [-Wdeprecated-declarations]
+  *  d195cd5c9 - Qt5: 'Qt::DropAction QDrag::start(Qt::DropActions)' is
+    deprecated: Use QDrag::exec() instead [-Wdeprecated-declarations]
+  *  053312188 - Qt5: 'void QListWidget::setItemSelected(const
+    QListWidgetItem*, bool)' is deprecated: Use
+    QListWidgetItem::setSelected() instead [-Wdeprecated-declarations]
+  *  84a164ba3 - Qt5: 'static QString
+    Gui::TaskView::TaskWatcherCommands::trUtf8(const char*, const char*,
+    int)' is deprecated [-Wdeprecated-declarations]
+  *  da6cb8a96 - Qt5: 'bool QTreeWidget::isItemSelected(const
+    QTreeWidgetItem*) const' is deprecated: Use
+    QTreeWidgetItem::isSelected() instead [-Wdeprecated-declarations]
+  *  0984bedeb - Qt5: 'bool QTreeWidget::isItemExpanded(const
+    QTreeWidgetItem*) const' is deprecated: Use
+    QTreeWidgetItem::isExpanded() instead [-Wdeprecated-declarations]
+  *  45017ec83 - Qt5: 'void QTreeWidget::setItemExpanded(const
+    QTreeWidgetItem*, bool)' is deprecated: Use
+    QTreeWidgetItem::setExpanded() instead [-Wdeprecated-declarations]
+  *  c814eb1a5 - Qt5: 'QString::null' is deprecated: use QString() [-
+    Wdeprecated-declarations]
+  *  85109240b - clang/gcc/cmake: [skip ci] suppress deprecated-copy
+    warnings for OpenInventor class SbMatrix
+  *  be0c8eab2 - Arch: Better support for App::Parts in Arch Windows
+  *  fbf0b23e0 - [TD] make all hatch patters plain SVG
+  *  9726ad3f4 - [TD] add dialog for hatches
+  *  736633926 - [TD] GeomHatch dialog: use sensible hatch limits
+  *  4d0cd751d - [TD] detail view: add missing tooltip
+  *  b2f5a3bd9 - [skip ci] avoid to redefine GL_GLEXT_PROTOTYPES if
+    already defined
+  *  c8be528f3 - Qt5: [skip ci] 'void QTextEdit::setTabStopWidth(int)'
+    is deprecated [-Wdeprecated-declarations]
+  *  8b9fb7822 - Gui: [skip ci] Invalid signal/slot connection:
+    'buttonBox' -> 'Utils::CheckableMessageBox'
+  *  449edf985 - C++: [skip ci] fix -Wredundant-move This change was
+    part of #2720 but has been skipped in order to not complicate a
+    pending PR of an upgrade of the SMESH sources. However, this other
+    PR #2706 has been closed by its author. Since this warning is
+    reported on latest Fedora version using gcc 10 it will be fixed now.
+  *  eaedcfea4 - Gui: [skip ci] fix some thread issues: avoid to crash
+    the application when trying to create thumbnail from worker thread
+    avoid that application behaves weirdly when triggering an action
+    update from worker thread
+  *  6271887cc - Arch: Allow to export structural analysis model to IFC
+  *  415b0dce2 - Draft: Allow to define rounding value in
+    DraftVecUtils.rounded
+  *  df2884f81 - [PATH] make -custom- op compliant. Improve gcode_pre
+    importer
+  *  11a2b948e - [Theme] Dark high contrast color theme
+  *  d205316a8 - Arch: Support user-defined profiles csv file
+  *  b2c72a212 - CMake: [skip ci] add build option to let the user
+    decide to link with shiboken/PySide at build time
+  *  b7bb7d1f2 - [TD] update view when autoscale was set
+  *  bb86fe18e - Sketcher: [skip ci] fix -Wimplicit-fallthrough=
+  *  c9480d7d1 - PartDesign: [skip ci] fix -Wunused-variable
+  *  350bae2aa - clang/gcc/cmake: [skip ci] suppress deprecated-copy
+    warnings for OpenInventor class SbMatrix
+  *  6c2815214 - CMake: [skip ci] add build option to let the user
+    decide to link with shiboken/PySide at build time
+  *  0446086a8 - [TD]CosmeticEdge type guards
+  *  418359403 - [TD]CosmeticEdge setters and getters
+  *  dd0273ff4 - [TD]Fix CosmeticVertex size
+  *  134f5fd34 - [TD]save template as plain Svg, not Inkscape Svg
+  *  6bc2d5ac2 - [TD]hide Symbol property in Editor
+  *  27b6066be - clang/gcc/cmake: move handling of suppressed deprecated-
+    copy warnings from source file to CMake file to more easily support
+    gcc 10
+  *  9a06fdf22 - Arch: Fixed wrong structural node generation
+  *  86655f067 - [TD] add scale settings to detail task dialog
+  *  c97438712 - [TD]Fix editable field in template
+  *  cda235aba - [TD]Fix geometric hatch in Pdf
+  *  fe6dfabbb - [App] fix a typo
+  *  327b30630 - Draft: add some explanation on the properties of
+    PathArray
+  *  904f3408b - Draft: fixed wrong QT_TRANSLATE_NOOP usage in Draft
+    Objects
+  *  c0971eb5c - Fix saving of DXF files (python3)
+  *  c8c579b0d - Draft: clean up draftgeoutil modules
+  *  9271c9f84 - Draft: clean up the order of the submodules in
+    DraftGeomUtils
+  *  8f646d931 - Arch: Fix bug of exporting into collada file #4362
+  *  86a675706 - FEM: constraint transform, fix round by improving
+    coordinate calculation
+  *  7c7275cfb - FEM: constraint transfrom, coordinate transformation
+  *  11f550071 - PartDesign: closing task dialog when exiting edit mode
+    for Primitives
+  *  652d965d5 - [TD] use new keyboardTracking feature for Detail dialog
+  *  fdc07cb6c - Py3.8: [skip ci] missing initializer for member
+    '_typeobject::tp_vectorcall' [-Wmissing-field-initializers]
+  *  e4d531bb8 - Py3.8: missing initializer for member
+    '_typeobject::tp_vectorcall' [-Wmissing-field-initializers]
+  *  42fcda5d3 - gcc: [skip ci] suppress gcc 10 warnings in smesh code
+  *  f68f44311 - FEM: fem examples manager, fix ccx tools solver
+  *  905d9d65d - Path: Area fixes and robustness tweaks
+  *  8311b1e66 - [Part]Fix bad shape from Fillet
+  *  7c654878d - Path: Fix for optimizeLinearSegments
+  *  c8ce12832 - PartDesign: [skip ci] fix typo
+  *  9a67154e7 - Gui: [skip ci] fix bug when keyboard tracking for
+    QuantitySpinBox is disabled and value is changed by mouse wheel or
+    the spin buttons
+  *  1e117647f - [skip ci] include missing boost header
+  *  89ddab33f - Expression: move handling of invalid quantities (NaN)
+    from FunctionExpression to DlgExpressionInput
+  *  73f086f73 - [Part]Fix #4285 Bad Shape from Chamfer
+  *  d693ff13d - [TD]Fix preference directory pickers
+  *  200c7c7e0 - [skip ci] include missing boost header
+  *  0a8c6e36a - [skip ci] include missing boost header
+  *  e91197415 - App: [skip ci] handle XMLAttributeError in
+    Document::readObjects
+  *  b0e92abcb - Base: [skip ci] in XMLReader class replace assert(0)
+    calls with throwing an XMLAttributeError exception
+  *  ae641dc52 - Python: [skip ci] tp_print slot has been replaced with
+    tp_vectorcall_offset in Py3.8
+  *  03113405f - Gui: [skip ci] fix bug when keyboard tracking for
+    QuantitySpinBox is disabled and value is changed by mouse wheel or
+    the spin buttons
+  *  f98b94886 - Revert "App: [skip ci] avoid that Origin makes
+    persistent any properties of its extension"
+  *  ac4196fb6 - Expressions: Avoid multiline error messages
+  *  980151940 - App: [skip ci] correctly mapping of sub-feature name to
+    role name of an Origin feature
+  *  b7f56e43b - App: [skip ci] in dependency graph make sure that an
+    Origin stays inside the Body or Part container
+  *  45c2e5cb2 - App: [skip ci] throw an exception if the expression
+    gives NaN
+  *  5b5ea24b6 - App: [skip ci] suppress false warning
+  *  0c69eebda - Path: Use _optimizeLinearSegments utility in
+    _planarSinglePassProcess
+  *  84113fbd1 - Path: More ambitious step-over and break optimizations
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 20 Jun 2020 00:45:10 +0300
+
 freecad-daily (0.18.3+git21501-457dba4fe-1) unstable; urgency=medium
 
   * Compile

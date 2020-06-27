@@ -1,3 +1,26 @@
+librecad (2.1.3+git4647-9f2c32dd-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: master
+  * Commit: 9f2c32dd4b9dc2ed5e028b682473b098c48ad3e0
+  * Date: 1591888939
+  * git changelog:
+  *  9f2c32dd - fixed save/restore issue of snap modes, caused by #1147
+  *  0e463c42 - fixed #1101, also implemented new undo/redo buffer for
+    active line drawing undo/redo (rebased)
+  *  c888a724 - reformatting for readability to debug #1101
+  *  a857c382 - fixed garbage return issue detected by static analyzer
+  *  9c92615a - fixed dead initialization issues detected by static
+    analyzer
+  *  39fa2d4b - fixed dead assignment issues detected by static analyzer
+  *  4bfe1170 - fixed a follow up issue from #1233, call of an
+    uninitialized pointer
+  *  8cbf149f - fixed chance of calling nullptr objects, detected by
+    static analyzer
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 20 Jun 2020 23:12:22 +0300
+
 librecad (2.1.3+git4639-38c3f94b-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,114 @@
+gimp-gtk3 (2.99.0+git45866-2d3e5075a1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 2d3e5075a1d2cd7a7f21c7def553b48f0ff08fa0
+  * Date: 1592522445
+  * git changelog:
+  *  2d3e5075a1 - Update Swedish translation
+  *  eccf64cf30 - Updated Italian translation
+  *  887d6a3670 - app, themes: fix display-shell statusbar height
+  *  4280f7dc9b - Update Ukrainian translation
+  *  4510e75864 - Fix minor typo: entred -> entered
+  *  76c735a722 - Update Spanish translation
+  *  f1eec22047 - Update Spanish translation
+  *  4761fc422f - Update Ukrainian translation
+  *  1ceb0dc8ad - Fixes to Catalan translation
+  *  45ce68fe15 - plug-ins: change the "compose-type" default values to
+    upper case
+  *  4e9227e5d3 - plug-ins: make sure "decompose-type" in decompose.c is
+    upperacse
+  *  54b5faeefb - plug-ins: port file-xmc.c to GimpProcedureConfig and
+    prop widgets
+  *  0d56bbb745 - plug-ins: change "comment" arguments to "gimp-comment"
+  *  48b04e7257 - libgimp: implement argument sync in
+    GimpProcedureConfig
+  *  5a235fae69 - libgimp: add the concept of "argument sync" to
+    GimpProcedure
+  *  896286279b - libgimpconfig: cache the "gegl-property-keys" Quark
+  *  b814ea95a1 - libgimp: return the added GParamSpec from all
+    GimpProcedure...
+  *  bcebc9f6e2 - Update Swedish translation
+  *  a5535dc9c9 - themes: improve GimpColor{Notebook,Scales} spin-button
+    style
+  *  f182442206 - app, themes: improve GimpSpinScale styling
+  *  f4f1bb3af4 - Update Swedish translation
+  *  9809939e25 - app, themes: use compact style for GimpSpinScale
+  *  da73b6b310 - themes: remove entry/spin-button min-height
+  *  c6f2c8bda5 - Updated Italian translation
+  *  ad0e34fb0c - Update Swedish translation
+  *  66a952df9f - app: check if display is X11 before
+    gdk_x11_display_get_user_time().
+  *  1fb754d87b - Updated Italian translation
+  *  6a01bf2df2 - Issue #5219 - Color>Info>Export histogram counts
+    pixels twice
+  *  68ec9c70f5 - Update Polish translation
+  *  c0367f2dc2 - Update Ukrainian translation
+  *  f0281e1421 - app: remove the "Keys" list in the Input Device
+    editor.
+  *  4def457c63 - app: Input Devices "Reset" button should actually
+    reset to defaults.
+  *  cef7ecca27 - build: add libwmf patch from libwmf repository to
+    prevent issue #4061
+  *  0ce3798a42 - build: add libwmf patch from libwmf repository to
+    prevent issue #4016
+  *  6f5e4a8e3d - Update Catalan translation
+  *  f9cc239f2c - data: clean up "Acrylic 05" brush
+  *  c4a201eaf4 - Issue #5208 - paint brush is broken when aspect ratio
+    is set to negative
+  *  6d74c57be7 - Update Basque translation
+  *  c8d5d6b1d3 - Update Basque translation
+  *  bbc0f18953 - app: fix error propagation in boolean GUM grouping
+    subexpressions
+  *  5c07bcd1ff - app: fix reference parsing in boolean GUM expressions
+  *  93f728e484 - app: fix switching filter-tool split-preview
+    orientation
+  *  214936e8c6 - app: use absolute offset for filter-tool split-preview
+    guide position
+  *  9a25ae7171 - app: update custom guides when moved past display
+    bounds
+  *  3c98305979 - Update Ukrainian translation
+  *  b2e223813b - libgimpbase: avoid double definition of exported
+    variables on Windows
+  *  ee79c7b294 - app: "OK", "Cancel" and "Reset" buttons on "Input
+    Devices" dialog.
+  *  588ae66e52 - desktop: fix some news URL in appdata.
+  *  4d8c60e4ed - INSTALL: update the plug-in API binding dependencies.
+  *  d867fffc70 - Add Central Kurdish translation
+  *  080ef8a0d8 - Issue #5179: fix "Add layer masks" and improve "Edit
+    layer mask".
+  *  5302beb947 - app: make a tooltip translatable and translate device
+    axis strings.
+  *  b070abe5bf - plug-ins: port decompose to GimpProcedureConfig
+  *  5d412088af - plug-ins: fix spyro-plus after Gimp/GimpUi split.
+  *  2e6656599d - libgimpconfig: fix string deserialization for some
+    cases
+  *  c16e310c36 - Corrected code to work with newer split Gimp and
+    GimpUi bindings.
+  *  a9421be414 - Fix minor typo: pisels -> pixels
+  *  7c664b369f - NEWS: update.
+  *  fb978acda2 - Update Ukrainian translation
+  *  9054ab5dc5 - plug-ins: port file-tiff-save to GimpProcedureConfig
+  *  afe98c5c70 - libgimp: add gimp_procedure_config_save_metadata()
+  *  1ef5f816aa - libgimp: change ARG_OFFSET define in GimpSaveProcedure
+    from 4 to 5
+  *  478b733c01 - Update Japanese translation
+  *  f67822c545 - Update Ukrainian translation
+  *  3c0867b8f3 - Add the list of changes in 2.10.20 to the appdata
+  *  14765e72b6 - meson, autotools, app: depend on GEGL 0.4.24
+  *  529471e1ca - meson, autotools, app: depend on babl-0.1.78
+  *  5e504bc567 - Update Japanese translation
+  *  6fa34df359 - Update Japanese translation
+  *  5b100f59fa - Update Japanese translation
+  *  bd6e870c6c - Update Japanese translation
+  *  0c06c24441 - build: add Japanese translation to the Windows
+    installer
+  *  b56f5eb3f6 - po-windows-installer: fix unsupported chars in
+    Japanese translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 21 Jun 2020 01:24:21 +0300
+
 gimp-gtk3 (2.99.0+git45793-c69467b6c4-1) unstable; urgency=medium
 
   * Compile

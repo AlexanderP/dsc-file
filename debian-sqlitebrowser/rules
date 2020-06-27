@@ -5,8 +5,22 @@
 
 export DEB_BUILD_MAINT_OPTIONS=hardening=+all
 
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+ifneq (,$(filter $(DEBIAN_CODENAME), buster bionic eoan)) 
+	configure_flags = 	-DFORCE_INTERNAL_QSCINTILLA=ON
+	
+else
+	configure_flags = 	-DQSCINTILLA_INCLUDE_DIR=/usr/include/x86_64-linux-gnu/qt5/Qsci/
+endif
+
+
+
 %:
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	dh_auto_configure -- -DENABLE_TESTING=True -DQSCINTILLA_INCLUDE_DIR=/usr/include/x86_64-linux-gnu/qt5/Qsci/
+	dh_auto_configure -- -DENABLE_TESTING=True $(configure_flags)
+

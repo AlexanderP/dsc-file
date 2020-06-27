@@ -1,3 +1,55 @@
+gscan2pdf (2.8.0+git3232-5122438c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 5122438cbf0c952aa9427c42ecab8ff2aedb52e2
+  * Date: 1592413766
+  * git changelog:
+  *  5122438c - Improvements to the Crashed sessions dialog to make it
+    more intuitive
+  *  604d84ea - When saving a session file, note that pages have been
+    saved
+  *  4ebb0c01 - + restart option to 'device not found' mini-wizard & if
+    tmp directory changed
+  *  f84cba98 - Fix incorrect string operator introduced in '+ debugging
+    messages to ask_question()'
+  *  c52c1092 - Prevent the session dir from being used as tmpdir
+  *  e362eb4e - Cope better if data model becomes corrupted
+  *  0aaebb1c - + debugging messages to ask_question()
+  *  0aa01fc1 - Suppress warning finding a page that has no uuid for
+    some reason
+  *  eaf2c70e - Avoid another race condition in callbacks between
+    bin/gscan2pdf and lib/Gscan2pdf/Dialog/Scan by not using globals
+  *  2e2c017f - Update to Hungarian translation
+  *  a6ae9f69 - Pass resolution to tesseract via --dpi
+  *  580273e2 - Don't use imagemagick on PS
+  *  614ef1f3 - Bump version to 2.8.0
+  *  76785e50 - Update to Ukrainian translation
+  *  ca4f2941 - Fix save as PS
+  *  688254b5 - + preference to disable device list cache + mini-wizard
+    if device not found
+  *  136c325e - No need to think about trusty or precise any more
+  *  21024047 - Avoid race conditions in callbacks between bin/gscan2pdf
+    and lib/Gscan2pdf/Dialog/Scan by not using globals
+  *  ff62aefa - filter out fonts with no style
+  *  ef06bb33 - get_bbox_by_index() return undef if no bbox in list
+  *  455cb295 - + button to add to text layer
+  *  2168d78d - Also update text position and rectangle when updating
+    bounding box
+  *  113c916d - Limit zoom to 100 to avoid errors like: "drawing failure
+    for widget GtkBox: error occurred in libfreetype"
+  *  ed52f05b - Update to Hungarian translation
+  *  e51d091a - Refactor max/min colour properties from
+    Gscan2pdf::Canvas::Bbox into Gscan2pdf::Canvas
+  *  19799fa9 - Interpolate colours according to OCR confidence in HSV
+    space
+  *  69b48f72 - Factor Gscan2pdf::Canvas::Bbox out of Gscan2pdf::Canvas
+  *  56389ca0 - Use apt instead of apt-get in documentation
+  *  dd6c0815 - Post-release commit
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 20 Jun 2020 07:48:32 +0300
+
 gscan2pdf (2.6.5+git3203-0dcf6157-1) unstable; urgency=medium
 
   * Compile
