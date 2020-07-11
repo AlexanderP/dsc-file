@@ -1,3 +1,166 @@
+freecad-daily (0.18.3+git21832-31b1ad874-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 31b1ad874fb4750b6f6f25b494246f6ac7e61cde
+  * Date: 1593712455
+  * git changelog:
+  *  31b1ad874 - Sketcher: Augment malformed constraint messages
+  *  98b804cd7 - FEM: ccxtools unit tests, improve directory handling
+  *  82551c2d0 - FEM: elmer unit tests, add ccx canti node load test
+  *  d8d0a513d - FEM: unit tests, improve directory handling
+  *  7890f1a7a - FEM: solver elmer unit tests, add generic input file
+    test method and make use of it
+  *  da6b37956 - fixes #0004318: Compilation fails with Qt 5.15 beta
+    with QPainterPath errors [skip ci]
+  *  19d37ec5d - [TD]tweak CosmeticEdge point getters
+  *  bc309838d - FEM: examples, fix mat value in simple box example
+  *  aad66311f - FEM: elmer unit tests, add ccx canti faceload
+  *  25a4cf67d - FEM: elmer unit test, rename case file
+  *  ddaaa5edf - FEM: solver elmer unit test, small improvements
+  *  b13c2b57c - FEM: examples, nonlinear material, add forum link
+  *  ebbcdf5ff - Sketcher: [skip ci] fixes -Wmaybe-uninitialized
+  *  064b3fb36 - FEM: unit tests, make own module for each frame work
+    solver
+  *  c35d8be9a - Sketcher: Check invalid constraint indices in unmanaged
+    operations
+  *  ee21985e2 - Sketcher: PropertyConstraintList input data validation
+  *  7055b5ef0 - GCS: Prevent that reference constraints affect the
+    result of a redundant solving
+  *  ffaa92d29 - GCS: Add debug code to identify the popularity contest
+    selected redundant that is removed
+  *  926625b67 - Sketcher: Use move semantics wherever sensible
+  *  fe993abc3 - PropertyConstraintList: refactor setValue
+  *  9ca8568f8 - PropertyGeometryList: move setValue and refactor
+  *  ac167aa85 - Sketcher: ViewProviderSketch inhibit update if internal
+    transaction is ongoing
+  *  3941b6917 - Sketcher: Internal Transaction Support and ensure valid
+    constraint geometry indices
+  *  1fe43280c - FEM: meshtools, better comment
+  *  ec4535aea - FEM: imports, improvements
+  *  c4b063536 - FEM: mesh tools, compact mesh, use one id for Edges,
+    Faces and Volumes as SMESH does save it
+  *  68b98f5ff - Fem: [skip ci] handle exception in Fem Constraint in
+    case referenced shape element doesn't exist
+  *  2b5ef38a8 - Base: fix build failure for Py2
+  *  8b2044aa1 - Data: examples FEM, delete files added by accident with
+    commit 9bfd947886d9
+  *  9bfd94788 - FEM: elmer equation flux, better name without word
+    solver
+  *  0c1f99a30 - FEM: equation head, change back wrong menue text
+    introduced with e7b813f178e3
+  *  0a8f4b510 - Gui: [skip ci] improve usability of VectorListEditor
+  *  1da81df75 - Fix typos [skip-ci]
+  *  fe4107c3a - FEM: elmer writer, fix unit test
+  *  c43b3c2b2 - FEM: elmer writer, better messages and code formating
+  *  95a58b1ee - FEM: elmer writer, add scaling and revert scaling only
+    for m/kg/s unit schema
+  *  6a511c142 - FEM: elmer writer, export meter based units for scaled
+    m-based simulation
+  *  962f3e050 - App: [skip ci] extend doc string of
+    Document.findObjects
+  *  864555bc9 - Base: let PyStreambuf figure out if String or Bytes
+    object must be written to file
+  *  d3b43aa5b - FEM: constant vacuum permittivity, implement in elmer
+    writer
+  *  43ad6aa72 - FEM: constant vacuum permittivity, add object to
+    overwrite constant
+  *  fe93f6027 - App: properties, add vacuum permittivity
+  *  f948a39bd - Gui: export scene graph to file or buffer
+  *  ecc07bc05 - FEM: examples manager, typo
+  *  0ac4897cf - FEM: objects make, add TODO comment
+  *  3ea4ceb89 - FEM: object add module, small comment fix
+  *  10119ad9a - FEM: elmer equation objects, improve object creation
+  *  6fc8a3cae - check if pcLineCoords is empty
+  *  2035e0cfb - fix null reference
+  *  2c56e3c9f - Spreadsheet: [skip ci] avoid to show scroll buttons in
+    PropertiesDialog when a style sheet is used
+  *  478823b90 - Part: [skip ci] fix regression in ruled surface feature
+    by applying placement of source object twice See:
+    https://forum.freecadweb.org/viewtopic.php?p=411934
+  *  65f7e24a9 - Path: Resize the Base Geometry list dynamically
+  *  9b67e43b1 - Path: Fix calculation of OpFinalDepth default value
+  *  79e11ce8a - App: extend Document::findObject to allow to search by
+    label
+  *  1f741aa51 - [skip ci] do not set attribute WA_DeleteOnClose when
+    loading FreeCAD GUI from Python
+  *  ef21d8ec0 - FEM: examples manager, delete depreciated code
+  *  c57c3cbcf - FEM: examples manager, add generic method to run
+    examples
+  *  97ea8f456 - FEM: constants, typo
+  *  45fa9e299 - FEM: elmer writer, better identifier in a method
+  *  fc8da5ca0 - FEM: flake8
+  *  801bfe4ba - FEM: flake8
+  *  742b6d416 - Arch: Small code optimizations to the multicore IFC
+    importer
+  *  7651e6d97 - Fix for changed Github url links being relative instead
+    of absolute.
+  *  d43588d24 - Arch: New multicore IFC importer
+  *  59bdba9c4 - FEM: code foramatting, line length
+  *  ccea55a65 - FEM: elmer, better print and log
+  *  d36c21fd5 - Arch: add missing translate function
+  *  8ff45dfb3 - [ArchWall] Revert comments in getExtrusionData()
+  *  81dd47b03 - [ArchWall]  ArchWall Offset should now works with Base
+    as Sketch
+  *  f5dea7edc - FEM: ccx constraint section print, add unit test
+  *  5f928b732 - FEM: examples, section print, fix to setup on cmd mode
+  *  3dfc9471a - FEM: ccx constraint section print, add task panel
+  *  7d17d6f6b - FEM: ccx constraint section print, add Gui command and
+    icon
+  *  e8bee15f0 - FEM: examples, add section print
+  *  eb9d5bf8f - FEM: ccx constraint section print, implement in ccx
+    writer
+  *  50d834c0b - FEM: ccx constraint section print, add object
+  *  9bd95ed10 - [TD]CosmeticVertex default size
+  *  5c24b236f - OpenSCAD: [skip ci] fix missing treeview icon
+  *  487215d2f - [part] More robust tessellation angular deflection
+    default
+  *  648b3bbe7 - FEM: examples, some comment changes
+  *  5948a8305 - FEM: unit test, fix setting up some examples
+  *  c22fa6eac - FEM: examples, use gmsh mesh object instead off pure
+    mesh object
+  *  cfec12ec1 - FEM: examples, ccx_cantilever_std separated into 4
+    examples
+  *  54c8dbd81 - FEM: examples, boxanalysis separated into 2 examples
+  *  6360ab6ce - FEM: examples, manager, add missing run in run all
+  *  061524803 - FEM: examples, flow 1D, add comment
+  *  79377cbc9 - FEM: examples, bimetall, move comment
+  *  602a9a163 - Gui: [skip ci] fix -Wrange-loop-construct
+  *  771b4738a - Gui: implement property editor for vector list
+  *  ac6e9f464 - Arch: fixed minor bug in Offline rendering module
+  *  8b8210f29 - Arch: fix calculation of fence objects
+  *  29f3ab6db - Icon themes Part viewproviders
+  *  de152bf7b - Icon themes DAGView
+  *  d11750501 - Icon themes toolbar customization dialog
+  *  425d8f8fe - Icon themes parameter editor
+  *  5613793f5 - FEM: elmer writer test mode, do not search for gmsh
+    binary
+  *  32d401491 - FEM: unit tests, use unique dir for each run
+  *  6c74b7850 - Part: [skip ci] add missing headers
+  *  62129362b - TaskProjGroup.ui: correct a typo
+  *  0e0e9dbbc - disable keyboardTracking for the scale to avoid
+    unnecessary recomputes
+  *  e50db2ed7 - [TD] add spacing to ProjGroup dialog
+  *  a91470576 - [skip ci] make Jupyter notebook integration working
+    again
+  *  daec77869 - [skip ci] improve possibility to create a QApplication
+    in a thread
+  *  cfa6ad5de - Path: Slot operation fixes and improvements
+  *  002e25b56 - [TD]Cosmetic Edge endpoint inversion
+  *  ff66708c3 - [TD]Detail default scale
+  *  87046ef04 - GuiPy: [skip ci] expose function to Python to replace
+    Switch with Separator nodes
+  *  0d05fc328 - GuiPy: [skip ci] handle some Qt warnings when using GUI
+    from Python + avoid warning: QEventLoop: Cannot be used without
+    QApplication + avoid warning: QObject::startTimer: Timers can only
+    be used with threads started with QThread
+  *  c23a1f6ed - Base: [skip ci] include sstream in swigpyrun source
+    files
+  *  9b7319107 - [Path] Make jobs delete cleanly.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 03 Jul 2020 00:03:26 +0300
+
 freecad-daily (0.18.3+git21713-ffe957cef-1) unstable; urgency=medium
 
   * Compile

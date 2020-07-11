@@ -1,3 +1,30 @@
+gimp-devel (2.10.18+git44082-2953d70620-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 2953d70620328a41ff9370644c112e0623ec6003
+  * Date: 1593694562
+  * git changelog:
+  *  2953d70620 - Update Catalan translation
+  *  fd58984350 - Update Polish translation
+  *  3212da715b - app: increase idle priority for hiding on-hover tool-
+    group menu
+  *  b177c98e32 - Update Swedish translation
+  *  b62098d2ec - Update Swedish translation
+  *  acef860ea7 - Update Ukrainian translation
+  *  911b85fb3d - Update Ukrainian translation
+  *  04d56bf31c - plug-ins: add option to crop layers to image bounds
+    when exporting TIFF
+  *  6c44e51b83 - libgimp: add GIMP_EXPORT_NEEDS_CROP export capability
+  *  00d1a21b78 - Issue #5274 - Exporting as TIFF fails for layers with
+    a negative offset
+  *  33e76338d8 - plug-ins: fix last commit for PLANARCONFIG == SEPARATE
+  *  7d5188db49 - Issue #5275 - TIFF files with signed-int samples are
+    misinterpreted as unsigned
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 03 Jul 2020 16:01:54 +0300
+
 gimp-devel (2.10.18+git44070-68f27d7592-1) unstable; urgency=medium
 
   * Compile

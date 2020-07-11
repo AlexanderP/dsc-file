@@ -1,3 +1,91 @@
+labplot (2.7.0+git7525-d0b0eaa46-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: d0b0eaa466e21a26167e40ff8641955ab281b657
+  * Date: 1593759478
+  * git changelog:
+  *  d0b0eaa46 - [worksheet] implemented a better logic to handle the
+    selection and deselection of items in the worksheet view when
+    objects are set to visible or unvisible in the properties widget.
+  *  6e74ec553 - [fit] handle zero eval range
+  *  fd33b51ff - [fit] avoid error message when progress in below
+    machine precision (perfect parameter fit)
+  *  902e55b26 - [fit] avoid error when fitting with all parameter fixed
+  *  a29d0e76e - [fit] Fix naming in result display
+  *  8427b89af - Add build timestamp in about dialog
+  *  28b16ef3d - [worksheet] fixed the loading of the default colors for
+    the text label.
+  *  866ff0c7b - [tests] fix NSL tests for percentile smoothing
+  *  e7fa6088a - [tests] Add percentile smooth test
+  *  eaf1bd51f - [Smooth] switch to method 7 as default to be consistent
+    with median smoothing
+  *  ee99aec3b - [worksheet] when changing the visibility of the axis,
+    also change it for the grid item.
+  *  20f534417 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  1264d1d7c - [worksheet] always draw the plot legend on top of other
+    plot objects.
+  *  a0e9a69e2 - doc: remove CLI chapter from user documentation
+  *  dfdb60b76 - doc: remove download/build instructions
+  *  2b12b7900 - When creating a new worksheet with many plots in the
+    plot data dialog it can happen the place available for the data in
+    the plot is small and the result created here doesn't look nice. To
+    avoid this and as a quick a dirty workaround, we increase the size
+    of the worksheet so the plots have a certain minimal size.
+  *  d23ea2945 - [worksheet] save the layout type as part of the
+    template.
+  *  4402d2e0d - [worksheet] properly reset the container for the
+    visible curve points when doing retransform.
+  *  bd533e95b - In the preview widget for themes in the settings dialog
+    allow to show multiple theme icons in a row to better use the
+    available space. Limit to one column in the preview for the theme
+    widgets shown in context menus only.
+  *  8f99e4b70 - Properly reset to the default worksheet theme in the
+    settings dialog.
+  *  871aa1034 - Properly load the last opened project if this option is
+    active.
+  *  5e2d23474 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  c1d9fa350 - GIT_SILENT made messages (after extraction)
+  *  68630e3b5 - Improved the determination of the unique name for
+    aspects. This should also fix the failing tests.
+  *  6859a72c4 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  6428f85f3 - GIT_SILENT made messages (after extraction)
+  *  5cb99b0b6 - [fit] fix regression loading fit results
+  *  528ae4627 - [cmake] remove duplicate line
+  *  f9923ccd0 - Add system info to about dialog
+  *  cc7842ab7 - Add "Changed" to  the title bar already after the very
+    first change.
+  *  3360ba161 - Introduce an option to determine what should be shown
+    in the title bar - file path, file name or project name.
+    Furthermore, fixed the regression with the window mode being not
+    applied after the settings were changed.
+  *  9e557c33b - [xycurve] code cleanup
+  *  f0ce69177 - When determining the unique name for the newly added
+    aspect, ignore the digit characters in the names of other children
+    names that are part of the original name. Look for the combination
+    of space+digit that is added to the names to ensure the uniquness.
+  *  b1d9ea19e - Properly reset to the default values in the settings
+    widgets.
+  *  36a3606cc - [worksheet] added missing double validators in the text
+    fields for plot ranges in the plot properties widget.
+  *  4687f849d - [xycurve] further code improvements
+  *  5b5e65994 - [xycurve] fix previous commit
+  *  56b38cb5b - [fit] show warning/errors only after recalculate was
+    done.
+  *  68f522ffc - [xycurve] Improve plotting for many data points
+  *  60073a536 - [xycurve] more code improvements
+  *  b7ee403dd - [xycurve] code improvements
+  *  370c15d65 - [fit] close the message widget showing the message from
+    the previous fit if the current fit was successful.
+  *  20cef2e85 - [fit] show fit warnings and errors more prominently in
+    a message widget.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 03 Jul 2020 10:43:27 +0300
+
 labplot (2.7.0+git7481-1a47853a6-1) unstable; urgency=medium
 
   * Compile
