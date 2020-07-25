@@ -1,3 +1,30 @@
+gscan2pdf (2.8.0+git3246-03c62319-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 03c62319c699f33a3bead091ab02c53eec77fe0c
+  * Date: 1594453419
+  * git changelog:
+  *  03c62319 - Fixed test failures due to version bump
+  *  9f5c897f - Bumped version to 2.8.1
+  *  d40d2cd0 - Update to Ukrainian translation
+  *  01d8a730 - Update to German translation
+  *  c97a3a93 - Update to Brazilian Portuguese translation
+  *  5c3c71af - Use version->parse() calls that pass strict checks
+  *  4e9e723d - Fix check for tesseract version. Remove support for
+    tesseract < 3.04.00
+  *  fffa7217 - refactor _thread_save_pdf() and _set_timestamp() to
+    reduce complexity
+  *  1ecc4e2c - Fix check for unpaper version
+  *  af08e821 - Create PS level 3 instead of 1
+  *  d46c881d - Update position of OCR text when cropping
+  *  047e62c4 - Refactor bboxtree attribute of Page to use json
+  *  2d4ada92 - Suppress warning if TMPDIR not defined
+  *  ab44c1be - Refactor hocr attribute of Page to bboxtree
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 20 Jul 2020 06:19:05 +0300
+
 gscan2pdf (2.8.0+git3232-5122438c-1) unstable; urgency=medium
 
   * Compile
