@@ -1,3 +1,67 @@
+pinta (1.6+git1879-7925b841-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/PintaProject/Pinta.git
+  * Branch: master
+  * Commit: 7925b8416ed33138e97c06495a563ed89886b6e0
+  * Date: 1596226475
+  * git changelog:
+  *  7925b841 - Related to 9c0e401b, ensure the base selection is also
+    transformed
+  *  9c0e401b - Fix issues where Rectangle Select tool didn't update
+    correctly after using the Move Selection tool.
+  *  1776a79d - Add a similar fix to 196a9319 when creating new images.
+  *  7dcd1794 - Update the copyright year and contributor credits.
+  *  f9fd0432 - Constrain to a square when holding Shift in the
+    rectangle / ellipse tools.
+  *  a8f8f296 - Add a changelog entry for the new user guide.
+  *  255e0aec - Related to 7027dd05, just link to the online user guide.
+  *  7027dd05 - Remove the (very) incomplete documentation system.
+  *  36acb957 - Update the translation template.
+  *  775ba1a4 - Use Alt instead of Shift for the Intersect selection
+    mode.
+  *  5a6607d6 - Add a workaround to explicitly call xdg-open on newer
+    Mono versions.
+  *  808df20e - Disable use of the ExtendedLabel widget.
+  *  d9e57314 - Only allow closing tool windows through the menu.
+  *  5fdadc6e - Fix a couple undo issues with crop to selection.
+  *  bf684c4d - Remove Stetic from the Curves dialog.
+  *  635388b2 - Remove unnecessary partial specifiers.
+  *  7160c9c0 - Remove Stetic from the Resize Canvas dialog.
+  *  2aa4480d - Explicitly upload the zip, since otherwise the root
+    folder (Pinta.app) is excluded.
+  *  453753e0 - Update Pinta.Resources.csproj to match the other
+    projects.
+  *  d8233884 - Build in the release configuration.
+  *  7755d665 - Build and upload the OSX installer.
+  *  66fecf93 - Mono is already installed on the CI environment.
+  *  9123f48f - Fix incorrect mono package name.
+  *  19a03156 - Add an OSX CI build.
+  *  0aeb00ab - Remove debugging output.
+  *  2448c460 - Upload the installer as an artifact.
+  *  a778b60a - Fetch the latest translations.
+  *  f4bb97d5 - Add a step to build the installer.
+  *  4bb46c36 - Add a step to compile translations.
+  *  7ed63b72 - Add additional verbosity when running choco.
+  *  7c926a19 - CI: install GTK# before building.
+  *  0b248055 - Initial attempt at a Windows CI build.
+  *  f01f5669 - A couple updates to the Windows installer.
+  *  3939e5af - Remove Stetic from the Resize Image dialog.
+  *  719fd3d7 - Disable printing for now until it is fully functional.
+  *  c7940572 - Another attempt at fixing incorrect paths.
+  *  65fda0fa - Simplify the steps and (hopefully) generate the zip in
+    the correct folder.
+  *  3b54d487 - Fix incorrect path to the zip file.
+  *  bb735b4f - Upload an artifact with a zip of the build results.
+  *  c56796fa - Add nunit dependency.
+  *  6133bf4b - Test setting up an Ubuntu 18.04 build with Github
+    Actions.
+  *  c1c7a02f - Update changelog for recent selection fixes.
+  *  cfa47d82 - Build fix for Ubuntu 18.04.
+  *  f78d88a5 - Fix a few issues with the Select tool not updating.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 01 Aug 2020 00:43:13 +0300
+
 pinta (1.6+git1833-43086486-1) unstable; urgency=medium
 
   * Compile

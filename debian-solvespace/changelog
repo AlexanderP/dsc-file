@@ -1,3 +1,22 @@
+solvespace (3.0.0~git1540-d8b76ef-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: d8b76ef7f105df873c978d17d5dc8660c73d2d5b
+  * Date: 1595948215
+  * git changelog:
+  *  d8b76ef - Drop backtrace generation.
+  *  bbf402b - Fix "Sketch → In Workplane" not updating the UI
+    immediately.
+  *  56e2592 - Make "Toggle Reference" remember undo state.
+  *  e0fa99b - remove another redundant pass checking earness
+  *  2640034 - NFC: Remove a redundant pass over all verticies in ear
+    triangulation.
+  *  b0fc191 - Create mimalloc heaps only when necessary.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 31 Jul 2020 04:29:45 +0300
+
 solvespace (3.0.0~git1534-188b2e2-1) unstable; urgency=medium
 
   * Compile

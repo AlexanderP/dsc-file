@@ -1,3 +1,25 @@
+gscan2pdf (2.8.0+git3254-7084719c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 7084719c6d02321d1f7108f1b0836e4d0f2bc633
+  * Date: 1595712526
+  * git changelog:
+  *  7084719c - Rename Vcs-git -> Vcs-Git
+  *  42036711 - Update to Ukrainian translation
+  *  8fb6ce6b - Update to German translation
+  *  9a2a989c - Bumped version to 2.8.2
+  *  3decfac3 - Factor finished_process_callback() out of scan_dialog()
+    to reduce complexity
+  *  fd42cde1 - Fix reload-recursion-limit problems after device-not-
+    found mini-wizard
+  *  a31ad385 - Delete temporary files that fall off the undo buffer
+  *  3768bcd2 - If previously used font no longer exists, automatically
+    pick another one
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 30 Jul 2020 17:51:48 +0300
+
 gscan2pdf (2.8.0+git3246-03c62319-1) unstable; urgency=medium
 
   * Compile

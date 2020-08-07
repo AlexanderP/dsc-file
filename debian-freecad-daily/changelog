@@ -1,3 +1,193 @@
+freecad-daily (0.18.3+git22164-f2a9f712e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: f2a9f712e8d68ee2393d0fe748c02096c4148a32
+  * Date: 1596052384
+  * git changelog:
+  *  f2a9f712e - [TD]Correct font size on PDF export
+  *  60d73e0e8 - Part: Attacher intersection calculation fix
+  *  17f16650c - flatmesh: [skip ci] implement converters from Eigen3
+    matrices to Python
+  *  a2926df47 - MeshPart: [skip ci] fix segmentation fault in flatmesh
+    when built with boost.python
+  *  980ecc87a - [TD]Dim blocks selection of geometry
+  *  cd5341001 - remove superfluous includes of iostream, use iosfwd
+    instead
+  *  4329ccd1e - [TechDraw] Add context to zh_CN README file for
+    description changes
+  *  0190e8d27 - [TechDraw] Add all sizes (landscape/A3/A4 portrait)
+    template PRoC files
+  *  d39b4dfcd - [TechDraw] Delete v0.001 of all landscape PRoC template
+    files
+  *  767b2787c - LGTM: [skip ci] remove some obsolete FIXME comments
+    from source code
+  *  ebaac6377 - Arch IFC import, add simplificated method to get pset
+    properties
+  *  5a2d0633b - LGTM: [skip ci]: Ambiguously signed bit-field member
+    Until C++11 bit fields with integral types should have explicit
+    signedness only. It is implementation specific whether an -typed bit
+    field is signed, so there could be unexpected sign extension or
+    overflow.
+  *  244d7aae4 - LGTM: [skip ci] fix: Inconsistent definition of copy
+    constructor and assignment ('Rule of Two')
+  *  3b0eeb63e - LGTM: [skip ci] fix: Inconsistent definition of copy
+    constructor and assignment ('Rule of Two') Remove user-defined copy
+    constructor of Exception classes without assignment operator
+  *  4dd32ce14 - LGTM: [skip ci] fix: Missing header guard
+  *  44f42a8e2 - LGTM: [skip ci] fix: Declaration hides parameter A
+    local variable hides a parameter. This may be confusing. Consider
+    renaming one of them.
+  *  e727cd375 - also avoid leading newlines
+  *  d7ee728be - assure the translation
+  *  5e6e03b6f - improve coding style
+  *  2b33e7776 - [TD] get rid of trailing newlines
+  *  21becb4e7 - [TD]remove obsolete QPointF (LGTM)
+  *  cb90b6a11 - [TD]remove obsolete QGraphicRectItem (LGTM)
+  *  04f184230 - [TD]remove obsolete QGraphicsSVGItem (LGTM)
+  *  9dac347fc - [TD]fix Dim selection fails to clear prev selection
+  *  a6df94e37 - FEM: show result, make it possible to use the menu and
+    icon if there is a pure result object in a document.
+  *  48f908574 - LGTM: [skip ci] fix: Local variable hides global
+    variable A local variable or parameter that hides a global variable
+    of the same name. This may be confusing. Consider renaming one of
+    the variables.
+  *  8dc95874a - [TD] add 2 shortcuts for dimensions
+  *  dc65b055e - LGTM: [skip ci] fix: Empty branch of conditional An
+    empty block after a conditional can be a sign of an omission and can
+    decrease maintainability of the code. Such blocks should contain an
+    explanatory comment to aid future maintainers.
+  *  8dac7e466 - [TD]fix misaligned PAT hatch on section
+  *  584a1bf44 - LGTM: [skip ci] fix: Resource not released in
+    destructor
+  *  16edad7af - LGTM: [skip ci] fix: Accidental rethrow
+  *  d300d148c - LGTM: [skip ci] fix: Function declared in block
+  *  9a1a06c94 - LGTM: [skip ci] fix: Duplicate include guard
+  *  eff0655d8 - LGTM: [skip ci] fix: Wrong type of arguments to
+    formatting function
+  *  47d570716 - LGTM: [skip ci] fix: Non-virtual destructor in base
+    class
+  *  d5d7d65bf - LGTM: [skip ci] fix: Large object passed by value
+  *  75ba0b8a7 - Add Mark property to ArchRebar object
+  *  752f84046 - Crowdin: Edits based on feedback from translators [skip-
+    ci]
+  *  3c35504de - Arch: improve import and export IFC preferences pages
+  *  6ab4bb5a1 - smesh: [skip ci] port Netgen plugin to v6.2
+  *  690652a57 - coverity cid 192591 (fix typo)
+  *  0491fa4ab - coverity issue cid 305102
+  *  1911453aa - Arch: touch Axis when key property change
+  *  f20ab1765 - Fix Crowdin typos + trim superfluous whitespace [skip-
+    ci]
+  *  4851947bc - Remove unnecessary pre-processor directive
+  *  0b1af7c83 -     Add App::Link support to Cloud module     ONLY
+    enabled if the Cloud Module is compiled into FreeCAD     ALL files
+    must be saved into a Cloud Based storage     Add a Signal to the
+    PropertyLink to enable support of external storage     Put the
+    Assembly Document as active document
+  *  cb2099aa6 - Part: optimize ViewProviderPartExt::getNormals
+  *  87fcebd53 - smesh: [skip ci] port Netgen plugin to v6.2
+  *  3e86f98d7 - smesh: [skip ci] port Netgen plugin to v6.2
+  *  5c6de6dd1 - Path: Area based unified projection implementation
+  *  886d9656f - FEM: solver frame work, beside dir fix
+  *  d30862b7b - FEM: unit tests, fix z88 for installed FC
+  *  d30e4a508 - Arch: import ifc, use the new layer make command since
+    the dereciated one does not create layers on import
+  *  f32248997 - Coverity: [skip ci] Dereference before null check
+    Remove logically dead code because 'pcActiveBody' cannot be null at
+    this stage
+  *  5584c36c1 - Coverity: [skip ci] Dereference before null check
+  *  617668a7f - Coverity: [skip ci] Bad use of null-like value
+  *  6b4a5066a - FEM: calculix solver, fix result mesh purging on
+    multiple result obj.
+  *  e3e378125 - FEM: unit tests, add tests for cantilever examples
+  *  103f87ca6 - FEM: unit tests, add test for node load example
+  *  b51f966c2 - FEM: unit tests, add test for edge load calculation
+    example
+  *  052448e61 - FEM: examples, add node load calculation example
+  *  2306afbb5 - FEM: examples, add edge load calculation on twisted
+    hollow profile
+  *  6291471e0 - FEM: fix unit test after coverity test
+  *  c47eaa36e - FEM: coverity, some left outs
+  *  15495db5d - FEM: coverity, control flow issues
+  *  a10f19f0a - FEM: coverity, Null pointer dereferences
+  *  33f716d78 - FEM: elmer and z88 writer, add input files directory
+    print
+  *  ff8517752 - FEM: elmer tasks, better handling of not available
+    elmer env variables
+  *  5b6755989 - FEM: examples, selfweight elmer, change solver
+    attribute
+  *  b25dee58d - Coverity: Uninitialized scalar/pointer field
+  *  67bf5445b - Coverity: Unchecked return value
+  *  b480a207c - Coverity: Uncaught exception
+  *  aff2e5a76 - Gui: Optimize ViewProviderDocumentObject::getDocument()
+  *  51585ac4a - Coverity: Not restoring ostream format
+  *  83cc9e958 - Coverity: Useless call
+  *  45b755a59 - Coverity: Unchecked dynamic_cast
+  *  1a16cde1f - Coverity: Structurally/Logically dead code
+  *  410e65ce2 - Coverity: Suppress false-positives
+  *  e83dd3c0c - Coverity: Using invalid iterator
+  *  60b491833 - Coverity: Explicit null dereferenced
+  *  6dc9a89d9 - Coverity: Empty virtual destructor
+  *  43d9e82f9 - Coverity: Uncaught exception
+  *  2ee8ad185 - Coverity: Division or modulo by float zero
+  *  4a494fec6 - Coverity: Dereference null return value
+  *  a2f3c5129 - Coverity: Dereference before null check
+  *  421f6c52c - Coverity: Dereference after null check
+  *  433ec2d6e - Coverity: Copied into fixed size buffer
+  *  aa3fde2da - Coverity: Big parameter passed by value
+  *  d26aafa83 - Coverity: Argument cannot be negative (actually a bug
+    by using the wrong index variable)
+  *  0e279348f - Coverity: Use after free (_removeObject may delete the
+    DocumentObject)
+  *  0b45b1134 - Coverity: Resource leak
+  *  12670655a - Coverity: Uninitialized scalar variable
+  *  591987443 - Coverity: Invalid printf format string
+  *  14d08db7f - FEM: migrate tools, fix github links
+  *  95f611f0b - FEM: writer base: use warning instead of error message
+  *  a0480dc62 - fixed door open plan symbol  and make makeWindow use
+    name parameter
+  *  5b56ce4d1 - [openscad] mirror mesh feature -- rename
+    OpenSCADUtils.mirror() to OpenSCADUtils.mirrormesh(), and provide
+    some better interactive help information when typing
+    OpenSCADUtils.mirrormesh() into the python console
+  *  2c0b49ea4 - [openscad] mirror mesh feature -- separate gui from
+    function
+  *  92b14ba16 - [openscad] fix refine shape feature
+  *  a1d7b128d - [openscad] add updated icon to qrc file
+  *  6ab472612 - [openscad] work on icon for mesh mirror
+  *  4c259e43b - [openscad] add icon for mirror mesh feature
+  *  c5b93d698 - [openscad] add ulrich's mirror mesh macro, fix error in
+    refine shape
+  *  d106be0b9 - Draft: add Draft Layer unit tests
+  *  831e51771 - Draft: migrate Layer object and function to the new
+    structure
+  *  cdc6c5f54 - Draft: move GuiCommand for Draft Layer to its own
+    module
+  *  54aa70614 - Mod/Web: Use of deprecated not thread-safe setter, use
+    setUrlRequestInterceptor instead.
+  *  4e36cde00 - [ArchWall] Failed if Sketch as Base has Point, now OK
+  *  8565736de - avoid saving to parameters if new shortcut is the
+    default, better check for if setting shortcut was success
+  *  43be29c3b - return false when unable to set shortcut
+  *  42a4b11d1 - convert tab to spaces
+  *  c437ab007 - move preprocessor directives back to column 1
+  *  5c42e35f5 - remove some commented lines
+  *  5f347447b - [Python Gui] add new command Gui.setCommandShortcut(),
+    fix bug in Gui.getCommandShortcut() and Gui.getCommandInfo() where
+    user has changed shortcut via customize dialog, but these 2 commands
+    returned previous default information
+  *  ac8259e56 - [Standard Views] change preference label to default
+    camera orientation
+  *  78cd1790d - [Standard Views] add Home view command.  Default
+    shortcut is 'Home' key.  Restores camera orientation to current home
+    view, configurable in edit menu -> preferences -> display ->
+    navigation -> New Document Camera Orientation / Home view.
+  *  ce18f6afd - FEM: elmer tasks, comment regression added with
+    ece663444cac
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 30 Jul 2020 08:34:08 +0300
+
 freecad-daily (0.18.3+git22039-2bfc6301b-1) unstable; urgency=medium
 
   * Compile
