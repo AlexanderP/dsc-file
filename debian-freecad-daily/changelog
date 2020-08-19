@@ -1,3 +1,155 @@
+freecad-daily (0.18.3+git22262-f56825c79-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: f56825c79f11b75648a7a0dcc8a9f52bb4574e61
+  * Date: 1597412234
+  * git changelog:
+  *  f56825c79 - [TD]handle bad preferences in AppImage temp dir
+  *  1c432fd61 - Sketcher: [skip ci] add function to sketch validation
+    panel to remove degenerated geometry
+  *  023f77977 - Sketcher: [skip ci] remove superfluous semicolons
+  *  9c17fe359 - Part: [skip ci] fixes #0004117: Crash during extrusion
+  *  77dc31d9a - Gui: [skip ci] fix warning when opening recovery dialog
+    in debug mode
+  *  93bb9646c - plugin: [skip ci] add custom widgets Gui::IntSpinBox
+    and Gui::DoubleSpinBox
+  *  0811c6143 - Fix non-center aligned wall with multimaterial
+  *  fdbfee279 - Arch: clean up message printing during IFC import
+  *  bef440f2b - Arch: small cleanup of IFC helper module
+  *  c1476cd96 - Arch: small cleanup of IFC importer and exporter
+  *  024ae4dd9 - Fix a typo in draft snapping
+  *  72ec8445f - Draft: Offset save and restore the value of OCC
+    checkbox
+  *  f97d27cb5 - Fix placement of rebar wires in Draft.getSVG.py
+  *  102cfb4a7 - [Draft - geotuils.offsets]  Fix To Work with Sketch
+  *  7a4107862 - [Draft - geoutils.offsets]  Fix Circle and Arc Offset
+    Direction
+  *  d51955f65 - Draft: makeLayer, small adjustments to keep
+    compatibility
+  *  abd18ff88 - [TD]fix showSectionEdge preference
+  *  50aa73da9 - PD: [skip ci] add missing forward declaration
+  *  a8ea844e0 - [PD] [skip ci] add Sketch top level menu
+  *  acecdd8c5 - [PD] allow expression for pocket offset
+  *  17cd64934 - Part: code simplifications and sorting
+  *  26ebfbf84 - code simplifications and sorting
+  *  3ce634b12 - TaskFaceColors.cpp: correctly end box selection if
+    necessary
+  *  da08611c4 - [Part] FaceColors cleanup
+  *  f9cbec0d5 - Improve the projection on surface algorithm. For now
+    the first possible solution was taken. If several solution exists,
+    this leads to a miss match. Now check the distance of the projection
+    shape and the original shape and the take the projection with the
+    smallest distance. Discussion can be found here:
+    https://forum.freecadweb.org/viewtopic.php?f=8&t=49341&p=422925#p422
+    925
+  *  940c27288 - [PD] [skip ci] disable keyboardTracking for primitives
+    and attachment
+  *  6d56b3e3b - plugin: [skip ci] fix of QuantitySpinBox to not remove
+    value property from existing files
+  *  050356aa5 - plugin: [skip ci] add new signal textChanged() to
+    QuantitySpinBox
+  *  068bfc2eb - plugin: [skip ci] fix warnings
+  *  47d4db552 - plugin: [skip ci] make QuantitySpinBox inside plugin
+    functioning
+  *  8db4149c8 - [Tools] add PrefQuantitySpinBox to designer
+    plugins/widget/FreeCAD_widgets.vcxproj
+  *  278219b7c - PartDesign: [skip ci] fix broken tooltip of Pad
+    property
+  *  81a98a447 - [PD] bind expression to pad offset
+  *  40bbe3515 - Base: [skip ci] add an enum for unit schemes in Python
+    to avoid to work with numbers
+  *  557f5f30a - FEM: elmer writer, make use of new unit schema FEM: mm,
+    N
+  *  785295762 - Base: add new unit schema for mm and N for use in FEM
+  *  49a5f554f - Gui: fix
+    ViewProviderPythonFeature::getLinkedViewProvider
+  *  59e3ea096 - Crowdin: Merge new translations [skip-ci]
+  *  6cf5119b5 - Part: [skip ci] move grid handling from
+    ViewProvider2DObject to ViewProvider2DObjectGrid
+  *  da5bd6594 - Part: [skip ci] move grid handling from
+    ViewProvider2DObject to ViewProvider2DObjectGrid
+  *  6592a76ac - Part: [skip ci] use of ViewOrthoProjMatrix in
+    ViewProvider2DObject::updateData to compute the grid
+  *  86658c339 - [GUI/Sketcher] Add option to disable grid auto-sizing
+    based on shape boundbox
+  *  0dff8a661 - Base: [skip ci] add class ViewOrthoProjMatrix for
+    orthogonal projections in 3d
+  *  4ce85d39d - [PD] patterning UI: avoid whitespace
+  *  64200d828 - [TD]add py getEdgeBySelection
+  *  1ce486f17 - [OpenSCAD] Add 2 new commands: Scale and Resize, fix
+    bug in Mirror mesh feature
+  *  c516bb06d - PartDesign: [skip ci] add text of sub-menus to
+    translation system
+  *  80a88470b - [PD] rework menu
+  *  ee383b7ae - [Gui::CommandPy] add new command resetShortcut() --
+    resets shortcut to default
+  *  361f56ddd - Fix COPR rawhide builds
+  *  ad7fbee06 - Part: [skip ci] fix crash when closing document while
+    face colors panel is open
+  *  828078379 - OpenSCAD: [skip ci] set default of 16 for useMaxFN
+    parameter
+  *  4c1f029c2 - OpenSCAD: [skip ci] set default of 16 for useMaxFN
+    parameter
+  *  9c3f9b72a - App: improve support of portable version of FreeCAD
+  *  76e742948 - Gui: [skip ci] set Gui.listCommands to keep old code
+    working
+  *  0cf8279f0 - [Gui Commands] new command:
+    listCommandsByShortcut(string) -- returns a python list of all
+    commands that are using the shortcut.  Search is case-insensitive
+    and ignores spaces
+  *  9b529bc45 - Gui: [skip ci] move Python functions for commands to
+    its own class
+  *  c7d34929a - Path: Fix reference to undefined `ns`, and adjust
+    comments
+  *  2528898cb - Path: Fix the rotational `LimitDepthToFace` feature
+  *  986775ec1 - Path: Fix `InverseAngle` feature
+  *  069768669 - Path: PocketShape - Fixes ticket #4411
+  *  ed4876abb - Gui: add an option to also suppress normal messages
+  *  a41ad338e - [report view] add preferences to report view context
+    menu
+  *  488419cd7 - Part: fix FaceMakerBullseye plane finding
+  *  989519e00 - [TD]Fix extent dim for edge collection
+  *  4a5cca335 - PartDesign: fix pattern transformation
+  *  aefe6e179 - App: [skip ci] for a recompute do not report every
+    exception as error
+  *  a9af41869 - PartDesign: [skip ci] move indexesMoved() to base class
+    TaskTransformedParameters to avoid code duplication
+  *  d5787f9bd - [PD] allow to change feature order in patterns
+  *  3600ccae8 - FEM: examples, fix another non ascii character
+  *  74ab9ccd9 - Crowdin - Fix typos found by translators + Random typos
+    [skip-ci]
+  *  55445f1af - FEM: examples, fix non ascii character in code
+  *  94ca4388e - PartDesign: [skip ci] set dragDropMode of list widgets
+    of Transform panels to 'InternalMove'
+  *  64c9fa0da - Py2: fix Python2 builds
+  *  6903b4fe6 - ReverseEngineering: [skip ci] do not explicitly use
+    boost::shared_ptr because pcl11 now uses std::shared_ptr
+  *  a1f418710 - [Win installer] remove FindProc plugin
+  *  47aeb41b8 - [Win installer] add missing translations
+  *  71d64a7bf - Crowdin: Fix superfluous newlines + uniformity [skip-
+    ci]
+  *  598baecd3 - Part: move Shape view properties to Part design
+    preferences
+  *  2a8fe5103 - [App/Gui] improve coding style
+  *  c5e2aba15 - [PD] allow multiselection on creation of pattern
+  *  10e697f5b - FEM: improve short cuts
+  *  25da304b5 - Arch: further small fixes in importIFC
+  *  7dc66ce11 - Arch: simple cleanup to the importer, spacing, and PEP8
+  *  9728cf15f - FEM: square pipe examples, typo corrected for
+    consistency
+  *  499eb8d07 - FEM: examples, add electrostatics electricforce example
+  *  7bb3506c4 - FEM: examples, added capacitance two balls example
+  *  6d5b0432e - FEM: examples, bimetall, add solver elmer
+  *  50566cff2 - FEM: examples, add constraint transform beam hinged
+    example
+  *  b737ed6a5 - FEM: examplesgui, enhancements
+  *  30a87fa0e - FEM: examplesgui, setting default solver to None
+  *  74ffe857d - Arch: export IFC, better default preferences
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 15 Aug 2020 12:39:34 +0300
+
 freecad-daily (0.18.3+git22164-f2a9f712e-1) unstable; urgency=medium
 
   * Compile

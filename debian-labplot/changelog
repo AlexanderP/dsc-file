@@ -1,3 +1,215 @@
+labplot (2.7.0+git7642-790960a8f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 790960a8f9b336fad62a6e649e29a2c2d8a667b1
+  * Date: 1597131691
+  * git changelog:
+  *  790960a8f - Removed the "show memory usage" from the settings
+    dialog.
+  *  d00c904ba - [worksheet] if we have double values for axis tick
+    labels, we don't want to show them as integers, keep at least one
+    float digit.
+  *  947380736 - Moved the option to show or hide the memory usage from
+    the application settings to the main menu "View".
+  *  67978e765 - Save and restore the position of the dock widgets
+    (project and properties explorers).
+  *  d43360756 - Fix attribute name
+  *  fcf1787c2 - [worksheet] improved the calculation of the plot ranges
+    with auto-scale option active: 1. don't take the size of the error
+    bar caps into account, the current algorithm is not complete and
+    it's ok if we ignore the caps and plot them on top of the axes. 2.
+    when calculating mi and max values of a curve, ignore the values in
+    the error columns if the error type is NoError.
+  *  85e083a2d - Removed the actions to toggle the properties and
+    project explorers from the rc-file. This is done now manually in the
+    code.
+  *  c0a19b8be - [worksheet] properly handle asymmetric error bars for y-
+    data.
+  *  9c9d9b8c2 - Moved the actions to show/hide project and properties
+    explorers to the main menu "View" and added also an action to
+    show/hide the status bar.
+  *  68b444118 - [import] minor improvements in the ImportFileWidget: 1.
+    showing the content of the file can be expensive, show the wait
+    cursor here. 2. clear the privous content of the model in
+    JsonOptionsWidget when a new JSON file is loaded.
+  *  f6819f91f - [json import] further fixes and optimizations: 1.
+    create QJsonModel in JsonFilter when executing the tests since no
+    model is available in this case. 2. use the already available full
+    JSON document in the prepare step when the root element is selected,
+    no need to re-create it again.
+  *  95072f26d - minor fixes
+  *  1df3dc04b - [json import] create the QJsonModel only once and use
+    it in JsonFilter and in JsonOptionWidget to reduce the memory
+    consumption.
+  *  1661b51ff - [worksheet] don't draw the caps of the error bars when
+    the length of the error bars itself is zero.
+  *  dfa907867 - [worksheet] allow to choose a column in a workbook
+    spreadsheet as a custom column for the position of axis ticks.
+  *  677ef400d - [worksheet] fix the mouss press event in Axis. This
+    fixes the regression with axis being not selectable via mouse click.
+  *  670f5e959 - [fit] Check if chi is zero instead of chi^2 to avoid
+    precision problems
+  *  e37cefcd9 - [fit] Improve cases when chi^2 gets zero
+  *  8ec710c68 - [axis] fix crash fitting data with zero y range
+  *  790f9f06b - [fit] Improve Debugging and fix showing data x range
+  *  c8683edd5 - [locale] Show actually used language in about dialog
+    when changed in 'switch application language'
+  *  6b6fb4a6a - [json import] further optimizations in QJsonModel.
+  *  ca1780ec3 - [json import] performance optimizations in QJsonModel.
+  *  178a44fad - [json import] use only comma and point characters
+    instead of different languages for the decimal separator and added
+    the missing changes from the previous commit that broke the build.
+  *  52e42917c - [json import] avoid copying internal JSON structures
+    where reading data or generating the preview. Much faster import.
+  *  b1f0789a1 - [json import] take the number of lines for the preview
+    specified by the user also for JSON files.
+  *  cbd71a551 - [fit] Calculate and show correlation matrix
+  *  65c9a8844 - [macOS] install datasets
+  *  e07716b73 - Fix compilation with older Cantor installed
+  *  59c78fa6e - No need to check for Cantor presence in
+    CantorWorksheet.cpp. This is already done in CMakeListst.txt.
+  *  ee32369c0 - Cleanup
+  *  63ce7336c - Make Qt5SerialPort optional
+  *  7b7d1f98c - Fix missing cantor message and missing QFile include
+  *  33f454618 - [cantor] Set minimum version to 19.12
+  *  58e973189 - [cas] properly set the python backend name when
+    openning Cantor projects (native or Jupyter).
+  *  f302ab617 - [worksheet] don't crash when a zero size for the image
+    element was provided.
+  *  3f6231251 - [cas] react on requests to show the panel for the
+    integrated help in Cantor.
+  *  54a190aad - Added missing signal-slot connection for changing the
+    visibility in the analysis curves dock widgets.
+  *  9544ffd5a - [locale] Only set automatic when default
+  *  8ca10f860 - [cantor] header fixes
+  *  506cbc4f5 - [cas] new signal-slot syntax in CantorWorksheetDock.
+  *  da5f20635 - Added missing changes in CantorWorksheet.cpp.
+  *  9a7207370 - [cas] adopted to the recent changes in Cantor where the
+    panel plugin handler is not part of the KPart-component and needs to
+    be created separately.
+  *  e0ad3ee3c - [xycurve] Improve debugging
+  *  103d81e87 - Fix typo
+  *  6ec3fe8f6 - Avoid compiler warnings using newer Qt
+  *  c5014a924 - Fix a few Qt 5.15 deprecation warnings
+  *  dfb5bc832 - Allow to change the visibility of worksheet elements
+    with the blank key.
+  *  09f7ba9cd - [locale] simplify setting locale on filter
+  *  29243f35f - Moved the common locale specific code in the filter
+    classes to the base class.
+  *  50141c1b7 - [spreadsheet] update the locale on locale setting
+    changes.
+  *  3ace91b64 - Locale updates in Datapicker widgets.
+  *  5e22cb8bd - [worksheet] further improvements in the handling of
+    locale setting changes: 1. initialize the locale in the constructors
+    of dock widgets and update it later on setting changes. No need to
+    set the locale every time the the selection in the project explorer
+    is happening - settings are changed less frequently than the
+    selection in the project explorer.
+  *  659eb2a8c - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  e91fd94b6 - [locale] fix generate equidistant values
+  *  4dafee795 - [worksheet] drag the plot axis to change the visible
+    data region.
+  *  37eede8ec - [debug] clean up
+  *  b20872ffa - [locale] more fixes in spreadsheet
+  *  50059f9ee - Avoid plot range changes when making the plot invisible
+    and visible again.
+  *  5f168a585 - Avoid the selection change in the project explorer when
+    making plots invisible.
+  *  6a51387c8 - Properly update the locale in QLineEdit widgets in Plot
+    and Axis properties widgets.
+  *  3ace9550f - [locale] start using number locale in spreadsheet
+  *  4d8b5e24d - [locale] avoid missing group separator of C locale and
+    problems related
+  *  1962d6727 - [settings] don't crash changing settings without a
+    project
+  *  35061007b - Capital letters in the spreadsheet settings page and
+    better TAB-ordering in the histogram properties widget.
+  *  cb91006d6 - [worksheet] allow to zoom along the axis with the mouse
+    wheel if the axis is under the mouse, no need to select it anymore.
+  *  876a35001 - Automatically update locale dependent widgets in Axis,
+    Curve and Label properties widgets on settings changes.
+  *  50827d7b3 - Don't crash when copying the fit results.
+  *  51b6b612f - Automatically update locale dependent widgets in
+    Worksheet and Plot properties widgets on settings changes. Needs to
+    be done similarly for all other properties widgets.
+  *  65d9e0e04 - Update the spreadsheets on header settings changes
+    directly without restarting the application.
+  *  0ffcaa2c3 - fixuifiles
+  *  3d752fb8e - Only save the settings in the different pages of the
+    settings dialog if there were any changes done there.
+  *  a98bdcae0 - Settings page for Spreadsheet to allow the user to
+    modify the appearance of the spreadsheet header (show column type
+    and plot designation or not).
+  *  977489b91 - Removed the additional if-statement in
+    SettingsGeneralPage::decimalSeparatorLocale() since this case is
+    also handled later in the switch-case statement. This caused the
+    selection "Comma" being not saved properly.
+  *  802cbb532 - [locale] show arabic decimal separator
+  *  2bb5ea08c - [locale] Improve number locale settings and usage
+  *  b65f506aa - [locale] show current number locale in about dialog
+  *  dc16327eb - [locale] Add automatic option for number locale
+  *  6bd96bf50 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  7e2b89adf - [mac os] updated kdmactouchbar to a newer version to
+    make the code compile with Qt 5.15.
+  *  ee9c34666 - GIT_SILENT changelog
+  *  a495f557c - [locale] Number locale in random values dialog
+  *  fafa93f61 - [locale] Use number locale in most dialogs
+  *  260ce708c - Switched from QMap to std::unordered_map in the
+    calculation of the column statistics.
+  *  40b12032a - Don't block the UI when showing the statics for big
+    columns in the Statistics Dialog.
+  *  a38645dac - [locale] Use number locale in double spin boxes of all
+    docks
+  *  5384d04fa - [locale] use number locale in more double spin boxes
+  *  bf2efb37c - [locale] Use locale in spin boxes of cartesian plot box
+  *  4098be089 - [locale] Use general decimal separator for axis tick
+    label
+  *  0b8318301 - [locale] Number locale fixes
+  *  1d3e2d428 - [locale] use number locale from settings
+  *  c2ec5abdc - [locale] use number locale in axis dock
+  *  4c541beb2 - [settings] Add decimal separator selection
+  *  9da04c544 - Changed the order of "Export" and "Import" actions in
+    the project toolbar to be more consistent with the order in the main
+    menu and also with the order for "Open" and "Save" actions.
+  *  a46f3fb96 - [about] Extend locale info
+  *  bbcbf98ce - [sql import] fixed showing the data type in the preview
+    table.
+  *  49a001aac - [spreadsheet] instead of asking the user to provide the
+    locale in the export dialog, ask explicitly for the decimal
+    separator (point or comma).
+  *  14fc2f1b8 - [spreadsheet] properly determin the last row to export
+    if we export a spreadsheet with integer column(s).
+  *  a2a6e9714 - [sql import] instead of asking the user to provide the
+    locale, ask  explicitly for the decimal separator (point or comma).
+  *  bf4e9fbc8 - [ascii import] instead of asking the user to provide
+    the locale, ask explictely for the decimal separator (point or
+    comma).
+  *  708a25d07 - [locale] matrix, etc. and analysis docks
+  *  ef98d4d91 - Improved the wording for newly created objects in the
+    plot data dialog.
+  *  e0e46e862 - [locale] axis and histogram dock
+  *  f9866b4e9 - [locale] fit dock and plot dock fixes
+  *  928e7506c - [locale] Fix in fit parameter widget
+  *  45309a1f4 - typo
+  *  c6c8bc1c4 - GIT_SILENT changelog
+  *  81f8b5fca - Fix locale of line edits in fit options widget and
+    related improvements
+  *  0b274be2f - [backend] Improve Range class
+  *  4de64b345 - [plot] Fix using system locale in range line edits
+  *  0617ab9e3 - [about] show system locale
+  *  3f01893f8 - Better calculation of the fixed side of ThemesWidget.
+  *  105908783 - [test] help MSVC to deduce correct type
+  *  39b896c5e - CID 202495
+  *  4f2ff300e - Range.h
+  *  4c0119f2b - Add Range class and use in fit
+  *  7151383b6 - [coverity] CID: 211328, 211326, 21330.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 15 Aug 2020 22:41:39 +0300
+
 labplot (2.7.0+git7525-d0b0eaa46-1) unstable; urgency=medium
 
   * Compile

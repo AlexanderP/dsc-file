@@ -1,3 +1,44 @@
+pinta (1.6+git1905-ead3d82c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/PintaProject/Pinta.git
+  * Branch: master
+  * Commit: ead3d82cfdc440c3408b048b056d127322138236
+  * Date: 1597420112
+  * git changelog:
+  *  3806401b - Add release notes for 1.7 to appdata.
+  *  f334a096 - Update the changelog with recent contributions.
+  *  50150868 - PintaCanvas: Implement horizontal scrolling using Shift-
+    MouseWheel
+  *  aff7188b - PintaCanvas: Cleanup source
+  *  7b26cc90 - Fix URLs in appdata.
+  *  aca36cd8 - Update the changelog for the 1.7 release.
+  *  e2f94d52 - Also add the tests folder to the `make dist` target.
+  *  f4298c4d - Add Pinta.Docking to the `make dist` target.
+  *  4db6f5b8 - Fix the Ubuntu CI build.
+  *  a1573dd5 - Bump version numbers for the next round of development.
+  *  1c85a464 - Pull in the latest translations.
+  *  180c1998 - Link to the new mailing list, and update the GTK#
+    installer link.
+  *  fbc04f5c - Fix a bug exposed by 9c0e401b
+  *  9bc50c71 - Error if no files are found to upload
+  *  efab0f1a - Fix incorrect detect condition, which was flipped
+    around.
+  *  e795081e - Add missing InstallCondition attribute, which seems to
+    be required.
+  *  4547f03b - Use a bool for whether the registry key exists.
+  *  7b03bf9d - Add missing /install command.
+  *  3301d0ac - Set Format="raw" for the registry search, since we don't
+    want any extra prefixes.
+  *  ad26f70e - Attempt to fix the registry check.
+  *  0bba0313 - Install the redistributable exe instead of the merge
+    module.
+  *  f19655b1 - Install the VC 2013 runtime.
+  *  09477df8 - Adjust the default installation paths to follow the
+    InstallPrefix property.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 15 Aug 2020 22:28:25 +0300
+
 pinta (1.6+git1879-7925b841-1) unstable; urgency=medium
 
   * Compile

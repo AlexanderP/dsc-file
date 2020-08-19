@@ -1,3 +1,32 @@
+solvespace (3.0.0~git1552-bc4924a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: bc4924ae471bc01d70d9a19e10ad347a7b87cf1c
+  * Date: 1597437549
+  * git changelog:
+  *  bc4924a - Don't duplicate points when connecting contours with zero
+    length bridge. Fixes #303
+  *  04b332d - Ratpoly - Less noise in terminal. Comment out expected
+    dbg print and try harder to converge.
+  *  4cceaa5 - NURBS boolean improvement.
+  *  f952991 - Fix issue161 and 174. Use the same logic for selction and
+    dragging, but ignore entites that are inherently undraggable.
+  *  575ddb5 - Add a pass in triangulation to create convex triangle
+    fans. These triangles will have smaller bounding boxes and look
+    better.
+  *  b3eb589 - Fix issue659 - Problems constraining to ends of Helix.
+  *  6ae417a - Update mimalloc to v1.6.4
+  *  a296220 - Improve text screen for a selected entity.
+  *  afa9e28 - Improve text screen for a selected constraint.
+  *  fef6a39 - Don't init srand(0) because rand isn't used any more.
+  *  3c2f82b - Remove the Random() function and use a fixed table of
+    arbitrary vectors in raycast.cpp
+  *  fd2dfe8 - Fix #656 by making SSurface::SplitInHalf thread safe.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 15 Aug 2020 23:34:04 +0300
+
 solvespace (3.0.0~git1540-d8b76ef-1) unstable; urgency=medium
 
   * Compile
