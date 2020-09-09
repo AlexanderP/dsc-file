@@ -1,3 +1,65 @@
+freecad-daily (0.18.3+git22298-dbcf003f3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: dbcf003f3422b64d9410f7e17abfa25c1fde97c4
+  * Date: 1598533890
+  * git changelog:
+  *  dbcf003f3 - Mesh: [skip ci] fix bug in binary PLY export for mesh
+    with colors
+  *  b0f78f5a3 - Mesh: [skip ci] improve support of asymptote export
+  *  dd7afa72d - Mesh: [skip ci] adjust
+    MeshInput::supportedMeshFormats()
+  *  58a92681c - Mesh: [skip ci] improve support of asymptote export
+  *  50bbd5228 - Mesh: [skip ci] improve support of asymptote export
+  *  4badaba52 - Mesh: [skip ci] support of asymptote export
+  *  f09d48d0f - Mesh: [skip ci] fix bug in Mesh.export when passing a
+    custom tolerance value
+  *  30bc9fc6b - [PartDesign] [skip ci] #fixes 4367: Thread size out of
+    range using hole-feature
+  *  c714dd0a7 - [Report View] fix inconsistencies
+  *  227e88871 - Mesh: correct display of bounding box values
+  *  6152ad402 - Add SVG icons for MeshWB
+  *  2ea94bee6 - Part.Curve2d : adjust parameters
+  *  f50415291 - Part.Curve2d : fix for toShape sometimes generating
+    wrong BSpline curves
+  *  ff57ddeb6 - Gui: Add missing SoSubEvent.h header to
+    SoMouseWheelEvent.h
+  *  bf1e8e483 - App: fix crash due to incorrect usage of std::mismatch
+  *  4b7e64381 - Gui: avoid code duplication in NavigationStyle and
+    remove superfluous doZoom_wheel method
+  *  b200801eb - Gui: use SoMouseWheelEvent in navigation styles
+  *  68848ea9f - Gui: implement SoMouseWheelEvent
+  *  666682d4e - [PartDesign Hole] Restore value of reversed checkbox
+    when opening dialog
+  *  faed39ded - [PartDesign Hole] Add reversed checkbox to dialog
+  *  f6411f822 - 3DConnexion SpaceBall and configuration dialog
+    improvements
+  *  cc81f791d - [TD]change Angle Dim tolerance format
+  *  bba3d2a32 - fix long spiral bug similar to #954. Work around OCC
+    bug #23314
+  *  d4a727e77 - Mesh: grouped view properties in ViewProviderMesh
+  *  32a05f360 - PointsGui: ordered ViewProvider view properties
+  *  9b71dd77b - Part: grouped ViewProviderExt subdivided view
+    properties
+  *  a262b11cd - Gui: divide ViewProviderGeometryObject properties into
+    groups
+  *  26ac41f93 - Gui: attempt to reorder ViewProviderDocumentObject
+    properties
+  *  45d28c236 - Sketcher: workaround for cursor pixmaps created from
+    SVG icons
+  *  b53326b38 - High DPI support: Scale Draft cursor to device pixel
+    ratio
+  *  7a0aec121 - High DPI support: Convert sketcher cursors to SVG
+  *  1cad17c5f - [TD]draw line through 2 points
+  *  1a6bbf812 - Mesh: [skip ci] Save icon as normal SVG file
+  *  2d71c5176 - Add SVG icon for Mesh FillupHoles command in MeshWB
+  *  9c20a1f6b - Part: rename to uppercase, Part_ProjectionOnSurface
+  *  71cf0e64f - Part: fix typos in source function names and variables
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 27 Aug 2020 22:36:45 +0300
+
 freecad-daily (0.18.3+git22262-f56825c79-1) unstable; urgency=medium
 
   * Compile

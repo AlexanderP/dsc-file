@@ -1,3 +1,32 @@
+scantailor-universal (0.2.8+git1466-141d6006-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/trufanov-nok/scantailor.git
+  * Branch: master
+  * Commit: 141d6006dc32b1abf1f28a573f80e003aaaa8cb7
+  * Date: 1598058738
+  * git changelog:
+  *  141d6006 - Improve Zone dragging behaviour
+  *  3a41fe11 - Fix some static analyzer warnings
+  *  ed42dfe2 - Format the code with astyle
+  *  838f0b53 - Minor fix
+  *  d47076a7 - fixed incorrect link for "Heroes and Cobblestones"
+  *  9020993b - Remove unneeded comparisons (fix warnings from LGTM)
+  *  c9b247ea - Remove const modifiers which have no effect (fix
+    warnings from LGTM)
+  *  76f9f967 - Fix wrong function call in
+    ImageViewBase::mousePressEvent
+  *  d73bd97a - Pass large objects by reference (fix LGTM hint)
+  *  873c2fec - Rename output binaries To scantailor-universal and
+    scantailor-universal-cli
+  *  bbd846c0 - Change project URLs from /scantailor to /scantailor-
+    universal
+  *  b3bcfbc2 - Remove uneccessary call to toGrayscale
+  *  6253b5b0 - Replace foreachs, assure const for-all don't detach Qt
+    containers
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 28 Aug 2020 04:07:10 +0300
+
 scantailor-universal (0.2.8+git1453-7c6d9455-1) unstable; urgency=medium
 
   * Compile

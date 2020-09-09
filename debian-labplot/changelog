@@ -1,3 +1,26 @@
+labplot (2.7.0+git7646-23ad5e48f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 23ad5e48f3b91c2738f01407f674ed7bc8a6ac1c
+  * Date: 1598270924
+  * git changelog:
+  *  23ad5e48f - [worksheet] added a safety check in
+    AxisPrivate::upperLabelsPrecision() for the case when no tick labels
+    are available. This avoids crashes with some project files during
+    the project load. The reason for absent tick labels at this stage
+    still to be understood.
+  *  0365171e0 - [import] in the options widgets for the import from
+    ASCII files and from SQL databases allow to save custom datetime
+    formats specified by the user. Reported in BUG 425337.
+  *  b2a685ec9 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  2df9703d2 - Save and show the last used SQL query for every
+    connection in the database import dialow.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 28 Aug 2020 08:28:28 +0300
+
 labplot (2.7.0+git7642-790960a8f-1) unstable; urgency=medium
 
   * Compile

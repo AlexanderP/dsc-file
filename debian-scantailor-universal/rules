@@ -35,7 +35,7 @@ override_dh_auto_test:
 
 override_dh_install:
 	dh_install
-	mv $(CURDIR)/debian/scantailor-universal/usr/bin/scantailor \
-	$(CURDIR)/debian/scantailor-universal/usr/bin/scantailor-universal
-	mv $(CURDIR)/debian/scantailor-universal/usr/bin/scantailor-cli \
-	$(CURDIR)/debian/scantailor-universal/usr/bin/scantailor-universal-cli
+	#mv $(CURDIR)/debian/scantailor-universal/usr/bin/scantailor \
+	#$(CURDIR)/debian/scantailor-universal/usr/bin/scantailor-universal
+	#mv $(CURDIR)/debian/scantailor-universal/usr/bin/scantailor-cli \
+	#$(CURDIR)/debian/scantailor-universal/usr/bin/scantailor-universal-cli
