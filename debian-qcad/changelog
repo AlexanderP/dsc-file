@@ -1,3 +1,40 @@
+qcad (3.24.0+git7836-eac5ba7e9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: eac5ba7e9064a8b8b5cb728f1956708a85787cb0
+  * Date: 1600171681
+  * git changelog:
+  *  eac5ba7e9 - add rotation option for rectangle from 2 points
+  *  40022f543 - update experimental code
+  *  aca76612c - fix block dialog: select text in block name line edit
+    when creating new block
+  *  eb123d738 - update script bindings
+  *  2dd09bb38 - improve exploding of polylines with segment widths
+  *  c18ecd226 - add isSplineEntityWithFitPoints
+  *  6e87085c8 - add getReversed, getLeftRightOutline (proxy)
+  *  d223d5b95 - add RSpline::removeFirstFitPoint
+  *  c7151bbce - add standard warning
+  *  98f92a5a2 - performance: avoid unnecessary bounding box
+    calculations
+  *  bbcd195f1 - update script bindings
+  *  3d298f186 - add additional, faster check based on RTTI
+  *  6a8cd87fd - add static QRegExp object for reusage (performance)
+  *  298f718b8 - make sure dimensions don't loose connection to
+    dimension block on update (preferences)
+  *  4a6150149 - fix icon
+  *  753946188 - set version to 3.25.2
+  *  c07edd551 - update icons
+  *  db3bce724 - optimize / refactor icons
+  *  56bdf033b - optimize / refactor icons
+  *  29c11653b - add test mode to run tests with deployed binaries
+  *  c03c932c4 - set version to 3.25.1
+  *  bfc5f859a - update FlexPainter
+  *  cdf0a74f9 - extend file lookup
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 16 Sep 2020 09:46:24 +0300
+
 qcad (3.24.0+git7812-56ab0d78d-1) unstable; urgency=medium
 
   * Compile

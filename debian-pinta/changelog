@@ -1,3 +1,39 @@
+pinta (1.7+git1930-1f182bb9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/PintaProject/Pinta.git
+  * Branch: master
+  * Commit: 1f182bb9b369350344f0db3f58d5e7a1b32784f0
+  * Date: 1600289072
+  * git changelog:
+  *  1f182bb9 - Update the changelog.
+  *  ae5625b8 - Comply to code style
+  *  3915f8e9 - Add shortcut key for switching palette color
+  *  57e37699 - Make the zoom percentage parsing more robust.
+  *  3e5ab971 - Update the changelog
+  *  23bfcb5d - Fix screenshot link.
+  *  f99b009e - B-1558767 Refactoring.
+  *  4317a012 - B-1558767 Removed tuple because of its uselessness,
+    created one unite counter for all tools, fixed a few bugs.
+  *  fa9d8a9e - B-1558767 Refactored FindNextTool() method in order to
+    simplify it.
+  *  a59523b5 - B-1558767 Refactor dictionary of groupedTools to keep it
+    up-to-date.
+  *  5cfa2c9d - Changed the way of choosing tools to make behavior of
+    the shortcuts more predictable. Added LassoSelectTool "S" shortcut.
+  *  ea2df81d - Add a changelog entry for bug 1856821
+  *  a529fe5b - Check for existing of importer for the format (instead
+    of exporter).
+  *  55559bd8 - Check for existing of exporter for the format.
+  *  6913d7ca - Wrapped string with Catalog.GetString() for translations
+    support.
+  *  6fb9a6ef - Update Pinta.Core.csproj
+  *  426e205f - Changed the text of message.
+  *  3646b003 - Created new Dialog window for "Unsupported Format"
+    exception. Bug-1856821
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 17 Sep 2020 09:52:24 +0300
+
 pinta (1.6+git1905-ead3d82c-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,167 @@
+freecad-daily (0.18.3+git22410-abfb6e844-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: abfb6e8444097594bfad9ec8257730bfce8e87ce
+  * Date: 1599834342
+  * git changelog:
+  *  abfb6e844 - fix typo in src/Gui/DlgPropertyLink.ui [skip-ci]
+  *  33adc5778 - QtConcurrent is required for non GUI builds too
+  *  9fd5769f0 - TechDraw: [skip ci] fix several gcc/clang warnings -
+    Wunused-private-field -Wmaybe-uninitialized -Wunused-parameter
+  *  877d7e3c4 - Gui: [skip ci] workaround for QWindowsStyle to disable
+    spin buttons when it is set read-only
+  *  46209e7f7 - Gui: fix view object global coordinate space showable
+    checking
+  *  e2071de5b - Arch: small bugfixes in multicore IFC importer
+  *  06152bf12 - Spreadsheet: [skip ci] disable unused function
+  *  556630ffd - Spreadsheet: [skip ci] use global scheme to display
+    quantities in a spreadsheet table
+  *  be42d1b6c - [ DraftVecUtils.cloest ]  Elaborate documentation
+  *  ea16bb939 - [ DraftVecUtils.closet ]  Could return the distance (no
+    unit) of the tested point from the found closest point.
+  *  f20eaf4aa - Remove duplicate code
+  *  dee22fab8 - [AddonManager] Handle Wiki Bad Gateway issue...
+  *  dc97e3170 - Draft: Small bugfix in DXF exporter
+  *  b82716ca5 - Arch: Better support for colors in multicore IFC
+    importer
+  *  61f734723 - [Arch/TechDraw] Clean up _ArchDrawingView: remove
+    getDXF
+  *  d8f056352 - Arch: small changes to color methods in IFC importer
+  *  6f2691631 - Draft: fixed obj.TypeId output after utils.get_type()
+    change
+  *  28c00f838 - Draft: provide the possibility to implement support for
+    Edit in objs
+  *  8e1bb66cf - Draft: support experimental BIM wall in Draft_Edit
+  *  7f415b4b5 - Update scale.py
+  *  18c0d8ab1 - Part: fix dangerous static_cast usage in view provider
+  *  2d11f16e9 - Update gui_stretch.py
+  *  e31147176 - Skip rebar shape to be subtracted from structure
+  *  5cf799dd8 - Draft: rename svg parameter to fillspaces (lowercase)
+  *  b835e5f29 - Draft: replace FreeCAD with App for consistency
+  *  7627d0b81 - Draft: move getSVG to draftfunctions submodule
+  *  c493d42bf - SurfaceOfExtrusion: use uIso and vIso methods of parent
+    class
+  *  b38517b29 - Gui: [skip ci] fix bugs in spin box classes: + use
+    correct format string when assigning value to an expression + do not
+    round value when setting value of a DoubleSpinBox
+  *  b0d5afc37 - Inspection: [skip ci] do not use multi-threading when
+    Part objects are used for visual inspection
+  *  db947e351 - Draft: Fix wire placement issue if Copy=False.
+  *  7f3814fae - [Arch] ViewProviderPanelSheet: Too many arguments
+  *  4c0bd797f - Update gui_snapper.py
+  *  03d273c65 - Calculate length of rebar derived from Part::Helix
+  *  3051b7526 - Gui/Mesh: [skip ci] make sure object fits into canvas
+  *  976867e71 - Gui: [skip ci] set crease angle if possible when
+    exporting to x3d/xhtml
+  *  3bdb812a7 - FEM: tests, adding check for file
+  *  4dcfd8caa - FEM: correcting string comparison
+  *  f82b57083 - Gui/Mesh: [skip ci] add Iso view position button to Web
+    3d page
+  *  623d6b713 - Gui: [skip ci] add x3d and xhtml format to export
+    dialog
+  *  629b1403b - Web: [skip ci] allow to directly load local (X)HTML
+    files with file browser
+  *  6019f6c69 - Gui/Mesh: [skip ci] put view positions at top of Web 3d
+    page
+  *  34c11fcc6 - Base: Py2 related fix
+  *  4cfefb193 - Gui: automatically activate the DlgExpressionInput
+    dialog; fixes #4384
+  *  685fc401a - Gui: improve transaction handling in PropertyEditor
+  *  2fbac59d4 - App: record transaction on non DocumentObject
+  *  fc8eecb8e - Part: [skip ci] make Tube command behave like all other
+    solid creation commands
+  *  c176f714f - Gui: make Clipping widget a dockable widget so that it
+    can be used while a task dialog is open
+  *  aa6f06036 - Mesh: [skip ci] include missing header
+  *  daa259067 - Gui: add SoTimerSensor.h to PCH
+  *  5cd408687 - Fix typos in various files [skip-ci]
+  *  1590c209e - freecad-python-interface: use absolute-path to install-
+    bin-dir for windows
+  *  1c91c1287 - Base: [skip ci] Various fixes in
+    InterpreterSingleton::runStringWithKey: + fix memory leak
+    (localDictionary) by replacing C API with PyCXX + don't write the
+    whole code as error message if an error occurs. Python raises an
+    exception with all relevant information for debugging
+  *  cc0e4ee95 - Gui: fix Qt4 build failure
+  *  d91508fec - Part: [skip ci] set proper icons for Tube feature
+  *  06d6cc579 - Part: [skip ci] add MapMode support to Tube feature,
+    raise an error if inner > outer radius, set icon to command and tree
+    view (use cylinder icons for the time being)
+  *  e477283ff - Draft: new PathTwistedArray object
+  *  8ee644bcb - [AddonManager] fix bug in CheckSingleWorker
+  *  1f15f04b1 - Initialize mark and add compatibility for
+    rebar.RebarShape
+  *  df0204466 - [CheckGeometry] fix segfault, reformat output with
+    lower case, use try/except to check for runtime python errors and
+    fall back on OCCT method if script failed.
+  *  b553ebe48 - [check geometry] decrement some pyobject references
+  *  9bb3b0e04 - [CheckGeometry] fix python2 build
+  *  1b8a410d2 - [CheckGeometry] fix py2 build failure
+  *  dc3befbff - [CheckGeometry] update a source code comment
+  *  a4e38baeb - [CheckGeometry] add new shapecontent builder instead of
+    OCCT's to correct some errors in OCCT's values and to add for some
+    more advanced information, e.g. volume or area, add new method to
+    Base::Interpreter runStringWithKey() -- allows to run a python
+    script and get a string return value
+  *  2697ea658 - Clean up docs
+  *  a80e1f4cc - Separate the xcrun check into an env specific section
+  *  e2dc5ab85 - Attempt to auto set conda env
+  *  b827a54f1 - Setup scripts for developer env using conda
+  *  b71e100bc - Setup for local conda build
+  *  7d7c0ab99 - Initial build startup works with one-shot conda script
+  *  5cc8ffba4 - Start setting up 1-liner conda build
+  *  29e1117c8 - Make sure we can find pyside on osx
+  *  4b8ebccc7 - Draft: improve style and indentation of getSVG function
+  *  4bf665a6f - Draft: move format_point out of getSVG function
+  *  775c4d0a9 - Draft: move getText out of getSVG function
+  *  67c0af7b5 - Draft: move getOvershoot out of getSVG function
+  *  f240972ff - Draft: move getArrow out of getSVG function
+  *  6eccf4784 - Draft: move getEllipse out of getSVG function
+  *  4c498e132 - Draft: move getCircle out of getSVG function
+  *  04afa25f9 - Draft: move getPath out of getSVG function
+  *  3e1231697 - Draft: rename getPattern to get_pattern
+  *  cfce1a8ad - Draft: rename getDiscretized to get_discretized
+  *  e61efd9e6 - Draft: rename getProj to get_proj
+  *  8b5e922e0 - Draft: improve initial code of getSVG
+  *  ee58279b3 - Draft: use draftutils.utils module in getSVG
+  *  4a0d127da - [Macro Menu] add Recent macros to Macro menu + list
+    size preference.  Executes selected macro or if Shift+click opens
+    macro in editor.
+  *  2ef0017cf - Gui: add function to export a VRMLGroup into X3D format
+  *  3d6390bc9 - [TD]Allow single line S/S view
+  *  33ef4e0e3 - Update CommandView.cpp
+  *  41da46a68 - fix build on Win
+  *  b8fedc603 - Gui: use utility tovrmlx3d to convert a VRML 2.0 file
+    into X3D format
+  *  9beeb53a9 - Gui: [skip ci] do not handle left mouse button events
+    when in dragging or zooming mode
+  *  6ef1562d1 - App/Gui: warn when loading/saving file with identical
+    physical path
+  *  18eb018a1 - App: fix PropertyXLink handling on symlink file path
+  *  ad1b48b73 - [TD]fix V2E DistanceX,Y
+  *  035993c96 - typos: [skip ci]
+  *  643b2d6aa - App: report error on copying OriginGroup without
+    dependency
+  *  a5899f389 - Part: [skip ci] return std::unique_ptr from
+    Part::makeFromSurface() to avoid memory leaks
+  *  efb403b8f - Edge.curveOnSurface : add placement to the output tuple
+  *  7d3ff633b - Part.EdgePy : get access to stored Pcurves
+  *  30c07083a - Draft: Fix typo in variable name
+  *  4344f6bc0 - Fix typos in source comments
+  *  9f9d8e152 - Mesh: [skip ci] allow to set custom size for asymptote
+    output
+  *  e989b5f7a - [Base]use degree symbol in Imperial schemes
+  *  08ba104d8 - [TD]remove restrictions on Edge-Edge Dims
+  *  5d58c2c71 - [TD]remove extra space in Angular Dims
+  *  66617c5e9 - Mesh: [skip ci] support compressed X3D output
+  *  f50c4a9e2 - Mesh: [skip ci] improve color support for X3D and X3DOM
+    output
+  *  c06a4d462 - Mesh: [skip ci] support of WebGL/X3D export
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 12 Sep 2020 12:36:13 +0300
+
 freecad-daily (0.18.3+git22298-dbcf003f3-1) unstable; urgency=medium
 
   * Compile
