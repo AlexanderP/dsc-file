@@ -23,6 +23,12 @@ else
 	CONTROL = control.stretch
 endif
 
+ifeq ($(DEB_HOST_MULTIARCH),i386-linux-gnu)
+        confopt = --disable-soundtouch
+else
+        confopt = --enable-soundtouch
+endif
+
 %:
 	dh $@ --parallel
 
@@ -33,7 +39,7 @@ override_dh_auto_configure:
 	cp debian/$(CONTROL) debian/control
 	dh_testdir
 	./autogen.sh
-	dh_auto_configure
+	dh_auto_configure -- $(confopt)
 
 override_dh_auto_clean:
 	cp debian/$(CONTROL) debian/control

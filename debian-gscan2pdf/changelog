@@ -1,3 +1,57 @@
+gscan2pdf (2.8.0+git3285-2c19ac00-2) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 2c19ac000b77305e7d3f04908aa083a7d7b4b26b
+  * Date: 1601032986
+  * git changelog:
+  *  2c19ac00 - Bumped version to 2.9.1
+  *  27ea9195 - Call scan_exit() explicitly when quitting to prevent
+    occasional segfaults closing SANE handle
+  *  daf1995a - Update to Ukrainian translation
+  *  7fc9de27 - Update to German translation
+  *  750af857 - Map C locale to English
+  *  dca5e5a0 - Avoid issues when LANGUAGE is not set by using
+    LC_MESSAGES
+  *  9719ce0f - Split newlines from messages as possibly confusing for
+    translators
+  *  899fc044 - Append linefeed to Tesseract locale messages
+  *  1fb4bd5c - Work around imagemagick versions that create TIFFs that
+    PDF::API2 doesn't like when testing pdftk by using JPEG
+  *  099cc133 - If language_code2code alpha-2->term doesn't work, try
+    alpha-2->alpha-3
+  *  39e40741 - Call sane_exit() explicitly to prevent crash when hot-
+    plugging devices
+  *  ab50cc94 - Update to Hungarian translation
+  *  f90d8098 - Post-release commit
+  *  433cd0b8 - Bumped version to 2.9.0
+  *  ed93e792 - Update to Turkish translation
+  *  ea176234 - Check for negative start page when looking for valid
+    page numbers
+  *  08d1a1d0 - Log renumbering pages
+  *  97f31057 - Fix bug finding page by number
+  *  6566efb1 - Fix error message checking for valid OCR output
+  *  8c7fb0d1 - Log version of Gtk3::SimpleList
+  *  5cb6e30b - Improve error if user tries to import DjVu without
+    having installed djvulibre-bin
+  *  19569d8c - Delete OCR output if it has become corrupted
+  *  308e5513 - Make 131_save_tiff compatible with ImageMagick >= 7.0.10-
+    24
+  *  67d9b7cc - Limit zoom to 15 to avoid errors like
+    'pango_font_description_set_size: assertion 'size >= 0' failed'
+  *  a0a0b3b3 - Fix bug manually adding first OCR word to page
+  *  e7de69a9 - Fix error editing OCR text after clearing it
+  *  bf005f15 - If device-not-found mini-wizard is exited via cancel or
+    by destroying it, use ignore response
+  *  33cd837f - + split tool
+  *  16dfb6cf - + warning if tesseract OCR package for current locale
+    not installed
+  *  642fe8a8 - Updated list of languages for tesseract 4
+  *  0f3a26ce - Update to Hungarian translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 02 Oct 2020 20:38:18 +0300
+
 gscan2pdf (2.8.0+git3254-7084719c-1) unstable; urgency=medium
 
   * Compile

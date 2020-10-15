@@ -1,3 +1,97 @@
+labplot (2.7.0+git7715-d949e182a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: d949e182ad9fa750816ace9b2ea4d2e6080b7630
+  * Date: 1601673344
+  * git changelog:
+  *  d949e182a - Use new function argument functions
+  *  f3542c932 - Helper functions to expose function argument string
+  *  eee509398 - Minor edit
+  *  fdd6551f8 - [parser] Extend function list with argument count (to
+    be continued)
+  *  884dbe91f - [parser] Fix crash in parser when used locale is not
+    installed
+  *  57e1522a2 - Fix compiler warnings on non-MSVC systems
+  *  356d9eec1 - [worksheet] fixed the positioning of the filling
+    rectangular for axis labels if a background color was selected. This
+    finalizes the fix for Bug 426440. Background and font colors still
+    need to be fixes for axis labels where html is used (powers of 10,
+    ets.).
+  *  fb9373e36 - [parser] Disable locale test on FreeBSD (to be fixed)
+  *  d35d6a892 - [parser] Enable debugging on FreeBSD for failing test
+  *  ae2004d47 - Fix Windows build
+  *  374db360a - Try fixing Windows build
+  *  8e18da21b - [parser] Add test for parser
+  *  10fbd6109 - [parser] Extend operators and default return on error
+  *  420550ef6 - Header cleanup
+  *  a741c1a68 - Bump version to 2.8.1
+  *  4a7d5f847 - Minor cleanup
+  *  96450d93e - [parser] Fix locale on Windows
+  *  1e4e1ef55 - Enable using locale in parser to detect numbers
+  *  9e8788161 - [parser] Prepare supporting locale
+  *  755ed516e - GIT_SILENT Changelog
+  *  0e8fb2535 - [parser] Disable debugging again
+  *  b1f2e7531 - [parser] Add remove_symbol() and proper remove
+    variables in ExpressionParser::isValid()
+  *  7476d6235 - [parser] Fix parser function usage and disable
+    debugging
+  *  7a402c3b9 - [parser] Code cleanup
+  *  497f7165c - [nsl] Remaining missing castings
+  *  09043806e - [nsl] Another missing casting
+  *  d3bf3583f - [nsl] Add missing casting
+  *  28dc15c90 - [parser] Fix bug in assign_variable and minor edits
+  *  fcd01cdd9 - Minor edit
+  *  5f73d5557 - [parser] Better debugging and minor improvements
+  *  5cc05cf21 - Allow to change the background color for axis labels.
+    Initial commit, the positioning of the fill rectangular with the
+    backround color to be be fixed still.
+  *  7fc691505 - Don't try to update spreadshets on spreadsheet settings
+    changes if there is no project yet available.
+  *  9db976f25 - Refactor ExpressionParser
+  *  0caa1f9cf - [json] fixed the preview for json files and more usage
+    of macros in JsonFilter::load().
+  *  583bd43b6 - [import] adjested the failing ascii and json tests to
+    the new logic for the auto-detection of datetime formats.
+  *  a8199ee57 - Use default =operator in Range
+  *  b4f44e1a1 - Add stepSize() to Range
+  *  f8762d8fe - Minor editing
+  *  cbf4bd2bb - Fix build
+  *  0a1cb21da - Clean up and improve documentation in
+    FunctionValuesDialog
+  *  59534171c - Fixing the build.
+  *  d01998bf6 - [live data] improved the error handling for MQTT data
+    sources.
+  *  2e3f0889d - [live data] show the error messages in KMessageBox also
+    for file/pipe sources.
+  *  68785dc8e - Fix minor typo
+  *  611c92dc2 - [live data] show the problems with connecting to the
+    network socket in a message widget in the import dialog so the
+    problem is directly clear and visible to the user.
+  *  627616e8a - [live data] unified the naming convention for columns
+    created for MQTT and network sockets, as well as the indexing in the
+    index column.
+  *  aec712ca2 - [spreadsheet] better auto-detection of datetime format
+    for values pasted in the spreadsheet.
+  *  bb0164d16 - Default ReadStat support disabled until needed
+  *  0790ec77e - [live data] allow to add the timestamp column for all
+    live sources, not only for MQTT.
+  *  13d87ea0f - [3rdparty] Fix compilation for paths with spaces
+  *  d281221bc - [cmake] Try fixing install path with spaces
+  *  a3370d11f - [3rdparty] Build ReadStat if not available
+  *  d938b9b47 - [cmake] Find ReadStat library
+  *  30c1fc231 - GIT_SILENT changelog
+  *  db6760584 - [cantor] 20.08 will not get the new interface
+  *  4255438c9 - [cantor] 20.08.1 still uses old code & minor formating
+    fixes
+  *  2ede3988a - Removed the Socrate data set collection. The URLs don't
+    work anymore and the page is going offline soon.
+  *  d8f896357 - Updated SLOC statistics for 2.8 and added new file
+    admin/README.release.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 03 Oct 2020 01:23:01 +0300
+
 labplot (2.7.0+git7657-7e27a6d4e-1) unstable; urgency=medium
 
   * Compile

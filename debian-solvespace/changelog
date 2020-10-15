@@ -1,3 +1,35 @@
+solvespace (3.0.0~git1578-c021df3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: c021df33c04eb599c30ce9832e69ac7ab55bfb77
+  * Date: 1601574940
+  * git changelog:
+  *  c021df3 - Fix issue 684 as whitequark suggested via WM_KEYDOWN-
+    >WMCHAR change.
+  *  3ce8c29 - Allow DXF import of 3D arcs and circles
+  *  6b7f114 - Updated changelog
+  *  8cf9d68 - IDF file Linking.
+  *  0a061b6 - NFC: Performance. For step-and-repeat groups, create the
+    copies first (in parallel) and then combine them using unions of
+    equal size shells to reduce the total time spent on booleans.
+  *  7c766c7 - translate_solvespace updates
+  *  d49c8a1 - add debug message showing the name of a group whose
+    linked file can't be found.
+  *  d575da8 - Add cmake option ENABLE_LTO for link time optimization on
+    Release builds.
+  *  39f419e - Flip sign of exportCanvas dx and dy. Fixes issue #523
+  *  704bb4a - Fix view centering and directions or cli thumbnail
+    function.
+  *  34328c9 - solvespace-cli: Fix --view
+  *  2adf5de - de_DE: missing translations
+  *  6e515b6 - Fix 699: Allow dragging linked objects in an assembly.
+  *  094eff7 - Fix 197 Update the state of checkboxes in menus after
+    failed workplace activation.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 03 Oct 2020 02:05:47 +0300
+
 solvespace (3.0.0~git1564-668fe6f-1) unstable; urgency=medium
 
   * Compile

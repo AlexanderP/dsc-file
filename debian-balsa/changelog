@@ -1,3 +1,343 @@
+balsa (2.6.1+git9623-4de959f6f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/balsa
+  * Branch: master
+  * Commit: 4de959f6f772818d07cf33b1fa281d2be40652d9
+  * Date: 1600976612
+  * git changelog:
+  *  4de959f6f - Various: Remove mentions of cell-renderer-button
+  *  e8e91f492 - Remove LibBalsaCellRendererButton
+  *  595ac0077 - address-view: Set "activate-on-single-click"
+  *  912a649cf - libbalsa/imap/meson.build: Add top_include path
+  *  483070ba7 - Updated Spanish translation
+  *  100666db6 - Update Brazilian Portuguese translation
+  *  63c777cbe - balsa-index: add a timeout to verify scrolling
+  *  d7243d438 - Update Chinese (China) translation
+  *  90a305979 - balsa-index: Clear an idle handler at dispose time
+  *  3ca4acf08 - Various: Check for NULL GtkTreePath
+  *  a48ece781 - address-book-config: Delete copy+pasted line
+  *  709771d0f - libbalsa-gpgme-widgets: fix warning icon name
+  *  fe65a19ce - balsa-index: scroll to row in another idle handler
+  *  26a71cad0 - Rename libbalsa_mailbox_get_has_sort_pending()
+  *  ca1552470 - balsa-index: Ensure visible in an idle handler
+  *  191c544c8 - Various: Fix some more mailbox-opening issues
+  *  528b80548 - send: Use g_strsplit_set()
+  *  9cae360c1 - address: Use g_strv_length()
+  *  5a3510700 - balsa-message: Check BALSA_IS_MIME_WIDGET_TEXT
+  *  eaeb917d7 - balsa-message: Restore text copy
+  *  33e398a06 - Updated Spanish translation
+  *  71f47bccc - Fix broken markup in Nepali UI translation
+  *  1988e6de3 - source-viewer: Fix breakage from c5392a32
+  *  c69da1a99 - workaround for broken message index heights
+  *  5c4a7c34b - fix multiple new messages desktop notifications
+  *  c5392a32f - Various: Drop libbalsa_{radio,toggle}_activated
+  *  4a61e0aa3 - Update Polish translation
+  *  75d4b7215 - Update Romanian translation
+  *  f931dfef4 - Update Ukrainian translation
+  *  7fae39685 - improve crypto key selection dialogue
+  *  55af8c065 - Ensure utf8-clean crypto key uid
+  *  ccfc6d115 - restore evaluation of “enable-autocrypt” configure
+    option
+  *  b6f3d165f - Copy gnome-balsa2.png to logo.png
+  *  12333ebf2 - body: Use case-insensitive match.
+  *  151f16fb6 - body: Another "message/external-body" fix
+  *  26f3924fe - compose-window: Ensure attachment has a filename
+  *  db2174867 - Update Romanian translation
+  *  1117b66e0 - Fix broken markup in Hebrew UI translation
+  *  5e60f77c1 - compose-window: Handle external-body attachments
+  *  bfa22511f - compose-window: Use gtk_selection_data_get_uris()
+  *  460e9f951 - libbalsa/autocrypt.h: Wording
+  *  4472271ac - compose-window: Make an "Open" menu option work
+  *  5fb3a872c - mime-widget-text: Actually pop up a context menu
+  *  da03db4c2 - libinit-balsa: Use 'Controller' naming
+  *  623fa68ff - Build files: Drop obsolete deprecation guards
+  *  783fc4ccb - main-window: Use parent/child naming for GtkPaneds
+  *  48e476ead - mailbox-local: Simplify finding duplicate messages
+  *  a53447fff - balsa-message: Pop up the parts menu at the button
+  *  33fe183f4 - fix issue #38
+  *  2f0080675 - Added Slovenian translation
+  *  2e2704f43 - main: Sandbox all the webkit!
+  *  b877543d0 - Update Polish translation
+  *  cfbcdd7a8 - Various: Use GtkTreeView's "row-activated" signal
+  *  2030fa72b - iTIP calendar reply compatibility improvement
+  *  06aba42c6 - Updated Spanish translation
+  *  e3b7a617c - Update Ukrainian translation
+  *  5780676a7 - fix version and statistics command line output
+  *  0ae61a82f - set log domain 'mailbox' for common mailbox operations
+  *  677724f4a - unify console logging
+  *  af2ec3b7e - Various: Restore filtering in unopened mailbox
+  *  f2125f441 - filter-run-dialog: Disable "Apply selected"
+  *  0c31c27d9 - Various: Do not crash when selecting Apply
+  *  14f0e61cf - balsa-message: Do not crash
+  *  57f138a8b - toolbar-factory: Stop using direct access
+  *  0892bf791 - Find in message: Make it work again Also for HTML
+    parts.
+  *  52781e198 - Find in message: Make it work again
+  *  da425a4fa - mblist: Stop using direct access to GdkEvent
+  *  a5fd6830c - compose window: Connect to the "pressed" signal
+  *  e09f7fa60 - mime-widget-text: Use bmwt_html_ prefix
+  *  7bec1e900 - main-window: Connect to "notify::focus" signal
+  *  2cb194d37 - application-helpers: Add capability to block accels
+  *  e29f20a6d - main-window: Revert the previous commit
+  *  c1b66cd1c - Update id in appdata file to match with the desktop
+    file name
+  *  823d66d13 - main-window: Connect to "focus-{in,out}" signals
+  *  c344e9b1b - mime-widget-text: Connect to the "pressed" signal
+  *  52ded54c3 - mime-widget-text: Use event-controllers
+  *  286c2ba08 - balsa-index: Get right-click events in capture
+  *  c4e6e1df0 - mime-widget-image: Connect to the "pressed" signal
+  *  5e8c37eb4 - mime-widget-image: Connect to the "pressed" signal
+  *  4d0ae44ac - balsa-message: Connect to the "pressed" signal
+  *  7923d3bc3 - Various: Connect to "focus-{in,out}" signals
+  *  1f2cb6f5e - mime-widget-text: Fix a copy-paste error
+  *  d725a787c - Various: Connect to the "key-pressed" signal
+  *  d67d115ba - balsa-mblist: Connect to the "pressed" signal
+  *  d6e92151b - balsa-index: Do not cast away constness
+  *  4181d865f - balsa-index: Connect to the "pressed" signal
+  *  ff855ffb2 - ab-main: Connect to the "key-pressed" signal
+  *  bbf6958d9 - autocrypt: Connect to "pressed" signal
+  *  f7fa19bf4 - address-view: Connect to "notify::has-focus"
+  *  e471ecd47 - compose window: Hold a reference to identity
+  *  723df82ed - Update Brazilian Portuguese translation
+  *  bdfdcc644 - compose window: Fix a typo
+  *  e9419fb69 - Update Romanian translation
+  *  e1c15a554 - autocrypt: Stop using direct access to GdkEvent
+  *  f47c36bbe - address-view: Stop using direct access to GdkEvent
+  *  aa25187ea - print-object: BalsaPrintObject is abstract
+  *  8275dc434 - mailbox: LibBalsaMailbox is abstract
+  *  5489a9e86 - address-book: LibBalsaAddressBook is abstract
+  *  9e139c3c9 - address-book and subclasses: Clean up #includes
+  *  6f6282319 - compose window: Chack BalsaSendmsg:ident
+  *  b99fd873a - compose window: Chack BalsaSendmsg:ident
+  *  12280691a - compose window: Use correct action name
+  *  e75626b38 - identity: Revert previous commit
+  *  408936651 - identity: Do not leak identity
+  *  58340175c - address-view.: Do not leak string
+  *  54e708740 - ab-window: Do not leak strings
+  *  67e8b21cf - Update Polish translation
+  *  f193fef58 - Bump required versions
+  *  be9b2fcf5 - balsa-message: Fix a scan-build report
+  *  b50fe0e19 - Release balsa-2.6.1
+  *  3b3320ce4 - compose window: Improve the popup context menu
+  *  774ba0e50 - main-window: Avoid a crash
+  *  acd8d62a1 - main-window: Plug a GSlist leak
+  *  c69ca3ea3 - mime-widget-text: GdkEvent is not a GObject
+  *  0af28146b - fix wrong version numbers in README
+  *  a6d1416f2 - Release balsa-2.6.0
+  *  4140e2023 - Build files: Restore the version to 2.6.0
+  *  29b47415c - Updated Spanish translation
+  *  dcab903bb - Update Ukrainian translation
+  *  0ae0fde10 - Improve TLS certificate validation error message
+  *  e8952e3cc - fix NULL server-identity TLS warning with recent gio
+  *  b022b1765 - Bump GMime required version to 3.2.6
+  *  ccf38afea - autocrypt: Convert e-mail addresses to lowercase.
+  *  378fcde72 - GMime3 (3.2, at least) supports Autocrypt headers
+  *  33dfbe86a - GMimeParser changes
+  *  f330ef778 - libbalsa-message: Save some dereferencing
+  *  8e95b338c - mailbox_mbox: Set the parser format to mbox
+  *  0b2819fb5 - Do not unref GDateTime
+  *  b03f1a293 - Fix some porting to g_mime_filter_dos2unix_new()
+  *  fdb52201a - Fix some porting to g_mime_filter_dos2unix_new()
+  *  7393dc9ec - Check for NULL return
+  *  494dca7bf - Guard against passing NULL name
+  *  66e7f961b - Adapt to new g_mime_utils_header_decode_date() API
+  *  fb3e54b65 - Drop redundant get_tz_offset()
+  *  3c8b810cd - g_mime_object_append_header() has a new argument
+  *  111611ffe - Cleanup
+  *  577330056 - g_mime_message_set_subject() has a new argument
+  *  0db48d0c8 - g_mime_message_set_{reply_to,sender}
+  *  a09de879b - Oops--typo
+  *  a02ed7f1a - g_mime_object_new_type() has a new first argument
+  *  4ee77dc8f - g_mime_set_user_charsets() has been replaced
+  *  fa001e253 - New API for g_mime_utils_header_decode_date()
+  *  09157e3f6 - New API for g_mime_utils_header_encode_text()
+  *  eae668b2d - g_mime_utils_header_encode_text()
+  *  e73e5b003 - Oops--missed one case
+  *  0f9b4f26a - g_mime_references_decode() has been replaced
+  *  3b2c55fb5 - Cleanup
+  *  c330f93ee - GMimeRecipientType has been replaced
+  *  980fd48eb - GMimeHeaderIter has been replaced
+  *  ce1382bc6 - Oops--missed one case
+  *  962c2fba1 - g_mime_object_set_header() has an extra argument
+  *  eeb6a8a84 - g_mime_parser_get_from() has been renamed
+  *  3663b88b4 - g_mime_parser_get_from_offset() has been renamed
+  *  ed99b2bc8 - g_mime_parser_set_scan_from() has been replaced
+  *  2cc9e7a15 - Oops--use g_mime_filter_dos2unix_new()
+  *  b3989ac9a - g_mime_init() has no arguments
+  *  cc834ca1c - Include libbalsa.h
+  *  03b22ef2c - g_mime_part_set_content_object() has been renamed
+  *  42a6e7bc3 - Add parser-options argument
+  *  da298e4ce - Insert a NULL format-options argument
+  *  0e79543bf - g_mime_filter_crlf_new() is no more
+  *  488bfddaf - g_mime_filter_crlf_new() is no more
+  *  8fd0163ae - More GMime3 changes
+  *  40310ebde - g_mime_content_type_new_from_string()
+  *  eb45acae3 - g_mime_parser_construct_message()
+  *  256675486 - g_mime_content_type_to_string() has been renamed
+  *  9f4f2db78 - More GMime 3 changes
+  *  3f34d5d39 - internet_address_list_parse_string() replaced
+  *  bd90b5ea7 - Insert a NULL GMimeFormatOptions
+  *  09fb37f15 - Bump GMime requirement to 3.2.4
+  *  3053be153 - Resolve some scan-build warnings
+  *  ac687b19d - Release balsa-2.5.10
+  *  f975311c7 - Update Basque translation
+  *  a99a218e1 - Update Ukrainian translation
+  *  3278227f8 - Update Ukrainian translation
+  *  1c94552ea - Change the keyboard shortcut to re-check cryptography
+    from Ctrl-D (which conflicts with “Toggle Deleted”) to Ctrl-Y.  See
+    the Gitlab discussion for issue #26 and
+    <https://mail.gnome.org/archives/balsa-list/2020-
+    March/msg00009.html>.
+  *  383371ac3 - Updated Danish translation
+  *  2c5b21d48 - libsecret use: fix confusing 'configure' option
+    comment, and default to link against libsecret instead of storing
+    obfuscated passwords in a text file.
+  *  625e86e6f - mailbox-local: Drop unused private member
+  *  e24018736 - Drop libbalsa_mailbox_local_load_messages
+  *  af7be21ea - Drop LibBalsaMailbox:is_directory
+  *  6b8d818c9 - mailbox: Make cache-message a class method
+  *  7bbfc012d - mailbox: Guard against out-of-bounds access
+  *  1dfeaffda - Update Polish translation
+  *  77a1f2ef6 - Update Brazilian Portuguese translation
+  *  ea1e79b37 - mailbox: Do not always cache message info
+  *  508437571 - Updated Spanish translation
+  *  4db63c170 - README: Use American English spelling of "license"
+  *  ad6c70b0a - Correct metadata_license tag name in AppStream data.
+  *  aca0cba76 - mailbox-local: Do not pass message
+  *  07c43b9ef - Move recheck crypto button to menu, toolbar
+  *  95b0525e5 - Fix broken markup in Galician UI translation
+  *  d95c3a90b - mailbox-local: Do not pass message to LBMailbox
+  *  f07af4eb7 - Use g_print() instead of g_printerr()
+  *  27a66843d - main: Do not leak Inbox and Outbox
+  *  c6c15c79a - main: Save the config files
+  *  878cf6ee0 - man page: update
+  *  b520762a7 - main: Use non-copying GVariant formats
+  *  34fe7a06c - main: Change parsing of command line arguments
+  *  ba8a07fa1 - main: Behave as documented
+  *  ddddee291 - Update Brazilian Portuguese translation
+  *  e190d41e2 - sync manpage with command-line options
+  *  f0c1890fd - meson.build: Actually install man page
+  *  089e51083 - Man page: cleanup
+  *  0c35a5515 - Man-page: revert the last commit
+  *  9fd6c61f9 - Man-page cleanup
+  *  714d2d05e - sendmsg-window: Remove useless, leaky, assignment
+  *  6a4128478 - Use a GThreadPool to open mailboxes
+  *  4f50f7e86 - COPYING: Minor cleanup to match
+    https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
+  *  2bc7240c1 - update dates in manpage
+  *  983b19875 - correct paths to balsa configuration (Closes: #28)
+  *  ba6a89b7a - drop --debug-imap and --debug-pop
+  *  9b64653b4 - Add --open-inbox and --get-stats to balsa.1
+  *  be940dc4f - balsa --checkmail is not --check-mail
+  *  47ab7ece0 - Updated Spanish translation
+  *  6fa9adc08 - COPYING: Update FSF contact info
+  *  30aa6daa3 - Restore project to GPLv2+
+  *  e12bbdb31 - Relicense some files as GPLv2+
+  *  3a9448440 - libnetclient: Relicense as GPLv2+
+  *  4e245d758 - imap-handle: Do not crash on PREAUTH greeting
+  *  667b4b539 - Two meson.build files: Set G_LOG_DOMAIN
+  *  abab0dae4 - Remove auto-generated files from the repo
+  *  6771528c8 - use gitlab.gnome.org instead of git.gnome.org
+  *  6bfb15a6e - use https for www.iana.org
+  *  07a9c9328 - Use https://pawsa.fedorapeople.org/balsa/ instead of
+    http://balsa.net
+  *  1393d0792 - Use https://gitlab.gnome.org/GNOME/balsa/issues instead
+    of bugzilla.gnome.org
+  *  c9e1d05a1 - Use https://gitlab.gnome.org/GNOME/balsa/issues instead
+    of bugs.gnome.org
+  *  dee69513f - Use https for www.ietf.org
+  *  803544f07 - Point to https://pawsa.fedorapeople.org/balsa/ instead
+    of http://balsa.gnome.org
+  *  845b15068 - Use https for old bugzilla link
+  *  310027be7 - Refer to modern URLs for freedesktop standards
+  *  4b3a95f8b - Use https for mail.gnome.org
+  *  b73f8d508 - Use https for www.mew.org
+  *  f9086c977 - Use https for pawsa.fedorapeople.org
+  *  756f768e9 - Use https to refer to fsf.org
+  *  3e60b1d0e - Update reference for Pine technical notes about folder
+    locking
+  *  3f026ac74 - Use https when referring to www.gnu.org
+  *  7fe4c3336 - Added Keywords to .desktop file
+  *  2456b8669 - Fix misspellings of "received"
+  *  0683d98f3 - Use PKG_PROG_PKG_CONFIG for better cross-building
+  *  06dd11f81 - mailbox: Warn in dispose if open_refs != 0
+  *  ef61ad9b2 - mailbox-imap: Unref handle after releasing it
+  *  1b6d818fa - Update Polish translation
+  *  c284d679e - mailbox: Sort when new details about a message
+  *  805054225 - mailbox-local: Clean up usage of g_ptr_array_index
+  *  fbcc60222 - mailbox-maildir: Coding style
+  *  7ba0b34b5 - mailbox-local: Use g_ptr_array_set_size()
+  *  5a5b40d7e - main: Typo
+  *  eb1a57bb2 - Updated Spanish translation
+  *  3fa22c4f3 - Restore config.h.in in .gitignore
+  *  c93018179 - main-window: Simplify and make more robust
+  *  2f60f9224 - mailbox: Reset messages-threaded in open method
+  *  b6c1fe108 - Build: Remove config.h.in from git
+  *  0b77b02e4 - Build: Do not check for getaddrinfo
+  *  c997afbca - Add a file that's needed in the autotools build
+  *  dcb78def6 - Build tools: Remove test for libresolv
+  *  ad3f57b29 - [Patch] ical improvements
+  *  f5a26796a - mailbox: Remove another idle handler when closing
+  *  450b7c700 - mailbox: Do not sort until messages are threaded
+  *  928e1f466 - Message threading cleanup
+  *  12853d445 - mailbox-local: Fetch threading info when needed
+  *  0b5d88db4 - Move messages-loaded to LibBalsaMailboxLocal
+  *  f6417f5cb - mailbox-local: Improve threading
+  *  e4e1fc319 - Updated Spanish translation
+  *  7f28ebeb1 - mailbox: lock the mailbox from start to finish
+  *  7b042b0b8 - Unify wrapped label creation
+  *  b6883642a - mailbox-local: Drop a redundant auxiliary struct
+  *  e2bc5a28a - mailbox-local: Clear idle handler id
+  *  774e32f82 - mailbox-local: Lock the mailbox in idle callbacks
+  *  c0615fd03 - mailbox: Lock the mailbox in idle callbacks
+  *  9c40d094a - mailbox: Always use an idle callback
+  *  1d9948552 - ui: Change single quotes to double quotes in XML tags
+  *  65406567b - Update Swedish translation
+  *  9ce373460 - Updated Spanish translation
+  *  64f4ecef4 - Header eye candy
+  *  5d0a9a4f5 - Crypto eye candies
+  *  f635d4af5 - Bug fix: S/MIME cert chain broken
+  *  a28b5d184 - Updated Spanish translation
+  *  1bef67413 - balsa-index: improve ensure-visible
+  *  c5f92fa92 - balsa-index: Do not leak row-reference
+  *  f7ee53d02 - Move to libical
+  *  2aa739560 - balsa-index: Simplify managing handlers
+  *  e466beb73 - balsa-index: Fix the previous commit
+  *  9cbcd3c8b - balsa-index: improve expand and collapse
+  *  e15cad453 - balsa-index: Use gtk_tree_view_expand_to_path()
+  *  63d072dd9 - Revert 90ee8bcc82d8ebdae0bd286212c21d1138531658
+  *  1a4bd3c9e - mailbox-local: Fix a thinko
+  *  7a01d8db6 - mailbox-local: Set messages-loaded
+  *  43264bc6e - Fix a few bugs
+  *  90ee8bcc8 - Move some more code to a thread
+  *  90f8b5568 - main-window: Drop another guard
+  *  7f457d65e - balsa-index: Use a low priority idle handler
+  *  109364db0 - balsa-index: cleanup
+  *  84bfb0169 - mailbox-local: Set messages-threaded
+  *  5cd4f9b75 - mailbox: If priv->mindex is NULL, try again later
+  *  5a77fe593 - balsa-index: Use a single bit for 'expanded'
+  *  e556a7206 - Stop using gtk_main_iteration_do()
+  *  266cf2c43 - mailbox: Ensure gboolean return value
+  *  8e6b6cc2c - mailbox: Check for finalized mailbox
+  *  179dbfeab - mailbox-local: Check for error return value
+  *  fce9bdf54 - mailbox: Fix thinko
+  *  d9b18d235 - Guard against mailbox changes
+  *  a9bbd483e - mailbox: Check whether the mailbox was closed
+  *  547eb5aa3 - main-window: Really disconnect signal
+  *  29b92853a - mailbox: when closing a mailbox, remove source
+  *  83a023ce3 - balsa-index: minor cleanup
+  *  e9958cddc - libbalsa/x509-cert-widget: keep scan-build happy
+  *  bb450d5d9 - balsa-index: Do not scroll to first-unread
+  *  f4ac3170f - main-window: Fix the previous commit
+  *  82db6b41c - main-window: Avoid recursive entry
+  *  4c66178d9 - libbalsa-mailbox: Pack booleans in contiguous 1-bit
+    fields
+  *  b11f00d62 - Fix expand-on-open
+  *  c2a5e88a5 - main-window: Disconnect from a signal
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 02 Oct 2020 13:59:53 +0300
+
 balsa (2.5.7+git9282-19cdb5672-1) unstable; urgency=medium
 
   * Compile
