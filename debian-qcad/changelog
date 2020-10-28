@@ -1,3 +1,38 @@
+qcad (3.24.0+git7926-2895712a5-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 2895712a5fdd41358395a27999a6db3a7a5a34ab
+  * Date: 1602771272
+  * git changelog:
+  *  2895712a5 - update translations
+  *  484a5d99d - update qrc
+  *  d576bbc44 - update script bindings
+  *  f85c2fdfb - set transaction type to fix performance when changing
+    layer / layer selection
+  *  36b3b5d34 - performance fix for layer changes, layer selection
+  *  d21e0f7cb - add transaction type
+  *  d4954d671 - set version to 3.25.2.1
+  *  d0e50deea - add transaction type enum
+  *  9d9bb4e6d - add debugging output for long transforms (disabled)
+  *  1e3f91d99 - add text codec test
+  *  df0807a07 - update translations
+  *  d6094c21c - set relative zero when snapping to point with distance
+    manual
+  *  ff0b75fe9 - fix FS#2123 - File > Print: Crop marks not printed
+  *  710b9bda8 - Script bindings for Qt 5.15.1
+  *  254bd8524 - Add end of line punctuation so the help is correct.
+  *  82af62699 - Improve the script path processing.
+  *  9169ad346 - import paths as polylines if possible
+  *  e04b7640c - update translations
+  *  bd847210b - set version to 3.25.3
+  *  34c596e56 - don't use sprintf
+  *  0a7093c4a - fix formatting of property values in Architectural
+    format
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 16 Oct 2020 09:34:07 +0300
+
 qcad (3.24.0+git7901-44b592beb-1) unstable; urgency=medium
 
   * Compile

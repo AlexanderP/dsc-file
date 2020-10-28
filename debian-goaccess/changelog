@@ -1,3 +1,27 @@
+goaccess (1:1.3.0+git3218-ebec767-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: ebec7671db420556ca2fff01de2a91401c38e099
+  * Date: 1602910527
+  * git changelog:
+  *  ebec767 - Fixed a few memory leaks when restoring from disk.
+  *  e4b419c - Fixed build issue due to lack of mmap on
+    Win/Cygwin/MinGW.
+  *  f06a0f9 - docs: fix simple typo, ouput -> output
+  *  af76bd9 - Fixed segfault [Docker] due to bad allocation when
+    generating fifos.
+  *  2e14dc3 - Fixed possible incremental issue when log rotation
+    occurs.
+  *  7d46607 - Revert "Change base image to scratch"
+  *  a6e1825 - Fixed inability to properly count certain requests when
+    restoring from disk.
+  *  d2c4181 - Fix filename
+  *  af20c03 - Fix typo in zcat argument
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 17 Oct 2020 20:15:53 +0300
+
 goaccess (1:1.3.0+git3206-17a879f-1) unstable; urgency=medium
 
   * Compile

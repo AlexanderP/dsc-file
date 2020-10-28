@@ -1,3 +1,205 @@
+freecad-daily (0.18.3+git22747-df9282dc1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: df9282dc12d45996bb83cb42f6da10fd82519a47
+  * Date: 1602780929
+  * git changelog:
+  *  df9282dc1 - C++11: [skip ci] replace deprecated function
+    std::mem_fun_ref with lambda functions
+  *  da4a2e4ea - Py3: suppress warning: 'tp_print' is deprecated [-
+    Wdeprecated-declarations]
+  *  9c72532f5 - Qt5: fix deprecation warnings for Qt 5.15 + replace
+    QDirModel with QFileSystemModel + QProcess::start(QString, OpenMode)
+    is deprecated + QByteArray::append is deprecated + QPixmap*
+    QLabel::pixmap() is deprecated
+  *  3430adda7 - Py3: [skip ci] fix warning: missing field 'tp_print'
+    initializer [-Wmissing-field-initializers]
+  *  ef0fd3ca6 - Qt5: 'endl' manipulator is deprecated with 5.15.
+    Replace it with newlines.
+  *  d4c0baba0 - C++11: replace deprecated function std::bind2nd with
+    lambda functions
+  *  268270085 - Arch: Made default door/windows openable
+  *  fd0019c65 - Draft: Added grid extension control in WorkingPlane
+    task panel
+  *  bc6fefe3a - Py3: fix warning: missing field 'tp_print' initializer
+    [-Wmissing-field-initializers]
+  *  71236cbc2 - [Sketcher] Changes to drawing of constraint icons.
+  *  d75299143 - TechDraw: [skip ci] fix possible crash in
+    QGIViewPart::drawFace
+  *  71cd301ca - Draft: Added pref option to set default dimension unit
+  *  7f95da95c - Draft: Compatibility fix
+  *  b33f92898 - PartDesign: [skip ci] Improve revolution function + Fix
+    hard crash when selecting an edge or face of the created feature
+    before selecting option to choose a reference. + In
+    ProfileBased::getAxis() convert OCCT into FreeCAD exception to
+    simplify handling of calling instances. + Change return value of
+    getReferencedSelection() from void to bool to mkae it easier for
+    calling instance to detect if the selection failed.   This is needed
+    to avoid to add invalid items to the combo box of the revolution
+    task panel
+  *  3edbcb7bb - Add a file existence test for opencascade patch
+  *  a43f334ba - Use relative path as CMAKE input
+  *  e2e51f812 - Build final cache
+  *  c83bc0073 - Enable MacOSX build with latest homebrew integration
+  *  72bcdf8c8 - Surface: automatically start "Add edge" mode when
+    starting the fill surface tool. Moving the order of edges is
+    supported now.
+  *  255ef44c9 - Surface: rename TaskFillingUnbound to TaskFillingEdge
+  *  27e42f5b0 - Part: add viewprovider icon for the Part::Spline object
+  *  c9c4bbe10 - Surface: better titles for the task panels, and
+    tooltips
+  *  8eb466d3e - Surface, MeshPart: add more information to the
+    CurveOnMesh command
+  *  13a5f74d3 - Surface: new icon for existing Surface_CurveOnMesh
+    command
+  *  9b4b6d427 - Surface: ViewProviderExtend for Surface::Extend object
+  *  64e0ac16a - Surface: new Extend icon for existing
+    Surface_ExtendFace command
+  *  f81c1cd31 - Part: make changing face colors independent of edit-
+    mode implementation of a view provider
+  *  048da4808 - Part: activate Part_ColorPerFace in the menu and
+    toolbar
+  *  e75523845 - build: boost: Clean up branches requiring boost-1.55
+  *  6a6a6f3d2 - build: boost: Drop branches requiring boost-1.46
+  *  95ed01728 - build: boost: Drop boost-1.44-specific checks
+  *  a56b6730d - build: boost: Drop boost <= 1.41 dependent-code
+    branches
+  *  06d87e400 - build: Bump boost requirement to 1.55 and drop bundled
+    boost::any
+  *  74abbfde0 - Part: fix the mixed newlines of DlgPrimitives.h
+  *  d54cdff9e - Part: improve tooltip of measure commands
+  *  5d1d8d800 - Part: clean up spacing of lines in BOP JoinFeatures
+  *  d60313682 - Part: update object and commands for BOP SplitFeatures
+  *  0eafaa303 - Part: update icon, object and command for
+    CompoundFilter
+  *  f439384cc - Part: small cleanup of Python modules and InitGui.py
+  *  5a07d7dd4 - Part: update icon for ProjectionOnSurface
+  *  c3994535d - Part: move more icons to tools subdirectory
+  *  9177eae0b - Part: move icons to measure subdirectory
+  *  e6dd1df7a - Part: move icons to parametric subdirectory
+  *  3b671bf4a - Part: move icons to booleans subdirectory
+  *  db91c6f42 - Part: move icons to tools subdirectory
+  *  2fa40f406 - Part: move icons to create subdirectory
+  *  ffd769381 - Fix deburr CW/CCW calculation
+  *  f82532ddb - Seed randomizer on application init
+  *  7825eef62 - PartDesign: [skip ci] Prevent crash when pressing
+    delete key without feature selected to remove in mirror and scale
+    pattern dialog
+  *  08edc39a5 - [PartDesign] Prevent crash when pressing delete key
+    without feature selected to remove in linear and polar pattern
+    dialog
+  *  5dfc061d4 - [PartDesign] Prevent crash when pressing delete key
+    without feature selected to remove in linear and polar pattern
+    dialog
+  *  432ac985e - [PartDesign Multitransform] prevent crash when pressing
+    delete key without feature selected to remove in multitransform
+    dialog
+  *  90f2314b1 - [Sketcher] Fix merged constraint preselection bug
+  *  413431543 - Draft: Fixed translation of construction group
+  *  dd51cbccb - Arch: Fixed translation of wall (better version)
+  *  a0114ac41 - Arch: Fixed translation of wall
+  *  5609b38e9 - Draft: Fixed patterns + added default pattern size pref
+    option
+  *  e3c30e748 - Gui: [skip ci] support to remap motion data array of
+    space mouse
+  *  da7f105ef - Arch: fix typo in ArchBuildingPart.py [skip-ci]
+  *  357a6c3b2 - Update MacAppBundle to work properly with Qt5 and
+    updated homebrew Add WebEngine required file to the bundle
+  *  9be9620ae - Show: add argument to NotAContainerError class
+    constructor
+  *  f54761510 - Draft: fix mismatch of argument in get_dxf function
+  *  f799717f4 - Arch: consider DraftText objects in the section plane
+    for compatibility
+  *  611bcdd4c - Arch: 4 additional tests for ArchRoof (bug fix)
+  *  aff5da530 - Arch: ArchRoof bug fix
+  *  61dc5dea0 - Add a task panel page for controlling turning diameters
+  *  66afbc36a - Add turning selection gate
+  *  101a0e00e - Using python type conversion to return voronoi element
+    color
+  *  12155f4aa - Part: [skip ci] harmonizing the way to add sub-modules
+    to Part module
+  *  ed61873b2 - make deburr ignore non-vertical faces fixes #4327
+  *  b5f37f06a - make deburr check for tool attributes fixes #4327
+  *  d76124b61 - Part: [skip ci] fix crash when trying to convert null
+    shape to nurbs
+  *  11afaaea6 - Part: [skip ci] port class TaskCheckGeometryResults to
+    OCCT 7.5
+  *  13963592f - Part: [skip ci] fix crash when trying to scale null
+    shape
+  *  de64e6500 - Part: port class BOPProgressIndicator to OCCT 7.5
+  *  b0d785040 - Fix various typos [skip-ci]
+  *  f91eb3435 - Part: link TKStepAttr, TKStepBase and TKStep209
+  *  37c8dc411 - CMake: add OCCT libraries. Print lib and header
+    locations in summary report
+  *  fd9cdb9de - Part/Import: [skip ci] disable use of
+    Message_ProgressIndicator for OCC >= 7.5 due to major API changes
+  *  f129f3f09 - Gui: [skip ci] workaround to allow to define the link
+    color of the application's palette
+  *  34ed859c9 - Gui: [skip ci] make commands print, print preview and
+    print to pdf also active when editig a sketch
+  *  16d911891 - Path: [skip ci] fix build failure on Windows if PCH is
+    disabled
+  *  6f941c34d - lgtm cleanup fix contradictory tooltip
+  *  55c150690 - Panel for AxisMap dressup Zdepth correction dressup
+    open panel on create
+  *  1e2fb1099 - add task panel for dragknife
+  *  c42149b0d - making it a bit more forgiving of old jobs/tools
+  *  cfa38c26a - Ignore old-style tool controllers
+  *  a8a76deb8 - Allow adding a material to the stock object.
+  *  dfc4e53f6 - Working html report with asciidoctor
+  *  566d32177 - Arch: import IFC, support multiple styles in styled
+    items in IFC4
+  *  3b6e0a934 - Arch: import ifc, small fix in colors
+  *  4c057c95b - Arch: import ifc, colors in IFC4 print warning not
+    implemented
+  *  a299f234a - Gui: [skip ci] fix appearance of TaskGroups when a
+    style sheet is set
+  *  6d7ed787b -  Arch: import ifc, fix typo in material colors
+  *  8292664f4 - Arch: import ifc, fix import break if colors dictionary
+    contains None values
+  *  83c24d610 - change final step down label for clarity issue #4439
+  *  1a0a21475 - Gui: [skip ci] fix uic warning
+  *  de57d4d40 - remove commends
+  *  a3fb14ff9 - Update DlgSettings3DView.ui
+  *  01f7e5543 - Extra space removal
+  *  b1c5ddcf6 - moved 'Pick Radius' from 'Color' to '3D View' fixes
+    #0004147
+  *  f8a45e6b3 - PartDesign: [skip ci] remove automatic adjustment of
+    view frustum when creating a body
+  *  6d819854c - README.md: Fix links to wiki
+  *  3f89175c3 - README.md: Fix link to FAQ
+  *  f4ff61c35 - Complete: do not build the Complete workbench because
+    it is empty
+  *  c3a8fcf59 - Gui: [skip ci] fix handling of active document when
+    importing a file
+  *  4fbb37623 - [Image] Very minor improvement to Report View..
+  *  c4ff3385f - [File Import] add import to document transaction for
+    unde/redo
+  *  d45e143f1 - Arch: ifc import, typo in var name
+  *  ceccc212b - Gui: [skip ci] move dontUseNativeDialog() to unnamed
+    namespace
+  *  6badcaced - Part: [skip ci] work around OCCT bug
+  *  706a014ce - AddonManager: Fix python imports
+  *  0cc3c5cac - PATH: fast retraction and return speeds for grbl_post
+    G83 expansion #3725
+  *  611806b26 - add coolant mode fix Z depth
+  *  fd21a8377 - AddonManager: Fixed missing import
+  *  9c20ce05e - Part: [skip ci] expose ShapeUpgrade_UnifySameDomain to
+    Python
+  *  99cbb413e - Dealing with 32bit compile error of Voronoi interface.
+  *  7db21217f - Gui: [skip ci] fix  parsing of arguments of ControlPy
+    methods See https://forum.freecadweb.org/viewtopic.php?f=10&t=50805
+  *  ab4ab444b - Path: [skip ci] fix memory leak in
+    CommandPy::getParameters()
+  *  5eb5434c6 - Path: Fix rotational error for certain situations
+  *  d2981fb09 - Path: Remove FinalDepth limitation for internal profile
+    operation
+  *  4e6741a02 - Path: Add debug feedback and comment
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 16 Oct 2020 00:42:08 +0300
+
 freecad-daily (0.18.3+git22611-7eeec7a59-1) unstable; urgency=medium
 
   * Compile

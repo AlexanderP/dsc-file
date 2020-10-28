@@ -1,3 +1,85 @@
+labplot (2.7.0+git7754-75cbee6f1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 75cbee6f1ad40a9a9ec08498b9b59ca3eded23b9
+  * Date: 1602830169
+  * git changelog:
+  *  75cbee6f1 - [ascii import] save the timestamp option only if it's
+    visible, i.e. live source is used. Use the default setting in the
+    ascii filter (false) otherwise for non-live source.
+  *  5cc7f3222 - Properly propagate the "create timestamp column" option
+    to the filters used in the MQTT topics and some minor cleanup in
+    ImportFileWidget to avoid unneeded casting between int and enum
+    values.
+  *  593bda498 - Fix build without MQTT and indentation
+  *  fd6973da6 - [mqtt] when switching from mqtt to another source type
+    in the import dialog,  make sure we disconnect from the current
+    broker, if connected, in order not to get any notification anymore.
+  *  5921520f2 - [mqtt] reduced the number of dynamic casts in
+    MQTTSubscriptionWidget.
+  *  7b3084655 - Change the project author in an undo/redo-able wave and
+    also set the project to "Changed" if the author is modified.
+  *  962a14448 - Minor improvement
+  *  340ff7a0a - [mqtt] explicitely disconned the subscriptions to be
+    unsubsribed from in order not to recieve updates for them anymore
+    and some further code cleanup.
+  *  5075a5ff5 - New signal-slot syntax in the analysis curve dock
+    widgets.
+  *  5b6d3c43e - GIT_SILENT Changelog
+  *  e94992321 - Fix size of dock widgets when changing between docks
+  *  755bf52b8 - [mqtt] more cleanup in the mqtt code.
+  *  b6d162e54 - [mqtt] moved some pure MQTT relevant code out of the
+    ascii filter.
+  *  53997d94c - [live data] properly handle the timestamp column for
+    live file data sources.
+  *  bd91f8085 - [live data] properly show the pause reading status in
+    the LiveDataDock when switching between different live data sources
+    and some minor UI improvements in the dock widget.
+  *  15cd0810a - [tests] Make tests run faster
+  *  2c0edbabc - [worksheet] allow to copy the plot cursor cordinates.
+  *  662d88483 - Fix focus in save template
+  *  76433fb2f - [live data] set the aspect comment pointing to the file
+    name for file and local socket data sources only, no need to do this
+    for other sources like MQTT, etc.
+  *  20dcb8d1d - [live data] don't crash when removing MQTT
+    subscribtions in the project explorer, properly pause the reading
+    from the broker prior to removing from the project.
+  *  401595131 - Minor code fixes
+  *  0e70770a1 - [live import] in case a wrong host for the MQTT broker
+    was specified, the error QMqttClient::TransportInvalid occurs.
+    Better handling and error message in ImportFileWidget for this case.
+  *  de121f034 - Ignore hint for trailing return types
+  *  632c50354 - Fix more issues found by clang-tidy
+  *  bc350886f - More code style improvements
+  *  a5ed05a79 - [build] clazy script update
+  *  2ba5b69dd - Code style improvements
+  *  23c78ece6 - [import] use message widget instead of the message box
+    also for the MQTT error messages and minor layout improvements in
+    ImportFileWidget.
+  *  791feb000 - GIT_SILENT Changelog
+  *  80cae9af0 - [live data] properly reset the arrays for the column
+    names and modes when doing the preview of the data coming from a
+    live device.
+  *  8cc136a91 - [axis] Fix color of tick label in HTML mode
+  *  6cf0d56ec - Fix drawing lines between datatime data points
+  *  f8c069674 - [live import] don't show "use header to name vectors"
+    option when reading from non-file sources.
+  *  6fb435439 - Updated ChangeLog.
+  *  1e236ec16 - [ascii import] more code reuse and unification in
+    AsciiFilter.
+  *  ba32a167a - Fix compiler warnings
+  *  d4b9b5b63 - [ascii import] further unification in the Ascii filter:
+    use a common function to set the values in the data container when
+    reading from files, live devices and from MQTT topics.
+  *  9f9a68074 - [ascii import] unified the parsing of column values for
+    the preview of files, devices and MQTT messages.
+  *  94109d486 - [parser] Finish extending function list with argument
+    count
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 16 Oct 2020 14:05:23 +0300
+
 labplot (2.7.0+git7715-d949e182a-1) unstable; urgency=medium
 
   * Compile
