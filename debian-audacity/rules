@@ -39,7 +39,7 @@ else
 	configure_flags += 	--with-lv2=system
 endif
 
-ifneq (,$(filter $(DEBIAN_CODENAME), sid bullseye focal)) 
+ifneq (,$(filter $(DEBIAN_CODENAME), sid bullseye focal groovy)) 
 	CONTROL = control.sid
 else
 	CONTROL = control.stretch
