@@ -40,7 +40,7 @@ override_dh_auto_test:
 override_dh_auto_clean:
 	test ! -d $(CURDIR)/debian/tmp2 || rm -rf $(CURDIR)/debian/tmp2
 	test ! -d $(CURDIR)/debian/tmp3 || rm -rf $(CURDIR)/debian/tmp3
-	for i in babl gegl gexiv2 glib glib-networking lcms2 libmypaint librsvg libpng libwebp mypaint-brushes ; do \
+	for i in babl gegl libmypaint mypaint-brushes ; do \
 	cd $(CURDIR)/3rdparty/$${i} && test ! -f Makefile || make clean ; \
 	done
 	dh_auto_clean
