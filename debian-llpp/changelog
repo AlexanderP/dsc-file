@@ -1,3 +1,108 @@
+llpp (27.0.0+git3930-1a3006b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://repo.or.cz/llpp.git
+  * Branch: master
+  * Commit: 1a3006b62647cd38e5f67d4392a60a6d5c2fe31e
+  * Date: 1604152235
+  * git changelog:
+  *  1a3006b - Cosmetics
+  *  e86d438 - Remove redundant "color"
+  *  14e61e9 - Silence clang
+  *  8f0cf5a - Make regexec failure case more robust
+  *  9665c23 - Better diagnostic messages
+  *  89f5bd8 - Remove indirection
+  *  087a694 - "Improve" documentation
+  *  a45425d - Use stdin as a placeholder fd in no redirect case
+  *  5a6d8d0 - Move command names to FFI
+  *  dc0308d - Mention existing workaround
+  *  ea608a8 - Submodules are driving me nuts
+  *  dccb2e8 - Make it possible not to redirect stderr
+  *  0ab298c - Cosmetics
+  *  d2a570d - Still WIP on RPC between C and not C
+  *  bc37059 - D'oh
+  *  42ce7f5 - Use CASE macro to process commands
+  *  8c364d7 - Back to mandatory braces
+  *  edc9dad - Move fclose to the proper scope
+  *  623826c - Co...y
+  *  138a7c7 - Resolve one point of contention
+  *  649d056 - Braceless single line
+  *  0ae80da - Kill stray whitespace
+  *  a9a937a - +109 LOConsistency
+  *  50a8b73 - Do not attempt to draw empty rectangles
+  *  bf7b9a5 - Only add optimization flag when building against debug
+    version of mupdf
+  *  8fc27a8 - Use geometry API
+  *  bf2dca9 - Add an NB entry
+  *  dc0331e - Avoid infinite recursion
+  *  e2cacb0 - Remove pintless assignment
+  *  0fb7cc8 - Cosmetics
+  *  6042565 - Cosmetics
+  *  16798f3 - User configurable unseen diagnostic messages handling
+  *  d88044f - Morebetter font scaling
+  *  9fa11fb - Update
+  *  d89805a - Change the way UI font scaling (configuration) works
+  *  5924af8 - Consistency
+  *  8672e46 - Fonts
+  *  179a925 - Cosmetics
+  *  1c421e2 - Consitency
+  *  c650bf7 - Cosmetics
+  *  47a37da - Cosmetics
+  *  2a9cb87 - Cosmetics
+  *  3069cc3 - Fix naming
+  *  2421342 - Avoid endless logging loop
+  *  4d36761 - Add newlines to all dolog messages
+  *  a00ca9a - error source
+  *  c54c719 - Revert "Fix freshness in the present .git case"
+  *  362ef7f - Fix freshness in the present .git case
+  *  f916936 - Simplify
+  *  f7f5636 - Cosmetics
+  *  3dc4a0a - Cosmetics
+  *  b1b1e66 - Bring uptodate
+  *  6f8905e - Last ditch effort to notify user that there are unseen
+    error messages
+  *  22d20c7 - Cosmetics
+  *  6704f53 - Another stab at stderr redirection
+  *  cd28ae1 - C(ompaction|onsistency)
+  *  802cc6f - Add spawn note
+  *  43e6e55 - Paper over build.bash issue
+  *  702adc4 - Remove unused function
+  *  a747c70 - Spelling and consistency
+  *  e3539f9 - Know your stdlib
+  *  cd6049b - Reroute dolog to adderrmsg once wsi is operational
+  *  abfaec3 - Add hint charset error reporting
+  *  6ee08bd - Make hint character setting more robust
+  *  3115e1b - Let's hope that my understanding (this time) is closer to
+    reality
+  *  aac1ee7 - Stop papering over prince's font issues
+  *  3e63d12 - Make llpphtml work again (after local typographical
+    overhaul)
+  *  954e401 - Refactor
+  *  b4e17da - Scriptify
+  *  1a52b69 - Less convoluted example
+  *  aa9aa3e - Add failure notes for future analysis
+  *  27e0040 - Reject invalid hitset
+  *  a5000fa - Add steps to make this recipe usable
+  *  6315f83 - Refactor pointer passing
+  *  a4d7f79 - Make hint chars settable in the setup UI
+  *  1e8d854 - Fix all so far identified issues with the new hint target
+    selection
+  *  b39fba5 - Accept all ascii chars
+  *  520fc4b - Save/restore hint characters
+  *  ab6725c - Make narrowing conversions
+  *  ed40d8a - User specified hint chars
+  *  2dc143f - Consistently refer to home via environment variable
+  *  69c4efa - Targeted envvars
+  *  a85b73f - Improve various aspects of the script
+  *  012a5f5 - Fix automatic build and add build test example
+  *  7bd0abf - Harmonize pdim format
+  *  8e42c79 - Consistency
+  *  f75327d - Also bump the UI font size
+  *  268398b - Use pan-unicode font as an example
+  *  e253c9f - Stop cargo culting
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 01 Nov 2020 00:17:24 +0300
+
 llpp (27.0.0+git3841-8d54c00-1) unstable; urgency=medium
 
   * Compile

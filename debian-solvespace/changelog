@@ -1,3 +1,69 @@
+solvespace (3.0.0~git1623-d973405-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: d973405c8c71ab807622c809b88e745fda8ddffb
+  * Date: 1603999977
+  * git changelog:
+  *  d973405 - adjust logo size
+  *  078fb99 - add logo in heading
+  *  ef7e2c7 - README: Add Travis & Snap Store badges
+  *  8a3e5b4 - Don't do numeric surface intersections if an exact curve
+    has been copied. We don't want 2 overlapping but different sets of
+    PWLs.
+  *  eadeac4 - use VERY_NEGATIVE and VERY_POSITIVE instead of numeric
+    values which is some cases were 1e-10 instead of -1e10
+  *  6c4b075 - Increase MAX_UNDO to 100
+  *  7e99ba0 - UI: Fix the Property Browser window scrollbar
+  *  3694c9b - Travis: sign libomp.dylib
+  *  73bbbde - Travis: include libomp in macOS .app
+  *  88b26aa - Update the year in the About dialog
+  *  7292c32 - Performance: inline the Bernstein functions
+  *  5388e10 - Travis: use force to overwrite tag
+  *  57f8b37 - Travis: skip build if tag is edge, staple to the .dmg
+  *  5fbb1b8 - Travis: remove old secrets from .travis.yml
+  *  24720a0 - Revert "CMake: use sanitizer flags for internal targets
+    only"
+  *  da87a68 - Travis: try fixing deploy secret (sorry, has to happen on
+    master)
+  *  8f509f1 - Travis: CI improvements and fixing edge builds (#766)
+  *  7035071 - Performance optimization of the Vector class
+  *  68b1abf - CMake: use sanitizer flags for internal targets only
+  *  c674bc8 - Add OpenMP parallel for to SShell::CopyCurvesSplitAgainst
+  *  0f1ece2 - Resovle a huge performance regression introduced by
+    commit ab10e38 while still fixing the NURBS issues resolved by that
+    commit with only modest speed penalty. The performance is
+    significantly improved by using bounding box tests on curves prior
+    to doing complex intersection testing.
+  *  0761339 - STEP Export: include colors and alpha
+  *  400056c - CMake: Give ENABLE_LTO a default and a description so it
+    shows up in cmake-gui
+  *  aa83681 - snap: enable OpenMP and LTO
+  *  32e695b - STEP Export: include colors and alpha
+  *  b3cd928 - Travis: release macOS and Windows edge builds
+  *  8a2e77d - CMake: fix LTO on Linux
+  *  f3f33d3 - Travis: optimize macOS deploy build
+  *  ab10e38 - Add vertexes to curve intersection list in addition to
+    surface intersections.
+  *  6b5936b - remove zh_CN.mo
+  *  2be2e42 - Chinese translation added.
+  *  9d2641a - Travis: update travis and macos build configs
+  *  3af8127 - macOS: add NSOpenGLPFADoubleBuffer to
+    NSOpenGLPixelFormatAttribute
+  *  8e7416f - Travis: Build improvements and fixes (#751)
+  *  b28499e - initial support (disabled) for keepout regions in IDF
+    files.
+  *  b12bcc5 - Fix some IDF file curves.
+  *  0548702 - macOS CI fixes
+  *  408128a - Avoid zero tangnet vectors on degenerate NURBS edges.
+    Fixes #652
+  *  e42aa0f - Update .travis.yml for macOS build
+  *  91684fe - Add macOS travis config, fix issue in CMakeLists.txt
+    causing macOS build to break
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 30 Oct 2020 20:49:41 +0300
+
 solvespace (3.0.0~git1583-0288c0a-1) unstable; urgency=medium
 
   * Compile

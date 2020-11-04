@@ -1,3 +1,36 @@
+goaccess (1:1.3.0+git3234-f5ae4d2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: f5ae4d2498c129bd295380f0318bc952c13585ef
+  * Date: 1603942563
+  * git changelog:
+  *  f5ae4d2 - Ensure we display the file name when unable to open given
+    log.
+  *  5e21ae2 - Fixed potential memory leak when failing to get root
+    node.
+  *  1e71a6b - Updated Changelog with latest v1.4.1 changes.
+  *  211e8bb - Updated NEWS with latest v1.4.1 changes.
+  *  14c8aa9 - Fixed memory leak on an invalid cache hit token with the
+    %C specifier.
+  *  ae98eb9 - Fixed unknown operating systems with W3C format.
+  *  3b86af2 - Version bumped to 1.4.1.
+  *  32c076c - Minor formatting update.
+  *  a71f898 - Changed reverse for loop so it can deal with uint32_t.
+  *  556b608 - Make sure we check that currently parsed date is in the
+    set of dates when using --keep-last.
+  *  836f3c3 - Ensure allocated dates memory is freed.
+  *  4689e7a - Fixed issue where parser would stop regardless of a valid
+    --num-test value.
+  *  57da91e - Version bumped to 1.4.1.
+  *  0bd93e0 - Fixed inability to keep processing a log when using --
+    keep-last.
+  *  f4ebc33 - Updated formatting + indentation.
+  *  b8dcbb0 - Updated formatting + indentation.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 30 Oct 2020 20:35:35 +0300
+
 goaccess (1:1.3.0+git3218-ebec767-1) unstable; urgency=medium
 
   * Compile

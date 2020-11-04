@@ -1,3 +1,183 @@
+freecad-daily (0.18.3+git22873-f7532b91d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: f7532b91d47f1048f54a42038ac5595592ff76a4
+  * Date: 1603901541
+  * git changelog:
+  *  f7532b91d - Update ClipPlane.py
+  *  7c9e0f3a9 - Merged crowdin translations
+  *  5eafaa37f - Updated ts files
+  *  c3672f6e1 - Tools: Made updatets delete temporary json files
+  *  0f875168b - Material: Mateiral editor UI fixes - Fixed color
+    buttons - Introduced "Section Color" property - Fixed named
+    properties - Added preview icons - Remember UI dimensions and
+    expanded states
+  *  d0eb71517 - FEM: python, get rid of bare excepts
+  *  0fdd15739 - Draft: Added TechDraw patterns
+  *  9a3fcfd8c - Arch: fixed placement of Space label on TD pages
+  *  1e687bb1f - Special provisions for py2 - not understanding why
+    though
+  *  1f8201bbc - Remove app include files from precompile guard
+  *  e878eb56e - Include proper model headers for python files.
+  *  09e6552fb - Fixed 'o' and depth issue
+  *  4c16bef13 - Allow voronoi edges to be traversed in any direction
+    and use that to sort the sequence of milling the wires.
+  *  fb2a747ae - Added sorting over all wires, not just the ones of a
+    single face
+  *  2046db099 - Added sorting of voronoi wires to minimize rapid moves
+  *  ebe5bb0e7 - New vcarve wire detection algorithm using the new z-
+    values of toShape
+  *  d40c18b31 - Fixed parabola calculation if vornonoi edge starts
+    close to its location.
+  *  d563849a7 - Fixed voronoi parabola creation with correct
+    orientation.
+  *  6a9f0f592 - Replaced toGeom with toPoint for VoronoiVertex and
+    toShape for VoronoiEdge - results in arbitrary orientation of
+    parabola for multiple z
+  *  8f45deea9 - Added equal/not equal comparison to voronoi python
+    objects with unit tests.
+  *  1f46b7249 - Part: Geometry - encapsulate construction access
+  *  bc2d3e9d2 - Sketcher: Fix ticket #4399
+  *  3598da57a - Gui: [skip ci] move support of SpaceMouse Explorer to
+    its own event handler function
+  *  0b1cc83c8 - handle button presses on "Spacemouse Enterprise"
+  *  d3f0ed247 - Add list of all available 3Dconnexion devices
+  *  c5895e1a0 - Gui: do not use event handling of SpaceMouse Plus XT
+    for Enterprise model
+  *  690cc3e18 - Gui: [skip ci] let view provider to decide to whether
+    open a transaction on double-click
+  *  f16f97404 - Sketcher: Capitalize opeCommand() text [skip-ci]
+  *  e73ea7d24 - Sketcher: Fix typos [skip-ci]
+  *  9f74b422a - Fix various typos [skip-ci]
+  *  73ba30616 - App: [skip ci] fix printing warning for recursive calls
+    of Document::_commitTransaction
+  *  cda1205c3 - App: [skip ci] fix possible segmentation fault when
+    performing a transaction after an undo
+  *  341540191 - Sketcher: [skip ci] fix changing multiplicity of a
+    spline for Windows builds if PCH is enabled
+  *  aeb0c17e6 - Sketcher: [skip ci] fix crash when deleting a selected
+    geometry directly with delGeometry()
+  *  4a8201a23 - Sketch: [skip ci] handle possible crashes when
+    decreasing degree of a spline
+  *  fc89f4eb0 - Sketcher: implement command to decrease degree of a B-
+    spline
+  *  c5d5d69c9 - Part: [skip ci] add method to approximate a B-spline
+    curve with a given max. degree
+  *  0001cb0fb - Sketcher: [skip ci] remove AutoTransaction from
+    ViewProviderSketch::mouseButtonPressed because it breaks the
+    open/commit transaction logic
+  *  a2a1f04f2 - Sketcher: [skip ci] remove superfluous transaction when
+    start/finish editing a sketch
+  *  88f0ea629 - Path: Fixes ticket #4471
+  *  318312be7 - Draft: Fix logical error in is_line function
+  *  cd4901bf5 - Sketcher: [skip ci] do not create dialog on heap if not
+    needed to improve exception-safety and reduce possible memory leaks
+  *  8b983e636 - Part: update the Part_Thickness icon
+  *  bc0cfdfda - Draft: use new name of the icon Part_3D_object
+  *  587475fc8 - Arch: use new name of the icon Part_3D_object
+  *  15408b213 - Part: rename the basic Part 2D and 3D icons
+  *  a1e89da8f - Sketcher: add BSplineDecreaseDegree although with an
+    empty implementation
+  *  7f52d8bcb - Sketcher: clean up line spacing for VirtualSpace
+    command
+  *  a2913050e - Sketcher: clean up the sketcher B-spline tooltips
+  *  dcc648381 - Sketcher: clean up the sketcher tools tooltips
+  *  ee79991c4 - Sketcher: fix regression in CmdSketcherValidateSketch
+    Do not enable the command if another task dialog is still active
+  *  9bd31637d - Sketcher: clean up general commands tooltips
+  *  b81ea41ae - Sketcher: add five tools to the Sketcher toolbar and
+    reorder code
+  *  ef067e9f5 - Sketcher: Merged constraint selection fix.
+  *  896a1bcb4 - [PD] more holes fixes
+  *  9d3625353 - Part: [skip ci] use the correct icon for helix and
+    sprial view providers
+  *  537089b34 - [Sketcher] Allow selection of 2 vertices for
+    horizontal/vertical constraint in continuous mode
+  *  ccd898039 - Add SVG icons for two Std commands
+  *  33caa1ec3 - Fix various typos
+  *  72eb41b24 - Fix macro code processing
+  *  783f8dc78 - [PD] fix thread UI bugs
+  *  2bf4448e0 - TechDraw: Better tooltip for scale property
+  *  0d511d055 - Arch: Added SectionColor property to Arch Materials
+  *  1a2b75ab0 - Draft: allow to scale imageplanes
+  *  87eae7c58 - Arch: Enabled ellipse-based walls - fixes #3859
+  *  eee68a314 - Start: Allow to display more than one custom folder on
+    the start page
+  *  ec46265bc - [PD] initialize hole dialog properly
+  *  a29d834bd - App: [skip ci] fix PropertyEnumeration::setEnums to
+    avoid to produce index values out of range
+  *  6e6f2c8a0 - PartDesign: [skip ci] some improvements in
+    TaskHoleParameters + do not rely on translated strings but set user
+    data for the items of the combo box + do not use tr() to convert the
+    C strings to QString of the hole feature, use QString::fromLatin1 +
+    do not use findText() twice for the same search but store the result
+  *  99dd4460c - [PD] keep hole size when changing type
+  *  c0b2188ad - PartDesign: [skip ci] make the hole feature more
+    forgiving in case of inconsistent configuration
+  *  39744ce98 - Draft: split svg.get_svg into subfunctions (2)
+  *  8187cbee1 - Draft: split svg.get_svg into subfunctions
+  *  f136ee844 - Draft: move svg subfunctions to svgshapes.py module
+  *  ebc50e03e - Draft: move svg subfunctions to svgtext.py module
+  *  4d3ea2d85 - Draft: support object without shape in DraftLink
+  *  4234e6679 - [Stylesheet] Add border to tiled subwindows to allow
+    resizing
+  *  b51c952e4 - Surface, MeshPart: update CurveOnMesh command tooltip
+    and task panel
+  *  becd393af - Surface: updated task panel for Surface_Filling
+  *  3304e1b44 - Surface: update tooltip of Filling
+  *  aa88f3ded - Improve make_sketch and geometric related functions
+  *  675fdd7c3 - travis: disable TechDraw for macOS build The travis
+    builds for macOS always stop at around 82% and this is a test to see
+    if the build runs out of memory
+  *  272972559 - fix build problem with path
+  *  950269834 - Add files via upload
+  *  1f0b7793e - Revert "PartDesign: [skip ci] fixes #0004371: Changing
+    Hole profile from ISO to nothing is not possible: "Hole: Cannot get
+    value from invalid enumeration""
+  *  cf5ab312b - Part: Enable test for issue 4456
+  *  54e29ac2b - macOS: suppress some warnings
+  *  38fcf770a - Qt5: fix build failure with Qt 5.15
+  *  a96f6619a - Fem: Python header must be included before vtk headers
+    to avoid re-definition of macro _LARGEFILE_SOURCE
+  *  8ffbabb60 - Py3: suppress warnings about un-initialized/deprecated
+    tp_print slot
+  *  4e68025d9 - Part: remove deprecated type LinePyOld
+  *  571ab1b6e - Qt5: make StatusWidget derive from QDialog instead of
+    QWidget to avoid code duplication and using deprecated API functions
+  *  2057e151d - Qt5: fix deprecation warnings for Qt 5.15 +
+    QByteArray::append is deprecated + QPixmap* QLabel::pixmap() is
+    deprecated + overloaded version of QString::split is deprecated +
+    QSysInfo::windowsVersion()/QSysInfo::MacVersion() is deprecated
+  *  34f4b712d - Qt5: fix deprecation warnings of QWheelEvent in Qt 5.15
+  *  f3bdaaa55 - fix import, OpenSCAD isn't namespace workbench
+  *  01af171a3 - macOS: [skip ci] suppress some more Py3.8 warnings,
+    suppress warnings about deprecated OpenGL API
+  *  28270e53a - Gui: [skip ci] workaround for Qt5.12.9 that causes a
+    crash in the parameter editor for right clicks in an empty area
+  *  ce87f586e - fixes #0004456: Regression : Part.Plane.Intersect do
+    not accept plane as argument [skip ci]
+  *  9881fff3a - Part: [skip ci] replace some old C-style casts with
+    static_cast
+  *  bbbf7aad1 - Part: Add regression test for issue #4456 (skipped for
+    now)
+  *  02157cdbf - fix deburr direction.
+  *  4ce860cbf - Allow the probe data file to have blank lines.
+  *  6db7bf604 - Fix File Dialog
+  *  c8712b83f - more pythonic params (thanks plaes)
+  *  015910448 - add RtoIJ function to PathUtils.  fixes #2606
+  *  1062b6ee0 - Part: [skip ci] allow to create empty shapes of each
+    type
+  *  9fcf2c21c - Part: [skip ci] fix bugs in MakePrismPy
+  *  94ec50cb2 - Qt4: fix Qt4 build failure
+  *  e1b56f855 - Part: expose BRepFeat_MakePrism to Python
+  *  b33a12093 - Part: [skip ci] implement getPyObject/setPyObject of
+    TopoShape class
+  *  27053d90b - Arch: Fixed backwards compatibility issues
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 29 Oct 2020 01:06:49 +0300
+
 freecad-daily (0.18.3+git22747-df9282dc1-1) unstable; urgency=medium
 
   * Compile

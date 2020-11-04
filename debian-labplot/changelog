@@ -1,3 +1,65 @@
+labplot (2.7.0+git7779-dd2af1987-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: dd2af19878e43b46e77619716c8e596d150bf3c5
+  * Date: 1603933901
+  * git changelog:
+  *  dd2af1987 - GIT_SILENT made messages (after extraction)
+  *  ced921c05 - Minor improvement
+  *  7b1bf1faf - Put double comparison into NSL
+  *  5f1678bc8 - GIT_SILENT made messages (after extraction)
+  *  8bfda6a8e - GIT_SILENT made messages (after extraction)
+  *  eee041498 - In the previous commit a signal was removed in
+    ProjectExplorer::load() to avoid calling the update of windows
+    visibility multiple times in MainWin. This caused a regression with
+    the views not being shown after the project load. To address both
+    problems - show views and avoid multiple update visibility calls - a
+    new signal is introduced and the update of the visibility is done
+    only once after the project was loaded.
+  *  77a95ebba - GIT_SILENT Minor changes
+  *  791eb64b5 - When loading the project, handle the "current aspect
+    changed" signal only once after the project was completely loaded
+    and some minor refactoring in MainWin.
+  *  039edb1b5 - Handle the change of the windows visibily settings.
+  *  b1b228734 - When openning a project, set the project file name for
+    all supported formats and not for the navive format only.
+  *  fab541817 - [worksheet] avoid potential division by zero and one
+    more index==-1 case.
+  *  7c399a879 - Remove sub-window shadow remnants when closing the
+    project.
+  *  95cd6ca15 - More handling of the index == -1 cases in the
+    comboboxes in Axis and Worksheet dock widgets.
+  *  57dc9d83b - GIT_SILENT improve build scripts
+  *  e30684b88 - Fix build on FreeBSD
+  *  ebcbf6124 - [AbstractCoordinateSystem] Replace legacy round()
+    function
+  *  f549042fe - [spreadsheet] when loading columns, don't call the
+    setters for the numeric formats and digits if the saved values are
+    equal to the default values of Column. This removes some overhead
+    during the project load.
+  *  4879c2d10 - In the event filter in ProjectExplorer only react on
+    mouse events in the tree view to avoid wrong casts. The issue is
+    reported by UBSAN.
+  *  c745baf3e - When populating a comboboxe with pen and brush styles
+    via GuiTools, the items in the combobox get deleted first and the
+    current index is -1. Don't react on -1 in the corresponding slots
+    otherwise we convert -1 to Qt::PenStyle or Qt::BrushStyle which is
+    wrong. This issue is reported by UBSAN.
+  *  1e831a259 - Updated the version in the splash screen and in the
+    Changelog file to 2.8.1.
+  *  d502b1aa6 - [worksheet] user the icon for xy-curve also for
+    convolution and correlation curves since we don't have any dedicated
+    icons for them yet and some minor layout improvements in the
+    convolution dock widget.
+  *  93449579a - [mqtt] properly set the status of the widgets
+    (enabled/disabled) in the last will message widget.
+  *  5d2261a8c - Use qPrintable()
+  *  264db0764 - Fix crash importing JSON (regression)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 29 Oct 2020 11:06:19 +0300
+
 labplot (2.7.0+git7754-75cbee6f1-1) unstable; urgency=medium
 
   * Compile
