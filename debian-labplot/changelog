@@ -1,11 +1,43 @@
-labplot (2.7.0+git7779-dd2af1987-1) unstable; urgency=medium
+labplot (2.8.0+git7803-d0573f64a-1) unstable; urgency=medium
 
   * Compile
   * URL: https://github.com/KDE/labplot.git
   * Branch: master
-  * Commit: dd2af19878e43b46e77619716c8e596d150bf3c5
-  * Date: 1603933901
+  * Commit: d0573f64a0edc64b2167a9ce86f2064b8f781299
+  * Date: 1605038347
   * git changelog:
+  *  d0573f64a - GIT_SILENT Updated Changelog.
+  *  e5a934870 - Fix full screen mode on macOS
+  *  373fc93e1 - Fix full screen action
+  *  0cfbf73a9 - [textlabel] Fix regression
+  *  680dc4605 - Opimize drawing text label
+  *  f7683f04a - GIT_SILENT Add icons for Windows store
+  *  4840579c4 - Add option for reproducable builds
+  *  7d170193a - GIT_SILENT changelog
+  *  30c06bad1 - Don't crash when doing drag&drop between different main
+    windows.
+  *  d6f0b31b5 - Fix changing font of text label for newer Qt versions
+  *  437a3e547 - GIT_SILENT made messages (after extraction)
+  *  27bdb848f - GIT_SILENT made messages (after extraction)
+  *  7efdf6aa9 - Code style
+  *  00fc63b46 - Fix datetime add/substract operations
+  *  9193bd86c - Fix add/substract datetime values
+  *  ce3b45b1f - GIT_SILENT made messages (after extraction)
+  *  8d78da661 - Typo
+  *  61edd3e60 - [spreadsheet] when pasting values into the spreadsheet,
+    convert to the proper column mode also if the whole target column
+    was selected, i.e. clicked on the header.
+  *  644d51fc7 - Use qint64 instead of quint64 in AddSubtractValueDialog
+    when converting from the Unix epoch to milliseconds.
+  *  3976d0c8f - Replace old syntax in all standard actions
+  *  3e9519f00 - [spreadsheet] unified the handling of the column
+    context menu generated in the view and and in the project explorer.
+    This also fixes a regression where it was not possible anymore to
+    add/subtract values in a datetime column.
+  *  f119ace69 - GIT_SILENT made messages (after extraction)
+  *  53aa1ced7 - GIT_SILENT changelog
+  *  3082e81d1 - Improve standard actions and fix missing Preferences
+    menu on macOS
   *  dd2af1987 - GIT_SILENT made messages (after extraction)
   *  ced921c05 - Minor improvement
   *  7b1bf1faf - Put double comparison into NSL
@@ -18,10 +50,11 @@ labplot (2.7.0+git7779-dd2af1987-1) unstable; urgency=medium
     problems - show views and avoid multiple update visibility calls - a
     new signal is introduced and the update of the visibility is done
     only once after the project was loaded.
+  *  8a6de1100 - Merge branch 'master' of https://github.com/KDE/labplot
   *  77a95ebba - GIT_SILENT Minor changes
-  *  791eb64b5 - When loading the project, handle the "current aspect
-    changed" signal only once after the project was completely loaded
-    and some minor refactoring in MainWin.
+  *  791eb64b5 - When loading the project, handle the current aspect
+    changed signal only once after the project was completely loaded and
+    some minor refactoring in MainWin.
   *  039edb1b5 - Handle the change of the windows visibily settings.
   *  b1b228734 - When openning a project, set the project file name for
     all supported formats and not for the navive format only.
@@ -58,7 +91,7 @@ labplot (2.7.0+git7779-dd2af1987-1) unstable; urgency=medium
   *  5d2261a8c - Use qPrintable()
   *  264db0764 - Fix crash importing JSON (regression)
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 29 Oct 2020 11:06:19 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 13 Nov 2020 01:15:40 +0300
 
 labplot (2.7.0+git7754-75cbee6f1-1) unstable; urgency=medium
 

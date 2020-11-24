@@ -1,11 +1,60 @@
-goaccess (1:1.3.0+git3234-f5ae4d2-1) unstable; urgency=medium
+goaccess (1:1.3.0+git3272-7d231a2-1) unstable; urgency=medium
 
   * Compile
   * URL: https://github.com/allinurl/goaccess.git
   * Branch: master
-  * Commit: f5ae4d2498c129bd295380f0318bc952c13585ef
-  * Date: 1603942563
+  * Commit: 7d231a24077a042d8aa112b5a48d082aeb5f76be
+  * Date: 1605054244
   * git changelog:
+  *  7d231a2 - Ensure perf metrics are logged & calculated only on debug
+    mode.
+  *  e21fe29 - Fixed issue where served time metrics were not shown when
+    data was piped.
+  *  f245aa8 - Updated README.md.
+  *  6b3f845 - Updated Changelog with latest v1.4.1 changes.
+  *  8ca2d1f - Updated Spanish po file.
+  *  1122f26 - Updated screenshot for v1.4.1.
+  *  db10a09 - Added macOS 11.0 Big Sur to the list of OSs.
+  *  c378a8c - Added Android 11 to the list of OSs.
+  *  f4f165f - Updated Changelog with latest v1.4.1 changes.
+  *  0e01260 - Updated screenshot for v1.4.1.
+  *  ca20c30 - Updated screenshot for v1.4.1.
+  *  da89020 - Updated Changelog with latest v1.4.1 changes.
+  *  4ce449f - Removed unused general stats code.
+  *  eaf5e93 - Update spinner label when restoring from disk.
+  *  5257978 - Fixed minor typo on man page.
+  *  f14856d - Updated man page notes about persist and restore.
+  *  4e1618b - Ensure allocated fifos are free'd.
+  *  6ad9476 - Ensure persisted_dates is free'd.
+  *  28a0b79 - Updated man page for the upcoming version.
+  *  a6ebd2a - Updated NEWS with latest v1.4.1 changes.
+  *  8f6d542 - Updated list of collaborators for upcoming version.
+  *  694655f - Added 'average' to each panel overall metrics.
+  *  8cfae1b - Ensure restored data enforces --keep-last if used by
+    truncating accordingly.
+  *  fc3eeb8 - Fixed issue where restoring from disk and ensuring the
+    MAX.TS. is kept.
+  *  3bffb3f - Fixed issue where restoring from disk would increment
+    MAX.TS.
+  *  610f89e - Ensure we reuse the initial file pointer to read log
+    snippet instead of the mmap(3) syscall.
+  *  18d4928 - Fixed issue where log truncation could prevent accurate
+    number counting.
+  *  3628814 - Minor spacing update to browsers.c.
+  *  dc3e6ee - Minor update to formatting.
+  *  5782fe3 - Merge pull request #1939 from Titaniumtown/patch-2
+  *  e8ec58c - Merge branch 'master' of
+    https://github.com/allinurl/goaccess into patch-2
+  *  69b240f - Fixed address of array always evaluating true.
+  *  ef22f6a - Fixed issue where it would not parse subsequent requests
+    coming from stdin.
+  *  46844be - Added missing function comments to is_likely_same_log().
+  *  846747b - Added missing function comments to
+    set_initial_persisted_data().
+  *  0348d6a - Added extra check to ensure restoring from disk verifies
+    the content of the log.
+  *  af7ac21 - Updated function comments to reflect actual
+    functionality.
   *  f5ae4d2 - Ensure we display the file name when unable to open given
     log.
   *  5e21ae2 - Fixed potential memory leak when failing to get root
@@ -29,7 +78,7 @@ goaccess (1:1.3.0+git3234-f5ae4d2-1) unstable; urgency=medium
   *  f4ebc33 - Updated formatting + indentation.
   *  b8dcbb0 - Updated formatting + indentation.
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 30 Oct 2020 20:35:35 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 13 Nov 2020 00:57:42 +0300
 
 goaccess (1:1.3.0+git3218-ebec767-1) unstable; urgency=medium
 

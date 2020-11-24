@@ -1,11 +1,15 @@
-solvespace (3.0.0~git1623-d973405-1) unstable; urgency=medium
+solvespace (3.0.0~git1627-d0876d5-1) unstable; urgency=medium
 
   * Compile
   * URL: https://github.com/solvespace/solvespace.git
   * Branch: master
-  * Commit: d973405c8c71ab807622c809b88e745fda8ddffb
-  * Date: 1603999977
+  * Commit: d0876d5f43f8e4663b0743e426babaa59fb57013
+  * Date: 1604782635
   * git changelog:
+  *  d0876d5 - Update README.md (by @nii236)
+  *  5945d55 - Add end marker to text window and increase max rows.
+  *  953c472 - Travis: add clean edge script
+  *  6ff8db9 - Use zOrder for selections within the same group
   *  d973405 - adjust logo size
   *  078fb99 - add logo in heading
   *  ef7e2c7 - README: Add Travis & Snap Store badges
@@ -23,8 +27,8 @@ solvespace (3.0.0~git1623-d973405-1) unstable; urgency=medium
   *  5388e10 - Travis: use force to overwrite tag
   *  57f8b37 - Travis: skip build if tag is edge, staple to the .dmg
   *  5fbb1b8 - Travis: remove old secrets from .travis.yml
-  *  24720a0 - Revert "CMake: use sanitizer flags for internal targets
-    only"
+  *  24720a0 - Revert CMake: use sanitizer flags for internal targets
+    only
   *  da87a68 - Travis: try fixing deploy secret (sorry, has to happen on
     master)
   *  8f509f1 - Travis: CI improvements and fixing edge builds (#766)
@@ -62,7 +66,7 @@ solvespace (3.0.0~git1623-d973405-1) unstable; urgency=medium
   *  91684fe - Add macOS travis config, fix issue in CMakeLists.txt
     causing macOS build to break
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 30 Oct 2020 20:49:41 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 13 Nov 2020 01:03:29 +0300
 
 solvespace (3.0.0~git1583-0288c0a-1) unstable; urgency=medium
 

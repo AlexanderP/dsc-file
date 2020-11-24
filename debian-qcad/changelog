@@ -1,11 +1,68 @@
-qcad (3.24.0+git7951-5cde8a200-1) unstable; urgency=medium
+qcad (3.24.0+git8001-0a8aa17a7-1) unstable; urgency=medium
 
   * Compile
   * URL: https://github.com/qcad/qcad.git
   * Branch: master
-  * Commit: 5cde8a200a9fd68979bfaf12e0cbe75f43715549
-  * Date: 1603826828
+  * Commit: 0a8aa17a7ad5aa39ff65ea3cc7a52fd7653070d2
+  * Date: 1605193657
   * git changelog:
+  *  0a8aa17a7 - fix FS#2133 - Modify > Break out Manual: exception for
+    closed polyline
+  *  8d0dae19f - update translations
+  *  687533337 - update script bindings
+  *  4a594e194 - change fading calculation from int to float
+  *  1474e027d - fade texts and images if not in working set
+  *  dadd1bfdb - move working set flag to drawable
+  *  f3566e54f - add getFaded for fading entities
+  *  802f44034 - update translations
+  *  1432cb47b - Merge branch 'master' of github.com:qcad/qcad
+  *  e2a62b3a2 - Translated using Weblate (English)
+  *  eb66ab3a1 - restrict editing to working set
+  *  bdf52237b - update translations
+  *  fd70f3bb6 - update translations
+  *  848db5b34 - fix file
+  *  bff07d7e7 - no relative zero point restoring when resuming default
+    action
+  *  a8069b582 - fix potential crash when isSelected is called for an
+    entity that is not on a layer (yet)
+  *  1c8bced7d - Merge branch 'master' of github.com:qcad/qcad
+  *  b602bceba - fix splitting up xlines
+  *  d78924ce7 - Translated using Weblate (English)
+  *  868531c21 - update script bindings
+  *  b6aad24ee - add REntity::isInWorkingSet
+  *  574c91adb - improve warning text
+  *  219bbfbc3 - update translations
+  *  eca9d66a2 - Translated using Weblate (Portuguese)
+  *  162ae92a8 - Translated using Weblate (Dutch)
+  *  36f5c58c8 - Translated using Weblate (Italian)
+  *  8de26fdbf - Translated using Weblate (French)
+  *  9e55d0ef9 - Translated using Weblate (Spanish)
+  *  f991916cb - update script bindings
+  *  262f7effc - formatting
+  *  ece9b6cb2 - suspend default action on quit
+  *  6c8cf2533 - add working set property lock entities not in working
+    set add new entities to working set fade entities not in working set
+    lock block list when editing a working set
+  *  e99a26b91 - call EAction.suspendEvent for default actions
+  *  2977035a4 - Translated using Weblate (German)
+  *  a3d077a0e - Translated using Weblate (English)
+  *  280dd2b8d - update translations
+  *  b7604fb4a - update translations
+  *  556402218 - change default line weight to 0
+  *  0cda54c7e - change default line weight to 0
+  *  65a096831 - update
+  *  166ffdd26 - back port to Qt 5.5
+  *  494c41b75 - add more QImage script bindings
+  *  15fd6d8d7 - set version to 3.25.2.3
+  *  48d351a26 - fix FS#2129 - Info > Polyline Area: Overlapping labels
+  *  248024db1 - add tool title to transaction log
+  *  8d2a2c0e9 - fix insertion of points into splines that are closed
+    but not periodic
+  *  5353fd0a0 - update custom layer sorting
+  *  5d257c997 - ignore entities on non-snappable layers
+  *  b2ed85e47 - update script bindings
+  *  2212d3d8d - add layer sorting functor for advanced layer sorting
+    (custom ordering)
   *  5cde8a200 - enable opengl plugin by default
   *  6e8e064a1 - update script bindings
   *  5f2d2b98b - add isEntitySnappable
@@ -15,10 +72,12 @@ qcad (3.24.0+git7951-5cde8a200-1) unstable; urgency=medium
   *  d9b951cdd - update translations
   *  406deade8 - update support for text in background decoration
   *  1412bba5a - fix transaction type initialization
+  *  8b8326ee4 - Merge branch 'master' of github.com:qcad/qcad
   *  a64489d6c - set version to 3.25.2.2
   *  762cc01ba - Translated using Weblate (Chinese (Simplified))
   *  ff5f175a8 - Translated using Weblate (Chinese (Simplified))
   *  d293e167b - Translated using Weblate (Chinese (Simplified))
+  *  ac01a250e - Merge branch 'master' of github.com:qcad/qcad
   *  2375848fe - update manual, qrc
   *  439d0a02c - add support for text in background decoration
   *  83440169f - add Prnt proxy for advanced features
@@ -30,7 +89,7 @@ qcad (3.24.0+git7951-5cde8a200-1) unstable; urgency=medium
   *  f445347ba - performance improvement for layer locking
   *  b0442b2bd - add text test
 
- -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 29 Oct 2020 12:29:11 +0300
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 13 Nov 2020 01:03:44 +0300
 
 qcad (3.24.0+git7926-2895712a5-1) unstable; urgency=medium
 
