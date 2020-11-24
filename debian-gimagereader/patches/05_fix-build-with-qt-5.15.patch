@@ -1,0 +1,24 @@
+Author: Alexander Volkov <avolkov@astralinux.ru>
+Description: Fix build with Qt 5.15
+Forwarded: not-needed
+Last-update: 2020-09-06
+--- a/qt/src/hocr/HOCROdtExporter.cc
++++ b/qt/src/hocr/HOCROdtExporter.cc
+@@ -31,6 +31,7 @@
+ #include <QMessageBox>
+ #include <QUuid>
+ #include <QXmlStreamWriter>
++#include <QUrl>
+ #include <quazipfile.h>
+ 
+ static QString manifestNS("urn:oasis:names:tc:opendocument:xmlns:manifest:1.0");
+--- a/qt/src/hocr/HOCRTextExporter.cc
++++ b/qt/src/hocr/HOCRTextExporter.cc
+@@ -28,6 +28,7 @@
+ #include <QFileInfo>
+ #include <QMessageBox>
+ #include <QTextStream>
++#include <QUrl>
+ 
+ bool HOCRTextExporter::run(const HOCRDocument* hocrdocument, QString& filebasename) {
+ 	QString suggestion = filebasename;

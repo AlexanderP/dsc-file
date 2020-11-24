@@ -1,0 +1,15 @@
+Author: Sandro Mani <manisandro@gmail.com>
+Description:  Fix exception if LANG is unset
+Applied-Upstream: https://github.com/manisandro/gImageReader/commit/a274cbd13dbc62868c88521400636120c53ab2e9
+Last-update: 2019-09-16
+--- a/gtk/src/Utils.cc
++++ b/gtk/src/Utils.cc
+@@ -392,7 +392,7 @@ Glib::ustring Utils::getSpellingLanguage(const Glib::ustring& lang) {
+ 		return langspec.code;
+ 	}
+ 	// Use the application locale, if specified, otherwise fall back to en
+-	Glib::ustring syslocale = g_getenv ("LANG");
++	Glib::ustring syslocale = Glib::getenv("LANG");
+ 	if(syslocale == "c" || syslocale == "C" || syslocale.empty()) {
+ 		return "en_US";
+ 	}

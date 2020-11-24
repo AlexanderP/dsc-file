@@ -1,0 +1,97 @@
+Source: gimagereader
+Section: graphics
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 9),
+ cmake,
+ intltool,
+ libcairomm-1.0-dev,
+ libdjvulibre-dev,
+ libenchant-2-dev | libenchant-dev,
+ libgtkmm-3.0-dev,
+ libgtksourceviewmm-3.0-dev,
+ libgtkspellmm-3.0-dev (>= 3.0.4),
+ libjpeg-dev,
+ libjson-glib-dev,
+ libpangomm-1.4-dev,
+ libpodofo-dev,
+ libpoppler-glib-dev,
+ libpoppler-qt5-dev,
+ libqtspell-qt5-dev,
+ libquazip5-dev, libquazip5-headers | wget,
+ libsane-dev,
+ libtesseract-dev,
+ libxml++2.6-dev,
+ libzip-dev,
+ python3-gi,
+ qtbase5-dev,
+ uuid-dev,
+Standards-Version: 4.5.0
+Homepage: https://github.com/manisandro/gImageReader
+
+Package: gimagereader
+Architecture: any
+Depends:
+ gimagereader-common (= ${source:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: Graphical GTK+ front-end to tesseract-ocr
+ gImageReader is a simple front-end to tesseract-ocr. Tesseract is probably
+ the most accurate open source optical character recognition (OCR) software and
+ can recognize text in over 60 languages.
+ .
+ gImageReader supports automatic page layout detection but the user can also
+ manually define and adjust the recognition regions. It is possible to import
+ images from disk, scanning devices, clipboard and screenshots. gImageReader
+ also supports multipage PDF documents. Recognized text is displayed directly
+ next to the image and basic text editing including search/replace and removing
+ of line breaks is possible. Spellchecking for the output text is also supported
+ if the corresponding dictionaries are installed.
+ .
+ This package contains the GTK+ variant of gImageReader.
+
+Package: gimagereader-qt5
+Architecture: any
+Depends:
+ gimagereader-common (= ${source:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: Graphical Qt 5 front-end to tesseract-ocr
+ gImageReader is a simple front-end to tesseract-ocr. Tesseract is probably
+ the most accurate open source optical character recognition (OCR) software and
+ can recognize text in over 60 languages.
+ .
+ gImageReader supports automatic page layout detection but the user can also
+ manually define and adjust the recognition regions. It is possible to import
+ images from disk, scanning devices, clipboard and screenshots. gImageReader
+ also supports multipage PDF documents. Recognized text is displayed directly
+ next to the image and basic text editing including search/replace and removing
+ of line breaks is possible. Spellchecking for the output text is also supported
+ if the corresponding dictionaries are installed.
+ .
+ This package contains the Qt 5 variant of gImageReader.
+
+Package: gimagereader-common
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+Replaces:
+ gimagereader (<< 3.3.1-2),
+Breaks:
+ gimagereader (<< 3.3.1-2),
+Description: gImageReader common files
+ gImageReader is a simple front-end to tesseract-ocr. Tesseract is probably
+ the most accurate open source optical character recognition (OCR) software and
+ can recognize text in over 60 languages.
+ .
+ gImageReader supports automatic page layout detection but the user can also
+ manually define and adjust the recognition regions. It is possible to import
+ images from disk, scanning devices, clipboard and screenshots. gImageReader
+ also supports multipage PDF documents. Recognized text is displayed directly
+ next to the image and basic text editing including search/replace and removing
+ of line breaks is possible. Spellchecking for the output text is also supported
+ if the corresponding dictionaries are installed.
+ .
+ This package contains common files for the GTK+ and Qt 5 variants of
+ gImageReader.

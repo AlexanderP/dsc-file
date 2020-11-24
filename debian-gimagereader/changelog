@@ -1,0 +1,166 @@
+gimagereader (3.3.1-2.1) unstable; urgency=medium
+
+  * Compile
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 08 Nov 2020 14:30:12 +0300
+
+gimagereader (3.3.1-2) unstable; urgency=medium
+
+  [ Philip Rinn ]
+  * Bump Standards-Version to 4.5.0 (no changes necessary)
+  * Bump debhelper compat version to 13 (no changes necessary)
+  * Add debian/patches/06_fix-build-with-cmake-3.17.patch:
+    - Fix build with CMake >= 3.17
+
+  [ Alexander Volkov ]
+  * Add packaging for the Qt 5 frontend (closes: #891414)
+
+ -- Philip Rinn <rinni@inventati.org>  Tue, 08 Sep 2020 09:23:20 +0200
+
+gimagereader (3.3.1-1) unstable; urgency=medium
+
+  * New upstream version (closes: #947591)
+  * Add debian/patches/04_fix-crash-missing-lang.patch:
+    - Fix crash when $LANG is not set (closes: #930642)
+  * Bump Standards-Version to 4.4.1 (no changes necessary)
+  * Bump debhelper compat version to 12 (no changes necessary)
+
+ -- Philip Rinn <rinni@inventati.org>  Sat, 28 Dec 2019 12:03:29 +0100
+
+gimagereader (3.3.0-1) unstable; urgency=medium
+
+  [ Philip Rinn ]
+  * New upstream version (closes: #889633):
+    - Add build dependencies libdjvulibre-dev, libzip-dev, python3-gi, uuid-dev
+  * Drop patches that are applied upstream:
+    - debian/patches/01_fix-appstream-metadata.patch
+    - debian/patches/02_remove-pixdata-conversions.patch
+    - debian/patches/04_set_local_c_for_tesseract.patch
+  * Bump Standards-Version to 4.2.1 (no changes necessary)
+  * Bump debhelper compat version to 11 (no changes necessary)
+  * Add upstream metadata
+  * Update debian/copyright
+
+  [ Ondřej Nový ]
+  * debian/copyright: Use https protocol in Format field
+
+ -- Philip Rinn <rinni@inventati.org>  Mon, 26 Nov 2018 22:32:05 +0100
+
+gimagereader (3.2.3-3) unstable; urgency=medium
+
+  * add debian/patches/04_set_local_c_for_tesseract.patch:
+    - Adapt for tesseract 4.x aborting if LANG!=C (closes: #906243)
+
+ -- Philip Rinn <rinni@inventati.org>  Thu, 16 Aug 2018 22:19:01 +0200
+
+gimagereader (3.2.3-2) unstable; urgency=medium
+
+  * add debian/patches/01_fix-appstream-metadata.patch:
+    - Use current format and location for appstream metadata
+  * add debian/patches/02_remove-pixdata-conversions.patch:
+    - Remove pixdata conversions (closes: #886139)
+  * add debian/patches/03_fix-slowdown-with-tesseract4.patch:
+    - Fix massive slowdown with tesseract 4.00dev
+  * Bump Standards-Version to 4.1.3 (no changes necessary)
+
+ -- Philip Rinn <rinni@inventati.org>  Fri, 05 Jan 2018 16:08:46 +0100
+
+gimagereader (3.2.3-1) unstable; urgency=medium
+
+  * new upstream version
+  * Bump Standards-Version to 4.0.0 (no changes necessary)
+
+ -- Philip Rinn <rinni@inventati.org>  Mon, 17 Jul 2017 12:49:39 +0200
+
+gimagereader (3.2.1-1) unstable; urgency=medium
+
+  * new upstream version (closes: #856206)
+
+ -- Philip Rinn <rinni@inventati.org>  Wed, 14 Jun 2017 15:39:57 +0200
+
+gimagereader (3.2.0-1) unstable; urgency=medium
+
+  * new upstream version:
+    - remove all patches as they are merged upstream
+    - Add build dependencies libjpeg-dev and libpodofo-dev
+  * Bump debhelper compat from 9 to 10 (no changes necessary).
+
+ -- Philip Rinn <rinni@inventati.org>  Thu, 24 Nov 2016 22:17:44 +0100
+
+gimagereader (3.1.91-2) unstable; urgency=medium
+
+  * add debian/patches/02-fix-ftbfs.patch:
+    - Fix FTBFS due to missing implicit bool conversion
+  * Fix typo in doc-base file
+
+ -- Philip Rinn <rinni@inventati.org>  Wed, 28 Sep 2016 19:59:40 +0200
+
+gimagereader (3.1.91-1) unstable; urgency=medium
+
+  * new upstream version (closes: LP: #1579707):
+    - remove all patches as they are merged upstream
+  * add debian/patches/01-catch-segfaults-tesseract.patch:
+    - catch deliberate segfaults created by tesseract
+  * update debian/copyright
+  * Bump Standards-Version to 3.9.8 (no changes necessary)
+
+ -- Philip Rinn <rinni@inventati.org>  Mon, 13 Jun 2016 19:49:08 +0200
+
+gimagereader (3.1.2+git368fa8f-2) unstable; urgency=medium
+
+  * add debian/patches/02-make_build_reproducible.patch:
+    - make build reproducible
+  * Bump Standards-Version to 3.9.7 (no changes necessary)
+  * Use secure URIs for vcs-* in debian/control
+
+ -- Philip Rinn <rinni@inventati.org>  Sat, 27 Feb 2016 15:40:28 +0100
+
+gimagereader (3.1.2+git368fa8f-1) unstable; urgency=medium
+
+  * Pick upstream snapshot (closes: #802391)
+  * update debian/copyright
+
+ -- Philip Rinn <rinni@inventati.org>  Sat, 31 Oct 2015 20:15:29 +0100
+
+gimagereader (3.1.2-1) unstable; urgency=medium
+
+  * new upstream version (closes: #785656, #794489)
+  * update debian/copyright
+  * fix spelling errors in debian/control
+
+ -- Philip Rinn <rinni@inventati.org>  Fri, 14 Aug 2015 16:29:02 +0200
+
+gimagereader (3.1-1) unstable; urgency=medium
+
+  * new upstream version
+  * add build dependency: libgtksourceviewmm-3.0-dev
+  * drop patch debian/patches/01-desktop-entry-lacks-keywords-entry.patch
+    - applied upstream
+  * add patch debian/patches/01-fix_build_on_armel.patch:
+    - fix build failure on armel
+  * debian/control: update Vcs-Browser field to use new URL syntax
+  * update debian/copyright
+
+ -- Philip Rinn <rinni@inventati.org>  Tue, 12 May 2015 23:15:14 +0200
+
+gimagereader (3.0.1-1) unstable; urgency=low
+
+  * new upstream version
+  * drop patch debian/patches/02-detect-sane-on-hurd-and-kfreebsd.patch
+    - build system switched to cmake
+  * register documentation with doc-base
+
+ -- Philip Rinn <rinni@inventati.org>  Mon, 20 Apr 2015 00:15:45 +0200
+
+gimagereader (2.93-2) unstable; urgency=low
+
+  * Fix build failure on Hurd and kFreeBSD due to missing check in configure.ac
+  * Bump Standards-Version to 3.9.6 (no changes necessary)
+
+ -- Philip Rinn <rinni@inventati.org>  Mon, 06 Oct 2014 21:01:23 +0200
+
+gimagereader (2.93-1) unstable; urgency=low
+
+  * Initial release (closes: #748350)
+
+ -- Philip Rinn <rinni@inventati.org>  Wed, 20 Aug 2014 00:12:16 +0200

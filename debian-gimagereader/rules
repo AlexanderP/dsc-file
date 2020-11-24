@@ -1,0 +1,28 @@
+#!/usr/bin/make -f
+
+#export DH_VERBOSE=1
+export V=1
+
+## Enable compiler hardening flags.
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+export DEB_LDFLAGS_MAINT_APPEND=-Wl,--as-needed
+
+%:
+	dh $@ --parallel
+
+override_dh_auto_clean:
+	dh_auto_clean
+	dh_auto_clean --builddirectory=build-qt5
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DINTERFACE_TYPE=gtk -DENABLE_VERSIONCHECK=0
+	dh_auto_configure --builddirectory=build-qt5 -- -DINTERFACE_TYPE=qt5 -DENABLE_VERSIONCHECK=0
+
+override_dh_auto_build:
+	dh_auto_build
+	dh_auto_build --builddirectory=build-qt5
+
+override_dh_auto_install:
+	dh_auto_install
+	dh_auto_install --builddirectory=build-qt5
