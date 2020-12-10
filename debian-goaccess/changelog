@@ -1,3 +1,107 @@
+goaccess (1:1.4.2+git3355-b8ddab90-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: b8ddab90ac79947973fc7d36892a52e4cd90536c
+  * Date: 1606319786
+  * git changelog:
+  *  b8ddab90 - Updated man page about using ssh with goaccess locally.
+  *  b6fba8e5 - Updated man page to reflect proper way of tail -f a
+    remote access log.
+  *  1ace23ba - Updated README about using ssh with goaccess locally.
+  *  398977fb - Updated README to reflect proper way of tail -f a remote
+    access log.
+  *  df8119cc - Minor update to Changelog.
+  *  ec55ea25 - Minor formatting to README.md.
+  *  166dc8ac - Added GeoIP2 to README.md.
+  *  6adf56d7 - Fixed spacing on Changelog.
+  *  41e27b8c - Fixed typo when setting struct member if no connection
+    has been set.
+  *  d374abfa - Merge pull request #1824 from cgzones/cov_res
+  *  dd4b3fe3 - Revert gkhash: fix use after free
+  *  e6ec4d0a - Merge branch 'master' into cov_res
+  *  9e4b7cf1 - Updated po files (i18n) with latest labels.
+  *  e5c2c5e1 - Updated AUTHORS with latest v1.4.2 changes.
+  *  451a3cff - Updated Changelog with latest v1.4.2 changes.
+  *  01d46ab7 - Updated README.md with latest v1.4.2 changes.
+  *  8666d050 - Updated NEWS with latest v1.4.2 changes.
+  *  0199f4ce - Updated man page to reflect TLS changes.
+  *  a0ba7766 - Ensure TLS_TYPE and SSL_CIPHER can be parsed even when
+    specifiers are in different order.
+  *  57315b8e - Ensure MIME_TYPE & TLS_TYPE panels are not shown if not
+    available.
+  *  a1393669 - Minor code formatting update on MIME/TLS changes.
+  *  350762a4 - Changed GKeyData members to const as their value don't
+    change up until hash insertion.
+  *  1489026f - Revert Revert Logging MIME-Type and TLS parameters
+  *  1e1b1c28 - Improve German translation
+  *  051e719d - Spelling corrections
+  *  019cb239 - is_likely_same_log(): take const pointer instead of 4128
+    byte copy
+  *  52705098 - restore_dates(): handle case when tpl_Alen() returns -1
+  *  686baa7b - generate_fifo_name(): use snprintf instead of insecure
+    sprintf
+  *  ec2cd1ee - gkhash: fix use after free
+  *  2677f034 - gen_req_key(): avoid NULL dereference
+  *  51f7fae7 - get_home(): use snprintf instead of insecure sprintf
+  *  d165c6f4 - sort_sub_list(): fix memory leak
+  *  f8817f8f - get_global_config(): use snprintf instead of insecure
+    sprintf
+  *  b37b0359 - handle_fixed_fifo(): read one byte less to always assure
+    space for a terminator
+  *  343156fe - ws_socket(): check socket() call for failure
+  *  b64daa28 - handle_accept(): fix NULL-dereference of client
+  *  fda9ef73 - ws_openfifo_in(): drop unused return value
+  *  40887a3d - load_agent_list(): fix resource leak
+  *  79d544c5 - ui_spinner(): unlock mutex on return
+  *  39f11a2f - init_windows(): do not call keypad() on NULL
+  *  2a8bec09 - tpl_dump(): always call va_end()
+  *  66f02c2d - set_spec_date_time_num_format(): fix memory leak
+  *  1f7f6f4f - parse_specifier(): fix memory leak
+  *  b245fb7d - extract_keyphrase(): fix memory leak
+  *  cc3bd8c8 - ins_igsl(): fix memory leak
+  *  26e5dfe6 - add_root_to_holder(): fix memory lead
+  *  b7b41626 - free_holder_data(): check whether member metric in non-
+    NULL
+  *  3c98d337 - geoip_query_city(): free allocated strings
+  *  9985bb74 - dns_worker(): unlock mutex on return
+  *  e5426047 - gqueue_enqueue(): use strncpy() instead of unsafe
+    strcpy()
+  *  f52e0852 - access_log_open(): always open access log in append mode
+  *  56e8b5dc - parse_browser(): avoid passing NULL to strpbrk()
+  *  658f8199 - base64: use checked xmalloc()
+  *  4c968e50 - bin2c: check fread explicit against expected value
+  *  a8dfdfaf - bin2c: check if ftell failed
+  *  f8f6edab - Ensure we can restore from disk even if no logs/pipe
+    passed.
+  *  67f8e66d - Use an i18n label for common no data error.
+  *  22acbda3 - Removed unnecessary padding from SVG charts.
+  *  d182a1d3 - Ensure conf.serve_usecs is reset if multiple log-format
+    options are given.
+  *  8ec4859b - Ensure the HTML report defaults to widescreen if
+    viewport is larger than 2560.
+  *  bdbed8aa - Ensure the HTML report defaults to widescreen if
+    viewport is larger than 1980.
+  *  d7067fc8 - Updated log format errors on stderr output.
+  *  4829e8a4 - Fixed warning when attempting to print out pthread_t.
+  *  25f12a64 - Merge pull request #1962 from stephenwade/master
+  *  56420e5e - Merge pull request #1964 from allinurl/revert-1727-
+    master
+  *  1eefdbe4 - Revert Logging MIME-Type and TLS parameters
+  *  d8c70466 - Merge pull request #1727 from uschwarz/master
+  *  ec8ad10f - remove check for mktemp in configure.ac
+  *  e989e09e - seed random number generator with current pid
+  *  37bab7d1 - Version bumped to 1.4.2.
+  *  21f8ca20 - TLS, MIME: no need to split by protocol or method
+  *  5000743b - date keys sind jetzt anders
+  *  a8fe13be - merge - nur Zeilennummern?
+  *  e6df81ad - ??
+  *  3de4bcfe - Ensure we can properly read from stdin after a43993b.
+  *  a43993b9 - Fixed issue when processing multiple logs in real-time.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 26 Nov 2020 17:24:45 +0300
+
 goaccess (1:1.3.0+git3272-7d231a2-1) unstable; urgency=medium
 
   * Compile

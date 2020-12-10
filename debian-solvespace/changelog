@@ -1,3 +1,44 @@
+solvespace (3.0.0~git1647-9390ab0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 9390ab02d5e1d921cfaa4e4948082a818d0e8246
+  * Date: 1606494289
+  * git changelog:
+  *  9390ab0 - Set the default font for text objects correctly.
+  *  a2b5d0d - Win32: Remove sscheck on IsWindowVisible and ShowWindow
+  *  22dea59 - Edit newly added dimensions is now turned on by default.
+    issue826
+  *  5d17369 - Win32: Remove sscheck on SetScrollInfo - it returns the
+    scrollbar position
+  *  bb5994e - UI: Display err in the property browser only if check
+    sketch for closed contour
+  *  f285024 - Move z-index of construction segments behind normal
+    segments
+  *  8dcb2db - Changelog: Describe the err indicator in the property
+    browser.
+  *  fac093a - Translations: update de_DE
+  *  d0d5df1 - Update contour_area test image to match the change in
+    displayed units.
+  *  08f37de - Make better choices of SI units by considering order.
+  *  5137da2 - Win32: Mouse wheel zooming always remains properly
+    centered
+  *  bdd2be6 - Translations: Add solvespace.cpp to the translations...
+  *  942bf3f - Remove Q3DO export.
+  *  427a29a - Travis: build snaps in LXD containers
+  *  bcb8cd2 - Fix unsequenced modification and access warnings.
+  *  898fb6f - Travis: deploy tagged & master commits to GitHub
+  *  1b2d47c - Travis: deploy tagged commits & edge tagging fixes
+  *  5a3f45e - ran make translate_solvespace. cleaned out some obsolete
+    strings in en_US.po
+  *  142252d - Add z distance checking to entity picking. Fixes issue
+    521
+  *  6c2b967 - Use recent flatbuffers commit to solve compiling issue on
+    OpenBSD
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 28 Nov 2020 00:08:09 +0300
+
 solvespace (3.0.0~git1627-d0876d5-1) unstable; urgency=medium
 
   * Compile

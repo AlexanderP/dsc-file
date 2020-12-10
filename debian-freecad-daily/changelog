@@ -1,3 +1,387 @@
+freecad-daily (0.18.4+git23126-01a7680a7-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 01a7680a72a486d42a10a6e3238f6e6a9ffd784a
+  * Date: 1606394875
+  * git changelog:
+  *  01a7680a7 - Arch: Fixed regression in structures
+  *  a16eec8a7 - PyCXX: [skip ci] fix SeqBase<>::max_size() by returning
+    the max. value of a Py_ssize_t instead of -1
+  *  298c67787 - Gui: Fix header uniformity, whitespace, and doxygen
+    fixes
+  *  c6faecdce - FEM: small code change to get lgtm quit
+  *  f2bf17ea1 - FEM: dummy usage of some vars for flake8 no longer
+    needed
+  *  b23578501 - FEM: trailing whitespaces
+  *  029eec37a - FEM: remove  superfluous 'pass'
+  *  de07c9236 - Py2: do not open Init[Gui].py files with utf-8 encoding
+  *  038b0b6f0 - PyCXX: [skip ci] avoid MSVC build failure (still needs
+    a proper fix)
+  *  a3603911b - Gui: [skip ci] when embedding app icon into thumbnail
+    then only scale it if the offscreen image could be created from the
+    active view
+  *  981b9b621 - Reduce appicon size when generating thumbnail
+  *  a50ae3355 - Part/Sketcher: [skip ci] fix build failures with gcc 10
+    on Fedora
+  *  6b2b6a486 - PyCXX: [skip ci] fix compiler warnings due to changes
+    on PyCXX
+  *  ef583e658 - PyCXX: harmonize PyCXX with Python C API
+  *  e3e6f64fa - Merge pull request #4067 from marioalexis84/draft-
+    upgrade
+  *  711b4440f - Merge pull request #4077 from marioalexis84/draft-
+    arch_dim_tracker
+  *  9dc45340a - [App] get rid of MSCV compiler warning
+  *  8e080f1da - Draft: Some fixes in upgrade function. bug #0004460,
+    fixes #0004462, #0004080
+  *  27130f779 - Fix thumbnailing
+  *  6bd39e8a9 - Gui: [skip ci] fix -Wodr The forward declarations of
+    QuantitySpinBox and Ui_TaskAppearance were done in the wrong
+    namespace
+  *  27ee19c1f - Init: [skip ci] do explicitly open Init[Gui].py files
+    with utf-8 encoding
+  *  8d73c8f07 - Import: [skip ci] do not scale when exporting to glTF
+    format
+  *  fc3bf0951 - Merge pull request #4073 from Russ4262/fix_slot
+  *  31f30747a - Draft: Change archDimTracker text position depending on
+    distance and scale values
+  *  40d79fc04 - Merge pull request #4014 from
+    sliptonic/feature/toolbitdock
+  *  b3200a8a9 - Gui: [skip ci] add method to return list of QAction of
+    a Command
+  *  6e07dd9e2 - Gui: [skip ci] add method to create Python wrapper for
+    QObject
+  *  d41369ad5 - Path: LGTM cleanup
+  *  c6d5bb840 - Path: Implement LazyLoader for Arcs module
+  *  a61aa0563 - Path: Fix g-code arc direction
+  *  9f489b59e - Path: Simplify and fix debugging code
+  *  a0d7ff24e - Path: Standardize debugging mode control code
+  *  d5f6c096b - Base: Fix header uniformity, whitespace, and doxygen
+  *  56b687452 - revert docstring format for help box formatting. log
+    levels reset to INFO remove unnecessary comments.
+  *  0a6b7dad4 - App: fix ObjectIdentifier::relativeTo()
+  *  74b866ed3 - Import: [skip ci] add support of glTF format (requires
+    OCCT 7.5)
+  *  acf9b1f0d - Add SVG icons for five Std Tool commands
+  *  5a9da45e0 - Gui: [skip ci] add method to Python binding of
+    ViewProviderExtension to ignore overlay icon
+  *  d0e5a281c - Gui: [skip ci] merge icons of extensions of view
+    provider of a Python feature
+  *  f9104f588 - Gui: [skip ci] add method to ignore to merge icon of an
+    extension that is e.g. used for Part primitives
+  *  20649ec52 - Mesh: [skip ci] add command to split a mesh into its
+    components
+  *  99e9b4db1 - Gui: [skip ci] Fix navigation styles
+  *  f65369465 - Image: [skip ci] pass trackers as argument to
+    cmdCreateImageScaling
+  *  634fce6e3 - fix 'add' button in Job task panel fix chamfer bit lgtm
+    cleanup
+  *  c4d42a1f7 - Draft: Fixed bug in SVG projection fill
+  *  61a575b30 - StartWB: Add description to start.dox with orientation
+    on howto improve it
+  *  d238da0fa - StartWB: Make all file headers uniform and trim
+    whitespace [skip-ci]
+  *  d84071275 - Surface: Fix header uniformity, whitespace, and doxygen
+    header
+  *  31d6c7528 - Refactor code in DrawViewDimension::getRefType()
+    shorter and simpler. No functional change except subelement sizes >
+    3 are supported, even though they are not supposed to happen.
+  *  bfdffb50b - App: Fix header uniformity, trailing whitespace, and
+    doxygen headers
+  *  11c7c4d30 - Arch: Windows: Added 'invert opening' and 'invert
+    hinge' context menu items + task panel buttons
+  *  04e987c40 - cMake [skip ci] fix copying of qtwebengine_locales on
+    Win
+  *  6e60870eb - FEM: ccxtools, dir improvements
+  *  e2b58bf3d - App: simplify the logic in PropertyLinkList::getPyValue
+  *  031619db2 - Modify PropertyLinkList to accept None from Python.
+  *  bda3e700f - [TD]fix V2E DistanceX,Y to always use the closest point
+    of edge to the vertex.
+  *  371c23a58 - [PD] more hole fixes
+  *  4af412f1e - Draft: Fixed regression caused by new setstyle button
+  *  59fcb80a8 - Web: Fix header uniformity, whitespace, doxygen headers
+  *  31c0099a5 - Test: Fix header uniformity, whitespace, doxygen
+    headers
+  *  64fb52e4c - FEM: typo in coding conventions
+  *  b235f1be7 - Material: pep8 code formating
+  *  48d5ab5eb - Merge pull request #3916 from Russ4262/fix_PocketShape
+  *  26eac120b - bug: on deleting tool controllers
+  *  138a39502 - fix toolbit install
+  *  2cfd04d17 - TechDraw: minor cosmetic readability change in
+    Gui/Workbench.cpp
+  *  1917ef736 - Arch: Added licence blurbs with attributions to authors
+  *  67381e957 - Arch: Fix header uniformity and remove trailing
+    whitespace
+  *  42ccdb812 - PartDesign: [skip ci] fixes #0004494: Error Result is
+    empty for Pads and Pockets with non zero Offset
+  *  bff31175c - Draft: better checks for no active document
+  *  ec3bbb02f - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  e06e3d7bb - Merge pull request #4054 from Roy-
+    043/ArchRoof_processSubShapes_placement_fix
+  *  23dd5fa8e - Draft: Enabled 'apply to selected' button in SetStyle
+    dialog
+  *  d819a62db - PartDesign: [skip ci] support negative values as second
+    length of a pocket
+  *  f9d153818 - PartDesign: [skip ci] support negative values as second
+    length of a pad
+  *  a5efc81ff - minor change to make toolcontroller labels better
+  *  c41527290 - Rework default library and toolbits
+  *  f2eaa98bf - Add toolcontroller to open operation
+  *  2da3308bc - Only allow editing of toolbit if shapefile is found
+  *  472cb83ae - Handle errors is toolbit json more gracefully
+  *  aa59e98b3 - Make Toolbit find Bit files relative to the current
+    library directory
+  *  7c3300dbf - Fix duplicate docs being created fix edit changes not
+    being retained fix edit removing new toolbit from diretory
+  *  0a7742148 - Removed diameter dependencies so lathe tools work
+  *  e64f86876 - Fix default directory bug
+  *  234b88cc1 - added attribute to Toolbit for spindlepower setting
+    this to false will suppress M3 commands. User can configure a
+    toolbit to never have the spindle turn on this is to prevent
+    accidental powering of the spindle with unpowered tools like
+    dragknife and probe
+  *  88a24475b - Better cleanup on new toolbit creation
+  *  42f7854a5 - fix bug in create toolbit flow
+  *  7c4c25cee - Editing Works
+  *  0a2183fe4 - Basic workflow.  No editing
+  *  691f25904 - Part: allow to open attachment editor via context-menu
+  *  8af45a1fe - Part: move ViewProviderPrimitive to its own source
+    files
+  *  d3d34fc9d - Part: [skip ci] include needed headers into PCH file
+  *  74d5e458c - fixes and typos
+  *  b21f5d591 - Part: add BezierCurve constrained interpolation
+  *  bb7e64786 - Part: [skip ci] include generated ui files from within
+    source file
+  *  9f6c14998 - [Part] show location dialog when creating a Primitive
+  *  5916572c4 - [Gui] get rid of MSCV compiler warning
+  *  b99102f2a - Update ArchRoof.py
+  *  55af73b07 - PartDesign: [skip ci] if numpy fails to load due a
+    RuntimeError then handle this exception but still load the workbench
+  *  ed175c9f6 - Sketcher: [skip ci] revert minimum size hint from
+    widgets in datum dialog because this leads to a squashed appearance
+    on some systems.
+  *  d5767cd3b - [PD] Hole countersink angle work
+  *  a3cb87b11 - TechDraw: Header uniformity and whitespace fixes
+  *  82beefa98 - Win32: [skip ci] DLL resolution in Python 3.8 on
+    Windows has changed
+  *  aabff6038 - Gui: [skip ci] try to avoid to truncate QuantitySpinBox
+    at bottom margin on macOS
+  *  8f69368f6 - Image: [skip ci] move the import of Draft trackers
+    inside scaling function. This gives a more useful error message in
+    case of a failure to load it
+  *  d3c3a11d9 - Path: Delete irrelevant code
+  *  a273bef21 - Path: Fix div by zero error
+  *  9f13c8c23 - Path: LGTM cleanup
+  *  c03a0bba6 - Path: Fix and cleanup removal shape creation code
+  *  c357cb77a - Path: Remove null comments and improve debugging
+  *  9c49dc595 - Merge pull request #3989 from Russ4262/Surface_fixes
+  *  b7d763a1c - PartDesign: [skip ci] make cut type modes of hole
+    feature translatable
+  *  4246c902a - [PD] fix issue 3968
+  *  a48dd3aa2 - Part: [skip ci] rearrange line page to save some
+    vertical space
+  *  f8ac3ea14 - [Part] remove unnecessary vertical whitespace in
+    dialogs
+  *  a58c4736a - [PD] add measure tools
+  *  922815df5 - [Part] improve tube dialog
+  *  64288425a - Part: [skip ci] show dialog directly when creating a
+    tube feature
+  *  2b2524451 - Draft: Fixes #0004293: Vertical dimensions can't be
+    created in XZ and YZ working plane
+  *  e7af8b5c0 - [PD] hole UTS fixes
+  *  68673c6ad - [PD] more hole cut work
+  *  04be99a2a - cut-profiles with identical names for different threads
+  *  175c870e8 - Gentle exit only if gtimeout reached end of time as to
+    fill up build cache
+  *  f31493153 - Merge pull request #4038 from daveseff/pathworks
+  *  812125931 - Part: [skip ci] implement editor dialog for tube
+    feature
+  *  ba3106af0 - Part: [skip ci] make sure to open a transaction when
+    starting edit mode of primitives via context-menu
+  *  b5608611a - App: [skip ci] expose functions to Python to get status
+    string of a feature and whether it's valid
+  *  475668638 - AddOn: manager, clone repos default branch instead of
+    the master
+  *  cdc8b3c77 - Part: [skip ci] split classes of Shapes.py file into
+    files for feature, view provider and command classes
+  *  139fac133 - Make the tool setup images a bit nicer.
+  *  cdc01cb20 - FEM: elmer solver, add newline in output
+  *  1c618a822 - Merge pull request #4034 from dubstar-
+    04/PathTurnRoughingSel
+  *  b7f9e351c - Win: [skip ci] check if NOMINMAX is already defined
+    before setting it
+  *  0392ca9b7 - [Path] rename TurnPart to TurnPartoff
+  *  1b8f4747e - femtest/test_information.md: tweaks
+  *  484693c1d - FEM: remove superfluous 'pass'
+  *  f9420c987 - Part: [skip ci] simplifications in primitives location
+    dialog
+  *  f0af88eca - [Part] add preview for changes to primitives location
+  *  bdcbf316b - PartDesign: [skip ci] fix whitespaces
+  *  ea08a660e - [PD] hole creation
+  *  e26a9efae - Arch: Added Awming window preset
+  *  e76c85703 - Merged crowdin translations
+  *  f76eeddfc - Updated ts files
+  *  413d315d3 - Draft: Change WP button icon to reflect current state
+  *  88f5fc20b - Draft: Condensed the Draft toolbar style buttons into
+    one with more options
+  *  485b0b58a - Sketcher: GeometryFacade inheritance correctness
+  *  871391665 - [Path] Add Turning Roughing Selection
+  *  645535234 - Material: fix open material editor with empty material,
+    regression was added with commit 0f87516
+  *  59c50053a - MSVC: [skip ci] make working with C++17 compiler
+  *  08efd286d - [Sketch] add missing menu entry for new feature
+  *  6b9178e0b - Part: [skip ci] correctly show control points of a B-
+    spline/Bezier curve/surface if a placement is set
+  *  3f5caddab - Draft: Enable offset for working plane aligned with
+    current view
+  *  a36fb6065 - Draft: Improve archDimTracker class
+  *  ef2d4f298 - Draft: Fixes in gui_offset
+  *  97828f0ba - Update dxf.cpp
+  *  5f63f3ae7 - Update dxf.cpp
+  *  58be246ba - Part: [skip ci] fix type of Rotations property of
+    Spiral primitive
+  *  70473ab42 - Path: Fix missing variable declaration for rotational
+    scan
+  *  b94cbb617 - Path: Fix unsorted arc order for circular cut pattern
+    in some cases
+  *  220bf0e39 - Path: Fix cut direction when  is true for
+  *  4c558f1a3 - Path: Restructure code to fix  LGTM issue
+  *  dea85bc99 - Path:  Some LGTM cleanup
+  *  604cfaf77 - Path: Apply missing  setting when
+  *  9b5eb7748 - [Sketch] remove now unused variable
+  *  c5a4b01d2 - Gui: [skip ci] try to avoid to truncate QuantitySpinBox
+    at bottom margin on macOS
+  *  975c03a20 - Sketcher: Some fixes to bspline weight information
+    layer
+  *  65c96a3b2 - [Sketch] add option to display spline weights
+  *  7251a90f6 - Part: [skip ci] implement live preview for primitives
+  *  70be25752 - Part: override extensionSetupContextMenu in
+    ViewProviderSplineExtension
+  *  31ff1921c - Gui: [skip ci] add method extensionSetupContextMenu to
+    extension view provider
+  *  4025405ce - Part: make view provider for helix and spiral inherit
+    from primitive and use spline extension
+  *  98d7a0400 - Part: [skip ci] implement extension
+    ViewProviderSplineExtension
+  *  694eebf12 - smesh: [skip ci] comment out call of
+    std::set_unexpected that has been removed in C++17
+  *  035803e47 - Part: [skip ci] properly handle transactions when
+    editing primitives
+  *  dabf65cc7 - Part: [skip ci] implement live preview for box and
+    cylinder
+  *  0b9c42567 - [part] remove a now misleading comment
+  *  b8376e152 - Sketcher: Fix select associated constraints when
+    drawhandler active
+  *  c23e1dd7b - Release handler in commands where not needed
+  *  6cac6d937 - set -DBUILD_ENABLE_CXX_STD='C++17'
+  *  e9531d2a7 - increase osx timeout limit
+  *  c11a36386 - smesh: [skip ci] comment out call of
+    std::set_unexpected that has been removed in C++17
+  *  f8bd2c81c - Part: [skip ci] add missing export macro
+  *  f23187cd0 - Part: allow to edit primitives via dialog
+  *  5807c3841 - [Path] Fix Typo - Stock object requires uppercase 'S'
+  *  80626d3a1 - [Part] allow to edit helices via a dialog + add class
+    ViewProviderPrimitive to avoid to re-implement setEdit/unsetEdit
+    methods for each sub-class separately + avoid using global variables
+    + when editing a feature directly pass it to the dialogs + when
+    editing a feature then do not use active document as this could
+    point to the wrong object + fix undo/redo message + re-add '3D View'
+    button to location dialog
+  *  5170a1564 - Part: [skip ci] fix build failure due to missing class
+    declarations
+  *  6d8316278 - [Part] allow to edit helices via a dialog
+  *  edc592514 - [TD] change RichAnnos's linestyle to the one of other
+    TD components
+  *  0d27ad18c - Base: [skip ci] fix several -Wunused-parameter warnings
+  *  36bece992 - Base: [skip ci] fix several -Wunused-parameter warnings
+  *  1940f4e3b - Surface: prevent GeomFillSurface to produce C0 rational
+    BSpline surface
+  *  b75cd3dd5 - Path: Fix header uniformity and remove trailing
+    whitespace
+  *  48365ecdb - Merge pull request #3974 from glhasson/glhasson-
+    marlin_post.py
+  *  c8e46ee55 - PartDesign: [skip ci] do not write error but log
+    message when reading thread definitions of hole feature
+  *  70eb263eb - fixes bug not enabling ui-elements
+  *  a5adc3eb8 - README: minor nitpick [skip ci]
+  *  db537b8f9 - Sketcher: [skip ci] use delGeometries to delete all
+    superfluous geometry in one go after changing multiplicity
+  *  9801b36e7 - Sketcher: [skip ci] add method
+    SketchObject::delGeometries
+  *  a5b338630 - Sketcher: [skip ci] minor optimization in
+    SketchObject::delGeometry
+  *  75b8ff366 - Modify code format to PEP8
+  *  d63213083 - Refactor marlin_post.py
+  *  0e0156a2c - Add files via upload
+  *  ff5f3799d - Fix various typos [skip-ci]
+  *  19a519024 - Swap comma for period
+  *  70f4e523c - Line 38 removed.
+  *  94ca8ac9a - Requested suggestions added
+  *  f33ca4607 - Typos and language in README
+  *  396695240 - Issue #4473: Expose openCommand()
+    CommandConstraints.cpp to translation
+  *  30e18cdbe - Gui: [skip ci] support of translation in undo/redo
+    dialog
+  *  50208b8bf - Remove installation in the case of timeout during build
+  *  f35d30bc5 - Fix travis build for MacOS
+  *  62f315df0 - [PD] hole - fix typo
+  *  44636aca2 - Spreadsheet: Make all file headers uniform [skip-ci]
+  *  c9923ab15 - Gui: [skip ci] Revert workaround to avoid to handle
+    wheel events twice inside the 3d view
+  *  f4aceec54 - Part: [skip ci] make arguments const references
+  *  0324d2de6 - Gui: [skip ci] when closing document via context-menu
+    ask the user first how to continue
+  *  709c0b546 - Sketcher: Documentation editorial change
+  *  b0bc4b5dc - Sketcher: Improve documentation of SketchGeometryFacade
+    and ExternalGeometryFacade
+  *  79b192978 - Sketcher: Restrict ability to create empty
+    GeometryFacade and ExternalGeometryFacade objects to Python
+  *  7dcac4622 - Sketcher: Facade for geometry and external geometry
+    extension
+  *  4a166e0a5 - Sketcher: Change GeometryFacadePy representation
+  *  93dee6ccd - Sketcher: Separate ExternalGeometryExtension interface
+    from class
+  *  10102f45f - Sketcher: Utility functions to simplify common
+    operations with GeometryFacade
+  *  284c4d93f - Sketcher: Extend SketchObject Python Interface to
+    get/set SketchGeometryExtension GeometryId (convenience interface)
+  *  0fd808dfc - Sketcher: Geometry Facade interface for Geometry and
+    SketchGeometryExtension
+  *  7bfec92bd - Sketcher: SketchGeometryExtension separation to
+    interface
+  *  5b415f6d7 - Part: Geometry extensions constness correction
+  *  33b4d0087 - Part: Geometry - refactor py functions into class for
+    code reuse
+  *  e81482c7f - Mesh: [skip ci] improve reading OFF mesh format
+  *  ebb43351d - Mesh: [skip ci] improve reading OFF mesh format
+  *  9eb080488 - PartDesign: [skip ci] minor cosmetic changes
+  *  6d1b29228 - [PartDesign] Dynamic hole cut-types
+  *  e84fa25c0 - [PartDesign] Hole countersink for metric
+  *  0a4218917 - Merge pull request #4006 from dubstar-
+    04/TurningPartOperation
+  *  462efdab3 - Part: [skip ci] After removing a knot check if the B-
+    spline is still valid
+  *  6ebee8686 - Sketcher: [skip ci] avoid possible memory leak
+  *  53441613c - Part: [skip ci] handle OCCT exception in
+    GeomBSplineCurve::copy()
+  *  9c296217e - [Path] Tidy imports
+  *  c1302fb4f - [Path] PEP8 whitespace fixes
+  *  4f6c7797a - [Path] set the default max diameter
+  *  65e3476e2 - [Path] PEP8 Formatting fixes
+  *  5c4ad1a7d - [Path] Add TurnPart selection
+  *  aebf568ea - Draft: Draft_Dimension_linked_geometry_fix
+  *  cd8af3656 - Arch: Added Text settings to SectionPlanes
+  *  0371a67da - Base: [skip ci] expose Type::createInstance and
+    Type::createInstanceByName to Python
+  *  20a52f3f6 - Merge pull request #4003 from dubstar-
+    04/feature/jobsetupplane
+  *  4852ac73d - Merge branch 'master' into feature/jobsetupplane
+  *  e64cb66a3 - Reorder imports to match PEP8 guidance
+  *  7618dba49 - silence lgtm warnings
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 26 Nov 2020 17:23:55 +0300
+
 freecad-daily (0.18.3+git22873-f7532b91d-1) unstable; urgency=medium
 
   * Compile

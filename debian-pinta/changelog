@@ -1,3 +1,23 @@
+pinta (1.7+git1948-d58ab5b2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/PintaProject/Pinta.git
+  * Branch: master
+  * Commit: d58ab5b21ebe77612a7e23eb259e45002a3236f1
+  * Date: 1606177030
+  * git changelog:
+  *  d58ab5b2 - Fix issues where the document's dirty state was not
+    updated properly.
+  *  1057e0a0 - Fix issues where the SimpleEffectDialog could run
+    callbacks after closing.
+  *  3aa97819 - Try running builds for both Ubuntu 18.04 and 20.04
+  *  50f43a7a - Update the setup-msbuild action to fix CI errors.
+  *  b8b00823 - Update the translation template.
+  *  fdc34dc7 - Fix blurred pixels when translating using the Move
+    Selected Pixels tool.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 26 Nov 2020 17:38:05 +0300
+
 pinta (1.7+git1942-6b32605a-1) unstable; urgency=medium
 
   * Compile

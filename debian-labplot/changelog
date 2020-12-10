@@ -1,3 +1,67 @@
+labplot (2.8.0+git7839-0bc95b1b8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 0bc95b1b810fe24ce3502f44997968ca8b22b3bb
+  * Date: 1606344695
+  * git changelog:
+  *  0bc95b1b8 - Use double consistently
+  *  c1dcac647 - [worksheet] simplified the UX in the properties panel
+    for the info element - for points to be shown on curves, use on
+    single list widget with items having check boxes instead of two
+    current list widgets.
+  *  a9ef93e03 - Fix numeric limits
+  *  14cc4ac00 - readstat: use default build command
+  *  ba3aae28a - Add missing dependency to readstat library (fix build
+    with Qt Creator)
+  *  f9d7e14ba - Don't crash when the rc file was not found.
+  *  3fc867fc5 - gsl: minor improvement
+  *  f9cd81e4a - gsl: add Mathieu functions
+  *  4e179d38a - gsl: add missing Ln
+  *  044378c6b - Update Hermite polynomials and functions for GSL 2.6
+  *  953e369e9 - [worksheet] improved layout in InfoElementDock.
+  *  601fde47f - [worksheet] use the colors from the current theme for
+    the info element lines.
+  *  4a16646f1 - GIT_SILENT clean up
+  *  1c834ebbe - Moved liborigin to src/3rdparty
+  *  f4e64f1af - Improve status bar and memory info bar
+  *  443fbde00 - Support semicolon as function argument separator in
+    parser to improve support for locale with comma decimal separator
+  *  188133063 - GIT_SILENT made messages (after extraction)
+  *  33b22d2f7 - [fit] Fix custom model equation validation
+  *  43227e3d1 - Update appdata for flathub
+  *  c9020caae - [CAS] fixed the regression introduced after the python2
+    backend was deprecated in Cantor. There is no Python 3 and Python 2
+    backend names anymore, there is only Python now.
+  *  6e54c8753 - Fixed the compiler warning in InfoElement about the
+    function override.
+  *  93125ad99 - GIT_SILENT made messages (after extraction)
+  *  a1c0c0d3b - ReadStat: Fix possible build problem
+  *  6c47004bc - fixuifiles
+  *  7a9241786 - GIT_SILENT changelog
+  *  71afe611a - parser: explicitly reset error count in parser
+  *  62bf94e02 - Merge branch 'master' of https://github.com/KDE/labplot
+  *  ad27fe233 - Bump version to 2.9.0
+  *  bf0d1fb8b - More KDE like behavior for the entries in the Settings
+    menu: 1. added the Show menubar action 2. use KStandardAction also
+    for Show statusbar. No need to create it on our own and handle the
+    save and load of its status. This action is now in the Settings menu
+    and not in View anymore.
+  *  5f075c67f - Fix another compilation issue
+  *  cd5c373dc - Fix compilation with Qt < 5.13 and code style
+  *  5bdb45a70 - Enable ReadStat per default
+  *  e203a13cc - Established the coordinate binding (got lost during the
+    merge of the MR) and more cleanup of the unused variables in the
+    info element code.
+  *  f06bb6bda - Cleanup in the recently added info element files.
+  *  eaf0e78e1 - Fix the build.
+  *  122e57ae8 - otherwise there is an infinity loop. This does not
+    occur previously, because the Custom point of the Marker is one step
+    below all other elements
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 26 Nov 2020 20:59:06 +0300
+
 labplot (2.8.0+git7803-d0573f64a-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,53 @@
+gscan2pdf (2.8.0+git3316-4b92db18-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://git.code.sf.net/p/gscan2pdf/code
+  * Branch: master
+  * Commit: 4b92db181ff758dee7f50e9991281f61cd3ac5ea
+  * Date: 1606061879
+  * git changelog:
+  *  4b92db18 - Don't sort OCR confidence list if not changed
+  *  f41f932e - Fixed bug processing deleted page
+  *  c72b602d - Update to Hungarian translation
+  *  33e84294 - Post-post-post-release commit
+  *  8b6f3e42 - Don't hang up when loading invalid text layer
+  *  36542124 - Fixed bug adding OCR text '0'
+  *  fd757a72 - gtk log error deleting box from confidence list
+  *  063fa848 - + button to duplicate OCR text
+  *  b8d1567a - Fixed bug manually adding OCR that overlaps with
+    existing words
+  *  8389a1f9 - Allow cut/copy/paste whilst editing OCR
+  *  2a2f3ce0 - Don't zoom in/out if plus/minus pressed whilst editing
+    OCR
+  *  024dcbbb - + View/Edit OCR toggle
+  *  5a4e9d00 - Unconditionally use ABSTRACT_FROM and AUTHOR keywords in
+    Makefile.PL
+  *  578f0316 - use IPC::System::Simple instead of system() and
+    backticks in tests
+  *  4243f2fe - + missing crop icon
+  *  97187bd7 - Use can_run() instead of system('which...')
+  *  d3d4d2d5 - Perltidy
+  *  85c97bd7 - Switch from Perlmagick to imagemagick for threshold tool
+    improve performance
+  *  42eebb91 - Post-post-release commit
+  *  4c43e8e6 - Update to Hungarian translation
+  *  9a33fc7d - Post-release commit
+  *  a3a3a489 - Added new build dependency fonts-noto-extra to ensure
+    non-ascii fonts available for tests
+  *  3e156131 - Bump version to 2.10.0
+  *  7116345f - Update to Ukrainian translation
+  *  a5a790e8 - Update to German translation
+  *  4a326d6f - Put back old icons so that we can use different
+    Gtk3::ImageView::Tools
+  *  3635c23c - Use Gtk3::ImageView instead of Gscan2pdf::ImageView
+  *  8107da73 - Switch from PDF::API2 to PDF::Builder to improve TIFF
+    handling and compression options
+  *  1d1da2dd - Sort Debian dependencies
+  *  f8b7fd82 - Make dependency liblocale-codes-perl versioned
+  *  38d0a837 - Document closing Debian bug 703124
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 26 Nov 2020 17:37:07 +0300
+
 gscan2pdf (2.8.0+git3285-2c19ac00-2) unstable; urgency=medium
 
   * Compile

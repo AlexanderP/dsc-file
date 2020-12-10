@@ -1,3 +1,94 @@
+gimp-devel (2.10.18+git44374-d3361c4dbc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: d3361c4dbc0ec952c4c4dcdd37bb851d9c4bd9eb
+  * Date: 1606048948
+  * git changelog:
+  *  d3361c4dbc - Update Polish translation
+  *  2fd189031d - plug-ins: oops I messed up cherry-picking.
+  *  baa063e687 - plug-ins: in metadata editor and viewer only convert
+    values to UTF-8 if they are not.
+  *  c74d623202 - plug-ins: fix metadata-editor not saving
+    Xmp.photoshop.Urgency and Xmp.xmpRights.Marked.
+  *  78d4806c6b - plug-ins: let metadata-editor also save Iptc tags.
+  *  88433bb4e1 - plug-ins: add missing Iptc equivalents of Xmp tags in
+    metadata-editor.
+  *  1055016eb5 - plug-ins: In metadata-editor always read iptc
+    equivalent values of xmp tags.
+  *  f6bed86934 - plug-ins: fix not showing all values of iptc tags that
+    appear more than once.
+  *  4275dbb8f5 - plug-ins: Refactor cleaning xmp values into a separate
+    function in metadata-editor.
+  *  2217680a6c - plug-ins: fix incorrect struct used for comparison in
+    metadata-editor.
+  *  173e2fcb64 - plug-ins: fix incorrect single/multi(ple) values for
+    certain iptc tags used in metadata editor.
+  *  51a622d950 - plug-ins: fix incorrect reading of iptc tags that
+    appear more than once.
+  *  6b854b0a30 - plug-ins: Refactor certain string handling into
+    separate functions in metadata-viewer.
+  *  3886252422 - libgimpbase: fix incorrect reading of iptc tags that
+    appear more than once.
+  *  a13ddc9248 - Update German translation
+  *  07273da041 - Update German translation
+  *  be2a6eb81f - Update German translation
+  *  57a131ec9b - Update German translation
+  *  2afe4c7c98 - Update Ukrainian translation
+  *  7ec030814a - plug-ins: improvement of TIFF loading when
+    TIFFNumberOfDirectories()…
+  *  09970f45b7 - Issue #5837: TIFF file not recognized.
+  *  9bd8a8a134 - libgimpbase: do not use g_snprintf() with same source
+    and buffer.
+  *  7bca6f06c6 - Update Romanian translation
+  *  ff137a6f12 - Add Kabyle translation
+  *  6c1ace322b - Add Kabyle translation
+  *  1a5b2c791e - Update Catalan translation
+  *  4ea7fb6f4f - app: proper ellipsis & wrap on Image Properties label
+    where it matters.
+  *  18fa6d3a2f - app: display profile name in Color space field of
+    Image Properties.
+  *  97955482b5 - NEWS: add the D-Bus calls updates.
+  *  2fd4fc7c7a - app: improve opening images through the DBus service.
+  *  f2f0b6aae8 - app: wait for the software to be fully initialized
+    before processing…
+  *  220e6ca6a9 - Update Spanish translation
+  *  3edc753b58 - Update Spanish translation
+  *  2fca3d97bd - Update Spanish translation
+  *  69a367e333 - Update Spanish translation
+  *  abb8d51702 - Update Slovak translation
+  *  60746f7478 - Update Romanian translation
+  *  04de009f0c - Update Catalan translation
+  *  4c67233844 - Update Polish translation
+  *  566edc8ffa - Update Swedish translation
+  *  462a266610 - Update Romanian translation
+  *  fdc577f93f - Update Romanian translation
+  *  348a2faa2a - Update Romanian translation
+  *  264310c809 - Update Ukrainian translation
+  *  6ca70a35fc - NEWS: add GeoTIFF support.
+  *  0b40a4c8bc - GeoTIFF tags support added to file-tiff plugin.
+  *  3525e0d19a - Update Romanian translation
+  *  979d9ae3ef - Update Romanian translation
+  *  04b80f82f1 - Update Romanian translation
+  *  de9ae0b41e - Update Romanian translation
+  *  8ed25458d7 - Update Romanian translation
+  *  4d4bb28af4 - Update Romanian translation
+  *  bb30dae5ff - NEWS: oups mixed some 2.99.x news with 2.10.x ones.
+  *  fddec4a910 - NEWS: start a GIMP 2.10.24 section.
+  *  f8c99a9db5 - Update Polish translation
+  *  b998894c6d - Update Romanian translation
+  *  40a1c98d47 - Update Romanian translation
+  *  56bb4cd62a - Update Romanian translation
+  *  82dc2285b1 - Update Catalan translation
+  *  cc0774d5d7 - Update Catalan translation
+  *  f570fc804f - Update Ukrainian translation
+  *  e215ec3a27 - Installer: forgot Components for girepository
+  *  27c98c3478 - Installer: some cleanup, make Lua optional, add devel
+    splashes
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 26 Nov 2020 17:49:58 +0300
+
 gimp-devel (2.10.18+git44311-00dbfc7375-1) unstable; urgency=medium
 
   * Compile
