@@ -1,3 +1,66 @@
+labplot (2.8.0+git7869-73120f7ef-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 73120f7ef1ee93086895583d7fa6227884c95233
+  * Date: 1607636335
+  * git changelog:
+  *  73120f7ef - Added missing changes on InfoElementPrivate.h.
+  *  17a5bb16f - [worksheet] improvements in InfoElement: 1. added all
+    properties for lines that we also have in other areas 2. add new
+    tabs in the dock widget for the label and for the lines 3. reworked
+    the logic in save/load.
+  *  5f5b1fa5a - GIT_SILENT Add KUserFeedback to INSTALL
+  *  1a70ca84e - [worksheet] in the datetime combobox for axis labels
+    react also on text changes and not only on index changes.
+  *  3b159a1c1 - Fix clang warnings
+  *  809a8d4a5 - [worksheet] don't crash when loading a project with a
+    saved info element.
+  *  8aa5c5497 - [worksheet] properly handle the locale for the info
+    element position in the dock widget and retransform the info element
+    if the label text was changed.
+  *  d19dc044d - [worksheet] in the InfoElementDock use LineEdit instead
+    of SpinBox for better positioning of double values.
+  *  8d3066cbc - fix style
+  *  7fab22c5b - textwrapper must also set
+  *  e25631bbb - rename arguments, so it is more readable
+  *  bab3096c8 - rename placeholder to allowPlaceholder, because it
+    matches better its usage
+  *  b6174fcc5 - [worksheet] improved the layout and the variable naming
+    in InfoElementDock.
+  *  556c334a2 - [worksheet] don't allow to hide a TextLabel if it's a
+    child of an InfoElement and hide the InfoElement in the worksheet
+    view if no curves are selected.
+  *  6d9b724d6 - [worksheet] improvements in InfoElement: 1. when
+    selecting new curves and adding new symbols, don't jump to the newly
+    added CustomPoint objects in the project explorer, stay at the
+    InfoElement 2. hide the info element label in the project explorer
+    if no curves are selected 3. better wording for some 18n-able
+    strings.
+  *  0f553e9fc - [worksheet] if the theme is reset to the default one,
+    use the black color for the legend text color instead of white since
+    the default background color is already white.
+  *  ef9662e47 - [Range] Fix inverted range used in plot
+  *  cdc93039c - [worksheet] react on name and comment changes in
+    InfoElement and somre more code style fixes.
+  *  b3ae19ba6 - Fix minor typos
+  *  14bffc7a7 - add position spinbox to dock
+  *  3cb5f08ce - add option to set position from the dock
+  *  e82c52dc6 - do not end before the last row
+  *  0a5c07ce5 - [cartesian] code cleanup
+  *  3d2f3aec8 - [worksheet] fixes in InfoElement: 1. don't crash when
+    loading a saved info element 2. apply the color theme also for info
+    element's children (text label and custom points)
+  *  fa2be37dd - Fix compilation
+  *  2bac71349 - Merge branch 'master' of https://github.com/KDE/labplot
+  *  febd13992 - [axis] use range instead of start/end
+  *  4ce9d944e - Fix some marker issues
+  *  7b3541087 - clean up
+  *  4f9eb9c39 - clean up cartesian plot
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 11 Dec 2020 21:00:19 +0300
+
 labplot (2.8.0+git7839-0bc95b1b8-1) unstable; urgency=medium
 
   * Compile

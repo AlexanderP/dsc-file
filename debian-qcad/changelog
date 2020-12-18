@@ -1,3 +1,60 @@
+qcad (3.24.0+git8088-5057b9d4c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 5057b9d4c931a3ecfd0d5ed977212c7a7e1224ca
+  * Date: 1607592853
+  * git changelog:
+  *  5057b9d4c - fix FS#2145 - Modify > Trim Both: closed polyline as
+    either entity breaks undo
+  *  d6c0199ef - clean up
+  *  b3546d80f - fix FS#2145 - Modify > Trim Both: closed polyline as
+    either entity breaks undo
+  *  1f4c6d15c - Merge branch 'master' of github.com:qcad/qcad
+  *  8f1ca01c7 - fix FS#2144 - Draw > Viewport > Add Viewport: Custom
+    hatch pattern not shown
+  *  66e811d22 - add script bindings for Qt 5.15.2
+  *  357a5c0da - allow copying of all (empty, unreferenced) blocks with
+    contents
+  *  2d2cdc01e - add preference to allow opening zero size files (e.g.
+    online file references that are not synced locally)
+  *  148af574a - clean up
+  *  8625e6199 - refactor
+  *  0caf2e03a - fix FS#2143 - Rendering: arcs in scaled up blocks
+    rendered with too low resolution
+  *  b6d6d0de7 - fix default value of app preferences for dimension
+    label color
+  *  aa52ad23d - fix FS#2142 - Viewports: Cannot snap to reference
+    points of circles / arcs (90°, 180°, 270°)
+  *  7e76b5eb0 - update script bindings
+  *  bf48fdd7b - refactor working set bock reference data storage add
+    API to check if we're editing a working set
+  *  7226442cb - refactor transaction type to transaction type flags
+  *  1a7bef8c1 - avoid warning if type is invalid
+  *  6bebc5e9f - add setReferencedBlockName
+  *  fdbe080bd - add resuming state
+  *  146e7ac3a - set version to 3.25.2.7
+  *  b3e6722c2 - Translated using Weblate (Portuguese)
+  *  7be26fa77 - Translated using Weblate (Dutch)
+  *  806216df0 - Translated using Weblate (Italian)
+  *  1b79edee1 - Translated using Weblate (French)
+  *  2bf78773d - Translated using Weblate (Spanish)
+  *  8a3ba5938 - Translated using Weblate (English)
+  *  446bb8b81 - Translated using Weblate (German)
+  *  2224154d8 - update translations
+  *  4fd99eb1d - Translated using Weblate (German)
+  *  372eb6163 - Merge branch 'master' of github.com:qcad/qcad
+  *  606d8e626 - update translations
+  *  431fa6ef6 - always set transaction type from operation
+  *  3b1fbabe9 - update debug info
+  *  6d5f74199 - use shift for square
+  *  a4249f330 - use shift to draw square
+  *  477694d2f - typo
+  *  07852efee - Translated using Weblate (English)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 10 Dec 2020 23:48:44 +0300
+
 qcad (3.24.0+git8051-705f84c5a-1) unstable; urgency=medium
 
   * Compile

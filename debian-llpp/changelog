@@ -1,3 +1,284 @@
+llpp (27.0.0+git4189-39e48ac-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://repo.or.cz/llpp.git
+  * Branch: master
+  * Commit: 39e48ac43ed625c041ff45c5decc0770f0834bdc
+  * Date: 1607674890
+  * git changelog:
+  *  39e48ac - Use realpath if available
+  *  41d8d20 - Cosmetics
+  *  7671bd1 - Cosmetics
+  *  0fe3724 - Switch to a different Code2003 variant
+  *  7c0e7da - DNRY
+  *  07abde3 - Make help list wsi specific utilities
+  *  413a760 - Consistency
+  *  fb8f352 - Consistency
+  *  1c79586 - Substitute Format module with Printf
+  *  749114e - Substitute Format module with Printf
+  *  b17721d - Crude but effective address of the rounding issue
+  *  6eb9e45 - Use adderrmsg to notify about failure to write instead of
+    dolog
+  *  7b65ea0 - Save lines
+  *  97cf120 - Remove femcmd
+  *  0d20974 - Co{nsistency,smetics,mpression}
+  *  52891b6 - Remove cloexec wrapper
+  *  2d9f194 - Consciously emove the slideshow thing
+  *  d3d574d - Co{smetics,mpression}
+  *  44a184a - Add and use utility bool->string function
+  *  33be781 - Remove comment
+  *  b870999 - Revert Remove slideshow mode
+  *  f3192b1 - Remove slideshow mode
+  *  f450140 - Increase default window size
+  *  188ff56 - Reset memory statistic when opening document
+  *  801dd50 - Kill stray space
+  *  6b13843 - Make non re-mapped keys work too
+  *  e1d2590 - Refactor state
+  *  f63b008 - Clarify plan
+  *  f4d6324 - Update
+  *  b2517b0 - Move empty anchor where it belongs
+  *  170989a - Make action a simple option type
+  *  6c2c1c4 - Consistently cull cargo culting
+  *  68d47a7 - Fix macOS bitness check
+  *  0396410 - Use proper environment variable
+  *  48fbb38 - Fasciliate testing with different bash versions
+  *  72d73ff - Consistency
+  *  f66b021 - Apter naming
+  *  a9e249d - Refactor
+  *  f71d104 - I have no idea how to print from command line on macOS
+  *  1bdae5f - Remove redundant labels
+  *  fb9db17 - Build/use release version of mupdf
+  *  706751d - Consistency
+  *  c938b90 - Only output target name
+  *  d1deebd - Inline part commands
+  *  2ff461b - Hard code ccache into .dir-locals instead of ahbs
+  *  e1f3ee5 - Compress
+  *  ec75dd0 - Cosmetics
+  *  3f75d82 - Only build man pages when doc target is specified
+  *  1fb578e - Convergence
+  *  8b33ca6 - Identify C compiler by the first line of --version output
+  *  0b47de0 - Remove traw which is no longer used by anyone
+  *  b34b84b - Make placeholder less bright and strip whitespace
+  *  d4520be - Remove checkers
+  *  bc1f1ad - Hmmmm DNRY
+  *  770e3e1 - Avoid redundant quote escaping
+  *  ad7db2e - Do not use subshell when building mupdf
+  *  00cfda1 - Nativity
+  *  4ecb7a9 - Different approach to mcomp and bitness on macOS
+  *  c568844 - Cosmetics
+  *  a441c15 - Hard to explain
+  *  9f4c961 - If no document was requested make gc exit after cleaning
+  *  81415d9 - More consistent logging/error reporting
+  *  04448cd - Cosmetics
+  *  1080660 - Replace status line error reporting with a less ephemeral
+    way
+  *  dd3d575 - C{onsistency,smetics,mpression}
+  *  fd794df - Cosmetics
+  *  808c6a3 - Notify user in case of password protected document and
+    askpass not set
+  *  b82f4e0 - Refactor
+  *  1157113 - Cosmetics
+  *  2e4a0f9 - Refactor
+  *  fd44501 - C{onsistency,smetics,mrpssion}
+  *  a16018c - Consistency
+  *  2fc506d - Remove bedefault
+  *  74d897e - Do not show empty info entries
+  *  df933ee - Cosmetics
+  *  dc0e8e5 - Cosmetics
+  *  2d70b1e - Quoting in d{efault,ummy} path operations
+  *  1ed1809 - stderr redirection is fully addressed
+  *  fd30b61 - Make confstruct generation track environment variables
+  *  21c30dc - date(1) on macOS does not know about -I command line
+    option
+  *  86df5e6 - Improve (on unknown) version string
+  *  871ef24 - Less ambitious (non tracking) titling
+  *  49097a1 - Avoid trying to show nil characters
+  *  8610baf - Use path as a title when document's one is empty
+  *  6d8c4d4 - Show proper OCaml version
+  *  488cf5c - Consistency
+  *  c53c3aa - -flip-redirect-stderr
+  *  6199c3d - Do not redirect stderr it is connected to a tty
+  *  99f6487 - Do not limit digest output size to 8
+  *  64153b9 - Do not pretend that any BSO variant is supported
+  *  a517c39 - Drop functions check NULL themselves
+  *  68fffba - Cosmetics
+  *  9ffbd80 - Rename
+  *  6c838a5 - Handle situation when there is no active element and
+    going backwards
+  *  fd8539e - Use proper class name
+  *  fc1a4a6 - Switch back to OCaml 4.11.1 complier
+  *  8163640 - Shift-h vs Ctrl-h vs H
+  *  ebaeb74 - Don't needlessly change title
+  *  19d724a - Avoid redundant space
+  *  72375d4 - Fix several printing configuration issues
+  *  d5cbbaf - Change print command on non-cocoa to just dump the path
+    to stderr
+  *  850e177 - Use b3sum if available
+  *  11c5744 - Remove clearrects remote command
+  *  779a7db - Remove prect(s)
+  *  0419a3f - Move texture type selection out of C and into build
+    system
+  *  4d0746b - Move FIXME out of link.c
+  *  b398124 - Cosmetics
+  *  ed6e26a - Cosmetics
+  *  b014f01 - Better error message
+  *  dec2265 - Beautify
+  *  2e98009 - Further title changes
+  *  5643747 - Make key code remapping configurable
+  *  4a89b94 - Use Hashtbol.find_opt
+  *  dc73c41 - Use stdout printing loger, and escaping format specifier
+  *  7be18d6 - Cosmetics
+  *  3291849 - Improve error allerts
+  *  9a24d8e - Use error reporting framework
+  *  c3fed74 - Change title formatting
+  *  b3fc221 - Fix several titling annoyances
+  *  4343ccd - Make WM title reflect the reality
+  *  f7e78b1 - Cosmetics
+  *  ff6e580 - Add title todo
+  *  85b662d - Fix guard
+  *  9560de9 - Fix default help mode key combo
+  *  d680a37 - Cosmetics
+  *  bf13249 - Massege keys some more
+  *  709daa9 - Update
+  *  1e34c8d - Co(nsistency, smetics)
+  *  e712e68 - Cosmetics
+  *  71bf6bc - Cosmetics
+  *  0a47052 - Do not attempt to map shifted codes
+  *  77cbe91 - Try making cocoa work again
+  *  a18f3f1 - Consistency
+  *  200d673 - Remap codes only with empty maks
+  *  d4d16df - Update
+  *  33ca800 - Barbaric method to make arrowless keyboards usable
+  *  8634d20 - Add stdout outputting dolog1
+  *  2a59a0e - Drop Astra
+  *  6369386 - Bump C requirement
+  *  2c8e6cc - Revert Make sym/code distinction implicit
+  *  668e238 - Make sym/code distinction implicit
+  *  3ddf5ed - Consistency
+  *  00460f8 - Shuffle
+  *  14f42d4 - Cosmetics
+  *  dd26c08 - Excessive ar
+  *  cd89c17 - Explicitly include inttypes
+  *  fc1a81e - Test presence of non power of two extension in non
+    rectangular case
+  *  cca159b - More fitting test
+  *  4fefef9 - Follow a naming precedent
+  *  f64e423 - Lost cause
+  *  a51f0ef - Generalize
+  *  50cf24b - Rejig and fix search result reporting
+  *  ab5fa86 - Sybolize
+  *  9ac97d9 - Rename standard error redirection command line option
+  *  789766f - Fix/harmonize progress indication
+  *  58e9a6c - Cosmetics
+  *  3bceecf - Fix search related messaging
+  *  acc6b69 - Cosmetics
+  *  1112c46 - Move externals that do not introduce cycles into Ffi
+  *  012e172 - Update
+  *  ddb18b7 - Remove msg command
+  *  d4c0808 - Make sure there are no progress indicator remnants in the
+    text area
+  *  86a9c0c - Reject macOSen with less than 64 bits at build instead of
+    run time
+  *  9c3028c - Kill stray space
+  *  75479d7 - Cosmetics
+  *  6f0f32d - Use Bytes provided binary integer reading helpers
+  *  c339ad2 - Typo
+  *  ae71e19 - Save lines by consolidating enums
+  *  74ea882 - Move diagnostic fine-tuning to a separate header file
+  *  dbbf290 - Co{smetics,mpression}
+  *  13a8e0c - Cosmetics
+  *  5ea5d23 - Fix wcmd1
+  *  d7ec91e - Remove redundant ellipsis
+  *  931e9e8 - Hopefully less confusing wording
+  *  e455197 - Cosmetic refactoring (saving cycles)
+  *  513f187 - Consistency
+  *  01bad1d - Cosmetics
+  *  b45e675 - Co{smetics,nsistency}
+  *  83ed32a - Cosmetcs
+  *  61546a1 - Consistency
+  *  3d78f89 - Add missing const qualifier
+  *  f4b6fdf - Move rectangular texture check to C
+  *  0bb33ce - Format help string in an Arg align friendly way
+  *  797cd9b - Send error messages to stdout instead of stderr
+  *  3f0c5a2 - Remove superfluous parentheses
+  *  4acab97 - Remove PBO remnants on the C side
+  *  db88d7d - Remove PBO support
+  *  8dfbad0 - Use close on exec functionality provided by Unix module
+  *  d2789a5 - Co{smetics,mpression}
+  *  88f3219 - Remove fixed function pipeline support
+  *  6956fad - Remove whitespace
+  *  3f451b8 - Compression
+  *  af45be3 - Co(nsitency,mpression}
+  *  ddd06b3 - Bump memlimit
+  *  aa39d97 - Cosmetics
+  *  cdc8ee9 - Paranoia
+  *  07acab5 - Consistency
+  *  c0210a0 - Remove done item
+  *  a4b184b - Consistency
+  *  03d00d4 - Refactor [ml_]hasdata
+  *  9bb278f - Compress matching IPC
+  *  7d1675a - Cosmetics
+  *  7857155 - Cosmetics
+  *  83a7c10 - Consmetics
+  *  2285e17 - Less c{ode,onsing,onfusion}
+  *  a9347c0 - Co{nsistency,smetics}
+  *  50a75fd - Consistency
+  *  86cbe8a - https://xkcd.com/859/
+  *  b88c999 - Cosmetics
+  *  b3a0e05 - Llipposuction
+  *  d3fb432 - Better FFI parameter naming
+  *  6718ede - Ditch remnants of platform
+  *  b140281 - Consistency
+  *  08b51a5 - Remove unnecessary alias
+  *  3ae9dae - Kill stray spaces
+  *  90102b4 - Consistency
+  *  7f4ef92 - I suck
+  *  b81ea85 - Remove pageref caching remnants
+  *  8a00640 - Macrosmetics
+  *  777c4e4 - Only use Weverything with sufficiently new clang
+  *  bdf45c9 - Update
+  *  731a83a - Reimplement padcat
+  *  87ffd0b - Bail on warnings in own code
+  *  8e18290 - Better error message
+  *  302d7b4 - Every line is sacred...
+  *  bca5e8f - Update
+  *  240e5bb - Remove unused ystrdup
+  *  29e7f79 - Y - У
+  *  3222e3b - Add missing space
+  *  3c31cbf - Cosmetics
+  *  3e1aef6 - Add another alias
+  *  f597d7e - Remove no longer used header
+  *  544cfdd - Co{nsistency,mment}
+  *  7a4cfbb - Cosmetics
+  *  47991ac - Remove platform
+  *  82ba6cc - cf a6df1ef726c50a16414748e7c32ef9b91879b843
+  *  a6df1ef - Remove stray debugging printf
+  *  668629f - Even betterrer printing/uriopening defaults
+  *  a319048 - Use correct version string
+  *  aa34049 - Use proper(new) name in error message
+  *  3fbbef7 - Rename (for consistency's sake)
+  *  03b0d7d - More better command selection
+  *  7c92941 - Cosmetcks
+  *  42bc440 - PT Astra Serif fell victim to COVID-19
+  *  c9271df - More kerning
+  *  1d58473 - Adjust sizes
+  *  30bdeed - Attribution
+  *  dc9bbe5 - Use generic serif
+  *  f005a2a - More kerning
+  *  4700248 - Another kerning issue
+  *  41798a4 - Proper OCaml version
+  *  f429127 - Use symbolic diagnostic names
+  *  3f8de88 - Veränderung
+  *  4bdef5b - +s
+  *  35be3e9 - Clarify man page
+  *  5bfba4f - Cosmetics
+  *  1ddb8e8 - Avoid postprocessor removing stuff from the version
+    string
+  *  0e1139a - Move a bunch of one-liners into a U module
+  *  4880e20 - Cosmetics
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 12 Dec 2020 00:06:45 +0300
+
 llpp (27.0.0+git3930-1a3006b-1) unstable; urgency=medium
 
   * Compile

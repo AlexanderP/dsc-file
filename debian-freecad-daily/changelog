@@ -1,3 +1,295 @@
+freecad-daily (0.18.4+git23307-9add3ba19-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 9add3ba199c01f5f6ff4eae60557c4b22b625940
+  * Date: 1607621646
+  * git changelog:
+  *  9add3ba19 - Sketcher/Part: Python handling of GeometryExtensions
+    without a Python counterpart
+  *  40c0f0aa0 - Sketcher: refactor onDocumentRestored()
+  *  f33aab5f5 - Sketcher: Reduce ViewProviderUpdates when deleting
+    Internal Alignment Geometry
+  *  4aa91f0f2 - Sketcher: SketchGeometryExtension - Do not store ID
+  *  2c0faabb6 - Sketcher: GeometryFacade - Remove Debuging code
+  *  c08d4d9df - Sketcher: ExternalGeometryFacadePy Python interface
+  *  51eb55081 - Sketcher: GeometryFacadePy - testGeometryMode Python
+    interface
+  *  cfd5cfd6c - Sketcher: SketchGeometryExtensionPy getConstruction
+    from extension
+  *  11d4d6c18 - Part/Sketcher:
+    GeometryExtension/GeometryPersistentExtension split
+  *  4e199bd23 - Sketcher: Fix construction migration
+  *  a624a35af - Sketcher - Construction Migration - step 4: Migration
+    function from legacy construction geometry to extension
+  *  395a0f19b - Part/Sketcher - Construction Migration - step 3:
+    Removal of Geometry construction data member
+  *  316a8b635 - Sketcher - Construction Migration - step 2: Adapt
+    GeometryFacade to retrieve construction from extension
+  *  6f63796ef - Sketcher - Construction Migration - step 1:
+    SketchGeometryExtension add construction enum
+  *  40c8af801 - Sketcher: GeometryFacadePyImp - no longer checking if a
+    point is construction to set construction status
+  *  d96769e6d - Sketcher: Refactor for GCS magic numbers
+  *  be8e5ac33 - GCS: Simple refactor magic numbers into enum
+  *  00cf07d1d - Sketcher: GeometryFacade - isInternalType static
+    convenience function
+  *  2197db04e - Sketcher: Viewprovider B-Spline pole representation
+    factor
+  *  95c1a262b - Sketcher: Unit independent pole weight for B-Splines
+    (Weight constraint)
+  *  8080e8df9 - Sketcher: ViewProvider - Show Internal aligment
+    geometry in different color
+  *  e5eff3f06 - Sketcher: Constraint-Driven geometry status
+  *  593ade160 - Sketcher: GeometryFacade convenience function
+    isAlignedGeometry()
+  *  ffe2ecaa4 - Sketcher: Sketch solver interface using geometry state
+    extension for BSpline knot checks
+  *  02737a3b5 - Sketcher: After restore migration mechanism
+  *  eb929ad21 - Sketcher: Extend GeometryFacade and
+    ExternaGeometryFacade to GeometryMode
+  *  092a1ee39 - Sketcher: SketchGeometryExtensionPy - add
+    testGeometryMode/setGeometryMode interface
+  *  cd77e7ad2 - Sketcher: SketchGeometryExtensionPy getBlocked Python
+    interface
+  *  9abbbd2b5 - Sketcher: SketchGeometryExtension refactor GeometryMode
+    type from string
+  *  e230e60d5 - Sketcher: SketchGeometryExtension - New GeometryMode
+    flags
+  *  91ac9d295 - Sketcher: SketchGeometryExtension refactor
+    InternalGeometry string conversion
+  *  72fa70add - Sketcher: Adapt GeometryFacade and
+    ExternalGeometryFacade to new SketchGeometryExtension
+  *  858d29f16 - Sketcher: Geometry Extension for Internal Alignment
+    Geometry
+  *  2b35a7eec - Sketcher: GeometryFacade and ExternalGeometryFacade
+    nullptr creation
+  *  858abd99c - Sketcher: GeometryTypedFacade and GeometryFacade
+    convenience functions
+  *  6b05767a0 - Sketcher: ExternalGeometryExtension - refactor flag
+    string to type in static function
+  *  ec5976ec2 - Part: GeometryMigrationExtension classes
+  *  6a0249686 - Part: Geometry - Add non-const getters for extensions
+  *  90dea635a - Part: Geometry refactor member copy
+  *  6ffe65c91 - AddonManager: Sort .qrc file
+  *  7c43b059d - Part: fix header uniformity + trailing whitespace
+  *  ed063646e - PD: [skip ci] fix invalid strings
+  *  a99a60194 - Gui: [skip ci] Fix Qt warning 'Unable to set geometry
+    ...'
+  *  56b4837a8 - Main: [skip ci] handle C++ exception in main() function
+  *  8ca1d2b3d - Fix compiler warnings about redefinition of
+    GL_GLEXT_LEGACY
+  *  84f56393d - Draft: Better layout of the Draft SetStyle task panel
+  *  d03262cc4 - Arch: Fixed typo (Awming->Awning)
+  *  065f3fafa - [skip ci] avoid to let Coin redefine several HAVE_
+    macros
+  *  daea30341 - App: [skip ci] by default disable transactions on
+    recompute
+  *  78c6cc136 - Import: [skip ci] fixes #0004477: Can't import .STEP
+    files with cyrillic symbols
+  *  b082c813f - Merge pull request #4068 from aapo-aapo/TD-Spreadsheet-
+    fix
+  *  959c21451 - Merge pull request #4113 from
+    bitacovir/Std_File_Menu_Icons
+  *  1d3113ebd - Add SVG icons for ten Std File Menu Commands
+  *  983e51370 - Merge pull request #4089 from mlampert/feature/thread-
+    milling
+  *  72d003f10 - [TD] Make DrawViewSpreadSheet respect
+    DrawPage::redrawCommand() update mechanism.
+  *  6803af4dc - [TD] Fix column index range checking bug in std::string
+    DrawViewSpreadsheet::getSheetImage(void)
+  *  71726a11d - FEM: Added instructions to fem.dox file
+  *  f4a65dcbb - FEM: doxygen
+  *  bc3f90663 - Remove unused variable in DrawViewDimension.cpp
+  *  c76afc56e - App: [skip ci] in addition to PR4104 pop the diagnostic
+  *  c1475c982 - Suppress gcc warnings also in FeaturePythonPyImp.h
+  *  e09d52500 - [TD] uniform wording
+  *  85cd4af06 - More py2 special handling for unit tests
+  *  9eebafbe4 - Added consistent encoding headers and fixed whitespaces
+  *  134fe23c8 - Fixed unit test breakage for py2
+  *  cc0ba34a4 - Added thread milling files to cmake
+  *  c0bdf89f4 - Added example thread cutter to default library
+  *  aa2881e08 - Use new ToolBits (and only those) for thread milling.
+  *  d5beaf806 - Filter all TCs for suitability for a given op.
+  *  b7a356cce - Catch exception if shape file does not include a
+    thumbnail.
+  *  074ad4033 - Fixed merge issue
+  *  b1c385f90 - Cleaned up properties
+  *  c11aaafc5 - Added support for imperial threads to thread milling
+  *  15141e33d - Added actual thread milling path generation.
+  *  0a96a861c - Added thread milling radii calculation
+  *  b29d16813 - Add basic thread milling op
+  *  dadac3623 - [TD] GQIViedDimension.cpp, GQCustomText.cpp - Fix
+    Dimension label unit positioning bug and too tight bounding
+    rectangle.
+  *  be190a948 - Merge pull request #4097 from Russ4262/millface_fix
+  *  c80adf8cb - Merge pull request #4102 from sliptonic/vcarvedepth
+  *  a1915d313 - [TD] make LineGroup selectable
+  *  35ad37946 - Py3: [skip ci] make FreeCAD thumbnailer working with
+    Py3 by opening PNG icon in binary mode
+  *  0add97a18 - Draft: Fixed Annotation style dialog's arrow types -
+    fixes #4505
+  *  8fe7ca0c2 - tolerances can be negative, thus the decimal precision
+    check must be adapted
+  *  0baabcaa4 - [TD] fix unit mismatch bug
+  *  f13c8974b - Draft: Colored grid axes
+  *  e43df1693 - PartDesign: [skip ci] for PartDesign::Torus primitive
+    use TopoShape::makeTorus
+  *  88de941d1 - Part: [skip ci] for Part::Torus primitive use
+    TopoShape::makeTorus
+  *  c578f9747 - Part: [skip ci] add method TopoShape::makeTorus
+  *  53eb15fe5 - Gui: [skip ci] make parameter to control High DPI
+    scaling available for all platforms
+  *  b935769fe - Add finaldepth property. Operation now sets start/final
+    depth more reasonably. Will not violate the finaldepth.
+  *  e0dbca653 - Merge pull request #4101 from TheRaytracers/master
+  *  53091320c - Path: Swap list instantiation per senior devs
+    specifications
+  *  384541eed - Path: Instate  property for debugging purposes
+  *  f869fbf59 - Path: Address problem with rounding issue
+  *  b875e7847 - Add icon for POV-Ray-Rendering workbench to qrc file
+  *  e48066a93 - Add icon for POV-Ray-Rendering Workbench
+  *  caf30cd7c - Merge pull request #4071 from
+    Russ4262/fix_rotational_drilling_depth
+  *  578e4aca1 - [TD] add an enum to avoid to work with plain numbers
+  *  e95b3167d - [TD] use PropertyQuantity for OverTolerance and
+    UnderTolerance and add backward compatibility
+  *  e71b7ac87 - @aapo-aapo @chennes [TD] Suggested minor improvements
+    for DrawViewDimension.cpp and QGIViewDimension.cpp in Pull request
+    review. Co-authored-by: Chris Hennes
+    <chennes@pioneerlibrarysystem.org>
+  *  3f623576d - [TD] Add tolerance format specifiers and arbitrary
+    tolerances.
+  *  768a2b1f1 - [TD] Make tolerance labels use the same formatValue()
+    conversion as dimension labels.  Support MultiValueSchemas for
+    tolerances, too.
+  *  c695b4009 - [TD] Refactor DrawViewDimension getFormatedValue() into
+    two functions.
+  *  60e1d7a7f - Merge pull request #4096 from sliptonic/bug/toolbit
+  *  af15d6cea - Merge pull request #4095 from luzpaz/Path-SVG-Rename
+  *  3d6dee2a1 - Gui: [skip ci] add user parameter to disable High DPI
+    scaling on Windows (by default off)
+  *  27b71b1f5 - Path: Last sort of Path.qrc file
+  *  181914b46 - (Windows only) Improve the dpi handling with different
+    dpi screens on windows
+  *  22c652f76 - Path: Added revision suggested by @cheenes
+  *  5dc381a71 - Path: fix translation to reflect the correct context
+  *  0e4cf2e75 - Path: Added missing Path_Custom in previous commit
+  *  fe547195b - Path: Change filenames in the rest of the Path code
+  *  14daf9636 - Path: Added SVG files missed in previous commit with
+    fixed metadata
+  *  df4f9018f - Path: Fix SVG metadata to reflect filename change
+  *  21e1f9f98 - Path: Rename missed filenames from Path.qrc in previous
+    commit
+  *  07a96afb3 - Path: Rename Path-*.svg files to conform with the FC
+    image file naming standard
+  *  998e17748 - replace auto with type
+  *  165b0e96f - add missing include
+  *  7085bd751 - PartDesign: [skip ci] fix -Wmissing-field-initializers
+  *  e73d8c555 - Add core hole info for fine threads.
+  *  af153643f - PR review suggestions and fixes
+  *  8b1aa6313 - Merge pull request #4085 from sliptonic/bug/vcarve
+  *  afa829fd0 - Merge pull request #4076 from
+    amrit3701/bug/importing_IFC_in_CLI_linked_with_FreeCADGui_module
+  *  e06f2744f - Update src/Mod/PartDesign/App/FeatureHole.cpp
+  *  16b61c580 - Update src/Mod/PartDesign/App/FeatureHole.cpp
+  *  5637c6a7a - [PD] make threaded holes norm-conform
+  *  a8da70e7f - Start: encode basename to avoid crashes on non-ascii
+    file names
+  *  be07e9a7e - FEM: Issue #0004473: Expose openCommand() to
+    translation
+  *  5da8bb0c3 - Image:  Issue #0004473: Expose openCommand() to
+    translation
+  *  02902c3b0 - Import: Issue #0004473: Expose openCommand() to
+    translation
+  *  c801c8ff6 - Inspection: Issue #0004473: Expose openCommand() to
+    translation
+  *  bd8b86b35 - Surface: Issue #0004473: Expose openCommand() to
+    translation
+  *  9ef583275 - Path: Issue #0004473: Expose openCommand() to
+    translation
+  *  b8c949411 - Points: Issue #0004473: Expose openCommand() to
+    translation
+  *  6715e62e3 - ReverseEngineering: Issue #0004473: Expose
+    openCommand() to translation
+  *  74ab51649 - Gui: Issue #0004473: Expose openCommand() to
+    translation
+  *  7b6af35e6 - Spreadsheet: Issue #0004473: Expose openCommand() to
+    translation
+  *  faa8688ee - PartDesign: Issue #0004473: Expose openCommand() to
+    translation
+  *  5aff8cdd0 - Part: Issue #0004473: Expose openCommand() to
+    translation
+  *  2befcd950 - TD: Issue #0004473: Expose openCommand() to translation
+  *  5effcc198 - Sketcher: Issue #0004473: Expose openCommand() to
+    translation
+  *  d23c08104 - MeshPart: Issue #0004473: Expose openCommand() to
+    translation
+  *  69d4258f7 - Mesh: Issue #0004473: Expose openCommand() to
+    translation
+  *  d6a1bd014 - TechDraw: [skip ci] fix -Winconsistent-missing-override
+  *  4e0641455 - [TD] Add comments and more transparent tolerance
+    position adjustment calculation.
+  *  4ed3c99e3 - Update src/Mod/TechDraw/Gui/QGCustomText.cpp by
+    compacting boundingRect()
+  *  f2e91ec48 - [TD] Make dimension number graphical layout more
+    compact by making boundingRect() tighter for dimension number
+    labels.
+  *  a8728853d - Points: Add new icons to the Gui
+  *  8a35874f8 - Points: link to icons from said commands
+  *  68748e836 - Points: Add Point icons designed by @bitacovir
+  *  2461d942a - Path: Delete unnecessary comment block
+  *  99beebc2a - Path: Replace all-caps variable name
+  *  43d54e7f1 - Path: Simplify ActiveDocument references
+  *  d52a96f2b - Path: Fix rotational errors and organize/simplify some
+    rotational code
+  *  43cd864f8 - Path: Clean up comments and simplify one code block
+  *  693db4e4b - Path: Synchronize methods with same in PathAreaOp
+    module
+  *  aa2d35cad - Path: Apply the user's Final Depth value
+  *  be2f0702a - fixup vcarve threshold
+  *  3eb300a8c - fix ui bugs
+  *  7c2065f91 - Fix help text for filter control
+  *  3d822cf26 - [path]  make toolbit reject invalid filenames help user
+    create toolbit working location
+  *  c54deee14 - Py2/Qt4: fix build failures and warnings
+  *  994d29c9b - PyCXX: harmonize PyCXX with Python C API
+  *  cfa029321 - FEM: gmsh task panel, fix regression added with
+    c6faecdcee8f
+  *  0eba78d40 - Gui: [skip ci] support of bitmasks for enum
+    RotationCenterMode
+  *  18ef1f71f - Part: [skip ci] add GeomAdaptor.hxx to PCH
+  *  5e83aa884 - Gui: [skip ci] in user settings offer combo box to
+    choose between rotation modes
+  *  4c9eca562 - Gui: [skip ci] replace dragAtCursor with new enum value
+    WindowCenter
+  *  5bd5f3a96 - Spreadsheet: Fix header uniformity + trailing
+    whitespace
+  *  5abfdb140 - ReverseEngineering: Fix header uniformity + trailing
+    whitespace
+  *  0e93dd12e - Part: [skip ci] fixes #0004169: DatumPoint at the
+    intersection of a DatumPlane and DatumPoint not working correctly
+  *  11c3de1bb - Revert Sketcher: Solver Interface - Treat length
+    equality parameter as a driven parameter to enable redundant
+    constraint reporting
+  *  c582e8a08 - Gui: [skip ci] implement new RotationCenterMode called
+    BoundingBoxCenter
+  *  056030b1d - Sketcher: Solver Interface - Treat length equality
+    parameter as a driven parameter to enable redundant constraint
+    reporting
+  *  fa92973a7 - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  c3b0af2d8 - Arch: Added .ifcjson export type
+  *  5f7df94ea - Gui: [skip ci] improve commands Std_ViewSaveCamera &
+    Std_ViewRestoreCamera to save/restore camera per view Implement
+    resetToHomePosition() for Blender style
+  *  15e661061 - Gui: [skip ci] add commands to save & restore camera
+    positions so that they can be bound to a space mouse button
+  *  e92fff2ca - Gui: [skip ci] const correctness and remove superfluous
+    semicolon
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 10 Dec 2020 23:30:07 +0300
+
 freecad-daily (0.18.4+git23126-01a7680a7-1) unstable; urgency=medium
 
   * Compile

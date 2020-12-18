@@ -1,3 +1,50 @@
+gimp-devel (2.10.18+git44398-87a670a272-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 87a670a27268f40b2b0f489610ddde8391406b6c
+  * Date: 1607550718
+  * git changelog:
+  *  87a670a272 - gitlab-ci: package is called libaa1-dev, not libaa-dev
+  *  2fefbded35 - gitlab-ci: make the GIMP build more complete
+  *  d89a5b5ba1 - gitlab-ci: we need graphviz for dot, not graphiz-dev
+  *  39d9e872bd - Update Catalan translation
+  *  90293c596c - Update Polish translation
+  *  f06316364d - Update German translation
+  *  b1e11e5cf9 - #5977 prompt to apply layer offset only if there
+    actually is a (non-zero) offset
+  *  3706f43f59 - Update Ukrainian translation
+  *  d3527f22e4 - plug-ins: fix mistakes in cherry-picking metadata
+    improvements.
+  *  bcf91f7774 - plug-ins: use logging for some messages that seem to
+    be for debugging only.
+  *  3f3dd3cfc9 - plug-ins: improve error handling and use GError in
+    metadata-editor/viewer.
+  *  1965c759a2 - plug-ins: fix #2836 GPS data is truncated to the
+    degree when edited.
+  *  fe77ded9e9 - plug-ins: improve formatting of gps data in metadata-
+    editor.
+  *  f131ede108 - plug-ins: use g_log instead of g_printerr when setting
+    tag fails.
+  *  31164859af - plug-ins: fix crash in metadata-editor when licensor
+    phone data was NULL.
+  *  8b26c7e23d - plug-ins: fix incorrect formatting when switching
+    between m and ft for gps altitude.
+  *  f3c4e7af99 - plug-ins: improve formatting of gps data in metadata-
+    viewer.
+  *  5a68e24ca0 - plug-ins: add functions for formatting gps metadata.
+  *  7bf6fa663f - plug-ins: improve casing in metadata-tags.
+  *  aab39d3fe2 - plug-ins: refactor saving longitude/latitude in
+    metadata editor.
+  *  8d4919c95e - gitlab-ci: expire distribution stage artifacts after 2
+    days
+  *  434f632b71 - Updated Italian translation
+  *  3bfa97cb57 - Updated Italian translation
+  *  eaaa74561b - Update Catalan translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 10 Dec 2020 23:55:51 +0300
+
 gimp-devel (2.10.18+git44374-d3361c4dbc-1) unstable; urgency=medium
 
   * Compile
