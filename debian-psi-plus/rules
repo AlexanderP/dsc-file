@@ -46,7 +46,7 @@ else
 endif
 
 %:
-	dh $@ --buildsystem=cmake
+	dh $@ --buildsystem=cmake --parallel
 
 override_dh_dwz:
 	dh_dwz || true

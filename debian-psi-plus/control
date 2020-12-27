@@ -9,7 +9,6 @@ Build-Depends: cmake,
                libgstreamer1.0-dev,
                libhttp-parser-dev,
                libhunspell-dev,
-               libidn11-dev,
                libminizip-dev,
                libotr5-dev | libotr2-dev,
                libqca-qt5-2-dev,
@@ -20,13 +19,15 @@ Build-Depends: cmake,
                libsm-dev,
                libssl-dev,
                libtidy-dev,
+               libusrsctp-dev (>= 0.9.3.0+20201102),
                libxss-dev,
                qt5keychain-dev,
                qtbase5-dev,
                qtmultimedia5-dev,
                zlib1g-dev
 Homepage: https://psi-plus.com/
-Standards-Version: 4.5.0
+Standards-Version: 4.5.1
+Rules-Requires-Root: no
 
 Package: psi-plus
 Architecture: any
@@ -41,7 +42,7 @@ Recommends: psi-plus-l10n,
             psi-plus-plugins,
             psi-plus-sounds,
             sox
-Suggests: libgnome-keyring0, xdg-utils
+Suggests: xdg-utils
 Description: Qt-based XMPP client (basic version)
  This package contains basic version of Psi+. Use it if you prefer old
  fashioned plain text chats from era of IRC heyday.
@@ -78,7 +79,7 @@ Recommends: psi-plus-l10n,
             psi-plus-plugins,
             psi-plus-sounds,
             sox
-Suggests: libgnome-keyring0, xdg-utils
+Suggests: xdg-utils
 Description: Qt-based XMPP client (WebKit version)
  This package contains WebKit version of Psi+. In comparing with basic Psi+
  version it has few additional features: support of animated emoticons, support
@@ -188,7 +189,7 @@ Description: plugins for Psi+
 
 Package: psi-plus-plugins-dev
 Architecture: all
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: qtbase5-dev, ${misc:Depends}
 Description: development files for Psi+ plugins
  This package contains header files and cmake modules which are necessary
  for building of Psi+ plugins which are developed outside of Psi+ project.
