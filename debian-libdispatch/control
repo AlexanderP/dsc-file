@@ -1,0 +1,36 @@
+Source: libdispatch
+Priority: extra
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper ( >= 11),
+               cmake,
+               ninja-build,
+               clang,
+               systemtap-sdt-dev,
+               libbsd-dev,
+               linux-libc-dev, libblocksruntime-dev
+Standards-Version: 4.5.1
+Homepage: http://libdispatch.macosforge.org/
+Rules-Requires-Root: no
+
+
+Package: libdispatch-dev
+Section: libdevel
+Architecture: any
+Depends: libdispatch0 (= ${binary:Version}), ${misc:Depends}
+Recommends: clang
+Description: development files for the Grand Central Dispatch API
+ The libdispatch project consists of the user space implementation of 
+ the Grand Central Dispatch API as seen in Mac OS X version 10.6 
+ (Snow Leopard).
+ .
+ This package contains the headers, manpages, and other files needed
+ to build programs that use libdispatch.
+
+Package: libdispatch0
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: user space implementation of the Grand Central Dispatch API
+ The libdispatch project consists of the user space implementation of 
+ the Grand Central Dispatch API as seen in Mac OS X version 10.6 
+ (Snow Leopard).

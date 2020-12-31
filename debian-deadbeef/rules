@@ -3,6 +3,9 @@
 
 export DH_ALWAYS_EXCLUDE := COPYING:COPYING.GPLv2:COPYING.LGPLv2.1
 
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
+
 DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 DEBIAN_CODENAME = $(shell echo $$DIST)
@@ -17,12 +20,6 @@ LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
 
 export CPPFLAGS CFLAGS CXXFLAGS LDFLAGS
 
-ifneq (,$(filter $(DEBIAN_CODENAME),jessie trusty))
-	CONTROL = control.jessie
-else
-	CONTROL = control.stretch
-endif
-
 ifeq ($(DEB_HOST_MULTIARCH),i386-linux-gnu)
         confopt = --disable-soundtouch
 else
@@ -36,14 +33,9 @@ override_dh_makeshlibs:
 	dh_makeshlibs -n
 
 override_dh_auto_configure:
-	cp debian/$(CONTROL) debian/control
 	dh_testdir
 	./autogen.sh
 	dh_auto_configure -- $(confopt)
-
-override_dh_auto_clean:
-	cp debian/$(CONTROL) debian/control
-	dh_auto_clean
 
 override_dh_install:
 	dh_install

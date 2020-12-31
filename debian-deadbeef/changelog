@@ -1,3 +1,481 @@
+deadbeef (1.8.4+git9743-d7d029ef8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: 1.8
+  * Commit: d7d029ef80e52f2f6fd372cf81e5336b69a6fb56
+  * Date: 1608818879
+  * git changelog:
+  *  d7d029ef8 - 1.8.5-rc1
+  *  f9277b004 - docker: added --progress plain to be able to read the
+    logs
+  *  7b808db19 - translations update for 1.8
+  *  97758e4aa - travis: use Xcode12.2
+  *  3e1861ae5 - osx: delete xcode workspace, since it's not really
+    used, only referencing a single project
+  *  f6271c704 - Changelog update
+  *  fad0c50f3 - streamer: fix shuffle bug repeating the same tracks
+    when more than 2 tracks queue up (fixes #2438)
+  *  eaef2f1a7 - 1.8.5-beta2 + changelog
+  *  9585b8328 - streamer: fix album shuffle after last album track
+    issue (fixes #2471)
+  *  477050405 - deadbeef.h: removed obsolete wiki link
+  *  03d8dede0 - Changelog update
+  *  35cf7d6b7 - Make sure to cancel timer on shutdown
+  *  dcaa4c8a7 - gtkui: Update titlebar based on TF update interval
+  *  0f121c6c5 - Merge pull request #2488 from
+    saivert/widget_parent_menu
+  *  b521186b3 - Make data key a constant
+  *  ece6163c9 - gtkui: add parent menu for widgets
+  *  8864472cb - Add two  generated files to .gitignore
+  *  961d5bd41 - New vscode debug config for autotools builds
+  *  d1b7c6e76 - gtkui: fix playlist not drawing content on startup
+    (fixes #2484)
+  *  048e90914 - updated docker scripts
+  *  76965654a - gme: fix weird typedefs
+  *  d435b8f63 - mp4tagutil: fix a bug which caused calculating negative
+    padding size, when moov is already located at the end of file (fixes
+    #2474)
+  *  09383fd54 - osx: gtk version update
+  *  e25886a0c - gtkui: implemented a more robust method of detecting
+    when gtk widget has been realized and resized ot its final size and
+    maximization state (fixes #2414)
+  *  76027db8f - gtkui: fix autoresizing columns when deadbeef starts
+    maximized (fixes #2414)
+  *  6c44ddf13 - Revert vtx: do not include sys/mman.h
+  *  9f92b2da2 - premake5: cleanup, disable plugins for windows
+  *  a589f0bf8 - Replace premake5.lua with premake5-win.lua
+  *  edb9bacf0 - premake5: fix for linux
+  *  e5bd3fe06 - windows_postbuild: fix removal of *.lib files
+  *  73af46f70 - README.md update
+  *  f9289d5ae - travis: update premake invokation
+  *  839851ab8 - premake5: add plugins, many different changes
+  *  6ca88b317 - libwin: add shn workarounds
+  *  180b5dda8 - vtx: do not include sys/mman.h
+  *  5510cad29 - travis: add yasm for windows build
+  *  1957882af - premake5: disable medialib by default
+  *  c2516a8b2 - premake5: fix windows build
+  *  e0c9e7b51 - premake5: refactor build script
+  *  7edddc729 - premake5: add pkgconfig_cflags
+  *  4a8d12511 - README.md update
+  *  8466bed96 - portaudio: fix playback of non-existent tracks
+  *  650a48d91 - portaudio: convert to libdispatch
+  *  4486622da - Changelog update
+  *  3561f1a36 - 1.8.5-beta1 + ChangeLog
+  *  2099827f6 - disable medialib API for 1.8.5
+  *  1a7bcdba7 - lastfm: fix a few reference counting bugs
+  *  2251e5222 - aac: update copyright notice
+  *  1a48436e2 - gtkui: fix logwindow/widget scroll detection
+  *  6a4ee8898 - gtkui: Fix warning when there is no log action
+  *  aa1ca0277 - cocoaui: fix logger autoscroll when the log window
+    shows for the first time with enough initial content to cause
+    scrolling
+  *  55d7a8b55 - cocoaui/artwork: fix memory leaks
+  *  98f410073 - mp4p update: memory leak fix (fixes #2474)
+  *  9975f10ac - main: Make socket path use XDG_RUNTIME_DIR if set again
+  *  f823ad2b0 - cocoaui: covermanager slight cleanup and modernization
+  *  b80c0cf81 - dumb: added some extra error recilience to s3m parser,
+    to make certain seemingly corrupt s3m files to load and play,
+    although it's not clear whether they're playing correctly (fixes
+    #2463)
+  *  dc1626a74 - osx: remove jansson xcconfig reference
+  *  530bc276e - gtkui: fix file filter for the GtkFileChooserNative
+    implementation
+  *  a8f760626 - alac: re-use the same fd for mp4reader, don't open a
+    duplicate
+  *  63266ed11 - aac: close the file if it is mp4 but not aac
+  *  5bcd39b7e - tf: include band field in %artist% mapping
+  *  d8279ce97 - ffmpeg: cleanup unused enum
+  *  35714bfc7 - submodule fix
+  *  9e0a4ad61 - apbuild as submodule, ship libdispatch+deps in portable
+    build
+  *  fc2ac3cdc - 14.04 docker test script to include libdispatch
+  *  073ee6886 - exclude medialib from build on master
+  *  90a3a34ab - README.md update
+  *  83af8fb88 - README.md update
+  *  d984225c1 - README update
+  *  3d2d74c6d - Merge branch 'medialib'
+  *  10b01ffb0 - added clang requirement to configure.ac
+  *  e164fb412 - switch travis config back to 14.04
+  *  0d7ff6ce2 - added 14.04 clang docker build scripts
+  *  61ce5c4be - cleanup 18.04 docker build scripts
+  *  0ae9a4657 - switch to clang in apgcc wrapper
+  *  528dd5d6f - jansson xcconfig delete
+  *  5b9edd432 - xcodeconfig folder rename
+  *  f2de6a26e - switch from gnu99 to c99
+  *  b4e867ec3 - cocoaui: disable experimental/WIP features for master
+    branch
+  *  d7b98ec10 - Merge pull request #2447 from DeaDBeeF-for-
+    Windows/medialib
+  *  d15d85b69 - travis: enforce clang on windows builds
+  *  4113cc07d - travis: remove gcc from windows build
+  *  f5fd36036 - gtkui: fix pixmaps and document paths in xcode project
+  *  4cd2bc8e3 - travis: add build messages for windows
+  *  9db41a386 - premake/travis: dispatch windows support
+  *  f169b1f52 - travis: add clang for windows build
+  *  62ec648fb - premake5: use clang
+  *  4946308f2 - premake5-win: add medialib
+  *  af5f3e869 - notify: convert to libdispatch (fixes #1077)
+  *  dec513408 - gtkui: fix drawing playlist column separators on newer
+    GTK themes
+  *  5ec712713 - gtkui: fix crash / memory leak after shrinking gtkbox
+    (fixes #2297)
+  *  1356d7a1f - gtkui: make playlist min width 250px, to prevent
+    drawing/scrolling problems (fixes #1385)
+  *  f268ad168 - gtkui: align hotkey code changes, and make hotkeys
+    assignments work again (fixes #2437)
+  *  cf95f7919 - gtkui: fix assigning hotkeys with shift (fixes #2437)
+  *  fdbdf7617 - osx: gtkui project settings fixups
+  *  8b2959165 - cocoaui: improved playlist focus handling
+  *  76b291410 - lastfm: convert to libdispatch
+  *  1847a57d3 - medialib: add jannson flags to build
+  *  821bd96c1 - medialib: add build steps for automake/autoconf build
+  *  7473ed8be - cocoaui: fix libjansson install path
+  *  d6152b6c4 - artwork: moved image loading/scaling routines to
+    separate files
+  *  e3e9db545 - artwork: convert to libdispatch
+  *  a5ea9efe3 - enable building medialib plugin for linux
+  *  7bb894532 - travis: build on ubuntu bionic + clang
+  *  d38c2d764 - Merge branch 'master' into medialib
+  *  d9a342b6d - added clang building support using docker
+  *  5fd1abfe7 - Merge branch 'master' into medialib
+  *  eb356e8d3 - mp4: fix writing disc number
+  *  b77cf59f3 - mp4: fixed writing total discs
+  *  bac2cd881 - mp4: cleanup old text fields before writing new ones
+  *  63919eff7 - travis: cancel windows build if make fails
+  *  3ad733906 - Merge branch 'master' into medialib
+  *  8554777a7 - mp4p update
+  *  4030496fa - gtkui: move files to trash
+  *  ccbb75048 - deadbeef.h: media source plugin api level limit
+  *  8b62573d1 - medialib: fix types / names
+  *  43d937be2 - medialib: new plugin type for supporting multiple media
+    sources
+  *  54e6e17a1 - medialib: new plugin API, which allows multiple sources
+    / instances (WIP)
+  *  ccab41e8c - cocoaui: reimplemented medialib drag-drop functionality
+    without involving the internal medialib playlist
+  *  dd53f5cd0 - medialib: remove ddb_playlist_t access from medialib
+    API
+  *  db6766e18 - junklib: fix bug in shift_jis detection, which caused
+    memory corruption
+  *  0f546ea3b - cocoaui: report artist/album/title to the
+    NowPlayingInfoCenter (fixes #2401)
+  *  975bb54d1 - cocoaui: report artist/album/title to the
+    NowPlayingInfoCenter (fixes #2401)
+  *  709236d0f - cocoaui: remove the apply/reset buttons from medialib
+    preferences
+  *  33c2c0c7e - medialib: music files in the top level music folder
+    will now show up with folder filter
+  *  29febdab7 - junklib: fix bug in shift_jis detection, which caused
+    memory corruption
+  *  82d9a6fc5 - medialib: fix crash caused by under-retained track
+    references
+  *  4f9ff7261 - medialib: fix applying medialib configuration when no
+    previous configuration existed
+  *  36bb2917e - medialib: ensure playlist is not null before clearing,
+    when medialib paths list is empty
+  *  75980f87d - cocoaui: added a comment for -[MediaLibraryOutlineView
+    validateProposedFirstResponder:forEvent:]
+  *  c6aa2810a - cocoaui: medialib search
+  *  120ec5043 - medialib: thread safe configuration access
+  *  74141ebf6 - cocoaui: use path instead of uri when changing medialib
+    settings
+  *  5a2e57daf - Merge branch 'master' into medialib
+  *  e8aa6d346 - cocoaui: fix crash after clicking empty space in column
+    header, causing array write at index -1
+  *  ccafdd9a8 - cocoaui: fix group titles clipping (#2436)
+  *  eb7527370 - Revert streamer: workaround for double-sending
+    DB_EV_SONGCHANGED
+  *  dc44ef43e - coreaudio: avoid sleep prevention code from being
+    executed multiple times, just in case
+  *  73e8156c4 - coreaudio: use kIOPMAssertionTypeNoIdleSleep instead of
+    kIOPMAssertionTypeNoDisplaySleep, to allow display sleep while music
+    is playing (fixes #2434)
+  *  4e7dbbdb0 - coreaudio: prevent sleep while playback is active
+    (fixes #2434)
+  *  085ca4314 - cocoaui: medialib folder list editing
+  *  2da8f0699 - compile fix
+  *  5293401ab - cocoaui: eliminate the need to install libjansson to
+    build medialib plugin
+  *  2117f682e - cocoaui: cleanup
+  *  a6d9f11f2 - cocoaui: medialib configuration UI WIP
+  *  b290ebaed - cocoaui: added medialib configure button
+  *  e5cb00c55 - cocoaui: sort medialib tracks accounting for disc nr
+  *  738067760 - fix tests
+  *  07eede300 - medialib: added support for multiple toplevel music
+    folders
+  *  295cbc42d - cocoaui: fix medialib random crash on startup
+  *  22f26be20 - cocoaui: medialib outline view styling: make it look
+    right in big sur beta 5
+  *  298f2aa9f - fixed a few thread safety issues
+  *  fab5513c7 - cocoaui: fix window title formatting in pre-bigsur
+    macOS (fixes #2433)
+  *  5269079a7 - medialib: update modified tracks when mtime is higher
+    than scan time
+  *  1834f9a39 - cocoaui: improve medialib right click track selection
+  *  e786aa455 - cocoaui: sort items in medialib groups
+  *  f00fc05f0 - medialib: use album artist for artist+album name
+    construction
+  *  ae3c399ba - medialib: fix album grouping impl
+  *  23357e1bb - metacache: deprecate metacache_ref/unref
+  *  f9255207d - medialib: build album names as artist+album, to avoid
+    compilation grouping
+  *  075ee6083 - cocoaui: display medialib album art for albums instead
+    of tracks
+  *  0757db7dd - medialib: cleanup, fixed cue tracks handling
+  *  85e0a1eb6 - artwork: improved caching
+  *  8de12ae8a - artwork: cover caching mechanism
+  *  9bd11d1f5 - cocoaui: medialib artwork optimizations
+  *  e8fd37fe8 - cocoaui: display medialib album art
+  *  cf1c170a1 - cocoaui: fix window titlebar mess caused by bigsur
+    beta4
+  *  44fc13114 - Merge pull request #2422 from DeaDBeeF-for-
+    Windows/master
+  *  406991da8 - gtkui: increase toggle mainwindow action timeout to
+    500ms (fixes #1987)
+  *  5018085a8 - gtkui: added delay of 200ms before showing/hiding main
+    window using shortcut action (fixes #1987)
+  *  1d9933b4b - cocoaui: initial support for drag-drop from medialib
+    into playlist (tracks only, no groups)
+  *  f70a9ae7a - libwin: fix capath len
+  *  6b27885c4 - artwork: simpler cache root path generation
+  *  e8aaf1647 - medialib: trackproperties for medialib folders
+  *  4240849ad - medialib: track properties for multiple selection
+  *  96819e2d8 - medialib: fix missing track ref in albums and folders
+    modes
+  *  46b7bf3e0 - medialib: fixed updating medialib issue caused by
+    cuesheets
+  *  15a03a8d5 - windows_postbuild: mkdir fix
+  *  24e21b0e7 - medialib: handle updating the items which disappeared
+    on disk since the last scan
+  *  c2b9f2d2e - playlist: expand API with
+    plt_get_head_item/plt_get_tail_item
+  *  953f9bac9 - Windows: fix cert paths + include them in build
+  *  4fbe34eec - artwork: append '/' to cache path when needed
+  *  3666be78a - cocoaui: changed to use popup button medialib selector,
+    and enabled multiple selection
+  *  1a64dba9b - Merge pull request #2421 from DeaDBeeF-for-
+    Windows/master
+  *  4ad249a62 - artwork: adjust trace message
+  *  8d41ef37c - Revert disable windows build on travis
+  *  115289a21 - Merge branch 'master' into medialib
+  *  945565376 - Windows: move slash conversion to main
+  *  c0912513b - artwork: simplify cache path generation
+  *  3d6d93866 - artwork: rename variable
+  *  cec5b47cf - artwork: fix double 'deadbeef' in cache path
+  *  464936312 - Merge pull request #2419 from DeaDBeeF-for-
+    Windows/master
+  *  594ec40fb - Windows: binary mode in open() rewrite
+  *  6e3e025ec - premake5: add artwork to windows bulid
+  *  ebeeb9b32 - artwork: remove trace
+  *  7b13db056 - libwin: reverse return value for fnmatch
+  *  2e0045e95 - artwork: remove quickfix windows
+  *  921c1d3b9 - libwin: fix filter for scandir
+  *  69ad6091e - Windows: use binary mode in open() in junklib/converter
+  *  9546c480b - artwork: escape illegal chars on windows
+  *  3ce47a309 - artwork: cache path from deadbeef
+  *  0daa41f1d - artwork: fix ctx type
+  *  74d14ae49 - Merge branch 'album_art_wip' into master_album
+  *  777ff17d7 - artwork: fix mp4tagutil.h path
+  *  27a2e68ef - artwork: trace enabled
+  *  803963327 - premake5: fix artwork for windows
+  *  87a2e4b75 - travis: fix upload for windows
+  *  7af7ebe11 - Fix ctx type for gtkui and hotkeys
+  *  a9be23803 - cocoaui: play medialib tracks by adding to default
+    playlist
+  *  8be1ea4bc - playlist: fix playlist loading for windows
+  *  d788319e6 - plugins: fix relative path detection for windows unc
+    paths (fixes #2413)
+  *  2a62f156e - premake5: add adplug
+  *  cf8d27aca - Merge branch 'master' into medialib
+  *  f024da21f - mp3parser: fix handling numbef of frames from Xing/Info
+    frame
+  *  727d9a2ef - cocoaui: modernize TrackPropertiesWindowController
+  *  230426555 - cocoaui: display track properties from medialib context
+    menu
+  *  8afbcbab9 - osx: fix loading plugin libraries from PlugIns folder
+  *  c6c7b05cf - cocoaui: added a FIXME
+  *  f9d48a4f5 - cocoaui: display track context menu for media library
+  *  240dea683 - cocoaui: TrackContextMenu cleanup
+  *  1f30f5bc8 - cocoaui: extract medialib outline view controller into
+    a separate class
+  *  65aacdf53 - cocoaui: extract track context menu to a reusable class
+  *  a92f7972b - cue: fixed playlist file-add filtering, which allows to
+    detect the already present tracks in medialib when loading cuesheets
+  *  2125e8c84 - medialib: unknown artist/album/genre handling
+  *  36b7aaeef - cocoaui: fixed spectrum analyzer octave number
+    calculation bug
+  *  5b9c5e129 - medialib: get_albums_for_collection_group_by_field
+    performance: from 8 sec to 0.5 sec on 110K tracks artists query
+  *  55be78b3e - medialib: optimization
+  *  3724286c0 - medialib: cleanup / fix folders tree
+  *  23271ec31 - medialib: cleanup
+  *  7e3747bec - medialib: optimized version of building artists tree
+  *  b2e6be390 - tf: added a new flag to prevent mutex locks, used by
+    medialib
+  *  321e4bab7 - medialib: cleanup
+  *  194e15e48 - cocoaui: MediaLibraryItem cleanup
+  *  8ee96c4be - medialib: added comment
+  *  e3fd0e264 - adplug: fix several heap buffer overflow bugs
+  *  3a467692a - adplug: fix negative index array access
+  *  48f51fb63 - adplug: heap buffer overflow crash fix
+  *  ee0c3e713 - adplug: heap buffer overflow crash fix
+  *  cf218d324 - adplug: heap buffer overflow crash fix
+  *  ea3afafbc - adplug: fix crash caused by uninitialized memory block
+  *  f1b99040e - medialib: save library playlist; UI tweaks
+  *  eca4abf9d - cocoaui: don't crash after medialib update
+  *  383c6e801 - medialib: rescan/reindex at startup, fixed a bug with
+    filename hashes, fixed memleak, type renames
+  *  61a9b75a1 - cocoaui: spectrum analyzer perf tweaks -- 30fps, fewer
+    draw calls, cached colors / attributes
+  *  9594bbd6c - cocoaui: use the actual accent color in spectrum
+    analyzer
+  *  4c2f42f49 - cocoaui: spectrum analyzer changed colors and added
+    dB/octave grid
+  *  eb87a63ab - cocoaui: spectrum analyzer memleak fix
+  *  ca6cbb2e6 - cocoaui: added a spectrum analyzer hack (for
+    entertainment purpose, not release-ready)
+  *  ef114682d - cocoaui: delete a FIXME
+  *  53f7f3c85 - cocoaui: PlaylistHeaderView modernization
+  *  bffac3e9b - cocoaui: fix playlist header cursor coordinate system
+    conversion bug
+  *  7a037e781 - cocoaui: when using sidebar layout, don't add tabstrip
+    as window accessory - make it a regular view
+  *  0d554e5a2 - cocoaui: playlist code cleanup
+  *  e0a0a7726 - cocoaui: playlist column management cleanup
+  *  894ec646c - cocoaui: playlist code modernization
+  *  97af2c874 - cocoaui: moved playlist header drawing to
+    PlaylistHeaderView
+  *  4ff427818 - cocoaui: disable window tabs
+  *  096863d76 - cocoaui: improved dark mode and keywindow handling in
+    tab strip
+  *  02a2fe29c - cocoaui: sidebar style set to source list
+  *  601ca5ed8 - osx: fix loading plugin libraries from PlugIns folder
+  *  233f392c0 - cocoaui: fix tab bar glitches after renaming and
+    removing playlists
+  *  058e06303 - cocoaui: tab close button on the left, center tab title
+  *  842e87990 - cocoaui: fixed tab title and close button positioning
+  *  aa3cdff5f - cocoaui: older macos sdk compat fix
+  *  b52cf2e0a - cocoaui: older macos sdk compat fix
+  *  d99645439 - cocoaui: compile fix
+  *  689d4c57f - cocoaui: fixed messy drag-n-drop position calculation
+  *  3411172a8 - cocoaui: macos sdk 10.16 detection fix
+  *  8cca318f9 - cocoaui: tab scrolling cleanup
+  *  04bf10d4c - cocoaui: macos sdk 10.16 detection fix
+  *  2d4070087 - cocoaui: cleanup tabstrip UX
+  *  95f310c5e - cocoaui: remove tabstrip scrolling buttons
+  *  4dbc641d1 - cocoaui: allow compiling on pre-bigsur sdk
+  *  127bf1719 - disable windows build on travis
+  *  df0061b1c - cocoaui: mainwindow splitview layout tweaks
+  *  1286f0c6d - cocoaui: fixed autosaving splitview configuration
+  *  9d713fa2c - cocoaui: remove medialib test window
+  *  4feba96e2 - cocoaui: disable medialib floating groups
+  *  5fabf81f4 - cocoaui: medialib progress indication WIP
+  *  cad2a1fc0 - cocoaui: cleanup
+  *  b906848ea - cocoaui: library view rearranged
+  *  0952446d2 - cocoaui: move playback buttons to the sidebar section
+  *  67bd030bb - Merge branch 'master' into medialib
+  *  5cc850713 - osx: gtk3 release build fix
+  *  aebef946f - osx: gtk3 build using xcconfig
+  *  3676ee396 - cueutil: added support for additional per-track
+    metadata (fixes #2412)
+  *  dbb637ee3 - cocoaui: medialib collection selection
+  *  c94bf9dc7 - cocoaui: improve drawing close button of playlist tabs
+  *  8b2cb8cec - Merge branch 'master' into medialib
+  *  bbd10e84c - cueutil: fix handling linebreak when ignoring
+    unsupported cuesheet fields (fixes #2389)
+  *  7029b6c25 - cocoaui: window layout tweaks
+  *  07f36ec33 - cueutil: fix handling linebreak when ignoring
+    unsupported cuesheet fields (fixes #2389)
+  *  c78ad3e2a - cocoaui: fix handling tabstrip resize
+  *  c6a017ae5 - cocoaui: relocate status bar to the window bottom,
+    spanning the entire split view
+  *  b41527340 - cocoaui: added status bar to splitview window
+  *  f1fd6c2f7 - Merge branch 'master' into medialib
+  *  67ff9f22c - alac: fix division by zero on seek (fixes #2408)
+  *  b7a9ea372 - cocoaui: increase seekbar max width (fixes #2409)
+  *  9fd2b3dc5 - travis: upload.sh missing ;; fix
+  *  96918c218 - travis: add missing VERSION variable
+  *  886cff942 - Merge pull request #2405 from DeaDBeeF-for-
+    Windows/travis_windows
+  *  fa0a2fea0 - cocoaui: fix playlist view clipping
+  *  425fdf523 - cocoaui: custom accent color
+  *  3df66ebd1 - cocoaui: title and subtitle support; restored seekbar
+    and volumebar functionality
+  *  928911a13 - cocoaui: sidebar content and styling
+  *  ad52a7210 - cocoaui: rename folder
+  *  b77d88215 - cocoaui: added main window splitview
+  *  dd00e6f58 - cocoaui: added missing files into project
+  *  f12ba994c - travis: update premake on windows
+  *  50935903e - travis: upload windows artifacts
+  *  0cde8e597 - Windows build update
+  *  5f3735c2d - travis: windows update
+  *  4933fcfad - travis: quiet zip on windows
+  *  447108249 - mp4tagutil: fixed crash on non-text metadata fields
+  *  ff2b6167f - mp4tagutil: fixed crash on non-text metadata fields
+  *  c2a33a77c - Merge branch 'master' into medialib
+  *  e64706110 - travis: zip fix
+  *  df7710e4a - travis: compensate output
+  *  6b0fd195f - travis: generate windows binaries
+  *  a24d3d886 - travis: remove cache on windows
+  *  495368703 - travis: windows changes
+  *  c06795a25 - travis: windows: build in mingw64 environment
+  *  ce0060ab4 - travis: add windows
+  *  e8b843762 - cocoaui: fixed main window and preferences window
+    looking weird in Big Sur
+  *  254b25337 - artwork-legacy: compile fix
+  *  8dcaa8e98 - cocoaui: improve main window toolbar look on big sur
+  *  d5f20d3b6 - adplug: makefile cleanup
+  *  a280e31ec - mp4p update
+  *  bc30dc5bd - artwork-legacy: update to use mp4p, and get rid of
+    mp4ff
+  *  42979a304 - Merge pull request #2404 from DeaDBeeF-for-
+    Windows/master
+  *  7397408f1 - Merge remote-tracking branch 'deadbeef/master' into
+    master
+  *  328b257a1 - premake5: linux fixes
+  *  04c65c01a - Readme update
+  *  b558f5ae6 - travis: don't update brew
+  *  d44d99a58 - mp4p update
+  *  7c2c41e23 - travis: don't install yasm
+  *  5c321542c - README.md update
+  *  4178b74d5 - COPYING update
+  *  ac4fe6b60 - remove LICENSE.txt symlink
+  *  3a009df77 - mp4p update
+  *  56e35ed71 - update mp4p
+  *  a6d2da722 - added LICENSE.txt symlink for github
+  *  5ffef493f - mp4p update
+  *  d3e657bf5 - waveout: fix wrong type
+  *  d94fcf98c - premake5: mp4p update
+  *  aab02c8b1 - Merge remote-tracking branch 'deadbeef/master'
+  *  4df8db44d - osx: remove libmp4ff from copy files phase
+  *  86d024887 - travis: disable xcodebuild verbose log
+  *  a12250d57 - osx: mp4p include fixes
+  *  87004e970 - osx: deployment target fix
+  *  2c8153378 - osx: artwork header search path
+  *  7fbd10911 - osx: switch to xcode 11.5
+  *  f40588368 - travis: verbose xcodebuild log
+  *  290d78801 - mp4p update
+  *  b51bd5200 - added missing files
+  *  d06a5bffa - Merge branch 'mp4p-external'
+  *  8bc88be33 - enable submodules for travis builds
+  *  fb363a623 - mp4p: linux compile fixes
+  *  99ab6b679 - osx: don't link ffmpeg to deadbeef target
+  *  a02ccb73b - mp4p update
+  *  fc46d1bf3 - mp4p: use mp4p as submodule / framework
+  *  0ff455bd8 - artwork: use the new mp4parser instead of mp4ff
+  *  ddfdc0d16 - mp4parser: license and readme
+  *  3af94ceb0 - mp4parser: text cleanup
+  *  023e10ded - mp4parser: implemented tag writing which can move moov,
+    and keep mdat immutable
+  *  f0a262662 - mp4parser: fixed reading unknown metadata fields
+  *  53a5fc3b7 - mp4parser: test cleanup
+  *  a34432cb3 - osx: project cleanup
+  *  2a51d5506 - Merge branch 'master' into mp4parser
+  *  8fb6ca249 - Merge branch '1.8'
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 26 Dec 2020 12:49:45 +0300
+
 deadbeef (1.8.4+git9070-69fa2dba2-1) unstable; urgency=medium
 
   * Compile

@@ -1,0 +1,106 @@
+libdispatch (0~svn1420-1) unstable; urgency=medium
+
+  * Compile
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 26 Dec 2020 14:11:38 +0300
+
+libdispatch (0~svn197-3.3ubuntu2) vivid; urgency=medium
+
+  * Strip -fstack-protector-strong from CFLAGS too.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 24 Nov 2014 17:10:34 +0000
+
+libdispatch (0~svn197-3.3ubuntu1) vivid; urgency=medium
+
+  * Resynchronise with Debian.  Remaining changes:
+    - Strip --param=ssp-buffer-size=4 from CFLAGS; clang doesn't support it
+      and so we end up omitting Blocks support.
+    - Strip -fstack-protector from CFLAGS; this causes a link failure with
+      clang on at least some architectures.
+    - Fix build with 'ld --no-add-needed'.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 24 Nov 2014 16:54:38 +0000
+
+libdispatch (0~svn197-3.3) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Build successfully on mips/mipesl
+    Add -fPIC flag for mips/mipsel
+    Patch by Dejan Latinovic
+    Closes: #741943
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Mon, 17 Mar 2014 15:36:52 +0000
+
+libdispatch (0~svn197-3.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Detect GNU linker on host_os-es other than linux-gnu (Closes: #660671)
+
+ -- Balint Reczey <balint@balintreczey.hu>  Tue, 12 Nov 2013 17:47:45 +0100
+
+libdispatch (0~svn197-3.1ubuntu1) quantal; urgency=low
+
+  * Resynchronise with Debian.  Remaining changes:
+    - Strip --param=ssp-buffer-size=4 from CFLAGS; clang doesn't support it
+      and so we end up omitting Blocks support.
+    - Strip -fstack-protector from CFLAGS; this causes a link failure with
+      clang on at least some architectures.
+    - Fix build with 'ld --no-add-needed'.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 10 Aug 2012 15:08:39 +0100
+
+libdispatch (0~svn197-3.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix use SSE2 instructions in i386. (Closes: #660806)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Tue, 10 Jul 2012 02:05:06 +0900
+
+libdispatch (0~svn197-3ubuntu1) precise; urgency=low
+
+  * Strip --param=ssp-buffer-size=4 from CFLAGS; clang doesn't support it
+    and so we end up omitting Blocks support (LP: #935090).
+  * Strip -fstack-protector from CFLAGS; this causes a link failure with
+    clang on at least some architectures.
+  * Fix build with 'ld --no-add-needed'.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 23 Apr 2012 13:43:20 +0100
+
+libdispatch (0~svn197-3) unstable; urgency=low
+
+  * Replace individual patches with a combined libdispatch-r197_v2 patch.
+  * Add workaround for eglibc bug #631888.
+  * The configure script now defaults to Clang if it is available.
+
+ -- Mark Heily <mark@heily.com>  Tue, 28 Jun 2011 22:20:40 -0400
+
+libdispatch (0~svn197-2) unstable; urgency=low
+
+  * Require clang >= 2.8
+  * patches/dispatch_main: prevent the process from becoming a zombie.
+  * patches/__builtin_expect: removed due to use of >= 2.8
+  * patches/use_libm: removed due to use of clang >= 2.8
+  * Add a Build-Depends on dh-autoreconf, and enable this in debian/rules
+
+ -- Mark Heily <mark@heily.com>  Wed, 18 May 2011 22:28:58 -0400
+
+libdispatch (0~svn197-1) unstable; urgency=low
+
+  * Upgrade to r197 from the upstream source repository.
+  * Remove all Debian-specific patches.
+  * Remove libbsd as a dependency.
+  * Add a dependency on libpthread-workqueue.
+
+ -- Mark Heily <mark@heily.com>  Sun, 6 Mar 2011 15:31:39 -0400
+
+libdispatch (0~svn188-2) unstable; urgency=low
+
+  * Add pkg-config as a dependency (fixes FTBFS)
+
+ -- Mark Heily <mark@heily.com>  Tue, 13 Jul 2010 22:45:01 -0400
+
+libdispatch (0~svn188-1) unstable; urgency=low
+
+  * Initial upload (Closes: #576638)
+
+ -- Mark Heily <mark@heily.com>  Mon, 05 Apr 2010 23:00:34 -0400

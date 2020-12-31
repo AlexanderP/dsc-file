@@ -1,3 +1,312 @@
+freecad-daily (0.18.4+git23529-c6eda6dca-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: c6eda6dca7893fc48ab4284c70d90ff80abc4a3e
+  * Date: 1608826068
+  * git changelog:
+  *  c6eda6dca - [PythonConsole] Fixed pasting using middle mouse button
+    on Linux
+  *  0e2ab0812 - Gui: temporary fix of preference menu in macos
+  *  4a9da93e6 - Doc: Cosmetic fixes for doxyhen-generated doc
+  *  145fa6bfa - Merge pull request #4186 from luzpaz/typos
+  *  af605e406 - GCS: Improve documentation about debug
+  *  197a23435 - Sketcher: Fix block constraint with several dependency
+    groups
+  *  dfda68be1 - Sketcher: enable Block constraint with empty additional
+    constraints
+  *  5cfef4556 - Sketcher: Additional debug code for new block
+    constraint
+  *  ff96cb301 - Fix typos [skip ci]
+  *  d89cd953a - Path: [skip ci] fix Python 3.9 deprecation warning
+  *  ed0a5af0d - Mesh: [skip ci] fix -Wrange-loop-construct
+  *  799a2e1f5 - Reverting files wrongly committed with 5a974f824
+  *  5a322d75c - Merged crowdin translations
+  *  5a974f824 - Updated ts files
+  *  6754e2b37 - Merge pull request #4117 from robot-army/master
+  *  7da795525 - Merge pull request #4142 from DinoMesina/master
+  *  a891c0422 - Merge pull request #4175 from donovaly/TD-unit-
+    dimension-fix
+  *  b617ebfa2 - Merge pull request #4172 from tomate44/fcinfo
+  *  99a6c0a0a - Merge pull request #4176 from
+    dbpatankar/indian_standard_profiles
+  *  23073c14d - Py2: fix Py2 build failure
+  *  b66c895bb - [Part] AppPartPy.cpp Python 3.9 Unicode warning fixes.
+  *  107ed94d8 - CXX, Objects.hxx: Python 3.9 Unicode compilation
+    warning fixes suggested by wmayer on the FC forum.
+  *  cbbbe942e - Apply style suggestions from @abdullahtahiriyo
+  *  73fa30468 - Sketcher: Fix issue #4513 - SketchObject::addSymmetric
+  *  07211b0fb - [TD] ShapeExtractor.cpp: Avoid processing infinite-
+    sized shapes (Datum objects etc).
+  *  52c2e7eff - PyCXX: In Python 3.9 Unicode API are being deprecated
+  *  04337034c - Sketcher: ViewProvider representation of (not)-fully
+    constraint defining points
+  *  f1a00f7a0 - Sketcher: Allow UI to toggle construction status of
+    Vertices
+  *  e875704c2 - Sketcher: Support for defining point
+  *  6c956bb80 - Sketcher: support vertexes in sketch used e.g. for hole
+    features
+  *  c79ac8d1f - Sketcher: Implement Python function
+    getConstruction(geoId) to retrieve geometry construction status
+  *  3a845e4d0 - Merge pull request #4159 from Russ4262/fix_slot_op
+  *  dec01d1df - Sketcher: Fix several issues in SketchObject::trim
+  *  3b449e1ce - Fix typo found via Crowdin [skip ci]
+  *  a8443b6b7 - Improve comment and remove uncessary return statement
+  *  bfc036daa - Update src/Mod/Sketcher/App/SketchObject.cpp
+  *  edb87a066 - Delete Equal constraints on LineSegments in
+    SketchObject::trim
+  *  07725ede2 - Sketcher: New Blocked constraint solver implementation
+  *  ea006076e - Sketcher: GeometryFacade - convenience method to check
+    if a geometry is blocked
+  *  e3873a73e - GCS: enable to invalidate diagnosis result
+  *  652d62878 - Indian standard H and U profiles added to profiles.csv
+  *  7dea66838 - [TD] fix unit conversion for dimensions
+  *  c3acfcc0a - Sketcher: Fix Array/copy/move
+  *  6aca180d7 - Sketch: fix correct index in parameter dependency map
+    for poles and knots
+  *  ade218f58 - Sketcher: fix knots PointPos coded as mid instead of
+    start
+  *  2ebed71e7 - Sketcher: fix crash on mirroring geometry defined by
+    internal alignment geometry
+  *  efa6346e5 - Merge pull request #4150 from sliptonic/posttodxf
+  *  adc6db8f3 - Eliminate Windows debug-mode warning
+  *  3b9be2286 - Merge branch 'master' into master
+  *  5c811d233 - fcinfo: support FCBak backup files
+  *  8719b48e1 - fcinfo: support backup files
+  *  fbe0b1974 - Merge pull request #4163 from Russ4262/patch-1
+  *  fb64d208b - Merge branch 'master' into posttodxf
+  *  aa9e16cbe - Merge pull request #4144 from mlampert/feature/suppress-
+    warnings-preferences
+  *  ea0ce293f - Fix typos [skip ci]
+  *  c276139f1 - Part: [skip ci] add TopoShape::isInfinite
+  *  ba5bc449c - Sketcher: Remove unnecesary header
+  *  82a4f676f - GCS: clean up old interface
+  *  3d361b1ca - Sketcher: Sketch.cpp clean up old interface
+  *  d5e7f0ad8 - Sketcher: Bring new colors to preferences
+  *  b1db23727 - Sketcher: ViewProviderSketch - Show constrained
+    elements in new color
+  *  994101e08 - Sketcher: ViewProviderSketch - fix BSpline pole
+    dragging based on SolverGeometryExtension
+  *  fdc4df020 - Sketcher: rewrite Cmd to select DoFs using
+    SolverGeometryExtensions framework
+  *  cb68fa4fb - Sketcher: rewrite SketchObject
+    getGeometryWithDependentParameters to use SolverGeometryExtension
+  *  87699ea18 - Sketcher: Sketch.cpp - use SolverGeometryExtension as
+    mechanism to convey dependent parameter information
+  *  603a23234 - Sketcher: new SolverGeometryExtension to store solver
+    information within the geometry
+  *  1cc953339 - Sketcher: Add ability to update a GeometryExtension of
+    the solver
+  *  621a9a0e9 - GCS: Set SparseQR conditional compilation guards
+  *  e0a814bfc - GCS: Change asynchronous launch policy to default to
+    avoid having to take care of exceptions on oversubscription
+  *  28415f53d - GCS: renaming parameters to make them more descriptive
+  *  7f006e2c7 - GCS: Augment information provided by GCS with groups of
+    dependent parameters
+  *  270b0cbc3 - GCS: Interface to query whether the used diagnose
+    matrix is empty
+  *  996f006de - GCS: Deactivate Debug code and fix warnings in non-
+    Debug mode
+  *  b2fd91c33 - GCS: Asynchronous full geometry parameter
+    identification for Dense QR
+  *  5e2a2cbbb - GCS: Make QR decompositions for constraints and
+    parameters run asynchronously
+  *  9f2d34ac4 - GCS: QR profiling debug code
+  *  ac7f6b8ce - GCS: Rewrite diagnose() so that it has a single return
+    point
+  *  474d5550c - GCS: Diagnose() - Separate DenseQR and SparseQR
+  *  c635b4b95 - GCS: Refactor new SparseQR Dependent Parameter
+    detection code and const correctness
+  *  2d37d7194 - GCS: Detect dependent parameters (geometry) during
+    diagnosis using two SparseQR factorisations
+  *  982591b0d - GCS: makeSparseQRDecomposition generalise for
+    transposed and non-transposed matrices
+  *  820b02b29 - GCS: SparseQR compilation guards
+  *  0f9af72f2 - GCS: reduce input parameters in
+    makeDenseQRDecomposition
+  *  dd4b29333 - GCS: Refactor Non-Zero elimination over pivot
+  *  ed5af06d1 - GCS: Refactor diagnose identification of conflicting
+    and redundant constraints
+  *  a5927e1a6 - GCS: Refactor dependent parameters identification which
+    is only available for DenseQR
+  *  25d94d00c - GCS: Refactor QR decomposition into separate functions
+    for Sparse and Dense
+  *  d9bca3e8c - GCS: Increase documentation of diagnose() routine
+  *  ad549d49e - Sketcher: ViewProviderSketch update of geometry
+    extensions
+  *  985f3510f - Sketcher: Fix crash when creating an angle constrain on
+    a line segment
+  *  70f85505d - Sketcher: delete internal alignment geometry using new
+    delGeometries function
+  *  117c63ad2 - Part: Geometry - BSplineCurve - add IsRational member
+    function
+  *  bdf4d3979 - Path: Fix reference to cutting edge angle in OCL_Tool()
+    class
+  *  d67f636d9 - Path: Fixes to path generation for certain selections
+  *  3b2d06a48 - Path: Add docStrings to some methods
+  *  4d35905a6 - Path: LGTM and spelling correction
+  *  8e911b347 - Merge pull request #4157 from sliptonic/bug/4466
+  *  5aac143e6 - PartDesign: [skip ci] fix Hole feature * by default
+    ThreadDirection must be set read-only since Threaded by default is
+    None * use suitable values to initialize the class properties
+  *  e697a3de1 - Merge branch 'master' into feature/suppress-warnings-
+    preferences
+  *  b2e993e97 - Merge branch 'master' into bug/4466
+  *  5cea165a6 - Merge pull request #4160 from mlampert/bugfix/issue-
+    4500-segfault
+  *  1c897b7ba - PartDesign: [skip ci] fix order of controls so that by
+    pressing TAB always the next control gets focus
+  *  055424342 - cleanup of hole dialog
+  *  9be9abe47 - PartDesign: [skip ci] fix layout of Drill point
+    controls
+  *  126c58471 - Gui: [skip ci] avoid adding a wrong file name to the
+    recent files list
+  *  8462fc184 - [TD] Balloon, fix Origin and scale refresh bugs, make
+    Balloon scale change more reasonable per UI click.
+  *  303863306 - [TD] Balloon, fix EndTypeScale refresh bug.
+  *  f3bce14f2 - [TD] Balloon, move property LineVisible to View tab and
+    fix a refresh bug.
+  *  b41cf9858 - [TD] Balloon, change ordering of the data properties to
+    more logical.
+  *  def9e29fa - Gui: [skip ci] fix crash when using a dialog instance
+    twice for a task panel
+  *  72b70c52a - Added provision for gcc peculiarities in unit tests
+  *  3b69d2357 - Reuse existing QuantitySpinBox'es in order to avoid
+    segfault on focus change.
+  *  c1549ba3a - Allowing QuantitySpinBox to be reused for different
+    attribute; using properties to get values to work around build
+    differences.
+  *  d13639437 - Rearranged BitTool shape update so dependent ops don't
+    execute with invalid tool.
+  *  a5e992f70 - Make BitShape read/writeable, so the tool can be edited
+    when shared to a different system
+  *  3da82fa6a - Hide document when loading a ToolBit.
+  *  7049c0944 - Only update the shape if it has changed.
+  *  2566d1ba0 - Merge branch 'master' into posttodxf
+  *  9ea837fd9 - fixes 4466
+  *  97e394794 - [TD] Make Dimension Tolerances respect the Prefs
+    formatSpec when creating a Dimension.
+  *  627fea4e2 - PartDesign: [skip ci] make the spin box for the angle
+    of the drill point wider
+  *  16c565725 - Switch off mac builds - temporary travis fix
+  *  249b3c3a1 - make the hole-cut-type dropdown-box wider
+  *  93736cca4 - Gui: [skip ci] add option to use software OpenGL
+  *  933413b14 - add post to Cmakelists.txt for install
+  *  6c6f5e7fb - Sketch: Fix exception on redraw
+  *  51189caba - Sketcher: Fix equality constraint command
+  *  e8674fc13 - Sketcher: Fix crash on applying angle constraint on arc
+  *  c158e640d - Merge pull request #4025 from travisapple/master
+  *  f23ed3b17 - Merge pull request #4148 from mroote/update_fcinfo_py3
+  *  fc9be2134 - Path: [skip ci] fix TooltablePy::getTools to avoid
+    possible double destruction of a Tool instance
+  *  ffea46388 - Print deburr tool info only once.
+  *  f5e7d7a6f - Changed print to debug msg
+  *  cc8dbef1d - Disabled path wb dis-/activated msgs
+  *  73cd5d31d - Disabled '... postprocessor loaded' messages
+  *  63dbf329a - Added warning suppression for all missing speeds and
+    changed default to true
+  *  385c9b844 - Added hidden preference to suppress the opencamlib
+    error
+  *  9684d820d - Replaced print messages with PathLog statements
+  *  afb4545a4 - Preference setting so suppress logging the selection
+    mode as a warning.
+  *  2b4a0db79 - Added preference option to suppress missing rapid speed
+    warning
+  *  d8ea0c9c6 - Merge branch 'master' into master
+  *  bcdc245a4 - add debug.  Fix arc error
+  *  b2e015f03 - Fix bug in where wiresForPath would error on empty list
+  *  4bb609d12 - dxf post
+  *  cefd6b2ce - Update fcinfo script for py3 compatibility
+  *  e672aa26b - Draft: Small layer improvements - Added 'Print Line
+    Color' property - Added 'Add new layer' context menu action to
+    layers group
+  *  8e223cdf5 - Draft: Small wording fix
+  *  bc4856672 - Draft: Small fixes to Draft SetStyle panel
+  *  b920bbf73 - Merge pull request #4143 from mlampert/bugfix/vcarve-
+    depth
+  *  f948da83a - Merge branch 'master' into master
+  *  6d065963d - Merge branch 'master' into master
+  *  07e2e8fcf - Merge pull request #4141 from
+    gauna85/PathToolcontroller
+  *  3a0761313 - Merge pull request #4136 from gauna85/PathEngrave
+  *  b6a83cbeb - Merge pull request #4132 from gauna85/Path
+  *  9b39c6784 - Path: [skip ci] fix memory leak in
+    TooltablePy::getTools() For some background information see:
+    https://forum.freecadweb.org/viewtopic.php?f=15&t=50583&start=20#p45
+    7516
+  *  0a35cb5b0 - Part: improve TopoShape::findPlane()
+  *  c25ff3ac1 - Draft: Hide undo button from modify operations
+  *  0e556a082 - Merge pull request #4121 from
+    everlanes/TechDraw_Segfault
+  *  fe721a193 - Merge pull request #4116 from
+    chennes/fixAirfoilImportNumberRegex
+  *  dd580a49a - Merge pull request #4115 from JAndersM/patch-1
+  *  cbcf45a4b - Merge pull request #4109 from donovaly/TD-dimensioning-
+    fix
+  *  115963d79 - Merge pull request #4100 from marioalexis84/draft-
+    upgrade
+  *  46a6ea335 - Merge pull request #4069 from aapo-aapo/TD-Balloon-
+    improvements
+  *  6e88f4088 - Merge pull request #4137 from abdullahtahiriyo/_arc_fix
+  *  6575023f5 - Tools: [skip ci] extend doc string of FreeCAD
+    thumbnailer
+  *  50d97a3f2 - Merge branch 'master' into fixAirfoilImportNumberRegex
+  *  736c22e8d - Updated links
+  *  ee92a1d2f - Adding g0 to safety to base op so it's applied to all
+    ops
+  *  d89c86912 - Correct placementFromDXFOCS()
+  *  add350c6b - Merge branch 'master' into PathToolcontroller
+  *  a7edfcf1c - Path: Added missing signl-connection causing spindle
+    speed not to be updated using ToolControllerDlg
+  *  ed7be8674 - meld h and v speeds for v-carve commands depending on
+    incline
+  *  6176ed3e0 - Fixed tool-bit shapes when diameter == shank diameter.
+  *  1511fae5f - Consistent TC naming/labeling, regardless of how
+    created.
+  *  70364c027 - Fixed thread-milling icon reference.
+  *  c955bf4a4 - Fixed v-carve depth calculation in the presence of a
+    bottom diameter, added unit tests and cleaned up the v-bit parameter
+    naming.
+  *  5bafaac60 - Merge branch 'master' into Path
+  *  4ad41c96d - Path: Check if startpoint is not lower than bounds in
+    order to work always from top to bottom
+  *  864ea59b9 - Merge branch 'master' into PathEngrave
+  *  e7085cb47 - Path: Sort edges before splitting at selected vertex
+  *  68eba58e6 - Mesh: Uniformity fixes [skip ci]
+  *  ddbd7696c - Py: [skip ci] replace PyList_Append with
+    Py::List::append
+  *  a152cd2d9 - Py: [skip ci] replace PyList_Append with
+    Py::List::append
+  *  aec9d5f07 - Py: fix memory leaks by incorrect use of PyList_Append
+  *  2386df93a - Arch: Make ArchWall use Sketcher GeometryFacade
+  *  512d5c614 - Sketcher: Ensure that ViewProvider Geometry extensions
+    is correctly initialised
+  *  3f6fed377 - Sketcher: refactor unnecessary dir/angle conversion
+  *  c2108911d - Sketcher: ViewProvider fix Weight length when dragging
+  *  a9605dc46 - CMake: [skip ci] use FILTER of list command only for
+    v3.6 or later
+  *  c4b1ec01b - Main: fix header uniformity + trailing whitespace
+  *  cb58706e8 - Fix various typos [skip ci]
+  *  be11a92f4 - PD: [skip ci] in wizard shaft handle case where Plot
+    module is not available
+  *  1bc39542d - Part: [skip ci] support of keywords in
+    Part.GeometrySurface.toBSpline()
+  *  f5f349fac - Part:Surface.toBSpline use OCC MaxDegree instead of
+    fixed value.
+  *  75a2f471e - Part: update GeomSurface.toBSpline doc
+  *  e7c06e848 - Part: add default values to GeomSurface.toBSpline()
+  *  5f37274ce - [Web] Close stale file handle in exec()
+  *  528f0cbdd - Fix fedora COPR builds
+  *  2a8c1271d - Draft: fix header uniformity + trailing whitespace
+  *  4a8fac914 - Part: [skip ci] fix memory leaks + add convenience
+    function GeometryExtension::copyPyObject() + make sure to destroy
+    the clone when leaving getGeometry()
+  *  ea3ecf405 - Silence Qt/Windows setGeometry Warning
+  *  b8ce1a7c0 - Merge branch 'master' into fixAirfoilImportNumberRegex
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 24 Dec 2020 22:43:16 +0300
+
 freecad-daily (0.18.4+git23307-9add3ba19-1) unstable; urgency=medium
 
   * Compile

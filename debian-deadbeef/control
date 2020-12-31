@@ -42,7 +42,7 @@ Build-Depends: debhelper (>= 9),
                 libjansson-dev, 
                 libopusfile-dev, 
                 libopus-dev,
-                libsndio-dev | wget
+                libsndio-dev | wget, clang, libdispatch-dev, libglib2.0-bin
 Standards-Version: 4.3.0
 Homepage: http://deadbeef.sourceforge.net/
 
@@ -84,7 +84,7 @@ Package: deadbeef
 Replaces: deadbeef-opus-plugin
 Breaks: deadbeef-opus-plugin
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, deadbeef-gtk2 | deadbeef-gtk3
+Depends: ${shlibs:Depends}, ${misc:Depends}, deadbeef-gtk2 | deadbeef-gtk3, libdispatch0
 Description: ultimate music player for GNU/Linux systems
  DeaDBeeF (as in 0xDEADBEEF) is an audio player for GNU/Linux systems with X11.
  .

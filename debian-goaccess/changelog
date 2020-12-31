@@ -1,3 +1,26 @@
+goaccess (1:1.4.3+git3384-bb97ebb4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: bb97ebb4ae4190922072e3f2bb01a9f920af8045
+  * Date: 1608658226
+  * git changelog:
+  *  bb97ebb4 - Fixed issue where some items under browsers.list were
+    not tab separated.
+  *  cca954c9 - Fixed issue where the format parser was unable to
+    properly parse logs delimited by a pipe.
+  *  ec6208a1 - Fixed issue where XFF parser could swallow an additional
+    field.
+  *  1b850f53 - Added command line option --no-strict-status to disable
+    status validation.
+  *  8d25a627 - Merge pull request #1978 from tellustheguru/patch-1
+  *  54bef451 - Update sv.po
+  *  6bcc639b - Fixed issue where parser was unable to parse syslog date
+    with padding.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 24 Dec 2020 22:44:01 +0300
+
 goaccess (1:1.4.2+git3377-87f8f0c5-1) unstable; urgency=medium
 
   * Compile

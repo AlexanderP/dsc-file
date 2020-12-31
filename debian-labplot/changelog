@@ -1,3 +1,84 @@
+labplot (2.8.0+git7899-97a4ee0ca-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 97a4ee0ca6659a7d504c16a68f55275ad2f5a499
+  * Date: 1608830269
+  * git changelog:
+  *  97a4ee0ca - [worksheet] fixes and improvements in CustomPointDock:
+    1. react on text changes and not on return pressed in text fields 2.
+    properly handle the locale in text fields 3. use white color for
+    symbol icons on dark themes 4. new signal-slot syntax
+  *  09a50dc84 - [worksheet] show all available symbol styles for the
+    custom point (last possible enum value was missed).
+  *  d526f72dc - [worksheet] removed additional memeber x and y in
+    InfoElement::MarkerPoints_T since these values can also be obtained
+    via the custom point which is also a member of this struct.
+  *  a33309bcc - [worksheet] properly update the placeholders in
+    InfoElement's label when curves are added/removed and use the proper
+    data time format for the y-values in case DateTime is in use.
+  *  41dde6c67 - [worksheet] added again the return value deleted by an
+    error in the previous commit.
+  *  3003905b5 - [worksheet] use the proper column mode dependent
+    valueAt*() in info element when determining the nearest possible
+    data point.
+  *  07eeefbe7 - [worksheet] initial support for DateTime in the info
+    element.
+  *  53cfe4ecf - [worksheet] performance improvements in
+    InfoElement::retransform().
+  *  bc97cbdc9 - [worksheet] don't print any plot artifacts associated
+    with the different mouse cursor modes (zoom&select, crosshair and
+    cursor lines), more robust handling of the mouse cursor shapes when
+    switching between the different modes and some minor optimizations
+    and cleanup in the code.
+  *  113edc507 - [worksheet] implemented the crosshair cursor mode in
+    the plot.
+  *  87f22b05b - [spreadsheet] allow to freeze the first column in the
+    spreadsheet.
+  *  fa867f44a - [worksheet] don't allow any context menu for custom
+    points of an info element (everything is controlled via the parent)
+    and use curve names to name the points.
+  *  d509b1482 - Simplified the logic in AbstractAspect to determine
+    when to allow the entries delete and rename in the context menu.
+  *  701f5ee31 - [axis] Improve tick label auto precision
+  *  7111dde90 - [json filter] the icons labplot-json-object and labplot-
+    json-array are not part of the breeze icon theme (yet) and with this
+    they are not shown in the ImportFileDilog in the preview window for
+    JSON files on Windows and macOS. To overcome this we draw the icons
+    directly with QPainter when initialization the preview for JSON.
+  *  fd36fe9f2 - [json filter] automatically use the JSON-filter for HAR
+    files in the ImportFileDialog.
+  *  f27358a3e - GIT_SILENT changelog
+  *  d39191037 - [axis label] improve notations
+  *  bdf69fa64 - [axis label] Fix auto rounding of small numbers
+  *  915e17e1c - [axis label] Switch to scientific format also for very
+    small values (TODO: auto precision fails for scientific formats)
+  *  e152cf98a - Support real scientific notation of axes label besides
+    scientific E notation
+  *  436bf6f08 - Add link to windows store in AppStream
+  *  43818527d - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  2ca8a3961 - GIT_SILENT made messages (after extraction)
+  *  b2c963ce7 - [worksheet] removed the dialog used to create the info
+    element to be more consistent with the creation of all other objects
+    on the worksheet - the user has to do all the settings directly in
+    the dock widget.
+  *  6f1752002 - [worksheet] update the connect to curve combobox in
+    InfoElementDock when new curves are selected/deselected in the list
+    widget for all available curves.
+  *  e9ac66222 - [worksheet] don't crash when adding a new info element
+    for a curve that doesn't have any data set yet and properly load the
+    saved QPen settings in InfoElement::load().
+  *  8da67bb11 - [settings] Added number options
+  *  6ffcc73c5 - [worksheet] properly enable/disable the ok-button in
+    the export worksheet dialog when switching between export to file
+    and export to clipboard.
+  *  5143c708f - [worksheet] for the InfoElement, show it's title
+    directly in the dock widget and not as a child.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 24 Dec 2020 23:39:01 +0300
+
 labplot (2.8.0+git7869-73120f7ef-1) unstable; urgency=medium
 
   * Compile

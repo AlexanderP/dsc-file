@@ -1,3 +1,38 @@
+qcad (3.25.0+git8108-f6a93b008-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: f6a93b0085858bc84dc0d8ac60463d2782d01efe
+  * Date: 1608806058
+  * git changelog:
+  *  f6a93b008 - fix import of path data without separators (leading 0
+    implied separator: 1 02 equivalent with 1 0 2)
+  *  a2b42eec7 - fix FS#2158 - dwg2bmp: -origin does not export origin
+  *  f7ab9478e - add isEntityEditable
+  *  edf6c03ad - set version to 3.25.2.8
+  *  3735cfff9 - fix copying of empty / unreferenced blocks
+  *  1511688c1 - update script bindings
+  *  fcd7929bc - add arc radius limit for spline interpolation with bi-
+    arcs
+  *  e06f23046 - transform text position and height when retaining texts
+  *  1434c6291 - remove '0' shortcut
+  *  acfe7b68d - make sure vectors are valid after undo / redo
+  *  2549ad8e6 - add queryAllViewports, fix layer toggling in viewports
+  *  839f65303 - Merge branch 'master' of github.com:qcad/qcad
+  *  f51c745d2 - update
+  *  7a45b560c - fix FS#2150 - Modify > Stretch: block with attribute
+    not moving
+  *  2e4df5694 - port to macOS, arm64
+  *  24aabaf7a - fix selection of block references in block in-place
+    editing mode
+  *  b37cd37d4 - disable save warning about working set
+  *  8d63897d1 - update translations
+  *  fb6bcf28f - port to macOS 11.0
+  *  47586a770 - update
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 24 Dec 2020 23:16:23 +0300
+
 qcad (3.24.0+git8088-5057b9d4c-1) unstable; urgency=medium
 
   * Compile
