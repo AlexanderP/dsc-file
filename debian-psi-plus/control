@@ -35,6 +35,7 @@ Depends: libqca-qt5-2-plugins,
          libqt5sql5-sqlite,
          libsasl2-modules,
          psi-plus-common,
+         libusrsctp1 (>= 0.9.3.0+20201102),
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: psi-plus-l10n,
@@ -71,6 +72,7 @@ Architecture: any
 Depends: libqca-qt5-2-plugins,
          libqt5sql5-sqlite,
          libsasl2-modules,
+         libusrsctp1 (>= 0.9.3.0+20201102),
          psi-plus-common,
          ${misc:Depends},
          ${shlibs:Depends}
