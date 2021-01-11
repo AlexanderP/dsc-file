@@ -1,3 +1,174 @@
+gimp-gtk3 (2.99.0+git46562-478193fbcd-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 478193fbcd8f02bfac4cc4fee9d5639ded5f1fdc
+  * Date: 1609953394
+  * git changelog:
+  *  478193fbcd - libgimp: add down arrow to Reset button to show it
+    will pop-up a menu.
+  *  dda39908ce - Update Japanese translation
+  *  691548579a - plug-ins: set blue channel of BC5 dds images to 0
+    instead of 255.
+  *  a4cc8b7070 - plug-ins: fix incorrect dds BC5 images saved by GIMP.
+  *  efa899ad15 - plug-ins: fix #6200 DDS BC5 compression/decompression
+    has Red and Blue swapped.
+  *  7be1776914 - Update Japanese translation
+  *  d009aea990 - Update Lithuanian translation
+  *  6bd97dfaf0 - Update Lithuanian translation
+  *  df11a5ce9a - Fixes small tweak
+  *  029ffd5778 - Issue #5066: Create From Screenshot Crash.
+  *  0595d0ee74 - Update Japanese translation
+  *  e3fcd3fbdb - Update Japanese translation
+  *  1f3bcb9b49 - libgimp: Always use g_object_notify_by_pspec()
+  *  9fd2433f21 - libgimp: Add gtkdoc comments in gimpproceduredialog
+  *  c328da6bd3 - app: Hide CSD when going fullscreen
+  *  af7f46eb65 - Update Spanish translation
+  *  ce9bfdca8d - libgimp: always keep the same number of columns for
+    metadata settings.
+  *  ba4f24e49c - plug-ins: set parent_window parameter to Screenshot
+    function of portal…
+  *  dcddb2f150 - Update Swedish translation
+  *  a4d3b5ecd3 - Update Swedish translation
+  *  aab1d0c227 - plug-ins: do not show our own dialog with Freedesktop
+    screenshot portal.
+  *  a29ece23b9 - plug-ins: screenshot_x11_available() should not always
+    return TRUE.
+  *  929311f208 - libgimp: improve
+    gimp_procedure_dialog_check_mnemonic().
+  *  fa4eb263a0 - plug-ins: screenshot: Remove GDK_NATIVE_WINDOW_POINTER
+  *  5a1dd584e9 - app: Partially correct gimp_window_get_native_id()
+  *  273486a625 - libgimp: Don't use g_message() for log message
+  *  226f3707de - libgimp: progress: partially fix native window id
+  *  e8b6ba5c10 - libgimpwidgets: Set transient_for on scrolledpreview
+  *  f1aae9ad6d - app: tagpopup: Try to set transient-for property
+  *  4a48ea44dc - Updated Greek translation
+  *  6dc3cb16dd - devel-docs: Update libgimpwidgets3-sections.txt
+  *  fa44c5dc85 - libgimp: Fix SaveProcedure properties gtkdoc
+  *  4d100cc20c - app: Use g_object_notify_by_pspec for GimpItem
+  *  434107731a - libgimpwidgets: Use g_object_notify_by_pspec for
+    zoommodel
+  *  76e380244b - libgimpwidgets: Use g_object_notify_by_pspec for ruler
+  *  1023197ca7 - Update Lithuanian translation
+  *  1ba3052c66 - Updated Greek translation
+  *  918a1c4499 - Updated Greek translation
+  *  b3f3120e32 - libgimpwidgets, app: silence warnings about State 0
+    for GimpRuler and GtkScrolledWindow doesn't match state 128 set via
+    gtk_style_context_set_state ()
+  *  c21859ebc4 - Issue #6142: plugin crash exporting as jpg.
+  *  df28349c17 - GIR: Try to return more specific GtkWidget subclass
+  *  e34c051d78 - gimpintcombobox: Add (array length) annotation
+  *  bba70f5869 - gimpparamspecs: Add annotations about array length
+  *  73252da4f4 - GIR: Add some missing (nullable) annotations
+  *  b38d55b1f7 - Update Ukrainian translation
+  *  50a0f49762 - devel-docs: some small release-howto updates.
+  *  72effc5a57 - configure.ac, meson.build: post-release version bump
+    to 2.99.5.
+  *  db996f218d - Release development version GIMP 2.99.4.
+  *  9fc87b8d91 - authors: update the authors list.
+  *  b1abc5b6a6 - app: improve Paint Select Tool description.
+  *  d89f28db1c - Update/fix Russian translation
+  *  588626dec1 - desktop: update appdata with dates.
+  *  82391c136b - devel-docs: some updates to release-howto.txt
+  *  e5aa146f76 - docs, etc: regenerate the default gimprc and its
+    manpage.
+  *  d4392d0bc6 - Update Catalan translation
+  *  5520b5531d - NEWS: update.
+  *  dfbf1d5d7b - app/widgets/gimpactiongroup: protect against calling
+    gettext with NULL msgid
+  *  aa151a08a0 - app/dialogs: protect against calling gettext(NULL).
+  *  daea111efc - autotools: bump GEGL dependency to 0.4.28.
+  *  2d5aa81456 - depend on GEGL-0.4.28
+  *  8040813a4f - Update Polish translation
+  *  277a086c68 - Update Ukrainian translation
+  *  15c1e04c27 - INSTALL: update a bit the installation instructions.
+  *  2ffedd1db6 - desktop: AppData updated for upcoming 2.99.4 release.
+  *  d9b25b8b50 - app: do not ask about conversion for an image using a
+    preferred profile.
+  *  12348f5241 - app: fix some RGB/sRGB mixup in 2 labels.
+  *  0d7c26f129 - plug-ins: add missing define G_LOG_DOMAIN in file-psd
+    for the meson build.
+  *  43c3369b36 - Update Ukrainian translation
+  *  c05abcefc6 - plug-ins: fix #4176 color displayed wrong in multi
+    page tiffs with linear TRC.
+  *  9893f60d8c - plug-ins: changed GTK_RESPONSE_YES|NO into
+    GTK_RESPONSE_OK|CANCEL.
+  *  59f2ba44c7 - libgimp, devel-docs: enhance GIMP-PLUGIN-DEBUG
+    backtrace
+  *  c10ffd4f38 - libgimp: fix the def file.
+  *  f68d91e87f - Update Swedish translation
+  *  2b75b63ab7 - app: keep error dialog above.
+  *  fdd949ae69 - Update Ukrainian translation
+  *  c0972eebb5 - app: hide the export file dialog when showing the plug-
+    in dialog.
+  *  56c116f132 - Update Ukrainian translation
+  *  ea2a9a8312 - libgimp: replace GtkFlowbox use by GtkGrid in
+    generated metadata frame.
+  *  b13502088f - libgimp, plug-ins: add a format name concept to
+    GimpFileProcedure.
+  *  ab5ac463a2 - Update NEWS: HEIF plug-in changes
+  *  76810d28dd - Updated HEIF plug-in
+  *  1f48fdabbc - NEWS: update with GimpSpinScale usability updates.
+  *  670bc35eb9 - app: show the relative edit cursor on motion with
+    Shift pushed.
+  *  7b0d553511 - app: improve GimpSpinScale cursors.
+  *  976b518999 - app: improve GimpSpinScale usability for keyboard
+    editing of value.
+  *  a30cbb22d9 - Update Ukrainian translation
+  *  e108584c55 - Update Swedish translation
+  *  df507c05ae - Remove trailing spaces in 3 strings
+  *  9a05f24a03 - plug-ins: fix uninitialized warnings.
+  *  6d7d73935f - app: remove unused (deprecated) property read.
+  *  164907384c - po-python: remove py-slice from POTFILES.in.
+  *  f6f94836c1 - app, menus: get rid of custom input method menu.
+  *  0f7c6285ca - plug-ins: move py-slice.py to gimp-data-extras.
+  *  7ed68556c7 - Issue #5863: No namespace info available for XMP
+    prefix.
+  *  d90d622c92 - INSTALL: adding infos about  for gegl:introspect
+    dependency.
+  *  2cae9b9acf - app: make gegl:introspect an optional operation
+    dependency.
+  *  7a8f89122d - Update Ukrainian translation
+  *  155daa337e - Update Swedish translation
+  *  c62cbd2585 - NEWS: update.
+  *  b659d3ba4f - app: different undo labels for various Alpha to
+    Selection operations.
+  *  d6d8e43cb5 - Issue #6030: Mask related Shortcuts conflicting with
+    Multiple Layers…
+  *  6da6b95cd4 - Update Brazilian Portuguese translation
+  *  a3eba9fbad - app: new default dynamics is Pressure Size.
+  *  f4d39f8c72 - app: mask alternative click modifiers must not clash
+    with…
+  *  14b4c08881 - app: catch Alt-click exact combination on
+    GimpItemTreeView preview.
+  *  f5d9856125 - app: be more accurate to ascertain in we are multi-
+    selecting.
+  *  305dcdcccc - app: do not popup a viewable preview when modifiers
+    are active.
+  *  dfc4ecfc4c - po-plug-ins, po: (workaround bis) fixing the distcheck
+    job in CI.
+  *  9e4aa586f7 - po, po-plug-ins: (workaround) fixing the distcheck job
+    in CI.
+  *  08c387805f - Update Icelandic translation
+  *  6c5c453c6b - Update Kabyle translation
+  *  d4e501919e - app: revert to gimp-paintbrush-tool as default tool.
+  *  845f1c81ed - data: create po-tags/ build directory.
+  *  12564ca646 - Update Ukrainian translation
+  *  3b3404b03d - plug-ins: Set the number of threads used to decode
+    JPEG200 files...
+  *  c94325c670 - plug-ins:
+    s/g_get_num_processors/gimp_get_num_processors/ in file-heif.
+  *  698b7184b2 - libgimp: add gimp_get_num_processors().
+  *  991e99f08a - plug-ins: fix loading 2 and 4 bit tiff images. This
+    fixes issue #6065 and part of #2680.
+  *  31e38fe869 - app: better tool defaults depending on the device
+    source.
+  *  273972bc4d - app: do not reuse stored configuration on virtual
+    devices.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 06 Jan 2021 22:38:18 +0300
+
 gimp-gtk3 (2.99.0+git46441-4187b840d0-1) unstable; urgency=medium
 
   * Compile

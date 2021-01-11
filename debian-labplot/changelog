@@ -1,3 +1,89 @@
+labplot (2.8.0+git7933-436f8fd7c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 436f8fd7ca7fe885ae52cff88a7a9ecb5d3d9634
+  * Date: 1609948361
+  * git changelog:
+  *  436f8fd7c - [spreadsheet] minor layout fix in the export
+    spreadsheet dialog.
+  *  b3bc9a083 - [worksheet] minor fixes: 1.  show the full context menu
+    of the worksheet in the view including the base actions like rename,
+    delete,  copy&paste,  etc.  so the user is able to perform them
+    directly in the view,  too. 2. properly handle the copy&paste of the
+    info elements
+  *  a9bc9e720 - [worksheet] apply theming also for the reference lines.
+  *  28329a300 - Allow to copy&paste custom points,  reference lines and
+    info elements and some cleanup in CustomPoint.
+  *  b2b99980b - Silence some compiler warnings in macros. h and more
+    cleanup in InfoElement.cpp.
+  *  82fc3c1dc - Allow to copy&paste analysis curves.
+  *  fb09b7baa - React on copy/paste/duplicate shortcuts also in the
+    worksheet view.
+  *  e5e991b39 - Show an error message in a message widget in the
+    project explorer in case the copied object cannot be pasted in the
+    currently selected object (because of the incompatible types).
+  *  4d75f8164 - React on shortcuts for copy,  paste and duplicate user
+    actions in the project explorer.
+  *  f39904181 - Show in the context menu the name of the object that
+    can be pasted.
+  *  cbf03949a - Allow to duplicate objects in the project explorer
+    (fast copy&paste under the same parent).
+  *  9427b143a - Make copy&paste undo/redo-able in one single step and
+    added code changes in Project.cpp that should have been part of the
+    previous commit already.
+  *  7abc94383 - Simplified the initialization of the legend and added a
+    special logic for copy&paste of a legend to ensure there is only one
+    single legend object present per plot.
+  *  559677cf2 - More complete implementation of copy&paste in the
+    project explorer.
+  *  09d7230a8 - Fixed the invalid XML generated for copy&paste (the
+    root element was missing) and restore the pointers after the object
+    was pasted.
+  *  7b6ce31c3 - [worksheet] more for the implementation of the label
+    positioning via the logical coordinates.
+  *  c1fba943c - Fix typo
+  *  75e64d4b6 - [worksheet] more code to enable the positioning of text
+    labels via logical coordinates.
+  *  211775127 - [worksheet] properly update InfoElement's label on
+    position changes.
+  *  badd91bc0 - Fixing the build...
+  *  fd5782d19 - [worksheet] simplified the save/load logic in
+    InfoElement.
+  *  1006a9dc5 - GIT_SILENT Updated ChangeLog.
+  *  b91157e97 - [worksheet] support for DateTime in CustomPoint
+    properties widget and more usage of READ-macros in
+    CustomPoint::load().
+  *  54e86f4ef - [worksheet] new curve symbols heart and lightning.
+  *  be42a5d55 - [worksheet] for custom points being children of an
+    InfoElement, the position is changed via the parent settings ->
+    disable the positioning in CustomPointDock.
+  *  1dca79e79 - [worksheet] if binding to logical coordinates is
+    selected in the label widget, hide all widgets used for absolute
+    coordinates.
+  *  fb1b5818c - Added the preparational code for the copy&paste
+    functionality in the project explorer.
+  *  3374e95d7 - [worksheet] don't add axis ticks' lines to the axis
+    path if the line stily for ticks is no line.
+  *  cb71de515 - [worksheet] improvements in the ExportWorksheetDialog:
+    1. export the whole worksheet if export selection was selected but
+    there is no selection instead of exporting an empty image which
+    results in an error. 2. don't ask the user twice whether the
+    selected target file should be overwritten.
+  *  9783c6563 - [worksheet] better looking preview image for themes
+    showing more features (text labels, curve symbols and legend).
+  *  ab16fc84b - Added new themes Monokai, ggplot grey and ggplot dark.
+  *  a247a27c2 - Better wording for the title string of the properties
+    explorer set in GuiObserver.
+  *  587621a80 - [worksheet] supress more unwanted entries on the undo
+    stack caused in InfoElement.
+  *  1c60ba310 - [worksheet] don't put visibility changes of info
+    element's labels onto the undo-stack and removed some dead code in
+    InfoElement.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 06 Jan 2021 22:48:52 +0300
+
 labplot (2.8.0+git7899-97a4ee0ca-1) unstable; urgency=medium
 
   * Compile

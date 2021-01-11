@@ -1,3 +1,45 @@
+gimp-devel (2.10.18+git44423-bf98388d97-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: bf98388d97120986384438c9b65d9c1a01f1055e
+  * Date: 1609904936
+  * git changelog:
+  *  bf98388d97 - plug-ins: set blue channel of BC5 dds images to 0
+    instead of 255.
+  *  c82c995bd3 - plug-ins: fix incorrect dds BC5 images saved by GIMP.
+  *  204c6fa8a5 - plug-ins: fix #6200 DDS BC5 compression/decompression
+    has Red and Blue swapped.
+  *  8aebe03034 - Update Japanese translation
+  *  a51bcc5fa9 - Update Romanian translation
+  *  5874f7fb0b - Issue #5066: Create From Screenshot Crash.
+  *  dfdd71c7ab - Update Japanese translation
+  *  a06c2dec13 - Update Japanese translation
+  *  bda43922a5 - Update Japanese translation
+  *  86c1524864 - Update Spanish translation
+  *  25bc7c674c - Update Swedish translation
+  *  82cf4af2a5 - Update Catalan translation
+  *  b17b33e2e2 - plug-ins: also omit hidden layer groups in PDF export.
+  *  d6a0660c0d - Update Polish translation
+  *  bc7b0cb910 - Update Ukrainian translation
+  *  dbf41dc63f - plug-ins: fix #4176 color displayed wrong in multi
+    page tiffs with linear TRC.
+  *  c7b5464026 - po-plug-ins, po: (workaround bis) fixing the distcheck
+    job in CI.
+  *  7d9fd36cd8 - po, po-plug-ins: (workaround) fixing the distcheck job
+    in CI.
+  *  6b9131e643 - data: create po-tags/ build directory.
+  *  5d76ae7db2 - Updated HEIF plug-in
+  *  b6ddab60c0 - NEWS: update.
+  *  e357b0bd83 - Update Brazilian Portuguese translation
+  *  0d8b602c22 - Update Brazilian Portuguese translation
+  *  b8531885e1 - Update Icelandic translation
+  *  258a394f58 - plug-ins: fix loading 2 and 4 bit tiff images. This
+    fixes issue #6065 and part of #2680.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 06 Jan 2021 22:34:59 +0300
+
 gimp-devel (2.10.18+git44398-87a670a272-1) unstable; urgency=medium
 
   * Compile

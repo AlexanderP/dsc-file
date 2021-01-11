@@ -1,3 +1,161 @@
+freecad-daily (0.18.4+git23634-5d9db07dd-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 5d9db07ddd4473e50adcac6ad509e6727fc4f2f8
+  * Date: 1609943965
+  * git changelog:
+  *  5d9db07dd - Part: [skip ci] in TopoShape::getMemSize() handle edges
+    or faces with no attached geometry
+  *  ec73869d1 - Sketcher: Remove Internal Alignment constraint from
+    toolbar
+  *  4ffb6c5e2 - Sketcher: VP - Fix error messages while deleting
+    geometry
+  *  a3b9edc6d - Sketcher: Expose delGeometries function to Python
+  *  41c91574c - Sketcher: deleteGeometries split
+  *  b91bba28b - Sketcher: VPSketch override correctness
+  *  dbb08f0bf - Sketcher : Correct XPM icon
+  *  a388a0d98 - Sketcher: ViewProvider - Show malformed constraints in
+    solver messages
+  *  3d5ab8a67 - Sketcher: add command to select malformed constraints
+  *  2bd2041bf - Sketcher: Retrieve 1-based list of malformed
+    constraints from solver
+  *  150e50c70 - Sketcher: Treat malformed solver constraints as an
+    error during recompute
+  *  83d039101 - Sketcher: VP show overlay icon fully constrained status
+  *  87c9f83bd - Gui: Colorful/Greyable overlay status in icons
+  *  035bea508 - Sketcher: Add FullyConstrained read-only output
+    property
+  *  f9143750a - Sketcher: Show attachment overlay icon information
+  *  55219f85d - Start: Added tooltip to preferences button
+  *  eb549a99d - Draft: Added import/export buttons to Annotation styles
+    editor dialog
+  *  d7692e359 - Arch: Fixed wrong section fill when using archvrm
+    module
+  *  58cf466b3 - Add SVG icons for eight Std View commands
+  *  bb1e4ed7c - Path: [skip ci] fix build failure when using boost 1.75
+  *  2a0b68811 - cmake_ [skip ci] print major, minor and build number of
+    boost
+  *  d5092d78f - Merge pull request #4213 from mlampert/feature/job-tool-
+    group
+  *  deaee2292 - Merge pull request #4226 from
+    sliptonic/bug/adaptiveclip
+  *  294a2ebc9 - Fix Qt deprecation warnings. QPrinter::paperSize() and
+    QPrinter::setPaperSize() are obsolete.
+  *  65b4271d5 - FEM: fix also typos in inp files to avoid to break unit
+    tests See also: 22ed94e11852
+  *  9324b0aa5 - Merge pull request #4216 from marioalexis84/draft-
+    draftify
+  *  5fca0232d - Merge pull request #4236 from
+    bitacovir/New_Std_View_Icons1
+  *  f1b644d17 - Merge pull request #4235 from marioalexis84/draft-
+    facebinder
+  *  914e10c62 - Merge pull request #4239 from
+    carlopav/fix_draft_move_with_copy
+  *  580378437 - Merge pull request #4242 from realthunder/HelpDonate
+  *  3ea148607 - Gui: fix external edit reset crash
+  *  d45122f45 - Gui: add 'Donate' to Help menu
+  *  254505e83 - Merge branch 'master' into feature/job-tool-group
+  *  22ed94e11 - FEM: calculix solver, typos, thanks to UR_
+  *  19ea3d28f - Merge pull request #4234 from mlampert/bugfix/drilling-
+    op-tool-attributes
+  *  2b6f3ba84 - Merge pull request #4237 from Schildkroet/centroid_post
+  *  b9867ab7e - Merge pull request #4233 from Schildkroet/adaptive_fix
+  *  eae5d56cf - [PATH] Bugfix centroid_post
+  *  79aa9ed0c - Draft: change in default Draft.makeCopy
+  *  712f6c125 - Fix Qt deprecation warnings. QPrinter::orientation()
+    and QPrinter::setOrientation() are obsolete.
+  *  9e846c66f - Merge branch 'master' into bugfix/drilling-op-tool-
+    attributes
+  *  ae761583a - Updated centroid post
+  *  c61b7ee63 - Merge branch 'master' into feature/job-tool-group
+  *  7587658ae - Add SVG icons of eight Std View menu commands
+  *  50c3cbf00 - TechDraw: [skip ci] restore TAB order of TaskBalloon
+    dialog
+  *  a9da6194a - [TD] update balloon dialog
+  *  ea6e8e990 - Fix build warnings from deprecated Boost headers (1.74)
+  *  e6032b7d5 - Fix Qt deprecation warnings. QPrinter::paperRect() and
+    QPrinter::pageRect() are obsolete.
+  *  4d9e29418 - Draft: Fix multiple crashes when using modification
+    functions - fixes #0004243
+  *  2eb9d7a07 - Merge branch 'master' into feature/job-tool-group
+  *  c077672ad - Check for CuttingEdgeAngle existance before using it
+    for drill tip calculation.
+  *  36526d708 - Added missing attribute
+  *  08b988b69 - add fix in one more spot
+  *  0db316ab0 - fix bug with path gouging at start of movement
+  *  01072f370 - Merge pull request #4224 from realthunder/FixPathCrash
+  *  83b431d0b - Fixed unit test for ToolTable rename
+  *  8e6f964e0 - Renamed ToolTable group to Tools in order to (not) set
+    expectations.
+  *  b92660086 - Fixed job deletion.
+  *  121152deb - Use job.ToolTable.Group instead of job.ToolController.
+  *  8a9500558 - Added ToolTable to job and convert old ToolController
+    property on the fly.
+  *  2203dcec9 - Merge pull request #4214 from mlampert/bugfix/dangling-
+    signal-registration
+  *  ecfd3e703 - Merge pull request #4225 from Russ4262/patch-1
+  *  08ec99a24 - Path: Fix isinstance()  error
+  *  3ae9a08ee - Path: fix crash on edit
+  *  f9bcfada1 - Gui: [skip ci] re-add removed SVG icon, remove
+    duplicate entry
+  *  c3f329442 - Merge branch 'master' into bugfix/dangling-signal-
+    registration
+  *  82ec99dbc - [TD] fix regression for balloon text separators
+  *  26c63c8ca - Merge branch 'master' into bugfix/dangling-signal-
+    registration
+  *  75f78f940 - Replace SVG icons of six Std View commands
+  *  bd1f06cf7 - [TD] cleanup preferences
+  *  942c40227 - Sketcher: Fix lock constraint reference mode
+  *  2625aabe2 - Sketcher/GCS: New Block constraint fixes
+  *  079b8ff5c - [TD] DrawViewDimension Tolerances, print zero
+    tolerances without plus sign and decimals.
+  *  30fcddae4 - [TD] fix bug with angular and small values
+  *  81a5ec5e5 - LinearPattern: Support 1 occurrence
+  *  60dfd2552 - Draft: Replace Part.getSortedClusters by Part.sortEdges
+    in draftify function
+  *  0f31c87cc - Boost: [skip ci] Fix build warnings from deprecated
+    Boost headers (v1.75)
+  *  ed3acd466 - SMESH: [skip ci] fix -Wdelete-non-virtual-dtor
+  *  2559f2d29 - Fix build warnings from deprecated Boost headers (they
+    are used internally by Boost). Thanks @wwmayer for the hint.
+  *  4ea97faa5 - Sketcher: check for BSpline knot instead of
+    construction point
+  *  5f57b0f31 - Remove event registration when task panel is destroyed.
+  *  5dca59d82 - Fix GCC warnings: type qualifiers ignored on cast
+    result type [-Wignored-qualifiers]
+  *  6075ba308 - Fix GCC warnings: catching polymorphic type by value [-
+    Wcatch-value=]
+  *  4327243a0 - Sketcher: Fix typos and code linting [skip ci]
+  *  472168fc1 - Fix typos [skip ci]
+  *  b318426cd - Sketcher: fix -Wextra-semi
+  *  ae0742c74 - Sketcher: fix layout by removing minimumSize property
+    from labels
+  *  cc29af4da - [Sketch] remove unused code
+  *  6b017f9a1 - Sketcher: ViewProvider - fix crash due to invalidated
+    geomety pointer
+  *  64774bc1f - Sketcher: Fix crash on constraint rename
+  *  1d56289c7 - Sketcher: restric ViewProviderSketch access to the
+    solver
+  *  8e3b6be0e - Sketcher: Trigger elements widget update on toggle/set
+    construction geometry
+  *  733b7bde9 - Sketcher: encapsulate Sketch::SolveTime and
+    RecalculateInitialSolutionWhileMovingPoint members
+  *  18ecd174a - Sketcher: make Sketch::calculateNormalAtPoint const
+  *  a790e3260 - GCS: Const correctness and override qualifier
+  *  c2ab51314 - GCS: Return a zero sized reduced Jacobian if only
+    driven constraints present
+  *  67e5f9c3e - Sketcher: Make select-constraint select-elements mode
+    consistent with select-element select-constraint
+  *  38cafc57a - Sketcher: typo in function name
+  *  72ec38be5 - Merge pull request #4161 from bryanbendall/adaptive-
+    work
+  *  f2d17774e - [Sketch] fix SnellsLaw dialog
+  *  ef8831ff2 - [Sketch] improve wording for a color
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 06 Jan 2021 21:52:26 +0300
+
 freecad-daily (0.18.4+git23529-c6eda6dca-1) unstable; urgency=medium
 
   * Compile

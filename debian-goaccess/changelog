@@ -1,3 +1,37 @@
+goaccess (1:1.4.3+git3402-f642100a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: f642100a4733dede10f1d367c545f08622914273
+  * Date: 1609978578
+  * git changelog:
+  *  f642100a - Merge pull request #1994 from rsmarples/libc_sha1
+  *  481a3d65 - Ensure we simply return on an empty JSON value as
+    there's no need for processing.
+  *  86d4a32e - Detect SHA1Init in libc and use that instead of our own
+    sources
+  *  2ae93b0d - Updated pre-defined Caddy log-format.
+  *  3f936f3b - Merge pull request #1993 from rsmarples/cc
+  *  77b066db - Prefer the host default compiler
+  *  05a4abd2 - Move the format string into the {l,r}print_col()
+    functions.
+  *  a87c4147 - Ensure we have SSL_CIPHER_standard_name prior to resolve
+    its code.
+  *  f1520f1b - toupper(3) says the argument should be of type int
+  *  36e84d19 - Added missing function comments to json string parser.
+  *  c442db45 - Merge pull request #1990 from rsmarples/nanosleep
+  *  e8e779ec - Merge pull request #1989 from rsmarples/NetBSD
+  *  31d2c63e - POSIX has made usleep(2) obsolete in favour of
+    nanosleep(2)
+  *  87a9e50f - configure: Work on NetBSD
+  *  0dab9fb8 - Added Caddy to the list of pre-defined log formats.
+  *  cfd3883f - Added native support to parse JSON logs.
+  *  0164a2ef - Added src/pdjson.c to codebase.
+  *  7646cb48 - Fixed memory leak when using %x as date/time specifier.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 07 Jan 2021 12:15:04 +0300
+
 goaccess (1:1.4.3+git3384-bb97ebb4-1) unstable; urgency=medium
 
   * Compile
