@@ -13,7 +13,7 @@ ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 	$(CURDIR)/build/test/chiaki-unit
 endif
 
-override_dh_install: debian/chiaki.6
+override_dh_install:
 	dh_install
 	mkdir -vp $(CURDIR)/debian/chiaki/usr/share/icons/hicolor/scalable/apps/
 	install -vm0644 $(CURDIR)/gui/res/chiaki.svg $(CURDIR)/debian/chiaki/usr/share/icons/hicolor/scalable/apps/chiaki.svg
@@ -24,5 +24,5 @@ override_dh_install: debian/chiaki.6
 	test -f chiaki.png && rm chiaki.png;\
 	done
 
-%.6: %.6.md
-	pandoc --verbose --standalone $< --to man --output $@
+override_dh_compress:
+	dh_compress -Xpsn-account-id.py

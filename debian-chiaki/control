@@ -4,16 +4,17 @@ Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: debhelper (>= 11), cmake, python3-dev, protobuf-compiler, libssl-dev,
                libopus-dev, libavcodec-dev, libqt5svg5-dev, libqt5opengl5-dev, qtmultimedia5-dev,
-               libsdl2-dev, python3-protobuf, libgl1-mesa-dev, pandoc, imagemagick, librsvg2-bin
+               libsdl2-dev, python3-protobuf, libgl1-mesa-dev, imagemagick, librsvg2-bin, libevdev-dev
 Standards-Version: 4.4.1
-Homepage: https://github.com/thestr4ng3r/chiaki
+Homepage: https://git.sr.ht/~thestr4ng3r/chiaki
+Rules-Requires-Root: no
 
 Package: chiaki
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: free and open source PS4 remote play client
  Chiaki is a Free and Open Source Software Client for
- PlayStation 4 Remote Play.
+ PlayStation Remote Play.
  .
  Everything necessary for a full streaming session, including
  the initial registration and wakeup of the console, is
