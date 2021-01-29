@@ -1,3 +1,75 @@
+labplot (2.8.0+git7955-446332bd1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 446332bd114ce7cf80bec73618e66814f3b06748
+  * Date: 1611217355
+  * git changelog:
+  *  446332bd1 - Refactored the logic to update the column dependencies
+    on column name changes to avoid code duplication and made this logic
+    more complete by taking also the value columns in the curves into
+    account.
+  *  7e9a70a6f - Fixed a wrong signal-slot connection in CartesianPlot.
+  *  8620a45de - [import] further reduced the number of objects in the
+    XML file to be parsed when doing the preview of a project to be
+    imported. We pre-load only those objects that are relevant to check
+    the dependencies across the project.
+  *  b747394ee - Fixed issues introduced with the previous commit: 1.
+    fixed compile error when building without HDF5 lib 2. removed
+    unnecessary test file
+  *  d29aec661 - [import] #ifdef the different file formats in
+    AbstractFileFilter::fileType() so we don't try to parse for example
+    a netCDF file when the application was compiled without any support
+    for netCDF.
+  *  af2cd0359 - [import] show the last recently imported projects in a
+    combobox also in ImportProjectDialog.
+  *  8ed763170 - [worksheet] minor fixes: 1. react on TextChanged
+    instead on ReturnPressed in HistogramDock. 2. removed unneeded
+    member in ReferenceLine. 3. new signal-slot syntax in
+    XYEquationCurveDock.
+  *  f7f970045 - [worksheet] draw the text for the cuve values via
+    QPainter::drawText() and not via QPainter::drawPath() in oder to get
+    the text exported as text in SVG and not as a polygon.
+  *  3177e2517 - GIT_SILENT Changelog
+  *  48310f0bd - [worksheet] save/load the values format in xy-curve and
+    react on text change for values prefix and suffix and not on return
+    pressed event.
+  *  b14ba6fa6 - [worksheet] minor fixes and improvements in some
+    classes.
+  *  f39f2ab1d - Initial code for BoxPlot.
+  *  43e55f58c - Removed the setPrinting() override in Historgram and
+    Legend.
+  *  6165f15eb - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  209a635f7 - GIT_SILENT made messages (after extraction)
+  *  8cb743866 - When creating new histograms via the plot data dialog,
+    set the title text of the y-axis to Frequency and some refactoring
+    in PlotDataDialog.cpp to have more re-use of the common code.
+  *  113b6fd56 - [worksheet] we need to reverse the horiz. and vert.
+    layout icons from the breeze theme since the reverse order is better
+    fitting into what we're doing in the worksheet layout with this. The
+    icons were changed already in the main toolbar and we need to change
+    them also in the worksheet properties widget where the layout type
+    can also be modified.
+  *  3f93b1c7e - [worksheet] moved the function isPrinting() to the base
+    class since the implementation is the same for  all worksheet
+    elements.
+  *  821908b70 - [worksheet] when changing plot area padding, generate
+    one single entry on the undo stack in case the symmetric padding is
+    used.
+  *  5a5a56cb3 - [worksheet] improved the calculation of the bounding
+    box of the plot when the selection box has to be drawn. Still not
+    optimal, will be replaced by a different solution later.
+  *  96dab170e - [worksheet] use the appropriate color from the current
+    theme also for the lines of the different mouse cursor modes like
+    zoom&select and crosshair to avoid situations where we're drawing
+    black lines on the black plot area.
+  *  97b55ab5e - [spreadsheet] removed the Binary format in the export
+    dialog since it's not supported yet.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 21 Jan 2021 22:41:21 +0300
+
 labplot (2.8.0+git7933-436f8fd7c-1) unstable; urgency=medium
 
   * Compile

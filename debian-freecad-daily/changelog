@@ -1,3 +1,144 @@
+freecad-daily (0.18.4+git23740-3ed124816-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 3ed124816486dbaee0cd7801a977853d47fcd1d9
+  * Date: 1611243724
+  * git changelog:
+  *  3ed124816 - Gui: [skip ci] drop the hard limit of 50 allowed
+    workbenches
+  *  020e5bc70 - CMake: workaround for possibly failing OpenGL check in
+    vtk9
+  *  7a08b7aad - Merge pull request #4285 from
+    bitacovir/OpensCAD_Icon_replacement
+  *  b4d973d80 - Merge pull request #4287 from
+    bitacovir/PartDesign_Icons
+  *  c06cd3c54 - Merge pull request #4291 from aapo-aapo/TD-US-
+    MultiValueSchema-fix
+  *  d7038409b - Merge pull request #4292 from aapo-aapo/TD-MDIViewPage-
+    papersizes
+  *  f490852ab - FEM: make FemMesh::getVolumesByFace() working for SMESH
+    >= 7
+  *  b0c4e1699 - Merge pull request #4298 from Roy-
+    043/ArchRoof_FixSelfRefRelProfile
+  *  135525a80 - smesh: port to version 9.6
+  *  649a767f6 - Update ArchRoof.py
+  *  9e1d7653b - Add SVG icons for two Part commands
+  *  b5f57ed2f - [TD] make pointers to the UI std::unique_ptr
+  *  4af6c5a13 - Gui: [skip ci] update standard cursors of 3d view when
+    device pixel ratio changes (e.g. by moving between standard and high
+    DPI monitor)
+  *  9788467a3 - Mesh: [skip ci] fix hot spot of mesh selection cursor
+  *  4d40ab0f4 - [TD] MDIViewPage: Support printing/exporting arbitrary
+    custom paper sizes for Qt5.
+  *  d79fd9d6a - [TD] MDIViewPage: Add support for Qt5 automatic paper
+    size handling with many new paper sizes possible.
+  *  1c02a2ae9 - [TD] Fix Dimension unit printing problem for US
+    building units and other multivalueschema.
+  *  4c323a632 - Part: Crash when calling SubShapes of empty shape from
+    Python
+  *  00822b0a8 - Gui: Prevent crash when trying to access sub-objects of
+    a deleted object from a SelectionObject
+  *  afd147020 - Update src/Mod/PartDesign/App/FeaturePipe.h
+  *  cdfe908c5 - PartDesign: Fix small bugs in the Pipe feature
+  *  254ed951f - Gui: [skip ci] must set device pixel ratio to QBitmaps
+    on Windows when using for cursor as otherwise garbage is shown
+  *  d87b26069 - [UI] Add SVG icons for three PartDesign commands
+  *  6719e8651 - Merge pull request #4271 from donovaly/TD-dimension-
+    dialog
+  *  8a1bd9d96 - Merge pull request #4283 from paullee0/ArchComponent_02
+  *  41e1626bd - Sketcher: increase relative size of the subindices of
+    the constraints
+  *  dc2d7c6ee - [UI] Replace of 2 SVG icons for OpenSCAD commands
+  *  bf221af68 - FEM: mesh tools, add a comment
+  *  e43ee28e3 - FEM: utils, fix clipping FemMesh without Shape
+  *  ed15b99a4 - [ArchComponent] Fix Link Of Window Hosts if empty got
+    error as Wall Child
+  *  625502bb4 - Sketcher: Compensate for Coin not taking the dpi of the
+    monitor into account in font pixel setting
+  *  a56a22de5 - Sketcher: fix horizontal distance constraint on
+    external edge
+  *  fc91b251e - [TD] add dialog to modify some dimension settings
+  *  919196fb9 - Sketcher: Migrate old construction points as
+    construction
+  *  fe1bee4be - Sketcher: Increase distance from constraints to
+    geometry
+  *  67b45c7da - Sketcher: fix font size
+  *  33ec7fb3e - Merge pull request #4275 from realthunder/FixGetPartOf
+  *  94801b56d - Merge pull request #4276 from donovaly/TD-exact-no-
+    tolerance
+  *  83cfffd1b - Merge pull request #4188 from
+    Russ4262/fix_import_base_geometry
+  *  60b19308d - Merge pull request #4184 from Schildkroet/leadinout_gui
+  *  e0663cde5 - Merge pull request #4227 from mlampert/feature/expose-
+    enumerations-to-python
+  *  9aecf36f7 - Win32: [skip ci] fix support of SpaceMouse Plus XT
+  *  8f4da8ba8 - zipios++: [skip ci] apply bugfix on
+    ZipLocalEntry::trailingDataDescriptor() from upstream
+  *  2b0a13f71 - [TD] don't allow tolerances for exact values
+  *  af4de262e - Merge pull request #4187 from Russ4262/patch-2
+  *  d7d20ba48 - Draft: Don't snap to ImagePlanes
+  *  c745f4ef5 - Arch: Fixed non-workng Panel tools
+  *  74de3aebe - App: fix Part::getPartOfObject()
+  *  6b3936c8b - Sketcher: [skip ci] fix segmentation fault in
+    ViewProviderSketch::drawConstraintIcons()
+  *  ddaa29d11 - Win32: [skip ci] enable logging for SpaceMouse input
+    events to figure out why Plus XT model stopped working
+  *  a0bda4071 - Merge pull request #4232 from hyarion/feature-
+    spreadsheet-allow-removed-aliases
+  *  254c1bcee - Merge pull request #4263 from donovaly/TD-tweaks
+  *  69edc2de6 - Merge pull request #4261 from paullee0/ArchComponent_01
+  *  c67f4b14f - Merge pull request #4265 from
+    chennes/shadowFixAndAddUnitTests
+  *  e65f6a798 - Merge pull request #4269 from eddyverl/Pyramids-
+    and_Polyhedrons
+  *  c3316693a - Merge pull request #4272 from donovaly/TD-show-balloon
+  *  0c7c330fe - [TD] show balloon dialog on double-clicking
+  *  f87f1e57d - Sketcher: ViewProvider HDPI lineWidths and pointSizes
+    as float
+  *  bd65aab55 - Update AddonManager.qrc
+  *  4f86f30aa - Add files via upload
+  *  faf8d0ac2 - Sketcher: Change of color of Y axis
+  *  e8d76d49b - [TD] some fixes
+  *  4e5f0a385 - Sketcher: Check for null geometry shapes before adding
+    them to the toShape array
+  *  c0d810a37 - Part: Geometry trigger notifyAttach on extension
+    addition
+  *  e6af511f3 - Part/Sketcher: Refactor Geometry Extensions
+    copy/save/restore AND attachment notification
+  *  927fdc9ed - [Sketcher] Fix crash in SketcherObject::setDatum
+  *  d18a76e9b - Add unit tests for HTML string replacement
+  *  a0aaae7ea - Add SHADOW replacement
+  *  fcdd44115 - Add initial unit test for Start page.
+  *  921103778 - [ArchComponent] Link of Window get opening now
+  *  1851ddd93 - Sketcher: [skip ci] fix -Winconsistent-missing-override
+  *  714a71657 - [TD] handle equal tolerances correctly
+  *  adc78f1e2 - Merge pull request #4252 from donovaly/Part-angular-
+    measure
+  *  d339e4067 - Start: Fixed freedesktop thumbnail retrieval
+  *  1bfd7644b - Gui: Prevent crash when trying to access a deleted
+    object from a SelectionObject
+  *  94405e33c - [PartDesign]: Fix refine boolean not being obeyed at
+    multiple places
+  *  b054e16cf - Sketcher: Fix detach observer
+  *  5b058a9f1 - Sketcher: App/Sketch.h minor documentation tweaks [skip
+    ci]
+  *  b01e189c6 - Sketcher: Preferences - add 3D view scaling factor
+  *  3661ffe7f - Sketcher: Constraint icons and fonts in 3D View
+  *  1d970d522 - Sketcher: Add constraint icon scaling.
+    https://forum.freecadweb.org/viewtopic.php?f=3&t=4362&start=20#p4580
+    26
+  *  7a82f955c - Sketcher: Scalable constraint icons
+  *  e29a394ce - Sketcher: std::move improvement fixes
+  *  f774c0ec5 - Merge pull request #4244 from
+    danreb25/BBLPatch_ArchComponentDiffuseColor
+  *  94767d462 - Merge pull request #4249 from donovaly/GUI-icon-fix
+  *  eb2d512fc - Merge pull request #4251 from fxjaeckel/patch-1
+  *  12defb11b - Part/Sketcher: improve list property update efficiency
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 21 Jan 2021 21:55:48 +0300
+
 freecad-daily (0.18.4+git23634-5d9db07dd-1) unstable; urgency=medium
 
   * Compile

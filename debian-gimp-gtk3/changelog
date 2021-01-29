@@ -1,3 +1,100 @@
+gimp-gtk3 (2.99.0+git46630-6b65998bf7-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 6b65998bf7a54304852dde0221b8f04ebb245a0a
+  * Date: 1611247174
+  * git changelog:
+  *  6b65998bf7 - xcf: fix #6138 Stack Overflow when saving xcf.
+  *  82209920a9 - devel-docs: Introspected Python libgimp and libgimpui
+    docs generation.
+  *  fee221167c - app, libgimp, pdb: improve
+    gimp_vectors_stroke_get_length() docs.
+  *  e813d90fbb - app: allow 0.0 precision for
+    gimp_coords_interpolate_bezier().
+  *  00bbeabaf4 - Issue #6210: Subpixel font rendering system settings
+    should only…
+  *  1873f0d65c - libgimpbase: fix memory leak in
+    gimp_installation_directory().
+  *  58b98b941f - libgimpbase: remove case of plug-ins binaries directly
+    under plug-ins/.
+  *  c264f0b705 - gimp: macOS: fix for file export dialogs GIF and PNG.
+    Authored by @pietervo, and he should be credited with this.
+  *  4e8087be85 - Update Catalan translation
+  *  40b83450bd - Update Swedish translation
+  *  a55cab8f80 - plugins: feature #449 allow fract DPI values when
+    importing PDF
+  *  2b74bcb59a - Update Serbian translation
+  *  76b5b97c2b - Update Serbian (Latin) translation
+  *  593e9fa854 - Update Serbian translation
+  *  549864089d - Update Serbian translation
+  *  82f9329481 - Update Serbian translation
+  *  aceeb38cf7 - Update Serbian translation
+  *  c53b64452b - Update Serbian translation
+  *  041104b5ec - Paint Select tool: enable viewport-based local
+    selection
+  *  d21911ebfc - Issue #3265: PNG gAMA chunk is silently ignored.
+  *  7465b0782a - plug-ins: more debugging data in file-darktable.
+  *  6ca6a8d239 - HEIF plug-in: ensure max quality for lossless encoding
+  *  e341f00875 - Update Ukrainian translation
+  *  83ab86eb8b - plug-ins: fix #6279  Error loading PSD file:
+    Unexpected end of file.
+  *  823ae50cc5 - plug-ins: fix crash at end of JPEG export.
+  *  07a3734db5 - plug-ins: fix plugin-defs for file-heif.
+  *  be457997f3 - Update Japanese translation
+  *  f77e261cd4 - plug-ins: export with explicit PNG's sRGB chunk when
+    no profile written.
+  *  26903fde73 - Update Japanese translation
+  *  f78b131c1b - Update Japanese translation
+  *  e7db1e688e - Update Serbian (Latin) translation
+  *  0f6e6e0337 - Update Serbian translation
+  *  16ddf3984e - Update Catalan translation
+  *  cdf239b29a - Update Catalan translation
+  *  773c3a88e5 - HACKING: some update on coding style and other.
+  *  dce0eef704 - Update Serbian (Latin) translation
+  *  d9d8ae723a - Update Serbian translation
+  *  fc955b8208 - Update Serbian (Latin) translation
+  *  00db130ff6 - Update Serbian translation
+  *  f489976b05 - plug-ins: fix #5081 Opening TIFF with YCbCr format
+    displays incorrect warning.
+  *  8c3eb59ac0 - Update Serbian (Latin) translation
+  *  bfa35ef378 - Update Serbian translation
+  *  b962c07edc - Update Japanese translation
+  *  234e006ffc - Update Japanese translation
+  *  cca6830077 - Update Japanese translation
+  *  634a28c10e - Update Japanese translation
+  *  f572d77999 - Update Japanese translation
+  *  e50f56662a - Update Swedish translation
+  *  dccc57c473 - Update Ukrainian translation
+  *  7d753c6f54 - Paint Select tool: apply a threshold on the image mask
+    before triggering...
+  *  4d0ba4392b - Paint Select tool: add a dedicated function to check
+    tool requirements
+  *  10dc9fc177 - Update Finnish translation
+  *  d0d0c9f8df - Update Catalan translation
+  *  9cfc0a92b8 - Update Catalan translation
+  *  de161a1bba - libgimp: Add compiler hints to gimpproceduredialog
+  *  c15e9bad03 - Update Ukrainian translation
+  *  d60b74b391 - Update Serbian (Latin) translation
+  *  0bd5eb3ad1 - Update Serbian translation
+  *  e55e078245 - plug-ins: allow loading of BMP images with incorrect
+    BI_BITFIELDS compression.
+  *  d8c164ced3 - plug-ins: fix #6144 Unrecognised or invalid BMP
+    compression format.
+  *  e96dba41f4 - Update Serbian translation
+  *  64a6baad3d - libgimp, libgimpbase: fix def files.
+  *  a2965b1974 - Update Swedish translation
+  *  c9b0cafc1d - libgimp: rename Save
+  *  3e25ea532e - libgimpbase: new gimp_parasite_get_data().
+  *  c7efae0cff - plug-ins: fix tiff comment getting saved when save
+    comment is unchecked.
+  *  f814ae7205 - plug-ins: save comment on all tiff pages/layers.
+  *  2dd61d4613 - Fixed #6109 for saving color profile on each tiff
+    layer
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 21 Jan 2021 22:30:38 +0300
+
 gimp-gtk3 (2.99.0+git46562-478193fbcd-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,39 @@
+goaccess (1:1.4.3+git3420-784805de-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 784805de423e51ab29a01ab941c7fb3dc1ddbec1
+  * Date: 1611367781
+  * git changelog:
+  *  784805de -  Updated NEWS with latest v1.4.4 changes.
+  *  beb0efa6 - Updated list of AUTHORS & contributions.
+  *  92dbe8a9 - Version bumped to 1.4.4.
+  *  8afc9d62 - Version bumped to 1.4.4.
+  *  f6284729 - Added back uint32_t max/min functions to JSON/HTML
+    outputs.
+  *  d7318ac9 - Ensure TUI/CSV/HTML reports are able to output uint64_t
+    data.
+  *  8e9d0900 - Updated (C) year on help dialog.
+  *  98dcf468 - Fixed issue where T.X. Amount metrics were not shown
+    when data was piped.
+  *  102eed80 - Ensure we allow for a UI render if the rate at which
+    data is being read if greater than 8192u.
+  *  4229e7f9 - Removed unused code from goaccess.c
+  *  f546e561 - Added the ability to process timestamps in milliseconds.
+  *  a77a9048 - Ensure we set fdstate to NULL in case we ever need
+    another websocket afterwards.
+  *  d5f4cfdd - Minor code formatting updates across several files.
+  *  98d69479 - Fixed memory leak on last poll() realloc of fdstate.
+  *  5ac53cc1 - Replace select(2) with poll(2)
+  *  d7c12a91 - Minor code formatting updates across several files.
+  *  a1f645ec - Ensure we don't re-render Term/HTML output if no data
+    was read/piped.
+  *  6a39f6b1 - Fixed issue where it would send data via socket each
+    second when managed by systemd.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 23 Jan 2021 14:00:11 +0300
+
 goaccess (1:1.4.3+git3402-f642100a-1) unstable; urgency=medium
 
   * Compile
