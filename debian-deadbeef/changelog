@@ -1,3 +1,59 @@
+deadbeef (1.8.7+git9791-4e5e467f1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: 1.8
+  * Commit: 4e5e467f192aa6d5ce4bd109bbbb0b1bacfea2ed
+  * Date: 1612633351
+  * git changelog:
+  *  4e5e467f1 - 1.8.7 release
+  *  7a5e74977 - wma: double-free crash fix for wma+cue
+  *  bc611798b - osx: build FLAC without DEBUG=1, to prevent asserts in
+    debug builds
+  *  cb5e29dac - 1.8.7-rc2
+  *  4eff492fb - alsa, pulse: _setformat_requested cleanup
+  *  5fe98d67d - pulse: handle setformat called from streamer_read on
+    playback thread
+  *  9f92318f5 - alsa: setformat error handling
+  *  bd8f08413 - Changelog update
+  *  1112d2cf7 - premake: fix lib parse
+  *  cbb861fd2 - Changelog update
+  *  ab72ae2fc - Changelog and 1.8.7-rc1
+  *  fbc98626f - streamer: remove the deferred setformat hack
+  *  5d12c48bf - alsa: move hwparams setting to the playback thread
+  *  c89cc0fe3 - main: save resume state immediately after every song
+    finished or playback is stopped
+  *  f917f86d8 - alac: fix handling alac files with 48 byte ASC
+  *  6a1c1363f - alac: handle invalid ALAC box data with samplerate=0
+  *  376addf96 - junklib: fixes id3v2.3 unsynchronized tag reading
+    support without breaking id3v2.4
+  *  f94e60faa - ID3v2 frame sizes are before unsynchronisation
+  *  c59d5e053 - better github action job names, for discord webhook
+  *  98da17fb9 - fixed typos
+  *  7e24046c7 - updated README; added discord link
+  *  c00d710e4 - added github workflow build status badges
+  *  afa7ec98e - enable uploading artifacts from github actions
+  *  de5938bdf - windows github action
+  *  a9c8d7c91 - linux github action
+  *  a38b2e47d - mac github action
+  *  7c325904a - disable travis-ci
+  *  4f73c0d23 - mp4: fix crash caused by encountering unsupporter
+    metadata fields; fix writing the padding after moov is moved to the
+    end of file (fix #2509)
+  *  e10e19a77 - junklib: do not discard id3v2.3-specific frames, when
+    they can be converted to TXXX; also convert such TXXX frames
+    correctly when writing id3v2.4 (fixes #2304)
+  *  61f1f1d41 - hotkeys: fix the missing action_sort_by_title, fix
+    warnings
+  *  c0bc84fe2 - hotkeys: initialize after all plugins has loaded /
+    connected (fixes #1150)
+  *  bca4afcdd - shellexec: cleanup legacy config support, rename the
+    config property name to not contain WIP (#829)
+  *  c65108149 - pulse: error handling instead of assert
+  *  3363094ec - docker: fix parameter typo
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 07 Feb 2021 00:41:07 +0300
+
 deadbeef (1.8.6+git9757-3910f8aa6-1) unstable; urgency=medium
 
   * Compile

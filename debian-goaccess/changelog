@@ -1,3 +1,48 @@
+goaccess (1:1.4.3+git3448-a89d29b0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: a89d29b08fd80b3449da80a73dabbc224cb05cda
+  * Date: 1612312801
+  * git changelog:
+  *  a89d29b0 - Fixed segfault when attempting to process a malformed
+    JSON string.
+  *  9c228438 - Merge pull request #2019 from allinurl/revert-2007-
+    kqueue
+  *  79d86ba2 - Merge pull request #2007 from rsmarples/kqueue
+  *  2999c1a6 - Monitor log files using kqueue(2)
+  *  cc054536 - Fixed issue when using %s with strptime(3) under musl
+    libc.
+  *  5494afd0 - Fixed possible buffer over-read for certain log-format
+    patterns.
+  *  a9c3c9e0 - Fixed segfault when setting an empty log-format from the
+    TUI dialog.
+  *  453b9c10 - Merge pull request #2009 from Schnouki/bug/fix-rt-piping-
+    non-root
+  *  6e3fe1e3 - Support real-time piping as non-root user
+  *  c98da7d7 - Updated Dockerfile image to use alpine:3.13 instead of
+    edge.
+  *  a4c4390a - Updated README.md for v1.4.5.
+  *  57e21719 - Updated Changelog for v1.4.5.
+  *  3ea7013c - Version bumped to 1.4.5.
+  *  6580aa1f - Version bumped to 1.4.5.
+  *  57b3dfe2 - Updated NEWS for the latest version.
+  *  637eeddc - Fixed build on CentOS 7 due to std99 declarations.
+  *  595969fd - Updated man page.
+  *  e88a4a9f - Fixed Changelog typo.
+  *  c973535f - Update README.md
+  *  7a14e160 - Updated man page ms specifier.
+  *  368a3b53 - Updated log/info comment on poll(2).
+  *  3c6567d0 - Updated log/info comment on poll(2).
+  *  96afc014 - Updated man page year.
+  *  c9ac5f04 - Updated TODO (C) year.
+  *  e4c85722 -  Updated NEWS with latest v1.4.4 changes.
+  *  7051346f - Updated Changelog for v1.4.4.
+  *  eb4c50c5 - Updated README.md for v1.4.4.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 04 Feb 2021 23:22:37 +0300
+
 goaccess (1:1.4.3+git3420-784805de-1) unstable; urgency=medium
 
   * Compile

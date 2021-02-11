@@ -1,3 +1,68 @@
+labplot (2.8.0+git7981-93da2c213-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 93da2c2134e3ff0dc966d7c381364f22c85adbd9
+  * Date: 1612385397
+  * git changelog:
+  *  93da2c213 - [boxplot] restore the pointers to the saved data
+    columns on project load.
+  *  7ea2e535d - [boxplot] generelized to multiple data columns
+    (datasets) per boxplot.
+  *  c4a151148 - Updated the ChangeLog file for 2.8.2.
+  *  bdb3e5378 - [boxplot] decoupled the calculatins of of the box plot
+    geometry from the actual drawing of rects, lines and symbols and
+    minor changes in BoxPlotDock.
+  *  00053a063 - [boxplot] draw only the unique outlier points. This is
+    helpful for datasets with many repeating values for the outliers.
+  *  2c4eb96a0 - [spreadsheet] added BoxPlot to the column statistics
+    dialog. The original commit for this was incomplete.
+  *  47ada8c4e - Use the canonical URL for docs.kde.org addresses
+  *  e22141781 - Fix the windows build.
+  *  512be321e - [boxplot] add missing changes in the ui file.
+  *  450773921 - [boxplot] allow to add multiple data columns for the
+    boxplot, the UI-part of the implementation right now.
+  *  1974effdb - [spreadsheet] added BoxPlot to the column statistics
+    dialog.
+  *  cadcec22e - [boxplot] more code to show, load and save the boxplot
+    properties.
+  *  d3193110f - Added the changes that were forgotten in the previous
+    commit...
+  *  645373e30 - [box plot] symbols for outliers and for the mean value.
+  *  e590a0cd3 - Moved the drawing of the combobox items for the
+    different Symbol styles to a central place in GuiTools.
+  *  52e8db1a5 - [box plot] median line.
+  *  d55393660 - [box plot] added whisker properties.
+  *  785119b4b - GIT_SILENT made messages (after extraction)
+  *  f92f41064 - Simplified the logic to notify about the availability
+    of Columns in TreeViewComboBox and moved it out of XYCurveDoc to
+    TreeViewComboBox so it's also easily accessible for Histograms, etc.
+    Checking the availability of columns is working now also in
+    Histograms properly.
+  *  1f934b891 - [worksheet] added missing changes in Histogram.cpp for
+    datetime data and also fixes save/load of datetime range properties
+    in the plot.
+  *  82843a9c8 - [worksheet] DateTime support in Histograms.
+  *  3e8b1b7e5 - [worksheet] convert the plot range format to datetime
+    also when the first histogram for datetime data was added.
+  *  fdb641f7a - [histogram] properly restore the saved values column in
+    the histogram and also save the values formatting properties.
+  *  164380729 - [spreadsheet] extended the statistics dialog by showing
+    more information in addition to the descriptive statistics we have
+    right now - histogram, boxplot, etc.  At the moment only the
+    histogram is implemented and we'll additional content step by step.
+  *  3b90d3e03 - If the deleted columns are being restored, restore the
+    column pointers also in the histograms.
+  *  e39878ae5 - When deleting an aspect, emit the about to be removed
+    signal also for all its children. This allows to remove the bad hack
+    in XYCurve to be aware of deleted columns when the parent
+    spreadsheet is being deleted. This is also more generic now and
+    applies for other curves like the histogram, too. So, the histogram
+    is now also properly reacting of spreadsheet or workbook deletions.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 04 Feb 2021 23:52:10 +0300
+
 labplot (2.8.0+git7955-446332bd1-1) unstable; urgency=medium
 
   * Compile

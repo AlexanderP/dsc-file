@@ -1,3 +1,281 @@
+freecad-daily (0.18.4+git23935-d5b68febbb-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: d5b68febbb4989b290b9af36bb2cb21d61a87a2e
+  * Date: 1612464031
+  * git changelog:
+  *  d5b68febbb - Add Workbench name as Tab item tooltip
+  *  13e2f93bae - Fix bug due to early return
+  *  bd8a3c5021 - Add pref window that loads unloaded workbenches
+  *  656c4919bc - Qt4: [skip ci] fix build failure
+  *  e3f8847450 - Conformed to FreeCAD coding conventions
+  *  dc09810e98 - Check for filename before selecting
+  *  48fca8c2bc - Add default filename for exports
+  *  6d0357379c - Fix typo in previous commit 7add058dc [skip ci]
+  *  7add058dc5 - LGTM: exclude zipios++ and kdl (orocos) libraries from
+    analysis
+  *  5903ff4426 - FEM: add basic support of Nastran-95
+  *  3ad8367b5e - Changed comment for free format CTETRA element
+  *  172d2d8a27 - Added readNastran95()
+  *  67ee247c0c - Added readNastran95()
+  *  59ec3cb141 - PartDesign: New features AdditiveHelix and
+    SubtractiveHelix
+  *  7999536858 - Transform patterns can be created from multiple base
+    features
+  *  ce7b57a08f - Sketcher: [skip ci] fix computing of hotspot of
+    sketcher icons on Wayland
+  *  28c66fc501 - [Sketcher] make pointers to the UI std::unique_ptr
+  *  6db7737547 - Sketcher: Group tests in different directories
+  *  7b9d9fdcdb - Sketcher: new fillet UI command
+  *  9fc31dfa22 - Sketcher: new Fillet - icon
+  *  46feeb11f6 - Sketch: new fillet Python support
+  *  f6f43b6fe4 - Sketcher: Constraint documentation
+  *  86992f8086 - Sketcher: Preserve corner and constraints for sketch
+    fillets
+  *  cc6099b7ef - Merge pull request #4262 from
+    Schildkroet/adaptive_improve
+  *  ccbc13ee82 - Draft: fix LGTM 'Testing for None should use the 'is'
+    operator' alerrts
+  *  27a6dedf19 - Temporarily qt5 fixes for Apple Silicon need to
+    disable the qtwebengine. That has to be considered in MacAppBundle.
+  *  222145993d - Gui: [skip ci] restore tab order in selection settings
+    page
+  *  05c61e349a - Gui: Add support for selecting multiple objects
+    without keyboard
+  *  d73ccbdba0 - Gui: add preferences tab for selection
+  *  99b2cba5f1 - PartDesign: Allow selection of sketch plane by  double
+    click in picker dialog
+  *  45dd1a7f60 - fix issue reported by @chennes
+  *  1c58c3b677 - [PD] hole fix custom cut handling
+  *  c676c07316 - [PD] fix UTS clearance holes
+  *  7eb9b5ed42 - [PD] hole dialog UI fixes
+  *  3ebd7d119b - Part: [skip ci] rename methods in TopoShape that
+    override non-virtual functions of base class
+  *  cc3a30a221 - [PD] fix typo in iso7046.json
+  *  400b25c0d0 - [TD] fix color change for dimensions
+  *  45eea3d9e7 - Fix various typos [skip ci]
+  *  7a83853535 - Part: offer all supported STEP schemes by OCC in a
+    combo box
+  *  078160ea70 - TechDraw: Exposed GeomHatch functionality to Python in
+    TechDraw.makeGeomHatch()
+  *  d02a0d558e - Merge pull request #4331 from chennes/openSCADFix
+  *  253ef2a99a - Merge pull request #4346 from
+    chennes/validateStartHTMLWithW3C
+  *  bdc07a1d22 - Merge pull request #4351 from
+    chennes/fixSurfaceDeleteShortcuts
+  *  612eba1b1a - Fix Surface task panel shortcut use to use Widget
+    context
+  *  5e07d708db - Remove extraneous lines from export
+  *  1958e30f84 - Modify Start HTML to be valid HTML
+  *  7b9c9d4f5e - Add tests for Start Page HTML validity
+  *  9f07b72b40 - [PATH] Limited cone angle for adaptiv helix
+  *  bead9bb938 - Gui: sync recent action file list from external
+    modification
+  *  93a956e70d - [PD] [skip ci] fix alignment in pad dialog
+  *  b50838c7a5 - [PD] fix alignment in pocket dialog
+  *  4ea0784341 - [TD] Dimensions: donovaly's minor fixes for
+    TheoreticalExact dimensions.
+  *  e802179cf4 - [TD] Improve arbitrary tolerance and unit handling for
+    Equal Tolerances.
+  *  660710c26e - [TD] Add under- and overtolerances for Dimension Task
+    layout, fixes for Dimension tolerance refresh and behavior.
+  *  a2f060e36e - [TD] Fix degree sign processing for equilateral
+    angular plusminus dimensions.
+  *  d26b6542ca - [TD] Fix regression in Dimensions: Setting arbitrary
+    under tolerance was somehow lost.
+  *  4ab3c95552 - [PD] correct hole cut definitions
+  *  eb6167ff89 - Enable LGTM to analyze some C++ source code
+  *  096e538c9e - App: [skip ci] use better deprecation warning as used
+    in PR 4335
+  *  b896bb4f2a - Part: [skip ci] fix path of attachment icon
+  *  756654c46e - App: [skip ci] print deprecation warning if
+    addExtension() has two arguments
+  *  446ce21517 - Remove ExtensionProxy and rely on default Python proxy
+    for extensions. fixes #0004534
+  *  37952a5949 - Spreadsheet: Add test for undo alias issue
+  *  f4c2539765 - Spreadsheet: Allow alias removed by undo to be reused
+  *  497ecbe0eb - Merge pull request #4134 from donovaly/PD-Hole-
+    DrillPoint
+  *  ca346b9099 - Merge pull request #4165 from
+    chennes/addImportExportRecentFilesPrefs
+  *  1f77dc2af8 - [MeshPart] Fix copy-paste error
+  *  046aa8a287 - Merge branch 'master' into PD-Hole-DrillPoint
+  *  ce8b96bada - Merge branch 'master' into
+    addImportExportRecentFilesPrefs
+  *  77d666a48b - Fix DXF import with no layers
+  *  4db83a41ca - Merge pull request #4325 from machste/fix_simple_copy
+  *  569817d87a - Fix ODR violation, correct Ui_TaskSketcherGeneral
+    namespace
+  *  1dddcd0b18 - Part: fix ViewProviderExt::updateVisual() on
+    incomplete mesh
+  *  aa45875a2b - Gui: modernize C++
+  *  b49c523a54 - [Part] - Fix View3DInventor.setCamera leaking
+    SoCamera*
+  *  4bd5c2669d - [Part] - Fix memory leaks
+  *  92846ad0f1 - [TD] Avoid changing default open/save dir to
+    templateDir when opening a Page template.
+  *  6870b02210 - [Gui] Make inventor markers symmetric
+  *  0f3cdfea33 - Merge pull request #4317 from Roy-
+    043/fix_gui_snapper_center_face
+  *  8396c34d61 - Merge pull request #4318 from
+    bitacovir/Surface_WB_icons
+  *  09b4dbd8e8 - Merge pull request #4320 from
+    chennes/cleanStartWithLGTM
+  *  fd2f2d83d0 - Path: Fix creating simple copy
+  *  f70f9572fe - Merge pull request #4297 from shadowbane1000/fanuc-1st-
+    pass
+  *  ef2e209b14 - Merge pull request #4140 from gauna85/PathStock
+  *  9f5acaa2bb - Merge pull request #4286 from kbickar/master
+  *  1596f1581f - Merge pull request #4321 from ci4ic4/patch-1
+  *  70d81c0e1c - Merge branch 'master' into
+    addImportExportRecentFilesPrefs
+  *  a4001fbf73 - Merge pull request #4322 from sliptonic/miscbugs
+  *  4dd4783702 - fix index bug in toolbit directory creation
+  *  2bd94ca7f3 - Merge pull request #4294 from mlampert/feature/toolbit-
+    free-properties
+  *  cbb0a8a11c - Update philips_post.py
+  *  43aef8616d - ViewProvider: make partial redundant color blue
+  *  0d9863849b - Updated toolbit-attributes.py script and cleaned up
+    shapes.
+  *  75e65dd09d - Added support for deleting empty groups from the
+    property bag's group tracking.
+  *  ba8e0aa863 - Minor tweaks to Start recommended by LGTM
+  *  a4890e51f5 - Disable library name edit
+  *  8d7543cc98 - Add toolbit test files to list to maybe get windows
+    build to pass
+  *  8d44fcdb06 - fixed slitting saw shape and bit
+  *  86b5738433 - tool bugs
+  *  231ad8f969 - fix bug when declining the creation of workdir
+    subdirectories.
+  *  571be1faf2 - Added commit to explain the purpose of dumping the
+    directory tree
+  *  26ba120aaf - Added Tools directory for recursive test file copy
+  *  4f0f9e78f1 - Added test case to determine directory layout.
+  *  f26e631ab6 - make initial path defaults slightly more intuitive
+  *  c8d3210ba4 - Fixed relative path search for shapes
+  *  c1202c3afa - check working dir on dock open as well as manager
+    open. use os.path.sep liberally choose the first library if no other
+    is selected
+  *  c815115cae - library file path bugs
+  *  8c4dfacb27 - Don't enforce working dir setup and don't copy toolbit
+    shapes
+  *  e807e1d762 - Fixed loading of TC from template
+  *  be4d90a8b3 - Fixed view providers and materials
+  *  c7fd08f858 - Added full toolbit library path as tool-tip
+  *  609afaf7e9 - Made all toobit shapes consistent, and added a script
+    for further maintenance
+  *  ee6220193f - Fixed property update if property value happens to be
+    0
+  *  9b7aa779be - Fixed toolbit editor to properly deal with changing
+    shape files.
+  *  533be4bcd1 - Migrate existing toolbits to new property layout.
+  *  3ec542b071 - Adapted client code to use new findTool... api and
+    fixed test cases.
+  *  df6de8693e - Changed tool-bit search path to either absolute, local
+    install or relative to context path
+  *  b0aa6f32fe - rework shapes with propertybag
+  *  7b6cb0f44c - Expand task panel according to the data in it.
+  *  e9ca3633ce - Added enum placeholder text and disable labels when
+    entry field is disabled.
+  *  eae6c32ce8 - Load PathGui in all modules which require gui
+    resources to be loaded
+  *  6c5b9ccc4d - Updated the README.md with the new workflow for
+    creating additional tool bit shapes.
+  *  a40569186e - Double click on property name brings up property
+    modify editor.
+  *  eee8d12a17 - Cleaned up property-bag task panel and added support
+    for editing the definition.
+  *  ac1e863c3e - Added support for enumerations to the tool bit setup
+    and using the property bag editors instead of re-implementing.
+  *  ee27fc876f - Added support for enumerations to property-bag, relies
+    on base api to get the enum values.
+  *  b41282ebd2 - Added tool bit attribute editor back in.
+  *  de1a64f090 - Simplified tool bit editor using property-bags
+  *  79b63bd521 - Add error message if toolbit shape does not contain
+    any extractable properties.
+  *  b0bce7c2e0 - Add last used toolbit path to the end of the list to
+    make using multiple installation possible.
+  *  3f66b24f7d - Renamed 'Bit Parameters' to geometry
+  *  6f4df10d4a - Renamed PropertyContainer to PropertyBag,
+    PropertyContainer already is a thing.
+  *  ad6d463e36 - Using property container for endmill attributes.
+  *  8b2bfaa322 - Allow property container to become a child of a body
+    when one is selected on creation.
+  *  cbaa1bab85 - Added ability to create multiple attributes in a row
+  *  cc12ce4283 - Added command with menu item to create a property
+    container.
+  *  e9093e1edc - Some code and comment cleanup.
+  *  c65ed37876 - Adding properties to property container.
+  *  da308d13f6 - Cleaned up logging
+  *  dd3a4be81d - Basic property container with editor, no adding of
+    properties yet
+  *  2f731b7da7 - Sketcher: Show partial redundant messages when sketch
+    is fully constraint
+  *  69547e2800 - [UI] Replace SVG icons for Surface WB commands
+  *  dbaa2c1ba4 - Merge pull request #4315 from mlampert/bugfix/vcarve-
+    selection-and-feature-processing
+  *  d601df3d81 - Merge pull request #4316 from wwmayer/J-Dunn-master
+  *  74d5c0a88a - [Draft] Fix snap to center of faces of solids
+  *  8113794e75 - Win32: [skip ci] disable logging again as regression
+    of support of Plus XT model has been fixed
+  *  5d924ddd9e - Merge pull request #4303 from Roy-
+    043/Arch_Schedule_Typo_Fix
+  *  c6088faca6 - Merge pull request #4309 from donovaly/TD-Arch-pages
+  *  ccf392cd2c - Merge pull request #4313 from donovaly/TD-center-marks
+  *  60d7c0d5df - Merge pull request #4314 from chennes/xmlNamespaceFix
+  *  8cb513ba45 - add comment about clearing Py::Dict when changing C++
+    data
+  *  08297e5239 - Path: fix unnecessary copy on read for
+    Command.parameters dict
+  *  ce625703b4 - Removed unused BaseObjects property from vcarve
+  *  13a4f54ecd - Process BaseShapes in vcarve and only fall back to the
+    model if nothing was found to engrave.
+  *  38b142be7a - Properly calling base logic for adding a base object
+    if special handling did not apply.
+  *  c2fa48ba90 - Disabled base geometry-list resizing since it makes
+    the list unusable on HDP monitors.
+  *  f440fa9dbd - Add the standard-defined xml namespace if it is not
+    specified
+  *  d8797ba0cb - [TD] show by default center marks
+  *  31c9dbafb2 - Add support for multiple models to vcarve op.
+  *  d97a393709 - Make PathOp rebust(er) against manual Base assignment
+  *  2d2041e98c - [TD] add Arch paper size Templates
+  *  7306ed28b0 - [PD] fix blind hole depth handling
+  *  305fb03c0d - App/Gui: New restoreError Document status and Gui pop-
+    up
+  *  7066bfed67 - Fem: [skip ci] fix FemMesh::addGroup() for smesh 9
+  *  9c6e918493 - App: auto create Origin in OriginGroup if copied
+    without dependency
+  *  078790268f - Add SVG icon for Std Windows command
+  *  125cf099a3 - Sketcher: Invalid Sketch geometry color in preferences
+  *  bcfe7e96b0 - Sketcher: New geometry color to indicate invalid
+    sketch
+  *  1e4551123d - GCS: convenience diagnosis functions
+  *  186f5a4c19 - GCS/Sketcher: Add equal length line constraint using
+    the new single constraint
+  *  5609269ca8 - GCS: New Constraint for equal size lines, avoiding to
+    use an extra parameter
+  *  ea49ed9215 - Sketcher: Update solver partially redundant constraint
+    information in the solver messages
+  *  67a9393300 - Sketcher: command to select partially redundant
+    constraints
+  *  b01313c0d8 - Sketcher: SketchObject partially redundant status
+  *  a3c1010800 - Sketcher: Sketch retrieve partially redundant
+    constraints
+  *  65fb44df6c - GCS: report partially redundant constraints
+  *  a78ef319c6 - Fixed typo in Arch_Schedule
+  *  24d26a0929 - Merge pull request #4300 from marioalexis84/draft-
+    gui_lines
+  *  0f33a09c10 - Draft: Prevent Draft_Wire from setting a single-edge
+    wire as closed
+  *  c27f4e8eca - Merge branch 'master' into fanuc-1st-pass
+  *  f30cbf6bd9 - Merge pull request #4284 from
+    sliptonic/bug/fixturetemplate
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 04 Feb 2021 23:21:56 +0300
+
 freecad-daily (0.18.4+git23740-3ed124816-1) unstable; urgency=medium
 
   * Compile

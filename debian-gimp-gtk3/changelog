@@ -1,3 +1,86 @@
+gimp-gtk3 (2.99.0+git46676-6298657297-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 6298657297c5509e677eead739321992246b1645
+  * Date: 1612399163
+  * git changelog:
+  *  6298657297 - Update Swedish translation
+  *  b7e7561583 - app: fix wrong enum type bug.
+  *  052fbedc83 - libgimp: allow NULL title for
+    gimp_procedure_dialog_new()…
+  *  5e9c33b2c9 - libgimp: add missing documentation for
+    gimp_procedure_dialog_new().
+  *  a6037760da - gui: #1140 Add image size template selector to resize
+    canvas dialog
+  *  5781ee756a - Update Catalan translation
+  *  09ed4152dc - Update Ukrainian translation
+  *  7a363f9095 - app: s/GEGL graph/GEGL Graph/
+  *  ce93d5c3ab - gui: #5339 Disable GEGL Op menu action if no image is
+    open
+  *  90d0a7f628 - app, menus: move GEGL Operation from Tools to Filters
+    > Generic menu.
+  *  0d519a606f - app: fix config properties / spin buttons mapping for
+    Convolution Matrix filter
+  *  b8abac1777 - app: fix crash when deleting channel
+  *  d8009a000b - plug-ins: Remove gamma parameter in openraster call to
+    file-png-save.
+  *  6bf7892cdf - libgimpbase: fix def file.
+  *  73a64a4ee8 - app: use the GimpDisplay as progress object when
+    exporting.
+  *  5d5ad7ea73 - libgimpbase: finally get rid of gimp_parasite_data()
+    and…
+  *  3e4407a315 - libgimp, libgimpconfig: use gimp_parasite_get_data().
+  *  ef3d4cddc4 - app: fix crash when opening several times an export
+    plug-in.
+  *  63d6d770c4 - plug-ins: replace gimp_parasite_data*() with
+    gimp_parasite_get_data().
+  *  ee26a39049 - app: replace gimp_parasite_data*() with
+    gimp_parasite_get_data().
+  *  443b738e61 - libgimpbase: improve gimp_parasite_get_data().
+  *  3303f9182e - NEWS: update.
+  *  d57eafd189 - plug-ins: gAMA chunk export is now a redundant option.
+  *  72af40b427 - devel-docs: generate both gjs (Javascript) and Python
+    API docs.
+  *  eae3d47e32 - devel-docs, meson: g-ir-doc option to generate
+    introspected API docs.
+  *  4b39217181 - devel-docs: generate Python API (GObject Introspected)
+    documentation.
+  *  84337cb754 - Update Swedish translation
+  *  9f46d92e8f - Update Swedish translation
+  *  1850f69dbf - libgimpwidgets: fix Gtk warning about wrong state for
+    GimpChainLine.
+  *  4686363606 - plug-ins: disable progress updates in file-png in non
+    interactive mode.
+  *  d87cd48f02 - plug-ins: check for run_procedure SUCCESS in
+    openraster
+  *  9a19cf3b81 - plug-ins: add missing parameters to file-png-save in
+    openraster save_ora
+  *  9d9f6e6240 - plug-ins: add progress updates to openraster load and
+    save.
+  *  6d6b7e90c2 - plug-ins: improve exporting of layer modes for
+    openraster.
+  *  304c7d6bc8 - plug-ins: don't use the legacy layer modes in
+    openraster load/save
+  *  7650767ad3 - plug-ins: loading and saving of group layers failed in
+    openraster plug-in.
+  *  d001e4b38b - Issue #5984 file-openraster-save throws CRITICAL at
+    Gimp.ObjectArray.new()
+  *  2381dbe7a4 - Update Polish translation
+  *  d346596381 - Update Catalan translation
+  *  7890d20a61 - Update Ukrainian translation
+  *  3c674e3d42 - Update Ukrainian translation
+  *  6df6332f9b - Issue #987 Corrupt 'gimp-metadata' parasite. Parsing
+    XMP data failed.
+  *  25d80faaf3 - app: Use GtkListBox for icon themes preference
+  *  93baaa64f2 - app: Use GtkListBox for title formats preference
+  *  926eb43716 - plug-ins: #5896. add option for reversing order of
+    layers when importing PDF
+  *  d3194c1f2f - Update Catalan translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 04 Feb 2021 23:39:56 +0300
+
 gimp-gtk3 (2.99.0+git46630-6b65998bf7-1) unstable; urgency=medium
 
   * Compile
