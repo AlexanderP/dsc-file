@@ -1,3 +1,30 @@
+rubyripper (0.7.0+git810-d819116-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/bleskodev/rubyripper.git
+  * Branch: master
+  * Commit: d819116840bb16e8f8da91c9323e8c9f4c09a796
+  * Date: 1613215186
+  * git changelog:
+  *  d819116 - Fix a crash in network code when there is no internet
+    connection (#617).
+  *  ccc7957 - Updated Danish translation file with patch given in #623.
+    Thanks!
+  *  e2947d4 - Fix GETTEXT_PATH env variable handling when testing
+    localization.
+  *  3fe6df0 - Update translation files to the latest version of the
+    code.
+  *  7bf3dd9 - Fix file permissions (remove execute permission on files
+    which should not have it).
+  *  04b53e0 - Update build to reference GTK3.
+  *  12a9328 - Update Readme file to reference GTK3 instead of GTK2.
+  *  c535c59 - Bump version to 0.8rc1.
+  *  95ab330 - Rename concerned files and folders: gtk2 -> gtk3.
+  *  6c19a1d - Port GUI to gtk3.
+  *  1190a7b - Bump version to 'official' 0.7.0 release.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 20 Feb 2021 16:03:28 +0300
+
 rubyripper (0.6.2+git799-b76997e-1) unstable; urgency=medium
 
   * Compile

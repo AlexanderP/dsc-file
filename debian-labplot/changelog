@@ -1,3 +1,136 @@
+labplot (2.8.0+git8168-692d18ef0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 692d18ef0b542bfe3a9c5786a1cfedc3c9cbe48a
+  * Date: 1613820077
+  * git changelog:
+  *  692d18ef0 - [box plot] fixes: 1. don't show whisker types that are
+    not implemented yet 2. update the color of the lines in the
+    comboboxes on load in the properties widget 3. fixed the
+    transformation of the position of the mean symbol
+  *  b23ccaf47 - Updated ChangeLog for 2.8.2.
+  *  c83c1421d - [spreadsheet] simpliefied the wording for the actions
+    to make the difference between remove cells and clear cell content
+    more clear.
+  *  1365ddfd8 - [spreadsheet] when selecting a column in the project
+    explorer, make sure it becomes visible in the spreadsheet by
+    scrolling horizontaly to its position.
+  *  a34c77b3c - [worksheet] 1.  adjust the range format (numeric vs.
+    datetime) also when the the column of the first curve is changed and
+    not only when a new curve is added 2.  simplified the naming of the
+    initial axes for the default plot types (box blot with four axes,
+    etc.)
+  *  2643b60f6 - Fix crash due to function argument mismatch
+  *  908283f18 - [box plot] implemented the horizontal orientation.
+  *  64de0418f - Respect start column when importing column names from
+    ASCII file
+  *  bc6257efa - Less debugging
+  *  79b904509 - Fix ASCII import when start column > 1
+  *  b02d55547 - [spreadsheet] when removing or inserting rows in the
+    spreadsheet, update the vertical header _after_ the new row count
+    was determined. This will solve issues in the spreadsheet when a
+    wrong number of rows was displayed in the spreadsheet after the user
+    has modified this number in the properties explorer.
+  *  ac2a7949b - Read until the end of the current element in XML in
+    case we failed to load it because of the missing CAS support and
+    continue reading the project after this.
+  *  cc5561541 - Improved the logic in the XML parser to better
+    differentiate between failed because of the missing CAS and failed
+    because of the broken XML.
+  *  14af0c2f6 - [spreadsheet] don't skip int and big int columns when
+    showing the statistics dialog for the spreadsheet.
+  *  b00907833 - [spreadsheet] added the reference line connecting (x1,
+    y1) = (-0.6745, Q1) and (x2, y2) = (0.6745, Q2) in the Q-Q plot in
+    the column statistics dialog.
+  *  1aa01a328 - Minor improvements of the previous commit for the
+    notification about the missing CAS support.
+  *  fd988f923 - Improve auto scaling of ranges by rounding
+  *  a49de598f - In case the project to be opened has some CAS content
+    (octave, maxima, etc. worksheet) and the current LabPlot
+    installation either competely lacks the support for CAS or the
+    required plugins are missing, notify the user about it and warn
+    about the potential data looses if the project is opened, modified
+    and saved.
+  *  c61986d3f - Add missing non-linear scale implementations and clean
+    up
+  *  9ddcc96f9 - More log scale checks
+  *  c3929d2db - Use ';' in range notation to avoid clash with decimal
+    or group separator
+  *  8e5dc7aad - log scale check and changelog
+  *  73a0686f7 - [worksheet] don't allow to set axis label's position
+    via plot's logical coordinates.
+  *  f99fed2cf - More axis scale improvements and clean up
+  *  a98dac14a - axis scale clean up
+  *  8297b89d5 - Add new file
+  *  e90ddf9d0 - Simplify scale usage
+  *  71fc60be2 - Fix scale in docks
+  *  fdd362ca1 - Simplify scale types
+  *  ebe140960 - Better scale naming
+  *  4bab15fb2 - minor warnings fixed
+  *  0c5cd9fd2 - fix memory problem in project import test
+  *  d49bfc844 - Don't crash when closing the statistics column dialog
+    and properly repaint the box plot.
+  *  df560dd60 - fix possible memory problem
+  *  753a2f597 - [spreadsheet] Q-Q plot im Column Statistics Dialog.
+  *  a6a858ac2 - finally fix memory leak
+  *  e583f2809 - another try fixing memory leak
+  *  e5b94c352 - another try fixing memory leak
+  *  57432a40a - try fixing memory leak
+  *  3421f00b0 - Fix regression in origin project import
+  *  3eb89d094 - [worksheet] repaint the histogram if only the pixmap
+    was changed (filling enabled/disabled, etc.) so the effect is
+    immediately visible and simplified logic in xy-curve and histogram
+    to draw the symbols.
+  *  957edf5d9 - [box plot] for the mean symbol use the mean value, not
+    the median.
+  *  fa8547edd - [import] show the correct number of rows after the
+    import for the currently selected spreadsheet in the project
+    explorer.
+  *  8acc6da2c - [import] don't generate any preview in the import
+    dialog when the options together with the preview widget are hidden.
+    This is helpful when the user is browsing through the content of a
+    big file and the generation of the preview is very expensive (e.g.
+    big JSON-structures, etc.).
+  *  0ef92abc8 - [box plot] improved the handling for deleted data
+    columns.
+  *  b1d93d791 - [worksheet] don't skip the inivisble data points when
+    calculation the drop lines, we still need to determing the parts of
+    the drop lines falling inth the current plot region.
+  *  de1af5a5d - Fix auto scale usage (crash in xy-equation curve)
+  *  bf9686d0b - better number default settings
+  *  512090644 - reorder axis tick label format options
+  *  a880226e4 - GIT_SILENT changelog
+  *  89dc2cb7a - Fix typo in export spreadsheet dialog
+  *  8d8e80872 - Fix LaTeX export of large tables (MR 16)
+  *  70398871a - fix typos
+  *  54c9b3433 - Fix crash in box plot
+  *  4b46a2656 - nsl: Error handling
+  *  06599a8fe - Fix regression
+  *  19e55e61c - Merge branch 'master' of https://github.com/KDE/labplot
+  *  7518f40e5 - Fix page clippling and loading plot range form old
+    projects
+  *  222b79bca - [box plot] react on column changes
+    (deleted/added/renamed).
+  *  3e0d20db1 - Minor fixes: 1. don't change the current selection in
+    the project explorer during undo/redo 2. improved the handling of
+    the initial read of the WindowState settings section 3. don't show
+    any error messages for the empty files name when the import dialog
+    is opened for the first time 4. properly enable/disable the
+    histogram filling related widgets in the histogram properties widget
+  *  b16af7668 - Merge branch 'master' of https://github.com/KDE/labplot
+  *  8136c73c3 - [ascii import] when importing into the spreadsheet in
+    the Append or Prepend mode,  ensure the uniqueness of the column
+    names to avoid name collisions  of the new with the already existing
+    columns in the spreadsheet.
+  *  22d161c6a - undoable range settings
+  *  98e25fd1b - fix loading plot range index
+  *  467822dc3 - merge fix
+  *  6e5313f48 - Fix autoscaling when deleting curves
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 20 Feb 2021 16:22:55 +0300
+
 labplot (2.8.0+git7981-93da2c213-1) unstable; urgency=medium
 
   * Compile

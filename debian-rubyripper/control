@@ -2,18 +2,18 @@ Source: rubyripper
 Section: sound
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 9), autotools-dev, quilt, ruby, ruby-gettext, cdparanoia
+Build-Depends: debhelper (>= 9), autotools-dev, quilt, ruby, ruby-gettext, cdparanoia, ruby-gtk3, cd-discid, eject, flac, vorbis-tools, vorbisgain, normalize-audio, lame, libcdio-utils, cdrdao
 Standards-Version: 3.9.8
 Homepage: https://github.com/bleskodev/rubyripper
 
 Package: rubyripper
 Architecture: all
 Suggests: lame, cd-discid
-Depends: ruby, eject, ruby-gettext, ruby-gtk2, cdparanoia, cdrdao, ${misc:Depends}
-Recommends: flac, vorbis-tools, vorbisgain, normalize-audio, sox
+Depends: ruby, eject, ruby-gettext, ruby-gtk3, cdparanoia, cdrdao, ${misc:Depends}
+Recommends: flac, vorbis-tools, vorbisgain, normalize-audio, sox, libcdio-utils
 Description: audio extraction tool for sampling CDs 
  Rubyripper aims to deliver high quality rips from audio 
  cd's to your computer drive. It tries to do so by ripping 
  the same track with cdparanoia multiple  times and then 
- comparing the results. It currently has a gtk2 and  a 
+ comparing the results. It currently has a gtk3 and  a 
  command-line interface.

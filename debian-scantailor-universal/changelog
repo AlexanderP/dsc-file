@@ -1,3 +1,1956 @@
+scantailor-universal (0.2.9+git1498-f30be288-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/trufanov-nok/scantailor.git
+  * Branch: master
+  * Commit: f30be288ae4e34b78c196d017dee0356334f639b
+  * Date: 1612962542
+  * git changelog:
+  *  f30be288 - Mention STU version in software tiff tag
+  *  1e2dc638 - Remove crash_reporter code
+  *  f5fec001 - Fix a few problems found with Valgrind
+  *  fecb20a0 - Update Deb build rules
+  *  657733ee - changed install prefix for Debian desktop and pixmap
+    files from absolute to relative
+  *  dd63d7a4 - Fix windows build rules
+  *  1e7b9bbc - Version bump
+  *  04a1ac7b - Separate tiff compression settings for b/w and non b/w
+    images
+  *  e79bf2f9 - Bugfix: output file size grows too much
+  *  fcdb9d39 - Bugfix: fix TIFFTAG_FILLORDER tag in output tiff files
+  *  0962f58d - Don't call postUpdateUI during batch processing
+  *  4b90d02b - Bugfix: at batch 'fix orientation' the starting page
+    keeps getting wrong settings updates
+  *  10f0f0ad - Use libcanberra to play beep on bulk processing
+    completion if available
+  *  c4afe4e7 - Fix a bug with endlessly expanding settings window
+  *  890dbb23 - Bugfix: Ellipse Zones
+  *  38378db8 - ~ Relocate the sources
+  *  18c2862a - Resolve some of Clazy warnings
+  *  f35de581 - Fix AutoMOC warnings
+  *  b894f678 - Replace some of deprecated methods
+  *  ce9ec48c - Fix a warnings regarding copy elision
+  *  12690934 - Fix executable filename in installer for Win
+  *  c50a63cf - Fix compilation on Windows
+  *  bf8e5ebf - Include QPainterPath header
+  *  9d37d76f - Building deb packets with ubuntu-dev-tools
+  *  13e2d41f - Move export functionality to a separate static lib
+  *  4431b6fb - Get rid of remaining uses of boost::lambda
+  *  375e566d - Fix deprecated boost .hpp includes
+  *  cafceda3 - Version bump
+  *  9ed8ac33 - Ellipse zones in Output processing stage
+  *  c2c4bf00 - Fix translation in Hotkeys manager
+  *  86d8b890 - Fix loading of translation files
+  *  6f153fcf - Copy source/output filenames and their page num. for a
+    selected pages
+  *  141d6006 - Improve Zone dragging behaviour
+  *  3a41fe11 - Fix some static analyzer warnings
+  *  ed42dfe2 - Format the code with astyle
+  *  838f0b53 - Minor fix
+  *  d47076a7 - fixed incorrect link for Heroes and Cobblestones
+  *  9020993b - Remove unneeded comparisons (fix warnings from LGTM)
+  *  c9b247ea - Remove const modifiers which have no effect (fix
+    warnings from LGTM)
+  *  76f9f967 - Fix wrong function call in
+    ImageViewBase::mousePressEvent
+  *  d73bd97a - Pass large objects by reference (fix LGTM hint)
+  *  873c2fec - Rename output binaries To scantailor-universal and
+    scantailor-universal-cli
+  *  bbd846c0 - Change project URLs from /scantailor to /scantailor-
+    universal
+  *  b3bcfbc2 - Remove uneccessary call to toGrayscale
+  *  6253b5b0 - Replace foreachs, assure const for-all don't detach Qt
+    containers
+  *  7c6d9455 - Update some translations
+  *  6736d644 - Allow to optionally remove input files too in pages
+    remove dialog
+  *  6abced6a - Fix Qt 5.5 compat. as req. by MacOs distr
+  *  432705cb - Fix text display of some critical errors in console
+  *  88ebfa55 - Version bump
+  *  716e359e - replace QtAlgorithm's qSort as marked obsolete
+  *  5c862244 - Fix more typos (found by codespell)
+  *  8498d657 - Button reset to defaults in Export dialog
+  *  5e507a3d - Enable copy  operation for Fill zones
+  *  e019e778 - [Exp] Copy zones from one page to others
+  *  619cd721 - A button to reset pages sorting
+  *  e8aff9e7 - Linux only: Open source image with... in context menu
+  *  4db98fa8 - Display batch progress in window title
+  *  626271e7 - OMP
+  *  6663e5e6 - Bugfix: ignore Tiff compression settings for saving
+    auxiliary images
+  *  f1e68444 - Bugfix proportional alignment
+  *  bdcaae9a - Revive -cli version functionality
+  *  14b76ff8 - Bugfix setting Tiff compression metod
+  *  3e4b0f7f - Fix detection of second chance components
+  *  d2767c51 - Version bump
+  *  53fa530a - New settings: color of indicators in Deskew and Content
+    Selection step
+  *  9ce0ac36 - Big update to export functionality
+  *  4ebb96f7 - Fix the warning
+  *  7befb9d8 - Make it compatible with Qt 5.7.1 for Win XP
+  *  55d0ad75 - Update 5 version of VS 2013 is required
+  *  ff16f531 - Version bump
+  *  c5615c50 - Update translation: RU
+  *  0dfba506 - Override output filename for page
+  *  a43e3d7d - fix mistakes in russian translation
+  *  7d6061a8 - Fix the old bug which seems to affect nothing
+  *  c7d40cf9 - Insert empty pages from context menu
+  *  bd650a69 - fix compillation issue
+  *  78f1082d - BugFix for OrderByPageSize at page split stage
+  *  57e9b54e - Bugfix for OrderBySourceColor in output stage
+  *  d011445a - Bugfix: existing image files are not filtered out in
+    insert image dialog
+  *  463ab91e - Show order hints in sm instead of inches by default
+  *  da86a2f2 - Bugfix for order by logical sizes
+  *  dfa88b2d - Feature: Export for selected pages only
+  *  f3a47883 - Bugfix - improve order by deskew angle hint display
+    format
+  *  61fd433b - Bugfix
+  *  b62ab0b8 - Add info about ST fork and its ver to project file
+  *  cf75ca5f - Order by page size for Page split step (dpi aware)
+  *  7697103d - Order by Rotation for Fix Orientation stage
+  *  8d2ce28e - Compatibility fix
+  *  8c9367fc - Version bump
+  *  0bd5857c - Update translations: ru
+  *  4d41c18f - Replace deprecated std::auto_ptr with unique_ptr and
+    simple pointers
+  *  b2b9d175 - Shift key selection works with key (PgUp/PgDwn)
+    navigation between pages
+  *  ea6e6927 - Ensure attributes in project's xml file are saved in
+    same order
+  *  6feb229d - Inverted page order in thumbnails view
+  *  3fad3eeb - Page navigation with keys doesn't reset focus button
+    status
+  *  49100f4e - Button to simulate selection key (Ctrl/Meta) press for
+    fast page multiselection
+  *  f0bdfa89 - Bugfix (defaule order not displayed on deskew step)
+  *  c6a68c14 - Order by readiness (Processed then unprocessed)
+  *  870c3c7d - Order by logical size for select content stage +
+    tooltips for some orders
+  *  6a442475 - Bugfix
+  *  b6bb4c95 - version bump
+  *  e35de9ac - Suggest import folder name as default project name
+  *  5d1eb06e - Notify about project saving via statusbar
+  *  36d7fbf6 - Disable going up to parent dir in a new project dialog
+  *  40067fa9 - Add few tooltips
+  *  f45befb3 - L10n: update russian
+  *  394a0d63 - Hints in thumbnail list if has non-default order
+  *  82123412 - New settings: some STF's dewarping features are
+    disableable
+  *  70594841 - Bugfix: parasite grayscale shadow in text after dewarp
+  *  153dac9d - Switching to manual content zone selection shouldn't
+    reset page detection to manual
+  *  e2c9c603 - Bugfix: crash on last page removal
+  *  8499a5b7 - Bugfix: foreground threshold adjustment
+  *  2e4a1eb4 - Orders by deskew angle
+  *  c4e662f8 - Added some people to about dlg
+  *  90e8d0a6 - Bugfix: No beep on Mac OS
+  *  9d6c9396 - Drop boost test framework support for boost < 1.34
+  *  d6ec6cd0 - Small MacOs build process adjustment
+  *  f90eae7f - version bump
+  *  9b29f3b1 - Bugfix
+  *  a80e953a - Bugfix
+  *  0b903c69 - Bugfix
+  *  6f1f252f - Add app icon to MacOs package
+  *  a81a1c3d - Build binary for mac with MACOSX_BUNDLE
+  *  a72fc761 - Set c++0x by default
+  *  409d9db7 - Bugfix: order by alignment type
+  *  f493ffa8 - Some changes in Mac OS packaging scripts
+  *  57c0b1ac - Bugfix Mac Os compilation issues
+  *  e6131b8d - Bugfix Export to.. crash
+  *  10cf41ab - Fix translation mistype
+  *  37969ed0 - Bugfix: Default auto-margins setting should'nt be
+    applied to already existing page
+  *  c1881485 - Generic Apply To dialog - first step
+  *  527afd9c - Bugfix: Page Range Selection widget
+  *  63876902 - Bugfix auto margins setting
+  *  38cc586b - version bump
+  *  20070fcd - Display current page odd/even hint + default range is
+    all if nothing is selected
+  *  74327cf1 - Bugfix add/even pages exclusion in apply to...
+  *  9e637133 - Bugfix alignment buttons
+  *  c756bfbf - OrderByAlignment
+  *  be3e4f4b - Add missing license text
+  *  0674cc88 - Update linux packaging
+  *  1b7e38eb - bump ver
+  *  19825c0e - Fix warning C4146 during MS VS compilation
+  *  cbd325f7 - Improve Settings dialog look&feel
+  *  45c9ce35 - Bugfix alignment comboboxes
+  *  adb4c279 - Spellcheck and first localization attempt
+  *  3ed56f29 - Fix path to lupdate for Qt5
+  *  0ea99002 - About dlg change + version bump
+  *  d3da850d - Unified page range selection widget
+  *  7fd9ce81 - Enhance alignment QComboBox'es
+  *  3a7ea0d7 - Bugfix deskew's apply to.. func
+  *  41a4505e - Initial attempt to move all settings keys to ini_keys.h
+  *  6e8a434e - Changes in Original/Auto alignment controls, settings
+    and implementation
+  *  e4c90954 - Thumbnail view settings page in Settings window
+  *  618d7a86 - Cached thumbnails size may be changed in ini
+  *  96c61373 - Save/load main window state
+  *  e13bec82 - Fix Depth perception in Dewarping
+  *  facb2015 - [Experimental]: Scale thumbnails at runtime and more
+    accurate multicolumn list handling
+  *  6fc0427d - Option to insert '.sep' suffix for background subscans
+    filenames
+  *  26c50062 - Export ignores current page order and save files in
+    default order
+  *  7983768a - Display default export folder in dialog if enabled
+  *  87afd18d - Rename export subfolders from 1 and 2 to txt and pic
+  *  aa811126 - Fix: export of dewarped scans with Keep the original
+    color...
+  *  3882ec3e - Display path to settings ini file as a tooltip for
+    Restore Settings button
+  *  5390e5d9 - Revert Optimize grayscale seed-fill by preventing
+    duplicates in the queue.
+  *  e0fbc46d - Bugfix: setting default negative threshold value
+  *  6a7ffe25 - Bugfix: one more attempt to get rid of crash when scan
+    has no margins
+  *  2ecdc596 - Bugfix: Order by Mode in Output stage
+  *  96dbb3ea - Bugfix: hide despeckling controls when Color mode is
+    selected
+  *  442f0dfe - Bugfix: page detection could be displayed without fine
+    tune or borders features
+  *  7e4caf0b - Make sure page layouts displayed properly if max sized
+    page removed from project
+  *  617f7c3b - Reset to defaults button in settings dialog
+  *  e8f19b42 - Bugfix for Original alignment
+  *  56d47044 - Rallbacked AutoMargins
+  *  3be79a7c - Bugfix margins' units switch
+  *  581f6c8b - Disable new behaviour of Each other selected to be more
+    compatible with original ST
+  *  2e949083 - Apply to every other selected page for multiple ranges
+    selection
+  *  67861ddd - Hotkeys for navigation between selected pages
+  *  2dbc0f29 - Improved pages highlighting and current page tracking
+  *  26a4492c - Change in [Fix crash for some scans without content
+    margins]
+  *  f555fcb0 - Improve [Hold Space to display original page in some
+    views]
+  *  b1179421 - Fix Maximized state at launch time for Win machines
+  *  3b0f1047 - Fix colorspace format for binary output after dewarp to
+    keep filesize small
+  *  20ab62de - Bugfix for [Hold Space to display original page in some
+    views]
+  *  e5c6e008 - Select pages by their numbers
+  *  7b4c64da - Go to page number command in thumbnails context menu
+  *  8079de5f - Hotkeys for despeckling modes
+  *  b8fdf49e - hotkeys for jumps over N page forward/backfard
+  *  38dd31ea - Settings dialog improvements 2
+  *  1cca6282 - Qt5: fix path to lupdate binary
+  *  86cdd318 - Basic scripts for Linux deb package creation
+  *  cac1bec6 - Foreground threshold
+  *  dd4549e5 - Settings dialog improvements
+  *  32e43696 - Display hotkeys as html table for portability
+  *  bee63c55 - Refuse from initializer_list's in QVector due to
+    MSVS2013 problems
+  *  5c9c6389 - Remove all languages except for russian as they are
+    outdated
+  *  d47a72da - Add some descriptions to settings window
+  *  8f23d07a - Hotkey manager in settings
+  *  0bb84d6b - Hold Space to display original page in some views
+    [experimental]
+  *  9609085a - Ctrl+ double click to copy last created zone to given
+    point
+  *  bc687bd7 - Simple Copy&Paste for a single zone
+  *  01957f0f - Proper move zone interaction
+  *  db4cea13 - Add build date into About dialog
+  *  8b2f3fbf - Refuse from QFlags::setFlag() usage to keep
+    compatibility with Qt 5.x < 5.7
+  *  bca71ed1 - Merge Rectangular and Quadro picture detection modes
+    into one
+  *  261c5888 - Use arrows to move content zone
+  *  d230c135 - Simplify image zones: removing vertex which angle is
+    ~180 degrees
+  *  9b6cb257 - Ignore Ctrl for picture zones except for quadrangles and
+    single dots
+  *  b8517303 - Keep zoom and pos while switching between output tabs
+    (approx.)
+  *  61622a48 - Save as.. context menu for dubug images tabs
+  *  12489450 - Replace all NULL with nullptr
+  *  dedac922 - Move picture zones along axes with SHift+Ctrl and
+    Shift+Meta
+  *  c4350749 - Hold Ctrl instead of Shift to move Content Zone along
+    the axes. Ctrl+Shift to squeeze zone along axes
+  *  8b33a81a - Enforce range-based for loops for PageSequence iteration
+  *  de90ccc5 - Fix sorting at content selection stage
+  *  cc82b23c - Stay on prev page if selected page removed from project
+  *  db9e41b7 - Fix number of thumbnails after Page Split stage Apply
+    To..
+  *  42561bcf - Replace BOOST_FOREACH with range-based for (c++11)
+  *  ae98c342 - Fix empty content rect resetting to full page
+  *  3042db77 - Don't redraw image when page borders changed if content
+    box was deleted
+  *  446a8bbc - Change Remove content box hotkey from Backspace to Del
+  *  d9a0fc74 - Info about zone moving in tooltips
+  *  344e5aed - resize mouse pos panel
+  *  5c3cc0e5 - Hold Shift to move zones in Select content, Picture/Fill
+    zones
+  *  66c7d1e4 - Display mouse pos in same units as page size + status
+    bar style adjustments
+  *  9ee1dde2 - Display mouse position relative to page in status bar
+  *  eda98923 - fix depth perception value display
+  *  5beebd1f - Fix current page saving in project file for pages that
+    were splitted
+  *  15ac5891 - Fix last page selection when project is opened
+  *  f6d2009f - Fix Blue_Dewarp_Line_Vert_Drag for rotated pages
+  *  7e1e53b7 - Better status bar style and text formatting
+  *  d518285c - Physical size of selected page in status bar
+  *  64459ac8 - PageNo in StatusBar + scroll to selected on order change
+  *  c2312fd3 - Regenerate result menu in debug mode
+  *  b896bcd8 - Setting Disable Smoothing for BW Mode
+  *  cfeebd73 - Move Debug setting page to General
+  *  9804fe6e - Better filename ordering
+  *  a3359852 - Update README.md
+  *  1008bb15 - Explicitly enforce a set of libtiff compression codecs
+  *  816226bf - Solve srpintf linking problem in x64 build
+  *  81c21b2b - Keep selected pages when filter or ordering changes
+  *  2977db9f - Correct order providers for more robust incomplete pages
+    sorting
+  *  958b823f - port away from Qt4's QRegExp to Qt5's QRegularExpression
+  *  9b34c15a - fix tiff jpeg and deflate compressions crash
+  *  e379152b - Remove Tiff compression methods unsupported by libTiff
+    4.0.8
+  *  08c062c4 - Rename classes, suppress compilaton warnings
+  *  1549720d - Tiff horizontal predictor in settings dialog (off by
+    default)
+  *  679f42ba - Fix tiff compression for jpeg and deflate
+  *  047c79c0 - Enable horizontal predictor in TiffWriter
+  *  967e4046 - Fix results caching for pages with alignment type ==
+    original
+  *  83fc39a9 - supported filetypes filter is customizable via ini file
+  *  a3e7f26c - Experemantal BMP loader
+  *  acd1b33c - Try to display an image even if it has problems while
+    loading
+  *  704c88f1 - Rollback STE commit 'fix thumbnail duplication '
+  *  929a4049 - Setting for default dpi value
+  *  2c66a6b2 - DPIs list in Fix DPI customizable via settings file
+  *  0e6e9d7e - Setting for default threshold value
+  *  2b54f753 - Fix default sorting order for Output step
+  *  5a6c1cfc - Proper use of invalidateAllThumbnails()
+  *  3f8922f4 - Upgrade PageSplit's Apply Cut functionality
+  *  836faba6 - Improve invalidate Thumbnail perforance
+  *  5bc7c64f - Setting for Start Batch Process dialog
+  *  d2093a57 - Setting for picture detection shape default value
+  *  7ba03f49 - Setting for despeckling default value
+  *  1c740aa8 - Correct title for Apply threshold dialog
+  *  8edb7097 - Setting to control min/max range for bw threshold slider
+  *  657d96f2 - Separate Apply to functionality for Mode and threshold
+    adjustment
+  *  b9b873dd - Experimental UI for last stage of processing
+  *  a1471762 - Fix docking panels behaviour when docking is off
+  *  4de6a5c0 - Uninstall target for make file
+  *  47f31406 - Vertically scrollable filter options
+  *  17e4054b - Improve docking panels setting
+  *  875d1b1f - Few more labels could be selected and copied in About
+    dlg
+  *  ede90a44 - Fix build problems discovered by trying to build on
+    Linux
+  *  0ea6d53f - Remove unused class DentFinder
+  *  e21534ba - Fix tests
+  *  91a51f58 - Fix Beep for Linux in Qt5
+  *  b29f983f - Get rid of the remaining Q_WS_* preprocessor symbols
+  *  f3f4dc67 - Get rid of X11-specific code.
+  *  c73fbab5 - Remove a dependency on a non-existing target in CMake
+  *  296846f9 - Don't use QT5_USE_MODULES on toplevel_ui_sources target
+  *  87b7294c - Compatibility with newer Qt
+  *  91f53a0d - Compatibility with newer CMake
+  *  1d918e38 - Deviant highlighting is now disableable in Deskew,
+    Content selection and Marging stages
+  *  fa1967b9 - Clean some code to disable a part of compilation
+    warnings
+  *  33645c21 - Change hotkeys for switching between stages to Ctrl+1,
+    ..., Ctrl+6
+  *  cbf519c1 - Settings tree now remember expanded/collapsed state of
+    its items
+  *  af61892c - Disable work with qtaccessiblewidgets.dll for Qt >=
+    5.4.0
+  *  1ef21a91 - Require Visual Studio 2013 on Windows.
+  *  ffc3988f - Optimizations for rectangle mode in picture
+    autodetection (mixed mode)
+  *  bd8a95fd - References page is added into About dialog from ST
+    Experimental
+  *  c6c6c36b - Docking panels are disabeled by default
+  *  4c11f979 - CCITTFAX4 Tiff compression is marked as one of defaults
+  *  0cfb70ef - Adapt project auto-save functionality form ST Plus
+  *  b0e47e3c - reset version
+  *  a1679a91 - Optimize grayscale seed-fill by preventing duplicates in
+    the queue.
+  *  729f6d20 - Optimize PolynomialSurface code / remove no longer used
+    code.
+  *  cad72884 - Get rid of remaining mensions of Qt4 libraries.
+  *  d44abbab - Move to Qt5, start using C++11 features, drop MinGW
+    support.
+  *  5b7a2800 - improve tiff compression setting control
+  *  702413b3 - Picture shape and Quadro are disableable
+  *  950ac0b0 - Settings tree supports nested checkable items
+  *  895d671c - Auto-Margins is disableable from settings
+  *  5487c7e9 - Borders panel in content selection task is disableable
+    from Settings
+  *  414a2540 - Fine Tune page corners are now disableable from Settings
+  *  120eda4b - Settings change now invoke updateMainArea to call
+    preUpdateUI of current options widget
+  *  f7c783cd - fix settings keys in settings window
+  *  f2bc00f5 - Fix language files discovery in settings window
+  *  15941aa1 - Export menu command disabled if project isn't open
+  *  71b29451 - Disable some FancyFilter functionality to keep project
+    buildable with VS 2008
+  *  453b5abe - Amend STE behaviour to avoid page reload at any content
+    rect change
+  *  7f1f3819 - Improve Export dialog
+  *  1933848d - Fix Auto dewarping for pages with undefined distortion
+    model
+  *  3bb95d35 - Fix beep at the end of output processing for Linux
+  *  58f1ff7a - New settings framework: part 1
+  *  ca05a3a8 - Hide OpenGL option if binary is compiled without OpenGL
+  *  06ebdb21 - Fix dewarping bug cought by static analyser
+  *  01f0c243 - App language selection setting
+  *  378ac81f - Setting to disable Docking for panels
+  *  30b9b8c7 - Remember my choice for StartBatchProcessingDialog
+  *  51ddd3f7 - A trick to  call App Settings initialization functions
+    anywhere - fix
+  *  36ffa21f - A trick to  call App Settings initialization functions
+    anywhere
+  *  4d05eb90 - Disable Apply Cut functionality
+  *  dd170070 - Discard commit stretch filled holes and set threshold to
+    32 from ST Enhanced
+  *  61ed985d - Discard commit Scantailor Featured -
+    Dont_Equalize_Illumination_Pic_Zones as not needed
+  *  1d4e8834 - Hide picture shape options if auto picture detection
+    layer is disabled
+  *  05690603 - Fix Manually dewarped image geeration in Mixed mode with
+    Normalization of Illumination disabled
+  *  5ed994b7 - Include libstdc++-6.dll and libwinpthread-1.dll in Win32
+    installer
+  *  b56bb316 - Color layer in mixed mode
+  *  35e96ec1 - Fix Export function crash
+  *  d6686ed0 - Page sorting for output stage
+  *  82f1e20f - Dewarp: reset distortion model from context menu
+  *  60aec1d9 - Fix crash for some scans without content margins
+  *  2846096d - Rename application to Scan Tailor Universal
+  *  26e0d69c - fix typo in url.
+  *  18365873 - Created a README.md from existing online sources
+  *  e2fb5f6e - Fix typos in comments and documentation
+  *  cb101117 - respect CFLAGS and CXXFLAGS
+  *  a58b7d20 - Add Ctrl+Shift+S as (standard) “Save as” shortcut
+  *  aded55c9 - Use 'value()' instead of 'operator[]()' to avoid
+    accidental setting of keys
+  *  b1bcfce9 - Compatibility with clang compiler.
+  *  f1beea3d - Fix spelling in error message.
+  *  be52a169 - Fix Relinking tool only applying the last operation.
+  *  f31b9f3c - Fix the update_translations target not processing all
+    the source code.
+  *  110a6d61 - Introducing RastLineFinder - finds lines in 2D point
+    clouds.
+  *  1a5d3304 - Add more operations to PriorityQueue.
+  *  1f1a5815 - Scantailor Featured -
+    Auto_Dewarping_Vert_Half_Correction
+  *  bbfb510f - Scantailor Featured - Marginal_Dewarping
+  *  50f7486f - Scantailor Featured - update to Quadro_Zoner
+  *  10c85675 - Scantailor Featured - update to
+    Dont_Equalize_Illumination_Pic_Zones
+  *  0aa54d14 - Scantailor Featured - update to
+    Original_Foreground_Mixed
+  *  7a868eb4 - Scantailor Featured - Quadro_Zoner
+  *  e6a6f25a - Scantailor Featured - Picture_Shape_Bug
+  *  84108419 - Scantailor Featured - Picture_Shape
+  *  e10a8688 - Scantailor Featured - Original_Foreground_Mixed
+  *  f595b721 - Scantailor Featured -
+    Dont_Equalize_Illumination_Pic_Zones
+  *  1f52b744 - Scantailor Featured - Auto_Save_Project
+  *  3e60ab3a - Scantailor Featured - Export_Subscans
+  *  c4176eca - Scantailor Featured -
+    Ortho_Corner_Move_Square_Picture_Zones
+  *  08dacc74 - Scantailor Featured - Square_Picture_Zones
+  *  b38fb7b4 - Scantailor Featured - Blue_Dewarp_Line_Vert_Drag
+  *  53a57237 - Scantailor Featured - Manual_Dewarp_Auto_Switch
+  *  d2f10802 - Scantailor Featured - Delete_3_Red_Points
+  *  aec5e564 - Merge  Fix compilation with GCC 6
+  *  fcdba81c - Always use fully qualified boost::lambda::{bind,_1,_2}
+  *  078ddfe0 - applied fix-qt4-parsing-error-on-libboost.patch from
+    Debian
+  *  3dc5ba7e - fix: reset deps if apply in select_content
+  *  2e89e23d - added key shortcuts
+  *  5dd5e64f - fix: last selected page get params from last page after
+    play
+  *  fd1b72cd - --tiff-force-keep-color-space
+  *  b54713cf - --tiff-force-grayscale
+  *  6cf8b9d0 - fix crash when apply dialog has no old params
+  *  a5e096aa - comment out debug info
+  *  1ff89e92 - deskew: check deps
+  *  feac2db1 - select_content: use params and deps
+  *  d68d4a60 - --tiff-force-rgb
+  *  17a81102 - fix thumbnail duplication
+  *  6aa14c09 - --force-disable-page-detection option
+  *  5ab2a8f0 - --deskew param rewrites what is in project file
+  *  0bfae64c - fix: content_rect: disapearing content box
+  *  d74b5712 - fix: select_content: manual button
+  *  a37a9ef5 - do not show incomplete thumbnail  for images in manual
+    mode
+  *  3cc5ebe2 - fix: persistent question mark on thumbnails
+  *  9275e058 - fix: select_content disable button from manual
+  *  18c57b8b - update czech translation
+  *  5adf0853 - update translations
+  *  15c54245 - fix apply texts
+  *  7c9132bb - save pageRect
+  *  5f6feee3 - use CommanLine params as default for page detection,
+    content detection and finetuning
+  *  bdcb8977 - default margins for new pages
+  *  2592e41a - DPI can not be 0
+  *  a349543f - Croatian translation
+  *  404aa4d5 - Default color mode as static function
+  *  f5dd4dfe - default gui dpi and color_mode from cli
+  *  177194a0 - allow to disable check if ready for output
+  *  189f2e5e - fix redrawing thumbnails
+  *  14f63cb1 - gui for borders
+  *  ed090549 - set page-borders from command line
+  *  a6d71f78 - apply content_box if selected in manual mode
+  *  0294e885 - apply split: using update
+  *  ea43f914 - fix split change for all pages
+  *  b3fad552 - apply cut lines if selected
+  *  a42479eb - vertical stretch set to 1
+  *  8b27e2a6 - thumbnails can be aligned horizontally if widget size
+    changes
+  *  7c9ee0ea - typo
+  *  c6e400a7 - process All pages as default
+  *  8019c213 - every other split
+  *  e45d83ed - fix deviation and change redoverlay to red *
+  *  6465874c - --match-layout-default=true
+  *  c55d2442 - disable page detection when manual mode
+  *  e9c56268 - select_content: every other page
+  *  c79866b4 - page_layout: every other
+  *  ed866664 - fix_orientation apply on every other
+  *  285fda15 - deskew every other page
+  *  d8a06ff6 - fix win
+  *  e4d35591 - fix params
+  *  1f3fb9c7 - cli params: fix has* functions
+  *  058f775d - gitignore
+  *  aaba89da - start batch processing shows now dialog with page range
+  *  520e5a22 - allow wrong dpis
+  *  886dfb45 - PageFinder: fix fine-tuning and params save/load
+  *  a0a84fe0 - cli: fix: don't load other files than supported images
+  *  c751be70 - dockable: no close button
+  *  1a23bf5d - dockable thumbnails and params
+  *  6c2862e3 - PageFinder: constrain fine tuning with page-detection-
+    box
+  *  074a0aad - deskew: apply to every other
+  *  3454212c - page-detection: more thresholding algorithms
+  *  ca462dc2 - page-detection: select better thresholding algorithm
+  *  4adb2aee - add window-title parameter
+  *  a9cda2fc - save params for all filters from cli
+  *  6ec6b22a - fix: language option
+  *  1b6822bf - fix: save/load automargins params
+  *  354e2566 - language switch: start gui with given language
+  *  cf570528 - cli fix: allow disable-content-text-mask option
+  *  e42e7dab - Merge branch 'content' into enhanced
+  *  82ecfe44 - cli fix: allow picture-shape option
+  *  4b5186c7 - fix cmake
+  *  fe4ba582 - support for tiff compression
+  *  82993140 - update enhanced version information
+  *  88583d15 - Merge branch 'enhanced' into deviation
+  *  fca94928 - Merge branch 'matchlayout' into enhanced
+  *  f009a58e - log only when debug
+  *  8905eb15 - log only when debug
+  *  572cc2b5 - fix: dont emit reload request on thmb change in
+    pagelayout
+  *  6c0434f0 - Merge branch 'deviation' of
+    git://scantailor.git.sourceforge.net/gitroot/scantailor/scantailor
+    into deviation
+  *  751226a4 - paint in red pages which does not match alignment
+  *  5c9c906b - fix default values from old project
+  *  2af05717 - merge with pagedetect
+  *  e81d693f - set content deviation threshold from cli
+  *  97a2c222 - update statistics after batch is completed
+  *  1a5a20dd - set skew deviation threshold from cli
+  *  0b858faf - paint deviant thumbnails in red
+  *  e07962ac - compute deviation for skew and content filters
+  *  4e356786 - Merge branch 'pagedetect' into enhanced
+  *  74478984 - fix reset parameters for select_content
+  *  2c4f3bdc - fix default values from old project
+  *  4f00bcf3 - set content deviation threshold from cli
+  *  69072bc0 - update statistics after batch is completed
+  *  08b757d7 - set skew deviation threshold from cli
+  *  8510a43f - paint deviant thumbnails in red
+  *  38b50523 - compute deviation for skew and content filters
+  *  76d0ac76 - Merge branch 'pagedetect' into enhanced
+  *  361c857a - fix: scale page_rect correctly
+  *  fa802e38 - Merge branch 'pagedetect' into enhanced
+  *  e80fb9ac - matchlayout tolerance options
+  *  a87c6a66 - Merge branch 'pagedetect' into enhanced
+  *  8aebea7d - Merge branch 'automargins' into enhanced
+  *  daeeda77 - Merge branch 'pictureshape' into enhanced
+  *  bf90389c - Merge branch 'automargins' into pagedetect
+  *  b5c04722 - Merge branch 'master' into pictureshape
+  *  3139d409 - Merge branch 'master' into automargins
+  *  37c8dd8a - Merge branch 'matchlayout' into enhanced
+  *  596d03c1 - Merge branch 'master' into pagedetect
+  *  56c30af6 - Merge remote-tracking branch 'origin/pagedetect' into
+    pagedetect
+  *  ac86fab9 - fix: init variables in constructor
+  *  437e6589 - rename no-content-text => disable-content-text-mask
+  *  f6eb7af6 - Merge branch 'master' into content
+  *  6a159864 - tune edge detect params
+  *  cacecbfd - update margins
+  *  ab0f2591 - Fix a bug introduced by trying to catch more out-of-
+    memory situations.
+  *  733c200b - Merge remote-tracking branch 'origin/pagedetect' into
+    pagedetect
+  *  d6fe22e7 - Merge remote-tracking branch 'origin/master' into
+    pagedetect
+  *  b0b61a53 - fix gui for automargins
+  *  067773c2 - Make opposite margins linked settings persistent.
+  *  f58f5d23 - Catch more out-of-memory situations.
+  *  5b9db7d7 - allow enable/disable fine tune corners
+  *  eb0138dd - display pagerect
+  *  247ab763 - fix button switching
+  *  82776253 - added binary threshold peakThreshold function
+  *  d34f33b4 - disable page detection by default (orig. behaviour)
+  *  bdc38f5c - Merge branch 'master' into pagedetect
+  *  49bb5c08 - cli: file names are collected from different sources
+  *  c7927aec - clean includes in PageFinder.cpp
+  *  078d7d3a - Fix 'Batch deskew wrong' bug.
+  *  b8de350d - Fix rendering artifacts when scrolling in the Relinking
+    dialog.
+  *  10af6b3b - When browsing for a substitution path for a missing file
+    / dir, start at the project dir.
+  *  de6ffe8f - If it looks like a UNIX path, display it like that in
+    Relinking dialog.
+  *  d2f1b585 - Avoid creating unwanted directories when loading
+    projects requiring relinking.
+  *  db082ca2 - New translation: Brazilian Portuguese.
+  *  d1ee8d5b - Fix a bug which was often causing picture zones not
+    being excluded for binarization purposes.
+  *  54019cbc - count black pixels on edge
+  *  8c9094ed - ui for automargins
+  *  795fdf20 - ui for content detection
+  *  96b7274f - fix dewarping
+  *  eae19597 - fix cli params checking
+  *  b45e7b83 - fix: spaces to tabs
+  *  088f9f92 - check if cli params are valid
+  *  3216d114 - cli interface to page detection
+  *  5c7613e3 - calcMarginsMM
+  *  35e0c7f6 - implement page detection
+  *  fc8db0ce - Merge branch 'master' into pagedetect
+  *  01e7579b - Merge branch 'master' into automargins
+  *  e34c000c - Fix cyan ghosting in areas inside the content box but
+    outside the page.
+  *  a314881a - Update Spanish translation.
+  *  04c331fa - Add support for custom debug image viewers.
+  *  31f91ed7 - a switch to disable using text mask in content detection
+  *  ed41bc49 - Add a missing return in so far unused code.
+  *  9d112688 - Fix build problems related to *.ui files.
+  *  c8412dd2 - Fix a typo in Spanish translation.
+  *  6a29637a - Set version to 0.9.11
+  *  939e49d8 - Russian translation updated.
+  *  bf6d0887 - Fix a minor visualization problem on Windows XP.
+  *  da0a96af - Reduce memory consumption when loading TIFF images.
+  *  df100df9 - Bulgarian translation updated.
+  *  d0c7b17f - update czech translation
+  *  15824898 - Fix a syntax error in a translation file.
+  *  37a6e0cc - Merge branch 'master' of
+    ssh://scantailor.git.sourceforge.net/gitroot/scantailor/scantailor
+  *  3d3967aa - Japanese translation updated.
+  *  a3b48bb5 - Ukrainean translation updated.
+  *  682c677e - Synchronize translations with source code.
+  *  6ffe2e19 - Remove old, unused code.
+  *  a02cd61c - Fix loading Qt plugins on systems where we don't
+    distribute them ourselves.
+  *  bff6ebc3 - Factor out the common code in scantailor and scantailor-
+    cli into a convenience library stcore.
+  *  e261910a - Fix the recently broken MinGW build.
+  *  a96a01de - Make sure necessary Qt plugins are copied to the staging
+    directory.
+  *  6e62b855 - Get rid of any references to Qt installation directory
+    from library path.
+  *  cdcea03d - Ensure you aren't able to insert multiple instances of
+    the same file.
+  *  05eca261 - Add a missing header and fix visualization problems on
+    Linux introduced by last commit.
+  *  57606fc2 - Project portability through resource re-linking.
+  *  64a19476 - Mention Spanish and Ukrainean translators in the About
+    dialog.
+  *  bc4e570d - New translation: Spanish
+  *  1ad99a5e - Fix a possible crash.
+  *  a1d315ea - Merge branch 'master' into pictureshape
+  *  863dd518 - Merge branch 'master' into pictureshape
+  *  e69c5687 - Handle out-of-memory situations, giving users the
+    opportunity to save their project.
+  *  1f295a86 - Merge branch 'out-of-memory'
+  *  ba6972d3 - Set version to 0.9.11pre
+  *  13e3ef9d - Make it possible to fix input DPIs at any time.
+  *  e27510ab - Support building a 64-bit version under Windows.
+  *  a25036fb - Fix build issues with certain version combinations of
+    boost and gcc.
+  *  0c865a82 - Support building new versions of boost on Windows.
+  *  9d683d2e - fix zero division if agg content is not known
+  *  45284735 - fix III
+  *  728ebd22 - fix disapearing images in page layout filter II
+  *  80419742 - fix disapearing pages after alignment mode changed
+  *  0f9f04bc - Merge branch 'master' into automargins
+  *  01a18269 - Merge branch 'master' into matchlayout
+  *  b4a2f2d0 - Merge branch 'master' into pictureshape
+  *  4d198186 - Handle out-of-memory situations by offering to save the
+    project.
+  *  024013b2 - Allow insertion of multiple files (preliminary version).
+  *  70ebfaa8 - Fix build errors on platforms where qreal is not double
+    (that is ARM).
+  *  4c1a4935 - New translation: Ukranian
+  *  cd6409d6 - Fix typos and spelling errors in the Russian
+    translation.
+  *  4900f754 - Fix boost not being built when building dependencies on
+    Windows.
+  *  bde4d14d - Hopufully fix infinite recursion in spline sampling.
+  *  e4975115 - Fixed typo.
+  *  d96c68c1 - Japanese translation updated.
+  *  de431749 - Fix windows build problems.
+  *  0e16f6fc - Move the license text from AboutDialog.ui to resources.
+  *  d4de140b - fix: agg borders if deltas > 0.1
+  *  bda82049 - Merge branch 'master' into automargins
+  *  e8937b66 - agg borders only if deltas > 1.0
+  *  83cb8048 - Set version to 0.9.10rc1
+  *  b5bad771 - Regenerate *.ts files; update Russian translation.
+  *  f748eb8f - Add apply modes Every other page and Every other
+    selected page to the Margins stage.
+  *  854a170a - Rename the command-line version from scantailor-batch to
+    scantailor-cli.
+  *  bd1a26b2 - Make About dialog more easily translatable.
+  *  bb25149e - Turn Order by split line count into Order by split type.
+  *  c81689ca - Use dynamic rather than static linking wherever it makes
+    sense.
+  *  fd04872e - update russian translation
+  *  af62d295 - update translations
+  *  cccfc405 - fix bug: scantailor/filters/page_split add int
+    m_splitLineCount to class UpdateAction
+  *  a413bf7f - Merge branch 'master' of
+    ssh://scantailor.git.sourceforge.net/gitroot/scantailor/scantailor
+  *  43d6a97b - page_split::Filter : Order by split line count
+  *  957e3302 - Fix a possible crash on despeckling.
+  *  5b3a1bdf - Enlarge link margins buttons on the Margins stage.
+  *  3de9904b - Fixed deskew re-processing bug.
+  *  0866de1a - Fix failure to reserve pure white and pure black colors
+    for B/W content.
+  *  9f132643 - refactoring: remove unused resultRect arg from
+    calcSoftMargins
+  *  94d3d398 - fix: use the right content rect for calcSoftMargins
+  *  c9d84818 - Merge branch 'master' into matchlayout
+  *  a17748e7 - Workaround a context menu on a zone issue on OSX.
+  *  bc9466a0 - Bulgarian translation updated.
+  *  df34c32b - clip gray histogram
+  *  b938f6c5 - stretch filled holes and set threshold to 32
+  *  81fca4a5 - Merge branch 'master' into automargins
+  *  be1043f2 - fix cli help alignment
+  *  d2f522a5 - PICT: change picture shape options and turn on
+    visibility setting
+  *  5f152172 - PICT: update image if picture shape changed
+  *  787cc2fe - save pictureShape
+  *  842ba589 - PICT: added ui support
+  *  bdf3e1a0 - PICT: added CLI interface for PictureShape
+  *  ca750a23 - fix rectangularize binary images
+  *  590e431a - rectangularize areas
+  *  6ca4be48 - New snake evolution method.
+  *  4695adfe - debug info
+  *  658e6291 - ALIGN: update content rect only for aligned pages
+  *  709b1950 - Fix another gcc warning.
+  *  8810be99 - Get rid of some gcc warnings.
+  *  9e2d738d - ALIGN: display debug info only ifdef DEBUG
+  *  1b630df7 - ALIGN: update content rect together with content size
+  *  8444edb4 - Merge branch 'master' into automargins
+  *  0eaf6169 - Fix build issues with certain combinations of gcc +
+    boost.
+  *  1993fb1e - ALIGN: modify the way how the auto align works
+  *  9c4dc30d - CLI: added options for autoalign
+  *  d745c88b - Add a missing include.
+  *  0ef61777 - Set version to 1.0.0beta11
+  *  1e21a811 - Introduce yet another mode weak nearest to transform()
+    and transformToGray()
+  *  7806a9cc - New text line segmentation algorithm.
+  *  be8d9554 - Remove implicit conversion from VecNT to T* and T const*
+  *  e33a2a59 - New class: GridLineTraverser
+  *  21e96142 - Add rasterOpGeneric() signatures operating on a
+    BinaryImage.
+  *  aacdec31 - Improve API docs.
+  *  13809334 - Fix constructing MatMNT from a MatMNT with a different
+    T.
+  *  442629c1 - Add default constructor, isNull(), swap() to Grid<T>
+  *  94718ac1 - Introducing a generic implementation of the Sobel
+    operator.
+  *  f26ceeb4 - Fix improper data type being used in gaussBlurGeneric()
+  *  5d8eb0db - Rework the spline fitting framework.
+  *  e11af2e9 - New classes: LinearFunction and QuadraticFunction.
+  *  79573efe - Introducing the automatic differentiation framework.
+  *  52749d56 - Better detection of vertical boundaries.
+  *  a9304916 - Make MatrixCalc aware of MatT, VecT and VecNT.
+  *  3369d4c5 - New classes templates: VecT and MatT.
+  *  64198ece - Add data() member for VecNT.
+  *  bfc2eec8 - Fix a bug in trans() in MatrixCalc.
+  *  f99719ef - Merge branch 'master' into automargins
+  *  5bd37876 - ALIGN: added experimental support for original alignment
+    based on aggregated content rect
+  *  b6b7ad31 - CLI: auto and original added to alignment options
+  *  c57a42d1 - Fix compiler warnings.
+  *  e335c884 - Merge branch 'master' into automargins
+  *  ee7184a3 - Fix missing parentheses in the last commit.
+  *  3e123dcd - Fix a problem with applying manual deskew.
+  *  36fa7678 - Japanese translation updated.
+  *  419d221e - Update translations Aggressive despeckling: correct
+    russian translate
+  *  c6bd9fd4 - added short description for --layout option
+  *  12fdaf18 - Add scantailor-batch.exe to the Windows installer.
+  *  b2ea8743 - Fix scantailor-batch being a GUI instead of a CLI
+    application on Windows.
+  *  774cf49e - Fix a crash on despeckling.
+  *  9d92cfb5 - automargins: fix after merge cli to master
+  *  3470caa1 - Merge branch 'master' into automargins
+  *  fb7ceae5 - matchlayout: fix after merge
+  *  c7ac13b5 - Merge branch 'master' into matchlayout
+  *  484234b2 - Update the About dialog.
+  *  07f0dab8 - setup cli args by filters
+  *  12d809f0 - select content filter does not need cli
+  *  5d9acc30 - get CommandLine instances as const&
+  *  4c618d97 - Merge branch 'master' into cli
+  *  0fc36838 - make contains private and create accessors
+  *  df4a5a9a - throw std::exception
+  *  b179ecec - make isGui non-static
+  *  25572404 - make accessors const
+  *  6076a078 - fix comments and class formating
+  *  25e26574 - Avoid trimming of diactrics and trailing punctuation by
+    content box.
+  *  bc8b1d98 - Fix XSpline::pointAndDtsAt()
+  *  73610101 - --match-layout
+  *  f4d8e333 - remove --match-layout
+  *  08a8290f - refactor CommandLine
+  *  24a8005c - page_layout::Settings::defaultHardMarginsMM
+  *  2c5a47e6 - move MainWindow::creteThumbnailCache to Utils
+  *  609f83a8 - fix output filer lastTab
+  *  471288a8 - refactor: clean the mess from autoalign
+  *  1e43f852 - refactor: ConsoleBatch variables
+  *  61d93b35 - fix: reflect IntrusivePtr changes
+  *  afffe936 - Merge branch 'master' into cli
+  *  fde21475 - Extend the display area on the Dewarping tab, as we may
+    need to see the top and bottom edges.
+  *  ffd114c6 - New utility function: PolygonUtils::convexHull()
+  *  7f0d4559 - Extend traced text lines before applying snakes.
+  *  013e8a60 - Avoid using QPolygonF::translated(), as that requires Qt
+    4.6
+  *  fa781094 - Remove implicit conversion from IntrusivePtr<T> to T*
+  *  549ead74 - fix
+  *  4b118086 - Merge branch 'master' into automargins
+  *  ac177acc - Merge branch 'master' into cli
+  *  0ec8f3a9 - Fix improper assertion introduced in the last commit.
+  *  25c18f34 - Represent margins-based cropping and scaling to output
+    DPI in the ImageTransformation class.
+  *  2c565e1c - minor help change
+  *  b23fd0ae - make it compile after merge with master
+  *  a2119fd2 - Merge branch 'master' into cli
+  *  f4b999f7 - --start-filter and --end-filter options
+  *  c367f051 - cli: catch and print errors
+  *  624695cc - fix: working short switch with value
+  *  e4c0b3ce - fix: page_split works in cli
+  *  c91b8422 - cli can read and write project files
+  *  444fea9c - Set version to 1.0.0beta10.
+  *  f8942f69 - Make spline sample flags provided by the spline itself
+    rather than guessed by SplineFitter.
+  *  71699964 - Add a VirtualFunction with 3 arguments.
+  *  17be8443 - Move XSpline to global namespace.
+  *  aeddf7d3 - Trace top and bottom page edges to help dewarping.
+  *  fb0b8100 - New utility function: lineBoundedByRect()
+  *  a6f4b059 - Fix linux build.
+  *  e75b875e - --output-project, -o: create project file if requested
+  *  a3982b52 - set gui flag in main file
+  *  3430af2c - New utility function: lineIntersectionScalar()
+  *  ce44c79b - New method ToLineProjector::projectionVector().
+  *  5d24b6d4 - Generalize gaussBlurGeneric() even further.
+  *  01ce17d5 - The IntegralImage(QSize const&) constructor should be
+    explicit.
+  *  9e48bc25 - Fix a typo in comments.
+  *  2c62736d - Refactor dewarping code.
+  *  d3e060b4 - cli mem fix: cache only image aspect ration
+  *  00e042a7 - no UiUpdater in cli
+  *  56b54456 - Fix radio button behaviour on the Change Dewarping
+    dialog.
+  *  8124439b - removing dependency on running x-window
+  *  0e46b332 - automargins
+  *  daea11f5 - remove auto content alignment code
+  *  aa56d0ef - change some parametrs in page layout
+  *  8d865319 - tune realign: we want more probably hcentr then vcentr
+  *  978f2dff - --content-detection=<cautious|normal|aggressive>
+  *  456ddc31 - auto content realign if content mass is too small
+  *  e73ac6da - Merge branch 'master' into cli
+  *  b368db67 - border detection and new align type: original
+  *  46bdc48e - Refactor the spline fitting framework and add some
+    tests.
+  *  b400aece - Make spline fitter operate on a const ModelShape.
+  *  73b5267f - cli: setup: image_cache
+  *  90311837 - cli: --match-layout-tolerance
+  *  821458fd - remove non working page_split-cli-test code
+  *  d9950031 - split main.cpp and create scantailor-batch executable
+  *  1444fe86 - move cli settings from filters to ConsoleBatch class
+  *  49e75502 - Build fix.
+  *  4bd9bf5c - Slovak translation updated.
+  *  d429dce4 - Merge branch 'master' into cli
+  *  f998a630 - cli: --margins, --alignment, --match-layout
+  *  0f8b2652 - cli: --content-box
+  *  e1ff6c65 - cli: --orientation, --rotate, --deskew
+  *  afcc320a - cli: --depth-perception
+  *  73c0d19a - cli: --threshold, --despeckle; --dewarping
+  *  8227920f - cli: --white-margins, --normalize-illumination
+  *  3e54a8a2 - --color-mode
+  *  8f9875fd - --output-dpi
+  *  75f05c6f - page layout is not working :-(
+  *  9c3aaf44 - fix: segfault on the end caused probably by destructor
+  *  7d751fa7 - Get rid of a compiler warning.
+  *  2ee6d133 - Make Scan Tailor include directories go before the
+    system ones.
+  *  9d15cc65 - simulate click only on last two filters: it seams to be
+    enough
+  *  bffcb5a0 - --layout option
+  *  4ccf9385 - big fix: no more background tasks
+  *  020d5857 - Hopefully fix problems linking to qjpeg plugin when
+    building with MinGW.
+  *  f2bdfe1c - cli --rotate
+  *  80936526 - DPI option
+  *  abe38da0 - added --layout-direction option
+  *  6c190c6d - CommandLine really parse cli
+  *  e2d94174 - CommandLine objects behaves as a singleton class.
+  *  a31a505f - add preprocessor option DEBUG_CLI
+  *  6ff9749d - experimental command line parser
+  *  f4bc0ad7 - Simple command line interface
+  *  5140faba - Slovak translation added.
+  *  b61ff5f9 - Polish translation updated.
+  *  c30113c9 - Fixed typo.
+  *  02b36d86 - Updated Japanese translation.
+  *  b17633f6 - Merge branch 'master' of
+    ssh://scantailor.git.sourceforge.net/gitroot/scantailor/scantailor
+  *  17173d95 - change to OutputFileParams::matches: to when moving the
+    project with one computer on other did not be needed anew to output
+    all scans
+  *  f232d86e - Add Czech translation.
+  *  c3d3658d - Set version to 1.0.0beta9
+  *  b0b0c174 - Auto-detected dewarping grid is now editable.
+  *  a7ce3698 - Don't crash when top or bottom line on a grid is reduced
+    to a point.
+  *  8de44d10 - Fix a bug in vertical bounds detection.
+  *  9219541f - Don't crash on extreme distortion models.
+  *  adc56363 - Introducing the spline fitting framework.
+  *  1b79772e - Various improvements for the MatrixCalc class.
+  *  ebb16f25 - A better epsilon value for the linear solver.
+  *  9509c105 - Make Grid<T> copyable.
+  *  1952584c - New class MatMNT for matrices with pre-defined
+    dimensions.
+  *  8a6ff35b - Update Russian translation for controls
+  *  04cfb882 - make update_translations
+  *  961e5ef9 - Merge
+    ssh://scantailor.git.sourceforge.net/gitroot/scantailor/scantailor
+  *  b87a2143 - Added Apply dialog box to deskew
+  *  01316dbd - Merge branch 'master' of
+    ssh://scantailor.git.sourceforge.net/gitroot/scantailor/scantailor
+  *  8c20a15f - Shifted content boxes equally with center of each page.
+  *  07635f52 - Add Label of the threshold binarization; the task of the
+    sign to need of the output (the symbol ? on scan miniature) when
+    change the threshold binarization
+  *  88eae308 - New translation: Polish
+  *  444fdb61 - Add version to the About dialog and fix a typo.
+  *  7d2b6024 - Made page params to be set anytime.
+  *  1d89435f - commit missng files.
+  *  1987e1b7 - Added Apply dialog box to Select Content
+  *  17af1935 - Set version to 1.0.0beta8
+  *  d6d255cc - Fix a crash with auto-dewarping on pages without a
+    content box.
+  *  758dabce - Added *.h.moc files to .gitignore
+  *  7bc12d74 - Fixed bug in Russian translation
+  *  5d14f244 - Fixed bug in traditional Chinese translation
+  *  f3bdb219 - Updated scantailor's translation master.
+  *  8793fe2b - Added authors to traditinal Chinese translation
+  *  a0ee2ebd - Added authors to Russian translation
+  *  a11263da - Added authors to Japanese translation
+  *  19d3359a - Added authors to Italian translation
+  *  63fd9aca - Added authors to French translation
+  *  5cb169ed - Added authors to Bulgarian translation
+  *  d31fba3f - Fixed German translation
+  *  02c4e2b9 - Added *.qm files to .gitignore
+  *  62769b1e - Removed some new lines from AboutDialog.ui
+  *  43a7d5d1 - Added additional translators to German translation.
+  *  d2c7fca8 - Removed notr attribute for Lead Developer and Authors,
+    because there're translations for it.
+  *  63406016 - Set version to 1.0.0beta7
+  *  5654c497 - Better region segmentation for dewarping.
+  *  3324f844 - Fix a problem with non-padded grids.
+  *  7de1d306 - Better error function for representative line selection.
+  *  223c65f4 - Fix some methods unused until now and make write() and
+    transWrite() return *this.
+  *  92d09424 - Updated line numbers of German translation's location
+    tags
+  *  91e27160 - added CMakeFiles to .gitignore
+  *  cea5e253 - added translations for the OutputChangeDewarpingDialog
+  *  5d63a3a8 - Set version to 1.0.0beta6
+  *  54c74df0 - Better detection of edge regions.
+  *  fd2c5a00 - Some tuning for snake parameters.
+  *  f61c63e5 - Use RANSAC for selecting two representative curves.
+  *  c20bca78 - Yet another improvement for vertical bounds detector.
+  *  f9398a6b - Avoid over-extending text lines prior to tracing them
+    with snakes.  Also fixes a possible crash.
+  *  a58fad9f - Set version to 1.0.0beta5
+  *  cf7daf84 - More robust detection of vertical lines.
+  *  7f842d61 - Fix a crash with auto-dewarping in color/grayscale
+    output mode.
+  *  b34718e9 - Set version to 1.0.0beta4
+  *  6713cf2b - Be more robust in handling invalid distortion models.
+  *  b3a2ee5b - Link to libXrender explicitly.
+  *  4d66cad8 - Set version to 1.0.0beta3
+  *  a56674d8 - Fix a bug in vertical bounds detection.
+  *  75c985bc - Fix distorted output in auto-dewarping mode if not
+    enough text lines could be traced.
+  *  9006a427 - More robust behaviour in case the detected vertical
+    boundaries are very close to each other.
+  *  51cb24c0 - In Qt 4.7.x, QtGui depends directly on libjpeg.
+  *  6e993252 - Set version to 1.0.0beta2
+  *  e439cd42 - Fix a crash with auto-dewarping when there were not
+    enough text lines to trace.
+  *  12de5656 - Fix some 64-bit issues.
+  *  7957eca9 - Get rid of bitfields in TextLineTracer - they might be
+    causing problems with 64 bit gcc builds.
+  *  1c66d74e - Build fixes.
+  *  06c7241a - Set version to 1.0.0beta1
+  *  602b91b5 - Next generation dewarping: initial support for automatic
+    dewarping.
+  *  b8905a64 - New utility function: sidesOfLine()
+  *  c61d0ef8 - More methods for ToLineProjector.
+  *  c1d85432 - Introduce BinaryImage::toAlphaMask() method.
+  *  a9155690 - Introduce gaussBlurGeneric template.
+  *  88054072 - Work towards being able to do 64bit builds on Visual
+    Studio.
+  *  201dab85 - New class template: Grid
+  *  9b0db352 - New class: PriorityQueue
+  *  016a63e5 - Work in progress on text line tracing.
+  *  dc2261da - Work in progress on text line tracing.
+  *  f312e6d3 - Switch stretchGrayscaleRange() from QImage to GrayImage.
+  *  dfc9b9ca - Fix passing a gcc option to msvc.
+  *  3d1b57af - Merge branch 'master' of
+    ssh://scantailor.git.sourceforge.net/gitroot/scantailor/scantailor
+  *  0bd190ee - Don't let inserting files when no project is open.
+  *  591bf9e7 - Fix locale name for traditional chinese.
+  *  5dc169e8 - Support build directory on a different drive than the
+    source directory.
+  *  e07fbe83 - Traditional Chinese translation added.
+  *  646e8b13 - Update the Mac OS X icon.
+  *  ecce31db - Mention the Italian translator in the About dialog.
+  *  dec55abd - Italian translation added.
+  *  1299004f - Mac OS X packaging scripts.
+  *  751e9e3e - Update libtiff patching script and the related
+    documentation.
+  *  7a5bd86c - Update the list of translators.
+  *  4e1b8bd6 - Workaround crashes or hangs when page sorting.
+  *  34a5e61c - French translation added.
+  *  290bd6f0 - Work in progress on next generation dewarping.
+  *  0aefb304 - Work in progress on next generation dewarping.
+  *  c42803dc - Compatibility with boost 1.44
+  *  fca87933 - Fix improper calculation of cut-off page outline.
+  *  162ae019 - Merge branch 'master' of
+    ssh://scantailor.git.sourceforge.net/gitroot/scantailor/scantailor
+  *  4f769670 - German translation updated.
+  *  604ea037 - Fix a bug with a page re-appearing after being removed
+    from project half by half.
+  *  6945319c - Fix build problems.
+  *  b2a84810 - Fix any clicking on the Split Pages stage causing
+    restoration of a previously deleted half-a-page.
+  *  50bbe0b5 - Initial work in text line tracing.
+  *  e49c7259 - Replace std::queue with FastQueue where it makes sense.
+  *  6b297dd0 - Hopefully resolve build problems with older versions of
+    gcc.
+  *  18a80bdb - Add another missing include.
+  *  31e2eeb8 - Add another missing include.
+  *  072e1c9c - Add a missing include.
+  *  24c24405 - Optimize morphological reconstruction.
+  *  a46d9310 - Work in progress on next generation dewarping.
+  *  d1086a52 - Mention the German translator in the About dialog.
+  *  8ef02652 - Work in progress on next generation dewarping.
+  *  ec90f7f6 - Fix object dragging behaviour.
+  *  57f2651c - Fix build errors and warnings from gcc.
+  *  3548893c - Merge branch 'master' of
+    ssh://scantailor.git.sourceforge.net/gitroot/scantailor/scantailor
+  *  78de88af - Merge branch 'wip'
+  *  ef1b39c5 - Speed up ReverseArcLengthMapper.
+  *  0346e9a0 - Work in progress on next generation dewarping.
+  *  70122ced - Optimize HomographicTransform for 1-dimensional case.
+  *  5cdf6456 - Speed up ReverseArcLengthMapper.
+  *  222525f1 - Speed up ReverseArcLengthMapper.
+  *  c7c82a94 - Build fixes.
+  *  a2923d54 - Merge branch 'master' of
+    ssh://scantailor.git.sourceforge.net/gitroot/scantailor/scantailor
+  *  0a77f307 - Set version to 0.9.10pre
+  *  96c00e0f - Next generation dewarping: initial work.
+  *  dac13f1c - German translation added.
+  *  fe525fe7 - Set version to 0.9.9.1
+  *  fb00d3d6 - Don't package CMakeLists.txt.user, which is generated by
+    Qt Creator.
+  *  b9584f39 - Add margins to the Output stage.
+  *  80debf08 - Fix zooming while creating a zone.
+  *  c77b772e - Fix inconsistent behaviour when skewing a cutter when
+    zoomed in.
+  *  3e68bddb - Set version to 0.9.9
+  *  07ab0258 - Invalidate the thumbnail when modifying zones.
+  *  824237e0 - Merge branch 'master' of
+    ssh://scantailor.git.sourceforge.net/gitroot/scantailor/scantailor
+  *  a0cfc584 - Make the build system depend on version.h file.
+  *  566e3bfc - Bulgarian translation updated.
+  *  99032ea6 - Japanese translation updated.
+  *  ef5349b1 - Corrections to the About dialog.
+  *  e7d3599f - Set version to 0.9.9rc3
+  *  d52c37d8 - Update Russian translation and regenerate all *.ts
+    files.
+  *  70f38aa2 - About dialog.
+  *  aca82d1e - Bulgarian translation updated.
+  *  cbdaa0f6 - Improve thumbnail rendering on the Margins stage.
+  *  8da3af72 - Japanese translation updated.
+  *  9134b26a - Build fixes.
+  *  a0ac88d2 - Update Russian translation and all *.ts files.
+  *  fa790e6c - New feature: Fill Zones.
+  *  84764cd3 - Bulgarian translation updated.
+  *  0c2dbf98 - Regenerate translation files and update the Russian
+    translation.
+  *  52f3ed2a - Set version to 0.9.9rc1
+  *  85a108f4 - Rename Page Layout -> Margins and Align with other pages
+    -> Match size with other pages.
+  *  2c586d8e - Restore the behaviour of jumping to the first page after
+    batch processing finishes at the last one.
+  *  4b4188fa - Generic versions of some algorithms.
+  *  046853f3 - The lower bound of B/W threshold was too hight.
+  *  3dec27a1 - Revert the last change - it didn't really help.
+  *  ddc56784 - Workaround a bug in Qt which would cause project loading
+    to pause until you move the mouse.
+  *  6364d340 - Center the Beep when finished checkbox and restructure
+    related code a bit.
+  *  3815818d - Zooming out will now also gradually center the image.
+  *  5e334c33 - Fix Ctrl+Wheel rotation on Deskew stage not being
+    bounded by +-45 degrees.
+  *  26f29b3d - Home / End hotkeys for page navigation.
+  *  882fdb8f - When sorting thumbnails, take into account the
+    valid/invalid status.
+  *  388e79c7 - A small optimization.
+  *  01eac8c3 - C++ standard compliance.
+  *  c5eafe84 - Fix a crash when loading really small images.
+  *  3391be5e - Fix a recently broken Apply to every other page
+    functionality.
+  *  4e963463 - Fix a hang introduced with the double cutters
+    functionality.
+  *  b16bd803 - Prevent binarization problems when there is no non-
+    picture content present.
+  *  6f659d44 - Build fixes.
+  *  90062698 - Dump symbols when building installer, not when building
+    scantailor executable.
+  *  c7f69f68 - Update licensing information for images.
+  *  f45864bc - Move version information from VERSION file to version.h.
+    Set version to 0.9.9pre4.
+  *  881169b6 - Use reference counting for ThumbnailPixmapCache
+    everywhere to prevent crashes on exit.
+  *  3b0520c9 - Fix a bug introduced by the recent major refactoring.
+  *  ea9e1474 - Fix a GCC warning.
+  *  3a569d46 - A major refactoring of everything having to do with
+    sequences of pages. This allows sensible behaviour when navigating
+    or batch processing custom-ordered pages.
+  *  752df3cb - Fix load/save issues related to the new 2-cutter scheme.
+  *  7707a0bf - Fix inconsistent behaviour when ordering pages having
+    identical width or height.
+  *  92fa9978 - Use different colors depending on the Align with other
+    pages option.
+  *  e596ffca - Toggling Align with other pages may require all
+    thumbnails to be updated.
+  *  ace5f59a - Don't let scrollbars cover important elements, like
+    cutter handles.
+  *  cb8b34f9 - Allow cutter handles to go off-screen horizontally but
+    not vertically.
+  *  433cf3f3 - Fix problems introduced by the last commit.
+  *  9d0f7350 - Set version to 0.9.9pre3
+  *  2295badf - Introduce a second cutter for the single page mode of
+    the Split Pages stage.
+  *  27e8b5ea - Fix problems introduced in the previous commit.
+  *  4d8acd9c - Localize the PageLayout class within the Split Pages
+    stage.
+  *  70b9bbd8 - Set version to 0.9.9pre2
+  *  e0f72d28 - More work on the new output file naming schema.
+  *  cbc58d1b - Change the way removing half-a-page from a project is
+    handled.  The new way doesn't cause losing information about the
+    remaining half.
+  *  79855136 - Fix removed half-pages re-appearing as phantom pages
+    under certain conditions.
+  *  8142d0d7 - Change the naming sceme of output files.
+  *  4ad24c33 - Build fix.
+  *  23df61dd - Page sorting for the Page Layout stage.
+  *  f303201c - Ability for processing stages to provide custom page
+    ordering.
+  *  375de1e6 - Merge branch '0.9.8'
+  *  6b28415d - Build fix.
+  *  eb04890e - Bulgarian translation updated.
+  *  8237cbbf - Japanese translation updated & fixed.
+  *  a2df3af2 - Update translations.
+  *  428ead38 - Set version to 0.9.8.1
+  *  a3d992d7 - Add - and + buttons to system load adjuster.
+  *  4a4a0801 - Fix cancelling page insertion not always working.
+  *  6b2766d2 - Ability to adjust batch processing thread's priority.
+  *  0ee818ea - Reserve pure black and pure white colors for Grayscale /
+    Color mode as well.
+  *  f2b26f36 - Build system cleanups.
+  *  85194c5a - Add an option not to build the installer by default.
+  *  202fdc63 - Fix different margins remaining linked on the Page
+    Layout stage.
+  *  50f89eea - An easier way to rotate the page on the Deskew stage.
+  *  e28910c0 - Fix a problem with despeckling that could lead to
+    excessive aggressiveness.
+  *  ee8419fb - Set version to 0.9.8
+  *  34d0cdd2 - Cleanup comments and API docs.
+  *  7818b490 - Bulgarian translation updated.
+  *  3bb8e19d - Japanese translation updated.
+  *  8af91fa8 - Russian translation updated.
+  *  19a48fbc - Updated *.ts files.
+  *  5e0dcbbc - Fix the possibility to insert a new page between halves
+    of another one.
+  *  df0aaf3f - Add Insert here menu item when right clicking on an
+    empty area in the thumbnail list.
+  *  54f135c3 - Fix question mask not disappearing after outputing a
+    page without a content box.
+  *  75e8696b - Bulgarian translation updated.
+  *  12d7be60 - More localization-related changes.
+  *  f492620f - Updated translations/scantailor_ja.ts
+  *  7ee6ab46 - Use a more backwards compatible syntax in CMake scripts.
+  *  867efb21 - Fix compatibility with Qt 4.6.x in terms of
+    localization.
+  *  70befc2a - Windows build scripts improvements.
+  *  798e5c2b - Support grayscale images with bits_per_pixel > 8
+  *  c691f07d - Make 'Cautious' the default despeckling level.
+  *  2d0d254c - Fix dialog's title.
+  *  745efc4b - Set version to 0.9.8pre5
+  *  58e6780a - Extend binarization threshold adjustment range to -30 ..
+    30 and fine-tune the corresponding UI behaviour.
+  *  df007131 - Fine-tuning for illumination normalization algorithm.
+  *  d5590e36 - Better behaviour when skewing the spline line while
+    zoomed.
+  *  c39ddb23 - Fix a despeckling visualization bug and remove some
+    redundant stuff.
+  *  c7c48786 - Set version to 0.9.8pre4
+  *  53811fd2 - Status tips for despeckling levels.
+  *  bacf85ed - Disable 3D acceleration and dewarping functionality by
+    default.
+  *  4fc53271 - Fixed yet another crash related to empty pages being
+    processed.
+  *  74ddca77 - Set version to 0.9.8pre3
+  *  8d38b39e - Fix a recently introduced problem of despeckling
+    aggressiveness depending on output resolution.
+  *  e9729f31 - Speed up despeckling a bit.
+  *  2eaeece7 - Merge branch 'master' of
+    ssh://scantailor.git.sourceforge.net/gitroot/scantailor/scantailor
+  *  d836984a - Set version to 0.9.8pre2
+  *  acba6e78 - Merge branch 'despeckle'
+  *  e7329562 - Remove the need in predespeckle cache files.
+  *  bfc0bfaa - Fix two crashes related to blank pages being processed.
+  *  b21755ac - Fix despeckle settings not being remembered.
+  *  840cbf1b - Set version to 0.9.8pre1
+  *  f78e66de - Zooming with keyboard.
+  *  1a8618b6 - Merge branch 'despeckle'
+  *  425ac52a - Despeckling improvements - work in progress.
+  *  1ba79595 - New translation: Japanese.
+  *  b5bdad7a - Fix a couple of problems with placement / new delete.
+  *  c187c852 - Reserve pure black and pure white colors for B/W
+    content.  Make sure they don't end up in halftone pictures.
+  *  8e4f84f7 - Don't crash on unreasonable DPIs.
+  *  35f4bd93 - Don't crash on imageproc::scaleToGray() with empty
+    target size.  Return a null image instead.
+  *  c4304a40 - Fix handling of grayscale images with non-standard
+    palette in imageproc::transform()
+  *  d1079730 - Reject DPIs that are too high.
+  *  a469c895 - Fix debugging images only loading if Qt3 support was
+    present.
+  *  ed12a7ac - Fix a few cases of accessing an object that has just
+    been destroyed.
+  *  e1363aed - Yet another build fix.
+  *  be96a95c - Build fix.
+  *  d915f38c - More usage of the new GrayImage class.
+  *  b1fc84fb - Remove duplicate mention of GrayImage.cpp/.h
+  *  7ea9d773 - Handle more hard cases with illumination normalization.
+  *  5cd6e16f - Introduce a new class GrayImage and use it where it
+    makes sense.
+  *  7d55c82d - Fix a problem with grayscale open/close operations and
+    asymmetric structuring elements.
+  *  401ed462 - Fix build errors.
+  *  0f80e013 - Work in progress on dewarping code.
+  *  75d049f3 - Improve connectivity map visualization.
+  *  d2c09b3b - When removing a half of a two-page scan from a project,
+    make sure to set manual mode for split line. Otherwise, such action
+    would most likely cause it to be adjusted.
+  *  1c49f79f - Initial dewarping support (continuation).
+  *  ff604b9f - Initial dewarping support.
+  *  b30bcc81 - Fix a possible crash when removing all of the pages from
+    a project.
+  *  086dc85e - Fix a crash on 1x1 input images.
+  *  2ffcaf4b - Fixed antialiasing problems at the edges of an image.
+  *  d43e280e - Set version to 0.9.7.2
+  *  8b06752c - Package a plist file for possible OSX packaging support.
+  *  a6abd18b - Don't call paintEngine() on QPaintDevice or QWidget, as
+    they don't guarantee a valid result.  Use other means to tell which
+    back-end we are using.
+  *  b4f8cb4d - Better OpenGL support for UI acceleration.
+  *  7293c067 - Make it possible to insert/remove pages from project at
+    any stage.
+  *  f026d244 - Fix build problems.
+  *  44986a2f - Don't keep debug images in memory.  Load them from disk
+    on demand instead.
+  *  caec6bcf - Fix MSVC build problems.
+  *  224690db - Set version to 0.9.7.1
+  *  9f989b6e - When user changes the type of a picture zone, remember
+    it and use as default for new zones.
+  *  25fdb7ff - Maintain realistic size of scrollbars on the central
+    area.
+  *  de77de89 - Hide split line options for whole page layout.
+  *  9000bc95 - Fix reverting all pages to auto-detected layout.
+  *  51bb7a56 - Fix behaviour of Auto and Manual buttons at page
+    splitting stage.
+  *  0d2d951d - Better separation between left button drag and creating
+    a zone vertex.
+  *  88f33e78 - Set version to 0.9.7
+  *  934e175a - A minor visual change for Split Pages stage.
+  *  1078dfa8 - Fix inaccurate visualization of content box.
+  *  0d89f5fd - Fix a possible crash when working with zones.
+  *  48d67a78 - Factor out the DragWatcher class and use it in both
+    ZoneDefaultInteraction and ZoneCreationInteraction.
+  *  08b75a34 - Turn OpenGL off by default.
+  *  2ce2ac45 - Cosmetic fix.
+  *  a01dbb46 - Update translations.
+  *  7401ce51 - Avoid less portable syntax in CMake files.
+  *  f24b3cd2 - Improve build scripts with regards to OpenGL support.
+  *  34683c21 - Make the installer target depend on translations being
+    compiled to *.qm files.
+  *  cf295c69 - Set version to 0.9.7rc1
+  *  f4ad8aa9 - Update translations.
+  *  c6f7457c - Enable dragging using middle button in addition to the
+    left one.
+  *  61b6fc35 - Optional 3D acceleration of user interface with OpenGL.
+  *  f4f8ba96 - Fix image positioning problems caused by a recent
+    commit.
+  *  b1e3178a - Preparations for OpenGL rendering support.
+  *  740df198 - * Add scrollbars to the central area. * Factor out the
+    ImagePresentation class.
+  *  ac11e534 - Limit the depth of search of whitespace regions.
+  *  f9fff461 - Ignore a few millimeters next to the edges when
+    searching for a spine.
+  *  03976354 - Fix a problem that caused missing translations.
+  *  8a5957f8 - Better interactivity in zone creation state.
+  *  eb9b0c59 - Allow propagation of accepted events to descendants of a
+    handler that accepted it.
+  *  4300f4bc - Hopefully improve UI responsiveness.
+  *  d1a41471 - Pass /Oy- to MSVC to ensure the built-in crash reporter
+    produces good stack traces.
+  *  a8536735 - CrashReporter must be a dependency of installer target.
+  *  ab49e5c7 - Update translations.
+  *  981a8395 - Set version to 0.9.7pre
+  *  c9b1821b - Update ignore patterns.
+  *  8525823c - Work in progress on the new interaction infrastructure.
+  *  4fa02909 - Work in progress on new interaction infrastructure.
+  *  3cb93c98 - Work in progress on the new interaction architecture.
+  *  e10bb1e9 - Work in progress on the new interaction architecture.
+  *  0a561bf4 - Fix build problem under MinGW.
+  *  71922185 - Add Bulgarian translation by Svetoslav Sashkov.
+  *  e968c184 - Fix several build issues on Windows.
+  *  59efe037 - Work in progress on new interaction infrastructure.
+  *  a599ee04 - Work in progress on the new interaction infrastructure.
+  *  ba4d3253 - Work in progress on the new interaction architecture.
+  *  b5c3a291 - Remove unnecessary executable flags from a couple of
+    source files.
+  *  f420909a - Hopefully the final fix to incorrect aggregate size at
+    Page Layout stage after manipulations on previous stages.
+  *  2314202b - * Write automask even in batch mode. * Don't write
+    automask file info to project file if automask wasn't written.
+  *  528f6ef5 - Fix caching problems introduced recently.
+  *  23e508b4 - Various UI improvements.
+  *  69bcb0b6 - Fix the Open Project dialog opening in background.
+  *  ea0b739e - Fix an error that caused runtime warnings from Qt.
+  *  ed697794 - Work in progress on picture zones.
+  *  839a7127 - New feature: manual picture zones.
+  *  7cbd1680 - Fix a crash.
+  *  1f7e50a1 - Add support for proxies to crash reporter.
+  *  bd8ff8a2 - Update translations.
+  *  f90d5a7d - Get rid of preprocessing step before split line
+    detection.  It looks like it does more harm than good.
+  *  2fee747c - Add a weak_background parameter to transform() and
+    transformToGray(), and use it to solve the problem that may lead to
+    folding line being incorrectly detected at the very edge of the
+    image.
+  *  d65eeeca - Fix minor visual inconsistency in the Project Files
+    dialog.
+  *  755807ca - Fix inconsistent behaviour when switching layout types
+    on the Split Pages stage.
+  *  d93777f4 - Better handling of cases when content box reaches
+    outside of the source image in Mixed output mode.
+  *  9b03f0eb - Update translations.
+  *  9e8ec9f7 - Relax DPI checks.
+  *  a2926da3 - Set version to 0.9.6
+  *  d13cfa69 - Update documentation on building Scan Tailor on Windows.
+  *  4ade8999 - Fix building boost on Windows.
+  *  c9769346 - Removing a page from the project now properly updates
+    the page layout.
+  *  dff06255 - Fix a crash after removing the last file in the project.
+  *  1b4d6456 - The project writer wasn't preserving the order of pages.
+  *  f47039f9 - Handle cases when parts of content box are outside of
+    original image's bounds. This fix only covers black and white mode.
+    In other modes, black borders will still appear.
+  *  3da04bd6 - Fix a bug introduced with optimization of the Savitzky-
+    Golay filter.
+  *  1c4004ff - Performance improvements for illumination normalization.
+  *  431476d0 - Performance improvements for the Savitzky-Golay filter.
+  *  e326372e - Make it build with Qt 4.5.2
+  *  897bc5fb - Change some UI text.
+  *  82c8eef5 - Make the update_translations target actually work on
+    Windows.
+  *  c49a53a8 - Add visual and optional audio indication of batch
+    processing completion.
+  *  ed3f7d5b - Fix a build problem introduced by the last commit.
+  *  b52380c5 - More strict DPI checking when creating, and even when
+    opening a project. Wrong DPIs can easily lead to out-of-memory
+    conditions.
+  *  8cf43989 - Add the Uninstall shortcut to Scan Tailor menu folder.
+  *  6b537db4 - Fix a syntax error introduced in the last commit.
+  *  8d4dcbe2 - Fix building under Windows with crash reporter disabled.
+  *  3ca61828 - Fix the applying output DPI to the current page only.
+  *  0a4d4d75 - Add automated crash reporting functionality.
+  *  7eaa19b0 - Set version to 0.9.6pre
+  *  eebebd24 - Remember the last opened input directory and next time
+    start with its parent directory.
+  *  9615b437 - Fix a build problem introduced by the last commit.
+  *  1cb4ae9e - Don't regenerate output files if no parameters have
+    changed.
+  *  667308f0 - Fix a recently introduced bug: the inability to change
+    output resolution.
+  *  41e40d23 - Fix a recently introduced bug: the inability to apply
+    the layout type to all pages.
+  *  0d84a815 - Fix a problem with multi-selection of pages.
+  *  4df19c73 - Fix thumbnail rendering problems.
+  *  5b1fc414 - * Options can now be applied to an arbitrary group of
+    pages. * Support building with MS Visual C++
+  *  8db05136 - Bugfix.
+  *  75c09cff - Fix build problems under gcc 4.4 and VS 2008
+  *  1336b71f - Fix broken ordering operator.
+  *  56c4de19 - Replace the arrow_in.png icon with a contributed one
+    under the GPLv3.
+  *  f8f3dc57 - Fix the inability to uninstall Scan Tailor.
+  *  0b35fa32 - Fix a compilation problem.
+  *  b1016a5f - Update licensing information for icons.
+  *  cf35356e - Set version to 0.9.5
+  *  5a273b2f - Update translations.
+  *  e0359807 - Fix a crasher bug.
+  *  332a573b - Set version to 0.9.4
+  *  e64876fd - Improve the automated content box selection so that
+    there is less chance for top or bottom page edge to be misclassified
+    as content.
+  *  fc0364f7 - The default page content alignment is now top+hcenter
+    rather than vcenter+hcenter.
+  *  b0621b79 - Visualize margins on Page Layout stage.
+  *  b7d89066 - * Fix saving/restoring of main window geometry. * Fix
+    calculations of the width of the thumbnail list.
+  *  779716a0 - This time really fix embedding the application icon to
+    the executable.
+  *  23d7e2ce - Fix problems with embedding application icon.
+  *  15aace7f - Properly embed icon into the Windows executable.
+  *  b8938f9d - Solve the problem of unnecessary scrollbars in stage
+    list by abandoning setIndexWidget() and doing things manually.
+  *  41ef20a6 - Remove the unnecessary component selection page from the
+    windows inscaller.
+  *  3d242c2a - Revert the last change.  It wasn't such a good idea.
+  *  7f1b81d7 - Automatically decide if batch processing should start
+    from the first page or from the current page.
+  *  d9058520 - A better thumbnail visualiztion for the Page Layout
+    stage.
+  *  13a2fa2b - A follow-up to grid drawing on the Deskew stage - now
+    grid is also drawn on the thumbnail.
+  *  29537e7c - Make whatever paintOverImage() produces look clipped.
+    Applies to thumbnails.
+  *  c4687a10 - Allow unrestricted dragging when holding down the Shift
+    key.
+  *  e826f4a4 - Draw a grid on the Deskew stage.
+  *  c4aa8a13 - Make zooming on the Deskew stage to be center focused
+    rather than cursor focused.
+  *  ed85bdc3 - When manually skewing a split line in zoomed mode,
+    rotate it around the off-screen endpoint, not the on-screen one.
+  *  f75ad4f3 - Documentation updates.
+  *  a1eb4dcc - * Allow inserting / removing files to / from the
+    project. * Update the application icon and provide a svg version of
+    it.
+  *  a22d5d3d - Fix a bug that caused project saving errors not being
+    reported.
+  *  89224e51 - Prevent deleting option panels from a background thread.
+  *  7162681d - Another missing include.
+  *  3881938b - Add missing includes.
+  *  dc3dfa42 - * Remove bundled boost sources.  Use external boost
+    installation instead. * Fix the application icon under Windows not
+    being embedded.
+  *  10d6cde7 - Pages where Align with others is turned off, should not
+    influence the size of other pages.
+  *  9a95f9d8 - Remove an unnecessary include.
+  *  c2f6449d - Fix a memory leak.
+  *  a1305968 - Fix a problem with the tools panel becoming invisible
+    after batch processing.
+  *  cc8ecc0b - Avoid adjusting the visibility of widgets in a
+    QTableView set with setIndexWidget().  Doing that may have caused
+    visual problems on some systems.
+  *  8d186108 - Remove an unused directory.
+  *  d159e251 - Fix wrong source files listed in CMakeLists.txt
+  *  13f5d15e - Improve the appearence of the stage list under KDE4
+    (Oxygen style).
+  *  9ad39bda - Hide the Launch batch processing button when
+    appropriate.
+  *  7c6fa877 - Update translations.
+  *  05725d2a - Fix recently introduced problems with closing of
+    projects.
+  *  d1516ffe - Hopefully prevent the appearence of an unwanted
+    scrollbar on the stage list.
+  *  91ff0e1a - UI improvements mostly related to batch processing.
+  *  83cd688b - When using the Widest Page / Tallest Page functions,
+    scroll to the page thumbnail even if autoscrolling is off.  To keep
+    things simple, just turn autoscrolling on in such cases.
+  *  58ce97eb - Revert the accidential code reformatting.
+  *  2d42f6b5 - save and restore main window geometry.
+  *  5f5c2ea9 - Add an icon to the Windows executable.
+  *  e673a8ea - Associate the .ScanTailor extension with scantailor.exe
+  *  a4b5f9f5 - Support specifying a project file on the command line.
+  *  8c969e9d - Use the new despeckling code on the Select Content
+    stage.
+  *  c8ce7497 - Document the despeckle() function and add a default
+    parameter value there.
+  *  4cb43cc2 - Improve the appearence of the list of stages.
+  *  566fa5ff - Factor version.h.in out of config.h.in and force cmake
+    to re-run if VERSION file changes.
+  *  3901fe13 - Fix an improper use of expandPower2() by generalizing it
+    into upscaleIntegerTimes().
+  *  460b8f6f - When manually specifying the split type, we have to
+    update the number of logical pages in an image immediately.
+  *  e0d179df - Fix a crash introduced when adding support for right-to-
+    left layouts.
+  *  ad0cac89 - Don't crash on Prev Page / Next Page shortcuts when no
+    project is loaded.
+  *  c36e7ec1 - Cosmetic fixes.
+  *  96e52dfa - Correct the tab order.
+  *  f8596123 - Update translations.
+  *  32bcf34d - Support right-to-left layouts where left page follows
+    the right.
+  *  77e0c633 - Fix a crash in the corner case where there is no
+    content, no borders, and alignment with other pages is turned off.
+  *  24860250 - Fix incorrect detection of dominant background color.
+  *  85619f26 - Detect unsupported JPEGs during project creation.
+  *  600228d1 - Fix jpeg metadata loading.
+  *  a4f929a6 - Don't use Fax G4 compression - Photoshop has problems
+    with it.
+  *  13a6f4b0 - Fix a corner case in Savitzky-Golay smoothing kernel
+    computation.
+  *  fa02f22f - Set version to 0.9.3
+  *  f2719f84 - Fix a possible crash.
+  *  0d0892ae - Set version to 0.9.2
+  *  d966eb53 - Fix incorrect handling of project saving cancellation.
+  *  95e3a19e - Fix a problem with non-existent pages in the thumbnail
+    list after changing the split type.
+  *  0111f466 - Fix a missing image in Change Split Mode dialog.
+  *  355e9742 - Fixes to Project Files dialog related to the ability to
+    manually edit or copy-paste paths.
+  *  3efac0c5 - New despeckling algorithm: same idea, less memory
+    consumption, faster and more accurate.
+  *  234dd0be - * Extend the Euclidean distance map to be able to
+    construct Voronoi diagrams. * Don't use INFINITY as a variable name -
+    it conflicts with a definition from math.h
+  *  4231d055 - Decide heuristically whether to write dots-per-inch or
+    dots-per-cm to TIFF files.
+  *  55d9b98e - More robust fuzzy polygon comparisons.
+  *  e18b3921 - Show the tooltip for the threshold adjustment slider
+    while it's being dragged.
+  *  5e144e21 - Scroll to the selected thumbnail when switching stages.
+  *  cd40d32d - Apply more rounding for coordinates of polygon
+    verticies.  Apparently the rounding we already applied wasn't enough
+    to workaround a clipping problem in QPainterPath.
+  *  9e8d30ee - Ability to adjust the auto-detected binarization
+    threshold.
+  *  c7848ef1 - Allow copy-pasting or manually typing in paths in the
+    Project Files dialog.  Strip them from enclosing quotes
+    automatically.
+  *  1c107ad1 - When batch processing completes, jump to the first page
+    instead of staying at the last one.
+  *  39ff88fc - Cosmetic improvements to the UI.
+  *  4bf9aa6a - Remove debugging stuff.
+  *  10a7125f - Fix a possible crash due to insufficient table size.
+  *  d6223b4d - * Speed up smoothing for high resolutions by hand-
+    picking Savitzky-Golay filter parameters. * Despeckling can now be
+    turned off. * Improve the behaviour of the Change Output DPI dialog.
+  *  cf80e839 - Fix a bug that caused creating the C:\cache directory
+    when closing a project.
+  *  c306a453 - More improvements to deskpeckling code.
+  *  93b71b0b - Updated build instructions.
+  *  84cdc70d - Fix a recently introduced crash in Color / Grayscale
+    output mode with color input images.
+  *  736142d0 - More improvements for deskpeckling.
+  *  5757e225 - Fix reading indexed or grayscale TIFFs with bits per
+    sample other than 8.
+  *  754e1222 - * Fix a crash with margins set close to zero. * Fix a
+    recently introduced crash with Mixed output mode and color images. *
+    Improve despeckling.
+  *  dd1f7eb4 - Use asynchronous signal/slot connection for the
+    reloadRequested() signal.
+  *  687eddac - Factor out the SavGolKernel class.
+  *  886786fe - Avoid creating high-resolution QPixmap's.  Create a
+    downscaled version instead.  Because we have a delayed high-quality
+    renderer that operates on the original QImage, the loss of
+    resolution with real-time rendering is not a big issue.
+  *  9c4cd1c2 - Cosmetic translation update.
+  *  0414b114 - Minor UI improvements.
+  *  92d79257 - Turn on autoscrolling when batch mode is activated.
+  *  2208d28e - Add despeckling for binary images.
+  *  41220b7c - NSIS doesn't like forward slashes as directory
+    separators.
+  *  4eb622e2 - A better way to locate NSIS.
+  *  e9f25fd0 - Integrate the Windows installer build procedure to the
+    build process.
+  *  37cd548b - Add licensing information.
+  *  ce35324c - Add an icon and a tooltip for the focus button.
+  *  26ce05cc - Even if autoscroll is off, still scroll to make the
+    newly selected item visible, if it was manually selected by the
+    user.
+  *  147c182e - Thumbnail list now follows the selected page only until
+    the user navigates away from it.
+  *  fe3024a5 - Fixed a bug that prevented thumbnails for multi-page
+    TIFFs to never be taken from cache.
+  *  e02c6daf - Fix a bug introduced when moving ThumbnailPixmapCache to
+    shared_ptr / weak_ptr completion notification.
+  *  9c90c915 - Get rid of boost::signals and boost::function.  We don't
+    need them anymore.
+  *  114216c4 - Don't use boost::signal + boost::function for thumbnail
+    load notification - they are not thread safe.  Use shared_ptr +
+    weak_ptr instead.
+  *  3c31cf6f - Try loading translations both from TRANSLATIONS_DIR_ABS
+    and TRANSLATIONS_DIR_REL.
+  *  378d9494 - Add Close Project and Quit menu items.
+  *  869e36ad - We need other X headers as well, not just Xrender.h
+  *  dae6728b - Explicitly search for Xrender.h on Unix platforms.
+  *  a64a52f3 - Add untranslated.ts to help creating new translations,
+    but don't generate untranslated.qm based on it.
+  *  931ceb2f - Update translations.
+  *  e1a63b4a - When creating a new project, put the image files in the
+    input directories to the project automatically, unless the project
+    is not empty.
+  *  00165ce9 - Try to detect cases when there is nothing but garbage on
+    the page.
+  *  174a0070 - Tune a constant for less false positives with text
+    detection.
+  *  ccea7692 - Better garbage segmentation into horizontal and vertical
+    garbage.
+  *  fb4d80b2 - When applying options to a range of pages, make the
+    default range [cur_page, last_page] rathern than [first_page,
+    last_page].
+  *  594fec76 - Make the default output DPI 600 rather than 300.
+  *  9959bcbb - Remove support for asymmetric (horizontal != vertical)
+    output DPI.
+  *  10701183 - * Remove the selection of thresholding methods - always
+    use Otsu (after normalizing illumination). * Remove the Bitonal
+    output mode (no one uses it anyway). * Add some customization
+    options for Color / Grayscale more.
+  *  4ca6bfc3 - A more correct implementation of ensureStatusTip().
+  *  5729ad50 - Fix order of elements in the list of recent projects.
+  *  b80ebc52 - Reimplement NewOpenProjectPanel without using setMask().
+    Apparently calling setMask() from inside paintEvent() caused crashed
+    under Windows.
+  *  e0f4c294 - Fix wrong split line detection with pre-rotated pages.
+  *  850539eb - * Make Q and W the alternative to PgUp and PgDown for
+    navigation between pages. * Introduce the status bar and start
+    making use of it.
+  *  78ea3064 - Got rid of that pesky little window at startup.  It was
+    replaced with a panel on the main window.  While at it, a list of
+    recent projects was implemented.
+  *  a73bbd27 - Make ThumbSequence work with an empty list of pages.
+  *  6bca7126 - A more localization-friendly approach to generating
+    links in UI.
+  *  d4413d30 - Fix a division by zero.
+  *  135ddc50 - Don't read RGB TIFF images as ARGB.
+  *  344ee0f2 - Fix RGB and ARGB output in Mixed mode.
+  *  b59bd99f - Those variables have to be double not int.
+  *  629602d2 - Static const data members still need to be defined in a
+    .cpp file!
+  *  a419291f - A new content box auto-selection algorithm.
+  *  05150252 - A bunch of new classes.
+  *  7cccd3b7 - New parameters for binarizeWolf(): lower_bound and
+    upper_bound.
+  *  d445ae28 - New function: reverseBits()
+  *  64e61a69 - New function: darkestGrayLevel()
+  *  600aced2 - Support grayscale images in PolygonRasterizer.
+  *  86656fb8 - Make the indexing operator return by reference, not by
+    value.  This makes it possible to pass histogram data to functions
+    expecting an array.
+  *  bb805c58 - Inline a couple of performance-critical functions.
+  *  81f1c128 - Use more robust calculations for QR decomposition.
+  *  8130f1f1 - Make use of transform() for color images instead of
+    using QPainter.
+  *  f1e17745 - Use more robust calculations for least squares fitting.
+  *  0159f6af - Fix a typo in Russian translation.
+  *  ab925288 - Handle more cases when splitting pages.
+  *  89ee6c13 - Fix a problem with DPI overriding.
+  *  dfd618ae - Fix a bug that caused degraded performance.
+  *  09020731 - Enable word-wrapping for error messages.
+  *  1a069ab0 - Fix another crash on the Output stage.
+  *  b32cbd29 - Fix crashes involving pages without content.
+  *  f69535fc - Cosmetic changes.
+  *  9fdf1c4a - Don't write a palette for BW images - some sotware
+    doesn't like that.
+  *  9adfd2e0 - More TIFF writing fixes.
+  *  9a435bc7 - Fix another TIFF writing bug.
+  *  53ddd34b - Fix writing optical resolution to TIFF images.
+  *  3bc8f934 - Better behavior when dragging the inner border at Page
+    Layout.
+  *  e1541f61 - * Zooming is now done towards the point under the mouse
+    pointer. * High quality antialiasing is now disabled for debugging
+    images.
+  *  e9c69d27 - Fix bit ordering problems with TiffWriter.
+  *  7ff4de38 - Improve automated page splitting.
+  *  c9c5d310 - Rework the Split Pages UI.
+  *  8767ce3c - Improve page splitting.
+  *  3dcea38a - Make UI localizable.
+  *  cb90165c - Output TIFFs rather than PNGs to be compatible with DjVu
+    tools from LizardTech.
+  *  5cf8e475 - Cosmetic changes.
+  *  07f231c3 - Implement high quality antialiasing for the display
+    area.
+  *  8e601ef0 - New class: BackgroundExecutor
+  *  20b4c36a - Support affine transformations on color images.
+  *  4e0ebe0c - Remove unused variables.
+  *  8a673be8 - Fix broken assert()'s.
+  *  de5157e4 - Fix a bug introduced when restructuring the Split Pages
+    stage.
+  *  f863ebbe - Minimize the number of conversions to grayscale.
+  *  fb7d06e2 - Restructure the Split Pages stage.
+  *  51f0a8b1 - Copy dots per meter when converting to grayscale.
+  *  45eb71b0 - Return an iterator from mapSetValue()
+  *  35982239 - Handle the case when the user replaces an image with
+    another one having different dimensions.
+  *  c6dca33c - Update to be compatible with the latest changes in
+    MorphGradientDetect.h
+  *  53cf573e - Bump version number.
+  *  ce1d0c41 - * Normalize illumination before binarization. * Improve
+    auto-selection of pictures.
+  *  c689ea76 - Add some new classes / functions.
+  *  11c37268 - Factor leastSquaresFit() out of PolynomialSurface.  Some
+    cosmetic changes as well.
+  *  faebb535 - Allow specifying separate polynomial degrees for
+    horizontal and vertical directions.  Some cosmetic changes as well.
+  *  85651da0 - Visual appearence changes.
+  *  a5b17a1f - Split morphGradientDetect() in two:
+    morphGradientDetectDarkSide() and morphGradientDetectLightSide()
+  *  7aa2b312 - Change the default src_surroundings value for
+    erodeBrick().  Black is a safer value because it will preserve both
+    a completely black and a completely white image.  Note that
+    erodeGray() already had black as the default.
+  *  2cb4a0a3 - Binarize page shadows before deciding which side has
+    more shadows touching it.  This gives better results.
+  *  bc3076e0 - Revert to Otsu as the default thresholding mode.
+  *  275a3b4d - Fix the signature of grayRasterOp()
+  *  2bfc82ee - Spellchecked a readme file.
+  *  8268614f - * Bugfix: the top-right corner area was wrong. * Code
+    cleanup.
+  *  0a008a96 - * Bugfix: binarization failed if width is a multiple of
+    32. * Code clenups.
+  *  24539bba - New class: PolynomialSurface
+  *  adfa2d16 - More error checks.
+  *  008098f8 - Fix a typo in a comment.
+  *  a43e003a - New method: createFramedImage() and some cosmetic
+    changes.
+  *  56a10fde - Savitzky-Golay: a new grayscale smoothing filter.
+  *  24e492e4 - Save some memory in debug mode by destroying debug
+    images as soon as they are no longer necessary.
+  *  e9187fa4 - Add missing includes.
+  *  5b441468 - BUGFIX: Deskew angle set via the spinbox wasn't applied.
+  *  f28247d5 - Add a missing #include
+  *  3183cd4a - Fix a typo.
+  *  515258a5 - Updates to the Ouput stage.
+  *  623b9110 - Cosmetic changes.
+  *  81e26785 - Add yet another thresholding algorithm.
+  *  a2fd1e64 - Update and document the build process.
+  *  1d24c77d - Reconsider the default values for src_surroundings for
+    grayscale morphology.
+  *  d6591033 - * Add stretchGrayRange() method. * Document more
+    methods.
+  *  abe861fa - Add more grayscale raster operations and rename some
+    existing ones.
+  *  00072db0 - Prevent the horizontal scrollbar on the thumbnail list.
+  *  2e915443 - Let user alter default compiler flags.
+  *  9f5c8be7 - Support building with libtiff from GnuWin32, which is
+    patched to support building it as a DLL.
+  *  514c144c - Make it build under Windows with the latest Qt.
+  *  75c7745a - Seed-fill: speed improvements, bugfixes, tests.
+  *  60f88d5f - More testing support code.
+  *  2dd4c547 - Rename Utils::renameFile() to
+    Utils::overwritingRename().
+  *  bc170df1 - Factor out write-temp-file-then-replace code into
+    AtomicFileOverwriter class.
+  *  a627fc9e - Reimplement Utils::renameFile() using native calls.  It
+    seems there is no cross-platform way to implement overwriting
+    rename.
+  *  038fde00 - Fix compiler warning.
+  *  09567e52 - Fix documentation.
+  *  2e2d5bec - * make install support. * Exclude .pcs files from
+    packaging.
+  *  d6a2eae8 - Initial work on the Auto Halftone output mode.
+  *  35f754ff - Remove objects that are too far away from the main
+    content.
+  *  121cf62e - New page splitting algorithm.
+  *  019df9fb - Disable debug mode where there is no way to see debug
+    output.
+  *  3852c80b - Add morphological gradient detection.
+  *  d4c86b56 - Add grayscale raster operations.
+  *  b39e0f18 - Add gauss blur implementation.
+  *  8845ffa5 - Make transformation smoothness adjustable.
+  *  0dc5df5e - * Minimize histogram size. * Less sensitive histogram
+    peak detection. * Add visualizeHoughSpace() method.
+  *  eddb6658 - Add openGray() and closeGray().
+  *  0d3c656c - Add seedFillGray() and minor improvements to seedFill().
+  *  0b97f283 - Add imageproc::HoughLineDetector class.
+  *  15873bd3 - Add support functions for testing grayscale operations.
+  *  7ec59ffa - Add grayscale dilate and erode operations.
+  *  3b1b3cd5 - Remember the directory where the last project was saved
+    and start with it on Open Project and Save Project As.
+  *  ee5cea62 - Change a constant in binarizeSavuola().  This seems to
+    improve binarization quality.
+  *  7483468f - Remove the backup file when clicking Discard.
+  *  03c4abd8 - Set output directory by default to /out
+  *  66ec3282 - Add VERSION file.
+  *  13758b24 - Add source packaging support (make package_source)
+  *  d11097ae - Prompt user when closing a non-saved project.
+  *  548fe5e1 - Work-in-progress on the output filter.
+  *  ab741991 - Work-in-progress on the output filter.
+  *  d330fb0d - Adapt content rectangle in CacheDrivenTask not in
+    Thumbnail.  This way we pass the adapted version further.
+  *  f4469918 - Add the new preScaledDpi() method.
+  *  195a19fc - Work-in-progress on the output filter.
+  *  42f2b4fb - * Fix thumbnails not overwriting the old ones. * Add the
+    new recreateThumbnail() method.
+  *  74cc9a45 - Work-in-progress on the output filter.
+  *  6e9cdbbf - Work-in-progress on the output filter.
+  *  6b6b78c4 - Fix a problem with the last commit.
+  *  d14602fa - Bugfix: Align with other pages wasn't updated when
+    switching pages.
+  *  96bbbd52 - Work-in-progress on the output filter.
+  *  f35e5d3b - Make upscaling smooth.
+  *  2978dfc0 - Work-in-progress on the output filter.
+  *  cd877231 - Make sure background is solid in the center area and in
+    the thumbnail list. We currently can't handle non-solid background
+    there.
+  *  34630ee8 - Add a border around the center area, because background
+    will always be solid there, unlike the surrounding areas.
+  *  2ae69002 - Work-in-progress on the output filter.
+  *  cd4cd7cf - Add hitMissReplaceInPlace(), performance optimizations.
+  *  752f1ff8 - Rename hitMissTransform() to hitMissMatch() and add
+    hitMissReplace()
+  *  dece3677 - Implement hit-miss transform.
+  *  f720c613 - Make rasterOp() accept empty destination rectangle.
+  *  dad39921 - Fix the inconsistency between the image and its
+    thumbnail after manually stopping the batch processing.
+  *  7c06786c - A cosmetic fix.
+  *  091684eb - Work-in-progress on the Page Layout filter.
+  *  7bd1b76c - Work-in-progress on the Page Layout filter.
+  *  fba619bb - Work-in-progress on the Page Layout filter.
+  *  c6dea5d2 - Work-in-progress on the Page Layout filter.
+  *  9614582e - Allow ThumbnailBase subclasses to change image
+    transformation after construction.
+  *  c2048d3c - Allow filters to invalidate all thumbnails at once.
+  *  bccf96cd - Work-in-progress on the Page Layout filter.
+  *  b4c817c0 - Make it possible for filters to request switching to a
+    different page.
+  *  fb0d8c06 - Work-in-progress on the Page Layout filter.
+  *  c8d809db - Bugfix.
+  *  4a1ba875 - Work-in-progress on the Page Layout filter.
+  *  08eeeb8e - Round polygon vertices some more.
+  *  c4832b59 - Work-in-progress on the Page Layout filter.
+  *  f4be4e2e - Work-in-progress on the Page Layout filter.
+  *  727de3cc - Add resetZoom() method.
+  *  f5df01cf - Work-in-progress on the Page Layout filter.
+  *  18c4ed95 - Implement and make use of a fuzzy polygon comparison
+    function.
+  *  c46616fd - Work-in-progress on the Page Layout filter.
+  *  04c2ea21 - Work-in-progress on the Page Layout filter.
+  *  0acb6c39 - Provide methods to get and set the focal point.
+  *  6aef3c1e - Work-in-progress on the Page Layout filter.
+  *  77ab101b - Work-in-progress on the Page Layout filter.
+  *  ea5c6c39 - Improve image rendering near its edges.
+  *  1caf546c - Factor out polygon rounding code.
+  *  de5d663b - Documentation update.
+  *  104989b0 - Fix crashes in debug mode.
+  *  e1810358 - Work in progress on the Page Layout filter.
+  *  19d61944 - * Generalize ThumbnailTask into CacheDrivenTask. *
+    Initial work on the Page Layout filter.
+  *  82e9f3db - Fix a memory leak.
+  *  b96c7d88 - Bugfix for PageLayout
+  *  e791e978 - Bugfix for PolygonRasterizer
+  *  a25bdc47 - Fix clearing out-of-page areas.
+  *  f027edf2 - Save PageId::SubPage in symbolic rather than numeric
+    form.
+  *  08aca1bd - Change the background color to match the background of
+    QGraphicsView.
+  *  b786d9ce - * Change the background of the thumbnail list. * Fix an
+    uninitialized variable.
+  *  22d1f78c - Fix rotation problems when mouse goes too far up or
+    down.
+  *  576b364b - Move background drawing code to ImageViewBase.
+  *  24e8b75d - Set the output directory as the default directory for
+    saving the project.
+  *  65a769d7 - Refactor the WorkerThread class and get rid of
+    WorkerThreadDispatcher.
+  *  8cd0d670 - Remove explicit pixmap caching, as it turns out Qt does
+    such caching by itself.
+  *  7e58009a - Factor out the common code from page_split::Task and
+    page_split::ThumbnailTask into a separate class.
+  *  e1d56d97 - Prevent the label for the lowest image to be cut off.
+  *  33e6e144 - Merge PageId with LogicalPageId.
+  *  9288bd38 - Store the maximum logical thumbnail size at a central
+    location and pass it around.
+  *  8e7a297e - If image is grayscale, use scaleToGray() which is faster
+    than QImage::scale()
+  *  25f3bfaf - Document the SmartFilenameOrdering class.
+  *  2c599eff - Test suite for PolygonRasterizer.
+  *  6c5f7301 - Fix make test target.
+  *  c37a9b49 - Avoid iterating over all scan lines in fillExcept()
+  *  128fbc68 - Cut parts of a sibling page.
+  *  7a979cd7 - New class: PolygonRasterizer
+  *  dd2664e3 - Comment out the debugging code.
+  *  119fd46a - Bugfix.
+  *  fd044968 - Hide the left panel during batch processing.
+  *  d5a9b0e4 - Don't call setBrush() from paint().  That results in
+    update() and an infinite loop.
+  *  837f0d4b - Visual improvements.
+  *  c3e6cd5c - Draw the same question mark on all platforms.
+  *  f154fa4b - Draw highlighted text according to application palette.
+  *  67a03446 - Fix a hang due to topLevelWidgets() returning internal
+    widgets.
+  *  2437c503 - Fix a crash due to unintended invalidateThumbnail()
+    call.
+  *  b5585734 - * Work in progress on the thumbnail list. * Batch
+    processing is not not managed by filters.
+  *  0cb4a032 - Change mouse cursor over thumbnails.
+  *  6a87efc8 - Bugfix.
+  *  38f743ff - Added an ignore pattern.
+  *  ef182a17 - Work in progress on the thumbnail list.
+  *  9b4925c5 - Build system fix.
+  *  634f98cf - Bugfix
+  *  c9d8f798 - Work in progress on the thumbnail list.
+  *  615245b1 - * Work in progress on the thumbnail list. * Remember
+    which files are multi-page.
+  *  4a7e6e39 - Work in progress on the thumbnail list.
+  *  49273ebb - Remove obsolete files after the boost upgrade.
+  *  1f7dc4cc - Update boost to 1.35.0 and add more of its libraries,
+    notable boost::signals.
+  *  46abd038 - Fix hight confidence in presence of very little data.
+  *  88722b31 - Imporive robustness of page splitter.
+  *  9085ebf8 - Prevent dithering to be misclassified as white letters
+    on black background.
+  *  93c4ccde - Use -ffast-math for gcc.
+  *  87f87311 - If there is a range of equivalent thresholds, choose a
+    middle one.
+  *  55019dfb - Remove unused method.
+  *  5f107c68 - Fix palette conversion.
+  *  ad243494 - Fix invalid assert().
+  *  651d2dcc - Remove commented out code.
+  *  e3f80065 - Initial import.
+  *  eb543f8d - Created directory trunk
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 20 Feb 2021 16:29:54 +0300
+
 scantailor-universal (0.2.9+git1493-f583a51d-1) unstable; urgency=medium
 
   * Compile

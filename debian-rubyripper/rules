@@ -15,7 +15,7 @@ endif
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	PWD=$(CURDIR) dh_auto_configure -- --ruby=/lib/rubyripper --enable-gtk2 --enable-cli --enable-lang-all
+	PWD=$(CURDIR) dh_auto_configure -- --ruby=/lib/rubyripper --enable-gtk3 --enable-cli --enable-lang-all
 
 #override_dh_builddeb:
 #	dh_builddeb $(BUILDDEBFLAGS)

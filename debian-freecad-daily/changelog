@@ -1,3 +1,352 @@
+freecad-daily (0.18.4+git24171-13ed4bc6e8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 13ed4bc6e8ec9be74be792f569a61b4affa49656
+  * Date: 1613824434
+  * git changelog:
+  *  13ed4bc6e8 - PD: [skip ci] fixes #0004540: When manual size of
+    DatumPlane is selected its Length property is not saved to the file
+    and consequently not restored on opening
+  *  e5e07445dc - Gui: [skip ci] fixes #0004569: Part Design Workbench -
+    New Bodies selection issues
+  *  eb240c219c - PD: [skip ci] do not pop-up dialog when creating a
+    body while another body is selected
+  *  0d97fb6f5a - PartDesign: Fix helix for OCC versions < 7.5.0
+  *  c331d608aa - App: [skip ci] replace plain C API with PyCXX to avoid
+    memory leaks
+  *  9f72a7b406 - [App] [skip ci] - Fix python new references leaking
+  *  c4e383829b - [GUI] - Fix leaking QObject
+  *  542bf23cb0 - [TD] - Fix geometry object leaking on every exec
+  *  17ec9b7c08 - [APP] - Fix leaking QGraphicsScene in QuarterWidget
+  *  354ac48d41 - Tools: Updated offline wiki fetching script
+  *  d6a9869db8 - Updated splashscreen
+  *  27042216c9 - [UI] Add tools to Mesh WB toolbar
+  *  db3b35cb5d - Gui: Minor cleanup
+  *  f5b7f645d8 - Spreadsheet: Don't autocomplete when writing strings
+  *  dc444b1f09 - Spreadsheet: Fix coverity warning
+  *  e0d07257b7 - [PD] fix dressup feature display when broken
+  *  c107ca3100 - PartDesign: Check closedness in AddSub refine function
+  *  857ba06219 - [UI] 0.19 Replace FEM WB icons
+  *  961e936e05 - [GUI] Modify behavior of VectorListEditor
+  *  ed02d1bbdd - PD: [skip ci] recompute document when canceling task
+    dialog, fix also possible crash
+  *  98f9397939 - PD: [skip ci] drop some superfluous static_cast
+  *  30c24ae0bc - [PD] Fix isFeatureMovable() to check null status of
+    property
+  *  6bcd37093c - PartDesign: Mild code cleanup of Helix
+  *  9a49453802 - Gui: [skip ci] fix crash on macOS in editor of vector
+    list property
+  *  f93b376cd5 - Sketcher: Improved ViewProvider visualisation for non-
+    rational Bsplines with non-unitary weight constraints
+  *  324f6d3e26 - Part: Geometry - BSpline - fix weight assignment
+  *  08e226df25 - Merge pull request #4456 from donovaly/TD-balloon-drag
+  *  a399312750 - Merge pull request #4470 from mnesarco/master
+  *  7c3911f61b - Merge pull request #4479 from Roy-043/ArchRoof-
+    compatibility-fix-2
+  *  0965fd4439 - Base: [skip ci] take care of case-sensitivity of
+    header file
+  *  190ddd941e - QGIViewBalloon.cpp: a fix as suggested
+  *  9a444671b7 - [Arch] ArchStructure.py wrongly used Part.Line
+    (endless line) to close a wire.
+  *  30c4c58f0b - [Arch] ArchRoof: Improved compatibility fix
+  *  b413b4a710 - Gui: Add new stylesheet ProDark-FreeCAD-theme (#4472)
+  *  da990fd51d - Addon Manager: Add MakerWorkbench icon
+  *  065bf4cfb4 - Added new names to About-Credits info, tried to
+    manually find new names from ~80 top public GitHub contributors.
+  *  dc0d4e4a02 - [TD] Fix error in editable status of DOCUMENT_TYPE
+  *  313fc6294f - PD: [skip ci] fix typo in comment
+  *  8b8b12b646 - FEM: Fix typo in filter function tooltip
+  *  2661e0ea47 - PartDesign: [skip ci] make base object visible again
+    if initial additive helix fails to recompute
+  *  8e16225b03 - PartDesign: Helix: fix preview
+  *  81267fc284 - App/Gui: fix possible crash when destroying Python
+    feature or its view provider
+  *  c5ebb6dd58 - AddonManager: Added icons for Marz, ExtMan,
+    MnesarcoUtils workbenches
+  *  87b6a42f13 - Merge pull request #4440 from mlampert/bugfix/path-
+    invalid-base-geometry-robustness
+  *  61824e80f3 - Update PathOp.py
+  *  bb00993a33 - Merge pull request #4464 from luzpaz/spacemouse-
+    warning
+  *  a62b5b314b - FEM: code formatting, revert parts of commit
+    f4a65dcbb68
+  *  fc1f611a18 - Merge pull request #4467 from mlampert/bugfix/cleanup-
+    redundant-check
+  *  9d095f1738 - Merge pull request #4455 from mlampert/bugfix/toolbit-
+    properties-alignment
+  *  cff02d85de - Fixed angle detection
+  *  da4f6cecc8 - QGIViewBalloon.cpp: code simplification
+  *  eae5826d93 - Merge branch 'master' into bugfix/toolbit-properties-
+    alignment
+  *  04fb966d69 - Merge branch 'master' into bugfix/path-invalid-base-
+    geometry-robustness
+  *  1061c0ed85 - [TD] fix dragging of balloons
+  *  35c1a005f1 - Fixed TC creation from templates if legacy tools are
+    enabled.
+  *  522734eb3c - Removed obsolete preference api
+  *  0d895980a4 - 3Dconnexion: Clarify ambivalent console output warning
+  *  ec89caacd1 - Merge branch 'master' into bugfix/toolbit-properties-
+    alignment
+  *  41de35c456 - Only use IconViewProvider in PathStock when required.
+  *  4d3ecdab68 - Added missing </a> as per review
+  *  baf5e5398e - [Start] Enable hyperlink for installed Addons
+  *  7803740edd - PartDesign: Subtractive Loft. Raise error when base is
+    null.
+  *  ef6e8ec844 - Merge pull request #4448 from luzpaz/BUG-4559
+  *  48dc4063f8 - Merge pull request #4387 from mlampert/feature/add-
+    experimental-features-to-preferences
+  *  ab186aa05a - Merge pull request #4433 from J-Dunn/master
+  *  1d0466d6f2 - PartDesign: Improve Helix parameter proposals
+  *  8d2b4d635f - FEM: code formatting, pep8
+  *  1f5acbf6b1 - FEM: material task panel, fix edition of Poisson Ratio
+  *  2cc764f5ca - Arch: add BIM_Classification command before make use
+    of it
+  *  686df593ea - Draft: Applied patch from nahshon - fixes misc errors
+    from translation fixes
+  *  3467907fab - Main: [skip ci] set new year
+  *  070b5560d0 - Merge pull request #4449 from
+    paullee0/ArchSectionPlane_BugFixes_01
+  *  47c52cf051 - Merge pull request #4434 from Roy-
+    043/Arch_Fix_ArchPipe
+  *  a058d1c482 - Only import icon view provider in job if required.
+  *  7da5c447e4 - Load PathGui for property bag view provider to
+    function properly
+  *  6516168c4b - Fixed property bag view provider and consolidated
+    chamfer tool
+  *  cc62aff0ae - Merge branch 'master' into bugfix/path-invalid-base-
+    geometry-robustness
+  *  ff01e4f4a8 - Merge branch 'master' into feature/add-experimental-
+    features-to-preferences
+  *  62ed39e010 - Merge pull request #4443 from mlampert/bugfix/deburr-
+    offset-part
+  *  e071d613db - Merge pull request #4441 from mlampert/bugfix/path-
+    ellipsis-cmdsForEdge
+  *  02b3074ab8 - Merge pull request #4384 from
+    Russ4262/feature_useoutline_to_adaptive
+  *  08de4809c4 - PD: [skip ci] fixes #0004205: Bad behavior when
+    entering manually PD/AdditivePipe path
+  *  97bbc459c6 - FEM: z88 solver function typos [skip ci]
+  *  cfebd3f1e6 - FEM: remote superfluous double semicolons [skip ci]
+  *  bb501c336f - AddonManager: removes unused imports
+  *  f7a467cbdc - Merge branch 'master' into bugfix/path-invalid-base-
+    geometry-robustness
+  *  086746228d - Merge branch 'master' into bugfix/path-ellipsis-
+    cmdsForEdge
+  *  696e17c894 - Merge branch 'master' into bugfix/deburr-offset-part
+  *  57cfd3c17a - Merge branch 'master' into feature/add-experimental-
+    features-to-preferences
+  *  008e97b929 - TD: fix undo/redo for balloon objects
+  *  a82a103cb3 - TD: fix undo/redo for dimension objects * do not emit
+    dragFinished() signal inside mousePressEvent as nothing has been
+    done. This avoids to create an empty transaction and doesn't touch
+    the document * inside mouseReleaseEvent() check if the mouse has
+    been moved and only if yes emit the signal * improve error handling
+    in mouseDoubleClickEvent * in mouseDoubleClickEvent start to edit
+    the view provider
+  *  ed87303802 - Mesh: add unit tests for splitting facets
+  *  d941c114cb - Mesh: [skip ci] expose some mesh evaluation functions
+    to Python
+  *  dac937ae35 - Part: Allow helix primitive with negative Angle
+  *  00cce75bd5 - Mesh: [skip ci] replace tabs with spaces
+  *  fb52f3177d - Path: fix typos in comments [skip ci]
+  *  733e90df7e - Merge branch 'master' into feature/add-experimental-
+    features-to-preferences
+  *  1d2c51d66f - Draft: Fix regressions in Draft array
+  *  ea957114ac - Merge branch 'master' into bugfix/path-ellipsis-
+    cmdsForEdge
+  *  d862434870 - Merge branch 'master' into bugfix/deburr-offset-part
+  *  d7c4612bb6 - Merge branch 'master' into bugfix/path-invalid-base-
+    geometry-robustness
+  *  da85fde409 - Split OCL and experimental features to allow enabling
+    independently.
+  *  63cd587e07 - Added 'Advanced' preferences page, moved warning
+    suppression there and experimental feature support.
+  *  1b42828d25 - Mesh: [skip ci] implement splitFacet
+  *  255b184540 - Merge branch 'master' into bugfix/path-invalid-base-
+    geometry-robustness
+  *  574918e5f2 - Merge branch 'master' into bugfix/path-ellipsis-
+    cmdsForEdge
+  *  293f1613c5 - Merge branch 'master' into bugfix/deburr-offset-part
+  *  f05cc354b1 - [ArchSectionPlane]  Fix Swing Symbol for
+    Windows(Doors) Link in ArchView/TechDraw
+  *  518a9fcbaf - Gui: Stylesheet fix applied to all shipped stylesheets
+    [skip ci]
+  *  95fcaccfd8 - Sketcher: Fix external geometry ellipse projection in
+    parallel plane
+  *  2b881cccad - Draft: fix syntax errors
+  *  5086c5f38d - Sketcher: Coverity fix in
+    Sketch::analyseBlockedGeometry
+  *  eef4629c6b - Merge branch 'master' into bugfix/path-invalid-base-
+    geometry-robustness
+  *  dba3f4055a - Merge branch 'master' into bugfix/path-ellipsis-
+    cmdsForEdge
+  *  7840130186 - Merge branch 'master' into bugfix/deburr-offset-part
+  *  feb4ffc693 - Correct minimum distance calculation in SplitFacet
+  *  d3b83764b7 - Merge branch 'master' into bugfix/deburr-offset-part
+  *  59de4bd378 - Merge branch 'master' into bugfix/path-ellipsis-
+    cmdsForEdge
+  *  5a1200b246 - Merge branch 'master' into bugfix/path-invalid-base-
+    geometry-robustness
+  *  f0d3e19a4e - PartDesign: Fix hardcoded through all distance in
+    ProfileBased
+  *  158acd110e - Add rocket workbench addon
+  *  2a3edfd83e - [SpreadSheet] Fixes #4563 exported range issue
+  *  17af884e50 - PartDesign: Fix broken outdated icon filenames
+  *  66417b3ce1 - TD: [skip ci] use setAutoCloseOnTransactionChange for
+    balloon and dimension task dialog
+  *  75dff5d947 - Gui: [skip ci] add option to automatically close task
+    dialog if undo/redo was pressed
+  *  d4e8a5a384 - TechDraw: [skip ci] avoid to trigger a slot in
+    constructor of TaskBalloon
+  *  3288c02eba - TechDraw: fixes for dimension feature:
+  *  bb0d75b6cc - TechDraw: [skip] fixes for balloon feature: *
+    reimplement ViewProviderBalloon::setupContextMenu() to show item to
+    start editing it + fix TaskBalloon::accept() and
+    TaskBalloon::reject()
+  *  84b8282f48 - Updated ts files
+  *  97bfc5541e - Tools: Detect and use pyside2-lupdate in ts tools
+  *  43feb585ad - Draft: Fixed broken translations everywhere
+  *  eaae425c64 - PD: [skip ci] fix ViewProviderPrimitive::getIcon()
+    after renaming of icon files
+  *  d7ad20acdd - Part: [skip ci] code-refactoring in DlgPrimitives
+    class
+  *  e5527025cc - Added support for Part.OffsetCurve to flipEdge.
+  *  95ccfd4505 - Fixed segmentation for unknown shapes, leaving that to
+    the experts.
+  *  ec2328bfaa - Ensure base geometry is valid so if it isn't one can
+    still edit the op and fix the base geometry.
+  *  5683d054d4 - [Arch] Fix for ArchPipe: getProfile returned Shape
+    instead of Wire
+  *  57fd294391 - FEM: Improve Gmsh log, when Gmsh is not installed
+  *  d55a72ee6a - [PATH] fix conecutter core dumps
+  *  32200b604d - LGTM: Removes unused import in PathPropertyBagGui.py
+  *  ca2ecf4248 - Path: Removes unused imports from PathToolBit.py
+  *  a0bbb173f4 - LGTM: Remove unused Time() function
+  *  2834075d6a - [PD] rename icons to match Wiki files
+  *  946e980d1a - LGTM: Move seq->next out of loop control
+  *  cbc3fbd157 - [UI] Replacement of 3 SVG icons for OpenSCAD commands
+  *  4130244329 - Fix MeshPart icon names
+  *  ebc4cd6700 - LGTM: Minor fixes to FreeCADApp.py
+  *  3ef6e1c6d0 - [OTHER] Catch only Exception, not BaseException
+  *  fe7e45a7de - [DRAFT] Catch only Exception, not BaseException
+  *  8228d64ac4 - [ARCH] Catch only Exception, not BaseException
+  *  10b08671ef - Sketcher: Fix uninitialized scalar field in ctor
+  *  0641e243e0 - Sketcher: Bug fix / improve B-Spline knot support
+  *  731ef48136 - Merge pull request #4417 from
+    Schildkroet/adaptive_improve
+  *  c59b9bd013 - Sketcher: fix malformed constraint on nurbs conversion
+  *  46a899c437 - [Part] Coverity: dtors can't throw
+  *  1e2f8e366f - Sketcher: Fix geometry state synchronisation routine
+  *  9f871a444b - [FEM] Clipping plane: Fix handling of shapeless
+    document objects
+  *  ea67e77e81 - [PD] Add missing ctor variable init (Coverity)
+  *  b76fe29412 - Sketcher: Add 'Sketcher B-spline tools' to translation
+    [skip ci]
+  *  ddcb7b73f4 - Fix mesh icon names of 3 SVG files
+  *  f45f218885 - TechDraw: expose TechDraw_Decorate function tooltip to
+    translation
+  *  bcf46a3351 - TechDraw: Expose strings in Workbench.cpp to
+    translators
+  *  5d0cf1081e - LGTM: Eliminate float-to-double overflow warning
+  *  5269d10327 - LGTM: Don't check PyCXX
+  *  136a625e4c - [PATH] Added onDocRestore method for adaptive op
+  *  bcb5c8786f - merged crowdin translations
+  *  7c708eeca3 - Gui: [skip ci] add convenience function
+    updateActions() to Application Use updateActions() in
+    ViewProvider::onChanged() to also trigger an update on pure view
+    property changes
+  *  53c5852ccb - Mesh: [skip ci] use a more appropriate icons for cross
+    sections
+  *  f7e9ee74d6 - MeshPart: [skip ci] use correct icon for Mesh cross-
+    section dialog
+  *  e5f00e4d57 - Merge pull request #4402 from luzpaz/ArchSchedule
+  *  f92b8bf18e - Adds 3DConnexion SpaceMouse Pro Button Map
+  *  2b5bc5d99d - Fix mesh icon names of 9 SVG files
+  *  36fdbc460a - Sketcher: Geometry state synchronisation
+  *  41a40c1c31 - [PD] Catch Python exceptions in dtors (Coverity)
+  *  d00f1099f3 - Arch: update tooltip ref. to LibreOffice version
+    within ArchSchedule
+  *  5e00309368 - Gui: [skip ci] add possibility to auto-expand items in
+    property editor
+  *  15068d7dc6 - Merge pull request #4383 from mlampert/feature/path-
+    hide-ops-by-default
+  *  24e7e83ddd - More required items in the github pull request
+    template
+  *  911a3b8e1e - Merge pull request #4253 from J-Dunn/master
+  *  ec0cc86ead - Merge pull request #4393 from mlampert/bugfix/issue-
+    4557
+  *  73b8995c7b - Fix mesh icons names of SVG files
+  *  15d4cac123 - LGTM: Remove superfluous conditional
+  *  298004a39c - Updated master TS files
+  *  97dcb24c80 - Merge pull request #4341 from hyarion/feature-error-
+    handling-get_svg
+  *  4e3a269906 - Merge pull request #4386 from marioalexis84/draft-
+    clone
+  *  91435c96f7 - Gui: [skip ci] support undo/redo for view properties
+    in editor
+  *  5323de3d0b - [UI] Add SVG icon for Mesh SplitComponents
+  *  ef14a561bd - [FEM] save icons as plain SVG
+  *  081cc4d9eb - Remove extra comma in Asymptote surface color
+    definition
+  *  05dd6c287c - Silence incorrect LGTM warning.
+  *  503a5a99d2 - Base: [skip ci] fix MSVC build failure
+  *  394a885929 - import DraftTools if Snapper isn't loaded yet (before
+    using it)
+  *  a3fb41502b - FEM: Fix svg icons that causes warning messages
+  *  a30cf5b4df - App: make sure to also call a feature's extensions
+    when recomputing it
+  *  ea2e46dccb - Part: allow TaskAttachmentEditor to install attacher
+    extension on demand
+  *  c5ce992786 - App: fix Link extensionGetPropertyByName()
+  *  3423e72679 - LGTM: remove redundant variable assignment
+  *  7d5a1d7e5d - Remove catch block for plain C strings
+  *  4719bb703d - Mesh: [skip ci] fix MeshPy::trim
+  *  7c8c5892d0 - Draft: Correct the placement in scale_with_clone -
+    fixes #0004113
+  *  c2110dc48f - Path: Add checkbox input for  feature
+  *  9dce167073 - Set operation Visibility to False, and turn it back on
+    while editing.
+  *  c8c18e2968 - Path: Add  property and default value for new feature
+  *  2c204f3c29 - Path: Add  usage for  module dependencies
+  *  0ba06f3831 - Path: Relocate edge preprocessing and apply  feature
+  *  db9525e7d7 - Mesh: minor change to exporter based on suggestion
+  *  ea61253c67 - Mesh: refactor mesh exporter for better support of
+    Link
+  *  13927b2465 - [skip ci] Do not throw plain C string as exception
+  *  3e2780a511 - PartDesign: Fix sign error in Helix
+  *  727dc9fa9e - Sketcher: Fix wrong diameter reference constraint
+    value when blocked
+  *  9318c4c1f2 - [TD] ShapeExtractor.cpp: Fix linked View source bug,
+    link targets were translated but not scaled in TD.
+  *  ea54ed3e90 - Modify LGTM config to exclude legacy/unmaintained
+  *  692900d085 - PartDesign: fix regression in Helix
+  *  75dee2ff7d - [TD] Fix XSource handling of sub-objects of links to
+    another document(s) in TD Views.
+  *  8efbe8861f - PartDesign: [Helix] Fix helix starting point bug
+  *  2ac84872ec - [PD] make pointers to the UI std::unique_ptr
+  *  a544951dcd - Merge pull request #4333 from
+    Russ4262/remove_feature_expand_profile
+  *  99c686f061 - Part: [skip ci] fix -Wreorder
+  *  603cbdbfd5 - [Part] make pointers to the UI std::unique_ptr
+  *  65656f6d22 - [Sketcher] make more pointers to the UI
+    std::unique_ptr
+  *  9c3c562f7b - Surface: re-implement closed() in TaskFilling
+  *  1e7929ba59 - Gui: add virtual method 'closed' to TaskDialog that is
+    called when deleting a dialog
+  *  9c9244dfb3 - Guard against segfaults due to out-of-order dialog
+    deletion
+  *  aa52a3f55c - Merge pull request #4215 from hyarion/feature-
+    spreadsheet-equal-prefix-for-expressions
+  *  21dc72ed10 - [TD] make more pointers to the UI std::unique_ptr
+  *  7560a35ea0 - Fix minor issues with Workbenches preference panel
+  *  4cdef79531 - Merge pull request #4356 from luzpaz/LGTM-ArchPanel
+  *  47137ea465 - Merge pull request #4366 from
+    amrit3701/bug_fix/draft_getCubicDimensions
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 20 Feb 2021 15:51:13 +0300
+
 freecad-daily (0.18.4+git23935-d5b68febbb-1) unstable; urgency=medium
 
   * Compile
