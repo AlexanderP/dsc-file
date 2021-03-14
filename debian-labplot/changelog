@@ -1,3 +1,41 @@
+labplot (2.8.0+git8185-5a3eab2ca-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 5a3eab2caf05f8e0a57359776a7853c7eeafa0ae
+  * Date: 1614735370
+  * git changelog:
+  *  5a3eab2ca - GIT_SILENT made messages (after extraction)
+  *  3a780f53f - Off by one typo
+  *  1c2413b14 - typo
+  *  a9369dba8 - use std namespace
+  *  2c6642280 - Use std::isnan
+  *  90ea8f97f - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  0bafa3e8a - GIT_SILENT made messages (after extraction)
+  *  980de5de4 - Hilbert transform curve with dock and implementation
+    including tests
+  *  441667522 - Update splash image
+  *  35db54570 - [spreadsheet] properly resize the internal data
+    containers created for the Q-Q plot in the statistics dialog.
+  *  ab069ad3b - Make datetimeedits wrap
+  *  0ca1c1a9f - Add missing save and load of datetime format
+  *  68828f183 - [spreadsheet] make the plots in the column statistics
+    widget non-interactive and switched to the default color theme for
+    all plots in this dialog.
+  *  05c5e5923 - Improve range display
+  *  db4590df7 - [spreadhsheet] allow to plot box plots via the Plot
+    Data-Dialog.
+  *  330289fef - User QJsonValueRef instead of auto& in the range-based
+    for-loops in ImportDatasetWidget.cpp to avoid copies of containers
+    because the range of type 'QJsonArray' does not return a reference
+    (clang warning).
+  *  0740051bf - [spreashdeet] implemented KDE plot in the column
+    statistics widget.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 04 Mar 2021 23:15:40 +0300
+
 labplot (2.8.0+git8168-692d18ef0-1) unstable; urgency=medium
 
   * Compile

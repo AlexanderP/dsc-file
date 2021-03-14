@@ -1,3 +1,52 @@
+goaccess (1:1.4.3+git3482-5c2503bc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 5c2503bce30a379a8030a6016da1fefcff68ceda
+  * Date: 1614817337
+  * git changelog:
+  *  5c2503bc - Merge pull request #2046 from sazb/patch-1
+  *  856dbbda - Update settings.c
+  *  601338f6 - Added cache status to the pre-defined CloudFront log-
+    format.
+  *  a64b1a2c - Updated man page with latest changes.
+  *  0b186309 - Minor code alignment change.
+  *  e7197028 - Minor code alignment change.
+  *  2cd6147b - Added missing panels to some of the config options.
+  *  8431d04f - Ensure Changelog uses spaces as indentation.
+  *  75871f26 - Updated Changelog to reflect changes in v1.4.6.
+  *  3d2fbca8 - Updated AUTHORS to reflect latest contrib.
+  *  fa49c5f5 - Updated README.md with latest v1.4.6 changes.
+  *  c7ad74b0 - Updated po files with latest changes.
+  *  faa3014d - Version bumped to 1.4.6.
+  *  c7d35061 - Updated CloudFront pre-defined log-format to reflect the
+    latest fields.
+  *  f773e804 - Fixed inability to parse escaped formats.
+  *  ebfcbda7 - Fixed comment typo under util.c.
+  *  5faad16b - Ensure we capture linux (lowercase) when extracting an
+    OS.
+  *  5141dd77 - Updated browsers list to reflect latest changes on some
+    bots.
+  *  239feec0 - Fixed sorting on hits and visitors when larger than
+    INT_MAX.
+  *  057d6568 - Merge pull request #2039 from jackdesbwa-
+    contrib/geoip1_ipv4_ipv6
+  *  ef593116 - Added command line option '--unknowns-log' to log
+    unknown browsers and OSs.
+  *  c2f3e358 - Handle case when IPv4 is encoded as IPv6 in GeoIP1
+  *  056359d4 - Ensure we use strict JSON when determining if we're
+    using a JSON format.
+  *  df134b6d - Version bumped to 1.4.6.
+  *  25c203ef - Version bumped to 1.4.6.
+  *  5cc06a31 - Added Referer to the pre-defined Caddy JSON log format.
+  *  4970b4c0 - Merge pull request #2035 from IzzySoft/browsers2
+  *  53fab513 - add Aptly, PrivacyBrowser, Mastodon UA
+  *  5211fd58 - Merge pull request #2034 from IzzySoft/browsers
+  *  39aa6ac7 - add some browsers
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 04 Mar 2021 22:17:22 +0300
+
 goaccess (1:1.4.3+git3452-03aafa86-1) unstable; urgency=medium
 
   * Compile

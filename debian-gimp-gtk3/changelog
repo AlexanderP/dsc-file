@@ -1,3 +1,65 @@
+gimp-gtk3 (2.99.0+git46734-dee605ce27-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: dee605ce27c732fd0853a84acf1f23eb95b65cd0
+  * Date: 1614882774
+  * git changelog:
+  *  dee605ce27 - Update Ukrainian translation
+  *  a79aac687b - plug-ins, TIFF: Don't try to load image with bit depth
+    we can't handle.
+  *  a6d4ef8b94 - plug-ins, TIFF: improve loading of
+    miniswhite/minisblack images.
+  *  86d1cf1c1b - Update Hungarian translation
+  *  8ef6a9cb2c - Update Hungarian translation
+  *  17d9fb8ff1 - Updated Slovenian translation
+  *  aff0c68234 - Updated Slovenian translation
+  *  d004a42c35 - Updated Slovenian translation
+  *  51a0278ae2 - Updated Slovenian translation
+  *  8336147bdf - Revert gitlab-ci: testing gtk!1563 for Windows Ink
+    support.
+  *  32434d9fc3 - gitlab-ci: testing gtk!1563 for Windows Ink support.
+  *  fe4cde9d48 - Update Ukrainian translation
+  *  038e9eaa47 - Update Slovenian translation
+  *  20cedd4c0c - plug-ins: improve a few error messages and allow
+    translating.
+  *  2ff9ccf46c - plug-ins: add more safety checks when loading a TIFF
+    image.
+  *  97739af643 - plug-ins: libtiff warnings can cause a crash on
+    Windows.
+  *  a44de4679f - libgimp: fix annotation.
+  *  f0a8c0c3f5 - plug-ins: also generate grayscale color profiles from
+    gAMA/cHRM chunks.
+  *  87669c2a1c - Updated Italian translation
+  *  64128c7787 - Update Polish translation
+  *  fb0deacdeb - Update Catalan translation
+  *  2abf23c812 - Update Swedish translation
+  *  a3a6607b92 - Update Ukrainian translation
+  *  8977c1055d - gui: Update text of 'Crop tool' option to 'Selected
+    layers only'
+  *  e83faedb9d - Update Swedish translation
+  *  6959426603 - tools: Rectangle select. Incorrect center_xy after
+    converting channel selection to rectangle
+  *  a3e7bdf900 - Update Ukrainian translation
+  *  6457394069 - Issue #6446: Typo fixes.
+  *  72d1f9cb6d - plug-ins: get rid of
+    gimp_image_(s|g)et_active_layer().
+  *  6e7ce32446 - libgimp: new gimp_image_take_selected_layers().
+  *  0f0e63fff3 - plug-ins: multi-layer support in PSD load/export.
+  *  d9840893c0 - app: remove useless code.
+  *  c800b262b0 - app, pdb, libgimp: new PDB call gimp-image-set-
+    selected-layers.
+  *  02fa354254 - app: replace more gimp_(s|g)et_active_layer() to
+    *_selected_layers().
+  *  579cfc064c - libgimpwidgets: on HiPPI display, fix stroked eye when
+    parent item…
+  *  1e76829989 - Issue #6447: Meson 0.57 build fails.
+  *  1de810f6de - configure, meson: missing OpenRaster MIME type in
+    desktop file.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 04 Mar 2021 23:04:56 +0300
+
 gimp-gtk3 (2.99.0+git46697-dffab0e9a4-1) unstable; urgency=medium
 
   * Compile

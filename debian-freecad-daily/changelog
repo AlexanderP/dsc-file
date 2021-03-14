@@ -1,3 +1,271 @@
+freecad-daily (0.18.4+git24344-6789ddaac9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 6789ddaac98a2819619c2faf4d54049fde7b1a5d
+  * Date: 1614881903
+  * git changelog:
+  *  6789ddaac9 - Fix regex in translation extraction script
+  *  19d8c755c2 - travis: remove Qt4 & Py2 support from the build matrix
+  *  f85478155b - Revert [PartDesign] Add Material property to Body
+  *  7b87cc8a74 - Merge pull request #4549 from
+    chennes/lgtmFixDraftLocalizeVectors
+  *  4fcf8f199c - [PartDesign] Add Material property to Body
+  *  232fa56f02 - CMake: fix build and install location of Qt help files
+  *  55896f316e - PD: [skip ci] in the helix dialog use step size of 5
+    degree for the angle
+  *  965250246a - [PD] use same helix angle step as for other features
+  *  249c2c7970 - [PD] set App constraints for their Gui counterparts
+  *  39d82a8d5d - Update icon for Sketcher Constraint Block
+  *  e8566f22bb - Tools: Remove super old DistTools module
+  *  ac23438eb6 - PD: [skip ci] in the helix task dialog use the value
+    range defined in the helix feature
+  *  f982112e24 - [PD] set constraints for helix properties
+  *  4610e26110 - [GUI] Tweak wording and translatability of Credits
+  *  318972ce70 - PartDesign: Allow customization of Helix preview modes
+  *  d1439107df - [PD] fixes problem with the path for user-defined hole-
+    cut-types
+  *  3704ad68d8 - [PD] make constraints static class member
+  *  42bf2c8285 - [PD] attempt to use more reasonable angle limit for
+    drafts
+  *  0f3e98588f - PD: AddressSanitizer: heap-use-after-free Fix crash
+    inside TaskDlgSketchBasedParameters::reject()
+  *  036c6b0d25 - PD: improve task panel for revolution/groove: * set
+    range Angle property to spin box * connect signals after
+    initializing widgets to avoid superfluous recomputes
+  *  bc1b9ea1bb - PD: [skip ci] set value range to angle spin box
+  *  3694da3102 - PD: [skip ci] fix angle checks for groove and
+    revolution
+  *  3e7429d163 - PD: [skip ci] set angle constraints for groove
+  *  c0de42335b - [PD] disallow angles <=0 for holes and revolution
+  *  5edd7d01a0 - Base: fixes #0004586: Conversion error for PoundForce
+    (lbf)
+  *  f5cc3027f4 - [GUI] Refactor About to list credits from a file
+  *  d8e523978c - [GUI] Add window decorations to About
+  *  eccc5bfe1a - PD: [skip ci] fix angle check in
+    PolarPattern::getTransformations()
+  *  832174641c - PD: improve task panel for polar patterns: * set range
+    of Occurrences property to spin box * connect signals after
+    initializing widgets to avoid superfluous recomputes and possible
+    inconsistencies
+  *  2d54d838cf - PD: improve task panel for linear patterns: * set
+    range of Occurrences property to spin box * connect signals after
+    initializing widgets to avoid superfluous recomputes and possible
+    inconsistencies
+  *  48b42f8355 - App: add convenience methods to get minimum, maximum
+    and step size of property constraints
+  *  7f1b47d118 - [PD] disallow invalid polar and linear pattern
+    settings
+  *  a263b731ef - CMake: [skip ci] copy ThirdPartyLibraries.html and
+    LICENSE.html to the correct location and add the latter to the
+    INSTALL() command
+  *  c9366cd96b - Switch to removeTab() to support older Qt versions
+  *  73f4b9b4db - [GUI] Implement license tab that obeys stylesheet
+  *  cb81426e63 - Crowdin: remove trailing whitespace [skip ci]
+  *  083f57116d - Gui: [skip ci] for the author label use the same font
+    configuration as with the rich text as otherwise the text appears
+    very tiny
+  *  a5c0ac6d16 - [GUI] Make UrlLabel in About styleable
+  *  89b094683f - Gui: support to customize the font size of bounding
+    boxes
+  *  43bc30da84 - Beautify xml step 1: These changes do not affect the
+    uic output
+  *  9cd929afa4 - travis: using C++17 for the clang build doesn't
+    currently work on Bionic. So revert the change from commit
+    daef7ec0fead and instead suppress the C++17 related warnings caused
+    by OCCT
+  *  daef7ec0fe - travis: OCCT 7.5.1 uses [[nodiscard]] that is a C++17
+    feature. To avoid to get tons of warnings because of -Wpedantic the
+    clang build should use C++17, too
+  *  deaf74856b - Arch: Fixed SectionPlane outside objects bug in
+    ArchSectionPlane - Fixes #4549
+  *  752cb73d24 - [Draft] Fix localize_vectors double definition
+  *  c1408f130c - [OpenSCAD] Add unit test framework to module
+  *  52c0558f91 - PartDesign: Allow use of circle edge as axis in
+    PolarPattern
+  *  f1d6c78cbe - PartDesign: Allow use of circle edge as axis in
+    ProfileBased
+  *  356db441a6 - PD: [skip ci] PolarPattern: Support 1 occurrence This
+    is analogous to support 1 occurrence of the linear pattern feature:
+    81a5ec5e55ef
+  *  f481c47123 - [PD] fix multi-transform View
+  *  6be901557e - Add library versions to LibraryVersions.h
+  *  c7c420ca1d - PartDesign: Hole. Address Donovaly bugs 7 and 8
+  *  1eeefeb8ae - PartDesign: Hole: Always update view if modelthread is
+    disabled
+  *  d59e90a10f - PartDesign: Hole: Turn off keyboard tracking on model
+    thread spinboxex
+  *  ebe2ce1034 - PartDesign: Hole: Rename Automatic Tapped (DIN76) and
+    change default to Hole depth.
+  *  6ea6b48c0e - PartDesign: [Hole] Add Entire Depth thread depth mode
+  *  d3ddbe8549 - PartDesign: Add true threads to Hole
+  *  221a43255c - [CMAKE] Add version info for MEDfile
+  *  74b0c6efae - [CMAKE] Cleanup version info for Python & XercesC
+  *  0ed341a84c - [CMAKE] Add Coin3D version info
+  *  4b4a6b3580 - [Offline Docs] Fix static analysis issues
+  *  e2bb84fd2f - [Tools] Fix static analyis issues
+  *  bcb070def1 - Crowdin: Startpage - add whitespace to tooltip [skip
+    ci]
+  *  2ff669e5b8 - Crowdin: Startpage: remove obsolete translation [skip
+    ci]
+  *  e0b5aade34 - Crowdin: StartPage - remove obsolete translation [skip
+    ci]
+  *  223d7971ae - Sketcher: fixes #0004303: Three choices in a Sketcher
+    menu each with the same Ctrl+Shift+E 'address'
+  *  f0e4265205 - Image: fixes #0003959: Created image plane is not
+    proportional to loaded image
+  *  59048fb95b - Tux: fixes #0004565: Status bar text runs under
+    Navigation Button
+  *  957eed7d2c - Gui: [skip ci] allow to unbind() an ExpressionBinding
+    and automatically unbind it if the observed object has been deleted
+  *  2599d67c2b - Clean up various LGTM-flagged items
+  *  283d09dc1a - [DRAFT] Add call to super().__init__ where missing
+  *  a432480e8d - [Part] Fix signature of TempoVis dummy function
+  *  b1789ae7d2 - [PD] Fix minor static analysis issues in FCGear
+  *  16ff933b09 - PartDesign: Transformded. Align the property category
+    of Refine with other PD commands
+  *  82354979c9 - Gui: [skip ci] fix memory leak in SelectionFilter
+  *  bd755b654b - Gui: [skip ci] re-add removed Py_INCREF of module
+  *  df0f979f3b - App/Gui: fix memory leaks: + add function to cleanup
+    units and quantities in debug build + fix reference leak in
+    PropertyVector::getPyPathValue() + fix reference leak in
+    PropertyPlacement::getPyPathValue() + in
+    InterpreterSingleton::init() use a static std::vector<wchar_t*>
+    instead of a C array   to free memory at program end + in
+    MainWindow::closeEvent() explicitly delete all task watchers + in
+    ReportOutputObserver constructor pass parent to QObject + in
+    PropertyEditor destructor explicitly delete QItemEditorFactory
+  *  5d5d05616f - App: [skip ci] AddressSanitizer: heap-use-after-free
+    When removing a dynamic property its myName member must be nullified
+    as the memory has been de-allocated
+  *  b2ca86d8d7 - FEM: [skip ci] fix crash in Constraint::getDirection
+  *  d29fd7d9cb - [OpenSCAD] Fix colors not working correctly when
+    polygons are extruded
+  *  29bbb5e14f - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  958009c2ca - Merged crowdin translations
+  *  7900a069c2 - [TD] DrawViewPart.cpp: Fix a crash when user sets the
+    PropertyVector Direction to zero.
+  *  20bcce1544 - TD: [skip ci] implement DrawView::recompute to handle
+    all OCC exception types
+  *  5b864424db - Gui: [skip ci] improve exception handling: * handle
+    all exceptions in Application::onLastWindowClosed because this
+    method can be (indirectly)  called from ~BaseView and would
+    otherwise trigger std::terminate() * handle exceptions in
+    PropertyEditor::closeTransaction() because when recomputing a
+    document while closing it leaves the editor in a bad state
+  *  17a848dfe1 - TD: [skip ci] explicitly nullify geometryObject in
+    DrawViewPart::partExec to avoid to leave it a dangling pointer in
+    case makeGeometryForShape raises an exception
+  *  4e5cfec623 - Crowdin: removing obsolete strings from PartDesign.ts
+    [skip ci]
+  *  879ab9ed84 - Crowdin: Gui: move whitespace out of translation
+    string [skip ci]
+  *  2300c44451 - Crowdin: fix trailing whitespace [skip ci]
+  *  81dbae551f - Crowdin: Gui: fix user-facing typo in Document.cpp
+    [skip ci]
+  *  51194d67d5 - [TD] Hotfix for Dimension label Arbitrary value
+    regression in DrawViewDimension.cpp
+  *  460426c038 - Gui: [skip ci] make Save logic of text document more
+    intuitive
+  *  8be8c08b47 - FEM: [skip ci] fixes #0004405: Using PartDesign axis /
+    plane as direction for constraints
+  *  7a56781285 - FEM: [skip ci] support Line and Plane objects in
+    Constraint::getDirection()
+  *  ab0a660963 - FEM: [skip ci] connect onButtonDirection() slot with
+    clicked() signal
+  *  a95cd106bb - PD: [skip ci] remove invalid static_cast
+  *  5ba28fa7ff - Merged crowdin translations
+  *  bc5311b3ee - PD: fixes #0004567: Pattern from a feature type
+    UpToFace and Offset > copy whole body
+  *  2389b4779a - PD: [skip ci] code refactoring Move adding offset to
+    face from getUpToFace() to addOffsetToFace()
+  *  7149c80f81 - Merge pull request #4520 from
+    sliptonic/bug/translations
+  *  a6fd02cb04 - Fix whitespace error
+  *  fa5dc51491 - fix trailing whitespace
+  *  315d4a8026 - fix bad string formatting
+  *  b2283c5430 - Make string less ambiguous
+  *  85bd1bf639 - typo in string
+  *  f7c50a4d75 - fix string formatting
+  *  3ef181a751 - AddonManager: Fixed missing WB icons
+  *  1939b93fa7 - Gui: [skip ci] fixes #0004104: Void property value
+    defaults to 1
+  *  9b31018b2e - Crowdin: Gui: fix DlgSettings3DView.ui tooltip [skip
+    ci]
+  *  7cf4d4b01e - App: [skip ci] AddressSanitizer: heap-use-after-free
+  *  eed7357674 - PD: [skip ci] AddressSanitizer: stack-use-after-scope
+  *  786e98e374 - Merge pull request #4438 from
+    paullee0/Draftutils_BugFixes_01
+  *  d90c1ff72f - Merge branch 'master' into Draftutils_BugFixes_01
+  *  4dd234bb22 - Merge pull request #4506 from berndhahnebach/bhbdev242
+  *  55d37935d9 - Merge pull request #4508 from donovaly/TD-
+    BalloonHotfix
+  *  482884cfd4 - PD: [skip ci] fix regression caused by e0d07257b7b86
+  *  7659bb0dae - Sketcher: Work-around for expression engine failure to
+    calculate dependencies
+  *  8a0d0236dc - Doc: Updated offline doc for 0.19
+  *  872a1a3ecc - Tools: Added link fix tool to offlinedoc tools
+  *  1241752b94 - App: [skip ci] check object status before accessing
+    back links
+  *  442b1a5db5 - Tools: Updated offline doc scripts
+  *  d761c9d2c0 - Mesh: Crowdin: fix typo in translation [skip ci]
+  *  f39002fb07 - Draft: Fix PathTwistedArray bug
+  *  ab3464b0f6 - [TD] fix balloon dragging
+  *  f5a567a1fc - Arch: ifc export, save guid to obj attribute
+  *  8c26baebab - Sketcher: [skip ci] Fix coverity warning
+  *  72b3354a28 - Gui: [skip ci] Fix coverity warning
+  *  e728c3590e - TD: [skip ci] Fix coverity warning
+  *  1d412261d6 - Part: [skip ci] Fix coverity warning
+  *  abfbed3ffa - Gui: [skip ci] Fix coverity warning
+  *  91c36f9ab1 - Mesh: [skip ci] Fix coverity warning
+  *  d4333072a9 - Part: [skip ci] add missing expression bindings to
+    tube dialog
+  *  3d227cf717 - Gui: [skip ci] fix issue found with -fsanitize-address-
+    use-after-scope
+  *  110860fa47 - Part: Part.CompoundTools.Explode.explodeCompound
+    access a property of...
+  *  9fb381b716 - [Part] fix regression in location dialog layout
+  *  20d513cd66 - Merge pull request #4484 from
+    Russ4262/fix_profile_feature_filter
+  *  6697310672 - Merge pull request #4498 from
+    sliptonic/bug/slotexperimental
+  *  2940953470 - Merge pull request #4497 from
+    sliptonic/bug/adaptiveuseoutlineprop
+  *  385efeeb58 - Sketcher: [skip ci] fix bad static_cast
+  *  43de589732 - PartDesign: Fix throughall distance when throughall is
+    used together with midplane
+  *  7405dd0ef9 - PD: [skip ci] fixes #0004573: missing bindings to
+    expressions in primitives location dialog
+  *  dd4874d2b6 - [Part] add missing bindings
+  *  2b35419e55 - Path: LGTM cleanup
+  *  a961fbee86 - Path: Remove unnecessary line return
+  *  1b3205de20 - Path: Add error for incorrect open-edge usage
+  *  215967fe78 - Path: Catch error if  has no  attribute
+  *  2b4158addc - Path: Fix incorrect empty data type return
+  *  8e234290ef - Path: Catch  error if
+  *  b3fc4fcf17 - Path: Fix spacing typo
+  *  d7483f6e85 - Path: Fix range() input type per gcc-7 build
+  *  3a10ed5f27 - Path: Fix feature selection and handling
+  *  91dd729d4e - Path: Fix error for undefined  variable
+  *  8f4f304635 - Path: Fix open-edge profiling for micro bit usage
+  *  45dab6b589 - Path: Change  default value to
+  *  0b9a160331 - Path:  Apply LazyLoader for DraftGeomUtils module
+  *  669201c47a - move slot op to experimental status
+  *  6359d83836 - Merge pull request #4454 from lag-linaro/master
+  *  d9ed0191d8 - Update
+    src/Mod/Path/PathScripts/post/heidenhain_post.py
+  *  ca06ab24a5 - Update heidenhain_post.py
+  *  6238f0e88a - Pep8 cleanup
+  *  0a9bf1c5f0 - Add useoutline property to op if doesn't exist
+  *  57a6c18e2f - Merge pull request #4477 from
+    sliptonic/bug/miscellaneous
+  *  26d7902303 - [FEM] correct sorting order
+  *  cdae5049ed - Import: [skip ci] fixes #0003988: the function
+    Import.readDXF doesn't import Bsplines
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 04 Mar 2021 22:16:42 +0300
+
 freecad-daily (0.18.4+git24171-13ed4bc6e8-1) unstable; urgency=medium
 
   * Compile

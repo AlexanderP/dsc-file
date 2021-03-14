@@ -1,3 +1,23 @@
+solvespace (3.0.0~git1699-3309181-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 33091817738d780d904bcd3e077022d87ebf2cd3
+  * Date: 1614650976
+  * git changelog:
+  *  3309181 - fix problems with ctrl/shift key drag modifiers When
+    dragging points we must always update position and mark them dirty
+    through all code paths. Ensure the ctrl and shift modifier rotation
+    quarternion is always set to something reasonable. separate
+    extraLine tracking code from drag tracking code
+  *  60dca4c - Fix incorrect styling on svg export
+  *  2fcc933 - Clarify ambiguous license terms.
+  *  0858fe6 - Update Changelog
+  *  745a12c - permit construction geometry toggle while drawing
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 04 Mar 2021 22:46:57 +0300
+
 solvespace (3.0.0~git1694-47c3209-1) unstable; urgency=medium
 
   * Compile
