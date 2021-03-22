@@ -1,3 +1,52 @@
+gimp-gtk3 (2.99.0+git46757-a95371c2b0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: a95371c2b070c83b4807786ffd3ba12c7b808872
+  * Date: 1615855779
+  * git changelog:
+  *  a95371c2b0 - plug-ins: in metadata-editor use /iptcExt instead of
+    /Iptc4xmpExt when saving.
+  *  d00fe2bfe2 - plug-ins: set most common CreatorContactInfo last in
+    metadata-editor.
+  *  184b803811 - plug-ins: fix several memory leaks in metadata-editor.
+  *  f04b84cb39 - plug-ins: fix using incorrect structs and fields in
+    metadata-editor.
+  *  4609def72f - plug-ins: more refactoring of duplicate code in
+    metadata-editor.
+  *  9c2451d813 - plug-ins: refactor writing single metadata tag in
+    metadata-editor.
+  *  87763cbe27 - plug-ins: remove use of strcpy without length checking
+    in metadata-editor.
+  *  c2fa21ac7d - plug-ins: remove use of global tagdata array in
+    metadata-editor.
+  *  0a0eeac1ad - plug-ins: more refactoring of metadata-editor.
+  *  e24a6dc8d6 - plug-ins: refactor metadata-editor adding values to
+    gui.
+  *  0ef5d672b7 - Update Hungarian translation
+  *  138aadce3f - Update Turkish translation
+  *  106e13d5db - Issue 4594: Spotify doesn't open with Gimp open.
+  *  3f1cae4d6b - libgimp: gimp_image_take_selected_layers() with
+    boolean return.
+  *  1cab305231 - tools: Made 'Crop tool' aware of color or pattern
+    changes
+  *  43b25781dc - libgimp: fix annotations of
+    gimp_image_list(_selected)_layers.
+  *  0442f700b6 - Update Polish translation
+  *  3fe07c1a37 - Update Ukrainian translation
+  *  fd2aa645af - plug-ins: be a little more forgiving loading g3 fax
+    images.
+  *  1edd114834 - plug-ins: improve error handling when loading g3 fax
+    images.
+  *  f59feba611 - Fix #6540 annotations on BrushSelectButton.get_brush()
+  *  df766d5443 - Fix annotations allowing null constraint and data
+    args, #6526
+  *  441631322b - plug-ins, TIFF: Oops, forgot to save formatting fixes
+    before committing.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 18 Mar 2021 23:43:17 +0300
+
 gimp-gtk3 (2.99.0+git46734-dee605ce27-1) unstable; urgency=medium
 
   * Compile

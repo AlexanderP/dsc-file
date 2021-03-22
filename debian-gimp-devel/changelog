@@ -1,3 +1,45 @@
+gimp-devel (2.10.18+git44534-404d0a711d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 404d0a711d16445d2587dd6eca7cc75f4bec8d7b
+  * Date: 1615915632
+  * git changelog:
+  *  404d0a711d - plug-ins: in metadata-editor use /iptcExt instead of
+    /Iptc4xmpExt when saving.
+  *  81b4ce100e - plug-ins: set most common CreatorContactInfo last in
+    metadata-editor.
+  *  cb3f7d527d - plug-ins: fix several memory leaks in metadata-editor.
+  *  aeb4967334 - plug-ins: fix using incorrect structs and fields in
+    metadata-editor.
+  *  11de16f8ab - plug-ins: more refactoring of duplicate code in
+    metadata-editor.
+  *  b5b8e38479 - plug-ins: refactor writing single metadata tag in
+    metadata-editor.
+  *  eda92ae5c7 - plug-ins: remove use of strcpy without length checking
+    in metadata-editor.
+  *  b6f0c0130b - plug-ins: remove use of global tagdata array in
+    metadata-editor.
+  *  b40c29ac0a - plug-ins: more refactoring of metadata-editor.
+  *  b0ab2b0e62 - plug-ins: refactor metadata-editor adding values to
+    gui.
+  *  6770f19e01 - tools: Made 'Crop tool' aware of color or pattern
+    changes
+  *  adc11d7a2c - Update Hungarian translation
+  *  9fcc31ea19 - Issue 4594: Spotify doesn't open with Gimp open.
+  *  be9995adc5 - Update Polish translation
+  *  58d63d4809 - Update Ukrainian translation
+  *  f4420f51a0 - plug-ins: fix cherry picking of commit fb38e42
+  *  c7f8e505de - plug-ins: be a little more forgiving loading g3 fax
+    images.
+  *  fb38e42ff4 - plug-ins: improve error handling when loading g3 fax
+    images.
+  *  9bf8097bd7 - plug-ins, TIFF: Oops, forgot to save formatting fixes
+    before committing.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 18 Mar 2021 23:41:12 +0300
+
 gimp-devel (2.10.18+git44515-3751cfa082-1) unstable; urgency=medium
 
   * Compile

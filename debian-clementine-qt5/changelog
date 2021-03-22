@@ -1,3 +1,49 @@
+clementine-qt5 (1.4.0~git514-g05e450c3c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 05e450c3c3dcc0de8955d77db8cb5a11cc2816f2
+  * Date: 1616066174
+  * git changelog:
+  *  05e450c3c - internet/core: Move core ShowContextMenu to base class
+  *  5ebd6d1e6 - internet/core: Move context_menu_ to base class
+  *  8b2f7f08a - ext: Remove depencency on src
+  *  cd41f706a - libclementine-common: Move timeconstants.h to common
+    location
+  *  3f34b332c - Automatic merge of translations from Transifex
+  *  89e9b20df - Use smart pointers for menus; move static vars and most
+    private methods to an anonymous namespace
+  *  3ba2c811f - Different context menu for service and stations; add to
+    your radio streams action for stations; reworked server error
+    handling
+  *  6a45edaa3 - Removed dirty hack in InternetModel; added
+    radiobrowser: url handler; rework station play callback
+  *  cd062f1d8 - Added settings page
+  *  cc0cedc5b - added station art
+  *  3e3109422 - Initial RadioBrowser support: implemented search,
+    groups by category, top 100
+  *  e7768948e - Initial radio-browser.info support
+  *  af75ebbd6 - libclementine-common: Mac: Fix exec search path
+  *  c974b8b6f - build: Don't include src/config.h from ext
+  *  08ded2384 - build: Move main config from /src to /include
+  *  610d87fa3 - Automatic merge of translations from Transifex
+  *  681e7bea5 - Automatic merge of translations from Transifex
+  *  3bd15aea0 - library: Add option to ignore files by extension
+  *  cef1d7e74 - Automatic merge of translations from Transifex
+  *  10bf5dc17 - internet/core: Remove unused ItemDoubleClicked
+  *  dfb953a78 - player: Emit request URL in SongChangeRequestProcessed
+  *  bde6d9cc5 - player: Add original request URL to playback request
+  *  233940485 - player: Send request when reporting playback status
+  *  651eee13e - lint
+  *  f56244cd8 - add wayland icon
+  *  6314c8cb2 - Automatic merge of translations from Transifex
+  *  7bb0c59f2 - Automatic merge of translations from Transifex
+  *  15474ada3 - build: Don't reset cflags in moodbar cmake
+  *  f92690c14 - build: Pin mac qt version to 5
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 18 Mar 2021 23:25:35 +0300
+
 clementine-qt5 (1.4.0~git485-g3677f702a-1) unstable; urgency=medium
 
   * Compile

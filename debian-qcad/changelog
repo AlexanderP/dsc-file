@@ -1,3 +1,58 @@
+qcad (3.26.0+git8260-82b9f7dbc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 82b9f7dbc15dee761eee8b28702384a0ea7fcf61
+  * Date: 1615924007
+  * git changelog:
+  *  82b9f7dbc - update PolyLineBreakSymbol tool [petevick]
+  *  fbce5dde0 - set version to 3.26.1.1
+  *  accb15706 - update qrc
+  *  a768107c6 - remove theme preference on macos
+  *  5c1d056f8 - add themes (petevick)
+  *  f1fa6ec30 - add break out manual tests
+  *  cb51654dc - fix FS#2210 - Modify > Break out Manual: unexpected
+    results with arc
+  *  acd56717d - fix: Modify > Break out Manual: point order matters
+    with open polyline
+  *  c54140916 - fix FS#2209 - Modify > Explode: incorrect results with
+    almost circular ellipse arcs
+  *  b117b190e - compile fix
+  *  34dfe86e0 - update qrc
+  *  d8751aef7 - fix FS#2207 - File > SVG Export: dimension labels
+    invisible with TTF fonts
+  *  2b8f52ade - fix FS#2208 - Snap: Cannot snap to block arrays
+  *  9d4b8240a - Merge branch 'master' of github.com:qcad/qcad
+  *  e4c187d22 - update misc drawing tools
+  *  df00c996a - update mist drawing tools
+  *  4132b7999 - update credits
+  *  d05ce5a8c - add PolyLineBreakSymbol tool [petevick]
+  *  4aefac844 - fix scene iteration with multi threading
+  *  2fdb1ac54 - fix FS#2203 - Ruler: not all labels shown
+  *  1dbc4bbd6 - add comments
+  *  fc25f7d92 - performance fix for snapping in uniformly scaled but
+    mirrored blocks (scaled with factors 1/-1 or -1/1)
+  *  e2b9ec60d - performance fix for drawings with many arcs
+  *  21c8951ec - add setWeights (not used)
+  *  eec8166e8 - update translations
+  *  4b1a5afb8 - fix FS#2200 - Linetype scale is wrong when scaling
+    linetypes by lineweight
+  *  2acc03347 - set version to 3.26.1
+  *  dd575a41d - update line pattern output
+  *  47c5c7820 - update user manual
+  *  a28825aa6 - export layers in same order as displayed
+  *  3c7780910 - update user manual
+  *  88a113a3f - fix FS#2199 - Polyline with segment widths: duplicate
+    rendering as block contents
+  *  ce1a22f00 - update qrc
+  *  7542e15ba - fix closing of file
+  *  5f8f819d0 - update credits
+  *  de3c00bf5 - update
+  *  e470224e4 - add LineBreakSymbol tool
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 18 Mar 2021 23:36:22 +0300
+
 qcad (3.26.0+git8223-54a19b787-1) unstable; urgency=medium
 
   * Compile

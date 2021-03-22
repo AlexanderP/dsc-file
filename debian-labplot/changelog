@@ -1,3 +1,96 @@
+labplot (2.8.0+git8222-aea43b38b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: aea43b38bee0c5f32c6bb7f0d7e4878c807ce081
+  * Date: 1616013378
+  * git changelog:
+  *  aea43b38b - Fix potential memory leak
+  *  34da49786 - [spreadsheet] simplified the wording in the Manipulate
+    Data part of the context menu.
+  *  35aa2e4f7 - Fixed a couple of places where Qt's container could be
+    potentially detached in the for-range loops.
+  *  26fad12ca - [spreadsheet] removed some unneeded intermediate
+    retransforms in the plots shown in the column statistics widget to
+    improve the performance on big data and made the dialog more
+    responsive.
+  *  3f354de65 - Switched from gsl_sort to std::sort also in the column
+    statistics widget.
+  *  b6c73f22f - [spreadsheet] replaced gsl_sort with std::sort which is
+    300% faster and some further minor cleanup in
+    Column::calculateStatistics().
+  *  ac468f4f3 - Fine tune extending/shrinking axes to nice values
+  *  58172a001 - [worksheet] removed some more copy&paste code in
+    CartesianPlot.cpp
+  *  b0427a7d6 - [worksheet] removed the old and commented code that
+    took the sizes of the error bars into account when doing the auto-
+    scaling in the plot.
+  *  9fb292ef8 - GIT_SILENT changelog
+  *  5df201460 - Improve auto axis when zooming
+  *  2132d5700 - Fix precision of axis tick label for big numbers
+  *  269f491d5 - Improve axis auto range and add tests
+  *  eed3cafa8 - [spreadsheet] initial code for the conditional
+    formatting in the spreadsheet.
+  *  1efda5f41 - Fix crash adding new axes
+  *  c8ff57279 - Allow to copy&paste histograms and box plot and also
+    show the waiting cursor when the objects are being copied.
+  *  f9927e8d3 - [spreadsheet] hide the freeze/unfreeze column action
+    instead of disabling it for non-first columns in the spreadsheet.
+  *  2bd49a99c - Added the Diverging Color Maps for Scientific
+    Visualization.
+  *  c48fb65d0 - Fix saving of plot padding and avoid checking for old
+    settings
+  *  896f2ebbd - Improve auto number of axes ticks
+  *  c6a4cc20b - [spreadsheet] don't limit the number of rows shown in
+    the column properties widget to 16777215. The column can have more
+    values.
+  *  faea8e30e - [spreadsheet] delay checking whether the current
+    selection has some masked and unmasked cells to enable/disable the
+    corresponding action in the context menu to a later point when this
+    sub-menu for the selection is really opened. This improves the
+    performance for big selections in the spreadsheet.
+  *  e8c412fae - Merge branch 'master' of
+    invent.kde.org:education/labplot
+  *  a5a3bbd69 - Minor fixes.
+  *  d891aa495 - Don't show FITS meta data editor menu if cfitsio it's
+    not available
+  *  634123c40 - Use auto number of axis ticks
+  *  8338bef53 - Implement auto tick count for axes
+  *  e2d6349be - [spreadsheet] show the pdf-normalized histogram in the
+    KDE plot in the column statistics dialog.
+  *  896d7f88b - [histogram] count density and probability density
+    normalizations.
+  *  661c77ce1 - [worksheet] extended the logic in previous commit also
+    to BoxPlots.
+  *  bece2e8a0 - [worksheet] when adding new curve like objects to the
+    plot (xy-curve, histogram, etc.) and assigning the color index from
+    the current theme, determine the index for children of all types and
+    not within one type only. I.e., if a xy-curve was added and a
+    histogram after this, the histogram should already get the second
+    color from the palette.
+  *  27c041510 - [histogram] implemented the normalization of the
+    histogram. The normalization type Count is the usual normalization
+    with the height of each bar being equal to the number of elements in
+    the bin. The normalization type Probability normalizes the height by
+    the total number of elements in all bins (the area below the
+    histogram envelope is equal to 1). Other normalizations will be
+    implemented later.
+  *  da416ac08 - [worksheet] use Text instead of Text Label in the
+    context menu of the plot to be consisted with the wording used in
+    other areas.
+  *  f6caf843e - [worksheet] fixed the regression where the label
+    positioning was possible via coordinates for axis title label.
+  *  1d3f2b0bd - GIT_SILENT changelog
+  *  8e6b2b018 - Worksheet export to more image formats
+  *  3c32aa99f - First version of the Color Maps Browser. This dialog
+    will be used later to select a color map for different purposes in
+    the application like for the conditional formatting in the
+    spreadsheet, for heatmaps, etc. In the initial version all color
+    maps from the CollowBrewer collection are included.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 18 Mar 2021 23:58:45 +0300
+
 labplot (2.8.0+git8185-5a3eab2ca-1) unstable; urgency=medium
 
   * Compile

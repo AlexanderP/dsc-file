@@ -1,3 +1,169 @@
+freecad-daily (0.18.4+git24449-371b089ea0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 371b089ea0c98b640b034b39f1370554fb38d72e
+  * Date: 1615980915
+  * git changelog:
+  *  371b089ea0 - OpenSCAD: fix test_import_surface by changing
+    currently working directory
+  *  cf241d0c93 - FEM: examples, elmer eigenvalues, add calculix solver
+    for frequencies
+  *  9a105e3405 - OpenSCAD: fix utility_create_scad by changing
+    currently working directory so that test_import_surface doesn't fail
+    any more
+  *  0581409fbe - OpenSCAD: [skip ci] fix incorrect filename creation in
+    unit tests
+  *  0f12d6e9ec - [FEM] improve get_gmsh_version
+  *  5bf22ad4ac - FEM: examples, elmer tut1, eigenvalues, fix some
+    problems
+  *  71141d0964 - FEM: fix unit test because of denisty writing. See
+    3e1b16b198f. This reverts 8ec3766b00d
+  *  3e1b16b198 - FEM: elmer writer, only write denisty if really
+    needed, partitially revert 2d73444a66ac, unit test fix in separate
+    commit
+  *  4561deb4fa - Part: [skip ci] implement makeShellFromWires
+  *  bfdeaf6af3 - Update task_material_common.py
+  *  b9f4576dba - FEM: material task panel, small code improvements
+  *  4bf8fd2e07 - Merge pull request #4621 from marioalexis84/draft-
+    gui_snaps
+  *  bc60c93266 - Draft: Fix regression in sync_snap_toolbar_button
+    function
+  *  1233555826 - [Stylesheet] increase behave-dark contrast on input
+    boxes (#4619)
+  *  381ce4a830 - [FEM] get Gmsh version
+  *  8ec3766b00 - FEM: unit tests, fix denisty writing in existing unit
+    tests
+  *  69aacc2fc5 - FEM: pep8
+  *  a8c1624b94 - FEM: elmer writer, add comment
+  *  f11945d1c7 - getPropertyOfGeometry() used to get BoundBox
+  *  abf4fee6a4 - upgrade getBoundBoxOfAllDocumentShapes to handle more
+    objects
+  *  65b9f8b43d - [FEM]implement Gmsh mesh property
+    MeshSizeFromCurvature
+  *  9f2d1d76c8 - FEM: examples, add elmer nongui tutorial 1, eigenvalue
+    of a beam
+  *  2d73444a66 - FEM: elmer writer, do write density in any case
+  *  4092c97bac - Merge pull request #4573 from
+    Russ4262/fix_pocketshape_warning_msg
+  *  e6801d9c58 - Merge pull request #4613 from
+    sliptonic/bug/outputsplit
+  *  6bf27e0ae1 - [OpenSCAD] Reimplement surface() to match OpenSCAD
+  *  f55c46cc86 - PD: adjust unit test for mirrored offset that doesn't
+    fail any more
+  *  ee60ccd044 - PD: remove empty try/catch block
+  *  3131b97aa8 - PartDesign: Transformed. Fix regression in preview
+  *  8453d41515 - PartDesign: Transformed. Fix regression for Mirrored,
+    and multiple features
+  *  fecf9c2e84 - PartDesign: Transformed: Allow explict selection of
+    overlap mode
+  *  03da9d3501 - PartDesign: Performance improvements in Transformed
+    (pattern)
+  *  89b8e81d5c - Sketcher: Constraint svg caching
+  *  a8cb3d5dfb - Sketcher: allow icon/color update in
+    STATUS_SKETCH_UseHandler mode
+  *  011e19060a - Sketcher: fix performance issue with drawing svg icons
+  *  c1b471588b - [PATH] Fix bug with spindle not restarting if output
+    is split by operation spindle should restart when next file is
+    loaded
+  *  db16029c6a - Update 45degree_chamfer.fctb
+  *  bfce108083 - [OpenSCAD] Add scale parameter to linear_extrude
+  *  b6634e041b - Fem: refactor FemMesh::readNastran95
+  *  38b54de578 - Fem: refactor FemMesh::readNastran
+  *  d4a37421ff - Fem: [skip ci] support NASTRAN CTRIA3 elements
+  *  9f937f765d - Mesh: [skip ci] fix regular expression in MeshInput
+  *  df738615fd - Fem: [skip ci] fix possible crash in Fem::readNastran
+  *  d0eb13be15 - Merge pull request #4544 from
+    chennes/draftSnapSyncRefactor
+  *  98b52b09d6 - PartDesign: New input mode, and allow spirals to be
+    created
+  *  a00c00e4da - [OpenSCAD] Add unit tests for resize() and others
+  *  a02f6b4b91 - [OpenSCAD] Implement resize()
+  *  7b4fdf3e7c - [Gui] fix HiDPI rounding bug
+  *  ee6222d216 - [Start] Add missing files to translation script
+  *  0b5500948a - CMake: Fix find Matplotlib
+  *  839b96385c - Part: fixes and check input values for spiral and
+    helix primitives
+  *  97543396c5 - Part primitives: add SegmentLength property to helix
+    and spiral
+  *  6f9856bd46 - Part primitives: use makeSpiralHelix in spiral and
+    helix primitives
+  *  18f36c10da - TopoShape: add a common function to build spirals and
+    helixes
+  *  0d49525798 - Gui: Auto update NaviCube when changing preferences
+  *  7ba93c9e32 - Gui: Add setting for changing size of navigation cube
+  *  7b33ba361b - [OpenSCAD] Minor fixes from LGTM analysis
+  *  300ab23600 - Gui: [skip ci] show or hide splash image depending on
+    screen size
+  *  80af82a4fe - PartDesign: Hole performance: Compound holes and cut
+    once
+  *  94b1fbb58b - Gui: Sketcher Color Preferences UI rearrangement.
+  *  0e9b8ef4d4 - Reworked Prefereces Sketcher Colors User interface,
+    adding groupings.
+  *  95b7c5074d - [FEM] improve error message if gmsh.exe not found
+  *  d8faa26588 - Gui: Update usability enhancements to ProDark theme
+  *  971bb6695b - CMake: correct non-POSIX friendly 'sed-i' arg in
+    FindPySide2Tools.cmake
+  *  e2782d0c20 - [CMake] Add missing backwards-compatibility var
+  *  b14394c7e7 - Gui: [skip ci] do not allow image size in About dialog
+    to occupy more than 25% of the screen size
+  *  a48c7e27a9 - satisfy Travis
+  *  eceea653ae - [FEM] make ccx_dat_file object (from ccx_Result)
+    ReadOnly
+  *  226b713ed4 - [GUI] Migrate Application to std::bind
+  *  9d0086eb23 - [GUI] Remove deprecated code from Application
+  *  52ed707b0e - [Core] Remove deprecated code for 0.20
+  *  1b398a9526 - [Main] set Coin environment variable
+  *  231c470e7e - [Base] Remove unused std::make_unique back port
+  *  f6c9cc90ee - [Base] Remove includes to StdStlTools.h as that's not
+    needed anymore
+  *  e10f0a9545 - Add forwards-compatibility definitions
+  *  1670a430f0 - Add output of Pivy version
+  *  0edf24f7a6 - Default PCL to OFF on MSVC as well
+  *  231a76f884 - Modify Travis to test without setting QT5, etc.
+  *  7bbff520a0 - Modify Python checks when cMake >= 3.12
+  *  13702ce5de - Add Python 3.6 requirement
+  *  13b9127eee - Drop build-system support for Qt4 and Python 2
+  *  0274b039a2 - fixes not handled exception in task_mesh_gmsh.py error
+    = sys.exc_info()[0].strip() <class 'AttributeError'>: type object
+    'RuntimeError' has no attribute 'strip' Furthermore reporting value
+    instead of type gives more useful error messages
+  *  41de6c3d99 - [Spreadsheet] Use std::shared_ptr instead of
+    boost::shared_ptr
+  *  505ba29c6b - [Sketcher] Use std::shared_ptr instead of
+    boost::shared_ptr
+  *  babe8c2487 - [Sandbox] Use std::shared_ptr instead of
+    boost::shared_ptr
+  *  fabcbf76d4 - [Robot] Use std::shared_ptr instead of
+    boost::shared_ptr
+  *  e7024f5db3 - [Points] Use std::shared_ptr instead of
+    boost::shared_ptr
+  *  991dbd75c5 - [Path] Use std::shared_ptr instead of
+    boost::shared_ptr
+  *  f555754810 - [MeshPart] Use std::shared_ptr instead of
+    boost::shared_ptr
+  *  7ec00e22f0 - [Fem] Use std::shared_ptr instead of boost::shared_ptr
+  *  5caa4b9a55 - [Assembly] Use std::shared_ptr instead of
+    boost::shared_ptr
+  *  f9ac51b6a6 - [Gui] Use std::shared_ptr instead of boost::shared_ptr
+  *  a7f0d0112e - [App] Use std::shared_ptr instead of boost::shared_ptr
+  *  afb1d0fbc9 - [Path] Switch from boost::tuple to std::tuple
+  *  64e2811192 - [Gui] Switch from boost::tuple to std::tuple
+  *  7ee7e60310 - [App] Switch from boost::tuple to std::tuple
+  *  c087c18fbe - Path: Remove 'verify final depth' warning
+  *  b2ebaa01a2 - [OpenSCAD] Add unit tests for importing primitives
+  *  f6863bdb77 - Fem: [skip ci] set backend of matplotlib to Qt5Agg
+  *  20c0f14efc - Gui: in document observer classes replace boost::bind
+    with std::bind
+  *  086f6640ae - Gui: harmonize API of Gui document observer classes
+    with App document observer classes
+  *  3779aadd7c - App: in document observer classes replace boost::bind
+    with std::bind to fix build failure with C++17
+  *  08988b8769 - Win installer update for FC 0.20dev
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 18 Mar 2021 23:18:30 +0300
+
 freecad-daily (0.18.4+git24344-6789ddaac9-1) unstable; urgency=medium
 
   * Compile
