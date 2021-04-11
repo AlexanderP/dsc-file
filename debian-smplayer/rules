@@ -21,7 +21,7 @@ else
 	MAKE_OPTS  = PREFIX=/usr QMAKE=qmake-qt4 LRELEASE=lrelease-qt4 QMAKE_OPTS="$(QMAKE_OPTS)"
 endif
 
-SVNREV=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | sed 's/.*svn//g' | sed 's/-.*//g')
+SVNREV=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | sed 's/.*git//g' | sed 's/-.*//g')
 
 override_dh_auto_clean:
 	cp debian/$(CONTROL) debian/control
