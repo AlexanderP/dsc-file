@@ -20,6 +20,9 @@ override_dh_auto_configure:
 #override_dh_builddeb:
 #	dh_builddeb $(BUILDDEBFLAGS)
 
+override_dh_auto_build:
+
+
 override_dh_install:
 	dh_install
 	#chmod a+x $(CURDIR)/debian/rubyripper/usr/lib/rubyripper/rr_lib.rb
