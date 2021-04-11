@@ -7,8 +7,16 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
+
+ifeq ($(DEB_HOST_MULTIARCH),i386-linux-gnu)
+        confopt = -DENABLE_READSTAT=OFF
+else
+        confopt = -DENABLE_READSTAT=ON
+endif
+
 ifneq (,$(filter $(DEBIAN_CODENAME),bionic)) 
 	CONTROL = control.bionic
+	confopt = -DENABLE_READSTAT=ON
 else
 	CONTROL = control.buster
 endif
@@ -18,7 +26,7 @@ endif
 
 override_dh_auto_configure:
 	cp debian/$(CONTROL) debian/control
-	dh_auto_configure -- -DENABLE_READSTAT=OFF
+	dh_auto_configure -- $(confopt)
 
 override_dh_auto_test:
 	# non-fatal, as tests fail on almost non-amd64 archs
