@@ -1,3 +1,73 @@
+labplot (2.8.0+git8265-966951362-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 966951362a066334c25ca5149840f6ccf2012fa3
+  * Date: 1617287973
+  * git changelog:
+  *  966951362 - new release
+  *  52aab6cb3 - readstat: read notes as comment
+  *  0cc557048 - Implemented the search and the synchronization between
+    the icon and list views in the color maps browser.
+  *  3a2a00470 - Icon view mode in the color maps browser.
+  *  e7692c018 - GIT_SILENT changelog
+  *  1e6afc2fa - readstat: use start and end column in import
+  *  84ea875f8 - [spreadsheet] for the heatmap formatting allow to
+    select what to hightlight - the background or the icon of the cells.
+  *  50816f959 - readstat: use start and end row in import
+  *  9a5375b94 - [spreadsheet] initial implementation of the heatmap
+    formatting in the spreadsheet.
+  *  f0e920cae - GIT_SILENT made messages (after extraction)
+  *  c3926cce4 - Fix build without readstat
+  *  20fe897ff - readstat: import data
+  *  e2d41a06e - [box plot] performance optimizations: 1. no need to
+    calculate the outliers when MinMax whiskers type is selected 2.
+    avoid drawing outlier symbols falling onto the same scene point
+  *  cc3d743d7 - readstat: Fix preview of empty cells
+  *  38c2cd3b5 - Fix compilation without readstat
+  *  6428f4311 - Implement preview of readstat files
+  *  78d9e4ad7 - [worksheet] finalized the implementation of the custom
+    column for axis ticks labels.
+  *  558b660c9 - Fix linking libiconv
+  *  36e5de667 - Added all colormaps from the collection Scientific
+    Colour Maps.
+  *  a2d0fb7a6 - Link libiconv if necessary
+  *  f2df522d4 - Try another linking fix
+  *  009a49dd8 - Merge branch 'master' of https://github.com/KDE/labplot
+  *  2ab2581b5 - Try again fixing linking
+  *  64760ac8c - try to fix test builds
+  *  31f58f740 - Try fixing linking problem with readstat
+  *  739bbd373 - [worksheet] better logic in LabelWidget to decide
+    whether it should be possible to position a text label via logical
+    plot coordinates or not.
+  *  4d028f186 - Fix typo
+  *  f953a8bcb - Read file info for all formats supported by readstat
+  *  dcd6f0c87 - GIT_SILENT changelog
+  *  5be53a66b - Add readstat import filter
+  *  3a353342e - Update readstat to 1.1.5
+  *  5af556179 - changelog
+  *  c8ed59182 - [box plot] switched to the 1.5*IQR whiskers type and
+    minor fixes in the theme handling.
+  *  a3b95ce32 - Fix square and inverse axes scale
+  *  0c0abf336 - Merge branch 'master' of https://github.com/KDE/labplot
+  *  0156a8e4c - Fix sqrt scale and add inverse scale
+  *  8217804a1 - [worksheet] added a new theme Tufte following Tufte's
+    minimal ink, maximal data philosophy.
+  *  f27385597 - [worksheet] added missing slot implementation for the
+    custom column changes for axis ticks in the properties widget.
+  *  a838f5c0e - [worksheet] add widgets to allow to use a custom column
+    for axis labels. The actuall consumption of the custom column still
+    needs to be implemented in Axis.
+  *  eb152759c - Fix crash in log scale
+  *  fc7151799 - Removed some outdated colormaps related code and added
+    the first color maps from the collection Scientific Colour Maps
+    (http://www.fabiocrameri.ch/colourmaps.php).
+  *  61acfff52 - Spreadsheet export: don't allow selection of FITS
+    export if cfitsio is not available.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 01 Apr 2021 19:26:05 +0300
+
 labplot (2.8.0+git8222-aea43b38b-1) unstable; urgency=medium
 
   * Compile

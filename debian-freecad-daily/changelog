@@ -1,3 +1,259 @@
+freecad-daily (0.18.4+git24644-b64c4da51b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: b64c4da51b6eea86eb7dcf710c72e213b1c06f25
+  * Date: 1617277274
+  * git changelog:
+  *  b64c4da51b - CMake: fix possible linker error when using external
+    SMESH
+  *  90ed40d605 - Import: if in a dxf file control points and fit points
+    are given then use the former to create the B-Spline
+  *  5169a7e852 - smesh: [skip ci] build FEM & MeshPart with C++14 when
+    using external smesh because it doesn't support C++17 yet
+  *  663ac994a7 - [OpenSCAD] Fix projection for OCCT7.3
+  *  afa40aa049 - Merge pull request #4299 from three-
+    ddd/archstairs_connections_flight_landing
+  *  37ef8ee24f - Merge pull request #4410 from marioalexis84/draft-snap
+  *  111184a770 - Merge pull request #4517 from Roy-
+    043/Arch_Roof_fix_for_adjust_list_len
+  *  7573e54d16 - Merge pull request #4546 from
+    chennes/lgtmDraftUnusedLoopVariables
+  *  a346a10c88 - Merge pull request #4547 from
+    chennes/lgtmArchUnusedIterationVariable1
+  *  aba520180e - Merge pull request #4548 from
+    chennes/lgtmDraftColorArrayCreation
+  *  d8fc51dcf5 - Merge pull request #4625 from marioalexis84/draft-edit
+  *  cc88c21fae - Arch: Fix displayed rotation values when adding or
+    editing window components
+  *  788e8aea69 - Start: Fixed translated quote issue
+  *  4bf315a070 - Merge pull request #4690 from
+    chennes/openscadFixMinorIssuesB
+  *  38e6f40ba0 - Merge pull request #4691 from
+    chennes/cmakeFixStartTestInstallationLocation
+  *  8fb567291d - [Gui] fix a NaviCube Corner
+  *  dfbfa67250 - [Start] Correct TestStart installation location
+  *  fbd6b0441f - [OpenSCAD] Add piecewise helix for OCCT < 7.5
+  *  b18cabae05 - [OpenSCAD] Add additional recompute() logic
+  *  f525904c1b - Gui: concatenate rotations and apply the result once
+    at the end
+  *  23747f9d11 - fix animation issue
+  *  e58ee299d4 - [Gui] improving NaviCube
+  *  033bf619fa - Gui: [skip ci] expose Control::showModelView() to
+    Python
+  *  ebfaa6ac95 - Sketcher: No vertex color update
+    (selection/preselection) after box selection
+  *  5c4f9df447 - Sketcher: add subnodes to the right separator
+  *  bedd22a662 - [Part] save more icons with uniform resolution
+  *  4bec60cc78 - App: use std::wstring_convert instead of QString to
+    encode/decode unicode/utf-8
+  *  e1dd20db0c - Gui: fix unicode handling of path names on Windows
+  *  f410aae48c - App: Refactor win appData setup with boost::filesystem
+  *  66d39ecbb7 - App: Refactor *nix appData setup with
+    boost::filesystem
+  *  00d749601c - App: Refactor mac appData setup with boost::filesystem
+  *  a12f26b8f5 - Gui: Enable compression of tablet motion events
+  *  c712b2feb6 - [Gui] add recompute icon to context menu
+  *  f45207fcb1 - Gui: [skip ci] add some separators to context-menu to
+    group recompute related functions
+  *  4c6c1af016 - Gui: fix Command::_invoke to avoid build failure
+  *  05f1634276 - PD: [skip ci] fixes #0004139: Macro - SubtractivePipe
+    attached path object issues after macro executed
+  *  d158c50c48 - App: [skip ci] rename class to PropertyLinkT
+  *  545b4f20db - App: [skip ci] add class PropertyListT
+  *  b55cc8aec1 - Gui: [skip ci] refactor Command::invoke
+  *  ffb196b1b7 - Gui: Running a command with Gui.runCommand() must
+    always be considered as Gui command
+  *  b9da524451 - PD: in setEdit() helper function make sure that
+    recorded macro is handled as Gui command
+  *  703bb02af0 - Gui: Change the Part icon
+  *  b1f8184858 - Remove unneeded Qt version checks
+  *  b15f134038 - Remove deprecated Qt constants
+  *  1f62d46661 - Minor refactoring and cleanup of the About window
+  *  0490e33667 - [Part] save icons with uniform resolution
+  *  80a3aa8eaa - format TopoShapeWirePy.xml
+  *  44f6b670a8 - format TopoShapeSolidPy.xml
+  *  7111e137a1 - format TopoShapeShellPy.xml
+  *  37764982bd - format TopoShapeEdgePy.xml
+  *  c09093a079 - format TopoShapeCompoundPy.xml
+  *  f9af6e8ea3 - format TopoShapeCompSolidPy.xml
+  *  5f01c7559e - format TopoShapeFacePy.xml
+  *  88c27d502e - fix some missed lines
+  *  f94b3c3f58 - Improve Part.Shape methods documentation
+  *  4fbdcfb477 - OpenSCAD: [skip ci] disable rich text in OpenSCAD
+    widget to avoid weird behaviour when copying code from an HTML page
+  *  9f93bf3b3c - PD: remove superfluous code block from Helix::execute
+  *  ac3ce00b63 - PD: replace error-prone strings with enum to handle
+    different helix modes
+  *  415034d1eb - PartDesign Helix: update NbTurns in Pitch-Height-Angle
+    mode
+  *  dfd683d464 - [OpenSCAD] Add angle &  to rotate_extrude(file)
+  *  4e58747c16 - [OpenSCAD] Add  and angle to rotate_extrude()
+  *  07804a8c85 - [GUI] Enable dragging in dependency graph view
+  *  07b9cbb441 - [PD] Misc. small LGTM fixes
+  *  6bd2dc7d21 - [Gui] add Std_TransformManip to MenuItem
+  *  26750530f0 - [Sketch] fix a typo in preferences dialog
+  *  a849f9f932 - Mesh: [skip ci] in ViewProviderMesh::highlightSegments
+    change material binding only if colors list is non-empty
+  *  15c16610c8 - fix source comment typos [skip ci]
+  *  c439cb4cf4 - [FEM] add a Graphite material card
+  *  a3e3487f74 - Gui: [skip ci] handle number of decimals in
+    PropertyUnitItem, PropertyVectorDistanceItem and
+    PropertyPlacementItem
+  *  8277b3f9e9 - travis: switch Netgen support off for Windows builds
+  *  5dacdd820e - smesh: [skip ci] suppress C++17 related warnings about
+    extensions
+  *  fcf5a13eab - [Travis] Update CI to use new libpack location.
+  *  5e73e7187a - TD: fixes #0004598: Segfault when deleting template
+    without page
+  *  e825148cf4 - App: add system32 to Python's search paths
+  *  a25061870c - [Sketcher] Settings checkBox for..
+  *  7a8792f64b - [Sketcher] Constraints Allow User to...
+  *  353e556c7d - MeshPart: refactor class Tessellation
+  *  b68ca4c3be - MeshPart: refactor class Mesher
+  *  182a578c43 - Merge pull request #4664 from
+    papaathome/uccnc_postprocessor
+  *  19fa532e2a - Aplied Flake8 formatting and removed redundant global
+    declarations. Line limit used: 100 characters, still 3 lines longer
+    than that.
+  *  3025bd8c72 - Merge pull request #4609 from hyarion/cleanup-draft-
+    load-texture
+  *  09e5ad7e67 - Merge pull request #4550 from
+    chennes/lgtmDice3DSIssues
+  *  d25eeae87d - Merge pull request #4630 from luzpaz/typos
+  *  9b2dc76b63 - Merge pull request #4631 from sde1000/webgl-export-
+    camera-buttons
+  *  48098ee712 - Merge pull request #4656 from
+    chennes/draftContextMenuFallback
+  *  7649eb7940 - Merge pull request #4658 from
+    chennes/draftFixScaleDataEntryGlitch
+  *  43c23deb73 - Merge pull request #4661 from
+    chennes/draftImportDXFNoGUI
+  *  4319ea7a0f - Merge pull request #4667 from oliveroxtoby/master
+  *  d8dd64e72a - Merge branch 'master' into
+    Arch_Roof_fix_for_adjust_list_len
+  *  6dcb1686f2 - Merge pull request #4453 from regularfry/lgtm-arch-
+    unused-imports
+  *  55cb6e58eb - Merge branch 'master' into draft-snap
+  *  c4a49a5575 - Merge pull request #4348 from marioalexis84/draft-
+    coordinate_input
+  *  8d186b5a59 - Merge branch 'uccnc_postprocessor' of
+    https://github.com/papaathome/FreeCAD into uccnc_postprocessor
+  *  5abd19f121 - Included bugfix as in FreeCAD PR. #4673 'Fix proxy
+    error bug that occurs when postprocessing' (review recommendation)
+  *  515c7deb21 - Merge pull request #4634 from mlampert/bugfix/issue-
+    2839-dogbone-visualisation
+  *  837cf18153 - Merge pull request #4639 from claasahl/claasahl-patch-
+    1
+  *  2490629a4a - OpenSCAD: [skip ci] pipeshell -> pipe_shell
+  *  8cbfa5a717 - [OpenSCAD] Improve helical extrusion, fix scaling
+  *  69f24859b5 - [OpenSCAD] Fix bug in resize code
+  *  ce6c53a6a4 - Merge branch 'master' into uccnc_postprocessor
+  *  37d2fb1cbb - Merge branch 'uccnc_postprocessor' of
+    https://github.com/papaathome/FreeCAD into uccnc_postprocessor
+  *  bde3e3d4dc - Added UC-CNC script to the build specifications.
+  *  efa19683ae - Add missing files to fedora.spec
+  *  b63102fae8 - [Part] change icon to math the other Part icon scheme
+  *  5db4fb767c - [Part] uniform feature sorting
+  *  d358e13cd6 - TechDraw: [skip ci] convert source files from iso-8859
+    to utf-8
+  *  a026c9d3d4 - [UI] Replace SVG icons for Sketcher commands
+  *  1c93fc25f1 - FEM: [skip ci] re-add removed comma
+  *  0a2eb2756f - [PD] some fixes for the new pad length feature
+  *  b6e81c1821 - [UI] Replace Bitmap icon of Part_PointsFromMesh
+    command
+  *  e8a3990878 - cmake: update command to find python-site-packages
+  *  1ca3b36228 - Mesh: [skip ci] use enum to define the various 2D
+    meshing algorithms
+  *  bf08e25f34 - [Mesh] fix Gmsh mesh algorithms
+  *  bcc669b930 - [Base] add electrical conductivity
+  *  04cf845d77 - [GUI] Remove explicit triangle styling from tabs
+  *  148c528b09 - [skip ci] [FEM] don't hide Gmsh mesh by default
+  *  80189e3d2a - [FEM] fix typo
+  *  f3f2a49301 - FEM: fix gui test problems introduces with
+    af3643853cc0
+  *  e6a8a682cf - AddonManager: Fix logic for fallback to displaying raw
+    markdown
+  *  1e1c7cd354 - Merge branch 'master' into uccnc_postprocessor
+  *  232969348a - Added UC-CNC postprocessor script.
+  *  6317acc97c - LGTM: Remove some additional legacy files [skip ci]
+  *  cf7e072ca9 - FEM: gmsh mesh, set back standard element order to
+    2nd, changed in 7fb5a2d72a97,
+  *  54026f70a0 - [FEM] add missing material cards to CMakeLists.txt
+  *  75371bb238 - [FEM] add mesh algorithms
+  *  7fb5a2d72a - [FEM] add GMSH mesh order setting to dialog
+  *  af3643853c - [FEM] refactor GeometryElementsSelection, introduce
+    parameter to modify help text for several task panels using
+    GeometryElementsSelection.
+  *  8ec9bfad0d - [Draft] Eliminate required GUI for importDXF
+  *  3f5fbef881 - [Draft] Fix bug in data entry on scale w/ uniform
+  *  05b0ff2fd1 - Merge pull request #4624 from mlampert/bugfix/dogbone-
+    on-straight-edges-and-noop-moves
+  *  28d09cf6db - Merge pull request #4622 from mlampert/bugfix/job-
+    setup
+  *  ffcd0f5c65 - [Draft] Enable Transform context menu item
+  *  a5c4d19a10 - Merge branch 'master' into bugfix/issue-2839-dogbone-
+    visualisation
+  *  c81a43a256 - Merge branch 'master' into bugfix/dogbone-on-straight-
+    edges-and-noop-moves
+  *  5fccb4fc9b - Merge branch 'master' into bugfix/job-setup
+  *  7d118f31b7 - Merge pull request #4615 from
+    Russ4262/fix_pocketshape_combine_shapes
+  *  39e1d5c518 - Merge branch 'master' into bugfix/job-setup
+  *  f0eb6246f7 - Merge branch 'master' into bugfix/dogbone-on-straight-
+    edges-and-noop-moves
+  *  8c23518ed4 - Merge branch 'master' into bugfix/issue-2839-dogbone-
+    visualisation
+  *  1ac35d2b42 - Import: [skip ci] handle utf-8 filepath when writing
+    to dxf
+  *  b4b1cbedb1 - PD: fix several issues in pad: * pass boolean instead
+    of int to setValue of PropertyBool * support of symmetric option for
+    two-length mode * fix bug in TaskPadParameters::updateUI() * remove
+    strange acronyms from method names
+  *  cf11f38875 - [PD] add along length option for pad
+  *  5e90c07375 - [FEM] add material cards for gases
+  *  804830d772 - [FEM] fix specific heat of air
+  *  011cef1e7b - FEM: material task panel, fix unuseable Gui if
+    material editor was canceled and material accepted
+  *  a25a2200cb - Fixed misc. typos [skip ci]
+  *  28e40ffbee - Sketcher:: Trim creator UI
+  *  2d817128d0 - Sketcher: SketchObject - Trim refactor
+  *  2afcbff0d6 - Part: Geometry - Add function to trim a B-Spline
+  *  8be50486af - Sketcher: reset Marker Edit layer when exiting
+    DrawSketchHandler
+  *  010a2cbd41 - Sketcher: ViewProvider - add marker information layer
+  *  595fc118e3 - Part: Part2DObject::seekTrimPoints rename parameters
+  *  f4e3e8abd6 - Mesh: [skip ci] refactor Mesh open/import functions
+  *  182952a881 - Mesh: [skip ci] do not make lower case read lines of
+    OBJ file as otherwise it may fail to load the MTL file
+  *  3a656d8597 - Sketcher: UI Constraint Creation - PointOnObject +
+    Tangency on edge constraint substitution
+  *  477e0d3982 - Gui: [skip ci] avoid using const reference as member
+    for several action classes to avoid memory corruption
+  *  c08a19626f - Sketcher: Use old NotifyConstraintSubstitution
+    parameter in DlgCheackableMessageBox
+  *  4bf6b19849 - Gui: Extend DlgCheckableMessageBox to use specific
+    preference path and parameter
+  *  d759a8e43d - Sketcher: Change constraint-conversion MessageBox to
+    DlgCheckableMessageBox
+  *  f0f25af3f5 - Update grbl_post.py
+  *  4ef6bde9a3 - Draft: Make Edit closed wires consistent with open
+    wires and tracker
+  *  9c8685c20c - Import: [skip ci] avoid conflicting class names in
+    global namespace
+  *  b1ac7701e6 - [Stylesheet] ProDark: major bugfix for add-ons
+  *  67555d2cc3 - Fixed coin import for py3 class initialisation
+  *  e510d095c4 - Moved coin import under GuiUp clause
+  *  cbb76ca84e - Merge branch 'master' into bugfix/dogbone-on-straight-
+    edges-and-noop-moves
+  *  49c6349a5c - Merge branch 'master' into bugfix/job-setup
+  *  1704f42fb4 - Cleanup marker after deleting them
+  *  c343533604 - Added visualisation for dogbones during editing
+  *  75b4225d45 - Fix camera position buttons in WebGL export
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 01 Apr 2021 18:13:35 +0300
+
 freecad-daily (0.18.4+git24449-371b089ea0-1) unstable; urgency=medium
 
   * Compile
