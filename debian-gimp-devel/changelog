@@ -1,3 +1,63 @@
+gimp-devel (2.10.18+git44573-573a4798b6-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 573a4798b636acaa04083f155883deb96f44b86e
+  * Date: 1618422254
+  * git changelog:
+  *  573a4798b6 - plug-ins: fix #6723 Unable to open DDS files.
+  *  59bab76383 - app: fix 3d transform tool not added to gimphelp-ids.h
+  *  2b6ab09cc1 - Issue #6394: Wacom Airbrush finger wheel non-
+    functional (on…
+  *  2c182ed5eb - build: adding patch for glib!2020.
+  *  dbc3139759 - Update Dutch translation
+  *  7f7331e4dd - Update Dutch translation
+  *  4d6cf1e3e8 - app: Don't second-guess the dependency system
+  *  1fd6f68afa - meson, configure, plug-ins: image/x-sun-raster is a
+    supported MimeTypes.
+  *  f742981171 - build: remove *.rs file association with SUN Raster
+    images
+  *  261eff08f4 - app: Print 2-digit LittleCMS minor versions correctly
+  *  09d2ef07bf - Update Polish translation
+  *  ed2484b429 - Update Spanish translation
+  *  08b396503f - plug-ins: fix another cast warning.
+  *  07b947fbeb - configure: post-release version bump to 2.10.25.
+  *  fea5236e19 - configure: release GIMP 2.10.24.
+  *  50c460877f - Update Swedish translation
+  *  a7a3b983fb - docs, etc: regenerate gimprc and its manpage.
+  *  a0bb707d55 - Update Ukrainian translation
+  *  6a2910bd3b - plug-ins: set the Save GeoTIFF data checkbox
+    insensitive when…
+  *  c864b65525 - NEWS: update/reword a bit more.
+  *  5e4b52eb40 - NEWS: update.
+  *  90f8cb54eb - plug-ins: fix crash of qbist when loading files.
+  *  504c7875d6 - configure: missing OpenRaster MIME type in desktop
+    file.
+  *  c9c8f96e46 - Update Swedish translation
+  *  d397a68d7a - desktop: AppData ready for tomorrow's release.
+  *  b61871e94a - configure,app: depend on GEGL-0.4.30
+  *  7ebfc03283 - Update Slovenian translation
+  *  6c126529fa - Update Slovenian translation
+  *  3b0a4bf336 - Update Slovenian translation
+  *  c182d17ef7 - Update Slovenian translation
+  *  c8422ac34b - plug-ins: fix incorrect saving of
+    Iptc.Application2.Caption in metadata-editor.
+  *  e3c57e43c8 - plug-ins: fix incorrect values for ModelReleaseStatus
+    and PropertyReleaseStatus.
+  *  27ee0c87ee - plug-ins: Do not write to
+    Iptc.Application2.DateCreated if no date was set.
+  *  efc41d1fa8 - plug-ins: Do not write empty ModelReleaseStatus and
+    DigitalSourceType.
+  *  8c1e7679a0 - Update Brazilian Portuguese translation
+  *  7b1f6e69dc - plug-ins: interpret Exif.Photo.UserComment before
+    showing in metadata-viewer.
+  *  e10517dccc - libgimp: fix issue #6050 Phantom comments on pictures.
+  *  34983e1a25 - libgimp: improve saving xmp metadata.
+  *  0e14834e1d - Update Swedish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 15 Apr 2021 21:07:19 +0300
+
 gimp-devel (2.10.18+git44534-404d0a711d-1) unstable; urgency=medium
 
   * Compile

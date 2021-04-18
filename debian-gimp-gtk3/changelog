@@ -1,3 +1,124 @@
+gimp-gtk3 (2.99.0+git46835-48ff5313c3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 48ff5313c3c7edc360d19db202b9c0398c1793f4
+  * Date: 1618421842
+  * git changelog:
+  *  48ff5313c3 - plug-ins: fix #6723 Unable to open DDS files.
+  *  4aaad4f749 - app: fix 3d transform tool not added to gimphelp-ids.h
+  *  1fb776325d - Update Ukrainian translation
+  *  cbce7b3a98 - Issue #6033: fix calling gimp_pdb_run_procedure_argv()
+    with no…
+  *  b21865328c - gui: Add pixel density selector to canvas size dialog
+    ...
+  *  6488a5e480 - Disable automatic metadata handling for HEIF plug-in
+  *  83a5838836 - Update Persian translation
+  *  7e2a0238a2 - build: adding patch for glib!2020.
+  *  c3cfab2477 - libgimpbase: fix gimp_parasite_new() annotation.
+  *  5ae7bb6aa2 - app: fix folder when showing again the export dialog.
+  *  2f46dfb354 - plug-ins: use gimp_procedure_dialog_set_sensitive().
+  *  3f09030b03 - libgimp: new gimp_procedure_dialog_set_sensitive().
+  *  df723aca28 - plug-ins: use GimpChannelOps in gfig rather than using
+    a custom…
+  *  ca8bc2bc1d - app, libgimp, pdb, plug-ins: more functions moved to
+    get|set().
+  *  32310f5e4b - libgimp: use G_DECLARE_DERIVABLE_TYPE and
+    G_DECLARE_FINAL_TYPE for…
+  *  acf104a0ab - Update Ukrainian translation
+  *  6b310002c2 - NEWS: update.
+  *  931f44e54a - extensions: update the 5 goat-exercise extensions to
+    multi-drawable API.
+  *  fa16152757 - app, libgimp, pdb, plug-ins: update some more
+    functions to get|set().
+  *  d659bb128d - plug-ins: store last used values for QBist with new
+    plug-in API.
+  *  0b01b812a9 - libgimpconfig: implement serializing GimpParasite into
+    a GimpConfig.
+  *  891097ba2f - libgimp: gimp_procedure_dialog_fill() allows no
+    properties listed.
+  *  70a9576f27 - app, devel-docs, libgimpbase:
+    s/gimp_parasite_name/gimp_parasite_get_name/…
+  *  b83988539b - Update Swedish translation
+  *  d124e974b4 - Update Dutch translation
+  *  cd3333c6d3 - meson, configure, plug-ins: image/x-sun-raster is a
+    supported MimeTypes.
+  *  80c2f28375 - MAINTAINERS: update.
+  *  dda65d85c3 - app: Don't second-guess the dependency system
+  *  957e3374a7 - Update Ukrainian translation
+  *  809e045ead - build: remove *.rs file association with SUN Raster
+    images
+  *  de87a31825 - libgimp, libgimpbase: update the .def files.
+  *  e54bfa58b1 - app: Print 2-digit LittleCMS minor versions correctly
+  *  b78eb953f2 - libgimp: only add the generic metadata aux arguments
+    once.
+  *  6dd48d1a82 - app, libgimp, pdb: improve gimp_image_get_layers()
+    docs.
+  *  931b9fb539 - plug-ins: fix all remaining GimpImageProcedure to new
+    run() API.
+  *  79e608694e - plug-ins: fix many GimpImageProcedure to new run()
+    API.
+  *  3f9c736592 - libgimp: new gimp_plug_in_error_quark() /
+    GIMP_PLUG_IN_ERROR.
+  *  353c73457a - app, libgimp, libgimpconfig, extensions: image
+    procedures now with…
+  *  dc7853233b - app, libgimp, pdb: new API to advertize when
+    procedures are sensitive.
+  *  b1fed22763 - libgimpbase: new GimpProcedureSensitivityMask type.
+  *  fb98b180c1 - Update Hebrew translation
+  *  c6150f6486 - Add Hebrew translation
+  *  158bb126c9 - Update Polish translation
+  *  a539c6d3c7 - Update Spanish translation
+  *  9b6d59f38a - Update British English translation
+  *  5e68a953ee - app: fix the test for XCF version with off-canvas
+    guides.
+  *  ae96f4308c - Update German translation
+  *  1a4b69c23f - Update Catalan translation
+  *  513fc9daa7 - gimp.doap: adding myself as maintainer in the doap
+    file.
+  *  b1e16dbf67 - NEWS: remove some points which were actually
+    backported to 2.10.24.
+  *  758f25944a - NEWS: update.
+  *  f3ee39c3c4 - devel-docs: quick command to get the right flatpak
+    runtime version.
+  *  21add2c994 - Update Swedish translation
+  *  95900ae6f1 - configure,meson,app: depend on GEGL-0.4.30
+  *  804c322102 - Update Slovenian translation
+  *  4b4a578f6a - Update Slovenian translation
+  *  cad00abbdb - Update Slovenian translation
+  *  03d6bc9726 - app: do not use PATH_MAX and realpath() on macOS.
+  *  5d14c59d2e - plug-ins: fix incorrect saving of
+    Iptc.Application2.Caption in metadata-editor.
+  *  4b940f886e - Update Ukrainian translation
+  *  708f075f80 - plug-ins: make the applied pattern in qbist a bit more
+    prominent.
+  *  8396fc5022 - plug-ins: tweak the pattern preview size relatively to
+    the scale ratio.
+  *  93f591931b - plug-ins: fix incorrect values for ModelReleaseStatus
+    and PropertyReleaseStatus.
+  *  0a902456ac - plug-ins: Do not write to
+    Iptc.Application2.DateCreated if no date was set.
+  *  a229454915 - plug-ins: Do not write empty ModelReleaseStatus and
+    DigitalSourceType.
+  *  7fb696206e - plug-ins: fix crash of qbist when loading files.
+  *  2c965139cd - Update Brazilian Portuguese translation
+  *  c15537bf26 - Update Brazilian Portuguese translation
+  *  fac9d9b5d5 - Update Brazilian Portuguese translation
+  *  34463786b1 - plug-ins: interpret Exif.Photo.UserComment before
+    showing in metadata-viewer.
+  *  352b5885b1 - libgimp: fix issue #6050 Phantom comments on pictures.
+  *  9e4bc86f8a - Fix -Wsign-compare in gimpbase/gimpparamspecs.
+  *  f4fd1f55e5 - Update Swedish translation
+  *  5eb9a998bb - libgimp: improve saving xmp metadata.
+  *  362e00f209 - libgimpbase: get rid of one more PATH_MAX.
+  *  8586f16f31 - libgimpbase: fix _gimp_reloc_init_lib().
+  *  47fbfc2f0e - libgimpbase: do not assume PATH_MAX to be the actual
+    max size of paths.
+  *  269343832a - libgimp: fix (destroy) and (closure) annotations.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 16 Apr 2021 19:38:07 +0300
+
 gimp-gtk3 (2.99.0+git46757-a95371c2b0-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,101 @@
+freecad-daily (0.19.0+git24711-47a41ae1c8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 47a41ae1c8a08fe47ce0e7b5b73df8f849adfe21
+  * Date: 1618476777
+  * git changelog:
+  *  47a41ae1c8 - Gui: ProDark Stylesheet QT Icon Fix
+  *  9d95887dcb - [PD] [skip ci] fix sprocket icon
+  *  3c1eefd7a3 - [TD] Fix minor superfluous whitespace [skip ci]
+  *  f50521a7ab - [TD] Fix typo in Gui/CommandAnnotate.cpp [skip ci]
+  *  525f5dd709 - [GUI] new icon to mark for recomputation
+  *  6a7184139d - Gui: remove Py2 code from several src/Gui .cpp files
+  *  b7a15767e9 - Remove ancient dockerfile
+  *  c8d5e2ec70 - added removable-media plug
+  *  72b8613742 - Added the removable-media plug
+  *  fc1dc18cf6 - [GUI] Stylesheet fix for icons in Qt file dialog
+  *  d504c12517 - PD: [skip ci] fixes -Wreturn-std-move
+  *  1e5c0fcef7 - [FEM] add support for 3D recombinations (#4706)
+  *  d4e01609fe - Base: [skip ci] add convenience function to get
+    PyObjectBase from GeometryT
+  *  a2574987b4 - Base: [skip ci] remove Py2 code from PyObjectBase
+  *  733cbce2c6 - Gui: fix memory leak
+  *  7f01c558df - Py: fix memory leak
+  *  6f1455700e - Py: fix memory leak
+  *  111a21e45c - Base: do not report C++ exception when converting it
+    to Python exception
+  *  e01f0d25d5 - Import: [skip ci] for glTF export set scale factor of
+    0.001 because lengths are measured in meters
+  *  4e4068e44f - Py: fix memory leak
+  *  cc0af9b4dd - [FEM] proper support for Gmsh HighOrder optimization
+  *  3a36602ae8 - fix bug that property SprocketReference is not an enum
+  *  cadbacb683 - [PD] sort entries in sprocket feature
+  *  1e36b6095c - Merge pull request #4712 from tomate44/wirestring
+  *  a855033f21 - Sketcher: Adapt fillet to moving addConstraint
+  *  476ff00360 - [0.20][PartDesign] Sprocket - Correct camelCase
+  *  ff88c2dbad - [0.20][PartDesign] Sprocket UI - Allow multiple...
+  *  49ecb37137 - [0.20][PartDesign] Sprocket - Allow multiple...
+  *  dff561a1b0 - [PD] UI file fixes
+  *  d26e7500ab - [Part] [skip ci] add a word in description
+  *  69aa35578e - Base: Vector3::GetAngle() uses a smaller epsilon
+  *  373e3a68aa - [TD] icon uniformity for ActiveView and FaceCenterLine
+    commands
+  *  7185ee93f2 - [PartDesign] add direction to cylinder primitive
+  *  c0e6debcfa - [Part] add direction to cylinder primitive
+  *  64dbe342e1 - PartDesign: for Prism feature use PrismExtension
+  *  57d2a2fae0 - Part: for Prism feature use PrismExtension
+  *  84c5d22ccb - Part: implement Prism as extension
+  *  0f9ed158de - Draft.ShapeString : add option to choose wires or
+    faces output
+  *  e66ed26769 - QPainter::HighQualityAntialiasing is deprecated. Use
+    QPainter::Antialiasing instead.
+  *  1986e6b547 - Qt::MidButton is deprecated. Use Qt::MiddleButton
+    instead.
+  *  73a077ae01 - QDockWidget:AllDockWidgetFeatures is deprecated. Use
+    individual flags instead.
+  *  5b755c20b5 - Gui: set UTF-8 encoding when reading file with
+    contributors
+  *  8ac8492167 - Gui: [skip ci] support user-defined about image
+  *  c039217af1 - Allow different splash and about image
+  *  24ce12d8f3 - [UI] Replace SVG icon of TechDraw RedrawPage
+  *  21d3749d7a - Spreadsheet: [skip ci] fix gcc warnings about unused
+    variables
+  *  5d49bf78de - Gui: QuantitySpinBox inherits from ExpressionSpinBox
+    to reduce code duplication
+  *  e151f19d41 - Gui: add class ExpressionSpinBox to reduce code
+    duplication
+  *  51596b5acc - Spreadsheet: Fix UI issues when trying to insert
+    rows/cols
+  *  75bf85eb5b - Gui: Change label type to ExpressionLabel in
+    ExpressionBinding * Add function ExpressionBinding::makeLabel() and
+    use it in subclasses to reduce code duplication
+  *  64fb634ed1 - Add tooltip to f(x) when there is no expression
+  *  efba06737f - Web: remove obsolete function setTextSizeMultiplier
+    because QtWebEngine already supports HiDPI monitors
+  *  51b57f9844 - [Web] Remove deprecated Qt < 5.9 code
+  *  033b5397f3 - TD: [skip ci] fix
+    DrawingView::print/MDIViewPage::print
+  *  cbdc2ac48e - [TD] Remove deprecated Qt < 5.9 code
+  *  72eceb91c6 - Gui: remove WinNativeGestureRecognizers because this
+    was a workaround for Qt4 under Windows
+  *  e7c91d68af - Gui: [skip ci] remove MainWindow::showMainWindow() &
+    timer
+  *  50c7ee36bf - [GUI] Remove code for Qt < 5.9
+  *  67d26939dc - Tux: Add _light suffix to light navigation icons
+  *  a56e5c2928 - Tux: Add _dark suffix to dark navigation icons
+  *  6227a711c3 - [Sketcher] Remove deprecated Qt < 5.9 code
+  *  00d9dd965f - [Part] Remove deprecated Qt < 5.9 code
+  *  08ba85888e - [Spreadsheet] Remove deprecated Qt < 5.9 code
+  *  f200cea636 - [Test] Remove deprecated Qt < 5.9 code
+  *  6b4b245f08 - [Main] Remove deprecated Qt < 5.9 code
+  *  71c9c24374 - [Base] Remove deprecated Qt < 5.9 code
+  *  377b01b4b4 - Py3: fixes #0004081: Abillity to show console output
+    when running under Python
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 15 Apr 2021 20:44:32 +0300
+
 freecad-daily (0.18.4+git24644-b64c4da51b-1) unstable; urgency=medium
 
   * Compile

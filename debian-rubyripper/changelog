@@ -1,3 +1,43 @@
+rubyripper (0.7.0+git827-79f609a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/bleskodev/rubyripper.git
+  * Branch: master
+  * Commit: 79f609afcb5fac2f337166fec8fb9927addde531
+  * Date: 1617557104
+  * git changelog:
+  *  79f609a - Bump version to 0.8.0rc2. Update translation files and
+    translation template.
+  *  7da30eb - Change behavior of 'NoSpaces' settings flag: do not
+    replace '_' with ' ' if flag is not set.
+  *  f5d2fb6 - Move 'NoSpaces' and 'NoCapitals' preferences from Codecs
+    to Other preferences page.
+  *  5a12725 - Fix a typo in readme file. Update Changelog.
+  *  0f554ae - Implement replaygain for wavpack (using wvgain) (#630).
+  *  fe818a4 - Fix a bug where replaygain would not be applied in
+    'album' mode (#630).
+  *  c7949f0 - Add more information on why gtk3 library failed to
+    load/initialize.
+  *  f42fba9 - Execute 'mo' generation at configure time and not at
+    installation time.
+  *  e86f6d9 - Fix for discID tag insertion implementation. Update unit-
+    tests.
+  *  9e8dc96 - Update change log.
+  *  4d29605 - Update localization files with new strings (freedb =>
+    Gnudb mostly).
+  *  e787deb - Add MusicBrainz Disc ID to tags.
+  *  28705f9 - Implement 'multiple releases/db hits' handling in GTK
+    frontend.
+  *  bffbc33 - Correctly cancel TOC scan when ejecting the disc or
+    refreshing the disc.
+  *  d1b9cd9 - Redirect freedb code to use gnudb servers.
+  *  aed1bde - Fix spec failure following the change in CUE sheet
+    implementation.
+  *  ef1456b - Limit available operations when showing RipSummary if CD
+    has been ejected.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 15 Apr 2021 20:57:04 +0300
+
 rubyripper (0.7.0+git810-d819116-1) unstable; urgency=medium
 
   * Compile

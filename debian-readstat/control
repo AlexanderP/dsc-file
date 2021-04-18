@@ -1,0 +1,61 @@
+Source: readstat
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 11), zlib1g-dev
+Standards-Version: 4.1.3
+Section: math
+Homepage: https://github.com/WizardMac/ReadStat
+
+Package: readstat
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Read (and write) data sets from SAS, Stata, and SPSS
+ ReadStat is a command-line tool and MIT-licensed C library for
+ reading files from popular stats packages. Supported data formats include:
+ .
+    * SAS: SAS7BDAT (binary file) and XPORT (transport file)
+    * Stata: DTA (binary file) versions 104-119
+    * SPSS: POR (portable file), SAV (binary file), and ZSAV (compressed binary)
+ .
+ Supported metadata formats include:
+ .
+    * SAS: SAS7BCAT (catalog file) and .sas (command file)
+    * Stata: .dct (dictionary file)
+    * SPSS: .sps (command file)
+
+Package: libreadstat1
+Section: libs
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: core library for ReadStat
+ ReadStat is a command-line tool and MIT-licensed C library for
+ reading files from popular stats packages. Supported data formats include:
+ .
+    * SAS: SAS7BDAT (binary file) and XPORT (transport file)
+    * Stata: DTA (binary file) versions 104-119
+    * SPSS: POR (portable file), SAV (binary file), and ZSAV (compressed binary)
+ .
+ Supported metadata formats include:
+ .
+    * SAS: SAS7BCAT (catalog file) and .sas (command file)
+    * Stata: .dct (dictionary file)
+    * SPSS: .sps (command file)
+
+Package: libreadstat-dev
+Section: libdevel
+Architecture: any
+Depends: libreadstat1 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: core library for ReadStat (development files)
+ ReadStat is a command-line tool and MIT-licensed C library for
+ reading files from popular stats packages. Supported data formats include:
+ .
+    * SAS: SAS7BDAT (binary file) and XPORT (transport file)
+    * Stata: DTA (binary file) versions 104-119
+    * SPSS: POR (portable file), SAV (binary file), and ZSAV (compressed binary)
+ .
+ Supported metadata formats include:
+ .
+    * SAS: SAS7BCAT (catalog file) and .sas (command file)
+    * Stata: .dct (dictionary file)
+    * SPSS: .sps (command file)

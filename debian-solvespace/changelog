@@ -1,3 +1,35 @@
+solvespace (3.0.0~git1738-9e8c3db-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 9e8c3db856b8fa9eeb807b42239cf9d404739acf
+  * Date: 1618473345
+  * git changelog:
+  *  9e8c3db - Update uk_UA.po
+  *  f4ad820 - CI: Support cancelling, update actions & prevent draft
+    releases
+  *  af5fbf6 - Revolve icon updated to counter-clockwise, which is the
+    way revolve works
+  *  853e7d8 - Extrude, Lathe and Revolve Icons Updated
+  *  a01dd18 - Combine arm64 and x86_64 libomp libraries
+  *  b8e41c8 - Correct libomp.dylib path in sign-macos.sh script
+  *  e2bf722 - Copy path to avoid it being invalidated by
+    OkayToStartNewFile()
+  *  2a56ba6 - Fix debugging and profiling on macOS
+  *  8105699 - Add apple arm64 support
+  *  312a8df - repair glyph data for [ff0c] to prevent assertion
+  *  3ed151b - Skip image rendering in CLI rather than hard abort
+  *  9020b83 - Fix issue #984 by changing the comma in not-closed-
+    contour chinese translation.
+  *  fa41676 - Update mimalloc version.
+  *  af8b0e4 - change test sketch failing under x86-64-v3. Add a copy of
+    the sketch for the old round-trip tests.
+  *  cc52eb2 - Allow right click to end sketching of all entities
+  *  2e88c5e - Clamp lighting value on export to fix flat colors
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 15 Apr 2021 20:57:32 +0300
+
 solvespace (3.0.0~git1722-2df786e-1) unstable; urgency=medium
 
   * Compile
