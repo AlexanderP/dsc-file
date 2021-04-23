@@ -1,3 +1,69 @@
+labplot (2.8.2+git8291-389f8ea64-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 389f8ea649d34dd1ef203a97e61d14d86dadda2d
+  * Date: 1618436022
+  * git changelog:
+  *  389f8ea64 - Simplify analysis docks
+  *  c72023166 - Use line edits instead of double spinboxes for ranges
+    in analysis docks
+  *  702b4bf6e - minor fix
+  *  b71845fa7 - Hilbert transform: Fix showing auto x range
+  *  8d98a74bb - [boxplot] adding the changes in BoxPlotPrivate that
+    were forgotten in the previous commit.
+  *  d6fe54928 - [boxplot] introduced the option for the variable box
+    width. If checked, the box width is made proportional to the square
+    root of the number of data points.
+  *  c3600aaff - [boxplot] properly place the whisker ends and the
+    lowest and upper adjacent values.
+  *  e5b05a95e - [spreadsheet] moved the management of the heatmap
+    formatting from the spreadsheet model into Column which allows a
+    much more easier saving and loading of the formatting properties and
+    impelemented save/load of them in the project.
+  *  18e3e9f7d - [worksheet] allow to apply the actions for zooming in
+    the plot separately for X and for Y for all plots on the worksheet.
+  *  614bc577e - [worksheet] use prefix and suffix, if available, also
+    for text custom columns used for axis labels.
+  *  fcbedc316 - [worksheet] fixed copying and duplicating of boxplots.
+  *  d3d4ddba7 - [boxplot] propely recalculate the whiskers when the cap
+    size was changed.
+  *  be3f2ba35 - Show collapse all and expand all entries and use more
+    compact strings in the context menu of the project node in the
+    project explorer.
+  *  bcc7e1740 - [spreadsheet] show the preview for the currently used
+    color map in the heatmap formatting dialog and some minor layout
+    improvements.
+  *  d851c5217 - Minor code cleanup in MatrixModel and in main().
+  *  a772866eb - [spreadsheet] allow to apply the conditional formatting
+    in the spreadsheet also to the font color of the cells.
+  *  a4abbd177 - Decoupled the handling of the definitios of the color
+    maps from their visualization. This will allow to use the color map
+    colors independent of the ColorMapsWidget.
+  *  09ad50465 - Minor fixes.
+  *  a0e369f16 - [worksheet] moved the check whether the multiple
+    selected info elements have the same parent from GuiObserver into
+    InfoElementDock.
+  *  b9966f06f - Simplified the initialization of InfoElementDock in
+    GuiObserver.
+  *  67cbfa103 - [worksheet] suppress a couple of unneeded
+    recalculations of the bounding rectangular in Histogram and in
+    BoxPlot.
+  *  8c275602c - Allow to paste Spreadsheet and Matrix into Workbook.
+  *  512eb0196 - Allow to drop Spreadsheet and Matrix onto Workbook in
+    the project explorer and also expand the destination object after
+    the drop was finalized so the dropped object is automatically
+    visible.
+  *  e2680bce7 - Properly invalidate column properties (statistics,
+    etc.) on data changes.
+  *  4e5779498 - Minor fixes in the color maps and heatmap formatting
+    widgets.
+  *  5810e5c49 - [spreadsheet] allow to remove the heatmap formatting in
+    the spreadsheet.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 15 Apr 2021 21:21:18 +0300
+
 labplot (2.8.0+git8265-966951362-3) unstable; urgency=medium
 
   * Compile
