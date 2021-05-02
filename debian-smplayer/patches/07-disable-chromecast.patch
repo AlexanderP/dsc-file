@@ -26,7 +26,7 @@ Last-Update: 2018-11-09
  	if [ -f src/Makefile ]; then cd src && make distclean; fi
 @@ -46,7 +47,7 @@
  	-install -d $(DESTDIR)$(DOC_PATH)
- 	install -m 644 Changelog *.txt $(DESTDIR)$(DOC_PATH)
+ 	install -m 644 Release_notes.md *.txt $(DESTDIR)$(DOC_PATH)
  
 -	install -m 755 webserver/simple_web_server $(DESTDIR)$(PREFIX)/bin/
 +	#install -m 755 webserver/simple_web_server $(DESTDIR)$(PREFIX)/bin/
