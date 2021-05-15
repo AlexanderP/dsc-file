@@ -1,3 +1,48 @@
+clementine-qt5 (1.4.0~git586-g20647e8a9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 20647e8a9852cc2681a77909811f3e7f4a22e68f
+  * Date: 1619664882
+  * git changelog:
+  *  20647e8a9 - Automatic merge of translations from Transifex
+  *  8c1bdc1a4 - Changed to const reference
+  *  1646ab222 - Corrected comments + Added reference to Song& + use non-
+    default constructor for QFileInfo.
+  *  66a34a906 - Removed unneeded empty arguments already provided by
+    defaults
+  *  444f1e2e6 - clang-format correction
+  *  b7a995d22 - Re-added log message for URL and mime-type.
+  *  fb391a7fb - Optimization to avoid save+delete of remote playlists
+    to temporary file
+  *  8fddc816a - Remove unsupported FC31 build
+  *  d59ed1e70 - Add Fedora Core 34 workflow
+  *  fc83e4127 - Automatic merge of translations from Transifex
+  *  7e48b78c1 - Automatic merge of translations from Transifex
+  *  94f4f65a6 - Automatic merge of translations from Transifex
+  *  b2ed9499f - Automatic merge of translations from Transifex
+  *  8258c78c0 - dbus: Fix signal arg annotations
+  *  59f6d95b8 - clementine-tagreader: Fix addDefaultCaCertificates
+    deprecation
+  *  5f75bde39 - libclementine-common: Use positive numbers for worker
+    ids.
+  *  73c0af197 - Remove expired Equifax CA root
+  *  f17b79a10 - dbus: Fix qdbusxml2cpp unknown type warnings.
+  *  c51d2f954 - Automatic merge of translations from Transifex
+  *  280a514eb - dbus: Fix annotation deprecation warnings
+  *  f04657e7e - Replace qrand usage with QRandomGenerator
+  *  6b21079fd - dbus: Fix xml format errors.
+  *  429d8ee0f - core/logging: Fix QString::split deprecation
+  *  163ebe71d - libclementine-tagreader: Discontinue use of deprecated
+    taglib methods.
+  *  99ee1394a - build: Remove CMP0012 NEW policy
+  *  3690c41cb - build: Remove CMP0011 OLD policy
+  *  7303f72ee - Automatic merge of translations from Transifex
+  *  e7364263b - build: Move minimum cmake version to 3.0.0
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 30 Apr 2021 23:07:41 +0300
+
 clementine-qt5 (1.4.0~git558-g47f7b307f-1) unstable; urgency=medium
 
   * Compile

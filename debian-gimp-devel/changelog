@@ -1,3 +1,48 @@
+gimp-devel (2.10.18+git44595-108d9be2b7-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: gimp-2-10
+  * Commit: 108d9be2b79e91cb8e7ba34c37a8d0964cc745a1
+  * Date: 1619695252
+  * git changelog:
+  *  108d9be2b7 - Update Spanish translation
+  *  c9d2722192 - plug-ins: fix compilation of previous commit.
+  *  e29219fee7 - plug-ins: fix #5960 Gimp loads 16 bit DDS images with
+    luminosity as 8 bit.
+  *  0bc3653f98 - Update Catalan translation
+  *  330c3f49a9 - Update Ukrainian translation
+  *  0ebf24d4b4 - Update Catalan translation
+  *  9102914748 - Update Swedish translation
+  *  eb9eec4acb - pdb: add a PDB compat procedure for median-blur
+  *  9406991bb7 - plug-ins:fix #6624 metadata viewer default window size
+    is too small
+  *  b2fa1bd948 - script-fu: fix #6741 Round Corners script fails to
+    work on layer masks
+  *  58a54998d3 - NEWS: update. Start the GIMP 2.10.26 section.
+  *  c447c7e7b5 - plug-ins: Add 'dir-make' procedure to Script-fu.
+  *  57bffb2464 - GIMP-CRITICAL:
+    gimp_marshal_VOID__OBJECT_STRING_STRING: assertion 'n_param_values
+    == 4' failed
+  *  ac7e841e24 - Issue #5008: Always true condition (i>=0) inside
+    fill_inverse_cmap_gray.
+  *  2e6c233a4c - app: fix an assertion when converting grayscale images
+    to indexed.
+  *  404c728e2a - plug-ins: fix #6755 DDS RGB10A2 has Red and Blue
+    swapped.
+  *  b93dd4e0fe - Revert app: append insensitive reason to GimpAction
+    proxy tooltip.
+  *  bf9a292723 - app: append insensitive reason to GimpAction proxy
+    tooltip.
+  *  c52aa7dc2c - plug-ins: change non-existing brush.
+  *  1664ca7867 - Update Makefile.am
+  *  9b87106720 - Issue 6210: Subpixel font rendering system settings
+    should only apply…
+  *  7b0df6f04a - Fix issue #6577 : scriptfu hang on select dialog on
+    Mac
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 30 Apr 2021 23:27:24 +0300
+
 gimp-devel (2.10.18+git44573-573a4798b6-1) unstable; urgency=medium
 
   * Compile

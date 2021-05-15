@@ -1,3 +1,70 @@
+labplot (2.8.2+git8317-5d6cef45a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 5d6cef45aa161e03b6c99db1d0d3f17f53739180
+  * Date: 1619728405
+  * git changelog:
+  *  5d6cef45a - typo
+  *  4aa156c06 - readstat: datetime value labels not supported
+  *  fd86103d2 - [worksheet] allow to consume variables from CAS
+    worksheets as custom columns in AxisDock (for custom tick positions
+    and custom label values).
+  *  1d359e410 - readstat: import value labels
+  *  8efd27f6c - [spreadsheet] allow to specify labels for the values in
+    a column. This initial implementation introduces the basic usage of
+    this feature that will be made more complete in the later commits
+    (undo/redo, save/load, better handling of DateTime values, batch
+    edit mode, etc.)
+  *  3b36a9fa3 - Fix crash in correlation and convolution & clean up
+  *  c9a155efa - cmake: search for matio library
+  *  a9e2b0b89 - axis: nice extend when zooming with mouse to avoid ugly
+    ranges
+  *  94ff93032 - axis: improve auto scientific tick label format
+  *  3bb807922 - fixuifiles
+  *  6db94e560 - [import] many online datasets are using quotes,
+    especially R's datasets. Activate the option in ASCII filter to
+    remove the quotes to properly import such data.
+  *  fcc5e25f6 - [worksheet] better initial settings for the opacity in
+    histograms and box plots.
+  *  3052f0511 - [box plot] implemented notches.
+  *  766e48160 - axis: Fix problems with values near zero and scientific
+    format with precision zero
+  *  cea7422d0 - [box plot] minor improvements.
+  *  3a060a15c - [box plot] implemented jitters and far out values.
+  *  e845e4021 - [worksheet] moved some common code from XYCurve and
+    BoxPlot to CartesianCoordinateSystem.
+  *  66525c993 - [worksheet] switched to using the new Symbol-classes
+    also in the box plot. It's possible now to modify the symbol
+    properties for mean, outlier, far out and jitter values in the box
+    plot independent of each other.
+  *  6cf5b990c - [worksheet] moved the settings for the custom label
+    column from the tab Labels to the tab Ticks in the axis properties
+    widget. Usually, when providing a custom column for the ticks
+    position the user will also want to provide custom labels for them.
+    So, it makes sense to keep these settings together in the same tab.
+  *  0940d66a6 - [worksheet] properly handle the axis tick labels coming
+    from a custom text column when the plot range is being changed
+    during zooming etc.
+  *  429f6523a - [worksheet] used the Symbol and SymbolWidget in the
+    code for XYCurve and for Histogram.
+  *  175f65093 - readstat: prepare reading value labels etc.
+  *  de53420b7 - [worksheet] implemented the symbol specific logic in
+    the class Symbol and introduced a new widget SymbolWidget to modify
+    the properties of a symbol. This widget will be used everywhere
+    where a symbol is available - xy-curve, histogram, custom point,
+    boxplot (mean, outliers, jitters), and later probably more.
+  *  426594747 - Fix crash when missing y scale due to range being zero
+  *  90aa63cbe - [box plot] don't try to draw the symbol for the mean
+    value if this point is outside of the currently visible plot region.
+    Same for whisker caps. This now removes all ugly artefact in the box
+    plot that could arise during zooming in the plot.
+  *  3c1a421db - [box plot] properly clip the box of the boxplot on the
+    plot boundaries when zooming in the plot.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 30 Apr 2021 23:30:36 +0300
+
 labplot (2.8.2+git8291-389f8ea64-1) unstable; urgency=medium
 
   * Compile

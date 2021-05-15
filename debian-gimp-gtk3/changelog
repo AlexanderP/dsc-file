@@ -1,3 +1,162 @@
+gimp-gtk3 (2.99.0+git46943-4f1007edbc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 4f1007edbceda5fa3f65d27c978b3c6a6ec2ea7d
+  * Date: 1619747481
+  * git changelog:
+  *  4f1007edbc - Issue #6695: Wrong tab after JPG export because of
+    Show preview…
+  *  1566d9437e - app: make sure we send the origin display to plug-ins
+    through PDB.
+  *  7eaa4f1ca9 - app, libgimp, pdb: new gimp_display_present() PDB
+    call.
+  *  aba721ae68 - Issue #6280: JPEG preview window doesn't get closed.
+  *  802c6fe64b - Issue #6767: sensitivity ALWAYS not working in Python.
+  *  3ce0e66321 - Issue #6767: sensitivity API NO_IMAGE not working in
+    Python.
+  *  8d8c77730c - devel-docs: release-howto updated.
+  *  0645bf6f0f - authors.xml, README: update the authors list.
+  *  fa143017e7 - Update Spanish translation
+  *  2211ca7fd3 - app: wait child processes with
+    g_child_watch_add_full() rather than…
+  *  3d233695be - Update Basque translation
+  *  4ee3a9caa1 - app: fix core crash when a plug-in calling a
+    GimpPdbDialog crashes.
+  *  2967ab7f82 - libgimp: add docs and annotations for
+    gimp_brush_select_new().
+  *  208921706a - Issue #5475: Tablet pointer offset malfunction with
+    scale ratio + …
+  *  fe228a6f6f - plug-ins: fix #5960 Gimp loads 16 bit DDS images with
+    luminosity as 8 bit.
+  *  88898dad95 - gitlab-ci: improve the CI for releases.
+  *  1e53985e4b - configure.ac, meson.build: post-release version bump
+    to 2.99.7.
+  *  bf1b405a74 - Release development version GIMP 2.99.6.
+  *  9b978467c1 - devel-docs: update release-howto.
+  *  842689c9d8 - docs, etc: regenerate the default gimprc and its
+    manpage.
+  *  8e77f7c3ec - Update Vietnamese translation
+  *  9b3611e517 - desktop: release date pushed one day.
+  *  603e912dc3 - Issue #6179: New Icon for Paint Select Tool.
+  *  e9e92338f4 - Update Russian translation: and then some
+  *  694d81de25 - Update Russian translation (slightly)
+  *  ed6f1fec52 - Update Ukrainian translation
+  *  5115fd8db9 - Update Catalan translation
+  *  3950cc2c83 - Update Catalan translation
+  *  829b0da61e - Update Swedish translation
+  *  c97cf30e6e - pdb: add a PDB compat procedure for median-blur
+  *  b7a06795d6 - desktop: fix release date (wrong month! Oups!).
+  *  423a6fe6d6 - NEWS: update.
+  *  d977876363 - libgimp: add missing API docs-comment for
+    gimp_procedure_new_arguments()
+  *  3773490436 - Update Vietnamese translation
+  *  b25a8c5beb - Update Ukrainian translation
+  *  6b1ed7d722 - Update Catalan translation
+  *  0c951e62da - Update Catalan translation
+  *  61a95a8cc9 - Update Swedish translation
+  *  c8020c20a5 - app: don't print a NULL insensitive action reason.
+  *  ef2402bf8e - app, libgimp, pdb, plug-ins: allow pasting multiple
+    full layers.
+  *  11e1f6ea5e - app: fix out-of-gamut representation (pink triangle).
+  *  165b50abcc - plug-ins:fix #6624 metadata viewer default window size
+    is too small
+  *  ed35579861 - script-fu: fix #6741 Round Corners script fails to
+    work on layer masks
+  *  69fdcf5d3f - plug-ins: use g_mkdir() for generic cross-platform
+    code.
+  *  472eec0bfb - NEWS: update.
+  *  11906fa82c - plug-ins: Add 'dir-make' procedure to Script-fu.
+  *  c6fde64815 - GIMP-CRITICAL:
+    gimp_marshal_VOID__OBJECT_STRING_STRING: assertion 'n_param_values
+    == 4' failed
+  *  d6dac25579 - Issue #5008: Always true condition (i>=0) inside
+    fill_inverse_cmap_gray.
+  *  c0e605ef96 - app: fix an assertion when converting grayscale images
+    to indexed.
+  *  1fcb2a3d68 - Update Catalan translation
+  *  6a1a0d51bb - Update Ukrainian translation
+  *  1d0b925d55 - Update Swedish translation
+  *  cad6273fed - plug-ins: fix #6755 DDS RGB10A2 has Red and Blue
+    swapped.
+  *  13a02aea23 - app: append insensitive reason to GimpAction proxy
+    tooltip.
+  *  811d356953 - app: GimpAction now has a reason parameter to explain
+    being disabled.
+  *  e1e4818ad5 - Update Swedish translation
+  *  046d420996 - Update Swedish translation
+  *  a8b258cd84 - app: Implement canvas support for touchpad gesture
+    zoom by pinch
+  *  51d1ab9bce - libgimpwidgets: Introduce GIMP_ZOOM_PINCH
+  *  877d585271 - Partial fix 5426.  Lets old scriptfu script call old
+    name gimp-image-is-valid, mapped to new PDB procedure gimp-image-id-
+    is-valid (same signature), for example.
+  *  34150ddda7 - Use g_logging and migrate functions for author's
+    errors to separate source file.
+  *  a0f89a9d4c - Update Spanish translation
+  *  5bb7f2c7d4 - Update Swedish translation
+  *  2cb0d0a220 - Update Basque translation
+  *  33b267ba12 - Update Basque translation
+  *  6ec20e6ed0 - plug-ins: adapt file-openraster to API changes.
+  *  65e10faf50 - plug-ins: change non-existing brush.
+  *  34c1dbde13 - Fix #6676 brush select crash, pass GimpArray->data
+    instead of GimpArray*
+  *  68dcb4b421 - app: fix sending signals to finalized object.
+  *  997c12a304 - Update Ukrainian translation
+  *  6068665b25 - Update Vietnamese translation
+  *  5c1230574d - Add Vietnamese translation
+  *  6e27c46b5f - Update Makefile.am
+  *  90b3c4e547 - NEWS: update.
+  *  88e6a8ec83 - devel-docs: update the removed_functions table.
+  *  3f9184f576 - app, pdb: plug-in-autocrop-layer() multi-layer aware.
+  *  60b9c5633e - app, libgimp: validate procedure arguments taking
+    class heritage into…
+  *  b622f09e0b - po-python: benchmark-foreground-extract.py was
+    deleted.
+  *  2a1555b082 - plug-ins: fix spyro-plus.
+  *  66b09fe570 - libgimp: fix alphabetical order.
+  *  67f63b0987 - Update Basque translation
+  *  51614e92e5 - Update Basque translation
+  *  5f61d84570 - Issue 6210: Subpixel font rendering system settings
+    should only apply…
+  *  22586485aa - libgimp, libgimpwidgets: fix def files.
+  *  e960f1a296 - Fix #5915, Python Console Apply button fail.
+  *  fb84b9eba7 - plug-ins: fix a bunch of Scheme scripts after API
+    functions renaming.
+  *  0b750eca6f - app: print to standard error output when procedure
+    uses deprecated…
+  *  077f2d4e25 - plug-ins: remove now useless/ugly workaround.
+  *  e1a489a43a - libgimp: sink the floating references after adding
+    them to hash table.
+  *  f15d16150e - plug-ins: update foggify to latest API and add a GUI.
+  *  ca72c41fcd - libgimp, libgimpwidgets: support of GimpRGB properties
+    in…
+  *  5d210667c5 - libgimp, libgimpconfig: recognize RGB boxed args
+    containing GimpRGB.
+  *  72d4b91cc1 - libgimp: argument array for GimpImageProcedure was
+    incremented…
+  *  e3f2a54bf1 - Update Spanish translation
+  *  0c39289a47 - Update Spanish translation
+  *  c3b396c7db - Updated Italian translation
+  *  3094517478 - Update Ukrainian translation
+  *  623ce4a9e3 - plug-ins: move benchmark-foreground-extract to gimp-
+    data-extras.
+  *  51d9251123 - NEWS: small update.
+  *  1f4df66a63 - desktop: prepare 2.99.6 release.
+  *  e8b23d6e4b - typo in pdb/groups/plug_in_compat.pdb
+  *  5cb51e096a - Fix issue #6577 : scriptfu hang on select dialog on
+    Mac
+  *  ea083055b4 - Update Lithuanian translation
+  *  6a9c07239f - Update Lithuanian translation
+  *  6f0022870d - Update Ukrainian translation
+  *  266f16ca0f - NEWS: update.
+  *  6a0a8b4c9b - desktop: sync AppData with gimp-2-10 branch.
+  *  530dc883ca - app, libgimp*: glib-genmarshal warns about --header --
+    body
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 30 Apr 2021 23:29:53 +0300
+
 gimp-gtk3 (2.99.0+git46835-48ff5313c3-1) unstable; urgency=medium
 
   * Compile

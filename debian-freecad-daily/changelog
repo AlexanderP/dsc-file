@@ -1,3 +1,153 @@
+freecad-daily (0.19.0+git24825-ccc4151b30-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: ccc4151b3020969450325466e385850783795325
+  * Date: 1619793860
+  * git changelog:
+  *  ccc4151b30 - Draft: Added a 'solid faces' projection mode to
+    shape2dviews to treat individual faces
+  *  e2e380655b - Draft: Allow to set 'arch' unit override on dimensions
+  *  1b09fecda4 - Merge pull request #4766 from waebbl/module-test-issue
+  *  9ef0e8b26a - Merge pull request #4688 from marioalexis84/draft-
+    feature_name
+  *  dca216e761 - Merge branch 'master' into draft-feature_name
+  *  20c4c369b3 - [Test] fix failing test
+  *  bcf9ef3cbe - Merge pull request #4764 from KeithSloan/addElement
+  *  6138770ef2 - Gui: [skip ci] fix crash in SequencerBar::setProgress
+    or SequencerDialog::setProgress when used in worker threads
+  *  b5c49a6b77 - Base: allow to use the classes XUTF8Str and StrXUTF8
+    outside FreeCADBase
+  *  05a22ec22d - Misc: remove py2 code
+  *  d850ed87aa - Add Load/Save/Refresh to add OpenSCAD Elements
+  *  2f276601f8 - Fix generation and build of python classes for 3.8
+  *  346fe8a93a - Path: [skip ci] fix memory leaks
+  *  1e5c5f4e7f - Path: [skip ci] fix memory leaks
+  *  aa0dcff74f - Fix generation and build of python classes for 3.9
+  *  5a5b20df56 - Sketcher: [skip ci] fix memory leak in GeometryFacade
+  *  e51f5a8aa7 - Sketcher: [skip ci] remove superfluous semicolons
+  *  86b1308f45 - Base: [skip ci] do not make PyBaseProxy class
+    declaration dependent on ATTR_TRACKING
+  *  1c282b8aa8 - Added KiCAD Corp to the credits
+  *  b35ae4fc81 - Sketcher: [skip ci] fix memory leak in
+    GeometryFacadePy
+  *  f82af9eca2 - Base: remove obsolete swig source files
+  *  6aef001272 - Part: remove some more deprecated Py2 code
+  *  0fc3d4883f - Image: remove some more deprecated Py2 code
+  *  b4ee9fa345 - Drawing: remove some more deprecated Py2 code
+  *  b84dcf9b27 - Path: remove some more deprecated Py2 code
+  *  322e027c2b - Points: remove some more deprecated Py2 code
+  *  2d0bbfdb3a - Raytracing: remove some more deprecated Py2 code
+  *  77b7b0816c - Spreadsheet: remove some more deprecated Py2 code
+  *  f5f3acc2a3 - TD: remove some more deprecated Py2 code
+  *  1aad309886 - Gui: remove some more deprecated Py2
+  *  44e82ac3c4 - App: remove some more deprecated Py2 code and remove
+    deprecated void from function signature and replace 0 or NULL with
+    nullptr
+  *  af16ab02a0 - Base: remove some more deprecated Py2 code and remove
+    deprecated void from function signature and replace 0 or NULL with
+    nullptr
+  *  142c2c2c4d - Base: remove Py2 code
+  *  31b0f25b6d - [UI] Replace SVG icon files for Plain SVG format
+  *  3ed720dcd3 - App: [skip ci] fix memory leaks: Found two memory
+    leaks in class Enumeration * method tearDown() always ignored to
+    free the memory of the first element * assignment operator didn't
+    call tearDown() when needed
+  *  8bdf4a7a2b - Add load/save/refresh to addElement
+  *  ea96f18601 - TD: do not delete mtextedit.h for in-source builds
+  *  c69f245d6f - Part: remove py2 code
+  *  81918da613 - Gui: remove py2 code
+  *  086063f75e - Mesh: remove py2 code
+  *  1e795e869c - [FEM] remove Py2 code
+  *  043dd45da0 - [Sketcher] Visibility automation : add ability to open
+    sketch in Section View mode
+  *  18e751530a - Sketcher: Changes to split edge functionality
+  *  4d6b1f3eb8 - Sketcher - Add new Split Edge action
+  *  ae0a31542f - TD: fix memory leaks in BaseGeom::baseFactory() and
+    make code more readable
+  *  317177dad6 - Draft: Fixed default color for new dimensions (now
+    uses DefautTextColor instead of DefaultLineColor)
+  *  73bfb94895 - Add human readable version to mac app bundle
+  *  56fb65de62 - Base: use Python's weak reference mechanism to avoid
+    memory leaks due to cyclic dependencies
+  *  ef4f74aa94 - Gui: fix memory leak in SelectionParser::yyparse()
+  *  b4823e8606 - Merge pull request #4749 from
+    sliptonic/feature/inspecttool
+  *  f64f0e7182 - Sketcher: remove Py2 code from Sketcher wb
+  *  1d60dbdc85 - [TD] remove Py2 code from TD
+  *  819e15a0a4 - Merge pull request #4748 from steelman/material-color-
+    dialog
+  *  80728ed66b - Merge pull request #4747 from SniperCZE/master
+  *  0377ad9c0d - Merge pull request #4745 from steelman/opening-modes
+  *  d775aa930b - Merge pull request #4724 from Syres916/patch-15
+  *  b7aee7bfa1 - fixes #0003844: PVS: The pointer was not released in
+    destructor. A memory leak is possible.
+  *  e799546556 - Merge branch 'master' into master
+  *  c4f411af26 - Gui: use public methods in Command sub-classes
+  *  34d61f231b - Merge branch 'master' into opening-modes
+  *  c7b1e35c02 - Arch: Fix material color pickers
+  *  88bc022a90 - tabs to spaces
+  *  2c072c7092 - Mesh: [skip ci] fixes #0004430:
+    Mesh_BuildRegularSolid: parametric mesh props have no units in
+    Property editor
+  *  f3e9f6c4cd - [OpenSCAD] Fix regression with angle specification
+  *  b0b53fc8ef - revert dynamic char limit
+  *  60aa32695a - fix path lenght for ecryptfs
+  *  657b33d892 - adjust tool position during inspect
+  *  b9b42a52f4 - [PD] fix primitives issues
+  *  a76fb2c6d6 - Part: properly handle small quantities in part
+    primitive dialog
+  *  6ce9ef387b - Mesh: properly handle small quantities in mesh
+    primitive dialog
+  *  ab247acd0d - Gui: properly handle small quantities in property
+    editor
+  *  0ae1cda2e9 - Arch: Parse window opening modes with more than one
+    digit
+  *  e084df62b9 - Base: add convenience functions to create a QString
+    from quantity
+  *  cd9319f125 - Base: add convenience functions to create a QString
+    from quantity or double
+  *  bd0c319962 - Merge pull request #4536 from hyarion/feature-
+    updatecrowdin-api-v2
+  *  0e0f55660e - Merge pull request #4710 from marioalexis84/draft-
+    draftgui
+  *  690f69de82 - Merge pull request #4743 from steelman/horizontal-snap-
+    widget
+  *  a25d7cd2ec - Merge pull request #4389 from marioalexis84/draft-
+    close_button
+  *  d35daaeffd - Draft: Ensure horizontal orientation of snap_widget
+  *  fc6d1292d1 - App: remove Py2 code from several src/App .cpp files
+  *  ee98ed5baf - CMake: disable moc for some targets and fix failure
+    for existing builds
+  *  92683e1f63 - Fix CMake warning: qt5_make_output_file is not part of
+    the official API, and might be removed in Qt 6.
+  *  7eec10defa - Merge pull request #4726 from
+    chennes/openscadLinearExtrudeAngleFix
+  *  e537a1f7f8 - Merge pull request #4727 from
+    bitacovir/TransformManip_Icon
+  *  6834dc96b0 - Merge pull request #4735 from easyw/master
+  *  c364155c42 - Merge pull request #4728 from sde1000/webgl-export-
+    javascript-update
+  *  97f45b471f - Merge pull request #4729 from marioalexis84/draft-
+    gui_trimex
+  *  8b0c58d1b4 - Part: Shape.ReflectLines: add 2D/3D, visibility and
+    EdgeType options
+  *  33cca2e6c6 - TD: fix center line style settings
+  *  6c52a46d07 - [TD] remove icons/cursor-balloon.png and replace
+    references w/ SVG file
+  *  84dffcc460 - [TD] Replace techdraw-lock.png and rename with
+    TechDraw_Lock.svg
+  *  5d890d8ba2 - [TD] Cont. organizing TechDraw.qrc file
+  *  73d330b0c8 - [TD] Renamed , ,
+  *  ef4ef201e7 - [TD] Renamed , ,
+  *  d703d9a89c - [TD] Renamed , , ...
+  *  147e4aafff - [TD] icon name uniformity (cont.)
+  *  a601b58cf6 - Merge branch 'master' into
+    openscadLinearExtrudeAngleFix
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 30 Apr 2021 23:06:43 +0300
+
 freecad-daily (0.19.0+git24711-47a41ae1c8-1) unstable; urgency=medium
 
   * Compile
