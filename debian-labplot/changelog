@@ -1,3 +1,119 @@
+labplot (2.8.2+git8390-ef399fec2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: ef399fec2c77275947c331be121dbcd7a3e69f36
+  * Date: 1620984775
+  * git changelog:
+  *  ef399fec2 - cmake: silent warning
+  *  a5726bd25 - Allow to change the name and comment properties of
+    Folder and Workbook in the properties explorer. Also, renamed Notes
+    to Comment in the project properties widget to be consistent with
+    the usage in other places.
+  *  3d7267d9f - Fix build on Windows
+  *  a707a6958 - readstat: Add tests
+  *  e4b22c5e9 - cmake: output imorovements
+  *  882e6fdda - readstat: clean up
+  *  2167bb2a1 - readstat: Fix problem with value labels and clean up
+  *  a1922692f - matio: minor fixes
+  *  3ba6ccb3b - readstat: Fix bug reading double value labels
+  *  7950625a1 - liborigin: 3.0.1 update
+  *  86f664bf7 - Merge branch 'master' of https://github.com/KDE/labplot
+  *  f0df9e73d - box plot: minor improvements
+  *  43c584dba - [worksheet] always save the column path if available
+    and not only when the column pointer is valid.  This is needed for
+    the following workflows: plot data ->  delete one of the colums->
+    save project and close it -> open it again and re-create the  column
+    with the same name as used before. With this fix the column is
+    properly restored in the plot.  This logic needs to be  implemented
+    everywhere where WRITE_COLUMN is used right now.
+  *  a6f95fb51 - Better wording for the import data related actions in
+    the main window.
+  *  3918819cf - [box plot] made BoxPlot inheriting from Curve to
+    reimplement the hovering related functions. This fixes the problem
+    with the proper hovering of xy-curves placed on top of a box plot.
+    The hovering of box plot itself still needs to be fixed.
+  *  a45abe3c4 - typo
+  *  708392c58 - Minor fixes: 1. allow to copy&paste notes and
+    datapicker objects 2. allow to paste folders on folders 3. activate
+    the new project action after a project was openned 4. added dates to
+    the recent release in ChangeLog
+  *  9bed7c580 - liborigin: Add link to SciDAVis fork
+  *  c99a94f85 - update INSTALL
+  *  06cefc9dc - cmake: use system liborigin when available
+  *  8f41fe799 - typo
+  *  027b8e612 - Merge branch 'master' of https://github.com/KDE/labplot
+  *  20ca0c09a - liborigin: Update README
+  *  e0f7d0544 - liborigin: Update opj versions
+  *  253456b27 - [worksheet] don't crash when duplicating a worksheet
+    having a box plot.
+  *  18e6ebafb - liborigin: add latest fixes from upstream
+  *  f12f7b6af - liborigin: update build
+  *  d8c92438f - [box plot] draw box plots in the legend (show the name
+    only at the moment) and fixed the missing signal-slot connection for
+    the boxplot visibility changes.
+  *  9d9e155a9 - [import] fixed the invalid memory access in the origin
+    parser.
+  *  2e8921f83 - [worksheet] when mapping a point from logical to scene
+    coordinates, check whether the mapped point is visible and react to
+    this instead of comparing with QPointF(0,0). This removes artifacts
+    like those arising during zooming in the box plot.
+  *  e2235c653 - [worksheet] fixed the indentation in TextLabel.
+  *  67b44a7ef - Merge remote-tracking branch
+    'martin/LegendRework#15_Merge'
+  *  da88fdb20 - Improve y auto scaling (Martin)
+  *  f97bfc533 - readstat 1.1.6
+  *  24a466a11 - readstat: fix Windows build
+  *  47bee2f51 - readstat: link on Windows
+  *  9cd691419 - readstat: link on Windows too
+  *  4b936294a - readstat: help finding lib on Windows
+  *  66c401ccf - readstat: disable own version on Windows
+  *  6e4f79229 - readstat: enable on Windows for testing
+  *  502eeaae4 - rename compatibilityNumber to xmlVersion
+  *  bf7a3ffad - [box plot] added a couple of other definitions for the
+    whiskers.
+  *  89c343868 - matio: improve finding on Windows
+  *  d8a30def3 - If project version number is smaller than 2.9.0, Change
+    some values to have the textlabels again at the same position,
+    because the handling is different in 2.9.0
+  *  44231ca5f - use static function to access project version, because
+    otherwise it is not possible to access from new created elements to
+    the version number, because they don't have any Project object as
+    Parent
+  *  f63e2d0df - [box plot] allow to specify a factor in % to control
+    the box width relativ to its default value.
+  *  df693c0a5 - matio: import basic data types
+  *  cb68e10b2 - Disable print, export and new project actions if a new
+    and empty project was created.
+  *  e71af8276 - [worksheet] allow to change x- and y-columns in the
+    XYCurve properties widget also when multiple curves are selected in
+    the project explorer. Useful when the same column needs to be
+    assigned as x or as y for multiple curves.
+  *  aefe8be2f - [box plot] properly handle the cases where the adjucent
+    values are exactly equal to Turkey's fences.
+  *  e68e16732 - forgotten to load horizontal and vertical alignment
+  *  6a87d4c41 - fix indentation
+  *  0d57d68e3 - matio: preview rank 2 variables of class double
+  *  5ede8769b - [spreadsheet] value labels for DateTime column mode.
+  *  ad5d90b17 - Fix build
+  *  ea8dd8bda - [spreadsheet] save and load value labels in Column.
+  *  22b0e1544 - matio: show variable list in import dialog
+  *  2739d014e - [spreadsheet] show the available value labels in the
+    column properties widget.
+  *  57aaba6c0 - matio: show basic file info
+  *  b2aff1376 - matio: prepare import and filter
+  *  7242ef6c7 - always link libz
+  *  2e42bd74c - Fix typo in hdf5 linking
+  *  b61e5f124 - Fix typo in readstat libs
+  *  e82920ffa - tests: cmake clean up
+  *  d27c19b32 - Fix configure without readstat
+  *  8d9b14c2b - cmake clean up
+  *  370c8f33a - matio: cmake find
+  *  cfac65218 - Default to start with new project
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 15 May 2021 08:45:13 +0300
+
 labplot (2.8.2+git8317-5d6cef45a-1) unstable; urgency=medium
 
   * Compile

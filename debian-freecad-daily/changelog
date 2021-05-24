@@ -1,3 +1,95 @@
+freecad-daily (0.19.0+git24893-03855f793f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 03855f793feaceeb4385c02f6520f3e1b6429c93
+  * Date: 1620907844
+  * git changelog:
+  *  03855f793f - [Sketcher] Visibility automation : add option to force
+    orthographic view when entering edit mode
+  *  6f0662c716 - format Selection API doc
+  *  9a3faf7722 - improve TaskDialog API doc
+  *  de80c5dd22 - format ViewProvider API doc
+  *  283a554402 - format SelectionObject API doc
+  *  e5c144566f - Documents CommandPy.xml and DocumentPy.xml
+  *  91b0409c48 - Part: [skip ci] workaround for OCCT 7.5.2
+  *  a6450a9584 - Readme: Added LGTM C++ badge
+  *  f0564b0f4b - Readme: Changed stable build badge version from 0.18
+    to 0.19 + added kicad sponsor
+  *  7b0a6358b1 - Merged crwodin translations
+  *  c7fb3ff829 - Tools: cosmetic tweaks to updatecrowdin script
+  *  1175f2a38d - Merge pull request #4779 from bitacovir/TD_Tree_Icons
+  *  7132d7cc87 - Merge pull request #4784 from UR-
+    0/origin/Draft_harmonize_digits_of_dxfScaling
+  *  3505d36a98 - Merge pull request #4786 from Roy-
+    043/AddonManager_Fix_Macros_URL
+  *  64071fdee8 - AddonManager: Fix Macros URL
+  *  2f3bb4050e - Draft: Added 'apply to texts/dims' button to SetStyle
+    dialog
+  *  61c67cf3b8 - [Draft] harmonize no of digits of dxfScaling between
+    Edit->Preferences and Tools->Edit Parameters
+  *  28c51d4a43 - Draft: Allow to use dimension tool with predefined
+    direction
+  *  81a44fcccb - Updated ts files
+  *  f626e1e2b7 - Merge pull request #4770 from mpu-creare/master
+  *  4b4087e18f - Merge pull request #4773 from steelman/techdraw-svg-
+    layer
+  *  805970860f - Merge pull request #4781 from matthijskooijman/pr-
+    template-changelog-link
+  *  3a4621bda9 - Merge pull request #4780 from matthijskooijman/fix-
+    flat-groups-section-view
+  *  cfb030930f - Merge pull request #4782 from heewa/fix-startpage-dir-
+    bug
+  *  58d436cdab - Merge pull request #4783 from donovaly/Addon-SVG-fix
+  *  dcfd17adb7 - [Addons] fix an icon
+  *  8cefceaf99 - Start: fix bug when custom dir missing
+  *  cb2edd1bd0 - Addon Manager: Added FEM_FrontISTR Workbench icon
+  *  582621b3bc - FEM: pep8
+  *  caafd13510 - Update link to changelog thread in pull request
+    template
+  *  82d0d3007d - Draft: Improve docs for get_group_contents spaces
+    parameter
+  *  f0c99c16f6 - Arch: Do not draw draft-like groups twice in section
+    view
+  *  0cfea3fee3 - Make smesh compile with vtk9
+  *  9502501f61 - Update TechDraw_TreePageTemplate.svg
+  *  20f0084b81 - Update TechDraw_TreeView.svg
+  *  9e902124a0 - Update TechDraw_TreeSymbol.svg
+  *  7d7b9ba5d0 - Update TechDraw_TreeSpreadsheet.svg
+  *  5bb3f9d3f1 - Update TechDraw_TreeSection.svg
+  *  1eae45bd77 - Update TechDraw_TreeProjGroup.svg
+  *  4a2ac428b8 - Update TechDraw_TreePageTemplate.svg
+  *  9f98889fc6 - Update TechDraw_TreePage.svg
+  *  ac8b47e5ca - Update TechDraw_TreeMulti.svg
+  *  158e51398e - Update TechDraw_TreeHatch.svg
+  *  468af0e714 - [TD] Name uniformity for Tree Icons
+  *  20e756306d - [Fem] fix femtest failure with yaml.load
+  *  9a5eefaec8 - [FEM] patch LGTM alerts
+  *  72e249a106 - Draft: Fixed last commit (stroke endcap -> stroke-
+    linecap)
+  *  d8c74c06fd - Draft: Using square endcaps for lines in SVG output
+  *  d998f2df7d - Arch: Small translation fix
+  *  8c4f4e6895 - Draft: Added load/save functionality to SetStyle
+    dialog
+  *  970158f78b - Added OpeningDesign to contributors list
+  *  131cdd1e4e - Merge pull request #4557 from
+    luzpaz/crowdin/whitespaces-substituted-into-code
+  *  665e8bd32e - Draft: Changed shapestring FillLetters property to
+    MakeFace
+  *  191cfb2365 - Merge pull request #4769 from Roy-
+    043/Draft_make_ellipse
+  *  ddb6b5b8be - Merge pull request #4768 from Roy-043/Draft-Gui-
+    addModule-issue
+  *  f4f1b0bc3f - Merge pull request #4775 from amrit3701/arch/rebar-
+    allow_negative_offset
+  *  9904d42f57 - [TD] Make the root SVG group a layer for Inkscape
+  *  70ff9afa9d - Arch: allow Rebar OffsetStart and OffsetEnd in
+    negative also
+  *  b69ef38c7f - allow to enable PCH for gcc and clang
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 15 May 2021 08:21:25 +0300
+
 freecad-daily (0.19.0+git24825-ccc4151b30-1) unstable; urgency=medium
 
   * Compile

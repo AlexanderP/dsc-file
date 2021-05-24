@@ -1,3 +1,80 @@
+smplayer (1:21.1.1~git9633-b0443308-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/smplayer-dev/smplayer.git
+  * Branch: master
+  * Commit: b044330801eed45add5e7f760d9a3802be9653b5
+  * Date: 1620904128
+  * git changelog:
+  *  b0443308 - Check if mplayer is v. 1.4
+  *  bf129cd6 - Add build-macos.yml
+  *  28c99150 - Disable GLOBALSHORTCUTS on macx
+  *  d10f3e93 - Fix audio cd playback in mpv. Fixes #33
+  *  aed22a8b - Check if the user passed the option --input-ipc-server,
+    in that case use that socket. Should fix bug #87
+  *  7d61dc3a - Update the smplayer website url
+  *  9dab7701 - Change metainfo dir
+  *  140ad7c7 - Update build-rpm.yml
+  *  7dfdf38e - Merge pull request #84 from City-busz/patch-1
+  *  9bf548e6 - Install appdata file
+  *  777b944a - Move rpm
+  *  7df04d84 - Add build-rpm.yml
+  *  cb566e6a - Update smplayer.spec
+  *  c7c1cc3c - Merge pull request #73 from sergiomb2/mongoose_gcc11
+  *  6c5f6ade - Use app-name
+  *  98be427f - Use app-name
+  *  15719094 - Add ~/bin to the process path
+  *  60a6af1f - Update translations
+  *  7f89f5d1 - Remove webfs from smplayer.spec
+  *  5ea5f3c0 - Merge pull request #72 from sergiomb2/master
+  *  8131afa4 - Enable dash by default
+  *  ba3677d8 - Add defines NO_MPLAYER and NO_MPV
+  *  4aa67eac - Fix build of webserver with GCC11
+  *  d5571ee4 - add smplayer.appdata.xml
+  *  91574137 - Delete build-deb-packages.yml
+  *  b875cdc0 - Add build-deb-packages.yml
+  *  f3685f6c - Update build-ubuntu-packages.yml
+  *  eaef4b76 - Add build-deb-packages.yml
+  *  9cd0a563 - Use lsb_release
+  *  0f0198d9 - Delete zlib
+  *  0acd3fd0 - Don't back up ytdl
+  *  817821f5 - Update the docs file
+  *  326defef - Update Release_notes.md
+  *  3c0284b3 - Install Release_notes.md instead of Changelog
+  *  29cab83d - Add Release_notes.md
+  *  fba9ca43 - Delete Changelog and Release_notes.txt
+  *  069b627c - Update old Changelog and Release_notes.txt
+  *  191e28b4 - Remove build dependency on qt5-default and libqtwebkit
+  *  2a228fff - Remove dependency on qt5-default
+  *  1b6382d3 - Experimental code to resize the main window trying to
+    prevent black borders
+  *  53c77e34 - Simplify ifdefs
+  *  383dc00d - Fix linuxApplicationPath
+  *  fc477213 - Add function linuxApplicationPath
+  *  acd8ba84 - Fix package name
+  *  7e8f7887 - Install players
+  *  46b56492 - Install sources depending on the portable setting
+  *  bfd16312 - Use git to get smplayer-portable
+  *  3762fbc6 - Again the dir separators
+  *  84300dec - bash
+  *  5b66a8da - Install themes
+  *  5a8a1f57 - Get sources from git
+  *  185594d4 - Get revision from git
+  *  5cf72650 - Install the styles folder. Should fix #53
+  *  74d5c604 - Rename action
+  *  d81ac338 - Add build-source-package.yml
+  *  14839d39 - Add build-ubuntu-packages.yml
+  *  929eb6b2 - Simplify get_svn_revision.sh and get_version.sh
+  *  8717d1a8 - Use matrix
+  *  052f40d8 - Update and rename test.yml to build-windows-packages.yml
+  *  e8c6f3b8 - Update test.yml
+  *  2d416830 - Create test.yml
+  *  ad9a188e - Add get_version.sh
+  *  8f929936 - Remove KDE from the categories in the *.desktop files.
+    Fixes #49
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 15 May 2021 08:16:52 +0300
+
 smplayer (1:21.1.1~git9570-55c0aa98-1) unstable; urgency=medium
 
   * Compile

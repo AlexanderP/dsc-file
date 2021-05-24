@@ -1,3 +1,49 @@
+goaccess (1:1.4.3+git3541-fe642ded-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: fe642ded70de03fbbb4021a76e4ae99ff4e5c933
+  * Date: 1621185096
+  * git changelog:
+  *  fe642ded - Merge pull request #1985 from thomas-mc-work/build-env
+  *  d099b016 - remove duplicate Dockerfile
+  *  5cca6d9b - remove duplicate Dockerfile
+  *  23a365b8 - rename Dockerfile
+  *  efe2da75 - update README
+  *  016155ff - remove the ubuntu option and improve biuld process
+  *  b04f16c5 - Merge branch 'master' of
+    https://github.com/allinurl/goaccess into build-env
+  *  d4a880a8 - Added rendering status label appropriately.
+  *  05a51247 - Merge pull request #2108 from yiyuaner/dev
+  *  43a63f5a - Check item.hits in map_data to protect against divide by
+    zero
+  *  83e7366a - Fixed leak when a JSON value contained an empty string
+    (e.g., JSON/CADDY format).
+  *  2e35734a - Ensure valid returned method and protocol are stored in
+    the DB.
+  *  67b412aa - Added the ability to parse IPs enclosed within brackets
+    (e.g., IPv6).
+  *  1ffbaa5e - Moved http methods/protocols to gstorage and avoid dup
+    code.
+  *  4247cc9d - Merge pull request #2107 from dertuxmalwieder/patch-1
+  *  b7d7797c - Moved db insertion routines to their own source/header
+    file.
+  *  33b014bd - Moved persistence routines to their own source/header
+    file.
+  *  94cff6c9 - Added the ability to migrate a v1 database to v2 upon --
+    restore.
+  *  87836801 - Refactored DB schema to minimize storage space by about
+    35%.
+  *  2bfd879f - Add pagination by 24
+  *  0abddd5f - Merge pull request #2102 from dertuxmalwieder/patch-1
+  *  4da07c4f - Fixed invalid free() on restore_data introduced in
+    319b65.
+  *  3cc9738c - Rename referer to referrer in goaccess.conf
+  *  319b65a6 - Moved hash tables to their own database instance.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 16 May 2021 21:41:14 +0300
+
 goaccess (1:1.4.3+git3516-3bce68e9-1) unstable; urgency=medium
 
   * Compile
