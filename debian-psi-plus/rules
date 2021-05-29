@@ -7,8 +7,6 @@ ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
 
-export DEB_CXXFLAGS_MAINT_APPEND = $(shell dpkg-buildflags --get CPPFLAGS)
-export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 BUILDDIR1 = $(CURDIR)/debian/builddir1
@@ -27,6 +25,7 @@ CMAKEOPTS = -DBUNDLED_IRIS=ON \
             -DUSE_DBUS=ON \
             -DUSE_ENCHANT=OFF \
             -DUSE_HUNSPELL=ON \
+            -DUSE_KEYCHAIN=ON \
             -DUSE_XSS=ON \
             -DVERBOSE_PROGRAM_NAME=ON
 
@@ -39,24 +38,13 @@ OPTSSTEP2 = -DCHAT_TYPE=WEBKIT \
             -DENABLE_PLUGINS=OFF \
             -DBUILD_PSIMEDIA=OFF
 
-ifneq (,$(filter $(DEBIAN_CODENAME),xenial))
-	CMAKEOPTS += -DUSE_KEYCHAIN=OFF
-else
-	CMAKEOPTS += -DUSE_KEYCHAIN=ON
-endif
-
 %:
-	dh $@ --buildsystem=cmake --parallel
+	dh $@ --buildsystem=cmake
 
 override_dh_dwz:
 	dh_dwz || true
 
 override_dh_auto_configure:
-ifneq (,$(filter $(DEBIAN_CODENAME),stretch xenial artful))
-	sed -i '/^    omemoplugin/d' $(CURDIR)/src/plugins/generic/CMakeLists.txt
-else
-	# no sed
-endif
 	dh_auto_configure -B$(BUILDDIR1) -- $(CMAKEOPTS) $(OPTSSTEP1)
 	dh_auto_configure -B$(BUILDDIR2) -- $(CMAKEOPTS) $(OPTSSTEP2)
 

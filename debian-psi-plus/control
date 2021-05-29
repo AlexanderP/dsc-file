@@ -3,7 +3,7 @@ Section: net
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: cmake,
-               debhelper (>= 9),
+               debhelper-compat (= 11),
                libgstreamer-plugins-bad1.0-dev,
                libgstreamer-plugins-base1.0-dev,
                libgstreamer1.0-dev,
@@ -15,7 +15,7 @@ Build-Depends: cmake,
                libqt5svg5-dev,
                libqt5webkit5-dev,
                libqt5x11extras5-dev,
-               libsignal-protocol-c-dev | wget,
+               libsignal-protocol-c-dev,
                libsm-dev,
                libssl-dev,
                libtidy-dev,
@@ -138,7 +138,7 @@ Architecture: any
 Depends: psi-plus (=${binary:Version}) | psi-plus-webkit (=${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Description: plugins for Psi+
+Description: official plugins for Psi+
  This package contains officially supported plugins for Psi+:
  \* Attention
  \* Autoreply
@@ -224,7 +224,7 @@ Depends: gstreamer1.0-plugins-base,
          ${misc:Depends},
          ${shlibs:Depends}
 Replaces: psimedia
-Description: plugin for Psi+ for audio and video calls
+Description: plugin for audio and video calls in Psi+
  Media plugin provides functionality required for Audio/Video calls and can
  also replace some parts of QtMultimedia.
  .
