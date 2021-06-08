@@ -1,3 +1,106 @@
+freecad-daily (0.19.0+git24971-a9f6fad531-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: a9f6fad5316a8557d4735c2dcbe4f4935df1be19
+  * Date: 1622216335
+  * git changelog:
+  *  a9f6fad531 - Merge pull request #4812 from
+    jimzim111/patharray_multibase
+  *  cc1140489e - Merge pull request #4801 from Roy-
+    043/draft_make_label_text_input
+  *  750f8ae643 - Merge pull request #4814 from Syres916/patch-18
+  *  7c412e6eaf - Merge pull request #4798 from
+    Russ4262/refactor/remove_rotation
+  *  16015f66e3 - Path: Remove first-draft rotational code Path
+  *  c6771853ae - Updated translation files
+  *  c0105690f4 - Merge branch 'master' into draft_make_label_text_input
+  *  e728c9226c - Merge branch 'patharray_multibase' of
+    https://github.com/jimzim111/FreeCAD into patharray_multibase
+  *  815679a487 - fix whitespace
+  *  a2960cd4e6 - Merge branch 'master' into patharray_multibase
+  *  b0ab46878b - Clean up logic that tests whether there any base Paths
+    to process
+  *  9234c33db1 - Hide ToolController property.  TC can be chosen by the
+    first operation in the PathArray Base property.
+  *  4e2137b358 - Wrap strings in QT_TRANSLATE_NOOP
+  *  13cb80ef5e - [Material] Change File encoding to UTF-8
+  *  1e8c848544 - Merge pull request #4802 from
+    meapeteze/TD_Spreadsheet_merged_cells
+  *  e8a7e4794e - Merge branch 'master' into TD_Spreadsheet_merged_cells
+  *  da53836d06 - Merge pull request #4806 from
+    meapeteze/TD_Spreadsheet_merged_cells_optimal
+  *  e6af8032e2 - Merge pull request #4804 from luzpaz/Crowdin-Draft
+  *  601d6ca466 - Merge pull request #4808 from
+    matthijskooijman/movewithhost-link-exception
+  *  0a4ea36073 - Merge pull request #4805 from luzpaz/StartWB-tooltip
+  *  5d57496f25 - Merge pull request #4809 from matthijskooijman/draft-
+    arch-simplifications
+  *  8896d74e6e - Merge pull request #4810 from matthijskooijman/fix-
+    autogroup-groups
+  *  6e818208bf - Merge branch 'patharray_multibase' of
+    https://github.com/jimzim111/FreeCAD into patharray_multibase
+  *  a3f37025b1 - Fix row-ordering logic when SwapDirection==True
+  *  3a5627553b - Merge branch 'FreeCAD:master' into patharray_multibase
+  *  daddf550aa - Add PathArray Jitter capability to offset each copy by
+    a random distance.  Helps create an imperfect hand-crafted
+    appearance.
+  *  b0364e466a - Merge pull request #4680 from
+    ChrisNisbet01/Fix_vcarve_depth_calculation
+  *  98ec3dda9d - Merge pull request #4765 from
+    sliptonic/bug/toolnumbers
+  *  224f49af28 - Merge pull request #4617 from
+    Russ4262/fix_pocketshape_circular_extension
+  *  6e622fab9d - Merge pull request #4637 from
+    Russ4262/fix_update_default_extension_length
+  *  c3878ea58f - Merge pull request #4523 from Russ4262/slot_fixes
+  *  77c44170f3 - Merge pull request #4796 from heewa/fix-path-errors
+  *  57de4681ec - Update make_label.py
+  *  0495310984 - fix whitespace
+  *  db8a6116da - Path: Add PathArray SwapDirection property to process
+    copies along X axis before Y axis
+  *  4ea8d3a5fe - Merge branch 'patharray_multibase' of
+    https://github.com/jimzim111/FreeCAD into patharray_multibase
+  *  e8e1b4ce94 - PathArray support for multiple paths as base
+  *  738bcbe357 - Draft: Fix Show groups in layer list drop-down button
+    preference
+  *  ecc05545c1 - Draft: Simplify code using getattr default value
+  *  96cbc722f5 - Arch: Simplify some ifs in ArchComponent
+  *  19ada8fd1f - Draft: Do not move children of App::Link objects
+  *  98e563c3d9 - Update make_label.py
+  *  db31ad0098 - Merge branch 'master' into patharray_multibase
+  *  4d127347dc - PathArray support for multiple paths as base
+  *  60a75e5d24 - Fix TechDraw View Spreadsheet with merged cells, 2
+  *  089b2ae478 - Draft: Fixed use of double quotes in Draft Texts
+  *  ac96cd1650 - StartWB: Add missing tooltip for 'Show tips'
+    preference dialog
+  *  5394c27683 - Crowdin: fix Draft mirror code typo
+  *  32cbd7fabc - Fix TechDraw View Spreadsheet with merged cells.
+  *  8ac722c1e8 - Improve IFC export (structural analysis) for slabs
+  *  9b7800368e - Merge pull request #4776 from dubstar-
+    04/fixes/DrillingOp
+  *  9b2ebec35d - Draft: Fixed make_label to accept list of strings for
+    custom_text
+  *  3d3f93470b - Merge pull request #4789 from
+    chennes/fixOpenSCADMissingHide
+  *  02017f039e - Merge pull request #4793 from donovaly/TD-centerline-
+    fixes
+  *  5161d99b48 - Merge pull request #4795 from luzpaz/Crowdin-Draft-
+    whitespace
+  *  6c1294ad92 - Merge pull request #4794 from luzpaz/Crowdin-Draft-
+    Prefs
+  *  2f49d4ee56 - Path: check for empty before using - fixes #4645
+  *  71faff2a0a - Crowdin: remove superfluous whitespace from
+    translation
+  *  7f4ac1d4f8 - Crowdin: fix mistake in Draft Preferences text [skip
+    ci]
+  *  a378b6b66f - Arch, import IFC, fix in materials
+  *  b981f9056c - [TD] fix centerline crashes and bugs
+  *  99f9c3405c - [OpenSCAD] Fix missing hide() on linear extrude
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 28 May 2021 20:37:52 +0300
+
 freecad-daily (0.19.0+git24893-03855f793f-1) unstable; urgency=medium
 
   * Compile

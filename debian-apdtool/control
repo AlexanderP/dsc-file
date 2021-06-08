@@ -3,7 +3,7 @@ Section: graphics
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: debhelper (>= 9), autotools-dev, libpng-dev | libpng12-dev, zlib1g-dev
-Standards-Version: 4.5.0
+Standards-Version: 4.5.1
 Homepage: http://azsky2.html.xdomain.jp/
 
 Package: apdtool
@@ -17,6 +17,6 @@ Description: apd and adw file tool
   * Can read APD v1-v3 and ADW v1-v2 files.
   * A single picture with layers combined can be batch converted to PNG/BMP/PSD.
   * Images of each layer can be extracted as PNG/BMP/PSD.
-  * A16bit/A1bit layer texture can be converted to a specified color layer 
+  * A16bit/A1bit layer texture can be converted to a specified color layer
     based on the texture image path.(You can convert a tone image to grayscale)
- 
+

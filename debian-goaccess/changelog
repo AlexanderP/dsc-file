@@ -1,3 +1,52 @@
+goaccess (1:1.4.3+git3576-2ff49e63-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 2ff49e638b14e62b5031daa26ddb20d670770d8d
+  * Date: 1621987826
+  * git changelog:
+  *  2ff49e63 - Updated NEWS for the latest changes.
+  *  c00ecaf4 - Reverted back GNU+Linux to Linux from a050396.
+  *  732d43af - Updated man page to reflect referrer instead of referer.
+  *  de0fb635 - Updated translation files for current build.
+  *  9b7e5531 - Ensure all panels have the right key mapping on terminal
+    output.
+  *  4b29eff0 - Updated README.md for upcoming version.
+  *  11fc0e78 - Ensure terminal render call cleans and draws all windows
+    properly.
+  *  0ae3765b - Updated Changelog to reflect latest changes.
+  *  291f71fd - Updated AUTHORS to reflect latest contributions.
+  *  cdb1b1cb - Version bumped to 1.5.
+  *  0e8cd7c6 - Merge pull request #2120 from cgzones/cov
+  *  90c282b0 - Merge pull request #2119 from cgzones/ubsan
+  *  54ea8620 - Merge pull request #2118 from cgzones/german
+  *  b25fe14e - Ignore return value of nanosleep
+  *  b8f14d88 - Move NULL-check before first dereference
+  *  a28b8717 - Drop unnecessary NULL check
+  *  20242ee1 - Drop unnecessary NULL check
+  *  dc0a321f - Free resources on error in extract_tls_version_cipher
+  *  caf0b80f - Free memory on return
+  *  297e89bb - Resolve UBSAN issues
+  *  1c189d63 - Update German translation
+  *  2d47c270 - Version bumped to 1.5.
+  *  9c596029 - Removed unused variable from app.js.
+  *  647ab958 - Removed unused variable from app.js.
+  *  8b2b7b14 - Bit field free_data should be explicitly unsigned int.
+  *  b2573450 - Ensure we account for \0 when allocating WS packet
+    buffer from the browser.
+  *  c4006db9 - Ensure we use the right path to restore file.
+  *  b61819a9 - Minor update to formatting.
+  *  7a2c577e - Ensure methods and protocols are persisted.
+  *  02b74575 - Removed unused app metric from array of stores.
+  *  6bfa9b6d - Ensure we restore db props before any other db.
+  *  fe2fde04 - Renamed database properties persisted file.
+  *  3d9025bc - Moved tail follow log iteration to its own function.
+  *  6efa160f - Ensure we reuse existing append str function.
+  *  f569d2dd - Moved the Logs structure to be part of a DB instance.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 28 May 2021 20:38:25 +0300
+
 goaccess (1:1.4.3+git3541-fe642ded-1) unstable; urgency=medium
 
   * Compile

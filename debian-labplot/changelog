@@ -1,3 +1,113 @@
+labplot (2.8.2+git8443-48ee28c12-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 48ee28c1233e94952daed896609b7725b2cb82cd
+  * Date: 1622190209
+  * git changelog:
+  *  48ee28c12 - matio: preview given number of lines only
+  *  2fd1d334b - matio: set column names for imported complex data of
+    basic types
+  *  6a7f56238 - matio: preview and import complex data of basic types
+  *  b7d9f1a38 - [worksheet] when adding a new TextLabel via the context
+    menu on the worksheet, place it at the place where the context menu
+    was called. Also, some minor code style fixes in WorksheetElement.
+  *  2dfb11806 - matio: preview double complex struct fields
+  *  f2035d148 - Wenn new curves are added via the PlotDataDialog,
+    always select the plot of the last added curve instead of selecting
+    the curve. In most cases this dialog is used to quickly plot the
+    data and the user want immediately see the results and we don't want
+    to disrupt this with the selection effect drawn for the selected
+    curve.
+  *  03c5240d4 - Fixed the build for the case when Cantor libs are not
+    available.
+  *  cfd13a36f - Fixes in the CAS worksheet: * Don't show the column
+    properties widget if a CAS variable column was selected. Show the
+    properties for the CAS worksheet instead. * Properly remove all
+    variable columns when the CAS backend is restarted * Don't allow to
+    copy, duplicate and rename CAS variable columns in the context menu
+    in the project explorer - the management of these variables is done
+    in CAS.
+  *  93c840606 - matio: preview struct data
+  *  f780ad4b8 - Switched to ResizableTextEdit also in the ProjectDock
+    to get a consistent behavior across all dock widgets. Also, removed
+    the template handler for the project since it's not really useful
+    here and there are no properties that could be templated.
+  *  de933d657 - [datapicker] use the new class Symbol also in
+    DatapickerCurve to reduce the amount of redundant code.
+  *  6aab82e8f - matio: complete previous patch
+  *  0a00d9f11 - matio: add more tests and fix sparse import
+  *  35962d440 - matio: correctly read matrix data
+  *  d6e0381cb - [worksheet] properly apply the mouse move event to all
+    plots on the worksheet if the option apply action to all plots is
+    selected.
+  *  0527ea055 - [worksheet] better default values in Symbol for the
+    different classes using it.
+  *  247850c87 - [datapicker] use the new class Symbol also in
+    DatapickerImage to reduce the amount of redundant code.
+  *  59fc66e04 - Add matio import test
+  *  1b1a18551 - column: add mode name method
+  *  36e237338 - matio: other types
+  *  ceafa7be9 - Minor layout fixes in a couple of properties widgets
+    using the new SymbolWidget. Also, removed an obsolete spacer in the
+    project properties widget which might adress the unwanted artifact
+    seen on windows.
+  *  911a5febd - Moved the handling of the description changes (name and
+    comment) from the dock widgets to the central class.
+  *  00e6867c0 - [worksheet] better layout in xy-curve dock widget.
+  *  386d24432 - Made all comment text fields resizable.
+  *  2ba6cd91e - cmake: don't link to libzip directly
+  *  e848d5a88 - cmake: fix previous patch
+  *  f40af0b3a - tests: disable readstat tests when readstat not
+    available
+  *  d1daf7afd - cmake: link system readstat with iconv also on macOS
+  *  1d1e7ad9f - cmake: find and include zip library if found (netcdf
+    may be build with it on Windows)
+  *  9148e7113 - matio: sparse import improvements
+  *  6eee92a21 - matio: Import sparse data
+  *  411306d64 - Better appearance for the grab element in
+    ResizableTextEdit that is used for comment text fields.
+  *  0e951ae3f - [worksheet] fixed some positioning related issues in
+    Axis for older projects that were caused by the re-design of this
+    logic today.
+  *  c1f802943 - Fix readstat test
+  *  44d22b6ed - minor warnings fixed
+  *  df4a1bdfe - link to zip library with netcdf (try fixing problem on
+    Windows build server)
+  *  7b5e2ab27 - matio: read all basic cell types
+  *  8691ae9ce - [spreasheet] the relevant change was forgotten in the
+    previos commit.  Adding it now...
+  *  196eea81f - [spreadsheet] adjuste the column width to fit the
+    content in case the application settings were changed and the
+    spreadsheet header needs to be adjusted according to the new
+    settings (show column mode,  etc.).
+  *  5cc2396dd - matio: read cell class type
+  *  1d9f36982 - plot() is not yet assigned, when the axis was just
+    added before. So use the parent element which is also the plot
+  *  2d256c482 - if no coordinate system is available, it means no plot
+    is yet assigned, so just ignore and wait until adding was finished
+  *  45556a83a - use dummy second value in QPointF and use already
+    existing mapping functions instead of creating new 1D functions
+  *  50525ba1e - fix tabs
+  *  ab66ed0d9 - cleanup
+  *  165d52fb7 - fix problem that centering axis does not work
+  *  ce917e3bd - move position spinboxes next to the combobox
+  *  b557a47ef - implement like in transformAnchor
+  *  cd4b0f86e - initial commit to refactor axis position
+  *  d373d6562 - When showing an non-existing Column in
+    TreeViewComboBox,  red-highlight the font color only and not the
+    background. This looks better on windows and macOs since overwriting
+    the background color breaks the whole style of the combobox.
+  *  aed93f8ed - [spreadsheet] no undo/redo for value  labels yes,
+    notify the project about changes manually.
+  *  02bbd89d5 - [spreadsheet] fixed the removing of value labels and
+    some other minor issues around the labels.
+  *  ee476feb4 - [spreadsheet] allow to modify the value labels in a
+    batch mode by entring the text like 1 = true 0 = false etc.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 28 May 2021 21:07:36 +0300
+
 labplot (2.8.2+git8390-ef399fec2-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,35 @@
+znotes (0.4.3+git20210525-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://github.com/proton/zNotes.git
+  * Branch: master
+  * Commit: 404e077c4c7ed238006e5334b923fd303f85127a
+  * Date: 1621923947
+  * git changelog:
+  *  404e077 - actualize translations, add missing russian translations
+  *  e9be73b - respect use_system_icons_theme setting immediately
+  *  3e5e82a - display IconsUseSystemTheme config only on linux
+  *  da60f88 - fix IconsUseSystemTheme checkbox (requires restart)
+  *  2768e72 - actualize ifdef for qt5
+  *  9adbc55 - fix settings load for qt5
+  *  1613796 - default value for IconsUseSystemTheme setting
+  *  1e2fa4e - toolbar action respect setting
+  *  96dbd3c - add high-resolution icons
+  *  dfa14e3 - renamed icons to match with theme
+  *  ac32a1e - fix installation section in README
+  *  537f6ca - fix loading icon size from settings in config dialog
+  *  bd50ee8 - update VERSION
+  *  cb2c4f8 - update changelog
+  *  782fc0e - configurable toolbar icon size
+  *  d4f07e5 - add icons controls to config form
+  *  68d68ea - fix compliation warnings
+  *  d140246 - Merge branch 'icon-theme'
+  *  db42d71 - update year in about dialog
+  *  7b761b8 - use system icons
+  *  6476b27 - add TODO to gitignore
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 28 May 2021 20:53:37 +0300
+
 znotes (0.4.3+git20150825-3) unstable; urgency=medium
 
   * add qt5 build

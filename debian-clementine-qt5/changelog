@@ -1,3 +1,40 @@
+clementine-qt5 (1.4.0~git622-gf7369d2c4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: f7369d2c421e59b1a7fdcbb5af70ad6da43083b0
+  * Date: 1622175987
+  * git changelog:
+  *  f7369d2c4 - Automatic merge of translations from Transifex
+  *  2132e99fb - Automatic merge of translations from Transifex
+  *  684c9d232 - Automatic merge of translations from Transifex
+  *  d71eba97f - Automatic merge of translations from Transifex
+  *  f071075e8 - build: Add Ubuntu Hirsute to workflows.
+  *  776bd3b02 - settings: Add option to guess song metadata
+  *  cf88e4720 - settings: Create a new Song Metadata settings page
+  *  01be9f196 - settings: Organize page enums by category.
+  *  89831f8dc - MusicBrainzClient: Log message for malformed XML in
+    reply
+  *  e756f2d68 - CddaSongLoader: explicitly reading discid as UTF8
+  *  8d69da28f - Fixing freeing of memory in cddasongloader
+  *  866869997 - CddaSongLoader: handle potential multiple tag messages
+    correctly
+  *  e9945bcbc - do NOT free toc entries in CddaSongLoader (reverting
+    previous change)
+  *  86bbd2ace - Formatting/linting fixes.
+  *  81c0661e8 - MusicBrainzClient stop result parsing after reading
+    first medium with correct discid.
+  *  54a497b30 - RipCDDialog rejects metadata lists if number of tracks
+    does not match disc.
+  *  436c53870 - Correctly freeing memory in
+    CddaSongLoader::LoadSongsFromCdda
+  *  97800e613 - Fix for #7019: CddaSongLoader obtaining metadata on
+    first try.
+  *  1309c76be - tagreader: Relocate artist/album/title guessing code
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 28 May 2021 20:39:00 +0300
+
 clementine-qt5 (1.4.0~git603-g75de59703-1) unstable; urgency=medium
 
   * Compile

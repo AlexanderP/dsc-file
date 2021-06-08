@@ -10,25 +10,25 @@ export DH_VERBOSE=1
 
 
 override_dh_auto_install:
-	[ ! -f $(CURDIR)/translation/Makefile ] || ( cd $(CURDIR)/translation && make )
-	cd $(CURDIR)/translation && $(CURDIR)/translation/mtrconv ru ru.mtr
-	cd $(CURDIR)/translation && $(CURDIR)/translation/mtrconv en en.mtr
-	cd $(CURDIR)/translation && $(CURDIR)/translation/mtrconv uk uk.mtr
-	cd $(CURDIR)/translation && $(CURDIR)/translation/mtrconv be be.mtr
+	[ ! -f $(CURDIR)/translation/tool/Makefile ] || ( cd $(CURDIR)/translation/tool && make )
+	#cd $(CURDIR)/translation && $(CURDIR)/translation/tool/mlktrconv ru -d $(CURDIR)/translation/
+	cd $(CURDIR)/translation && $(CURDIR)/translation/tool/mlktrconv en -d $(CURDIR)/translation/
+	#cd $(CURDIR)/translation && $(CURDIR)/translation/tool/mlktrconv uk -d $(CURDIR)/translation/
+	#cd $(CURDIR)/translation && $(CURDIR)/translation/tool/mlktrconv be -d $(CURDIR)/translation/
 	dh_auto_install
 
 override_dh_auto_clean:
-	[ ! -f $(CURDIR)/translation/mtrconv ] || rm -f $(CURDIR)/translation/mtrconv
+	[ ! -f $(CURDIR)/translation/tool/mlktrconv ] || rm -f $(CURDIR)/translation/tool/mlktrconv
 	[ ! -f $(CURDIR)/translation/en.mtr ] || rm -f $(CURDIR)/translation/en.mtr
-	[ ! -f $(CURDIR)/translation/ru.mtr ] || rm -f $(CURDIR)/translation/ru.mtr
-	[ ! -f $(CURDIR)/translation/uk.mtr ] || rm -f $(CURDIR)/translation/uk.mtr
-	[ ! -f $(CURDIR)/translation/be.mtr ] || rm -f $(CURDIR)/translation/be.mtr
+	#[ ! -f $(CURDIR)/translation/ru.mtr ] || rm -f $(CURDIR)/translation/ru.mtr
+	#[ ! -f $(CURDIR)/translation/uk.mtr ] || rm -f $(CURDIR)/translation/uk.mtr
+	#[ ! -f $(CURDIR)/translation/be.mtr ] || rm -f $(CURDIR)/translation/be.mtr
 	dh_auto_clean
 
 override_dh_install:
 	rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/en.mtr
-	rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/ru.mtr
-	rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/uk.mtr
-	rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/be.mtr
-	rm -rf $(CURDIR)/debian/azpainter/usr/share/azpainter/doc/
+	#rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/ru.mtr
+	#rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/uk.mtr
+	#rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/be.mtr
+	rm -rf $(CURDIR)/debian/azpainterusr/share/doc/azpainter/GPL3.gz
 	dh_install

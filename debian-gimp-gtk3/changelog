@@ -1,3 +1,264 @@
+gimp-gtk3 (2.99.0+git47115-16fd4ae7f4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/gimp.git
+  * Branch: master
+  * Commit: 16fd4ae7f4de988eff0cdfc6d94b89929743548e
+  * Date: 1622215670
+  * git changelog:
+  *  16fd4ae7f4 - gitlab-ci: make sure the normal commit jobs are also
+    run on MR.
+  *  20fa78dcfb - gitlab-ci: add support for flatpak and Windows
+    installer jobs in MR…
+  *  85dd69dc88 - gitlab-ci: expire the Windows installer artifact after
+    a week.
+  *  512fc24694 - add msys support
+  *  039be5d00e - build: sync with development flatpak.
+  *  eeb7b6315a - gitlab-ci: store flatpak-build output into a log file.
+  *  f2c73f2840 - gitlab-ci: fix (again!) the gitlab-ci.
+  *  e6d3e898d8 - gitlab-ci: remove when: always in flatpak job.
+  *  434ef403fb - gitlab-ci: create a GIMP_CI_FLATPAK Gitlab variable to
+    trigger the…
+  *  83f5698fe2 - ci: Enable nightly flatpak builds
+  *  61389adfa0 - flatpak: Use exact version of GEGL (0.4.30)
+  *  1228d898b8 - flatpak: Add maxflow dependency and build with
+    workshop
+  *  94ed45db04 - flatpak: Add patch to Cairo preventing subpixel font
+    rendering system settings to apply to text layers
+  *  d468722828 - flatpak: Build graphviz as GEGL submodule
+  *  68cf9d8581 - flatpak: Remove -Dlibdir=lib configure option
+  *  551cc6a0ba - flatpak: Remove meson build
+  *  95754f0d6b - flatpak: Add gvfsd permission for gvfs
+  *  2842a8e691 - flatpak: Bump versions of some modules
+  *  8e448254d5 - flatpak: Fix build
+  *  8b39b92acf - Update Spanish translation
+  *  c112a55958 - libgimp*, plug-ins: fix some warnings
+  *  825067eab7 - plug-ins: fix #6859 Hurl random pct limits in PDB are
+    incorrect
+  *  003f137dc0 - 6872 gimp-pdb-dump print type of GValue instead of
+    type of GParamSpec
+  *  1c537b0cfd - Add devel doc
+  *  e57304f71a - Issue #5402 Scriptfu handle GFile and GimpObjectArray
+    types
+  *  603c5dcb2c - app: call parent's window_state_event() from
+    GimpImageWindow
+  *  203393a9fc - core: function documentation clarification
+  *  f8320ce535 - core: minor memleak fixes
+  *  8c54a0caa9 - build: fix installer creation.
+  *  7a4f0a6f2b - gitlab-ci: redirect installer logs to a file.
+  *  35ef549028 - Issue #5879: Legacy icon theme not installed with
+    meson build.
+  *  3fbe59cd3c - build: do not add the same files twice for lua in the
+    installer.
+  *  f75cad56e0 - build: disable javascript plug-ins.
+  *  076e4d687b - gitlab-ci: add a new packaging stage.
+  *  7c4f12ee63 - gitlab-ci: move the dependency moving step into the
+    build stage.
+  *  2d15aa00cc - build: move lua import files into bin/.
+  *  49349c78cc - build: add lua support to the Windows installer.
+  *  ece8cbe447 - Update Catalan translation
+  *  0625902d71 - app: set OK the default button to the Create a New
+    Image dialog.
+  *  18785bf9f1 - build: clean out obsolete Windows-specific patches.
+  *  9c6776fbe4 - Issue #6257: Race condition bug in meson build.
+  *  11a891b314 - Issue #6257: Race condition bug in meson build.
+  *  b815bca8d3 - gitlab-ci, build: --enable-windows-installer also on
+    Linux.
+  *  3b3ab0aa11 - plug-ins: fix #6116 grayscale gif animation hangs on
+    export.
+  *  ee2a3104e9 - meson: fix the build.
+  *  7d9e6e311e - build: fix Python support in Windows installer.
+  *  9c62dfd4d4 - build: extensions are gimp32/64 specific.
+  *  f647517912 - build: job win-installer-nightly should return failure
+    appropriately.
+  *  a8f020d889 - meson: -Dwindows-installer also works on Linux build
+    machine.
+  *  8a42c6ccc2 - build: add a test to check the Windows installer
+    languages.
+  *  9d065b8718 - build: create installer with debug symbols and Python
+    support.
+  *  c5b05b6e03 - build: separate debug symbols from binaries in the
+    Windows installer.
+  *  016948c482 - plug-ins: load 16-bit per sample SGI images as 16 bit
+    integer
+  *  90ee7bd417 - NEWS: update.
+  *  0d479b4e3e - Update Spanish translation
+  *  625c437352 - Update Spanish translation
+  *  e1fcaaaa0a - plug-ins: always stop on error after reading PSD layer
+    block.
+  *  be20a25ec6 - plug-ins: additional layer info in PSD images can have
+    multiple resources.
+  *  d99b87c529 - plug-ins: add support for reading Photoshop PSB image
+    files.
+  *  35f4b7b517 - plug-ins: make PSD resource loading handle 64-bit
+    lengths.
+  *  6f523d33dd - plug-ins: adjust some psd-load debug statements for 64-
+    bit.
+  *  2df0569a50 - plug-ins: PSD ChannelLengthInfo data_len should be 64
+    bit.
+  *  0de02a5b2d - plug-ins: PSD layer size validation only for normal
+    layers.
+  *  f82974a70e - plug-ins: in psd-load.c change debug state to 4 for 1
+    bit conversion details.
+  *  714052e998 - plug-ins: remove outdated comment about
+    GIMP_MAX_IMAGE_SIZE in psd-load.c
+  *  2e2e43a404 - plug-ins: add psd_read_len function
+  *  0a703115d1 - plug-ins: increase MAX_CHANNELS in PSD files to 99.
+  *  32be0ec709 - plug-ins: PSD layer name can be NULL.
+  *  58183e55c6 - plug-ins: store PSD file version in our PSDimage data
+    structure.
+  *  f98ccf5b32 - build: Windows installer version deduced from
+    configure.ac.
+  *  5a366ee0d2 - gitlab-ci: reorganize pipeline rules.
+  *  62ae32123a - build: add aalib dependency for ASCII Art support.
+  *  a181d672ef - configure: better libaa detection.
+  *  cf6482f716 - build: more optional feature to Windows installer.
+  *  de31d65daa - gitlab-ci: gimp-distcheck-debian and gimp-autotools-
+    debian redundant.
+  *  1d03258797 - gitlab-ci, build: construct the Windows installer from
+    CI.
+  *  9057de6c33 - build: remove some data relevant to GTK+2 from
+    installer.
+  *  2415d06c66 - build: no signed installer for the CI yet.
+  *  681c37d830 - build: debug component only known when DEBUG_SYMBOLS
+    is defined.
+  *  8cd05ceba7 - build: unset LZMADictionarySize high value.
+  *  529eb56477 - build: also looking for HKEY_CURRENT_USER Inno Setup
+    registry key.
+  *  3d50cb339c - build: patterns to bypass ghostscript version
+    detection.
+  *  9f2b32de6c - build: package a bit more.
+  *  004749158d - gitlab-ci: native (MSYS2) Win32 32/64 builds only on
+    schedules.
+  *  d408568628 - Update Ukrainian translation
+  *  eeefa46403 - Update Slovenian translation
+  *  c7a8c35903 - Update Slovenian translation
+  *  970f7b0465 - Update Slovenian translation
+  *  82cb11eb54 - plug-ins: add extra safety checks in psd-load.
+  *  eb78aa994e - plug-ins: fix computation of padding in
+    fread_unicode_string.
+  *  3da302adce - plug-ins: consider reading less bytes than we need an
+    error in psd-util.
+  *  670ef6b9a3 - plug-ins: fix setting error message in psd-util.
+  *  3d248dc66f - plug-ins: PSD color block can have a non zero length
+    even when mode is RGB.
+  *  666ae4ecfe - plug-ins: don't use G_GSIZE_FORMAT specifier in
+    translatable string in psd-load.
+  *  9b033f8996 - plug-ins: fix creating multiple preview display for
+    JPEG export.
+  *  065581b0a9 - NEWS: update.
+  *  db10c2b971 - Update Ukrainian translation
+  *  85c050c440 - Update Swedish translation
+  *  668c9de5a5 - app: add back a timeout-based idle function to queue a
+    canvas redraw.
+  *  38c0344fa8 - plug-ins: fix #5944 Unable to open XCF converted PSD
+    files in Gimp and Photoshop- Too many channels in layer: 4907
+  *  a4a6ac59e0 - Issue #6852: Don't include gimp30-tips.mo in binary
+    package
+  *  822eb3cf2f - Issue #6852: Don't include gimp30-tips.mo in binary
+    package
+  *  df7b2b6b1e - Update Vietnamese translation
+  *  bd985585bb - Update Vietnamese translation
+  *  c4ba4bdaad - Update Ukrainian translation
+  *  fb16acf9d3 - build: enable Windows installer translation files in
+    CI build job.
+  *  eb3c42fda5 - Add a distribution job with Win 32-bit!
+  *  a04eff326f - gitlab-ci: add native Windows 32-bit build with MSYS2.
+  *  1284bbf679 - build: update the generated Windows installer
+    languages.
+  *  a97fbc561e - Installer: forgot Components for girepository
+  *  7cf6605da5 - Installer: some cleanup, make Lua optional, add devel
+    splashes
+  *  a42c441c13 - Installer: preparing for GIMP 2.99
+  *  7cc383c5f7 - Installer: add Croatian and Marathi language
+  *  ff4dd2ce25 - Installer: rearrange install order of files, should
+    make installing slightly faster
+  *  2bb5d2807f - Installer: file-mng builds on 32-bit Windows, stop
+    special-casing it
+  *  5315e9fbdc - Installer: properly remove old icons on 32-bit
+    installs and per-user installs
+  *  1bb71e8193 - Installer: skip .debug files when they don't exist
+  *  62c1c5c045 - Installer: unofficial languages, ghostscript 9.50
+  *  b7ab224f92 - Installer: handle associations better
+  *  d94d375340 - Installer: fix for issue 3226
+  *  4d3b901589 - Installer: forgot about .xcf extension
+  *  90c2e81212 - Installer: minor fixes
+  *  d7799efd0d - Installer: ported install script to Inno Setup 6, add
+    per-user install support
+  *  c9b9e37c57 - Installer: install 64-bit Python on 64-bit Windows
+  *  4ccf42dc0a - Installer: changes for 2.10.12
+  *  67f7187c25 - Installer: handle missing install directory of GIMP
+    <2.8 better when there's still uninstall info in Registry
+  *  b8021c0826 - Installer: remove dead code
+  *  d476b47dcd - Installer: remove LIBTHAI_DICTDIR environment variable
+    (no longer needed, see
+    https://gitlab.gnome.org/GNOME/gimp/issues/2496#note_365235 )
+  *  0ed37058de - Installer: remove lib\gegl-0.2
+  *  2cc134b8f4 - Installer: include debug symbols for babl/gegl DLLs in
+    lib\*
+  *  2c724ba064 - Installer: proper fix for libthai
+  *  f959726b5d - Installer: remove Thai locale temporarily (causes
+    crash on Windows 7)
+  *  f05f51295e - Installer: include extra debug symbols, Ghostscript
+    9.25
+  *  9ed68c833c - Installer: don't scan recursively for configuration
+    override files
+  *  63d5e3591b - Installer: small fix for 32on64
+  *  c8dfa69def - Installer: don't include unnecessary files, some more
+    fixes for new plugin paths
+  *  4c64588f18 - Installer: zlib1.dll has no version info, compare
+    timestamp when updating in System32
+  *  f030ade0be - Installer: plug-ins install changes
+  *  97289a0989 - Installer: remove plugins from the lib\gimp\2.0\plug-
+    ins directory
+  *  101d1a4d97 - Installer: fix .svg MIME type in Registry (fixes
+    toolbox icons)
+  *  e6eb002eb3 - Installer: improved compile.bat
+  *  d2190e70df - Installer: show progress while removing old .debug
+    files
+  *  655a874f1b - Installer: remove all obsolete 2.8 plugins
+  *  f592814100 - Installer: more verbose debug messages
+  *  06b98b9bea - Installer: include full version number in icon name
+  *  0f775b5adc - Installer: update python2 interpreter file
+  *  5c31c6ac3d - Installer: remove Quick Launch icon
+  *  66ccd53174 - Installer: install debug symbols by default
+  *  33d0af3d19 - Installer: ignore version information on files
+    installed to {app}
+  *  e939fcec31 - Installer: include gdk-pixbuf-query-loaders.exe
+  *  6dc98fe7f0 - Issue #6850: support for memory in the dashboard under
+    OpenBSD.
+  *  6466d46052 - app: check the time before last selection draw before
+    queuing a redraw.
+  *  e8a531e51e - app: fix selection display on right/bottom borders
+    when rulers are…
+  *  4fee04b839 - Issue #5640: Selection tools not showing selection on
+    Wayland.
+  *  8c2afcb31b - NEWS: start the GIMP 2.99.8 section.
+  *  60a9e25101 - build: add Vietnamese translation to the Windows
+    installer
+  *  419892c3bd - gitlab-ci, build: CI job to package GIMP on Windows
+    from MSYS2 build.
+  *  2ad349106a - gitlab-ci: add Win 32-bit and Linux Clang builds to
+    schedules.
+  *  89e83ae5e4 - Updated Greek translation
+  *  84766839f1 - Update Vietnamese translation
+  *  3027b4eb4c - devel-docs: update a bit the release-howto.
+  *  7cca69cd49 - build: fix a weird (yet unexplained) build bug.
+  *  6c91e7f964 - build, gitlab-ci: break the native Windows build into
+    2 jobs.
+  *  ffd732c444 - build: do not build Windows dependencies with ccache.
+  *  7254d7500d - Cleanup the Gitlab runner manually.
+  *  1858aac4c3 - gitlab-ci, build: testing native Windows build.
+  *  6c1a0e8be7 - app: gui_free_progress() should accept any GimpProcess
+    widget.
+  *  8fdeaddbe7 - plug-ins: fix using wrong offset for group layer masks
+    in psd export.
+  *  fca3f23c60 - Update Vietnamese translation
+  *  644abd790a - Update Vietnamese translation
+  *  834ff9d99d - Update Polish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 28 May 2021 21:05:47 +0300
+
 gimp-gtk3 (2.99.0+git46943-4f1007edbc-1) unstable; urgency=medium
 
   * Compile
