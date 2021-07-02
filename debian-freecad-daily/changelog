@@ -1,3 +1,130 @@
+freecad-daily (0.19.0+git25059-87ae516e1e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 87ae516e1ecc15d3b5db2d44caa8d0db43013d61
+  * Date: 1623389305
+  * git changelog:
+  *  87ae516e1e - Fixing connection error for structural surface members
+  *  f76be90c59 - Bug fix for PointConnections of
+    StructuralCurvedMembers
+  *  4a9963a03f - Merged crowdin translations
+  *  ac4937f59c - Tools: small cosmetic fix
+  *  5739d6eb7c - Updated ts files
+  *  8700e75d99 - Merge pull request #4848 from 0penBrain/getDrawPagePy
+  *  95224a1b9b - Merge pull request #4849 from sliptonic/tool/dovetail
+  *  3fdd8ba99b - Merge pull request #4388 from
+    Russ4262/feature_extensions_to_adaptive
+  *  a600320f7c - adding dovetail cutter toolshape
+  *  d8194ec237 - [TechDraw] Add 'getPage' Python API ; returns page
+    from view
+  *  28a1300c86 - Merge pull request #4842 from 0penBrain/getSheetPy
+  *  77dd36de9d - Merge pull request #4834 from luzpaz/PD-tweak
+  *  ff1b3fe10d - Merge pull request #4845 from
+    tomate44/fix_offset_macro
+  *  c50bbd263d - Merge pull request #4833 from carlopav/draft-fix-
+    autogroup
+  *  524023cab9 - Merge pull request #4840 from marioalexis84/draft-wp
+  *  423f36efb0 - Merge pull request #4846 from Roy-
+    043/Draft_fix_pointarray_wrong_tree_icon
+  *  3cdccea9d6 - adds IFC export for structural slabs
+    (StructuralSurfaceMemebers) with their thickness
+  *  45ae81f955 - Formating for better readability
+  *  1bea75d62b - FEM: code formating
+  *  0ad5a0f735 - FEM: unit tests, add calculix flexural buckling
+  *  c82de2a0f5 - FEM: examples, add calculix flexural buckling
+  *  8e25fe33dc - FEM: solver calculix, add buckling analysis
+  *  09f441c93e - FEM: unit test, add simple calculix frequency example
+  *  5f4581098c - FEM: examples, add simple calculix frequency example
+  *  cb07846ca8 - Draft: Fix wrong tree icon for Draft_PointArray
+  *  ea04f6d179 - Part: add Fill property to Offset2D macro recording
+  *  6e7136284f - [Spreadsheet] Expose SpreadsheetView::getSheet to
+    Python
+  *  a6ef3e656b - Draft: Check null shape in geometry.py functions
+  *  1c918e9d9e - Draft: Improve alignToSelection method on WorkingPlane
+  *  fc26a86e07 - PartDesign: tweaks to Gui/Workbench.cpp formatting
+  *  d115db2cbb - Draft: Autogroup, insert guard to prevent cyclic
+    references
+  *  85f37a1dbc - [Sketcher] Fix 'Reference' checkbox not working for
+    diameter
+  *  f050f77343 - Draft: Autogroup, rename variables to more readable
+    names
+  *  fb8b21ec43 - Updated ts files
+  *  fd6298d542 - Path: Refactor and upgrade feature, and apply to
+    Adaptive op
+  *  1fb45a0c5e - Merge pull request #4831 from balrobs/master
+  *  ada62d44a6 - Merge pull request #4829 from 0penBrain/navIndic
+  *  7b58a46ab7 - Merge pull request #4827 from Roy-
+    043/Draft_Fix_gui_stretch
+  *  f9c0455385 - Merge pull request #4816 from luzpaz/typos
+  *  3352ebf9a0 - Merge pull request #4811 from
+    carlopav/DraftEdit_Improvements
+  *  e02902cfa2 - [Sketcher] Fix 'Reference' checkbox not working for
+    radius/diameter ; fixes #4627
+  *  a91cde1915 - [Arch] Fix errors when exporting struchtures to IFC2X3
+    format
+  *  91852ecc58 - Fix previous commit
+  *  f3540ee41b - Crowdin: uniformity and grammar in FEM translation
+  *  c61d37776f - Crowdin: remove superfluous whitespace in
+    Gui/Command.cpp
+  *  f4ac6e9e77 - Crowdin: Fix a .ts file translation [skip ci]
+  *  097bb0769c - Arch: fix typo in translate()
+  *  e1af437848 - Arch: fix typo in getIfcPsetProperties()
+  *  261c06a052 - Fix misc. typos
+  *  6e59ee0c99 - [Tux] Prevent updating timer to trigger errors if
+    navigation indicator widget is deleted
+  *  ff26df0a6d - Tools: updated help text
+  *  d0d637b2c6 - merged crowdin translations
+  *  4361893f24 - updated ts files
+  *  6cbd0cb9b4 - Draft: Fix gui_stretch
+  *  267291567f - Draft: Edit, cleanup of new GuiTools.addPoint methods
+  *  5841b737e1 - Draft: Edit, moved resetTrackers for context menu
+    actions to main module
+  *  0ea4c5d2fe - Draft: Edit, Added reverse wire option to context menu
+  *  28ced10d50 - Draft: Edit, rewriting context menu system
+  *  cc87ab4913 - Draft: Edit, Split out addPoint in multiple methods in
+    the GuiTools
+  *  bd02136f9d - Draft: Edit, change startEditing method to accept
+    (obj, node_idx)
+  *  b108f66780 - Draft: Edit, Remove all the empty pass functions
+  *  fc50ef8f0f - Merge pull request #4826 from sliptonic/master
+  *  fd4870992b - Path cleanup PathGuiInit
+  *  bc764120ad - Merge pull request #4825 from FreeCAD/revert-4817-
+    fix/camotics_import
+  *  d23393923a - Revert [Path] Handle unavailability of Camotics
+    library/module
+  *  f7cdb4cc04 - Merge pull request #4822 from marioalexis84/draft-
+    fillet
+  *  9332e52d94 - Draft: Added ExclusionPoints property to shape2dview
+    object
+  *  7436bbfa30 - [Sketch] fix too long tooltips
+  *  b28a22152d - Merge pull request #4821 from FreeCAD/revert-4672-
+    feature/camotics2
+  *  d363f10edf - Draft: Add shortcut to fillet command
+  *  f316cb337d - Revert [PATH] CAMotics simulation. First Draft
+  *  43a2e2e640 - Merge pull request #4820 from Roy-
+    043/Draft_Fix_make_text
+  *  ff6845e2f3 - OpenSCAD: Fixed typo
+  *  5ddf75d358 - Arch: Added arrow and bar bubble modes to Arch Axis
+    object
+  *  6b3c3a60f6 - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  cd31a4f026 - Draft: make_text fixed 3 small issues
+  *  ce2d17b5ae - Merge pull request #4819 from sliptonic/bug/postcancel
+  *  d80d6fa844 - fix cancel bug
+  *  9b644b4303 - Merge pull request #4817 from
+    Russ4262/fix/camotics_import
+  *  71b5050707 - Path: Handle unavailability of Camotics library/module
+  *  0a710faecc - Path: Alphabetize import list and remove comments
+    therein
+  *  af1e1149a2 - Merge pull request #4673 from sliptonic/bug/proxyerror
+  *  f1d7a4277d - removed PathUtils import from all post-processors to
+    avoid the deleted proxy error
+  *  bb50a37024 - Merge pull request #4672 from
+    sliptonic/feature/camotics2
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 11 Jun 2021 14:49:59 +0300
+
 freecad-daily (0.19.0+git24971-a9f6fad531-1) unstable; urgency=medium
 
   * Compile

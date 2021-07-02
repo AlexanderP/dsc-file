@@ -1,3 +1,29 @@
+kvirc (4:5.0.1+git-7461-6dc728d2a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 6dc728d2aeae3da55120270729ce9358a1e9537b
+  * Date: 1622273552
+  * git changelog:
+  *  6dc728d2a - Update Desktop Entry file This commit adds well-formed
+    values for all keys defined in version 1.5 of the [Freedesktop.org
+    Desktop Entry Specification][1], published on 2020-04-27, adding: -
+    the ability for KVIrc to be designated by all XDG-compliant Linux
+    Desktop Environments (GNOME, KDE et al.) as a (default) handler for
+    irc/irc6/ircs protocol URIs within all installed applications, -
+    support for the Startup Notification Protocol, - a context menu
+    entry in DE graphical application launchers for opening   a new
+    session/instance/window of KVIrc when one or more are already in
+    use, and - registration of KVIrc as the default handler for the
+    'text/kvc' and   'text/kvs' Media (MIME) Type definitions already
+    installed by the   several circulating vendor packages for Linux
+  *  ff5384443 - Switch default channel from freenode to libera
+  *  6d6d54752 - Add Libera.Chat to serverdb
+  *  fa2b4a9f9 - Stop using deprecated KWindowSystem::windowInfo()
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 11 Jun 2021 14:52:16 +0300
+
 kvirc (4:5.0.1+git-7457-a0cc6730f-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,46 @@
+llpp (27.0.0+git4385-26ba122-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://repo.or.cz/llpp.git
+  * Branch: master
+  * Commit: 26ba122c09064ab7ed232630b018fa1c75593168
+  * Date: 1623398441
+  * git changelog:
+  *  26ba122 - Reformat to not confuse emacs' c-mode
+  *  d767279 - Do not set diagnostic callbacks when not redirecting
+    stderr
+  *  9870819 - Add bounds checking
+  *  02f0675 - EPUB wrapper
+  *  f9f4527 - Consistent formatting
+  *  626c942 - Remove script to work around tearing
+  *  351e2bb - Move wikipedi helpers into snippets
+  *  d6f88b7 - Use proper command for error messages (emsg)
+  *  12d370a - Add -u, remove braces, manage fallout
+  *  4977565 - Remove font converter
+  *  62f4fa9 - More kerning
+  *  3fcc598 - Incorporate iosovka's legibility matrix
+  *  8c51a73 - Oh, oh, zero!
+  *  db7e33f - Change shuffstr a bit and show it verbatim too
+  *  f1cb2b2 - NB
+  *  07bdb97 - Sync with upstream
+  *  86432ac - Show non-shuffled string with similar shopes too
+  *  46d72c2 - Handle errors and notify the user while trying to save an
+    attachment
+  *  d9acdc0 - Save attached files when
+  *  186695f - Cosmetics
+  *  16bb666 - Better text/file-attachment annotation differentiation
+  *  979b814 - Remove stray spaces
+  *  ead1130 - Use properly typed annot variable
+  *  16816b8 - Print file attachment annotation info
+  *  c572e1c - Decrease indentation of reflowable layout knobs
+  *  c133be8 - Hack around intermittent postprocess failures
+  *  929f8c8 - Do not sefgfault on empty regexec results
+  *  b9a267b - Use Glutils explicitly in main
+  *  057cf6e - Free memory before branching
+  *  a28c3d7 - Add another La.. example
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 11 Jun 2021 15:00:18 +0300
+
 llpp (27.0.0+git4355-8ab2d5f-1) unstable; urgency=medium
 
   * Compile

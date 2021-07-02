@@ -1,3 +1,197 @@
+deadbeef (1.8.7+git10003-1b2794d48-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: 1.8
+  * Commit: 1b2794d486687f7e696dc0706b70696e0f7f00a9
+  * Date: 1622365455
+  * git changelog:
+  *  1b2794d48 - Update about.txt
+  *  678a26750 - translation update
+  *  f3e86028a - 1.8.8-beta1 + changelog
+  *  df4e304a1 - fix title capitalization in a few menu items
+  *  09c224f92 - gtkui: rename play queue commands to play next / play
+    later; add play next shortcut action; fix title capitalization in
+    hotkeys actions
+  *  31e8e7a4a - Merge pull request #2607 from nataliesstewart/master
+  *  5ef10a116 - gtkui: 'Add To Front Of Playback Queue' option in right-
+    click dialog
+  *  44806e459 - cocoaui: seeking with mouse wheel
+  *  93e93c6f5 - osx: fix gtk3 build
+  *  691ad2a77 - travis: build.sh shebang fix
+  *  b70209d33 - gtkui: Add scroll event handler to seekbar widget
+  *  103002045 - gtkui: accept drag and drop on main window
+  *  f6eafa7e6 - gtkui: fix position of content-type mapping dlg
+  *  125889f42 - gtkui: non-modal preferences dialog
+  *  8cf65b91f - junklib: fix a crash causes by the id3v2 TXX remap
+    check (fixes #2601)
+  *  733d42a9d - Update translators.txt
+  *  c4daddb88 - artwork_legacy: Include extension in size calculation
+  *  1265b3e26 - artwork_legacy: Fix buffer size calculation
+  *  81e93bb5f - artwork_legacy: Run album name through improved
+    sanitization
+  *  d47b0bb41 - artwork_legacy: Run artist name through improved
+    sanitization
+  *  1fd0e4f2f - artwork_legacy: A more robust sanitization function.
+  *  aa469e80b - artwork_legacy: Windows illegal character and name
+    detection functions
+  *  6757aac40 - Fix typo in the changelog
+  *  86113f105 - netbsd build warnings/errors fixes
+  *  a08e05d3c - cocoaui: fix infinite recursion crash when using
+    converter (fixes #2578)
+  *  4505e1d0f - sndfile: inital support of RIFF tags.
+  *  4cdcc4ee0 - windows_postbuild: fix parsing for unresolved libs
+  *  dcd501175 - sndfile: clean up sndfile_free.
+  *  3f1b3ccc3 - aac: handle tracks with 0 samplerate
+  *  0cabf90ad - streamer: added an option to add arbitrary amount of
+    silence at the moment of wave format change (#2333)
+  *  ac2a02da5 - tftintutil: add byteindex for pango attributes
+  *  2e829aeb4 - gtkui: don't render dimmed/colorized text on selection
+  *  5f5d85de7 - tf: ignore whitespace args to
+  *  5dc9ab289 - coreaudio: fix memory leak
+  *  2e7d1d2f0 - dts: fix memory leak
+  *  734987765 - cocoaui: align rgb and dimming algorithm / blend
+    factors with gtkui
+  *  89904c56b - Fix include
+  *  f7d337e91 - Add libtftintutil to premake script
+  *  bfea78b65 - gtkui: use shared code to parse dim/rgb escape
+    sequences
+  *  cc1d272b6 - gtkui: sorth plugin list alphabetically
+  *  7a29beee4 - moved tfintutil to shared
+  *  f5a3896ba - gtkui: ellipsize value column in track properties
+  *  f114cf596 - playlist: fix resolving directory path before loading
+    cuesheet (fixes #2548)
+  *  e83174c6c - gtkui: fix missing transient for playlist rename dialog
+  *  d6a74e304 - gtkui: tweak focus rect for playlist tab
+  *  d19eb9447 - gtkui: fix entry_dialog positioning
+  *  dac99d17f - fix console --version copyright year (fixes #2547)
+  *  e48189f15 - gtkui: fix a few warnings
+  *  2c48458bf - gtkui: compile fix and cleanup
+  *  e19e157f2 - gtkui: focusable playlist tabs with keyboard support
+  *  edc534533 - fix rename the right plt_idx
+  *  5fe90cd24 - Don't confirm remove playlist if empty
+  *  2afa3f062 - cocoaui: added  support
+  *  077b2750d - cocoaui: refactor tftintutil to support more parameters
+  *  3857216e4 - remove very old and dead code
+  *  a9c3e1158 - factor out gtkui_rename_current_playlist
+  *  5c68c18e7 - add action_rename_current_playlist
+  *  2ace17eaa - gtkui: plugin report menu item
+  *  0f1086203 - premake5: export all symbols on windows
+  *  bcdb89a6a - windows_postbuild: fix missing ssl lib and cleanup
+    build
+  *  54a2e5ea9 - gtkui: group title dimmed/colorized text support
+  *  ea948f014 - Fix for older pango
+  *  78ad8b257 - tf: tf_func_rgb Fix calculation and missing enum
+  *  afc813f34 - tf: Implement () function
+  *  fbd99cdaa - hotkeys: Previous or restart current rack action
+  *  baaa6f58c - Don't disable conf tab button
+  *  c47c56b7f - Move reset button to the Configuration notebook page
+  *  29cba57c1 - Fix parsing error on reset_settings code path
+  *  f3753f171 - Some fixes
+  *  b43b94edc - gtkui: Implement reset to defaults for plugin prefs
+  *  d180ea3e8 - Fix styling and HPaned resizing behavior
+  *  65a03d9c3 - gtkui: New plugin preferences UI
+  *  cf295cb29 - Combine workflows into one file
+  *  a4050ee20 - Upload artifacts with github actions
+  *  7919877ff - psf: fix getting a relative directory error on windows
+  *  9700ef18f - aac: update mp4p; fix loading MP4 files with moov/meta
+    atoms; fix appending new udta/meta to the files without valid
+    metadata (fixes #2532)
+  *  50959ea28 - README: permanent discord link update
+  *  bc8e810d0 - gtkui: fix memory leak
+  *  fc9544b22 - gtkui: fix releasing track list when capturing for
+    context menu
+  *  f78519d81 - deletefromdisk: fix retaining current playing track
+  *  41f25f6ac - junklib: add support for disc subtitle tags in ID3 and
+    APE tags
+  *  e7cbd24b8 - aac: fix freeing the heap buffer
+  *  908ba7731 - aac: fix potential division by zero on frames with 0
+    channels
+  *  ff74aa181 - aac: fix buffer overflow bug on files with large frame
+    size
+  *  a998644d0 - osx: opus compile fix
+  *  459e29d28 - Merge branch '1.8'
+  *  26055c971 - osx: sort deadbeef sources by name
+  *  cb1dde370 - osx: sort plugins in the project
+  *  518386b04 - sid: warnings disable
+  *  759bfed1a - tta: fix warning
+  *  384eeeac2 - sc68: warning fixes
+  *  60e0b5cdc - psf: warning fixes
+  *  afd8c24c1 - osx: deps update (faad2)
+  *  5e4536e2c - dumb: fix warnings
+  *  e9afacfcb - dca: fix/disable warnings
+  *  5bf1fc42f - ffmpeg: disable deprecated warnings
+  *  b6da191c6 - musepack: warning fixes
+  *  c547b61eb - libsndfile update
+  *  8512afd50 - FDK-AAC: xcode project upgrade
+  *  566b4cc1f - soundtouch: warnings disable
+  *  c538faa8a - artwork: warning fixes
+  *  bad0d65a1 - dumb: warnings disable
+  *  fe70beeca - musepack: warnings disable
+  *  0ddbf98b0 - osx: deps update
+  *  83deb04cd - faad2: warnings disable
+  *  ada780683 - sndfile: warnings disable/fix
+  *  b2066a1c3 - flac: warnings disable
+  *  524c29645 - mms: warning fix
+  *  4c54a65d2 - aac: warning fixes
+  *  1960988db - oggedit: warning fixes
+  *  75dd38084 - ape: warning fixes
+  *  abcce0368 - osx: deps submodule ref update
+  *  98bd0c29b - fdk-aac: recommended xcodeproj settings
+  *  14d149c33 - sc68: added -Wno-multichar
+  *  5f4c06996 - deadbeef: warning fixes
+  *  4f50bd31f - cocoaui: warning fixes
+  *  47d58bb94 - utf8: warning fixes
+  *  9e528b185 - shn: warning fixes
+  *  7a5eacd06 - osx: deadbeef.xcodeproj recommended settings
+  *  973687eb3 - mms: warning fix
+  *  3cbf28fe9 - utf8: warning fixes
+  *  f5556bcee - junklib: warning fixes
+  *  487d97538 - premix: warning fixes
+  *  fca45744a - replaygain: warning fixes
+  *  e07202bdf - dsp: warning fixes
+  *  0ec3e5370 - deadbeef: fix a bunch of warnings and edge case
+    handling
+  *  9aab1ff1e - psf: fix crash after missing file play attempt
+  *  fb996692f - vfs_zip: fix warnings
+  *  39c7ed255 - psf: fix import minidsf file crash
+  *  99bcaa20c - psf: fix minissf getlibpath
+  *  b77472e9c - gtkui, cocoaui: fix a regression with skipping to next
+    track after delete (fixes #2525)
+  *  6c92dab0c - cocoaui: remove PlaylistView constraint hack
+  *  040550ba1 - osx: fix deployment target for tests
+  *  7ce18ce14 - osx: libsamplerate compile fix
+  *  ce6d5d6c1 - osx: sid warnings fix
+  *  02ad29d2d - osx: shut up libsidplay2 warnings
+  *  2fb431ae9 - osx: shut up libsndfile warnings
+  *  4b60361a1 - osx: shut up tta warnings
+  *  d3b383952 - osx: shut up libvorbis warnings
+  *  e2eef0502 - osx: shut up vtx warnings
+  *  95b8f0011 - osx: fix a few warnings, don't set deployment target
+    explicitly
+  *  873845ff5 - osx: shut up wma warnings
+  *  fe867b2d7 - osx: shut up jansson warnings
+  *  de5e23522 - osx: shut up gme warnings
+  *  e3c123131 - osx: remove libmp4ff
+  *  eb8100896 - osx: update gtk3 xcconfig
+  *  9dd6684a1 - osx: shut up psf warnings
+  *  c6f6f5783 - osx: shut up libsamplerate warnings
+  *  e6d135635 - osx: separate libwavpack into separate target, and fix
+    warnings
+  *  31adf95f4 - osx: shut up most of the sc68 warnings
+  *  1d4333f29 - osx: ebur128 warnings fix
+  *  ce5060cc1 - osx: shutup ogg/vorbis/opus warnings
+  *  265da902c - osx: deps update (libzip warnings)
+  *  9c49512fd - osx: fix mp3/mpg123/libmad warnings
+  *  53edd8465 - osx: shut up wildmidi warnings
+  *  bf271a0ff - m3u: fix warnings and add tests for m3u loader
+  *  726ff2657 - adplug: fix or suppress warnings when building in Xcode
+  *  b54783b63 - osx: reordered targets alphabetically
+  *  2f7b61f7e - cocoaui: fix crash when pinned group is not updated
+    after groups are rebuilt
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 11 Jun 2021 14:45:51 +0300
+
 deadbeef (1.8.7+git9791-4e5e467f1-1) unstable; urgency=medium
 
   * Compile
