@@ -1,3 +1,135 @@
+labplot (2.8.2+git8522-06fb5d97f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 06fb5d97f4029aa15fb8afb88b8db9b0ec0b138d
+  * Date: 1625132378
+  * git changelog:
+  *  06fb5d97f - simplify previous commit
+  *  e3067fda8 - Sort list of random number distributions
+  *  c2d2cf9e6 - import: select first variable in matio and hdf5 when
+    nothing is selected
+  *  29d87e163 - Explain order of random number distribtions
+  *  b3d498f3d - show git hash in about dialog
+  *  70b7065b4 - matio: test import of cell portion
+  *  99fb36419 - matio: support start/end row and col for cell data
+  *  2f770b35e - matio: redesign import cell type
+  *  5b046eb87 - matio: add empty cell test
+  *  2591c8168 - Make code more standards-compliant and portable
+  *  5d1b7dfd1 - Don't save the project file name in the project xml.
+  *  e56a00773 - matio: test portion of sparse data
+  *  a8ca410bd - matio: consider start/end column for sparse data
+  *  917dee45f - matio: consider start/end row for sparse data
+  *  cfa189518 - matio: add test files
+  *  f2450163e - matio: test sparse complex
+  *  288caeef3 - matio: import sparse complex data
+  *  8e5a833cc - matio: sparse logical test
+  *  1bbf71c69 - matio: read all sparse data types
+  *  aaf006422 - [worksheet] fixed the resizing of plots with the mouse.
+  *  7a8928ca9 - matio: test for portion of struct
+  *  59a3cef0c - matio: fix import struct into matrix
+  *  ec6e379fa - Enable -DQT_NO_URL_CAST_FROM_STRING and fix compilation
+    accordingly
+  *  2919386ef - matio: consider start and end column for struct data
+  *  6ea54339f - matio: consider start and end row for struct data
+  *  43c94b531 - Null-pointer check in the recently added code in
+    Worksheet. Should fix the failing project import tests.
+  *  a1ff361d7 - matio: test struct import
+  *  9baabf1a6 - matio: import struct data
+  *  bae9a4b5b - matio: preview all types of struct fields
+  *  9dd88de1d - matio: preview complex field in struct as two cols
+  *  024476388 - matio: test for start/end row/col
+  *  bb2c1ed35 - matio: use start/end row/col for complex data
+  *  4dbabda48 - [worksheet] properly handle the resize item on
+    selection and layout changes in the worksheet.
+  *  72a353a73 - matio: handle start/end row/col correctly for basic
+    types
+  *  33f07cbc8 - Fix missing locale supprt in evaluating range of fit
+    function
+  *  db7ba0f99 - Put the add new spreadsheet and put new matrix into a
+    new sub-menu Add New of the context menu of Workbook to be
+    consistent with other top-level objects.
+  *  78ae834c9 - When adding new spreadsheet or matrix to the project,
+    add it to workbook also when one of its children is currently
+    selected. E.g. a spreadsheet in a workbook is active now and the
+    user click on the spreadsheet icon in the toolbar -> we add it to
+    the current workbook.
+  *  6c5a9bd02 - Adding changes that were forgotten in the previous
+    commits...
+  *  969e1b2bc - [worksheet] properly resize the parent container in
+    ResizeItem.
+  *  4332da82a - color scheme: don't switch theme on Windows (system
+    dark theme is usable now)
+  *  8dc773502 - [worksheet] initial implementation of the resize of
+    plots with the mouse when no worksheet layout is active.
+  *  771dcef68 - matio: use given start and end row
+  *  f14cb8ad1 - Set the widget style to breeze on windows and macOS
+    since it seem to work best with the differen color schemes we allow
+    to use.
+  *  eeef78232 - color scheme: try fixing problems with initial scheme
+    on Windows
+  *  356d26e58 - custompoint of the info element has not the plot as
+    parent. use the more secure variant to check plot()
+  *  8733e6501 - rename function
+  *  7a9ecca5d - implement key press reaction also for the logical
+    coordinates
+  *  d756ffc8a - fix taborder
+  *  0fb618877 - invert movement, so key up and the textlabel goes up
+  *  f21e04058 - Disable clipping, so the TextLabel can be placed also
+    outside of the bounding rect, but the Line will anymore be drawn
+    then.
+  *  b54cbd902 - do not map to parent, because pr is the bounding rect
+    of the plot not the parent
+  *  31c8fc545 - fix alignment for logical coordinates
+  *  6e198a40e - fix label positioning problems
+  *  da6079196 - not only the direct parent must be a plot. There must
+    only a plot set
+  *  e19bde212 - No need to set the cSystem again. It is already done in
+    the InfoElement it self
+  *  8b9922f0f - fix element info custom point not visible. During
+    finalizeAdd the m_plot is cleared to 0x0, because the parent aspect
+    of a custompoint inside a Infoelement is not a CartesianPlot, but
+    the InfoElement it self. Conflicts:
+    src/backend/worksheet/WorksheetElement.cpp
+  *  3e9ee3752 - [worksheet] use a more reasonable pen width to draw the
+    hover/selection box.
+  *  d317f934d - Don't react on selection changes in the project
+    explorer on project load since this is leading to multiple changes
+    in the properties explorer. We select the proper object at the very
+    end after the project was completely loaded and show the
+    corresponding properties widget only once.
+  *  e84003be6 - [boxplot] save and load the min and max values of the
+    box plot ranges. For other curves like xy-curve and histogram this
+    is not needed since this values are determined in
+    plot::retransform() directly from the data column. For  the box plot
+    the logic is different and additional calculations are required to
+    determin the ranges so we save it to properly show the box plot on
+    project load.
+  *  f9db34aa8 - Properly register signal-slot connections for newly
+    added folders and all their children in MainWin.
+  *  3f88a0f94 - [worksheet] removed redundant set-calls when change the
+    background images files in the relevant classes.
+  *  1f7c7e73c - [worksheet] moved the logic for the selection of the
+    file for the backround image to a central place in GuiTools.
+  *  dd0b2a330 - [worksheet] adjusted ImageElement to the new
+    positionioning logic and create the image on the worksheet at the
+    position where the context menu was called.
+  *  07ae17127 - [boxplot] don't crash when the used data columns are
+    deleted in the spreadsheet.
+  *  5c811bcd0 - [spreadsheet] undo/redo for removing the heatmap
+    formatting.
+  *  b98a299f3 - [spreadsheet] undo/redo for setting the heatmap
+    formatting.
+  *  f98ad9f87 - [boxplot] position the middle of the box plot at the
+    values 1, 2, 3, etc. instead of 0.5, 1.5, 2.5, etc. and set the
+    number of major axis  ticks to the number of data sets when creating
+    box plots via the plot data dialog. This allows to place the major
+    ticks below the box plot. The logic for auto ticks needs to be
+    adjusted a bit now.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 02 Jul 2021 19:32:34 +0300
+
 labplot (2.8.2+git8455-aa4d8ec41-1) unstable; urgency=medium
 
   * Compile

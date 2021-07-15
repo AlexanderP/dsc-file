@@ -1,3 +1,124 @@
+smplayer (1:21.1.1~git9780-b380bfe4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/smplayer-dev/smplayer.git
+  * Branch: master
+  * Commit: b380bfe48f9b6a0c5307e5b14ea9e2c0fd9570ac
+  * Date: 1625142407
+  * git changelog:
+  *  b380bfe4 - Update build-macos.yml
+  *  b9097720 - Update build-macos.yml
+  *  4aca72c6 - Enable SINGLE_INSTANCE on macos
+  *  46c10245 - Set the smtube path in mac
+  *  a5044701 - Use a signal
+  *  4021d663 - Add define COUNT_FPS
+  *  815071fd - Display format as string in connectionshm.cpp
+  *  8b1248d5 - A few improvements and a fix for a crash
+  *  6de650e7 - Use courier font for the log window. Seems to fix a
+    weird crash
+  *  b43bfcf5 - Enable libmpv vo
+  *  98db0baf - Update build-macos.yml
+  *  e1a9551d - Update build-macos.yml
+  *  30695078 - Print format as string
+  *  f11ab5eb - Copy buffer
+  *  d5b4f410 - Convert formats
+  *  cf70512c - Update build-macos.yml
+  *  6e037328 - Update build-macos.yml
+  *  d566323b - Use shm as default on macos
+  *  ccde7fdb - Display shm as 'Shared memory'
+  *  8815c498 - Try to detect format
+  *  4d3b0a10 - Use UYVY with mplayer
+  *  f83c9a84 - Add support for 'sharedbuffer'
+  *  6e1090ac - Enable mpv in mac os
+  *  1c9f0dbe - Pass buffer name to mpv
+  *  f30f195c - Use tabs
+  *  4df83a9f - Call stop_connection
+  *  fe033a05 - Fix another warning
+  *  13068541 - Fix compile warning
+  *  63e47068 - Display the format name
+  *  851fe3a3 - Simplify smplayer.pro
+  *  c1c5e400 - Remove some unnecessary brackets
+  *  36b7b1c5 - Fix compile without USE_GL_WINDOW
+  *  af205182 - Move formats to connectionbase
+  *  0fce66ea - Add videoformats.h
+  *  3db7d153 - Use connectionbase in videolayerrender
+  *  ad448d12 - Add connectionbase.h
+  *  221c831b - Delete videolayershm and videolayercv
+  *  7acffdd9 - Remove target_vo
+  *  7a74ec3f - Simplify mplayerwindow
+  *  a672ce43 - Add connectioncv
+  *  55a5ab13 - Add connectionshm
+  *  e159a763 - Trying to fix selected items in the playlist
+  *  8f06f107 - Fix compile when USE_GL_WINDOW is not defined
+  *  afd1d679 - Update build-flatpak.yml
+  *  d8232bd4 - Create build-flatpak.yml
+  *  76c9ec4f - Disable wayland and vdpau code on macos
+  *  fc29d443 - Update build-macos.yml
+  *  159b5730 - Add openglrenderer
+  *  e6008684 - Update build-macos.yml
+  *  4a50e940 - Change some debug messages
+  *  c5010bba - Update build-macos.yml
+  *  2454a16b - Use a list of assertions
+  *  64a763f1 - Inhibit powersaving on mac
+  *  f2bacac2 - Add powersaving_mac (empty)
+  *  36e57259 - Update build-macos.yml
+  *  9f691c3a - Add version to dmg file
+  *  557d41ba - Use REPAINT_BACKGROUND_OPTION on linux only
+  *  7d298106 - Update build-macos.yml
+  *  a66a8fe1 - Update build-macos.yml
+  *  6abc4d98 - Use corevideo as default on mac
+  *  49064f99 - Fix when MULTIPLE_VIDEOLAYERS is not defined
+  *  eaf53c70 - Use another code
+  *  dcf61438 - Use GL_CLAMP_TO_EDGE
+  *  0dbfd963 - Add some comments
+  *  4da7ca58 - Enable YUY2 in videolayercv
+  *  6c8f6c7c - Enable YUV and RGB
+  *  65e0c901 - Add code
+  *  1b53ebfd - Add rendereryuy2 (empty)
+  *  92168520 - Fix compile without USE_GL_WINDOW
+  *  93578569 - Move some lines
+  *  9fc8584a - Add rendereryuv
+  *  4ccaade6 - Add rendererrgb
+  *  e42435a4 - Add ffmpeg paths
+  *  39697d1d - Add YUY2toRGB24
+  *  dc21d5e7 - Delete mconnection
+  *  e287f381 - Enable USE_COREVIDEO_BUFFER
+  *  6fee3bdf - Possibility to change videolayer
+  *  b6ca61be - Don't use videolayer outside mplayerwindow
+  *  20207983 - Add create_dmg,sh
+  *  29f08bbf - Disable MPV_SUPPORT on macos
+  *  29e29d0f - Identify Mac OS
+  *  7d13dc4d - Use 100 ms
+  *  2293a27c - Disable MPRIS2 on macos
+  *  c0027a38 - Use rgb jpeg
+  *  8ff6fac6 - Initialize vars
+  *  d97d1a8d - Fix compile videolayercv.cpp
+  *  acac01df - Fix smplayer.pro
+  *  057a03e2 - Fix position of planes
+  *  e09ee926 - Fix create_plist
+  *  bc334143 - Disable AA_DontUseNativeMenuBar
+  *  15378d17 - Add ifdefs
+  *  b6e9825d - Open files passed from the application event function
+  *  37f7b523 - Update translations
+  *  ec768b77 - Comment debug line
+  *  a5fc0bf1 - Revert 9685
+  *  f6b095cc - Check if header is valid
+  *  125b9189 - Add ',' to vo
+  *  e8b1bee8 - Update myapplication.h
+  *  5ea73eab - Check for QFileOpenEvent
+  *  9704ce15 - Simplify myapplication.h
+  *  f4432add - Output GL_VERSION
+  *  6aa6b717 - Don't abort on fatal messages
+  *  8d5f9b24 - Check for NO_OPENGL environment variable
+  *  588f9db5 - Add glPixelStorei
+  *  e20a33aa - Update compile_mac.sh
+  *  331ff616 - Enable AA_DontUseNativeMenuBar
+  *  9565d88b - Disable SINGLE_INSTANCE for Mac
+  *  25248e24 - Add Mac dir
+  *  4f7856e4 - Update compile_mac.sh
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 02 Jul 2021 19:02:30 +0300
+
 smplayer (1:21.1.1~git9671-0a70c91a-1) unstable; urgency=medium
 
   * Compile

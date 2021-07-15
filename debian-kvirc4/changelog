@@ -1,3 +1,20 @@
+kvirc (4:5.0.1+git-7465-d86b79f65-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: d86b79f657bb7388d7ec1d3e0d91e7c4221c2394
+  * Date: 1625096011
+  * git changelog:
+  *  d86b79f65 - Fix some typos in Polish translation.
+  *  c8a6812fc - Wayland fixes: disable X11 IPC at runtime to avoid
+    crash on start (partially fixes #2479, but a proper IPC is still
+    missing). Correctly set main window icon
+  *  22000b2b2 - Fix #2478: Remove deleted s from owning list
+  *  5a586ec65 - Insert missing null terminator
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 02 Jul 2021 19:09:32 +0300
+
 kvirc (4:5.0.1+git-7461-6dc728d2a-1) unstable; urgency=medium
 
   * Compile

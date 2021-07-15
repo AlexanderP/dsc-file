@@ -1,3 +1,65 @@
+clementine-qt5 (1.4.0~git672-ga5fd484a6-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: a5fd484a610ea4d9a2beaf6bf9cd5d0f659923d9
+  * Date: 1625223261
+  * git changelog:
+  *  a5fd484a6 - internet: Consolidate ShowConfig methods.
+  *  25b537cf2 - De-duplicate my translator credit
+  *  8c660e278 - Automatic merge of translations from Transifex
+  *  67aa15418 - Explicitly tap liblastfm homebrew dependency
+  *  f35a640ce - clang-format
+  *  cbe384d14 - Add override
+  *  4a83f8c81 - Automatic merge of translations from Transifex
+  *  67a947f11 - Automatic merge of translations from Transifex
+  *  1db1e3231 - Automatic merge of translations from Transifex
+  *  f9854e564 - transcoder: Add options avenc_aac element.
+  *  5ab81fd8b - Automatic merge of translations from Transifex
+  *  62cb889a3 - Automatic merge of translations from Transifex
+  *  e46503d0c - Automatic merge of translations from Transifex
+  *  54be35f52 - Automatic merge of translations from Transifex
+  *  6240fd3d0 - player: Fix crash on UrlHandler error.
+  *  57b5911f1 - Fixes from code review for PR #7037
+  *  6fa9cbcc6 - Removing watch_for_disc_changes in CddaDevice
+    constructor
+  *  83b6bf28f - No exceptions for error handling! ConnectedDevice::Init
+    now returns bool, indicating success or failure.
+  *  a4ad50770 - Removed some unused includes.
+  *  d2240ec0a - Device change watchdog timer no longer freezes main
+    thread while CddaSongLoader is active.
+  *  2dd566653 - Dealing with cdio_open failures in CddaDevice
+    constructor
+  *  e35e4195c - Not using std::make_unique
+  *  6ea20336c - CddaSongLoader: Only run one song loading thread at
+    once.
+  *  ae9824e26 - RipCDDialog no longer needs to LoadSongs on show.
+  *  63953e104 - RipCDDialog now allows selecting the CD drive
+  *  b68734c76 - Fix: Missing include guard for cddadevice in
+    mainwindow.cpp
+  *  95799a911 - Removing ConnectedDevice::Refresh altogether
+  *  639b91855 - Removing CddaDevice::Refresh
+  *  3c06b92b2 - Ripper now works with a cdio instance passed into
+    constructor
+  *  ae3037984 - RipCDDialog now uses CddaSongLoader from passed in
+    CddaDevice
+  *  14d5c25d3 - Integrated cddevice back into cddadevice
+  *  9ca75ae35 - RipCDDialog now relies on CddaDevice to be notified
+    about disc changes
+  *  d2c636ab4 - Introducing CdDevice, simple wrapper for cdio that
+    watches disc changes.
+  *  11bd0db03 - Automatic merge of translations from Transifex
+  *  c3c77aef1 - Automatic merge of translations from Transifex
+  *  ffdaeba09 - cueparser: Be more lenient when parsing indexes.
+  *  2bf8f1388 - Automatic merge of translations from Transifex
+  *  418a36693 - Automatic merge of translations from Transifex
+  *  4aa4f4fce - Automatic merge of translations from Transifex
+  *  3a00403ad - build: Add patch for libgpod mac build.
+  *  7fb387b96 - Automatic merge of translations from Transifex
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 02 Jul 2021 19:09:38 +0300
+
 clementine-qt5 (1.4.0~git631-g4e4fccc07-1) unstable; urgency=medium
 
   * Compile

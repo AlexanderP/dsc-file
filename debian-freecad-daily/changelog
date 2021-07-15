@@ -1,3 +1,161 @@
+freecad-daily (0.19.0+git25176-909dfa7036-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 909dfa7036f9fd36bbd3acee2a5dee161d2819fb
+  * Date: 1625140644
+  * git changelog:
+  *  909dfa7036 - Tools: allow to run updatets script from updatecrowdin
+  *  ed9dca288c - Merged crowdin translations
+  *  6360345ce5 - Updated ts files
+  *  5b32b806f6 - Arch: Added Depth property to SectionPlanes
+  *  b64fddb2e0 - Draft: Added Text Spacing and Line Spacing settings to
+    Draft Set Style dialog
+  *  e2ea3e7df8 - Draft: Fixed text rotation + dim text height in DXF
+    export
+  *  c401e3efe3 - Merge pull request #4878 from
+    pavltom/TechDraw_Edge_MidPoint_Vertex_Fix
+  *  76af6556d6 - Merge pull request #4877 from
+    berberic2/AddonManager/parse_addonflags.json
+  *  c1643887fa - Merge pull request #4867 from marioalexis84/draft-
+    label
+  *  bb23a191db - Merge pull request #4865 from Roy-043/Draft-fix-
+    offsets.py
+  *  dd53430d19 - Merge pull request #4492 from marioalexis84/draft-
+    wp_restore
+  *  39b44b1570 - Sketcher: FIx typos in source comments [skip ci]
+  *  257cdd8f42 - Draft: Implemented edit mode for Draft texts
+  *  b08e91b691 - Merge branch 'master' into
+    TechDraw_Edge_MidPoint_Vertex_Fix
+  *  be19f397f3 - TechDraw - Add edge midpoint cosmetic vertex fix -
+    added comments
+  *  79b41f7393 - FEM: ccx results name improvements
+  *  4ef2769402 - FEM: CCX naming of buckling resultfile
+  *  991817a47d - FEM: cpp python mesh api, fix crash if not existing
+    group was given in get name method
+  *  c8b5d8d762 - Merged crowdin translations
+  *  aa862254dd - Updated ts files
+  *  df364b9714 - FEM: code formating
+  *  57f9e0b82f - Part: tube object, add method to simplify to add it to
+    the document
+  *  51328d3bbe - FEM: examples, fix material information for some multi
+    material ones
+  *  835e326652 - Draft: Fixed working plane set on non-coin view
+  *  08c3a6b3e7 - Draft: Create Draft texts when using the C++ DXF
+    importer
+  *  c46036a1b8 - Merge pull request #4850 from luzpaz/crowdin/PD-fixes
+  *  54139caff9 - Draft: Fixed construction group name
+  *  0fd02a4c11 - TechDraw - Add edge midpoint cosmetic vertex fix
+  *  438895a3be - [Sketch] fix menu entry wording
+  *  4071a13310 - [Sketch] change slot icons
+  *  0d95ea9197 - AddonManager: parse addonflags.json with json module
+  *  471e143d09 - [sketch] rework the slot command
+  *  90d59ef3dc - [TD] save new template as plain SVG
+  *  198aa4c564 - [Sketch] save new icons as plain SVG
+  *  3559710da6 - [Sketch] fix these issues:
+  *  b7f8f249b2 - Sketcher: Add centered rectangle to the menu
+  *  0fb621af28 - Sketcher: Update icon resources
+  *  cead3808aa - Sketcher: centered rectangle icons
+  *  8b4acf11c2 - Sketcher: Centered Rectangle Creation
+  *  7c519689f0 - Sketcher: Reorder rounded rectangle code next to
+    normal rectangle code
+  *  27c72da585 - [Sketch] update icons - part 4 of 4
+  *  4c795098e2 - [Sketch] update icons - part 3
+  *  4d2cd6c205 - [Sketch] update icons - part 2
+  *  e5aab6c124 - [Sketch] update icons - part1
+  *  4727dd0de2 - Sketcher: Resources updated manually
+  *  725d9db95b - Sketcher: Remove axes alignment icon
+  *  9b34d671e0 - Sketcher: UI toolbar/menu remove axes alignment
+  *  be153ae2d9 - Sketcher: Python wrappers for new remove axes
+    alignment algorithm
+  *  3c593a33ce - Sketcher: Remove Axes Alignment algorithm
+  *  01d2f6298f - [Sketch] add new sketch object rounded rectangle
+  *  9073517291 - Sketcher: Default parameter to meaningful value
+  *  70d90584ae - [Sketcher] Remove no more used preference
+  *  dfc975dd93 - [Sketcher] Radiam is default tool for radius/diameter
+    constraining
+  *  eda1e4b1df - [Sketcher] Radiam : fix bug in constraint processing
+  *  267cb43a32 - FEM: solver calculix, improve iterations parameter
+    code
+  *  147b2ec3c9 - FEM: solver calculix, better implementation for
+    document restore method
+  *  a536093b70 - FEM: examples manager, code formating
+  *  69b084f492 - Merged crowdin translations
+  *  7c5f8d8737 - Updated ts files
+  *  bc9beffc45 - FEM: examples, add explanation text object to all the
+    rest examples
+  *  3626f48699 - FEM: examples, update manager
+  *  d1fa49f514 - FEM: examples, improve import code formating
+  *  5870bfd361 - FEM: examples, fix material information in material
+    nonlinear example
+  *  00adea5e2c - FEM: examples, add text explanation object to more
+    examples
+  *  c3c383a58b - FEM: examples, improve explanation text object
+  *  b8530ec506 - FEM: update imports in coding conventions
+  *  56ce278abf - Fix typos
+  *  07a2ed94f4 - [FEM] typos
+  *  49ce8dcab9 - FEM: solver calcilix, implement missing document
+    restore for missing attributes for buckling analyisie FINISH BITTE
+  *  f9a6dd77eb - FEM: mesh gmsh object, improve code in on doc restore
+  *  a9bf66cdbc - FEM: solver calculix, typos
+  *  dba02ab3e0 - Merge pull request #4857 from snelweg/snelweg-patch-1
+  *  96b47a3a92 - FEM: examples, fix mesh information
+  *  83a93cfd5c - FEM: examples gui, add mesh type
+  *  790bf1835b - FEM: examples, move base setups in separate modules
+  *  0986b5f848 - FEM: examples, ltb, add text explanation object
+  *  e5968f8ed9 - FEM: ccx dat result text object, delete it on result
+    purging
+  *  5f8b7d2f85 - FEM: calculix dat result text object, move into
+    analysis
+  *  05d9feb511 - FEM: examples icon, use better icon and add it to the
+    FEM tool bar
+  *  7a9a282431 - FEM: examples, move some method in separate module
+  *  68f1b49637 - FEM: examples, add calculix lateral torsional buckling
+    example
+  *  27acfe1372 - FEM: examples, add calculix plate buckling example
+  *  47886d3bd6 - FEM, examples, typos
+  *  3383f43008 - Draft: Fix rotations and Circle marker in
+    ViewProviderLabel - fixes #0003987
+  *  ce9f92b42b - FEM: examples, typo in flexural buckling
+  *  03bc35ebb9 - FEM: examples, code formating and code improvements
+  *  97457d7b44 - FEM: calculix writer, fix in comment
+  *  a7e3f7a77b - FEM: member tools, add missing comments
+  *  c667efdb77 - FEM: objects create, typos
+  *  4453a1e129 - FEM: icon qrc, add missing ui entry
+  *  f4c983bba9 - FEM: objects create, typos
+  *  df5c24bc63 - Draft: Fix offsets.py problem with direction if
+    precision=6
+  *  728c001421 - Merge pull request #4864 from sliptonic/master
+  *  27ddc54828 - Merge pull request #4852 from Syres916/patch-20
+  *  bfbb7dbb92 - Merge pull request #4854 from luzpaz/typos
+  *  b7dcb2856e - Merge pull request #4856 from marioalexis84/draft-
+    make_wire
+  *  61dd515f37 - Merge pull request #4862 from andesfreedesign/master
+  *  4afaf5249e - Merge pull request #4863 from marioalexis84/draft-
+    shortcut
+  *  faf24538c4 - Path bug splitting gcode by Fixture
+  *  2dcbc694af - Draft: Check special characters using focused input
+    field
+  *  5c4e40b7e6 - Add A4 format template according to IRAM standard
+  *  bedccf090b - Merge branch 'master' into snelweg-patch-1
+  *  4de2ad46b2 - Sketcher: replace or keyword with || as it's not
+    supported by all compilers
+  *  544ba0f56a - Draft: Use ordered vertexes to create Draft Wire from
+    Part.Wire
+  *  32ed22858c - Merge branch 'master' into snelweg-patch-1
+  *  07c65c65d6 - TD: fix -Wunused-private-field
+  *  380b8f8c14 - Update PathSanity.py
+  *  1645cc0c28 - [Sketcher] Radiam : add icons
+  *  2ef1516121 - [Sketcher] Radiam : add specific management for
+    Bspline poles
+  *  ea1e6595b5 - [Sketcher] Radiam : make the command basically usable
+    into Gui
+  *  74cfdb57af - [Sketcher] Introduce 'Radiam' command that auto set
+    radius or diameter constraint based on geom type
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 02 Jul 2021 19:07:06 +0300
+
 freecad-daily (0.19.0+git25059-87ae516e1e-1) unstable; urgency=medium
 
   * Compile

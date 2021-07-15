@@ -10,7 +10,7 @@ export DH_VERBOSE=1
 
 
 override_dh_auto_install:
-	[ ! -f $(CURDIR)/translation/tool/Makefile ] || ( cd $(CURDIR)/translation/tool && make )
+	cd $(CURDIR)/translation/tool && cc -O2 -o mlktrconv mlktrconv.c
 	#cd $(CURDIR)/translation && $(CURDIR)/translation/tool/mlktrconv ru -d $(CURDIR)/translation/
 	cd $(CURDIR)/translation && $(CURDIR)/translation/tool/mlktrconv en -d $(CURDIR)/translation/
 	#cd $(CURDIR)/translation && $(CURDIR)/translation/tool/mlktrconv uk -d $(CURDIR)/translation/

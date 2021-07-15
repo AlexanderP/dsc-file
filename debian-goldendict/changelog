@@ -1,3 +1,28 @@
+goldendict (1.5.0~rc2+git20210630-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/goldendict/goldendict.git
+  * Branch: master
+  * Commit: baff02a14b3f70f0d0a55bef550dbb74dcbf0ce8
+  * Date: 1625072500
+  * git changelog:
+  *  baff02a - Make MainWindow::setTranslateBoxTextAnd*() harder to
+    misuse
+  *  9ff28e2 - Translate box: add missing wildcard symbol (un)escaping
+  *  f919685 - Extract duplicated gdfrom- string manipulation into
+    functions
+  *  bc7fe1a - Merge branch 'dictionaries-dialog-save-restore-geometry'
+    of https://github.com/vedgy/goldendict into Temp
+  *  c3e4a99 - Dictionaries dialog: always show Maximize button
+  *  fdf0464 - Save&restore the geometry of Dictionaries dialog
+  *  e1c9a0d - Fix compilation without C++11 support
+  *  df192bf - Don't show duplicate MediaWiki articles
+  *  99ddb76 - Don't add the same phrase to history twice in a row
+  *  60bc052 - Add input phrase's punctuation suffix to alts
+  *  57c4c33 - Add support for *.oga audio files
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 02 Jul 2021 19:24:48 +0300
+
 goldendict (1.5.0~rc2+git20210309-1) unstable; urgency=medium
 
   * Compile
