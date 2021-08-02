@@ -1,3 +1,191 @@
+freecad-daily (0.19.0+git25306-5f5b3d9b67-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 5f5b3d9b67136edda1f6738f1a83154990f7839d
+  * Date: 1626802171
+  * git changelog:
+  *  5f5b3d9b67 - Merge pull request #4446 from
+    Schildkroet/deburr_improve
+  *  31fd5be0c4 - FEM: calculix writer, use generic elset variable names
+  *  f4275adfed - FEM: mesh set getter, use ccx independent method names
+  *  a98ebfde6e - FEM: mesh set getter, use ccx independent variable
+    names
+  *  166f5e7a4b - FEM: material task panel, raise max possible young's
+    modul value
+  *  241a6a4eac - FEM: tasks and writer, use generic solver input
+    writing method name
+  *  efbe176691 - FEM: writer base, typo
+  *  a7caa50d38 - FEM: mesh set getter, output print
+  *  bbb557aab6 - FEM: calculix writer, fix time output
+  *  d0dbdf8bf3 - FEM: make use of mesh data getter class for calculix
+    solver and ccxtools
+  *  afeb9b2305 - FEM: calculix writer, use mat geo sets instead of ccx
+    elsets
+  *  8b061cecc2 - Draft: Fixed wrong placement of lines in shape2dview's
+    cutface mode
+  *  4869e040f8 - Draft: Use different icon if object has AutoUpdate
+    turned off
+  *  146dcd75a9 - Arch: Fixed windows invert hinge option
+  *  573a295067 - Arch: Fixed wrong numbering in arch axis in section
+    mode
+  *  6a76c7668d - FEM: calculix writer, make use of the member objs
+    everywhere
+  *  7df9e7fe63 - FEM: calculix writer, code formating
+  *  043aa945bc - FEM: mesh data getter, add time and some comments
+  *  fd3f17ea45 - FEM: separate getting the mesh sets from writer class
+  *  507ccc518b - FEM: material task panel, code formating
+  *  07efb027ac - FEM: calculix writer, matgeosets, code formating
+  *  f20e29a04c - Material editor: add some comments
+  *  5bb95f0139 - Material Editor, code formating
+  *  1b8244580e - Material, workaround for precision problem
+  *  807f61400d - Draft: fix dimensions with decimals=0 problem
+  *  a7492d1934 - Material: comments
+  *  179f7234fb - FEM: material task panel, catch wrong
+    ThermalConductivity quantity
+  *  addb41d424 - FEM: calculix writer, materials, delete code added by
+    mistake with d72d24b30c6
+  *  0afa4bd344 - Material: nitrogen card, fix wrong minus which leads
+    to syntax error in unit system
+  *  cfcf8df4ce - Material: matcard reader, fix some problems
+  *  a9300c2141 - Fix FEM and Material typos
+  *  def2df9253 - FEM: calculix writer, improve information about units
+    in input file
+  *  2bf2c7d546 - FEM: calculix writer, improve floats writing for
+    femelement material
+  *  3f45205ea6 - FEM: calculix writer, improve floats writing for
+    femelement geometry
+  *  a58cd00e5a - FEM: calculix writer, continue improve floating point
+    writing for constraints
+  *  138144d88e - FEM: calculix writer, improve floating point writing
+  *  74c3a4f676 - FEM: calculix writer, use better writing for young's
+    modulus, improves c73c6097bf1900
+  *  2fe036e823 - Material: card reader, do not break if error on card
+    reading.
+  *  9a564dd906 - Maaterial: card writer, force to use utf-8
+  *  78924196db - Material: better warning message if card name is not
+    file name
+  *  3e14f499e5 - Material: matcard writer, print error if no card name
+    is provided on save
+  *  6257ec125e - Material: matcard writer, get rid of Python 2 code
+  *  4596f441bf - FEM: calculix writer, materials, comment
+  *  8d93a0f3d8 - Arch: Better icon for Arch component
+  *  2685f13eb3 - FEM: calculix writer, print getting sets time
+  *  8728400e04 - Merge pull request #4910 from Roy-
+    043/Arch_Fix_Arch_Wall
+  *  2acfba9870 - Merge pull request #4883 from steelman/arch-timezone
+  *  c73c6097bf - FEM: cslculix writer, fix if young's modulus is
+    smaller than 500 kPa
+  *  e704f3267c - FEM: calculix writer, small improvements
+  *  ad76c5b554 - FEM: calculix writer, move generic constraint writer
+    into base writer
+  *  d72d24b30c - FEM: calculix writer, move material, element geometry
+    and mat-geo-elementsets into separte methods
+  *  9fa444c113 - FEM: calculix writer, move write mesh in separate
+    module
+  *  61436a874d - FEM: calculix writer, move write footer and step in
+    separate modules
+  *  90cecd0d2c - FEM: calculix writer, rename constraint writing
+    methods
+  *  cd02cf2ffd - FEM: writer base, add method to retieve all known sets
+  *  290b5cc322 - FEM: code conventions, update
+  *  4681577166 - FEM: calculix writer, typo
+  *  3307bfe07c - FEM: base writer, return on empty fem objects dict
+  *  fa146510f8 - FEM: basewriter, do not try to get elementsets if
+    there are no centrif objects
+  *  7ec2d0e1cb - FEM: calculix writer, move constraint fluidsection in
+    separate module
+  *  9715034bc9 - FEM: calculix writer, move constraint
+    initialtemperature in separate module, use generic constraint writer
+    and fix unit tests
+  *  b43bdecef6 - FEM: calculix writer, move constraint selfweigt in
+    separate module and use generic constraint writer
+  *  a154d3b93f - FEM: calculix writer, move constraint writing methodes
+  *  3e7899b7f8 - FEM: calculix writer, code formating
+  *  4e26596f90 - FEM: calculix writer, add write before and write after
+    to constraints modules
+  *  671b408751 - FEM: calculix writer, do no longer write method names
+    into input file, fix all unit test files
+  *  2760064897 - FEM: calculix writer, constraint writer, more
+    simplifications
+  *  aea694ac23 - FEM: calculix writer, rename set writing methods to a
+    generic one
+  *  b97d774971 - FEM: calculix writer, constraints set writer, remove
+    getter from there
+  *  c674cd31e9 - FEM: calculix writer, move mesh data getter outside
+    file writing
+  *  cc4ba46f54 - FEM: calculix writer, improve constraints code
+  *  3576ae7c78 - FEM: code formating
+  *  81d04186c7 - FEM: calculix writer, move constraint methods into
+    separate modules
+  *  b9cc49383f - FEM: code formating
+  *  46282db7c8 - FEM: constraint centrif, Gui tools
+  *  f0b543ed81 - FEM: constraint centrif, add unit test
+  *  94c0522c38 - FEM: constraint centrif, add example
+  *  974f41e0cc - FEM: constraint centrif, App objects and methods:
+  *  65f84827e5 - FEM: constraint transform beam hinged, add unit test
+  *  b32d16fd52 - Merge pull request #4909 from troyp76/master
+  *  20287874a8 - Arch: Fixed text position of Arch spaces
+  *  83991d7014 - FEM: examples, constraint transform beam hinged, fix
+    material
+  *  0a388722a7 - FEM: constraint transform torque example, code
+    improvement and unit test fix
+  *  bda6ad109f - FEM: contraint transform example, add unit test
+  *  48d6fa8ea2 - FEM: examples, add constraint transform torque example
+  *  487005a20c - FEM: general preferences gui, improve a string
+  *  0bbcfd7c04 - FEM: calculix writer, small fix in constraint
+    transform and a white space somewhere else
+  *  a319a68628 - FEM: calculix writer, move inlet outlet fluid mesh
+    treament methods
+  *  6c7aaaff3e - FEM: calculix writer, code improvements
+  *  302e9e8374 - FEM: writer base and ccx writer, move some calculix
+    writer methods to writerbase
+  *  1cee70cd62 - Merged crowdin translations
+  *  324621f3d8 - Updated ts files
+  *  084a8e6fae - Arch: Fix Arch_Wall: block joints where put on the
+    wrong side of offset
+  *  01c9010664 - Draft: added AutoUpdate property to shape2Dviews to
+    disambiguate with VisibleOnly property
+  *  9137e15f06 - Draft: Fixed missing type check in is_clone
+  *  8d5544ee3c - Draft: disconsider unknown edge types in geo utils
+  *  8d445f38e4 - FEM: calculix writer, move heatflux suface faces
+    getter in separate method (like other constraints do)
+  *  36f683de94 - Merge branch 'master' into master
+  *  b4f58543bd - FEM: calculix writer, move section print suface faces
+    getter in separate method (like other constraints do)
+  *  bbdccd02ca - Merge branch 'master' into master
+  *  f1db4bc83e - FEM: calculix writer, get rid of two times the word
+    head
+  *  ec55cb6b77 - FEM: calculix writer, generic node set writer, get rid
+    of duplicate code
+  *  7f01e989db - FEM: calculix writer, code formating
+  *  05465a53fe - FEM: calculix writer, add generic constraint data
+    writer
+  *  78a11b8f42 - FEM: calculix writer, improve contraint set writer
+  *  3fcdef5ca0 - FEM: calculix writer, use obj name as unique
+    identifier for constraint section print
+  *  8c59c2fda2 - Merge branch 'master' into master
+  *  809a4ff153 - FEM: fix failing unit test due to wrong result name,
+    related: 79b41f739381
+  *  fb8c6f7abe - FEM: code formating
+  *  20a2ee5732 - FEM: selection widget, small improvements
+  *  ec38055466 - FEM: calculix writer, add method is density needed
+  *  73cf10c4e7 - FEM: calculix writer, use generic method to write sets
+  *  7fae1d7fcf - Merge branch 'FreeCAD:master' into master
+  *  f8c65989f9 - Operations were being recalculated even if the dirty
+    state was False. The isDirty function was not being called correctly
+    by the accept call back.
+  *  9b04818dcb - FEM: calculix writer, improve split inpfile writing
+  *  d3800cc36b - FEM: solver writer base, some comments
+  *  69c4fd44ff - FEM: solver writer base, add generic method to
+    retrieve solid element sets
+  *  db9850008f - FEM: temporary deactivate two FEM tests to get master
+    back on travis
+  *  5a53b740a1 - FEM: calculix writer, typo in var names
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 22 Jul 2021 17:59:15 +0300
+
 freecad-daily (0.19.0+git25176-909dfa7036-1) unstable; urgency=medium
 
   * Compile

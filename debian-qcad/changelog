@@ -1,3 +1,77 @@
+qcad (3.26.0+git8497-e596276ed-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: e596276ed9f9db8b90a53170021e482dd67a9ec6
+  * Date: 1626783944
+  * git changelog:
+  *  e596276ed - compile fix MSVC
+  *  e4687842f - update script bindings
+  *  47a2f62c9 - make copyEntity scriptable
+  *  eedcfd757 - compile fix MSVC
+  *  24dee5b1b - compile fix MSVC
+  *  9477bf806 - compile fix
+  *  5131841b4 - compile fix
+  *  7a15f907a - set version to 3.26.4.5
+  *  f320aaf68 - fix default thread count
+  *  6974607a4 - Update README.md
+  *  5166eec49 - set version to 3.26.4.4
+  *  ec0ab7ce6 - add initEntity stub
+  *  6952b9c84 - update translations
+  *  55baa0dfa - refactor to allow overriding of getEntity
+  *  c12f3406e - clean up
+  *  04579c877 - clean up
+  *  a956552af - block invalid positions for coordinateEvent
+  *  f40e43862 - update script bindings
+  *  05a4779d4 - fix pt translation
+  *  e3d53dd64 - return information about (sub-)entities for all snap
+    methods
+  *  c2e7ddde0 - revert to grid snap if free snap is disabled
+  *  7edc29f3a - allow overriding of free and grid snap for auto snap
+  *  fa6d46340 - delegate snapping to RAction to allow override
+  *  9b7ece034 - add preference to apply the line weight to point
+    entities
+  *  1271fd89e - update script bindings
+  *  0a4cae9fe - update meta types
+  *  941596af3 - collect IDs of block entities when snapping to points
+    in block references
+  *  158b6ca6c - allow disabling of high dpi scaling
+  *  c97790793 - fix FS#2259 - Insert file as block: crash when
+    inserting block with attribute definitions
+  *  21fecbe6c - clean up
+  *  7c3fb3d72 - Merge branch 'master' of github.com:qcad/qcad
+  *  147f9a781 - tag UI elements with restart required flag
+  *  0fcd58f44 - add test data
+  *  59df48ff2 - Merge branch 'master' of github.com:qcad/qcad
+  *  eda6e4763 - enable UI / high-res scale settings for Linux / macOS
+  *  790e70be7 - remove script handler warnings
+  *  b9331040c - set version to 3.26.4.3
+  *  e7cc1c4f0 - update
+  *  00f2df40a - update script bindings
+  *  5c84c3e68 - update translations
+  *  a7bf16c73 - update translations
+  *  8fdbaafa3 - update translations
+  *  5c66de36c - update script bindings
+  *  19193ce27 - fix exporting of (invisible) entities moved to
+    invisible layer
+  *  daeeae485 - clean up
+  *  2e667cb59 - fixed values for enum
+  *  fa0d451bb - add option to export invisible entities
+  *  42d2af198 - regen entities after de-selection (update color of
+    painter paths)
+  *  d5b40c2c0 - add querySelectedLayerEntities
+  *  a09ec3165 - update
+  *  f784d06cf - add getEntity for easier overriding
+  *  8af3bc62a - fix potential crash in RPolyline::getDirection2
+  *  52f5f6413 - add support for custom script handler
+  *  42daf8de1 - always reveal snap status, not only for auto snap
+  *  96ff1559c - add getFactor, initEntity for overrides
+  *  4f13f2d49 - fix FS#2257 - Images from Windows file cannot be loaded
+    under Linux / macOS
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 22 Jul 2021 18:13:09 +0300
+
 qcad (3.26.0+git8441-fb679b619-1) unstable; urgency=medium
 
   * Compile

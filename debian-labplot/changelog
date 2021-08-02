@@ -1,3 +1,85 @@
+labplot (2.8.2+git8604-9301d36bc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 9301d36bc64dcf3462d1fd2fcefb6dce1615f39c
+  * Date: 1626640257
+  * git changelog:
+  *  9301d36bc - tests: Another try fixing linking of multirange test on
+    Windows
+  *  067642134 - tests: Try fixing linking of multirange test on Windows
+  *  d3d4455b4 - [worksheet] don't crash when adding a new histogram in
+    the plot (regression).
+  *  8a0ea45d5 - [worksheet] properly initialize the symbol properties
+    in the dock widgets for the equation and analysis curves.
+  *  065a451cf - Improve axis auto tick label precision calculation
+  *  17ff5729b - add missing return
+  *  f2059387b - Merge branch 'master' into MultiRange
+  *  604c65cb5 - code simplify
+  *  8b8b7d6d2 - fix y axis ticks and minor things
+  *  f0dec304a - PlotRange is already used otherwise
+  *  3b7461f8c - fix debug build
+  *  03c705222 - minor fixes
+  *  bc7512382 - merge conflicts
+  *  bcbbbbb1d - code style and other fixes
+  *  d24278022 - [datapicker] when switching to log scales,  change the
+    reference point value  from 0.0 to 0.1.
+  *  29ba3e6a8 - rename RangeP to (maybe better) PlotRange
+  *  8009a4e91 - clean up
+  *  bd926a8f7 - [worksheet] when creating new custome point,  reference
+    line or info element via the add new entry in plot's context menu,
+    position the new elements at the current position of the mouse
+    cursor.
+  *  ac0a3b264 - test: avoid locale problem of parser in fit
+  *  c764e485a - tests: enable tests in Windows compile script
+  *  ac677a098 - tests: allow debugging on Windows
+  *  44ea5af0a - GIT_SILENT minor comment change
+  *  8aa8e8505 - [worksheet] don't draw the grid lines when exporting or
+    printing the worksheet or when showing it in the presenter mode.
+  *  8527fba49 - Fix typo
+  *  820196177 - Add application path to PATH on Windows to find backend
+    servers
+  *  bba7a3d0c - project: use user name for author correctly
+  *  bb966143a - minor fixes
+  *  a4c5de316 - Fix compiler warning
+  *  19110bea4 - string typo fix
+  *  de4ddb038 - Replace deprecated methods
+  *  9659ec480 - Fix compiler issues and Qt deprecations
+  *  97439779e - tests: add hdf5 int import
+  *  2e9cb6f0a - tests: add HDF5 test
+  *  e5b05387e - hdf5: Improve using start/end row/column
+  *  1345a119a - WIP
+  *  9b9907868 - fix bugs
+  *  3b47d5216 - add new property
+  *  56a3f929a - add new property
+  *  676f37166 - HDF5: use data type when importing data
+  *  f56a9113b - move xRangePrev and yRangePrev into Struct, be make it
+    multirange capable
+  *  c6d8a5e6e - Properly save the geometry of the visible views.
+  *  1660bc207 - make some additional function multirange capable
+  *  a7325fa4f - HDF5: preview and import 2d data of strings
+  *  114501a18 - HDF5: preview and import 2d data of strings
+  *  a5dd308d2 - More Changelog updates
+  *  1c41bd94f - Update preview image of gaussian random number
+    distribution
+  *  c7cdb11ba - Changelog update
+  *  ee61b7bfe - Update tooltip
+  *  8ad6857ce - Finalized the implementation of the plot border types
+    (draw the lines left, top, etc.) and updated the ChangeLog file.
+  *  795ae8033 - [worksheet] introduced the border type which will allow
+    the user to define for which side of the plot rectangular to draw
+    lines. This is useful when plots are put besides each other and no
+    lines should be drawn at the touch point. This is the implementation
+    in the UI, the actual drawing of the lines will be added soon.
+  *  4053d5e82 - fix minor compiler warnings
+  *  8f13dbe69 - worksheet: coding fixes
+  *  4c6c950eb - project: fix code and compiler warnings
+  *  0f2f2aa02 - check it fixed size pixmap is better for displaying
+    formulas
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 22 Jul 2021 18:25:30 +0300
+
 labplot (2.8.2+git8522-06fb5d97f-1) unstable; urgency=medium
 
   * Compile

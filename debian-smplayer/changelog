@@ -1,3 +1,77 @@
+smplayer (1:21.1.1~git9843-cd339e56-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/smplayer-dev/smplayer.git
+  * Branch: master
+  * Commit: cd339e56a6a68d289fa23264d4f58b8149446ef3
+  * Date: 1626949590
+  * git changelog:
+  *  cd339e56 - Update ts files
+  *  0cfa78fc - Add tr
+  *  095ba67b - Detect if youtube-dl fails because of missing libraries
+  *  8fa68606 - Increase connect interval to 100
+  *  47154558 - Update build-appimage.yml
+  *  9eac4df9 - Update build-macos.yml
+  *  70e3bfdb - Update header
+  *  e80530c4 - Use stride[3]
+  *  12715016 - Fix italian.nsh
+  *  691e7680 - Update ts files
+  *  8b4cf5db - Update installer translations
+  *  5a6205f8 - Change some ifdefs and some texts
+  *  3ea146ba - Change a text
+  *  d0ee824e - Update translations
+  *  1a0321ab - Update build-appimage.yml
+  *  09a5f126 - Add workaround to build on some ubuntu/debian distros
+  *  68710575 - Update build-source-package.yml
+  *  49239f16 - Update build-appimage.yml
+  *  94e26089 - Update build-appimage.yml
+  *  8c8eb63e - Check for NO_MPLAYER var
+  *  5a328191 - Use shm by default on wayland
+  *  57fb332b - Update build-flatpak.yml
+  *  9bfdf072 - Update build-appimage.yml
+  *  78345701 - Disable mplayer on appimage
+  *  3516f222 - Update build-appimage.yml
+  *  01d6850b - Update build-appimage.yml
+  *  78e9738d - Don't use -wid on mac os (2)
+  *  9d935abd - Don't disable input in mac os
+  *  1b010b1a - Don't use -wid on mac os
+  *  3b245df0 - Use filename of mplayer_bin
+  *  4a0dcdbe - Fix ignoring -wid
+  *  e7098731 - Update build-appimage.yml
+  *  42bccef8 - Find python on linux only
+  *  899929ef - Call python to run youtube-dl
+  *  733322d1 - Update build-appimage.yml
+  *  e2180d9a - Another fix
+  *  7b05576b - Fix install translations
+  *  9556e2ee - Check for USE_SMTUBE_LIB
+  *  7f866525 - Update build-appimage.yml
+  *  5442c9f5 - Create build-appimage.yml
+  *  854ac242 - Fix checking for player binary
+  *  03698589 - Add application path to the list of search paths
+  *  9a942e62 - Remove NO_MPLAYER
+  *  f91c325a - Install icons
+  *  3ca16585 - Add compile_appimage.sh
+  *  a42aac0e - Add smplayer-document.icns
+  *  94fef1b9 - Use color conversion in packedShader
+  *  c163ff72 - Add more possible conversions
+  *  96449bed - Use setMenuRole
+  *  79c448e3 - Usar BT709
+  *  d2047ea8 - Invalidate buffer
+  *  1c18c40d - Update build-macos.yml
+  *  e96bc291 - Update build-macos.yml
+  *  d6503b07 - Copy the smtube translations to the correct dir
+  *  7a87d7c8 - Change the themes and shortcuts dir on mac os
+  *  82543f1f - Use Resources/translations on mac os
+  *  860fe9f9 - Disable SINGLE_INSTANCE in macos
+  *  4407440d - Compile smtube
+  *  e61f9682 - Add translator for smtube
+  *  bdc68a95 - Load smtube translations
+  *  26c46f02 - Load homepage only after creating
+  *  e8c1d600 - Connect signal
+  *  f7bf74ce - Add define USE_SMTUBE_LIB
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 22 Jul 2021 17:54:11 +0300
+
 smplayer (1:21.1.1~git9780-b380bfe4-1) unstable; urgency=medium
 
   * Compile

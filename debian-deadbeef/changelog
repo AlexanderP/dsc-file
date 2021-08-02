@@ -1,3 +1,70 @@
+deadbeef (1.8.7+git10049-89d63a6bc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/Alexey-Yakovenko/deadbeef.git
+  * Branch: 1.8
+  * Commit: 89d63a6bca1c8ba585864c0afa37754772fc2daf
+  * Date: 1626717303
+  * git changelog:
+  *  89d63a6bc - 1.8.8-rc1
+  *  0d7036afd - translation update
+  *  4c5103c04 - Changelog update
+  *  7c41aa28d - deletefromdisk: rename buttons to Cancel and Delete
+    instead of No and Yes
+  *  22bbc6b3f - gtkui: make the Yes button in the delete from disk
+    confirmation dialog signify a destructive action (fixes #608)
+  *  902922896 - cocoaui: set both main and preferences window
+    toolbarStyle from code
+  *  bec9a11d1 - osx: ffap compile fix when source path contains spaces
+  *  b89c39292 - switch CI to use xcode 12.4
+  *  0480e7934 - deadbeef.h: document ddb_decoder2_t
+  *  1191967e2 - deadbeef.h: Fix the DDB_PLUGIN_SUPPORTS_DECODER2 to
+    have a value of 4 instead of 3
+  *  0fa45acaf - deadbeef.h: added documentation for
+    plug_get_path_for_plugin_ptr
+  *  cf8aabdb0 - deadbeef.h: fix duplicate deprecation macro typo
+  *  94514242e - switch to devel version
+  *  12f5ac348 - 1.8.8-beta3
+  *  c7dd1c452 - cocoaui: fix updating seekbar regression
+  *  c17350dca - wma: fix a regression which caused corrupt playback
+    (fixes #2637)
+  *  4644032d9 - gtkui: fix gtk_widget_get_mapped / GTK-2.20 check
+    (fixes #2630)
+  *  92852c5b5 - flac: added a new extended decoder plugin interface,
+    and implemented it in the flac plugin (fixes #2636)
+  *  e0bd78a2f - osx: fix warnings for building in Xcode 13 beta2
+  *  95ca904a1 - gtkui: use g_get_monotonic_time in
+    gtkui_run_preferences_dlg with GTK3, to make focus stealing work in
+    wayland
+  *  83a19f970 - gtkui: fix GTK2.16 compatibility (fixes #2630)
+  *  5dc23c6db - configure: bump the required GTK2 version check to 2.16
+  *  cae5b2c08 - gtkui: fix gtk2.16 compatibility (fixes #2630)
+  *  0903880f5 - cocoaui: extract TrackPositionFormatter into a separate
+    file
+  *  93f6c5f54 - cocoaui: fix seekbar on mojave (fixes #2631)
+  *  8e3c562ec - 1.8.8-beta2
+  *  8efc63780 - update translations
+  *  ba277990d - Merge branch 'master' into 1.8
+  *  3075a8d72 - tf: fix infinite loop when trying to  an empty string
+    (fixes #2570)
+  *  a35f19718 - osx: switch the project deployment target to 10.13, in
+    order to make xcode13 usable on big sur
+  *  c396b02a8 - deletefromdisk: fix jumping to next track after
+    deleting using a shortcut (fixes #2594)
+  *  00a3b79e7 - deadbeef: fixed typos in deadbeef.h
+  *  efd6d480b - deadbeef: DDB_TF_ESC_RGB api version check
+  *  f3030f364 - aac: fix the stream parser bug after skipping ID3v2
+    tags (fixes #2596)
+  *  156d693f5 - osx: ffmpeg update to 4.4
+  *  0a1108c5f - pulse: support higher samplerates than 192KHz with a
+    fallback
+  *  c87e3e11a - cocoaui: increase the buffer size for loading config
+    values to NSString
+  *  57369475b - tf: fix the %isplaying% and %ispaused% behavior (fixes
+    #2612)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 22 Jul 2021 17:56:04 +0300
+
 deadbeef (1.8.7+git10011-6bd389690-1) unstable; urgency=medium
 
   * Compile
