@@ -1,3 +1,51 @@
+labplot (2.8.2+git8637-abe9428f2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: abe9428f258430f1a55cffcf394908f0e73c0af3
+  * Date: 1627758629
+  * git changelog:
+  *  abe9428f2 - tests: disable failing multirange until fixed
+  *  96dd0b73c - Fix crash when loading project
+  *  e65ee620c - cartesian plot dock: clean up
+  *  6cb2c67ae - tests: fix multirange
+  *  4fc018baf - [worksheet] don't crash when adding a new histogram to
+    the plot, regression introduced with the previous branch merge.
+  *  07a9c3b09 - fix compile issues
+  *  c51d357c4 - Merge commit 'a337167659afe490149b9e8c584c700975060ec8'
+  *  7c9ef93b6 - every cSystem must have it's own scales, because
+    otherwise double delete occurs
+  *  ff5cc8e43 - fix compile issues
+  *  a33716765 - GIT_SILENT typo
+  *  651616d43 - axis: make showing axis scale and ofset optional
+  *  a4d8a3090 - axis: add scale+offset label and clean up
+  *  70dd638b3 - Fix auto tick for inverted axes
+  *  6fd768e2a - axis: fix ticks and tick label for all directions and
+    inverted ranges
+  *  5b7377721 - axis: only use auto ticks when changing range and fix
+    saving custom tick counts
+  *  52f9b53f4 - [box plot] allow to activate jittering for all types of
+    marker points (outliers, far out values and data points).
+  *  d4a547d18 - [box plot] allow to order the data sets by their mean
+    and median values, ascending and descending.
+  *  65045ae4b - axis dock: easily set special scalings
+  *  f7c3146ec - axis dock: easily set certain offsets
+  *  81cc54cac - [box plot] allow to plot the data points with and
+    without jittering.
+  *  93a152446 - plot dock: use number locale in plot range list
+  *  c9531140e - plot dock: keep cursor position in line edits for
+    inputing values
+  *  db6eaf18c - tests: Fix range extend check
+  *  ef96f072d - axis: simplify auto scale
+  *  326650c5c - axis: Fine tune automatic range extend
+  *  c05b58c3e - tests: disable failing parts of multirange test until
+    fixed
+  *  30465ed7d - Fix crash in column statistics (KDE plot)
+  *  155fd22ca - axis: improve nice extend and auto ticks
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 02 Aug 2021 21:52:00 +0300
+
 labplot (2.8.2+git8604-9301d36bc-1) unstable; urgency=medium
 
   * Compile

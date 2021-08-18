@@ -1,3 +1,135 @@
+freecad-daily (0.19.0+git25396-ecff58875c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: ecff58875cc83db51d15cf1b66b7044bb3f53fc9
+  * Date: 1627921765
+  * git changelog:
+  *  ecff58875c - FEM: calcuix writer, fix circular beam section
+  *  15c04a30cf - Merge pull request #4926 from Syres916/patch-24
+  *  eef30446aa - Merge pull request #4936 from ho-ho-ho/master
+  *  b1cfadf7ae - Merge pull request #4947 from luzpaz/path-typos
+  *  6fd5e83d3b - Merge pull request #4953 from noahwilliamsson/path-
+    json-fix
+  *  af28a37c0f - Path: fix invalid JSON in 45degree_chamfer.fctb tool
+    bit
+  *  f76c9926da - [Draft] gui_utils Added FIXME comment to assist..
+  *  3b444b1cf3 - Merge pull request #4927 from marioalexis84/draft-
+    restore
+  *  bd0b5bbecd - Merge pull request #4929 from marioalexis84/draft-
+    multiselection
+  *  b2ebda4d98 - Merge pull request #4930 from Kawashima-Azumi/shutil-
+    no-which
+  *  78e9c166a4 - Merge pull request #4881 from Roy-
+    043/Draft_Fix_Draft_SetStyle
+  *  6a6fd946a5 - Merge branch 'master' into Draft_Fix_Draft_SetStyle
+  *  26ff21d93d - Merge pull request #4879 from Roy-
+    043/Draft_Fix_Layer_List_Issues
+  *  f8d040f9fd - FEM: calculix writer, force constraint, do not write
+    zero loads
+  *  6fed5236b9 - FEM: z88 writer, add circular beam section
+  *  9ff622d00b - Add Debian/Ubuntu runtime deps for Docker build
+    scripts (#4951)
+  *  af3bc822fe - Basic build container images with distribution package
+    references (#4893)
+  *  d3cd395b94 - FEM: z88 mesh exporter, add comments for element
+    assignment
+  *  422bde4bf7 - Draft: Fixed wrong cmd names in gui_planeproxy.py
+  *  ad39e5fbdd - Draft: Fixed units mismatch when moving Draft_Point
+    objects
+  *  f47c33bd65 - Draft: Fixed units mismatch when moving Draft_Point
+    objects.
+  *  638976c409 - Draft: Fix patharray edge sort issue
+  *  597dbfb6c4 - FEM: examles, add missing geom obj links in meshes
+  *  117d928d5d - FEM: unit test command file, add command for all FEM
+    App tests
+  *  130ef93d83 - FEM: unit test information, remove duplicate lines,
+    they are in unit test commands file available
+  *  ce6df4494c - FEM: improvements for meshes without geometry link
+  *  abcd05b591 - FEM: calculix prechecks, beamsections and mesh without
+    geometry link is not allowed
+  *  d0e4467761 - FEM: migrate modules, add old z88 solver module
+  *  dfc01ec949 - FEM: Mystran solver, add Gui preferences page for
+    binary path setting
+  *  cfc08b811f - FEM: Mystran solver, add Gui command to add solver to
+    a document
+  *  005c66f4ec - FEM: Mystran solver, add examples and writer unit
+    tests
+  *  cdcd271b4c - FEM: Mystran solver, add solver, writer, tasks and
+    constraint force and fixed writing
+  *  e100971fa0 - FEM: add Nastran mesh exporter based on pyNastran
+  *  a03eb6b962 - Draft: Fix wrong default value for defaultWP
+  *  03a1b9b1c1 - Draft: fix gui_offset.py wrong ghost if start angle of
+    arc is larger
+  *  ed94be6ab9 - Draft: fix geometry.py findDistance function
+  *  5564b025fe - Draft: Fix spelling gui_edit_draft_objects.py
+  *  eab17ddff5 - Fix various typos
+  *  427a2ab8d6 - Path: fix various typos and superfluous whitespace
+  *  3962c347ac - FEM: meshtools, fix node count in newly add mesh type
+    method, regressin wass added in ff5509f8550221
+  *  83723fef44 - FEM: examples, small improvements
+  *  0816e30cba - FEM: ccx canti quad4 example and unit test, improve
+    mesh
+  *  ff5509f855 - FEM: meshtools, add generic method to return femmesh
+    type
+  *  e6a6ac3725 - FEM: unit tests, temporary deactivate 2 unit tests as
+    they fail on ci
+  *  551e6e9675 - FEM: examples and unit tests calculix solver, add ccx
+    cantilever with quad8 elements
+  *  74b6276c20 - FEM: examples and unit tests calculix solver, add ccx
+    cantilever with quad4 elements
+  *  d15ae5d804 - FEM: z88 writer, delete if tests, prechecks are made
+    before starting writer
+  *  bcb17be94a - FEM: z88 unit test, move a method
+  *  a9af9829f5 - FEM: calculix framework solver, do not rais a
+    exception on problems
+  *  26c2d6540f - FEM: z88 solver, tria6 example and unit test as well
+    as small writer improvements
+  *  ac7caebb59 - FEM: calculix unit tests, add ccx cantilever with
+    seg2, seg3, tria3 and tria6 mesh elements
+  *  0974f8f250 - FEM: improve calculix framework solver menu and tool
+    tipp
+  *  e3405417fb - FEM: frame work solver calculix, get rid of text
+    experimental
+  *  c0c6212f0c - FEM: solver, improve analysis member tests
+  *  c756881ffa - FEM: solver run, improve output
+  *  bea371fc8e - FEM: comand definition, delete not needed z88 icon
+    definition as it uses FEM standard names
+  *  41b0805e18 - FEM: solver frame work, improve binary handling
+  *  e84f0ab609 - FEM: solver frame work, code formating
+  *  1cc9c88be1 - FEM: examples, ccx cantilever add face and edgemesh
+  *  c5be18888b - FEM: examples, canti hexa20, delete wrongly added
+    exaplanation object
+  *  dde8ec5c7f - Merge pull request #4939 from
+    Russ4262/fix/job_template_paths
+  *  1a1910a489 - Merge pull request #4938 from
+    Russ4262/fix/adaptive_edge_processing
+  *  4695ed09ca - FEM: examples, ccx canti hexa20, fix comment
+  *  dbff0d9e9c - Merge pull request #4937 from
+    Russ4262/cleanup/adaptive_unit_test
+  *  147fd446ba - FEM: cmake, fix
+  *  83c8cc30e8 - FEM: examples and unit tests, some heavy file renaming
+  *  7416fd3f5b - FEM: examples, code formating, use double quotes
+    whenever it is possible
+  *  415a29387a - FEM: calculix writer, constraint force, code formating
+  *  18c3ef6d46 - FEM: solver tasks, use same result reading method name
+    in all solver
+  *  8ce14b2a2b - Path: Close Adaptive geometry source file upon unit
+    test completion
+  *  65a59b102f - Path: Re-enable all disabled Path unit tests
+  *  640eb6ace7 - Path: Fix multi-OS path issue.
+  *  b91a4b6ecd - Path: Restore edge processing to Adaptive as in 0.19
+    release
+  *  cb7c8d8458 - Path: Improve comments and docStrings
+  *  1b856e9cfb - Path: Delete dead code and comments
+  *  a40812dfbf - Merge pull request #4917 from
+    Russ4262/fix/Adaptive_process_edges
+  *  d2c170a929 - Path: fix grbl --return-to placement
+  *  3311bb6df3 - Path: Add some  unit tests
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 02 Aug 2021 19:55:23 +0300
+
 freecad-daily (0.19.0+git25306-5f5b3d9b67-1) unstable; urgency=medium
 
   * Compile

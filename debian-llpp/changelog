@@ -1,3 +1,44 @@
+llpp (27.0.0+git4441-3192b6d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://repo.or.cz/llpp.git
+  * Branch: master
+  * Commit: 3192b6df02d4a9c159091c9538a79abb591b20d1
+  * Date: 1627747036
+  * git changelog:
+  *  3192b6d - Reformat to stay within 80 columns.
+  *  70c9656 - And so it did
+  *  1e920ab - CI will shout
+  *  ac54989 - All hail Argentina
+  *  92117e0 - build.bash: adapt compilation flags to OCaml 4.13
+  *  a7a189a - Mention build issue
+  *  e0cf82e - Cosmetics
+  *  c3c54a0 - Use OCaml 4.13 alpha2
+  *  462e502 - Remove, no longer needed, diagnostic suppression
+  *  7b2a30d - Sync with upstream
+  *  e7c513f - Switch to generic example
+  *  908f242 - Remove superfluous entry
+  *  1979469 - Shorten some type names
+  *  a7a294f - No CI macOS for now
+  *  c982e2a - Install ccache on linux and do not require one on macos
+  *  31b5977 - CI
+  *  f4c17c0 - Build with ahbs and by extension with ccache
+  *  3430dc3 - Remove, shot in the dark, attempt to pacify GH CI robot.
+  *  0623887 - Improve stderr redirection again
+  *  18d115b - Another stab at 4.13 incorporation.
+  *  a45c6f1 - Improve comment and clean things up...
+  *  122ca99 - Put bisect under build/
+  *  b924b9c - Put bisection under build/
+  *  1f3790f - Initial steb at bisection helper script
+  *  862eaa5 - Better wording
+  *  6d307c0 - Cosmetics
+  *  47d12e0 - Sync with upstream
+  *  c2983c9 - Revert An attempt to work around an issue with outputs
+  *  c4822f7 - An attempt to work around an issue with outputs
+  *  5eaaf40 - Work with (and require) ocaml 4.13.0~alpha1
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 02 Aug 2021 20:05:38 +0300
+
 llpp (27.0.0+git4410-208ab54-1) unstable; urgency=medium
 
   * Compile
