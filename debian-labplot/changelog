@@ -1,3 +1,48 @@
+labplot (2.8.2+git8654-9348dffe5-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 9348dffe5954aa9c4b595e1dc549b247b5c7eb8c
+  * Date: 1629385359
+  * git changelog:
+  *  9348dffe5 - [box plot] added special handling for the theme Tufte
+    so appearance of the box plot is identical with what was advocated
+    by Tufte.
+  *  e4526aee8 - Added SameStats example again, was deleted by an error
+    in the previous commit.
+  *  11a48ec94 - New folder for example projects with the first project -
+    SameStats.
+  *  504a4ff63 - When saving the state of the project explorer, which
+    nodes are expanded, etc., and the geometries of views, properly take
+    care of the sub-folder structure.
+  *  37d1c18dc - Properly register signal-slot connections in MainWin
+    for workbook's children.
+  *  d20b202db - Show the relevant actions in the context menu of
+    spreadsheet and matrix also when they are chidlrend of a workbook
+    and some general cleanup in AbstractPart.
+  *  1fbaa8869 - Properly update the window title bar on undo/redo
+    steps.
+  *  054e6b33e - Allow to change the order of objects in the project
+    explorer (move up and down) via the context menu.
+  *  1568ab964 - axis ticks: improve corner cases
+  *  23ae37b21 - Fixed crashes caused by the wrong results in
+    AspectTreeModel::modelIndexOfAspect().
+  *  94b80e29d - Minor fixes: 1. don't create any unwanted entries on
+    the undo-stack when selecting a plot 2. use QStringLiteral instead
+    of QString for AbstractAspect::typeName()
+  *  596863447 - Save the current paths of the data columns if available
+    instead of saving the last available column path. This fixes the
+    issue when the spreadsheet was renamed and the connection to the new
+    column paths was not properly saved and restored.
+  *  c949e15b3 - Show only relevant objects in TreeViewComboBox.
+  *  abd1aa21d - conflicts
+  *  736e653a2 - better debugging
+  *  3573076c5 - Simplified the logic for the selection of objects in
+    the project explorer and for the propagation of signals.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 19 Aug 2021 20:14:51 +0000
+
 labplot (2.8.2+git8637-abe9428f2-1) unstable; urgency=medium
 
   * Compile

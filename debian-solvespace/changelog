@@ -1,3 +1,28 @@
+solvespace (3.0.0~git1779-0a3504c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 0a3504c30a005c53e4f0cb6c8fa608482b90f0e9
+  * Date: 1629282908
+  * git changelog:
+  *  0a3504c - CI, NFC: Update libomp installation approach on macOS in
+    the GitHub action (#1094)
+  *  5edb2ee - Add Show Exploded View menu option
+  *  3e59500 - Update CHANGELOG.md
+  *  e86eb65 - Update feet and inches format to match architectural
+    convention
+  *  959cf5b - Fix MmToString calls that should have editable=true set
+  *  41e3668 - Make feet and inches show fractions of an inch, rounded
+    to nearest 1/64
+  *  2fb6119 - Add option for displaying dimensions in feet and inches
+  *  645febf - Set OSX minimum supported version
+  *  c19bd8c - Remove unused variable
+  *  b65a0be - Fix/silence mac build warnings
+  *  5671941 - Don't reset showFaces every time a group is activated
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 19 Aug 2021 20:03:47 +0000
+
 solvespace (3.0.0~git1768-1b8e1de-1) unstable; urgency=medium
 
   * Compile

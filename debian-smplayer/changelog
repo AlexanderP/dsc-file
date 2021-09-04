@@ -1,3 +1,55 @@
+smplayer (1:21.1.1~git9890-5c02dd07c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/smplayer-dev/smplayer.git
+  * Branch: master
+  * Commit: 5c02dd07c811b401e6f007fb7fbc4edac8bf350e
+  * Date: 1629209038
+  * git changelog:
+  *  5c02dd07c - Update smplayer.spec
+  *  0362b2151 - Change version to 21.8.0
+  *  acf0d4491 - Update build-archlinux.yml
+  *  fe1bcffd8 - Update build-archlinux.yml
+  *  ddf013ac0 - Use . instead of _ to separate the subtitle language
+    code
+  *  30fa34848 - Try to fix player path
+  *  b4461f9f8 - Don't use absolute path
+  *  07a4f7f8c - Revert 9882
+  *  edb4dcca0 - Don't check if path exists
+  *  1eb5408f8 - (Linux) Try to find the player executable when it's
+    changed in the preferences dialog
+  *  09d40fb33 - Update build-archlinux.yml
+  *  2bbe07b21 - Update build-archlinux.yml
+  *  39d2f6cf3 - Create build-archlinux.yml
+  *  5ab1b1f43 - Update Release_notes.md
+  *  077f3a042 - Use -noconfig
+  *  eeada7ef6 - Use a hash in inforeader.cpp
+  *  89e30a281 - Use --no-config in inforeadermpv.cpp
+  *  f1c49273d - Update build-flatpak.yml
+  *  671eedd20 - Fix audio channels. Should fix bug #176
+  *  f3d43943a - Remove icon info from smplayer.appdata.xml. Flatpak
+    build fails with it
+  *  89fd30c74 - Update Release_notes.md
+  *  9d4ac6952 - Add remote icon
+  *  c47d9373b - Update build-snap.yml
+  *  995b4dd20 - Update smplayer.appdata.xml
+  *  1e96d393a - Add common-id
+  *  1eb905540 - Update build-appimage.yml
+  *  7fa8dfd00 - Update build-macos.yml
+  *  29149297d - Update build-windows-packages.yml
+  *  ed0c3f730 - Update build-snap.yml
+  *  6dc73bc2f - Update snapcraft.yaml
+  *  0be64522b - Update build-snap.yml
+  *  afdc91b2b - Avoid repetition
+  *  f2dc69874 - Change description
+  *  0cd35ec0c - Update smplayer.appdata.xml
+  *  3c32daec3 - Update build-rpm.yml
+  *  02e852ae2 - Fix wayland
+  *  6cad838a9 - Add snap dir
+  *  a07a0c352 - Update screenshots info
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 19 Aug 2021 19:38:02 +0000
+
 smplayer (1:21.1.1~git9852-2cbdf6bf-1) unstable; urgency=medium
 
   * Compile

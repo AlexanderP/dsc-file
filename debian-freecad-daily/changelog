@@ -1,3 +1,178 @@
+freecad-daily (0.19.0+git25541-ca043dcb6d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: ca043dcb6d20d70b8e24d75e810683214eecc5d4
+  * Date: 1629371619
+  * git changelog:
+  *  ca043dcb6d - Merge pull request #4978 from
+    carlopav/Gui_AddTooltipNames
+  *  ba776825c7 - Merge pull request #4983 from
+    chennes/lgtmAddMissingInits
+  *  fdaf780452 - Merge pull request #4979 from Kawashima-Azumi/no-
+    filename-encode
+  *  b6c88080ba - Merge pull request #4980 from 0penBrain/coredump
+  *  b5a5a6cd70 - Gui: Improved tooltips
+  *  bf3d86e8b0 - FEM: pep8 code formating
+  *  40d29fe329 - FEM: task panels, improve units value handling
+  *  f976699bdf - [Core] exit() can prevent core dumping, use abort()
+    instead on debug mode
+  *  6c977d8511 - [FEM] Change reference files to avoid failed tests
+  *  a95e9549a6 - Start: Correct hash for thumbnail filename (py3)
+  *  3b6c442187 - Start: Correct hash for thumbnail filename
+  *  380d214e74 - AddonManager: Handles git module with no Repo
+    attribute - Fixes #4072
+  *  cbdac756a8 - Merge pull request #4963 from Helios113/stiffness
+  *  d2d113a7a1 - Merge pull request #4892 from PrzemoF/copr_fix_v37
+  *  ea9a4ef93f - Merge pull request #4972 from chennes/revert-4931-no-
+    filename-encode
+  *  1d74880ac2 - Revert Start: Properly hash thumbnail filenames
+  *  95770e521a - [Arch] Silence LGTM missing init warnings
+  *  1b12226bd4 - [Tools] Silence LGTM warning about missing init
+  *  317dd4c031 - Merge pull request #4928 from Zolko-123/master
+  *  2429043218 - Merge pull request #4931 from Kawashima-Azumi/no-
+    filename-encode
+  *  13ba896ea2 - Merge pull request #4970 from
+    chennes/openscadUnitTestBBoxFix
+  *  4e7742ad37 - Merge pull request #4932 from 0penBrain/windowClosed
+  *  a80e67c04c - [OpenSCAD] Fix OpenSCAD bounding box calculations
+  *  c167955018 - Merge pull request #4885 from Roy-
+    043/Draft_Fix_Array_Count_Issues
+  *  1925998907 - Merge pull request #4958 from
+    paullee0/ArchWall_BugFixes_14
+  *  82d18aa324 - Merge pull request #4950 from realthunder/FixLinkMode
+  *  586955e31b - [PartDesign] Enable reverse ability for
+    Pocket/UpToFace mode as it makes sense for curved faces
+  *  b2cf8581e0 - [PartDesign] Add reverse ability for Pad/UpToFace mode
+    as it makes sense for curved faces
+  *  39ca142d5f - [PartDesign] Restore 'Reversed' ability into
+    Pocket/2dims mode
+  *  c561b5ac1f - [PartDesign] Fix 'Reversed' no more available in Pad
+    'toFirst/toLast'
+  *  089d5abb6f - Fixes Xercesc include, harmonize XercesC_INCLUDE_DIRS
+    statement (#4960)
+  *  72411f83ad - Draft: Fix LGTM 'test for equality' warning (#4969)
+  *  61ac0b4838 - Merge pull request #4900 from sanguinariojoe/del_ship
+  *  50056dca9f - Merge branch 'master' into ArchWall_BugFixes_14
+  *  fece09a4d5 - Merge pull request #4954 from
+    ageeye/FixDefaultShapeVertexColor
+  *  05c88d8ada - Merge pull request #4905 from Roy-
+    043/Draft_fix_trimex_wrong_units
+  *  54f7486299 - Merge pull request #4955 from
+    paullee0/ArchWall_BugFixes_13
+  *  163075b3ba - Merge pull request #4967 from Syres916/patch-30
+  *  1dd5ffdba3 - Merge pull request #4968 from tomate44/patch-1
+  *  4ab37fc0ca - Added stiffness units to FreeCAD [mN/m, N/m, kN/m,
+    MN/m]
+  *  108437e37b - Update BSplineSurfacePyImp.cpp
+  *  09d9caf438 - TechDraw - Edit annotations via double-click
+  *  2343c3cbe2 - [OpenSCAD] Fixes cut color while importing CSG (#4920)
+  *  0fcd0cec44 - Merge pull request #4797 from
+    Russ4262/feature/tile_job
+  *  59c36f150e - Merge pull request #4815 from Russ4262/fix/GUI_issues
+  *  1cdfd611fd - Path: Downgrade module's debug level to INFO
+  *  ff3adacd93 - Path: Auto-load the user-selected job for the
+    simulator
+  *  be1e394da9 - Path: Changes to allow for Adaptive op defaults at job
+    level
+  *  30ea19a923 - Path: Refactor  algorithm to independent class
+  *  cfca2a790a - Path: Allow parent job assignment
+  *  2a900b1850 - [PartDesign] Expose WizardShaft/ strings to
+    translation (#4964)
+  *  e215c22519 - [Base] Remove one unnecessary precision level
+  *  463ff88a57 - [Base] Increase precision
+  *  dddf76b47f - [Gui] PropertyItem change Base Quantity Format
+  *  f3c2622468 - [PD] Gui - Primitives change Base Quantity Format
+  *  b0b4b321cb - [PartDesign] Linting and cleaning superfluous
+    whitespace (#4851)
+  *  6d136c9b1b - Add PartDesign Python commands for translation (#4961)
+  *  ed8e632708 - TechDraw - Remove code artifacts from
+    CommandDecorate.cpp (#4904)
+  *  4edf18a630 - TechDraw - Undo for Cosmetics Vertices and Lines
+  *  c6697bbc78 - FEM:request for reaction forces on Constraint
+    displacement
+  *  e2e7733d09 - [GUI] Add autoload option to Workbench preferences
+    page (#4957)
+  *  273a7d5e3f - FEM: examples, use correct constraint in information
+    for mystran plate example
+  *  a0d860679e - FEM: examples, displacement constraint needs to set
+    Free and Fix
+  *  ad63322ac7 - FEM: examples, delete not needed material values
+  *  4e6a09be37 - FEM: examples, add ccxtools solver
+  *  d635f03a60 - FEM: solver task panel, get rid off error message
+  *  1f38d89cc4 - FEM: material task panel, improve handling of input
+    fields without unit
+  *  24e472cdde - [ArchWall] Fix MakeBlocks to work if Base is Sketch
+    with 1 edge only
+  *  aff4172550 - FEM: solver framework member checks, extend them
+  *  dff0537fab - FEM: z88 and mystran writer, get rid of deprecated
+    member assignments
+  *  ec3b79aa9d - FEM: z88 tasks and writer, make use of mesh set data
+    getter class
+  *  6dbe713d7b - FEM: tasks module for z88, mystran and calculix, code
+    improvements
+  *  afd885330a - FEM: z88 writer, code formatting
+  *  4dbd2c36da - FEM: do not use the red error print if it is not a
+    error
+  *  b287c8604c - [ArchWall]  Fix MakeBlocks to work if Base is Sketch
+  *  df62e01c2b - Merge branch 'FreeCAD:master' into
+    FixDefaultShapeVertexColor
+  *  6c78531ab6 - FEM: examples, truss seg2, fix solver typ
+  *  c4118bb2be - FEM: examples, add 3D truss for z88 and calculix
+  *  0942f4f55e - FEM: calculix unit tests, add beam cross section tests
+  *  0090cf64a9 - FEM: unit tests calculix and cmake, move a method and
+    a file
+  *  a94eb6b3ba - FEM: typo
+  *  587c7323a7 - Merge branch 'FreeCAD:master' into
+    FixDefaultShapeVertexColor
+  *  acce57a25d - Merge pull request #4912 from sprhawk/master
+  *  1228f798bf - Merge branch 'FreeCAD:master' into
+    FixDefaultShapeVertexColor
+  *  e197c3ab9f - FEM: calculix writer, beam cross section angle,
+    improvements and fixes
+  *  d3b503be90 - FEM: calculix writer, femelement geometry, code
+    formating
+  *  7dac3cc6b3 - FEM: calculix writer, delete formatting comment, no
+    longer needed as alle calculix input values are formatted the time
+    being
+  *  f7cefaef47 - FEM: CalxuliX cantlever beam examples for pipe, circle
+    and rectangle cross section
+  *  ea9272b1a3 - FEM: calculix writer, reaction forces, add some
+    comment
+  *  7886391edf - Merge branch 'FreeCAD:master' into
+    FixDefaultShapeVertexColor
+  *  a74792e3f6 - Draft: Allow to stretch more complex Arch objects
+  *  2c940e3a98 - Arch: Remember wall alignment when creating from
+    existing wires
+  *  053dd7f3b8 - Arch: Don't add spaces to BuildingPArt's shape
+  *  f5aea33548 - Update src/Mod/TechDraw/App/Cosmetic.cpp
+  *  b817ade2a8 - [TD] comment the new centerline behavior
+  *  3a4bf809b2 - Merge branch 'FreeCAD:master' into
+    FixDefaultShapeVertexColor
+  *  bc9a601a46 - Merge pull request #4894 from steelman/arch-frame-
+    profile-alignment
+  *  aeddacfb7f - Merge branch 'FreeCAD:master' into
+    FixDefaultShapeVertexColor
+  *  082b78328b - Merge branch 'FixDefaultShapeVertexColor' of
+    https://github.com/ageeye/FreeCAD into FixDefaultShapeVertexColor
+  *  1b63b613de - FEM: ccx tools task panel, do not run solver with no
+    or wrong ccx binary
+  *  ed1d71e671 - Possible to use DefaultShapeVertexColor setting.
+  *  9813e10d8c - FEM: ccx tools, do not rais exceptions if there is no
+    binary, give feedback to the user instead
+  *  8a072140e3 - Merge branch 'FreeCAD:master' into master
+  *  a021f5d933 - Possible to use DefaultShapeVertexColor setting.
+  *  2736142ddf - Merge pull request #4901 from Russ4262/fix/3D_Pocket
+  *  8f4d3a7008 - Merge pull request #4906 from
+    Russ4262/fix/toolbit_missing_readme_doc
+  *  0e59eb565d - Merge pull request #4919 from
+    Russ4262/fix/profile_cut_side
+  *  d66fbada61 - Merge pull request #4818 from
+    Russ4262/refactor/path_array
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 19 Aug 2021 19:41:58 +0000
+
 freecad-daily (0.19.0+git25396-ecff58875c-1) unstable; urgency=medium
 
   * Compile
