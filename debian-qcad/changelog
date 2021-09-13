@@ -1,3 +1,57 @@
+qcad (3.26.0+git8563-851706bf4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 851706bf4f80274c3cdf633b319aaca83fc7ac11
+  * Date: 1630676845
+  * git changelog:
+  *  851706bf4 - update
+  *  021e2b0c2 - update dimension styles, overrides, property editor
+  *  a619e4f50 - update script bindings
+  *  10563ac8c - update DIN7200, add Layer, Symbole
+  *  35053c458 - fix FS#2274 - View > Screen-based Linetypes: rendering
+    of arcs with dashes
+  *  18b31c077 - add enum markers
+  *  a6a577f1c - add parameter to start transaction group or not when
+    creating block
+  *  b79c8d925 - update dimension style handling
+  *  7cdf9cf81 - clean up
+  *  564b97155 - clean up
+  *  e0ea205b7 - clean up
+  *  72001247c - fix FS#2270 - Draw > Dimension > Ordinate: Ordinate
+    dimension values scale with viewport
+  *  69a467be0 - update pro
+  *  5f95c159c - update script bindings
+  *  1936263a6 - refactor dimension properties, dimension style handling
+    add RDimStyleData for overrides of dimension entities
+  *  1fef55fbb - add parent id as property to allow updating
+  *  9053b6d6d - add setInteger
+  *  d79eaeb2f - output dim styles as part of debug info
+  *  bfe24a924 - add clearLinked to clear only linked storage (used to
+    reuse preview document)
+  *  88c7408c7 - add missing known variable
+  *  281e13215 - preformance: reuse preview document
+  *  915658a5f - add KnownVariableType enum to track type of known
+    variables
+  *  698c5d735 - add parent id as property to allow updating
+  *  56fedc2ab - add comment
+  *  f5d426b3d - add debug info about parent id
+  *  3e35fc036 - clean up
+  *  932f09847 - update script bindings
+  *  07c255134 - add templates
+  *  a4ad9f449 - set version 3.26.4.7
+  *  c782682eb - set dxflib version to 3.26.4.0
+  *  6b63ec5d7 - update script bindings
+  *  74d0c9c71 - add query functions with shape index information
+  *  510bd7b0e - add REntity::getClosestSubEntityId for scripts
+  *  b623f9406 - keep document dimension settings up to date with
+    dimenstion style settings
+  *  a2f36f3a7 - fix dimension shape order
+  *  d58433637 - update
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 05 Sep 2021 11:47:26 +0000
+
 qcad (3.26.0+git8527-913cbc8c2-1) unstable; urgency=medium
 
   * Compile

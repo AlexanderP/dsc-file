@@ -1,3 +1,104 @@
+freecad-daily (0.19.0+git25645-37d9757399-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 37d9757399b4c2ec30318eb88d7cd7c508246345
+  * Date: 1630650668
+  * git changelog:
+  *  37d9757399 - FEM: writer base, fix regression introduce in calculix
+    writer with ec55cb6b779bd
+  *  12d0974525 - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  70462e1d1b - Merge pull request #3229 from alafr/alafr-arch-
+    structure
+  *  c99ec69f9c - Merge branch 'alafr-arch-structure' of
+    https://github.com/alafr/FreeCAD
+  *  91dde33ef2 - Arch: Added option to references to fuse the base
+    objects by material
+  *  68b328fd4c - Merge pull request #4732 from donovaly/PD-attachment-
+    fix
+  *  3e483c5268 - Merge pull request #4788 from 0penBrain/UserEditMode
+  *  8ed419cf6a - Merge pull request #4882 from Roy-
+    043/Draft_Fix_init_tools.py
+  *  3172bd1005 - Merge pull request #4888 from Syres916/patch-21
+  *  854fc52ff2 - Merge pull request #4891 from Roy-
+    043/Draft_Fix_Misplaced_Edit_Nodes_BezCurve_2
+  *  ab119685ff - Merge pull request #4907 from Roy-
+    043/Draft_fix_move_alt_copy_mode
+  *  ff8f887de5 - Merge pull request #5004 from PrzemoF/copr_fix_v40
+  *  348ca64033 - Merge pull request #5005 from sliptonic/archcleanupfix
+  *  b53ec3bd4e - Black reformat
+  *  ddc4c69e82 - black
+  *  9369350c65 - [COPR] Bump version in spec file to 0.20pre
+  *  509af5e7c5 - Merge pull request #4916 from waebbl/find-vtk-9-
+    improvements
+  *  829c1d2a7e - Merge pull request #5003 from
+    sliptonic/removeArchPanel
+  *  b60edfd9d6 - Merge pull request #4974 from
+    Russ4262/cleanup/pathpocketshapegui
+  *  ffa92561a0 - Merge pull request #4976 from
+    Russ4262/cleanup/general_lgtm
+  *  9cd18976d4 - Merge pull request #4986 from ho-ho-ho/master
+  *  cf5ffb8208 - Merge pull request #4923 from Syres916/patch-23
+  *  63d77e003b - Merge pull request #4945 from 0penBrain/sk3ptCircle
+  *  f5bf6f437d - Merge pull request #4966 from dirkolbrich/sketcher-
+    name-param
+  *  730159d088 - purge archpanel support
+  *  3cb9f522a7 - Sketcher: display dimensional constraint name
+  *  fa057ca7d3 - Merge pull request #4772 from realthunder/EulerAngles
+  *  b8f4a152d3 - Start: Fixed faling test
+  *  62997b1bfa - Merge pull request #4915 from
+    carlopav/draft_snap_nodoc_fix
+  *  cd19082ac6 - Update src/Mod/Draft/draftguitools/gui_snaps.py
+  *  41e0eda96c - Merge pull request #4914 from donovaly/PD-property-
+    fixes
+  *  2f70ddc3dd - Removed redundant namespace
+  *  02fb90f16c - Merge pull request #4924 from dbdbdb/spacepilot-pro-
+    keycodes
+  *  1e7aa024dc - Merge pull request #4997 from PrzemoF/copr_fix_v39
+  *  52a6558dfb - Merge pull request #5000 from
+    chennes/checkForConflictingAccelerators
+  *  1823d05950 - Merge pull request #5001 from
+    carlopav/Gui_fixTooltipForGroupedActions
+  *  01df25866c - Gui: Improved tooltips for grouped commands
+  *  af9690ec06 - [Core] Add checks for conflicting accelerators
+  *  9153079756 - [COPR] Restore dist in Release
+  *  ae7a8752fb - Path: LGTM cleanup
+  *  8c361dd3fc - Merge pull request #4902 from
+    Russ4262/fix/Extensions_error_msg
+  *  619a30b672 - Merge pull request #4994 from PrzemoF/copr_fix_v38
+  *  154fc694b8 - Merge pull request #4995 from
+    chennes/fix4664HardcodedTooltips
+  *  cb4a0b1dd0 - Also set tooltip after Reset and ResetAll
+  *  f7f8d200bc - Arch: Better icon for arch references
+  *  a09ec0b403 - Draft: Use BuildingParts as group in Draft SVG
+    projections
+  *  49abe81271 - Merged crowdin translations
+  *  a8cb3ef1e3 - Updated ts files
+  *  e359c01cc9 - Tools: Removed Plot from translation scripts
+  *  8f8a0c7e35 - [COPR] Exclude Inventor-devel for fedora above 34
+  *  44ce401a53 - [GUI] Refactor tooltip code to rebuild shortcut
+  *  4b1c62e8c9 - [COPR] Fix FreeCAD spec as dist in no longer required
+  *  3473537ec6 - improve search for VTK-9
+  *  08736cb4ce - Plot: Rename README to README.md + refinements
+  *  d0de6284f9 - Merge pull request #4872 from
+    berberic2/PD_pad_ui_change
+  *  103262d131 - Merge pull request #4971 from
+    sanguinariojoe/plot_module
+  *  dcaab146c1 - Merge pull request #2625 from luzpaz/AddonManager-
+    readWarning
+  *  baafa2a0c4 - Update grbl_post.py
+  *  378dec720c - Gui: fix -Winconsistent-missing-override, TD: fix -
+    Wunused-parameter
+  *  2845078459 - AddonManager: Consolidate preference in user.cfg from
+    Plugins to  Addons
+  *  9a97bf16cf - Merge pull request #1 from
+    oliveroxtoby/matplotlib_import_issue
+  *  b7867e2be1 - Prevent matplotlib selecting the PyQt API instead of
+    PySide2
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 05 Sep 2021 11:28:57 +0000
+
 freecad-daily (0.19.0+git25541-ca043dcb6d-1) unstable; urgency=medium
 
   * Compile

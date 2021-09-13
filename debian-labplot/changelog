@@ -1,3 +1,57 @@
+labplot (2.8.2+git8681-c635d74d8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: c635d74d845b6cc2273323491ab03904f72bff4f
+  * Date: 1630832631
+  * git changelog:
+  *  c635d74d8 - GIT_SILENT Update ChangeLog.
+  *  717f01799 - Improvements in ColorMaps and Examples Dialogs:
+  *  ffb285eda - Fix compile warnings
+  *  d03fb39ae - First version of the Examples Dialog - a dilaog showing
+    all available example projects that will be delivered with LabPlot
+    and that can be openned from the main menu bar via Open Example.
+  *  1ca2203d7 - Improve formula picture resolution
+  *  f36ee542b - [axis] Fix y axis line for non-logical positions
+  *  275b25e6f - [axis] Fix crash
+  *  4c71564ce - [axis] unused variables
+  *  37ffe13a0 - typo
+  *  9b5865a55 - [axis] Fix axis line for non-logical positions
+  *  149619eca - [axis] Fix auto data range
+  *  b0718f4e7 - [axis] Implement auto data range
+  *  9f8c927d7 - Hamburger menu needs framworks >= 5.81
+  *  5ddbef48e - Added KHamburgerMenu. It's not shown yet, the reason is
+    not clear yet...
+  *  184a536f6 - [worksheet] introduced axis range type replacing the
+    old auto scale option.
+  *  968ee5e1e - [worksheet] when creating new text labels and images
+    via the context menu of the plot, place them under the mouse cursor.
+    This is similar to how it's done already for labels and images
+    placed directly on the worksheet.
+  *  f86fd3734 - [datasets] don't download the online version of the
+    dataset descripton twice and,  if it's in the hmtl format,  convert
+    it to plain tex for the spreadsheet comment field.
+  *  1d0b3fd61 - [axis dock] add tooltips for new buttons
+  *  f77a5a8af - [worksheet] properly handle the  positioning of
+    TextLabel when being child of a worksheet  and not of a plot. This
+    also solves the problem with worksheet's text labels jumping to a
+    different position when a theme is applied.
+  *  6b5159020 - Fix minor typos
+  *  5eb6bb010 - Introduced text setting mode in TextLabel to better
+    switch between rich-text formatting,  LaTeX and Markdown type-
+    setting.
+  *  25bad33ab - Added the search for the Dicsount library for the
+    markdown markup language.
+  *  12618da0d - Save/load or rug properties in XYCurve and minor fixes
+    in Tufte's theme and R dataset defitinition file.
+  *  6dd8fffcc - [histogram] introduced half bars line type.
+  *  b1bf73f6e - [worksheet] minor fixes
+  *  c0753b023 - [worksheet] implemented rug plot.
+  *  dfcf86584 - GIT_SILENT made messages (after extraction)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 05 Sep 2021 12:11:10 +0000
+
 labplot (2.8.2+git8654-9348dffe5-1) unstable; urgency=medium
 
   * Compile
