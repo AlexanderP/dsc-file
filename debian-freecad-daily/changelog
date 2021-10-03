@@ -1,3 +1,179 @@
+freecad-daily (0.19.2+git25778-7f772ba227-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 7f772ba227aa5fcb778f0e6991f167d080ebd03f
+  * Date: 1632154544
+  * git changelog:
+  *  7f772ba227 - port to MSYS2/clang
+  *  7a7c7cc77f - Merge pull request #5030 from mwganson/spreadsheet
+  *  e5d5bc774f - Merge pull request #5048 from Roy-043/Draft-Fix-
+    annotation-scale-to-label-issue
+  *  07eced129a - Draft: Fix annotation scale to label issue.
+  *  b8a4d1e07e - Merge pull request #4800 from heewa/abort-save-when-
+    unable-to-finish
+  *  907ab8205e - Merge pull request #5040 from mwganson/macros
+  *  c64b470731 - [Docs] Minor tweaks to BUILD_OSX.md
+  *  639979e4e7 - Merge pull request #4217 from
+    ipatch/macos.build.instructions
+  *  1761eb8ce0 - Merge pull request #5046 from
+    carlopav/Draft_fixSnapGrid
+  *  be10709785 - Tools: LGTM - don't catch BaseException
+  *  2a75451460 - Template: LGTM - don't catch BaseException
+  *  ff5bf3e0df - PD: LGTM - don't catch BaseException
+  *  be5971ad8e - Path: LGTM - don't catch BaseException
+  *  97cec75e32 - Plot: LGTM - don't catch BaseException
+  *  68a027cf94 - Draft: LGTM - don't catch BaseException
+  *  84e86793f0 - Arch: LGTM - don't catch BaseException
+  *  7db39151b9 - Merge pull request #5044 from
+    chennes/lgtmAppDeclHidesParam
+  *  8b7da3b0eb - PD: Silence LGTM warning about empty block
+  *  e211b89cf8 - port to MSYS2/clang
+  *  6780ded233 - [App] Fix LGTM warning decl hides param
+  *  ef0e303235 - App: handle empty, . or .. as parent directory
+  *  c1cbee9a06 - Tools: port example of embedding to Py3
+  *  31a8fc5c7d - Draft: fix Snapper GridSnap not working over a face
+  *  2fd71242ba - Merge pull request #5043 from
+    chennes/lgtmLinkDeclHidesParam
+  *  186548da6c - [App] LGTM fix - rename loop variable
+  *  75e0ad6396 - Merge pull request #5041 from Syres916/patch-32
+  *  874e333d67 - Merge pull request #5039 from
+    troyp76/PartDesignChamferImprovement
+  *  2c9a4602a1 - [AddonManager] stderr remove translate
+  *  1a3527c06a - Improved chamfer behavior when faces are selected
+  *  a7fb567cd5 - [AddonManager] Handle stderr from git status
+  *  5661e23eef - Merge pull request #4792 from heewa/abort-quit-on-
+    failed-save
+  *  823ebacbf9 - [Sketcher] Refactor split code
+  *  bb48dad417 - [Macros Dialog]rename DuplicateReplaceSpaces parameter
+    to ReplaceSpaces, make it default = true, apply also to new file
+    creation and renaming in the dialog
+  *  fe616e8954 - [Macros Dialog] Add 2 new parameters:
+    DuplicateIgnoreExtraNote and DuplicateReplaceSpaces
+  *  1ceaa09d17 - Added spring boundary condition
+  *  d7ac25e3cf - Ammending stiffness units
+  *  421ece90b6 - [FEM] Add backward compatibility for simple hardening
+  *  5f4b87035b - [FEM] Add tools for more yield points in simple
+    hardening materials
+  *  edee981ee1 - Merge pull request #5038 from mwganson/macros
+  *  54700faad8 - Gui: fix typos
+  *  a3357cfda8 - [Macros Dialog] begin searching for unique name for
+    duplicate function with current numbers rather than from 001
+  *  5fd21f80da - TechDraw housekeeping: TechDraw_LandmarkDimension icon
+    fix (#5033)
+  *  e305dbd49c - PartDesign: Add new need active body dialog with
+    option to choose body (#4949)
+  *  820e88f95b - [Core] (Partially?) Fix data loss on dir rename
+    (#4996)
+  *  3ab5dadd82 - Mesh: add function section() to Mesh class
+  *  666f67f8d9 - Part: support null shapes in boolean operations
+  *  d3567b9d90 - Merge pull request #5031 from luzpaz/PD-typo
+  *  89e4f21008 - MeshPart: show a more useful error message if the
+    currently selected object cannot be tessellated
+  *  08aa7154c1 - TechDraw: Changed TechDraw_Dimension_Link ->
+    TechDraw_LinkDimension (#5032)
+  *  7fb4dd37e4 - PD: Fix typo in function getContiniusEdges-
+    >getContinuousEdges
+  *  9fe1f56824 - PD: fix ProfileBased::Restore to not affect sub-
+    classes that need to handle changed property types/names
+  *  e273954135 - PD: move handling of changed properties of Transformed
+    to handleChangedPropertyType
+  *  6176e815e8 - PD: move handling of changed properties of the
+    Chamfer/Fillet to handleChangedPropertyType
+  *  62723f3dfd - Part: move handling of changed properties of the
+    Primitive class to handleChangedPropertyName and
+    handleChangedPropertyType
+  *  4327cd5ccb - Mod: make sure to call the base class'
+    handleChangedPropertyType
+  *  33f3fa6865 - Mesh: define the typenames FacetIndex and PointIndex
+    to distinguish between facet and point related indexes
+  *  ce285ea265 - Mod: fix warning [-Wmacro-redefined]
+  *  d02e708e75 - [Spreadsheet] Prevent infinite loop when copy/paste of
+    non-rectangular selection
+  *  671032f506 - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  046fcdc68c - Gui: fix compiler warnings: [-Wunused-parameter]
+  *  40d2955c66 - Base: split export/import macros from FCConfig.h and
+    move them to FCGlobal.h The FCGlobal.h can be included in a Global.h
+    header file of an extension module.
+  *  4ed05b1406 - Merge pull request #4771 from Syres916/patch-16
+  *  075f9cdc74 - Merge pull request #4791 from heewa/fix-lost-err-msg
+  *  381f835479 - Merge pull request #5027 from 0penBrain/rotation
+  *  59a4a4c361 - [Core] Rotation : fix gimbal lock handling
+  *  455412ccc7 - Tools: Updated crowdin script after PR #5021
+  *  811004b6c8 - Merge pull request #5021 from
+    chennes/translatorImprovements
+  *  c4dd6b3b02 - Merge pull request #5020 from 0penBrain/placement
+  *  e5c7bb6487 - Merge pull request #5022 from Megidd/fix-infinite-loop
+  *  7e66ea855b - Merge pull request #5025 from
+    luzpaz/DlgSettingsNavigation-code-naming-conformity
+  *  da918350c9 - Merge pull request #5026 from luzpaz/Crowdin-
+    Axonometric
+  *  f560d5e810 - [Gui] Edit/Placement not active when no object
+    selected
+  *  528790ddb8 - Crowdin: Expose View -> 'Standard views' ->
+    'Axonometric' to translation
+  *  8ebd5c6eac - Gui: Make DlgSettingsNavigation methods conform to
+    naming standard
+  *  c3df0db4f7 - Mesh: fix infinite loop when repairing mesh facet
+    indices
+  *  719fb95382 - [GUI] Add prefs for translators
+  *  582c26ea8b - Merge pull request #5019 from luzpaz/Gui-fix-korean-
+    and-alphabetize
+  *  a12385adb9 - Gui: Language/Translator.cpp remove extra .ko
+    translation + alphabetize
+  *  04eecd0c92 - Merge pull request #4178 from uLeonis/master
+  *  8a526a9ba4 - Merge pull request #4935 from edi271/TechDrawToolsEdi
+  *  9fe0442729 - Merge pull request #5018 from luzpaz/sketcher-cstring-
+    fix
+  *  7295c795d1 - Merge pull request #5012 from luzpaz/pathjobgui-typo
+  *  391a9e8d23 - Draft: whitespace tweak
+  *  c03d4b1c10 - Draft: fix comment typo
+  *  6642e28826 - Path: Fix PathScripts/PathJobGui.py typo bug
+  *  48c1738a53 - Merge pull request #5017 from chennes/renameWBTab
+  *  e72da8babd - Sketcher: fix mislabeled .ui cstring tag
+  *  50e4be1b90 - [GUI] Change name of workbenches tab
+  *  642836d58a - Merge pull request #5002 from AjinkyaDahale/fix-4732-
+    self-int
+  *  67a603f094 - Merge pull request #5016 from mwganson/techdraw
+  *  c4367add4a - [TechDraw] prevent crash where user has duplicated
+    page without dependencies and then tries to remove a view from one
+    of the pages by editing the Views property
+  *  64775bf91f - Merge pull request #5007 from 0penBrain/DrawStyleMode
+  *  33d63519f4 - Merge pull request #5013 from mwganson/techdraw
+  *  d964653057 - Merge pull request #5014 from marioalexis84/draft-
+    gui_label
+  *  e19c086116 - Merge pull request #5015 from Roy-043/Spreadsheet-
+    importXLSX
+  *  419e601482 - Tools: Updated crowdin scripts
+  *  89e1a97d80 - Merged crowdin translations
+  *  4339e47582 - Spreadsheet importXLSX: Added floor and ceil
+    functions. Fixed aliasRef is None issue.
+  *  bdbe3105ff - Draft: Prevent working plane from restoring after
+    label command
+  *  dfe02d4099 - [TechDraw] prevent crash where user duplicates page
+    without also duplicating dependencies
+  *  3454ca381a - renamed to CommandExtensionPack
+  *  89b7d72d1a - added TechDrawTools Commands
+  *  017db79458 - delete redundant line in CommandCreateDims
+  *  cdd8147024 - added TechDrawTools Commands
+  *  d14167a50d - Updated ts files
+  *  1c8b803f9e - Draft: Introduced Hatch command + object
+  *  7cb44f86ac - Merge pull request #3358 from JeromeL63/Draft_addgroup
+  *  cbde274c9a - Merge branch 'master' into Draft_addgroup
+  *  42a8389e40 - Restored docstring
+  *  5c0517e620 - Changed M shortcut to M,G
+  *  f642e561d1 - Merge pull request #5006 from
+    0penBrain/ExpDlgClearEnter
+  *  4ce30f69d1 - Merge pull request #5010 from mwganson/duplicate
+  *  5cd231bf11 - Merge pull request #5011 from marioalexis84/draft-
+    gui_trimex
+  *  813114cab5 - Draft: Fix variable referenced before assignment
+  *  096fb76585 - [Edit menu -> Copy / Duplicate] Add Use Original
+    Selections button to dependency selection dialog
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 20 Sep 2021 17:09:25 +0000
+
 freecad-daily (0.19.0+git25645-37d9757399-1) unstable; urgency=medium
 
   * Compile

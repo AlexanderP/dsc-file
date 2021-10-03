@@ -1,3 +1,119 @@
+labplot (2.8.2+git8750-7898511ff-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 7898511ff91a8966fb68bf12bf91b6559bd98da7
+  * Date: 1632090429
+  * git changelog:
+  *  7898511ff - [xycurve] Fix drawing only relevant lines between data
+    points
+  *  4f04544fc - Initialize the symbol widget also in
+    XYFourierTransformCurveDock.
+  *  c608979f5 - Don't crash when closing a top-level views like
+    worksheet,  etc. (regression).
+  *  bd35a8ddf - Mark the project as changed on text changes in Note.
+  *  e866f0521 - Improved the logic in the project exlorer to handle its
+    state (expanded nodes, etc.) on save/load.
+  *  49afef680 - [axis dock] clean up
+  *  b5c3b496a - [worksheet] properly scale the image element on size
+    changes when the keep ration option is not selected.
+  *  ae0f11ca1 - Removed obsolete includes and forward declarations in
+    CartesianPlot.
+  *  6ee1cd446 - Cleanup.
+  *  2cb2ca762 - Reduced code duplication in AxisDock.cpp.
+  *  83f082036 - [worksheet] simplified the data range type settings
+    (free, last points, first points) in plot's properties widget.
+  *  b983a41cf - [worksheet] react in worksheet dock on use view size
+    changes.
+  *  554e32c19 - [worksheet] made the option use view size undo/redo-
+    able.
+  *  356277cbf - [worksheet] when adding a new label or a new image from
+    the toolbar and not from the context menu, place them at the center
+    of the worksheet.
+  *  dfc6348e4 - [worksheet] properly save and load the properties of
+    the median symbol in the box plot and activate the range-frame axis
+    mode if Tufte theme was selected.
+  *  033ecff42 - [axis] Fix missing axis line for some cases
+    (regression)
+  *  09ff73031 - Removed the dependency on PlotArea in
+    CartesianPlotLegend.
+  *  20dda806c - Moved background related enumerations from PlotArea to
+    WorksheetElement to remove the dependencies on PlotArea in several
+    classes.
+  *  41a954866 - [sdk] export the APIs for histogram and box plot and
+    more includes cleanup.
+  *  ed64e747e - [sdk] expose the APIs for XYEquationCurve.
+  *  e0ea6e647 - Removed the dependency on PlotDataDialog in XYFitCurve.
+  *  5ae1d7ada - Fix the build.
+  *  92369d3dd - Export the API symbols for the shared library and more
+    forward class declarations.
+  *  1661cd684 - Introduced the ability to build a dynamic library
+    containing the plotting part of LabPlot only. The idea is to provide
+    a component that can be used in other projects. First version, more
+    improvements will follow in future.
+  *  56b1c0503 - Fix building tests
+  *  05b82f6ac - Merge branch 'master' of https://github.com/KDE/labplot
+  *  5081e4359 - Reduce dependencies
+  *  e8657d216 - Removed the dependency on Workbook and Datapicker in
+    AbstractPart and further cleanup in the includes.
+  *  8e2e761af - Removed the dependency on LiveDataSource and on
+    MQTTClient in AbstractAspect.
+  *  a00e82cb4 - [spreadsheet] delay the initialization of menus and
+    actions in SpreadsheetView until the point when they are really need
+    and some minor cleanup.
+  *  c3c14ad5b - [matrix] delay the initialization of menus and actions
+    in MatrixView until the point when they are really need and some
+    minor cleanup in the includes.
+  *  511a5623f - typo
+  *  07f50c350 - fix file name logic
+  *  b45fcb41b - [file dialog] Improve path handling on Windows
+  *  26f1d48a4 - [Matio] Fix importing multiple variables in a workbook
+  *  378f5e189 - [import dialog] Improve file name handling on Windows
+  *  4575ca829 - [Matio] Prepare import of multiple vars and clean up
+  *  9806a51f8 - [matio] Make import a lot faster
+  *  a2302ae33 - [fit] Use evaluation range as plot range and not more
+  *  1bc749b4d - Add license info for 3rdparty kdmactouchbar lib
+  *  12c72544e - Add license info for 3rdparty liborigin lib
+  *  e100ddbec - Convert newly added example-kdefrontend license headers
+    to SPDX
+  *  277a7abaa - Convert QT_BEGIN_LICENSE license statements to SPDX
+  *  47f89bb51 - Convert CC-BY-3.0 license header to SPDX
+  *  cd664e692 - Organize SPDX-FileCopyrightText better
+  *  b55198932 - Put contact information in angle brackets
+  *  6a2e3f7fb - Convert remaining MIT license headers to SPDX
+  *  a1b7bc2e7 - Use 4 spaces instad of tab in license headers
+    indentation
+  *  d912fbf08 - Adjust formatting of license headers
+  *  3e152b31b - GIT_SILENT Clean up 'by' keyword in SPDX-
+    FileCopyrightText
+  *  2fdf8aff2 - GIT_SILENT Remove .directory file
+  *  05784fb65 - Group 'Description' with other info and not license
+    statements
+  *  5cace43b4 - Format license headers & cleanup
+  *  c4a22581a - Convert LGPL-3.0-or-later license headers to SPDX
+  *  1b05db82b - Convert remaining BSD and GPL-3 license headers to SPDX
+  *  4009f94a3 - Remove licensing files that do not reference and data
+    files
+  *  d70fdb6e2 - Convert license information for datasets
+  *  e62c3ed32 - Convert license header oftree.hh to SPDX
+  *  0de44ce50 - Manually convert remaining MiT license statements
+  *  f856a122d - Put contact information in <> instead of ()
+  *  1517e9197 - Put contact information in <> instead of ()
+  *  5c808d980 - Update .gitignore
+  *  61e60115f - Manually convert remaining GPL-2.0-or-later license
+    statements
+  *  0c1a14006 - kdefrontend/dockwidgets: Convert license headers to
+    SPDX
+  *  c77558d8a - Remove obsolete COPYING file
+  *  2a0dde5b9 - Cleanup
+  *  f79419e37 - Convert license headers to SPDX
+  *  a991e384a - [worksheet] prevent switching to scientific notation
+    for axis labels when openning a project where the format was
+    explicitely set to decimal.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 20 Sep 2021 20:16:17 +0000
+
 labplot (2.8.2+git8681-c635d74d8-1) unstable; urgency=medium
 
   * Compile

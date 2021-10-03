@@ -1,3 +1,150 @@
+qcad (3.26.0+git8680-dee6a5e55-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: dee6a5e553f99ae35384b54465491abb378e8ee1
+  * Date: 1632129407
+  * git changelog:
+  *  dee6a5e55 - update translations
+  *  75615fc39 - add preference to show / hide dim style overrides
+  *  db5491998 - add DimStyleOverride flag
+  *  9305529ae - update
+  *  0ee581257 - tag dim style overrides
+  *  d317b7e52 - add preference to show / hide dim style overrides
+  *  a6aad6436 - add type strings
+  *  6d5e0abd5 - clean up
+  *  0add22fdd - update
+  *  882ecdeed - add local language name
+  *  8b0e94364 - set version to 3.26.4.8
+  *  2815a7337 - Translated using Weblate (Slovak)
+  *  86cf78bd8 - Translated using Weblate (Polish)
+  *  fd80f043f - Translated using Weblate (Polish)
+  *  ddef0c788 - Translated using Weblate (Dutch)
+  *  fc78358ae - use same property type id for dim style and dim
+    entitites (simplify translations)
+  *  f11f95d20 - use same property type id for dim style and dim
+    entitites (simplify translations)
+  *  75a93e27a - clean up
+  *  9ba33b325 - release object handle on re-assignment
+  *  2f9f633f0 - clean up
+  *  a9e54cac8 - update script bindings
+  *  062f2e164 - add more translations
+  *  43ea8c883 - compile fix for old gcc
+  *  78ca3c0cb - update
+  *  cdb42b9be - compile fix for old gcc
+  *  d670a4c63 - compile fix for old gcc
+  *  40f66d973 - compile fixes for old gcc
+  *  61c869175 - fix compiler warnings
+  *  54695da9b - compile fix for old gcc
+  *  4f5bc1926 - add Danish user reference manual translation
+  *  a5b99829b - update user reference manual
+  *  82bf02fc0 - fix label alignment
+  *  89388398d - update translations
+  *  73a83f46e - update translations
+  *  855c5088d - update translations
+  *  1c2255437 - update translations
+  *  bf6567090 - fix FS#2279 - Edit > Application Preferences > File >
+    Open/Save: wrong initial value shown for default format
+  *  a8b2656bf - fix entity type filtering
+  *  ea6d4e4ee - fix thread safety
+  *  e1a1b8f7b - update
+  *  2f7d9207c - update menu separator color
+  *  d3247db6e - fix icon paths for derived classes
+  *  735cc0d21 - clean up
+  *  492bf783c - compile fix for msvc
+  *  2f1b52e81 - compile fix for msvc
+  *  e98933697 - add test data
+  *  7903efc71 - update translations
+  *  1481108d3 - change layout type to grid layout to improve expansion
+  *  551d950b7 - clean up
+  *  8e4a2f514 - add API doc
+  *  7c13f23c2 - make sure we update property editor if a property has
+    been added
+  *  13ad0d16b - update
+  *  306c0c9b5 - prevent duplicate custom property handling aused by
+    fixed custom properties
+  *  1d4d8e271 - clean up
+  *  d82c315e6 - update script bindings
+  *  67ab03bfa - update translations
+  *  2009960d8 - clean up
+  *  6ae3bcdae - move RProperty to separate file
+  *  52bec0d80 - move RProperty to separate file
+  *  e7b2efcb7 - add support for a list of fixed custom properties to
+    always include in the list of combined properties
+  *  b428bac81 - add containsAll
+  *  fd293825d - keep labels small, show start of numbers if line edit
+    is too small (instead of end as by Qt defaults)
+  *  66a1e3c86 - fix translatable strings
+  *  55418e0e2 - update translations
+  *  4fa8e8d02 - always regen selected entities to update reference
+    points
+  *  7669fd443 - add missing rtti
+  *  d2172ef42 - add Qt concurrent module
+  *  6491dd105 - concurrent processing of property values
+  *  f3fbc710d - thread-safety
+  *  dfb9edf77 - add queryObjectCC to query object pointers directly for
+    thread safety
+  *  ec92154c1 - add separate preferences for displayed reference points
+    and active reference points
+  *  fa62688a1 - update script bindings
+  *  c74d89388 - avoid unnecessary listener notifications
+  *  f1c7f60f1 - refactoring / performance improvements for property
+    editor
+  *  6be3df4e2 - refactor typeid to rtti
+  *  ae7c2187b - allow disabling of listener notifications at storage
+    level
+  *  44f935989 - exclude text entities from intersecting shape search
+    (auto trim, break out, etc.)
+  *  76056e81b - fix Mac OS X, OS X, macOS name references
+  *  59d836377 - fix closing of floating dock widgets under macOS
+  *  6f880e328 - fix column stretch
+  *  282fa41f6 - OS X -> macOS
+  *  dd8bf4939 - fix translatable strings
+  *  336a474b4 - update translations
+  *  d60f26de1 - don't translate decimal separator
+  *  89ed5d4b3 - update script bindings
+  *  f703e5e2a - add dimblk properties
+  *  2cb744c49 - arch tick depends on dimtsz only
+  *  50d4fb85a - add getBlockNameFromHandle
+  *  75caa60c4 - clean up
+  *  bdf101f71 - clean up
+  *  e5d4cdff5 - update after clearing overrides
+  *  561bb3ef1 - fix type conversion
+  *  227d372ae - clean up
+  *  402acefb8 - clean up
+  *  92e20e262 - update script bindings
+  *  d15276b25 - add clearStyleOverrides
+  *  06709d99b - update strings
+  *  3efb1b6a0 - add isEllipseArcEntity
+  *  63f30c6b0 - spelling
+  *  ca1f0e114 - allow deriving from PropertyEditorImpl
+  *  a3d6073c3 - update strings
+  *  5ad31b4e1 - add EAction.warnNotLineArcSplineEllipseArcPolyline
+  *  67025c7bb - update unit tests
+  *  690ceb163 - revert text placement changes for dimensions
+  *  376862484 - update script bindings
+  *  6a79d6f47 - move getFileQCADVersion to RDxfServices fix font names
+    on import add support for dimtad, dimtih
+  *  7329ead6e - add updateFromDocumentVariables to update dim style
+    from document variables
+  *  2cb3faba1 - use dimtsz to check for use of arch ticks
+  *  95d98c66f - add support for dimtad, dimtih
+  *  f61c7dfc6 - fix FS#2275 - Snap > Center: snapping to center of
+    polyline arc segments
+  *  72be37614 - only set simple proxy for dim style if no other proxy
+    has been installed
+  *  a7c6dc0cc - add dimension override properties
+  *  0a1ce8dc5 - allow plugins to affect dimension property
+    initialization
+  *  ae3c3265e - lighter default selection color
+  *  df54d15ba - add QGridLayout::getItemRow and
+    QGridLayout::getItemColumn for scripts
+  *  e1e7ebeb1 - clean up
+  *  6483a09e8 - set object name for group widgets
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 20 Sep 2021 17:27:09 +0000
+
 qcad (3.26.0+git8563-851706bf4-1) unstable; urgency=medium
 
   * Compile

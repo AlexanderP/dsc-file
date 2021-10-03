@@ -1,3 +1,31 @@
+clementine-qt5 (1.4.0~git730-gfd585e8aa-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: fd585e8aa4f53e1264f6017b592064d7867049ee
+  * Date: 1632218023
+  * git changelog:
+  *  fd585e8aa - RipCDDialog: no longer forces Cdda* to emit signals
+  *  2936578fa - CddaDevice: Preventing double read on disc change.
+  *  62b5a0e77 - CddaDevice now does not re-read song list if disc is
+    not changed
+  *  50404a967 - RipCDDialog now only depends on CddaDevice, no longer
+    on CddaSongLoader
+  *  6b03b8f5d - CddaSongLoader now emits a Finished signal if no
+    further updates will follow for the same disc read.
+  *  90ec6f6a2 - CddaSongLoader now reads CD-Text for metadata
+  *  b020171da - Automatic merge of translations from Transifex
+  *  c969bf978 - Automatic merge of translations from Transifex
+  *  082f941bb - build: Fix translations
+  *  cd72cf339 - Use XSPF image elements as manually set artwork
+  *  ba29b0e3b - build: Add Debian Bullseye.
+  *  ab6a48013 - Apply reformatting from lint.
+  *  f548884f5 - Correct time computation for seekbar tooltip.
+  *  1535e78aa - Automatic merge of translations from Transifex
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 21 Sep 2021 10:54:30 +0000
+
 clementine-qt5 (1.4.0~git716-g2cca75d93-1) unstable; urgency=medium
 
   * Compile

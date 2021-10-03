@@ -1,3 +1,91 @@
+smplayer (1:21.8.1~git9966-8b7a423e9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/smplayer-dev/smplayer.git
+  * Branch: master
+  * Commit: 8b7a423e9eefd815c167089f884cbfc680496149
+  * Date: 1631974186
+  * git changelog:
+  *  8b7a423e9 - Update ts files
+  *  56ffd3611 - Make some texts more generic
+  *  539c7c307 - Delete the snap directory
+  *  a12b139cb - Update build-flatpak.yml
+  *  fa0a175d2 - Use QDebug
+  *  440ce6f26 - (Mac) Install Qt translations
+  *  5552d5fd2 - Update build-snap.yml
+  *  99244cef8 - (snap) Install qt translations
+  *  e2b46e09e - Add the user bin dir to the search path
+  *  176b5ba8b - Prevent app_bin to be empty
+  *  d91717a4b - Find youtube-dl binary on Linux
+  *  5b0317324 - (Youtube) Don't use ~/bin by default on Linux
+  *  31ef60033 - Update build-flatpak.yml
+  *  69203778e - Change a text
+  *  acc45dd03 - Update ts files
+  *  00afbb015 - Update Spanish translation
+  *  250a0b0b5 - Update translations
+  *  94cd929e2 - Change a text
+  *  08d1716c4 - Use only rx_stream_title
+  *  e56654f40 - Add option 'allow av1 codec'
+  *  37939466f - Disable yt binary box when not needed
+  *  9a5d0a091 - Revert changes in smplayer.pro
+  *  372996f6e - Revert previous commit
+  *  ce2319acf - Look for python only on linux
+  *  0e70230fe - Simplify function
+  *  946c99cc5 - Change some texts
+  *  dad1a1143 - Identify yt-dlp version
+  *  e76d64080 - Possibility to download yt-dlp
+  *  16a37b404 - Use correct path on Windows for ytdl_bin
+  *  1caf462e4 - Add option to select either youtube-dl or yt-dlp
+  *  e24fc22f8 - Use python only with youtube-dl
+  *  53d70b0e2 - Pass to mpv the youtube-dl path if it's not the default
+  *  7b9847dda - Simplify on YT_BIN_ON_CONFIG_DIR
+  *  9d831da92 - Set the default youtube-dl path in preferences.cpp
+  *  d64baf100 - Use / as prefix
+  *  48f7b7993 - Use /tmp as prefix for the buffer name
+  *  1d520897d - Add missing include
+  *  34386fa74 - Use OS_UNIX_NOT_MAC in retrieveyoutubeurl.cpp
+  *  c3ec35cc4 - Revert previous commit
+  *  b318cabf1 - Update install_appdata.sh
+  *  d4d58e9a9 - Update build-windows-64.yml
+  *  9391e0968 - Update build-windows-32.yml
+  *  a50930d46 - Update build-windows-32.yml
+  *  0131af12c - Update build-windows-32.yml
+  *  e04b0b08b - Create build-windows-32.yml
+  *  4b1d69e07 - Fix in install_appdata.sh
+  *  f652b61e9 - Update build-flatpak.yml
+  *  94b252dc2 - Update build-flatpak.yml
+  *  c7847fedc - Remove NO_DEBUG_ON_CONSOLE from build scripts
+  *  653504005 - Add NO_DEBUG_ON_CONSOLE in smplayer.pro
+  *  a5930bd0e - Remove support for obsolete mplayer2
+  *  8ca093fd8 - Identify FreeBSD on startup
+  *  c21a91c83 - Replace Q_OS_LINUX with OS_UNIX_NOT_MAC
+  *  facc9c2ed - Fix compile on freebsd
+  *  0241af1f1 - Add support for autorotate 270 and 180 degrees
+  *  9acae608b - Comment YTDL code
+  *  d6a8e245a - Change name of action
+  *  b8aa96c94 - Pass path
+  *  b1c936d3b - Use YT_BIN_ON_CONFIG_DIR only on Windows
+  *  f386dc597 - Fix output path
+  *  8619073de - Add define YT_BIN_ON_CONFIG_DIR
+  *  93e3f5e5c - Revert 9901
+  *  8d0216167 - Don't check for the mplayer version
+  *  b880a5fb1 - Update stream title
+  *  7e9e749ec - Don't change the working directory
+  *  53c159b35 - Use the absolute path in MyProcess::start
+  *  cb12164e8 - Use static_cast
+  *  d85a9cc8a - Try to use a style proxy
+  *  03aeddb4f - Revert previous commit
+  *  69c60284c - Use the signal doubleClicked instead of activated in
+    playlist
+  *  4fc4e4f4a - Update build-flatpak.yml
+  *  4a214816a - Update snapcraft.yaml
+  *  8a1391935 - Update build-flatpak.yml
+  *  3c04765ab - Fix get_version.sh
+  *  9fdca9ec7 - Start new version
+  *  3674a4477 - Update README.md
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 20 Sep 2021 17:05:09 +0000
+
 smplayer (1:21.1.1~git9890-5c02dd07c-1) unstable; urgency=medium
 
   * Compile
