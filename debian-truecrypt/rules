@@ -16,8 +16,8 @@ endif
 	dh $@ --parallel 
 
 override_dh_auto_build:
-ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid buster bullseye xenial yakkety zesty artful bionic disco eoan focal groovy hirsute)) 
-ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid buster bullseye yakkety zesty artful bionic disco eoan focal groovy hirsute)) 
+ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid buster bullseye xenial yakkety zesty artful bionic disco eoan focal groovy hirsute impish))
+ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid buster bullseye yakkety zesty artful bionic disco eoan focal groovy hirsute impish))
 	patch -p1 < debian/patches/truecrypt-7.1a-gcc5.patch
 	patch -p1 < debian/patches/truecrypt-7.1a-gcc6.patch
 else

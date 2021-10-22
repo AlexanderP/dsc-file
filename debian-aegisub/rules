@@ -18,7 +18,7 @@ endif
 
 
 override_dh_auto_configure:
-ifneq (,$(filter $(DEBIAN_CODENAME),sid bullseye groovy hirsute)) 
+ifneq (,$(filter $(DEBIAN_CODENAME),sid bullseye groovy hirsute impish))
 	patch -p1 < debian/patches/debian_patches_make-4.3.patch
 else
 	echo "no patch"
