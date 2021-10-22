@@ -1,3 +1,80 @@
+labplot (2.8.2+git8788-031533021-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 031533021695b8708c4c07ed78c33b84553afba8
+  * Date: 1634127127
+  * git changelog:
+  *  031533021 - minor fixes
+  *  34374a925 - Make poppler optional
+  *  fdcb7503a - poppler changelog
+  *  5be643792 - [tex renderer] Fix tools check in settings
+  *  679e0a149 - [tex renderer] Fix tool checking
+  *  569c88970 - [tex renderer] use poppler instead of ImageMagick for
+    PDF
+  *  9ffc87aa1 - Improve compatibility
+  *  69f172b5b - [worksheet] more fixes in TextLabel: * re-render the
+    LaTeX image when the theme is changed to get the new font and
+    background colors * use syntax highlighting in LabelWidget also for
+    Markdown * when switching from LaTeX with non-valid text to Markdown
+    remove the red-highlighting in the text field
+  *  4e209cd2f - [worksheet] hide the TextGraphicsItem in TextLabel when
+    LaTeX image is shown and added icons for the different text modi in
+    LabelWidget.
+  *  2016b41a7 - Merge branch 'master' of https://github.com/KDE/labplot
+  *  dcf39b7b4 - Fix compiler warning
+  *  66a22d3a2 - [worksheet] disable the item for LaTeX in the combobox
+    for available text modi for the text label if no LaTeX is available
+    on the system.
+  *  4b6937d73 - When adding a new child, call finalizeAdd() prior to
+    calling emit childAdded(). This also fixes the crash when adding a
+    new axis to the plot.
+  *  d4c2da6fb - [parser] use the right type for characters
+  *  c42661b21 - [worksheet] switched from QStaticText to
+    QGraphicsTextItem in TextLabel to get better support for html. Basic
+    markdown syntax is working now, too.
+  *  4f03d9534 - minor comments
+  *  c1e666074 - Fix stringDataPointers type.
+  *  0d8541a99 - [worksheet] removed the enum WorksheetElementName, we
+    can utilize AspectType for this purpose.
+  *  d1ced2e2a - [interpolation] Also use only valid x range for custom
+    ranges
+  *  6b6597f75 - Cleanup in includes.
+  *  5fcf802e2 - [interpolation] Fix possible crash with invalid data
+    points
+  *  d16b0a623 - Added changes that were missed in the previous commit.
+  *  7d4cd448e - [worksheet] allow to specify which curves should be
+    shown in the plot legend.
+  *  c3c126cd6 - [matrix] Catch type mismatch in append mode
+  *  0c54496d4 - Merge branch 'master' of https://github.com/KDE/labplot
+  *  47cdbf5b8 - [data sets] use the online description for the datasets
+    in the StatLib collection, if available, and some minor cleanups in
+    StatLib and Rdatasets collections.
+  *  0068894ed - Fix compiler warning
+  *  25fd7913b - [Matio] Fix import difference between Matrix and
+    Spreadsheet
+  *  e83678a0f - Support append in matrix and use it to import multiple
+    vars from MAT files
+  *  e065d93a9 - When saving the preview pixmap for the project,  save
+    only the area surrounding all visible sub-windows instead of saving
+    the whole main area.
+  *  11a7fd4f3 - [Matio] Prefer Matio filter over HDF5 for MAT 7.4 files
+    and clean up
+  *  fbf4700d4 - [Matio] Support importing all selected variables
+  *  15e6fa8e8 - [Matio] Preview all selected variables
+  *  cbda97819 - Use XZ compression as default when saving projects
+  *  a44add486 - Added tooltip text for the newly added projects setting
+    save calculations and updated the ChangeLog file.
+  *  a1d4c279b - Allow to save the project without the results of the
+    calculations in the analysis curves to reduce the size of project
+    file.
+  *  9d3307cc1 - [project] Fix previous patch
+  *  a2b6a5e71 - [project] Support loading xz compressed lml files
+    (besides gz and not compressed)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 14 Oct 2021 20:36:17 +0000
+
 labplot (2.8.2+git8750-7898511ff-1) unstable; urgency=medium
 
   * Compile

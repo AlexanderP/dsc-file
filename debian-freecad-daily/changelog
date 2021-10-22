@@ -1,3 +1,500 @@
+freecad-daily (0.19.2+git26153-346ff3815d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 346ff3815dba32c59e62c0892f0bbc03da901cad
+  * Date: 1634219197
+  * git changelog:
+  *  346ff3815d - Web: handle system exit exceptions
+  *  39e02ca195 - Web: support synchronous TCP/IP communication
+  *  0e7314068c - Arch: BuildingParts autogrouping
+  *  d95f085760 - Merge pull request #4787 from chennes/addThemeSupport
+  *  f3ccc6d660 - Merge pull request #5023 from marioalexis84/gui-
+    encoding
+  *  da99ad39e9 - Merge pull request #5113 from jack9603301/master
+  *  67df930184 - [Part] Fix null pointer error in sweep operation
+  *  5af1b03285 - Merge pull request #5112 from Roy-043/Draft-improve-
+    hatch-matrix-algo
+  *  620576ebd9 - Merge pull request #5110 from 0penBrain/UserEditMode
+  *  2d10f5cac3 - Merge pull request #5111 from
+    chennes/spreadsheetCherryPickRealThunder
+  *  1a94329d8e - Draft: improve hatch matrix algo
+  *  8c03581140 - Mesh: [skip ci] add unit test for self-intersection
+  *  0d16160f4e - Sketcher: Code improvements for Constraint Widget
+  *  408982e709 - [Gui] UserEditMode : last used mode is remembered
+    between sessions
+  *  1483cc023f - Import: [skip ci] consistent use of curly braces
+  *  74e8f087ae - [Gui] UserEditMode : new (better) icons for modes +
+    SVG file naming improvement
+  *  f598873b38 - Merge pull request #5108 from Roy-043/Draft-fix-
+    context-menu
+  *  e38d06a3dd - Merge pull request #5091 from
+    chennes/sketcherMoveColorsToPrefs
+  *  4579b842fd - Merge branch 'master' into sketcherMoveColorsToPrefs
+  *  413a822a07 - App: add signalChanged to Property
+  *  ec27c67dc0 - Spreadsheet: support displaying of integer
+  *  93beb9fabd - Spreadsheet: preserve component reference in cell
+  *  51d814d222 - Gui: handle exception in property item display
+  *  127e8098e8 - Spreadsheet: add a few context menu options
+  *  2c6f621721 - App: add expression built-in function str()
+  *  8fceac1762 - [Spreadsheet] Clean up compilation warnings
+  *  24c3261424 - Merge pull request #4277 from
+    chennes/selection2021SelectionViewAutoShow
+  *  dc3583e5df - [Stylesheets] Add StatefulLabel and UrlLabel styles
+  *  23622c8e08 - [Gui] Refactor StatefulLabel coloring
+  *  ccef385e26 - Merge pull request #5099 from
+    chennes/spreadsheetAutoReturn
+  *  482cf61025 - Draft: fix context menu
+  *  f03dfe351e - Draft: fix context menu
+  *  eb0c45ce63 - Draft: fix context menu
+  *  d99ad042b1 - Draft: fix context menu
+  *  fbceff0fdf - Delete gui_lineops.py
+  *  8f4060a47b - Merge pull request #5106 from chennes/transparentFaces
+  *  4f0fb52707 - Merge pull request #5102 from Roy-043/Draft-Update-
+    draft_test_objects.py
+  *  29408ee3d7 - OCCT: port flatmesh to version 7.6
+  *  6e4a09f569 - Sketcher: Copy and Array tool Snap at 5 degrees using
+    CTRL
+  *  2a6700deab - [Arch] Separate out return of None for clarity
+  *  e0653f6b06 - [Part] Remove redundant 'global' statement
+  *  df66858d42 - [Arch] Remove unnecessary pass
+  *  17ebbd1662 - [Arch] Remove redundant else: from while loop
+  *  7a5fb042f7 - [Draft] Eliminate default value modification
+  *  9cbfe835f3 - [Tools] Eliminate default value modification
+  *  1076ba0df5 - [Gui] PrefPacks - remove type parameter
+  *  6bcda71712 - Merge branch 'master' into sketcherMoveColorsToPrefs
+  *  fbdb4e29d8 - TD: [skip ci] fix warning about trunction from double
+    to float
+  *  9b2de68000 - Sketcher: Constraint widget associated constraints
+    filter
+  *  08542055c4 - Sketcher: Redesign of Constraint settings
+  *  ab57037f3e - Sketcher: Add preferences icon resource
+  *  7a7d58548b - Test: [skip ci] handle std. and unknown exceptions in
+    unit test dialog
+  *  68b657e166 - Merge pull request #5090 from mwganson/dragger
+  *  910dbcf880 - Web: [skip ci] fix warning: unused parameter 'ok' [-
+    Wunused-parameter]
+  *  b01d0e5181 - [Gui] Always hide progress bar on finished load
+  *  bce8c25421 - Start: if a corrupted file is part of the Recent File
+    List then ignore it
+  *  4c3371bf19 - [Part] Allow setting alpha for face colors
+  *  70ad1396ea - Gui: Add option to show alpha in QColorDialog
+  *  834831b6c8 - Merge pull request #5098 from realthunder/FixStepColor
+  *  6f3b00d67e - SMESH: port to OCCT 7.6
+  *  51e4366085 - OCCT: port FreeCAD sources to version 7.6
+  *  45d0660727 - Part: minor change on transparency setting
+  *  448318faea - Merge pull request #5105 from luzpaz/typos
+  *  4adfa1fe38 - Added requested revisions
+  *  277e164657 - Fix various typos
+  *  6dabdd0363 - Merge pull request #5104 from
+    chennes/migrateUrlLabelToQDesktopServices
+  *  7237495d79 - [Gui] Migrate UrlLabel to use QDesktopServices
+  *  498b40800e - Part: sync ViewProviderExt::DiffuseColor on
+    Transparency change
+  *  485be3acf8 - Merge pull request #5082 from pavltom/Balloon_Updates
+  *  34ead28ae9 - Merge pull request #5103 from donovaly/Coin3D-website
+  *  67ebeeaad0 - [Doc] update weblink to Coin3D
+  *  1b4ca8a01c - Merge pull request #5101 from Roy-043/Draft-Tweak-
+    gridShowHuman-tooltip
+  *  f641160ed1 - Merge pull request #5100 from Roy-043/Draft-Fix-
+    make_ellipse-default-value-face
+  *  52269f0c88 - Gui: [skip ci] fix gcc warning -Wimplicit-fallthrough=
+  *  b1c3982391 - Gui: [skip ci] reformat code
+  *  c01878c174 - Import: fix transparency STEP export/import
+  *  03be15cc6b - Part: fix bug in Part::Tools::getPointNormals for OCCT
+    7.6
+  *  74639da997 - OCCT: port FreeCAD sources to version 7.6 SMESH is not
+    yet ported Although FreeCAD code compiles with OCCT 7.6 it doesn't
+    work at the moment
+  *  f628050732 - PD: simplify code to display add/sub shape
+  *  66d3dd897f - Part: add convenience function to convert
+    TColgp_Array1OfDir to std::vector
+  *  0d1488d661 - Update draft_test_objects.py
+  *  09c0e03ec3 - Update draft_test_objects.py
+  *  4cce7b4236 - Draft: Tweak gridShowHuman tooltip
+  *  f271aa9ff6 - Draft: make_ellipse default value face should be None
+  *  beea1d3644 - Import: fix single shape STEP export with per face
+    color
+  *  010f1680d8 - Merge pull request #4992 from
+    chennes/hiddenPrefToLockToolbars
+  *  b485155c33 - TechDraw - Balloon updates - improve hospot
+    calculation
+  *  5b4c246944 - PD: simplify code to display rejected shape and move
+    it to  its own function
+  *  403a569315 - [Spreadsheet] Refactor keyboard handling
+  *  c2c5ae1bf0 - Part: remove ViewProviderPartExt::getNormals
+  *  0503f06930 - PD: do not enforce a reference axis  when no profile
+    is used to pad a face
+  *  f411390d33 - PD: do not set ReferenceAxis when no profile is used
+    to pad a face
+  *  302568d177 - Part: copy ViewProviderPartExt::getNormals to Tools
+    class
+  *  f43226f1f6 - TechDraw - Balloon updates - review based changes
+  *  9b4db7e064 - Part: in Part.getFacets() use functions of Tools class
+  *  442c8d52a1 - Part: in TopoShape::getDomains use functions of Tools
+    class
+  *  0f3b5d2750 - Raytracing: in PovTools/LuxTools use functions of
+    Tools class
+  *  08d46b5f88 - Part: add methods to get the point normals of the
+    triangulation or surface
+  *  7489e8ea9e - Merge pull request #5078 from
+    chennes/femRemoveExtraTranslations
+  *  5a7e551c3d - Merge pull request #5088 from Roy-043/Draft-
+    improvements-for-Draft_Hatch
+  *  714a0fc5a7 - Merge pull request #5092 from Roy-043/Draft-Draft_Text-
+    should-use-working-plane
+  *  8e6dab209e - Part: change TopoShape::exportFaceSet and
+    TopoShape::exportLineSet to use the functions of the Tools class
+  *  c9d17ebde2 - Part: add convenience functions to retrieve
+    triangulation of a face or edge
+  *  709181d909 - Import: avoid using Quantity_ColorRGBA::ColorToHex()
+  *  b6ec36fc3f - Draft_Hatch_ViewProvider -> ViewProviderDraftHatch
+  *  059b3d46aa - Draft_Hatch_ViewProvider -> ViewProviderDraftHatch
+  *  48761f4e7d - Draft_Hatch_ViewProvider -> ViewProviderDraftHatch
+  *  329a682a8e - Import: fix STEP color and add transparency in legacy
+    importer/exporter
+  *  b9a76cc8e4 - Import: support transparency for STEP import and
+    export
+  *  c3e3ff3c8b - Part: set transparency in
+    ViewProviderExt::DiffuseColor
+  *  c19e1398f2 - Import: fix STEP color problem caused by OCC 7.5
+  *  77b198048a - SMESH: [skip ci] do not undefine the guard of a header
+    file
+  *  5bb00636d5 - Part: [skip ci] fix build failure when using PCH
+  *  bea2fff850 - Merge pull request #5093 from Roy-043/Arch-InitGui-
+    draft_line_commands-not-used
+  *  2122be22c0 - Merge pull request #5094 from Roy-043/Draft-
+    housekeeping-gui_rectangles-use-make_rectangle
+  *  afb555f1d5 - Merge pull request #5096 from luzpaz/typos
+  *  1bac25de44 - Tools: fix updatecrowdin.py variable typo [skip ci]
+  *  bb108cff95 - Fix user facing typos [skip ci]
+  *  f1d1778a73 - Mesh: fix WildMagic4 build on Darwin AArch64 (Apple
+    M1)
+  *  5235af1d47 - Mesh: [skip ci] add unit test for corrupted facets
+  *  df23ab4441 - Sketcher: [skip ci] fix -Wunused-lambda-capture
+  *  5593b8499b - Part: add function Geometry.toShell
+  *  6858d938cc - [Gui] Add ability for stylesheet to override prefs
+  *  7b45d63bf2 - App: use consistent spelling of SubElement
+  *  8763810d81 - Draft housekeeping: gui_rectangles.py should use
+    make_rectangle
+  *  b739c865e5 - Merge pull request #5089 from mwganson/addonmanager
+  *  eb742200c4 - Arch: InitGui draft_line_commands not used
+  *  6c23e2be1c - Mesh: implement sub-element handling
+  *  1bd1d42fa8 - Sketcher: New constraint special filter, filter
+    selection
+  *  e333225a12 - Sketcher: use addSelections for group selecions in
+    TaskSketcherElements
+  *  521cfcfefd - Sketcher: user addSelections for group selection in
+    SketcherTools
+  *  0b9d4db814 - Draft: Draft_Text should be aligned toworking plane
+  *  3867e41f42 - Fix trivial typos
+  *  cba89c64a4 - [FEM] Rename menuetext -> menutext
+  *  4154bdd158 - [Stylesheet] Add styling for Sketcher labels
+  *  f2a073ca5a - [Sketcher] Make status message styleable
+  *  224ffe37e2 - [Gui] New widget supporting per-state styles
+  *  b46e454190 - [Dragger] add dragger (Std_TransformManip) to right
+    click context menu when right clicking on an object in the 3D view
+  *  7cf6230a00 - [AddonManager] -- put Restart now and Restart later as
+    button text instead of in the dialog text
+  *  b6d90bf575 - App: [skip ci] make Matrix a dynamic attribute of
+    ComplexGeoDataPy
+  *  30b784a596 - Update make_hatch.py
+  *  1f2a95f990 - Update gui_hatch.py
+  *  470f9307f1 - Update hatch.py
+  *  f002556803 - Update Draft.py
+  *  bfcfa1f68e - Merge pull request #5072 from Roy-043/Draft-fix-
+    shortcuts-in-menus-and-more
+  *  ff24678a7c - Update init_tools.py
+  *  849231b82a - Merge pull request #4998 from
+    carlopav/Draft_WPimprovements
+  *  32592de8ce - App: expose methods of ComplexGeoData to Python
+  *  0fc8460b0f - Part: use UnitsApi::getDecimals in ShapeFromMesh
+    dialog
+  *  501dc5867e - Points: [skip ci] for CmdPointsConvert command make
+    minimal value dependent on user settings of used decimals
+  *  8bb582f23f - FEM: writer base, use tempfile module for the temp
+    directory
+  *  fa843ad084 - FEM: writer base, improve working dir handling
+  *  e60e6c32f7 - Sketcher: redefine filters and groups of filters
+  *  007041b2ec - Sketcher: Reorder filter entries to match toolbar
+  *  f4a8f32db4 - adjust preferred size to contain also the ALL entry
+  *  41c30470f3 - [Sketch] Selection improvements
+  *  5a74cabaf0 - Merge pull request #5086 from
+    bartoszek/fix_build_linux
+  *  c9d28ac9f5 - Merge pull request #5049 from
+    chennes/spreadsheetPasteCleanup
+  *  3a8d906cf3 - Merge pull request #5085 from donovaly/Spread-UI-
+    preferences-fixes
+  *  69bfa47b0e - Part: [skip ci] use Gui::cmdAppDocumentArgs in
+    ShapeFromMesh dialog
+  *  57375ce7c2 - Gui: [skip ci] add Gui::cmdAppDocumentArgs and support
+    further string types with FormatString::str
+  *  0c3ba910aa - Fix linux build: undefined std:string_view
+  *  3833fe21ed - [Spreadsheet] fix preferences UI
+  *  c7cc7fa0fd - TechDraw - Balloon updates
+  *  ec249a8e4d - [Sketcher] Migrate constraint and solver status to
+    StatefulLabel
+  *  c4878487ba - [Gui] Add StatefulLabel
+  *  a65464b722 - Merge pull request #5081 from Roy-043/Draft-prevent-
+    negative-snaprange
+  *  2f789e6ce7 - Sketcher: Constraint widget Multi Filter feature
+  *  d6b7ab6937 - Update InitGui.py
+  *  9687262cfc - Update InitGui.py
+  *  19084494e8 - Update init_tools.py
+  *  14ff475192 - Part: move code to create shape from mesh to dialog
+    ShapeFromMesh
+  *  a6d93e2d5e - App: [skip ci] add overloaded constructor of
+    DocumentObjectT
+  *  5619b012a5 - Merge pull request #5079 from Roy-043/Draft-fix-
+    decimals-for-angular-dims
+  *  ad0113ca26 - Draft: prevent negative snaprange
+  *  745f8e044d - Part: for faster execution make sewing optional when
+    creating shape from mesh
+  *  b4f77d3c62 - Part: [skip ci] make TopoShape::setFaces 30% faster
+  *  21ab81fbb3 - Merge branch 'FreeCAD:master' into Draft-fix-decimals-
+    for-angular-dims
+  *  5ab525df4e - [Core] Add library dependency for boost date_time
+  *  c581585574 - Update units.py
+  *  323dfa6149 - Merge pull request #5076 from sliptonic/master
+  *  ef7127a456 - [Tools] Strip translations from base TS files
+  *  f469b70654 - [Fem] Clean up Fem.ts to remove extra translations
+  *  0c62c22554 - App: replace ctime() with boost's date/time functions
+    in Application::logStatus()
+  *  44ffc4653f - Base: [skip ci] use PyNumber_Check instead of
+    PyFloat_Check/PyLong_Check to check for numbers
+  *  c21f7ab023 - Black reformat
+  *  9fbd227456 - Job object doesn't exist in this context. Derive
+    output name in the output section or default if unknown
+  *  822bc86894 - Mesh: remove unused variable in Nastran reader
+  *  e1c5bfab1f - Mesh: add method MeshAlgorithm::GetFacetsBorders
+  *  eb9f47048a - Merge pull request #5075 from
+    chennes/openSCADSandboxingFix
+  *  b5d6a796e2 - Merge pull request #5070 from
+    Russ4262/fix/pocket_shape_finish_pass
+  *  7339bb8382 - Merge pull request #5071 from donovaly/PD-
+    pad_along_fixes
+  *  7ae611d86a - Sketcher: Improve text of the constraint widget
+  *  1d9ba918ac - Mesh: [skip ci] rename MeshAlgorithm::GetMeshBorder to
+    MeshAlgorithm::GetFacetBorder
+  *  8ff9bbc930 - Mesh: improve function to fix points on edge
+  *  62bd69e53d - [OpenSCAD] Update STL unit test to warn on pipes
+  *  2e504ab3b6 - [OpenSCAD] Add ability to communicate via pipes
+  *  fe7f4c4be7 - Gui: remove QT_TR_NOOP from command group names and
+    use CommandGroup as context string
+  *  6f6272f12b - Sketcher: [skip ci] remove superfluous
+    QT_TRANSLATE_NOOP from Sketcher commands
+  *  d2f3cd1e70 - Gui: [skip ci] support different context in
+    Command::translatedGroupName
+  *  bc57ba6027 - Gui: add convenience function
+    Command::translatedGroupName()
+  *  d06bee745b - Merge pull request #5069 from
+    chennes/lgtmArchMiscFixes
+  *  77925c428e - Updated ts files
+  *  319b490c0c - Merge pull request #5037 from
+    chennes/fixMixedLanguageTranslationExtraction
+  *  cf58f30ed4 - Gui: [skip ci] handle exception text as UTF-8 encoded
+    string when saving failed
+  *  dfe84ef123 - Base: [skip ci] pass the full file path to the
+    FileException
+  *  ca05fc678b - App: correctly handle UTF-8 encoded path names under
+    Windows
+  *  b7ea205c70 - [App] Fix regression introduced by PR #4996
+  *  3dd5438880 - Mesh: [skip ci] when points lie exactly on a plane it
+    can happen that a plane fit creates U,V vectors with NaN while W is
+    valid
+  *  fb49450c62 - [PD] fixes for padding along edge
+  *  217db02240 - Merge pull request #5073 from mwganson/spreadsheet2
+  *  0a9d08218a - Mesh: detect points on edges
+  *  aa7d8001a2 - Sketcher: Improve the performance of showing/hiding
+    constraints
+  *  490a6f1961 - Sketcher: Python - enable using the setVirtualSpace
+    command individually or by group
+  *  bc080c1845 - Sketcher: Overload setVirtualSpace to allow setting a
+    group of constraints
+  *  06a0e1e923 - [Arch] Fix LGTM warnings
+  *  b8c1877133 - PD: [skip ci] fix minor issues: * don't need to clear
+    an empty vector * remove two code blocks that effectively do nothing
+    (except of producing a warning :) )
+  *  f4ce6a8291 - Draft: fix shortcuts in menus and more (init_tools.py)
+  *  a1499c297e - Draft: fix shortcuts in menus and more (InitGui.py)
+  *  83ac792fb4 - TD: [skip ci] fixes #issue 4755: Copying a section
+    view segfaults
+  *  a47afb71d4 - Merge pull request #5062 from
+    chennes/meshImproveNastranUnitTests
+  *  04e98be597 - Merge pull request #5064 from
+    chennes/lgtmAddonManagerFixes
+  *  33eb4b1a61 - Merge pull request #5068 from FreeCAD-Tools/master
+  *  82a17a72fe - Merge branch 'master' into master
+  *  0be3565dbe - [Spreadsheet] add preference page and 3 import/export
+    parameters
+  *  e018707307 - Path: Strict application of  code formatting to module
+    file
+  *  0242ada64e - Path: Restore removal shape envelope buffer
+  *  0afe01dc5e - Merge pull request #5009 from
+    Russ4262/fix/ramp_dressup
+  *  fdfe0291fd - Merge pull request #5050 from jimzim111/PathArray_Z
+  *  c062384976 - Merge pull request #4975 from
+    Russ4262/cleanup/pathprofile
+  *  d4f4e25157 - Merge pull request #4973 from Russ4262/fix/millface
+  *  55d99d0fed - Merge branch 'master' into master
+  *  9ad741249b - Merge pull request #4685 from donovaly/PD-pad-
+    direction-selection
+  *  bf8c3eb0e9 - Merge pull request #5051 from 0penBrain/rotation
+  *  e1dc69f56d - [Core] Rotation : improve gimbal lock handling
+  *  0b97a54e83 - Merge pull request #3256 from
+    0penBrain/spinBoxDecPoint
+  *  67aeaba4c1 - Merge branch 'master' into master
+  *  fb83c70669 - Merge pull request #5067 from Roy-043/Draft-avoid-word-
+    hatch-when-dealing-with-svg
+  *  ffd7223d55 - Update CommandSketcherVirtualSpace.cpp
+  *  1f6e48de3f - Draft: avoid word hatch in preferences when dealing
+    with SVG patterns
+  *  510cbf523a - Gui : susbtitute dot with local decimal separator for
+    spin boxes
+  *  690f191165 - Merge branch 'FreeCAD:master' into master
+  *  2186b03fc2 - Update CommandSketcherTools.cpp
+  *  c828948457 - Update CommandSketcherBSpline.cpp
+  *  9229c461bb - Update CommandCreateGeo.cpp
+  *  caeffd21b4 - Update CommandConstraints.cpp
+  *  ff1b29ffe1 - Update CommandConstraints.cpp
+  *  a94888ec3d - Update CommandAlterGeometry.cpp
+  *  65df3b46e2 - Update Command.cpp
+  *  68fbf89e38 - Merge pull request #5066 from Roy-043/TechDraw-typo-in-
+    menu-extension-pack
+  *  322b420a61 - Merge pull request #5065 from Roy-043/Draft-move-
+    Draft_AddNamedGroup-in-menu
+  *  0dd4119369 - TechDraw: typo in menu extension pack
+  *  c1dec8e792 - Draft: move Draft_AddNamedGroup in menu
+  *  a44a1ecf12 - [Addon Manager] Silence LGTM warnings about urls
+  *  c505ac1ee3 - [Draft] Silence LGTM warnings about unused vars
+  *  dfd8b82fa2 - Draft: updated working plane BIM figure
+  *  67e0395aed - Draft: Grid added option in preferences dialog to
+    display the human figure
+  *  5810bde0de - Draft: Grid added option to disable human figure
+    representation
+  *  bd4623a2a3 - [Mesh] Improve unit tests
+  *  1b20118dfa - Merge pull request #5052 from
+    chennes/meshNastranFileFormat
+  *  c8a019c312 - Improve display of Apply button
+  *  b10dc6757a - Merge branch 'master' into meshNastranFileFormat
+  *  d3509a63fd - [Mesh] Add unit tests for NASTRAN reader
+  *  c9eaa2393d - Sketcher: Rectangular Array Snap mode
+  *  c37af5e737 - Sketcher: fix warning unreferenced local variable
+  *  5387e12e80 - Web: support to query values via TCP/IP communication
+  *  bd46e970d9 - Mesh: [skip ci] change
+    MeshTopoAlgorithm::SplitOpenEdge to return a boolean to indicate if
+    the operation succeeded or not
+  *  4427de68c2 - Redesign pref pack GUI
+  *  e94d7c32b5 - Merge pull request #5060 from Roy-043/Draft-fix-2-svg-
+    pattern-issues
+  *  0e03427736 - Merge pull request #5058 from Roy-043/Draft-fix-2-edit-
+    mode-issues
+  *  f2dc749170 - Merge branch 'master' into spreadsheetPasteCleanup
+  *  20848125a9 - Merge branch 'master' into
+    fixMixedLanguageTranslationExtraction
+  *  b31b1b4af5 - Merge branch 'master' into hiddenPrefToLockToolbars
+  *  b432592fb2 - Merge branch 'master' into addThemeSupport
+  *  2e77d44856 - Merge branch 'master' into
+    selection2021SelectionViewAutoShow
+  *  2bb8baec06 - Path: Delete unnecessary comments
+  *  dd03e616d0 - Path: LGTM cleanup
+  *  fcd8b8558e - Path: Fix  boundary shape usage
+  *  7ec38a5c3b - Path: Remove unused import
+  *  48d10b25b2 - Path: LGTM fix
+  *  61a43a644c - Path: Black code formatting only
+  *  5d4f7e96b4 - Sketcher: Hide/show constraints according to filter
+  *  6102f13071 - Draft-fix-2-svg-pattern-issues hatch45R.svg
+  *  19aa4e6a46 - Draft-fix-2-svg-pattern-issues hatch45L.svg
+  *  744ed7be52 - Draft-fix-2-svg-pattern-issues
+  *  873e0977ca - Sketcher: Minor fixes sketcher radius/diameter
+    presentation
+  *  1d98cc08e7 - [Sketcher] Add an option to get randomness in
+    radius/diameter display angle
+  *  daa52ab7b8 - [Sketcher] Display radius/diameter constraints with
+    some angle
+  *  3553d8ed3a - [Sketcher] Code simplification by systematically using
+    'finishDistance' to determine label distance
+  *  8fe021a789 - Merge branch 'FreeCAD:master' into PathArray_Z
+  *  00e95ba55d - Draft: Fix Unicode and UTF-8 encoding character
+    behavior
+  *  63d34c8e41 - TechDraw: Fix Unicode and UTF-8 encoding character
+    behavior
+  *  6d51083240 - Gui: Fix Unicode and UTF-8 encoding character behavior
+  *  6babbda88d - Update view_base.py
+  *  0c92514464 - Draft: fix 2 edit mode issues
+  *  00bb1d0b58 - Gui: [skip ci] fix possible warning
+  *  52c4ad941b - App: add comment for clarification
+  *  b042405933 - Merged crowdin translations
+  *  fafc18158c - Tools: small fix in crowdin script
+  *  15da3f01e5 - Updated ts files
+  *  dd1c65cfa0 - Merge pull request #5053 from Roy-
+    043/Draft_fix_dim_symbol_issues
+  *  129ad3b0bd - Merge pull request #5055 from Roy-
+    043/Draft_fix_wpproxy_view_prop_group
+  *  7ccec03df1 - Merge pull request #5056 from Roy-
+    043/Draft_fix_wrong_type_for_layer_transparency
+  *  ff2598d2aa - Merge pull request #5057 from 0penBrain/PDNexample
+  *  949263b93c - [Examples] Conform PartDesign example to usual
+    guidelines
+  *  edd4da121e - Draft: fix wrong type for layer transparency
+  *  bfe7a7a120 - App: make evalExpression() a class method of
+    DocumentObject
+  *  f439e0c3f3 - Web: BrowserView::setWindowIcon must be declared as
+    slot
+  *  3f224066db - [BUILDFIX] Add missing includes
+  *  612356edfe - Draft: fix wpproxy view properties group
+  *  b432d12933 - MinGW: if PYTHONHOME is not set then automatically do
+    it at program start
+  *  9bde68d784 - MinGW: automatically find Coin library when running
+    CMake
+  *  381e4b4d5a - Gui: use cbegin()/cend() for const_iterator
+  *  eb18c2f9db - Gui: modernize some classes
+  *  89ab1ddbfb - Gui: include FCGlobal.h for export macro
+  *  deda3668c9 - Draft: fix dim symbol issues
+  *  0d2451a20a - Gui: implement a workaround for MSYS2 to access
+    QUiLoader via its Python interface
+  *  2a72f34d9d - Merge branch 'master' into PathArray_Z
+  *  00759f9c96 - Gui: move PythonWrapper class to its own source file
+  *  b4e69f1b2d - Gui: move Ui loader classes to their own source files
+  *  30848cb635 - Gui: extend PythonWrapper: * add methods to
+    wrap/unwrap QDir * add method to load QtUiTools module
+  *  0ec51a959a - Gui: remove QUiLoader from Qt4All.h to make sure it is
+    included from a single file
+  *  7655e7347d - [Mesh] Improve NASTRAN input support
+  *  f3a5217468 - Sketcher: Fix hide/show operations on Constraint
+    Widget taking too long
+  *  6343836689 - Sketcher: Show All and Hide All buttons on Constraint
+    Widget
+  *  3e644ed2af - Sketcher: Constraint hiding/showing not working
+    properly for combined constraint icons
+  *  ff93cb9295 - Sketcher: Tracking of constraint visibility via
+    contraint widget filter
+  *  4243790627 - Sketcher: Constraint Widget extended filter
+  *  e233ba54e6 - Merge pull request #5047 from
+    chennes/lgtmMeshEmptyBlocks
+  *  fc83fd1fc8 - port to MSYS2/clang: suppress 'undefined-var-template'
+    warnings
+  *  70c5505a75 - Test: remove not needed u before py3 unicode string
+  *  d008d44a34 - [UnitTest] Fix UnitTests - use utf-8
+  *  f04f1e396a - Merge branch 'master' into hiddenPrefToLockToolbars
+  *  0536010d7d - Merge branch 'master' into spreadsheetPasteCleanup
+  *  a27d270fa9 - [Spreadsheet] Add support for copying empty cells
+  *  7b77ea52e7 - Web: Fix MSVC compile error in BrowserView (part 2)
+  *  4f2d65a178 - Web: Fix MSVC compile error in BrowserView
+  *  f7bdd2c5e8 - CI gitlab: update readme
+  *  6a9b27df1e - Tools: Corrected arguments to git.extractInfo
+  *  c942d950a9 - Web: Extended openBrowserHTML to allow custom icon
+  *  c6d30974be - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  1d8b334e88 - [UnitTest] Replace deg symbol with deg
+  *  a530d30c2c - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  26dfd72143 - [gitlab-ci] gitlab CI on docker initial commit
+  *  6e1784ddba - PathArry translate copies along Z axis as it does
+    along X/Y
+  *  f4c50e3701 - [Spreadsheet] Refactor and simplify paste code
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 14 Oct 2021 20:03:52 +0000
+
 freecad-daily (0.19.2+git25778-7f772ba227-1) unstable; urgency=medium
 
   * Compile

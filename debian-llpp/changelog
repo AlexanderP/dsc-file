@@ -1,3 +1,48 @@
+llpp (33.0.0+git4484-4f38a4c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: git://repo.or.cz/llpp.git
+  * Branch: master
+  * Commit: 4f38a4cec84d12c422df3ba286e430aec47334be
+  * Date: 1634226667
+  * git changelog:
+  *  4f38a4c - Allow selecting text in split columns mode
+  *  7042a6c - Clearer wording
+  *  fb7e855 - Use --reference-if-able instead of --reference
+  *  4096af3 - Cosmetics (on the surface)
+  *  4b21148 - Cut down on euphemisms
+  *  fd0ce3a - Sync with upstream
+  *  ff1e9df - Cosmetics
+  *  b109879 - Cosmetics
+  *  b3245bc - Expand
+  *  3eb9e78 - Add safety nets around outline loading
+  *  489645f - Sync with upstream...
+  *  caf7c21 - Add another fz_var warpper
+  *  265530a - Use gerontophile mupdf
+  *  2e29e0f - Make things build with older gccs
+  *  8e813a4 - Make sure that github's robot is happy
+  *  d7bda23 - Sync with upstream
+  *  03118c4 - Cosmetics
+  *  bfa56ed - Consistency
+  *  6dea5dd - Sync with upstream
+  *  1d1a85f - Whoops
+  *  239aa26 - Sync with upstream
+  *  e506df6 - Cosmetics
+  *  9ea32a9 - Trim
+  *  9bddffe - Repository addressing
+  *  821cee6 - Do not silence wget
+  *  ae32b78 - C/ML consistency/harmony
+  *  c4dbeda - Treat underlying condition instead of papering over
+    symptoms
+  *  d6333a6 - Add -g to glTex's flags
+  *  edf0eb4 - build.bash is awesome, take full advantage of this fact
+  *  7ddf1a4 - Utilize OCaml 4.13.0
+  *  6d5dd2c - Avoid catastrophic failure when fz_count_pages returns
+    negative value
+  *  e9073cc - Use second release candidate of OCaml 4.13
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 14 Oct 2021 19:57:10 +0000
+
 llpp (33.0.0+git4452-f15da86-1) unstable; urgency=medium
 
   * Compile

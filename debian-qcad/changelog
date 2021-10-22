@@ -1,3 +1,98 @@
+qcad (3.26.0+git8759-1ef5dafc9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 1ef5dafc98f60eb76af4159fd9202596c9b947db
+  * Date: 1634220482
+  * git changelog:
+  *  1ef5dafc9 - update script bindings
+  *  ba928129e - notify transaction listeners on block change for
+    convenience
+  *  ec2d029a8 - update
+  *  2f4367e6b - update script bindings
+  *  6662ca21e - attribute only selectable if not invisible
+  *  cfded256d - add invisible flag
+  *  b57696423 - add invisible flag
+  *  1c6113fd6 - no reference points if attribute is invisible
+  *  40b82f34e - clean up
+  *  9f7618f66 - fix property name collision
+  *  c75d8db58 - refactor to isSelectable
+  *  a658c7d2c - add isSelectable
+  *  22046e193 - spelling
+  *  1e72a24ec - remember last used path
+  *  df4191fea - set version to 3.26.4.10
+  *  d9082d144 - add closeTrim, appendShapeTrim
+  *  30f6882f3 - update script bindings
+  *  0bfe60e7b - add RPolyline to conversions
+  *  77ba3dc02 - add cloneToSharedPointer
+  *  366ac4b49 - fix qualification of return type
+  *  19a23ed2f - prevent conflicting settings in dimension preferences
+  *  29d001aae - update translations
+  *  5c70e2b60 - fix translations of free
+  *  f54e989d0 - add Swedish user manual
+  *  9df4ed595 - update
+  *  7fa4686cc - improve rendering
+  *  a1e091e72 - add Swedish user manual translation
+  *  36944c460 - update translations
+  *  54dbd4b8f - update string for dimtih
+  *  2030881d5 - update
+  *  297e6cac1 - add test data
+  *  cdc02fbd2 - fix radial dimension rendering
+  *  cc6636296 - fix command
+  *  6a6c25eec - update user manual
+  *  cfeb5c215 - update translations
+  *  b75ba05d6 - update test data, example data
+  *  eeae4f4cd - fix radial dimension rendering
+  *  4ce1dbff9 - disable unused properties for radial dimension
+  *  130b3a378 - fix export of arc dimensions to SVG
+  *  1ce2f10c8 - fix selection of dimensions in blocks
+  *  46fa025ae - fix dimension rendering in blocks
+  *  cbe1c4fba - fix dimension rendering in blocks
+  *  d6007a3d5 - add getClosestMatch
+  *  308b6e673 - update
+  *  748ed6639 - update strings
+  *  857c7bd6e - update translations
+  *  465ec5ee9 - update translations
+  *  071b60acd - tighten tolerance
+  *  f8602201d - set version to 3.26.4.9
+  *  7315ab44f - add unit test data
+  *  055561d04 - update qrc
+  *  842c8e119 - update translations
+  *  13720b4c8 - remove file
+  *  dc2d484aa - interpret latin1 as utf-8
+  *  e44ef4235 - write dim style based on RDimStyle info
+  *  d4efe45b0 - fix direction of radial dimension line (fixes unit
+    tests)
+  *  bc639de99 - fix check for DXF R12 variables
+  *  88a8a508c - update script bindings
+  *  3cf95c169 - implement rendering for arc / angle dimensions with
+    central vertical text alignment
+  *  651d20919 - add to2D
+  *  ca6522666 - add dim style properties for arc / angle dimensions
+  *  d21b34d49 - add to2D for dimension entities
+  *  77ae3e451 - add isValid for RShape
+  *  c74c03312 - add isOpenPolylineEntity
+  *  a6b5ff3f5 - only move cursor to start if field is not being edited
+  *  5b61bf82d - ignore invalid shapes from dimensions
+  *  221fef9c5 - add degree symbol
+  *  4ca0f7d9d - add unit tests
+  *  6e019c219 - handle special case
+  *  a735d9b7b - add unit tests
+  *  5a6acb3c3 - handle special cases
+  *  9d464c206 - fix angle label formatting
+  *  6e34741b5 - always get dimension style data from RDimStyle object
+  *  785d33b8e - allow forcing of screen-based linetypes on path level,
+    fix screen-based linetypes on layer level
+  *  e7462bca5 - add warning
+  *  15d34f0ba - hide parent ID property
+  *  3a8c1d20c - fix display of block reference attributes display
+    attributes if multiple block references of same block are selected
+  *  03844d191 - fix shape ordering (don't skip shapes)
+  *  09555dba2 - fix potential handle conflict
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 14 Oct 2021 20:23:12 +0000
+
 qcad (3.26.0+git8680-dee6a5e55-1) unstable; urgency=medium
 
   * Compile
