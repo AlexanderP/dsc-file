@@ -1,3 +1,225 @@
+freecad-daily (0.19.2+git26294-09da245af9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 09da245af974c25b035ba3635bbadc99e18f27d6
+  * Date: 1636019409
+  * git changelog:
+  *  09da245af9 - App: harmonize API of App::Application * make
+    getHomePath() static and return a std::string * make
+    getExecutableName() static and return a std::string
+  *  13dcfa64f6 - [skpi ci] Win installer: update MSVC version
+  *  f881330e8e - [skip ci] update links in Windows installer - missing
+    part
+  *  4346fddc9c - [skip ci] update links in Windows installer
+  *  bcab6b5a31 - Spreadsheet: Prevent marking a cell dirty when the
+    content didn't change
+  *  e43189fc48 - Merge pull request #5141 from luzpaz/mesh-qrc
+  *  909b035d0b - Squashed commit of the following:
+  *  1e49e20232 - Merge branch 'pr/5140'
+  *  b8ad042986 - Spreadsheet: Fix copy of empty but used cell
+  *  e8016bdb82 - Mesh: separating translation section in Mesh.qrc
+  *  9a9267f922 - Mesh: Convert comments from DE->EN
+  *  56d900c669 - Spreadsheet: Display new value, or pending, when dirty
+  *  123b5b5da1 - Spreadsheet: Remove double-set of value on enter
+  *  5b3bf97f2b - Gui: [skip ci] replace getNormalizedPosition() with
+    normalizePixelPos()
+  *  7542673b00 - FEM: command module, fix regression in the regard of
+    translation added with 5b52840ca5fdbb
+  *  0d511a6dd2 - Spreadsheet: Fix bug in content and alias lineedits
+  *  60467908c8 - Gui: [skip ci] code clean-up
+  *  bec3c797a8 - Gui: [skip ci] add method
+    NavigationStyle::getNormalizedPosition() to reduce code duplication
+  *  0b802eb717 - Gui: [skip ci] add method
+    NavigationStyle::handleKeyboardEvent() to achieve consistent
+    handling and reduce code duplication
+  *  1c93d3ee15 - Gui: [skip ci] add method
+    NavigationStyle::syncModifierKeys() to reduce code duplication
+  *  9def811a3a - Gui: [skip ci] expose function to Python to
+    enable/disable context-menu of 3d view
+  *  833868bd13 - Path: [skip ci] partially fix issue 0004765:
+    [MSVC][Build][Permissive-][std:c++latest] FreeCAD failed to build on
+    MSVC
+  *  13ba2242de - Gui: [skip ci] allow to set edit mode in cmdSetEdit()
+  *  d8f38a886a - Merge pull request #5128 from luzpaz/freecad-
+    translation-6
+  *  8348ebe8cb - Merge pull request #5136 from
+    sanguinariojoe/qtwebengine
+  *  ba2459cddc - [Spreadsheet] Fix missing header context menu
+  *  9a7bf3abff - Prefer QtWebEngine over QtWebKit
+  *  0e97a30ccd - Merge pull request #5130 from Roy-043/Draft-Fix-merge-
+    layers
+  *  002f212cee - Merge pull request #5133 from Roy-043/Draft-Fix-angle-
+    dimension-issue
+  *  ce56d65162 - Merge pull request #4952 from
+    realthunder/FixDocumentRestore
+  *  a3a7b5a6a6 - PD: [skip ci] if no active body exists then by default
+    pre-select the first option to create a new body
+  *  2a9fd08e7f - Merge pull request #5132 from luzpaz/Draft-whitespace
+  *  9e8516002b - Part: fixes #0004774: Datum plane or line is not
+    available in sketch in another body via binder
+  *  b488071a55 - Add requested revision by @chennes
+  *  30a3ccde46 - Add requested revision by @chennes
+  *  f742cd3c20 - Refined code formatting for uniformity
+  *  4dcc03cc72 - Add requested revision by @chennes
+  *  580a52f75c - Draft: Fix superfluous whitespace in translations +
+    misc. typos
+  *  c5b3ee7a72 - Part: in ViewProviderSpline use the
+    ViewProviderSplineExtension to avoid code duplication
+  *  717219bcec - Part: [skip ci] include PartGlobal.h in
+    ViewProviderExt.h
+  *  b3a6f21866 - Part: [skip ci] add PartGlobal.h with export/import
+    macros
+  *  c5fb91170b - dist-git: make script working again for Py3 and Linux
+  *  a2fb4a5d6d - Minor code change according to suggestions
+  *  9885dadfff - App: use enum in API Application::getDocumentByPath()
+  *  fc9d3547ad - App: fix external document loading
+  *  414ea71a28 - Part: fix unnecessary document 'modified' status
+  *  01d8d26bb4 - Gui: fix document 'modified' status on view property
+    change
+  *  f58faa607d - Merge branch 'master' into PDEdit
+  *  971057539f - Unit test: [skip ci] gimbal lock
+  *  0bd0ec5ed2 - [PartDesign] Remove useless function overriding
+  *  7a35afdd8e - Gui: add class RotationHelper to reduce code
+    duplication of PropertyRotationItem and PropertyPlacementItem
+  *  61de191771 - Gui: implement editor for PropertyRotation
+  *  16ae568549 - App: add class PropertyRotation
+  *  a624f6a50c - Draft: Fix angle dimension issue
+  *  09e2e7acfa - Sketcher: [skip ci] handle coincident points when
+    trying to create arc/circle
+  *  5e2bb15999 - Arch: import IFC, Materials, make merge materials
+    working on duplicate label setting
+  *  226e0adab9 - Arch: import IFC, Material, small improvement, no
+    changes
+  *  0a820e92fd - Arch: import IFC, Materials, small code improvements,
+    no changes
+  *  cd9055c396 - Arch: import IFC, use doc identifier instead of
+    FreeCAD.ActiveDocument
+  *  5f82ec99fc - Arch: IFC export and import, some code formating (only
+    very clearly ones)
+  *  cd8ce95f53 - Base: [skip ci] C++11: modernize use nullptr (replaces
+    NULL or 0)
+  *  b159144e13 - Base: [skip ci] handle gimbal lock when computing
+    Euler angles
+  *  cd91c73382 - Base: [skip ci] in Rotation class allow to set angle
+    in radian
+  *  4c886771d1 - Base: harmonize Python API of Rotation class
+  *  8b7718f823 - Draft: Fix merge layers
+  *  082989ac86 - Arch: import IFC, replace project, comment debug print
+  *  7d21029ff5 - Std: Fix URLs in CommandStd.cpp
+  *  951a0be9c7 - Base: [skip ci] expose Rotation.fromEuler() to Python
+  *  4c754f7af7 - Arch: add missing paranthesis to strings
+  *  f9da862dcc - Arch: import IFC, fix import if replace project and
+    only one building or one storey
+  *  8aa340b9e7 - Gui: [skip ci] fix regression not to allow to have
+    selected several objects when opening the placement dialog
+  *  b60ed6140f - Spreadsheet: [skip ci] update translation
+  *  c2fdeae7aa - Spreadsheet: [skip ci] add sub-menu text for
+    translation
+  *  4061c047a0 - Base: implement a way to test translator for testing
+    purposes
+  *  8f9ea8701d - Arch: import IFC, Layers, do not overwrite the
+    imported object color and line color with the default layer values
+  *  f3631c8ff1 - PD: Expose missing commands to translation in Measure
+    dropdown menu
+  *  ea355833fd - Arch: import IFC, fix new preference for not importing
+    Layer
+  *  fc14f67bf6 - Arch: import IFC, add preference to not import Layer
+  *  e702c5d234 - Gui: [skip ci] fix minor memory leak
+  *  0685afec7f - Arch: import IFC, some comments
+  *  326157cae8 - Arch: import IFC, materials, improve code but no
+    changes on what is done
+  *  55851e93eb - Arch: import IFC, fix merge material preference import
+  *  a1c9ab658c - Gui: add support of OpenSCAD navigation style
+  *  13ebb12bef - Merge pull request #4133 from donovaly/Gui-
+    ChildSelection
+  *  13cd1c23ec - Merge pull request #5119 from Roy-043/Draft-Fix-
+    Draft_SelectPlane-ignores-nesting
+  *  5fcd97b1c6 - Merge pull request #5124 from Roy-043/Draft-Fix-snap-
+    cycling-if-length-has-focus
+  *  f3ca27e18e - Gui: add search box to text editor
+  *  67e8fd0b6a - [GUI] fix tree object context menu issues
+  *  ca6d49d080 - Mesh: embed Evaluation dialog into a scroll area
+  *  9f2dd4a363 - Base: [skip ci] Modify GetASCII to include empty
+    strings
+  *  2808c4bc9c - Mesh: Mesh.createBox() now accepts a bounding box as
+    argument
+  *  044929342a - Sketcher: fix typos in Constraint Widget
+  *  398381c16e - Part: for vertex, edge, wire use
+    BRepExtrema_DistShapeShape to check whether point is inside
+  *  65923bfdbf - Gui: add virtual methods undoActions()/redoActions()
+    to MDIView to simplify code in UndoDialog/RedoDialog
+  *  123906034c - Merge pull request #5122 from Roy-043/Draft-Fix-
+    Draft_Edit-sketch-issue
+  *  aed8c5f4fd - Merge pull request #5118 from easyw/master
+  *  87ad1c0dde - PD: [skip ci] when creating a datum object allow user
+    to create a body if needed
+  *  3cb0f20b5a - Update DraftGui.py
+  *  45c3cee264 - PD: open transaction when calling item of context-menu
+    of sketch based features
+  *  d9d8761722 - Draft: Fix snap cycling if length input has focus
+  *  d39233313b - PD: [skip ci] code cleanup
+  *  3924d41073 - Part: do not open a second transaction when there is
+    already a pending transaction
+  *  e3ebe4bc9f - Mesh: add basic support of 3MF file format
+  *  c2502b09db - Merge pull request #5123 from
+    coldtobi/surface_fix_geticon
+  *  aa19f8b05f - Part: adjust orientation of refined face to input
+    faces
+  *  a156245704 - Fixes SurfaceExtend icon not being found.
+  *  a999273954 - Merge branch 'master' into master
+  *  a5411da5b9 - Gui: code-refactoring of document recovery handling to
+    reduce code duplication
+  *  954481bc2b - Draft: Fix Draft_Edit sketch issue
+  *  ee311b0835 - Surface: [skip ci] only try to build surface if at
+    least two boundary curves are used
+  *  796efc4c6b - Sketcher: fix segmentation fault when using sketch
+    validation dialog after document has been closed Therefore replace
+    the raw pointer of SketchObject with the template class WeakPtrT.
+    This class will be notified as soon as its handled object will be
+    deleted.
+  *  68e4806788 - Gui: [skip ci] add get() method to WeakPtrT class
+  *  b24ac5f2f8 - App: [skip ci] add get() method to WeakPtrT class
+  *  dce129ec49 - Merge pull request #5121 from luzpaz/typos
+  *  42e8287699 - Fix various typos
+  *  a9002f4218 - Gui: [skip ci] improve whitespaces
+  *  5da633d59f - Gui: [skip ci] improve whitespaces
+  *  b93aa77a1c - Gui: move handling of failed document saving to a
+    function to reduce code duplication
+  *  30ba396a82 - Mesh: improve MeshGeomFacet::IntersectWithFacet
+  *  890c40fcb6 - Merge pull request #5115 from Syres916/patch-33
+  *  9cbd07b52f - Merge pull request #5120 from Roy-043/Draft-Fix-
+    TeighaFileConverter-tooltip
+  *  4e0b8c535f - [Sketcher] Workaround for Elements theme issue
+  *  13ff620f36 - Draft: Fix TeighaFileConverter tooltip
+  *  cef86fb1ef - Mesh: extend API to access edges of a facet via Python
+  *  b6faf7f016 - Draft: Fix Draft_SelectPlane ignores nesting
+  *  25c3da4f0b - Draft: Fix Draft_SelectPlane ignores nesting
+  *  fcb5c768ff - deleting temp file (result of a previous export)
+  *  3b310cfdf2 - FEM: Fix variable pHeatTransfering ->
+    pHeatTransferring
+  *  5a55386919 - Mesh: [skip ci] add unit tests for coplanar and
+    intersecting triangles
+  *  8d0d149b5b - Mesh: add method to get intersection of edges
+  *  0b63548ea1 - Base: [skip ci] add method to check for null vector
+  *  abf1cd1586 - Mesh: [skip ci] update tri-tri-intersection
+  *  bde8c9416e - Draft: Allow to use QCAD pro as a converter to
+    import/export DWG files
+  *  cf1a0f7598 - Merge pull request #5114 from Roy-043/Daft-fix-
+    cleanProjection
+  *  ae341e6012 - Merge pull request #5116 from Roy-043/Arch-Fix-
+    BuildingPart-typo
+  *  9a76d28ca7 - Update ArchBuildingPart.py
+  *  7ebf53e94d - [Sketcher] Minor bugfix to display angle...
+  *  0926a4148b - Sketcher: Default Shortcuts
+  *  837de28e9e - Mesh: expose trimByPlane to Python
+  *  7da42730e1 - Update wires.py
+  *  fa80866a0e - Daft: fix cleanProjection (used by Draft_Shape2DView
+    and DXF export)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 04 Nov 2021 14:05:25 +0000
+
 freecad-daily (0.19.2+git26153-346ff3815d-1) unstable; urgency=medium
 
   * Compile

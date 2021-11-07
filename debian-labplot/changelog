@@ -1,3 +1,110 @@
+labplot (2.8.2+git8855-1dba2f68e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 1dba2f68ea4466561e19f0e6c29f9ab0529c6823
+  * Date: 1636118157
+  * git changelog:
+  *  1dba2f68e - parser: Add functions to generate non-uniform random
+    numbers of several distributions
+  *  cc606768d - Fix previous commit
+  *  f615aa72e - liborigin: d942dc63
+  *  40a148ecd - liborigin: 904fcc37
+  *  73c85a526 - l10n: Add @title:window helpers, capitalization and
+    punctuation fixes
+  *  f59b64599 - liborigin: ccefb3a5
+  *  69cb3dbc5 - changelog
+  *  04881574f - [boxplot] hide the symbol for the median.
+  *  94231553c - Origin import: fix curve data column import
+  *  361d9d121 - disable break point
+  *  3fe0006f7 - Origin import: fix column import and debugging
+  *  81bd76251 - Minor code style fixes in aspectcommands.h and two more
+    examples for the usage of boxplot and histrogram in the SDK.
+  *  bd33ec34f - [worksheet] switch off the rug for curves and the auto
+    data range type for axes when switching to a non-Tufte theme.
+  *  0ec427f65 - axis: add option for tick start offset
+  *  fdb99100a - Origin import: better axis label font size, fix empty
+    legend title
+  *  5e2abffe8 - When removing aspects, emit the aboutToBeRemoved signal
+    for column children only so the curves can react. Sending it for all
+    aspects causes issues that need to be fixed first. Alsom reduced the
+    dependency in multiple classes on macrosXYCurve.h.
+  *  a301c27ba - Origin import: fix auto scale of axes
+  *  8391feb72 - minor fix
+  *  f7d9dc87a - Merge branch 'master' of https://github.com/KDE/labplot
+  *  d47c30689 - * add DELETE macro * more Origin import debugging *
+    disable removing items from worksheet view to fix Origin GRAPH
+    import
+  *  0b89d9ecd - Minor fixes: * added shortcuts for panning in the plot -
+    arrow keys are used to move left, right, etc. * added additional
+    null-pointer check in CantorWorksheet so we don't crash when we
+    failed to load/find Cantor plugins and the session is not available.
+  *  6f6d02a12 - cartesian scales: remove unnecessary checks
+  *  2b5367e61 - Improve check macro
+  *  f45164816 - Fix warning macro
+  *  6c2c24214 - Fix log scales and combining different scales
+  *  7912982f2 - Fix typo
+  *  414acf48c - Fix crash loading a project
+  *  0d7037127 - Fix drawing curves in non-linear scales
+  *  d719d57e3 - spreadsheet: fix matio import test
+  *  d47b8e4e5 - axis: check ranges for non-linear scales
+  *  290006b4b - tests: more multi range tests
+  *  e35001691 - code cleanup
+  *  6b1981b69 - tests: improve multi range zooming
+  *  61895f85f - Fix plot actions
+  *  bdf12bcca - [worksheet] made the setting of axis range type (auto,
+    auto data, custom) undo/redo-able.
+  *  c9cfe6f1a - [worksheet] minor fixes: * react on undo/redo changes
+    for theme selection in the plot * when selecting 'Tufte', activate
+    the rug plot only for curves with <100 data points
+  *  7865839c4 - [worksheet] properly draw the background of the plot
+    area (regression).
+  *  14e041174 - [worksheet] don't apply theme when the objects are
+    being pasted (copy or duplicate action in progres) otherwise we
+    overwrite user's custom settings.
+  *  bbeb0d982 - Start fixing multi range tests
+  *  df2242740 - Fix compilation with MQTT
+  *  643f9ebb3 - Minor cmake improvements
+  *  32f0f3677 - Fix warnings without netcdf/matio
+  *  07e22f251 - Revert Numeric->Double for cartesian plot dock
+  *  4ff8307fa - Fix compilation without Matio
+  *  beaaf11c8 - Improve MAT import speed and add performance tracing
+  *  a5b562e8f - Fix build with MQTT
+  *  523765da8 - Refactor using poppler for handling PDFs
+  *  0839e75c1 - Better default LaTeX font size
+  *  d9b7f91d5 - Switch to PDF for formula preview to improve resolution
+  *  3934b9c77 - [examples] all the new example projects will be saved
+    in the xz-format. So, it's safe to always assume in ExampleManager
+    we're dealign with XZ.
+  *  b7a37290e - spreadsheet: fix column designation in append mode
+  *  34e76b997 - tests: add multivar MAT import
+  *  d5841e3c2 - mat import: Fix crash importing multiple MAT vars
+  *  511cc19db - Clenaup: * removed unused function in ProjectExplorer *
+    better function name in ExamplesWidget
+  *  02b25905b - axis title: Fix drawing bouding box of html text
+  *  85da72392 - Notify GuiObserver to bring up the proper dock widget
+    and somewhat simplified logic in ProjectExplorer to finalize the
+    project load.
+  *  176fa9f15 - tests: enable parser test on FreeBSD for testing
+  *  f21ff3991 - dock widgets: try improving resizable comment field
+  *  b082e7bfc - [examples] added a new example project SOS Morse
+    Signal.
+  *  7c4f93222 - [worksheet] when copying, duplicating or loading labels
+    and images, call retransform() so their positioning relative to the
+    parent is properly updated.
+  *  02ef6d7db - Code clean up
+  *  9eaa7dc5c - resizable text edit: try to improve grab bar
+  *  0ed9a42d0 - [axis] Fix loading ticks spacing
+  *  ccad79747 - [worksheet] added more shortcuts for the
+    navigation/zooming actions.
+  *  411826e42 - Also rename Numeric to Double internally
+  *  3a05a4044 - column: rename Numeric mode to Double to be more
+    precise
+  *  10bc8f720 - interpolation: catch non strictly increasing x data
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 05 Nov 2021 17:41:45 +0000
+
 labplot (2.8.2+git8788-031533021-1) unstable; urgency=medium
 
   * Compile

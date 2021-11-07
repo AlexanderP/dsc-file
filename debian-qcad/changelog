@@ -1,3 +1,89 @@
+qcad (3.27.0+git8827-f2c7a562a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: f2c7a562adcbb0a35386c8846b23f49e7cb71984
+  * Date: 1636118146
+  * git changelog:
+  *  f2c7a562a - update script bindings
+  *  d460fa11c - add setDimscale, setDimasz, setDimtxt
+  *  12fab8596 - update
+  *  125392688 - clean up
+  *  3c019877a - add overwritable functions for derived actions
+  *  2a9299962 - add TODO
+  *  32dc0927a - refactor viewport rendering as model space block
+    reference with rotation, don't render entities outside viewport
+  *  f8075af76 - performance: no distance calculation for entities
+    inside viewports
+  *  297630054 - avoid unnecessary regens in print preview
+  *  e2b9283c5 - set version to 3.26.4.11
+  *  e6863559c - cleanup
+  *  0ee679b74 - update tolerance, leader entities when dimension
+    settings change
+  *  1373fdc77 - only look up highlight entity if highlighting is
+    enabled
+  *  9dbb4446d - update translations
+  *  19849b534 - store last point for derived classes
+  *  ae8d786e4 - update script bindings
+  *  bffd74ea3 - update
+  *  627c6f6c7 - clean up
+  *  10a424767 - implement dimension style overrides for leaders
+  *  97dfd0f2c - update InfoAreaCentroid
+  *  114940149 - refactor DimAngular to allow more flexibility in
+    derived actions
+  *  e5389ca5f - update script bindings
+  *  30e77ad08 - remove unused properties
+  *  ebdc82b12 - add unit test
+  *  c1ba398c3 - fix order of preview entities
+  *  f1283648b - add centroid info tool
+  *  411105445 - fix arrow flipping for aligned dimensions
+  *  a02d95c05 - update script bindings
+  *  08104deb3 - add unit test
+  *  e7e003ce1 - render viewports using transformations
+  *  6e69427d2 - add unit test data
+  *  38f03e845 - fix dimscale name
+  *  4d967c90d - fix FS#2305 - Invisible XLine under visible XLine may
+    prevent selection of visible XLine
+  *  8662e6235 - scale visual properties when exploding blocks
+  *  bbd780cc8 - always scale visual properties
+  *  15d5fdc05 - mark overrides as affecting geometry
+  *  c5cdc6e48 - DimScale -> Dimscale
+  *  099ae4998 - improve backtrace formatting
+  *  540146bb2 - fix tolerance entity using dim settings, add overrides
+  *  bb7134818 - add unit tests
+  *  61a2ad3fa - fix segment area calculation
+  *  e48e94423 - make sure all dimensions are updated when settings
+    change
+  *  4c84d3792 - change init order
+  *  0a440f9c6 - comment out broken code
+  *  e354ac811 - update user manual
+  *  cc0b075c1 - update readme
+  *  8876deb39 - update splashscreen
+  *  404abc681 - update test data
+  *  9cf18df49 - identify windows 10 and 11
+  *  9101711fa - set version to 3.27.0
+  *  21fcc5f38 - set version to 3.26.5
+  *  ad453c606 - update test data
+  *  713c9b55f - update translations
+  *  43e45f466 - update script bindings
+  *  61e947d07 - add autoCloseLoops, addBoundaryShape
+  *  7e9a19189 - fix fuzzy comparison
+  *  dfca902bf - update translations
+  *  dfc4c5e0f - fix visibility of block entities when selecting
+  *  e9ec4b7ab - Merge branch 'master' of github.com:qcad/qcad
+  *  b5ae03ee8 - remove obsolete unused code
+  *  e2142b863 - Translated using Weblate (Croatian)
+  *  b2b2e48e8 - Translated using Weblate (Croatian)
+  *  ac0af81d3 - Translated using Weblate (Croatian)
+  *  51c4bf7e2 - Translated using Weblate (Croatian)
+  *  2a3cfa08a - add simple text left alignment preference
+  *  520958497 - fix FS#2291 - Rulers empty if auto grid scale is off
+  *  85166b610 - set version to 3.26.4.11
+  *  cf6725d69 - clean up
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 05 Nov 2021 17:42:30 +0000
+
 qcad (3.26.0+git8759-1ef5dafc9-1) unstable; urgency=medium
 
   * Compile
