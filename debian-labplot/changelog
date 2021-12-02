@@ -1,3 +1,109 @@
+labplot (2.8.2+git8914-40e3844b5-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 40e3844b58274e55ec19311bbc900e2eb57f6254
+  * Date: 1637337740
+  * git changelog:
+  *  40e3844b5 - histogram fit: fix function evaluation
+  *  daeb5fb72 - [histogram] initial implementation for fitting to the
+    histogram values, still a couple of issues needs to be addressed and
+    finalized.
+  *  da24b2042 - axis label: minor fix for multiple of pi format
+  *  0b2b7c4f9 - axis label: Fix minor problem with Scientific format
+  *  796ea1a8a - axis label: Fix multiple of pi format
+  *  1f4ea348f - Another try to be portable
+  *  286f05716 - define and use exp10
+  *  aa5af61ce - Fix compilation on non-GNU systems
+  *  f50113e57 - axis label: improve power-of formats
+  *  c392bb17f - use better warning colors in all places
+  *  3fea472d9 - [workhseet] adding the changes on CartesianPlot.cpp
+    that were forgotten in 7e0fb88.
+  *  708217eff - Improve background color for syntax errors. Also
+    consider light/dark theme
+  *  7e0fb889a - [worksheet] don't apply the current theme if the
+    objects are being moved (change drawing order), otherwise user's
+    settings are overwritten.
+  *  db7b07736 - [worksheet] save the alignment in TextLabel.
+  *  d95f0f877 - [box plot] allow to modify the appearance of the
+    whisker cap separately from the whisker line.
+  *  363e3e72e - [spreadsheet] when navigating between the different
+    columns in StatisticsDialog, don't change the current tab  in the
+    statistics widget, the user should continue with the same
+    visualization  for the different column.
+  *  7670959a0 - Don't notify the curves about the column removal when
+    the parent spreadsheet is just being moved (move up/down in the
+    project explorer).
+  *  c37de9c13 - axis range: Fix multirange tests by improving previous
+    commit
+  *  da6e1077c - auto scale: fix changing drawing order
+  *  125ba1406 - [examples] added a new example project Hertzsprung-
+    Russel Diagram.
+  *  110d346b3 - Minor fixes: * when notifying about columns being
+    remove, no need to do this for hidden columns like result columns in
+    XYEquationCurve, etc. * more usage of fixed-property in
+    LiveDataSource and InfoElement.
+  *  793211447 - [worksheet] fixed the regression with plot objects
+    being not updated when the underlying data or some of their
+    properties were changed.
+  *  4bf0c6053 - Show the used in sub-menu in the context menu of a
+    column only if the columns is really used somewhere and react on
+    rename requested events also for the project node in the project
+    explorer.
+  *  454509efb - Introduced a new property fixed in AbstractAspect that
+    allows to determine whether the objects can be moved, renamed and
+    deleted more easily. Thic commit also fixes the problem with
+    residual values in the fit curve and with rough values in smooth
+    curve where it was possible to delete the columns for them which we
+    don't want to allow.
+  *  7093b5d9c - resizable text edit: show fallback grab bar also on
+    Windows
+  *  7cc1e18ad - axis: fix drawing axis line when zoomed
+  *  3d9a49cc6 - fitting: pseudovoigt model fixed
+  *  e28f632b9 - [worksheet] always sort the list of available themes in
+    the themes preview widget.
+  *  6e873e363 - Properly copy&paste/duplicate equation curves.
+  *  243965427 - grab bar: use fallback only on Linux
+  *  78836d484 - axis: fix drawing with invisible curves
+  *  1c144073a - code cleanup
+  *  51e0d0805 - fix typo
+  *  1e4fa21ae - axis dock: improve auto scaling
+  *  5d814c73a - cartesian plot: better naming for data range
+  *  a2e43f019 - Fix compilation
+  *  558675904 - axis dock: enable clear button for first tick offset
+  *  b99beffcb - cartesian plot dock: Fix truncation of range values
+  *  13ca31be4 - axis tick label: use gsl_pow_int and better debugging
+  *  db94ab842 - axis tick label: keep any format when changed or loaded
+  *  9b57a3239 - [worksheet] hide the move behind and move in front of
+    sub-menus in the context menu of a worksheet element if they don't
+    have any entries.
+  *  1fdc478d3 - Delay the initialization of actions in the project
+    explorer to the point where they are really required.
+  *  14ab47625 - Add file name in the Save As file dialog.
+  *  1af3b1f70 - axis tick label: Fix crash in power of formats
+  *  4fd36f50c - axis tick label: Improve scientific format
+  *  c2dd8f50d - CAS settings: add warning when no backends are
+    installed
+  *  8188bb532 - Added a version check around KFuzzyMatcher, it's
+    available startign with KF 5.79 only.
+  *  d3edfdb87 - Fuzzy matching when doing search/filter in the Project
+    Explorer
+  *  ebf127af1 - [spreadsheet] proper icon for the search action and end
+    the search upon Escape key press.
+  *  1d6fe2fd4 - [spreadsheet] allow to search in the spreadsheet.
+  *  1eb716283 - axis dock: improve tool tip for tick offset button
+  *  2aa6b30e7 - axis dock: add auto first tick offset tool button
+  *  d4bb2146a - typo
+  *  09ed9a2c2 - axis dock: add tool button for first tick offset
+  *  cef92e691 - cartesian plot: improve API
+  *  1eec8a5ac - cartesian plot: simplify API
+  *  bc1ae9554 - [examples] added new example projects for multi-ranges
+    and for Tufte's minimal ink design.
+  *  a9838c60b - [worksheet] added a new symbol character X.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 19 Nov 2021 17:17:37 +0000
+
 labplot (2.8.2+git8855-1dba2f68e-1) unstable; urgency=medium
 
   * Compile

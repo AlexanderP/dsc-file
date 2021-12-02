@@ -1,3 +1,209 @@
+freecad-daily (0.19.2+git26427-751227402d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 751227402db14aad83f5aa87d63e514109bd438f
+  * Date: 1637335300
+  * git changelog:
+  *  751227402d - Gui: extend MainWindowPy * implement
+    MainWindowPy::getWindows * implement MainWindowPy::getWindowsOfType
+  *  6bf724cca9 - Gui: extend PySide2 wrapper of MainWindow with extra
+    functions
+  *  8eb099d4e1 - Gui: add MDIViewPy.cast_to_base and implement in
+    Python wrappers for sub-classes of MDIView
+  *  508df64732 - Gui: [skip ci] add sub-classes of the MDIView to the
+    type system
+  *  7ca80cade0 - Merge pull request #5177 from sliptonic/bug/profilebug
+  *  a41d11a299 - Merge pull request #5028 from luzpaz/Crowdin-MeshPart
+  *  f0646d8b51 - Tux: [skip ci] fix error: NameError: name 'adjustSize'
+    is not defined Caused by commit d7d23d5ef59
+  *  3dc9acef62 - PD: [skip ci] fix warning -Wunused-variable
+  *  055068a255 - TD: [skip ci] fix deprecation warning with Qt5.15
+  *  6bea853e80 - MingGW: [skip ci] fix build failure
+  *  a26fb4db1a - Merged crowdin translations
+  *  aca390ac88 - Updated ts files
+  *  ed03e8ded5 - Gui: allow to configure the checks of the cache
+    directory
+  *  e953dc1c2a - Merge pull request #5156 from donovaly/TUX-navibar-
+    fixes
+  *  75846b340b - Merge pull request #5153 from Roy-043/Draft-fix-
+    importDXF-should-use-make_layer
+  *  8527cab2bc - Gui: Add missing Windows QPrinterInfo include
+  *  4c129c7526 - face outerwires aren't always the first wire in the
+    Wires list. Added logic to compare hashCodes()
+  *  cd2955f3d3 - PD: simplify Pad/Pocket commands
+  *  a8cb5ed419 - PD: [skip ci] for pockets use opposite direction of
+    reference axis
+  *  973642285e - Gui: periodically check cache directory and offer a
+    way to clean it up if it exceeds the limit
+  *  d5726bd7af - App: standard path handling * distinguish between temp
+    and cache location * document's transident directory is created in
+    the cache location * add functions to access temp and cache location
+    via Python
+  *  7e5e0fe2fe - Merge pull request #5154 from sliptonic/feature/drill-
+    generator
+  *  838bdf93bc - [PD] fix issue 0004785
+  *  61481dc9c5 - [PD] uniform pad and pocket handling
+  *  0469e277ab - App: add PropertyLinkSubList::addValue() to extend the
+    list
+  *  1929b4ca4a - App: add PropertyLinkSubList::verifyObject() to reduce
+    code duplication
+  *  b9a2fb2f74 - [Print Preview] Save paper size and orientation to
+    user parameters
+  *  465548dc18 - App: Add colCount and rowCount to Range
+  *  d5009f2946 - App: Add missing use for boost placeholders
+  *  1f43b3f933 - App: fix compilation of PropertyStandard.cpp during
+    cherry-pick
+  *  14dfae0597 - App: add hiddenref() expression built-in function
+  *  8cf3cf330b - App/Gui: allow change dynamic property group and
+    documentation
+  *  72ae26dfee - App/Gui: improve expression binding of
+    PropertyEnumeration
+  *  3cc2b49ee9 - App: fix crash on copy of Enumeration
+  *  03dd79c155 - Base: add methods to Vector2dPy
+  *  3c1ea5883c - Base: implement number protocol for Vector2dPy
+  *  359955a51e - Draft: revise findMidpoint function
+  *  0c933ac70a - Part: use of factory method of Vector2dPy
+  *  50523fe951 - Base: add factory method to Vector2dPy
+  *  414f4d706e - [PD] uniform Pad/pocket UI
+  *  39c162f938 - Addon Manager: Added VendorParts workbench icon
+  *  5eb97d0028 - Spreadsheet: several improvements * do not simply
+    return with Py_None from Python handler without incrementing the
+    ref. counter as otherwise the interpreter steals a reference and the
+    program will crash after a while * avoid using the plain Python C
+    API and instead use the PyCXX API
+  *  63e1f95a97 - Spreadsheet: get access to the sheet view from the
+    view provider via Python
+  *  1e3b97f619 - Spreadsheet: in ViewProviderSheet do not add a second
+    member to store the Python wrapper because the base class already
+    has it and it invalidates the wrapper in case the it is destroyed
+  *  00846945d5 - SpreadSheet: fix -Wunused-parameter
+  *  b308645654 - SpreadSheet: fix -Winconsistent-missing-override
+  *  5f7b8214e5 - Spreadsheet: implement SheetViewPy that acts as sub-
+    class of MDIViewPy
+  *  093f15dce5 - Spreadsheet: Expose currentIndex to Python
+  *  4a4db353a5 - [PD] fix pad/pocket direction issue
+  *  37dbcf7f66 - Spreadsheet: Add programmatic selection of cells
+  *  640ecca830 - [PD] fix typos
+  *  179c6b540e - Spreadsheet: Minor code cleanup
+  *  16bbe12336 - Expose the selected cells to Python
+  *  96512c1e01 - PD: [skip ci] add PartDesignGlobal.h with
+    export/import macros
+  *  7c54774ef1 - [Core] Improve decimal point substitution mechanism
+  *  6da7749233 - App: do not raise an exception if application data
+    directory doesn't exist because this breaks the CI tests Instead try
+    to create the directories and throw an exception if this fails.
+  *  b2475b228a - App: add upgrade() method to PropertyLinkSubList
+  *  5aaf6e68b4 - [PD] Allow body faces when making loft by pre-
+    selection
+  *  51cc91da84 - Update src/Mod/Sketcher/Gui/TaskSketcherValidation.ui
+  *  bad413b0f7 - Sketcher: fix typo in Gui/TaskSketcherValidation.ui
+  *  0b3839f0f6 - [PD] TaskDlgPipeParameters - refactor comments
+  *  0995c81240 - [PD] add feature to set direction for pockets
+  *  bce2c0e648 - Gui: [skip ci] fix -Winconsistent-missing-override
+  *  126fadd2d6 - PD: make sure to switch off Profile and Section
+    highlighting when closing sweep dialog
+  *  fb9a3eecff - PD: change visibility handling of sweep to support
+    undo/redo
+  *  a545fb6741 - App: [skip ci] add program option --keep-deprecated-
+    paths to keep old path names
+  *  e7e2994ba0 - App: fix issue 0002956
+  *  c62239d0ba - Merge pull request #4626 from
+    pavltom/GUI_TreeView_Item_Ordering
+  *  bef1df4d40 - Merge pull request #5163 from donovaly/PD-sweep-
+    section-visibility2
+  *  969556573b - [PD] code improvement for FeaturePad
+  *  8173f79dc7 - [PD] code improvements for TaskPadParameters
+  *  cc242aae7d - [PD] handle changed property for loft and pipe
+  *  a4fa45b589 - [PD] Check if property is named before
+  *  6069d48b6d - [PD] fix sweep visibility bug
+  *  73c01a4196 - cmake error
+  *  d86a73f07e - App: code cleanup
+  *  37df050d59 - [PD] Clear other taskbox buttons in loft and pipe when
+    one pressed
+  *  62ad96508a - Arch: export IFC, make compatible with ifcopenshell
+    0.7
+  *  b660ed815c - Merge pull request #5152 from Roy-043/Draft-fix-
+    getTeighaConverter
+  *  e06034e772 - [PD] fix a typo
+  *  1957bcc489 - Gui: expose the 'Link Actions' toolbar icon to
+    translation
+  *  96bbb4ba21 - TechDraw: Renames submenu command + exposes to
+    translation
+  *  314ff0053c - [PD] Fixed loft and sweep breaking on section deletion
+  *  03a8ff7841 - [PD] Support adding solid faces for loft and pipe
+    sections
+  *  5c77af421d - PD: [skip ci] fix crash in ReferenceSelection::allow
+  *  4a7cdd5095 - fixing comment errors
+  *  f7073704e8 - Merge pull request #5160 from luzpaz/TD-ToolAttributes-
+    typo-translation
+  *  84182deff0 - App: add a CMake test to check if C runtime provides
+    backtrace symbols
+  *  5ad8bed9c4 - App: add new config key UserConfigPath to store the
+    path to the config files
+  *  d63dab54cb - TechDraw: Fix typo in Tool Attributes command + expose
+    to translation
+  *  ab1eab9ea3 - Merge branch 'master' into Crowdin-MeshPart
+  *  56875b2137 - Drill Generator and testing
+  *  2cc5707571 - App: issue 0002956: implement XDG_CACHE_HOME
+  *  9e4ea890e8 - Merge pull request #5149 from donovaly/PD-loft-
+    visibility-fix
+  *  d7d23d5ef5 - [Tux] fix navigation status bar
+  *  d244df4f79 - App: further code refactoring in
+    Application::ExtractUserPath()
+  *  7375be66ad - App: keep custom user data path as is if
+    FREECAD_USER_HOME or FREECAD_USER_DATA is set
+  *  ab1220b663 - App: code refactoring in
+    Application::ExtractUserPath()
+  *  7245b0894a - Draft housekeeping: importDXF.py should use make_layer
+  *  15c495a5bd - Draft: fix getTeighaConverter
+  *  11c5954ebf - App: split Application::ParseOptions into two
+    functions to simplify handling of options that should be processed
+    before determining user directories
+  *  25d0e63e0c - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  0b4e1ea556 - Draft: Fixed DWG import's QCAD config
+  *  02c1277a1d - OpenSCAD: Minor cleanup of import code
+  *  058962362d - OpenSCAD: Refactor tests to all use the same code path
+    for tempdir generation
+  *  0b77c2b2b5 - [PD] fixes loft visibility on creation and
+    modification
+  *  0b4405e935 - [PD] simplify Loft code
+  *  84274f5c80 - PD: [skip ci] fix ambiguous shortcut overload in
+    TaskDlgPipeParameters
+  *  4f56ee263d - Sketcher: fix some memory leaks
+  *  6d2aa6acc9 - Main: [skip ci] partially fix issue 0004765: FreeCAD
+    failed to build on MSVC with std:c++latest
+  *  4543c98267 - MeshPart: fix header uniformity + remove superfluous
+    whitespace (#5135)
+  *  e30efba754 - [PartDesign] Fix typo in method name
+  *  549e5b5650 - Tux: support of OpenSCAD and TinkerCAD in navigation
+    indicator
+  *  916fe37a6b - Gui: move handling of SoMouseWheelEvent to its own
+    handler function
+  *  4a1c1c7004 - C++11: modernize use nullptr (replaces NULL or 0)
+  *  528ffce593 - Gui: add method NavigationStyle::processClickEvent()
+    to reduce code duplication in sub-classes
+  *  b1ab5c3b8f - Gui: [skip ci] in MayaGestureNavigationStyle rename
+    mousedownConsumedEvent to mousedownConsumedEvents
+  *  5b023b0af5 - Gui: [skip ci] rename handleKeyboardEvent to
+    processKeyboardEvent
+  *  ef100d55e9 - Gui: add support of TinkerCAD navigation style
+  *  7cd3930dd8 - [Sketcher] Removed lines that was introduced to
+    workaround grid visibility management issues
+  *  76130c85ce - [ViewProvider2DObject=>Sketcher] Fix grid visibility
+    management
+  *  648c55c8a0 - [ViewProvider2DObject] Fix typo
+  *  a2d6c317fd - [Examples] Add thumbnail to PDN example
+  *  fdcdaebc9b - Fix typos in source comments [skip ci]
+  *  8366028e6f - PD: [skip ci] open a transaction when creating a new
+    body with DlgActiveBody
+  *  b22f2c6562 - [Sketcher] Add tooltips in Validate Sketch task UI
+  *  eac21354fa - [Sketcher] Refactor Validate Sketch task UI to
+    decrease confusion
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 19 Nov 2021 16:55:56 +0000
+
 freecad-daily (0.19.2+git26294-09da245af9-1) unstable; urgency=medium
 
   * Compile
