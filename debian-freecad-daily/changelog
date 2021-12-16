@@ -1,3 +1,195 @@
+freecad-daily (0.19.2+git26553-632af47a0d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 632af47a0d137bffe625762799a8c21a2ed75748
+  * Date: 1638614942
+  * git changelog:
+  *  632af47a0d - Added SpaceNavigator defaults
+  *  04be1a4af9 - [GUI] code style fixes for Tree.cpp
+  *  6e52161dce - PD: refactor ReferenceSelection
+  *  543024e078 - PD: comment out dead code
+  *  92a8e0e3d8 - [Gui] Tree: implement collapse/expand system with keys
+  *  7aef0b3de7 - [Gui] UserEditMode : fix operating on PartDesignObject
+  *  fab96e2151 - PD: avoid include generated .ui file in header file
+  *  c64d86274c - PD: minor cleanup in view provider headers
+  *  3ee1d91b88 - PD: cleanup the mess with boolean arguments and
+    replace them with a bitmask
+  *  59c759ebbd - Merge pull request #5219 from luzpaz/gender-neutral-
+    fixes
+  *  269681d83c - PD: use button group to make mid-plane and reversed
+    option mutual exclusive
+  *  73fa6217ce - Merge pull request #5217 from
+    sliptonic/feature/rotationgenerator
+  *  0042f58e4c - Make source code comments use gender neutral pronouns
+  *  501c3dc657 - PD: fix ProfileBased::getAxis
+  *  526dc1a030 - App: expose more methods of Document class to Python
+  *  96cbb3d2c0 - TD: fix C++20 warning: bitwise operation between
+    different enumeration types [-Wdeprecated-enum-enum-conversion]
+  *  4f12416fa0 - Gui: fix C++20 warning: bitwise operation between
+    different enumeration types [-Wdeprecated-enum-enum-conversion]
+  *  2e5bcae6b8 - Change macro path selection from File to Folder
+  *  bbacecb397 - Gui: fix C++20 warning: bitwise operation between
+    different enumeration types [-Wdeprecated-enum-enum-conversion]
+  *  2fd81006ea - PD: fix build failure with C++20
+  *  58f33f350d - Gui: fix build failure with C++20
+  *  b2800dfbb8 - draft generator and tests
+  *  be88e838c1 - [Sketcher][Bugfix] Slot: fix segfault accessing empty
+    vector
+  *  e4ca3d2971 - Merge pull request #5214 from mdkus/master
+  *  b28ff5b1ba - Merge pull request #5178 from Roy-043/Draft-
+    housekeeping-import-is_group-get_windows
+  *  78f4e980ba - Merge pull request #5202 from Roy-043/Draft-fix-3-snap-
+    issues
+  *  114fe73300 - Merge pull request #5206 from Roy-043/Draft-fix-layer-
+    and-style-handling-of-point-color-and-point-size
+  *  5e16fffc20 - App: [skip ci] improve importing a Python module when
+    passed as program argument
+  *  4024180d5d - Merge branch 'master' of
+    https://github.com/mdkus/FreeCAD
+  *  569f61b19a - Update CreatePyModule.py
+  *  770c7f6330 - Replace deprecated qt functions toList() & toSet()
+    (#5213)
+  *  a05cd50fa5 - Part: add exception handling to
+    Face.makeEvolved/Wire.makeEvolved
+  *  edf5d13de6 - Part: add module with enums
+  *  5018af974c - Part: implement Part.Wire.makeEvolved and
+    Part.Face.makeEvolved
+  *  3cddf78b5e - PD: refactoring of TaskHelixParameters
+  *  46e516f5d3 - PD: fix crash in TaskHelixParameters::updateStatus()
+  *  ffe240a539 - PD: refactoring of TaskHelixParameters, update status
+    after each recompute
+  *  41efee1b4c - PD: handle language change in TaskHelixParameters
+  *  834ae29ad0 - [Sketcher] Allow to autoconstraint slot
+    horizontal/vertical
+  *  abe4babd13 - [Sketcher] Introduce hack to be able to
+    vertically/horizontally auto-constrain primitives
+  *  7c0c6bf671 - [Sketcher] Ability to snap slot horizontal/vertical
+  *  9d70589d6c - [GUI] set dialog width to the one of the other
+    preferences ones
+  *  955af2fa8d - [PD] use existing definition for PI in Helix
+  *  35683883cb - [PD] allow negative helix growth
+  *  1358cd021f - [PD] prevent invalid helix geometry
+  *  625c84e34a - [PD] allow to move sweep sections
+  *  90f2040386 - [PD] fix increment of helix growth
+  *  169c38622c - [PD] Helix: Offer profile's normal as axis
+  *  bc90f4480b - [PD] Use  to compare strings instead of
+  *  6d0c6b4119 - [PD] Support punctual sections for PD Pipe
+  *  5e0f8bf604 - Draft: fix layer handling of PointColor and PointSize
+  *  e2fec183db - Draft: fix style handling of PointColor and PointSize
+  *  0ead26f5c2 - [Sketcher] Floating point computation immunity for
+    carbon copy parallel/aligned checks
+  *  0ccdf8b717 - [Sketcher] Improve a bit XZ plane mapping by using
+    quaternions directly
+  *  682cdb42ef - [GUI] minor UI fix for a pref dialog
+  *  2650ef3b81 - fix dialog height
+  *  dc4a8e5beb - [Gui] Decimal separator substitution : add option in
+    Preferences
+  *  f5d230ed29 - Merge pull request #5205 from sliptonic/bug/depthsteps
+  *  6c16094d5a - PD: fix bug in TaskExtrudeParameters When switching
+    from Custom direction to Select reference mode do not jump back to
+    Custom direction mode after selecting an edge
+  *  cb8330d5bd - PD: code-refactoring of TaskExtrudeParameters
+  *  8e6c5a497b - make sure depthparams handles negative steps and
+    finish step correctly revised test
+  *  e412c3f4cc - PD: add enum class to TaskPadParameters to avoid to
+    work with magic numbers
+  *  828b1b6d0a - PD: add enum class to TaskPocketParameters to avoid to
+    work with magic numbers
+  *  6a0cf8233a - PD: create a common base class of TaskPocketParameters
+    and TaskPocketParameters to reduce code duplications
+  *  bca145d8c7 - App: Added warning at startup if user mods are found
+    in older location
+  *  9baf044e6a - Draft: fix 3 snap issues
+  *  3648948711 - Gui: in search bar set red background color as style
+    sheet because a palette won't work if an application wide style
+    sheet is set
+  *  9283aa0f72 - [PD] revert a part of commit 1da079b34
+  *  3465ac3add - Gui: [skip ci] do not trigger
+    on_fileChooser_fileNameChanged when opening macro dialog
+  *  00d9bb5dd9 - Revert Addon Manager: Added VendorParts workbench icon
+  *  fea1d3558b - App: remove code to copy user config from old to new
+    location
+  *  325c5ec887 - Fix issue 0004791: DXF import fails for trivial circle
+  *  401db10fc6 - Update Draft.py
+  *  c9a74d40d2 - Revert Merge pull request
+  *  643460e941 - Merge pull request #5180 from Roy-043/Draft-fix-draft-
+    point-array-issue
+  *  0eba852815 - Merge pull request #5179 from Roy-043/Draft-
+    housekeeping-SS-shortcut-used-twice
+  *  2d7e867e8a - Merge pull request #5183 from Roy-043/Draft-fix-toggle-
+    grid
+  *  ad408a0989 - [Sketcher] Change diameter symbol used in presentation
+    string, fixes #4779
+  *  263f2e91da - Part: Auto-add primitives to active Part
+  *  57ce37d867 - App: add CMAKE_BINARY_DIR to search paths
+  *  7f50605c61 - App: save version number of the most important
+    libraries
+  *  1da079b34b - [PD] better solution for reversed pad/pocket handling
+  *  4c72df3480 - [PD] fix pad/pocket UI issues
+  *  81f4bcce66 - Gui: [skip ci] fix -Wmultichar
+  *  34ef43811c - [Gui] Add corner cross size as a preference in
+    Display/3D View/General
+  *  9d82286bc8 - [Gui] Render corner cross lines with thin polygons so
+    it can be scaled
+  *  513b49aa7e - [Gui] Improve corner cross labels rendering by using
+    larger antialiased pixmaps
+  *  3d32909302 - [Gui] Render corner cross labels as pixel maps so they
+    are scalable
+  *  9d15df29d9 - [Gui] Expose API for corner axis cross visibility/size
+    to Python
+  *  792277a848 - Gui: add button group that allows to uncheck all
+    buttons in exclusive mode
+  *  e5ea670633 - [Sketcher][Bugfix] Fix crash when applying 'Constrain
+    internal alignment' on contraints, fixes #4790
+  *  fc31a79eef - Gui: remove superfluous whitespace from translation
+    string
+  *  563743e7e6 - Gui: do not include generated ui file inside header
+    file
+  *  d34a5616a2 - PD: If pad/pocket is directly used on several faces
+    then determine the normal of the first face
+  *  b9e72f1a7c - App: fix subname encoding when saving property links
+  *  ab26d4d0d2 - [PD] Change some strings and comments in loft code
+  *  ea10dfd85d - [PD] Allow sketch point profile in selection-based
+    loft workflow
+  *  d5e750d262 - [Sheet][Bugfix] Reject alignment change for merged
+    cell except top-left one
+  *  dc8f20a9e4 - [Sheet] Assert non-null pointer before using it
+  *  7349eb5198 - [Sheet] Prevent duplicate call to 'nonNullCellAt'
+  *  e3cbc9fcfc - App: change PropertyContainer::Restore()
+  *  789d32f87b - Test: fix test case
+  *  66038006d7 - App: do not auto rename new dynamic property
+  *  9bfab4262f - Mod: change error text of Python wrapper when trying
+    to access deleted view
+  *  fad2fd9568 - Gui: make View3DInventorPy acting as sub-class of
+    MDIViewPy
+  *  292f6dcaa7 - Gui: make AbstractSplitViewPy acting as sub-class of
+    MDIViewPy
+  *  d64b698d05 - TD: make MDIViewPagePy acting as sub-class of
+    MDIViewPy
+  *  cf337394a1 - Gui: in repr() of MDIViewPy write the typeid name
+  *  8de5d37fba - Web: make BrowserViwePy acting as sub-class of
+    MDIViewPy
+  *  c93031da39 - Gui: expose some more methods of MDIView to Python
+  *  195144fdc3 - Gui: make sure the calltips show the added methods of
+    MainWindowPy
+  *  71e70c876b - [PD] Use  for loft and sweep sections
+  *  2c701c0985 - Spreadsheet: [skip ci] return Py::None() instead of
+    Py::Object()
+  *  d60a0fb760 - Spreadsheet: Remove unnecessary functions & files
+  *  79a0c6b54c - Spreadsheet: Implement Python SheetView functions
+  *  5b7fb78b10 - App: remove superfluous whitespace in
+    ObjectIdentifier.h
+  *  0db37e77c3 - App: fix doc typo in ObjectIdentifier.h
+  *  4fa4446f01 - PD: [skip ci] code clean-up in pad and pocket feature
+  *  449797d7f5 - Gui: Remove superfluous whitespace from string that is
+    translated
+  *  ab480df745 - PD: move duplicated code to common base class
+  *  9ee60fd585 - PD: Add common base class for Pad/Pocket
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 04 Dec 2021 12:33:58 +0000
+
 freecad-daily (0.19.2+git26427-751227402d-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,108 @@
+labplot (2.8.2+git8963-c3344a3bf-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: c3344a3bf4be1f0f9734b00445cef73831bbc435
+  * Date: 1638618538
+  * git changelog:
+  *  c3344a3bf - [worksheet] ImageElement - allow to embed the image
+    data and save it in the project file.
+  *  c137563f1 - use macros
+  *  92476cbe7 - readme: Cantor details
+  *  695b80088 - When an axis is selected and the mouse wheel event is
+    triggered, the corresponding ranges should be used to zoom
+  *  6c0f94c82 - [spreadsheet] when hitting Return in the search field,
+    navigate to the first cell matching the current search string.
+  *  df0484bf0 - [spreadsheet] don't draw any border line in the plots
+    in Column Statistics Dialog and react on 'find' and 'cut' shortcuts
+    in the spreadsheet.
+  *  b55f21624 - windows: enable certain debug messages per default
+  *  c872ccf91 - Even more symbols added
+  *  3b9bc37b5 - More symbol styles
+  *  586dd885f - Resize the height of the comment field to fit the
+    content and minor layout fixes in ProjectDock and updated Tufte's
+    example project.
+  *  e406c3100 - Reduced the number of cast in the analysis curve dock
+    widgets and fixed a copy&paste bug in ExamplesWidget.
+  *  d31737bb7 - Merge branch 'master' of https://github.com/KDE/labplot
+  *  1a9c3aacc - symbol: add symbol order to freely sort symbols in UI
+  *  c3f57ac7f - Explicitly use C++11
+  *  75a7c60ef - Further fixes for coverity issues.
+  *  480de3384 - Fix more coverity issues
+  *  a7c22c6b5 - [examples] add a new example - Same Data, Different
+    Boxplots.
+  *  b782c8784 - Fix several coverity issues
+  *  a87385824 - Bug fixing: * reverse y-coordinate of the text label
+    when reading from the older (<2.9 format) to properly position the
+    labels in the old projects * potential memory leak in
+    Project::load()
+  *  575a695c0 - [examples] two new example project files demoing the
+    info element and Hilbert transform.
+  *  d8ab85463 - [worksheet] bug fixing in TextLabel: * properly set the
+    text color in LaTeX mode * reduced the number of retransform() call
+    which is doing more than needed in many cases and where LabelWidget
+    is reacting in slots. This also solves the problem with the jumpting
+    cursor when entering some text in Markdown mode.
+  *  267980521 - Properly read the example project files that are in the
+    old format compressed with Gzip.
+  *  6d7680c60 - Merge branch 'master' of https://github.com/KDE/labplot
+  *  d7a787aa7 - Symbol: rename and prepare adding more styles
+  *  e3be033dc - Minor fixes and improvements: 1. use an empty string as
+    a value label if the value in the custom column for value labels in
+    XYCurve is masked, don't skip it. 2. don't recalculate the logical
+    points in XYCurve when the data in the custom column for value
+    labels was changed, it's only changing the labels and not the
+    positions of the points. 3. renamed Apply Theme to Theme everywhere
+    since it's consuming a lot of space in some languages. 4. added an
+    icon for the select theme button in the ThemeHandler.
+  *  50b8a5763 - Improve debugging
+  *  580c75546 - symbols: Fix count of symbols
+  *  23e65c68f - random values dialog: Consistent handling of
+    distributions
+  *  69ca6e1d4 - [worksheet] position plot' title label relativ to the
+    plot bounding rectangle and not to its data rectangle.
+  *  da8df2014 - cantor worksheet: Improve debugging plugins
+  *  cf8a79fa7 - Prevent crash on Windows in Debug mode
+  *  4562c9000 - Improve Debug build on Windows
+  *  de653f164 - Rename macro due to name clash
+  *  83331b578 - More debug portability
+  *  81d541c59 - Improve debugging on Windows
+  *  22a915763 - minor fixes
+  *  b32128056 - cantor: try ixing problems with new paths
+  *  947359958 - [worksheet] re-render latex images from PDF according
+    to the current zoom factor in the worksheet view.
+  *  a10205751 - histogram fit: fit various distributions via context
+    menu
+  *  3d65f5049 - histogram fit: make fit via context menu work
+  *  7171d1675 - [worksheet] used a dedicated aspect tree model in the
+    combobox for value labes in XYCurveDock to allow also the selection
+    of text columns.
+  *  cd5c7a39e - [worksheet] when LaTeX mode is used, work with the
+    produced PDF file in TextLabel and produce the image out of it. The
+    PDF-data will be used later to generate a scaled version of the
+    image when the user is zooming in or out in the worksheet view.
+  *  2bf77020c - [cas] in case we fail to initialize Cantor, show a more
+    specific error message in the CAS worksheet.
+  *  fc044eb72 - [spreadsheet] properly show the overview in the column
+    statistics widget.
+  *  ee073dd0f - [box plot] properly read the save settings for the
+    median symbol.
+  *  826d17554 - axis tick label: fix crash without tick label
+  *  9f88ae044 - [histogram] improvements for the new distribution fit
+    feature: * don't always create the columns required for a
+    distributin fit, only create them when there are requested for the
+    first time, i.e. when a distribution fit is performed * added
+    Analysis/Distribution Fit action to histogram's context menu
+  *  d8386779c - Fixed the resizeTo() function in Column and better
+    handling of the switcht between the different source types
+    (spreadsheet, curve or histogram) in the fit-curve properties
+    widget.
+  *  604cc46fc - [worksheet] restore the saved data source histogram in
+    XYFitCurve and added missing slot in the dock widget.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 04 Dec 2021 13:05:27 +0000
+
 labplot (2.8.2+git8914-40e3844b5-1) unstable; urgency=medium
 
   * Compile

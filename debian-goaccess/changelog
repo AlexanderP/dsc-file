@@ -1,3 +1,30 @@
+goaccess (1:1.5.1+git3645-6e48ffb2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 6e48ffb20be3311d89553aae057eaa35f31759b6
+  * Date: 1638237235
+  * git changelog:
+  *  6e48ffb2 - Ensure we require a valid host token even when we're not
+    validating the IP.
+  *  ec853386 - Fixed buffer overflow when checking if an HTTP code was
+    a 404 on an empty status code.
+  *  0e808f8a - Optimized terminal and HTML UI output when tailing
+    multiple files.
+  *  97cf7aa6 - Updated po files with the latest changes.
+  *  6e3fa09a - Version bumped to 1.5.3.
+  *  87a398b1 - Version bumped to 1.5.3.
+  *  3764be4e - Updated po files with the latest changes.
+  *  1448cac1 - Updated man page with the latest changes.
+  *  7a026f93 - Version bumped to 1.5.3.
+  *  b45f4dcb - Updated NEWS with the latest changes.
+  *  dfb15331 - Updated Changelog with the latest changes.
+  *  97742499 - Fixed buffer overflow caused by an excessive number of
+    invalid requests with multiple logs.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 04 Dec 2021 12:34:34 +0000
+
 goaccess (1:1.5.1+git3633-5bafe8a5-1) unstable; urgency=medium
 
   * Compile
