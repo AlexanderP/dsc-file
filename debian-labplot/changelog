@@ -1,3 +1,71 @@
+labplot (2.8.2+git8995-8d1b569c2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 8d1b569c2882b5db594fa488082ff6b7c9328172
+  * Date: 1639566899
+  * git changelog:
+  *  8d1b569c2 - OJ import: update symbols
+  *  cc07d2e0a - Fixes: * restore the pointers during the project load
+    before selecting the current object in the project explorer so the
+    proper information is shown in the properties widget * work with a
+    reference and not with a copy in InfoElement to properly assign the
+    selected curve during the project load.
+  *  58ca29300 - [box plot] when determining the max and min adjacent
+    values, check both edges (min and max) for every value in the data
+    set.
+  *  b0425055d - OPJ project import: Fix curves with data in workbooks
+  *  aa5907b00 - [box plot] allow to modify the parameter 'k' controling
+    the whisker range and update the box plot example project.
+  *  6ece48f31 - fix clang++ problem
+  *  d4d3e138e - [worksheet] added the missing action for box plot in
+    the worksheet view.
+  *  fc446efc2 - [worksheet] introduce new shortcuts in the plot to
+    navigate to the next/prev curve.
+  *  77c0c8b4c - copy/paste: better handle numbers when group separator
+    is a space
+  *  b0b5d7712 - [worksheet] properly undo/redo the resize of the plot
+    when it was done manually with the mouse.
+  *  31530b0a7 - fit: better wording (uncertainties instead of errors)
+  *  7926825fb - cantor: improve on macOS
+  *  1bedcf7f8 - [worksheet] generate one single entry on the undo-stack
+    when manually resizing the plot with the mouse.
+  *  95b6866c4 - Fix reading older projects with custom fit models
+  *  e30e73e1b - code style fixes suggest by clang-tidy
+  *  069b2df1a - Merge branch 'master' of https://github.com/KDE/labplot
+  *  40de11c6e - [examples] fixed the positions of the images in the
+    Space Debris example.
+  *  3d10a3d04 - [worksheet] removed some a couple of coordinate
+    mappings in TextLabel that are obsolete now.
+  *  c8a4ca4e6 - example: fix a few settings
+  *  6d878faef - plot dock: avoid updating locale and plot range list
+    twice
+  *  155c130c8 - remove doubled defaults
+  *  07c6dc061 - plot dock: minor ui fixes
+  *  0f9f849c0 - [worksheet] adjusted the positioning of Image on the
+    new logic in 2.9.
+  *  9c5877220 - [examples] add a new example Space Debris showing the
+    usage of reference lines and image elements on the worksheet.
+  *  ab631fc07 - axis dock: fix combobox for label text type
+  *  38c4f9c1a - [worksheet] simplified the usage of
+    WorksheetElement::relativePosToParentPos().
+  *  e4c56e90f - [worksheet] simplified the usage of
+    WorksheetElement::parentPosToRelativePos().
+  *  48ea7e679 - [worksheet] moved parentRect() function from TextLabel
+    to WorksheetElement so we use the same code also in other objects
+    like Image.
+  *  c11497d45 - macos: build script simplification
+  *  ae189b7ee - enable debugging infos on macos
+  *  b9aa43a66 - Bug fixing: * fixed the separator for a data set in the
+    JSEDataArchive collection * don't show the statistics dialog if
+    there are not columns with numerical values available * read the
+    'embedded' property in Image * don't save the placeholder text if
+    there is any in TextLabel
+  *  39f44cc6e - avoid macro and delete pointer directly
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 16 Dec 2021 20:17:07 +0000
+
 labplot (2.8.2+git8963-c3344a3bf-1) unstable; urgency=medium
 
   * Compile

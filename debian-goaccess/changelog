@@ -1,3 +1,28 @@
+goaccess (1:1.5.1+git3656-1d928a36-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 1d928a362235bb1387aa51133110179b42b51e32
+  * Date: 1639613709
+  * git changelog:
+  *  1d928a36 - Merge pull request #2251 from dertuxmalwieder/patch-1
+  *  927ef7be - Fix support for OpenSSL < 1.1.0
+  *  16412272 - Update gkhash.h
+  *  64fc55d8 - Updated deprecated SSL function to TLS_server_method().
+  *  aa9d1607 - Merge pull request #2248 from cgzones/unicode
+  *  3bb0f56a - Ensure we simply update the TUI once after tailing
+    multiple files.
+  *  8d458a9e - Ensure we simply update the UI once after tailing
+    multiple files.
+  *  b279ef6a - Ensure we lock our pipe/websocket writer before
+    broadcasting message.
+  *  e0b151dc - Include config.h to define HAVE_LIBSSL
+  *  68beff88 - Mark djb2 parameter const
+  *  eda8b2ef - Drop unicode character from status description
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 16 Dec 2021 19:53:17 +0000
+
 goaccess (1:1.5.1+git3645-6e48ffb2-1) unstable; urgency=medium
 
   * Compile

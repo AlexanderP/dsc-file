@@ -1,3 +1,173 @@
+freecad-daily (0.19.2+git26656-8585149ab4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 8585149ab4ee0c165c5c443e84915741968d5624
+  * Date: 1639667523
+  * git changelog:
+  *  8585149ab4 - Draft: Added INSUNITS to exported DXF - Fixes #4517
+  *  568dbcea9e - Arch: Fixed display of axis bubbles and texts on DXF
+    export and Techdraw pages
+  *  b1beadd2e9 - Core: Fix std::string init from null pointer
+  *  ab66d7b34f - Sketcher: Fix various typos
+  *  e485fed06f - [Points] compilation fix or -> ||
+  *  b94b28838e - Points: implement helper method to reduce code
+    duplication
+  *  71b8af6bb1 - Points: fix several warnings, fix invalid point
+    assignment
+  *  86b230d191 - libE57Format: fix warnings -Wunused-parameter
+  *  40180dd311 - If the channels xyz be missing, display error message.
+  *  698a876ba1 - Load settings move to AppPointsPy
+  *  8da1799956 - Add E57Reader
+  *  fb97812148 - Add e57 extension support
+  *  5772328061 - Add the libE57Format include dirs to the point wb
+  *  ab315f05ef - Add the libE57Format to 3rdParty
+  *  e2d04f61e2 - ReverseEngineering: translate doxygen from DE to EN
+  *  8a2ea97276 - PD: support of wires in ReferenceHighlighter
+  *  b428fb2afa - PD: handle Base::Exception in Loft::execute
+  *  5bef110491 - PD: do not throw an exception in
+    TaskSketchBasedParameters::make2DLabel as otherwise editing a broken
+    loft/pipe won't be possible
+  *  94d8a2034a - PD: hide the sections of a loft only if it can be
+    recomputed successfully
+  *  a87c8dca31 - PD: hide the profile of a sketch based feature only if
+    it can be recomputed successfully
+  *  b5e67c14a5 - Gui: remove pop-up dialog in case the macro directory
+    is empty
+  *  6ae061e5be - [Win installer] fix typos
+  *  bcd278c860 - [Win installer] add info
+  *  2bfbbb9973 - [Gui] Ensure dockwidget is stacked on top when
+    activated
+  *  2353563cb7 - Start: do not show RuntimeError when opening/saving a
+    file after Start page has been closed
+  *  0183d28f62 - Start: avoid flushing the buffer after each new line
+  *  2d9c403cc0 - PD: in ViewProviderLoft::highlightSection follow the
+    same logic as in Loft::execute for selected profiles/sections
+  *  a853d80c73 - Gui: make the Copy command of the report window
+    working if an object in the tree is selected
+  *  df76209f58 - PD: use class ReferenceHighlighter inside
+    ViewProviderDressUp
+  *  418ef59625 - PD: use class ReferenceHighlighter inside
+    ViewProviderPipe
+  *  098927fb54 - PD: properly reset line colors when un-highlighting
+    loft profile/sections
+  *  6289ff40d5 - PD: highlight current profile and sections of a loft
+    when selecting a new profile/section
+  *  2b65ef8fcf - PD: make Loft working again when two sketches are pre-
+    selected
+  *  7db38c0e78 - [Win installer] change naming scheme
+  *  b6527a7098 - Gui: add function
+    View3DInventorViewer::projectPointToLine and expose to Python
+  *  4dae213b45 - Gui: harmonize classes View3DInventorViewer and
+    View3DInventorPy
+  *  651a4d7626 - Part: set explicit format version number for binary
+    BRep files to support all OCC versions
+  *  7dcd59d9fb - PD: Enhance the helix property docs
+  *  f212a8ef76 - Part: set explicit format version number for BRep
+    files to support all OCC versions
+  *  17836f5d39 - Sketcher: GeoList remove _PreComp
+  *  ac0bae2337 - Draft: fix Draft_Arc_3Points task panel issues
+  *  8f0aecbcf3 - [python editor] add keywords False, nonlocal, and True
+    to keywords list for syntax highlighting
+  *  a2b6f55d17 - Fix Qt deprecation warning. QPrinter::setOrientation()
+    is obsolete.
+  *  e20039cbbb - Sketcher: GeoList Improvements
+  *  3c43b50608 - Sketcher: Improve documentation of GeoEnum, PointPos
+    and GeoElementId
+  *  97c82a6703 - Sketcher: Convert PointPos into an enum CLASS
+  *  bb76be1371 - Sketcher: GeoId, GeoElementId and GeoUndef refactor
+  *  56d86df5bb - Base: fix memory leak when creating object with
+    factory method
+  *  2f99b5b56d - Base: [skip ci] allow to access the twin pointer of a
+    PyObjectBase
+  *  bfc8111d19 - Cam: Adjust header uniformity
+  *  c11d5df80a - TD: replace usage of raw pointers of Vertex and Face
+    with shared pointers. This fixes issue 4741: Broken File After Using
+    Landmark Dimension in TechDraw
+  *  d87b45b214 - ReverseEngineering: translate doxygen from DE to EN
+  *  f7ec9787d1 - Part: a deflection of 0.0 is not allowed any more for
+    meshing a shape
+  *  24bfc4f0a2 - Draft: Fix Part_Line offset issue
+  *  810d41ce52 - Path: fix typo in author's name
+  *  e901e584ac - Path: fix file header uniformity
+  *  01cc99349e - Test: explicitly switch on undo/redo mode in
+    testIssue4649
+  *  24ce41328a - Test: disable a test that fails in command line mode
+  *  f687e25e01 - Test: add unit test for issue 0004649
+  *  e855cc6bd3 - App: 0004649: Segmentation fault when clearing an
+    expression in an onChanged handler
+  *  b6f9f39ffc - Fix various typos and grammatical refinements
+  *  782f9c93f4 - Part: [skip ci] 0004665: Part/projection tool :
+    Unhandled unknown exception caught when mouse gets over a datum
+    plane
+  *  5ddefe56fb - PD: 0004699: ShapeBinder still touched after recompute
+  *  f61ca1bf17 - Merge pull request #5223 from Roy-
+    043/Draft_fix_task_panel_issues
+  *  055bcbbe1a - Gui: refactoring: move duplicated code to
+    DockWindowManager::activate()
+  *  6c065300a8 - [StdCmdSendToPythonConsole] make python console
+    visible if not already visible and set keyboard focus to it when
+    invoking the send to python console command
+  *  208237d2e6 - PD: 0004582: Mulit-transformation dialog cannot be
+    cancelled
+  *  d3cad74ac6 - Draft: fix regression draftlink.py (#5220)
+  *  4bd77b3b35 - Draft: fix doxygen typos
+  *  ea25f69f03 - [ArchWall] Do not copy shape
+  *  62c8125097 - Sketcher: Addition of layerId field to
+    SketcherGeometryExtension, GeometryFacade and
+    ExternalGeometryFacade, and their Python wrappers
+  *  f29a6a0518 - Sketcher: move GUI common utility functions to a new
+    file Utils.h
+  *  5f0d3e22fc - Sketcher: CommandSketcherTools add missing include
+    that was indirectly satisfied
+  *  6857f105f7 - Sketcher: ConstraintType enum indicate underlying type
+  *  e472aef28a - Sketcher: SketchObject - method to getCompleteGeometry
+    as GeometryFacade
+  *  db1bcc5f13 - Sketcher: Move GeoEnum struct to separate file
+  *  b88dad5ef2 - Sketcher: Create GeoList class
+  *  1e66792cf9 - Sketcher: GeometryFacade Improvements
+  *  e16b9f47af - Part: Geometry - Curve member to calculate the normal
+    at Point
+  *  8b4276c2cc - Part: Geometry - Extend Geometry Curve to query the
+    value at parameter point directly from D0
+  *  fa1a571cc9 - Sketcher: Constraint.h - add underlying type to
+    PointPos enum
+  *  ca5c799ce2 - Gui: rename methods of SelectionObserver to clarify
+    intention in client code
+  *  ce88fa2052 - PD: enable selection only on request and disable it
+    after selecting an object
+  *  a27b3067ba - PD: eliminate the boolean argument from
+    TaskSketchBasedParameters::onSelectReference
+  *  6167e9f77a - PD: 0004759: Bad error message when creating pad with
+    0 length
+  *  1e4c7a2de9 - [PD] improve selection mode exit for Helix
+  *  6efd5f1bf6 - [PD] fix calculation of possible Helix intersections
+  *  a19f3787bd - Part: 0004742: Editing features by context menu may
+    not be undoable
+  *  8df497b08e - Gui: move methods startDefaultEditMode() and
+    addDefaultAction() to ViewProviderDocumentObject
+  *  e71051f4f0 - PD: 0004742: Editing features by context menu may not
+    be undoable
+  *  3f97cb660e - Added back defaults for SpaceExplorer
+  *  382b38f2bd - Use correct name  so it's uniform and searchable in
+    our code
+  *  3cef5da1ad - [PD] fix division by zero in Helix
+  *  3f76c7869a - [PD] Helix: improve variable naming
+  *  d2dc6ca7dd - [PD] rewrite a Helix function
+  *  1af3755a17 - [PD] add missing tooltips for Helix dialog
+  *  67f8a4c61c - Spreadsheet: fix format of table cells when used for
+    printing, by default use landscape orientation
+  *  d3a0bf018f - Spreadsheet: issue 0002957: spreadsheet direct
+    printing
+  *  af24c3ba02 - Draft: fix task panel_issues (gui_texts.py)
+  *  fccf955c6f - Draft: fix task panel issues (gui_polygons.py)
+  *  77d21df65f - Draft: fix task panel issues (gui_points.py)
+  *  055f1850e8 - Draft: fix task panel issues (gui_edit.py)
+  *  81268073df - Draft: fix task panel issues (DraftGui.py)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 16 Dec 2021 19:52:44 +0000
+
 freecad-daily (0.19.2+git26553-632af47a0d-1) unstable; urgency=medium
 
   * Compile
