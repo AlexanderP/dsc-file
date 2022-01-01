@@ -1,0 +1,21 @@
+Source: ddb-gui-qt5
+Section: sound
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 9), deadbeef-dev, qtbase5-dev, qttools5-dev,
+ qtchooser, qttools5-dev-tools, libqt5svg5-dev
+Standards-Version: 4.5.1
+Homepage: https://github.com/kuba160/ddb_gui_qt5
+Rules-Requires-Root: no
+
+Package: ddb-gui-qt5
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, deadbeef
+Description: Qt5 interface to DeaDBeeF
+ DeaDBeeF is an audio player for GNU/Linux systems with
+ X11 written in C and C++. Features: minimal depends;
+ native GTK2 GUI; cuesheet support; mp3, ogg, flac, ape;
+ chiptune formats with subtunes, song-length databases, etc;
+ small memory footprint.
+ .
+ This is the Qt5 interface for the DeaDBeeF package.

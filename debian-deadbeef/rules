@@ -3,9 +3,6 @@
 
 export DH_ALWAYS_EXCLUDE := COPYING:COPYING.GPLv2:COPYING.LGPLv2.1
 
-export CC=/usr/bin/clang
-export CXX=/usr/bin/clang++
-
 DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 DEBIAN_CODENAME = $(shell echo $$DIST)
@@ -24,6 +21,14 @@ ifeq ($(DEB_HOST_MULTIARCH),i386-linux-gnu)
         confopt = --disable-soundtouch
 else
         confopt = --enable-soundtouch
+endif
+
+ifneq (,$(filter $(DEBIAN_CODENAME), impish jammy))
+	export CC=/usr/bin/clang-12
+	export CXX=/usr/bin/clang++-12
+else
+	export CC=/usr/bin/clang
+	export CXX=/usr/bin/clang++
 endif
 
 %:

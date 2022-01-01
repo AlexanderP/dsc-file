@@ -42,7 +42,7 @@ Build-Depends: debhelper (>= 9),
                 libjansson-dev, 
                 libopusfile-dev, 
                 libopus-dev,
-                libsndio-dev | wget, clang, libdispatch-dev, libglib2.0-bin
+                libsndio-dev | wget, clang, clang-12 | aria2, libdispatch-dev, libglib2.0-bin
 Standards-Version: 4.3.0
 Homepage: http://deadbeef.sourceforge.net/
 

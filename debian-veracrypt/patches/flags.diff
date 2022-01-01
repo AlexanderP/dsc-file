@@ -1,13 +1,14 @@
---- veracrypt.orig/src/Makefile
-+++ veracrypt/src/Makefile
-@@ -56,6 +56,10 @@ export WXCONFIG_CFLAGS :=
- export WXCONFIG_CXXFLAGS :=
- WX_ROOT ?= ..
+--- veracrypt-1.25.4.orig/src/Makefile
++++ veracrypt-1.25.4/src/Makefile
+@@ -60,6 +60,11 @@ WX_ROOT ?= $(BASE_DIR)/wxWidgets
+ 
+ export TC_BUILD_CONFIG := Release
  
 +CPPFLAGS+=$(shell dpkg-buildflags --get CPPFLAGS)
 +CFLAGS+=$(shell dpkg-buildflags --get CFLAGS) $(CPPFLAGS) -Wno-sequence-point
 +CXXFLAGS+=$(shell dpkg-buildflags --get CXXFLAGS) $(CPPFLAGS) -Wno-narrowing
 +LFLAGS+=$(shell dpkg-buildflags --get LDFLAGS)
- 
- export TC_BUILD_CONFIG := Release
- 
++
+ ifeq "$(origin DEBUG)" "command line"
+ 	ifneq "$(DEBUG)" "0"
+ 		TC_BUILD_CONFIG := Debug
