@@ -1,3 +1,252 @@
+freecad-daily (0.19.2+git26829-175ceb2d12-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 175ceb2d12e69c81017fbb34c4e20d9eaa4fd5cc
+  * Date: 1641034243
+  * git changelog:
+  *  175ceb2d12 - PD: [skip ci] remove obsolete TaskPocketParameters.ui
+  *  22a4270a51 - [Part::CheckGeometry] add edwilliams16's code for some
+    global properties to the advanced shape content
+  *  6ae5b17b02 - Start: in Workbench::loadStartPage() raise StartPage
+    if there is already an instance
+  *  3d359e2e24 - Mouse navigation: change unnecesary messages to log
+    messages
+  *  99bbe40154 - Addon Manager: Work around stylesheet problem in Qt
+    5.9
+  *  c855a3072e - PD: fix bug in TaskDressUpParameters::KeyEvent and
+    simplify code
+  *  9458ab6708 - Gui: add function to check matches of key event and
+    key sequence
+  *  e1b03bc0eb - [skip ci] fix some typos
+  *  a930d4ebac - [PartDesign] for chamfer and fillet, add
+    SelectAllEdges option in the context menu while in add or remove
+    mode
+  *  06774459ba - Addon Manager: Add option to hide obsolete and py2
+    addons
+  *  a9cf722d04 - Addon Manager: Convert dev startup warning to log
+  *  ae5391eaf9 - Addon Manager: Clean up report window output
+  *  bb5c3d2091 - Use std::map without const
+  *  458ae2307c - Spreadsheet: Fix trouble with clang and MacOS
+  *  513d15886d - Gui: move options to use native or Qt dialogs to class
+    DialogOptions
+  *  31175b5788 - [core] Add new parameter to BaseApp/Preferences/Dialog
+    called DontUseNativeColorDialog, default to true
+  *  fddfc7bdcd - Mouse navigation: change unnecesary warnings to
+    messages
+  *  e4c2cc3c76 - Tools: small bug fix for showing the correct test icon
+  *  6cab871678 - Sketcher: fix build failures with MinGW
+  *  5663651fd0 - Sketcher: fix build failures with MSVC
+  *  e8f723b99c - Fem: Fixing translation context
+  *  a6b306123a - Addon Manager: Do not change image size
+  *  dc1c227ad4 - Addon Manager: Add filter on installation status
+  *  80b95225f8 - Addon Manager: Add Check for updates button
+  *  4098c88171 - [Spreadsheet] Use stylesheet for alias color
+  *  7b3c3e6ca3 - App: fix doxygen typo
+  *  f6b7f7a4a9 - Path: fix source comment typo
+  *  b962326bf7 - Gui: encoding/decoding of system specific error
+    message
+  *  6cb3782c03 - Merged crowdin translations
+  *  fd7735d035 - Updated ts files
+  *  214d9d19f0 - [Gui] MainWindow New Doc camera position bugfix
+  *  cdac3e9a34 - Base: fix issue found by lgtm: Inconsistent definition
+    of copy constructor and assignment ('Rule of Two')
+  *  07e2dc8c9c - Part: fix issue found by lgtm: Expression has no
+    effect
+  *  c6410f5aef - Sketcher: fix source comment typos
+  *  1742d7ff82 - 0004809: Security vulnerability in DWG import when
+    using ODA file converter
+  *  af3e510715 - Arch: Added 'flip direction' context menu option to
+    walls
+  *  8bf59d77f4 - Addon Manager: Correct wording
+  *  cc86461c3b - Sketcher: Adapt Typed Facade to new behaviour of
+    automatic taking ownership of emplaced pointer
+  *  b3e4d9589d - Sketcher: GeoList improvements
+  *  344a2470d7 - Sketcher: GeometryFacade improvements
+  *  1b91bf1883 - EditCoinManager: Ensure rootpoint is higher than
+    constraints
+  *  f7dec6b601 - Part: Geometry and Sketcher: GeometryFacade and
+    ExternalGeometryFacade
+  *  6c019ac93f - EditCoinManager: root point full constrained only when
+    there is another point on top
+  *  f04d5171da - EditCoinManager: Additional refactoring
+  *  dfd726ec35 - Sketcher: Sketch - extraction of geometry as GeoList
+    with owned memory allocation
+  *  62bb8f67c8 - Sketcher: GeometryFacade - Add ownership parameter to
+    factory method
+  *  9ce2eaf32e - Sketcher: GeoList - Fix bug in index conversion
+  *  4bcca31b02 - Sketcher: Fix root point not fully constrained when
+    sketch is empty
+  *  0f6e8b95a9 - Sketcher: Use Part::Geom2dCircle::getCircleCenter
+  *  92e6094449 - Sketcher: EditModeCoinManager/DrawSkechHandler
+    refactoring
+  *  b9ed85a2de - Sketcher: GeoEnum and GeoListId constant reference
+    outside the translation unit
+  *  afa40eaf87 - Gui: reduce code duplication in ReportOutputObserver
+    and ReportOutput
+  *  0bc96dfedd - + code refactoring of
+    View3DInventorPy::viewDefaultOrientation
+  *  cbede02dc5 - Arch: Fixed units display of building parts
+  *  03d836c6bf - Cam: fix previously mistranslated source comment
+  *  3683740d4d - Link: Fix doxygen typo
+  *  1c83d8fedd - Points: translate doxygen from DE to EN + fix
+    superfluous whitespace (#5287)
+  *  5923ce1858 - [GUI] don't show report view on warnings by default
+  *  ce236c3f03 - [Mesh] rename gmsh -> Gmsh
+  *  6cf2d39a24 - Sketcher: white-space only commit - remove unnecessary
+    indentation
+  *  3bd2bcc72f - [Sketcher] Constrain new B-spline pole weight only if
+    equal to first
+  *  ba78b194b3 - [Sketcher] Ensure reference angle constraint is always
+    positive, fixes #4621
+  *  32e0e427c0 - [sketcher_mapsketch] prevent circular dependency by
+    disallowing mapping a sketch to an object in the sketch's
+    outlistrecursive, make the command active only when there is a
+    selection, recompute after doing attachment
+  *  0a27540479 - [PD] refine helix intersection calculation
+  *  3cff3202ef - [PD] fix Helix creation bug
+  *  4ca362df0a - App: catch Base::Exception in
+    ObjectIdentifier::getDep()
+  *  53f24f4bc2 - Sketcher: add unit test for sketch with expressions
+  *  1653d26ffa - Cam: translate doxygen from DE/FR to EN
+  *  b0fc0ab0f4 - cMake: Default /MP to ON for MSVC
+  *  afd003db78 - App: fix Enumeration assignment and comparison
+  *  ccf10b8867 - Minor code changes according to suggestions
+  *  35d7b71466 - Spreadsheet: code style change
+  *  75e639c94c - App/Gui: add new ObjectStatus TouchOnColorChange
+  *  b32369d185 - App: insert UUID property to trace the source of
+    copied object
+  *  d286a54fc1 - PartDesign: show error on SubShapeBinder CopyOnChange
+    failure
+  *  f6c2688319 - App: clarify documentation of
+    PropertyContainer::getPropertyNamedList()
+  *  715d67e2c3 - Gui: do not prompt when closing view of temp document
+  *  d0b7bf1669 - App: fix property status restore
+  *  0029f3206d - Spreadsheet: improve copy/cut/paste cells
+  *  2bd4404afb - PartDesign: expose SubShapeBinderPython
+  *  5f6b34ebad - App: expose some property status bits to
+    PropertyContainerPy
+  *  39c04e4877 - PartDesign: support CopyOnChange in SubShapeBinder
+  *  99f199ad7e - App: fix pending object remove on recomputing
+  *  caa29060cf - Spreadsheet: fix handling of absolute cell address
+  *  0dcea9b2e1 - App: warning on invalid cell offset in Expression
+  *  a9895e4f04 - Gui: expose 'Expression...' property editor menu
+    action
+  *  08cdd323b6 - App: add Property::isSame() API
+  *  51d4e5c2a9 - Draft: support 'CopyOnChange' in Draft link array
+  *  4f29e81d0c - App: support CopyOnChange property in Link
+  *  1f604ec632 - Gui: fix property view linked property highlight
+  *  bd201c82ce - Spreadsheet: add menu action 'Configuration table...'
+  *  7d23d5b984 - Spreadsheet: support mapping protocol in
+    PropertySheetPy
+  *  82759f6203 - Spreadsheet: Compilation fixes for cherry-picked
+    commits
+  *  2a3951ca32 - Spreadsheet: change alias handling
+  *  79cda0a1b7 - Spreadsheet: Compilation fixes for cherry-picked
+    commits
+  *  68fca40983 - Spreadsheet: support cell binding
+  *  3d1b9f5c90 - Spreadsheet: support paste into cell range
+  *  b76509bfea - Gui: handle exception in property item display
+  *  df6a7e4a56 - App: add expression build-in href() for backward
+    compatibility
+  *  fa50122c33 - [PD] fix a hole thread issue
+  *  c5f87d8ea8 - [PD] hole dialog improvements
+  *  a40c57786c - Base: translate doxygen from DE/FR to EN
+  *  9c74c0afb1 - Mesh: translate doxygen from DE to EN
+  *  9770449be7 - [PD] fix several hole thread issues
+  *  f429a3630e - Addon Manager: Fix github macro update code
+  *  b371487224 - Addon Manager: Correct macro installation location
+  *  427fe5d1e1 - Part: handle removal of function
+    HLRBRep_PolyAlgo::Angle in OCC 7.5
+  *  ea85cf5e36 - Part: expose Poly HLR algorithm to Python
+  *  4c303e339e - Addon Manager: Correct proxy default
+  *  283b0a6382 - Merge pull request #5243 from
+    paullee0/ArchEquipment_2_SketchArch_UpdateAttachmentObject_support_t
+    ake3
+  *  b84a099f68 - Merge pull request #5244 from
+    paullee0/ArchWindow_2_SketchArch_UpdateAttachmentObject_support_take
+    2
+  *  6895813400 - Merge pull request #5249 from Roy-043/Draft-
+    Draft_Label-fix-label-type-list
+  *  73e01719d2 - Merge pull request #5266 from Roy-043/Draft-fix-
+    Draft_Label-viewprovider
+  *  5fba9cecae - TD: [skip ci] partially fix issue 0004765
+  *  73a986714c - Part: expose HLR algorithm to Python
+  *  dede24d5e4 - Addon Manager: Bugfix for zip installation
+  *  b2fbf64b37 - Addon Manager: Add Qt.Tool window flag
+  *  f9fb1c9abb - Addon Manager: Fix hashing with Qt 5.9
+  *  e7cde8bed0 - Addon Manager: Fix macro update code
+  *  861c543fd9 - Addon Manager: Add error checking for missing content
+  *  f45481ae36 - Addon Manager: Support Qt 5.9
+  *  2db73c099b - App: fix ObjectIdentifier::getDep + it's an obscure
+    way to clear the error state by instantiating PyException, instead
+    use the clear() method + do not handle unknown exceptions because
+    this suppresses all exceptions and thus makes error search more
+    complicated
+  *  47eee38c02 - Gui: in catch blocks first write the error message
+    before cleaning the resources
+  *  97cc44b889 - App: workaround for boost's file_lock with version <
+    1.76 on Windows
+  *  6ad156b6b7 - TD: [skip ci] partially fix issue 0004765
+  *  6d4d433080 - PD: [skip ci] improve readability of argument list
+  *  7156b33ec4 - [PD] fix compilation issue with Helix
+  *  a178cc15f2 - Gui: boost 1.76 provides an overloaded version of
+    file_lock that accepts a wchar_t string
+  *  b23ae963d9 - Merge pull request #5271 from sundtek/sundtek-
+    discretize-bug
+  *  7172e57e5d - Update PathAdaptive.py
+  *  3d03f0a468 - [PD] style improvements for Helix
+  *  7dad9a908f - [PD] small code improvements for Helix
+  *  1f9c602ae7 - 0004807: Freecad crashes when windows username
+    contains special characters
+  *  18b3c59d80 - Web: fix storage paths of web content
+  *  f4fe2efe19 - PD: Fix helix property visibility/writability (#5254)
+  *  473bdc07dd - Merge pull request #5262 from
+    sliptonic/bug/translation
+  *  bb3d02298d - PD: Fix assignment of Angle/Growth properties
+  *  47fc8dee91 - change discretize value to fix issues
+  *  11822b8c5c - E57Format: respect GNU install dirs
+  *  acfde1a4b6 - Addon Manager: Bug fixes for detailed display
+  *  787b1e0f56 - Addon Manager: Black reformatting
+  *  ef09c0af16 - Addon Manager: Improve display of install details
+  *  52da213a3c - Addon Manager: Improve cache behavior
+  *  c6383e77f8 - Addon Manager: Implement preferences in standard
+    dialog
+  *  6a9600e3c7 - Gui: Add PrefTextEdit
+  *  a0992902de - Addon Manager: Begin UI redesign
+  *  c600fda0d9 - GUI: Tweak verbosity of InitGui startup sequence
+  *  bd6b3eb404 - Addon Manager: Bugfixes and cleanup of refactor
+  *  67f051007e - Addon Manager: Add support for salsa.debian.org
+  *  5c1655d125 - Core: Fix installation conflict with pkgutils
+  *  2bfcf6af09 - GUI: Handle packaged Workbenches and their icons
+  *  768a0f086f - Addon Manager: Rework backend to use package.xml
+  *  1844a0161e - Core: Modify metadata Python handling to use dict
+  *  fc642482dd - Mesh: Correct installation location of tests
+  *  0b50daec4d - OpenSCAD: Handle missing script element from text()
+  *  d88165c284 - Fem: include FemGlobal.h
+  *  e743c30f3b - Add Global.h headers to modules
+  *  a9ffc6cf1e - Include Limits
+  *  49d4ef2471 - Sketcher: Fix Debug mode GeoUndef
+  *  21765dec9c - Modified combobox selection cleaned up translation
+    method
+  *  1eccba10ca - Path: Translation Solution POC
+  *  3ca86cafeb - PathOpGui Black reformat
+  *  fbda0498fd - Sketcher: Fix recompute issue
+  *  955fe455cb - Part: add function GetCircleCenter from
+    CommandCreateGeo.cpp of the Sketcher module to the Geom2dCircle
+    class in the Part module
+  *  f24a5d1fc7 - Draft: fix Draft_Label viewprovider
+  *  47b064e7fd - E57Format: for CMake version < 3.11 add_library
+    requires explicit list of source files
+  *  f17c85fc47 - [MainWindow] Add toolbar name as toolbar's  tooltip
+    (#5259)
+  *  5de15267f5 - [Points] minor style fixes by MSVC
+  *  86ee738dff - Cam: translate doxygen from DE/FR to EN
+  *  a5bfba2665 - PD: Adjust header uniformity
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 01 Jan 2022 19:13:43 +0000
+
 freecad-daily (0.19.2+git26656-8585149ab4-1) unstable; urgency=medium
 
   * Compile

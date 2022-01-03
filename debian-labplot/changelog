@@ -1,3 +1,269 @@
+labplot (2.8.2+git9130-54aef72ae-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 54aef72ae6cb5d060cd72440858f41ed9a3fcd8c
+  * Date: 1641040589
+  * git changelog:
+  *  54aef72ae - [notebook] apply default settings for new notebooks.
+  *  ce27d235b - [notebook] added a new page in the setttings dialog for
+    the notebook.
+  *  a9e63696f - [notebook] don't try to parse numpy's arrays of arrays.
+  *  5b68a6c16 - [notebook] parse string lists in Maxima and double and
+    string lists, tuples and sets in Python and added first unit tests
+    for the variable parser.
+  *  486b925ba - [notebook] switched to the new parse values function
+    that can handle different data types for all backends and moved the
+    for-loop into the case statements for performance reasons.
+  *  108ebf617 - [notebook] fixes: * when replacing the values in the
+    column, always resize to the size of the new array otherwise we end
+    up having more elements in the column vector than the number of new
+    values that were set. Relevant for the case when the count of the
+    new values is smaller than the count of the old values. * added
+    missing cases for all data types in dataChanged() slot * don't use
+    any NAN for invalid integer values. It's not a correct int, we use 0
+    right now for invalid integers until we have a proper solution for
+    invalid/missing integers * fixed indentation
+  *  369b7eb6d - Fixed the info element in the Helium example project
+    and new actions for the notebook and more cleanup in this area.
+  *  f839cbe41 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  6ce2004e5 - GIT_SILENT made messages (after extraction)
+  *  d3feba332 - append is wrong, because it was already preallocated,
+    so assigning is enough
+  *  f8f62952a - an array with only two elements do not have two commas
+    in it. So assume if one comma exists, it is the separator
+  *  b4282a72f - fix numpy array datatype extraction regular expression.
+    There can be whitespaces in it.
+  *  e8baf13f1 - implement parsing numpy arrays of different datatypes
+  *  e67b85318 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  cd35a2bc4 - GIT_SILENT made messages (after extraction)
+  *  20df3cd4d - Fix setting range (\!43)
+  *  a1acc25e5 - fit: allow equation curve as data source
+  *  523666e0a - xy curve: fix off-by-one bug
+  *  ab163e0ce - [notebook] more cleanup in the actions.
+  *  d53c5b6ea - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  728c577fb - GIT_SILENT made messages (after extraction)
+  *  3b461d08a - [notebook] further small improvements: * more renaming
+    Worksheet -> Notebook * don't show any name and comment in the
+    properties explorer when multiple notebooks were selected * cleanup
+    in actions shown in the notebook menu
+  *  00ee4573d - OPJ import: use text font size and color
+  *  2f61e6c3a - reduce debugging output
+  *  55c7fb17d - CI: fix cantor dep
+  *  bd0089dd9 - CI: fix cantor dep
+  *  520246fd5 - CI: fix cantor dep
+  *  2d37bab09 - CI: try cantor dep
+  *  d0b13c827 - [notebook] multiple minor improvement: * renamed CAS
+    Worksheet to Notebook * don't show the export, copy and duplicate
+    actions in the context menu * restructured the context menu a bit *
+    removed the dependecy on KParts/ReadWritePart in
+    CantorWorskheetDock.
+  *  6be5ef332 - gitlab CI: mode deps
+  *  c4c9d619c - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  b1573fa6c - GIT_SILENT made messages (after extraction)
+  *  d7f69ef24 - gitlab CI: update
+  *  7ff60d3f2 - gitlab CI: all frameworks dependencies
+  *  94bc9d17e - gitlab CI: add kde dependencies
+  *  794d726d7 - Add CI files for gitlab
+  *  9201ef1a9 - Update desktop file and About info
+  *  51b407ae2 - Minor updates in INSTALL
+  *  406eeeac0 - Update AUTHORS (see About LabPlot)
+  *  99d5b36c6 - Update README
+  *  b352a5eea - Update appdata file
+  *  7823f7da9 - Fixes: * retransform all worksheet elements after the
+    project was imported (Origin or LabPlot project import) * don't try
+    to adjust the plot area padding for newly added curves during the
+    project load
+  *  d475e7ddb - minor improvement
+  *  a0e93c9fd - Fixes&iprovements: * avoid flickering in the worksheet
+    and plot toolbars, don't re-populate them when the worksheet was not
+    changed when switching between its different children. Same for the
+    spreadsheet. * show loading ... message in the status bar when
+    openning a project which is helpful for heavy projects taking long
+    to load. * change the current aspect in the project explorer when
+    doing undo/redo. This was done differently in the past to avoid
+    unwanted changes but it causes more problems, e.g. add Workbook,
+    undo this step, add new Spreadsheet -> the spreadsheet is created as
+    a child of the workbook... * use capital letters for the
+    descriptions of the different sections in the overview tab in the
+    column statistics dialog.
+  *  7b6ba8559 - Minor fixes: * resize the datapicker window to fit the
+    view size when initially created * copy&paste bug in BoxPlot *
+    layout fixes in CartesianPlotDock
+  *  799787bea - Performance improvements: * don't call
+    Column::dataChanged() twice when changing a value in a spreadsheet
+    cell, this triggers the expensive retransforms in the curves also
+    twice. * no need to raise warnings during the XML-parse and when
+    empty strings were encountered. String parameters can be modified by
+    the user and an empty string is a valid input parameter. * skip the
+    initialization of objects (and especially reading the themes from
+    the hard disk, etc.) when doing the preview of the structure of
+    Origin projects.
+  *  9b2f08c06 - simplify function
+  *  1137a1a34 - remove not needed includes
+  *  15d4883cf - simplify
+  *  243ab1ac0 - item can be casted to WorksheetElement and then
+    directly the type can be used.
+  *  86346d1ec - handle also reference line
+  *  236c67da5 - count also analysis curves, because the AspectType is
+    not part of XYCurve
+  *  febeffca8 - fix data type of QGraphicsItem: set it in a common
+    place instead in every class which leads to errors
+  *  4c7ede93d - [worksheet] delay the initialization of ThemeWidget in
+    the context menus of plot and worksheet until it's really required.
+  *  93644f56e - Avoid too many updatePixmap() calls in the curves when
+    openning a project that are caused by the initalization of symbol
+    properties.
+  *  9ceaed97f - [worksheet] when adding a new curve to the plot and
+    changing the ranges and the axis tick labels, adjust the plot area
+    padding if the axis title label is outside of the plot area.
+  *  644c18633 - Fix previous commit
+  *  e404d4f14 - Make it proper json
+  *  516d9e5db - Fixes: * don't crash when the user is setting the focus
+    in the spreadsheet by calling the context menu * removed a couple of
+    unneeded retransforms in the plot when creating it via the plot data
+    dialog or in the column statistics dialog
+  *  6c1c98460 - issue warning when parser evaluates NaN in
+    XYEquationCurve
+  *  b82c36ea3 - minor macOS fixes
+  *  4cd239546 - the numpy array can contain also the type of the array
+    elements
+  *  fff2e7a46 - attributes must be read, because otherwise the previous
+    are stored
+  *  990702c0b - Improve string problems
+  *  3221c6c8b - Fix a couple of raw strings
+  *  b28b87b54 - Fix signal/slot handling of check boxes
+  *  918940608 - use macros Q_SIGNALS, Q_SLOTS and Q_EMIT to avoid
+    future conflicts with Qt libraries and applications using LabPlot
+    headers
+  *  cf0ba78fc - code style: pedantic fixes
+  *  89e741455 - Update CMakeLists.txt, TODO: enable Qt definitions and
+    compiler flags to fix problems
+  *  ee8a75251 - parser: add fallback with default locale to be more
+    tolerant
+  *  0ca1949b1 - omit default value
+  *  2cd85f9be - Ranges: better rounding when showing values
+  *  0d0476e85 - Merge branch 'master' into EnableNiceExtend
+  *  5e70782ba - enable by default, update plot range list and minor
+    corrections
+  *  38491bf71 - [worksheet] call retransform() in Image every time the
+    image is rescaled so the proper bounding rect is calculated.
+  *  80c118990 - Add ability to turn off niceExtend fix #17
+  *  7a28d534a - [worksheet] reduced the number of
+    QPainterPath::moveTo() calls when calculating the line path in
+    XYCurve. They are obsolete and seem to break the vectorization of
+    the line path.
+  *  71f688a32 - fix mimetype for projects
+  *  0cba2a426 - [worksheet] keep the original image in Image.cpp so we
+    can use it when rescaling the image later on size changes.
+  *  0ac4add0e - axis label: fix rounding in log scales
+  *  4bc3d9b40 - improve log scale example
+  *  41dc83fab - changelog
+  *  e3b873f6f - [examples] added three new example project: * log-
+    scales * non-linear regression * Duffing oscillator calculated in
+    Maxima and visualized in LabPlot
+  *  e1cb0691d - tests: add test for histogram fit
+  *  4d169750a - settings: add option to save projects in a pre 2.9
+    compatible format
+  *  82c5e230a - don't overwrite imported OPJ projects when saving
+  *  b79cef39f - [box plot] allow to specify the parameter 'k' also for
+    the whisker types SD and MAD.
+  *  81995382a - use new default colors
+  *  a20bacb6b - another override
+  *  725552845 - do not shift if an object different to the plot is
+    used, because for example the infoelement catches also the key press
+    events
+  *  4685fea92 - Added missing override keywords in the new code.
+  *  ed6d95f8a - set text should not automatically convert to html if
+    the Textwrapper argument is string
+  *  142a35155 - if the text is html coded, it makes no sense to set the
+    FontColor, because it will not have an effect, but instead change
+    the QLineEdit Text and then store this text in the Textlabel
+  *  a0834b0a4 - clear selection after color is set
+  *  53ba2a899 - Not necessary to set position every time. Only once is
+    fine enough
+  *  8fd106b0e - use the plot rect instead of the datarect as bounding
+    rect. So the area of the textlabel is bigger. But for the vertical
+    line still the datarect must be used
+  *  d3230b76f - fix position issue of the infoelement
+  *  088ed09df - after everything was loaded call dataChanged to scale
+    all plots correctly
+  *  9f87f576a - fix wrong index is scaled this might lead to a crash
+  *  1f1c9e549 - OPJ import: correctly import symbol interiors
+  *  7a8066cda - symbols: are more types
+  *  9c1f57965 - fix compiler warning
+  *  17ad64835 - symbol rotation: fix direction
+  *  dcf0e7e3d - remove assert, it is better to just return than
+    crashing
+  *  2b8861cf1 - CartesianPlot: No assert
+  *  80ac69358 - - remove retransform from CartesianPlot::load() - add
+    child after text is set, otherwise retransform of the infoelement
+    will be called, because text was changed and the signal slot
+    connection is already there
+  *  c221d8c9c - ReferenceLine: remove retransform()
+  *  f1429d8ec - Custompoint: remove retransform()
+  *  a475e3cfb - Image: remove retransform from scaleimage. So it will
+    not be called during load
+  *  d4dd440f7 - loading is already done a few lines above. No need to
+    retransform again
+  *  eb21f0067 - do a retransform also on elements directly in the
+    worksheet not only the plots
+  *  4604ad551 - set isLoading for all childs to false, otherwise no
+    retransform is executed
+  *  e0918a245 - no isloading check in
+    CartesianPlotPrivate::retransform()
+  *  b3f9abcb5 - Do not give a chance to retransform. Retransform after
+    everything is loaded
+  *  60da5a8f2 - remove D_OBJ macro, because it is unintuitiv
+  *  d77d6f941 - remove dead code
+  *  d773aba75 - before xmlVersion 6 the custompoint position was always
+    a logical position
+  *  74ebd4346 - fix filebrowse problem. Fixes #15
+  *  28085b0dc - emit positionChanged signal, otherwise the dock will
+    not be notified
+  *  8cc207297 - ItemChange is already implemented in worksheetelement
+  *  e22d97f3c - limit infoElement exceeding the limits of the curve. -
+    The info element stays at that position, but the logical value
+    changes accross the limits of the x axis of the curve
+  *  7b5689728 - Fix custom point wrong position shown in the dock
+  *  601c2ebdc - if the keypress is used, do not pass it to the parent,
+    otherwise two actions will be executed at the same time. - So when
+    having an infoelement and the label should be move with the mouse
+    cursors, the infoelement moves too, because it handles also the
+    keypress event
+  *  78ede95be - draw bounding rect if desired. For debugging purpose
+    only
+  *  7dd94d1ac - use plot rect only if the direct parent is a cartesian
+    Plot. If not (for example the Custompoint or the label of the
+    infoelement) use the parents bounding rect
+  *  6620290e9 - set visible correct
+  *  cf198b473 - retransform when rotated which calls
+    recalcShapeAndBoundingRect()
+  *  887e81f4a - boundingRect() instead of boundingRectangle must be
+    used, because the Legend does not use the boundingRectangle variable
+    and then the align is always zero
+  *  7b167105d - Legend: Set correct initial values
+  *  34326c046 - Align custompoint, legend and textlabel dock to look
+    like the same and implement alignment for custompoint and legend
+  *  a867804dc - Fix position issue of the InfoElement Custom point.
+  *  93918f96e - Use WorksheetElementPrivate class in every Element
+  *  3c09e9212 - Create WorksheetElementPrivate as Base class for all
+    Worksheet Items.
+  *  b57665af3 - [worksheet] when loading TextLabel we need to call
+    updateBoundingRect() instead of retransform() to properly calculate
+    the bounding rect for stored PDF content, adding the actual change
+    in the cpp file now.
+  *  7dc242a93 - [worksheet] when loading TextLabel we need to call
+    updateBoundingRect() instead of retransform() to properly calculate
+    the bounding rect for stored PDF content.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 01 Jan 2022 20:21:50 +0000
+
 labplot (2.8.2+git8995-8d1b569c2-1) unstable; urgency=medium
 
   * Compile

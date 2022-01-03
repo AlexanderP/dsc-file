@@ -1,3 +1,39 @@
+smplayer (1:21.10.0+git10033-f111ba2b3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/smplayer-dev/smplayer.git
+  * Branch: master
+  * Commit: f111ba2b30a30c8aa40f48379353dcdcf6be6640
+  * Date: 1640789684
+  * git changelog:
+  *  f111ba2b3 - Shuffle the playlist after adding files if the shuffle
+    button is activated
+  *  2c344950d - Merge pull request #265 from bmwiedemann/date
+  *  261db0dc6 - Update translations
+  *  70ef3254c - Add AUDIO_DEVICES_SELECTION
+  *  d70c19184 - Move code
+  *  cea750088 - (Mac) Add coreaudio devices
+  *  19516fb5f - Simplify
+  *  145d5d14a - Pass the pulse sink name to mplayer
+  *  cf38379c4 - Enable USE_MPV_PULSE_DEVICES
+  *  8e6020272 - Add USE_MPV_PULSE_DEVICES
+  *  a612cf0b7 - Update build-archlinux.yml
+  *  e1ffab467 - Check screen before changing it
+  *  04f43196e - Add define DETACH_VIDEO_LAYER
+  *  6c6da2731 - (Linux) Change the default vo when using a external
+    window
+  *  176eb49be - (Mac) Change the default vo when using a external
+    window
+  *  609e1bb82 - Possibility to pass the screen to mplayer
+  *  0a221e845 - Revert the 3 latest commits
+  *  2e5723a51 - Fix send video to screen
+  *  9f9634626 - Use play/stop instead of restart
+  *  56c42d9f9 - Add USE_WINDOW_VIDEOLAYER
+  *  bcf655a6e - (Test) Change the window flags to detach the video
+    widget
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 01 Jan 2022 19:10:13 +0000
+
 smplayer (1:21.10.0+git10011-4cae908b3-1) unstable; urgency=medium
 
   * Compile

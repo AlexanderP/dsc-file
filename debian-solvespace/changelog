@@ -1,3 +1,40 @@
+solvespace (3.0.1~git1827-5315a69-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 5315a69a1e0df22cba4ba2b11d2c66da4e4486f6
+  * Date: 1640981812
+  * git changelog:
+  *  5315a69 - Increase MAX_UNKNOWNS in the solver from 1024 to 2048
+  *  18dc8ee - Small simplifications
+  *  8ab70c2 - Fix formatting
+  *  6edeb66 - Don't hold the sparse matrices in a pointer at all.
+  *  42f5d3a - Banish an unneeded use of our custom containers.
+  *  2521dca - Fix loop type
+  *  605b48e - Use unique_ptr in main system jacobian.
+  *  c0f0756 - Eigen library integration into solver.
+  *  4ad5d42 - Add missing eigen submodule in some scripts
+  *  c66e6cb - Add eigen extlib to install command
+  *  dca5ce6 - Add Eigen to build.
+  *  ac91809 - Add Eigen submodule at 3.4.0 tag
+  *  e528fab - Add an early out in writing jacobian.
+  *  aec46b6 - Add a method to Expr.
+  *  3ba4023 - Some optimization
+  *  2f31673 - Decrease WriteJacobian complexity
+  *  4d58f95 - Suppress dof calculation flag
+  *  7f86a78 - Dof calculation when redundant is allowed.
+  *  708a08f - SolveBySubstitution of linear complexity.
+  *  974175d - Fix CMake warnings
+  *  006539b - Clean up/simplify build
+  *  a1e18b8 - Normalize namespaces: includes all at global/root
+    namespace.
+  *  6d40efa - importidf: Fix uninitialized variable
+  *  71c6492 - readme: Clean up, fix nearly all markdownlint complaints
+  *  b86e0de - readme: remove outdated build instructions
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 01 Jan 2022 20:17:25 +0000
+
 solvespace (3.0.1~git1802-e07b082-1) unstable; urgency=medium
 
   * Compile
