@@ -1,4 +1,7 @@
 # This lintian note never will be fixed by upstream developers: there are no
 # classical tarballs with "releases" at all, only automatically generated
 # tarballs from git tags exist.
-psi-plus-l10n source: debian-watch-does-not-check-gpg-signature
+debian-watch-does-not-check-gpg-signature
+
+# Hide useless notes:
+very-long-line-length-in-source-file translations/*.ts *

@@ -1,0 +1,8 @@
+# Program does not use libidn library, it uses only stringprep library
+# which is absent in libidn2, see:
+# https://gitlab.com/libidn/libidn2/-/issues/28
+# https://libidn.gitlab.io/libidn2/manual/libidn2.html#Stringprep-and-libidn2
+embedded-library libidn usr/bin/psi-plus*
+
+# False positives:
+hardening-no-relro [usr/bin/psi-plus-webengine]
