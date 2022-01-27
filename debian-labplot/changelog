@@ -1,3 +1,196 @@
+labplot (2.8.2+git9231-1fb3dd080-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 1fb3dd080d56a1ec25eae77cd7a5f851e5021870
+  * Date: 1642172486
+  * git changelog:
+  *  1fb3dd080 - retransform must be done at least once, because the
+    ranges change anyway even if no autscale is selected.
+  *  8cfd45a0e - Fix minor typos
+  *  0a41a9287 - Fix out of range error in x/y data changed
+  *  64044a21a - Fix desktop file removing %i
+  *  0d51fc4e4 - Reduced the scope of some temp variables in Column and
+    simplified the logic to determine the bounding rectangle surrounding
+    all visible sub-windows in MainWin for the project preview
+    thumbnail.
+  *  cb6407703 - cache the availability of min/max in own variable
+  *  807f726ba - GIT_SILENT Updated README to use the last version of
+    the description of features that we want to promote.
+  *  5a5c79426 - reading must be done as in the Variableparser, because
+    some dates are only valid in the UTC timezone
+  *  bddbd7160 - Added the note about how to reference and cite LabPlot
+    in literature to the README file.
+  *  9c57457bf - Added new screenshots to AppData and added the note
+    about how to reference and cite LabPlot in literature to the README
+    file
+  *  6e5376d41 - macOS: try fixing resolution
+  *  75f3f5e67 - If previously the text was empty, the bounding rect is
+    zero  therefore the alignment did not work properly.  If thext is
+    added, the bounding rectangle is updated and then the position must
+    be changed to consider alignment
+  *  aba77ffa6 - add missing ampersands
+  *  34a4ed70e - retransform plot after changing type
+  *  64471d13b - rename variables. So TODOs can be removed
+  *  28555f8f9 - removing not needed comments and general cleanup
+  *  810115fd5 - - extend function to work also correctly for nonlinear
+    axes - use last point always as reference point. If a point on the
+    same pixel occured, don't use it as last point, otherwise it is not
+    possible to draw a vertical line and a connection line to the next
+    point
+  *  32a0acd88 - do not draw first point, because there last Point is
+    still NAN
+  *  a251897a0 - add last line
+  *  a2d5dcc75 - do the calculation only once
+  *  2326ac999 - optimize to make function much faster
+  *  eb898d9c9 - WIP
+  *  1d81579a0 - make addUniqueLine() static so a unit test can be
+    written for it
+  *  993e5f59e - fix increase curve drawing again
+  *  74a24b3a1 - move addLinearLine content into addLine function to
+    reduce code size and because addLinearLine is not a big function
+  *  70f47a0e9 - revert improvement
+  *  9e1f3c0bc - auto scale: use default fullRange and add missing fix
+  *  aa04bd525 - remove retransform from all scaleAuto functions,
+    because of the multirange it makes no sense to suppress every time.
+    So do a retransform only when needed. It is a big performance
+    improvement
+  *  375700289 - GIT_SILENT made messages (after extraction)
+  *  0e54a024e - tests: more data change tests
+  *  afc78c059 - tests: add cartesian plot test for data changes
+  *  c6e48efc0 - tests: multi range comment fixes
+  *  cd79f4132 - when setting the cSystems in the dock, do not
+    retransform every time an item was added.
+  *  c61a62fb7 - do not forward QGraphicsItem::MousePressEvent when zoom
+    selection is used. So the selection does not change.
+  *  1c095ecb1 - m_data in the init() function will overwrite the data
+    pointer from the constructor.
+  *  71e714f7b - Updated the README file:
+  *  bd1b8fbe9 - GIT_SILENT made messages (after extraction)
+  *  c25b3a652 - plot: Fix updating ranges on data change
+  *  68dcce078 - code style fixes
+  *  f8504b287 - Fix compilation for older Qt versions
+  *  8726543de - minor code style
+  *  2d167b61a - Fix unnecessary typedef and variable order
+  *  6c43ecceb - rename formulaDatas into formulaData
+  *  bb447a70b - Remove assert, because it might happen that column is
+    nullptr
+  *  118ebdce5 - columncommands: cleanup
+  *  76bd2fdf8 - cleanup
+  *  ce020b849 - add const
+  *  37a25ee80 - remove brackets in one liner
+  *  10a55d09a - - rename formulaDatas to formulaData, because it is
+    already plural - remove access to private member m_formulaData,
+    because it makes no sense to access it.
+  *  c3187b38e - remove argument, because it is already the default
+  *  0c4b9dd69 - instead of using three Vectors (formulaVariableNames,
+    formulaVariableColumns and formulaVariableColumnPaths) Which have to
+    be synched, use a struct and store the data in there. So it is much
+    easier to sync
+  *  37623e449 - remove template so there is no need to include
+    ColumnPrivate header into Column
+  *  3062cc392 - add init function to avoid writing duplicate code
+  *  41a8032d5 - do not include ColumnPrivate but only AbstractColumn
+  *  8ead70c54 - GIT_SILENT made messages (after extraction)
+  *  43fae62a2 - [worksheet] similarly to drawValues() in XYCurve, use
+    QPainter::drawText() instead of QPainter::drawPath() also in
+    Histogram. drawText() is faster. This committhis also solves the
+    problem with the wrong brush used to draw the values.
+  *  916145974 - GIT_SILENT made messages (after extraction)
+  *  150cae19a - [worksheet] removed the border and reduced the margins
+    of the LaTeX preview image in TextLabel.
+  *  9debd5f89 - Minor fixes.
+  *  3a97d9529 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  a8bd1f781 - GIT_SILENT made messages (after extraction)
+  *  55adefaa9 - About: Fix author email address
+  *  94e84fc4c - column: improve availableRowCount() by adding option
+    'max' to make it faster when only max values are needed
+  *  fdd8c705e - GIT_SILENT minor fixes
+  *  38fb7519b - Added Dariusz Laska to the list of authors/contributors
+    to be shown in the About-dialog.
+  *  ff2f796df - Extended the tooltip text for columns in the project
+    explorer and removed the some debug output in MainWin that was added
+    in the previous commit by an error.
+  *  9131dab09 - Added a new option to create a new spreadsheet on
+    startup.
+  *  b5f30f199 - GIT_SILENT typo
+  *  f5560a933 - column: add wrapper for columnModeString() and
+    plotDesignationString()
+  *  743517b61 - cleanup
+  *  27e6a96b1 - position.point returns the position in scene
+    coordinated and not the logical position which is stored in
+    positionLogical()
+  *  04de97127 - - remove xPos, because positionLogical exists -
+    supressChildPositionChanged if the position of the custom point will
+    be changed by the infoelement - move connects to the end, otherwise
+    position changed of the custompoint will be called
+  *  48fc6a7bd - - do not retransform, because it is done already in the
+    Cartesian Plot. Retransform will crash labplot, because in
+    retransform the plot datarect is used. - Check that setText does not
+    call texlabelTextChanged of the infoelement, because this leads also
+    to a call of retransform and the application will crash
+  *  95933998e - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  a4c0155bb - GIT_SILENT made messages (after extraction)
+  *  ebf684c4c - column: simplify plot designation string usage
+  *  de4425ddd - column: Add convenient method to get plot designation
+    string
+  *  422c8ac90 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  1fb71a281 - GIT_SILENT made messages (after extraction)
+  *  d77dd3e0c - Fixes a crash when moving over an item which is not a
+    WorksheetElementPrivate
+  *  8bd3bce43 - tests: better handle fails (don't crash) in Notebook
+    tests
+  *  659e130f9 - [examples] added new project Mathematical Functions.
+  *  4074e7158 - Fixing regressions introduced in
+    eb21f0067273fd03ad70d476220fcf2e8da173f2: * recursively retransform
+    all children when loading the project. This fixes projects like
+    SameStats having folder structures that were not read. * when
+    copying/duplicating an object, retransform only this object and its
+    children and not all children in the project.
+  *  5f1464b0e - scale axes on data changes in curves and better debug
+    output
+  *  0a0c4452c - [examples] added new example Data = Smooth + Rough and
+    some minor improvements in the already available projects.
+  *  c1f76fa7e - GIT_SILENT Discount in INSTALL
+  *  8325131b2 - [worksheet] avoid adding an entry to the undo stack
+    when selecting a box plot in the project explorer and added a couple
+    of missing updates of GUI elements when the line color, etc. is
+    being changed in the boxplot and in the histogram properties.
+  *  25718a926 - minor improvement
+  *  9afb38df7 - QDate::startOfDay is available from Qt5.15 on. For
+    older version use the old method
+  *  cfa7353cc - plot: Fix calculating inde range of curves
+  *  4c3c33985 - [examples] new project SLOC History.
+  *  181c3f342 - fix datetime lighttime issue
+  *  663e274b5 - Fix regression
+  *  e6dadae76 - fit curve: do not change plot range to custom eval
+    range automatically
+  *  53bb5739b - [examples] minor fixes in the already available
+    examples and two new projects - Maxima Tutorial for Beginners and
+    Basic Plots.
+  *  b1b75e897 - Renamed Datapicker to Data Extractor.
+  *  6b533c215 - Fixes and improvements: 1. don't try to initialize the
+    variable model in the notebook if the backend session is not
+    available (backend is not installed for example). 2. renamed
+    Datapicker to Data Extractor 3. allow to paste the column data via
+    the context menu of the column similar to copy data 4. allow to
+    paste the column data into a column via CTRL+V in the project
+    explorer 5. delay the initialization of actions in Column until
+    there are required
+  *  160e123d9 - Retransform all elements after they were copied or
+    duplicated.
+  *  1fdb54a5d - [notebook] only execute the unit-tests for Notebook if
+    cantor libraries were found.
+  *  77e3a1b14 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  cb065a340 - GIT_SILENT made messages (after extraction)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Jan 2022 19:54:12 +0000
+
 labplot (2.8.2+git9130-54aef72ae-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,308 @@
+freecad-daily (0.19.2+git27075-089b18f868-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 089b18f8686ac03da749b916ab304f1c13f79d21
+  * Date: 1642174725
+  * git changelog:
+  *  089b18f868 - Part Design: Missing =
+  *  66864bbe7b - [PD] Pad/Pocket: sort out duplicated code
+  *  a1a8de633c - PD: fix small inconsistence, use forwared declaration
+  *  b2e6f91c1d - [PD] Use  signal in PD pipe
+  *  1296e2c417 - [PD] Use  in
+  *  e4aad767f4 - Mesh: translate doxygen from DE to EN
+  *  c9b772cf7d - Merge pull request #5373 from marioalexis84/draft-
+    wpproxy
+  *  99ae628a00 - Merge pull request #5370 from Roy-043/Draft-Fix-
+    translation-issues
+  *  cd089a82c7 - Robot: fix source comment typo
+  *  313032af16 - Update src/Mod/Assembly/App/opendcm/core/property.hpp
+  *  45bde3b502 - TD: fix 'praefix' typo in source and source comments
+  *  19e984f8c9 - Fix various typos
+  *  29ae8b0502 - Gui: remove obsolete/incorrect tree view comments
+  *  771d9a735a - Gui: improve safety of Application::getViewProvider()
+  *  843ea92055 - Draft: Fix additional translation issues related to
+    the snapping commands
+  *  f3530800b0 - Merge pull request #5371 from Roy-043/Arch-Fix-
+    translation-issues
+  *  1f70e352a8 - OpenSCAD: Rewrite fixVisibility() to use rootObj
+  *  79f9fb6845 - [TD]expose Page request paint method to Python
+  *  3a7a12e436 - [TD]improve handling of View in multiple Pages
+  *  4cc744c920 - AddonManager:Correct funcion name
+  *  59755b9d0e - Update gui_arcs.py
+  *  70d61b9624 - Addon Manager: Fix for Py3.6 w/ no fromisodate
+  *  285a4a76c1 - Draft: Add extension 'AttachExtensionPython' to WP
+    proxy
+  *  5ee5a6ed36 - [TD] fix a double to float truncation compiler warning
+  *  07c51f1b2c - Gui: Prevent crash when calling stderr.write and
+    stdout.write without arguments
+  *  1bfbcb5c95 - Addon Manager: Remove progress object from git pull
+  *  619947fcc2 - Merge pull request #5270 from
+    iromero91/dressup_translate_fixes
+  *  b0d7bd5961 - Merge pull request #5329 from belov-
+    oleg/path_simulator
+  *  adf084bb45 - TechDraw: Rename TechDraw_ExtensionArc command to
+    TechDraw_ExtensionDrawCosmArc
+  *  2e6437a961 - Merge pull request #5352 from sliptonic/bug/simulator
+  *  63f4ac15fd - Update gui_arrays.py
+  *  626425526b - [PD] sort out more Pad/Pocket code
+  *  00695f7378 - Merge pull request #5307 from marioalexis84/draft-
+    projectPoint
+  *  e33ef084ff - Merged crowdin translations
+  *  de374cbdfa - Updated ts files (after @chennes ludate fix)
+  *  d36b455e95 - Merge pull request #5318 from
+    chennes/lupdateCPPWorkaround
+  *  65425b5e30 - Arch: Fix translation issues
+  *  93a41d2941 - Draft: Fix translation issues
+  *  bb6e0a026e - Draft: fix Draft_SelectGroup
+  *  19db2f5ca0 - Addon Manager: Add version-based Addon deprecation
+  *  b70c7b6323 - Fix superfluous whitespace in various files
+  *  b0fcf45513 - Fix various superfluous whitespace in *.dox files
+  *  aa9b853bfb - Update _TEMPLATEPY_Workbench.svg
+  *  2ba95b3423 - PartDesign: Improve orientation behaviour for conical
+    helices (#5363)
+  *  cf0764c1b5 - [Part] sort includes
+  *  f84d32d1b6 - [PD] sort includes
+  *  8923f50dce - Sketcher: Remove unnecesary geometry touch
+  *  247a9f0876 - Sketcher: EditCoinManager - Check constraint types on
+    updating constraint color
+  *  d920d73af4 - [Sketcher] Add knot insertion command in Sketcher
+    workbench
+  *  d8c5801b95 - [Sketcher] Add  to
+  *  978f579870 - [Part] Support insertion of knots in b-splines
+  *  f1a265479d - PD: declare signedLengthConstraint in FeatureExtrude
+    as static class member
+  *  26f9e7869f - App: replace three boolean of CellAddress::toString()
+    with a bitmask of enums
+  *  2cbe72aea5 - Addon Manager: Display download progress
+  *  e4bb4e7db7 - Addon Manager: Correct typo
+  *  3c937a5f8d - Addon Manager: Clean up thread termination
+  *  ddac2f7580 - Addon Manager: Correct bad metadata update
+  *  1cd01248e0 - Draft: Fix projectPoint method
+  *  efa08946f2 - Addon Manager: Improve stability when cache update
+    interrupted
+  *  9a933a6015 - Base: [skip ci] add class Flags
+  *  3b76a23d7b - Addon Manager: Silence error on missing cache
+  *  f8e08659d2 - Addon Manager: Fix error on fast failed connection
+  *  eef27b845f - Start: header uniformity + whitespace management +
+    misc. pep8 fixes
+  *  417d18762c - [Part] improve Extrude dialog
+  *  56bfb9804c - Base: [skip ci] support bitmask operations for enums
+  *  968a9d83ae - PartDesign: Silence noisy FeatureTransformed
+  *  118b7aa0cc - Sketcher: improve exception handling * if determining
+    the normal raises an exception then fall back to a default value *
+    when handling a Base::Exception then call its ReportException()
+    function to get as much information as possible
+  *  a81dedc791 - Merge branch 'master' into path_simulator
+  *  38cc6f29e0 - [PD] Pad /Pocket: remove unused code
+  *  5aadc54d18 - [PD] Pad/Pocket: fix reverse behavior
+  *  e2f883fcc4 - [PD] Pad/Pocket: sort out common code
+  *  f31fe30c57 - Codespell: skip *.svg + add more ignored words (#5338)
+  *  cc447a061c - Draft: Fix issues with translate and _tr (#5351)
+  *  d556a38752 - Merge branch 'master' into path_simulator
+  *  68439aa831 - Draft: Use super() to call base class methods
+  *  faa9658b9d - [PD] remove double include
+  *  9eb3012ecc - [Gui] use predefined M_PI
+  *  4199ff2c66 - [Mesh] use predefined M_PI
+  *  629c1467ce - [Drawing] use predefined M_PI
+  *  9057093f02 - [FEM] use predefined M_PI
+  *  2f0c4d055a - [TD] coding style fixes for new extensions
+  *  6cab015fdd - [TD] fix another compiler warning about double to
+    float truncation
+  *  cde8650da8 - [TD] fix compiler warning and use predefined M_PI
+  *  9a8e055cc6 - [PD] Hole: fix angle constraints
+  *  7c158a3751 - [PD] rename a UI file
+  *  e7c2f8b703 - Spreadsheet: proper implementation of mp_subscript of
+    Mapping protocol of PropertySheetPy
+  *  e58d30d55e - [TD]use smart pointers in Extensions
+  *  e91cc8e329 - [TD] avoid memory leaks by using shared_ptr
+  *  cd7cf1b712 -  Path: Fix simulator bug workaround while milling
+    curves with small radius. Path Simulator produces out of trace
+    artifacts while milling curves with small radius. In VolSim.cpp the
+    branch for curve radius smaller then tool radius is not implemented
+    yet. In this condition the simulator produces artifacts of higher
+    radius while milling path using G2 or G3. There is an implementation
+    of G2 and G3 in python level.
+  *  0d63b87f75 - Fix bug with dxf post missing params.
+  *  b1ea3a0bef - Fix bug where simulator won't run after closing
+    document
+  *  4c9191d489 - Addon manager dependency resolver (#5339)
+  *  d3cdd29f5e - App: [skip ci] fix Property::isSame() and subclasses
+    by first comparing the pointers directly
+  *  039d52f01b - Merge pull request #5350 from
+    jimzim111/Path_Post_MachineCommands
+  *  4e1f2d5015 - PD: [skip ci] remove unused variable
+  *  058f88ec8b - [TD]fix typo in command name
+  *  f2d624cede - [TD]combine @wmayer and edi271 changes re command
+    extensions
+  *  de1ab433e5 - using getCircleCenter from Part WB
+  *  bfe2184251 - using enums to define line attributes
+  *  5e44722a18 - Changes caused by PR5231
+  *  74c3f2b0cf - Cascade spacing added
+  *  f2d89f471e - Menu seperators added
+  *  93ea3ba19f - Inserted undo/redo commands
+  *  9aac5253dc - Desired changes in TaskSelectLineAttributes.h
+  *  ed643f3fe9 - Desired changes in Workbench.cpp
+  *  380386851e - Next31TechDrawTools
+  *  d76f3b3c0c - Sketcher: ViewProvider parameter color subscription
+  *  34415c6946 - use python library 're' instead of 'regex' for
+    portability
+  *  c558fc7195 - [FEM] Use modal add/remove for more constraints (8/??)
+  *  0aeed0e53b - [FEM] Add modal add/remove for dispacement constraint
+  *  ecc6dee175 - Addon Manager: Clean up copied macros on uninstall
+  *  7ea0394e97 - Addon Manager: Handle symlinking failure
+  *  13817448b2 - Merge pull request #5097 from Russ4262/fix/waterline
+  *  8a59607517 - [FEM] Use OpenMP for
+  *  147f2a0b07 - [FEM] Possibly fix race conditions
+  *  8087b34840 - [FEM] OpenMP-parallelize
+    FemMesh::{getNodesBySolid,getNodesByFace}
+  *  2336ea1b59 - [FEM] speed up get_femelement_sets in meshtools.py
+  *  5052809d2b - Merge pull request #5228 from P-C-R/RRF-PP-for-Path
+  *  ba580fc315 - Merge pull request #5290 from
+    Russ4262/fix/3D_Surface_Optimize
+  *  b699096721 - Plot: remove superfluous whitespace
+  *  7375b3aa82 - Plot: Expose src/Mod/Plot strings to translation
+  *  ccc45659b0 - [PD] correct copyright
+  *  4f886b2b8c - Fix various typos and refinements
+  *  38534bd33d - Draft: improve get_group_contents function in
+    groups.py
+  *  e71c860985 - Draft: fix scale.py copy_scaled_edge
+  *  de9007ba92 - Draft: Fix importSVG.py: wrong position for certain
+    ellipses (#5297)
+  *  f6754eddfc - Draft: make Draft_Snap_Angle work in 3D
+  *  d5870a87e8 - Merge pull request #5319 from
+    jimzim111/PathArray_RandomSeed
+  *  a6b01fa1f0 - [PD] Hole: some coding style fixes
+  *  7afcc93062 - [PD] remove wrong comment
+  *  d232f17e23 - [PD] Hole: don't call onChanged on restoration
+  *  8df64b7426 - [PD] add missing hole constraint
+  *  f2b0333c75 - [PD] Hole: coding style fixes
+  *  76c611ae2a - [PD] remove unnecessary Unicode characters
+  *  0c0239571b - Sketcher: avoid attaching to/detaching from the same
+    parameter group twice
+  *  7ab27ff2e2 - merge with formatting and translation changes
+  *  6aec424aa5 - Gui: override QuantitySpinBox::setExpression and
+    validate expression to update internal representation
+  *  00d6f4f2df - Gui: refactor code to reduce code duplication
+  *  cc4597503f - App: include FCGlobal.h for export macro
+  *  aa56ce4799 - Merge pull request #5336 from
+    jimzim111/Path_Post_MachineCommands
+  *  122deb98fb - Draft: change static to non-static declared variables
+    (#5292)
+  *  c93c0e6aaf - [Part::CheckGeometry] pass object to
+    buildShapeContent() rather than string as docname.objname
+  *  ddbf8e0e2d - Sketcher: avoid attaching to/detaching from the same
+    parameter group twice
+  *  4e2c1158c6 - Tools: update _TEMPLATE to 2022
+  *  7f27c81119 - Update 'About' info to reflect new year 2022
+  *  64b2677ac0 - [PD] get rid of a CI compiler warning (#5335)
+  *  8d6ff3c07b - [Spreadsheet] Use DontUseNativeColorDialog parameter
+    when using QtCol… (#5326)
+  *  c461af19c3 - check for gcode comments that contain controller-
+    specific commands to include
+  *  dfa62af40f - [PD] avoid a single-letter variable
+  *  a0746a0c02 - PD: Fix bug in FeatureTransformed
+  *  dc288a7ade - Fix more typos + whitespace fix and added 'TODO'
+  *  3292475613 - Fix various typos
+  *  977b602469 - [PartDesign] Chamfer and Fillet, select all edges for
+    the user when no subobjects have been selected prior to executing
+    command
+  *  dd651d5dc3 - Merge pull request #5330 from
+    sliptonic/bug/translation-post
+  *  12a5774ab7 - newline characters
+  *  bab226a051 - Merge pull request #5331 from
+    sliptonic/bug/translation-setupsheet
+  *  0a44fab03c - Merge pull request #5324 from
+    sliptonic/bug/translation3
+  *  c7a20f2876 - Translation cleanup.  Setupsheet related files. Simple
+    copy, simulator
+  *  3217352194 - black reformat (setupsheet)
+  *  268203103d - translation cleanup (postprocessing files)
+  *  f3eceb3f4a - Black reformat (postprocessing files)
+  *  abe76b35f4 - [TechDraw] Use global DontUseNativeColorDialog
+    parameter from BaseApp/Preferences/Dialog when opening color dialog
+  *  7a1695cb2c - Codespell: add rady to the ignorelist
+  *  472c09cd09 - [Win installer] upgrade year
+  *  ba205415c5 - change the workflow trigger from pull_request to
+    pull_request_target
+  *  3ce001abdf - remove the AddonManager Label
+  *  8508324efc - Github: Create Labeler workflow/action and labels.yml
+    file
+  *  4b0767dec1 - [TD] some style unification
+  *  1999e7563c - [CMake] fix mis-matching arguments issue
+  *  3bb235a17a - Move SimpleEditPanel to its own file
+  *  84e8c03c44 - Dont put mutables where they are initialized only once
+  *  cf1db1eedc - Implement mixin class for simple GUIs over properties
+  *  a0492e3cdb - Change UI panel name to put all translations in one
+    context
+  *  3a5a4e5f2a - Fix translations in PathDressupLeadInOut
+  *  2a96bb8982 - Black formatting
+  *  2a1f50fd7c - translation cleanup pathdressupdragknife
+  *  42988f0a81 - Black pathdressupdragknife
+  *  01b8817d1b - translation cleanup pathiconviewprovider
+  *  302ff98f11 - translation cleanup
+  *  0f70ef6142 - translation cleanup PathSanity
+  *  2e8eaa3ffc - translation cleanup
+  *  40973cc8ee - translation cleanup
+  *  a6301d0ec1 - Translation cleanup
+  *  3873f9731f - translation cleanup
+  *  ead79d974c - translation cleanup PathCollision
+  *  908622176b - PathArray translation cleanup
+  *  75ac674917 - translation cleanup PathGeom
+  *  3fe1408567 - Translation cleanup PathHop
+  *  c19e971368 - Translation cleanup PathUtils/PathUtil
+  *  f3d6bd21e3 - translation cleanup PathCustom/gui
+  *  9b4af0b812 - translation cleanup PathComment
+  *  e022675b7a - tranlation cleanup PathCopy
+  *  02cbd7c342 - Translation cleanup: PathCommands
+  *  c28036e020 - cleanup for translation handling
+  *  2a22ead350 - black reformat
+  *  0287ca6e29 - Make combos in .UI non-translatable.
+  *  e209bc706d - Merge pull request #5008 from
+    Russ4262/fix/childless_job
+  *  169eb655f3 - Merge pull request #5306 from sliptonic/bug/4810
+  *  c14af5f5fe - Make it possible to do new Pick Points
+  *  b09822c417 - Use latest user input for Add Cosmetic Vertex
+  *  b8b015d0f1 - [PartDesign::Scripts::Spring.py] update old example
+    script
+  *  d70faa1f5e - PD: helix cleanup: remove unused strings from task
+    panel ui
+  *  88063627d2 - PD: Use the helix property docs as tooltip in the task
+    panel
+  *  138418ef30 - Raytracing: replace subprocess.call with
+    subprocess.Popen and escape file names
+  *  d6ad9f50bc - Merge branch 'master' into lupdateCPPWorkaround
+  *  c7cf9b25df - Github: Create codespell workflow and codespellignore
+  *  ba4f1b443b - allow user to specify a seed value for jitter
+    pseudorandomness so that multiple operations/tools can follow the
+    same sequence
+  *  4430e3ec8c - [TD]Allow selection of Page when adding View
+  *  cec898c6b3 - [TD]prevent touched but must be execute on DrawPage
+  *  a2127e0f00 - Fix MacBundle relocation
+  *  531e9143f4 - Correct typo in jitter dimension calculation
+  *  1358c110e3 - Draft: Commands acting on subelements did not load the
+    Draft module
+  *  83241d3f54 - Draft: fix several issues with importAirfoilDAT.py
+  *  069d5ca4d7 - Merge pull request #5312 from
+    chennes/addonManagerCacheMacros
+  *  3e75db0d58 - Tools: Add workaround for lupdate missing source
+  *  f48d79a227 - Addon Manager: Improve display of installation details
+  *  64cf6a68d8 - Addon Manager: Remove unused imports
+  *  70c9804fc0 - Addon Manager: Ensure cache is rebuilt after firstrun
+    dialog
+  *  024e404a0e - Addon Manager: Downgrade failed low-level urlopen to
+    log
+  *  50336440dc - Addon Manager: Add preference to control macro
+    download
+  *  8ef9f257be - Addon Manager: Remove extraneous UI elements
+  *  b370d3dae4 - Addon Manager: Improve wiki page data extraction
+  *  81c1187f58 - Addon Manager: Fix macro cache loading
+  *  c746be388f - Addon Manager: Improve macro scanning performance
+  *  4c5b8f368c - Addon Manager: Implement simple macro metadata cache
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Jan 2022 19:58:47 +0000
+
 freecad-daily (0.19.2+git26829-175ceb2d12-1) unstable; urgency=medium
 
   * Compile

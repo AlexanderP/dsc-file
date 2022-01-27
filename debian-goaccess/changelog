@@ -1,3 +1,19 @@
+goaccess (1:1.5.4+git3671-1d375107-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 1d3751077e234c062ca217235400543376b6aa12
+  * Date: 1641664427
+  * git changelog:
+  *  1d375107 - Avoid calling cleanup early since conf.stop_processing
+    already should gracefully end goaccess.
+  *  ac8e44b8 - Ensure WS is stopped on SIGINT if running as --real-time-
+    html.
+  *  2bf745d9 - Ensure we use a FATAL error on invalid output extension.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Jan 2022 19:59:38 +0000
+
 goaccess (1:1.5.1+git3668-72876319-1) unstable; urgency=medium
 
   * Compile

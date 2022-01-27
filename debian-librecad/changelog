@@ -1,3 +1,48 @@
+librecad (2.1.3+git4732-5d331c8b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: master
+  * Commit: 5d331c8bf51031f46989a5ce3350c59508505289
+  * Date: 1641752416
+  * git changelog:
+  *  5d331c8b - sync libdxfrw (072aecd)
+  *  e829bce1 - fixed possible out of bounds read with MText entities
+  *  258fef91 - sync libdxfrw
+  *  b7092a95 - AppImage was broken by fix for #1488
+  *  96bd34ba - fixed wrong translations folder for additionals paths
+    from settings
+  *  8c3b652a - fixed #1488, getDirectoryList() failed on Linux when
+    librecad is in
+    /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+  *  2c2c1b0d - Merge pull request #1491 from luzpaz/typos [ci skip]
+  *  3613d526 - FIx various source comment typos
+  *  70f7a86b - Merge pull request #1475 from eldstal/polyline_bounds
+    [ci skip]
+  *  29e85c5f - Merge pull request #1469 from eldstal/hatch93 [ci skip]
+  *  e6a8fffe - Merge pull request #1465 from eldstal/cdatalist [ci
+    skip]
+  *  d9dcb27e - Merge pull request #1463 from eldstal/security [ci skip]
+  *  a4a4f297 - Merge pull request #1384 from a1346054/fixes [ci skip]
+  *  468c2659 - Merge pull request #1359 from luzpaz/typos [ci skip]
+  *  b3e667f2 - copy/rename media files in desktop folder to remove
+    whitespaces [ci skip]
+  *  8c9e0659 - Fix bounds check in DRW_LWPolyline
+  *  57714258 - Added NULL check for hatch code 93
+  *  4edcbe72 - Added bounds check to CDataList in JWW parser
+  *  f3502963 - Added bounds checking to CDataMoji in jww parser.
+  *  eba14138 - remove --tags from git describe
+  *  8d1116b5 - run action on master push only
+  *  ad4802f7 - Merge branch 'appimage'
+  *  d1d8318f - AppImage - use git sha for version, upload to latest pre-
+    release
+  *  a64f1f48 - AppImage - build on GitHub Actions, with go-appimage
+    tool
+  *  1d314270 - migrated static analyzer build from Travis CI to GitHub
+    Actions
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Jan 2022 20:05:01 +0000
+
 librecad (2.1.3+git4700-e75cba87-1) unstable; urgency=medium
 
   * Compile

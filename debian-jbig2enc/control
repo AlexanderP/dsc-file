@@ -8,7 +8,7 @@ Build-Depends:
  libleptonica-dev,
  python-all,
  zlib1g-dev
-Standards-Version: 4.3.0
+Standards-Version: 4.5.0
 Homepage: https://github.com/agl/jbig2enc
 
 Package: jbig2enc
@@ -32,7 +32,6 @@ Architecture: any
 Section: libs
 Depends:
  ${misc:Depends},
- ${python:Depends},
  ${shlibs:Depends}
 Description: JBIG2 encoder (shared library)
  JBIG2 encodes bitonal (1 bpp) images using a number of clever tricks to get
@@ -52,7 +51,6 @@ Architecture: any
 Depends:
  libjbig2enc0 (= ${binary:Version}),
  ${misc:Depends},
- ${python:Depends},
  ${shlibs:Depends}
 Description: JBIG2 encoder (development files)
  JBIG2 encodes bitonal (1 bpp) images using a number of clever tricks to get
