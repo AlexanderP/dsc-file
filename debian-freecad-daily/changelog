@@ -1,3 +1,351 @@
+freecad-daily (0.19.2+git27332-4d395f85bb-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 4d395f85bbb9ae595978669fe185332a29cf755e
+  * Date: 1643644121
+  * git changelog:
+  *  4d395f85bb - [packaging] Fix COPR building system
+  *  d69401107b - [packaging] Add libE57Format to fedora spec file
+  *  ad7ab573eb - PD: PrefQuantitySpinBox now requires an explicit entry
+    name for the parameter group
+  *  8b33a70513 - Gui: fix a couple of problems of class
+    PrefQuantitySpinBox * derive it from PrefWidget as any other
+    preferences widget * save history values to a separate group as
+    otherwise two PrefQuantitySpinBox may override the values each other
+  *  b8b3cea035 - OpenSCAD: Fixes in several actions from Keith Sloan
+  *  065e87f313 - [Part] Extrusion: stop if intermediate shape is Null
+  *  d455783ebe - [Part] Extrusion: fix logic issue
+  *  647b54302f - [Part] Extrusion: fix CI compiler warning
+  *  754fc5f9ae - [Part] Extrusion: code simplification and
+    documentation
+  *  7c55db58d1 - [Part] Extrusion: handle also complex nested
+    structures
+  *  55f71f4015 - [Part] Extrude: fix a thinko introduced by previous
+    commit
+  *  29997d5e71 - [Part] Extrusion: simplify code by using full
+    recursion
+  *  a5135efd87 - TD: cleanup after #5457 [skip ci]
+  *  8eab4a397e - [Part] Extrusion: code optimizations
+  *  63c864c5b6 - [Part] Extrusion: taper nested wires properly
+  *  062e30d42f - Gui: Fix some docstrings in Selection module
+  *  c63c3e6538 - Part.show() python return the new document object
+    instead of None
+  *  99d9e781fc - [Part] Extrude: remove unused variable
+  *  cce730c79d - [Part] handle inner wires for Extrude (#5367)
+  *  a26933bf4c - [TD] Include Intersection method into DrawUtil class
+  *  cd4da51e60 - [TD] Insert new tool Area Annotation
+  *  cc770208ea - [TD]migrate DrawingWB projection functions to
+    TechDrawWB
+  *  71913a497f - [App] fix compiler warning
+  *  ec2fc59fde - App: add a function to document observer to be
+    notified if the active document changes
+  *  38321cc2e9 - App: rework ColorGradient and allow to easily extend
+    it with further color models
+  *  43ffd70111 - App: code cleanup of Color models
+  *  0620911da1 - Gui: Change signature in some Python Selection module
+    functions
+  *  cf2e1a0aa5 - Gui: Improve docstrings of Python Selection module
+    functions
+  *  19668d2924 - Gui: Add option to enable/disable text cursor blinking
+  *  8da66398ad - Gui: supprt PrefQuantitySpinBox by PreferenceUiForm
+  *  93fee152e5 - Ignore revs w/ 'header uniformity' from git blame
+    history [skip ci]
+  *  45ef3ed2fb - Update gui_orthoarray.py
+  *  acf88af89e - Update gui_beziers.py
+  *  fd2f964b6b - Update gui_beziers.py
+  *  d5615fc6a6 - Draft: Fix several translation issues
+  *  27691073e1 - [TD]restore missing import statement
+  *  54e2eabccb - Fem: for view provider of post-object enable two-side
+    rendering because the coloured object could look broken depending on
+    the range of the color bar
+  *  2886ca0185 - App: include header with export macro
+  *  063905adfd - Addon Manager: Run uninstall.py when uninstalling
+    AddOn
+  *  88f6b2f432 - Addon Manager: Translation cleanup
+  *  2f7b919671 - Qt::TextColorRole is obsolete. Use ForegroundRole
+    instead.
+  *  420d54340a - [TD] Prevent crash when snapping leader line
+  *  8419d53392 - Merge pull request #5442 from
+    sliptonic/bug/translationAreaOp
+  *  97cc2cf16c - AddonManager: Correct bug with older Qt data
+  *  e296aa6973 - Addon Manager: Eliminate use of QDeadlineTimer
+  *  96b8a6e87b - Black
+  *  8d7c92ece4 - Remove unused modules and variables
+  *  bc392faf56 - Refactor counting for moved views
+  *  918be1d102 - Black
+  *  2babd6d483 - Remove unused modules
+  *  4da3c21dcf - [TD]Allow override of dimension line angles
+  *  7ef448572d - Fem: fix possible crash when loading a VTK file
+  *  bfada57b0f - Addon Manager: Refactor to eliminate extra event loop
+  *  20f422f76d - don't force CRC
+  *  f045a0b6f1 - Addon Manager: Improve startup speed
+  *  763dc231cf - PropertyBag translation cleanup
+  *  2044515d59 - surface and waterline translation
+  *  50da50be48 - remove items from comboboxes
+  *  554de6f18f - surface translation cleanup
+  *  17de45a228 - translation cleanup circularholebase
+  *  889ad4f634 - AreaOp translation cleanup
+  *  9c5e4e2340 - Black
+  *  efaebbb7fc - Merge pull request #5446 from sliptonic/bug/marlinpost
+  *  ca691bce90 - Fix typos [skip ci]
+  *  12eb5dafb1 - Base: implement some convenience methods to get/set
+    rows/columns of a matrix
+  *  3a4100d656 - zipios++: modernize C++11 * use nullptr * replace
+    deprecated headers
+  *  63f256ad24 - kdtree++: modernize C++11
+  *  853454a139 - Mesh: modernize C++11 * remove redundant void-arg *
+    use nullptr * replace deprecated headers
+  *  8f4aa0290c - Image: modernize C++11 * remove redundant void-arg *
+    use nullptr * replace deprecated headers
+  *  4398ae54dd - Points: modernize C++11 * remove redundant void-arg *
+    use nullptr
+  *  4b788d0413 - Sandbox: modernize C++11
+  *  9db8340ff8 - fix default unit string for mm/min
+  *  92671e0da5 - Test: modernize C++11 * remove redundant void-arg *
+    use nullptr
+  *  2bb082bfaf - Merge pull request #5436 from
+    sliptonic/bug/translationJob
+  *  9fba28c1b6 - Update CommandExtensionPack.cpp
+  *  b03dd9b6da - Update CommandExtensionPack.cpp
+  *  9c00c3ffea - Update CommandExtensionPack.cpp
+  *  a2be2ab959 - Update CommandExtensionDims.cpp
+  *  55441fd97b - Update Workbench.cpp
+  *  08aa89cfa2 - Update Workbench.cpp
+  *  5476af8f8f - TechDraw: Ext. Tools: Improve menu texts and tooltips
+  *  daf1269497 - Gui: remove support of using deprecated Qt OpenGL API
+  *  b3e2c87530 - Merged crowdin translations
+  *  630215c721 - Regenerated ts files
+  *  c1ba2962dc - Tools: Using recursive option in lupdate script
+  *  2cb478fd66 - MeshPart: raise runtime error in meshFromShape() if
+    smesh was built without netgen support
+  *  ec167207bf - Gui: Add functionality to enable/disable block shape
+    cursor in text editor and console
+  *  4b2e707018 - Set App::Part Material property type to
+    App::PropertyLink
+  *  4acef3f14f - Addon Manager: Confirm delete
+  *  2b0a4dc643 - Addon Manager: Create NetworkManager class
+  *  4d87039635 - Base: modernize C++11 * remove redundant void-arg *
+    use nullptr * replace deprecated headers
+  *  7330799155 - Test: fix exception handling in tests for units
+  *  61f3dc49b6 - feature extension translaton cleanup
+  *  c9d1b25024 - Holding tag translation cleanup
+  *  b39272cf96 - dogbone, boundary, ramp entry dressup tranlation fixes
+  *  10574a255b - translation cleanup misc files
+  *  c675c8b859 - Job translation cleanup
+  *  946944e1de - Black - Job
+  *  3c8b65aee4 - Merge pull request #5421 from
+    sliptonic/bug/translationEngrave
+  *  071752b3c1 - libE57Format: Fix warnings -Wignored-qualifiers and -
+    Wcomment
+  *  e6b7c0e5f9 - Draft: fixed tstroke error in get_svg
+  *  eac4dd5588 - Pocket translation cleanup
+  *  cbc60a3f44 - Base: clean-up code in UnitsApi
+  *  19cce52864 - pocket black
+  *  2cbc0b333c - translation cleanup
+  *  ab51e26196 - Black
+  *  de6045ed28 - Black
+  *  2098054b0d - black
+  *  38bad10701 - Engrave translation cleanup
+  *  bd20ee0f16 - Black
+  *  4fb91e4f02 - Fix various typos
+  *  4a18442e04 - Gui: [skip ci] change placeholder text of
+    ModifierLineEdit
+  *  4f8ebf8d07 - Gui: harmonize AccelLineEdit and ModifierLineEdit
+  *  fc269c6273 - [Macro] Use a key catcher line edit to get modifier(s)
+    for recent macros
+  *  58951fd9ec - [Macro] Do not try to translate shortcut
+  *  410d835dfc - Inline documentation fix
+  *  146c0c78db - Typo
+  *  bfe0b62533 - Merge pull request #5400 from dirkolbrich/archaxis
+  *  fe0213a3cd - Merge pull request #5422 from
+    sliptonic/bug/translationThreadMill
+  *  a3efe5a03e - Merge pull request #5388 from Roy-043/Arch-Fix-
+    ArchWall-onBeforeChange
+  *  5d63eb51be - Merge pull request #5384 from Roy-043/Draft-fix-task-
+    panel-related-issues
+  *  66358a8e38 - Gui: in AccelLineEdit use the provided placeholder
+    text and enable the clear button
+  *  321c8b66ed - [Core] set Backspace key as shortcut
+  *  e77df533b8 - Gui: Remove unused error message
+  *  10ca067d95 - Spreadsheet: unit test for expressions using an input
+    spreadsheet A bug was reported here:
+    https://forum.freecadweb.org/viewtopic.php?p=564502#p564502
+  *  369fc153b1 - Gui: code refactoring that handles printer settings,
+    also support color mode
+  *  3dfdc6804f - Fem: [skip ci] fix runtime failure when using Py3.10
+  *  1e4da60367 - Create .git-blame-ignore-revs
+  *  78d0fc786a - OpenSCAD: pep8-ified + removed superfluous whitespace
+    + uniform headers
+  *  c14e6b318e - Spreadsheet: fix dependency calculation on external
+    spreadsheet
+  *  c4c81e6e69 - [Core] Fix unit management in QuantitySpinBox
+  *  09d7b44495 - [PD] uniform default Pad/Pocket lengths
+  *  59c470dedf - PD: fix bad formatting
+  *  ad24b32fef - Revert [PD] uniform default Pad/Pocket lengths
+  *  501b45bac8 - [PD] uniform default Pad/Pocket lengths
+  *  62ed6b509e - [PD] FeatureSketchBased: only style fixes
+  *  3c7ed89306 - [PD] correct copyright year
+  *  9f529089ae - Toolbit Translation Cleanup
+  *  52a4df3b62 - Toolbit black
+  *  0a53abbb9f - Adaptive translation cleanup
+  *  420ea7b725 - Merge pull request #5411 from
+    sliptonic/bug/translationDressup
+  *  6aaa531175 - Old ToolLibrary translation cleanup
+  *  457d963d84 - Old toollibrary black
+  *  b2f0bf0e67 - ToolController Translation cleanup
+  *  b804f21184 - toolcontroller black
+  *  820077b960 - Threadmilling translation cleanup
+  *  cb280afbc4 - [TD]remove redundant edits from 9 Task dialogs
+  *  2c2e13c178 - import error
+  *  fee8660bcf - Drilling translation cleanup
+  *  953a319edc - black
+  *  b60a97f2b4 - Vcarve translation cleanup
+  *  d39d91f90e - Black
+  *  4c08365920 - AxisMap dressup translation cleanup
+  *  931f4a2b8f - black
+  *  aae9d645f2 - ZCorrect translation cleanup
+  *  c3b46bad38 - Merge pull request #5405 from
+    sliptonic/feature/helix_refactor
+  *  e506233bbb - Merge pull request #5410 from
+    sliptonic/bug/translateDeburr
+  *  7383a80b53 - [Arch] split ArchAxis into separate modules
+  *  48f07429a2 - TD: fix source comment typo
+  *  da6f34723b - Part: fix source comment typo
+  *  abf5014ac8 - App: fix source comment typo
+  *  0324b5b338 - TD: Uniformity tweaks left over from #5383
+  *  e3c0a43797 - [PartDesign] Allow single (viewport) click for mapping
+    feature selection
+  *  c950d3779d - Merge pull request #5418 from sliptonic/bug/unittest
+  *  c7e7f4ed90 - Unit test breaks due to tolerance issue.  Disable this
+    test
+  *  997cd89fc2 - TechDraw: fix typos in CommandAnnotate.cpp
+  *  5bbd24e48d - Display Midplane checkbox with Pocket/ThroughAll
+  *  88ded38ca1 - Base: only handle Base::ParserError exceptions for
+    quantity expressions
+  *  945602f187 - Merge pull request #5403 from
+    sliptonic/feature/splitArcsHelper
+  *  63ced6756d - translation cleanup
+  *  a09a6fe879 - black reformat
+  *  9ee01669ed - fixture command fix
+  *  caaa9005b6 - translation cleanup (probe)
+  *  4c0e9da7e1 - black reformat
+  *  1f71e170ce - translation cleanup (PathInspect)
+  *  3332712bb3 - black reformat
+  *  cf5a14bc27 - [TD]Adjust initial placement of dim text
+  *  253817e3e9 - [TD] Add new non-standard format specifier '%w' that
+    truncates trailing zeros.
+  *  83839b6d13 - [TD] add right/left baseline in Parallel Dimension
+    tools
+  *  242dcd7e44 - [TD] Variable line stretching distance
+  *  c46a4f776b - [TD] Move Circulation method to DrawUtil
+  *  5a40cd0ae5 - [TD]Add MoveView and CopyView commands
+  *  d1a94de371 - Addon manager: install dependencies (#5376)
+  *  39b9cd0f98 - fix bug with extraoffset not stored
+  *  be772fc6c7 - translation cleanup
+  *  fb84f715fa - Base: extend Python wrapper to allow to create a
+    quantity with Units.Quantity(1, 'm') and add a unit test
+  *  2fef77e267 - [Core] Fix Quantity construction with value as double
+    + unit as string
+  *  bb4adc37d5 - Tweaks
+  *  39ed257eb4 - [Part] add missing include
+  *  5d1d1bc2a7 - remove deprecated code
+  *  3dcb104461 - add a material allowance property
+  *  21f31d6556 - black reformat
+  *  1ff688a3ff - Helix refactor for generator
+  *  3cf2a2cb69 - translation fixes
+  *  4ea14101c0 - helper to split arcs
+  *  69fc16d367 - add helper to discretize arc gcode to G1
+  *  f9518ed42c - fix typo
+  *  b3e52226fe - [Sketcher] set debug as cross platform
+  *  7b23f6793c - Part: Use Tools::getNormal to compute normal to
+    surface
+  *  a888a0ac0a - Part: Implement Tools::getNormal function
+  *  e8162893ce - Test: add unit test for face and surface normals
+  *  fcaa698be8 - [Part] Extrusion: just style fixes
+  *  e4bc11d973 - [GUI] Allow origin plane/axis selection with entire
+    label bounding box
+  *  ec00d35c5f - [FEM] Add reference highlighting for FEM constraints
+  *  2b8790ac76 - Merge pull request #4425 from
+    sliptonic/feature/discreteArcs
+  *  d5f17a7106 - Add property to split arcs into G1/G0 segements
+  *  0dbcafa12b - Merge pull request #5390 from sliptonic/feature/helix-
+    generator
+  *  97b9ee8c20 - fix missing test import
+  *  edefffae4b - basic retraction handling
+  *  a6a062a20c - cleanup for readability. More forgiving of input.
+  *  606e613e28 - Added another test to drill generator and
+    corresponding test case
+  *  944e74012b - helix generator shouldn't assume flip. shortend test
+    case
+  *  e92a0e813f - Path: Append unit tests for helix generator
+  *  c36b102e87 - Helix Generator and Testing
+  *  ae0528e56e - Merge pull request #5397 from luzpaz/typo/Path
+  *  450dfc7970 - Path: fix minor typo [skip ci]
+  *  e3bdd864be - Merge pull request #5229 from sliptonic/feature/drill-
+    refactor
+  *  31e2e95203 - Base: Exception handling: * Harmonize FreeCAD with
+    Python exception types * Implement
+    AbortException::getPyExceptionType() to avoid handling it in client
+    code * Remove catch block for plain C strings
+  *  b9280ae760 - App: do not hide actual exception type in
+    DocumentObjectPy::addProperty/DocumentObjectPy::removeProperty and
+    throw TypeError in DynamicProperty::addDynamicProperty() if the
+    based type id is invalid
+  *  59b4f8d6d8 - Test: add unit tests to test with wrong types
+  *  12883abdbe - App: Prevent crash when trying to delete pointer to
+    BaseClass
+  *  de59bce3b3 - Base: Add 'getTypeIfDerivedFrom' member function to
+    Type class
+  *  fdabaf692b - [App] DocumentObject.cpp: Add more information to the
+    error message ... (#5394)
+  *  74fe1fa4db - Part: support of vertexes in ReferenceHighlighter
+  *  af868ed079 - PD: move ReferenceHighlighter to Part module
+  *  f9b37729fe - PD: add PD test modules to __init__.py
+  *  96e7c6b3b5 - PD: Add tests for InvoluteGear
+  *  d530b6ea4a - Update CreatePyModule.py
+  *  113a587ae5 - Part: in function to create a part handle meshes with
+    defects
+  *  ead1bce8e9 - Gui: [skip ci] improve comment
+  *  9d37d27229 - Gui: fix handling of dimensionless expressions
+  *  d5ae0777d0 - [PD] Correct include guard name
+  *  af45d932c4 - [Part] Extrude: avoid code duplication
+  *  6461f9f6d2 - PD: [skip ci] make uniform the license text of test
+    modules
+  *  f9b84079cf - Arch: Fix ArchWall onBeforeChange
+  *  20b86e55b8 - Part: expose Precision to Python
+  *  a3b3134594 - [Part] just style fixes
+  *  7121032f1b - cleanup imports Remove py2 test for Queue.
+  *  b42b689a95 - Remove deprecated code
+  *  4d91ea271d - rename function.
+  *  e601b60469 - Refactor filter arcs.
+  *  461eee797f - Test case for filterArcs
+  *  2d1c083d9a - PD: fix crash in thickness dialog when clicking 'Add
+    Face' button
+  *  8300c07767 - Removed F words. Various fixes from code review
+  *  c0c4ae40a5 - TopoShape::analyze() SetRunParallel(true) to do the
+    bopcheck in parallel mode
+  *  e535204f8e - Sketcher: prevent crash when accessing null pointer
+  *  f147986fa9 - App: Bugfix for NULL-Pointer dereference of Property-
+    >getName()
+  *  9ca8e01771 - fix feedrate update Fix machinestate to handle drill
+    moves and tests move feed and rapid declarations to PathGeom
+  *  fc2d6c172b - Make CircularHoleBase use drillableLib
+  *  f156d9daea - Helpers and tests
+  *  5b23af3d4b - Refactor PathDrilling to user generator
+  *  cada185a70 - Drill Generator and testing
+  *  7655849797 - Add JobType property
+  *  c81ce5dea1 - Draft: fix task panel related issues
+  *  b836712c83 - Test: [skip ci] clean up documents for unit test with
+    cross links
+  *  94e2ce44b4 - Test: [skip ci] add unit test with cross links Forum
+    thread: https://forum.freecadweb.org/viewtopic.php?f=3&t=58603
+  *  6a7e02000e - Test: [skip ci] add test for issue 4823 Forum thread:
+    https://forum.freecadweb.org/viewtopic.php?f=3&t=52775
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 31 Jan 2022 17:52:45 +0000
+
 freecad-daily (0.19.2+git27075-089b18f868-1) unstable; urgency=medium
 
   * Compile

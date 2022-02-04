@@ -1,3 +1,188 @@
+labplot (2.8.2+git9333-b100ff258-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: b100ff2581820abd3690bed7896c01d447f954f1
+  * Date: 1643645425
+  * git changelog:
+  *  b100ff258 - unused code
+  *  206d493ed - fix #94 Duplicate of a worksheet with a plot doesn't
+    work
+  *  e2d52fda2 - when coordinateBinding was changed in the label or the
+    custompoint, notify the dock, otherwise it will not be updated
+  *  ce0a66c4d - update position to update the logical position variable
+  *  7f2016b7f - missing retransform, otherwise the image will not be
+    placed correctly
+  *  d86a128a5 - fix wrong initial positioning of the custompoint. A
+    logical position was set to the relativePosition variable, which is
+    wrong
+  *  2de6ce810 - set Position after adding as child, otherwise the
+    position will not be set correctly, because parent datarect is not
+    available and therefore alignment does not work correctly
+  *  0641a13ec - - move setting the graphicsItem position to
+    WorksheetElement, so it can be used for every element. # Conflicts:
+    # src/backend/worksheet/WorksheetElement.cpp #
+    src/backend/worksheet/plots/cartesian/CustomPoint.cpp
+  *  ad3975a23 - update application icons
+  *  52a935459 - [worksheet] when mapping logical to scene coordinates,
+    properly set the elements for visible points vector to true or false
+    instead of just negating their current value.
+  *  e0464dcf9 - changelog
+  *  5dc145a0e - label: fix restoring selection for color changes
+  *  a32b93bac - label: fix updating label when background color changes
+  *  b4168f8fc - Merge branch 'master' into labelBackgroundColor
+  *  5e00399df - plot: Fix enabling auto scaling and clean up (fixing
+    multi range test)
+  *  365400fd5 - tests: fix OPJ import range checks
+  *  e981e27d1 - [plot] correctly set auto scale on ranges and save/load
+    them properly
+  *  af35b0ba4 - code style fixes
+  *  dd48e112a - when setting a custompoint logical position,
+    coordinatebinding must also be enabled, otherwise it will fail
+  *  12c86db0a - boundingRect() is already in WorksheetElement
+  *  9e46eae91 - the boundinRectangle variable is not used and is
+    already in the worksheetElement. Remove transformedBoundingRectangle
+    because it is not needed. boundingRectangle can be used
+  *  6c6fc8dd6 - use boundingrect() function, because custompoints
+    reimplements this function and does not use the boundingRectVariable
+  *  8b8da12be - must be positionLogical, when logical Position is
+    passed
+  *  f0b6e55e4 - [worksheet] don't show any context menu if the label is
+    hidden which is the case for example for axis and plot title labels.
+    For such objects the context menu of their parents, i.e. of axis and
+    plot, is used.
+  *  2fdba0417 - improve label background and better debugging
+  *  ad1ce006c - [worksheet] set the minimum size of the text edit
+    widget to one row of a QLineEdit and some other minor layout fixes
+    in LabelWidget.
+  *  7c65e1df0 - GIT_SILENT made messages (after extraction)
+  *  e5fd415c4 - Merge branch 'master' into labelBackgroundColor
+  *  9e21388f3 - more background and font color debugging
+  *  178184d34 - Fixed the calculation of legend's bounding box, the
+    horizontal spacing was not properly taken into account.
+  *  37a282ab5 - fix merge
+  *  1eebe0e4a - axes label: fix color used for empty text and load
+    color
+  *  178c6961a - minor code style
+  *  d0c57b533 - [notebook] delay the initialization of plugins to a
+    point when they are really requests and show the documentation panel
+    if it's requested in the notebook.
+  *  9ac93da66 - make negative sign when cursor2 is smaller than cursor1
+    so it is as when the value is not a datetime
+  *  95cdda883 - implement visibilityChanged() in WorksheetElement, so
+    only one signal for emiting that visibility changed. Not like in the
+    case of the XYCurve visibilityChanged() and visibleChanged()
+    existed. So the cursor dock was not updated, because the signal was
+    not called
+  *  b25008d0f - Fix compiler warnings
+  *  73dca0ceb - Merge branch 'master' of https://github.com/KDE/labplot
+  *  95c01a603 - axis label: remove debugging and minor code
+    improvements
+  *  6adc6359a - disable textlabel if placeholder is enabled and normal
+    text is visible, otherwise when changing it has no effect and the
+    user may be wondered why it does not have an effect
+  *  cdaef2a71 - ignore wheel on hovering combobox in the treeview
+    otherwise the values are changed instead of scrolling in the
+    tablewidget. When focusing a combobox by clicking it is possible to
+    scroll through the values
+  *  82570d33e - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  7e067ac22 - GIT_SILENT made messages (after extraction)
+  *  d2ea42560 - cmake: better readability
+  *  01e6c1385 - cmake: link MacTouchBar to lib for tests
+  *  0758b1a1e - [build] fixed the ifdef's for HAVE_TOUCHBAR in MainWin.
+  *  f8e0ce25e - cmake: add path to find cerf.h
+  *  155852f65 - [build] made the support for touch bar on mac os
+    optional in the build.
+  *  d81cc877a - text label: Fix using theme for axis label
+  *  80f361ef2 - [worksheet] allow to position the vertical reference
+    line also for DateTime x-ranges.
+  *  45eb172e7 - differentiate between datetime and numeric, otherwise
+    keypress for the infoelement will not work if the x axis is a
+    datetime
+  *  f70cc04a8 - fix also for underline, strikeout, superscript and
+    subscript
+  *  dc3c400f9 - fixes #80
+  *  61424b175 - tests: import OPJ import test
+  *  df305c4f3 - [data extractor] when entering curve points, ignore the
+    reference points under the cursor - it should be possible to place
+    curve points close to or over the reference points.
+  *  cb368b015 - [notebook] better logic to determine the position of
+    the help panel tab that is needed when the internal help is
+    requested and shown in Maxima and in R.
+  *  174f1003d - implement multirange support for the InfoElement
+  *  8a5cdebdb - Revert tests: enable previously failing parser test on
+    FreeBSD
+  *  6d3fab976 - fix retransforming of plot
+  *  23c7c9b52 - GIT_SILENT made messages (after extraction)
+  *  cb8176c6a - Merge branch 'master' of https://github.com/KDE/labplot
+  *  b0136ff88 - tests: enable previously failing parser test on FreeBSD
+  *  526f37479 - Fixed the normalization of the variance in the column
+    statistics and refactored the code a bit to make it more readable.
+  *  6422f1cf9 - text label: enable background color
+  *  33567ab52 - merge
+  *  db3ac2c24 - Adjusted the names of the default xy-plot types to
+    avoid collision with box plot.
+  *  dbf0c2f5e - text label: fix restoring color when switching back to
+    text mode
+  *  69d49e1b0 - fix #70
+  *  27155dcbf - tests: clean up building part 2
+  *  21ec69170 - tests: clean up building
+  *  35d1a7ca8 - tests: simplify building analysis tests
+  *  e9231a88a - tests: simplify building project import test
+  *  f96c6397f - tests: extend OPJ importing plots
+  *  eb86fee62 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  57afa3f70 - GIT_SILENT made messages (after extraction)
+  *  31f0f1a2c - do not compare both strings, because of the local time
+    this will fail. Compare DateTimes directly
+  *  a2ff37e2b - text label: fix restoring color when switching mode
+  *  0b11da978 - interchange old and new, because in the Constructor the
+    order is different
+  *  4b705c80c - fix crash when creating an InfoElement
+  *  2396150ab - if isloading() then no undocommand should be created
+  *  7261567d4 - Removed some temp local vectors in Column::load() that
+    are not needed anymore.
+  *  8861afa5a - set different text if m_first is smaller than 0 which
+    means the complete column will be replaced
+  *  86bb6a9ec - old functions from scidavis. Seems that they are not
+    needed
+  *  24519608b - - use template for setter and replace command - use
+    different method for reading in columns. This method is much faster,
+    because no undocommand will be created every time and the vector
+    will be replaced at the end of the load operation.
+  *  5b5e19ac2 - add column tests
+  *  3a38f6e26 - fix issue in the minimum and maximum functions
+  *  cf8949da6 - GIT_SILENT made messages (after extraction)
+  *  106eabb3c - text label: fix setText() to simplify usage
+  *  48f360ca7 - statistics widget: fix using theme color for axes label
+  *  375786ca1 - Removed the KF5/ prefix for KSyntaxHighlighting's
+    includes since they are obsolete.
+  *  777c2fb97 - [worksheet] minor clean-up in the context menu - added
+    icons and separators and shortened some texts.
+  *  83ababd55 - [worksheet] resize the label widget after everything
+    was initialized to have the minimal height. this will fix the
+    problem with the dock widgets (plot and axis) being to big
+    initially. Also, fixed some other minor layout related issues.
+  *  9e7a6d79d - enable label background
+  *  85d2b1ce8 - minor code style fixes
+  *  e01c96890 - plot data dialog: also fix axis label format for
+    histogram and box plots
+  *  59a660181 - GIT_SILENT made messages (after extraction)
+  *  20edb84a6 - plot data dialog: fix axis label format
+  *  c765126d0 - tests: start adding OPJ import tests with graphs
+  *  5b685fdb0 - [worksheet] when converting the font size from pixels
+    to points, round the result to show the expected value correctly in
+    KFontRequestor in CartesianPlotLegendDock. This is already done in
+    all other places in the code except this one.
+  *  93b7b3aee - GIT_SILENT made messages (after extraction)
+  *  a7d9822ee - plot: fix updating plot when curve is deleted
+    (including test)
+  *  4cf55ce04 - tests: add curve deletion including rescale bug
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 31 Jan 2022 18:02:42 +0000
+
 labplot (2.8.2+git9231-1fb3dd080-1) unstable; urgency=medium
 
   * Compile
