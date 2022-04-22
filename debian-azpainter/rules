@@ -2,33 +2,27 @@
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/default.mk
-
+export DESTDIR=$(CURDIR)/debian/azpainter
 export DH_VERBOSE=1
 
 %:
-	dh $@  --parallel
+	dh $@
 
 
 override_dh_auto_install:
 	cd $(CURDIR)/translation/tool && cc -O2 -o mlktrconv mlktrconv.c
-	#cd $(CURDIR)/translation && $(CURDIR)/translation/tool/mlktrconv ru -d $(CURDIR)/translation/
 	cd $(CURDIR)/translation && $(CURDIR)/translation/tool/mlktrconv en -d $(CURDIR)/translation/
-	#cd $(CURDIR)/translation && $(CURDIR)/translation/tool/mlktrconv uk -d $(CURDIR)/translation/
-	#cd $(CURDIR)/translation && $(CURDIR)/translation/tool/mlktrconv be -d $(CURDIR)/translation/
-	dh_auto_install
+	cd build && DESTDIR=$(DESTDIR) ninja  install
 
 override_dh_auto_clean:
 	[ ! -f $(CURDIR)/translation/tool/mlktrconv ] || rm -f $(CURDIR)/translation/tool/mlktrconv
 	[ ! -f $(CURDIR)/translation/en.mtr ] || rm -f $(CURDIR)/translation/en.mtr
-	#[ ! -f $(CURDIR)/translation/ru.mtr ] || rm -f $(CURDIR)/translation/ru.mtr
-	#[ ! -f $(CURDIR)/translation/uk.mtr ] || rm -f $(CURDIR)/translation/uk.mtr
-	#[ ! -f $(CURDIR)/translation/be.mtr ] || rm -f $(CURDIR)/translation/be.mtr
 	dh_auto_clean
 
 override_dh_install:
 	rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/en.mtr
-	#rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/ru.mtr
-	#rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/uk.mtr
-	#rm -f $(CURDIR)/debian/azpainter/usr/share/azpainter/tr/be.mtr
 	rm -rf $(CURDIR)/debian/azpainterusr/share/doc/azpainter/GPL3.gz
 	dh_install
+
+override_dh_auto_build:
+	cd build && ninja

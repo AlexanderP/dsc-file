@@ -1,3 +1,71 @@
+qcad (3.27.1.8+git9070-edfdcfaf6-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: edfdcfaf6064056f2f893dcb0d7bddf1f05d122c
+  * Date: 1648201374
+  * git changelog:
+  *  edfdcfaf6 - update translations
+  *  ba4b099d5 - set version to 3.27.1.8
+  *  01b274321 - set version to 3.27.1.7
+  *  831bbf1dd - disable signals while while adding items
+  *  69b83cbad - update script bindings
+  *  6882a5f2c - add getRows
+  *  cecdb9686 - add getRows
+  *  31fa82970 - change list of available imperial scales
+  *  f463616de - make controls for tool options optional
+  *  cef95d371 - fix regular expression
+  *  3fe7c0dde - update script bindings
+  *  4a1b0fc9b - add support for scale mode in RMathLineEdit and
+    RMathComboBox
+  *  d0def1f65 - add getScaleList
+  *  644daee53 - use scale combo from RMathComboBox for scales in
+    property editor
+  *  39b2ee52a - use scale combo from RMathComboBox for print preview
+    combo
+  *  cbe3af17a - use scale combo for dimensions UI
+  *  6b807a212 - update script bindings
+  *  557af8f67 - refactor auto snap modes to flags
+  *  9e847c2d0 - add getColor for ACI support
+  *  4337488db - set version to 3.27.2
+  *  e0ae72d76 - fix unit test
+  *  3426bbc54 - tolerance invalid / empty values
+  *  599a5e519 - update script bindings
+  *  a8b83a6fd - fix script binding generation
+  *  1b56ad3d1 - add relocateStartPoint
+  *  f1d4babb7 - tag unscriptable functions
+  *  77a796f5e - addd reverse tool to tool matrix
+  *  271f08b42 - update unit tests
+  *  c3162f5ed - add block references CSV export tool
+  *  46a0a12ca - sort blocks by name
+  *  97099e3ea - add EGB to ACI (color index) conversion
+  *  b8c54efc3 - add invisible parameter to regen invisible entities
+    FS#2342 - Layer > Edit Layer: Changing Color of Invisible Layer
+  *  b9e0d6a84 - remove copyCount implementation (prints too many pages)
+  *  198a0faef - set version to 3.27.1.7
+  *  f7b14807a - update user manual
+  *  3194ab14d - port to qt 4
+  *  461bfc68e - fix port to qt 4
+  *  ec2ef5c0a - port to qt 4
+  *  fa31f9203 - port to Qt 4
+  *  b39add52a - set version to 3.27.2.0
+  *  d58ee7078 - move InfoPolylineArea tool to QCAD Pro (area
+    calculation not implemented in QCAD CE)
+  *  c7b2be810 - update qrc
+  *  89deea5ed - remove area properties for QCAD CE
+  *  864ef4417 - remove area properties for QCAD CE
+  *  0f80b39d6 - make properties unitless
+  *  519270b77 - Merge pull request #39 from iisys-droplet/bearing-entry
+  *  b948a1c50 - update qrc
+  *  387f9e90b - add unit tests
+  *  a24c5d361 - fix FS#2343 - Modify > Projection: Dimension entities
+    offset
+  *  825b57d32 - add more imperial scales
+  *  a76f7b88f - Add bearing entry
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 27 Mar 2022 20:28:55 +0000
+
 qcad (3.27.1.6+git9019-4a82d1e8a-1) unstable; urgency=medium
 
   * Compile

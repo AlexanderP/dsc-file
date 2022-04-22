@@ -1,3 +1,340 @@
+labplot (2.8.2+git9526-eb2060ac5-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: eb2060ac57dc6d4a6fd9be31f5b71173d5a4392e
+  * Date: 1648341656
+  * git changelog:
+  *  eb2060ac5 - GIT_SILENT made messages (after extraction)
+  *  df5a92053 - [ascii import] minor fixes in the ASCII options widget:
+    * properly show the last used column separator also when a custom
+    character was used * update the status of the SpinBox for the header
+    line (enable/disable the spinbox) when loading the options widget
+  *  c9f2b0c6a - tests: add datetime import test (Datetime before
+    BigInt)
+  *  2794b1f47 - tests: revert spreadsheet temporary changes
+  *  5a4ae51f7 - ASCII import: detect datetime before big int
+  *  400d27df7 - GIT_SILENT made messages (after extraction)
+  *  b8d20ad0b - Manually revert remove path from file
+  *  c13bdc701 - add missing license
+  *  f864cb775 - SpiceFilter: Read all options of ltspice and store them
+    in a hash
+  *  aece06942 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  5b5f71691 - GIT_SILENT made messages (after extraction)
+  *  c2ac0e0d1 - GIT_SILENT made messages (after extraction)
+  *  770216cde - Appdata: fix caption (cannot end with '.')
+  *  61918ef74 - Appdata: fix caption length (max. 100 chars allowed)
+  *  ac42d8ff8 - Add retransform check to all MultiRangeTests
+  *  0d28e915a - macOS package: add missing color maps and examples
+  *  fd20c4d7a - macOS: improve packaging
+  *  569052ff1 - final fixing build with MSVC
+  *  de61275bf - another try fixing build with MSVC
+  *  ddfa4a186 - second try fixing build with MSVC
+  *  11230c609 - try fixing build with MSVC
+  *  4bb0e0008 - when enableAutoScaleX, retransform must be done
+  *  3723c0f3a - text label: remove unnecessary adjustSize() to avoid
+    unwanted line wraps
+  *  ebc65c78c - gitlab CI: ... and disable it
+  *  263f6915b - gitlab CI: try Linux Qt6 template
+  *  4d0626b38 - gitlab CI: enable FreeBSD for checking
+  *  514747025 - text label dock: fix color and bg color for latex
+  *  588858080 - Add spinboxes next to the sliders, so it can be seen
+    which value is set and if the maximum already reached. fixes #172
+  *  b3f6f117f - Spice tests: Attempt to fix test on Windows
+  *  311fbd188 - [worksheet] removed the wait cursor when updating/re-
+    calculating curves.
+  *  6878fa960 - [live data] when switching between the differen source
+    types in the ImportFileWidget (e.g. from FileOrPipe to TCPSocket),
+    select Periodically in the combo box in case New Data was selected
+    before since New Data is not possible for this source.
+  *  eef0b5ea3 - [ascii] set the plot designation for additionally
+    created columns Index, Timestamp and Values, if available.
+  *  f93282ba3 - Minor fixes: * use a boolean member variable in
+    AsciiOptionsWidget to decide whether a timestamp column needs to be
+    created for LiveDataSource or not, reading the visibility status of
+    the CheckBox doesn't seem to work * deleted the file
+    labelwidget_marker.ui that was added to the repository by an error
+    most probably
+  *  582cc765c - [worksheet] allow to use DateTime for the y-coordinate
+    also for the custom point and for the reference line.
+  *  140f47cb9 - fix #171
+  *  1f07ebc1b - spice filter: add missing copyright and minor fixes
+  *  2d52dec39 - tests: fix spice test on Windows
+  *  049447c3b - do not include the reference data directly, but read
+    them from a file. So the compilation time is lower
+  *  4c0597f72 - 2.9.0beta splash screen
+  *  4a76f1ef8 - fix compilation
+  *  e79c95b12 - Added the support for LTspice files to ChangeLog and
+    version bump to 2.9.0.beta
+  *  f96f70df1 - Fixes in LiveDataSource: * fixed the issue with the
+    timer being not started after the LiveDataSource was creted (pause
+    reading was unecessily called when creating new columns and changing
+    their column modes). * postpone the creation of the action for the
+    context menu to the point when it's really required
+  *  5c317e44a - splash screen for beta release
+  *  8c97254e4 - Minor changes: * migrated socket related test scripts
+    to python3 * don't show the newly introduced option for the start
+    line of the header when dealing with LiveDataSource * removed the
+    wrong dependency on Matrix.h in LiveDataSource.h * minor code
+    cleanup
+  *  b949eca95 - fixes #165
+  *  fabe869b2 - spice filter: fix compilation
+  *  216b359e6 - LTSpice file support
+  *  1635852cb - CI: disable FreeBSD until fixed upstream
+  *  1720ee0a2 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  42f74fcba - GIT_SILENT made messages (after extraction)
+  *  aad97322c - ascii import: count start row from beginning of file
+  *  e6289f991 - ASCII import: add option to select header line (used to
+    name data columns)
+  *  37d98845e - changelog
+  *  047bc42d2 - hdf5 filter: handle fixed size attribute strings
+  *  8bdcb89bb - [worksheet] when exporting the worksheet to the
+    clipboard, don't ask if the previously used file should be
+    orverwritten. This is only relevant when exporting to the file.
+  *  2b70096ff - hdf5 filter: Fix crash importing compound data with
+    unsupported member type (string)
+  *  0afa32235 - hdf5 filter: better debugging
+  *  fb0e7b84e - hdf5 filter: fix reading attribute strings
+  *  a4b16d1ef - niceExtend changes ranges
+  *  73b13a717 - fix #164
+  *  f4d0550b3 - create unittests
+  *  198be28ab - second scaleautoy might not do anything, because
+    enableAutoscaleY does already the scaling.
+  *  5783e56ef - scale auto if curve is removed and autoscale is enabled
+  *  919ff57de - do not enable autoscale here!
+  *  6fe338d9d - retransformX/YScale is already done in scaleAutoX/Y so
+    no need to do it here again
+  *  0c57d5d36 - move initialization to variable declaration
+  *  a01d26df7 - forgotten semicolon
+  *  8e0d10107 - move the retransformScales into the function where the
+    ranges are changed
+  *  68c1fe1cf - after translation a retransform must be done
+  *  971b8dac9 - scale auto over full range Conflicts:
+    src/kdefrontend/dockwidgets/CartesianPlotDock.cpp
+  *  93edfa7ad - fixes #111
+  *  3fbdb3ff0 - fix scaleAutoX
+  *  22a709e82 - fix cartesianPlot autoscale Conflicts:
+    src/backend/worksheet/plots/cartesian/CartesianPlot.cpp
+  *  f8ecf3091 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  0197e5e94 - GIT_SILENT made messages (after extraction)
+  *  1797a5e1a - Do not store data double in column setter
+  *  1c5629751 - [examples] added two new example projects - Anatomy of
+    a Box Plot and Multicopter.
+  *  05aa794ea - text label: better bounding box for multiline markdown
+    text
+  *  e9f8d6405 - label widget: fix background color when changing mode
+  *  7802bc802 - text label: fix color buttons for markdown
+  *  a22a2c102 - label widget: don't set background color on markdown
+    mode
+  *  70d125e51 - [worksheet] font size and colors in TextLabel also in
+    the Markdown-mode.
+  *  76468cf3f - [worksheet] use logical coordinates when reading the
+    properties of the reference line in load().
+  *  cac58bff9 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  521d583ef - GIT_SILENT made messages (after extraction)
+  *  297908f8a - Merge branch 'master' of https://github.com/KDE/labplot
+  *  a6ceaa862 - code simplifications final part
+  *  63e2c7663 - [spreadsheet] save and restore the last settings and a
+    more faster generation of values in  EquidistantValuesDialog.
+  *  9a6187b86 - Minor fixes for issues reported by cppcheck.
+  *  16df16fff - code simplifications part 2
+  *  8d43bb2cf - code simplifications part 1
+  *  aee24adb1 - liborigin: fix unused variables
+  *  76c7b921b - Fix more deprecated code for latest Qt 5
+  *  ce0f13350 - tests: avoid compiler warnings in XYCurveTest
+  *  f6062d9a8 - Origin parser: add default initializer
+  *  3dc366746 - Fix some deprecated warnings with lastest Qt
+  *  f5698beaf - cmake: use minimum cmake 3.16.0 for newer KF5
+  *  7a7e22421 - text label: set default font for all platforms
+  *  005efe9d4 - plot dock: update plot range list on locale changes
+  *  82c457faf - range: use number locale correctly
+  *  9c3e6606d - plot: fix zoom for non-linear scales by fixing
+    niceExtend() for non-linear scales
+  *  6aa2e9818 - [coverity] CID: 250264, 250267
+  *  2f9c4b5e8 - minor debugging fix
+  *  cc2bfec35 - [box plot] work with polygons instead of rectangulars
+    when drawing the fillig of box plot in order to take the notches
+    into account.
+  *  e72f08b07 - More robust implementation of Project::setVersion()
+    that can also handle corrupted version strings and is not crashing
+    with older and new projects which had or will had a 'beta' sub-
+    string in the version string, like in '2.0.0.beta2', etc.
+  *  f79c898ce - when using datatimes, an integer overflow can occur and
+    then the pixelDiff might be always zero. fixes #123
+  *  2e76ee21b - force const, so the original cannot be changed
+  *  1937eaea9 - fix datapicker processed image
+  *  8c15d94bd - [coverity] CID: 250264, 250220, 250217, 250256, 250231.
+  *  503ff010b - tests: fix tests with auto scale
+  *  a8a7224e4 - auto scale: only auto scale if enabled
+  *  7110dce36 - more code clean up
+  *  aebac9ae7 - code clean up
+  *  571ff5f3e - text label: work around too big bounding box
+  *  480353f4d - minor code style changes
+  *  e90876f1c - minor code style fixes
+  *  ef719c16c - fixXYCurveWrongConnectionLine
+  *  19481d15f - Fix some issues for drawing and create unit tests
+  *  2058b14bb - text label: fix setting empty string (used for unused
+    axes)
+  *  55b36d682 - tests: add differentation with duplicate x values
+  *  87618e020 - Differentation: Handle data with duplicate x values
+  *  34bab6187 - nullptr check when selecting the current object in the
+    properties explorer during project load for the case no selection
+    was saved.
+  *  d67ba1017 - [worksheet] properly read the private page rect member
+    in Worksheet when loading projects.
+  *  70589ec64 - tests: fix OPJ import check
+  *  8e5198956 - tests: fix multirange test
+  *  ea65c1084 - [box plot] when setting the number of axis ticks in
+    PlotDataDialog, properly take the actual number of box plots per
+    plot into account.
+  *  bbe6c6772 - Minor fixes: * auto scale the plot when the user
+    clicked on the scale actions in the toolbar also if the auto-range
+    in the plot is not active * remove a test menu entry in the
+    hamburger menu * commited changes in Image that were forgotten in
+    one of the previous commits fixing the initialization of the image
+  *  1cb0bd763 - fit test: increase tolerance to fix failing finish
+  *  39eebce6d - timestamp
+  *  b16da2c56 - fit test: increase tolerance to fix failing tests part
+    3
+  *  5da5b6301 - fit test: increase tolerance to fix failing tests part
+    2
+  *  e6c1aa135 - fit test: increase tolerance to fix failing tests
+  *  6efb3a4c6 - [notebook] properly handle the locale specific output
+    from backend systems (e.g. R) when parsing the numerical values.
+  *  6878caad6 - [box plot] no need to recalculate the filling
+    rectangular every time we need to draw it. Do it only if the box
+    lines where changed.
+  *  5d019ec5e - plot: use range based loops for cSystems
+  *  d2d9ace70 - [column] extended the Used In sub-menu in column's
+    context menu to also show the usage in error columns in XYCurve and
+    in ticks positions and labels in Axis.
+  *  6884834bb - [column] fixed a wrong access to the formula data when
+    creating the context menu and only add new secions in the Used In
+    sub-menu for curves, histograms and calculations only if the column
+    is really used in curves, etc.
+  *  9285d060c - [worksheet] fixed the initialization of Image (initial
+    position and bounding rect).
+  *  63f92f985 - [worksheet] don't use any brush when drawing the border
+    of the image otherwise the border rect is over-painting the image.
+    This also solves  the problem with the image being not printed.
+  *  fdcb2c96c - GIT_SILENT made messages (after extraction)
+  *  51b94cef7 - [box plot] better plot size and positions of axis ticks
+    when multiple box plot are created via the plot data-dialog in the
+    spreadsheet.
+  *  5cfe1b702 - tests: fix multi range test with new nice range
+  *  ede195fd5 - range: optimize nice range and adapt tests
+  *  f72a415f3 - [worksheet] work with the logical positioning in
+    ReferenceLineDock since this is what is semantically the case for
+    the reference line.
+  *  cf5f786f9 - tests: add text label test
+  *  96a3475e3 - [import] in the Import File dialog shown the correct
+    file info message for the Ngspice binary format.
+  *  83596748d - text label: don't set background if not defined text
+    (breaks default)
+  *  b7e0e307c - [worksheet] when adding new childred to the plot, no
+    need to retransform/rescale the plot and it's children when for
+    example TextLabel or Image or CustomPoint or ReferenceLine is being
+    added. These objects are always inside of the current data rect and
+    cannot change the ranges. Ranges can only be changed when new
+    curves, historgrams, etc. are added and only in these cases we need
+    to check and change the ranges.
+  *  53581374b - Fixing the build, adding the file changes that were
+    forgotten in the previous commit.
+  *  55e61bff4 - [import] improved the auto-detection of the DateTime
+    format: * added more DateTime format strings to the list of the
+    known formats * in case an empty format string was provided, auto-
+    detect the format - this was already implemented to the detection of
+    the column type but was not used for the data preview and for the
+    actual import.
+  *  ad17a624a - legend: fix empty title
+  *  1af93945a - less debugging
+  *  c19e76784 - fix compiler warning
+  *  2b0d6968e - use colors when not in html label text (old projects or
+    new text)
+  *  bfbcc5bbc - Add expand/collapse items to the context menu in the
+    Project Explorer only if the selected indices have children.
+  *  d0b242ded - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  b65e8e8af - GIT_SILENT made messages (after extraction)
+  *  cec1c2cc2 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  a5793676b - GIT_SILENT made messages (after extraction)
+  *  931f76675 - Minor improvements: * initial values in
+    WorksheetElement::PositionWrapper * more usage of
+    AbstractColumn::isNumeric() in XYCurve * avoid detaching from the
+    container in a for-loop in AspectTreeModel * improved padding in
+    CartesianPlotPrivate
+  *  e2da0613a - Don't show the Configure CAS menu entry if there are no
+    CAS backends installed or found.
+  *  fe6789f0f - [histogram] re-wrote the algorithm to calculate the
+    filling polygon and made the logic similar to what we have for the
+    box plot now. This solves many issues for the filling being not
+    correctly drawn when zooming in and out and when switching the
+    orientation.
+  *  31dc0ecac - box plot: fix duplicate crash (wrong aspect type)
+  *  80b68172e - When restoring the state of the selected object during
+    the project load, call aspect->setSelected(true); to also properly
+    select it in the view.
+  *  4b2eeea4e - Show the modified DateTime in the project explorer in
+    short and user's locale specific format.
+  *  13533b085 - axis dock: fix showing/hiding offset buttons
+  *  b1593db39 - [spreadsheet] use the new box plot icon also in for the
+    plot data dialog in the spreadsheet.
+  *  fb199b811 - minor code improvements
+  *  2be19d2ba - plot: fix calculating ranges with empty histograms or
+    box plots
+  *  3e46674a3 - [box plot] draw the icon directly in the code until we
+    have a breeze version of it.
+  *  9075386f6 - tests: fix column tests (indizes)
+  *  afc5bda4e - column: fix index calculations
+  *  855db3773 - tests: disable hanging MQTT test
+  *  22105b6b9 - Minor changes in the import related code: * properly
+    hide the text field for vector/column names if use first row for
+    name the vectors option is used in AsciiOptionsWidget * don't
+    simplify the SQL query string in ImportSQLDatabaseWidget when saving
+    the last used query, we want to keep the line breaks provided by the
+    user * added tooltip text for the Refresh button in
+    ImportSQLDatabaseWidget * removed Ankit from the license header in
+    ImportSQLDatabaseWidget, he never contributed to it
+  *  27ef7efd5 - worksheet element: fix positionwrapper initialization
+  *  777122b43 - must be connected to positionLogicalChanged, otherwise
+    the scene Coordinates are used
+  *  786e512e7 - add Position limit option
+  *  d733cd8d4 - fix positioning of the reference line
+  *  8c0bb565c - allow also negative position values, otherwise it is
+    not possible to align to the center and then moving to the left and
+    down-
+  *  dac2cfea0 - do not set scene coordinate points with logical
+    coordinates. UpdatePosition() will do the recalculation
+  *  49eea1686 - Use the menu to create a new notebook that is created
+    via KXMLGUI, no need to have an additional private menu.
+  *  12a755e4b - icons: add ico for app icons
+  *  c15b34a18 - When starting the application for the first time, use
+    IconOnly mode for all toolbars and maximize the full window.
+  *  fcf337cb9 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  cb4437d7c - GIT_SILENT made messages (after extraction)
+  *  2426304b6 - reference line: partly fix coordinates
+  *  25312ca40 - [box plot] improved the algorithm to determine which
+    area of the box needs to be filled out when filling is activated.
+  *  c9b9ed6a7 - label: fix color initialization
+  *  f9d311f52 - label: check height > 0 before resizing
+  *  a0b0a94d6 - label: minor fixes
+  *  4dd177dab - tests: more OPJ checks
+  *  aed42eecb - [worksheet] treat the x and y values independently of
+    each other in ReferenceLine. The user should be able to modify them
+    separately depending on the current orientation of the line (horiz
+    vs. vert)
+  *  56d7db91f - Fix using helper apps. See
+    https://kde.org/info/security/advisory-20220131-1.txt
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 27 Mar 2022 20:32:12 +0000
+
 labplot (2.8.2+git9333-b100ff258-1) unstable; urgency=medium
 
   * Compile
