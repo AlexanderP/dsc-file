@@ -1,4 +1,8 @@
 # False positives:
-eiskaltdcpp-devel source: missing-license-paragraph-in-dep5-copyright *
-eiskaltdcpp-devel source: dep5-copyright-license-name-not-unique *
 eiskaltdcpp-devel source: package-does-not-install-examples *
+
+# Upstream tarballs do not use a cryptographic signature (and never will):
+eiskaltdcpp-devel source: debian-watch-does-not-check-gpg-signature
+
+# Useless notes:
+eiskaltdcpp-devel source: very-long-line-length-in-source-file *

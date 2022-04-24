@@ -12,15 +12,19 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 CMAKEOPTS = -DUSE_ASPELL=ON \
             -DUSE_CLI_JSONRPC=ON \
-            -DUSE_GTK=ON \
-            -DUSE_GTK3=OFF \
-            -DUSE_IDNA=ON \
+            -DUSE_GTK=OFF \
+            -DUSE_GTK3=ON \
+            -DUSE_IDN2=ON \
             -DUSE_JS=ON \
             -DUSE_LIBGNOME2=OFF \
             -DUSE_LIBNOTIFY=ON \
             -DUSE_MINIUPNP=ON \
-            -DLOCAL_MINIUPNP=OFF \
+            -DUSE_QT5=ON \
+            -DUSE_QT=OFF \
+            -DUSE_QT_QML=OFF \
             -DUSE_QT_SQLITE=ON \
+            -DUSE_LIBCANBERRA=ON \
+            -DUSE_XATTR=ON \
             -DWITH_DEV_FILES=ON \
             -DWITH_DHT=ON \
             -DWITH_LUASCRIPTS=ON \
@@ -32,26 +36,20 @@ CMAKEOPTS = -DUSE_ASPELL=ON \
             -DNO_UI_DAEMON=ON \
             -DXMLRPC_DAEMON=OFF \
             -DJSONRPC_DAEMON=ON \
+            -DLOCAL_JSONCPP=OFF \
             -DCHECK_GTK_DEPRECATED=OFF \
+            -DCMAKE_BUILD_RPATH_USE_ORIGIN=ON \
             -DREPLACE_VERSION="$(DEB_VERSION_UPSTREAM)"
 
-ifneq (,$(filter $(DEBIAN_CODENAME),sid stretch buster bullseye zesty artful bionic disco eoan focal groovy hirsute impish))
-	CONTROL = control.sid
-	export QT_SELECT=qt5
-	CMAKEOPTS += -DUSE_QT=OFF -DUSE_QT5=ON -DUSE_QT_QML=OFF
-else
-	CONTROL = control.jessie
-	CMAKEOPTS += -DUSE_QT=ON -DUSE_QT5=OFF -DUSE_QT_QML=ON
-endif
-
+EXCLUDE_FILES = usr/share/eiskaltdcpp/emoticons/*/READ_ME.txt \
+                usr/share/eiskaltdcpp/sounds/READ_ME.txt
 
 %:
 	dh $@ --buildsystem=cmake --parallel --list-missing
 
 override_dh_auto_configure:
-	cp debian/$(CONTROL) debian/control
 	dh_auto_configure -- $(CMAKEOPTS)
 
-override_dh_auto_clean:
-	cp debian/$(CONTROL) debian/control
-	dh_auto_clean
+override_dh_install:
+	cd $(CURDIR)/debian/tmp && rm -f $(EXCLUDE_FILES)
+	dh_install
