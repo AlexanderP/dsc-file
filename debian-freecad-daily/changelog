@@ -1,3 +1,441 @@
+freecad-daily (0.19.2+git28744-f8ae185c15-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: f8ae185c15480b1b6cc4209d33a8e726d3a7ba80
+  * Date: 1650648536
+  * git changelog:
+  *  f8ae185c15 - Spreadsheet: improve efficiency when pasting many
+    cells
+  *  bc1f5498a9 - Spreadsheet: do not copy empty cell
+  *  070bdf5b4c - Spreadsheet: do not create string property for empty
+    cell
+  *  cac8454bd4 - [COPR] remove q files
+  *  a91f5e7352 - Gui: do not reset tab size to 4 when creating new text
+    editor
+  *  20f4195039 - Arch: Fixed duplicate UIDs in IFC export
+  *  ea5e9538da - Tools: Fix translation extraction bug
+  *  a4a0d11eca - Merged crowdin translations
+  *  0045c8facd - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  080f421448 - Merge pull request #6749 from marioalexis84/draft-
+    set_wp
+  *  43615c5177 - Merge pull request #6777 from Roy-043/Draft-Fix-Angle-
+    Lock
+  *  eae87882cb - Updated ts files
+  *  7cf1d7b582 - Draft: Fix Angle Lock
+  *  4358a9ba70 - [PD] Delete Overlap property for
+  *  e62496b636 - Draft: Fix orientWP method used by in Draft_Line
+    command
+  *  a93997df64 - Gui: issue #6765: Overlay Icons for Std Link nearly
+    invisible small
+  *  0cf9a778a5 - Gui: add link icons
+  *  46cf94e20f - Gui: fixes issue #6766: Navigation Cube -> Isometric
+    View does not work
+  *  1a7b2279b7 - PD: [skip ci] fixes #6762: Involute gear tool
+    duplicated in the menu
+  *  922ce46506 - Gui: add convenience functions to SelectionFilterGate
+  *  68cf734415 - Part: [skip ci] unit tests for PR #6732
+  *  be2ddb37a6 - Gui: fixes #6306: UI Rotation box can be dragged out
+    of view
+  *  65013e85d8 - Merge pull request #6726 from
+    sliptonic/bug/2TCspinspeed
+  *  6bc65bdd99 - Mod: issue #6274: Source code installation failed
+  *  139370a20f - Sketcher: fix crash after having created a new B-
+    Spline The crash might be related to issue #6324: Segmentation fault
+    on knot insertion in older B-Spline
+  *  23eb600774 - TD: fixes warning: local variable will be copied
+    despite being returned by name [-Wreturn-std-move]
+  *  cfe94b00d3 - Gui: tmp. redirect stderr to a file to suppress an
+    error message from spnav
+  *  5822568566 - Fem: fix handling of transparency in
+    ViewProviderFemPostObject
+  *  79cc738786 - Part: Cross-section, fix issue with using Links that
+    have been scaled and/or transformed
+  *  377b88ec37 - Part: CheckGeometry -- address issues with using
+    original shape when link has been transformed and/or scaled
+  *  0ac1309dbe - Part: ruled surface, address issue with link support
+    where link was transformed
+  *  a55758f0ab - Part: reversed -- fix so it works with App::Links and
+    App::Parts
+  *  93d745235c - Fem: scale imported vtk data set
+  *  2066946c29 - Sheet: use wrapper function to clarify intention
+  *  e2e91cdafa - Sheet: enable Merge action only if at least 2 cells
+    are selected
+  *  384f56fe65 - Sheet: enable Split action only if only one merged
+    cell is selected
+  *  2a002e3df6 - Sheet: Warn user when cell merge is not done because
+    already merge cells in the range
+  *  4f75f86a93 - Sheet: update commands status when selection is
+    changed
+  *  53f58fd669 - GUI: Re-add button to object selection
+  *  b90621ca3c - Draft: Update draft_test_objects.FCStd file
+  *  e8ed31f391 - Gui: add parameter switch to optionally stretch
+    'Description' column of Tree view
+  *  8f3f1d1e4c - App: Use regex to match names in
+    ComplexGeoData::getSubElementByName
+  *  c01dfad130 - Part: Fix getElement method in Python TopoShape class
+  *  aff08fd737 - Fem: optimize
+    ViewProviderFemPostObject::WritePointData
+  *  f00a3f59c4 - Fem: add a scale() function to FemPostPipeline
+  *  e9e04221c4 - Addon Manager: Add logging to update process
+  *  35bb6278ea - merged crowdin translations
+  *  d0778faa2c - updated ts files
+  *  2abda1e0a0 - Test: [skip ci] add test code of issue #6735 as unit
+    test
+  *  17f49bab18 - Part: [skip ci] fix computing of face normals in
+    TopoShape::getPoints
+  *  631d36e87c - App: [skip ci] fix bug in ComplexGeoDataPy::getPoints
+    The normals were added to the wrong list
+  *  78e1174018 - Core: partially revert 4ab37fc that introduced
+    composed units
+  *  0cd6fa3329 - [skip CI] [FEM] ViewProviderFemPostFunction: add a
+    comment
+  *  5ab7d17f67 - PD: issue #6641: polar pattern fails
+  *  1688991391 - FEM: automatically detect a suitable scale factor for
+    old project files
+  *  d1f5bb02fc - Gui: [skip ci] reduce duplicated code
+  *  f630844ad6 - Gui: add convenience function
+    View3DInventorViewer::getBoundingBox()
+  *  3d40a6f0e1 - Gui: fix const correctness of
+    Document::getViewOfViewProvider
+  *  a70d6fd7ec - FEM: [skip ci] fix some typos
+  *  c5ea25c949 - FEM: [skip ci] add missing files to PreCompiled.h
+  *  8ca3513441 - FEM: use an SoJackManip for
+    ViewProviderFemPostPlaneFunction
+  *  a13e251ad4 - Part: issue #6727: Missing B-Spline in STEP file after
+    Part Offset2D
+  *  3d249e0e67 - Part: Add function
+    BRepOffsetAPI_MakeOffsetFix::Replace() to replace unwanted curve
+    type with a B-Spline curve
+  *  c8c4686543 - Part: fixes #6282: exportStep breaking model
+  *  35913fc695 - Part: fixes #6584: Pocket becomes a pad when next
+    object ofter a polar pattern
+  *  27efdf9caf - Fixes #6275
+  *  69ac799f58 - AddonManager: Add gmsh-dev to ALLOWED_PYTHON_PACKAGES
+  *  04fe4ef695 - Draft: Fix WorkingPlane setup in automatic mode -
+    fixes #6060
+  *  91b5980495 - Part: fix typo in App/BRepOffsetAPI_MakeOffsetFix.h
+    [skip ci]
+  *  15c59d6007 - App/Gui: Fix auto checking 'Sync sub object' if
+    property link editor
+  *  9242355c8c - App: fix PropertyXLinkSubList::getLinks()
+  *  1ff4ad085c - App: issue #6672: PartDesign SubShapeBinder: crash and
+    other issues when manually editing Support This change only fixes
+    the crash as described in procedure A at
+    https://github.com/FreeCAD/FreeCAD/issues/6672
+  *  54fbe084dd - Part: Enable reversed method in Python TopoShape class
+  *  aea110ba15 - Gui: clean-up Selection API Replace the int of the
+    SubType of SelectionChanges with an enum class. The meaning of it is
+    nowhere documented and some magic numbers like 0,1,2 are used in
+    several places in the code.
+  *  0e40b9956e - Addon Manager: Improve bad icon handling
+  *  d0485c6bef - Gui: add enum class to Selection Python API
+  *  551df5e614 - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  152a552585 - [Part] ExtrusionHelper: polish code after today's
+    fixes
+  *  9eac35cf5d - Gui: clean-up Selection API Replace the int of the
+    'resolve' argument of several functions with a proper enum class. *
+    This avoids the inconsistencies in client code where often
+    true/false is passed when an int is expected * This avoids the use
+    of magic numbers like 0, 1, 2 or the undocumented 3
+  *  0571a7f2b2 - Part: make sure that new wire has same orientation as
+    old wire as otherwise the offset will be negative
+  *  731cda3e1a - Part: [skip ci] fix warning: unused parameter
+    'numEdges' [-Wunused-parameter]
+  *  539a6bf58d - [Part] extend BRepOffsetAPI_MakeOffsetFix and use it
+    for padding
+  *  7ddf10df45 - [skip CI] [App] PropertyLinks: fix line endings
+  *  44a989f3b9 - Draft: Make ShapeString editable by double-click -
+    fixes #5885
+  *  731ed820b5 - Part:Improve support for Links
+  *  6467ecab33 - Gui: [skip ci] improve readability of
+    SoFCColorGradient::setRange
+  *  049d8ae06c - Part: implement persistence methods of all geometry
+    classes and raise exception if needed (but no assert(0))
+  *  fb1f4433c6 - Part: [skip ci] use Py::None()
+  *  a2beab798b - [Core] Persistence: improve NotImplemented exception
+    presentation to user
+  *  1928bfed63 - Fix typo
+  *  fbea5fdca5 - [CrashFix] Core: fix crash when dumping content of a
+    Surface
+  *  760237c8f7 - [CrashFix] Core: fix crash when Surface is null
+  *  c5059d4108 - Replace Line with LineSegment
+  *  15917cd60f - [TD]fix artifact in PDF export
+  *  82d5be5f6b - Fem: remove the forced document recompute from
+    ViewProviderFemPostSphereFunction::updateData This is already
+    handled in ViewProviderFemPostFunction::dragFinishCallback and can
+    be switched on or off.
+  *  c4c0304518 - Fem: move handling of PostAutoRecompute to a central
+    class and by default set its value to true
+  *  02cb0b8234 - Sketcher: restore constraint filter if Multiple dialog
+    is canceled
+  *  1480c1f594 - Addon Manager: Black reformat
+  *  1ede604cfd - Addon Manager: Allow overriding install with missing
+    deps
+  *  2397883adb - Gui: [skip ci] avoid that mouse is stuck after opening
+    Help page with What's This
+  *  b5a6970c53 - Arch: Added object type to IFC export of 2D
+    annotations
+  *  adf23ff4ec - Tools: [skip ci] allow to build plugin as a top-level
+    project
+  *  bd832490e8 - Gui: if expression is emptied, pressing Enter discards
+    expression
+  *  5c342f6e58 - Tools: [skip ci] fix linking errors of designer plugin
+    with MSVC
+  *  002ba58bad - Arch: Fixed IFC import/export of dimensions
+  *  d41395bbd1 - Part: CheckGeometry handle non-ascii characters in
+    object names when generating advanced shape content
+  *  dc3986ee10 - Base: add method isEqual() to Base::Flags<> to
+    simplify comparison
+  *  c3ec0b7c49 - FEM: work around a crash with vtk9 on export of a
+    vtkUnstructuredGrid
+  *  670d0922d8 - Merge pull request #6712 from mlampert/bugfix/remove-
+    debugging-globals
+  *  651f6d871f - Arch: Fixed IFC import of Rebars
+  *  48deb6ae3e - Arch: fixed flipped import of IFC texts
+  *  ed5ee5655d - Arch: Fixed text justify in IFC export
+  *  076376e568 - Arch: workaround race condition in building part
+    creation
+  *  c521a9179b - Add option to build and install the designer plugin
+  *  2b35d19ce4 - Removed debugging globals
+  *  acede8c347 - [Gui] Color Gradient: handle case of min = 0
+  *  b3fb3e4005 - [Gui] fix color gradient label format
+  *  15c069a7b7 - Ext:[skip ci] drop prefix argument from Python code to
+    make sure the absolute path to dist-packages is used. This allows to
+    set CMAKE_INSTALL_PREFIX to something else than /usr and freecad as
+    Python package is still installed into the correct directory.
+  *  156cf62b8a - Tools: [skip ci] replace QtDesigner with QtUiPlugin
+    header to make moc happy on macOS
+  *  f492a8fac4 - Gui: handle number of labels and decimals in the
+    immediate update
+  *  7d843b250f - Gui: more fixes of DlgSettingsColorGradientImp: * make
+    sure that DlgSettingsColorGradientImp::setRange() generates a valid
+    string according to the validator settings * change back to
+    QLineEdit::editingFinished because for huge models an immediate
+    update considerably slows down editing
+  *  85d3abeb8b - Gui: put private class to anonymous namespace
+  *  03976ff333 - Code change according to suggestion
+  *  801ece560e - Gui: fix property enumeration editor initialization
+  *  1433ff166d - Gui: support auto grouping editing for
+    PropertyEnumeration
+  *  0b44a6c28d - Tools: [skip ci] Use qmake to determine Qt plugin
+    directory
+  *  2714e682db - [Path] manual merge of #6580
+  *  54eb842c11 - [Part] Helix Default Segment Length to 0.0
+  *  2f703e4627 - Addon Manager: Disable pip version check
+  *  9a7b411659 - Merge pull request #6705 from sliptonic/bug/pocketmode
+  *  ab2461629c - Tools: [skip ci] CMake support of plugin for Qt
+    Designer
+  *  9b3a50840f - Gui: fixes DlgSettingsColorGradientImp: * handle
+    exception in lambda function if max <= min * fix regression of
+    0938c98b6: a validator can be set to only one widget at a time
+  *  7b2d219c44 - [Macros][skip ci] change text of Addons... button to
+    Download to help new people
+  *  2c6af06fe9 - OpenSCAD: Fix difference action bug
+  *  d666cc4114 - App: [skip ci] fix zero-based color model Red-White-
+    Blue
+  *  66d0c35dc7 - Gui: Fix pref pack apply crash (Fixes #6702)
+  *  cf867ae96d - [Path] fix index error with PocketMode
+  *  65822ec2f8 - Base: fix quantity construction when unit as string is
+    empty
+  *  7dc130b00f - Revert Gui: [skip ci] fix a small regression caused by
+    PR
+  *  d0e1717cdf - Merge pull request #6701 from
+    Russ4262/fix/pocket_shape_pocketlaststepover
+  *  2d5f34f329 - Gui: fix some issues in DlgSettingsColorGradientImp: *
+    fix regression by rounding Max/Min values when setting up dialog *
+    switch signals from QLineEdit::editingFinished to
+    QLineEdit::textEdited to get changes immediately
+  *  027fb07743 - Gui: automatically apply changes made in color
+    gradient dialog
+  *  9500706d6f - Gui: refactor DlgSettingsColorGradientImp
+  *  02b8a98f79 - App: [skip ci] fix zero-based color model Red-White-
+    Blue
+  *  874a6ef28e - App/Gui: refactor ColorGradient and move all settings
+    to ColorGradientProfile
+  *  a27c964279 - Path: Correct PocketLastStepOver name
+  *  f2f71d0dc7 - [FEM] save all UI files using FreeCAD plugin for
+    designer
+  *  61d103358f - [Gui] Color gradient dialog: add missing tooltips
+  *  ccc9be98ce - Addon Manager: Move optional dep check logic
+  *  c50924be03 - Gui: change notification between SoFCColorBarBase
+    nodes
+  *  90c35171ae - Main: change position of version number to bottom/left
+  *  b435db807d - Addon Manager: Optional packages also obey allowlist
+  *  d36c59b3dc - Fem/Mesh: force update of shape nodes when changing
+    the transparencies of a color plot
+  *  5dff636cf8 - Merge pull request #6605 from
+    Russ4262/fix/misaligned_extensions
+  *  d20c4e7d8d - Merge pull request #6696 from
+    Russ4262/fix/dressup_path_boundary
+  *  87edeae197 - Mesh: change
+    ViewProviderMeshCurvature::setVertexCurvatureMode to use the alpha
+    value of the returned color for transparency
+  *  e437893e99 - Fem: support transparencies of the colour plot  in
+    ViewProviderFemPostObject
+  *  e8d3f60dbd - Gui: [skip ci] drop the _bOutInvisible member and use
+    the corresponding function of ColorGradient instead
+  *  09758aa889 - Gui: add functions setPrefEntry() and setPrefPath() to
+    PrefWidget to avoid build failures if the attribute stdset=0 isn't
+    set in a .ui file
+  *  5fe0a63201 - App: handle option 'outside invisible' directly in
+    ColorGradient
+  *  6f4d0fa1ab - [FEM] Material settings dialog: add missing slot and
+    tooltips
+  *  e5b52aebb2 - Path: Fix some misaligned extensions
+  *  5e852b1791 - Path: Correct method name spelling error
+  *  0938c98b6c - [GUI] fix color gradient dialog
+  *  8ccaac7264 - App: [skip ci] whitespace changes
+  *  26a6c085c2 - Base: [skip ci] make Flags<>::testFlag a const method
+  *  4cffe64b62 - Merge pull request #6691 from sliptonic/cleanleadinout
+  *  65187652dc - [FEM] Avoid writing parse cache file to non-writable
+    location
+  *  7cac8787a4 - [OpenSCAD] Avoid writing temporary parse cache file
+  *  9fcf5faf69 - App: in verbose mode print used library versions
+  *  e0e523e626 - Base: fix possible Python type mismatch for
+    Base::Vector2dPy when using FreeCAD as a pure Python module.
+  *  cb9dda7084 - Merged crowdin translations
+  *  93e63b85c3 - Merge pull request #6676 from marioalexis84/draft-
+    python2
+  *  c8904359c1 - Merge pull request #6694 from oficinerobotica/splash-
+    screen
+  *  356eca3316 - Updated ts files
+  *  274d755290 - Gui: [skip ci] replace hardcoded Alt+F4 with
+    QKeySequence::Quit to use the appropriate shortcut for each platform
+  *  a306ce5686 - [FEM] fix crash with result filters
+  *  690e3240eb - [Gui] remove misleading button from About Dialog
+  *  5f88e71e1f - [FEM] fix function selection for cut filter
+  *  8d8d8fd055 - [FEM] fix a comparison operator
+  *  4408c66ceb - [Part] repair line endings
+  *  8002b7d6d8 - Update v0.20 splash screen images
+  *  5505c59231 - cleanup
+  *  6839d2235d - Merge pull request #6662 from
+    Russ4262/fix/import_gcode
+  *  e1082bdbb2 - Merge pull request #6682 from
+    sliptonic/bug/inspecttweaks
+  *  93f428b4d1 - Arch: fix survey tool for Vertexes
+  *  eec99d5f53 - Gui: Added 'open Addon Manager' to Help message box -
+    issue #6514
+  *  7d29ddac02 - New 0.20 splash screen
+  *  f6464c7d5f - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  18b588dcbb - Gui: Fixed wrong button on Help messaage box - issue
+    #6514
+  *  e9c088c0ae - Fem: [skip ci] issue #6673: selecting a point for the
+    point result filter crashes
+  *  df9d9843c3 - Path: Add 5 unit tests for importing gcode with
+    gcode_pre
+  *  b1e4864910 - Path: Allow GUI Job creation without task panel
+    interaction
+  *  ee797360e1 - [FEM] improve sphere cut function handling
+  *  54ef47276f - [FEM] fix bug 4 of the cut filter bugs
+  *  bb74a6b2b8 - [FEM] [skip CI] remove superfluous ifs I introduced
+    today
+  *  eaf9adeb0f - [Path] minor tweaks to inspect
+  *  1cd952fc09 - [TD]Fix Extension Icons
+  *  be44c979d0 - minor fix
+  *  0d847fd482 - Merge pull request #6657 from sliptonic/bug/leadinout
+  *  49b5e7b0c4 - Addon Manager: Fix display of Macro wiki details
+  *  70488c8f26 - Git: PR6497 Ignore commits in git blame
+  *  3ef6811dae - Web: PR6497 move return statement to new line
+  *  c44ccc0ff2 - TD: PR6497 move return statement to new line
+  *  cb21ac7bf8 - Spreadsheet: PR6497 move return statement to new line
+  *  1ee046788d - Sketcher: PR6497 move return statement to new line
+  *  190d64bdae - Sandbox: PR6497 move return statement to new line
+  *  ec74d351f0 - Robot: PR6497 move return statement to new line
+  *  1e9236abd4 - Raytracing: PR6497 move return statement to new line
+  *  bac451cc53 - Points: PR6497 move return statement to new line
+  *  5f31fb74f6 - Path: PR6497 move return statement to new line
+  *  6f230d7404 - PD: PR6497 move return statement to new line
+  *  0a65575c2c - Part: PR6497 move return statement to new line
+  *  702238a99c - Mesh: PR6497 move return statement to new line
+  *  35156cdce3 - Import: PR6497 move return statement to new line
+  *  bb0e2f1c51 - FEM: PR6497 move return statement to new line
+  *  b13088664f - Draft: PR6497 move return statement to new line
+  *  1ea364379f - Tools: PR6497 move return statement to new line
+  *  3b42d4afac - Base: PR6497 move return statement to new line
+  *  bedf920702 - Gui: PR6497 move return statement to new line
+  *  132a1d7e55 - App: PR6497 move return statement to new line
+  *  2578c3d2ac - Base: [skip ci] optimize iteration over container with
+    parameter group elements
+  *  b47029998e - Base: fix handling of path separators in parameter
+    group names
+  *  7c24e54704 - [TD]skip LCS infinite shapes
+  *  6eafd18030 - Gui: Add dual info about FC + OS locale in full
+    information
+  *  c22d37a82c - Gui: Default Translator::SetLocale to OS locale +
+    simplify code
+  *  ec3c905b6b - Gui: fix (another) algorithmic issue in number format
+    change
+  *  21e5a41480 - Gui: fix algorithmic issue in language change
+  *  2ddf5dd625 - Gui: improve a bit number format selection
+  *  68d7892fb0 - Gui: fix locale number formatting propagation
+  *  b2df95a66d - Gui: fix several regressions in
+    DlgSettingsColorGradientImp * make line edit fields wide enough to
+    not truncate the text * fix error: Unhandled Base::Exception caught
+    in GUIApplication::notify.
+  *  2853f6715a - [FEM] fix sphere cut filter
+  *  d51608bce5 - [Path] Fix initial descent at start
+  *  659e84e57f - Draft: Remove Python 2 type support
+  *  5974abe351 - Fem: in case the range collapses to a single value
+    expand it to a valid range with +/- eps
+  *  a7ef1d7aa8 - fix creation of backup file even when numberOfFiles<=0
+    in applyTimeStamp
+  *  c346f76ae8 - move tmp file rename after file deletion in
+    applyTimeStamp when numberOfFiles <=0 [fixes #6532]
+  *  52c86de3cb - Tools: PR4556 Step 3: sort QGridLayout by row-col
+  *  d353bea5dc - Test: PR4556 Step 3: sort QGridLayout by row-col
+  *  44eb19f631 - TD: PR4556 Step 3: sort QGridLayout by row-col
+  *  3e954cbb3a - Surface: PR4556 Step 3: sort QGridLayout by row-col
+  *  c25b29f024 - Start: PR4556 Step 3: sort QGridLayout by row-col
+  *  bb11c74565 - Spreadsheet: PR4556 Step 3: sort QGridLayout by row-
+    col
+  *  b405de05df - Sketcher: PR4556 Step 3: sort QGridLayout by row-col
+  *  3092b38d32 - RE: PR4556 Step 3: sort QGridLayout by row-col
+  *  e461e8ebe3 - Raytracing: PR4556 Step 3: sort QGridLayout by row-col
+  *  dfc27ad5f3 - Points: PR4556 Step 3: sort QGridLayout by row-col
+  *  a046bc1d84 - Path: PR4556 Step 3: sort QGridLayout by row-col
+  *  ac3ea0a960 - PD: PR4556 Step 3: sort QGridLayout by row-col
+  *  48619ec5cb - Part: PR4556 Step 3: sort QGridLayout by row-col
+  *  ac6f33054e - MeshPart: PR4556 Step 3: sort QGridLayout by row-col
+  *  22e83879f3 - OpenSCAD: PR4556 Step 3: sort QGridLayout by row-col
+  *  970add4b1a - Mesh: PR4556 Step 3: sort QGridLayout by row-col
+  *  10080efb0c - Inspection: PR4556 Step 3: sort QGridLayout by row-col
+  *  52daf6c546 - FEM: PR4556 Step 3: sort QGridLayout by row-col
+  *  91da34b640 - Drawing: PR4556 Step 3: sort QGridLayout by row-col
+  *  c36f2ade86 - Draft: PR4556 Step 3: sort QGridLayout by row-col
+  *  f6e386f717 - Arch: PR4556 Step 3: sort QGridLayout by row-col
+  *  9c56f219f0 - Gui: PR4556 Step 3: sort QGridLayout by row-col
+  *  3a87c4d50e - TD: PR4556 Step 2: remove native=true
+  *  a9679d54c1 - Spreadsheet: PR4556 Step 2: remove native=true
+  *  b134322748 - Sketcher: PR4556 Step 2: remove native=true
+  *  f4dad65718 - Path: PR4556 Step 2: remove native=true
+  *  1b6b921941 - FEM: PR4556 Step 2: remove native=true
+  *  380d62775a - OpenSCAD: PR4556 Step 2: remove native=true
+  *  da22efe62b - Draft: PR4556 Step 2: remove native=true
+  *  5e5aac2e04 - Addon Manager: PR4556 Step 2: remove native=true
+  *  a5c39acd6c - Gui: PR4556 Step 2: remove native=true
+  *  11156e2836 - Merge pull request #6647 from
+    Russ4262/fix/millface_face_region_no_base
+  *  1b5b6965cc - remove pylint, commented code, and uncomment PathLogs
+  *  4e607304b9 - Black reformat
+  *  bae73e0056 - Changes from lcorley
+  *  0239732e69 - Fem: fix error: Unhandled Base::Exception caught in
+    GUIApplication::notify
+  *  bba7719cd1 - Gui: fixes #6663: [Bug] Decimal separator not chosen
+    by locale system settings anymore
+  *  d60dd085b7 - SMESH: fixes #6553: [Bug] gmsh with VTK9.x does not
+    work
+  *  5f5afd4b65 - [Gui] fix for DlgSettingsColorGradient dialog
+  *  b3d74905ca - [skip CI] [Gui] some UI improvements for the color
+    gradient dialog
+  *  51c7a8c2d3 - [FEM] fix crash in pipeline creation
+  *  361ea3367d - [FEM] fix network pressure value display in result
+    pipelines
+  *  784d62de10 - [FEM] some fixes for the Z88 settings dialog
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 22 Apr 2022 22:12:41 +0000
+
 freecad-daily (0.19.2+git28462-c27e016521-1) unstable; urgency=medium
 
   * Compile

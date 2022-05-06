@@ -1,3 +1,176 @@
+labplot (2.8.2+git9617-65dbe5373-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 65dbe53734173459037e823f96256ce52ee2877a
+  * Date: 1650591698
+  * git changelog:
+  *  65dbe5373 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  f38429794 - GIT_SILENT made messages (after extraction)
+  *  cde3c4001 - ascii filter: faster preview of big files by only
+    scanning lines to preview
+  *  2c9ce4e4f - liborigin: Fix memory access problem (failing project
+    import test)
+  *  30c04bd26 - Fix uninitialized members
+  *  f4f7f5692 - Fix wrong continue
+  *  cda8116e0 - Fix residual endif
+  *  0d193a57e - merge fix
+  *  f1d3d4e70 - matio: Fix UTF8 import found by failing test
+  *  d97524e55 - Try fixing FreeBSD build (moc problem)
+  *  9e77b5930 - Fix KSyntaxHighlighting include (mandatory with KF
+    5.94)
+  *  87b4be917 - ascii filter: Fix last issue from tests
+  *  20ef60af8 - ascii filter: Fix another issue
+  *  82c0c0d87 - ascii filter: Fix two issues in the new code reducing
+    the number of failing tests
+  *  c0dad5f80 - Minor fixes for some of the issues mentioned in the
+    quality report in the CI pipeline.
+  *  ef29411b2 - [worksheet] allow to re-apply a theme even though it
+    was already set in the worksheet or in the plot. This is useful when
+    the user has performed some other changes after the theme was set
+    initially and wants to override the changes by applying the same
+    theme again.
+  *  b97a2037d - Mention Maxima explicitely in example projects using
+    Maxima so it's directly clear in the example projects dialog.
+  *  759c0f99b - Renamed the toolbar to Data Extractor.
+  *  38ba57022 - BinaryFilter: comment rowNumber()
+  *  35b9feb69 - binary filter: make import much faster by tuning
+    rowNumber() and reading bigger chunks at once
+  *  7a0d6f072 - GIT_SILENT made messages (after extraction)
+  *  26ba1c566 - binary filter: separate index column filling
+  *  d7749b7c2 - Update SpreadsheetModel.cpp
+  *  21593b986 - Removed some debug output in spreadsheet.cpp.
+  *  0de10aac8 - Merge branch 'work/optimize-the-memory-consumption' of
+    invent.kde.org:education/labplot into work/optimize-the-memory-
+    consumption
+  *  ec685dc0a - [spreadsheet] removed obsolete QVector::resize() calls
+    in prepareImport.
+  *  28f5fc83d - Fixes: * use endInsertRows() when inserting new rows in
+    the model and not endRemoveRows() * make the new columns created in
+    finalizeImport() undo aware after their sizes were changed
+  *  8379b1d63 - [spreadsheet] removed obsolete QVector::resize() calls
+    in prepareImport.
+  *  d1b1efc4a - [spreadsheet] no need to have two functions
+    handleRowsInterted and handleRowsRemoved in SpreadsheetModel doing
+    the same. One function is enough.
+  *  96b5cd2bd - Replaced QVector<bool> by std::vector<bool> in XYCurve
+    and in BoxPlot. This will reduce the memory consumption for the
+    containers holding the information about the visible points by a
+    factor of 8.
+  *  ffb7aba76 - [spreadsheet] no need to hold QVector<int> for the
+    vertical header in the spreadsheet model. The text shown in the
+    vertical header can be directly mapped to the row/section of the
+    spreadsheet and we don't need any additional container.
+  *  86db98051 - GIT_SILENT: changelog
+  *  117008d7b - binary filter: use integer and bigInt type for
+    corresponding data
+  *  b3bef33c9 - [spreadsheet] removed obsolete QVector::resize() calls
+    in prepareImport.
+  *  af4c4d2c3 - binary filter: make preview fast
+  *  dd9fd8fde - get spicefilter working
+  *  307065afa - don't differentiate between SpiceAscii and SpiceBinary
+  *  5cd17f672 - data import: detect nc4 files as hdf5
+  *  152f023dd - tests: make ascii test a common test
+  *  b54b0957e - Use std::fabs() instead of std::abs() for double values
+    in SpiceReader.cpp. The privous commit has fixed the build on macos
+    but was semantically wrong, this commit corrects the behavior now.
+  *  e9181b9ac - Fixed the build on macos that was failing because of an
+    ambigous call when passing an double to abs() that is expecting
+    either an int or a long.
+  *  cb2f1f870 - add missing header
+  *  fe505c4c3 - BinaryFilter: improve progress bar
+  *  13f25e86f - tests: more binary import tests
+  *  d9ceddf40 - cmake: remove unnecessary include
+  *  4f93132e8 - tests: Fix build on Windows
+  *  1f3d996bc - tests: add more binary tests
+  *  8dcdac0f8 - Avoid integer overflow when updating the status bar
+    with the current percentage of the import progress during the import
+    of big ASCII and JSON files.
+  *  e38247fd0 - [ascii] removed some debug output in the function that
+    is very hot during the improt. This give ca. 1s performance for a
+    2.9GB file.
+  *  1f13a2b00 - tests: add binary import test
+  *  4cee6fa6e - Added c++ code to generate ASCII and binary test data
+    based on Brownian motion example. This is similar to the already
+    existing python script but significantly faster) and can be used to
+    generate big data sets (multiple millions of rows).
+  *  0f5025866 - binary filter: make preview fast
+  *  e0b62ca5d - binary filter: make preview fast
+  *  fb9c54dff - One more version check for the include of
+    qstringtokenizer.h.
+  *  434c8232a - QStringTokenizer depends on Qt 5.14. Put the new
+    optimization behind a version check.
+  *  908d7d1ea - [ascii] faster reading in AsciiFilter.
+  *  24b0c57f3 - Fixes: * use endInsertRows() when inserting new rows in
+    the model and not endRemoveRows() * make the new columns created in
+    finalizeImport() undo aware after their sizes were changed
+  *  1c7b16dc9 - get spicefilter working
+  *  d86496257 - don't differentiate between SpiceAscii and SpiceBinary
+  *  77fd9d4ff - data import: detect nc4 files as hdf5
+  *  687b8ee6d - tests: make ascii test a common test
+  *  d44074f13 - Use std::fabs() instead of std::abs() for double values
+    in SpiceReader.cpp. The privous commit has fixed the build on macos
+    but was semantically wrong, this commit corrects the behavior now.
+  *  050c353ab - Fixed the build on macos that was failing because of an
+    ambigous call when passing an double to abs() that is expecting
+    either an int or a long.
+  *  f3f34e61a - add missing header
+  *  0fe866021 - BinaryFilter: improve progress bar
+  *  213d6432b - tests: more binary import tests
+  *  70256ee7c - cmake: remove unnecessary include
+  *  cb816fc99 - tests: Fix build on Windows
+  *  b4e7303b7 - tests: add more binary tests
+  *  2a21e651f - Avoid integer overflow when updating the status bar
+    with the current percentage of the import progress during the import
+    of big ASCII and JSON files.
+  *  0941fdab0 - [ascii] removed some debug output in the function that
+    is very hot during the improt. This give ca. 1s performance for a
+    2.9GB file.
+  *  ae0b024f2 - tests: add binary import test
+  *  340f7bd4f - [spreadsheet] removed obsolete QVector::resize() calls
+    in prepareImport.
+  *  6da9df45c - Added c++ code to generate ASCII and binary test data
+    based on Brownian motion example. This is similar to the already
+    existing python script but significantly faster) and can be used to
+    generate big data sets (multiple millions of rows).
+  *  6ff2a2b28 - [spreadsheet] no need to have two functions
+    handleRowsInterted and handleRowsRemoved in SpreadsheetModel doing
+    the same. One function is enough.
+  *  bd4cfd4d1 - Replaced QVector<bool> by std::vector<bool> in XYCurve
+    and in BoxPlot. This will reduce the memory consumption for the
+    containers holding the information about the visible points by a
+    factor of 8.
+  *  f491af70f - [spreadsheet] no need to hold QVector<int> for the
+    vertical header in the spreadsheet model. The text shown in the
+    vertical header can be directly mapped to the row/section of the
+    spreadsheet and we don't need any additional container.
+  *  0a0f815a2 - GIT_SILENT made messages (after extraction)
+  *  1ec9d931d - add more qlatin
+  *  2831aa001 - add QLatin1String
+  *  33f28936d - use reference
+  *  9022bf7cb - fix ltspice bug
+  *  712a58cd6 - Update tests because the reference data where wrong
+  *  1c5c7dc06 - [spreadsheet] the fix done in
+    d4c61765d657b6ad4dfc4db3c082a16e7cdb954d has caused test failures on
+    windows and freebsd which are not clear and which don't happen on
+    linux. Reworking the fix trying to adress the test failures.
+  *  b458e9aa8 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  249ccd6b7 - GIT_SILENT made messages (after extraction)
+  *  d4c61765d - [spreadsheet] changed the ownership of SpreadsheetModel
+    -  make Spreadsheet owning it and not SpreadsheetView,  to make sure
+    spreadsheet's children columns are not deleted when the view is
+    closed and the model is deleted.
+  *  2d995cf1c - CI: make failing tests fatal
+  *  0e1e909b1 - Removed the usage of the depricated function
+    QWheelEvent::delta(), use QWheelEvent::angleDelta() instead.
+  *  1df05e4c8 - GIT_SILENT made messages (after extraction)
+  *  6e4cf23ff - cmake: Fix linking zlib with 3rdparty readstat
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 22 Apr 2022 22:28:53 +0000
+
 labplot (2.8.2+git9526-eb2060ac5-1) unstable; urgency=medium
 
   * Compile

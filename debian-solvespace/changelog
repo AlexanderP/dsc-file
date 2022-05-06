@@ -1,3 +1,34 @@
+solvespace (3.1.0~git1862-6a6fffe-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 6a6fffed0e30916b107419e095c31555ff0c83ea
+  * Date: 1649819556
+  * git changelog:
+  *  6a6fffe - CI: Use upstream action to build snap & drop arm64 snap
+    (#1232)
+  *  0cec15c - Update README.md
+  *  2e4a4de - Update README.md
+  *  7e2aba4 - Update README.md
+  *  fc16cdb - Fix for zoom in/out error (#1221)
+  *  c5ea9a4 - Move shell functions out of surface.cpp and into
+    shell.cpp (#1220)
+  *  2383a39 - UI: Display the circumference of a circle in the property
+    browser
+  *  d8b5281 - MacOS: Update the year to 2022 in the About dialog.
+  *  43795f5 - CI: Create tarballs with submodules included for releases
+  *  026f936 - A workplane can now be defined from a workplane defined
+    by point and normal
+  *  4655066 - Fix normal issue, when a workplane is created from a
+    point and normal we were only storing the numeric normal so the
+    plane (and subsequent extrusion) wouldn't follow if the sketch was
+    on the face of a revolve. Now we store the handle to the defining
+    normal it predef.entityB so it can update properly on regeneration.
+  *  7fa7250 - Turkish translation tr_TR.po updated (#1203)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 22 Apr 2022 22:24:34 +0000
+
 solvespace (3.1.0~git1849-a1b2db5-1) unstable; urgency=medium
 
   * Compile
