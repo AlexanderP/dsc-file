@@ -1,3 +1,58 @@
+labplot (2.8.2+git9648-58d265023-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 58d265023e47c62d63362710d1582209a416afbc
+  * Date: 1651801349
+  * git changelog:
+  *  58d265023 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  4c22aca93 - GIT_SILENT made messages (after extraction)
+  *  488ea7b4a - tests: add hdf5 benchmark
+  *  2263eac54 - tests: improve compiling by using a lib for shared code
+  *  0b0923d71 - tests: add netcdf file imports
+  *  cabdb400b - GIT_SILENT: more release docu
+  *  6bb37c605 - GIT_SILENT: update release docu (MS App Store)
+  *  19c84d6ce - tests: clean up
+  *  8ec357e62 - tests: use same test as netcdf for binary data
+  *  5ce4e243f - tests: add netcdf import benchmark
+  *  0c5a5d9f2 - GIT_SILENT: update release docu
+  *  742deeac8 - Update splash screen (and fix release docu)
+  *  900bed979 - Bumping the version to 2.9.0.
+  *  35c77ae4e - typo
+  *  d5624962d - prepare appdata for release
+  *  dd006d259 - [ascii import] removed some of the debug output in hot
+    for-loops in AsciiFilter.
+  *  f69a8f3be - binary test: add import performance benchmarks
+  *  a70f0c46e - liborigin: d0e04663 (Support building shared library on
+    Windows)
+  *  d4c44ad14 - liborigin: 42a38c11 (Silent warnings from clang about
+    deprecated allocate form in c++17)
+  *  43ea6a97d - liborigin: bf29c8a8 (Remove 'using namespace std' from
+    header files)
+  *  57c3e9e0f - minor code style and one bug
+  *  7bb35dc1e - Use QOverload instead of static_cast
+  *  73975abef - liborigin: format header
+  *  b072ae1be - liborigin: add format files
+  *  c07380a32 - liborigin: downstream format with clang-format
+  *  ae1380b68 - CI: require tests @all
+  *  68fe903e7 - CI: gitlab supports Windows
+  *  890dfc51c - [data extractor] resize the data spreadsheet if more
+    points are added then the initial size of the spreadsheet.
+  *  51618c6d2 - [data extractor] minor fixes and improvements: * avoid
+    multiple updatePoint() calls * the default spreadsheet can have
+    arbitrary number of colums as per user's default template, make sure
+    we have the columns for x and y only for the data sheet * set the
+    comment text widgets to reasonable sizes in the dock widgets for
+    curve and image
+  *  9a03d4cd1 - When rendering PDF to QImage, no need to scale
+    additionally, work with the current dpi number only.
+  *  e0b6ff2ce - ASCII import: use comma as fallback separator in
+    automatic mode  since spaces are detected automatically
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 06 May 2022 22:54:41 +0000
+
 labplot (2.8.2+git9617-65dbe5373-1) unstable; urgency=medium
 
   * Compile

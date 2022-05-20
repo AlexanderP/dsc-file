@@ -1,3 +1,119 @@
+freecad-daily (0.19.2+git28809-c960622b3d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: c960622b3d67c635534603c6c1453df1ec8b9e02
+  * Date: 1651862048
+  * git changelog:
+  *  c960622b3d - App: fixes #6840: Crash in
+    ObjectIdentifier::resolveProperty
+  *  d926331e57 - Spreadsheet: fix extra row or column when printing
+  *  6d6af2dd3b - Spreadsheet: add new API
+    PropertySheet::getNonEmptyCells()
+  *  3bea43a228 - App: cannot assign a null pointer to a std::string
+    Depending on the compiler an exception is raised or a crash occurs
+  *  54edb231bb - LGTM: Remove unnecessary deletion of local variables
+  *  25bbc31848 - [Partdesign] Fix proposed by @0penBrain (#32)
+  *  07f4267112 - [PartDesign] Add individual QString for menu text
+    which exposes text to translation
+  *  3e7ad90b7b - [Part] Part Measure Linear (tool) fix translation for
+    Selection xx button.
+  *  b107498d49 - Use python3 to run MakeMacBundleRelocatable.py (#6784)
+  *  8433a78807 - Gui: fix crash on setup Link CopyOnChange objects
+  *  15e1556f97 - App: handle exception on change Link CopyOnChange
+  *  b97e141e01 - Merge pull request #6796 from
+    Russ4262/fix/3d_surface_opt_step_trans
+  *  0680ad5558 - Merged crowdin translations
+  *  ab5a6d83a1 - Updated ts files
+  *  c051711578 - Tools: Favor the use of pylupdate5 over pyside2-
+    lupdate in translation scripts (pyside2-lupdate doesn't encode
+    properly).
+  *  72e91dbbca - Draft: Fix Draft_WorkingPlaneProxy ignores Auto
+    Working Plane
+  *  dc53e6dce1 - App: fix restoring the attributes of a dynamic
+    property For more details see:
+    https://forum.freecadweb.org/viewtopic.php?p=591465#p591465
+  *  eebdaadb94 - App: handle 'NoPersists' property type in
+    PropertyContainerPy::getTypeOfProperty
+  *  b160d9b7e0 - Test: [skip ci] add unit tests for Prop_None and
+    Prop_Output
+  *  95123b3399 - App: expose PropertyType enum to Python
+  *  583916a2e5 - Merge pull request #6820 from 0penBrain/startPage
+  *  ccc8ac65c5 - [TD]fix X,Y change propagation
+  *  afebe07514 - Part: optimize hasShapesInSelection() by avoiding
+    performing a possibly expensive transformation See also:
+    https://forum.freecadweb.org/viewtopic.php?p=592445#p592445
+  *  ea5f3eb68e - Merge pull request #6813 from Russ4262/fix/rrf_post
+  *  6ab0ba073d - [Bugfix] Prevent start page loading to fail if WB
+    doesn't define an icon
+  *  e8c8c335d4 - Merge pull request #6814 from Roy-043/Draft-fix-2-
+    gui_groups-translation-issues
+  *  2a559df2cd - Gui: [skip ci] a couple of IDEs or editors struggle
+    with the degree symbol in the comment, replace it with 'deg'
+  *  254a1c5645 - Gui: issue #6306 was fixed with be2ddb37a6ff6d but
+    this doesn't work on high DPI monitors. This commit fixes that now
+  *  21d0e10367 - Mesh: fix grammatical issue in console message string
+  *  fb60c863ba - [COPR] Remove CONTRIBUTORS file
+  *  40083d2b85 - [FEM] Expand Add/Remove buttons in constraint tasks
+  *  868b5f1a1c - Draft: fix 2 gui_groups.py translation issues
+  *  a27836d82d - Path: Exclude dumper and example posts
+  *  62851568fa - Path: Add missing post-processor modules
+  *  d2253c7be4 - Part: in TopoShape::transformGeometry convert OCC
+    exception into Base exception The conversion is needed because
+    TopoShape::transformGeometry reimplements
+    ComplexGeoData::transformGeometry and is called in the core system
+  *  b22424ee9b - Part: handle exception of makeGTransform in
+    _makeTransform
+  *  cb7d7d27a2 - Part: adjust TopoShape::transformGShape() to reduce
+    code duplication of TopoShape::makeGTransform Revert changes of
+    a96d356afbdc4d as otherwise there is no way to handle a failure in
+    client code
+  *  cd65de7e44 - Base: fix conversion from Placement to Matrix See
+    also: https://forum.freecadweb.org/viewtopic.php?f=3&t=61000
+  *  a222bc6782 - Draft: Fix Draft_Snap_Intersection for self-
+    intersecting objects
+  *  5ed2850a03 - FEM: work around a crash with vtk9 on export of a
+    vtkUnstructuredGrid
+  *  8427d446e0 - Base: fix a possible naming clash with 'timezone' with
+    Py3.6 on Windows
+  *  126d205cf4 - Tools: [skip ci] fix linking error of plugin with MSVC
+  *  0d0bd1168b - Mesh: handle exceptions when running FreeCAD in
+    headless mode
+  *  a96d356afb - Part: handle OCC exception inside
+    TopoShape::makeGTransform For more details about the problems an
+    unhandled exception will cause see:
+    https://forum.freecadweb.org/viewtopic.php?f=3&t=61000
+  *  4f9eb9ebce - Gui: Compile CONTRIBUTORS into Qt resources
+  *  f8f3ba7a04 - Gui: Fix Stereo view disabling
+  *  cb1093ef30 - Git: Add line ending fix to blame ignore revs file
+  *  3ef438eaf0 - Fix mixed line endings
+  *  2753dd4ca7 - Merge pull request #6795 from LarryWoestman/master
+  *  1ba78b7e72 - Part: Use regex to match names in
+    ViewProviderPartExt::getDetail
+  *  e634921a4c - Addon Manager: Fetch allowed py packages from Github
+    repo
+  *  5321edca3c - Path: Fixes #6775 - Check for end of range
+  *  68d9afa58e - Added a missing continue.
+  *  53cc222255 - Merge pull request #6789 from
+    Russ4262/fix/initgui_translation
+  *  f65b924ed4 - Path: Update translated message syntax
+  *  3f89b656e4 - Test: [skip ci] add missing unit test for PR #6787:
+    fix property conflict in App::Link restore
+  *  fe5ac277a0 - App: fix property conflict in App::Link restore
+  *  fb85a2c93b - Draft: Restore DontUseNativeDialog after ShapeString
+    edit
+  *  d36cbb522a - [TD]fix ExtendShorten handling of CenterLine
+  *  abd8e3a46e - [TD]fix ExtendLine changes CenterLine
+  *  a59dac1675 - [PD] Do both fuse and cut in  if applicable
+  *  22fe0d62fd - Part: Add functions to replace indentical code
+    structure in TopoShapePyImp.cpp
+  *  817063290a - Part: Clean up code in TopoShapePyImp.cpp
+  *  5ec19fc5a1 - Reduce debug log output
+  *  30faedfce2 - [TD]fix GeomHatch change file name
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 06 May 2022 22:37:15 +0000
+
 freecad-daily (0.19.2+git28744-f8ae185c15-1) unstable; urgency=medium
 
   * Compile

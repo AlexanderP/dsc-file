@@ -18,11 +18,11 @@ endif
 
 
 override_dh_auto_configure:
-ifneq (,$(filter $(DEBIAN_CODENAME),sid bullseye groovy hirsute impish jammy))
-	patch -p1 < debian/patches/debian_patches_make-4.3.patch
-else
-	echo "no patch"
-endif
+#ifneq (,$(filter $(DEBIAN_CODENAME),sid bullseye groovy hirsute impish jammy))
+#	patch -p1 < debian/patches/debian_patches_make-4.3.patch
+#else
+#	echo "no patch"
+#endif
 	./autogen.sh
 	dh_auto_configure -- \
 	--with-boost-libdir=/usr/lib/${DEB_HOST_MULTIARCH} \
