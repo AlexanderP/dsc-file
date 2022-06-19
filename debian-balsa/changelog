@@ -1,3 +1,35 @@
+balsa (2.6.3+git9841-ea34d8f38-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/balsa
+  * Branch: master
+  * Commit: ea34d8f38c27122a5aa4c231f95aca594f55ea66
+  * Date: 1652815790
+  * git changelog:
+  *  ea34d8f38 - fix build error with glib < 2.70
+  *  5aee78c80 - Merge branch 'master' of gitlab.gnome.org:GNOME/balsa
+  *  84dc14ea7 - Various: Replace libbalsa_str_has_prefix()
+  *  18a76fff0 - Update Ukrainian translation
+  *  0ee9f43d8 - sendmsg-window: Use g_file_get_contents()
+  *  f1bf1250d - Merge branch '78-edit-with-gnome' into 'master'
+  *  58a5fc4a0 - mailbox_local: Do not leak reference to message
+  *  5ebb7414e - mime: Do not leak GMatchInfo
+  *  a4c60f089 - sendmsg-window: Use g_file_new_tmp()
+  *  56c4fbf3e - sendmsg-window: Use g_strsplit() on edited file
+  *  d43c4cd0d - sendmsg-window: Replace fork() and exec()
+  *  95337bd30 - Merge branch '75-peter' into 'master'
+  *  2f63dfb44 - Merge branch '74-quote-wrapped-lines' into 'master'
+  *  1ef095dc3 - Implement and use libbalsa_wrap_quoted_string()
+  *  b84a5a637 - sendmsg-window: Fix edit headers in GNOME editor
+  *  f32689011 - sendmsg-window: Fix Edit with GNOME-Editor
+  *  fb518bbd6 - body: Restore mp_alt_selection member
+  *  c02e04ed3 - Merge branch 'Doomsdayrs-master-patch-82363' into
+    'master'
+  *  0227b47eb - Convert README to MD
+  *  84957e354 - body: Use a hash table to store HTML selection
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 20 May 2022 19:36:49 +0000
+
 balsa (2.6.3+git9818-893cda7b2-1) unstable; urgency=medium
 
   * Compile

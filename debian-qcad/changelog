@@ -1,3 +1,41 @@
+qcad (3.27.6.0+git9175-1a7f2ec70-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 1a7f2ec70e32528476e2bcd96c30a9268423a01f
+  * Date: 1653055114
+  * git changelog:
+  *  1a7f2ec70 - update debugging
+  *  98912bebd - add print implementation for RLayer
+  *  4b6401986 - update script bindings
+  *  2aca62d58 - fix text rendering with \p...;
+  *  82d47d6dc - update srcml
+  *  9fc12856e - add tolerance getters
+  *  39d0e9fbc - update
+  *  ab1414479 - fix compilation on Windows
+  *  adea24a09 - auto fit drawing to page: auto set orientation
+  *  0d1357ada - Print.autoFitDrawing: add option to auto set paper
+    orientation
+  *  b9af28c6e - update
+  *  b297a2bd1 - update workaround for macOS M1 crashes in
+    QStackedLayout
+  *  6dd6f045d - update
+  *  9bbc9236c - add cache for minimumSize and sizeHint, possibly
+    preventing crashes on macOS M1
+  *  f76bbd6ab - clean up
+  *  c2807bc08 - explode attributes to texts when projecting
+  *  a554fa932 - update handling / encoding of aguments
+  *  dec423144 - update
+  *  98ec81117 - disable floatable CAD toolbar on macOS
+  *  66e665bff - fix random crash in QStackedLayout::minimumSize (Qt bug
+    workaround for macOS on M1)
+  *  81871932f - set version to 3.27.6.0
+  *  b32d75307 - add RPolyline::getPolygon
+  *  a4d5b2853 - add to toolbars
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 20 May 2022 19:49:18 +0000
+
 qcad (3.27.5.0+git9152-d55c024a4-1) unstable; urgency=medium
 
   * Compile

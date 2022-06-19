@@ -1,3 +1,71 @@
+labplot (2.8.2+git9701-4ee3e0c14-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 4ee3e0c148fc71d1d93db8b85daae52471ec90b9
+  * Date: 1653033667
+  * git changelog:
+  *  4ee3e0c14 - code format
+  *  93916b767 - GIT_SILENT made messages (after extraction)
+  *  c23a8bcb6 - tests: add hdf5 VLEN data
+  *  1b23795a3 - tests: add hdf5 VLEN test
+  *  e645b022c - hdf5: set column names when importing VLEN data
+  *  b61ce1e8c - hdf5: Fix startRow for VLEN data
+  *  950901495 - hdf5: minor simplification
+  *  9bdf25803 - hdf5: support VLEN rank 1 data
+  *  374093ca7 - CI: disable failing tests on custom builds
+  *  2efd05867 - CI: Add F35 custom build for checking failing tests on
+    F36
+  *  7809bfe2b - CI: try fixing tests in custom builds
+  *  22a8b9b90 - CI: debug F36 tests
+  *  e1ef76371 - CI: typo
+  *  b7e033b84 - CI: add F36 full build
+  *  1e534c5e7 - CI: typo
+  *  75e2fee69 - CI: try fixing tests on F36
+  *  87fdfe8f9 - CI: run tests on custom build
+  *  e1875afc0 - typo
+  *  a6ef3c6e2 - CI: hint for cmake to find own readstat lib
+  *  5fb546e2e - CI: Fedora 36 missing package
+  *  71ae5528f - CI: minimal Fedora 36 build
+  *  177000559 - CI: try custom builds on master
+  *  b142965f0 - CI: try custom builds
+  *  317cd5064 - 3rdParty: readstat 1.1.8 fix gcc12 build problems
+  *  c16d8f353 - 3rdparty: readline 1.1.7
+  *  ba11b8d69 - CI: Another try fixing gitlab package path
+  *  d78144245 - CI: Another try fixing gitlab package path
+  *  712bbf76f - CI: Another try fixing gitlab package path
+  *  e69c5d3cb - CI: Another try fixing gitlab package path
+  *  f11c265e7 - CI: Second try finxing gitlab package path
+  *  eba01f551 - CI: Fix gitlab path to cantor
+  *  685e6ae72 - CI: Fix gitlab path to cantor and QtMQTT
+  *  d689f00d8 - tests: only enable ROOT when requirements are
+    fullfilled
+  *  780a3fbb2 - tests: disable ROOT on Windows
+  *  8f7728c5a - code format
+  *  ba8d87499 - tests: another ROOT import
+  *  3ea69f9c5 - tests: add ROOT import
+  *  9ab35743d - code format requires clang-format 13
+  *  0d63b232c - code format
+  *  0794cc8d7 - ROOT filter clean up and prepare tests
+  *  aecaa990b - tests: add FITS tests
+  *  33079b388 - code format final
+  *  55ceab229 - code format
+  *  f33347cf1 - tests: fix header include
+  *  3ccf5fa09 - tests: add FITS benchmark
+  *  b510dd3a1 - format
+  *  f01a99a6c - ignore getRSS.h file, because otherwise windows.h will
+    be included after psapi.h and this will lead to compile issues on
+    windows
+  *  609f55bc1 - add clang format to ci
+  *  30dfb855c - tests: add FITS import
+  *  488d84a76 - fits filter: better default start row and column
+  *  694946cf5 - tests: disable FITS test until fixed
+  *  05d0135f2 - tests: prepare FITS tests
+  *  02690b020 - tests: add ASCII benchmark
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 20 May 2022 19:52:09 +0000
+
 labplot (2.8.2+git9648-58d265023-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,165 @@
+freecad-daily (0.19.2+git28915-7d6243d696-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 7d6243d6961f5c7616b2bcbc844f9abc47eeff9b
+  * Date: 1653037387
+  * git changelog:
+  *  7d6243d696 - Mesh: [skip ci] change icon Mesh_EvaluateFacet.svg
+  *  650210e2db - [Readme] Update build status badges
+  *  f16f617dc8 - Mesh: [skip ci] add missing icon Mesh_Pipette.svg
+  *  dabd109586 - OpenSCAD: Fix typo in prototype
+  *  c669c4e618 - Merge pull request #6904 from Roy-043/Draft-Fix-grid-
+    update-issue
+  *  6beef68ae1 - Fixed bugs and added requests
+  *  afe78105ec - Add files via upload
+  *  0b12cba3b5 - Draft: Fix grid update issue
+  *  354c4e9635 - Merge pull request #6887 from sliptonic/bug/6826
+  *  ca279e4057 - Gui: avoid that toolbars of active workbench become
+    invisible Forum thread:
+    https://forum.freecadweb.org/viewtopic.php?f=8&t=67748
+  *  2ecb11985e - App: simplify code in Application::getResourceDir()
+    and Application::getHelpDir()
+  *  f3fd1d2035 - App: inside Application::getLibraryDir() check if an
+    absolute path name is set for LIBRARYDIR
+  *  10888e7aad - [TD]fix handling of translated enumeration
+  *  a5ff515804 - Mesh: issue #6131: Colors set prior to saving aren't
+    retained when re-opening file Note: A mesh feature must have a
+    PropertyColorList property with the name FaceColors or VertexColors.
+    The colors won't be set when loading a project but in the context-
+    menu there is the function 'Display colors'
+  *  2e7a7e70b0 - Mesh: [skip ci] use const-reference when iterating
+    over list
+  *  eca8c9dbe2 - Mesh: improve OBJ import by allowing arbitrary names
+    for the mtllib file
+  *  f1025b1448 - Mesh: replace several reinterpret_cast with
+    static_cast
+  *  559a3f84dc - Merge pull request #6896 from FreeCAD/mesh-initpy
+  *  bb028c7989 - Mesh: modernize MeshIO classes
+  *  354bfb5c5b - Mesh: implemented recommended move constructor and
+    move assignment for Point3d
+  *  3fbc9992e8 - Mesh: avoid problematic const_cast
+  *  74ead2c6ff - Mod: whitespace fixes
+  *  216ed31d8a - Points: fix round-off errors in pcd export
+  *  61bc913fe5 - Test: [skip ci] test matrix element order
+  *  d0f98bf45c - Conda: ssize_t is a POSIX type and thus not
+    necessarily defined on Windows. Currently this causes build failures
+    with Conda + Py3.10. The solution is to get rid off all occurrences
+    of ssize_t in FreeCAD code
+  *  06515cd340 - Draft: Prevented error when grid size is zero - issue
+    #5427
+  *  27277e29c6 - Draft: Fixed qt connect style - fixes #6879
+  *  a564d5ced7 - Import: fixes #5793: DXF export (Autodesk DXF 2D type)
+    doesn't add any UNITS field inside the dxf file
+  *  6e86375e8f - [TestWB] fix source comment typo in
+  *  feec67e90f - Mesh: fix pep8 related issues in Init.py
+  *  cd53c06b98 - Draft: fix SVG rotation around non-origin center
+  *  9adf4c4e33 - fixes 6826.  Simplifies logic for calculating helix
+    stepovers
+  *  a8411881c9 - Gui: use Py_ssize_t instead of ssize_t in
+    AbstractSplitViewPy::sequence_item
+  *  52b1d11e59 - Gui: Fix crash when invoke command with sMenuText
+    equal to nullptr
+  *  1654dddb73 - Gui: Improve docstrings in CommandPy.xml
+  *  00fea5057c - Test: [skip ci] unit test for Commands related to PR
+    #6889
+  *  a175ae63b3 - Arch: fixed window for good this time
+  *  cca62bd8b5 - Test: unit test for sub-objects related to PR #6888
+  *  65889b6c80 - App: Fix Origin::extensionGetSubObject()
+  *  73d28acd87 - Arch: Fixed mistake in last commit
+  *  57fcdd8182 - Sketch: fixes #6890: Problem with Grid size preference
+  *  3ec140fac7 - Arch: Fixed default component type for new windows
+  *  aa19e21662 - Update the qrc file list to the latest QT file import
+    (QT5 files update for Polish language)
+  *  1c5e387035 - Win installer: prepare for a beta build
+  *  10fa08e879 - update to Windows SDK 10.0.19041.0
+  *  4ae98779c1 - Test: unit test for sub-objects related to PR #6838
+  *  eb6adf17fa - App: fix DocumentObjectPy::getSubObject: * do not set
+    pyMat to Py_None by default but nullptr and do type check in
+    PyArg_ParseTupleAndKeywords * if refType is out of range raise a
+    ValueError instead of TypeError * replace (undocumented) magic
+    numbers with an enum class * implement a lambda function to avoid
+    code duplication * fix bug for retType=3 or retType=4 if subname is
+    a list of strings
+  *  6340dcdd63 - App: fix Origin getSubObject()
+  *  a2e99d9196 - add Qt5 translation files
+  *  3e56f88404 - [TD]mark literals for translation
+  *  00c8916341 - [TD]Fix group item moving when locked
+  *  b96a650dec - Merge pull request #6703 from
+    Russ4262/fix/extensions_size_update
+  *  4fea37b3bc - Part: std::unique_ptr is provided by the memory header
+  *  5f0ad3864d - Part: reorder headers in PreCompiled.h
+  *  cbc0bfc24d - Base: cosmetic changes
+  *  354052e8f5 - [Gui] Navigation preferences: fix #6875
+  *  f60e20ef98 - [skip CI] [Gui] NaviCube.cpp revert a change
+  *  84feca0521 - [skip CI] [Gui] NaviCube.cpp code cleanup
+  *  f70329390c - [Gui] NaviCube: fix #6689
+  *  ef37abc441 - [TD]fix dimension special characters
+  *  23a1f08624 - [TD]add blank space for legibility
+  *  b39c6f62b4 - Base: replace several reinterpret_cast
+  *  e0116c271a - Merge pull request #6874 from JanneKro/master
+  *  349c6be995 - #6871 Use the variable 'cam_file' instead of trying to
+    read an non-existing document.
+  *  b4cb34c4d3 - Merge pull request #6872 from JanneKro/master
+  *  acb1e2047a - Merge pull request #6868 from fra589/master
+  *  5b6b5f0578 - Merge branch 'master' into master
+  *  55f1222bc2 - Remove '<post_processor_name> gcode postprocessor
+    loaded.' message from the post-processors that have them.
+  *  0f7cb192d5 - Do not read filename of document when it isn't open.
+  *  f0f0124f76 - [TD]allow more room for section name
+  *  bb2590e2bd - [TD]use PyArg_ParseTuple type check
+  *  584af812ad - [TD]fix extra undo on TaskCenterLine cancel
+  *  e1b00be15c - T, H and S GCode parameters are integers, not float
+    numbers.
+  *  936b51bbc9 - Merge pull request #6867 from
+    oliveroxtoby/bugfix/remove-extraneous-bracket-from-kinematic-
+    viscosity
+  *  8c984359dd - Part: LGTM: Multiplication result may overflow 'int'
+    before it is converted to 'unsigned int'.
+  *  105b63bf5e - Base: Remove extraneous bracket from string
+    representation of kinematic viscosity units in MKS schema
+  *  132fdeade5 - FEM: [Crowdin] fix typo in ElectrostaticPotential.ui
+    tooltip
+  *  1ca00446af - Part: [skip ci] unit tests for PR #6850
+  *  0900c4e3d3 - Gui: Improve docstrings in ViewProviderPy.xml
+  *  fd31cdcd10 - Gui: Clean up code in ViewProviderPyImp.cpp
+  *  ef00864607 - Gui: set Document as modified when changing one of its
+    properties
+  *  cd3ba642df - PD: [skip ci] remove extra semicolon [-Wextra-semi]
+  *  79f8798011 - Base: fixes #6802: Raise an exception when using
+    FileInfo::toStdWString() for other platforms than Windows
+  *  bd2c7dc651 - Merge pull request #6798 from 0penBrain/draftWPTB
+  *  1fbff0a616 - App: fix regression in Expression::getDepObjects Avoid
+    to add labels muliple times as reported here:
+    https://forum.freecadweb.org/viewtopic.php?p=593994#p593994
+  *  9d3040cc60 - Spreadsheet: PR #6843: add missing unit test
+  *  ef2db349f8 - Spreadsheet: fix cell clearing
+  *  44540a4d82 - Mesh: Add missing toolbar translation strings
+  *  feb0f27f8d - [PartDesign] Add Q_DECLARE_TR_FUNCTIONS() macro
+  *  c3bbb9a135 - [PartDesign] Fix and expose ViewProvider strings to
+    translation
+  *  a9d0d71b06 - App: implement DocumentP::clearDocument() to reduce
+    code duplication
+  *  c1c06f4ccb - Spreadsheet: [skip ci] issue #6840/#6844: add unit
+    test
+  *  24b6f06015 - App: fix crash on removing dynamic property
+  *  1d0e2f243a - Fix mixed line ending
+  *  971743a2e9 - Gui: fix build failure with Qt 5.9
+  *  c579021d95 - Merge pull request #6851 from Kuzma30/final_120
+  *  ee3038d32f - Spreadsheet: [skip ci] issue #6844: add unit test
+  *  ddf020e107 - App: fixes #6844: Crash in
+    PropertyXLinkContainer::updateDeps
+  *  086d86ee11 - Crowdin: fix whitespace and typo in translation string
+  *  ccad0fac90 - [TD]add Python QGraphicsObject to Page
+  *  ad64c57acd - [Gui]add support for QGraphicsObject to PythonWrapper
+  *  e56d7d0935 - Final fix of Path - message during startup  (#43)
+  *  30b0efe025 - Gui: fix crash on deletion if Undo/Redo is disabled
+  *  03c5661690 - Path: Relocate  signal translation to QSB class
+  *  477c912ad0 - Path: Fix delayed extension length updates
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 20 May 2022 19:25:28 +0000
+
 freecad-daily (0.19.2+git28809-c960622b3d-1) unstable; urgency=medium
 
   * Compile
