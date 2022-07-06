@@ -1,3 +1,127 @@
+labplot (2.8.2+git9797-3a7c946c9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 3a7c946c95e1f6f8e556fd50bc126878088399bd
+  * Date: 1655556731
+  * git changelog:
+  *  3a7c946c9 - code format
+  *  a20424dfb - Merge branch 'master' of https://github.com/KDE/labplot
+  *  d060cc06c - Fix sparse custom value label in zoomed plot
+  *  ce1408b8a - [spreadsheet] use a different icon for calculated
+    columns and extend the tooltip text for them in the project explorer
+    to also show the definition of the formula and of the used
+    parameters.
+  *  4b4065ace - format
+  *  ab14cc89b - Fix custom value label with invalid data points
+  *  44a8f4dbe - format
+  *  fe0951cd2 - use public function of the axis to access tickLabels
+  *  3e80f349c - format
+  *  93fd102e2 - call base class undo/redo to undo/redo all childs
+  *  f9541b44b - rename functions to a more appropriate name
+  *  dbde64506 - no need to increase the buildXmlVersion, because if the
+    parameter is not available, it will be already ignored in the
+    READ_INT_VALUE macro
+  *  91b8075cf - do not automatically change the tick number if not
+    desired. Implement a auto checkbox to choose if automatic tick
+    numbering is desired or not.
+  *  8cc1ade50 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  45db4f364 - GIT_SILENT made messages (after extraction)
+  *  451fc1cfa - [box plot] added the missing implementatin for changing
+    the orientation via the context menu and better icons for this
+    action.
+  *  46d83d234 - GIT_SILENT made messages (after extraction)
+  *  9e1c059a4 - QXlsx: fix build with MSVC by using latest tag
+  *  edc1c0627 - QXlsx: try fixing build with MSVC
+  *  62078a638 - GIT_SILENT made messages (after extraction)
+  *  482c51351 - cmake: don't update 3rdparty QXlsx every time
+  *  c3eea9c4a - Minor fixes.
+  *  d6b9f0065 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  ae6440692 - GIT_SILENT made messages (after extraction)
+  *  6e830a76c - format
+  *  defec319e - fixing nonlinear update lines. The number of pixels
+    must be divided, because due to the usage of the factor in the
+    formulas below, the numberOfPixelX will be multiplied which is
+    correct
+  *  5f1293f71 - can be moved outside
+  *  a0f4c4e24 - - move condition out of the loop to speedup - remove
+    abs, because it matters only if the value is unequal to zero -
+    qround64 must not be calculated every time
+  *  efbcd62c2 - Edit textlabels correctly. Due to the usage of html
+    code it is not easily possible to change the properties of the text
+    without changing the content. Therefore a QTextEdit will be used.
+    The text will be stored into the textedit, the changes are applied
+    and then the text will be written back into the textlabel. So
+    properties can be applied to multiple labels at the same time
+    without changing any other property or content. fixes #188
+  *  2f3d16f48 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  89af6fbc8 - GIT_SILENT made messages (after extraction)
+  *  e540a5b84 - GIT_SILENT String fixes
+  *  632e4cdbb - CI: Fix Ubuntu min build
+  *  36ced3dde - CI: optimize Ubuntu builds
+  *  c39634854 - CI: add Ubuntu 22.04 full build and remove Fedora 35
+  *  5b02dfd45 - code format
+  *  ab85eb75d - Merge branch 'master' into work/224-reduce-the-memory-
+    consumption-in-the-sql-export-and-impor
+  *  02499f16d - CI: disable tests for Ubuntu 22.04 min
+  *  2a8ce5a5c - Merge branch 'master' into work/224-reduce-the-memory-
+    consumption-in-the-sql-export-and-impor
+  *  c11fe12d6 - CI: fix Ubuntu 22.04 min
+  *  8d0caff08 - CI: add Ubuntu 22.04 min
+  *  bcb5f26c7 - [sql import] more const references in
+    ImportSqlDatabaseWidget.cpp
+  *  892374c96 - [sql import] reduce the memory consumption when
+    importing from a table.
+  *  567b3f0af - [spreadsheet] reduce the memory consumption during the
+    spreadsheet export to Sqlite by inserting the data into the table in
+    multiple chunks.
+  *  806986692 - When adding a custom point to the plot, addChild()
+    needs to be called prior to setting the coordinates of the point
+    which generates additional entries on the undo stack after child was
+    added. Use macro around these calls to have one single entry.
+  *  962c675aa - Fix missing std:: for isnan
+  *  9bfa96f88 - Fix typo (txt files detected as excel)
+  *  eb21763f9 - GIT_SILENT changelog
+  *  942c04bc1 - Merge branch 'master' into work/215-wrong-result-when-
+    pasting-datetime-values-in-the-yyyy-mm-dd-hh-mm-ss-format
+  *  7727be37d - Fixing the stack-use-after-scope problem in the string
+    concatination with references.
+  *  18bfc6b80 - Merge branch 'master' into work/excel
+  *  9b011412a - GIT_SILENT typo
+  *  c2d1202a6 - GIT_SILENT changelog
+  *  eee8c6394 - excel: code format
+  *  9c06ac772 - excel: fix preview
+  *  2f41d3153 - excel: fix license text
+  *  b8226ea98 - excel: select first data range per default
+  *  790781eb6 - Fixed formatting in SpreadsheetView.cpp.
+  *  846c96cea - Merge branch 'work/excel' of
+    https://anongit.kde.org/labplot into work/excel
+  *  cf0e97b69 - excel: code format
+  *  a2293a853 - Merge branch 'master' into work/excel
+  *  69a68480a - excel: fix selecting file type by ending
+  *  82fa040fd - excel: Fix license header
+  *  51556c9b4 - tests: add another excel import test
+  *  72d74841d - tests: add xlsx import test
+  *  773b42e4b - [spreadsheet] properly paste the data in the format
+    'yyyy-MM-dd hh:mm:ss' and similar.
+  *  40962d75d - Fixed formatting in CartesianPlotTest.cpp.
+  *  14e1b524f - [worksheet] don't crash when undoing the step add info
+    element.
+  *  01e805894 - GIT_SILENT made messages (after extraction)
+  *  2b90e5184 - GIT_SILENT: changelog
+  *  c8483334a - code format
+  *  3e2857557 - tests: add hdf5 import portion of VLEN data
+  *  b730c883b - hdf5: fix compiler warnings
+  *  76207c0ea - hdf5: use start/end column for VLEN data
+  *  af17cb41c - hdf5: Fix using end row for VLEN data
+  *  8f5e1d070 - Merge branch 'master' into work/excel
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 19 Jun 2022 17:11:36 +0000
+
 labplot (2.8.2+git9701-4ee3e0c14-1) unstable; urgency=medium
 
   * Compile

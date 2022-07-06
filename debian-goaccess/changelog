@@ -1,3 +1,51 @@
+goaccess (1:1.5.4+git3770-c19db58a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: c19db58a6734fd57ede975fe66c1ee4467de48a7
+  * Date: 1655467811
+  * git changelog:
+  *  c19db58a - Avoid invalid read of linked list when closing a client
+    inside a foreach.
+  *  6a9a7e11 - Ensure client is not accessed since it's closed and
+    freed under handle_tcp_close().
+  *  b8970e51 - Added additional debugging code on close tcp.
+  *  69d7de39 - Added additional debugging code on close tcp.
+  *  dbeb273c - Moved debugging code for clarity.
+  *  1371d44b - Ensure we force close an invalid client under
+    ws_send_strict_fifo_to_client().
+  *  3cc86fb9 - Fixed issue where an invalid client connection would
+    stall data out to clients.
+  *  97d1b3aa - Ensure our WS retries counter is reset onopen.
+  *  3489104c - Added a max number of WS reconnects of 20 with exp.
+    backoff.
+  *  4be9b8cb - Ensure WS ping interval is cleared onclose.
+  *  5cc8525b - Added the ability to reconnect to WebSocket server after
+    1 sec with exponential backoff.
+  *  e49c6f7b - Merge pull request #2339 from mario-donnarumma/master
+  *  f37b9845 - Add default value to ping_interval in fpskeyival
+    function
+  *  8b30ccbd - Added ping-interval option
+  *  92eb8718 - Updated lang po files with latest changes.
+  *  c0751ff4 - Updated AUTHORS to reflect latest contrib.
+  *  7475d7a8 - Updated man page with latest changes.
+  *  973b8ffc - Updated change log with latest v1.6 changes.
+  *  e9ed9f3d - Version bumped to 1.6.
+  *  d62014e1 - Version bumped to 1.6.
+  *  a66ce21a - Updated man page with latest changes.
+  *  77fcf753 - Version bumped to 1.6.
+  *  549978bf - Version bumped to 1.6.
+  *  77ee6afe - Fixed segfault when attempting to open an unresolved IP
+    on mac/BSDs.
+  *  b44434ed - Fixed issue where the WebSocket server would fail with
+    POLLNVAL.
+  *  9f54f298 - Minor code formatting updates.
+  *  d65cae94 - Ensure max items per panel defaults to 1440 (24hrs) when
+    passing --date-spec=min.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 19 Jun 2022 16:56:28 +0000
+
 goaccess (1:1.5.4+git3743-77b04c1c-1) unstable; urgency=medium
 
   * Compile

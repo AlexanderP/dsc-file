@@ -1,3 +1,41 @@
+goldendict (1.5.0~rc2+git20220612-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/goldendict/goldendict.git
+  * Branch: master
+  * Commit: 9b5756d5e156f7714fba6e21fffc9ca179df9a4e
+  * Date: 1655058369
+  * git changelog:
+  *  9b5756d5 - Don't update pages history in
+    ArticleView::setCurrentArticle()
+  *  7df106c6 - Refactor: get rid of ArticleView::articleToJump
+  *  40dd0175 - Always jump to current article before reloading
+  *  0173251b - Jump to the first article too after expanding optional
+    parts
+  *  de69036e - ArticleView: deduplicate expand-optional-parts code
+  *  e8a1358b - Refactor: extract ArticleView::load()
+  *  ca0209fa - Save current article and window position before loading
+    DSL picture
+  *  10d0d819 - setCurrentArticle(): return false if the article doesn't
+    exist
+  *  99982a1c - ArticleView: expose only minimal API to JavaScript
+  *  aa33b8be - Disable assert macro checks in Release builds
+  *  8acec2e0 - Reduce build log verbosity
+  *  f9652487 - Zim: A little more support for new format features
+  *  55122eb7 - Zim: Handle new namespace (issue #1502)
+  *  0cea6269 - Linux-specific: workaround of clipboard issue with
+    Ctrl+C+C
+  *  c770e968 - Don't update state prematurely in showTranslationFor()
+  *  201f11e6 - Set current article at most once in loadFinished()
+  *  efb4a84d - fix: duplicated entries in epwing dictionary
+  *  f07ba75a - Epwing: Fix full-text search for some CJK dictionaries
+    (issue #1490)
+  *  b87b023d - Optimize highlighting FTS matches in articles
+  *  bd5b36ca - Extract ArticleView::highlightAllFtsOccurences()
+  *  9f5788ee - Remove unused declaration showFindButtons()
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 19 Jun 2022 17:05:55 +0000
+
 goldendict (1.5.0~rc2+git20220510-1) unstable; urgency=medium
 
   * Compile

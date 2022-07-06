@@ -1,3 +1,407 @@
+freecad-daily (0.19.2+git29215-e9bb9afc3b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: e9bb9afc3bac7df63a6d3b4e5e1e6825efef8a26
+  * Date: 1655657030
+  * git changelog:
+  *  e9bb9afc3b - [skip CI] [Path] fix typo
+  *  68a499574a - [Sketch] remove unnecessary Boolean comparisons
+  *  f4891488d3 - [Path] remove a unnecessary Boolean comparison
+  *  dbea942dda - [Image] remove more unnecessary Boolean comparisons
+  *  967c7fff65 - [Robot] remove unnecessary Boolean comparisons
+  *  7c98361447 - [Meh] Core: remove unnecessary Boolean comparisons -
+    part 2/2
+  *  a922605821 - [Meh] Core: remove unnecessary Boolean comparisons -
+    part 1
+  *  1a346722f8 - [Meh] Gui: remove unnecessary Boolean comparisons
+  *  4a052dc34a - [Path] cleanup formatting of Area.cpp/.h
+  *  1adff3f917 - [Path] remove unnecessary Boolean comparisons
+  *  b7097e4bd5 - [Image] remove unnecessary Boolean comparisons
+  *  28698a41e3 - [Point] remove unnecessary Boolean comparisons
+  *  db9aeefea1 - [Reverse Engineering] remove unnecessary Boolean
+    comparisons
+  *  60e419068b - fix Expressions assignment for FreeBSD
+  *  f64916dc5e - Base: Set angle in Rotation::inverse function
+  *  0a6d271121 - remove unused python<3.6 code
+  *  a4a8acd445 - [TD] remove unnecessary Boolean comparisons
+  *  bbcc8b2c5c - [Part] remove unnecessary Boolean comparisons
+  *  063fd56f5f - [App] remove unnecessary Boolean comparisons
+  *  6b09da9ab6 - [Base] remove unnecessary Boolean comparisons
+  *  c23a30b916 - [Gui] remove unnecessary Boolean comparisons
+  *  8e253cb4c8 - [FEM] fix a variable casting
+  *  fb1a7af360 - [TD]fix ProjGroup view spacing
+  *  4b47d38eb6 - [TD]fix dimension update on scale change
+  *  81be38ea8d - [Gui] View.cfg: fix typo
+  *  08d1e382e1 - [Gui] Add more general color settings to Preference
+    Pack
+  *  5b6ba058a7 - [Gui] Add more saving view data in Preference Pack
+  *  7814faa6fd - Gui: Add saving view data in Preference Pack
+  *  6c89e6dc73 - Spreadsheet: add tests for merging cells and binding
+    cells
+  *  453abff2fe - update screenshot in Readme
+  *  a1a4b89ba8 - Update Readme to FreeCAD 0.20
+  *  7e79686986 - Part: [skip ci] add tests for ruled surfaces
+  *  e89ebba736 - plugin: do not exclude widget plugins from tarball
+  *  79df90a45c - Mesh: fixes #7018: 3mf created with FreeCAD cannot be
+    loaded with PrusaSlicer
+  *  d8ca3093d0 - Update URL to HTTPS
+  *  b85e9b1fe4 - Mesh: fixes #6902: Conda test errors
+  *  ea7efbf96b - [Win installer] update information
+  *  68e337670e - Fem: remove string from translation
+  *  3158be46ad - Fem: added signals and slots to notify when first
+    function is added
+  *  02b66ca461 - [Win installer] refine deletion script
+  *  74c2ad4bf0 - [FEM] point filter: use a LineEdit to output value
+  *  522c91ce79 - [FEM] next try to proper revert
+  *  e8d65c22d6 - Revert Fixing principal stress plots part 2
+  *  166eee5eed - Fixing principal stress plots part 2
+  *  3af54a7dda - Fixing principal stress plots part 1
+  *  7fa294fd7a - Fem: for PointMarker and DataMarker use the internal
+    name instead of label, in customEvent() do not expect a fix name
+  *  7400b11870 - Fem: in FEM_PostFilterLinearizedStresses command do
+    not use a hard-coded object name but that of the selected
+    FemPostDataAlongLineFilter
+  *  915371aa70 - Fem: do not use the Label property but the internal
+    name  to access an FEM post object via Python
+  *  7b225789da - Fem: do not access the active document but the
+    document the FEM post object is part of
+  *  c0cccf7f7e - Gui: add overloaded version of cmdAppDocument and
+    cmdGuiDocument() that has a string as first parameter
+  *  5219718eb0 - GUI: Preliminary support for HiDPI splashscreen
+  *  4b1004b33a - Base: Improve docstrings in BoundBoxPy.xml
+  *  9aa14b36a3 - Fem: use WeakPtrT classes instead of raw pointers to
+    avoid possible dangling pointers and to avoid undefined behaviour if
+    a wrong static_cast is performed
+  *  876ef07480 - Gui: implement '*' operator for weak pointer classes
+  *  9e68e5f290 - App: implement '*' operator for weak pointer classes
+  *  27a36156f6 - Fem: improve TaskPostDataAtPoint: * refactor
+    TaskPostDataAtPoint::on_Field_activated() * show results in a label
+    instead of message box to reduce clicks * in output window also
+    print field and position as the pure values are useless
+  *  09f1b14cc9 - Fem: remove several superfluous casts
+  *  e0487b62a6 - Gui: [skip ci] set Std_LinkMakeRelative as WhatsThis
+    name
+  *  741fdc53c7 - Base: unset flag to skip leading whitespaces when
+    copying a file
+  *  832f181ec0 - [Gui] make What's This? work for sublinks
+  *  2a8f85d95c - [FEM] make post filter Ui std::unique_ptr
+  *  227e568b4f - [FEM] cut and clip filter: handle new functions
+  *  f0e735ed33 - [FEM] line filter resolution fix
+  *  ebd1afc5d9 - [FEM] fix 2 crashes with line and scalar filter
+  *  9065058265 - plugin: [skip ci] copy sizeHint handling to
+    QuantitySpinBox implementation in QtDesigner plugin
+  *  0a79760745 - Gui: set a minimum width for quantity spin boxes in
+    FEM dialogs to ignore the results of (minimum)sizeHint()
+  *  ac3390de12 - Gui: add function to determine size that a quantity
+    spin box would need to display a certain text
+  *  c2cfccf268 - Crowdin Add some menu text for translation.
+  *  505de3215b - [GUI] fix screenshot watermark
+  *  4f91499ada - [FEM] line filter, resolution tweak
+  *  4813e30703 - [FEM] fix line filter resolution
+  *  8bbf9b8347 - [Main] change URL
+  *  3528c626e7 - [FEM] fix plots of line filter
+  *  a06cc956c5 - [FEM] function dialogs size fix
+  *  e2856395a3 - [FEM] remove hardcoding of spinbox sizes
+  *  a3a97d7b5e - [FEM] fixes for line filter
+  *  0c43dab796 - [FEM] function dialogs fix
+  *  298fb8983d - [FEM] fix along line dialog
+  *  75546946db - Spreadsheet: fix border rendering for merged cells
+  *  4d19e611f8 - Spreadsheet: fix binding of merged cells
+  *  47a5a6302e - Spreadsheet: replace obsolete href with hiddenref in
+    binding
+  *  7b0b83a2e4 - [FEM] fix crash with data point filter
+  *  d81b016b2a - PD: several fixes of shape binder: * add action to
+    context-menu to remove an element * use an exclusive button group to
+    avoid to have several buttons pressed at the same time * allow to
+    completely clear the support * when pressing OK/Cancel then operate
+    on the document the shape binder is part of (which isn't necessarily
+    the active document) * remove obsolete parameter from
+    ViewProviderShapeBinder::highlightReferences()
+  *  5a432fe9ac - PD: allow to clear the shape when nullifying the
+    Support property
+  *  e6a6d838a6 - Spreadsheet: fix range selection
+  *  f3a8edcb5e - Merge pull request #7004 from Roy-043/Arch-
+    ArchSectionPlane-always-showed-plan-symbols-of-windows
+  *  baa1105a53 - Merged crowdin translations
+  *  6c1c63cffe - [FEM] point filter: fix data display for coordinate
+    change
+  *  9ef72fcd06 - [FEM] fix color bar handling of point filter
+  *  7521cfc7a0 - [FEM] fix point filter output
+  *  6d23205704 - [FEM] fix display of point filter
+  *  30706f4d0f - PD: allow to set object in shape binder dialog by
+    typing its name
+  *  6a877f7e29 - [FEM] point filter: fix initialization issue
+  *  007a5b351a - PD: use WeakPtr to avoid any possible dangling
+    pointers
+  *  9010b88b22 - Fix for non-Latin Group name in Tree View
+  *  a106f55ebe - PD: show object label instead of internal name in
+    shape binder dialog
+  *  b8434f2ddc - Test: [skip ci] extend test for issue #6949
+  *  6e587d130d - Expression: add unit test for issue #6948
+  *  38ec63cba1 - [Bugfix] Expression: fix precedence+associativity
+    management in parenthesis removal
+  *  fbb5555f27 - Part: do not expect a face to be infinite if meshing
+    it has failed See
+    https://forum.freecadweb.org/viewtopic.php?p=601240#p601240
+  *  9b5aabe458 - [FEM] fix unit handling of filter functions
+  *  9dc93b8f99 - [skip CI] [FEM] sort UI file
+  *  c8337118ba - [skip CI] [FEM] whitespace and comments to keep
+    overview
+  *  d13ecc1efa - [Path] fix compilation with precompiled headers
+  *  1b65b3f600 - [TD]fix icons for dark schemes
+  *  f89f032231 - Arch: ArchSectionPlane always showed plan symbols of
+    windows
+  *  083a27dc68 - Merge pull request #6886 from younghang/master
+  *  d4c180e953 - [FEM] fix unit handling of line filter
+  *  fdaca02994 - [skip CI] [FEM] fix initialization mistake
+  *  4c3c23776d - [FEM] fix illegal storage access in point filter
+  *  19ffd1ca94 - Merged crowdin translations
+  *  fa9c78611e - Updated ts files
+  *  825d95314e - [FEM] fix unit handling of point result filter
+  *  10c6d6eabf - [skip CI] [PD] fix typo
+  *  b54b3e6e32 - Addon Manager: Fix bug in macro git repo
+  *  6bb6bb4d24 - [FEM] fix unit settings of data point filter
+  *  8fb5ce3c43 - [FEM] allow to copy and edit result data
+  *  43a14ab4df - [FEM] fix result point filter upon line filter
+  *  dd00c46a8c - [FEM] fix issue that all plot windows had the same
+    name
+  *  10edc03ec1 - App: Clean up code in PropertyContainerPyImp.cpp
+  *  53e02bc851 - App: Improve docstrings in PropertyContainerPy.xml
+  *  d17954276c - [FEM] fix detached plot (#6998)
+  *  c4fec57368 - [FEM] fix linear filter plot (#6999)
+  *  d8bf4dfeb9 - App: Improve docstrings in MetadataPy.xml and fix
+    memory leak
+  *  7225e5f0ba - App: issue #6892: FreeCAD fails to start
+  *  68e8c19aaf - Merged crowdin translations
+  *  8d5a957eb0 - Gui: use expresion 'keyboard shortcut' to avoid
+    incorrect translation
+  *  e5fb5a6f27 - Mesh: [skip ci] improve German translation
+  *  ecb1b3c3cc - ReverseEngineering: [skip ci] improve German
+    translation
+  *  9a4ab21f2b - FEM: improve German translation
+  *  9d7b7af48c - Spreadsheet: fix range checking (#6997)
+  *  28c269cc5f - Gui: improve German translation
+  *  0f9ea612b6 - [Spreadsheet] uniform and polish wording of binding
+    feature
+  *  4148a33d15 - Gui: Improve docstrings in AxisOriginPy.xml
+  *  d7d22b1e7e - App: Improve docstrings in GeoFeaturePy.xml
+  *  5864e17d9d - Spreadsheet: improve range binding feature (#6995)
+  *  920e8e0469 - [FEM] Implement a better dialog layout management for
+    histogram (#6989)
+  *  c9cffae11d - Sketcher: Tweak pluralization of DoF
+  *  c143d91978 - Merge pull request #6991 from 0penBrain/draftGrid
+  *  f401cbe832 - Part: in BRepOffsetAPI_MakeOffsetFix::MakeWire also
+    consider the generated edges of the vertexes of the input shape
+  *  2e4dcfc22a - Generated ts files
+  *  b06f247f9f - Merged crowdin translations
+  *  e05e9a7247 - Draft: fix grid spacing default initialization
+  *  5792c502bf - [TD] further dialog refinements to fix vertical
+    spacing
+  *  ef1a835f4f - [TD] fix dialog height settings
+  *  18eb44d120 - [TD] fix dialog height setting
+  *  d0323e13c1 - [TD]add missing vertical spacer to ui
+  *  f31544dca8 - [TD]missing vertical spacer in ui
+  *  f256e3caf4 - [Gui] attempt to improve NaviCube rendering
+  *  0c6c3e5211 - Base: Improve docstrings in PersistencePy.xml
+  *  9570d88a39 - FEM: Enable translation of plot labels
+  *  6449e1bcf7 - FEM: Enable translation of axis label
+  *  47bb1408da - GUI: Add Vtk info to copied About data
+  *  77627bbc23 - Gui: add SoColorBarLabel as workaround for a Coin3D
+    bug
+  *  b9b21ddac5 - Merged crowdin translations
+  *  242083bbf7 - Merge pull request #6984 from Kuzma30/update_ts
+  *  eff8ecaafc - Crowdin Run update.ts with latest source code.
+  *  80bdc3f960 - Gui: don't use cached value of color bar width if
+    ratio of the canvas is less than 1.0
+  *  b4489422a5 - [TD]abort dimensioning of spline edge
+  *  8349a78dde - [TD]fix icon in dialog
+  *  fd47f2253a - Draft: Fix menu text for Select Plane
+  *  3cccd4d69e - Gui: cache color bar width to avoid to compute it for
+    every resize of the canvas
+  *  721f253c59 - Crowdin Update TechDraw.ts
+  *  29cc754cfd - [TD] Add ability to translate for some tooltip text.
+    Fix incorrect use of tr(variable).
+  *  af811b34b3 - Addon Manager: Additional diagnostics for Macro
+    updates
+  *  07422d2abe - Merge pull request #6978 from sliptonic/bug/ghostpath
+  *  6462cdf231 - zero out Job.Path property if it exists
+  *  9156d591c9 - [FEM] fix subsequent histogram plot call
+  *  4223e5d84d - [skip CI] [Spreadsheet] change misleading word in
+    dialog
+  *  7955c0dfac - [Spreadsheet] dialog fixes
+  *  681d961254 - [TD]fix updating of shared view
+  *  332cb9ec2f - [FEM] fix wrong error message about comments
+  *  34300c600f - [FEM] add missing parser handling of '^' character
+    (#6966)
+  *  f7c64c7322 - Crowdin Update Fem.ts
+  *  7e638a624e - [FEM] add missing tooltip
+  *  b5b5375fe4 - [FEM] result dialog: handle max shear stress
+  *  23d65cc9f2 - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  75a8998432 - [FEM] fix button text
+  *  6e97e9570c - [Sketcher] Add missing newline
+  *  27e3f3c153 - Crowdin Update .ts after fixing script.
+  *  a42e1b0223 - Crowdin Add full Part directory back to search path.
+  *  176cf0d144 -  Part: Reformat JoinDeatures by Black, delete some
+    comments. Reformat commented code too.
+  *  4d7e550d97 - [FEM] fix results dialog equation input
+  *  3fe354718c - [FEM] describe the tress variables
+  *  8567ef1849 - [skip CI] [FEM] change strings to be consistent with
+    the dialog
+  *  67c506d39e - Base: Improve docstrings in VectorPy.xml
+  *  9c8b21f5f4 - Web: update browser commands after loading page
+  *  f37574e809 - Base: raise TypeError if Vector is multiplied with
+    unsupported type
+  *  0d6b5b7f30 - Base: use const char*
+  *  f7f85464a3 - Base: include header in PCH
+  *  31047be9fb - Base: improve initialization according to cpp core
+    guidelines
+  *  ca9355b5cb - Base: remove redundant void
+  *  fc7f3f4e3d - Base: avoid const_cast in FileInfo
+  *  704feadc7c - [skip CI] [FEM] fix typos
+  *  e41879c6ea - [FEM] don't block FC by histogram plot window
+  *  2b0dd54fe7 - [TD]fix preference file handling
+  *  d73f9e3762 - FEM: Add translation calls to
+    task_result_mechanical.py
+  *  134fa8b7ea - [FEM] use proper histogram titles
+  *  e8f1bde367 - Merged crowdin translations
+  *  2d32de3cd2 - FEM: Tweak translatability of PEEQ
+  *  56d289997c - [TD]fix Dimension/Balloon movement
+  *  4dab407fbe - Tools: Manually search for translatable files
+  *  34502193a2 - i18n: Update TS files to ensure Python files are
+    included
+  *  d540de8bee - i18n: TS files generated by lupdate 6.4.0dev
+  *  acfbc72f50 - Tools: Fix issues with updatets.py
+  *  3c1e446c2f - Addon Manager: Don't translate placeholder text
+  *  2d5400f923 - Sketcher: Fix typo in tooltip
+  *  be16e1f52b - Sketcher: Tweak tooltip language
+  *  be8a4037db - FEM: Fix typo
+  *  977127012e - [TD]fix misleading error messages
+  *  89432a969d - TD: Set symbols to be non-translatable
+  *  7b204c01db - Gui: Fix typo
+  *  ee4f4e8cb7 - Base: Improve docstrings in CoordinateSystemPy.xml
+  *  297e3520ec - Base: Improve docstrings in TypePy.xml
+  *  8891394d5a - [TD]fix Rotation not applied
+  *  d223d4362c - [TD]fix double draw on position change
+  *  213bf1ec61 - Tools: Add Windows and Qt6 support to updatets.py
+  *  d860c4bb2d - PD: Fix w[z] plot in ShaftWizard
+  *  a0c0b2616c - Fix various typos
+  *  07e38636b9 - Addon Manager: Fix bug with updates being counted
+    wrong
+  *  a4b2bf584d - Gui: Fix display of tooltips for GroupCommand
+  *  477eed10a4 - [TD] Fix incorrect using  of QT_TRANSLATE_NOOP in
+    setText
+  *  9946a3916e - [FEM] TaskPostDataAtPoint: add missing support for
+    electrostatics
+  *  a67701b85b - Crowdin Add missing menu text for translation
+  *  2de25dd04e - [PD] fix Shaft wizard
+  *  3f04bf7b4d - [TD] Add text to translate This will fix
+    https://github.com/FreeCAD/FreeCAD-translations/issues/47
+  *  8c123bad50 - App: add default macro directory to sys.path
+  *  eda43a2ef9 - [Win installer] register all FC-specific file types
+  *  81d6401455 - [Win installer] update website
+  *  5542bc9970 - Addon Manager: Remove unnecessary translations
+  *  3dfb51d3ee - Addon Manager: Expose pref page name to translate
+  *  79a5cde3b5 - Base: Fix bad parse argument in AxisPyImp.cpp
+  *  33556d8a56 - Part: Change _translate to translate
+  *  b8952aaeb8 - Image: Change _translate to translate
+  *  819cfd7a11 - [TD] Fix problem with translation (add TechDraw_ to
+    context) This will fix https://github.com/FreeCAD/FreeCAD-
+    translations/issues 145-147
+  *  d447d75882 - Merged crowdin translations
+  *  d920a5bf4d - [Mesh] Add ability to translate This fix
+    https://github.com/FreeCAD/FreeCAD-translations/issues/53
+  *  35c872d4f2 - Base: Improve docstrings in MatrixPy.xml
+  *  98cb5d50af - Base: Fix undefined behaviour in row/col functions and
+    code clean up
+  *  62f65e12e2 - Part: Change contex from AttachmentEditor to
+    Part_EditAttachment Add menu text Create a copy to translation This
+    may fix https://github.com/FreeCAD/FreeCAD-translations/issues/64
+  *  f7b9a70ee5 - Addon Manager: Build in error-checking in developer
+    mode
+  *  03f3852617 - List all available test units, if none is selected.
+  *  537acfdddd - [Gui] code documentation of color bar
+  *  307cb3cda8 - Gui: Check for Snap and add details to About
+  *  0b574523e9 - [TD] Fix redefine text in .ui (that has translation on
+    crowdin) with English text without translation ability. This will
+    fix https://github.com/FreeCAD/FreeCAD-translations/issues/50
+  *  8edb3e64cc - Part: make DimensionLinear node kit unpickable See
+    forum thread: https://forum.freecadweb.org/viewtopic.php?f=3&t=69056
+  *  e13e3bcea3 - Merge pull request #6899 from 0penBrain/draftGrid
+  *  c2e34be393 - Part: Fix Chamfer parameter and Fillet parameter
+    title. Also rename variable to more informative in .ui. This will
+    resolve issues https://github.com/FreeCAD/FreeCAD-
+    translations/issues/74
+  *  c5296fbb92 - Gui: initialize _bbox with correct default values and
+    fix incorrect label postions if ratio of width/height is less than 1
+  *  1723196166 - Gui: fix shrinking and shifting of color bar if ratio
+    of width/height is smaller than one
+  *  37d2492719 - Gui: refactor SoFCColorGradient::setViewportSize and
+    SoFCColorLegend::setViewportSize
+  *  47125d8fda - Arch: Fixed position of rectangles in IFC export
+  *  d3d96816ce - Merged crowdin translations
+  *  7907b0f8b3 - [Gui] describe gradient code better
+  *  c4cd127499 - Gui: fix number display issue of color bar
+  *  919271ed5e - Gui: fix visibility of front nodes when moving an
+    object to Part container
+  *  79c218ad9a - [Gui] fix default color gradient numbering
+  *  7b79c9697c - [TD]prevent spurious recompute on click/drag
+  *  30f8015e71 - Part: expose ChFi2d_ChamferAPI to Python
+  *  f94ab3ec84 - Part: expose ChFi2d_AnaFilletAlgo to Python
+  *  b47f8d2605 - Part: move ChFi2d wrappers to own sub-directory
+  *  8e1a23eadf - Base: Improve docstrings in RotationPy.xml
+  *  391c9a6bbf - buttonClicked(int id) is deprecated since Qt 5.15. Use
+    idClicked(int id) instead.
+  *  bf6dbd4606 - Gui: react on picked point when double or right-
+    clicking color bar
+  *  8676d67a87 - merged crowdin translations
+  *  a80d9e5ef8 - Fem: [skip ci] fix deleting Result object if its
+    children has been deleted beforehand
+  *  b07be87677 - Part: expose ChFi2d_FilletAPI to Python and move to
+    ChFi2d module
+  *  bd853e5ef2 - Part: expose ChFi2d_FilletAlgo to Python
+  *  4c2972cb23 - AddonManager: Work around thread-safety issue in
+    update
+  *  975b8eac52 - [skip CI] add missing line ending
+  *  836c6b889a - add description on how to build installer from self-
+    compiled FC
+  *  b02705d79f - Part: apply OCC's fix for ElSLib::ConeDN and write a
+    unit test
+  *  1e034cc47f - Merged crowdin translations
+  *  914de33bf2 - Base: Improve docstrings in PlacementPy.xml
+  *  ee6f0d0ba9 - Part: fix ruled surface transformation problem
+  *  26e4a3345b - Part: Link support -- replace TopoShape.getSubShape()
+    with Part::Feature::getTopoShape(obj, elementname, true).getShape()
+    in order to support use of App::Link sublinks.
+  *  0791001787 - Base: Improve docstrings in AxisPy.xml
+  *  45a0e6eb20 - Mesh: [skip ci] add 3mf format to export dialog
+  *  9251480ddb - PartDesign: Remove redundant comparision with null
+    pointer
+  *  4474db7f50 - Draft: force length unit in grid spacing in
+    SelectPlane
+  *  ccdbf99341 - Draft: fix issues with grid spacing parameter
+  *  d492ac3083 - PD: fixes #6451: Face color of PartDesign Body not
+    exported to STEP
+  *  a05eb7c07b - Gui: [skip ci] avoid possible recursive loading of a
+    module in WorkbenchManager::createWorkbench
+  *  1383b47659 - Test: [skip ci] add unit tests for PR #6907
+  *  c00699b15d - Gui: Prevent crash when trying to delete pointer to
+    BaseClass
+  *  e76e4acb0f - Base: Prevent crash when trying to create badType
+    instance
+  *  a865e4f834 - Enabled github sponsors
+  *  daf2df6f80 - [CMake] remove traces of assembly module
+  *  a4480b4ba7 - plugin: improve support on Windows
+  *  b903e949ae - Update .ts with lupdate ver 6.4.0.
+  *  bfecd1359b - [TD]fix checkFit to use current scale
+  *  e1f2685734 - PD: Typo fix
+  *  469c36e3cc - Mod: handle removed headers in PCH files for OCC 7.6
+  *  f5cf112f48 - Spreadsheet: fix possible crash in SheetModel::setData
+    See also: https://forum.freecadweb.org/viewtopic.php?f=8&t=68529
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 19 Jun 2022 16:55:36 +0000
+
 freecad-daily (0.19.2+git28915-7d6243d696-1) unstable; urgency=medium
 
   * Compile
