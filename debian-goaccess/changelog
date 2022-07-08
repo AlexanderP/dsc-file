@@ -1,3 +1,71 @@
+goaccess (1:1.5.4+git3819-5c45fdae-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 5c45fdae1b9dc53523198bb718546d57e4698110
+  * Date: 1657110330
+  * git changelog:
+  *  5c45fdae - Ensure the HTML last updated label reflects the given
+    timezone.
+  *  6e5bead7 - Fixed issue where timezone conversion would be performed
+    twice on a given date.
+  *  d6fd5bc4 - Use the latest multi-arch release for deb packaging.
+  *  49641660 - Update README.md
+  *  51559af4 - Use the latest multi-arch release for deb packaging.
+  *  58f3a3a0 - Use the latest multi-arch release for deb packaging.
+  *  f90a2c9d - Use the latest multi-arch release for deb packaging.
+  *  e4503790 - Added amd64 and i386 support to deb packages.
+  *  e225f1b3 - Fixed revision typo.
+  *  e95e419e - Added amd64 and i386 arch to test deb packaging.
+  *  3c9934d8 - Removed debian jessie from arm64 deb workflow.
+  *  a6c4801a - Updated .deb packaging workflow.
+  *  f43871de - Added additional deb packaging distros.
+  *  027ec5f1 - Updated path to upload artifacts for deb packaging.
+  *  58a2f1e4 - Updated path to upload artifacts for deb packaging.
+  *  e5222d67 - Updated path to upload artifacts for deb packaging.
+  *  b8b7f616 - Updated deb packaging to remove sudo.
+  *  8ba3125f - Updated deb packaging to upload artifacts.
+  *  dcae0f62 - Updated deb packaging.
+  *  13aaefbe - Updated deb packaging.
+  *  d2a2c987 - Updated deb packaging deps on run section.
+  *  5a8938db - Moved deb packaging deps to run section as sudo.
+  *  995f2de0 - Moved deb packaging deps to run section.
+  *  6f7ce6d6 - Moved deb packaging script to run section.
+  *  028ca3ff - Added lsb-release dep to the deb workflow action.
+  *  994f1259 - Added multi-arch deb packaging Github Action.
+  *  f4012023 - Use _DEFAULT_SOURCE as _BSD_SOURCE is deprecated.
+  *  8fa51e12 - Fixed implicit declaration warning of timegm(3) on BSDs.
+  *  0146fe5e - Attempt to run make with more privileges (github
+    actions).
+  *  9ca9a9c1 - Attempt to run make with more privileges (github
+    actions).
+  *  2c53578a - Ensure setup envs. are run before build.
+  *  09b0a68e - Added build test github action.
+  *  d7032486 - Added build test github action.
+  *  bcd7de0b - Updated lang po files with latest changes.
+  *  8972fe53 - Updated lang po files with latest changes.
+  *  b828bc26 - Updated AUTHORS to reflect latest contrib.
+  *  19cc86b7 - Updated man page with the latest info.
+  *  31e76538 - Version bumped to 1.6.1
+  *  691c6993 - Version bumped to 1.6.1
+  *  d78479d8 - Version bumped to 1.6.1
+  *  6b5c55ad - Version bumped to 1.6.1
+  *  4ce4d7be - Version bumped to 1.6.1
+  *  f171e985 - Version bumped to 1.6.1
+  *  655d7c95 - Ensure we assume either DST or non-DST for the given
+    timestamp.
+  *  b3f6cd34 - Fixed issue where real-time data would be parsed
+    multiple times under Cygwin.
+  *  e912189a - Removed unnecessary code from time specificity.
+  *  d02715a8 - Ensure timezone conversion works on timestamps
+    (s,ms,us).
+  *  b5611a33 - Added support for timezone conversion via --datetime-
+    format and --tz.
+  *  63172be2 - Minor code formatting update.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 06 Jul 2022 19:59:58 +0000
+
 goaccess (1:1.5.4+git3770-c19db58a-1) unstable; urgency=medium
 
   * Compile

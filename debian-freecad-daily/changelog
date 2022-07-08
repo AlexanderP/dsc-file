@@ -1,3 +1,339 @@
+freecad-daily (0.19.2+git29449-91f84184bf-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 91f84184bf4712ba01234b77dc906c53f76c063d
+  * Date: 1657099683
+  * git changelog:
+  *  91f84184bf - Merge pull request #7138 from Roy-043/Draft-
+    displayStatusbarScaleWidget-should-be-checked-in-ui-file
+  *  212b140d82 - GuiPy: allow to call setupWithoutGUI more than once
+  *  966911775a - Draft: displayStatusbarScaleWidget should be checked
+    in preferences-draftinterface.ui
+  *  b4c480737f - Test: [skip ci] set direct connection mode as
+    otherwise the test will fail
+  *  5dcd27df93 - Gui: test for ILoggerBlocker
+  *  95a98669a4 - Gui: implement temporary blocker for console observer
+  *  06d65c73a3 - [BUGFIX] Gui: correctly restore message type enabling
+    in report view
+  *  3fe4e4b6a6 - [BUGFIX] Gui: correctly save and restore warning type
+    enabling in report view
+  *  8f4a982696 - Merge pull request #7132 from Roy-043/Draft-Fix-near-
+    snap
+  *  d82240e991 - Merge pull request #7135 from Roy-043/Arch-Invert-
+    opening-symbol-Simple-door
+  *  616cde7dfd - Arch: Invert opening symbol Simple door
+  *  f4ec49ed28 - [TD]fix multiple open dialogs
+  *  b6c20202cd - [TD]adjustable extension line gap
+  *  90d660260c - [Part] CylinderPyImp.cpp: add missing include
+  *  f92b5b4b7f - [Part] Cy* - Fac*: remove unneeded includes
+  *  e6e210467e - Update gui_snapper.py
+  *  45d7151dfa - Test: [skip ci] unit test for fix of Vector2d::Rotate
+  *  11c6f4a9e9 - [TD]fix scaling of bitmap
+  *  ab9ff476e1 - Merge pull request #7122 from donovaly/Arch-fix-typo
+  *  de839911e9 - Gui: show thumbnails in file dialog
+  *  4dbeb8c5aa - Gui: make sure to use FileIconProvider in FileDialog
+    and delete it after closing the dialog
+  *  bc2d022e55 - [Part] edgecluster.h: add missing include
+  *  5834cc8060 - [Part] ExtrusionHelper.h: add missing include
+  *  27a69f89c3 - [Part] E*: remove unneeded includes
+  *  e1a8c65a99 - Removed old wiki2qhelp file - issue 7120
+  *  988ec4c4fb - Drawing: [skip ci] fix build failure
+  *  fd68d0d947 - [Part] Geometry*: remove unneeded includes
+  *  e790566fd4 - [Part] SectionCutting.cpp: attempt to fix CI compiler
+    error
+  *  88d1808ccb - Draft: Fix near snap
+  *  70a5faf327 - Part: fix build failure
+  *  3aa4955e94 - [Part] fix MSVC compiler warning
+  *  7a17e579f5 - [Part] Geometry*PyImp.cpp: remove unneeded includes
+  *  d7d503de8d - App: fix build failure on Windows caused by PR #7034
+  *  738f6f47e9 - [App] Fix file not found error with canonical filename
+  *  84d766f0eb - [App] Fix #5592 : Respect symbolic links
+  *  2aac6ea1d9 - [Part] Import*.cpp: remove unneeded includes
+  *  828d4564c1 - Delete .arcconfig
+  *  2d19fad276 - [Part] H* to mo*: remove unneeded includes
+  *  c0fa37cfa9 - [FEM] update includes
+  *  9a41845a41 - [Part] OCCError.h: remove unneeded includes
+  *  0a5a7f6744 - [TD] DrawDimHelper.cpp: add missing include
+  *  c5ed57c405 - [TD] ShapeExtractor.cpp: add missing include
+  *  49f707e885 - [Measure] Measurement.cpp: add missing include
+  *  c5678ef373 - [PD] FeatureDressUp.cpp: add missing include
+  *  3bab125da7 - [Part] PlanePyImp.cpp.cpp: add missing include
+  *  6fb7f614c7 - [Part] Pa* to Pre*: remove unneeded includes
+  *  73511f82c2 - [Part] Prim* to Sur*: remove unneeded includes
+  *  01b4352693 - [Part] SectionCutting: remove unused include
+  *  ca5efc5be1 - [Part] To*: remove unneeded includes
+  *  74d582617c - [Part] TopoShapeFacePyImp.cpp: add includes needed by
+    the CI compiler
+  *  8e9b359928 - [Part] Topo*: remove unneeded includes
+  *  a4b054c063 - LGTM: omit src/Tools/wiki2qhelp.py from analysis
+  *  ac4fa39ad4 - [TD]fix bitmap hatch
+  *  96cb9dce0b - [Base] Tools2D.h: a simplification and code style
+    unification
+  *  06edc2db9b - Vector2d:fix rotate bug
+  *  6820e0a9ec - Py3: properly port to Py3.11
+  *  fcdec28716 - Merge pull request #6974 from agren/restore-path-
+    drilling-retract-behaviour
+  *  e844c4d20b - [App] [skip CI] fix minor code style issue
+  *  75165e9594 - [Robot] fix typo in function name
+  *  a88f69a9f0 - [Sketcher] Only move one piece of B-spline when
+    dragging
+  *  ef088674ba - [FEM] fix wrong console outputs for fluid materials
+  *  8afc5d3f0a - FEM WB Elmer viscosity bug fix.
+  *  7bf9f30c5f - [Base] UnitsSchemaInternal: improve code readability
+  *  1ae55905ba - Py: make FreeCAD to compile with Py3.11
+  *  19a69df0fc - Sketcher: Bug fix
+  *  94155361a0 - [Arch] fix typo in function name
+  *  1021098106 - remove unused boost files
+  *  7001caea9a - [FEM] [skip CI] fix a typo
+  *  3d597b797a - [AddonMgr] [skip CI] fix typo
+  *  13db192fca - [Gui] [skip CI] update for DlgProjectInformation.ui
+  *  dc57327e7f - fIx Cmake Messages
+  *  75d8371d2b - Arch: [skip ci] fix unit test
+  *  9b2b0e0acf - modernize C++: replace boost::function with
+    std::function
+  *  c7c43fcf4b - Core: fix minor issues: + fix issues found by clang's
+    clazy tool + fix cppcoreguidelines-pro-type-member-init   * Make
+    sure that all class members are initialized in the constructor
+  *  2949ab1a2b - [TD]remove unused code
+  *  fdcfd4c565 - [TD]Navigation Styles - context menu handling & std
+    cursors
+  *  866da5980c - [TD]fix Dimension export to DXF
+  *  460d153d6c - [TD]Include CosmeticLines in Dxf
+  *  2326186428 - Sketcher: Bug fix SolverGeometryExtension
+  *  b50e0485d9 - Test: ignore UnicodeEncodeError in
+    TestMetadata.test_file_path
+  *  317c6afd45 - Mesh: fix (Qt) issues found by clang's clazy tool
+  *  a427c1e99e - Base: [skip ci] fix slight regression caused with
+    d162d9371
+  *  e916f8afbb - Arch: Fixed test to work without the Drawing module
+  *  59b945dcc3 - Merge pull request #7111 from
+    sliptonic/bug/camoticsimport
+  *  d5921e08ec - fix (Qt) issues found by clang's clazy tool: + -Wclazy-
+    incorrect-emit + -Wclazy-strict-iterators + -Wclazy-overloaded-
+    signal + -Wclazy-qstring-arg + -Wclazy-unused-non-trivial-variable +
+    -Wclazy-container-anti-pattern + -Wclazy-range-loop-reference + -
+    Wclazy-const-signal-or-slot + -Wclazy-detaching-temporary + -Wclazy-
+    qfileinfo-exists
+  *  898b1007b9 - Test: use codecs.open in TestMetadata.test_file_path
+  *  7b377a216b - Gui: remove workaround for spnav 0.23 due to build
+    failure with musl libc
+  *  82bbe47d68 - Test: set encoding to utf-8 in
+    TestMetadata.test_file_path
+  *  22829f8a24 - App: issue #7112: Addon manager does not work on
+    windows with special characters in the username
+  *  448b1ec9f3 - Test: [skip ci] test file path with utf-8 <-> utf-16
+    conversion
+  *  9a70b165cc - App: fixes #7102: Undo/Redo of PropertyEnumeration
+    fails with MSVC
+  *  e428337ffc - Another import bug.  This time if --version doesn't
+    return a patch number.
+  *  e07cfa09bb - Test: extend test for enumeration
+  *  9763ed29e2 - Split DSHs from CommandCreateGeo
+  *  19230c83ef - Remove obsolete DSH Tools - CloseShape and
+    ConnectLines
+  *  3678a525a2 - DrawSketchHandler: Cursor rework and preselect at
+    point functionalities
+  *  2cf0c49955 - DrawSketchHandler: mechanism to update the cursor
+  *  f16c3f36a9 - DrawSketchHandler: Functions to draw cursor position
+    and direction
+  *  b80cd6a417 - DrawSketchHandler: refactor crosshairCursor
+  *  c6459bb7d3 - Utils refactor w/o commandcreategeo
+  *  9da0f369b1 - Utils: Conversion from 2d vector into XY plane 3d
+    vector
+  *  3cd34e1c38 - Sketcher-Utils: vector of smart pointers to vector of
+    pointers
+  *  bae8050fac - Sketcher-Utils: Refactor common code up
+  *  f99abec58e - Sketcher: Create Geometry ConstraintToAttachment
+    function
+  *  80cd03cded - Sketcher: Cleanup obsolete DrawSketchHandlers
+  *  df50dca01b - PythonConverter-Sketcher: A class to convert sketcher
+    geometries and constraints into the commands to generate them
+  *  c6aa3c91e6 - ViewProviderSketch: Cursor movement and preselection
+    at sketch coordinates
+  *  473c2efc38 - Sketcher: SketchObject - Add ability to diagnose
+    constraint redundancy before addition
+  *  f2c1f35aaf - Sketcher: SolverGeometryExtension and sketch parameter
+    information improvements
+  *  d847d309b0 - Merge pull request #7109 from Roy-043/Draft-Fix-
+    default-fillmode-in-DraftGui.py
+  *  bc37be0c54 - Draft: Fix default fillmode in DraftGui.py
+  *  779128b5f4 - Gui: get rid of some const_cast
+  *  3af5cfaed6 - Part: add method to project point on curve
+  *  9a3258c9da - Part: move BiArcs algorithm to its own class
+  *  9de8b33bb4 - Part: fix GeomBSplineCurve::toBiArcs If tangent of
+    start and end point are parallel then also check a tangent in
+    between to make sure that it can be considered a straight line See
+    https://forum.freecadweb.org/viewtopic.php?f=8&t=69710
+  *  0c797ae6a8 - [Base] remove unused MSC code
+  *  d162d9371c - Remove old msc ver. Freecad 0.20 require 64 bit and
+    windows 7 or higher. For this reason, msc libraries less than 1800
+    will no longer be used. (#7036)
+  *  d13db0ea4c - Merge pull request #7096 from sliptonic/bug/camotics
+  *  657f04908f - Merge pull request #7105 from Roy-043/Draft-Fix-align-
+    working-plane-to-DatumPlane-bug
+  *  27bfa083b2 - Update src/Mod/Draft/draftguitools/gui_selectplane.py
+  *  d69888b74d - Draft: Fix align working plane to DatumPlane bug
+  *  e8f3227191 - [FEM] fix point filter initialization issue
+  *  3a86b17194 - [TD] fix linker error with MSVC
+  *  a84220cd21 - Also check that the module imports correctly
+  *  25242430f4 - Restore drilling op retract value to user supplied
+    Retract Height
+  *  8acfd5bce7 - TD: minor fixes: * remove superfluous semi-colons * if
+    a method is declared override then the keyword virtual should be
+    dropped
+  *  175ecbc50f - Draft: handle the absence of the Drawing module in the
+    unit tests
+  *  8ee773362e - Sketcher: Fix warning not all enum handled in switch
+  *  073bf3215c - Sketcher: Constraints - add ability to generate
+    constraint type string
+  *  1f07083d4a - Merge pull request #6760 from
+    Russ4262/fix/dressup_leadinout
+  *  cd208c5477 - Part: Geometry - Add Ellipse minor radio convenience
+    function
+  *  6a06f60ee3 - Part: Geometry - function to get the conic axis
+    direction
+  *  7db925d991 - App: fix memory leaks in Enumeration class and
+    simplify code
+  *  d7313598aa - CMake: disable Drawing module by default
+  *  02bc430fac - Draft: handle the absence of the Drawing module in the
+    unit tests
+  *  2b04b01edc - cppcoreguidelines-special-member-functions * disable
+    move constructor and move assignment for several core classes
+  *  6b6df27df8 - C++ core guidelines: * ES.87: Don’t add redundant ==
+    or != to conditions
+  *  45b9f2a7aa - Fix import error if camotics not installed.
+  *  7de296b60e - cppcoreguidelines-pro-type-union-access   According to
+    https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuide
+    lines.md#Ru-pun using union for type-punning is undefined behaviour.
+    See also https://en.wikipedia.org/wiki/Type_punning#Use_of_union.
+    Replace it with std::memcpy.
+  *  14668197d1 - Base: Minor changes in some Python docstrings
+  *  999f3b85ee - [PD] re-add accidentally removed code in commit
+    93525ff7
+  *  1b2f0063a1 - [PD] Hole initialization bugfix
+  *  175d2cf2dd - [TD]remove build depend on DrawingWB
+  *  4ec9c381d4 - Part: re-add dropped parameter (93525ff7eb2)
+  *  0cd8fb12f3 - [Part] Fix display labelfillet name for Chamfer and
+    Fillet (#7083)
+  *  93525ff7eb - removed references to  OCC<7
+  *  e9890c0798 - Gui/Mod: replace several reinterpret_cast with
+    static_cast
+  *  360b4282f7 - [PD] Hole dialog fixes
+  *  1aa897d450 - Fem: remove some superfluous const_cast
+  *  8573d9f8b2 - TD: fix possible dangling pointer in QGIHighlight
+  *  5234d9bc67 - App: add pure virtual methods to PropertyGeometry to
+    delegate it to the geometry of sub-classes Following the law of
+    Demeter add some wrapper methods to PropertyGeometry and implement
+    them in sub-classes. As a side-effect this makes some const_cast
+    obsolete
+  *  f87d9bd626 - Part: [skip ci] remove superfluous const_cast
+  *  9894964eb6 - [TD]implement navigation styles
+  *  e53e231677 - Gui: remove some superfluous const_cast
+  *  c955372ecf - cppcoreguidelines-pro-type-union-access  According to
+    https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuide
+    lines.md using union for type-punning is undefined behaviour.
+    Replace it with std::memcpy
+  *  393352387d - Merge pull request #7071 from Roy-043/Draft-Fix-
+    Placement-in-make_sketch
+  *  830b3944db - Merge pull request #7067 from Kuzma30/add_ts
+  *  15e3e86c5a - [.github] next try to make bug reporting rule clear
+  *  b12e7a8ad6 - [.github] make bug reporting rule clear
+  *  ad8bb4dc69 - GeomBSplineCurve: Add interpolate without tangents
+  *  620c273c4e - Boost version <=1.60 is never used in freecad 0.20
+    (#7038)
+  *  b308da5387 - [BUGFIX] Gui: fix mouse Gesture navigation mode
+  *  00e7eae6f8 - [Sketcher] Use more segments while drawing splines
+  *  ad0f1147f7 - Part: Use PyObject_IsTrue in combination with
+    conditional ternary operator
+  *  ea79771afd - Import: Use PyObject_IsTrue in combination with
+    conditional ternary operator
+  *  a91e32a6f4 - Mesh: Use PyObject_IsTrue in combination with
+    conditional ternary operator
+  *  37511553f7 - PartDesign: Use PyObject_IsTrue in combination with
+    conditional ternary operator
+  *  d298a7101c - Path: Use PyObject_IsTrue in combination with
+    conditional ternary operator
+  *  51f3727d3c - Sketcher: Use PyObject_IsTrue in combination with
+    conditional ternary operator
+  *  f78412c75b - Gui: Use PyObject_IsTrue in combination with
+    conditional ternary operator
+  *  ccfa6cd9e5 - Main: Use PyObject_IsTrue in combination with
+    conditional ternary operator
+  *  89803987a1 - Base: Use PyObject_IsTrue in combination with
+    conditional ternary operator
+  *  22763c9e4f - App: Use PyObject_IsTrue in combination with
+    conditional ternary operator
+  *  69932742d2 - Rename FindOpenCasCade.cmake to FindOCC.cmake
+  *  4de0e8244e - Base: add Const attribute to many MatrixPy methods
+  *  a527daa4b3 - Part: add Const attribute to several methods in
+    TopoShapePy
+  *  54a4e02514 - Merge pull request #7075 from
+    sliptonic/bug/camoticsgui
+  *  012fe8d9b6 - Missing camoticsgui file in the CMakelists.
+  *  7de8a14b37 - Base: add Const attribute to MatrixPy::inverse()
+  *  256c4cd086 - Draft: Fix Placement in make_sketch
+  *  9e2ee47b01 - created clang-format
+  *  82da0065c4 - Base: Add function to get Python object types for SWIG
+    interfaces
+  *  b7cc7261b8 - Stylesheets: fix typos [skip ci]
+  *  cd32457b60 - Part: Add ShapeFix.hxx to precompiled header
+  *  818a890512 - Merge pull request #7065 from
+    sliptonic/feature/outputnaming
+  *  86fc7298a1 - UI fixes
+  *  40395a0a57 - Crowdin Add Material to updatets.py script and create
+    new Material.ts
+  *  166306469a - Add missing file.
+  *  e678620cbd - Crowdin Update .ts files with current source.
+  *  a83fc8acd1 - Crowdin Add no-sort option to lupdate.
+  *  4b0c125d61 - Crowdin Add Inspection WB to updatets.py script
+  *  5f4ea420b0 - Inspection Add more translation texts.
+  *  b70d8d3781 - Part: expose ShapeFix_FixSmallSolid to Python
+  *  4c2946c8a4 - Part: expose ShapeFix_FixSmallFace to Python
+  *  6843a461e6 - Part: expose ShapeFix_Wireframe to Python
+  *  bbecc3f296 - Part: expose ShapeFix_SplitTool to Python
+  *  8c6ffc99e3 - Part: expose ShapeFix_WireVertex to Python
+  *  1ee1aee10e - Part: expose ShapeFix_FreeBounds to Python
+  *  125d5b6360 - Part: expose ShapeFix_ShapeTolerance to Python
+  *  a0eb2e9de7 - Part: expose ShapeFix_FaceConnect to Python
+  *  4b44c54cfa - Part: expose ShapeFix_SplitCommonVertex to Python
+  *  4d4adb932b - Part: expose ShapeFix_EdgeConnect to Python
+  *  74c75b86a0 - Part: workaround for missing include in OCC >= 7.5
+  *  6cfd7d21e8 - Part: fix typos
+  *  8d56879305 - Part: expose ShapeFix_Solid to Python
+  *  4089cbfbf2 - Part: expose ShapeFix_Edge to Python
+  *  ac421ffd0e - Part: add convenience function to convert Placement
+    into TopLoc_Location
+  *  87db9dccb5 - Part: expose ShapeFix_Shape to Python
+  *  94f6279a67 - Part: expose  ShapeFix_Wire to Python
+  *  da4b05fdcc - Part: expose  ShapeFix_Shell to Python
+  *  b6cd635cc1 - Part: expose ShapeFix and ShapeFix_Face to Python
+  *  f3e941a382 - Part: start to expose ShapeFix framework to Python
+  *  6b2882e01f - Part: support of box selection in shape builder task
+    panel
+  *  8998c9847d - Points: fixes #5785: a python method to convert a
+    Shape into a point cloud without extra dialog but parameter
+  *  e7a9081097 - Mesh: replace boost::bind with std::bind
+  *  b416c42d58 - Tools: add script to create snapshots in headless mode
+  *  0d34449613 - Gui: expose SoQtOffscreenRenderer to Python
+  *  0a4488462c - Mesh: reduce the use of const_cast in Mesh module
+  *  9db32a3911 - Merge pull request #7056 from Kuzma30/toolbit_tr
+  *  e1eeabc86c - Merge pull request #6637 from
+    sliptonic/feature/camotics
+  *  8dad6cf84d - Resolving bugs and rebasing for 0.21 merge
+  *  35919e2a75 - Test: [skip ci] test for fixed Rotation::inverse()
+  *  796d722072 - Path: fix warning: extra ';' inside a struct/class [-
+    Wextra-semi]
+  *  b310a3e503 - Base: Fix wrong function name in RotationPy
+    documentation.
+  *  0678946103 - [core] update version number
+  *  4ccd24fe14 - [Crowdin] Add new texts for translation from Path
+    ToolBit
+  *  7b02f492fa - [Path] Add localization for PathToolBit
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 06 Jul 2022 19:59:01 +0000
+
 freecad-daily (0.19.2+git29215-e9bb9afc3b-1) unstable; urgency=medium
 
   * Compile

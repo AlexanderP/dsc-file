@@ -1,3 +1,216 @@
+labplot (2.8.2+git9943-6349a8b6a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 6349a8b6a9820876b13d59937dbc0a865bc44d6e
+  * Date: 1657142534
+  * git changelog:
+  *  6349a8b6a - code format
+  *  8ee65d850 - live data: improve TCP values column names
+  *  bb48537e8 - live data: rename symbols and fix TCP header names
+  *  e18f14e1f - live data: support multiple values for TCP stream
+  *  da77b31e4 - [import] speed-up the resize of the spreadsheet columns
+    after the import. The current logic is very expensive for very high
+    number of columns. In such situations we use a different logic where
+    we fit to the header sections only,  no parsing of the cell values
+    is done.
+  *  ce2defaeb - Merge branch 'master' into work/fit_start-parameter
+  *  938decc8b - fit: simplify calculating fit results
+  *  78d8fc840 - fit: simplify different column modes
+  *  c11a409d6 - fit: narrow scope of code
+  *  91f4e7229 - CI: disable building QXlsx to avoid download
+  *  5ed753e3a - CI: update package list for Ubuntu
+  *  9c714b6bb - Merge branch 'master' into work/fit_start-parameter
+  *  4fb59196f - fit: use available data correctly for getting parameter
+    start values with linear regression
+  *  7e51defd4 - fit: use weights in linear regression to get start
+    value of parameter
+  *  8f916c277 - Fix the build.
+  *  8dea399a4 - [import] faster import of files with a big number of
+    columns: 1.  disconnect from the handleAspectAdded slot in
+    SpreasheetView when when adding new columns during the import,  no
+    need for it 2.  refactored the creation of the column context menu
+    to avoid signal-slot connections - call createContextMenu via the
+    spreadsheet when needed and not via signals where the connection
+    needs to be maintained for a big number of columns potentially.
+  *  c681431ef - fit: show results of regression
+  *  0e4fb954b - Merge branch 'master' into work/fit_start-parameter
+  *  65061c1bd - code format
+  *  c1eed6d7e - [spreadsheet] heatmap formatting for categorical data
+    in text columns.
+  *  03ae965ca - GIT_SILENT changelog
+  *  f7092e018 - Merge branch 'master' into work/217-bar-plot
+  *  0674f725b - CI: disable FreeBSD until fixed
+  *  f31775732 - code format
+  *  f46e4bb41 - Merge branch 'master' into work/217-bar-plot
+  *  f8f9a76bb - Changed the aspect type for BarPlot,  set the axis tick
+    offset to 1 so we don't show any ticks at 0 and added some basic
+    tests.
+  *  f4fc56ebb - Better axis properties after the bar plot was created
+    via the plot data dialog and minor bug fixes.
+  *  781d59ea8 - tests: disable bigint statistics test on Windows until
+    fixed
+  *  6d1d29110 - tests: try fixing column statistics bigint test on
+    Windows
+  *  98aa88102 - tests: another try debug column statistics bigint test
+  *  988165c8e - tests: another try debug column statistics bigint test
+  *  4a4ee6e0d - tests: another try debug column statistics bigint test
+  *  09211cc36 - tests: another try debug column statistics bigint test
+  *  d67563c81 - tests: second try fixing column statistics bigint test
+  *  059fd073b - tests: try fixing column statistics bigint test
+  *  a3c51b5d8 - tests: debug BigInt column statistics test fail on
+    Windows
+  *  25d886272 - tests: enable even more statistics tests to debug fail
+    on Windows
+  *  ca3abdea2 - tests: enable even more statistics tests to debug fail
+    on Windows
+  *  6d1ac5b40 - tests: enable more statistics tests to debug fail on
+    Windows
+  *  71e72a5b2 - tests: disable all but one column statistics test to
+    debug fail on Windows
+  *  5a4e465c1 - test: remove warnings from column test which probably
+    make test fail on Windows
+  *  60f675ddb - Allow to modify the filling properties for every bar
+    independently of each other.
+  *  f028d01fe - code format
+  *  4b883212a - fit: use multifit also for linear regression to get
+    start values of parameter
+  *  a7197c39f - fit: show parameter uncertainties of regression
+  *  5180d1724 - fit: show results of regression to get start values for
+    parameter of polynomial models
+  *  184ddfeb9 - tests: column integer statistics
+  *  7eeeda3fa - column: simplify statistics calculation
+  *  dda906699 - tests: column stats improvements
+  *  96bfdf825 - column: correct geometric mean for negative or zero
+    values
+  *  f423305bc - tests: add column statistics
+  *  fb9d659ae - column: minor statistics improvements
+  *  9c977842b - fit: get start parameter for polynomial models by
+    multilinear regression
+  *  6f67342be - Merge branch 'master' into work/fit_start-parameter
+  *  f9ae80859 - 3rdparty: fix QXlsx tag
+  *  1680dddb3 - 3rdparty: use fixed version of QXlsx on Windows
+  *  949024c7a - 3rdparty: try latest QXlsx
+  *  bb3465366 - code format
+  *  77c5e27ca - fit: avoid problems with localization of ranges
+  *  478dc1657 - typo
+  *  16620bc89 - fit: linear regression for start parameter of linear
+    fit of any numeric type
+  *  806d24469 - format
+  *  2a154b31c - styleSheet().isEmpty() is only related to
+    SET_WARNING_STYLE. Because if the error text changes, the message
+    must be updated
+  *  fa0831993 - regex might be slower than directly checking the first
+    character
+  *  c3bffeb87 - only first error message is enough, it is not needed to
+    show all error messages
+  *  37bf42f0d - implement error handling also for latex engine
+  *  32f82ac3c - parse log file to show good error message
+  *  c144b0bc1 - remove also pdf file
+  *  bb08f7396 - close after reading, otherwise the remove will not work
+  *  2d47243a2 - Update TeXRenderer.cpp
+  *  7e8553172 - fix error message box location
+  *  d92c42f1f - format
+  *  046865d9e - Update TeXRenderer.cpp
+  *  1ac8ce23d - format
+  *  d100dbd92 - add ability to show errors during rendering in tooltip
+    of the textlabel
+  *  a07bb4621 - GIT_SILENT made messages (after extraction)
+  *  27ae1052e - fit parameter: POC lin. regression
+  *  9421a6356 - Use the new class Background also in BarPlot.
+  *  bc045cf76 - GIT_SILENT code format
+  *  701e99945 - Revert GIT_SILENT disable tests on Windows CI
+  *  f6faa6bf7 - Merge branch 'master' into work/217-bar-plot
+  *  6eea6ac90 - Allow to zoom the worksheet view via shortcuts also in
+    the dynamic presenter mode and updated the ChangeLog file.
+  *  3beedf5d9 - [export] use the current working project directory, if
+    available, as the default export path.
+  *  0e8e5d051 - code format
+  *  9c25eb465 - Switched to the new signal-slot connection syntax in
+    HistogramDock and in XYCurveDock.
+  *  ccb762b01 - [fit] correctly invalidate fit result when model
+    changes
+  *  14459a5ef - Bug fixes: * don't crash when changing the error bar
+    types in the curve with no x-column selected yet * don't show any
+    context menu in the presenter widget * use the full screen size in
+    the dynamic presenter widget for worksheets with use view size
+    property set to true
+  *  0b371bdb9 - Merge branch 'master' into work/background
+  *  66d9ff99c - GIT_SILENT disable tests on Windows CI
+  *  856d714b5 - code format
+  *  89eb81ed9 - Merge branch 'master' into work/background
+  *  88b9e464d - GIT_SILENT reduce load on CI for merge requests
+  *  5a5ac1fcb - conflicts resolved
+  *  528225ff7 - layout workaround and minor fixes
+  *  fef562db6 - Removed background related enums in WorksheetElement,
+    the new enums in Background are used now.
+  *  1625b1674 - Improved the layout in BackgroundWidget.
+  *  c1e072830 - Less technical error messages and added the clear
+    button to the custom folder text field.
+  *  9475fbebc - Save the last used location setting (default of custom)
+    and a couple of other minor layout, icons and wording improvements.
+  *  8fb13dba7 - Minor bug fixes in BackgroundWidget and attemp to align
+    the layout to the layout of the parent widget where BackgroundWidget
+    is being embedded into.
+  *  03c80cccd - fix interactive
+  *  f64656b72 - format
+  *  2de506c25 - use relative path to the search path if the item is
+    located in a subfolder
+  *  2ed98dc59 - use also a custom search path to reuse the listview
+    also there. So the user selects a custom path and in the listview
+    all elements are visible
+  *  0da776c85 - New proposal to handle custom folders in the
+    PlotTemplaDialog and use Worksheet::setInteractive() to disable
+    zooming and navigation in the preview plot.
+  *  9c8b79ab1 - restore pointers after loading the plot. So it is
+    possible to have curves and infoelements in the template and they
+    receive then the data assigned
+  *  a53e4caba - due to the lock(mLoading) changePreviewSource will not
+    be called. leave the lock to trigger updating the plot. react on
+    stateChanged, because it is also triggered if the checkBox is set
+    programatically
+  *  eb7a86bd9 - prevent opening a context menu. It should not be
+    possible to add elements to the plot because they are not applied
+  *  84cb1f0aa - rename TemplateChooserDialog to PlotTemplateDialog
+  *  dde133eaa - add xmlVersion to xml, because otherwise the loading of
+    xmlVersion dependend parts will be read incorrectly
+  *  1873be148 - Minor improvement: * moved the button for the export of
+    plot templates to the place where other theme and templates related
+    buttons are already shown * better icons and wording * save and
+    restore the size of the plot template dialog
+  *  0ed8eec28 - recalculate equation curves, otherwise they are not
+    visible
+  *  0339de49f - Add tooltip to show where the templates are stored
+  *  753dd23f1 - format
+  *  7e950bd39 - check checkbox if path changes
+  *  c9b696ed5 - use home folder if no config is found
+  *  d056e1889 - when not setting isLoading, a theme will be applied to
+    the plot childs, which is wrong
+  *  d74ee5a28 - WIP
+  *  4ce54f44a - old files
+  *  e715a9d44 - initial approach for loading a plot template
+  *  2eeff35e7 - Revert [3rdparty] use latest QXlsx
+  *  b46928bb9 - [3rdparty] use latest QXlsx
+  *  68ae48530 - Element specific default values for the background
+    opacity in Background, we need smaller opacity values for the inital
+    box filling in the box plot, etc.
+  *  e76809b02 - Use the new class Background in BoxPlot.
+  *  0113ba07c - Use the new class Background in Histogram.
+  *  28f3d0fe4 - [debug]
+  *  07fc88f65 - [fit] fix locale usage in evaluation range
+  *  1b6e04428 - Use the new class Background in XYCurve.
+  *  2279b3ff6 - Use the new class Background in CartesianPlotLegend.
+  *  59fc3543f - Use the new class Background in PlotArea.
+  *  34d4afa67 - Added an option to control whether to show the enabled
+    option for the background properties or not. This option is not
+    needed everywhere and will be activated in specific cases only.
+  *  0baddff29 - Use the new class Background in Worksheet.
+  *  20af31a68 - Initial implementation of the classes Background and
+    BackgroundWidget.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 06 Jul 2022 21:26:28 +0000
+
 labplot (2.8.2+git9797-3a7c946c9-1) unstable; urgency=medium
 
   * Compile
