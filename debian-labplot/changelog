@@ -1,3 +1,203 @@
+labplot (2.8.2+git10065-1f2c31d40-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 1f2c31d40e9eaebd97f2b2e4ef585e70a2fbd112
+  * Date: 1658830008
+  * git changelog:
+  *  8b7dc3adc - rename functions to match better
+  *  a62a367d6 - use QLatin1String
+  *  a1ac47391 - forgotten to indent correctly
+  *  6499f91cf - remove include suppressed because it is not used
+  *  270aaa448 - Init retransformCalled counter
+  *  49e7cf8bd - readRetransformCalled integer
+  *  f89ab3eb0 - format
+  *  10b5debeb - rename direction to dimension
+  *  4585dcc10 - format
+  *  06432ea1e - fix build
+  *  3eef1d169 - implement removeXRange and removeYRange, because they
+    are used by the toolbuttons in the .ui file
+  *  6cddaba92 - remove all defaults in the switch(dir)
+  *  178b2cbf6 - use temporary variable so the condition must not be
+    evaluated twice
+  *  e67037985 - rename Direction to Dimension
+  *  858c1c53b - fix build
+  *  209ea92c9 - format
+  *  4f64b1a5c - bug fixed
+  *  5ca456839 - cleanup
+  *  54ab45570 - use Direction instead of bool in shift and zoom
+  *  8ea8f26a0 - forgotten to distinguish
+  *  f032bd164 - fix bug
+  *  0d3a59997 - cleanup
+  *  ada67ec6d - must be called also for other directions
+  *  20abcd0eb - cleanup
+  *  b8260e77c - make x/y datachanged direction indipendend
+  *  af08808e5 - make range scale direction indipendend
+  *  92deb68c9 - forgotten to replace
+  *  ccb7ddcb7 - fix crashes
+  *  7260b427f - disable for now
+  *  0dfba2646 - fix issue
+  *  23215b9e4 - fix compiling tests
+  *  bfaca399b - Update InfoElement.cpp, Worksheet.cpp, and 3 more
+    files...
+  *  1cce176cd - update setRange
+  *  255b90283 - replace  direction depended function by function with
+    direction parameter
+  *  a22e32030 - replace xRange and yRange by an axis indipendent
+    range()
+  *  e06f3b918 - replace xRangeCount and yRangeCount by an axis
+    indipendent rangeCount()
+  *  521f108dd - Update RetransformTest.cpp
+  *  db0764d9f - initial commit to get rid of all of these dublicate
+    functions. Use an argument instead of an unique function name. So
+    Exspecially in the CartesianPlot a lot can be removed because it is
+    redundant
+  *  cbdd9147a - fix comment
+  *  40307e51b - fix gitlab threads
+  *  a9a2268f2 - Move call counting to own class so the reset is done
+    automatically
+  *  1cd312933 - fix tests
+  *  b46e5b083 - Update RetransformTest.cpp
+  *  6fa2cd1f9 - add comment
+  *  59a7e7734 - do not use conditional emits and remove the
+    m_lines_test function because it is not needed anymore, because in
+    the tests it will be checked whenever updateLines() was called
+  *  32299a239 - use CMAKE_ENABLE_TESTING
+  *  2776e49ed - set public and check if it is working
+  *  693aa9443 - Update CartesianPlot.cpp
+  *  c1a6a8e8d - fix compile issues
+  *  7efaa6f19 - set other range only dirty when using full range
+    otherwise the other range is used to find the indices between and
+    then it makes no sense
+  *  5c583dc06 - add test to evaluate if curve was added to the plot
+  *  44e9bc041 - add comments
+  *  54dd6f9dd - Update CMakeLists.txt and CMakeLists.txt
+  *  d6927968d - add copy paste test
+  *  128e32671 - forgotten to remove suppress retransform flag.
+  *  c92d5b2a1 - fix typo
+  *  b403a52e1 - fix test resize window
+  *  f6ff00bb4 - in some scenarios the retransform scale must be
+    suppressed to not called multiple times
+  *  76ab880b4 - add second plot to test also for multirange szenarios
+  *  1ff222857 - Check also in second test that retransformScale is
+    called correctly
+  *  56c6b6b59 - must be ifdef instead of only if
+  *  fc5f0c540 - set autoscale in test project. Check
+    retransformX/YScale how ofter they are called
+  *  462cfee1d - use WorksheetElementContainer in the internal functions
+    so from outside it stays retransform()
+  *  4a1e22956 - setHorizontalPadding calls afterwards the private
+    retransform of CartesianPlot and therefore here the childs must also
+    be updated. So move everything from the private retransform in it's
+    own function and call this function in finalizeLoad() so the childs
+    are not updated two times
+  *  4f8a05cfb - add images and textlabel to project
+  *  c2900e3aa - no need to call d->retransform() which is included in
+    retransform() again, just retransform the childs
+  *  e613c8237 - do not call recursive, because cartesian plot is
+    already doing
+  *  bac35d965 - use finalizeLoad() function instead of calling all
+    three functions by it self
+  *  70d79ced2 - must be ifdef not only if
+  *  1c6bc1859 - use hash instead of list and add expected call count
+    there
+  *  f884a162f - remove default values, because not needed and it is
+    just dangerous
+  *  45829f054 - remove suppressRetransform flag, because it will be
+    suppressed everywhere
+  *  b3afff308 - format
+  *  c4aa47bde - the datarect must be updated, because the rect changes.
+    Therefore also the scales change and the childs must be
+    retransformed
+  *  4dedc7337 - finalize load must be used, otherwise the axis are not
+    visible, because retransformScales() is never called
+  *  f7b774421 - use finalize load
+  *  4d79e31c0 - retransforming only private is enough, because only
+    datarect should be updated
+  *  5343ff1c8 - put a few functions into one function so in the project
+    it looks cleaner
+  *  c427af7da - do recalculation of the equation curve, otherwise
+    xColumn and yColumn are not updated and so autoscale in the
+    cartesian plot will be wrong.
+  *  0503e246f - fix compile issue
+  *  c1c1f58c0 - fix
+  *  6341d60ab - no need to call
+  *  f0ad330b1 - only the defaultCoordinateSystem changes
+  *  c0506759c - trying to get a clean structure how to retransform the
+    cartesianplot and its children - do not retransform title and legend
+    multiple times per retransform - do not retransformScales() every
+    time, because it is done when changing the scales it self
+  *  c99c7f153 - add comment
+  *  a67370e5d - not needed, because this is already in
+    retransformX/YScale it self
+  *  8559f1de4 - add retransformTest
+  *  13ff014b2 - [spreadsheet] when clearing the content of a column,
+    also remove the definition of the formula, if available.
+  *  5e77c1681 - 3rdparty: Fix couple of QXlsx warnings
+  *  abdd0aaf4 - code format
+  *  665695304 - fixed formatting issues introduced in the previous
+    commit.
+  *  fc0808734 - [spreadsheet] disable plot data, anylze data,
+    formatting and clear content actions in the column context menu if
+    no values area available in the selected columns.
+  *  ba4dbafe3 - [spreadsheet] imrovements for the row statistics item
+    in the context menu: 1. don't show any row statistics item if no
+    numeric values are available in the current selection 2. faster
+    iteration over the selected rows, utilize the selection model in the
+    view for this 3. fixed i18n for strings in the title of the
+    statistics dialog
+  *  4aeb51ba4 - [spreadsheet] better logic for the names of new columns
+    added to the spreadsheet via the project explorer, ensure continious
+    numbering.
+  *  2acef4504 - Don't set the project to modified if it was created
+    during the application start-up since nothing has changed from
+    user's perspective.
+  *  6ae0ac897 - Fix adding Cantor to CI deps
+  *  05b9a8a07 - [spreadsheet] added a nulltpr check to fix the crashes
+    introduced with the previous commit.
+  *  62b27e68f - [spreadsheet] faster creation of a big number of
+    columns in the Properties Explorer *  suppress handling of child sff
+    and remove signals when adding/removing multiple columns * use a
+    better initial column name to avoig expensive renaming to ensure the
+    uniquness of the name * remove some debug output that becomes
+    expensive when handling with many columns
+  *  8dd0f844b - [ascii import ] added missing test file
+    quoted_strings_with_separator_inside.csv and function declaration.
+  *  60f32fb0a - fix build
+  *  4bf763f92 - [ascii import] properly read quoted text columns having
+    separator characters between the quotes.
+  *  69031017b - Don't attempt to remove hidden aspects from the model
+  *  6a50940ac - Minor fixes: * properly save and load the auto number
+    setting for axis ticks * properly save and load the port number in
+    LiveDataSource * new test python script sending mulitple values via
+    TCP
+  *  0be417a71 - Fix preview of multi value live data (using separating
+    character)
+  *  a1be3b10a - [spreadsheet] don't create two curves via the plot data
+    dialog if only one column was selected in the spreadsheet.
+  *  19f702055 - GIT_SILENT changelog
+  *  0d2494a92 - Consistently use date time in UTC to avoid confusion
+    with locale date time settings
+  *  55af701e5 - code format
+  *  6fab5669d - plot dock: fix displayed date time range
+  *  ccaf546ca - [worksheet]  don't crash when deleting a text label
+    that was added after worksheet objects (plots and curves) were
+    created via the plot data dialog.
+  *  2fa204af9 - cmake: only link QXlsx when found or building
+  *  24507c4db - cmake: fix 3rdparty QXlsx
+  *  e0d0e1d70 - cmake: fix build (at least for cmake builds)
+  *  44dc146dd - cmake: another try fixing finding problem with ninja
+  *  35079573a - cmake: another try fixing finding problem with ninja
+  *  de0e1aa08 - cmake: try fixing finding problem with ninja
+  *  9288edc79 - QXlsx: add license file
+  *  2f8977c68 - cmake: include 3rdparty QXlsx
+  *  acb6168d4 - live data: fix data column names (also in preview)
+  *  14652a7a3 - code format
+  *  29ba97120 - live data: fix TCP column names
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 28 Jul 2022 20:02:36 +0000
+
 labplot (2.8.2+git9943-6349a8b6a-1) unstable; urgency=medium
 
   * Compile

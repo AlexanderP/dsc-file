@@ -1,3 +1,592 @@
+freecad-daily (0.19.2+git29824-e8e1050620-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: e8e10506204fd08472ec31c6d75e5a7c9e86630a
+  * Date: 1659034310
+  * git changelog:
+  *  e8e1050620 - [TechDraw] Make projection group test a unittest
+  *  48661cd3c7 - [TechDraw] Fix making template bug for tests
+  *  6893938f2a - [TechDraw] Make balloon test a unittest
+  *  36f50665fe - [TechDraw] Make section view test a unittest
+  *  337b40f846 - [TechDraw] Make view test a unittest
+  *  cf8e3f8eda - [TechDraw] Make dimension test a unittest
+  *  b43784c6e2 - Gui: [skip ci] mkae sure the tooltip in
+    ActionGroup::onActivated() disappears again
+  *  54ce3d0fc3 - [TD]fix redraw does not paint all views
+  *  0805d284d5 - [TD]fix Symbol update on property change
+  *  91cffca077 - App: use namespace prefix for classes in Base
+  *  76aeaab4b0 - Arch: added ExclusionNames property to Shape2DViews
+  *  9ad8486a25 - Base: replace C macro with function and lambda
+    expressions
+  *  eccf4fed96 - Base: Clean up code and improve docstrings in Python
+    Console module
+  *  c14347ce41 - * [.github] extend cpplintFilters with -
+    readability/todo
+  *  b420901697 - Remove 2 deprecate PyCFunction
+  *  be2a8a679c - Addon Manager: pylint cleanup of
+    manage_python_dependcies.py
+  *  802993dc5d - Addon Manager: Clean up Addon.py based on pylint
+  *  b1856f3603 - [.github] extend cpplintFilters with -
+    build/include_order
+  *  fc8842aea4 - Fem: use 'using' instead of 'typedef' [modernize-use-
+    using]
+  *  d0791a9494 - Base: help clazy with export macro
+  *  4a4bb34a87 - Addon Manager; Silence some pylint errors
+  *  b9224cd14b - Addon Manager: Utilities pylint cleanup
+  *  0e2508cca9 - Addon Manager: Fix get_zip_url for non-github URLs
+  *  71285f4266 - Addon Manager: Cleanup
+  *  97d28d689e - Part: if fillet/chamfer object has set transparency
+    then override the values of the input shape
+  *  62dbfc5290 - Part: if boolean/compound object has set transparency
+    then override the values of the input shape
+  *  f1ce218955 - Switch to Boost regex
+  *  e415f38fe6 - Addon Manager: Add dialog to manage Python deps
+  *  66ff55a2aa - [FEM] fix PostObject hiding issue
+  *  95df4d665e - [FEM] save icons as plain SVG - part 2/2
+  *  97eafab6d3 - [FEM] PostDataAtPoint: remove unnecessary style
+    setting
+  *  03041f0aff - [Sketcher] [skip CI] CommandCreateGeo: code style fix
+  *  054dd44315 - Part: [skip ci] add unit test for PR #7258
+  *  dbe8f47d93 - [BUGFIX] Sketcher: fix icon normal/construction
+    toggling when commands used in custom toolbar
+  *  ac6a730076 - Trim trailing whitespace for
+    Part/App/BSplineSurfacePyImp.cpp
+  *  7328f2f302 - [Part] BSplineSurface: add setBounds method
+  *  b330552337 - Part: [skip ci] add unit test for PR #7260
+  *  3ddfa5ce09 - [Part] BSplineSurface: fix KnotSequence for periodic
+    BSpline surfaces
+  *  a035d650b6 - [FEM] remove checks for Python 2
+  *  5f82cfb39f - Fix column number calc
+  *  79de5318cb - Test: [skip ci] fix typo
+  *  0dddd3336e - App/Test: implement unit test for PR #7250
+  *  7a198ca32e - CMake: use system version of FindCoin3D.cmake
+  *  39a473176a - Gui: help clazy with missing include
+  *  213ca948a6 - Spreadsheet: Returning data of temporary QByteArray [-
+    Wclazy-returning-data-from-temporary]
+  *  469e4f1655 - Spreadsheet: fix several memory leaks
+  *  ceed599beb - [FEM] skip CI] update a comment
+  *  16c89568b8 - [FEM] update ViewProvider selection code
+  *  0b6a5e63fa - [FEM] save icons as plain SVG - part 1/2
+  *  369bb48c90 - [FEM] BodyHeat constraint: use unique icon
+  *  d3066617bd - [FEM] BodyHeat constraint: hide unused property
+  *  b7b82489ab - [FEM] update Elmer tests after commit bc69cfd1
+  *  2eceb004e0 - [App] remove check for Python 2
+  *  bc69cfd19b - [FEM] Elmer: a fix for keywords
+  *  5b25c97589 - [Gui] fix unreferenced local variable warning
+  *  4f1fbb5a0e - Gui: help clazy checker with export macro
+  *  e0bd6d7e2a - Part: move initialization of STEP/IGES reader/writer
+    to ImportExportSettings::initialize()
+  *  70c18c8017 - Part: [skip ci] change some default parameters for
+    STEP export
+  *  1faf86c3da - Gui: Use new-style syntax of connect() When fixing
+    clazy issues -Wclazy-fully-qualified-moc-types then old-style syntax
+    of connect() may fail. Thus, replace it with the new-style syntax
+  *  c4e4b5cf02 - TD: Use new-style syntax of connect() When fixing
+    clazy issues -Wclazy-fully-qualified-moc-types then old-style syntax
+    of connect() may fail. Thus, replace it with the new-style syntax
+  *  a1dfe2465f - [TechDraw] Make image test a unittest
+  *  4fc8596d7b - [TechDraw] Make symbol test a unittest
+  *  906618c0b6 - [TechDraw] Make annotation test a unittest
+  *  d1f107f656 - [TechDraw] Make hatch test a unittest
+  *  5a9ffe468c - Remove deprecated function
+  *  c6a91b4ff3 - Merge pull request #7249 from Roy-043/Draft-Improve-
+    alignToFace-in-WorkingPlane.py
+  *  a187c506ee - Merge pull request #7243 from Roy-043/Draft-
+    Housekeeping-import-translate-from-correct-file
+  *  67e836b7e9 - [FEM] PostObject: improve color bar refreshing
+  *  c4b8983a27 - [FEM] Elmer writer: fix errors on missing material
+    properties
+  *  c7a2ddbaa3 - [FEM] add generic Aluminum material
+  *  22c64ef8be - [FEM] update bodyHeatSource
+  *  c9b709d814 - [TD] remove unnecessary nullptr checks
+  *  f73321b788 - [Part] ReferenceHighlighter: re-add necessary include
+  *  9a821604e5 - [Part] Gui: M to S: remove unused includes
+  *  fbd0665a77 - [Part] A to C: remove unused includes
+  *  d7074f88b4 - [PD] AppPartDesignGui: sort includes
+  *  38473f24be - Make image scaling command aware of user units (#7222)
+  *  3bacbf312d - Improve grid maxNumberOfLines warning message
+  *  e7edda9679 - TD: [skip ci] Fix several clazy issues: * Using copy-
+    ctor but class TechDraw::anglePoints has a trivial copy-ctor but non
+    trivial assign operator [-Wclazy-rule-of-two-soft] * Using copy-ctor
+    but class TechDraw::arcPoints has a trivial copy-ctor but non
+    trivial assign operator [-Wclazy-rule-of-two-soft] * Missing
+    reference in range-for with non trivial type [-Wclazy-range-loop-
+    reference] * C++11 range-loop might detach Qt container (QList) [-
+    Wclazy-range-loop-detach] * signal arguments need to be fully-
+    qualified (TechDrawGui::QGIView instead of QGIView) [-Wclazy-fully-
+    qualified-moc-types] * Use multi-arg instead [-Wclazy-qstring-arg] *
+    Use midRef() instead [-Wclazy-qstring-ref]
+  *  88accdb421 - PD: [skip ci] Fix several clazy issues: * Maybe you
+    meant to call base method instead [-Wclazy-skipped-base-method] *
+    Missing reference in range-for with non trivial type [-Wclazy-range-
+    loop-reference] * Mixing iterators with const_iterators [-Wclazy-
+    strict-iterators] * Unused QByteArray [-Wclazy-unused-non-trivial-
+    variable] * C++11 range-loop might detach Qt container (QList) [-
+    Wclazy-range-loop-detach]
+  *  d344ccc4eb - Sketcher: [skip ci] Fix several clazy issues: *
+    Missing reference in range-for with non trivial type [-Wclazy-range-
+    loop-reference] * Unused QString [-Wclazy-unused-non-trivial-
+    variable] * Missing emit keyword on signal call [-Wclazy-incorrect-
+    emit] * Don't call QList::operator[]() on temporary [-Wclazy-
+    detaching-temporary] * Use multi-arg instead [-Wclazy-qstring-arg] *
+    Maybe you meant to call ViewProvider2DObjectGrid::onChanged()
+    instead [-Wclazy-skipped-base-method]
+  *  832717e446 - Path: [skip ci] Fix several clazy issues: * Missing
+    reference in range-for with non trivial type [-Wclazy-range-loop-
+    reference]
+  *  e403b9ce55 - Fem: [skip ci] Fix several clazy issues: * Maybe you
+    meant to call base method instead [-Wclazy-skipped-base-method] *
+    Using copy-ctor but class SbMatrix has a trivial copy-ctor but non
+    trivial assign operator [-Wclazy-rule-of-two-soft] * Missing emit
+    keyword on signal call FemGui::PointMarker::PointsChanged [-Wclazy-
+    incorrect-emit]
+  *  51ecdbdabe - Drawing: [skip ci] Fix several clazy issues: * Missing
+    reference in range-for with non trivial type [-Wclazy-range-loop-
+    reference] * Don't call QList::operator[]() on temporary [-Wclazy-
+    detaching-temporary] * Use multi-arg instead [-Wclazy-qstring-arg]
+  *  6ad47111ab - Spreadsheet: [skip ci] Fix several clazy issues: *
+    Mixing iterators with const_iterators [-Wclazy-strict-iterators] *
+    Q_PROPERTY should have either NOTIFY or CONSTANT [-Wclazy-qproperty-
+    without-notify] * Missing reference in range-for with non trivial
+    type [-Wclazy-range-loop-reference] * Missing emit keyword on signal
+    call SpreadsheetGui::SheetViewHeader::resizeFinished [-Wclazy-
+    incorrect-emit] * Missing emit keyword on signal call
+    QAbstractItemModel::dataChanged [-Wclazy-incorrect-emit] * c++11
+    range-loop might detach Qt container (QStringList) [-Wclazy-range-
+    loop-detach]
+  *  bbe617614b - Robot: [skip ci] Fix several clazy issues: * Using
+    copy-ctor but class KDL::Rotation has a trivial copy-ctor but non
+    trivial assign operator [-Wclazy-rule-of-two-soft] * Maybe you meant
+    to call ViewProviderGeometryObject::attach() instead [-Wclazy-
+    skipped-base-method] * Missing emit keyword on signal call
+    RobotGui::TaskTrajectory::axisChanged [-Wclazy-incorrect-emit]
+  *  56730b0a2f - Raytracing: [skip ci] Fix several clazy issues: *
+    Don't call QList::operator[]() on temporary [-Wclazy-detaching-
+    temporary]
+  *  1c3f496d0f - Import: [skip ci] Fix several clazy issues: * Use
+    multi-arg instead [-Wclazy-qstring-arg]
+  *  1e3ee7ccb1 - ReverseEngineering: [skip ci] Fix several clazy
+    issues: * Missing reference in range-for with non trivial type [-
+    Wclazy-range-loop-reference] * Use multi-arg instead [-Wclazy-
+    qstring-arg]
+  *  d152d6dd0e - MeshPart: [skip ci] Fix several clazy issues: *
+    Missing reference in range-for with non trivial type [-Wclazy-range-
+    loop-reference] * Use multi-arg instead [-Wclazy-qstring-arg]
+  *  05d2f5957d - Web: [skip ci] Fix several clazy issues: * Missing
+    reference in range-for with non trivial type [-Wclazy-range-loop-
+    reference] * Missing emit keyword on signal call [-Wclazy-incorrect-
+    emit] * Unused QFileInfo [-Wclazy-unused-non-trivial-variable]
+  *  cea60a2cb4 - Surface: Fix several clazy issues: * Missing reference
+    in range-for with non trivial type [-Wclazy-range-loop-reference] *
+    Use multi-arg instead [-Wclazy-qstring-arg]
+  *  8444484677 - Part: Fix several clazy issues: * Maybe you meant to
+    call Primitive::onChanged() instead [-Wclazy-skipped-base-method] *
+    Maybe you meant to call Primitive::mustExecute() instead [-Wclazy-
+    skipped-base-method] * Missing reference in range-for with non
+    trivial type [-Wclazy-range-loop-reference] * Use multi-arg instead
+    [-Wclazy-qstring-arg] * Use midRef() instead [-Wclazy-qstring-ref]
+  *  43ae3c0b16 - [python init] Prepend install prefix if libdir is not
+    absolute
+  *  12440921bb - [FEM] Elmer: fix python error when solver failed
+  *  a399f044c0 - Image: [skip ci] Fix several clazy issues: * Missing
+    emit keyword on signal call ImageGui::ImageView::closeEventIgnored [-
+    Wclazy-incorrect-emit]
+  *  45f534bc32 - Mesh: Fix several clazy issues: * Use multi-arg
+    instead [-Wclazy-qstring-arg] * Q_PROPERTY should have either NOTIFY
+    or CONSTANT [-Wclazy-qproperty-without-notify] * Using copy-ctor but
+    class SbMatrix has a trivial copy-ctor but non trivial assign
+    operator [-Wclazy-rule-of-two-soft]
+  *  6becbc3b72 - Fix several clazy issues: * Returning data of
+    temporary QByteArray [-Wclazy-returning-data-from-temporary]
+  *  0ebdf4743a - Fix several clazy issues: * Don't call ... on
+    temporary [-Wclazy-detaching-temporary]
+  *  5354632bfb - Fix several clazy issues: * Mixing iterators with
+    const_iterators [-Wclazy-strict-iterators]
+  *  6ee2c7f865 - Fix several clazy issues: * C++11 range-loop might
+    detach Qt container [-Wclazy-range-loop-detach]
+  *  0bef4e82f2 - Fix several clazy issue: * Missing reference in range-
+    for with non trivial type [-Wclazy-range-loop-reference]
+  *  bf7e6aac4a - Fix several clazy issue: * Suppress non-POD static [-
+    Wclazy-non-pod-global-static] * Call to temporary is a no-op: [-
+    Wclazy-writing-to-temporary] * Unused QString [-Wclazy-unused-non-
+    trivial-variable]
+  *  36a6f9e2fc - Fix several clazy issue: * Use multi-arg instead [-
+    Wclazy-qstring-arg] * Use an empty QLatin1String instead of an empty
+    QStringLiteral [-Wclazy-empty-qstringliteral] * getter
+    Gui::ProgressBar::canAbort possibly mismarked as a slot [-Wclazy-
+    const-signal-or-slot] * Missing emit keyword on signal call [-Wclazy-
+    incorrect-emit]
+  *  54506e12bf - Fix several clazy issue: * Using copy-ctor but class
+    SbMatrix/SbViewportRegion has a trivial copy-ctor but non trivial
+    assign operator [-Wclazy-rule-of-two-soft]
+  *  20c770c899 - [FEM] ViewProviderDocumentObject: fix parenthesis
+    mistake
+  *  8e7e057430 - [FEM] fix color bar handling on hiding post objects
+  *  3b0b7775f4 - Fix several clazy issues: * Q_PROPERTY should have
+    either NOTIFY or CONSTANT [-Wclazy-qproperty-without-notify] * Use
+    Q_ENUM instead of Q_ENUMS [-Wclazy-qenums] * Add missing a Q_OBJECT
+    macro [-Wclazy-missing-qobject-macro] * Signal/Slot arguments need
+    to be fully-qualified [-Wclazy-fully-qualified-moc-types]
+  *  75d6804555 - Draft: Improve alignToFace in WorkingPlane.py
+  *  864c9ecac5 - [FEM] set default selection mode to BoundBox for post
+    objects
+  *  4efbc146ec - [.github] try to get the checks also for the 0-20
+    branch
+  *  c1946884d8 - [FEM] fix regression of missing stress results
+  *  be90374f4e - [.github] disable tidy checks for now
+  *  fed9f20f48 - Import: use Part::ImportExportSettings to access
+    parameters
+  *  b00044c656 - Part: initialize controls of DlgImportExportStep with
+    ImportExportSettings
+  *  710e16b340 - Part: implement class ImportExportSettings for
+    consistent parameter access
+  *  2dbc92d399 - [.github] disable clang checks for now
+  *  7d14bef0f5 - Draft: Housekeeping: import translate from correct
+    file
+  *  057e90bf29 - [FEM] TaskBoxes: add missing info about transparency
+  *  ed82bd1280 - Github: basic check CI Run (#7152)
+  *  689737b443 - [FEM] better fix for missing colorbar update for
+    FemPostObject
+  *  cce5de8087 - [Path] remove check for python 2
+  *  cf96b23b3e - Git ignore hidden files with defined exceptions
+    (#7108)
+  *  dc34a04d1e - fix warning :unused variables
+  *  0c4c3cc786 - Remove unused code into App
+  *  adff3da37a - [FEM] task_material_common: add a comment
+  *  1f7374edf1 - [FEM] fix material task dialog for fluids
+  *  44a3582923 - [Part] Bugfix Primitives correction of decimal..
+  *  639ff927de - Part: fix TopoShape.isInside() for faces
+  *  c30f21446d - Merge pull request #7233 from Roy-043/Arch-
+    Housekeeping-import-translate-from-correct-file
+  *  b4b53a865e - [Gui] [skip CI] Selection: a formatting style fix
+  *  b22e5737a5 - [FEM] [skipCI] ViewProviderFemPostPipeline: remove
+    unused include
+  *  2add334167 - [Stylesheets] Remove whitespace and add checked icon
+    style
+  *  9f9a874247 - [FEM] fix missing colorbar update for FemPostObject
+  *  a55f5eb1ae - Fix typos in Part and TechDraw workbenches
+  *  bafe141745 - Arch: Housekeeping: import translate from correct file
+  *  98b9ba20fe - [FEM] [skip CI] fix UI file height entry
+  *  6ed38eeb99 - [TechDraw] Improve readability of DrawViewDetail.cpp
+  *  a203b1ae30 - [TD] Add SurfaceFinishSymbol command
+  *  111aef4866 - [TD]review comments and rebase for PR7197
+  *  e326f9bd99 - [TechDraw] Improve readability of DrawViewClip.cpp
+  *  3979d589a3 - [TechDraw] Improve readability of DrawViewBalloon.cpp
+  *  b349d02496 - [TechDraw] Improve readability of DrawViewArch.cpp
+  *  fa27525021 - [TechDraw] Improve readability of
+    DrawViewAnnotation.cpp
+  *  6aef122551 - [TechDraw] Improve readability of DrawTile.cpp
+  *  380219ad7f - [TechDraw] Improve readability of DrawRichAnno.cpp
+  *  7ab531c51a - [TD] last part of removal of superfluous nullptr
+    checks
+  *  40d8ebb372 - [TD] remove some more superfluous nullptr checks
+  *  1819aa9c0c - [PD] TaskExtrudeParameters: add missing simplification
+  *  d665c9b8d0 - Merge pull request #7215 from Roy-043/Draft-Remove-
+    unnecessary-DisplayStatusbar-preference
+  *  e8fd473072 - Merge pull request #7217 from manuvarkey/dev_branch_1
+  *  98dae1b217 - [PD] TaskExtrudeParameters: simplify code
+  *  0e22ada9dd - [PD Pad/Pocket] Fix bug with midplane usage in
+    TwoLengths mode (#7216)
+  *  31bc9f3913 - [TD] remove some more superfluous nullptr checks
+  *  8304a0942e - [TD] remove more superfluous nullptr checks
+  *  fba4663baa - Part: add instruction how to adjust the maximum number
+    of grid lines
+  *  3f8dc1a5a8 - Gui: fix crash in
+    ViewProviderLink::currentDraggingPlacement() if there is no active
+    dragger
+  *  af18a97913 - [TD] Gui: remove more superfluous nullptr checks
+  *  43f289f27a - [PD] [skip CI] FeatureExtrude.cpp: fix a comment
+  *  b3ee50a749 - [zipios] remove superfluous nullptr checks
+  *  2e5e4dced8 - [TD] Gui: remove some  superfluous nullptr checks
+  *  003757176c - Mod: remove some more superfluous Boolean checks
+  *  93796e2d92 - [TD] App: remove some  superfluous nullptr checks
+  *  3a50f95be4 - Mod: remove some superfluous Boolean checks (#7213)
+  *  fadd455d16 - [Part] add missing part from: cleanup new preferences
+    Feature
+  *  a0bea6b24f - Arch: Add support for editing profile type, add L and
+    T sections
+  *  1e5055a86b - Draft: Remove unnecessary DisplayStatusbar preference
+  *  3e99d39d05 - [Gui] remove some more superfluous nullptr checks
+  *  2d60c3a682 - [libE57] remove more superfluous nullptr checks
+  *  90abdf2752 - [Base] remove some more superfluous nullptr checks
+  *  142cfce9f7 - [App] code style fixes by MSVC
+  *  88a06f8f10 - Mod: remove some unnecessary nullptr checks
+  *  a5eb40a9a6 - [Part] cleanup new preferences Feature
+  *  69bb354f28 - [Part] DlgSettingsMeasure.ui: change wording style
+  *  53d9b1899f - [PartGui] Add Font and Color Preferences to Measure
+    dimensions (#7148)
+  *  217b1e82cb - Merge pull request #7141 from Roy-043/Draft-
+    make_hatch.py-should-return-the-object
+  *  4555878c10 - Merge pull request #7173 from Roy-
+    043/Draft_Fix_setEdit_in_view_text.py
+  *  87d9a43117 - Merge pull request #7176 from Roy-
+    043/Draft_Add_resetEdit_to_gui_hatch.py
+  *  e08d394752 - Merge pull request #7200 from Roy-043/Draft-Fix-color-
+    handling-in-make_point.py
+  *  952a10e756 - Merge pull request #7212 from Roy-043/Arch-Fix-
+    getCutVolume-in-ArchCommands.py
+  *  caea150716 - Merge pull request #7192 from benj5378/docs
+  *  a9a67d8854 - Merge pull request #7181 from manuvarkey/bug_fix_1
+  *  2316809038 - Arch: Fix getCutVolume in ArchCommands.py
+  *  1d95c26e2e - [Gui] remove more superfluous nullptr checks
+  *  bd6ffcc7e0 - [Base] remove more superfluous nullptr checks
+  *  316a869b26 - [Gui] remove superfluous nullptr checks
+  *  53571f7196 - [Base] remove superfluous nullptr checks
+  *  fa36a57724 - [App] remove superfluous nullptr checks
+  *  615b1b9b00 - [libE57] remove superfluous nullptr checks
+  *  1823439195 - [Robot etc.] remove superfluous nullptr checks
+  *  c35579227b - [Path] remove superfluous nullptr checks
+  *  16c86a6d08 - [Sketch] remove superfluous nullptr checks
+  *  2d2ad11e14 - [Mesh] remove superfluous nullptr checks
+  *  48af573746 - [FEM] remove more superfluous nullptr checks
+  *  5d76afe0a5 - re-add some nullptr
+  *  1f04880da9 - [Image] [Inspection] remove superfluous nullptr checks
+  *  ce86b03e0a - [Spreadsheet] remove superfluous nullptr checks
+  *  fc548a4b34 - [FEM] remove superfluous nullptr checks
+  *  5f8e0c46ee - [Part] remove more superfluous nullptr checks
+  *  697e88aed6 - [PD] remove more superfluous nullptr checks
+  *  5048f14d60 - .clang-format: change a style
+  *  a8d01fa6c6 - [PD] add parameter enabling logic for pad/pocket
+  *  e4dfc42f33 - [PD] improve face selection for Pad/Pocket
+  *  35f75064a0 - [PD] remove superfluous nullptr checks
+  *  07ddfc88de - [PD] App: remove superfluous nullptr checks
+  *  e491ba8d12 - [Part] remove superfluous nullptr checks
+  *  ef04487cd1 - Merge pull request #7168 from
+    sliptonic/feature/camoticstooltable
+  *  5820618091 - Import: do not export the entire class but only its
+    public methods. This fixes the warning C4251 for the template
+    classes std::string or std::vector Forum thread:
+    https://forum.freecadweb.org/viewtopic.php?f=10&t=70317
+  *  d6b3942ad1 - Draft: Fix color handling in make_point.py
+  *  b548d3b1ef - Partially revert Remove unused code into GUI
+  *  3018985f80 - Remove unused code into GUI
+  *  094ae93678 - [PD] fix Pad/Pocket logic issue
+  *  faa1f96f08 - [FEM] check if Gmsh, CCX and Mystran solver binaries
+    exist
+  *  da104f63b7 - [FEM] fix CCX (new framework) binary handling
+  *  3a993abfb4 - [FEM] fix Z88 binary handling
+  *  a4ec6d4f83 - [TD] fix compilation on MSVC
+  *  e80e8bf731 - [TechDraw] Improve readability of DrawUtil.cpp
+  *  0421d7cc5d - [TechDraw] Gather rotation calculations in a single
+    function
+  *  137a4e0ee6 - [TechDraw] Improve readability of Cosmetic.cpp
+  *  568cc79186 - [TechDraw] Refactor CosmeticEdge constructors
+  *  fac4e72ea4 - [TechDraw] Use constructor delegation for CosmeticEdge
+  *  eb3a04f30e - [TechDraw] Use default parameters for LineFormat
+    constructor
+  *  4a5bf895ed - [FEM] [skip CI] inform user about used CPU cores for
+    Elmer
+  *  3542c73966 - [FEM] [skip CI] tell user when Elmer write succeeded
+  *  146e5508aa - [FEM] [skip CI] fix wording
+  *  2a41f359f7 - Gui: implement mechanism to set a custom icon name or
+    tooltip of a preferences group
+  *  2782d09dee - [FEM] [skip CI] fix a typo
+  *  fa49c07840 - Update
+    src/Mod/Path/PathScripts/PathToolBitLibraryGui.py
+  *  1a8a7959e5 - Merge pull request #7127 from
+    sliptonic/feature/chipbreak
+  *  32ac6fa9fd - [FEM] [skip CI] fix a string
+  *  9f7c699fb8 - GUI panel for chipbreaking
+  *  6d81f31f11 - Additional changes to support G73
+  *  ff1e995f30 - Generator can produce G73 (chipbreak) commands instead
+    of G83. Add tests
+  *  2dd9d69112 - Gui: fix crash in ExpressionCompleter::slotUpdate
+    Forum thread: https://forum.freecadweb.org/viewtopic.php?f=3&t=69931
+  *  3137a81604 - [TD]check for spline on linear Dims
+  *  5d93fbe0bb - [TD]fix ext line gap preference
+  *  6d54ca4df4 - [Gui] preferences: clarify Part/PD page
+  *  656408615a - PD: fix ProfileBased::getSupportFace() to also handle
+    the case where a support face is selected
+  *  fcd5394864 - [Gui] preferences: add button to switch gradient
+    colors
+  *  10301e7f75 - [FEM] [skip CI] fix a typo
+  *  882125c1c6 - PD: rename getUpToFaceFromLinkSub to
+    getFaceFromLinkSub
+  *  6625281986 - [FEM] enable to run Elmer multi-threaded
+  *  f34a814ead - Part: replace PyObject_Not with Base::asBoolean
+  *  201f4c9a5a - Core: replace PyObject_IsTrue with Base::asBoolean
+  *  d1ef818f39 - Fem: replace PyObject_IsTrue with Base::asBoolean
+  *  76330db700 - Import: replace PyObject_IsTrue with Base::asBoolean
+  *  aea58ace37 - Mesh: replace PyObject_IsTrue with Base::asBoolean
+  *  8ae3185e3b - Part: replace PyObject_IsTrue with Base::asBoolean
+  *  343aadf02b - Path: replace PyObject_IsTrue with Base::asBoolean
+  *  b48f7229a3 - Sketch: replace PyObject_IsTrue with Base::asBoolean
+  *  231de30c2f - Base: add convenience function to convert
+    PyObject_IsTrue to a boolean
+  *  b42e994ec9 - Path: fixes -Woverloaded-virtual
+  *  780ccceccf - Draft: [skip ci] fix -Wunused-parameter
+  *  2041eca74c - Import: if PyArg_ParseTuple() returns false
+    PyErr_Clear() must be called first before calling PyArg_ParseTuple()
+    again
+  *  e1ebcef39e - Import: [skip ci] change path to user config in
+    Import.readDXF()
+  *  c50e7a29fe - Remove duplicate source code
+  *  d15da0ef96 - PreCompiled fix
+  *  3ef8a641c6 - Remove DraftUtils.readDXF
+  *  a980b08719 - Code Cleaning - pragma
+  *  83203153cd - Group dxf relevant files in one folder
+  *  42b519a90a - Mesh: [skip ci] unit test for Mesh.foraminate()
+  *  68ade24c78 - Merge pull request #7187 from
+    sliptonic/bug/sectiontolerance
+  *  99c9cd9bca - [Doc] Clean up footer and header for WebDoc
+  *  e2e58f7bff - Mesh: [skip ci] allow to set third parameter in Python
+    wrapper
+  *  619c7942aa - [TechDraw] Improve readability of ViewProviderWeld.cpp
+  *  bb44c9ece4 - [TechDraw] Improve readability of
+    ViewProviderViewSection.cpp
+  *  700a0217b4 - [TechDraw] Improve readability of
+    ViewProviderViewPart.cpp
+  *  87d4c8e237 - [TechDraw] Improve readability of
+    ViewProviderTemplate.cpp
+  *  cd1cc2e6e9 - [TechDraw] Improve readability of
+    ViewProviderRichAnno.cpp
+  *  46ab6b7534 - [TechDraw] Improve readability of
+    ViewProviderProjGroupItem.cpp
+  *  0bf9f1de93 - [TechDraw] Improve readability of ViewProviderPage.cpp
+  *  0001965476 - [TechDraw] Improve readability of
+    ViewProviderLeader.cpp
+  *  4203420b02 - [TechDraw] Improve readability of
+    ViewProviderHatch.cpp
+  *  60e6a0e73e - [TechDraw] Improve readability of
+    ViewProviderGeomHatch.cpp
+  *  886f4fe1b9 - [TechDraw] Improve readability of
+    ViewProviderGeomHatch.cpp
+  *  c90fc4fe49 - [TechDraw] Improve readability of
+    ViewProviderBalloon.cpp
+  *  23c3cf76be - [TechDraw] Improve readability of
+    TaskWeldingSymbol.cpp
+  *  9830cabb33 - [TechDraw] Improve readability of
+    TaskSelectLineAttributes.cpp
+  *  8d7cb491f7 - [TechDraw] Improve readability of TaskSectionView.cpp
+  *  93700c81e4 - [TechDraw] Improve readability of TaskRichAnno.cpp
+  *  7c1c31e10e - [TechDraw] Improve readability of TaskProjGroup.cpp
+  *  c85e6d2d73 - [TechDraw] Improve readability of TaskLineDim.cpp
+  *  9976280027 - [TechDraw] Improve readability of TaskLeaderLine.cpp
+  *  6a2aa14edd - [TechDraw] Improve readability of TaskDetail.cpp
+  *  1ae137aeba - [TechDraw] Improve readability of TaskCenterLine.cpp
+  *  0d61c6a72b - [Doc] Migrate BuildWebDoc.cfg.in to doxygen 1.9.4
+  *  c2667384bd - Replace std::ignore with boost::ignore_unused()
+    According to https://isocpp.org/blog/2016/09/quick-q-stdignore-for-
+    ignoring-unused-variable std::ignore is not supposed to be used for
+    this
+  *  1bb9699c9a - Update fedora spec to v0.21
+  *  94223d4afe - Gui: [skip ci] print debug information in
+    GuiNativeEvent::tdx_drv_handler
+  *  acf2a186e5 - set PathArea section tolerance to 1e-07.
+  *  2003cb7506 - Gui: [skip ci] improve whitespaces in
+    GuiNativeEvent::tdx_drv_handler
+  *  339bb73e9f - Base: add convenience classes/functions that are
+    marked as deprecated in Qt 5.15 and removed in Qt 6
+  *  657b144128 - Gui: move QuiLoader for MinGW to global namespace
+  *  e8476868dc - Main: simplify MainPy.cpp
+  *  761ff7bab4 - Base: [skip ci] fix regression in ~ILoggerBlocker
+    caused by ea0c3e8598db6f
+  *  3f986ecce4 - Merge pull request #7174 from Roy-043/Draft-Fix-
+    EditMode-for-hatch,-facebinder-and-shapestring
+  *  84417b5e3a - Merge pull request #7186 from Roy-
+    043/Draft_Fix_Hatch_task_panel_title
+  *  d0c5345998 - Update view_hatch.py
+  *  081cf4c783 - Update view_facebinder.py
+  *  2886559fda - Draft: Fix Hatch task panel title
+  *  c126a8cced - Merge pull request #7137 from
+    Russ4262/fix/path_array_polar
+  *  cf27c91a2e - Replaced python2 usage of next()
+  *  d48fe836ca - [FEM] femutils.py: style changes
+  *  bd7e5c210b - Merge pull request #7178 from sliptonic/bug/misc
+  *  5abbfd7087 - [TD]fix crash on body with no shape
+  *  f14132ab71 - Merge branch 'master' into bug_fix_1
+  *  dd0bb33a01 - Fix bug #6679, add new profiles
+  *  edcd16afaf - FEM: Python code formatting
+  *  c76913454a - [Gui] ViewProviderGeometryObject: fix color and
+    transparency
+  *  c7aca5b5d2 - [FEM] [skip CI] electrostatic: remove unused code
+  *  c8064ed059 - [FEM] fix solver console bugs
+  *  16ec7d02c0 - Update view_text.py
+  *  e141910597 - Fixes #7164
+  *  a78d504ea4 - remove G53 from fixture list
+  *  ea1236664c - Avoid python 3.6 error. subprocess doesn't have
+    capture_output. Use subprocess.PIPE instead.
+  *  f4f37ecdd1 - G38 fixes for probe visualization per mlampert
+  *  c4c553617f - minor black fixes
+  *  792cb05473 - export a camotics tooltable
+  *  842fd4772b - Merge pull request #7007 from
+    LarryWoestman/post_refactor
+  *  7413a3a999 - Draft: Add resetEdit to gui_hatch.py
+  *  99262f6356 - FEM: extend codespell command in code conventions
+  *  bbbd4d07bf - FEM: typos, found with: codespell -q 2 -S *.ts -S
+    *.dyn -S *.svg  -L
+    childs,dof,dum,freez,methode,nd,normaly,programm,som,uint,vertexes,i
+    nout  src/Mod/Fem/
+  *  e49abfb350 - FEM: python code formatting
+  *  202f4fdc7f - Draft: Fix EditMode for hatch, facebinder and
+    shapestring
+  *  2f9c0713b2 - Draft: Fix setEdit in view_text.py
+  *  ff802c7274 - FEM: elmer solver writer, add some comment in the
+    regard of units
+  *  452c2ce7e7 - [TD]fixes for 8c0ab46b4d
+  *  5267658651 - Draft: fix spacing of ToolTip text
+  *  e7a8fd18e0 - Path:  Reformatted to a line lenght of 88 using black.
+  *  62d8d8b993 - Path:  Added 4 refactored postprocessors and
+    postprocessor tests.
+  *  8265de7b55 - Path:  Moved all of the global values to a dictionary
+    named values.
+  *  ff5e3734da - Lower level discrete tests for Linuxcnc post
+  *  e24cd8f03c - Part: [skip ci] fix possible build failure
+  *  732e6d9cee - Sketch: [skip ci] fix -Wsign-compare
+  *  5d389e3835 - [FEM] check if solver executables exist
+  *  07fab3e4f8 - [FEM] fix CCX multi-threading bug
+  *  713e160731 - [FEM] remove doubled slots from preferences UI files
+  *  a236ca843f - correction
+  *  4de0e6fb19 - Revert [Gui] preferences: add button to switch
+    gradient colors
+  *  25ffc89063 - [Gui] preferences: add button to switch gradient
+    colors
+  *  b3c0e7bc5a - [Gui] [skip CI] DlgPreferencesImp: a code style
+    improvement
+  *  19530b337f - [Part] [PD] add preferences setting for transparency
+  *  a014cac3c3 - [TechDraw] Alphabetize TechDraw.qrc for readability
+  *  43f6c17942 - [TechDraw] Rename icon filenames for consistency
+  *  8c0ab46b4d - [TechDraw] Improve readability of commands
+  *  bf606e980c - [Part] AppPartPy.cpp: compilation fix for precompiled
+    headers
+  *  162a39fb8c - [Part] Geom2d*: add more necessary includes
+  *  92129e83a1 - [Part] ShapeFix: remove unneeded includes
+  *  3c369285ce - [Part] Geom2d*: add more necessary includes
+  *  fc96cee7d5 - [Part] Geom2d*: add necessary includes
+  *  53d67a537a - [Part] Geom2d: remove unneeded includes
+  *  a09f04ded6 - [Part] ChFi2d_FilletAlgoPyImp.cpp: add necessary
+    include
+  *  494cedd863 - [Part] ChFi2d etc.: remove unneeded includes
+  *  6f28ba4eb8 - [Part] FeaturePart*: remove unneeded includes
+  *  c7a6bcef58 - [Part] FeatureRevolution.cpp: add necessary includes
+  *  ea0c3e8598 - [Base] fix a -Wunused CI compiler warning
+  *  4bbd240e5f - [Part] FeatureExtrusion.cpp: add necessary include
+  *  7030956099 - [Part] Feature*: remove unneeded includes
+  *  a54c2ed21b - [Part] Arc*: remove unneeded includes
+  *  3548032b5f - [Part] App*: remove unneeded includes
+  *  9fdac70448 - [Part] Attach*: remove unneeded includes
+  *  81ce256e69 - [Part] [Skip CI] BRepOffsetAPI_MakePipeShellPyImp: re-
+    add an include
+  *  f5d3c22d3a - [Part] B*: remove unneeded includes
+  *  ddf4214a01 - Merge pull request #7147 from Roy-
+    043/Draft_Fix_join.py
+  *  f4d4304e1b - Draft: Fix join.py
+  *  353c95bd82 - [Part] [skip CI] BSplineSurfacePyImp.cpp: remove
+    unneeded comment
+  *  47460b632c - [Part] BSpline*: remove unneeded includes
+  *  531e5d19a6 - [Part] ConePyImp.cpp: add missing include
+  *  b3cf8cc31c - [Part] C*: remove unneeded includes
+  *  e0a73327c2 - [TD]fix bad edge in face finder
+  *  c38e88c61b - TechDraw: Allow DraftView command on any object
+  *  1f4e6ad899 - [Sketcher] Do regular drag for small B-splines
+  *  8b52db90c5 - [TechDraw] Use function overloadin and avoid code
+    repeat
+  *  2f19dbaf23 - Draft: make_hatch.py should return the object
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 28 Jul 2022 19:55:44 +0000
+
 freecad-daily (0.19.2+git29449-91f84184bf-1) unstable; urgency=medium
 
   * Compile

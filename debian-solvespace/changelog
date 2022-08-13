@@ -1,3 +1,37 @@
+solvespace (3.1.0~git1895-bc4244e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: bc4244e0990af31ff326a72e2152fed662fca3e9
+  * Date: 1657323796
+  * git changelog:
+  *  bc4244e - Win32, MSVC: Enable Multi-processor Compilation (/MP)
+    with Visual Studio
+  *  ce6c4dd - Update README to point to flathub now too.
+  *  29263a8 - Update AppStream metadata.
+  *  6951c71 - Add a github action to build flatpaks
+  *  e6e217b - flatpak: Keep CLI enabled
+  *  1c5db4d - flatpak: Cleanup: Update and move module specific value
+    to module cleanup arrays
+  *  2d19afa - flatpak: Cosmetics
+  *  63e420e - flatpak: finish-args: Drop unsupported JSON comment and
+    cosmetics
+  *  c7dbd54 - flatpak: libjson-c: Enable threading and disable static
+    libs
+  *  2fdcf22 - flatpak: gtkmm: Avoid building demos and tests
+  *  d5f4e6f - flatpak: Use meson buildsystem where possible
+  *  356e675 - flatpak: Add eigen module
+  *  8314d74 - flatpak: Update modules to latest versions
+  *  fef5cc4 - flatpak: Add f-e-d-c properties to depends, retain
+    comments, and cosmetics
+  *  4a210bd - flatpak: Update runtime to 21.08
+  *  c4522db - flatpak: Update manifest.
+  *  c2f65ca - Fix whitespace and trailing newline in github actions
+    files.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 24 Jul 2022 21:31:04 +0000
+
 solvespace (3.1.0~git1878-b533360-1) unstable; urgency=medium
 
   * Compile
