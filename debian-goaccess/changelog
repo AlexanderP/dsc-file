@@ -1,3 +1,29 @@
+goaccess (1:1.5.4+git3842-9a3cc9a9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 9a3cc9a92b1ece74843dc12b3eb882e109c0e676
+  * Date: 1660043502
+  * git changelog:
+  *  9a3cc9a9 - Added back focal arm32v7 deb build.
+  *  caabc209 - Removed buster.04.arm32v7 deb build due to ca cert.
+    issues.
+  *  12855077 - Removed ubuntu20.04.arm32v7 deb build due to ca cert.
+    issues.
+  *  bb77edc2 - Ensure we have the latest ca-certificates for deb
+    builds.
+  *  7ac551c0 - Ensure we have the latest ca-certificates for deb
+    builds.
+  *  4f3bf32d - Ensure we use curl to download the provision file from
+    the deb repo.
+  *  4e86caec - Updated deb-packaging arm32v7 support builds.
+  *  61356972 - Added arm32v7 releases
+  *  75bcf26f - Update deb-packaging.yml
+  *  0e2583f7 - Update deb-packaging.yml
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 13 Aug 2022 22:56:09 +0000
+
 goaccess (1:1.5.4+git3832-5c4c5eec-1) unstable; urgency=medium
 
   * Compile

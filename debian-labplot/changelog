@@ -1,3 +1,91 @@
+labplot (2.8.2+git10103-3c88c367f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 3c88c367f04417e2ebc5e9c742240bf0939c560e
+  * Date: 1660385518
+  * git changelog:
+  *  3c88c367f - [histogram] minor fixes and improvements: 1.  don't use
+    any pen when drawing the shape of the histogram otherwise we're left
+    with unwanted line if no line is actually selected.  Fixed the same
+    issue also for the box and bar plots. 2.  rename the properties Line
+    to Shape to make more clear what we're dealing with here. 3.
+    disable filling properties if they don't make any sense,  i.e.  if
+    the shape type other than bars or envelope was selected.
+  *  8eec39e9d - fix Tests: normaly there shall be 6 ticks!
+  *  09f688a51 - remove comments
+  *  37c2b549a - call updateMajorTicksStartType() when the type was
+    changed in the dock and not in the Axis object.
+  *  32a25a6e9 - Adjusted the text for the major ticks start value to
+    the changes in the dock widget that were done in the previous commit
+    and disable the checks for isVisible() for a moment.
+  *  17d255bb3 - Fixes: * use ComboBox instead of CheckBox for the
+    selection of the first major tick type * show the auto option for
+    major ticks only if numbering is selected * properly show and hide
+    the required/unwanted widgets when changing the first major tick
+    type * adjusted enum and function names to the used convention in
+    the Axis classes
+  *  9859e44b0 - format
+  *  a836b0bb5 - format
+  *  4d220b4a9 - fix build
+  *  760022008 - fix compilation issues
+  *  f4efdd66d - fix compile issues
+  *  4a70d5995 - Update Axis.h
+  *  69464845d - add unittest
+  *  72d6e8ea8 - implement tickstart value because in some cases
+    startOffset might not be sufficient
+  *  7ab427ded - fix formatting
+  *  36815df62 - Fixed formatting and a minor fix in OzDASL dataset
+    collection file.
+  *  f6e033098 - [bar plot] implemented the stacked 100% variation of
+    the bar plot.
+  *  6a8e0f84a - [widget] show the text fields for name and comment in
+    the properties explorer for the text label if the label is not
+    hidden (i.e. not a plot title, etc.) and use a text mode (plain
+    text, LaTeX, markdown) specific icon in the project explorer for the
+    text label.
+  *  8b9d48f1c - spreadsheet: Fix translation of statistics
+  *  0dadf2a0c - [datasets] set the default value for the ASCI filter
+    parameter skip empty parts to false.
+  *  1a7ebb607 - format
+  *  dbbc0260d - Merge branch
+    'work/retransformMissingOrientationBarPlotTest'
+  *  daf9c0325 - emit signal only if scale rely changed
+  *  28de2848d - fix test
+  *  a8e6f5b2f - add test
+  *  97880841b - retransform always if not suppressRetransformScale,
+    because retransformScale does not handle index = -1
+  *  c210d0a32 - cleanup
+  *  8864a3f8a - introduce new function and emit dataChanged only for
+    the relevant ranges are retransformed
+  *  b9d90a4e0 - Remove arcconfig
+  *  19c748f88 - tests: readstat only when found or build
+  *  5ea35133a - cmake: disable building readstat for gcc version 11 for
+    the moment
+  *  a39f050a8 - GIT_SILENT made messages (after extraction)
+  *  ecd738791 - Fix several warnings introduced in recent commits
+  *  5861aaa7c - Avoid duplicate widget name
+  *  abf21e160 - 3rdparty: Fix more QXlsx warnings
+  *  86584a32c - [spreadsheet] ignore the second numeric value in the
+    Drop/Mask values dialog if it's not relevant for the selected
+    comparison operator and renamed the action from Delete to Drop.
+  *  53e9fe16d - [spreadsheet] better initial names for new columns
+    inserted via toolbar actions to avoid name collisions and don't
+    allow to insert new columns to the left of the currently selected
+    column if it's frozen.
+  *  3128f106b - Fixes: * don't crash on start-up when nothing needs to
+    be created on default (regression introduced in 2acef450) * use
+    smaller default font for LaTeX * removed error label in LabelWidget -
+    we don't show this label in other places, by using KMessageWidget
+    it's clear it's about errors * use Latin Modern Roman as the default
+    font in case lualatex is used since Computer Modern is not supported
+    by this compiler * for xelatex und lualatex, use the fontspec-
+    package instead of xltxtra since the latter is outdated and is
+    available for xelatex only
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 13 Aug 2022 23:09:29 +0000
+
 labplot (2.8.2+git10065-1f2c31d40-1) unstable; urgency=medium
 
   * Compile

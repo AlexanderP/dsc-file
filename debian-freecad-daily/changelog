@@ -1,3 +1,335 @@
+freecad-daily (0.19.2+git30079-0beefe7c5d-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 0beefe7c5de80aead2e6400804eb6cbda54d6ba8
+  * Date: 1660401719
+  * git changelog:
+  *  0beefe7c5d - [FEM] Substitute underscore for whitespace in CalculiX
+    solver output
+  *  b6cb5ffe4a - [FEM] Elmer: fixes for multi-threading
+  *  d1ffbc0ae9 - [Gui] [skip CI] NaviCube: fix indentation mistake from
+    previous commit
+  *  d78d1bbe58 - [Gui] fix NaviCube step handling
+  *  128877a7b7 - [FEM] Elmer: only output a property if necessary
+  *  08af39c1a8 - [FEM] Elmer: fix heat flux handling
+  *  2edf6abb2f - [FEM] Elmer: add support to turn off solvers
+  *  278598083d - [FEM] Elmer: add tooltips
+  *  5a72f2d1fa - [FEM] Flow constraints: fix wrong tooltips
+  *  4962c3da15 - [TD]fix merge conflicts
+  *  9905e17ba1 - [TechDraw] Remove uneeded redefinitions of inherited
+    functions
+  *  2f49a93292 - [TD]fix LineFormat ctor line color
+  *  11849808a1 - Gui: remove redundant void
+  *  2a434e3b2e - [TechDraw] fix up button in TaskProjGroup
+  *  ff876bf72c - Gui: clear combo boxes before re-filling them, fix
+    handling of icon size in preferences pack
+  *  b716644e27 - [FEM] Elmer: fix handling if fluids + solid materials
+  *  bd796c9197 - [FEM] Selection: fix error for 2D shapes
+  *  ed3625a0e0 - [FEM] Elmer: allow lower relaxation factor
+  *  746a56f5d3 - Gui: don't show non-existing and unusual directories
+    in file dialog
+  *  9311e2913e - Replace edit-cut.svg
+  *  2b5b7cd607 - Draft: fix snapper icons * Add convenience function to
+    get 3D views from MDI area * Use 'inherits' instead of
+    'QMetaObject.className()' to check more reliably for sub-classes
+  *  cb96332a64 - [TD]fix multiple dimension drag
+  *  730b14353c - Addon Manager: Finish pylint cleanup of startup
+    workers
+  *  9250850c9c - Addon Manager: pylint cleanup in startup workers
+  *  20047c94cd - [FEM] [skip CI] formatting fix for potential
+  *  ad2042e3cb - [FEM] electric Potential: add missing conversion
+  *  c219134a1e - [FEM] Elmer: fix material bug and improve material
+    handling
+  *  7910bd14e6 - [FEM] update a bimetal testfile
+  *  baaa5f8dd1 - [FEM] Elmer: set constraints for relaxation factor
+  *  48a206e3e4 - [FEM] Elmer: notify users about missing fluid material
+  *  5cd06b6148 - [FEM] fix bimetall example
+  *  9c50b541a5 - [Material] add materials used by our examples
+  *  69efa37e49 - [FEM] Elmer: automatic update for BiCGstablDegree
+  *  4b2a486d51 - [FEM] fix selection issues with flow velocity
+    constraint
+  *  8acce95ebb - Gui: revert changes of 0c70d45c83 for
+    GestureNavigationStyle
+  *  735eecc42b - Part: fix build failures with OCC >= 7.6
+  *  2062f9ce87 - clang: fix warnings [-Winconsistent-missing-override]
+  *  4638bbf8ed - Addon Manager: Unit tests for cache loading
+  *  54e06a759b - Addon Manager: Improve unit tests for utlility
+  *  44cbd88830 - Addon Manager: Refactor to improve testability
+  *  99084f1a62 - Addon Manager: Add unit test for addon fetch
+  *  616a343973 - Addon Manager: Fix macro-loading bug from refactoring
+  *  4c63094331 - Addon Manager: Worker refactor (round 1)
+  *  ddafb98813 - Mod: Use override etc 2
+  *  0c70d45c83 - Gui: Use override etc 2
+  *  3891e85c32 - App: Use override etc 2
+  *  91ea39a5c0 - Base: extend Placement/Rotation API * Add
+    Placement::isSame() and expose to Python * Add
+    Placement::multRight/Placement::multLeft * Fix PlacementPy::rotate *
+    Add Rotation::multRight/Rotation::multLeft * Add a test feature
+    FeatureTestPlacement for uni tests * Add unit tests
+  *  6067b18774 - Base: [skip ci] improve whitespaces
+  *  4b538a38ab - Fix Placement.rotate() to match documentation
+  *  4571206be5 - [FEM] Elmer: fix broken example
+  *  7f23e793eb - [FEM] increase size of generic solver task panel
+  *  4b861b1083 - Merge pull request #7333 from mlampert/bugfix/external-
+    thread-issues
+  *  915369d8a2 - Mod: Redundant_string_initialization
+  *  50ee321fa8 - Gui: Redundant_string_initialization
+  *  e5d4c09ce2 - App: Redundant_string_initialization
+  *  6f546de8f0 - [Gui] fix typos
+  *  a32e927227 - [FEM] Elmer: scale EigenMode results
+  *  515584c81b - [FEM] fix warp filter factor
+  *  617f213d2f - TD: [skip ci] help code analyzers with export macro
+  *  0c7e521ff5 - Gui: set width of list box according to text length
+  *  55fa3d8a77 - Mod: [skip ci] improve whitespace
+  *  da9ebc572f - Mod: redundant void 2
+  *  311abcc43e - Gui: [skip ci] include header with export macros
+  *  656ef8961f - Gui: redundant void 2
+  *  ec72d96038 - App: [skip ci] improve whitespace
+  *  7f699c3dad - App: redundant void 2
+  *  0200c8d70a - Fixed radii calculations and their processing for
+    external threads
+  *  1e8d1c621c - Fixed external thread milling orientation and
+    direction
+  *  38e34758c7 - Fixed logic error in path selection drill gate.
+  *  ffe0961853 - Added check to deal with float nan as cycle time
+    result
+  *  2e646c9147 - Sketcher: Fix sWhatsThis for
+    Sketcher_CompConstrainRadDia (#7324)
+  *  d02f6330fc - FEM: remove trailing whitespace from various FEM files
+  *  d438514d9f - [FEM] fix pipeline recompute issue
+  *  8b06680eb8 - [FEM] add framework to scale result mesh values
+  *  90afc19382 - [FEM] fix pipeline recompute bug
+  *  c4547c03e1 - Gui: improve integrated Python console: * correctly
+    handle the case that Py_BuildValue() can return a null pointer * fix
+    a latin1 <-> UTF-8 conversion problem
+  *  460efa3a72 - [FEM] Elmer: use defaults of ElmerGUI
+  *  753a034708 - [FEM] Elmer: fix for electricforce
+  *  bcc25f9bc7 - [FEM] pipeline fix when there is no field
+  *  678fc54358 - [FEM] [skip CI] set unit for potential loads
+  *  3783e629c6 - CMake: if module search mode for Coin3D failed try
+    config search mode, restore the variable COIN3D_VERSION
+  *  7a1c9303d3 - FEM: Python pep8 code formatting
+  *  b52967d52a - [FEM] update Elmer test files
+  *  38aaf9bfb3 - [FEM] Elmer: fix pipeline update issue
+  *  f6e0d37264 - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  e4e34affac - [FEM] Elmer: resale the mesh using Elmer
+  *  71c720efc8 - give success message normal prominence
+  *  42b3b8daed - [FEM] [skip CI] fix a typo for nonlinear solving
+  *  dcdbf6dcaa - [Fem] Elmer: change default nonlinear tolerance
+  *  df257416a5 - [FEM] make point filter aware of force density
+  *  3d0def93cd - [FEM] Elmer: fix default for heat
+  *  7e071623d5 - [FEM] fix selection issues with electrostatic
+    constraint
+  *  7f27c23bfb - [FEM] [skip CI] ViewProviderAnalysis.cpp: .clang
+    formatting fixes
+  *  a7c24ccd49 - FEM: Python pep8 code formatting
+  *  81836aae11 - [FEM] Elmer: polishing for nonlinear system
+  *  84db9d4baa - [FEM] Elmer: fixes for electrostatics
+  *  ef4366a20d - [FEM] Elmer: add missing parameters for Navier-Stokes
+    solver
+  *  3369aa4eca - FEM: Python pep8 code formatting
+  *  f39330163d - [FEM] Elmer: code improvements
+  *  b5faecea99 - [FEM] Elmer: output the equation-specific settings for
+    Navier-Stokes
+  *  7600855f26 - [Fem] Elmer: output the equation-specific settings
+  *  f2cbd9ebb4 - Mod: [skip ci] minor improvements
+  *  09c1b5a274 - FEM: Python pep8 code formatting
+  *  2b375f2dc6 - [Fem] Elmer: writer: remove unused variable
+  *  b621e6c253 - [Fem] Elmer: update tolerances
+  *  6f9a4ebc7f - [App] [Spreadsheet] fix compilation errors
+  *  b796a0d376 - Mod: use empty
+  *  1cc6329eab - App: use empty
+  *  29197f503d - [FEM] Elmer: next step to fix eigenfrequency analysis
+  *  d88729d2c4 - Gui: use empty
+  *  a00faca147 - Mesh: implement smoothing based on median filter
+  *  b5a34817db - [FEM] Elmer: fix mistake with transient solving
+  *  43dcbe4a31 - FEM: Python pep8 code formatting
+  *  3818534cd6 - [FEM] Elmer: fixes for the simulation parameters
+  *  550ef7ca80 - [FEM] Elmer: update test files
+  *  cd03ef3d78 - [Fem] Elmer: don't output unused parameters
+  *  2d4c5a4cfb - Mod: use emplace_back
+  *  6ac4d8392e - Gui: use emplace_back
+  *  e7357c1a99 - App: use emplace_back
+  *  b20060bcd0 - [FEM] Elmer: add missing parameters for flux equation
+  *  96ba47e80f - [Fem] Elmer: add missing settings for the stress
+    solver
+  *  bd42524548 - [Fem] Elmer: update test files
+  *  18d1941a79 - [FEM] Elmer: push mesh scaled to Elmer
+  *  869ab8d26c - Mesh: consider placement in MeshPy::foraminate
+  *  828c64a4c9 - Mesh: consider placement in MeshPy::nearestFacetOnRay
+  *  14451f7ec4 - Mesh: consider placement in
+    MeshPy::cut/trim/trimByPlane
+  *  f7a0586625 - Merge pull request #7278 from mlampert/bugfix/vcarve-
+    c++-exception
+  *  5a9201d2c5 - Draft: Enabled shortcut for undo segment - fixes #6181
+  *  953625d74b - [TechDraw] Use inherited isShow
+  *  fda3fd731f - [TechDraw] Use inherited unsetEdit
+  *  23966513c7 - [TechDraw] Remove uneeded redefinitions of inherited
+    functions
+  *  42fbc0f58d - Merge pull request #7309 from donovaly/Arch-code-
+    cleanup
+  *  b4305c7b46 - Base: add Transform/Transformed to Line3<> and
+    Polygon3<>
+  *  4d00faeceb - Base: add methods to transform a Vector3f with a
+    Rotation or Placement
+  *  d542185ba2 - Mesh: consider placement in
+    MeshPy::getCurvaturePerVertex
+  *  9b8cf02aaf - Mesh: refactor MeshPy::getSelfIntersections
+  *  3db79c907c - [FEM] Elmer: update test files
+  *  70b8f13c7c - [Arch] further code cleanup after Py2 check removal
+  *  357989c552 - [FEM] fix enable editing for all solvers
+  *  0549a47b09 - [FEM] Elmer: more work on Stabilize
+  *  82f41ce220 - [FEM] Elmer: setup new pipelines like we do for CCX
+  *  d455ba378e - [FEM] Elmer: use different default linear solver
+  *  ba858175fe - [FEM] Elmer: use direct solving as default for
+    stresses
+  *  6af8a84a3c - [FEM] pipeline: minor highlighting fix
+  *  846d39ba54 - [Arch] minor code cleanup after Py2 check removal
+  *  c49854b47b - Base: implement Line3 Polygon3 class
+  *  20dc9d0a61 - [Arch] remove unneeded checks for Python 3
+  *  109721fb0d - OpenSCAD: remove SCAD-Import error in importCSG.py
+  *  322080d4f1 - Mesh: refactor MeshPy::writeInventor
+  *  88e32eba9b - App: changes in ComplexGeoData: * rename some methods
+    * distinguish between Point and Vector * support of arrays of Point
+    or Vector
+  *  30cb46cc5f - Fem: [skip ci] fix possible crash in
+    PropertyPostDataObject::getMemSize
+  *  79a9b29304 - Merge branch 'master' into bugfix/vcarve-c++-exception
+  *  db3e28418d - [FEM] Elmer: update .sif files
+  *  1f89f6eca7 - [FEM] Elmer: fix solver stabilize settings
+  *  30d9efe691 - [FEM] Elmer: Flux: add missing settings
+  *  6edf0cc5ba - [Gui] QSint: missing piece to fix QGroupBox visibility
+  *  8ee6e78f7d - AddonManager: Fix source comment typos
+  *  3408d7c2ca - Enabled exception handling again
+  *  729c24b0f1 - Moved voronoi classes into Path.Voronoi module.
+  *  79021f4913 - Renamed python class Voronoi to VoronoiDiagram
+  *  9cc1d277fa - vcarve to color all borderline edges and ignore them
+    for path generation
+  *  2ea498874f - Added borderline interface to voronoi edge
+  *  86dfd0a862 - [TechDraw] Simplify code getting default line weights
+  *  750fa24b2e - [TechDraw] Remove deprecated replaceGeomFormat
+  *  8719b71e39 - [TechDraw] Remove deprecated replaceCenterLine
+  *  0bb56ad93f - [TechDraw] Remove deprecated replaceCosmeticEdge
+  *  127af5bea4 - [TechDraw] Remove deprecated replaceCosmeticVertex
+  *  ede18d20b9 - Fem: [skip ci] replace the SoAnnotation with an
+    SoSeparator to fix rendering artifacts for non-convex objects
+  *  38b34fb26a - PyCXX: [skip ci] fix linking error with MinGW/MSYS
+  *  60112e7618 - PyCXX: change typedef of PyCxx_ssize_t to fix compiler
+    warnings with MSVC
+  *  8690630495 - CMake: re-add workaround for MINGW to find Coin3D
+  *  7824d7b1df - Base: fix several warnings reported by code analyzers
+  *  c6de515b20 - Base: [skip ci] fix -Winconsistent-missing-override
+  *  34432c09f7 - Base: fix build failure because number_long() has been
+    removed in PyCXX
+  *  8aff4a7503 - Base: Modernise ctors dtors defs etc
+  *  3e9c2ff155 - clang-tidy: [skip ci] Disable modernize-use-trailing-
+    return-type
+  *  0c427dc57b - Merge pull request #7295 from
+    carlopav/DraftFixEditBSpline
+  *  adfffb688c - [FEM] remove some unused includes
+  *  360d1336b8 - - fixes #6102 - the point is that we don't set any
+    style for the group boxes, therefore the Windows style is applied as
+    nothing was set yet. The default Windows style is the color #dddddd
+    which is hardly visible on our blue default style. as solution set
+    an explicit color.
+  *  d37a1a2440 - [Draft] Fix Draft Edit AddPoint with BSpline
+  *  5b83b15b63 - PyCXX: update to version 7.1.7
+  *  114b5be981 - PyCXX: update to version 7.1.0
+  *  cfc8fb9fb4 - Merge pull request #7259 from Roy-043/Draft-Fix-
+    handling-of-groups-on-move-copy-and-rotate-copy
+  *  a2f509087e - PyCXX: update to version 7.0.0
+  *  04615798ab - PyCXX: update to version 6.3.0
+  *  c6ddc47733 - PyCXX: [skip ci] harmonize whitespaces with upstream
+  *  2f197d65ec - Spreadsheet: fixes #7285: [Bug] FreeCAD crashes if
+    cell value ' is set in Spreadsheet
+  *  89f34f562a - [FEM] Elmer: fixes for the point filter
+  *  59b4726698 - [FEM] Elmer: update .sif files
+  *  d296732de6 - [FEM] Elmer: don't push mesh scaled to Elmer
+  *  e07c696b1e - [FEM] Elmer: set sensible defaults for elasticity
+    equation
+  *  632e167ed8 - App: improve whitespaces
+  *  7c6b6a3942 - App: fix -Winconsistent-missing-override
+  *  65a356835b - App: Modernise ctors dtors defs etc
+  *  ffd51eda61 - FEM: python code formatting
+  *  244beb4e92 - [.github] [skip CI] checks.yml: disable a whitespace
+    check
+  *  19f07586c9 - Addon Manager: pylint cleanup of list diplay
+  *  ab11797f22 - [FEM] importVTKResults: assure user gets a visible
+    object
+  *  a285c3cd16 - [FEM] [skip CI] PropertyPostDataObject: some .clang
+    changes
+  *  aa7408f4c6 - [FEM] Constraint: BodeHeat: fix regression from commit
+    22c64ef8
+  *  0865b97459 - Addon Manager: fix thread termination bug
+  *  8bb85d2b7c - Fem: use SoAnnotation to highlight result pipeline
+    objects
+  *  47c2e77ebf - [App] [skip CI] Document: some .clang style fixes
+  *  4028a1dda5 - App: Use https
+  *  529c48cca4 - [FEM] remove unneeded checks for Python 3
+  *  eabffee3a5 - [Part] ViewProvider: 2 to M: remove unused includes
+  *  4b5062c0d3 - [Part] ViewProvider: P to T: remove unused includes
+  *  786741c0c0 - Fix various 'testing inequality to None' syntax issues
+  *  4043d049bc - remove redundant void from Base
+  *  e2805adb1b - Fem: implement a selection observer to notify a
+    ViewProviderFemPostObject when its selection status has changed
+  *  60c2157e54 - Gui: [skip ci] modernize QuantitySpinBox class
+  *  b40de7a509 - remove redundant void
+  *  fb5c731847 - [Test] remove unnecessary Python check
+  *  f4636e826e - [Spreadsheet] remove unnecessary Python check
+  *  0788b2c0a2 - [PD] remove unnecessary Python check
+  *  e61874be5a - [Path] remove unnecessary Python check
+  *  ae2b73567d - [SCAD] remove unnecessary Python 3 check
+  *  00f1360773 - [FEM] Elmer: fix small number property handling
+  *  c457f3bfbd - Fix various 'testing inequality to None' syntax issues
+  *  119a402c66 - Addon Manager: Add other_files download for wiki
+    macros
+  *  7c382f7c09 - [FEM] Elmer: fix eigenmode results for point filter
+  *  a6fbd74cae - [FEM] add missing eigenfrequcy calculation for Elmer
+  *  6a3a308fe7 - [FEM] utils: remove unused import
+  *  4662503d42 - Ci v2 (#7282)
+  *  ecbd151b11 - Remove unused conda files and PKGBUILD [skip ci]
+  *  181d3f5536 - Gui: fix ViewProviderLink transform with scale
+  *  a4708192b0 - [App] Application: add a comment
+  *  e7dd0528ae - [App] Application: revert init sorting
+  *  790bf5363e - [App] sort properties
+  *  2e3f3bab7e - Base: [skip ci] use Precision class in
+    Rotation::makeRotationByAxes
+  *  923de19044 - Base: add Precision class
+  *  bd5ef26536 - Base: add Precision class and move the Python binding
+    from Part to Base module
+  *  3811685826 - [Gui] [skip CI] PropertyItem: some .clang spacing
+    uniformication
+  *  548cab1fd8 - [FEM] Elmer: add missing direct variant MUMPS
+  *  69a4a49f3d - PD: Remove unnecessary semicolons in FeatureHole.py
+  *  84eb5fe9e2 - App: fixes #7277: Write to network drive fails on
+    Windows
+  *  82cdbebe97 - PD: Fix 'testing inequality to None' syntax (#7279)
+  *  1b5285bebd - [Gui] move a NaviCube parameter to the NaviCube
+    parameter group
+  *  d35400aae3 - Arch: Fix 'testing inequality to None' syntax  (#7274)
+  *  1ef31f40f5 - Draft: Fix 'testing inequality to None' syntax
+    (#7275)
+  *  6ea36b25ae - [Part] [skip CI] SectionCutting: silence MSVC compiler
+    warning
+  *  79d4c1556f -  [TechDraw] Improve readability of DrawWeldSymbol.cpp
+  *  811b85caeb -  [TechDraw] Improve readability of
+    DrawViewSpreadsheet.cpp
+  *  e48a3a8cea - Mod: [skip ci] fix warning: [-Wreturn-std-move]
+  *  54076efb64 - Part: [skip ci] fix typo
+  *  042d6df669 - Arch: Removed leftover debug messages
+  *  9b165e6fca - App: fixes #7112: Addon manager does not work on
+    windows with special characters in the username
+  *  d67ebd7058 - Delete .log_errors
+  *  505387d6fa - [Travis] remove Travis
+  *  666fab995e - [TD] silence a MSVC compiler warning
+  *  d4c60abf70 - [Sketcher] fix icon name
+  *  700d282301 - Addon Manager: pylint cleanup for install_to_toolbar
+  *  574bf49c61 - Addon Manager: pylint cleanup of NetworkManager
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 13 Aug 2022 22:54:53 +0000
+
 freecad-daily (0.19.2+git29824-e8e1050620-1) unstable; urgency=medium
 
   * Compile
