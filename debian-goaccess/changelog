@@ -1,3 +1,42 @@
+goaccess (1:1.5.4+git3865-e3a4aa2f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: e3a4aa2f6b52aa0bc034e75f42d6ac942dbc721a
+  * Date: 1662507460
+  * git changelog:
+  *  e3a4aa2f - Merge pull request #2375 from dcyang/master
+  *  2f3102fc - 참조대상 사이트 -> 출발 사이트
+  *  7aafdad7 - 분석한 요청 전체 -> 기록 분석 개요
+  *  a549f01b - 시관초과 -> 시간초과
+  *  30c45ae9 - comments cleaned up
+  *  6a028f81 - ko.po (Korean) added
+  *  3fdc8b9d - Removed CowAxess from the README.md.
+  *  cc612f62 - Removed stretch deb build as it's no longer supported.
+  *  2430d0fa - Removed buster.04.arm32v7 deb build due to ca cert.
+    issues.
+  *  991caceb - Updated change log with latest v1.6.3 changes.
+  *  7b380ade - Version bumped to 1.6.3.
+  *  176982c5 - Version bumped to 1.6.3.
+  *  ef9b2d15 - Version bumped to 1.6.3.
+  *  e8ddff30 - Version bumped to 1.6.3.
+  *  1c02407c - Version bumped to 1.6.3.
+  *  2463d524 - Ensure --no-term-resolver works with curses output only.
+  *  a2d867fd - Enabled DNS thread when resolving a host and outputting
+    real-time HTML.
+  *  b595d7e0 - Removed header and licensing from app.js (breaks JS).
+  *  3e65ce53 - Fixed WebSocket status label when outputting --real-time-
+    html.
+  *  0aaf3a0e - Added header and licensing to app.js.
+  *  db2b0b3e - Minor formatting updates.
+  *  d79de6ee - Ensure the DNS resolver goes through a thread when
+    outputting HTML real-time.
+  *  5f814c8f - Ensure --html-custom-css and --html-custom-js allow
+    filesnames without HTML special chars.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 07 Sep 2022 20:20:56 +0000
+
 goaccess (1:1.5.4+git3842-9a3cc9a9-1) unstable; urgency=medium
 
   * Compile

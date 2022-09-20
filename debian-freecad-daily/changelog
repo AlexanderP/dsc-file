@@ -1,3 +1,374 @@
+freecad-daily (0.19.2+git30362-061ec7f7b4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 061ec7f7b4b77f26c17e11c4fb0f83d3e0f95fe8
+  * Date: 1663081521
+  * git changelog:
+  *  061ec7f7b4 - Inspection: support of shape with edges only
+  *  92294c448e - [TD]fix active view on windows
+  *  f337a0f9d4 - [TD]fix PrintAll output to printer
+  *  1ac102e1d0 - [TD]fix missing = true
+  *  32db6656f3 - OpenSCAD: add unit test to check for empty 'union'
+  *  64784232ab - App: [skip ci] fix -Wsometimes-uninitialized
+  *  a70e37c20e - Addon Manager: Clean up extra import
+  *  ef7261e8e8 - [TD]restore missing isoparameter option
+  *  df831d8cbd - Addon Manager: Protect refs to
+    QRegularExpressionValidator
+  *  88ee6bb47f - OpenSCAD: Support empty unions and SVG import
+  *  3d7fa720e6 - [Bugfix]Sketcher: some user colors aren't taken into
+    account
+  *  285fc1065f - [Bugfix]Gui: allow set up expression even if property
+    value is currently being edited
+  *  4bfc6a082a - PartDesign: improve offset handling of SubShapeBinder
+  *  4d6f7bd8b0 - [github] disable 2 more checks
+  *  628e994f5a - extend find_package(SMESH)
+  *  fac841a0b7 - Fixed external SMESH cmake scripts, allowing netgen
+    and gmsh compatibility with VTK 9 - moved base SMESH cmake logic to
+    respective cmake script. - allow BUILD_SMESH, regardless of external
+    SMESH usage, for testing and so on.
+  *  317d489932 - Addon Manager: Support older PySide2 QRegExp
+  *  f42a47aa0f - Merge pull request #7469 from LarryWoestman/bugfix
+  *  9b322be497 - Path:  Allow error diff's to be as long as necessary.
+  *  3ee55aa2e7 - Path:  Fixed test00010 sensitivity to terminal column
+    count.
+  *  ec9d256d0e - [TD]space secondary views by row/columns
+  *  41944b2e2f - [TD]fix PrintAll context menu entry
+  *  85734ceb54 - [TD]Latin script templates to plain SVG
+  *  01d9ff8958 - Addon Manager: Fix bug in dep installation
+  *  b97c93008e - [TD]simplify ActiveView
+  *  6347f90b15 - Addon Manager: Fix disabling addon
+  *  96cfa1b0d3 - Addon Manager: Add note about Other... deps
+  *  e0b181e9b1 - Addon Manager: Fix macro other file copy
+  *  139b99d371 - Addon Manager: Cleanup
+  *  354a29d98a - Addon Manager: Refactor Licenses and People tables
+  *  cb1f6bffa8 - Addon Manager: DevMode content implementation
+  *  7a17106776 - Addon Manager: Implement content addition dialogs
+  *  aabf887e1e - Addon Manager: Add person editor
+  *  ea45af3a80 - Addon Manager: Add license selector
+  *  b6827b3621 - Addon Manager: Sketch out basics of Developer Mode
+  *  e28317f772 - [TD]fix misspelled preference key
+  *  20f5db1ad1 - [TD]fix extent dimension
+  *  968fb5be34 - Sketcher/BackEdit: makes clip plane switch side
+    according to view side
+  *  77f83ce716 - TempoVis : makes clip plane able to revert + some
+    improvements
+  *  7928a8c3a0 - Sketcher: makes TempoVis properties read only
+  *  3f220f1dd8 - Sketcher/BackEdit: makes sketch elements render on -Z
+    if sketch viewed from back side
+  *  a6a8f27125 - Sketcher/BackEdit: makes EditModeGeometryCoinConverter
+    class VP & attorneys aware
+  *  7d1e4186cc - Sketcher/BackEdit: makes
+    EditModeInformationOverlayCoinConverter class VP & attorneys aware
+  *  b40d800550 - Sketcher/BackEdit: makes view orientation factor
+    accessible to coin managers
+  *  36fccfdd08 - Sketcher/BackEdit: Add camera sensor to VP that
+    detects side and redraw if side changed
+  *  028517323c - Merge pull request #7462 from Roy-043/Draft-Improve-
+    drag-and-drop-behavior-for-Layers
+  *  975140614d - Mesh: [skip ci] remove xerces2 stuff
+  *  58cb977c3b - remove xcerces2
+  *  fe9daff383 - disable nodiscard
+  *  14ee13a0a5 - Part: remove duplicated wires from cross-section
+  *  789a15c787 - Merge pull request #7447 from
+    VM4Dim/StartPage_Fix_Wiki_Link_to_Reverse_Engineering
+  *  220c8c1259 - Merge pull request #7453 from Roy-043/Draft-Fix-
+    alignment-of-angular-dimension-arrows
+  *  333fc6448c - Draft: Improve drag-and-drop behavior for Layers
+  *  6d7d154c0e - TD: remove unused member variables to fix -Wunused-
+    private-field
+  *  5ffc2e10b6 - Merge pull request #7455 from mlampert/bugfix/setup-
+    sheet-stepover
+  *  967d4eb92e - [TD]remove white matting around detail view
+  *  fcef1cb174 - [TD]implement view stacking
+  *  d6330b7103 - [TD]add PrintAll command
+  *  86f61834ce - [TD]default LineFormat ctor
+  *  d14f8cda92 - [TD]propagate X,Y changes
+  *  71426aa467 - [TD]fix Text sizes not exact
+  *  a71a06291b - Update view_dimension.py
+  *  8b4e114b9d - TD: [skip ci] fix build failure with MSVC The compiler
+    requires the class declaration of LineSet in order to determine its
+    size
+  *  be686c3be5 - zipios: [skip ci] fix Windows build failure
+  *  9c911dd1b5 - [TechDraw] Microimprove new Face Finder Algorithm
+  *  1d4c607bff - [TechDraw] Fix bug in DrawUtil::isZeroEdge
+  *  d22a880fc9 - Fixed handling of App::PropertyPercent in SetupSheet
+    save/load
+  *  f5f618cd17 - Merge pull request #7454 from
+    sliptonic/PathFeedRateBug
+  *  ac0f0acc17 - Merge pull request #7185 from
+    LarryWoestman/post_refactor
+  *  9b2d39ae0d - Fix bug when testing verticallity during PathFeedRate
+    generation
+  *  e641232899 - [TechDraw] Improve readability of Geometry.cpp
+  *  c5a79d3909 - Draft: Fix alignment of angular dimension arrows
+  *  de7949a3b7 - [skip ci] Debian patches: * Fix FTBFS on armhf/armel,
+    undefined GL_PROJECTION (issue 1014875) * Disable syntax checks for
+    some Python modules
+  *  5244d9663e - zipios: [skip ci] remove deprecated header
+  *  84ea2f10e6 - zipios: Make local copy compatible with external
+    package
+  *  dcf2bc4fc9 - Addon Manager: Safer removal of macro cache
+  *  96dae36596 - [TD]dvAnnotation default dtor
+  *  2f363e4f17 - [TD]New face finder algo
+  *  abfd9da579 - [TD]CI clang warnings
+  *  acf17905ed - [TD]CI clang warnings
+  *  181b5af6a6 - Mesh: use class ZipHeader to directly access the model
+    file of a 3MF file
+  *  1789c957df - Base: [skip ci] Add function to read the CD of a zip
+    file from a std::istream
+  *  cd6ea30d31 - [StartPage] Fix Wiki Link to Reverse_Engineering WB
+    Page
+  *  f35f77e98e - Mod: [skip ci] fix some MSVC warnings
+  *  ded6b7234b - Mesh: [skip ci] add missing headers to PCH
+  *  6b7771d0fa - Merge pull request #7437 from luzpaz/codespell-ignore
+  *  460f33a1be - Merge pull request #7441 from Roy-043/Draft-Fix-
+    flatten-wire
+  *  0c8b50d591 - Merge pull request #7436 from Roy-043/Arch-Fix-
+    baseface-generation-for-walls-with-a-trace-that-self-intersects,-has-
+    T-connections-or-that-overlaps
+  *  f99bf376b0 - Merge pull request #7267 from Roy-043/Draft-Avoid-
+    faulty-Base.Placement.rotate()
+  *  b687e2ce0c - [Bugfix]Gui: ensure message boxes appear and stay on
+    top of main window
+  *  0f698bb9ac - Path:  Removed the comparison-style postprocessor
+    tests.
+  *  39c2ff4e45 - Draft: Fix flatten wire
+  *  c35244e74f - Merge pull request #7438 from Syres916/patch-54
+  *  f50505ae42 - Merge pull request #7428 from dresco/PathNaming
+  *  7d5f208ae7 - codespell: add 3 more words to codespellignore list
+  *  61f14dcf2c - Mesh: [skip ci] fix several minor issues
+  *  324e4ca33f - Mesh: [skip ci] remove superfluous function call
+  *  253ddde069 - Mesh: support to read 3MF format
+  *  3b29cf18be - [Part]fix makeWireString for Win & Py > 3.09
+  *  8aaa36a013 - Arch: Fix baseface generation for walls with a trace
+    that self-intersects, has T-connections or that overlaps
+  *  46b70c73fe - Addon Manager: Add missing GitFailed import
+  *  55866fd622 - Clang: [skip ci] set minimum name length to 2
+  *  01c3f1b636 - Mesh: [skip ci] fix minor issues
+  *  4a9559c580 - Merge pull request #7424 from Roy-043/Draft-Fix-
+    workingplane-auto-alignment-to-Front-view
+  *  794a51eecc - Fix for Path output file naming issues.
+  *  af18a9ea3b - Sketch: fix build failure
+  *  9381a8b2fb - Base: make isMultiUnitLength() and isMultiUnitAngle()
+    const
+  *  086ce2d34c - Mesh: add support of thumbnails of 3MF format
+  *  9ff0ae58da - [Path] Change Default Retraction from G99 to G98
+  *  0179afbe8a - Draft: Fix workingplane auto alignment to Front view
+  *  fbfac41c82 - [TD]fix face centerline
+  *  dd14b42829 - [Sketcher]make cursor coord display unit aware
+  *  16ff6dfbbb - [Base]identify schemas which use multiple units
+  *  ea8cf94991 - Mesh: [skip ci] include header in source file
+  *  fcc9d1fc84 - Mesh: avoid to create an extra tmp. copy of MeshObject
+  *  16c73780b9 - Mesh: add exporter class for 3MF format
+  *  580c124b22 - Mesh: improve 3MF support
+  *  88ce83b68c - zipios: unicode handling in ZipOutputStream
+  *  818a8add04 - github: Update PULL_REQUEST_TEMPLATE.md to v1.0
+    Changelog thread
+  *  9b5cf1537d - Merge pull request #7354 from Roy-043/Draft-add-
+    tolerance-to-boundbox-check-in-intersections.py
+  *  97ff522bb4 - Merge pull request #7368 from ebrahimraeyat/master
+  *  61b92666e1 - Mesh: refactor mesh exporter classes
+  *  2b5452d19d - [TD]fix perspective projection
+  *  5ea33e9c4b - [TD]fix too large page on print
+  *  d371abf6f5 - Mesh: move 3MF writer to its own class
+  *  b277ef36c1 - Misc: modernize C++: replace 'typedef' with 'using'
+  *  97967743a4 - TD: modernize C++: replace 'typedef' with 'using'
+  *  c3279b82b4 - Mod: modernize C++: replace 'typedef' with 'using'
+  *  a7bf7869ae - Sketcher: modernize C++: replace 'typedef' with
+    'using'
+  *  2ae40e006c - Points: modernize C++: replace 'typedef' with 'using'
+  *  55bfdfb6d7 - Path: modernize C++: replace 'typedef' with 'using'
+  *  6d4f95650c - PD: modernize C++: replace 'typedef' with 'using'
+  *  c6a208bb18 - Part: modernize C++: replace 'typedef' with 'using'
+  *  7eb30ca5c7 - MeshPart: modernize C++: replace 'typedef' with
+    'using'
+  *  fd4e2c967b - Mesh: modernize C++: replace 'typedef' with 'using'
+  *  e205daa43d - Mod: modernize C++: replace 'typedef' with 'using'
+  *  ba8d5ab055 - Gui: modernize C++: replace 'typedef' with 'using'
+  *  5240a30431 - App: modernize C++: replace 'typedef' with 'using'
+  *  d2168f51b9 - Base: modernize C++: replace 'typedef' with 'using'
+  *  4310b49a8b - [TD]replace GeometryObject only after all changes are
+    done
+  *  4bdbacda75 - [TD]clazy warning re 3 parameter QObject::connect
+  *  9ab037b581 - Addon Manager: pylint cleanup of Macro class
+  *  3e7a22daef - [TD]cosmetic vertex size consistency
+  *  cf399afe87 - App: minor improvements: * use 'using' instead of
+    'typedef' [modernize-use-using] * fix bugprone-reserved-identifier *
+    fix whitespace/comma
+  *  e809295342 - App: replace some while loops with range-based for
+    loops to increase readability
+  *  2a2062ec46 - App: use auto - strange iterator (PR #7405)
+  *  196983cf95 - Base: [skip ci] optimize writing Inventor file
+  *  47f69d1389 - Base: [skip ci] whitespace improvements
+  *  4cd8e2e93f - Base: Fix warning -Wrange-loop-construct
+  *  dd95969695 - [TD]fix crash in Preferences
+  *  51678cc8ab - Merge pull request #7207 from agren/remove-dead-code
+  *  90ffdda622 - Merge branch 'master' into remove-dead-code
+  *  1e865c6312 - Part: [skip ci] remove support of Py < 3.5
+  *  752511a9f1 - fix translation issue
+  *  89ad254b7c - Base: support of SoFaceSet in InventorLoader
+  *  6fa3a50149 - Mesh: use Base::InventorLoader to load mesh files in
+    .iv format
+  *  8b7f721cd0 - Base: implement loading of OpenInventor files
+    (currently only SoIndexedFaceSet is supported)
+  *  283fec68f8 - Addon Manager: Fix bug in updater
+  *  6ef7ae0404 - Addon Manager: Support older git versions
+  *  3a47916d9b - Addon Manager: Pylint cleanup of utilities
+  *  85ec32c60e - App use explicit
+  *  a8cb4e7444 - Addon Manager: Fix bug in dependency resolver
+  *  f8567b0975 - AddonManager: Refactoring of installer
+  *  65b22c2f51 - Surface: [skip ci] fix minor issues found by code
+    checkers
+  *  c38d8479bc - Clang: fix clang-diagnostic-error
+  *  6953310116 - Mod: Single arg ctors must be explicit
+  *  a909df7f39 - Gui: Single arg ctors must be explicit (PR #7369)
+  *  4faf443883 - stepZ.py: remove remaining mention of gzip_utf8
+  *  52845b8c4c - Surface: add unit test for blend curve
+  *  1ce78efb29 - Import: [skip ci] whitespace improvements
+  *  97ec620ff8 - remove unused gzip_utf8
+  *  bfa7a6687c - Update org.freecadweb.FreeCAD.xml
+  *  f79f1dd066 - Fixes filetype icon not showing Fixes the icon of
+    .FCStd files not showing because the xml element was called icon
+    instead of generic-icon
+  *  c538824309 - Base: [skip ci] fix scale factor in unit schemes
+  *  b74148fdd0 - Clang-tidy: [skip ci] set value of parameter
+    readability-implicit-bool-conversion.AllowPointerConditions to true
+    Forum discussion:
+    https://forum.freecadweb.org/viewtopic.php?f=10&t=71355
+  *  949b43aabb - App: [skip ci] whitespace improvements
+  *  a899f078bd - CMake: [skip ci] remove trailing whitespaces
+  *  a1776d3e74 - Fix build on MacOS-X 10.14: missing Xerces include dir
+  *  983e13c3b7 - Fix build on MacOS-X 10.14: missing cmath header
+  *  3c8a268355 - App: [skip ci] improve whitespaces
+  *  d66df602ad - App: Single arg ctors must be explicit
+  *  216ab71ade - Arch: removing unnecessary 'if' conditional check
+  *  ded17b7543 - Follow-up typo fixes
+  *  1a7ddfdc24 - Fix typos and whitespace
+  *  eb1f30d327 - Surface: several improvements * fix crash because of
+    incomplete inheritance of BlendPoint and BlendCurve -> do not
+    inherit from BaseClass   as consequebce make destructor non-virtual
+    and remove getPyObject * pass std::vector by const reference *
+    remove unneeded includes * use more suitable Python exception types
+    * when returning with null from Python handler then set an exception
+    * harmonize file guards * several optimizations or simplifications *
+    use modern C++ * harmonize command name * fix copyright note
+  *  27bf1dff0e - [Surface]: Change to BaseClass
+  *  c85c8cfb33 - [Surface]: Implementation of BlenCurve.
+  *  7e69d7e38b - Surface: Various fixes
+  *  a783d5bbfc - Part: fix test failure and add setBounds for backward
+    compatibility
+  *  df8e661ddf - Part: [skip ci] improve whitespaces
+  *  c86490eb15 - [Part] Change BSplineCurve/Surface setBounds() method
+    name to scaleKnotsToBounds()
+  *  e3dd67ad9f - [Part] Add setBounds method to BSplineCurve
+  *  a5ecf97092 - Gui: [skip ci] fix readability-identifier-length,
+    whitespace/comma
+  *  f4b01a5568 - Gui: Prevent crash when trying to create
+    ExpressionBinding without arguments
+  *  51860063f8 - Merge branch 'master' of
+    https://github.com/FreeCAD/FreeCAD
+  *  0e24ed6342 - [FEM] pipelines: distinguish stresses (#7246)
+  *  8efe30c8a9 - Test: add test feature for unit tests
+  *  71015d23d0 - App: fix possible dangling pointer in
+    Document::removeObject()
+  *  00204dd6d4 - Tools: Use Python 3 as interpreter for fcinfo
+  *  91830933d7 - TD: [skip ci] fix warnings of checkers about
+    whitespaces
+  *  67d0679643 - Addon Manager: Fix subproces call on Linux
+  *  4ad52a5778 - [TD]use Label in waiting for thread message
+  *  1494b8288a - [TD]use new style QObject::connect
+  *  5ea9627231 - Addon Manager: Update preferences for new git
+  *  3c191331a2 - AddonManager: pylint cleanup, git
+  *  46fc605fca - Addon Manager: Refactoring and pylint cleanup
+  *  ee162ff3a8 - Addon Manager: Refactor to test git and eliminate
+    GitPython
+  *  b6da08ef8b - Addon Manager: Create new git handling mechanism
+  *  f0d5d716a7 - Part: Add missing include to PCH
+  *  0a96f088d1 - Part: add Part.makeFilledSurface() that internally
+    uses GeomFill_Generator
+  *  5014bab534 - Mod: replace std::ifstream/std::ofstream with
+    Base::ifstream/Base::ofstream
+  *  5be214b885 - Base: implement default constructor and open()
+    function for Base::ifstream and Base::ofstream
+  *  145c3bf7c5 - PD: [skip ci] fix UTF-8 handling in Hole feature
+  *  a72bf218f9 - Sketcher: Tweak tip language for ConstrainRadiam
+  *  84253f4b4f - GUI: Remove unnecessary translation calls
+  *  ff01905f0b - TD: fix UTF-8 handling in LineGroup
+  *  ea5a0371a3 - Gui: [skip ci] fix UTF-8 handling of icon resources
+  *  8f067e02f3 - [TechDraw] Remove uneeded redefinitions of inherited
+    functions
+  *  f5c5eec3bb - [TD]code review changes for Gui
+  *  f9d62da307 - [TD]code review changes for dvp, dvs
+  *  e8a25a8fdf - [TD]code review changes for dgh, dpg, dpgi, dra
+  *  644b4991e2 - [TD]code review changes for dvp and dvd
+  *  d6806167e1 - [TD]fix typo in message
+  *  2d7d882235 - [TD]prevent running threads on object delete
+  *  74cdc6db61 - [TD]code clean ups
+  *  b1dd0bd2d0 - [TD]add preference for progress reporting
+  *  f12846599d - [TD]fix detail of section not displayed on restore
+  *  00b671e370 - [TD]fix projectShape for shape outline
+  *  6677cd4d8f - [TD]clazy warnings and duplicate setter/getter
+  *  006cf78c7a - [TD]fix segfault on repeated open/close
+  *  6df801ed96 - [TD]respect AutoDistribute on load
+  *  a2b09d37c5 - [TD]move section cut and detail common to thread
+  *  ac63550122 - [TD]add progress reporting framework
+  *  7e701969af - [TD]run hlr and extractFaces in threads
+  *  bdf4cea14e - [TD]refactor scene/view/mdi
+  *  9c929897ac - [Netgen] fix typos found by codespell
+  *  1efb0503d2 - [Gui] background default colors
+  *  8b056f156f - [Netgen] add headers to support recent Netgen
+  *  ee68391bc8 - [FEM] point filter: add units for flux results
+  *  876b4ebb8e - [FEM] Elmer: fix flux equation
+  *  68053e4f4d - ReverseEngineering: [skip ci] improve doc string of
+    approxSurface
+  *  baf294a5a6 - [FEM] initial pressure: bind expression to
+    QuantitySpinBox
+  *  bc2f04889b - Base: [skip ci] improve whitespaces
+  *  020bf1789a - Base: expose enum NumberFormat to Python
+  *  c3e724d78d - Removing Unnecessary if conditional check
+  *  040f86c4d5 - [FEM] fix body heat source constraint
+  *  0a18346767 - [FEM] potential constraint: change default value
+  *  9b56412856 - [FEM] potential constraint: allow to set expression
+    for value
+  *  517fde7881 - [Base] [skip CI] fix a typo in QuantityPy.xml
+  *  26c04ab136 - [FEM] [skip CI] sorting in Fem.qrc
+  *  262658685a - [Gui] revert the revert of setting unit factor for F/m
+  *  f7c3989a2f - [FEM] move initial pressure to fluid constraints group
+  *  37a3338537 - [Gui] revert setting unit factor for F/m
+  *  a598398a0b - [FEM] [skip CI] Elmer writer: fix indentation mistake
+  *  b177a8d6b2 - [.github] disable too many lines check
+  *  43b6c65311 - Test: unit test for handling of the factor of F/m This
+    test is supposed to cause a failure because of the wrong factor of
+    F/m for SI1 and SI2 in commit 9db5dff7
+  *  27f50ad131 - [FEM] add initial pressure constraint (#7364)
+  *  32d7663e46 - [FEM] permittivity: improve code
+  *  7ed74fa63d - Test: [skip ci] failUnless is deprecated, replace it
+    with assertTrue
+  *  10a78d91af - remove unused CXX standards. change boost min version
+    to 1.65
+  *  9db5dff744 - [FEM] fix handling of vacuum permittivity
+  *  e2636b2926 - [FEM] Elmer example: remove wrong permittivity
+  *  e0585a328b - [FEM] Elmer: writer: get rid of unnecessary function
+  *  99120c2c74 - [TD]include clean up continued
+  *  dce15245fa - [FEM] Elmer: handle pressure for fluids
+  *  f2ba030ebb - [TD]remove precompiled from *.h
+  *  aa9a667506 - [TechDraw] Clean up precompile in Gui
+  *  52b3c75eb4 - [FEM] change default pressure
+  *  335196a468 - [FEM] [skip CI] remove an obsolete comment
+  *  dd370b9643 - [FEM] Elmer: fix initial flow velocity
+  *  d7d49aa1a0 - [FEM] [skip CI] Elmer: add copyright
+  *  5779040107 - [FEM] [skip CI] fix non-Unicode character
+  *  08f02885a4 - [FEM] Elmer: sort solver methods for better overview
+  *  f0590d1b2f - Merge branch 'master' of github.com:FreeCAD/FreeCAD
+  *  d8784b7ac9 - [FEM] Elmer: fix for the Idrs method
+  *  4407dde179 - [TD]hatch file default handling
+  *  a2e473c5b7 - [FEM] Elmer: set constraints for solver systems
+  *  d985525893 - [FEM] Elmer: just sorting to keep the overview
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 13 Sep 2022 19:41:29 +0000
+
 freecad-daily (0.19.2+git30079-0beefe7c5d-1) unstable; urgency=medium
 
   * Compile

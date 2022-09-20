@@ -1,3 +1,173 @@
+labplot (2.8.2+git10201-5257eaf8f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 5257eaf8fcc95ae1a547b74d6deaf3ca233e73a2
+  * Date: 1662917144
+  * git changelog:
+  *  5257eaf8f - fix formatting.
+  *  d29a62823 - [spreadsheet] implemente Pareto Plot in the column
+    statistics widget for text columns.
+  *  8da0c1d54 - [worksheet] moved the properties of values (value
+    strings shown besides the data points in XYCurve, Histogram,
+    BarPlot, etc.) to dedicated classes for better code re-use.
+  *  d974bdf7d - [worksheet] for latex labels, use a somewhat bigger
+    value for fboxset to avoid too strong/errorneous trimming of some of
+    characters like '7', '9', etc.
+  *  65d70e4f5 - Fix compile error
+  *  31e8c1a49 - code format
+  *  86732799e - [spreadsheet] show column statistics also for text
+    columns.
+  *  091b327d8 - cmake: desktop files do not need to have the executable
+    bit set
+  *  f51c06fe8 - cmake: try another fix installing .desktop
+  *  e80e5b681 - cmake: fix installing .desktop
+  *  06aaf0342 - GIT_SILENT made messages (after extraction)
+  *  6b62d9a99 - Merge branch 'master' into work/kossebau/kdemoduledir
+  *  f5d9cc0ba - format fix
+  *  713c356be - minor code fixes
+  *  9062009c6 - Remove explicit use of ECM_KDE_MODULE_DIR, is part of
+    ECM_MODULE_PATH
+  *  531c4e8cc - [bar plot] new tests.
+  *  dff33531f - Fix setting Axis range
+  *  b5aabb5a8 - fix issue
+  *  1053e9084 - histogramm shall track retransform
+  *  b9f1ff4a9 - use QVERIFY2 to automatically showing description if
+    the test fails. Add string vector comparsion macro
+  *  4a73a67fd - Update RetransformTest.cpp
+  *  604a5ae04 - Update RetransformTest.h
+  *  caf6d4eb1 - add initial test
+  *  1f5a3d579 - [worksheet] when drawing the rotated latex image, use
+    the untransformed rectangle since it gets rotated in the painter
+    again.
+  *  55d6b5012 - Removed some dead code.
+  *  007c9cdf8 - [worksheet] when drawing the selection box for
+    TextLabel and Image, properly take the width of the pen into account
+    when calculating the rectangle.
+  *  d09c6a69b - [worksheet] improved the quality and the size of latex
+    labels when they are being created when the worksheet was already
+    zoomed.
+  *  a342460ed - When determining the error message in the latex output
+    that is forwarded to the end-user, use the first non-empty line of
+    the error output instead of the first line.
+  *  a9cbeda52 - cmake: fix linking iconv
+  *  53555e129 - cmake: link system readline with iconv on all platforms
+  *  bd278ac5a - Call explicitely the proper function of the base class
+    to avoid infinite recursion in AspectDock::setAspects() when adding
+    new folders and workbooks.
+  *  c6d932d19 - Restored the code that was removed by an error during
+    the refactoring done for Background.
+  *  98c4bf321 - Multiple fixes for copy&paste in the project explorer
+    via keyboard shortcuts: * properly determine the name and the type
+    of the copied object * fixed wrong string placeholders * when
+    creating or openning a new project, remove all error messages from
+    the previous project, if any are still visible * when pasting some
+    external data (for example the data copied from a text editor),
+    allow to paste into spreadsheet columns only
+  *  aeb934813 - unify checkRange and use Dimension instead of two exact
+    functions
+  *  834f9ee31 - retransformRange if the coordinatesystemindex changes,
+    because the range used to draw the axis is stored in the Axis object
+    and must be updated.
+  *  916acb5f6 - format
+  *  fe35e4681 - [spreadsheet] when generating random numbers,  allow to
+    specify the seed number.
+  *  69b466f67 - retransformscale and retransform must be called after
+    the scale changes so that the axis and curves are updated
+  *  16d533972 - the index is related to dim and not dim_other
+  *  02c50ce4f - Minor fixes: * reduced padding in
+    CartesianPlotSetRangeIndexCmd * switched to Symbol::draw() in
+    XYCurve and Histogram to reduce the code duplication * removed some
+    dead code in NoteDock * improved the layout in SymbolWidget
+  *  6f2211065 - [box plot] symbols for whisker end points and some code
+    refactoring to reduce code duplication around the handling of
+    symbols in BoxPlot.
+  *  26ddde193 - format
+  *  7f2c88824 - retransform if updated indipended if sender is provided
+    or not
+  *  2843d4856 - show index and value of the compared vectors
+  *  a44f1eeb8 - revert
+  *  953f6122b - if index is -1 execute retransformScale on all ranges
+  *  3828d3fba - fix crash
+  *  9e89c7653 - fix crash
+  *  f2c5b9635 - format
+  *  b4a34583f - rename signals and move them to the beginning and the
+    end.
+  *  cc08f9110 - static_cast missing
+  *  219887515 - typo
+  *  1f31e82eb - aspect is a pointer
+  *  2e6f45b06 - use signals instead of calling project() so the
+    dependency to the project is reduced
+  *  a6cbfabc2 - format
+  *  f8653e7f0 - m_suppressRetransform is not needed because
+    suppressRetransform exists
+  *  dbcda6ebb - format
+  *  8e5d152bc - RetransformTest: also the curve shall be called only
+    once. Instead of required, use suppress, because it is a better
+    wording
+  *  da6af4de9 - move setSuppressRetransform into WorksheetElement so it
+    can be used also by the curve and there must not be a second
+    suppress variable
+  *  8f53b332b - format
+  *  fe110316a - initial fix
+  *  e03df9261 - no need to retransform when printing changes, because
+    linepath is already calculated. Linepath is needed for the curve
+    shape and the bounding rect
+  *  998f241ca - for export use painter->drawPath()
+  *  8b7f666ff - if we have a solid line, use a faster approach to draw
+    the lines
+  *  b700b871c - Revert draw lines directly because it is more than 60
+    times faster than drawing the path
+  *  aa462d924 - Revert Test use drawPolyline which is faster
+  *  35956a58e - Test use drawPolyline which is faster
+  *  d813795f3 - draw lines directly because it is more than 60 times
+    faster than drawing the path
+  *  ecad1d782 - Remove qwindowtitle from desktop file
+  *  81c2c59bd - Remove ServiceTypes from desktop file
+  *  12a9699fd - Update LabelWidget.cpp
+  *  7b5be0bad - Apply 1 suggestion(s) to 1 file(s)
+  *  024a2bc64 - format
+  *  f9f7255a6 - fix build
+  *  942ae9ea7 - prevent using directly m_aspect
+  *  b513d4b61 - format
+  *  b604886b4 - use template
+  *  b57bfdde4 - 1) update the coordinatesystemIndex for all aspects not
+    only the first one 2)use function to set aspects to the basedock.
+  *  c8a3904b1 - instead of using an external project, reimplement the
+    project in code
+  *  634482aa7 - no need to retransform the other dimension, because it
+    will be retransformed already in the autoscale if needed
+  *  4c250f1c8 - reuse functions
+  *  7a75c48bf - format
+  *  8e963bf60 - [histogram] error bars with custom values.
+  *  c448852c8 - [histogram] caps for error bars in Histogram.
+  *  258e16876 - [histogram] initial implementation of error bars for
+    histograms,  only the Possion error bars are supported right now.
+  *  fb0f22bdb - fixed formatting.
+  *  8bde3e764 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  3ba7edef2 - GIT_SILENT made messages (after extraction)
+  *  3f137491e - [box plot] enable the rug plot also for box plots.
+  *  7fbcf139e - [histogram] rug plots for histograms.
+  *  cc4ae7221 - fixing the build.
+  *  9575c1f56 - [histogram] when creating the data spreadsheet,  use
+    the proper bin values and not always the probability dencity
+    normalized values.
+  *  3fbe9cd05 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  9ecba0282 - GIT_SILENT made messages (after extraction)
+  *  608c4cac5 - fixed formatting.
+  *  7fe88f29d - [worksheet] data spreadsheet for histograms with the
+    positions and values of the bins and for box plots with its metrics
+    (quartiles, median, etc.).
+  *  32650f4b8 - [analysis] allow to create a spreadsheet with the data
+    steming from the result of the computation.
+  *  6eed1afc8 - [histogram] use the selected range and not the default
+    one.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 13 Sep 2022 19:59:12 +0000
+
 labplot (2.8.2+git10103-3c88c367f-1) unstable; urgency=medium
 
   * Compile
