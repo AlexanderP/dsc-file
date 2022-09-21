@@ -18,7 +18,7 @@ else
 endif
 
 %:
-	dh $@ --parallel
+	dh $@ --parallel --buildsystem=qmake
 
 override_dh_auto_configure:
 	cp debian/$(CONTROL) debian/control
