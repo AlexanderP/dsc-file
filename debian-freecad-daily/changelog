@@ -1,3 +1,146 @@
+freecad-daily (0.20.1+git30473-b5e29c20dc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: b5e29c20dc7eb96d972b0fc72bd230098f58d099
+  * Date: 1664208282
+  * git changelog:
+  *  b5e29c20dc - App: Reformat Metadata per clang-tidy
+  *  66766282fa - Addon Manager: Use Vermin to detect min Python
+  *  552d6ab895 - Addon Manager: Add support for <pythonmin> tag
+  *  1d11c5805a - App: Add support for <pythonmin> XML tag in metadata
+  *  50bd4d8428 - Mesh: move Extension3MFFactory outside Exporter3MF
+  *  cbc5cf8ee0 - Part: [skip ci] cppcoreguidelines-prefer-member-
+    initializer / cppcoreguidelines-owning-memory
+  *  6f74903c3d - [skip CI] [Part] TaskFaceColors.cpp: whitespace
+  *  24e992e97d - [Part] Task*: remove unused includes - part 2/2
+  *  998056364d - [Part] Task*: remove unused includes - part 1
+  *  42a19ab883 - [Part] So*: remove unused includes
+  *  412a5a982b - [Part] Dlg*: remove unused includes - part 2/2
+  *  219ddd0ec5 - [Part] Dlg*: remove unused includes - part 1
+  *  73f885a37d - Addon Manager: [skip ci] fix typo
+  *  608fb15d40 - CMske: move define 'BOOST_NO_CXX98_FUNCTION_BASE' to
+    CompilerChecksAndSetups macro and support CMake < 3.12
+  *  bd88f7275c - Fix for Boost with C++20
+  *  198ce19e46 - App: Consider using getpwuid_r(...) instead of
+    getpwuid(...) for improved thread safety.  [runtime/threadsafe_fn]
+  *  e2a552a9c6 - Sketcher: [skip ci] remove unused includes
+  *  686eb74f5f - Gui: fix cppcoreguidelines-non-private-member-
+    variables-in-classes
+  *  bf81c8035f - Gui: fix regression of 2ef4b7a06
+  *  5df9546907 - [App] Application.cpp: silence some CI warnings
+  *  94a686f348 - redundant
+  *  2ef4b7a06b - [Gui] fix some CI warnings
+  *  2849d7bec3 - Addon Manager: Manually convert property to binary
+    data
+  *  414ff3fb35 - App: [skip ci] improve whitespaces
+  *  bf1c7eb345 - play
+  *  5cd2160bf5 - Sketcher/constraints: improve command opening
+    management
+  *  e4916d8057 - Sketcher: fix misleading indentation
+  *  189875b769 - [Bugfix]Sketcher/Point-on-object: do not substitute
+    constraint if conditions are not OK
+  *  74c1fed8a6 - [TD]fix StackTop and StackBottom
+  *  14db1b7c98 - Spreadsheet: Check Python types using
+    Base::PyTypeCheck
+  *  fa6cf56020 - Gui: Check Python types using Base::PyTypeCheck
+  *  5cb31ece93 - App: Check Python types using Base::PyTypeCheck
+  *  2185b8086d - Base: Add helper function to check Python types
+  *  1636997745 - [.github] disable another check
+  *  3eb9207639 - [App] silence some CI whitespace warnings
+  *  598889b227 - [.github] disable a check
+  *  6013781b23 - [Addon] fix typo
+  *  faef448019 - Part: Measure preferences: Improve UI texts
+  *  af198507f5 - [Sketcher] adjust some icons to better follow art
+    style guide [skip-ci]
+  *  94498816bd - Addon Manager: Support setting min Python version
+  *  cc17bd4335 - App: Add support for 'discussion' URL attribute
+  *  4f51123626 - App: Add support for <date> metadata element
+  *  a6c061715f - Base: fix const-correctness and include required
+    header
+  *  9e1ed4a68a - Addon Manager: Show package dependencies
+  *  49e37dd611 - Core: Add missing xml namespace property to metadata
+    output
+  *  3c7782b127 - Merge pull request #7506 from Roy-043/Draft-Fix-
+    several-path-array-issues
+  *  f26260e658 - Merge pull request #7359 from Roy-043/Draft-Improve-In-
+    Command-shortcut-Undo-implementation
+  *  8ce0e325cd - Mesh: Add boost/regex.hpp to Mesh's PreCompiled.h
+  *  7f6116cf17 - Addon Manager: Switch custom repo prefs to a table
+  *  78a4033929 - Addon Manager: Migrate to managed pref page class
+  *  6cb454354b - Mesh: split OBJ reader and writer from MeshIO
+  *  bf7732cbca - Addon Manager: Fix macro missing warings
+  *  73c586ba52 - Sketcher: Remove unnecessary translations
+  *  891637f00e - Spreadsheet: Handle language change event for context-
+    menu
+  *  1972dfe5a3 - Base: Replace C cast
+  *  544d5a27b8 - Web: Replace C cast
+  *  d206116c3d - TechDraw: Replace C cast
+  *  734dfc47c6 - Sketcher: Replace C cast
+  *  03cba01da4 - Raytracing: Replace C cast
+  *  4bf23b89b7 - Points: Replace C cast
+  *  f4423cfabe - Path: Replace C cast
+  *  34f070cf9b - Part: Replace C cast
+  *  9eadb9fbc5 - Mesh: Replace C cast
+  *  d239f94c3f - Inspection: Replace C cast
+  *  816ce9063d - Import: Replace C cast
+  *  72962ed923 - Fem: Replace C cast
+  *  0382f276a2 - Gui: Replace C cast
+  *  9ccb9eecb2 - App: Replace C cast
+  *  78cc184d50 - [Part/PD] few clang formatting fixes
+  *  884c11b4e9 - Revert [PD] simplify code for wedges
+  *  dd574d5c68 - [PD] simplify code for wedges
+  *  e4259cd851 - Gui: Add format parameter for wedgeXmin
+  *  b3dfdc568a - [TD]position view within clip group
+  *  9142d4ac5e - Draft: Fix several path array issues
+  *  541025b938 - [TD]limit zoom out
+  *  3396265c42 - Addon Manager: Update language for success message
+  *  489fc140a2 - Addon Manager: Implement browse for icon
+  *  dc2bf6c754 - Gui: Add importing CFG to PrefPack dialog
+  *  277ad4f7c4 - [FEM] tweak function docstrings in resulttools.py
+  *  9f8f38faef - CI: allow manual launch of CI
+  *  2d61e15112 - [Part] fix bold italic measurement text
+  *  5d0549aa7f - [TD]fix handling of high precision mice/touchpads
+  *  3996a537a9 - [TD]use QGraphicsView anchor for zoom
+  *  ebb32633d8 - Addon Manager: Fix bug when pip call fails
+  *  36332ff9a3 - Core: Add QPdfWriter to QtAll PCH on Windows
+  *  9c9a7f035c - Addon Manager: Spelling
+  *  5ce07933e9 - Addon Manager: Clean up backup directories
+  *  d6289e3211 - Addon Manager: Fix bug with missing git in devmode
+  *  860e50b589 - Gui: code refactoring of dock window setup
+  *  b5842966c1 - Merge remote-tracking branch 'gitlab/master'
+  *  5472d71855 - Arch: Allow to override IFC importer with the BIM WB
+    version
+  *  c7d0cf044c - Arch: Housecleaning - Moving IFC getPreferences() to
+    helper module
+  *  3cb442b1c3 - [TD]fix printall banner page
+  *  48aafc3f8b - Inspection: support display of lines, avoid explicit
+    type checks
+  *  2462f4c7a0 - App: move from float to double for accuracy parameter,
+    add a virtual method to determine a default accuracy
+  *  718be391f7 - Gui: when customizing shortcuts, warn user if command
+    isn't in use with message box
+  *  75acacd1b7 - Gui: Use auto and range-based for (#7481)
+  *  d7792826b4 - column limit
+  *  8ed0ba5e45 - Merge pull request #7483 from adrianinsaval/fcinfo-
+    patch
+  *  b5e8a2c28d - Mesh: implemment mechanism to load MeshGui module when
+    exporting to 3MF file
+  *  d6afbb5718 - [Sketcher] rename a variable to please spellchecker
+  *  655e8b6504 - [Sketcher] Fix Typo in comment
+  *  b76da40885 - [Bugfix]Sketcher: prevent dangling state of Shift key
+    if key released out of Quarter
+  *  1059dd4f9f - OpenSCAD: Remove aux spline when no twist
+  *  51167dfd7d - [tools] fix  script [skip-ci]
+  *  9dc9d6735a - [FEM] added critical strain ratio functionality
+    (#7467)
+  *  db7d615cb0 - Inspection: [skip ci] code-refactoring
+  *  05058e9708 - space before initializer
+  *  b605c40449 - Part: implement TopoShape::getLines
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 26 Sep 2022 20:53:47 +0000
+
 freecad-daily (0.19.2+git30362-061ec7f7b4-1) unstable; urgency=medium
 
   * Compile

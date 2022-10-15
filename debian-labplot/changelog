@@ -1,3 +1,99 @@
+labplot (2.9.0+git10247-a3e2be722-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: a3e2be722f63264d4ba84b21749f6fcd83d2db5a
+  * Date: 1664223745
+  * git changelog:
+  *  a3e2be722 - Minor improvements: * when changing search options in
+    the Project Explorer (enable fuzzy search, etc.), don't do any
+    search when the current search string is empty - this can save
+    performance with very many objects in the project * don't show any
+    frame for the range related ComboBoxes in plot's properties widget.
+  *  fd655bd96 - Renamed Plot, xy-Plot and Cartesian Plot to Plot Area,
+    s.a. the discussion in #380.
+  *  639d304cf - [spreadsheet] disable add/subtract value-actions in the
+    context menu for text columns.
+  *  4f0895f36 - More stable sorting of frequency values against
+    duplicates in the data set in the bar and Pareto plots and properly
+    clear the vector of frequencies on data changes in the column.
+  *  2357e5411 - code format
+  *  dffc1b1ae - hdf5: switch to binary filter when parsing fails and
+    show error message
+  *  ab7629fcd - hdf5: don't accept hdf4 files (non Windows only)
+  *  99fbfa48d - Show the frequency values in the bar plot and
+    cumulative percentage values in the Pareto plot in the column
+    statistics widget and use system's font size for values.
+  *  7332e7bd4 - [bar plot] allow to show frequency values on top of the
+    bars (or below, etc.).
+  *  335f5ed38 - [worksheet] moved the drawing method for values out of
+    Histogram to the central class Value so this logic can also be re-
+    used in other classes.
+  *  86cca75d7 - [worksheet] use theme specific color also for the
+    background color in Histogram and in BoxPlot.
+  *  00712b8d9 - fix code format
+  *  3a48bfac5 - pareto plot: fix number of ticks for first y axis
+  *  5fe043045 - axis: improve decimal tick label for log scales
+  *  0f65adf43 - Range: add helper function
+  *  281eaa107 - axis: avoid detaching Qt container
+  *  58e78ddeb - qAsConst() requires Qt 5.7
+  *  438c816be - instead of checking for nullptr, move addChild to the
+    beginning, so the plot is also set then
+  *  e3e7e72df - when adding a new axis and the coordinatesystem will be
+    set, retransformRange() will be called. Due to the missing plot and
+    csystem the application crashes. This is because the axis gets child
+    of the plot after all properties are set correctly
+  *  afd15ba16 - fixed clang format.
+  *  30c90d7e6 - [spreadsheet] improvements in the handling of values
+    labels: * when adding value labels for text columns, show all
+    available unique values in the combobox so the user can select them
+    faster * set the project to 'modified' when the value labels were
+    changed in the column
+  *  65799ec4c - fix tests
+  *  9bdffe8e6 - add Test
+  *  a759f89fe - retransform changed scales, otherwise the ranges are
+    not adapted.
+  *  be4577646 - plotRangeChanged() is already defined in the BaseDock,
+    so no need to reimplement again
+  *  cad413938 - [worksheet] improvements in the worksheet view: * don't
+    allow to zoom with the mouse wheel if the view was set to
+    'interactive' * don't crash when using view shortcuts in the
+    interactive mode like in the column statistics widget * remove
+    handling of shortcuts 'x' and 'y' in the worksheet view that collide
+    with the shortcuts in the plot
+  *  3a609b8f1 - [spreadsheet] in the statistics dialog for text columns
+    sort the values in the bar plot and properly resize the first y-axis
+    in the Paretto plot.
+  *  03c70a3ca - [spreadsheet] ensure all actions and menus are
+    initialized when calling the context menu for the headers.
+  *  75f406fea - [spreadsheet] better axis and label properties in the
+    Paretto plot in the statistics widget.
+  *  deb27d834 - Merge branch 'master' into work/CI/fixClangformat
+  *  e7b68bca2 - code format
+  *  a96af94ee - Merge branch 'master' into work/CI/fixClangformat
+  *  c38ad808c - Merge branch 'master' into work/cleanup
+  *  3b988a0e8 - code format
+  *  5c8d25866 - add const
+  *  0d61d5d66 - move initializations directly to the variables
+  *  b8ea9c5f0 - fix formating.
+  *  2fdb834cf - [spreadsheet] Data sampling (random and periodic
+    methods).
+  *  bae31ae19 - column statistics: fix cummulative curve of Pareto plot
+  *  24e228df7 - code format
+  *  eae3234f1 - column statistics: add second axis of pareto plot
+  *  cbccc2088 - [spreadsheet]  dropping and masking of values for text
+    columns.
+  *  21e5c3e96 - use already existing script to format. Otherwise the
+    behaviour might be different
+  *  10d0a7470 - add missing include
+  *  18daccc5b - retransforscale must be done also if no autoscale is
+    done, otherwise the axes lines are not drawn at the correct
+    position, because the cSystem scales are not recaculated
+  *  301b35c19 - Column: add IndexForValue test
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 26 Sep 2022 21:26:05 +0000
+
 labplot (2.8.2+git10201-5257eaf8f-1) unstable; urgency=medium
 
   * Compile
