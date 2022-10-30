@@ -1,3 +1,41 @@
+goaccess (1:1.6.3+git3888-187129b4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 187129b4033183c06f88372658554a0860daafba
+  * Date: 1664929988
+  * git changelog:
+  *  187129b4 - Removed filename/path check under --html-custom-css.
+  *  d96d5b67 - Removed filename/path check under --html-custom-js.
+  *  8d7fe57c - Updated lang po files with latest changes.
+  *  4a851ab7 - Updated change log with latest v1.6.4 changes.
+  *  6d2492de - Version bumped to 1.6.4.
+  *  de4a0ff5 - Updated AUTHORS to reflect latest contributions.
+  *  c9ac535d - Version bumped to 1.6.4.
+  *  a656f9c3 - Updated formatting under the CLI help.
+  *  c5ed7676 - Added --db-path to the CLI options.
+  *  1e37ee3a - Added --fname-as-vhost to the man page.
+  *  a69f9d74 - Version bumped to 1.6.4.
+  *  4cae059a - Version bumped to 1.6.4.
+  *  5e119919 - Changed geoip2 variable to static.
+  *  aaaacae0 - Updated lang po files with latest changes.
+  *  385addd9 - Fixed 'referer' typo under src/labels.h.
+  *  608a6229 - Display clawlers/bot under the OSs panel instead of
+    being part of the 'Unknown'.
+  *  c5359aec - Ensure regex extraction routine use append_str()
+    instead.
+  *  2a6c251c - Minor code formatting changes.
+  *  53afe1eb - Ensure we have a valid fname_as_vhost before making a
+    copy of it.
+  *  250c5f9c - Ensure we free the copy of the orig. string when
+    extracting a string via regex.
+  *  0bb66d20 - Added the ability to use filenames as virtualhosts.
+  *  37cb7c3f - Merge pull request #2385 from SlowMo24/patch-1
+  *  d3b40411 - Add geolocation description to docker info
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 15 Oct 2022 20:58:52 +0000
+
 goaccess (1:1.6.3+git3865-e3a4aa2f-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,173 @@
+labplot (2.9.0+git10339-1cb47939b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 1cb47939b975fc6c0a99ad9ec1f197382909ec55
+  * Date: 1665859741
+  * git changelog:
+  *  1cb47939b - code format fix.
+  *  d7b778731 - [spreadsheet] multiple minor fixes in the handling of
+    selected columns in SpreadsheetView: * removed the usage of default
+    QModelIndex() parameters in some of the calls in
+    QItemSelectionModel. * in case the context menu is called by
+    clicking one of the spreadsheet cells and the column underneath is
+    fully selected, show the column specific column and not the global
+    spreadsheet column. * reduced the number of selectedColumns() calls
+    in the event filter. * changed the default value of the parameter
+    full in selectedColumns() to true - this function is mostly called
+    without this parameter and the default value is applied and in most
+    of the cases this function is called when columns are fully
+    selected. In such cases we should benefit from the faster
+    QItemSelectionModel::isColumnSelected() used internally.
+  *  7c0c4962a - invalidate before emiting dataChanged, otherwise it
+    will the autoscaled wrongly
+  *  271d357ea - when shift is done, autoscale shall not be done on the
+    complete range, but only the one set by the other range
+  *  30b63ffe0 - Update CartesianPlotTest.cpp and CartesianPlotTest.h
+  *  09f0333ba - wrong function name in doxygen comment
+  *  2e42a0416 - [worksheet] moved the isLoading-check into
+    CartesianPlot::checkAxisFormat() instead of doing this check in
+    multiple places when checkAxisFormat() is being called.
+  *  0eca587d4 - missing PROJECT_SAVE stuff
+  *  5a12be831 - another missing isLoading() is needed
+  *  0e9ee2ddd - do not checkAxisFormat while loading, because format
+    should not be overwritten. Fixes #74
+  *  af92e2906 - move restorePointers to the end, because state is in
+    the ProjectExplorer. In the tests, it will not be created and
+    therefore restorePointers will never called in the tests
+  *  ed62a9e8c - GIT_SILENT Sync po/docbooks with svn
+  *  ecddbdd20 - Qt6: QDirModel->QFileSystemModel
+  *  b679fe9ea - - delete logical points, if x or y column gets deleted,
+    because data cannot be valid anymore - if xColumn not available, do
+    not calculate scenepoints because calculateScenePoints needs xColumn
+    and it make no sense to calculate fixes #407
+  *  bd7bdc5dd - do not calculate scenepoints if filling is disabled
+  *  ba8b44b7a - dirty must be set to true
+  *  60964756f - clear m_scenePoints, to release memory, because they
+    have to be recalculated before using it
+  *  be6cf239a - call calculateScenePoints whenever scenePoints are
+    accessed
+  *  69ee33efb - move calculating scene points into own function
+  *  f60076d79 - Merge branch 'master' of https://github.com/KDE/labplot
+  *  bcc4a5640 - More cppcheck issues fixed
+  *  6f0d06309 - [spreadsheet] avoid duplicated looping over all columns
+    in the spreadsheet to determin the selected columns and code style
+    fixes in DropValuesDialog.
+  *  61c089b84 - [spreadsheet] Dropping and masking of values also for
+    datetime columns.
+  *  50d1c346c - code format
+  *  e64ed3c16 - GIT_SILENT Sync po/docbooks with svn
+  *  42b7bd38a - Fix more cppcheck issues
+  *  e92af1abc - GIT_SILENT Sync po/docbooks with svn
+  *  97f3e0607 - Minor code format fix and adding Darek for the AUTHORS
+    file.
+  *  110be2673 - [box plot] use Line and LineWidget for box line, median
+    line and whiskers line properties in BoxPlot.
+  *  147c4e5b2 - GIT_SILENT Sync po/docbooks with svn
+  *  578e47ff6 - GIT_SILENT Sync po/docbooks with svn
+  *  392fc46bf - tests: fix couple of cppcheck issues
+  *  ae6b24c53 - Merge branch 'master' into work/spreadsheet-memory-
+    consumption
+  *  9d822d412 - [xy-curve] use Line and LineWidget for error bars line
+    properties.
+  *  7bc2a58cc - GIT_SILENT Sync po/docbooks with svn
+  *  a75cc35c5 - [histogram] use the central classes Line and LineWidget
+    for the properties of the error bars line.
+  *  073fd3358 - [histogram] use the new classes Line and LineWidget
+    also in the Histogram and HistogramDock.
+  *  3af39cc4a - GIT_SILENT Sync po/docbooks with svn
+  *  c6257f8b7 - function dialog: support quantile(p, X) and
+    percentile(p, X)
+  *  1c7175194 - code format
+  *  e8d4f5a01 - Merge branch 'master' into work/spreadsheet-memory-
+    consumption
+  *  bdfb9578d - [spreadsheet] fixed the subtraction of the number of
+    rows to be deleted from the total number of rows in case the delayed
+    initialzation of the data containt is done.
+  *  2fd5c4750 - GIT_SILENT Sync po/docbooks with svn
+  *  208ac6ea5 - [spreadsheet] when initializing the vector for doubles,
+    fill it with NaNs.
+  *  505ec530a - Merge branch 'master' into work/spreadsheet-memory-
+    consumption
+  *  de3578e27 - GIT_SILENT Sync po/docbooks with svn
+  *  4fe55fc0c - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  611ca82a0 - [spreadsheet] no need to initalize the data container
+    in ColumnPrivate::replaceData(), we directly replace the pointer to
+    point to the new data.
+  *  05ccb9f4f - [spreadsheet]  added more data container
+    initializations in case the initialization was delayed.
+  *  505e5a47f - function dialog: expose all statistical methods on
+    column
+  *  55c299f26 - GIT_SILENT Sync po/docbooks with svn
+  *  fb2489ba2 - statistic methods: add more methods
+  *  77965d78e - statistic methods: simplify value replace
+  *  9ba273d8b - statistic methods: use lower case names for consistency
+  *  431514daf - Port away from deprecated standard path
+  *  4e6ac33cd - GIT_SILENT Sync po/docbooks with svn
+  *  ef26e1ac6 - GIT_SILENT Sync po/docbooks with svn
+  *  051f982b1 - [bar plot] when modifying the prorties of bars, ask the
+    user to provide the column name and not ins index.
+  *  8299a0c87 - GIT_SILENT Sync po/docbooks with svn
+  *  b4e45bfe2 - function values: support basic statistic values
+  *  1f19eda10 - [spreadsheet] disable sample values and flatten columns
+    actions if the selected and columns don't have any values and
+    disable the add new reference column button in the
+    FlattenColumnDialogs if no reference columns are available.
+  *  c844080bc - code format.
+  *  1082452ea - [bar plot] allow to modify the properties of the border
+    line for every bar separately.
+  *  28ba228ed - code format
+  *  ca0b510bc - [worksheet] introduced new central classes Line and
+    LineWidget to hold and to modify properties of lines in worksheet
+    elements.
+  *  425ce83f1 - GIT_SILENT Sync po/docbooks with svn
+  *  93f6ffea3 - tests: fix datetime import
+  *  0fe9b4732 - code format
+  *  576a193bd - column: fix datetime editing in spreadsheet
+  *  cfd4b68fc - ascii filter: fix import datetime
+  *  697623f33 - Cantor and Jupyter files, when openned via the command
+    line or being dropped onto LabPlot, should be openned directly
+    instead of in the import file dialog.
+  *  76f6170e7 - [spreadsheet] use better action names Flatten Columns
+    and Sample Values instead of Flatten and Sample.
+  *  3ac6dd4db - [spreadsheet] allow to flatten values without any
+    reference columns (flip).
+  *  574f05ac2 - fixed clang format.
+  *  a91aae895 - [spreadsheet] properly handle missing values in the
+    reference columns and added unit tests for flattening.
+  *  f780c4dc7 - [spreadsheet] allow to remove reference columns in
+    FlattenColumnsDialog.
+  *  9bc3391cb - [spreadsheet] ensure all selected columns for
+    flattening have the same column mode and multiple other fixes in the
+    actual flattening code.
+  *  8c8c6ff84 - [spreadsheet] initial implementation for the flatten
+    data feature.
+  *  f01212074 - [ascii import] don't crash when trying to import a JSON
+    file via the ASCII filter.
+  *  83e1726b6 - GIT_SILENT Sync po/docbooks with svn
+  *  ae6201b63 - unused code
+  *  a26cbb7a9 - Fix build with Qt < 5.13
+  *  9bf48a4c8 - code format
+  *  9c33ac9b7 - [worksheet] improved the design in the plot dock widget
+    according to the proposal in #394.
+  *  b29ca966b - [worksheet] improved the wording in the layout tab of
+    LegendDock to be more consistant to the wording in other areas - in
+    the Margin-section use Top instead of Top margins, etc.
+  *  cda8d4083 - Consistently use the new term Plot Area in
+    PlotDataDialog.
+  *  6d4abde15 - add missing include
+  *  18ae05ebc - the dock function is private and might make problems on
+    compiling on windows, so use the axis function directly
+  *  8e0decb54 - Update Axis.cpp, Axis.h, and 6 more files...
+  *  8ededff66 - Faster filtering in the project explorer in case the
+    filter string is empty and all items in the tree model need to be
+    made visible again.
+  *  0e1a9981b - GIT_SILENT made messages (after extraction)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 15 Oct 2022 21:18:16 +0000
+
 labplot (2.9.0+git10247-a3e2be722-1) unstable; urgency=medium
 
   * Compile
