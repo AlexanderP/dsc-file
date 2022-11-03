@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_install:
+	rm -f $(CURDIR)/debian/freelib/usr/bin/kindlegen
+	dh_install

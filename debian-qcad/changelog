@@ -1,3 +1,90 @@
+qcad (3.27.8.1+git9469-2c4ca8870-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 2c4ca887036e92419493aae0a486c5643f2faed5
+  * Date: 1666945958
+  * git changelog:
+  *  2c4ca8870 - refactor CAD tool bar
+  *  20bafaf3c - switch between dark and light mode
+  *  1396dc95c - add CadToolBar.back
+  *  625fa819f - port to qt 6
+  *  74a33c828 - Merge branch 'master' of github.com:qcad/qcad
+  *  f402b4eb8 - update translations
+  *  ec155ae3e - update translations
+  *  b96f6de26 - update translations
+  *  bb555ca29 - Merge branch 'master' of github.com:qcad/qcad
+  *  f7e28c6b1 - changing CAD tool bar settings requires restart
+  *  8bebca410 - update script bindings
+  *  9fdf5e841 - update CAD tool bar
+  *  90c8f5ed7 - port to qt 6
+  *  c963cef26 - port to qt 6
+  *  4beeb761a - port to qt 6
+  *  8c9d891ed - fix preview while changing parameters
+  *  0e10a00a6 - port to qt 6
+  *  8518e042e - clean up
+  *  1605f39ee - add getPtr compatibility function
+  *  8ef5960e5 - clean up
+  *  653174d92 - add RCadToolBar, RCadToolBarPanel
+  *  6631191b0 - update
+  *  5207f4ac3 - update
+  *  351b080f4 - update
+  *  fc1043283 - update
+  *  36e114357 - update script bindings
+  *  961d26167 - back port to qt 5
+  *  298d68fff - update script bindings
+  *  d06460cf9 - update script bindings
+  *  fe0d9c03f - update script bindings
+  *  b74c023ab - port to qt 6
+  *  a8c02a662 - update script bindings
+  *  9ebfb1b78 - update
+  *  1280d4a6f - add C++ implementation of CAD tool bar, tool bar panel,
+    column layout
+  *  7c5acec43 - Merge branch 'master' of github.com:qcad/qcad
+  *  5a72ffd31 - port to qt 6
+  *  22d40b09c - set version to 3.27.8.1
+  *  14a031529 - Merge branch 'master' of github.com:qcad/qcad
+  *  491c35dca - update
+  *  d801e32e7 - Merge branch 'master' of github.com:qcad/qcad
+  *  fa0561d21 - port to qt 6
+  *  89cc0eddf - port to qt 6
+  *  8d2e85d4c - allow changing radius while choosing solution
+  *  3fe5268d6 - port to qt 6
+  *  29a3c3165 - port to qt 6
+  *  52c9415e8 - Merge branch 'master' of github.com:qcad/qcad
+  *  4d08a36ec - port to qt 6
+  *  d21c263b0 - port to qt 6
+  *  2e0b11984 - port to qt 6
+  *  6df63e6ce - port to qt 6
+  *  54ad72f47 - fix display of custom properties for layers / blocks
+  *  97ce279f8 - port to qt 6
+  *  d17b76ec0 - port to qt 6
+  *  74403cec7 - make sure mouse wheel zoom factor is never zero
+  *  70f9eb75a - port to qt 6
+  *  5a73fc906 - port to qt 6
+  *  8d82fdacb - port to qt 6
+  *  056d6d2d7 - port to qt 6
+  *  bad22b5ef - fix: getLineEntityId: always return value
+  *  dd2259bac - port to qt 6
+  *  de4ab3c11 - port to qt 6
+  *  ca30ee3d3 - Merge branch 'master' of github.com:qcad/qcad
+  *  3d01522cb - port to qt 6
+  *  69128a68a - clean up
+  *  d2e4a1719 - Merge branch 'master' of github.com:qcad/qcad
+  *  1e253bd26 - fix Qt >= 5.5 asprintf calls
+  *  c968a2364 - fix preference page reset: mark page as changed
+  *  e7e315995 - fix font chooser widget, font preferences
+  *  f36240253 - fix preference page reset: mark page as changed
+  *  551ee0a7d - fix handling of null events
+  *  c797161bb - add linetype pattern translations
+  *  19b9fb01b - allow for relative paths in referenced images (may be
+    partially supported by 3rd party applications)
+  *  e2af59d71 - allow RHatchData::getBoundaryAsPolylines without arc
+    segmentation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 30 Oct 2022 14:55:38 +0000
+
 qcad (3.27.8.0+git9396-ef7064606-1) unstable; urgency=medium
 
   * Compile

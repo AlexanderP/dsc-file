@@ -1,3 +1,119 @@
+labplot (2.9.0+git10406-91ba4015a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 91ba4015a5e8e11a86ceb8e41aa343ce1617d45c
+  * Date: 1667127943
+  * git changelog:
+  *  91ba4015a - [matrix] unified the entries in the main and in the
+    context menus and implemented zooming in the image view.
+  *  fca22d893 - GIT_SILENT Sync po/docbooks with svn
+  *  70da44b8e - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  e4a0bc1a1 - GIT_SILENT made messages (after extraction)
+  *  1823bb71b - function dialog: support cell(n, x) to access row n of
+    named column x
+  *  704a22bd9 - [matrix] improvements and bug fixes in Matrix: * fixed
+    the starting points for x and y when calculating the matrix values
+    via a function * react on text change and not on return pressed
+    events in the Matrxi dock widget * switched to the new signal-slot
+    syntax in MatrixDock
+  *  2e611ec21 - Disable filling options for more symbol types where
+    there is not filling possible.
+  *  15b9f9557 - Moved some of the logic added during the recent
+    refactoring from the cpp to ui files.
+  *  471b29dea - update infoelement when curve data is changing
+  *  609a17b6c - do not use the home folder as default custom, because
+    recursive searching there might be really expensive and leads to
+    freezing of labplot. Use as default custom folder the default
+    standard path. So the loading gets really fast
+  *  04ce6f9b4 - GIT_SILENT Sync po/docbooks with svn
+  *  7dcbdaf11 - code format
+  *  6cae9f107 - Initialize the internal XML version variable with the
+    current build version so we properly serialize and deserialize the
+    objects during copy&paste. When loading project file, set this
+    version temporarily to 0 - the actual project version will be read
+    in the file, if available, and used in load() functions.
+  *  f45461abd - format fix.
+  *  811fd374a - [worksheet] use Line and LineWidget for the reference
+    line.
+  *  7f672c670 - [worksheet] user Line and LineWidget for line, major
+    grid and minor grid properties in Axis.
+  *  23d2026e8 - GIT_SILENT Sync po/docbooks with svn
+  *  a0a52d2c0 - GIT_SILENT changelog
+  *  bba20d8a9 - fix warning
+  *  c91bb7ab2 - GIT_SILENT Sync po/docbooks with svn
+  *  4bdf6be61 - Merge branch 'master' into work/aacid/fix_parser_usage
+  *  4f7a45a39 - fix code style
+  *  1489bfec0 - Fix i18n usage
+  *  5b193cb1a - Remove duplicated command line parser stuff
+  *  6aada0579 - GIT_SILENT Sync po/docbooks with svn
+  *  1a9b40da1 - GIT_SILENT Sync po/docbooks with svn
+  *  9e02376b4 - code format fix
+  *  60e17b8d1 - tests: Fix project import
+  *  5bfd5a72d - code format fix
+  *  f42b9be66 - Merge branch 'master' of https://github.com/KDE/labplot
+  *  b2ca78349 - [worksheet] use Line and LineWidget for drop line
+    properties in XYCurve.
+  *  65c1517cc - simplify code (and fix warning)
+  *  882addd5c - NSL: fix dummy functions
+  *  355a29d3f - Qt6: replace deprecated QPrinter methods
+  *  6342f2257 - GIT_SILENT Sync po/docbooks with svn
+  *  4c2d54691 - tests: remove duplicate code
+  *  4fcb14a0b - Merge branch 'master' into 383-import-csv-with-same-
+    column-name
+  *  09c3cc7bb - Merge branch 'master' into 383-import-csv-with-same-
+    column-name
+  *  aaf6c4655 - Merge branch 'master' into work/label-use-default-font
+  *  0b2789b50 - Added a nullptr-check
+    XYCurvePrivate::calculateScenePoints() so we don't crash when symbol
+    properties of a curve are being modified before the curve is added
+    to the plot.
+  *  a5a2c46da - Merge branch 'master' into work/label-use-default-font
+  *  3724ed2f2 - Added forgotten changes in Spreadsheet.cpp.
+  *  2de1fedf7 - [ascii import] make sure the column names provided by
+    the user (either manually or in the file header) are unique.
+  *  2a7211b07 - GIT_SILENT Sync po/docbooks with svn
+  *  38c88167f - [worksheet] don't allow any horizontal scrollbars in
+    the range related tables  in CartesianPlotDock. This further reduces
+    the number of elements in this heavy widget, scrolling should be
+    done via the parent scroll area.
+  *  e13c1ba59 - [worksheet] use system's default font in text labels
+    insteads of hard-coded Arial 12pt.
+  *  fa38f8687 - GIT_SILENT Sync po/docbooks with svn
+  *  71a4bde7f - fix (unused) version test which would break on KF5
+    5.100
+  *  a0c00063f - [worksheet] use Line and LineWidget for cursor line
+    properties in the plot.
+  *  f71d4e0a0 - GIT_SILENT Sync po/docbooks with svn
+  *  d858dca7f - GIT_SILENT Sync po/docbooks with svn
+  *  78c0a33cc - GIT_SILENT Sync po/docbooks with svn
+  *  7d744e61c - Qt6: QNetworkAccessManager -> QNetworkInformation
+  *  7939cdfbc - GIT_SILENT Sync po/docbooks with svn
+  *  978fab0e0 - Merge branch 'master' into work/PlotFormat
+  *  9691d0185 - wrong dimension used
+  *  09318d0d8 - try to avoid defaultCoordinatesystem function whenever
+    possible, because they are error prone. Name function explicit with
+    Default suffix to indicate that those functions are using the
+    default coordinatesystem.
+  *  4ba8759d3 - fix bugs
+  *  99c1e7c58 - GIT_SILENT Sync po/docbooks with svn
+  *  cd28305bf - cmake: fix Qt min version deprecation
+  *  b58ecc41f - Add override
+  *  39caeb0b4 - for checking the rangetype not always the xColumn
+    should be used, but depending on the dimension
+  *  005513e86 - move zoom menu behind the new menu
+  *  20fe2f610 - move contextmenu creation of cartesianplot into
+    worksheetview, so the zoomScaleActions of the Worksheetview can be
+    reused instead of implementing own actions
+  *  4e02848e7 - enable actions if a valid element is selected
+  *  2302294e6 - use everywhere the navigation function to make it
+    consistent and easier to maintain
+  *  b81076ea2 - GIT_SILENT Sync po/docbooks with svn
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 30 Oct 2022 14:57:14 +0000
+
 labplot (2.9.0+git10339-1cb47939b-1) unstable; urgency=medium
 
   * Compile
