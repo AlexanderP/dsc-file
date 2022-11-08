@@ -8,7 +8,7 @@ ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
 
-ifneq (,$(filter $(DEBIAN_CODENAME),jessie trusty xenial bullseye sid groovy hirsute impish jammy))
+ifneq (,$(filter $(DEBIAN_CODENAME),jessie trusty xenial bullseye sid groovy hirsute impish jammy kinetic))
 	BITTORRENT=OFF
 else
 	BITTORRENT=ON

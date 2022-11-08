@@ -27,7 +27,7 @@ extra_flags += \
 -DOCC_INCLUDE_DIR="/usr/include/opencascade"
 
 override_dh_auto_configure:
-ifneq (,$(filter $(DEBIAN_CODENAME),sid bullseye buster disco eoan focal groovy hirsute impish jammy))
+ifneq (,$(filter $(DEBIAN_CODENAME),sid bullseye buster disco eoan focal groovy hirsute impish jammy kinetic))
 	patch -p1 < debian/patches/fix_gcc8_ftbfs.patch
 else
 	echo "no patch"
