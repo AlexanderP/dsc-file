@@ -1,3 +1,77 @@
+labplot (2.9.0+git10456-f3a4abdb8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: f3a4abdb82e11aa4a954c8c5828aeeeb06fbf8b5
+  * Date: 1667872528
+  * git changelog:
+  *  f3a4abdb8 - GIT_SILENT Sync po/docbooks with svn
+  *  d425b0e99 - GIT_SILENT Sync po/docbooks with svn
+  *  d9f499188 - code format
+  *  9f36efbc2 - Fix another string issue on Windows
+  *  1e6a41961 - Fixed the position of the customer column text values
+    for the major ticks in AxisDock.
+  *  d5df69a0d - Fix another string issue on Windows
+  *  26f26ea15 - Fix another string issue on Windows
+  *  8635fe459 - Fix another QString issue
+  *  f736da70f - Fix compilation on Windows
+  *  f888be7b9 - GIT_SILENT Sync po/docbooks with svn
+  *  68760a5c1 - Fix QByteArray usage
+  *  1e13136e6 - fix format
+  *  84a472bdf - Fix another QString issue
+  *  bfd08f38a - Fix another QString issue
+  *  46e7dc428 - Fix compilation in debug mode
+  *  098a8f28c - Finish fixing QString/QChar usage problems
+  *  14c6dc09a - [notebook] properly handle data type changes of already
+    existing variables and create columns when after the value change
+    the already existing variable got an array-like data that we expose
+    as Column. Similarly for the case when the variable value was
+    changed to a non-array like value and we need to delete the already
+    existing column.
+  *  0ab7bf5c7 - format
+  *  9dcaaff46 - Merge branch 'master' of https://github.com/KDE/labplot
+  *  fe0af4c69 - Fix more QString/QChar usage problems
+  *  4ec85ac9e - [worksheet] update the legend on data column and
+    formatting changes in the bar plot.
+  *  4f5346441 - [worksheet] refactored the legend to be able to draw
+    multiple items per curve like it is need in the box and bar plots
+    when multiple columns are plotted in the same plot and implemented
+    the legend for the bar plot.
+  *  ab96e8ba5 - GIT_SILENT Sync po/docbooks with svn
+  *  62340f242 - Fix more QString/QChar usage problems
+  *  14b9e1a53 - fix compiling (macro)
+  *  023f563a8 - Fix more QString/QChar usage problems
+  *  1ac89a9a6 - Fix more QString/QChar usage problems
+  *  f4dcf39e3 - Fix more QString/QChar usage problems
+  *  f2224e0e6 - GIT_SILENT Sync po/docbooks with svn
+  *  d72c1d287 - Fix several QString casting problems
+  *  7ea4cadbe - GIT_SILENT Sync po/docbooks with svn
+  *  8804df1c2 - tests: add sma(n,x) and smr(n,x)
+  *  7c0024fc1 - spreadsheet formula: support simple moving average
+  *  537b82c9b - spreadsheet formula: support simple moving range
+  *  23c432956 - spreadsheet formula: support simple moving min/max
+  *  c51cf3e08 - GIT_SILENT Sync po/docbooks with svn
+  *  d9f5b59e8 - tests: check moving statistics
+  *  ae32db3b7 - spreadsheet formula: make moving statistics more
+    prominent
+  *  ac3a57b33 - spreadsheet formula: support simple moving average
+  *  78b044b2e - spreadsheet formula: add mr(x) to support moving range
+    MR(2)
+  *  6c0be019c - tests: more spreadsheet formula tests
+  *  d461a9d6f - tests: add spreadsheet formula test
+  *  bb35064c7 - compile: use all cores
+  *  07b4746c5 - GIT_SILENT Sync po/docbooks with svn
+  *  0e8d6ff71 - parser: fix min(x) (duplicate min(ute) constant)
+  *  b04b85919 - formula dialog: support cell(f(index), column)
+  *  008ef78b5 - [matrix] zoom in the image view with the mouse wheel.
+  *  f0d00791d - [matrix] use viridis color map for the image preview
+    instead of grey colors.
+  *  c99762e3e - GIT_SILENT Sync po/docbooks with svn
+  *  a57b8fc0c - [matrix] fixed the layout in MatrixDock.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 08 Nov 2022 20:12:44 +0000
+
 labplot (2.9.0+git10406-91ba4015a-1) unstable; urgency=medium
 
   * Compile

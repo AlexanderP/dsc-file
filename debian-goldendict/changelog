@@ -1,3 +1,32 @@
+goldendict (1.5.0~rc2+git20221105-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/goldendict/goldendict.git
+  * Branch: master
+  * Commit: 5f96f1f26ee2389b29d8059a74f3e0e61a52c6c2
+  * Date: 1667675031
+  * git changelog:
+  *  5f96f1f2 - Linux-specific: don't force X11 focus unnecessarily
+  *  a321593e - Linux-specific: check correct X11 window ID
+  *  fdcd6a37 - Demote input phrase limit message from warning to debug
+  *  38f5fa6c - Don't warn about unclosed DSL [mN] tags
+  *  7c0c5864 - Extract is_mN() and isAnyM()
+  *  d6696b08 - Expand unclosed tag DSL warning message
+  *  fc9a48a1 - Demote missing favorites file message from warning to
+    debug
+  *  1d6b5efe - Disable GD_DPRINTF() output in Release builds on all
+    systems
+  *  98b37fea - Print debug output with gdDebug() instead of av_log()
+  *  a27a29ac - Linux-specific: don't open File menu after showing main
+    window
+  *  6dc74a7c - Assign correct values to XButtonEvent::[xy]_root
+  *  307fe2ba - Download and open an image double-clicked in scan popup
+  *  cf84f576 - Don't append duplicates to openedInspectors
+  *  9330c89e - Don't attempt to translate empty or whitespace-only text
+  *  c7c8b6f6 - git clone URL in README: git:// => https:// scheme
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 08 Nov 2022 20:05:46 +0000
+
 goldendict (1.5.0~rc2+git20220921-1) unstable; urgency=medium
 
   * Compile

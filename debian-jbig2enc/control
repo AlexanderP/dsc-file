@@ -6,7 +6,7 @@ Build-Depends:
  debhelper (>=10),
  dh-python,
  libleptonica-dev,
- python-all,
+ python3-all,
  zlib1g-dev
 Standards-Version: 4.5.0
 Homepage: https://github.com/agl/jbig2enc
@@ -15,7 +15,7 @@ Package: jbig2enc
 Architecture: any
 Depends:
  ${misc:Depends},
- ${python:Depends},
+ ${python3:Depends},
  ${shlibs:Depends}
 Description: JBIG2 encoder
  JBIG2 encodes bitonal (1 bpp) images using a number of clever tricks to get
