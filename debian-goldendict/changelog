@@ -1,3 +1,30 @@
+goldendict (1.5.0~rc2+git20221126-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/goldendict/goldendict.git
+  * Branch: master
+  * Commit: 02c02829f7aa9b39d9956d1d83272019233db3f0
+  * Date: 1669484479
+  * git changelog:
+  *  02c02829 - Qt 5.14+: don't use deprecated QString::SkipEmptyParts
+  *  5034348c - Allow silencing failed-loading-resource warnings
+  *  a61b203d - Extract TO_LOG_MESSAGE()
+  *  be22bb9f - Prevent using temporary codec-for-locale UTF8
+    replacement
+  *  0ae3fdf2 - Extract Utf8CodecForLocaleReplacer
+  *  a020ebc4 - Make loggingMutex nonrecursive
+  *  d1ff165a - Slob: Fix handling of a links with anchor
+  *  f0b66f75 - Use mutex in gdWarning/gdDebug when logging to file is
+    enabled (issue #1587)
+  *  3aaaf15e - Save&restore the geometry of Print Preview dialog
+  *  83d71daf - Don't reset FTS Ignore* options on Preferences change
+  *  c087d601 - Set article background to white while printing
+  *  5e8cab6d - Show translateBoxWidget automatically when Words Zoom
+    level decreases
+  *  f708c506 - Qt5: give focus to article view after last tab is closed
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 04 Dec 2022 15:35:13 +0000
+
 goldendict (1.5.0~rc2+git20221105-1) unstable; urgency=medium
 
   * Compile

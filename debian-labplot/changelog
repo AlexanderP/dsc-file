@@ -1,3 +1,301 @@
+labplot (2.9.0+git10655-a3d72f0a0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: a3d72f0a04c3bc08ef8288950e3f4d64cdd6942a
+  * Date: 1670156334
+  * git changelog:
+  *  a3d72f0a0 - fix test
+  *  ef56676de - add test
+  *  e0535a08e - suppress setting also setCurrentIndex, because
+    otherwise if two curves are selected, the second curve with a
+    different coordinatesystem receives the coordinatesystem of the
+    other, which is not desired
+  *  5f7cadb66 - fix test
+  *  5f8931a80 - do not set changed value, but just give feedback that
+    the applied value is not valid. So the user knows from the tooltip
+    which value he can set
+  *  93c612df8 - remove not needed emit
+  *  9744b0a0f - NumberSpinBox: disable waitFeedback after signal was
+    emitted. In this case it is expected that due to the signal/slot a
+    feedback is received and if not we are turning it directly of again.
+    So it cannot happen that it gets forgottn to send the feedback
+  *  c571479cd - cut the connection dock -> element -> (this) -> dock.
+    Because in the case of the qlineedit, the cursor would be set to a
+    wrong position and so the next letter will not be in the middle of
+    the text, but at the end
+  *  46eeec7ab - before every lock there must be a condition which
+    checks if m_initializing is not already done. And in this case the
+    function should not be executed
+  *  a97de7785 - use Lock class wherever possible
+  *  151f255ff - use everywhere the feedback feature. - use Lock class
+    for locking instead of doing it manually
+  *  d63b49a55 - turn on spinbox feedback for zeroOffset, position,
+    logicalPosition, titleOffsetX, titleOffsetY
+  *  22e34b01e - turn feedback on
+  *  9cf5911fa - move autoscaling and retransforming into the
+    undocommand
+  *  0b42c87cf - use dimension, so no differentiation between x and y
+    has to be done
+  *  cdb7cf238 - change start and end in current range, because
+    otherwise scaling and format will be change too which is not desired
+  *  00c386db1 - GIT_SILENT Sync po/docbooks with svn
+  *  696b77e5c - [import] properly update header options in
+    ImportFileWidget that are dependent on file type and on the
+    currently selected data container.
+  *  126fbec6a - GIT_SILENT Sync po/docbooks with svn
+  *  10305836f - GIT_SILENT Sync po/docbooks with svn
+  *  14965b947 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  8d03d20d9 - Remove qtmqtt from .kde-ci.yml
+  *  0b2c74a54 - GIT_SILENT Sync po/docbooks with svn
+  *  4288c034b - [bar plot] use the correct line and background
+    properties in the legend.
+  *  3e7964324 - Use UTC datetime consistently also in Info Element and
+    Custom Points
+  *  1bf8e92a8 - GIT_SILENT Sync po/docbooks with svn
+  *  347e2aef8 - GIT_SILENT Sync po/docbooks with svn
+  *  b1afcbaca - Fix typo in dependency name
+  *  dddf417fe - [notebook] properly parse Octave's column vectors.
+  *  4111ae443 - GIT_SILENT Sync po/docbooks with svn
+  *  a20f53bc5 - GIT_SILENT Sync po/docbooks with svn
+  *  6bf0dd854 - niceExtend is anymore called. No it shows the correct
+    behaviour
+  *  2074585dc - do not update y range when zoom x is done, because then
+    niceExtend() will be applied to y which changes the range even if it
+    is set to manual. Also for x range this problem might occur
+  *  b02195816 - add also test for common y
+  *  361730185 - add test
+  *  c535d44ec - GIT_SILENT Sync po/docbooks with svn
+  *  c7b49c59e - limit border numbers to positive values and turn on
+    feedback
+  *  fae51c31d - Fix running TeX Live on Windows
+  *  2d25fe14e - replace deprecated QHash::unite()
+  *  fddf83186 - GIT_SILENT Sync po/docbooks with svn
+  *  396737923 - GIT_SILENT made messages (after extraction)
+  *  c01f56d0f - do not translate debug messages
+  *  edbc8a61c - show standardoutput and stderr if not success
+  *  69b2a8bdc - process workdir is not set use the applications working
+    directory
+  *  eac07f5d9 - show engine fullpath
+  *  138dc5077 - consider timeout of waitForFinished
+  *  5a2f5b034 - show absoluate filepath of the logfile
+  *  3feaac33d - do not translate warning
+  *  20b859a96 - move also common code for finding the engine into
+    executeLatexProcess
+  *  3520967c8 - move common code of pdf and latex into reusable
+    function
+  *  c5f300917 - GIT_SILENT Sync po/docbooks with svn
+  *  3f4d86756 - GIT_SILENT Sync po/docbooks with svn
+  *  a28697409 - Revert GIT_SILENT disable tubmelweed CI until website
+    fixed
+  *  2b5172be7 - use findData instead of a dedicated loop
+  *  f1e106cf2 - The order of the entries into the graph type combobox
+    does not match the order of the enum entries. Therefore it is not
+    possible to use the integer of the enum entry as index
+  *  aac4428c3 - GIT_SILENT Sync po/docbooks with svn
+  *  3f883778a - GIT_SILENT Sync po/docbooks with svn
+  *  218d49587 - format
+  *  e3b7370bd - format fix.
+  *  d00c2f2c9 - Improved the namings in the curve macros in order to be
+    more consistent with the other code.
+  *  f0c88bc78 - Use macros that were initially introduced for XYCurve
+    to properly handle column renamings, etc. also in Histogram.
+  *  321ba4d4f - GIT_SILENT Sync po/docbooks with svn
+  *  3ad86fd30 - [datapicker] no need to react on description changes in
+    the dock widget for datapicker itself and its image object.
+  *  28331a50c - fix taborder for datapickerimagewidget
+  *  896ca08d5 - [datapicker] extended the test
+    DatapickerTest::curvePointMoveUndoRedo() to also check the scene
+    coordinates of the point after undo and redo.
+  *  c2e141ecf - [datapicker] added one more test for undo/redo of the
+    point move step and removed the direct usage of private members in
+    Datapicker.
+  *  bbeec9542 - [datapicker] fixed undo/redo for datapicker point
+    positioning and activated the test curvePointMove().
+  *  e88b9fc2a - [datapicker] fixes: * update the point position also in
+    the spreadsheet every time the point is moved with the mouse on the
+    image, i.e. retransform is called * made the x and y columns in the
+    data spreadsheet undo-unaware - the is no need for this since the
+    spredsheet is not modified manually, everithing is done by creating
+    and moving points on the image.
+  *  b24404a01 - simplify empty QStrings
+  *  9caaf8b86 - [worksheet] reduced the number of entries on the undo-
+    stack when loading theme config for Line and Background. This also
+    fixes crashes when doing undo/redo after these properties were
+    applied in Histogram, etc.
+  *  4b4013da6 - format fix.
+  *  578f29286 - Minor cleanup.
+  *  97c197300 - [worksheet] use Line and LineWidget for legend's border
+    line.
+  *  709e0cfec - code format
+  *  96079d523 - [worksheet] allow to modify pen's properties in Line
+    independent of each other. This addresses multiple issues: * reduce
+    the size of objects put onto the undo stack (double instead of QPen
+    if the width is changed, etc.) * decouple the updates of different
+    widgets in LineWidget for different properties which fixes the issue
+    with wrong values being shown when multiple lines are modified at
+    the same time * simplifies the handling in the code
+  *  a5d1737a8 - GIT_SILENT Sync po/docbooks with svn
+  *  74971feb4 - GIT_SILENT Sync po/docbooks with svn
+  *  96af15fb7 - [barplot] improved the algorithm for the positioning of
+    bars to better utilize the available space on the plot area.
+  *  92645b4ba - Fix empty QStringLiterals
+  *  54b47f343 - GIT_SILENT disable tubmelweed CI until website fixed
+  *  8dee3f20c - GIT_SILENT Sync po/docbooks with svn
+  *  696b1b696 - Reduced the number of Column::valueAt() and
+    Column::rowCount() calls which have performance impact during the
+    load of many big columns and which compiler doesn't seem to optimize
+    out.
+  *  ee6de37b5 - GIT_SILENT Sync po/docbooks with svn
+  *  a5e9e9dae - GIT_SILENT Sync po/docbooks with svn
+  *  3fd7701d8 - GIT_SILENT add tooltip
+  *  6b6487721 - Use GUM compliant terms
+  *  e54927821 - ui strings: use GUM terms option
+  *  efb084429 - fix ui strings
+  *  9099fc491 - settings: add GUM compliant terms
+  *  185e7ebe9 - code format
+  *  807a3ec23 - [histogram]  properly handle the case when a wrong bin
+    range was specified (max value < min value).
+  *  aff84fd46 - [worksheet] simplified the handling of theme colors and
+    prefix in Line and Background classes.
+  *  48c74e332 - [worksheet] use Line and LineWidget in InfoElement
+    classes.
+  *  a62b62da8 - GIT_SILENT Sync po/docbooks with svn
+  *  495808661 - Merge branch 'master' into work/DataPicker
+  *  6d7fc4b0d - Fix crash in Bar Plot
+  *  1c5b97215 - Merge branch 'master' into work/DataPicker
+  *  85b12e59c - Fixed formattting in DatapickerTest.
+  *  57ef7b84f - Reduced the precision in the failing test
+    DatapickerTest::mapPolarInRadiansToCartesian().
+  *  2fd9eaced - Use the same width of the separator between the columns
+    in all dock widgets.
+  *  8f26a33a9 - [worksheet] use Line and LineWidget for axis ticks line
+    properties.
+  *  d539b0995 - GIT_SILENT Sync po/docbooks with svn
+  *  1c66f127d - GIT_SILENT changelog
+  *  1e4e6113b - tests: Fix compilation
+  *  cbc9f5668 - [worksheet] use Line and LineWidget for line propertiex
+    in XYCurve.
+  *  1df31b0db - [worksheet] use Line and LineWidget for the border line
+    of the plot area.
+  *  102ce8f17 - format
+  *  1828ea44e - add radiobuttons to indicate which reference point is
+    selected
+  *  2f0a3fb8d - fix tests, because numberspinbox does not send out a
+    valueChanged() signal when setting the value
+  *  752060440 - use for every functionality it's own test
+  *  732fd8c91 - increase digits in debug output
+  *  8ac4ba601 - fix wrong calculation
+  *  85407b147 - fix build
+  *  922fd02bd - revert using strings instead of the integer
+    representation of GraphType
+  *  e0c809d63 - Update Datapicker.cpp, DatapickerImage.cpp, and 8 more
+    files...
+  *  f452068fe - add additional tests
+  *  c9cd29527 - add more tests
+  *  f3feafb8a - tests
+  *  1264c621f - implement log10 for datapicker
+  *  b7ac1d352 - GIT_SILENT Sync po/docbooks with svn
+  *  6d2c3228c - spreadsheet function: allow functions with columns
+  *  9928417cf - spreadsheet function values: fix case sensitive
+    completion
+  *  cb7ec045a - spreadsheet function values: extend auto completion to
+    show full description
+  *  298b8d949 - Fix crash in function dialog (regression)
+  *  973ebcca5 - tests: fix private access to axis dock
+  *  ee1dda899 - minor code fixes
+  *  ed42f3f01 - Fixed minor layout issues in the ui-files (non-first
+    tab selected on default, etc.).
+  *  ea10e8632 - fix tests and format
+  *  13f0cee2f - replace QDoubleSpinBox by NumberSpinbox
+  *  401e1e90c - turn on feedback for zeroscaling
+  *  6b6c0d3f0 - fix build
+  *  b0ce6228e - use qstringliteral
+  *  a8cf928d7 - Fixed the usage of protected constructors in QString in
+    the new class NumberSpinBox and fixed the ui files where not the
+    first tab was selected.
+  *  a3d76a045 - work on comments at gitlab
+  *  3960c7efb - code format
+  *  9e5e1086b - Fix warnings
+  *  8ca0addd6 - Fix compilation
+  *  ff545425f - fix control reaches end of non-void function
+  *  fbe5f1415 - limit values for labelWidget and lineWidget
+  *  0c5a29cd9 - limit the value during stepping for min/max
+  *  a25c1b5a7 - feedback when linewidth is invalid
+  *  5215ac97b - numberspinbox for lineWidget and axis
+  *  a1e042853 - use feedback for padding
+  *  85d062ee8 - Update XYCurve.h, XYCurvePrivate.h, and XYCurveTest.cpp
+  *  ba54a3f8d - fix compile issues
+  *  7fe27d037 - numberspinbox for cartesianPlotlegend
+  *  22773a570 - Update ReferenceLineDock.cpp, ReferenceLineDock.h, and
+    2 more files...
+  *  e62c9612f - use numerspinbox in infoelement
+  *  aaea19fe2 - Update CMakeLists.txt, AxisDock.cpp, and 7 more
+    files...
+  *  d30b91478 - use numberspinbox instead of qdoublespinbox
+  *  0055eb85e - fix tests
+  *  c8aabd5e5 - when switching from negative to positive value the
+    position of the cursor should changed accordingly
+  *  3d2f27aca - use NumberSpinBox in LabelWidget
+  *  5452a75ce - Create QtDesigner Plugin for NumberSpinBox, so they can
+    be added graphically to the *ui files.
+  *  181774105 - implement using decimals for initial setValue().
+  *  252afd5f5 - Update Axis.cpp, AxisDock.cpp, and 2 more files...
+  *  407ffa6a4 - fix error when setValue gets called in the slot the
+    valueChanged signal is connected
+  *  914cc12e5 - use by default strong focus
+  *  7cddd05a3 - add missing connections
+  *  990632dd4 - Update AxisDock.cpp, AxisDock.h, and axisdock.ui
+  *  649ab9042 - add another constructor to be more flexible
+  *  6ffda0f53 - implement feedback feature
+  *  67d863b24 - add test for entering numbers with the keyboard
+  *  d667119ce - use different approach setting invalid. So the error
+    strings are at a single place and are easily reusable
+  *  cbdd5ed5d - fix test by providing the text to event, because this
+    text is inserted to the lineEdit()
+  *  9343cdac0 - comment one test out for now
+  *  272edbb8b - fix tests
+  *  ed352a017 - implement suffix/prefix and min/max
+  *  097114c65 - emit valueChanged when value was changed
+  *  46c6f990e - fix bugs and create more unittests
+  *  c95ddd52d - missing calculation with exponential value
+  *  34d294bcf - fix a few bugs
+  *  90f5fa034 - initial commit for the NumberSpinBox
+  *  99e23d310 - Update CartesianPlotTest.cpp
+  *  0164cedbd - GIT_SILENT Sync po/docbooks with svn
+  *  0473003e0 - bar plot: fix x axes settings
+  *  6ae216e97 - GIT_SILENT: changelog update
+  *  06d11098b - tests: add formula tests for cell(f(i), g(x,..))
+  *  9fb24f15d - column formula: support general syntax cell(f(i),
+    g(x,..))
+  *  a0c1d79bf - code format
+  *  00fa3ad3e - GIT_SILENT Sync po/docbooks with svn
+  *  d2b2412cd - spreadsheet function: simplify code
+  *  5dec0aee7 - packaging: disable FreeBSD
+  *  218048083 - packaging: disable flatpak until fixed and enable
+    FreeBSD
+  *  63c386df6 - packaging: fix name?
+  *  04043c54d - packaging: fix name?
+  *  773a4ffc9 - packaging: fix flatpak by removing cantor dependency
+    (fails with missing qtwebengine)
+  *  f1fe02e27 - packaging: fix flatpak by including boost package
+    manifestos
+  *  7ef819e30 - packaging: fix flatpak by removing missing base
+  *  4c07ac8d6 - packaging: fix flatpak by including package manifestos
+  *  e7d9505fc - packaging: enable flatpaks in gitlab builds
+  *  b5fa02d22 - tests: improve matrix values check
+  *  879e7602b - tests: unambiguous name
+  *  da53f5779 - tests: derive from common test
+  *  f338a86db - GIT_SILENT Sync po/docbooks with svn
+  *  4311be605 - tests: prepare Matrix tests
+  *  f330734e5 - Matrix: Fix generating values from function
+  *  906278975 - [matrix] use the black color for invalid values and
+    reduced the number of static_casts when generating the image view.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 04 Dec 2022 15:44:11 +0000
+
 labplot (2.9.0+git10456-f3a4abdb8-1) unstable; urgency=medium
 
   * Compile
