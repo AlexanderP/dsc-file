@@ -1,3 +1,240 @@
+labplot (2.9.0+git10839-4daba96ff-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 4daba96ff931086692b7f12cf5678c009de3faa7
+  * Date: 1671796769
+  * git changelog:
+  *  4daba96ff - format fix.
+  *  75297f59e - [worksheet] use Line and LineWidget also for Image.
+  *  22be92559 - GIT_SILENT Sync po/docbooks with svn
+  *  3fe31c9e9 - Merge branch 'master' into work/nico/installdirs
+  *  9757c440c - datetime2int filter
+  *  08789d3ef - simplify code
+  *  e70cd2ec3 - clean up code
+  *  6d74fa539 - column: fix datetime to bigInt filter
+  *  29bf7bbd6 - cmake: bump Qt version
+  *  6bf80bd58 - Port away from deprecated install dirs
+  *  3741fd66b - Properly sort includes
+  *  97b26828e - Add missing includes
+  *  75c1429e5 - Use new method to load cantor plugin
+  *  fb096ca54 - GIT_SILENT Sync po/docbooks with svn
+  *  b8d24914c - Revert CI: enable all targets to fix them
+  *  a5215a1b5 - CI: enable all targets to fix them
+  *  3aceb01fe - i18n: minor fixes
+  *  abf9a96f1 - code format problems again
+  *  aa38875e8 - code format problems
+  *  3b6782c16 - Refactor: avoid unnecessary wrapper
+  *  ed233192f - code format
+  *  91b76f9e1 - Refactor: use C++ instead of Qt's methods for basic
+    math
+  *  da057251f - Merge branch 'master' into work/distribution-fit
+  *  d4d86b48e - tests: Fix Laplace ML fit
+  *  2f7883976 - Changelog
+  *  69a9efa18 - ML CI for exponential distribution
+  *  a96aa3697 - GIT_SILENT Sync po/docbooks with svn
+  *  6a8bb89d9 - Introduced the function Column::doubleAt() to reduce
+    the number of casts and if's when accessing the elements in numeric
+    columns.
+  *  2b6cfc4ff - In the properties explorer for curves, don't show the
+    line options that are relevant for xy-curve only and not for the
+    analysis curves.
+  *  3a9073d0b - ML binomial CI
+  *  d5386b974 - Added parent widgets for new QMenu() calls to address
+    issues on Wayland and delay the initialization of sub-menus in
+    WorksheetElement until the point when the context menu is requested
+    for the first time.
+  *  87f20b362 - GIT_SILENT Sync po/docbooks with svn
+  *  3cef24ac7 - ML error and CI for different distros
+  *  c56a58637 - [spreadsheet] consistently use UTC when
+    adding/subtracting values in the spreadsheet.
+  *  aed31ce27 - Fix exponential display formula
+  *  46d2bc367 - ML normalization for curves
+  *  13390ab85 - GIT_SILENT Sync po/docbooks with svn
+  *  09419cd95 - [axis] update the color of the arrow in the dock widget
+    on line color changes.
+  *  52f8f6e90 - Minor layout fixes.
+  *  9ab374aea - GIT_SILENT Sync po/docbooks with svn
+  *  f4493a308 - fix merge
+  *  e9e56737d - Column: Fix bigint to datetime conversion
+  *  76710a5fe - [spreadsheet] allow to subtract and add a value by
+    providing a difference between two values.
+  *  ab4eb6bce - ML normalization for exponential distribution
+  *  ae6d44132 - replace SET_NUMBER_LOCALE macro by a single line call
+  *  25bbb0323 - revert a lot
+  *  5de7a0bf5 - Merge branch 'master' into work/plot-base-class
+  *  7397f1c32 - do not lock, because it is done already in setImages()
+    and otherwise the widgets are not initialized correctly
+  *  7a03768b1 - call sliderSpanChanged, because otherwise min and max
+    spinboxes are not updated
+  *  9404a17c3 - use new lock macro instead of the legacy
+  *  0b75cfe68 - CI: disable tumbleweed until fixed
+  *  280548d42 - Minor comment fix
+  *  8b86c4f1f - restore algorithm list when opening project with ML
+  *  7e119ea9a - GIT_SILENT Sync po/docbooks with svn
+  *  83d59575b - ML gaussian fit for non-histograms
+  *  05310e27c - ML fit only for distributions
+  *  5f389d59b - ML fit: consider histogram normalization
+  *  e6d2782e1 - Merge branch 'master' into work/distribution-fit
+  *  8cd12a2cd - GIT_SILENT Sync po/docbooks with svn
+  *  3aecd37ad - GIT_SILENT Sync po/docbooks with svn
+  *  317373646 - Fix compiler warnings
+  *  9bd295952 - Column: fix conversion int to datetime
+  *  8b84ab2b5 - [bar plot] better positionioning of bars in case the
+    absolute width is modified by the user.
+  *  16b7ffcd9 - Merge branch 'master' into work/plot-base-class
+  *  4b19d38d5 - GIT_SILENT Sync po/docbooks with svn
+  *  8fbad5aaf - ML fit: disable changing data range
+  *  b958901e9 - Merge branch 'master' into work/distribution-fit
+  *  a526ad622 - UI: consistent order of plot designation
+  *  fc1421a55 - shift all corresponding ranges also for other plots if
+    set in the worksheetelement ApplyToAllX/Y/All
+  *  c628387db - Update Worksheet.cpp, Worksheet.h, and 7 more files...
+  *  83c9eccad - [import] added missing checkOkButton()-call on data
+    container changes in ImportFileDialog (regression introduced in
+    696b77e5).
+  *  795e4f726 - GIT_SILENT Sync po/docbooks with svn
+  *  645ae8746 - Fit: Fix eval range for histogram
+  *  3482fd000 - In CartesianPlot::childAdded() react on
+    WorksheetElements only - use dynamic_cast and check instead of a
+    static cast to make sure we deal with these children only.
+  *  fc6e0c271 - Fix merge
+  *  338a29185 - More format and build fixes.
+  *  62f18a73f - Fixed build and formatting.
+  *  bf6c6ce97 - format fixes.
+  *  31c93855b - Moved more logic to the base class Plot (renamed the
+    Curve to Plot)  and made all plot (xycurve, box plot, etc.)
+    inheriting from it. This allows for more simplification and
+    unification in the code now. First step is the simpler handling of
+    newly added children in CartesianPlot::childAdded().
+  *  3f744d0b0 - prevent using wrong indices
+  *  35c8f0d87 - More UI string fixes
+  *  46808eae8 - plot designation: don't break compatibility
+  *  bf49a47da - Column: Fix order of plot designation
+  *  62894d55d - [xy-curve] fixed the drop lines being not drawn after
+    the project load or for new plots when calculateScenePoints() was
+    not called yet.
+  *  699b4a469 - GIT_SILENT Sync po/docbooks with svn
+  *  2bbb05d6b - axis dock: code simplify to fix warnings
+  *  ebee6ce69 - UI: use GUM strings when selected
+  *  062763472 - format fix.
+  *  bd628dfb2 - [box plot] draw a legend item for every dataset in the
+    box plot.
+  *  f73d95507 - Minor cleanup.
+  *  e8d519c49 - [box plot] allow to modify box properties (color, etc.)
+    for every data set independently of each other.
+  *  19ca4d04c - UI: More string fixes
+  *  8a7c3bacd - add changelog entry
+  *  16ab29eb3 - add check if decimals is zero. In this case use the
+    representation derived from v directly
+  *  368d20830 - fix tests
+  *  35554a2c7 - Revert fix tests
+  *  ded9b7d5f - use insidePlot directly
+  *  a389f7a9c - If the Infoelement is the selected element during load,
+    not all markerpoints have yet a curve assigned and therefore the
+    check of the checkbox is not done. To fix this, the curvePath in the
+    markerPoints and the plot curves are used. Now after loading the
+    checkboxes are set correctly
+  *  1ee240454 - visible Variable in InfoElementPrivate is not needed,
+    use infrastructure of the WorksheetElement wherever possible
+  *  8624ef4cf - hide custompoint and infoelement if they are outside of
+    the plot
+  *  32be51266 - GIT_SILENT Sync po/docbooks with svn
+  *  706f36b5f - fix tests
+  *  47fa41f9b - Merge branch 'master' into work/FixFiltering
+  *  aecedd4ef - UI: more dock fixes
+  *  87a3dfcc2 - UI: fix axis dock and plot dock
+  *  40440ea20 - set valid depending on status
+  *  701a1e655 - comment out not working part, let this test in for
+    future implementations to speed up creating unittests
+  *  bc16633bb - cutindex must be divided, because xmax and xmin are
+    datetimes in ms
+  *  bc3fa1664 - add numberSpinboxTest
+  *  6519b3f8d - use common function for both unitChanged() and
+    unitChanged2()
+  *  b18dfe99d - divide the range by 1000 is datetime is provided,
+    because datetime is in milliseconds
+  *  0d53a31f1 - do not use decimals() to format the number if the
+    number is smaller than the minimum representation
+  *  56523307c - the setMinimum() and setMaximum() of QDoubleSpinbox are
+    rounding the value to the defined number of decimals, therefore
+    entering really small numbers with high precision is not possible.
+    Reimplement the function to get rid of this problem
+  *  e35a74bd3 - implement handling datetimes
+  *  490691099 - add test
+  *  0df0321c2 - WIP
+  *  6d3fa73ed - [box plot] use Line and LineWidget also for whiskers
+    cap line.
+  *  c0e40e96c - GIT_SILENT Sync po/docbooks with svn
+  *  d299fb1a7 - fix test
+  *  8968e507f - fix compiling
+  *  fbbe2946d - add test
+  *  fdf3fde29 - implement CartesianCoordinateSystem::isValid() instead
+    of implementing a valid in mapSceneToLogical
+  *  df2892a95 - setText must be done in locked conditions
+  *  96887125d - no lock in load, because it is done in the caller
+    function already
+  *  01c3bd1b7 - do not lock in the load() function, because it will be
+    already locked outside
+  *  8bf24c825 - DatapickerCurveWidget: enabling/disabling and visible
+    changes must be before LOCK mechanism
+  *  08f127783 - SymbolWidget: enabling/disabling and visible changes
+    must be before LOCK mechanism
+  *  58213e16d - DatapickerImageWidget: enabling/disabling and visible
+    changes must be before LOCK mechanism
+  *  c5d863035 - LabelWidget: enabling/disabling and visible changes
+    must be before LOCK mechanism
+  *  a84a70200 - XYSmoothCurveDock: remove not needed semicolon
+  *  97b722bca - XYCurveDock: enabling/disabling and visible changes
+    must be before LOCK mechanism
+  *  37d9f5f6f - XYCorrelationCurveDock: enabling/disabling and visible
+    changes must be before LOCK mechanism
+  *  55ed53dd2 - XYConvolutionCurveDock: enabling/disabling and visible
+    changes must be before LOCK mechanism
+  *  2d0db6bce - NoteDock: use macro instead of m_initializing directly
+  *  92ffe399b - ImageDock: enabling/disabling and visible changes must
+    be before LOCK mechanism
+  *  a532387fb - HistogramDock: enabling/disabling and visible changes
+    must be before LOCK mechanism
+  *  1f0f0166e - CustomPointDock: enabling/disabling and visible changes
+    must be before LOCK mechanism
+  *  f8ff86466 - AxisDock: fix compiling
+  *  1a6bdaabf - CursorDock: enabling/disabling and visible changes must
+    be before LOCK mechanism
+  *  a1d449fef - ColumnDock: enabling/disabling and visible changes must
+    be before LOCK mechanism
+  *  ae87d94a1 - CartesianPlotLegendDock: enabling/disabling and visible
+    changes must be before LOCK mechanism
+  *  13031425a - CartesianPlotDock: enabling/disabling and visible
+    changes must be before LOCK mechanism
+  *  ee961cdad - BoxPlotDock: enabling/disabling and visible changes
+    must be before LOCK mechanism
+  *  6c0f053b8 - AspectDock: use macro
+  *  4616af651 - AxisDock: enabling/disabling must be before the lock
+  *  2be19a0c4 - move cbLabelsFormat enabled() into slot function dock -
+    > axis. It must be before lock, because it shall be also executed,
+    when the value comes from the axis it self
+  *  a133a71be - move into function
+  *  999ed3c15 - use update, because it describes better
+  *  cd8a802d7 - delete lineedits, because they where replaced by
+    numberspinbox and just forgotten to delete
+  *  f33ee1884 - CartesianPlotDock: use macro instead of directly
+    accessing m_initializing
+  *  629635b41 - use common setPositionText in load and in
+    orientationChanged, because previously in load setting the correct
+    labelsPosition was forgotten
+  *  0ad0cfb46 - row is an integer and not a bool
+  *  8e02f680e - GIT_SILENT Sync po/docbooks with svn
+  *  90f348e3b - histogram: refactor
+  *  531386a2f - Merge branch 'master' into work/distribution-fit
+  *  124b9dc74 - ML residuals
+  *  bfd0c5c7f - GIT_SILENT Sync po/docbooks with svn
+  *  df3f8eed3 - Minor layout fixes.
+  *  6f13ca185 - GIT_SILENT Sync po/docbooks with svn
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 23 Dec 2022 19:37:27 +0000
+
 labplot (2.9.0+git10655-a3d72f0a0-1) unstable; urgency=medium
 
   * Compile
