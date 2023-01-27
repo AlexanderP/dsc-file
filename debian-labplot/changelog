@@ -1,3 +1,92 @@
+labplot (2.9.0+git10899-06464b14c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 06464b14c3251d8cd5c646215740aa2af43c50fe
+  * Date: 1673607001
+  * git changelog:
+  *  06464b14c - fix warnings. QVector3D uses float
+  *  69997e968 - must be negated
+  *  9e01a481c - GIT_SILENT Sync po/docbooks with svn
+  *  b0217f69f - tests: disable peak test on Windows until fixed
+  *  c927e0861 - NSL: add peak templates
+  *  4ec8dc180 - NSL: improve peak detection code
+  *  83fe391e8 - GIT_SILENT Sync po/docbooks with svn
+  *  a1ce32607 - NSL: prepare peak detection methods
+  *  b0f004424 - add compiler optimization flag.
+  *  e7b45479c - GIT_SILENT Sync po/docbooks with svn
+  *  4580bd843 - function dialog: fix separator in function list
+  *  731719567 - GIT_SILENT Sync po/docbooks with svn
+  *  b84671d87 - [spreadsheet] initial implementation of the preview in
+    the Add/Subtract Values-dialog.
+  *  31cfaebce - NSL: support baseline removal with arPLS including
+    tests
+  *  929855c4e - GIT_SILENT Sync po/docbooks with svn
+  *  c41ce8f58 - Added the changes that were fogotten in the previous
+    commit...
+  *  43890621c - [box plot] when loading an older project where it was
+    not possible yet to modify box' properties independently for each
+    data set, use the same saved properties for all newly added internal
+    objects for the background and border and median lines.
+  *  d678e216d - GIT_SILENT Sync po/docbooks with svn
+  *  c05e876d0 - NSL: add baseline end points and linear regression
+  *  d54315eab - [spreadsheet] allow to subtract minimum, maximum,
+    median and mean values directly in the Add/Subtract Values-Dialog.
+  *  aee9da311 - Updated the year also in the README file.
+  *  a5621ab8b - GIT_SILENT Sync po/docbooks with svn
+  *  69121b884 - NSL: more baseline methods and tests
+  *  4ebc28018 - NSL: add baseline functions and tests
+  *  59f735c42 - fit dock: show algorithm for distributions only
+  *  698df0634 - Happy New Year!
+  *  7be981418 - Fit Dock: fix regression changing start values
+  *  9baa01d9f - GIT_SILENT Sync po/docbooks with svn
+  *  0be5ffe05 - Removed the obsolete signal in Histogram.h, the signal
+    from the base class has to be used.
+  *  f785b757c - GIT_SILENT Sync po/docbooks with svn
+  *  afbbeedf1 - format fix.
+  *  c04fb997f - [spreadsheet] show column statistics for selected cells
+    only.
+  *  dc836ebbf - fit: avoid locale problems in fit models by omitting .
+  *  400aa9d84 - Minor fixes: * adjust the positioning of data and axis
+    ticks points in the statistics widget to the recent changes in the
+    positioning of bar plots * enable the context menu for column
+    statistics also for text columns
+  *  1aff006d5 - GIT_SILENT Sync po/docbooks with svn
+  *  54ccfe459 - SVN_SILENT made messages (.desktop file) - always
+    resolve ours
+  *  9d442a1d9 - GIT_SILENT made messages (after extraction)
+  *  3f010afdc - GIT_SILENT Sync po/docbooks with svn
+  *  45a6f909a - GIT_SILENT Sync po/docbooks with svn
+  *  9b3667d97 - GIT_SILENT Sync po/docbooks with svn
+  *  742c9ecd2 - GIT_SILENT Sync po/docbooks with svn
+  *  4b307082a - GIT_SILENT Sync po/docbooks with svn
+  *  63644d1c4 - GIT_SILENT Sync po/docbooks with svn
+  *  06139566b - GIT_SILENT Sync po/docbooks with svn
+  *  5205e67f1 - Fixes for templates: * fixed the wrong handling of
+    paths when saving and loading templates * apply the changes also in
+    the base classes for Line, Symbol and Background, don't lock
+    m_initializing (regression).
+  *  237105324 - GIT_SILENT Sync po/docbooks with svn
+  *  3bbeb59bd - [worksheet] initialize grid line properties for all
+    axes, not only for the first one and just set the line style to
+    NoPen for non-first axes otherwise we're showing uninitialized
+    values in the dock widgets which looks broken.
+  *  ee17a3c69 - column: prepare using time unit for datetime conversion
+  *  34844acc8 - Merge branch 'master' of https://github.com/KDE/labplot
+  *  05c42999f - [worksheet] minor fixes in AxisDock to properly update
+    (enable, disable, show, hide) some of the dependent widgets.
+  *  c4bcb2054 - Minor layout fixes.
+  *  f95ba64c7 - [worksheet] added template handler for ReferenceLine.
+  *  7134900fa - [worksheet] fixed the loading of saved images and
+    better handling of the embedded option in the dock widget.
+  *  df23411c3 - GIT_SILENT Sync po/docbooks with svn
+  *  44083609d - Merge branch 'master' of https://github.com/KDE/labplot
+  *  10eef4343 - GIT_SILENT Sync po/docbooks with svn
+  *  1ccb54d65 - Merge branch 'master' of https://github.com/KDE/labplot
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 13 Jan 2023 21:02:51 +0000
+
 labplot (2.9.0+git10839-4daba96ff-1) unstable; urgency=medium
 
   * Compile

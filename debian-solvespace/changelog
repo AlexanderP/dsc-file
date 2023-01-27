@@ -1,3 +1,40 @@
+solvespace (3.1.0+git1942-b4be656-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: b4be656f251301fd730fad1533461b4361ce9ced
+  * Date: 1673470710
+  * git changelog:
+  *  b4be656 - Update CHANGELOG.md
+  *  7b6a85d - UI: Add constraining multiple points coincident
+  *  6487fb8 - UI: Adjust the menu items Angle and Equal... to match
+    current state.
+  *  bacc0b6 - UI: Adjust the hints for creating constraints
+  *  3ee3561 - Update CHANGELOG.md
+  *  a1be8a8 - Update CHANGELOG.md
+  *  f22ebf2 - UI: Adjust the hints for creating constraints
+  *  20e3d15 - Use N for equal angle constraints. Allows 3 or 4 line
+    segments to be set equal length all at once.
+  *  10cb310 - Try to use SNAPCRAFT_STORE_LEGACY_CREDENTIALS for now
+  *  1827d15 - Fix snap release (#1323)
+  *  a71e4be - allow equal angle constraints when 3 or 4 lines selected.
+    Variadic constraints broke this feature by make equal length lines
+    in those cases.
+  *  3833dd0 - Allow point-on-face for up to 3 faces at once
+  *  3609f8a - Use a lambda to list selected faces when multiple faces
+    are selected.
+  *  aee47a4 - Clean up face selection code
+  *  adb2768 - Draw up to three selected faces
+  *  7d5eaff - Add ability to select 3 faces
+  *  105a350 - change/fix some undo behavior in variadic constraints
+  *  0db1f6b - Fix H/V constraints on points and allow more than 2
+    points
+  *  a580989 - fix several crashes on constraint creeation
+  *  3d3d5c7 - Sync multiconstraint with current state
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 13 Jan 2023 20:59:14 +0000
+
 solvespace (3.1.0+git1922-50cbecb-1) unstable; urgency=medium
 
   * Compile
