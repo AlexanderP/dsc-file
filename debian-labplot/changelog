@@ -1,3 +1,154 @@
+labplot (2.9.0+git10986-0400a4578-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 0400a457857b426e987a08bc74f8d4e4cf51bdf0
+  * Date: 1674846328
+  * git changelog:
+  *  0400a4578 - Multiple UX improvement  for the baseline subtraction:
+    * shown the name of the subtraction algorithm * show the result
+    termination ration in the plot * provide the smoothness factor in
+    the powers of 10
+  *  65f62a4b7 - spreadsheet: only enable statistics if enough data (>1
+    value)
+  *  775d06b3e - fix comiler warnings
+  *  783fc9f14 - fix for minorticks also the minorticks parameters must
+    be used
+  *  3aac4f8ad - set new value when automatic was turned on
+  *  5c8d6e0fa - disconnect will now be done in the BaseDock, so no need
+    to do it here again
+  *  b77311f05 - add test
+  *  7a800dc0e - forgotten to compare
+  *  bbab46761 - use same disconnect approach as above, because the
+    other one is not working properly
+  *  85b5caaff - add test, but test does not solve the problem
+  *  3701c1965 - disconnect before connecting again, because otherwise
+    multiple connections are available and this leads to problems
+  *  6e4372816 - Padding has nothing to do with the WorksheetElement.
+    Everything else is in AbstractPlot so move it also in there
+  *  7d9ca92d3 - add test to check the cursor position
+  *  c0731f364 - enable feedback by default
+  *  1c07b6a71 - GIT_SILENT Sync po/docbooks with svn
+  *  239b05ca1 - Changelog
+  *  bb1d2b85e - Support export to xlsx (when OXlsx is available)
+  *  e012a8818 - Better wording for the new enum NameHandling.
+  *  c592864f9 - instead of two bools use an enum class, because if not
+    unique is required the autounique flag would be ignored (exlusive).
+    This makes it more readable
+  *  a013e6950 - [import] use a new filter in the test for the second
+    file to be imported into the same spreadsheet so we go through the
+    prepare logic in the filter from scratch again and properly parse
+    the 2nd file.
+  *  c5e5c6222 - [import] added two test files required for the new test
+    in the previous commit.
+  *  2766d5d58 - [import] don't try to make column names unique when
+    calling setName() since the names were made unique already before.
+  *  019f6e40a - set label policy to fixed so they do not expand when
+    the widget changes its size, because only the spinboxes should
+    change the size
+  *  d20c48378 - GIT_SILENT Sync po/docbooks with svn
+  *  8a8da2654 - Merge branch 'master' into
+    work/preview_baseline_subtraction
+  *  06cac063d - better fallthrough
+  *  9f7ca772c - format fix
+  *  8fa45ccf7 - nsl baseline: return tolerance from arpls
+  *  d0c02df0e - format fix.
+  *  9ea326b99 - [spreadsheet] improved the name of the entry on the
+    undo stack in case the baseline subtraction is performed.
+  *  04edeaf48 - GIT_SILENT Sync po/docbooks with svn
+  *  a32675dc0 - [spreadsheet] added the x-axis in the preview plot in
+    AddSubtractValueDialog and tooltip texts for the parameters of the
+    baseline subtraction algorithm.
+  *  a688fff2c - [spreadsheet] fixes and cleanup in the preview related
+    login in AddSubtractValueDialog.
+  *  ad2896525 - [spreadsheet] trigger the update of the preview in
+    AddSubtractValueDialog _after_ the dialog was shown completely.
+  *  530f5bcdc - GIT_SILENT Sync po/docbooks with svn
+  *  4d604fbbb - Merge branch 'master' of https://github.com/KDE/labplot
+  *  0e07af43e - GIT_SILENT Sync po/docbooks with svn
+  *  bb3e11343 - nsl: extend peak find
+  *  e963642a1 - GIT_SILENT Sync po/docbooks with svn
+  *  3ca0f53bd - fit dock: support dark mode for fit formula
+  *  cc43b4a00 - GIT_SILENT Sync po/docbooks with svn
+  *  f96f3b315 - [worksheet] when showing the properties of box and bar
+    plots having multiple data columns, always select the first column
+    in the box/bar index combobox since the properties of the first
+    column are shown initially.
+  *  80e3eaa87 - Fixed some rounding issues in the dock widgets caused
+    by the conversion of double to integers for percentage values in the
+    docks.
+  *  016aece48 - GIT_SILENT Sync po/docbooks with svn
+  *  da580af23 - document memory issues found by valgrind
+  *  a46c3a6f0 - Removed unwanted entries in the undo-history when
+    loading a project a selecting some objects like box plots, etc.
+  *  a3fae62ec - [worksheet] fixed regressions in BackgroundWidget with
+    the update of widgets.
+  *  14b2b0ac8 - NSL: fix memory issue
+  *  dd9adf121 - GIT_SILENT Sync po/docbooks with svn
+  *  eb68b50b5 - GIT_SILENT Sync po/docbooks with svn
+  *  0a74d2353 - tests: prepare reactivate dataset tests
+  *  d5e742c60 - fix XYCorrelationCurve Test
+  *  c1a5be2ad - xyconvolutioncurve does not need tmpXDataColumn, only y
+    is mandatory
+  *  25625aabd - create common XYAnalysisCurveDock class which
+    implements commonly used stuff so a lot of code can be removed
+  *  406282506 - create common Result type which can be reused
+  *  9d131c274 - [ForuierTransform and HilbertTransform]: use
+    XYAnalysisCurvePrivate::prepareTmpDataColumn
+  *  d0e8fd154 - implement prepareTmpDataColumn function in
+    XYAnalysisCurvePrivate because it is used at the most curves, so it
+    can be reused. Only a few reimplement this function
+  *  f39438d72 - calling sourceDataChangedSinceLastRecalc is not needed,
+    because it will be done in XYAnalysisCurve
+  *  ec35fa8de - add more functions, which are needed in all analysis
+    curves so the implementation of new ones gets even more simple
+  *  ee14ffb34 - fix test
+  *  59e009e17 - do not overwrite the values of xVector, because in
+    XYAnalysisCurve the recalculation will be done and if this vector is
+    used again here the plot is wrong
+  *  3d05d155c - residualsColumn must be checked individually, because
+    if the source is a column it might crash
+  *  136d84e6f - xVector can be const
+  *  6192266b8 - WIP
+  *  480b7ea5f - before calculating new values the column must
+    invalidate its properties so that they need to be recalculated when
+    autoscale has to be done
+  *  dd021a6c3 - add test
+  *  3a926df4f - Fixed formatting.
+  *  ff34a8fa3 - [spredsheet] ignore clang-format for the bigger html
+    strings in StatisticsColumnWidget and don't call
+    SpredsheetView::selectedColumns() twice when masking/unmasking the
+    selected cells.
+  *  2f3512130 - [spreadsheet] implemented basic statistic properties
+    for DateTime columns (count, min and max values) which also allows
+    to simplify the code at many places.
+  *  c312e59e7 - GIT_SILENT Sync po/docbooks with svn
+  *  1b330f8bd - [spreadsheet] preview for the baseline subtraction in
+    AddSubtractValueDialog.
+  *  f38aba255 - GIT_SILENT Sync po/docbooks with svn
+  *  7b5221147 - code style: avoid braces for onliners
+  *  318781e47 - line: fix default initialization
+  *  eeeda5626 - if only one axis will be changed, show name, otherwise
+    the number of axes changed
+  *  f1b23e12d - write tests and fix the code
+  *  bdb40a494 - use dedicated function instead of lambda, it makes it
+    more readable
+  *  ad0cfa404 - implement widgets -> axisColorButton: when a
+    colorbutton of the axistitle or one of the lines changes it's color,
+    the main axisColor should be updated too
+  *  b57493005 - Add color button to .ui
+  *  b99179932 - Update AxisDock.cpp, AxisDock.h, and 3 more files...
+  *  75e22c531 - GIT_SILENT Sync po/docbooks with svn
+  *  c2f98dc4c - enable test fully again
+  *  d67a38ee0 - fix test
+  *  9307e4d17 - do not allow setting same value for min/max
+  *  6be02f417 - tests: enable peak on Windows again
+  *  a06074ec0 - NSL: fix memory issue in peak_detect and cleaner code
+  *  7441a1aba - fix warning of unused parameter
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 27 Jan 2023 22:00:15 +0000
+
 labplot (2.9.0+git10899-06464b14c-1) unstable; urgency=medium
 
   * Compile
