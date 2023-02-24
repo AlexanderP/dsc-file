@@ -1,3 +1,159 @@
+freecad-daily (0.20.1+git31829-95a6d1e208-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/FreeCAD/FreeCAD.git
+  * Branch: master
+  * Commit: 95a6d1e2083907afbe086b4d9ed9960b8b021a25
+  * Date: 1676054911
+  * git changelog:
+  *  95a6d1e208 - [FEM] Elmer: add support for 3D magnetodynamics
+  *  f26481ca20 - [FEM] change hiding logic on calling task panels
+  *  67d73f31a8 - [FEM] ViewProviderFemPostObject: fix a typo
+  *  c0bbff3f28 - Spreadsheet: fix some warnings and issues reported by
+    GH actions
+  *  108e30d8ba - smesh: std::iterator<> is deprecated in C++17
+  *  3f29b469a4 - [FEM] Elmer: fixes for Magneto2D writer
+  *  30e464d82a - cMake: Clean up old Mac Python search
+  *  b3e8add2e4 - [FEM] use extended current density constraint for 2D
+  *  aca9e15f66 - [FEM]  extend current density to 3D
+  *  16cacfb3fb - Merge pull request #8307 from LarryWoestman/staging
+  *  04f0b66ef7 - [FEM] use magnetization constraint for 2D
+  *  04915b694b - [FEM] add new constraint for magnetization
+  *  c59a10be77 - [FEM] add support to show absolute value result fields
+  *  aa4700f12b - [FEM] Elmer: magneto 2D use magnetization
+  *  cbe634719d - [Material] allow to use vectorial properties
+  *  436703e8ce - [Material] new card for Iron
+  *  c074fe1c95 - [App] fixes for Magnetization property
+  *  e5587cd935 - Addon Manager: Fix GUI tests on macOS
+  *  fe1c09f841 - [FEM] [skic ci] fix arrows in CurrentDensity icon
+  *  201b95a5b2 - [Core] add quantity Magnetization
+  *  b41776d077 - [Core] disable the the unit Oersted
+  *  ac694dea1e - [FEM] [skip ci] Elmer write: move a check function
+  *  30e3abde15 - Fix trailing newlines
+  *  ddfdce612e - [FEM] Elmer: extent potential constraint
+  *  0a4b860d66 - [App] [skip ci] add info for expression lexer
+    generation
+  *  78a988ba27 - [FEM] [skip ci] constraint_currentdensity.py: fix a
+    typo
+  *  7352512f6c - [Draft] fix Draft_Clone DiffuseColor delay issue
+    during unit test (#8386)
+  *  961bef36c0 - Gui: fix regression that NaviCube cannot be switched
+    off any more
+  *  39502e8c57 - Gui: recreate NaviCubes of all 3D views
+  *  e50dd7d2d2 - Gui: remove Q_SLOTS decorator and use connect() to
+    bind the signal
+  *  0ba20f3f1d - Gui: fix and harmonize tool tips
+  *  2ffa1d546f - Gui: use QString::fromStdString for std::string
+  *  d24bb7195a - Gui: move calls of OnChange to separate method and
+    explicitly call the class' method to fix warning about bypassing
+    virtual dispatch during construction
+  *  9906c63b32 - Gui: move calls of OnChange to separate method and
+    explicitly call the class' method to fix warning about bypassing
+    virtual dispatch during construction
+  *  3f3a548b22 - Disabled Accessibility on SheetTableView
+  *  c71e551556 - Merged crowdin translations
+  *  f51a6f2cf9 - updated ts files
+  *  06100d97dd - [FEM] Elmer: better sorting of equations
+  *  23e240e017 - [FEM] Elmer writer: correct copyrights
+  *  d5ac0758cf - [FEM] Elmer: add support for 2D magnetodynamics
+  *  c8e25bf4d4 - [FEM] Elmer writer: sort out elasticity equation
+  *  bc275eb772 - [FEM] Elmer writer: sort out electricforce equation
+  *  8d0d38911f - [FEM] Elmer writer: sort out flow equation
+  *  53452cfec3 - [FEM] Elmer writer: sort out flux equation
+  *  5b2f99c5ea - [FEM] Elmer writer: sort out heat equation
+  *  e90102ba4f - [FEM] Elmer electrostatic improvements
+  *  3d3313546a - [FEM] Elmer: refactor writer for electrostatics
+  *  41bafb2bc0 - [FEM] Elmer: add permeability of vacuum
+  *  c8630fec0a - [FEM] shorten too long lines
+  *  e7d757de3d - [Draft] fix ang dim arrows alignment issue related to
+    asin (#8368)
+  *  69e5359bfa - Gui: [skip ci] fix typo
+  *  2c931a88b0 - [TD] Add Command Axo Length Dimension
+  *  f09d038ff5 - Draft: add delay in the Draft_Clone unit test (#8363)
+  *  82b6e03625 - [FEM] add current density constraint
+  *  b4780be1d1 - Fix whitespace issues
+  *  2a4e87b64d - Fixes startpage css - fixes #8330
+  *  87c5b89135 - [Material] fix conductivity of Copper
+  *  68d478aa6e - [FEM] [skip ci] Elmer write: some cleanup
+  *  3be4744647 - [Start] set sensible size for DlgStartPreferences.ui
+  *  6a6442b0a3 - Start: Added option to hide start page scrollbars
+  *  d2ec8a85cc - [FEM] Elmer output material name
+  *  a38b2ffbf7 - Fix various trailing newlines, typos and grammar
+  *  2880a5ca2a - [Core] add current density
+  *  d33005d14e - [Material] add support for magnetic permeability
+  *  49a7a60311 - [Part] [skip ci] update a tooltip
+  *  181c7991e2 - Increase mesh generation output quality
+  *  20933f9c07 - Tools: tweak mesh generation
+  *  1a51e03b2f - [FEM] Elmer: revert wrong change from #8336
+  *  28c8addf5a - [FEM] Elmer: don't hardcode the coordinate system
+  *  51185e1c06 - [FEM] Elmer: fix error on wrong material settings
+  *  a891d5c766 - Draft: fix normal calculation for angular dims
+  *  0e17989707 - [Material] add new card for carbon dioxide
+  *  7f8b136dae - Sketcher: replace slots with member function pointers
+  *  4b3fb1c079 - TD: replace slots with member function pointers
+  *  0363ebdf8f - Surface: replace slots with member function pointers
+  *  9aede79ef8 - Mesh: replace slots with member function pointers
+  *  9a5d9880d5 - PD: replace slots with member function pointers
+  *  84aa8155ce - Part: replace slots with member function pointers
+  *  9b29c3a683 - Gui: replace slots with member function pointers
+  *  ec0182b915 - Draft: housekeeping: remove obsolete code (uiMode and
+    DraftGui.py) (#8327)
+  *  932abebca9 - [Gui] register NaviCube parameters to view
+  *  f14dea3226 - [FEM] solver_taskpanel: fix bug with Edit button
+  *  62a2c33a05 - CI: re-enable 20.04 build and test
+  *  681b8091ad - CMake: make sure to add RPATH to area-native library
+  *  951520a5c1 - [TD]use correct shape for section of section
+  *  bd25c86973 - [TD]fix handling of perforated section faces
+  *  d9afb06676 - [TD]allow section line when base is section
+  *  693ec401f7 - Draft: subelement mode ignored nesting (#8319)
+  *  802a220d2d - [FEM] equationbase: sort equations alphabetically
+  *  37dc6e8a29 - [FEM] sort equations alphabetically
+  *  89e7e29a08 - Path:  Refactored add_parameters into individual
+    functions.
+  *  2da2ee5044 - Gui: fix regression of 8801836321: Commands are not
+    shown any more when selecting a category
+  *  2e5cb03261 - Gui: move to new style connect()
+  *  25a63f8750 - TD: move to new style connect()
+  *  900ad81b49 - [Gui] modernize some UI connections
+  *  25c4792690 - Draft: fix issue with undo (#8267)
+  *  049056a99a - Part: put instantiation of BRepAdaptor_Surface into
+    try/catch block as for some broken faces it may fail
+  *  b75142850d - Build graph fix (#8311) - Fixed Constraints' value not
+    being updated
+  *  c5c3077f8f - Merge pull request #8282 from Roy-043/Arch-update-
+    Arch.pruneIncluded-to-include-cloned-PD-Bodies
+  *  fefa7cc40c - Merge pull request #8287 from Roy-043/Arch-Fix-
+    ArchPrecast.py-issues
+  *  0bfa983a89 - [Gui] FreeCADGuiInit.py: address some GH action
+    reports
+  *  8801836321 - [Gui] modernize some UI connections
+  *  d5e1b3f441 - Further efficiencies to Summary Report
+  *  0754201b8d - Delete .circleci directory
+  *  a810fa68b4 - [Sketcher]fix cursor display of angles
+  *  27012bb23c - Delete vagrant directory
+  *  53aedb17f4 - cMake: Correct PySideTools paths on Windows
+  *  f80edaa9ed - Merge pull request #8205 from LarryWoestman/staging
+  *  9a05a04dad - Improve unit testing directory structure
+  *  4eca103469 - Merged crowdin translations
+  *  31b89be95f - update ts files
+  *  b0ae66b94c - Remove obsolete cmake code (<3.16.3)
+  *  0a5c64239a - CI: allow Build2004 to fail because of PathAdaptative
+    bug with GCC
+  *  eef8054383 - CI: remove current CI workflow
+  *  87f60104ee - CI: global refactoring of build/test CI
+  *  2ca167f8c3 - SpreadSheet: Display alias
+  *  18fdd3f708 - [Gui] View3DInventorViewer: fix a GH action report
+  *  e188802ca6 - Addon Manager: Update license headers
+  *  cd2a35061d - Part: add integration test for SectionCut command
+  *  73e2bad373 - Merge pull request #8193 from
+    haraldhartmann/origin/PathAddEstlcamPP
+  *  243ad94fb2 - Simplify usage in Final Report and move Libpack copy
+    stuff out
+  *  c318bc08cb - [Part][Draft]fix #8271 temporary files on windows
+  *  c0910a7e5b - Arch: Fix ArchPrecast.py issues
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 10 Feb 2023 19:03:17 +0000
+
 freecad-daily (0.20.1+git31702-633a6e825c-1) unstable; urgency=medium
 
   * Compile
