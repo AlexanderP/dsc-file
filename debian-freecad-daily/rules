@@ -37,9 +37,6 @@ endif
 override_dh_compress:
 	dh_compress -X.qch -X.qhc
 
-override_dh_installchangelogs:
-	dh_installchangelogs ChangeLog.txt
-
 override_dh_auto_install:
 	dh_auto_install --destdir=debian/tmp
 
