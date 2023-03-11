@@ -40,7 +40,7 @@ endif
 	dh $@ --with autoreconf
 
 override_dh_auto_configure:
-	./autogen.sh $(CONFIGURE_FLAGS)
+#	./autogen.sh $(CONFIGURE_FLAGS)
 	dh_auto_configure -- $(CONFIGURE_FLAGS)
 
 # Ensure that .gmo files are gone before package building
