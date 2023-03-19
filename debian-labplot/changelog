@@ -1,3 +1,476 @@
+labplot (2.9.0+git11299-4a3c2026a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 4a3c2026a1d72dc357afb5770eea1ad305e2ed0a
+  * Date: 1678499873
+  * git changelog:
+  *  4a3c2026a - GIT_SILENT Sync po/docbooks with svn
+  *  c922941a9 - CI: disable Qt6 build and enable all other
+  *  2f78f015f - Qt6: more code fixes
+  *  6d165d556 - Qt6: try fixing compiler errors
+  *  58db1bc39 - Qt6: try fixing compiler errors
+  *  46ae0ae4e - Qt6: try fixing compiler errors
+  *  1a99039b2 - CI: try fixing KF6::NewStuff problem
+  *  393dd28e1 - CI: try fixing KF6::NewStuff linkage
+  *  46713be43 - CI: fix Qt6 build
+  *  fab054b91 - CMake: prepare Qt6 build
+  *  d75bc6db1 - CI: enable Qt6 build for testing
+  *  1973743a1 - CI: enable all targets
+  *  6fa6e5060 - CI: test appimage build
+  *  c19255f3b - CI: add Tumbleweed full target
+  *  9f314a67d - CI: add Leap 15.4 full target
+  *  e70df43d9 - CI: improve Leap min target
+  *  af62ee088 - CI: improve Leap min target
+  *  33a5a87e9 - CI: improve Leap min target
+  *  290d70d7a - CI: add Leap min target
+  *  1ec87d608 - CI: Qt6 dependencies
+  *  fdc5eadc8 - CI: test Qt6 build
+  *  5aba08a81 - CI: clang-format in stage test
+  *  a19c141c1 - 3rdparty: update readstat 1.1.9
+  *  292b39f3a - CI: update to Fedora 37 full
+  *  423417aae - CI: update to Fedora 37
+  *  94be6e0d7 - CI: own flatpak target
+  *  b20595903 - CI: fix disabling builds
+  *  bd45a820e - CI: try fixing flatpak (disabling most targets)
+  *  e46597daf - CI: try fixing flatpak
+  *  75769a908 - CI: enable network for flatpak build
+  *  739120226 - GIT_SILENT Sync po/docbooks with svn
+  *  4d1e20260 - CI: enable flatpak build (to fix it)
+  *  4ba1d9bb9 - CI: enable FreeBSD to fix it
+  *  151d535e8 - Fix compiler warnings
+  *  ebd682341 - Update splash screen for 2.10
+  *  ac363205c - Version bump and updated ChangeLog.
+  *  a9f556a92 - GIT_SILENT Sync po/docbooks with svn
+  *  57158e1f1 - cursorAnchor must be the smaller value Reason: because
+    otherwise cursorPos - cursorAnchor would be a negative value and
+    then it seems that the move cursor position does not work
+  *  5e3580221 - Use color of the format if the text is in html Reason:
+    Otherwise in the dockWidget the wrong color is shown
+  *  1b7e7c6b5 - GIT_SILENT Sync po/docbooks with svn
+  *  235539f70 - GIT_SILENT Sync po/docbooks with svn
+  *  b2901d6c9 - Merge branch 'master' into work/vector_blf_files
+  *  162daa359 - Help git hooks
+  *  2da12c8e7 - target must be available in the global scope Reason:
+    otherwise ninja complains
+  *  44d80d4be - Merge branch 'master' of https://github.com/KDE/labplot
+  *  9bd36b216 - GIT_SILENT Sync po/docbooks with svn
+  *  dfa6522f9 - Do not install header and helper files of 3rdparty
+    libraries
+  *  4b7a5ff14 - Minor fix
+  *  56ccba077 - GIT_SILENT Sync po/docbooks with svn
+  *  fffc4c1cb - [fit] Fix fitting xy-curve
+  *  526426ba7 - Support creating a spreadsheet with the data of an
+    equation curve
+  *  2cb7191a1 - Properly adjust the layout in LineWidget and
+    BackgroundWidget when these widgets are shown.
+  *  9cc984759 - GIT_SILENT Sync po/docbooks with svn
+  *  d5eb45d85 - [worksheet] fixed issues with saved PDF data for latex
+    labels: * don't show any message widget in the dock since there are
+    no error messages available for the already available PDF image *
+    properly initialize the zoom factor on load
+  *  e76184952 - GIT_SILENT Sync po/docbooks with svn
+  *  77d90b3c0 - fix crash introduced in !245.
+  *  05e3360b6 - GIT_SILENT Sync po/docbooks with svn
+  *  cd3115ee5 - In MR !217 the rotation was directly used in the
+    graphicItem. Previously -1*rotationAngle was done and then assigned
+    to the element. This is anymore the case so to load older projects
+    correctly, during load this must be handled
+  *  1b559b972 - GIT_SILENT Sync po/docbooks with svn
+  *  2abfcc3cb - GIT_SILENT Sync po/docbooks with svn
+  *  67914497b - GIT_SILENT Sync po/docbooks with svn
+  *  99418b0bf - Fix typo
+  *  3f147a562 - Fix deprecated message boxes
+  *  b4b3568fd - Fix build
+  *  e34e2e180 - Fix some deprecated warnings
+  *  b8b4c865b - Fix fallthrough
+  *  211253f00 - Correctly convert QUrl to file name
+  *  19f1d8862 - Fix uninitialized members
+  *  e14cdaf92 - GIT_SILENT Sync po/docbooks with svn
+  *  b9945e431 - GIT_SILENT Sync po/docbooks with svn
+  *  fd3961c03 - [worksheet] added missing handling of plot ranges in
+    Box and BarPlots.
+  *  ec268e733 - [spreadsheet] show a sparkline/overview plot of the
+    column data in StatisticsColumnWidget in the overview tab.
+  *  d854ed619 - GIT_SILENT Sync po/docbooks with svn
+  *  d0d820c22 - Fixed multiple issues reported by ccpcheck.
+  *  26744f6eb - minLogicalDiffX not needed, because it always results
+    in 1.0
+  *  ccc25860d - GIT_SILENT Sync po/docbooks with svn
+  *  058f7f220 - Merge branch 'master' into work/decimalseparator
+  *  f9f7b3fcd - Description: use loaded value instead the language set
+    in locale after passing the language Reason: because
+    locale.language() will return the default locale if AnyLanguage is
+    passed Files: SettingsGeneralPage.cpp
+  *  6b83f2e44 - Enable commented out tests and use new dbc library to
+    support also non byte size values (9 Bit, 10Bit)
+  *  4eafb164e - GIT_SILENT Sync po/docbooks with svn
+  *  930569d01 - Fix obsolete fromTime_t()
+  *  2712b747e - Fix uninitialized members
+  *  33fdf002f - Restore cout settings in macros
+  *  c71a43b69 - Fix more issues found by Coverity
+  *  e47864875 - Fix several issues found by Coverity
+  *  4d3cee906 - GIT_SILENT Sync po/docbooks with svn
+  *  984ee96e4 - Description: Set dbc file after creating the blf filter
+    Reason: Otherwise without doing a preview, no dbc file is set and
+    therefore no files get imported Files: ImportFileWidget.cpp
+  *  ac164d6e7 - Description: BLF: add better error handling and handle
+    also invalid blf file and invalid dbc file Reason: So the user can
+    see why it was not possible to import Files: DBCParser.h,
+    VectorBLFFilter.cpp, and VectorBLFFilterPrivate.h
+  *  6a2c4352f - Try fixing STREAM_FORMAT_STATE in macros
+  *  f5676879e - GIT_SILENT Sync po/docbooks with svn
+  *  01fad7e13 - Merge branch 'master' into work/NumberSpinboxWidth
+  *  c8e7027f6 - GIT_SILENT Sync po/docbooks with svn
+  *  2b9147779 - GIT_SILENT Sync po/docbooks with svn
+  *  7bf8131b0 - Description: Use NAN for the first value if not
+    available Reason: Because 0 is already a valid value which is not
+    correct, because no information of the state is known. The problem
+    is that the 0 is also used in the autoscale which is undesired if
+    the value is normaly far away from 0 Files: VectorBLFFilter.cpp and
+    BLFFilterTest.cpp
+  *  16040977e - GIT_SILENT Sync po/docbooks with svn
+  *  8221ac0f0 - GIT_SILENT Sync po/docbooks with svn
+  *  609225d37 - use values set in the header if no preconfigured value
+    is found
+  *  ae17cbdf7 - Description: set better default values. Those values
+    are choosen so that the curves are visbile, but the background,
+    grids and the axes are not visible anymore. Reason: To make the
+    selection with segments much faster
+  *  d8b23b5c2 - support also bigendian
+  *  9d160a900 - add dialog to show parse errors
+  *  1176ca94d - Fix warning
+  *  c58a1eca8 - Fix compilation
+  *  d371cb016 - FIx build
+  *  81c86e981 - Fix data import
+  *  7de3b6861 - Fix header import
+  *  bb25ba05c - fix import preview
+  *  b06a8179b - Fix preview
+  *  bdfd663da - test: check ascii matrix import
+  *  f91141d6c - refactor ascii filter
+  *  b300051d4 - use date before 1970 to test also negative values of
+    toMSecsSinceEpoch()
+  *  3e06737d7 - fix image test
+  *  b8d690bbe - add test to check changings in the dock
+  *  be0a7e4ce - add test for mouse_move_datetime
+  *  1c2039e22 - fix compilation
+  *  44d08f2b4 - Single commit and removing all untouched code because
+    of the formatting
+  *  0136cf4db - set sizepolicy of the tablewidget to resize elements
+    which have a benefit of being larger
+  *  25d2d9b81 - Description: add expanding as sizepolicy to the
+    numberspinbox widgets Reason: Because otherwise it might be that not
+    the complete number is visible
+  *  f9b2a5f45 - GIT_SILENT Sync po/docbooks with svn
+  *  b598f3708 - GIT_SILENT Sync po/docbooks with svn
+  *  4fd797e2e - Fix minor warning
+  *  620a7c980 - Disable actions that shouldn't be active if there is no
+    project.
+  *  380fb1a52 - Merge branch 'master' into
+    work/spreadsheet_memory_handling
+  *  5b2fc2230 - GIT_SILENT Sync po/docbooks with svn
+  *  9ab22cfa3 - version not printed correctly
+  *  ddfd27dbb - [spreadsheet] don't allow to enter invalid numeric
+    values for the termination ratio in the baseline subtraction.
+  *  72bf1b0d5 - [worksheet] added missing initialization of line
+    properties in Axis.
+  *  85506cf49 - Don't hard-code the black color when highlighting an
+    invalid interpolation point number and then going back to a correct
+    number in XYInterpolationCurveDock.
+  *  4cd8d8f0f - [spreadsheet] handle bad_alloc in
+    EquidistantValuesDialog.
+  *  8252c521e - format fix.
+  *  28ca80310 - [spreadsheet] when initilizing the internal data vector
+    in Column, allow not to resize the vector after creation. This is
+    useful when the content of the vector is going to be replaced with
+    another vector where the memory allocation and resize have happened
+    already.
+  *  aedde14c6 - GIT_SILENT Sync po/docbooks with svn
+  *  6529963f2 - CI: Ubuntu zlib devel
+  *  85a7f83c9 - CI: Ubuntu ca-certificates
+  *  830bbeb5f - CI: Fedora zlib-devel
+  *  3da1c18ba - CI: Fedora zlib
+  *  bf17a4d81 - enable BLF
+  *  d3128a812 - [spreadsheet] handle bad_alloc when initializing the
+    internal data container in Column.
+  *  815f9d376 - [spreadsheet] handle bad_alloc when allocating memory
+    for new temporary vectors with random values.
+  *  6e15549e0 - Use faster functions to replace the whole column
+    content.
+  *  c8649e94f - [spreadsheet] removed initialization and invalidation
+    related function calls done in Column since they are already done in
+    ColumnPrivate.
+  *  a885b328f - [spreadsheet] removed unused function in
+    SpreadsheetView.
+  *  f0ce196ef - 1) do not autoscale when adding new curves during
+    loading, because wheter it is already autoscaled when saving the
+    project, or it should not be autoscaled 2) When adding a range and
+    autoscale is on, dataRange shall get the same range, if not
+    autorange it shall set it to dirty.
+  *  8018c4754 - also for the x axis title height must be used
+  *  91c8aaf34 - GIT_SILENT Sync po/docbooks with svn
+  *  b8c8c4aa7 - code format
+  *  3bb66880f - [spreadsheet] don't allow to paste data into a read-
+    only spreadsheet (used for live data sources and data extractor).
+  *  78acc49da - [spreadsheet] dedicated menu entry and enum value for
+    the baseline subraction and minor refactoring in
+    AddSubtractValueDialog.
+  *  33b318bf8 - Fix warnings
+  *  2e50a170d - random number dialog: support dark mode for formula
+  *  c1c22a643 - fit dock: improve background of fit formula
+  *  35a42e0f3 - GIT_SILENT Sync po/docbooks with svn
+  *  a94128153 - fit dock: improve background of fit formula shown
+  *  2ebb23466 - Revert Description: Enable BLF support Reason: Was
+    forgotten to turn on
+  *  a7baf8c3a - Description: Enable BLF support Reason: Was forgotten
+    to turn on
+  *  f47019b8f - GIT_SILENT Sync po/docbooks with svn
+  *  a804c8549 - format fix
+  *  162827b33 - do not store install artifacts. It was enabled for
+    testing, but shall be disabled
+  *  d69c8700a - use patched version of vector_blf, because otherwise
+    the dll on windows will be installed to the wrong folder
+  *  f6d0a83ed - [worksheet] ignore invisible plots when calculating the
+    worksheet layout.
+  *  06774124e - GIT_SILENT Sync po/docbooks with svn
+  *  a975a018c - Update the scrollbar policy in WorksheetView when
+    zooming with the mouse wheel and setting the fit mode to None.
+  *  b5a231bcd - disable scrollbars when fitting
+  *  9535b9baa - initialize actions if not yet done
+  *  d7e46a0a6 - no undo needed for zoomFit
+  *  052190e8b - store zoomfit in the worksheet, so it can be used to
+    restore the state
+  *  1b7388323 - rename to proper name
+  *  ca64d279c - implement fit to whole
+  *  55e0905b6 - triggered() does not change for some reason the
+    checkstate so do it manually
+  *  fcb0b7188 - make the usage of fitToHeight, fitToWidth,
+    fitToSelection permanentely even when resizing the worksheetview
+  *  49cc12a03 - Initialize the GUI observer after all dock widgets were
+    created.
+  *  a82bb55bf - remove scale() functionality because it is not needed
+  *  a52ec1c90 - do not scale complete TextLabel, because for latex it
+    is not needed
+  *  8c30612d7 - width and heigth are interchanged. This was previously
+    correct, because the item was not rotated by it self. Now it will
+    and therefore those two values have to be changed
+  *  cad586392 - rotation angle must be changed
+  *  621cbe8e1 - use also the qgraphicsitem rotation instead of doing
+    the rotation with matrices manually
+  *  7fcb818bc - Update macros.h, WorksheetElement.cpp, and 3 more
+    files...
+  *  46ea1837c - the gluePoints must be transformed, otherwise they are
+    not shown at the correct position when rotating the label
+  *  19af73c79 - GIT_SILENT Sync po/docbooks with svn
+  *  9c7558766 - CI: enable windows and format everywhere
+  *  bebb1ac5b - CI: add missing dep
+  *  07f5a4f11 - fix compiler warnings
+  *  8dd7495d3 - forgotten to remove m_
+  *  46e48802c - format fix.
+  *  ee992198d - Synchronized the creation and deletion of the project
+    with the creation and deletion of the GUI observer and properly
+    clear the list of initialized dock widgets in the destructor.
+  *  c69bf5fb6 - Moved the declaration of the dock widgets from MainWin
+    to GuiObserver and delete the observer together with the crteated
+    dock widgets on project close. This has two advandages: * when the
+    project is closed, the memory consumption is reduced and only the
+    dock widgets are created that are needed for the next project to be
+    opened. * when the new project is opened, the dock widgets are
+    initialized from scratch and there is no need to reset their state.
+    This also solves the crash that was caused by the recent changes in
+    3701c196.
+  *  f31c56195 - Description: Disable vector blf temporarly Reason:
+    Currently on windows the lib is installed to /lib but labplot is
+    searching it in /bin. Therefore it is not possible to open labplot
+    anymore. Workaround: Copying the vectorblf.dll from the lib folder
+    into the bin folder solves the problem
+  *  32d03e1d4 - GIT_SILENT Sync po/docbooks with svn
+  *  f8edf3316 - Merge branch 'master' into work/blf
+  *  6bac10016 - gitlab: enable linux build
+  *  a8da32e49 - disable half of the widgets tewst to avoid timeout
+  *  290acfc33 - use const auto&
+  *  e6078f616 - use constFirst()
+  *  d4a1db50f - cleanup
+  *  655d2748d - set all worksheetelements visible not visible not only
+    one
+  *  f6486c127 - fix wrong viewsize showed
+  *  cd4cdabee - initActions instead of using useViewSizeRequested()
+    because it does not exist anymore
+  *  76df64e03 - Fix MSVC issue with fp numbers part 4
+  *  da707c533 - Fix MSVC issue with fp numbers part 3
+  *  bc06391cb - Fix MSVC issue with fp numbers part 2
+  *  0a0bc6c6d - Fix MSVC issue with fp numbers
+  *  4db5a396c - Merge branch 'master' into work/blf
+  *  2a7abce7e - [worksheet] fixed issues related to the view size mode:
+    * properly update the dock widgets and the worksheet itself when
+    switching to the view size mode (regression) * properly update the
+    view size on undo/redo after the switch to the view size mode,
+    react on the signal of the Cmd-setter.
+  *  2bfc0e84f - GIT_SILENT Sync po/docbooks with svn
+  *  166e08ef5 - add better comment
+  *  b93bb1bce - do not draw clipped lines, because when it looks as the
+    range is finished there
+  *  799d2c452 - when position is changed, not necesarly a retransform
+    is needed, because the shape is in item coordinates. Only if
+    clipping or other changes to the shape are needed it is necessary to
+    retransform. Therefore the objectPositionChanged() signal is
+    introduced to make reacting possible
+  *  7542e3924 - Test undo of the worksheetelement
+  *  d3b13fccf - binding must be done explicitly, because bindingChanged
+    has a lock and return before setting it
+  *  953e96848 - check if binding checkbox is set correctly
+  *  6eb41737b - add test also if coordbinding is disabled
+  *  ac58cf2c4 - make more flexible to be able to use it for multiple
+    types
+  *  9cdef2c61 - [Image] implement logical coordbinding
+  *  2f9d164a3 - doctype must be generic too
+  *  226a10e60 - make keypress macro more generic, so it can be used for
+    all directions
+  *  3f524f961 - check also dock values if they match
+  *  6dfd483d6 - accept only if not limited
+  *  f839c791c - fix Numberspinbox test
+  *  bbb78801a - QLatin1String must be used
+  *  3a7c5af74 - Update WidgetsTest.cpp and WidgetsTest.h
+  *  48ebb3925 - do not check the position, because it is not relevant
+    and just limits the possibility to modify the code
+  *  603104af5 - the rect in item coordinates is not important, only the
+    position in logical position. So use a macro to map the coordinates
+    and compare them
+  *  559c0e76a - do not use the limited function, because when changing
+    the position it should show with the highes precision which is
+    possible
+  *  2d81fd9da - set conditional_return correctly
+  *  2f5c526bd - rangePositionLogicalStartChanged() and
+    rangePositionLogicalEndChanged() are not executed correctly because
+    of the lock, copy the content. - Use numberspinbox instead of
+    lineedits
+  *  8d32eaf9b - enable tests again
+  *  cfd1ab848 - format
+  *  4303d304c - fix tests
+  *  afa1c7599 - Update ReferenceRange.cpp and WorksheetElementTest.cpp
+  *  53aed7e56 - WIP
+  *  8b035bdaa - Removed a couple of obsolete assignements in
+    ReferenceRangeDock.
+  *  5f30580d0 - AddImage WorksheetelementTests
+  *  f9dfbc37f - Test TextLabel as Worksheetelement
+  *  6f8b2aa10 - update position before changing the coordinateBinding.
+    Problem: if a new TextLabel is created, the label is not able to
+    calculate the logicalPos, because it does not have yet a parent.
+    After a parent is added, but coordinateBinding will be enabled, the
+    not calculated logicalPos is used which is wrong. This must not be
+    done in the Undo command, because it can happen only the first time
+  *  0eaad193e - create Macro which executes all tests
+  *  777562ac4 - format
+  *  d9a86aec0 - use more macros
+  *  f81fea626 - Put more into macros
+  *  b55bf22a0 - move to macro to be able to use it also for other
+    worksheetelements
+  *  43c8e2e61 - add tests for coordbinding
+  *  14ad18c5a - use macro to setup project
+  *  d20e19caa - add test for horizontal range
+  *  f4f54e12d - Test for the referenceRange
+  *  89e95b5a5 - try to get same structure as in other
+    WorksheetElements. 1) Calculating logical pos 2) use
+    updatePosition()
+  *  f6905f1f2 - get rid of the updatePosition at the top, having only
+    one setPos / updatePosition
+  *  15f10942b - [reference range] work with scene coordinates directly
+    in retransform() to calculate the new rect.
+  *  00372f922 - Revert WIP: Alex check it out
+  *  eee3708ff - WIP: Alex check it out
+  *  51d54fa36 - add tests for all directions
+  *  88544e06e - [reference range] removed some unneeded assignments in
+    WorksheetElement.cpp and in ReferenceRange.cpp.
+  *  1b6ae07fe - [reference range] calculate the start and end points of
+    the range after an item change event without using an extra private
+    variable and fixed the mapping to logical coordinates in
+    WorksheetElementPrivate::itemChange().
+  *  cac9ff77e - add another test
+  *  bb8cb1459 - Set the position limits in init() in ReferenceLine and
+    in ReferenceRange instead of calling the slots in order to avoid
+    unneeded and more expensive retranransforms.
+  *  74a97df35 - add WorksheetElement Tests
+  *  e7f84b8ac - format fix.
+  *  69c3ad26e - [reference range] minor i18n-issue in CartesianPlot and
+    updated ChangeLog.
+  *  8ac8ade23 - [reference range] minor fixes.
+  *  7d140b99f - Update CartesianPlot.cpp, ReferenceRange.cpp, and 5
+    more files...
+  *  aa35486f4 - Update CartesianPlot.cpp
+  *  227e7a278 - Minor fixes.
+  *  45a580586 - Better algorithm to properly set the position limits in
+    ReferenceLine and ReferenceRange after undo/redo.
+  *  3de874982 - Apply theme's color for the background color and
+    properly re-calculate the start and end values of the range when the
+    user moves the item with the mouse.
+  *  bcefc9431 - Added missing referencerangedock.ui file and some minor
+    bug fixing.
+  *  c2d491da6 - Update CMakeLists.txt, AbstractAspect.h, and 9 more
+    files...
+  *  1b42e2013 - GIT_SILENT Sync po/docbooks with svn
+  *  065366944 - fixing MSVC number issues finally 3
+  *  75cc7e0f6 - fixing MSVC number issues finally 2
+  *  a8f936e4f - fixing MSVC number issues finally
+  *  9e0459f12 - fixing MSVC number issues continued
+  *  f998d47ed - fixing MSVC number issues continued
+  *  1ea57b78f - finalize fixing MSVC number issues
+  *  7310c23c7 - try fixing MSVC number issues
+  *  039950661 - fix comments of alex
+  *  19dbb757f - msvc has problems to convert to double
+  *  35777dfe3 - add test also for previous value
+  *  061f97aa2 - fix tests
+  *  fb7923735 - fix tests
+  *  37caaeffe - enable tests again
+  *  53d0aab3a - store last used dbc file for further usage
+  *  f5892e20b - Update CMakeLists.txt
+  *  2c393f6dd - export artifacts
+  *  e5d56f4cb - HACK!
+  *  355dceeeb - thirdParty is not used anymore
+  *  dc54d0245 - disable also building the documentation, because this
+    fails currently
+  *  6733cdf57 - disable tests for dbcparser. This requires increasing
+    the minimum required from 3.16 to 3.17
+  *  253cbcba9 - fix test
+  *  2dc8eeaf8 - do not detach and create extra variable, because this
+    makes the access slow
+  *  561fd9933 - FastFloat was added as dependency to the dbc_parser
+    itself, so not needed anymore here
+  *  1197538dd - fix bug
+  *  b2dd727aa - remove not needed code
+  *  39055f119 - format
+  *  e8beb653c - prefer using clang-format-13 over clang-format, show
+    clang version
+  *  513dc7ba1 - turn on local build of dbc parser and vector blf
+  *  6ae9d415b - Update CMakeLists.txt
+  *  5678330d9 - make project work without BLF filter
+  *  922a614a4 - cleanup
+  *  7bd556f5e - move enverything into 3rdparty to have everything at
+    one place
+  *  984db2860 - add comments
+  *  e4627f984 - skip all unparsable messages
+  *  9fbe2c145 - fix
+  *  c0f956ea4 - add test to test native time system
+  *  749c9c96b - check for correct column name
+  *  e87dbb9ed - add unit to time column name
+  *  dc2d37873 - do a refresh when adding a dbc file
+  *  7cc5a22d4 - load and save settings, so the user has always the last
+    used options as default
+  *  2d0088bcd - write additional tests
+  *  52bd67706 - fix test
+  *  ae598ffcd - add tests
+  *  6cf106ec8 - split tests
+  *  9e13c4b55 - Fix test and implement CANMessage
+  *  fa9998381 - Update BLFFilterTest.cpp
+  *  732f46f37 - Update CANFilter.cpp, CANFilterPrivate.h, and 3 more
+    files...
+  *  0fbfb0894 - move everything which can be used by other CAN related
+    files (mdf, blf, ...) into a CAN Filter, so a new Filter can more
+    easily reimplemented
+  *  dc611e488 - implement parsing blf and dbc files
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 11 Mar 2023 06:28:16 +0000
+
 labplot (2.9.0+git10986-0400a4578-1) unstable; urgency=medium
 
   * Compile
