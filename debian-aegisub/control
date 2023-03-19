@@ -13,6 +13,7 @@ Build-Depends: debhelper (>= 9~), dh-autoreconf, intltool, libasound2-dev [linux
  libwxgtk3.0-dev | libwxgtk3.0-gtk3-dev, quilt, libboost-locale-dev, libopenal-dev, libuchardet-dev,
  libboost-chrono-dev, libavresample-dev | libswresample-dev, liblua5.2-dev | liblua5.3-dev, lua5.2 | lua5.3,
  luajit, git, autoconf-archive, libx11-dev
+Rules-Requires-Root: no
 
 Package: aegisub
 Architecture: any
