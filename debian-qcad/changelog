@@ -1,3 +1,66 @@
+qcad (3.27.9.3+git9748-19f68dc5f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 19f68dc5f002a401822198a9458352d68d311e71
+  * Date: 1679672422
+  * git changelog:
+  *  19f68dc5f - port to qt 5.5
+  *  142785242 - set splash override for qcad scripts plugin
+  *  807a9ea93 - update translations
+  *  43317e771 - update translations
+  *  c3062009f - update translations
+  *  e973c62bc - clean up
+  *  186a5dd17 - fix read only field display
+  *  3a01ec812 - Merge branch 'master' of github.com:qcad/qcad
+  *  7bcb4c153 - allow prefix for absolute coordinates, no prefix for
+    relative coordinates
+  *  813daca55 - Merge branch 'master' of github.com:qcad/qcad
+  *  ae31cb937 - update script bindings
+  *  ab504d3a9 - update translations
+  *  d47542c7e - update version
+  *  6fcfc8e32 - update
+  *  d0ac8f83a - fix potential memory leak
+  *  5dfb81bd2 - move makeReadOnly to RPropertyEditor.cpp
+  *  2dd3587c2 - move makeReadOnly to RPropertyEditor.cpp
+  *  55d15388c - port to qt 6
+  *  27a897c6c - set version to 3.28.0
+  *  d96b819fa - fix upper case
+  *  1b4b60618 - port to qt 5
+  *  b5adf2fa7 - fix attributes invisible after creation
+  *  445eca183 - move openFiles to library
+  *  e34b99d31 - fix potential exception
+  *  6a6407272 - don't import CXF files on drop
+  *  a0155db3b - Merge branch 'master' of github.com:qcad/qcad
+  *  f193f06a0 - update
+  *  9e8aa5d76 - fix FS#2459 - Linetype scale of blocks in viewports not
+    scaled according to viewport scale factor
+  *  a7b20497d - port to qt 6
+  *  2bdc3633b - port to qt 6
+  *  b2106296c - port to qt 6
+  *  a63645588 - update
+  *  28f494c7b - update
+  *  f9a39cf4e - clean up
+  *  e415298aa - update qrc
+  *  57abf33fc - fix duplication of complex cases (e.g. blocks with
+    attributes)
+  *  b4dbefe44 - update script bindings
+  *  5a7b67aaa - add setKeepSelection
+  *  e7f003d90 - move DrawFmsLanes to Misc > Draw menu
+  *  d5f1c3cbd - add drop support for image files
+  *  2dfe6bc30 - add Image.getSupportedFormats,
+    Image.isSupportedBitmapFile
+  *  8d9648a86 - Merge pull request #46 from fmg-lydonchandra/ribs
+  *  b812befca - fix orientation at last vertex
+  *  9eaa3322b - add boundary automatically
+  *  5a2494e66 - trying to add boundary automatically
+  *  d9a26d401 - add ribs
+  *  9c8d8ead6 - Scale left / right ribs using laneWidth
+  *  f9a40c9e9 - Draw Lanes
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 24 Mar 2023 20:20:00 +0000
+
 qcad (3.27.9.3+git9700-19439636d-1) unstable; urgency=medium
 
   * Compile

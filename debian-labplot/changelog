@@ -1,3 +1,72 @@
+labplot (2.9.0+git11334-9eb064dda-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: 9eb064dda3894cc974e67e4cd8027f416843c333
+  * Date: 1679622393
+  * git changelog:
+  *  9eb064dda - GIT_SILENT Sync po/docbooks with svn
+  *  d70acd63c - GIT_SILENT Sync po/docbooks with svn
+  *  5f071a734 - Limit filenames to *.dbc file endings Reason:No need to
+    list all files even they are not relevant
+  *  1949c1f31 - GIT_SILENT Sync po/docbooks with svn
+  *  13e1cdb82 - GIT_SILENT Sync po/docbooks with svn
+  *  09c6b0a62 - GIT_SILENT Sync po/docbooks with svn
+  *  b0afd039d - GIT_SILENT Sync po/docbooks with svn
+  *  2932c0493 - GIT_SILENT Sync po/docbooks with svn
+  *  6972d4fc5 - Updated git and SLOC statistics and minor fixes in
+    StaticticsColumnDialog.
+  *  8aaff5ad1 - Prepare release
+  *  f7bbaf88c - GIT_SILENT Sync po/docbooks with svn
+  *  34654c2f4 - packaging: update dmg script
+  *  cf8161764 - GIT_SILENT Sync po/docbooks with svn
+  *  74ea63b64 - GIT_SILENT Sync po/docbooks with svn
+  *  7f143ffea - [xlsx import] removed the QVector::reserve() calls with
+    the size equal to the total number of columns to be imported, the
+    vectors are resized later properly when adding the relevant column
+    data pointers only.
+  *  dd0837546 - GIT_SILENT Sync po/docbooks with svn
+  *  287c65c4f - xlsx import: support using first row as header in
+    preview
+  *  c8abb5fdd - xlsx import: fix preview table header
+  *  c7a52ed7b - [worksheet] if latex or markdown mode is used in
+    LabelWidget, use the default palette from the desktop theme since we
+    have additional highlighting for latex and markdown and we don't
+    want it to collide with the modified background color of QTextEdit.
+    Modify it only for rich-text.
+  *  dfd955b7e - GIT_SILENT Sync po/docbooks with svn
+  *  fb3617917 - CI: flatpak only for master
+  *  f4e2b933e - [spreadsheet] properly show the heatmap color for
+    values that are bigger than the max value of the range specified for
+    the heatmap formatting.
+  *  b1fd51174 - [worksheet] in the dock widgets for the analysis curves
+    use the full width of the last column in the layout for the ranges
+    combobox so we have more space for long ranges texts like with
+    DateTime, etc. Similarly it's already done in all other dock
+    widgets.
+  *  64f19f14c - Apply 1 suggestion(s) to 1 file(s)
+  *  0a0e0cfeb - enable tests again Reason: they were disabled, because
+    the Windows CI takes extremely long if the are enabled
+  *  471536784 - Do not allow selecting also the suffix and the prefix
+    Reason: Otherwise the strip function not anymore be able to remove
+    the suffix or prefix if parts of it (even only the whitespace) was
+    removed
+  *  ccda3105c - [examples] updated Basic Plots example project to
+    include rug plots also for histograms and box plots.
+  *  2297bec05 - Use datetime edit, if the type of the range is datetime
+    Reason: Otherwise the numeric value is shown, which looks not good.
+    Fixes #533
+  *  53f560d19 - Minor layout and wording fixes.
+  *  b3fadc196 - GIT_SILENT Sync po/docbooks with svn
+  *  8b98096f5 - cmake: Try fixing FreeBSD build
+  *  acf4c3abc - cmake: Try fixing FreeBSD build
+  *  79cd9f625 - cmake: Require Qt5 (Qt6 not supported yet)
+  *  c697bb559 - cmake: Require Qt5 (Qt6 not supported yet)
+  *  a9216c719 - cmake: more Qt6 improvements
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 24 Mar 2023 20:21:38 +0000
+
 labplot (2.9.0+git11299-4a3c2026a-1) unstable; urgency=medium
 
   * Compile

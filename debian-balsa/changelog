@@ -1,3 +1,53 @@
+balsa (2.6.3+git10001-e8eb553b3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://gitlab.gnome.org/GNOME/balsa
+  * Branch: master
+  * Commit: e8eb553b352b9e2c196b4fb1a88587c9075a29c2
+  * Date: 1679600873
+  * git changelog:
+  *  e8eb553b3 - sendmsg-window: Separate increment from assert
+  *  334f315dd - sendmsg-window: Clean up BalsaSendmsg
+  *  21a3fa886 - Update Georgian translation
+  *  c79192166 - Update Ukrainian translation
+  *  4727b451f - Merge branch '64-save-empty-attachment' into 'master'
+  *  767d09ea4 - balsa-message: Avoid (unlikely) race
+  *  e40921fda - Update Swedish translation
+  *  167036d20 - sendmsg-window: Use libbalsa_message_body_save_fs()
+  *  4c0f6b059 - body: Use libbalsa_message_body_save_fs()
+  *  e45f2dba8 - balsa-mime-widget-callbacks: Better temp file
+  *  d09297169 - body: Implement libbalsa_message_body_save_fs()
+  *  504a86a8a - Update Georgian translation
+  *  b0c4d79f1 - Update Ukrainian translation
+  *  9d9ffddcd - Update Polish translation
+  *  05af37184 - Update POTFILES.in
+  *  8c6ed1984 - LibBalsaMessageBody:filename is UTF-8 encoded
+  *  723602be7 - body: Use errno carefully
+  *  f9bd18beb - body: Add guards to libbalsa_message_body_save_gio
+  *  84e940696 - Cleanup after rebase
+  *  822efc8e5 - Merge branch 'master' into '64-save-empty-attachment'
+  *  d13fa77e3 - Use libbalsa_message_body_save_gio()
+  *  2c6be3dd1 - body: Implement libbalsa_message_body_save_gio()
+  *  8afe8521a - Drop libbalsa_safe_open()
+  *  2eb902bf5 - Drop now-unused functions
+  *  37dbc2e0f - balsa-message: Use GFile functions
+  *  4d11f1cc1 - body: Remove a now unnecessary local function
+  *  4ddb365d9 - libbalsa-vfs: Remove now unused functions
+  *  33a608955 - sendmsg-window: Use new api
+  *  420b45e5b - balsa-mime-widget-callbacks: Use GFile api
+  *  a9da7f006 - body: Add bytes_written out-parameter
+  *  3e173b22c - Update German translation
+  *  c091d5f9e - Add  parameter to libbalsa_vfs_move()
+  *  df5882d70 - Revert unintended commits
+  *  14604545e - Update Ukrainian translation
+  *  fde97fcaf - balsa-mime-widget-callbacks: Handle empty parts
+  *  ea72baafc - balsa-message: Check file creation
+  *  45e836f39 - libbalsa-vfs: Two new methods
+  *  c0308e58d - body: Add bytes_written out-parameter
+  *  c7d7fc14e - Update Turkish translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 24 Mar 2023 20:33:32 +0000
+
 balsa (2.6.3+git9962-19bed824f-1) unstable; urgency=medium
 
   * Compile
