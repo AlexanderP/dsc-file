@@ -1,3 +1,38 @@
+goaccess (1:1.7.2+git3999-5a07d3d9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 5a07d3d97ae99594746f695315e8aa83e668bad2
+  * Date: 1680794258
+  * git changelog:
+  *  5a07d3d9 - Update parser.c
+  *  1fac9199 - Updated pointer declarations to the right of spaces (-
+    par)indent 2.2.13.
+  *  f2bd49a2 - Moved memory hash storage to their own source files.
+  *  85936efb - Updated lang po files with latest changes.
+  *  6a4af10b - Version bumped to 1.7.2.
+  *  adf77063 - Updated the ChangeLog with the latest changes.
+  *  c2c3207b - Updated AUTHORS to reflect latest contributions.
+  *  3d6cf16d - Version bumped to 1.7.2.
+  *  39a53f2e - Updated man page with the latest changes.
+  *  4aac0da9 - Version bumped to 1.7.2.
+  *  42e06f2c - Version bumped to 1.7.2.
+  *  95c3c1fe - Ensure we have a valid file path when --external-assets
+    is used.
+  *  066fda5e - Added --external-assets option to output external JS+CSS
+    files.
+  *  fe229812 - Ensure WebSocket URL is properly built for multiple use-
+    cases.
+  *  23961515 - Update spelling.yml
+  *  ca7255f1 - Updated html highlights on the http status codes panel.
+  *  7a0172d3 - Updated code formatting.
+  *  be1d51a6 - Fixed invalid read (heap-buffer-overflow) when parsing
+    an XFF spec via JSON.
+  *  156aea4f - Fixed segfault when parsing a specific XFF specifier.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 08 Apr 2023 21:49:38 +0000
+
 goaccess (1:1.7.0+git3980-b9291209-1) unstable; urgency=medium
 
   * Compile

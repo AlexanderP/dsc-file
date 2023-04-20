@@ -1,3 +1,48 @@
+goldendict (1.5.0~rc2+git20230401-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/goldendict/goldendict.git
+  * Branch: master
+  * Commit: 8834e4a2924d143751870f4b943c3ce608b10a7d
+  * Date: 1680344345
+  * git changelog:
+  *  8834e4a2 - Port away from deprecated libtiff type aliases
+  *  71544855 - Port away from deprecated QProcess::execute(const
+    QString &)
+  *  11b86f7a - SLOB: Port away from deprecated QString::sprintf()
+  *  1cd1c300 - Port away from deprecated Qt::MidButton
+  *  727e0708 - Port away from deprecated QProcess::startDetached(const
+    QString &)
+  *  ccecf0be - Port away from deprecated QFlags(Zero)
+  *  2e3924e8 - Port away from deprecated QFontMetrics::width()
+  *  a56f4dc9 - Port away from deprecated QApplication::desktop()
+  *  c4dcd4dc - Port away from deprecated QString::KeepEmptyParts
+  *  8444f855 - Port away from deprecated QWheelEvent::delta()
+  *  389d1f37 - Port away from the deprecated QLabel::pixmap() overload
+  *  131dfbbb - Port away from deprecated
+    QHelpEngineCore::linksForIdentifier()
+  *  a5fc4519 - Port away from deprecated qGreater
+  *  581d810d - Port away from deprecated QLineEdit::getTextMargins()
+  *  5b165923 - Port away from deprecated QByteArray::operator+=(const
+    QString &)
+  *  a53a0eaa - Port away from deprecated qBinaryFind()
+  *  2a05bad6 - Port away from a deprecated QWheelEvent constructor
+    overload
+  *  5b04854f - Port away from deprecated QSet::fromList()
+  *  4495ba98 - Port away from deprecated QByteArray::replace()
+    overloads
+  *  fbab72c7 - Port away from deprecated QNetworkReply::error signal
+  *  47b21560 - Port away from deprecated QString::vsprintf()
+  *  430b9baf - Port away from deprecated QString::sprintf()
+  *  45288eae - Port away from deprecated QMap::insertMulti()
+  *  1c62ce90 - Port away from deprecated QMap::uniqueKeys()
+  *  f61e1b20 - Avoid copying a QVector
+  *  3d099abf - Fix -Wsign-compare GCC warning
+  *  1dfc44a6 - Fix add to favorites when tab dictionaries group don't
+    match current group
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 08 Apr 2023 21:54:49 +0000
+
 goldendict (1.5.0~rc2+git20230301-1) unstable; urgency=medium
 
   * Compile
