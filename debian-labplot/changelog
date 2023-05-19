@@ -1,3 +1,170 @@
+labplot (2.9.0+git11446-d3fbae62c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/KDE/labplot.git
+  * Branch: master
+  * Commit: d3fbae62c41698d7684f2ef11c1f939f3147cbe1
+  * Date: 1682415512
+  * git changelog:
+  *  d3fbae62c - disable tumbleweed
+  *  c99676bc6 - disable tumbleweed
+  *  e7f534ca6 - Enable Linux and Windows CI build
+  *  a2997ee33 - GIT_SILENT Sync po/docbooks with svn
+  *  8fe1125e4 - Fix string typos
+  *  d67f17071 - GIT_SILENT Sync po/docbooks with svn
+  *  95e212ecb - cleanup value labels and make init and deinit private,
+    because add and remove/removeAll shall be used. setMode directly
+    migrates the value labels now if possible
+  *  3b897b834 - use QDEBUG, because windows build complains
+  *  85d958fb4 - initialize value labels if not yet initialized
+  *  2362670ae - rename function names to a better value and add public
+    initialize valueLabels function
+  *  99ed6fff4 - set default mode
+  *  05d830301 - GIT_SILENT Sync po/docbooks with svn
+  *  2e191f38f - remove not needed source file
+  *  5f13ef0c7 - GIT_SILENT Sync po/docbooks with svn
+  *  926d1039e - GIT_SILENT Sync po/docbooks with svn
+  *  9ee636f45 - CI: enable all working targets
+  *  a351ef018 - CI: use correct flatpak image
+  *  9975ef50b - CI: activate own flatpak target
+  *  e914b296f - CI: use own flatpak target
+  *  841f145cf - CI: disable all targets to fix flatplak
+  *  8e1af0376 - CI: fix syntax
+  *  28d804852 - CI: try provided flatpak
+  *  2b6573607 - CI: add cppcheck
+  *  bf9fc4455 - CI: disable tumbelweed until readstat is fixed
+  *  fa641ae6d - GIT_SILENT Sync po/docbooks with svn
+  *  f3b4d3d19 - Fix compile on OpenBSD
+  *  424e30eb9 - GIT_SILENT changelog
+  *  368837fa7 - Use system QXlsx headers if building against system
+    QXlsx
+  *  6d8943690 - GIT_SILENT Sync po/docbooks with svn
+  *  22c553af4 - Fix discount 3 support
+  *  80340872e - support discount version 3
+  *  4eeb937bb - GIT_SILENT Sync po/docbooks with svn
+  *  17471ee61 - Fix compiler warnings
+  *  2ea9a9ae2 - enable Vector BLF in scripts
+  *  8d000744f - Move cbY2DataColumn also into XYAnalysisCurveDock
+    Reason: y2DataColumn is also in XYAnalysisCurvePrivate so make it
+    the same structure
+  *  1fe3857b4 - set value in spinbox correctly, Auto is the mode with
+    automatically 5 times datapoints, Multiple is custom
+  *  280b2e85d - update settings correctly
+  *  52d62fb6b - format
+  *  e28f6fb9c - Revert move restorePointers to the end, because state
+    is in the ProjectExplorer. In the tests, it will not be created and
+    therefore restorePointers will never called in the tests
+  *  f09097e24 - XYAnalysisCurveDock: move setModel() into this class
+    and call it from all derived classes
+  *  216cd5ca6 - Rename function to setAxesColumnLabels
+  *  d0adce94f - Use value labels for first y axis if possible, so this
+    step must not be done manually.
+  *  98813f8e4 - Rename radiobuttons to a better name
+  *  3a3b00f8e - GIT_SILENT Sync po/docbooks with svn
+  *  c4f26ed8d - Add to changelog
+  *  bc54e59d6 - use template to reduce lines of code
+  *  7e13c1875 - Add Test
+  *  1f6c411f8 - text must be set
+  *  27f5cd515 - WIP
+  *  e5bcaeffd - GIT_SILENT Sync po/docbooks with svn
+  *  a51d3844b - update flatpak build
+  *  98b4d8705 - tests: make Vector BLF optional
+  *  759b67eea - BLF: make optional
+  *  145b1a800 - INSTALL: update Vector BLF
+  *  21bfcd6cd - BLF: disable local build per default since git may not
+    be allowed
+  *  9062fc2ff - GIT_SILENT Sync po/docbooks with svn
+  *  63aac165b - GIT_SILENT Sync po/docbooks with svn
+  *  01f839cf1 - GIT_SILENT Sync po/docbooks with svn
+  *  56101848e - GIT_SILENT Sync po/docbooks with svn
+  *  98e4ad8de - [spreadsheet] fixed layout issues caused by two
+    expanding widgets in the layout by adding/removing the additional
+    vertical spacer on demand at runtime and not in the ui file and
+    small type fix in the ExportSpreadsheetWidget.
+  *  81acd2e49 - GIT_SILENT Sync po/docbooks with svn
+  *  66d07cef1 - [spreadsheet] reduced the peak memory consumption when
+    pasting the data into the spreadsheet by releasing the temporary
+    containers more eager. Also, handle the bad_alloc exception in order
+    not to crash the whole application when running out of memory during
+    this step. More optimizations will be done in
+    https://invent.kde.org/education/labplot/-/issues/549.
+  *  27f7fd393 - GIT_SILENT Sync po/docbooks with svn
+  *  0a486e9a5 - GIT_SILENT Sync po/docbooks with svn
+  *  9dd415607 - tests: Fix xlsx test
+  *  e2c0888c2 - fix build
+  *  fc63bdc6a - remove not needed stuff
+  *  8a9785063 - Reason:
+  *  b73d01898 - Reason:
+  *  6ef93bb49 - Description: Add possibilty to add custom column mode
+    to the value labels Reason: Because in some situations the column
+    mode might be integer, but the column it self has double. This
+    happens when reading CAN data in combination with a dbc file Files:
+    Column.cpp, Column.h, ColumnPrivate.cpp, and 5 more files
+  *  7c4984ce9 - GIT_SILENT Sync po/docbooks with svn
+  *  a675667ae - GIT_SILENT Sync po/docbooks with svn
+  *  f7b7da04a - GIT_SILENT Sync po/docbooks with svn
+  *  75d0f116b - Fix finding QXlsx with latest versions
+  *  18f281d28 - handle all worksheetelements, because all of them have
+    a csystem if the are bound to the coordinatesystem?
+  *  b24c04446 - checking for xyanalysiscurve is not needed, because it
+    is a derivative of Plot
+  *  25b3669ac - handle all derivatives of Plot. So also histogram,
+    boxplot and barplot can be zoomed without changing other ranges
+  *  ea9728087 - If the html does not contain any background color
+    information, format.background().color() returns black which is not
+    correct
+  *  031790228 - One retransform is needed Reason: Due to the change of
+    the range index in the coordinatesystem, the scales are wrong and
+    need a recalculation
+  *  f35bf2db3 - No need to retransform scale Reason: It will be done
+    already when setting a new range index to the coordinatesystem
+  *  dd511dc30 - When setting a new range to the coordinatesystem, the
+    coordinatesystem must be rescaled fixes #539
+  *  3ef81578e - GIT_SILENT Sync po/docbooks with svn
+  *  b55e1e8e8 - GIT_SILENT Sync po/docbooks with svn
+  *  48e7c8c04 - fixes #538
+  *  a9e616f39 - GIT_SILENT Sync po/docbooks with svn
+  *  5a3fa8ff6 - GIT_SILENT Sync po/docbooks with svn
+  *  bfc69ca0c - GIT_SILENT Sync po/docbooks with svn
+  *  78f004a05 - Apply 6 suggestion(s) to 1 file(s)
+  *  1bc058119 - Update UI to place all checkboxes into the second
+    column and the image checkboxes under the image. Hide relative
+    checkbox if embedded is used
+  *  92cddc98b - Fix Datetime test Reason: QVector3D uses internally
+    float, which does not have a good accuracy. So implement own vector
+    using doubles. The problem is that datetimes in ms are really large
+    values and therefore a high accuracy is needed
+  *  053358d25 - Implement changing from relative to absolute correctly
+  *  f92a8b0c9 - Emit signal as soon as project got saved, so the
+    relative checkbox can be enabled
+  *  d3a2f4a17 - When importing new image, and embedded is turned on,
+    replace the embedded image
+  *  088f95b6d - Add missing widgets again Reason: During rebase they
+    got discarded, so add them again
+  *  617e1315e - add more tests
+  *  ca8fa2cdd - implement adding image from the clipboard
+  *  a1a95ba87 - fix embedding file
+  *  85b6f2293 - Reason:
+  *  e579a1aff - Reason:
+  *  4c18dc188 - add comment
+  *  51a9ed8d8 - add tests
+  *  67d33caf7 - implement datetime columns for the datapickercurve
+  *  79e03288e - set locale
+  *  ff53f1c58 - update after all segments where added so a lot of
+    resizes and updatePoints can be saved
+  *  636463b58 - resize datasheet only if really needed
+  *  c8316c98d - do not execute unneccesary updatePoints
+  *  8c358eae8 - Reason:
+  *  6a7913c67 - Disable tumbleweed, because the build fails due to new
+    gcc used. GCC12 is the current stable, but Tumpleweed introduced
+    GCC13 and now the build fails
+  *  02dfe00da - GIT_SILENT Sync po/docbooks with svn
+  *  1d6392639 - GIT_SILENT Sync po/docbooks with svn
+  *  fd81bc772 - GIT_SILENT Sync po/docbooks with svn
+  *  a4223ffd5 - GIT_SILENT Sync po/docbooks with svn
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 25 Apr 2023 19:13:16 +0000
+
 labplot (2.9.0+git11334-9eb064dda-1) unstable; urgency=medium
 
   * Compile
