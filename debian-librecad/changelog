@@ -1,3 +1,232 @@
+librecad (2.2.0~git5014-75fe5100-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: master
+  * Commit: 75fe510018d3715c9c0e9ae8d469aaf21f6a8626
+  * Date: 1686979357
+  * git changelog:
+  *  75fe5100 - actionLayersExport: code cleanup
+  *  b209a0e5 - actionLayerExport: code cleanup: RAII style(WIP)
+  *  0ac3c28a - Fixed CI OsX/Win builds
+  *  f7094287 - Update librecad.pro
+  *  dbfbd96b - LC_ActionLayersExport: cuilt compiler warning
+  *  b21ba36b - PR #1436 by melwyncarlo: saving layers to files
+  *  86333b85 - RS_LayerList: header cleanup
+  *  89e83e59 - issue #1624: fixed resources folders for Linux CI build
+  *  c56dc504 - Qt-5.15 preparation: Qt-5.15 required
+  *  3e6dbf7e - more override fixes
+  *  4388ddeb - More override style fixes
+  *  ea238ba8 - OS_X: fixed a building regression
+  *  aee45574 - OS_X: fixed a building regression
+  *  b32ef0fb - FontList: added debugging(fixed)
+  *  d36a29d6 - FontList: added debugging
+  *  c042f175 - issue #1581 : CI: x64 troubleshooting
+  *  795a5eb6 - issue #1581: windows x64 rename keys
+  *  afa172d1 - Update README.md
+  *  09328dc7 - issue #1581: windows x64 fixes
+  *  8676ea63 - Revert CI: github release
+  *  7033820a - Revert CI: UpdateAssets: annotation fix
+  *  71eb7cfa - Revert CI: UpdateAssets: annotation fix
+  *  7fd47efd - CI: UpdateAssets: annotation fix
+  *  4b3e84ee - CI: UpdateAssets: annotation fix
+  *  b2ffe441 - CI: github release
+  *  ce19c87f - issue #1624: CI: linux locale support
+  *  9ad3a64f - CI: annotation fixes
+  *  64ec2aa7 - CI: more building fixes
+  *  7f0283ca - Update README.md
+  *  ff780549 - Update README.md
+  *  4174e150 - issue #1631: free snapping rework
+  *  81d93c7f - issues #1632/1633 : CI linux build fix
+  *  97c00660 - CI: linux/win32 fixes
+  *  83dc65c2 - PR #1514: building fixes
+  *  73451bc2 - Issue #1514 Radius=0 is invalid error displayed
+    repeatedly when zooming if division expression used for radius
+    (#1531)
+  *  c3440f3e - Issue #960 Feature request - Ability to set the style of
+    a POINT (#1532)
+  *  e9410df8 - Ref PR #1432 - Update tab order in qg dlgtext.UI - also
+    add cbFont selector into the tab order (#1540)
+  *  cb7043c7 - Change DXF Export to use ext Style handle ID for 340
+    Dimstyle field. Dimstyle should use the Text Style handle ID not the
+    name. (#1551)
+  *  9633657c - shapelib: avoid risky c string methods
+  *  076f441a - issue #1629: a root level editconfig
+  *  6674d882 - Fixed a heap corruption upon startup. (#1628)
+  *  0778a64d - libdxfrw: parseDWG specified override
+  *  68a27795 - qg_colorbox: fix building
+  *  f48761a6 - qg_colorbox: fixed a Mac building error
+  *  4fa20f7d - avoid risky c style string functions
+  *  e40b4569 - PR #1626: potential fix, MSVC support
+  *  20c59a76 - PR #1626 by madmaxoft: MSVC support fixes
+  *  e8c3f030 - CI: ubuntu from 20.04 to 22.04
+  *  152f51f5 - issue #1626: struct forward declaration
+  *  1beff81e - dxf2png: code cleanup
+  *  d5cce80e - formatLinear: use the actual drawing unit
+  *  716bf873 - PR #1461 by melwyncarlo: improved custom color support
+  *  14d13153 - issue #1625: fixed action diametric
+  *  cd8dd026 - RS_Units: test the dimension value is range
+  *  c9cb6740 - CI: update HKCU key name for x64
+  *  c9ec48cf - tangent 3 circle sometimes fails with parallels, fixes
+    #1386 (#1440)
+  *  59d01fa5 - PR #1446 by melwyncarlo/issue #1444: fixes incorrect
+    mtext border
+  *  a28f13b5 - Merge pull request #1623 from dxli/master
+  *  3fa90959 - CI: build win x64: avoid extra tools
+  *  84feb5b2 - Merge pull request #1622 from dxli/hideZeroFoot
+  *  6ee4ee36 - PR #1390 by ndeubert: architecture format cleanup
+  *  b78e1088 - In Arch mode hide feet when 0
+  *  a9d0c1c0 - Merge pull request #1389 from MarcelloTheArcane/master
+  *  7b1b3695 - Merge pull request #1621 from dxli/addCommand
+  *  7ea5c446 - PR #1331: merge conflicts
+  *  94d85b84 - Restore altered translation strings
+  *  226113e2 - Removed generic legacy commands
+  *  dc2f0bf4 - added commented section for abstracting
+    RS_Commands::RS_Commands()
+  *  2979f34d - Changed KCs cc<->cr, df->dg
+  *  14ae222a - Fixed dups
+  *  5c50ff45 - Fixed errors - added cr
+  *  f4752dbe - Merge pull request #1620 from dxli/dxf2png
+  *  17a15088 - PR #1293 by jalovisko: update README.md
+  *  82420dc1 - PR #1293 by jalovisko: Merging issues
+  *  9693fbc4 - Added suppor for custom output filename
+  *  d05618e0 - Added fully customizable output PNG resolution set from
+    the console
+  *  d37ddaf4 - Revert README.md
+  *  fa7b6194 - Minor refactoring
+  *  000b7553 - Added a correct check for file existance
+  *  81bf115c - Fixed an issue when both converters to PDF and PNG could
+    have been called
+  *  2db32afd - Fixed an incorrect exit code issue that prevented the
+    app from closing
+  *  3173869b - A working version of the DXF to PNG converter
+  *  56047a79 - First actual conversion attempt, not very successfull
+    yet
+  *  54d26871 - Set up graphics extraction from DXF
+  *  d7f66a07 - Work in progress on PNG file support
+  *  ed069564 - Set up the file read, work in progress on PNG file
+    support
+  *  cab23df6 - Setting up the variables
+  *  7ea5702b - Removed folder existance check for now as it complicates
+    things, fixed a bug with incorrect type
+  *  2473dd0e - More work on the parser, added DXF file format check,
+    check for file existanse and export path existance
+  *  3837eaa1 - More work on the parser
+  *  4bd61712 - Solved more dependencies and dxf2png can now be called
+    (without any output yet)
+  *  c04cf707 - quick fix of the dependencies issue
+  *  909ccd67 - Added a basic parser, it still requires dependencies to
+    be set
+  *  6099b98a - Added a template for the conversion to png based on the
+    pdf converter presend
+  *  2d000d15 - issue #1619: allow snapFree out of snapRange
+  *  5406cbda - Add CI support for windows x64
+  *  ee3b2eba - Merge pull request #1178 from
+    Sleet01/handle_fractional_imperial_dimensions
+  *  55c3fec5 - Merge pull request #1138 from gwhitney/alignSettings
+  *  5bb2cbf3 - cleanup QG_SelectionWidget - initialize class members
+  *  81ccb77e - fix incompatible (pre Qt 5.12) change from 26a658f
+  *  cd5885a6 - issue #1577: finish panning properly
+  *  e3097f74 - fixed the previous commit: 63491265
+  *  63491265 - pull request #1445, issue #1288: tan2_1p fixes
+  *  26a658ff - Merging pull request #1450
+  *  4d50e627 - Merge pull request #1592 from cfelder/fix-ttf2lff-
+    freetype
+  *  0aa5e97a - PenWizard: code cleanup
+  *  bd83f13a - double click to edit by top selected container
+  *  c7abf8c5 - merging fixes for MR1535
+  *  12b15074 - lc_dimarc: building fixes; minor coding cleanup for
+    c++14
+  *  e8f974a9 - Merge pull request #1484 from melwyncarlo/Task_39
+  *  fb99ed53 - Merge branch 'master' into Task_39
+  *  e1aad908 - Merge pull request #1535 from pollywinters/issue_1511
+  *  36e096f2 - Merge pull request #1582 from natrodrigo/master
+  *  102ffeca - Merge pull request #1618 from makos/no-website-install
+  *  88924d47 - trim: code cleanup
+  *  c3293d96 - entitycontainer: constness fix
+  *  9fcdc3a7 - header cleanup
+  *  ccff0d04 - rs_graphic: constness fixes
+  *  c02371f3 - issue #1616: copy/paste code cleanup
+  *  d6a2066e - Add IfSilent jump instruction to skip browser launch
+    after install
+  *  0f056af3 - updated gitignore
+  *  4657adbe - issue #1616: block copy/paste avoid double rotation
+  *  3932fb1f - modification: code cleanup
+  *  8ca47bdf - edit paste: code cleanup
+  *  91b50117 - RS_Block: header cleanup
+  *  940302ae - issue #1616: RS_Insert code cleanup
+  *  96d3e906 - eventHandler: coding style cleanup
+  *  8bdfccf9 - issue #1615: Properties in context menu, when MB3 on
+  *  07675a6e - Edit properties: context menu
+  *  99918e8e - arc options: action fixes
+  *  ed176a46 - graphicview: header cleanup
+  *  f99928a1 - issue #1615 : double click on entities to edit
+    properties
+  *  1dae5f0f - RS_Spline: clean up wrapped points at switching to open
+  *  6fd84ff6 - drw_entities: coding style: initialize class members
+  *  60817734 - issue #1572: contour area connectivity fix
+  *  c84500ce - issue #1598 spline: wrapping control points algorithm
+    cleanup
+  *  25c2e472 - issue #1598 : save closed splines with wrapped control
+    points
+  *  c983bb4e - auto zoom: add shortcut Ctl-F
+  *  2353381e - boost tuple: namespace boost::tuples
+  *  b2b9386c - issue #1514 : hide warning messages Radius=0
+  *  4ad13e31 - layer and library widgets cleanup
+  *  643f7069 - building fixes
+  *  0601d9f5 - lib widget : fix building CI
+  *  ff066741 - main window: support dropEvents
+  *  84f23dc6 - issue #1603 : part library path cleanup
+  *  e9bd492c - building fix: unique_ptr
+  *  aec7b716 - issue #891 : treat infinity bulge as zero angle for
+    tangential polylines
+  *  fb40a2a9 - QG_RecentFiles: save to settings at menu updating
+  *  d58422aa - issue #1612 : fixed a typo
+  *  8c2e3ce6 - main window singleton: allow cleanup
+  *  b6670573 - SplinePoints: file cleanup
+  *  9700416d - issue #1610 : length integral LenInt math cleanup
+  *  d0b36e35 - SplinePoints: file cleanup
+  *  3c6794f5 - SplinePoints: GetMatrix(): RAII coding style
+  *  dddf1ad4 - SplinePoints: math functions from the std namespace
+  *  0a0bc3b0 - issue #1610 : stable LenInt()
+  *  10b1c73c - fixed the previous commit
+  *  5e135d65 - coding style: avoid uninitialized
+  *  2a74ef2c - issue #1611 : strict main window singleton style
+  *  405dda13 - issue #1611 : main window singleton style
+  *  0f4bd405 - RS_Ellipse: avoid static casting
+  *  0a3e2c62 - RS_MText: use auto type to avoid casting
+  *  b20d66fa - Coding style: avoid non-initialized members
+  *  d280dc32 - revert incompatible change from 03f0cd2 (for pre Qt
+    5.10)
+  *  cb949f4f - revert incompatible change from d54d6bc
+  *  98eac341 - Coding style: avoid non-initialx
+  *  3b6d61a0 - header coding style
+  *  f32f41da - Fixed Qt version check for QList::swapAtItems
+  *  7181515d - Fixed Qt version check for QList::swapAtItems
+  *  ab055202 - header coding style: avoid uninitialized primitives
+  *  5d327e50 - RS_MText: allow escaping control strings
+  *  d54d6bc1 - RS_Ellipse: math cleanup
+  *  a2888e69 - RS_Leader: avoid uninitialized varible
+  *  14816bd5 - RS_Command: fixed a Qt building issue
+  *  e6db5050 - rs_command: file cleanup
+  *  7ce0f744 - header cleanup
+  *  03f0cd27 - MText: fixed non-font \F
+  *  18c6d01d - rs_math: updated math functions
+  *  024ae66d - Qt5: use QTransform instead of QMatrix
+  *  17e13704 - painter: math function cleanup
+  *  eb675e5e - RS_VECTOR: std namespace for math functions
+  *  9f39a7b0 - VectorSolutions: getClosest: update cutoff distance
+  *  e880e39e - rs_circle: header cleanup
+  *  8303b5bc - Revert picfile plugin: fixed compiling warnings due to
+    QString::split
+  *  0dc6747d - picfile plugin: fixed compiling warnings due to
+    QString::split
+  *  3c897aea - contour area: handle reversed arcs
+  *  9be3ea42 - Fix linker error when linking freetype w/ ttf2lff
+  *  5c3059a8 - Update pt-br translation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 17 Jun 2023 22:04:04 +0000
+
 librecad (2.2.0~git4804-f55f341e-1) unstable; urgency=medium
 
   * Compile
