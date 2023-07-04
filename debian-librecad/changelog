@@ -1,3 +1,47 @@
+librecad (2.2.0~git5046-a6f34238-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: master
+  * Commit: a6f34238c4ae57d59bdc7fe15c461eee4ec7b212
+  * Date: 1688300370
+  * git changelog:
+  *  a6f34238 - Save/restore window geometry by Qt native
+  *  951c8459 - issue #1645: glowing effect width
+  *  9ad76aa2 - LineTypePattern: added method getPattern
+  *  115f2295 - fixed highlighted color
+  *  0af569bf - code review: clean up initializer_list usages
+  *  5b541e66 - PR #1425: relative zero marker settings
+  *  0717ec10 - rs_image: ctor cleanup
+  *  8f709b91 - Reopen issue #1578 Reverted build-all.yml
+  *  c9467613 - Update build-all.yml
+  *  bcc56998 - CI: test latest uploading
+  *  2c85a0b8 - PR #1641 cleanup: remove hovered attribute
+  *  013c76bb - Glowing effect(PR #1641): remove isHovered
+  *  25f09ae6 - PR #1486 fixes (#1644)
+  *  176fa877 - grid appears in 2nd file, when it is disabled in 1st
+    file, fixes #1451 (#1457)
+  *  25b79e28 - Issue #1639: minor UI fixes for Point options (#1642)
+  *  bff014f3 - Fixes for glowing effect on mouse hovering (#1641)
+  *  26345813 - PR #1505: drawArc protopye
+  *  d777aabb - issue #1351: fixed auto-save setting
+  *  ab63588b - Qt-5.15: building issues
+  *  0d939049 - PR #1501: fillet more than once
+  *  1d8370e4 - PR #1506: wheel zooming centers on pointer
+  *  1ffd49bf - issue #1578: CI fixes
+  *  4bd960d5 - Update build-all.yml, issue #1578
+  *  84f9969f - Update build-all.yml: issue #1578
+  *  69d9443b - issue #1578: CI fixes, experimental
+  *  b4b4f8d4 - QMouseEvent: fixed a building failure
+  *  5c4d14de - PR #1490: delay auto-panning
+  *  e5b13c14 - MdiWindow: code cleanup
+  *  9026c54a - CI: fixed building
+  *  d3e13ea0 - PR #1486: glowing effect on hover
+  *  4216d7fe - PR #1490 by melwyncarlo: auto-pan support
+  *  d2a42d82 - issue #1635: Export Layer, fixed a crash
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 02 Jul 2023 13:20:23 +0000
+
 librecad (2.2.0~git5014-75fe5100-1) unstable; urgency=medium
 
   * Compile
