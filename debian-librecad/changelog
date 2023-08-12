@@ -1,3 +1,32 @@
+librecad (2.2.0~git5063-3974b220-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: master
+  * Commit: 3974b220507eb8a99c29b140a9345b679da43331
+  * Date: 1689350565
+  * git changelog:
+  *  3974b220 - Issue #1654: fixed MText missing lines
+  *  5baac2aa - Qt-5.15 support (#1656)
+  *  04a4ad0b - Issue #1589: image file path improvement
+  *  d6aa9a4a - RS_Spline: fixed a compiler warning
+  *  fad74498 - RS_Image: search image in the dxf file folder
+  *  b3586506 - RS_LOG: support QString
+  *  7de2a259 - filterjww: fixed a compiler warning
+  *  c8389f01 - RS_Debug: add RS_LOG(): stream style logging
+  *  e5133a51 - LayerWidget: less verbose on nullptr
+  *  fc51494d - Issue #1653: file cleanup
+  *  6bb6049d - Issue #1653: closest point on ellipse robustness
+  *  2cc6d172 - Wheel Events: reduced zooming sensitivity
+  *  209d4690 - Issue #1645: user option for mouse-over effects (#1650)
+  *  cdc866d3 - update CHANGELOG.md [ci skip]
+  *  ef9e5f84 - fixed CVE-2023-30259, remove plugin importshp, fixes
+    #1481
+  *  d7b5b0a3 - Fixes for CodeQL scan (issue #1646)
+  *  7d58f849 - Add CodeQL workflow (#1646)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 14 Jul 2023 19:33:13 +0000
+
 librecad (2.2.0~git5046-a6f34238-1) unstable; urgency=medium
 
   * Compile
