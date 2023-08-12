@@ -24,11 +24,6 @@ endif
 
 
 override_dh_auto_configure:
-ifneq (,$(filter $(DEBIAN_CODENAME),xenial))
-	patch -p1 < debian/patches/cmake.diff
-else
-	echo "no patch"
-endif
 	dh_auto_configure -- $(CMAKEOPT)
 
 override_dh_auto_test:

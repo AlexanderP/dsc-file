@@ -5,12 +5,9 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),trusty wily jessie wheezy)) 
-	CONTROL = control.qt4
-else
-	CONTROL = control.qt5
-	export QT_SELECT=5
-endif
+
+CONTROL = control.qt5
+export QT_SELECT=5
 
 Q_CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
 Q_CFLAGS:=$(shell dpkg-buildflags --get CFLAGS) $(Q_CPPFLAGS)

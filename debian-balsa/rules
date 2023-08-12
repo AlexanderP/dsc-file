@@ -29,11 +29,8 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),jessie trusty xenial)) 
-	CONFIGURE_FLAGS += --with-gtkspell
-else
-	CONFIGURE_FLAGS += --with-spell-checker=gspell
-endif
+
+CONFIGURE_FLAGS += --with-spell-checker=gspell
 
 
 %:

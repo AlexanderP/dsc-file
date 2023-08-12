@@ -13,13 +13,9 @@ ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(DEB_DISTRIBUTION)
 endif
 
-ifneq (,$(filter $(DEBIAN_CODENAME),jessie trusty xenial))
-	#no export
-else
-	export DEB_BUILD_MAINT_OPTIONS = hardening=+all
-	export DEB_CXXFLAGS_MAINT_APPEND = $(shell dpkg-buildflags --get CPPFLAGS)
-	export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
-endif
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_CXXFLAGS_MAINT_APPEND = $(shell dpkg-buildflags --get CPPFLAGS)
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
 # We don't install all files upstream wants to. Those files get added to
 # the following variable which gives us a cleaner buildd output (idea taken

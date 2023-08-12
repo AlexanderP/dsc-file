@@ -11,15 +11,11 @@ DEBIAN_CODENAME = $(shell echo $$DIST)
 ifeq "$(DEBIAN_CODENAME)" ""
 	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
 endif
-ifneq (,$(filter $(DEBIAN_CODENAME),stretch sid xenial yakkety zesty buster bullseye artful bionic disco eoan focal groovy hirsute impish jammy kinetic lunar))
-	CONTROL = control.qt5
-	export QT_SELECT=5
-	export DEB_BUILD_MAINT_OPTIONS = hardening=+all
-	MAKE_OPTS  = PREFIX=/usr QMAKE=qmake LRELEASE=lrelease QMAKE_OPTS="$(QMAKE_OPTS)"
-else
-	CONTROL = control.qt4
-	MAKE_OPTS  = PREFIX=/usr QMAKE=qmake-qt4 LRELEASE=lrelease-qt4 QMAKE_OPTS="$(QMAKE_OPTS)"
-endif
+CONTROL = control.qt5
+export QT_SELECT=5
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+MAKE_OPTS  = PREFIX=/usr QMAKE=qmake LRELEASE=lrelease QMAKE_OPTS="$(QMAKE_OPTS)"
+
 
 SVNREV=$(shell dpkg-parsechangelog | awk '/^Version: / {print $$2}' | sed 's/.*git//g' | sed 's/-.*//g')
 

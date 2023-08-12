@@ -3,11 +3,6 @@
 # Uncomment this to turn on verbose mode.
 export DH_VERBOSE=1
 
-ifneq (,$(filter $(DEBIAN_CODENAME),lucid karmic)) 
-	BUILDDEBFLAGS= -- -Zlzma -z9
-else
-	BUILDDEBFLAGS= -- -Zxz -z9
-endif
 
 CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
 CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(CPPFLAGS)

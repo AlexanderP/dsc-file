@@ -14,12 +14,7 @@ else
         confopt = -DENABLE_READSTAT=ON
 endif
 
-ifneq (,$(filter $(DEBIAN_CODENAME),bionic)) 
-	CONTROL = control.bionic
-	confopt = -DENABLE_READSTAT=ON
-else
-	CONTROL = control.buster
-endif
+CONTROL = control.buster
 
 %:
 	dh $@ --with kf5
