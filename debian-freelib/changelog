@@ -1,3 +1,53 @@
+freelib (6.0.36+git515-edd8ad8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/petrovvlad/freeLib.git
+  * Branch: master
+  * Commit: edd8ad8b038e71ffd1c4938a2c1df5b0cdad098a
+  * Date: 1692103571
+  * git changelog:
+  *  edd8ad8 - Merge pull request #124 from petrovvlad/develop
+  *  443c06d - fix: ошибка сборки в Qt<5.15
+  *  70c91fe - fix: ошибка сборки для qt<5.15.2
+  *  21666e1 - fix: ошибки при сборкев Qt<5.14
+  *  a9b2201 - fix: совместимость с Qt<5.14
+  *  db00493 - refactor: замена QLatin1String на QStringLiteral ил u
+  *  043c3e6 - fix: повторное добавление книг при обновлении
+  *  30fd2dd - fix: обновление версии библиотеки в статистике
+  *  49c3cff - fix: обновление версии библиотеки в статистике
+  *  95cf689 - choro: обновлена структура базы данных
+  *  dc07233 - optimize: Поиск уже добавленных авторов в QHash
+  *  0b77fdb - optimize: перенесён вызов QSqlQuery::prepare до циклов
+  *  8bc7124 - удалены файлы больше неиспользуемые в проекте.
+  *  f9d7a80 - choro: исключение добавления книги 0 длины
+  *  89805c5 - fix: исправлена опция «только первый автор» для epub
+  *  1c1d3ee - Merge pull request #122 from petrovvlad/develop
+  *  0918698 - fix: сообщение об ошибке при дублировании автора
+  *  43bd29e - fix: исправлен импорт жанров библиотек
+  *  0754aa1 - fix: импорт книги без серии
+  *  891f580 - optimize: updateIcons
+  *  b4888bb - choro: убран режим bSaveOnly_ в ImportThread
+  *  3a0ece1 - choro: импорт меток
+  *  c1d6566 - choro: добавлен отладочный макрос.
+  *  18d47d4 - choro: дабалены UNIQUE ON CONFLICT IGNORE в базе.
+  *  32c8653 - Merge pull request #121 from petrovvlad/develop
+  *  faca3c7 - fix: cloneDatabase в Qt<5.13
+  *  d584318 - fix: сборка для Qt<5.14
+  *  4f6ede9 - Merge pull request #120 from petrovvlad/develop
+  *  e398666 - fix: ON DELETE CASCADE
+  *  03f3585 - docs: обновлена инструкция по сборке
+  *  1d3d3ce - chore: в opds сервере удалено Показывать директорию
+  *  a8467af - add: precompiled.h
+  *  fe5d99a - chore: добавлен precompiled.h
+  *  f361b47 - improve: метки при экспорте библиотеки
+  *  e2c7b0f - fix: закрытие программы через меню
+  *  46fb033 - improve: добавлены пункты свернуть/открыть в меню трея
+  *  577a276 - improve: сворачивание принажатии на кнопку закрыть
+  *  9f37046 - fix: отмеченное состояние книг при переключении вида
+  *  dbee59d - refactor: rename listCheckedBooks → getCheckedBooks
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 15 Aug 2023 20:10:05 +0000
+
 freelib (6.0.36+git476-9f4b3fd-1) unstable; urgency=medium
 
   * Compile

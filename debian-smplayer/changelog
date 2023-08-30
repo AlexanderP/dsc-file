@@ -1,3 +1,29 @@
+smplayer (1:22.7.0+git10165-657dfb1c1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/smplayer-dev/smplayer.git
+  * Branch: master
+  * Commit: 657dfb1c19a88557c7ad22edc3c5e59bbe5d0110
+  * Date: 1690726022
+  * git changelog:
+  *  657dfb1c1 - Merge pull request #771 from BenjaminRi/fix-timeline-
+    slider
+  *  f3fdb8539 - Default GUI: Grab video seeker and volume slider by
+    clicking and dragging anywhere on the slider bar
+  *  89d945450 - Format myslider.cpp to the style the rest of the code
+    uses. No functional changes, only whitespace changes.
+  *  2fc5b1dfc - Do not emit a seek action on mouse release, unless this
+    option is enabled
+  *  1d5eb9c34 - Fix seeker judder and video jitter when clicking the
+    seeker without moving it
+  *  74d296743 - Clean up slots in timeslider. Make order of
+    sliderReleased slots explicit. No functional changes.
+  *  2ff85a76f - Partially revert PR #692 since it causes this problem
+    https://github.com/smplayer-dev/smplayer/discussions/753
+  *  0ff9a76b6 - Start new version
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 12 Aug 2023 19:41:17 +0000
+
 smplayer (1:22.7.0+git10157-aff9170c5-1) unstable; urgency=medium
 
   * Compile

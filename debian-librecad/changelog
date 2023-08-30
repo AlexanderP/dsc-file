@@ -1,3 +1,62 @@
+librecad (2.2.0~git5109-9b321ba9-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: master
+  * Commit: 9b321ba9cff4d7e6e658d71fdd545a383d6c4bd7
+  * Date: 1692109196
+  * git changelog:
+  *  9b321ba9 - LoopUtils: file cleanup
+  *  b22da344 - Issue #1572: updated loop extraction algorithm (#1681)
+  *  e6c39af7 - feat: Extend one-character coordinate shortcuts (#1677)
+  *  45a167b0 - Issue #1572: fix hatching area calculation (#1680)
+  *  9db3479c - Issue #1676: fixed a construction line regression
+  *  07398a97 - default action: file cleanup
+  *  439f4b6f - MText: right-to-left fixed alignment
+  *  5e5eaff3 - Mtext: initial support for Right-to-left text (#1674)
+  *  6df84917 - feat: Shortcut . to specify current point coordinates on
+    command line (#1673)
+  *  c3ffcd77 - Issue #1670: file cleanup
+  *  01b4ac04 - Issue #1670: disable mouse hovering effects on hatches
+  *  52355148 - Issue #778/#1657: fixed spline mouse hovering effect
+  *  816066a0 - Debugging: add LC_ERR
+  *  4a9a95a4 - Issue #778, #1657: spline drawing style
+  *  7a38afb3 - Issue #1672: code cleanup
+  *  a8891ecb - Issue #1672: relative angle line length fix
+  *  019af8d6 - Issue #1258: fixed RS_Image::clone()
+  *  92f0a4ac - RS_Entity: ID type to unsigned long long
+  *  802b3397 - Issue #1671: fixed dash style for selected
+  *  d5c673b1 - update CHANGELOG.md
+  *  82e2c3e9 - fixed various issues in LFF font files
+  *  c2542de8 - fixed segfault with malformed LFF font files
+  *  f4985ac4 - settings: improved RAII guard robustness
+  *  73ebf8ba - Preview style: solid line and highlight
+  *  108410eb - PR #1448: plot polyline, event cleanup, WIP
+  *  a1b0c8b3 - Issue #1449/#1668: fixed a polyline crash
+  *  12791120 - Issue #1449: fixed a typo
+  *  deb9de4d - Issue #1449: fixed a typo
+  *  5e2c0b65 - Logging style LC_LOG
+  *  718f4d35 - Issue #1449: fixed a Windows issue for parser
+  *  10b887c7 - Issue #1449: draw polyline by equation
+  *  ae35bd40 - Issue #778: painter dash pattern tweaking
+  *  967a00b1 - Polyline Equations in Command (#1449)
+  *  073e781f - Issue #778/#1664: Fixed style: NoPen
+  *  197e74a8 - Update cyrillic_ii.lff (#1663)
+  *  226c97b5 - Issue #778: fixed crash due to NoPen
+  *  871768d7 - Issue #778: painter rework
+  *  d7c197da - Revert Issue
+  *  df7b0a14 - Issue #1589: editable image file path
+  *  afab9e28 - Issue #778 Painter: use Qt native dash pattern (#1661)
+  *  0a23b6be - bevel/fillet: highlight selection cleanup
+  *  cc5c3c31 - Hatch: area display precision increased to 12 digits
+  *  651cc9b3 - fillet/bevel: highlight selections
+  *  e3ab9a3a - Bevel: highlight selections
+  *  32d9cbe5 - Issue #1572: topology sorting cleanup
+  *  342d0bf1 - Issue #1572 : add topology sorting for hatch loops
+    (#1659)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 15 Aug 2023 20:08:14 +0000
+
 librecad (2.2.0~git5063-3974b220-1) unstable; urgency=medium
 
   * Compile

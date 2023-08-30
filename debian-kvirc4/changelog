@@ -1,3 +1,40 @@
+kvirc (4:5.0.1+git-7489-de260e54c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: de260e54ca10efebc2a5d5a45cabe72afcfd2f7a
+  * Date: 1692009627
+  * git changelog:
+  *  de260e54c - Spellchecker: on right click menu, check the spelling
+    for the word under the mouse instead of the word where the cursor is
+    located; fix #1918 (#2551)
+  *  4c100d5d1 - add a basic ci build for linux and macos (#2550)
+  *  2b021749c - Batch export logs (#2485)
+  *  5a1e034e4 - kernel: We should read the default config on startup
+    (bis) (#2548)
+  *  c1848c3d0 - Add DarkScience to default server list. (#2472)
+  *  16de5dd48 - Detect solanum ircd (Libera net) to correctly decode
+    user and channel modes (#2547)
+  *  1fc6abe81 - Implement the UTF8ONLY IRCv3 specification (#2514)
+  *  4a55bd7f7 - translation and minor comment updates - switch from
+    transifex/transifex-client to transifex/cli, the current version
+    migrated the config properly (unlike earlier versions) and is usable
+    - pulled updates from tx, completed korean, updating portuguese and
+    spanish - minor comment updates and adding product ids that nobody
+    is going to be using
+  *  fbb7b3488 - Add a project file to .gitignore
+  *  148d8d9e1 - Use floating point widths in KviIrcView: fixes
+    overlapping texts
+  *  054f3e958 - fix path for kde notifier (#2545)
+  *  d356be9a2 - KviSSL: fix deprecations for openssl 3 (#2544)
+  *  457606446 - Avoid compilation warning on Python >=3.7 (#2543)
+  *  ed38ee977 - [WIP] Fix Appveyor builds (#2542)
+  *  28292170d - Port to (and require) Qt 5.15. Drop KDE4 support, fix
+    KDE5 (#2541)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 15 Aug 2023 20:05:28 +0000
+
 kvirc (4:5.0.1+git-7474-018ba7bdb-1) unstable; urgency=medium
 
   * Compile
