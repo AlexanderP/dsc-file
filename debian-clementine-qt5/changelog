@@ -1,3 +1,30 @@
+clementine-qt5 (1.4.0~git900-g3f572a413-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 3f572a4139ac02c76eaa6045670422875a1a3a00
+  * Date: 1695228775
+  * git changelog:
+  *  3f572a413 - RPM & CI: Build rpm packages against native
+    qtsingleapplication
+  *  f3837f95d - CMake: Re-enable usability of system
+    QtSingleApplication
+  *  6820a0a58 - 3rdparty: remove unused libmygpo-qt
+  *  cfcddf7c0 - src: remove unused variable
+  *  98e24f626 - library: use boolean, not bitwise, operator on bools
+  *  8e47ab59e - internet services: consistently use 'override'
+  *  63208b4e1 - core/organisefmt: use same visibility for fwd decl as
+    in def
+  *  20773dee2 - CMake: Check for minimum version before setting the
+    project name
+  *  c2a5b9b07 - Remove Kinetic build
+  *  de7455eeb - Adjusted MainWindow::TrackSkipped to only count song
+    skips if listened to for 5 seconds.
+  *  2a14ec9d4 - Lyrics Providers: Remove unreachable ones
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 21 Sep 2023 20:30:00 +0000
+
 clementine-qt5 (1.4.0~git889-g86e81cea0-1) unstable; urgency=medium
 
   * Compile
