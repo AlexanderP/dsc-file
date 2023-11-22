@@ -1,3 +1,63 @@
+kvirc (4:5.0.1+git-7525-b53073ba1-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: b53073ba12b65816c6e4684668ef40593e43a9dd
+  * Date: 1698134103
+  * git changelog:
+  *  b53073ba1 - Make macos dmg nightlies more orderable (#2560)
+  *  7883d2159 - Almost there
+  *  7879110b5 - Forgot to write file
+  *  cb1baab6b - Pass user through ssh config
+  *  f8009fa5e - Yet another time
+  *  89704880d - Next attempt
+  *  ccff77228 - Try to upload to sftp manually...
+  *  b7c766851 - Switch to yet another sftp upload action
+  *  9d9fdd248 - Don't delete from sftp
+  *  92617286a - Use another action to upload sftp
+  *  3ea2d898b - Fix yaml syntax
+  *  dab7ab237 - Try to upload nightly .dmg
+  *  8bf47fdd4 - Remove references to kvirc.de and kvirc.ru (#2559)
+  *  4a51c0e82 - Console window: fix server selection from combobox
+  *  afbf70ed3 - Qt6: fix font rendering on help window
+  *  9052018b5 - Migrate almost all QMessagebox to qt6-friendly version.
+  *  ff61da69a - Address feedback for XmlFunctions.cpp
+  *  2d1bc24d6 - Changes that will need to be reworked. QFont changed
+    the weight scale in Qt6, in order to use them we'd need to fix all
+    configuration files in all themes. QStreamConverter only supports
+    Utf8/16/32 and Latin1 before Qt6.5. Stick to qt5compat's QTextCodec
+    by now
+  *  b62b83e77 - Misc Qt6 port for slightly changed class names and
+    method signatures
+  *  cba0ebedf - Make shortcuts compatible with qt6; remove unused
+    KviShortcut constructor since it creates ambiguity with the previous
+  *  c8c0a92fd - Remove unused calls to viewOptions()
+  *  18003d224 - Use qMin, qMax, .. instead of std equivalents as they
+    better deal with qt integer types
+  *  d88521468 - Drop QApplication::globalStrut() usage (unavailable on
+    qt6)
+  *  29e92a939 - Port from QRegExp (unavailable on qt6) to KviRegExp,
+    based on QRegularExpression Method str_kvs_fnc_split() had to be
+    replaced with the original version, since the newer one relied on
+    Qt5's QStringRef
+  *  2e402d15b - Qt6 is stricter when casting numericals and chars. Add
+    an explicit cast/conversion to better digest them
+  *  06cdd04f1 - Port QDateTime::setTime_t() to setSecsSinceEpoch()
+  *  0ad5e82cc - Port QDateTime::toTime_t() to toSecsSinceEpoch(); it's
+    a quint64, but it should cast to time_t safely until year 2106
+  *  9cb9e4c22 - Qt6: required Qt5 compatibility module; needed by
+    QRegExp
+  *  0c9088c1d - Mass rename of margin -> contentsMargins
+  *  843e3c142 - Qt6: QStringList is a typedef now, avoid forward
+    declarations
+  *  0d1754ed0 - cmake: add support for qt6
+  *  9419f8b75 - Rename COMPILE_WEBKIT_SUPPORT to
+    COMPILE_WEBENGINE_SUPPORT
+  *  784f9218e - README.md: replace travis badge with github actions
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 28 Oct 2023 19:56:45 +0000
+
 kvirc (4:5.0.1+git-7492-681f0940b-1) unstable; urgency=medium
 
   * Compile
