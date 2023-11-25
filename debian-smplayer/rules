@@ -28,7 +28,7 @@ override_dh_auto_clean:
 
 override_dh_auto_build:
 	cp debian/$(CONTROL) debian/control
-	sed 's/0UNKNOWN/$(SVNREV)/g' -i $(CURDIR)/get_svn_revision.sh
+	sed 's/`git rev-list --count HEAD`/$(SVNREV)/g' -i $(CURDIR)/get_svn_revision.sh
 	dh_auto_build -- $(MAKE_OPTS) DOC_PATH=\\\"/usr/share/doc/smplayer\\\"
 
 override_dh_auto_install:
