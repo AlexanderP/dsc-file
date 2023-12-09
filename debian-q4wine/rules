@@ -33,3 +33,6 @@ get-orig-source:
 	wget -c "$(CUR_URL)" -O "$(PACKAGE)_$(CUR_VER).orig.tar.bz2"
 
 .PHONY: override_dh_makeshlibs
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9

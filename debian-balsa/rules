@@ -45,3 +45,6 @@ override_dh_clean:
 	dh_clean
 	rm -f po/*.gmo
 	rm -f balsa.desktop
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9

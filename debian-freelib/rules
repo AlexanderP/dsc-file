@@ -6,3 +6,6 @@
 override_dh_install:
 	rm -f $(CURDIR)/debian/freelib/usr/bin/kindlegen
 	dh_install
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9

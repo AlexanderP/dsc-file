@@ -19,3 +19,6 @@ override_dh_auto_configure:
 override_dh_install:
 	pod2man debian/goldendict.pod debian/goldendict.1
 	dh_install --
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9

@@ -33,3 +33,6 @@ override_dh_missing:
 override_dh_auto_clean:
 	cp debian/$(CONTROL) debian/control
 	dh_auto_clean
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9

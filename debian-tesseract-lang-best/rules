@@ -9,5 +9,7 @@ endif
 %:
 	dh $@ --parallel
 
-#override_dh_builddeb:
-#	dh_builddeb $(BUILDDEBFLAGS)
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9
+

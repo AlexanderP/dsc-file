@@ -9,6 +9,5 @@ endif
 %:
 	dh $@ --with python2
 
-#override_dh_builddeb:
-#	dh_builddeb $(BUILDDEBFLAGS)
-
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9

@@ -44,3 +44,6 @@ override_dh_makeshlibs:
 
 %:
 	dh $@ --parallel
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9

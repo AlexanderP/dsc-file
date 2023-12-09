@@ -48,3 +48,6 @@ override_dh_icons:
 	install -m 644 debian/tmp/usr/lib/freecad-daily/share/icons/hicolor/48x48/apps/freecad.png debian/freecad-daily/usr/share/icons/hicolor/48x48/apps/freecad-daily.png
 	install -m 644 debian/tmp/usr/lib/freecad-daily/share/icons/hicolor/64x64/apps/freecad.png debian/freecad-daily/usr/share/icons/hicolor/64x64/apps/freecad-daily.png
 	install -m 644 debian/tmp/usr/lib/freecad-daily/share/icons/hicolor/scalable/apps/freecad.svg debian/freecad-daily/usr/share/icons/hicolor/scalable/apps/freecad-daily.svg
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9

@@ -22,3 +22,6 @@ endif
 
 override_dh_auto_configure:
 	dh_auto_configure -- -DENABLE_TESTING=True $(configure_flags)
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9

@@ -15,3 +15,6 @@ endif
 override_dh_install:
 	dh_install
 	cd $(CURDIR)/debian/compizboxmenu && chmod -x usr/share/cb-editor/cb_itemtypes.py usr/share/cb-editor/cbmenu.py usr/share/dbus-1/services/org.compiz_fusion.boxmenu.service etc/xdg/compiz/boxmenu/precache.ini etc/xdg/compiz/boxmenu/menu.xml 
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9

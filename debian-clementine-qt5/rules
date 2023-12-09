@@ -12,7 +12,6 @@ CMAKEOPTS += -DUSE_SYSTEM_PROJECTM=OFF \
 	-DCMAKE_SHARED_LINKER_FLAGS="$(LDFLAGS)" \
 	-DCMAKE_EXE_LINKER_FLAGS="$(LDFLAGS)"
 
-BUILDDEBFLAGS = -- -Zxz -z9
 
 %:
 	dh $@ --buildsystem=cmake --parallel
@@ -38,3 +37,6 @@ override_dh_installchangelogs:
 	dh_installchangelogs Changelog
 
 override_dh_auto_test:
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9

@@ -31,3 +31,6 @@ override_dh_install:
 	mv $(CURDIR)/debian/scantailor-advanced/usr/bin/scantailor-cli \
 	$(CURDIR)/debian/scantailor-advancedl/usr/bin/scantailor-advanced-cli
 	rm -f $(CURDIR)/debian/scantailor-advanced/usr/share/applications/scantailor.desktop
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9

@@ -20,3 +20,6 @@ ifeq ($(filter nocheck,$(DEB_BUILD_OPTIONS)),)
 		$$python /usr/bin/nosetests --verbose; \
 	done
 endif
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9

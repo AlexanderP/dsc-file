@@ -8,3 +8,6 @@ override_dh_install:
 	dh_install
 	cp pdf.py debian/jbig2enc/usr/bin/jbig2pdf
 
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9

@@ -48,5 +48,8 @@ override_dh_auto_install:
 	$(RM) -f debian/tmp/usr/share/doc/smplayer/Release_notes.txt
 	$(RM) -f debian/tmp/usr/share/doc/smplayer/Copying_openssl.txt
 
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9
+
 %:
 	dh $@ --parallel 

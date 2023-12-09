@@ -20,3 +20,7 @@ override_dh_auto_build:
 	patch -p1 < debian/patches/truecrypt-7.1a-gcc6.patch
 	$(MAKE) -j$(NCPUS) wxbuild
 	$(MAKE) -j$(NCPUS) WXSTATIC=1
+
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9

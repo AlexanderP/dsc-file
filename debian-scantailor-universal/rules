@@ -34,3 +34,6 @@ override_dh_install:
 	#$(CURDIR)/debian/scantailor-universal/usr/bin/scantailor-universal
 	#mv $(CURDIR)/debian/scantailor-universal/usr/bin/scantailor-cli \
 	#$(CURDIR)/debian/scantailor-universal/usr/bin/scantailor-universal-cli
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9

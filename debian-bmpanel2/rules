@@ -16,9 +16,9 @@ CMAKEOPT= -DCMAKE_CXX_FLAGS="$(CXXFLAGS)"\
 %:
 	dh $@ --parallel --with python2  
 
-#override_dh_builddeb:
-#	dh_builddeb $(BUILDDEBFLAGS)
-
 override_dh_auto_configure:
 	dh_auto_configure -- $(CMAKEOPT)
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9
 

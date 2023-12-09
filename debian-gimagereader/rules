@@ -26,3 +26,6 @@ override_dh_auto_build:
 override_dh_auto_install:
 	dh_auto_install
 	dh_auto_install --builddirectory=build-qt5
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9
