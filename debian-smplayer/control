@@ -2,22 +2,28 @@ Source: smplayer
 Section: video
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
-Build-Depends: debhelper (>= 9), libqt4-dev, zlib1g-dev, subversion
-Standards-Version: 3.9.8
+Build-Depends:
+ debhelper (>= 9),
+ qtbase5-dev (>= 5.1),
+ qt5-qmake,
+ qtscript5-dev,
+ qttools5-dev-tools,
+ zlib1g-dev, qtbase5-private-dev, qtdeclarative5-dev
+Standards-Version: 4.2.1
 Homepage: http://smplayer.sourceforge.net/
 Rules-Requires-Root: no
 
 Package: smplayer
 Architecture: any
 Depends:
- mpv | mplayer,
+ mpv (>= 0.6.2) | mplayer,
  ${misc:Depends},
  ${shlibs:Depends}
 Recommends:
  smplayer-themes,
  smplayer-l10n
 Description: Complete front-end for MPlayer and mpv
- Qt4 front-end for mplayer and forks, with basic features like playing
+ Qt5 front-end for mplayer and forks, with basic features like playing
  videos, DVDs, and VCDs to more advanced features like support
  for MPlayer filters and more. One of the most interesting features
  of SMPlayer: it remembers the settings of all files you play.
@@ -37,7 +43,7 @@ Replaces:
 Breaks: 
  smplayer-translations (<< 16.8.0)
 Description: Complete front-end for MPlayer and mpv - translation files
- Qt4 front-end for mplayer and forks, with basic features like playing
+ Qt5 front-end for mplayer and forks, with basic features like playing
  videos, DVDs, and VCDs to more advanced features like support
  for MPlayer filters and more. One of the most interesting features
  of SMPlayer: it remembers the settings of all files you play.

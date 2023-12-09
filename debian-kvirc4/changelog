@@ -1,3 +1,23 @@
+kvirc (4:5.0.1+git-7530-00074d1c2-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 00074d1c2bbd4edbd78a8b5bbf6e84a99b874da9
+  * Date: 1700731055
+  * git changelog:
+  *  00074d1c2 - Settings: include styleName in font (#2568)
+  *  a0f26877b - Avoid sending a spurious null byte to the server at the
+    end of raw commands (#2565)
+  *  85e5878d5 - Do not leak each created
+    KviInputEditorSpellCheckerBlock (#2563)
+  *  131489589 - Fix KviTopicWidget label shifted down and clipped
+    (#2562)
+  *  75af3ecba - Fix text[idx] out of bounds assertion in
+    KviTopicWidget::paintColoredText (#2561)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 25 Nov 2023 09:20:48 +0000
+
 kvirc (4:5.0.1+git-7525-b53073ba1-1) unstable; urgency=medium
 
   * Compile
