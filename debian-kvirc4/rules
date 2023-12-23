@@ -23,8 +23,6 @@ export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 NOT_INSTALLED := \
 				usr/lib/$(DEB_HOST_MULTIARCH)/libkvilib.so \
 				usr/bin/kvirc-config \
-				usr/share/kvirc/5.0/license/ABOUT-LICENSE \
-				usr/share/kvirc/5.0/license/LICENSE-OPENSSL \
 				usr/share/pixmaps/kvirc.png
 
 override_dh_auto_configure:

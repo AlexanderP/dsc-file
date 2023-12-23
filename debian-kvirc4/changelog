@@ -1,3 +1,41 @@
+kvirc (4:5.0.1+git-7543-ac4c2db08-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: ac4c2db0879f79c90d76f35969ae75f0d2b75c38
+  * Date: 1702074546
+  * git changelog:
+  *  ac4c2db08 - Fix regression in some shortcuts introduced in
+    cba0ebedf3f0cc4da6f8729dde10282b23eb18e6 (#2579)
+  *  ee642156d - Fix crash bug on avatar handling with specific
+    realnames (#2578)
+  *  30fc8596f - Git version detection: ensure correct tag is returned
+    if present
+  *  2dda5d0f8 - Update version to 5.1.1 and extract translations
+    (#2577)
+  *  4b3b0963f - SSL updates (#2575)
+  *  519086882 - Attempt at fixinf font width size by enable full font
+    hinting, aka forcing glyphs to be aligned to pixels in order to
+    disable subpixel positioning (source: https://www.mail-
+    archive.com/development@qt-project.org/msg43330.html) (#2573)
+  *  9babfaff1 - KviCString::getToken(): add option to skip empty
+    elements (default off) (#2574)
+  *  7916bf0e2 - Removed unused travis files and 10-years-not-updated
+    changelog. (#2572)
+  *  de5b9e20d - 2569: fix mouse selection of mixed text: normal and
+    surrogate pairs
+  *  f8b64fbc3 - Remove QWebEngine usage in core. Rewrite web package
+    manager (#2570)
+  *  90d1f02e2 - Ircview: Fix out of bound memory read when a line ends
+    with a tab; fix #2377
+  *  bee611a96 - InputEditor: consider surrogate pairs when moving
+    cursor, deleting a char or editing selection
+  *  f0abc4920 - Ircview: consider surrogate pairs when calculating
+    block widths, wraps, and selection blocks
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 09 Dec 2023 08:20:56 +0000
+
 kvirc (4:5.0.1+git-7530-00074d1c2-1) unstable; urgency=medium
 
   * Compile
