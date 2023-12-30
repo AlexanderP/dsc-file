@@ -4,11 +4,6 @@ DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 export DEB_LDFLAGS_MAINT_APPEND := -Wl,--as-needed
 
-DEBIAN_CODENAME = $(shell echo $$DIST)
-ifeq "$(DEBIAN_CODENAME)" ""
-	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
-endif
-
 ifeq ($(DEB_HOST_ARCH_OS),kfreebsd)
 	confflags += --without-alsa
 endif
@@ -18,11 +13,6 @@ endif
 
 
 override_dh_auto_configure:
-#ifneq (,$(filter $(DEBIAN_CODENAME),sid bullseye groovy hirsute impish jammy kinetic))
-#	patch -p1 < debian/patches/debian_patches_make-4.3.patch
-#else
-#	echo "no patch"
-#endif
 	./autogen.sh
 	dh_auto_configure -- \
 	--with-boost-libdir=/usr/lib/${DEB_HOST_MULTIARCH} \

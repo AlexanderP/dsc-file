@@ -2,11 +2,6 @@
 # Uncomment this to turn on verbose mode.
 #DH_VERBOSE=1
 
-DEBIAN_CODENAME = $(shell echo $$DIST)
-ifeq "$(DEBIAN_CODENAME)" ""
-	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
-endif
-
 include /usr/share/dpkg/architecture.mk
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all

@@ -1,11 +1,6 @@
 #!/usr/bin/make -f
 #export DH_VERBOSE=1
 
-DEBIAN_CODENAME = $(shell echo $$DIST)
-ifeq "$(DEBIAN_CODENAME)" ""
-	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
-endif
-
 %:
 	dh $@ --with python2
 

@@ -3,12 +3,6 @@ export DH_VERBOSE=1
 
 #export DH_ALWAYS_EXCLUDE := LICENSE
 
-DEBIAN_CODENAME = $(shell echo $$DIST)
-ifeq "$(DEBIAN_CODENAME)" ""
-	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
-endif
-
-
 CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
 CXXFLAGS:=$(shell dpkg-buildflags --get CXXFLAGS) $(CPPFLAGS)
 LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed

@@ -8,11 +8,6 @@ REV=$(shell echo $${VERSION} | sed 's/.*~git/git/' | sed 's/ppa.*//g'| rev | cut
 DATE_UNIX=$(shell cat debian/changelog |grep '* Date' | sed 1q |awk -F ': ' '{print $$2}')
 DATE=$(shell date -d@$(DATE_UNIX) +%F | sed 's/-//g')
 
-DEBIAN_CODENAME = $(shell echo $$DIST)
-ifeq "$(DEBIAN_CODENAME)" ""
-	DEBIAN_CODENAME = $(DEB_DISTRIBUTION)
-endif
-
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 export DEB_CXXFLAGS_MAINT_APPEND = $(shell dpkg-buildflags --get CPPFLAGS)
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
