@@ -1,3 +1,60 @@
+goaccess (1:1.8.1+git4118-44facdd3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 44facdd39fe18760adbb35e52a2160fb63879e1e
+  * Date: 1704332450
+  * git changelog:
+  *  44facdd3 - Merge pull request #2603 from allinurl/multithread-
+    parsing
+  *  70ca3677 - Update man page to reflect multithreading parsing
+    changes.
+  *  d2a62bde - Updated man page to clarify --exclude-ip.
+  *  e432c01d - Updated --chunk-size help section for clarity.
+  *  1280072f - Removed unnecessary comment.
+  *  8495d4db - Fixed warning: comparison of integer expressions with
+    different signedness.
+  *  49fde968 - Ensure the WebSocket server is spun up once log-format
+    checks have passed.
+  *  9a1ad615 - Ensure we show format errors if max tests is reached on
+    stdin.
+  *  c6efef6d - Updated help section, threads and chunk-size options.
+  *  496f9c7f - Eliminated temporary debugging messages from the parsing
+    code.
+  *  8f570c85 - Refactored read_lines() for improved cohesion by
+    decomposing it into smaller functions.
+  *  728fd7d4 - Fixed issue where it will segfault when using ignore*
+    options.
+  *  0550432b - Fixed regression from commit 1e116d04 preventing stdin
+    data piping.
+  *  399837df - Updated code formatting to align with the coding style.
+  *  41e63dc1 - Ensure we don't process more than we should when testing
+    for log format.
+  *  1e116d04 - Merge pull request #2594 from Sea-n/multithread-part1
+  *  f4ca02d4 - Update .gitignore
+  *  1a072765 - Add multi-thread to README
+  *  6d2cb7ef - Change GLogItem->status from char* to int
+  *  4cd518f8 - Run proc_logs while read_lines_thread in progress
+  *  c7c7df2b - Process logs in batch
+  *  43ed0c1a - Implement the parallel version for log parsing
+  *  c612935f - Change char * to const char * for parser
+  *  2229709d - Use logitem instead of glog->item for init_log_item()
+  *  90be6788 - Add GLog->start_time for parse_specifier() and
+    init_log_item()
+  *  4b140aaf - Use __sync_add_and_fetch()
+  *  a8996cc4 - Eliminate data races with __sync_bool_compare_and_swap()
+  *  e8ba79e8 - Parse lines to GLogItem in batch
+  *  49f33081 - Replace lines with GJob in read_lines()
+  *  18a00656 - Replace logitems with GJob in read_lines()
+  *  22e3f4b1 - Add --jobs and --chunk-size options
+  *  9ee7266d - Uplift process_log() from read_line()
+  *  6815e308 - Uplift process_log() from parse_line()
+  *  81641216 - Rename pre_process_log() to parse_line()
+  *  df2df1e9 - Merge read_lines() for with/without GETLINE
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 04 Jan 2024 17:00:43 +0000
+
 goaccess (1:1.8.1+git4083-b1332f5a-1) unstable; urgency=medium
 
   * Compile
