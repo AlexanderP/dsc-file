@@ -1,3 +1,33 @@
+goaccess (1:1.8.1+git4134-70a9215c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 70a9215c9e42983fc3f5209e2e2f75eb20b3e275
+  * Date: 1705157791
+  * git changelog:
+  *  70a9215c - Merge pull request #2610 from GeraldoJAlves/fix/os-
+    android-12.1
+  *  e8d15953 - fix: add android 12.1 in operating systems
+  *  043453fc - Ensure we use mutex locking to avoid TZ environment race
+    condition.
+  *  be1a7c6f - Updated build test to include tz for datetime format.
+  *  941c8855 - Update build-test.yml
+  *  1e8c2144 - Merge pull request #2608 from SlowMo24/minor-
+    ducumentation
+  *  6c68a6e2 - Added basic run tests to build workflow.
+  *  01c074a4 - Merge pull request #2607 from SlowMo24/traefik-clf
+  *  5d1836e1 - doc: remove repeat
+  *  8797da96 - doc: move docu to website
+  *  1da75456 - doc: add minor documentation
+  *  15c9b62c - fix(settings.c): add comma
+  *  122952e2 - refactor: typo
+  *  943889a9 - feat(settings): add traefik log format
+  *  57bfa03a - Merge pull request #2605 from jkittner/sigquit-handling
+  *  ff07227c - handle SIGQUIT as a signal for a graceful shutdown
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 13 Jan 2024 21:16:50 +0000
+
 goaccess (1:1.8.1+git4118-44facdd3-1) unstable; urgency=medium
 
   * Compile

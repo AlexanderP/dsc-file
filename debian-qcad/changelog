@@ -1,3 +1,253 @@
+qcad (3.29.0.0+git10105-3685de90ed-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 3685de90edbbe54e6170f7741ded77d85f107697
+  * Date: 1704976526
+  * git changelog:
+  *  3685de90ed - port to macOS/Qt6
+  *  88a849bc92 - fix artefacts when rendering splines with dashes
+  *  6d8405b425 - clean up
+  *  e45a1d387e - Merge branch 'master' of github.com:qcad/qcad
+  *  1d655a56bb - port to MSVC 2010 / Qt 5.5
+  *  85b5b09d4b - update
+  *  3b8acdc5ef - update user manual: fix anchor
+  *  f582b49212 - fix user manual links
+  *  663ab307ae - update user manual
+  *  6c6425f5a2 - update user manual: correct line type link
+  *  7f44daf059 - update script bindings
+  *  6e35e7b183 - clean up
+  *  689c397685 - update years
+  *  785a5942b4 - Merge branch 'master' of github.com:qcad/qcad
+  *  9f6e9842a0 - update
+  *  a081b422a0 - rename buttonBox to ButtonBox for automation
+  *  340dbdf493 - fix relative zero painted with fill
+  *  164d831e2c - fix exception
+  *  aae0f9cce5 - update translations
+  *  1e53847ff8 - update translations
+  *  1539ee6b1b - alternative projection if no ellipse proxy is
+    available (QCAD CE)
+  *  b36bba3c95 - update
+  *  469c57f972 - update test data
+  *  9f1bdb4c81 - fixes for REllipse::getTangentPoint
+  *  6a17ef22fc - Merge branch 'master' of github.com:qcad/qcad
+  *  5c1bf17665 - fix hatch rendering (detection of tangent point
+    intersection points)
+  *  97778203eb - add getTangentPoint
+  *  8fa66ce434 - Merge branch 'master' of github.com:qcad/qcad
+  *  0a191dd5ce - port to Qt 5
+  *  7b5dc8f498 - update test data
+  *  11ecc4f93d - always update image
+  *  ae4aa9297f - update user manual
+  *  8073899515 - Merge branch 'master' of github.com:qcad/qcad
+  *  ff6c2f4326 - port to qt 5
+  *  a57f4f0879 - update translations
+  *  fefae082f0 - update version
+  *  7143a5cefa - Merge branch 'master' of github.com:qcad/qcad
+  *  2169ecb908 - disable app win while switching to print preview
+  *  99311b61ec - add comment about slow QPrinter
+  *  fc3a4f1ad4 - Merge branch 'master' of github.com:qcad/qcad
+  *  3df2afabe5 - avoid filled snap cursor if selection present
+  *  b120055ec6 - Merge branch 'master' of github.com:qcad/qcad
+  *  b4e978f128 - set version to 3.29.0
+  *  f1f03f9945 - Merge branch 'master' of github.com:qcad/qcad
+  *  e957a5895c - Merge branch 'master' of github.com:qcad/qcad
+  *  5844d6c1ca - update unit test data
+  *  8624e434dd - add RSpline::getLength to spline proxy
+  *  e115f1d0b6 - back port to Qt 5
+  *  6144426a31 - fix setting mouse cursor
+  *  d040f6eb57 - thicker lines for auxiliary previews when using a high
+    res display
+  *  0f07e9770b - fix wrong mouse cursor for choosing an entity
+  *  16fa66127b - add stub for ellipse from 4 points
+  *  8379848ffe - clean up
+  *  8b22d437f9 - update
+  *  91037d443a - fix FS#2508 - File > Print / PDF Export: Fails when
+    crop marks are enabled [macOS M1/M2/M3]
+  *  2509bae525 - update qrc
+  *  bf2ef14458 - add fractions to property editor precision preferences
+  *  5ec2dd79e4 - update inscribed ellipse function in ellipse proxy
+  *  cad83e7e9d - add todo
+  *  f8374a4a41 - avoid warning when using default filter
+  *  8de09ad2f0 - update required unit test data (fix arc direction)
+  *  0e638e306b - update ellipse inscribed in quad calls
+  *  4037872620 - remove ellipse inscribed in quad tool
+  *  909ee0f200 - move inscribed ellipse algorithm implementation to
+    ellipse proxy
+  *  9a09bd71eb - update non-uniform arc / circle transformation
+  *  ddb1b0210c - update API doc
+  *  fc75359225 - update test data
+  *  859180dcf5 - tolerate non-ellipse entity
+  *  b04a58f375 - Merge branch 'master' of github.com:qcad/qcad
+  *  ef3c585c6a - update
+  *  a8b0d5a173 - Merge branch 'master' of github.com:qcad/qcad
+  *  2b9f048b4a - only recommend dxf, dwg as default formats
+  *  19e35c3082 - fix inscribed ellipse (failed unit test)
+  *  8415101025 - update
+  *  684f31e3aa - fix compiler warning
+  *  456759592e - fit getWidgetPath for Qt 6
+  *  05f9445367 - fix font changes with multiple text entities with
+    different fonts
+  *  e2c8c203a2 - set version to 3.28.2.6
+  *  6cb1802eb1 - fix clipping of grid when only viewports are used in
+    layout
+  *  caf1ada63f - Merge branch 'master' of github.com:qcad/qcad
+  *  4fd03aead0 - port to gcc
+  *  58979ea564 - port to gcc
+  *  3ad1482cc6 - Merge branch 'master' of github.com:qcad/qcad
+  *  b868c8e166 - port to gcc
+  *  3ceb093ec4 - update
+  *  66e677efe1 - shorten translation of property editor label
+  *  8298ef0e07 - port to new graphics view
+  *  976808ecd3 - port to new graphics view
+  *  709ed339cc - update translations
+  *  9f8f5488e6 - update translations
+  *  7131b3cd88 - update translations
+  *  fe3a729e75 - handle font changes with QFont
+  *  57c201d9e3 - add GUI automation mode
+  *  729d7873ea - add command addlayer
+  *  1c1fc70c92 - adjust margins
+  *  30d1d3b662 - set name of document tab bar
+  *  7adb0da8a5 - only indicate error in visible RMathLineEdit
+  *  c20c798bac - port to Qt 6
+  *  43a602cd15 - port to scripts/Tools/arguments.js
+  *  1edc7ff066 - port to new graphics view
+  *  c5a05e9b4a - lookup icon: ignore non-existing icons
+  *  cc21874f99 - remove setIcon (implicit icons based on script path)
+  *  8ed29a2068 - update
+  *  6b884772b2 - avoid duplicate scene pointers
+  *  c517b8777a - fix downcast from RGraphicsView to RGraphicsViewImage
+    intead of RGraphicsViewQt
+  *  816364b710 - implicitely set icon based on script file path
+  *  1649ed0005 - fix for negative radii
+  *  99502c4279 - Merge pull request #48 from ppekala/master
+  *  0af9b51f47 - Add scripting support for Debian Bookworm (Qt 5.15.8)
+  *  0a67e08244 - update
+  *  d84a7d1677 - sync settings on exit
+  *  9bac2e7afc - update translations
+  *  6f2e6ab8d2 - improved checking of result for inscribed ellipse
+  *  a82895e8ee - prevent endless loop with zero segment length
+  *  4e25bb6563 - port to Qt 6
+  *  7334515c87 - update action state when application does not have the
+    focus
+  *  717383b982 - Merge branch 'master' of github.com:qcad/qcad
+  *  6cabfbf55f - update warnings
+  *  d471b37c97 - back port to Qt 5
+  *  a0ed5baafa - fix position of cursor indicator in vertical ruler
+  *  a294002419 - fix antialiasing
+  *  e509da1e1c - update coordinate displays when previewing coordinates
+  *  bf73b1c9d8 - update qrc
+  *  b04bd010de - add getPointOnShape for ellipses
+  *  723182600f - update meta types
+  *  9f53ee4d76 - fix getWidgetPath
+  *  629cf87d95 - update translations
+  *  d85850d36b - add unit test
+  *  32ff3eda79 - port to Qt 5
+  *  0c3d246ca7 - update script bindings
+  *  61f3cd16e2 - port to Qt 5
+  *  0e56faa893 - update script bindings
+  *  e68c164d01 - port to Qt 5
+  *  f05713765e - add support for case with two concentric circles [CVH]
+  *  4f6ef89bf3 - update translations
+  *  6d47424159 - add getNewObjectId for Qt 6 ports
+  *  758d1c4c11 - port to Qt 6
+  *  11db83919d - Merge branch 'master' of github.com:qcad/qcad
+  *  0809f394e8 - update
+  *  4306373274 - fix storing block zoom with qt 6
+  *  caa020b90f - clean up
+  *  b02b375419 - clean up
+  *  1a9ab2a243 - update script bindings
+  *  9650ea1839 - update strings
+  *  75096fc95f - fix paintOverlay / printing
+  *  e7d2363912 - update translations
+  *  9113401c63 - update translations
+  *  a7ce60d3d7 - update translations
+  *  cd3298080a - clean up
+  *  e3e9445895 - add distance snap label
+  *  293b139a9d - update
+  *  db8dc26894 - add repeat control for angle / length restriction
+  *  3c36f2dc29 - use premultiplied bitmaps
+  *  a8ddabcc7d - update
+  *  5d1b808ec9 - update script bindings
+  *  3830110877 - split up classes (for ECMAScript generator)
+  *  7e26c68143 - update script bindings
+  *  5f24d6ed86 - update script bindings
+  *  0bb21922d8 - update
+  *  e0abcbfdba - update script bindings
+  *  2289bfa207 - remove obsolete code
+  *  b626b1e1cf - Merge branch 'master' of github.com:qcad/qcad
+  *  c65f70df48 - update script bindings
+  *  9971fee940 - Merge branch 'master' of github.com:qcad/qcad
+  *  fb48bbf734 - update
+  *  c8315154b2 - update script bindings
+  *  02d9c7570e - Merge branch 'master' of github.com:qcad/qcad
+  *  d5cbc856b8 - update Qt translations
+  *  ab4c05b21c - update gitignore
+  *  7a7528ce27 - refactor graphics view to use RGraphicsViewWorker
+  *  f4fa7eaf23 - add paintCursorLine
+  *  5af04b36f2 - add more caches for QColor settings
+  *  18f667c02f - clear imageView pointer if image view is deleted,
+    prevent exit segfault
+  *  a06002f66a - add QLineF meta type
+  *  9442ce6b43 - update Qt 5 script bindings
+  *  a317989f14 - update Qt 5 script bindings
+  *  8c5b69d01b - Merge branch 'master' of github.com:qcad/qcad
+  *  2d1820f2ef - correct French translation mistakes [Marc56]
+  *  dc10fc5964 - add timers for performance monitoring
+  *  19ff4f10f9 - use class member painter
+  *  21d45addcd - clean up
+  *  d00436fbfa - make resizeImage virtual for derived classes
+  *  b08e0bf6fe - port to image view
+  *  22dc223273 - delete imageView
+  *  e72cdb67ad - allow grid point painting in one go
+  *  29d811f71e - update
+  *  05ddd7acef - add slot for alternative graphics view
+  *  b73679ec04 - update
+  *  dacb026948 - port to new Qt 6 bindings
+  *  d35b200065 - add EAction.getGraphicsViewWidget
+  *  40250998bb - port to new graphics view
+  *  fdf02d9f3d - clean up
+  *  55c8a548ad - clean up
+  *  87e11a6fa8 - refactor graphics view
+  *  031b57a7c3 - port to Qt 6
+  *  6ed6fbef11 - update
+  *  9350fe1c25 - add getCpuArchitecture
+  *  4256d9d9a7 - set version to 3.28.2.5
+  *  2d7a8867a1 - port wheel event to Windows
+  *  69b8f8465b - Merge branch 'master' of github.com:qcad/qcad
+  *  eda33ef6df - update translatable strings
+  *  dbd65b89e9 - fix default value
+  *  d5902ae5b2 - Merge branch 'master' of github.com:qcad/qcad
+  *  3a1c9b4c85 - add pan speed to navigation preferences
+  *  e016affe35 - port to Windows/Qt 6
+  *  7da8e38aae - set version to 3.28.2.4
+  *  4806362099 - port to Qt 6
+  *  3d8526ae8b - port to Qt 6
+  *  179d47ed65 - fix mouse wheel zooming for Qt 6
+  *  fc798097e7 - port to Qt 6
+  *  a5deda9528 - clean up
+  *  351cb5cf73 - set version to 3.28.2.3
+  *  fa4687b928 - fix trackpad scrolling for Qt 6
+  *  28b83327c1 - Merge branch 'master' of github.com:qcad/qcad
+  *  cfa90255a2 - Delete .github/workflows/cmake-multi-platform.yml
+  *  eaaa9ba887 - Create cmake-multi-platform.yml
+  *  15aa3741b0 - clean up
+  *  044748a05a - clean up
+  *  790f7d5c37 - fix ID of returned object
+  *  946a7c9452 - port to Qt 6
+  *  f8f9a7609b - set version to 3.28.2.2
+  *  9ec6cac02f - update
+  *  66730ade69 - set version to 3.28.2.1
+  *  e03c082134 - Merge branch 'master' of github.com:qcad/qcad
+  *  e524f7bcc5 - update
+  *  579c27b551 - set version to 3.28.2.1
+  *  25a6413c55 - Merge branch 'master' of github.com:qcad/qcad
+  *  800810b83e - update for cmake
+  *  5c8953f4c4 - update
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 13 Jan 2024 21:26:01 +0000
+
 qcad (3.28.1.3+git9876-a61ca7dc7-1) unstable; urgency=medium
 
   * Compile
