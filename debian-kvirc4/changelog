@@ -1,3 +1,34 @@
+kvirc (4:5.2.0+git-7571-8c8adf27c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 8c8adf27ca2a8ffb4579aab55868e1b54d457df3
+  * Date: 1711011470
+  * git changelog:
+  *  8c8adf27c - Fix Wayland appId (#2621)
+  *  c0a899866 - NSIS: make the installer wait for the uninstall to
+    finish before proceeding; fix #2546 (#2619)
+  *  edd04706f - Mac CI: ignore brew warnings caused by multiple python
+    installs that makes the run error out early (#2620)
+  *  b675a2eaf - Fix crash on undo; fix #2617 (#2618)
+  *  5ddf504c5 - Fix linux CI badge
+  *  16ced6886 - Version 5.2.2 (#2614)
+  *  27f96bbae - Switching the mac CI to qt6  (#2612)
+  *  dcba7a1e1 - Fix 2609; while we're at it, make the contextual help
+    work again (#2610)
+  *  9e9049626 - Switch windows CI builds to Github Actions and Qt6
+    (#2606)
+  *  6b57a7bef - Use separate caches for CI linux qt5 and qt6 builds
+    (#2608)
+  *  f5b1a71ba - Use target_compile_features to select C++ standard
+    (#2607)
+  *  598751f96 - Add a qt6 linux CI build (#2605)
+  *  6b57f7f31 - Check for QtMultimedia before using QSound; partially
+    fix #2166 (#2604)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 21 Mar 2024 20:05:31 +0000
+
 kvirc (4:5.2.0+git-7558-9b8fa92ef-1) unstable; urgency=medium
 
   * Compile

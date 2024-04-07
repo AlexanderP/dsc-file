@@ -4,6 +4,7 @@
 	dh $@ --parallel 
 
 override_dh_auto_configure:
+	cp README.md README
 	autoreconf -fiv
 	dh_auto_configure -- --enable-geoip=legacy --enable-utf8
 
