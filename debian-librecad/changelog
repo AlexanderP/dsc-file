@@ -1,3 +1,103 @@
+librecad (2.2.0+git5255-29944585-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: master
+  * Commit: 299445856b62e0907bc2c6bca9c600e3e9f8b50a
+  * Date: 1713858014
+  * git changelog:
+  *  29944585 - Print Preview: option ownership to action
+  *  26679744 - printpreview: scale logic cleanup
+  *  3e773f5e - Context menu: show block name in editing menu entry
+  *  29be0f2e - Context menu: add Edit Block for inserts
+  *  625eecdd - Snapcraft: building issues
+  *  585f1749 - snapcraft
+  *  d02a0bc8 - snapcraft.yaml
+  *  554ebe2d - snapcraft.yaml
+  *  f9c941ba - snapcraft.yaml
+  *  1005be79 - snapcraft.yaml
+  *  9637c9aa - Initial snapcraft support
+  *  9ccea6fb - Issue #1755: fix a preview crash
+  *  a705789b - Add languages: ar/he/sr/th
+  *  08997b18 - Update translations
+  *  270f0162 - Show 'Draft' at corners for DraftMode
+  *  e24e6927 - Parabola: debugging message cleanup
+  *  1603a1ac - Header cleanup
+  *  bd2e4304 - Update README.md
+  *  31f7a7b1 - Hatch: warnings on pattern failure
+  *  537b6249 - RS_Math:: add ULP support for floating points
+  *  bf2bbf25 - Hatch: fixed area calculation
+  *  ee56d230 - Hatch: fix area calculation
+  *  79085d81 - Hatch: code review
+  *  d2942446 - Issue #1757: pen Pallet only enabled by settings
+  *  2d40e66c - IntToWidth: fixed building
+  *  e5850c55 - IntToWidth: fixed building
+  *  e6d809db - IntToWidth: default to Width00
+  *  66b7058e - IntToLineWidth: fixed Linux building
+  *  9b2d4e10 - header cleanup
+  *  a2842d21 - muParser building issue: win32
+  *  a48e032f - Command Widget: fixed size policies
+  *  277216f7 - muParser DLL building issue
+  *  77809f6a - Add missing muParser files
+  *  927dc3f5 - Updated muParser to 20240316
+  *  91b83aa2 - File cleanup
+  *  d4ec36e3 - more header cleanup
+  *  cd2e14a9 - PenPallet/layer tree: docking as tabs
+  *  1619a16a - header cleanup
+  *  264d265d - PenPallet troubleshooting
+  *  d9624670 - PenPallet: enable by settings
+  *  e8f93e49 - RS_Settings: Avoid using Colors as namespace
+  *  6f1716c8 - LayerTree widget: maximum size policy
+  *  3294ef0e - Pen/Layer tree: maximum size policy
+  *  72626b5d - CI: reverted download-artifact to v3
+  *  408a6e8b - CI: reverted upload-artifact to v3
+  *  2a55f776 - CI: updated versions
+  *  213df194 - Help message: add dxf2svg
+  *  63f46e1a - SVG: makercam: make exporting points optional
+  *  65cd4dc3 - Issue: #1753: command line messages
+  *  1160d67b - Issue #1753: spacebar toggles snapping free
+  *  56b3cfb5 - SVG blocks: fix insertion point offset
+  *  3335aa6b - SVG blocks: fix insertion point offset
+  *  f277540d - Issue #1753: toggle free snapping by spacebar
+  *  b91bc4ba - Pen widget: compiler warning
+  *  1d3b0f18 - Issue #1753: code cleanup
+  *  01fe52e8 - Issue #1754: Add Alt-X shortcut for Exclusive Snapping
+  *  57c483cf - Issue #1753 : toggle snapping by spacebar
+  *  ed72b8b7 - Action Option: savingSettings() crash fixes
+  *  77b71411 - Fixed building issues
+  *  e3dd5d97 - QMenu: qt6 fix
+  *  1716254e - rs_system: Qt6 fix
+  *  398b7e93 - RS_Point::shear(): fixed return
+  *  7198287b - Add Drawing Options to default context menu
+  *  e0f8a4e0 - Fillet: preparation to support ellipses
+  *  448820bd - Fillet: a quick fix for circle trimming
+  *  ed79434d - Print: open printpreview, if not open yet
+  *  7476a9f1 - Default line width for layer 0 to 0.25mm
+  *  4dc3d5fa - Fixed two compiler warnings
+  *  d3dc0074 - Widget size policies
+  *  c434078d - LayerTree: fixed some compiler warning
+  *  b82ce3c3 - pen/layer tree widget: not shown by default
+  *  5477494d - shear: fixed constructionline
+  *  82ab47a9 - Issue#1751: drawline Angle: save settings using GUI info
+  *  311a96ba - Shear: initial support (#1749)
+  *  e20162ab - Pen Toolbar Actions - small improvement for pen
+    operations (#1750)
+  *  f0244b86 - Layer tree view (#1748)
+  *  6866f2db - PenPalletModel: porting QRegExp to QRegularExpression
+  *  60077d6b - Pens palette widget (#1745)
+  *  10e64902 - Update qg_arctangentialoptions.cpp
+  *  754b8385 - Issue #1718: draw arc-tangent
+  *  8315b1d6 - Snap Middle by Melwyn PR #1424 (#1744)
+  *  ea101cad - Update README.md: libdxfrw description
+  *  4f6055d8 - Tangent2: header cleanup
+  *  77c74942 - Parabola: update trimming
+  *  0b2d4537 - Tangent2: fixed MB3
+  *  99ca805d - Tangent2: fixed highlighting
+  *  1b61f12d - Tangent2: file cleanup
+  *  c8a85f42 - Parabola support common tangent (#1742)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 24 Apr 2024 17:33:55 +0000
+
 librecad (2.2.0+git5167-03d507f8-1) unstable; urgency=medium
 
   * Compile

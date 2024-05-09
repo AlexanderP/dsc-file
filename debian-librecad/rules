@@ -6,7 +6,7 @@
 export QT_SELECT = 5
 
 %:
-	dh $@ --parallel
+	dh $@ --parallel --buildsystem=qmake
 
 override_dh_clean:
 	dh_clean

@@ -1,3 +1,44 @@
+goaccess (1:1.9.1+git4203-756d6c2a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 756d6c2ad9f483175338c4e28385e48e37459f38
+  * Date: 1713578720
+  * git changelog:
+  *  756d6c2a - Update README.md
+  *  c80ae92e - Update and rename Dockerfile.debian-10 to
+    Dockerfile.debian-12
+  *  5c4ce9b2 - Ensure proper JS comments so they can be minified +
+    formatting.
+  *  964776c9 - Update deb-packaging.yml
+  *  e77578f6 - Updated lang po files with latest changes.
+  *  a933a871 - Updated man page with latest changes.
+  *  47f413fa - Updated Changelog with latest changes.
+  *  2a90d545 - Version bumped to 1.9.2.
+  *  2a9af86b - Updated AUTHORS to reflect latest contributions.
+  *  b4588ff4 - Updated NEWS with latest changes.
+  *  922eab8c - Version bumped to 1.9.2.
+  *  01a6fcf6 - Version bumped to 1.9.2.
+  *  5ee83fd6 - Added World Map to the Geo Location panel on the HTML
+    report.
+  *  d7c7daca - Added additional non-official/standard HTTP status
+    codes.
+  *  b751f292 - Resolved regression in 0dab9fb for format modification
+    in TUI dialog.
+  *  5cb1ff72 - Revised the hide/ignore-referrer option to filter by
+    hostname directly.
+  *  dc0f9d11 - typo: Update goaccess.conf
+  *  fcc65846 - Use an escape seq. to clear the line from the cursor to
+    the end.
+  *  b3b71ec9 - Fixed timezone offset parsing to ensure proper
+    extraction of hours/mins.
+  *  61637c8a - An attempt to fix the lack of support for %z on strptime
+    [non-glibc].
+  *  e52b85a3 - Ensure automake doesn't complain about missing README.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 24 Apr 2024 17:29:53 +0000
+
 goaccess (1:1.9.1+git4182-80e6a2c6-1) unstable; urgency=medium
 
   * Compile

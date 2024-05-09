@@ -1,3 +1,51 @@
+smplayer (1:23.12.0+git10276-29838afa5-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/smplayer-dev/smplayer.git
+  * Branch: master
+  * Commit: 29838afa5cedea007693814337b7ebe5d166bddc
+  * Date: 1713618461
+  * git changelog:
+  *  29838afa5 - Update build-windows-64.yml
+  *  17e570472 - Update build-windows-32.yml
+  *  acb48e3ed - Update build-windows-64.yml
+  *  78b1f4498 - Don't enable the audio equalizer by default on Windows.
+    It should fix #954
+  *  1da33d24a - Update compile_mac.sh
+  *  427c5666d - Update compile_mac.sh
+  *  4199501e3 - Remove Key_VolumeUp, Key_VolumeDown and Key_VolumeMute
+    as shortcuts. It should fix bug #844
+  *  e673aa62d - Update the copyright year
+  *  8dff8aa1a - Update Release_notes.md
+  *  8de04cdcd - Update translations
+  *  c919b464b - Update build-appimage-20.yml
+  *  16a3a6c4a - Add files via upload
+  *  27d2bfd7a - Update build-windows-smtubelib.yml
+  *  6fc3b1d62 - Update build-snap.yml
+  *  f51d6ce4b - Update build-ubuntu-packages.yml
+  *  8149160eb - Update build-source-package.yml
+  *  043b35c0a - Update build-rpm.yml
+  *  25a33fabf - Update build-macos.yml
+  *  96c7157ab - Update build-flatpak.yml
+  *  f4b70afd6 - Update build-flatpak.yml
+  *  cf5fdcd03 - Update build-appimage.yml
+  *  4e6fce96e - Update build-appimage.yml
+  *  d33647bcf - Update build-appimage.yml
+  *  1b36e0452 - Update build-windows-packages-qt5.6.yml
+  *  0c80490f6 - Update build-windows-packages.yml
+  *  f8b29de90 - Update build-windows-packages.yml
+  *  1d6642773 - Update build-windows-packages.yml
+  *  e63831c64 - Disable smtube on macos
+  *  56ff1906d - Disable smtube in the appimage
+  *  7190e4e9b - Fix compile without YOUTUBE_SUPPORT
+  *  e2a76b3f3 - Add SMTUBE_ACTION
+  *  cb08e9048 - Use a config folder for the portable version
+  *  0636fd353 - Merge pull request #937 from tbertels/patch-1
+  *  6ceaff8f6 - Let the workaround for mpv 0.37 work when resuming
+    video
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 24 Apr 2024 17:52:11 +0000
+
 smplayer (1:23.12.0+git10242-91c1ffc3a-1) unstable; urgency=medium
 
   * Compile
