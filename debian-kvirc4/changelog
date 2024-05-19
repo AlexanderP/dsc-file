@@ -1,3 +1,33 @@
+kvirc (4:5.2.0+git-7584-200e7bcec-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 200e7bcec7c8fa9ebd96d59bb526c4617f527f45
+  * Date: 1715243176
+  * git changelog:
+  *  200e7bcec - Include debian patches (#2639)
+  *  f9266bcb5 - Spellchecker: migrate to enchant++ to avoid use of
+    private API in enchant-provider.h (#2636)
+  *  5d7d5ffa6 - Set portable when it is needed (#2638)
+  *  2dc7dfe1e - Add cmake option WANT_PERL_DOCS to disable doc
+    generation.  (#2635)
+  *  6b25eda9c - Add an option to disable vertical margin between lines;
+    fix #2464 (#2633)
+  *  c2ae7a4d2 - Make D-Bus adaptor actually useful and use it as an IPC
+    backend (#2630)
+  *  4f0e6a55a - port dcc video to qt6 (#2628)
+  *  993d8de54 - Strip leading spaces on command; Fix #2626 (#2627)
+  *  3ae641ae2 - Numerical 301: respect the value of
+    KviOption_boolWhoisRepliesToActiveWindow even if a query exists
+    (same behavior of all the other whois reply handlers) (#2613)
+  *  d508022bd - Update README.md
+  *  81489fe09 - Added french network zeolia (#2625)
+  *  cf5cdd603 - Avoid possible infinite recursion; fix #2505 (#2624)
+  *  e68e34095 - More qt6 porting (#2622)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 09 May 2024 17:24:20 +0000
+
 kvirc (4:5.2.0+git-7571-8c8adf27c-1) unstable; urgency=medium
 
   * Compile

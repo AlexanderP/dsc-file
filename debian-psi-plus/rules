@@ -47,6 +47,7 @@ override_dh_dwz:
 	dh_dwz || true
 
 override_dh_auto_configure:
+	#sed '22d' -i plugins/generic/CMakeLists.txt
 	dh_auto_configure -B$(BUILDDIR1) -- $(CMAKEOPTS) $(OPTSSTEP1)
 	dh_auto_configure -B$(BUILDDIR2) -- $(CMAKEOPTS) $(OPTSSTEP2)
         ifeq ($(DEB_HOST_MULTIARCH), x86_64-linux-gnu)
@@ -71,10 +72,10 @@ override_dh_auto_install:
 	dh_auto_install -B$(BUILDDIR1) --destdir=$(DESTDIR)
 	ln -s psi-plus.png $(DESTDIR)/usr/share/pixmaps/psi-plus-webkit.png
 	cp -a $(BUILDDIR2)/psi/psi-plus-webkit $(DESTDIR)/usr/bin/
-	cp -a $(BUILDDIR2)/psi-plus-webkit.desktop $(DESTDIR)/usr/share/applications/
+	cp -a $(BUILDDIR2)/src/psi-plus-webkit.desktop $(DESTDIR)/usr/share/applications/
         ifeq ($(DEB_HOST_MULTIARCH), x86_64-linux-gnu)
 	    cp -a $(BUILDDIR3)/psi/psi-plus-webengine $(DESTDIR)/usr/bin/
-	    cp -a $(BUILDDIR3)/psi-plus-webengine.desktop $(DESTDIR)/usr/share/applications/
+	    cp -a $(BUILDDIR3)/src/psi-plus-webengine.desktop $(DESTDIR)/usr/share/applications/
         endif
 	# Move psimedia plugin to separate package:
 	mkdir -p $(CURDIR)/debian/psi-plus-plugin-psimedia/usr/lib/psi-plus/plugins/
