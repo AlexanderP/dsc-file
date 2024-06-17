@@ -1,3 +1,72 @@
+librecad (2.2.0+git5310-0790f21b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: 2.2.1
+  * Commit: 0790f21b6c3750cfc13b83d913dcbb24f37fc32f
+  * Date: 1716852369
+  * git changelog:
+  *  0790f21b - CI: fix windows 32bit building
+  *  7f32e56e - Update build-all.yml
+  *  60829cd0 - Update build-all.yml
+  *  b7dcf920 - LC_VERSION: 2.2.1_rc2
+  *  68f3535f - Print preview: fix scale selection
+  *  4cd3b138 - Issue #1769: installer naming fixes
+  *  3c407e5c - Issue #1781: fixed a number formatting crash
+  *  cf1f2be7 - Update build-all.yml
+  *  f00b3545 - Update build-all.yml
+  *  1e6b7cbd - Issue #1780 : shift key event avoid double freeing
+  *  8a12ffd5 - Update build-all.yml
+  *  d596ab27 - Update build-all.yml
+  *  02ac5088 - Update build-all.yml
+  *  1ad1c127 - Update build-all.yml
+  *  4a019fcc - Update build-all.yml
+  *  883ed8a6 - Update build-all.yml
+  *  408cce21 - Update build-all.yml
+  *  264aebcb - Update build-all.yml
+  *  2e2bc9bf - CI: win64 version: 2.2.1
+  *  2a616512 - Update build-all.yml
+  *  bb983d28 - Update build-all.yml
+  *  33568c13 - Update build-all.yml
+  *  e4ccbe31 - Update build-all.yml
+  *  5dea18be - CI: fixed Linux AppImage
+  *  65dd913f - Update build-all.yml
+  *  6397d808 - CI: installer renaming 2.2.1_rc1
+  *  d51e067f - CI: mark as draft
+  *  ecf4d7cb - Hatch preview: disable input events
+  *  bbb42b87 - Removed codeQL.yml for 2.2.1
+  *  9501b1a5 - update 2.2.1 assets
+  *  5397d52d - Fixed a duplicated entry in src.pro
+  *  6db90d7e - Update build-all.yml
+  *  e2630bc5 - CI: fixes for 2.2.1
+  *  49e0405b - line: reAngle: fixed compiler warning
+  *  823a4c6c - main: qt6 fix
+  *  b24b2099 - actionDrawStart: compiler warning
+  *  e483962e - polylineequidistant: macos building issue
+  *  46d057c9 - RS_Ellipse: fixed a compiler warning
+  *  231995fd - Fixed a MacOS building issue
+  *  4c67f2c6 - Fixed compiler warnings
+  *  9ec6d810 - Issue #1768: print preview options
+  *  cbf99b23 - Line: reAngle: option values
+  *  3f518b6d - Radial/Diameteric label: restore saved state
+  *  d777e639 - draw line-angle: format option angle/line values
+  *  16afc25f - RS_Radial dimension editing properties
+  *  a6c23812 - Radial dimension: initial Radial dimension prefix
+    support
+  *  221cc70c - more reliable selection of segments for break/divide
+    action - now it does not affected by current snap mode (#1766)
+  *  f1487fad - CI: MacOS build on qt6
+  *  e1437dbd - Pen toolbar - sync pen by layer action now works if
+    PenPalette widget is disabled (#1763)
+  *  21b29536 - Additional actions (#1761)
+  *  10dd2dae - Update build-all.yml
+  *  16a231d0 - Update build-all.yml
+  *  1dda20b8 - QPainter: Round Cap and Join Style
+  *  f974ebe3 - Context menu: fixed Text editing
+  *  806e61d0 - Pen Cap style: default to Qt::RoundCap
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 29 May 2024 20:34:03 +0000
+
 librecad (2.2.0+git5255-29944585-1) unstable; urgency=medium
 
   * Compile

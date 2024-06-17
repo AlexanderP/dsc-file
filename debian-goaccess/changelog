@@ -1,3 +1,35 @@
+goaccess (1:1.9.2+git4223-77bb087a-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 77bb087a3c6b02bd278f4ce8370dfea38e472982
+  * Date: 1716761559
+  * git changelog:
+  *  77bb087a - Updated code indentation/spacing.
+  *  aede5d18 - Fixed comment typo on gkhash.c
+  *  f81bf901 - Update hash table increment functions
+  *  761b4297 - Ensure ASan --enable-asan is available in macOS too.
+  *  891d965e - Ensure ASan --enable-asan is available in macOS too.
+  *  2be4669f - Added ASan to the build configure options.
+  *  8723d5bf - Added --enable-asan to the configure options for
+    debugging purposes.
+  *  c6199f66 - Fixed regression introduced in 8f570c, which caused
+    duplicate counts upon restoring from disk.
+  *  b45ab0d7 - Fix two missing instances of string copy refactoring
+  *  e49a3e45 - Avoid unnecessary string copies
+  *  2e6c0a7c - Avoid out-of-bounds access for invalid HTTP status codes
+  *  412e803d - Insert the status code in the correct position
+  *  b6351506 - Avoid out-of-bounds access in serial processing mode
+  *  dd296ec4 - Avoid UB in character checking functions
+  *  023b2d48 - Deduplicate strtoupper()
+  *  a375bc49 - Constify read-only data
+  *  c7ff4b4d - Updated C built test workflow and added config params.
+  *  70fbb722 - Fixed inability to parse JSON keys containing dots.
+  *  f75925c2 - Added additional common bots to the list.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 27 May 2024 18:08:07 +0000
+
 goaccess (1:1.9.1+git4204-2eb7e633-1) unstable; urgency=medium
 
   * Compile

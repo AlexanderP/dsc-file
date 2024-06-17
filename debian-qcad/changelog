@@ -1,3 +1,203 @@
+qcad (3.29.6.5+git10429-e075302d3f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: e075302d3f9e2f9039224d40bf92ca9ed41deff5
+  * Date: 1716994631
+  * git changelog:
+  *  e075302d3f - add shortcuts for tool options
+  *  6b32cf1a3e - add shortcuts for tool options
+  *  f00b253d12 - add shortcuts for tool options
+  *  7fa968a4c8 - add shortcuts for tool options
+  *  ef2e2b38db - add shortcuts for tool options
+  *  21c93bc8a8 - cache device pixel ratio
+  *  b113b249b6 - add shortcuts for tool options
+  *  0a24783481 - fix initialization of print preview options toolbar
+  *  b62dc5d0d5 - add workaround for qt keyboard focus bug after
+    QMessageBox
+  *  573bf3f3a9 - add workaround for qt keyboard focus bug after
+    QMessageBox
+  *  edcef1ab47 - add shortcuts for tool options
+  *  f6538a1f66 - add shortcuts for tool options
+  *  ec5bab38e0 - add shortcuts for tool options
+  *  35c980f923 - add shortcuts for tool options
+  *  51342b8898 - add shortcuts for tool options
+  *  2e181ed20d - add shortcuts for tool options
+  *  2ef5a07c4b - add shortcuts for tool options
+  *  9e5409107e - add shortcuts for tool options
+  *  7571dab515 - add shortcuts for tool options
+  *  d4a8e8ceaf - add shortcuts for tool options
+  *  ed8e41b44e - add shortcuts for tool options
+  *  d0e3e21314 - regen view on screen change
+  *  526f1cf7e9 - add shortcuts for tool options
+  *  5b2b67ed42 - add shortcuts for tool options
+  *  495bf93adf - fix multi screen setup handling
+  *  c624d1c950 - only remove shortcut if available
+  *  bd33c52b25 - add shortcuts for tool options
+  *  6fa7d56843 - add shortcuts for tool options
+  *  14a0d3f728 - add shortcuts for tool options
+  *  b162e07cd3 - add shortcuts for tool options
+  *  fa6252532c - add shortcuts for tool options
+  *  7a1f923186 - add shortcuts for tool options
+  *  2d0ee4fc5a - add shortcuts for tool options
+  *  748e35ed21 - add shortcuts for secondary tool options
+  *  49aa1ef025 - clean up
+  *  4ce5922d69 - clean up
+  *  3a28ff91a5 - implement all tool options shortcuts as custom
+    properties
+  *  d18485150f - implement all tool options shortcuts as custom
+    properties
+  *  9d171954fb - refactor shortcut / key stroke handling
+  *  f737bbd3a5 - move all shortcuts to dynamic properties
+  *  92f888bcd4 - refactor shortcut handling, add RMainWindowProxy
+  *  8a55b8bdd5 - clean up
+  *  032d06d312 - implement options tool shortcut handling
+  *  36cce368eb - add tool options shortcuts
+  *  213cb9989e - clean up
+  *  921bca4c55 - clean up
+  *  61f078e083 - clean up
+  *  4c876c0b1f - handle tab in block list
+  *  78d9c0499d - Merge branch 'master' of github.com:qcad/qcad
+  *  a5f2711869 - update tab key handling
+  *  684fa594e8 - add tool options shortcuts
+  *  47379b0d5d - update handling of enter key
+  *  fac3c4cf86 - clean up
+  *  565d0b0e93 - clean up
+  *  3f3bb45426 - clean up
+  *  f4426e910f - never tab to invisible widgets
+  *  4924a13a17 - forward enter key press event
+  *  ebf142c5da - add tool options shortcuts
+  *  b1d6fc759d - update preview when tool options change
+  *  21a4d670b7 - update qrc
+  *  fa97b153c2 - update icons in block list when dark mode changes
+  *  88d22ac816 - add tool option shortcuts
+  *  61e7f63c6b - add tool option shortcuts
+  *  6647880260 - remove obsolete tool
+  *  a98a03947b - update preview when options change
+  *  7676e6dbb6 - add tool option shortcuts
+  *  1865d78dd3 - update preview when options change
+  *  b557eb1149 - update preview when options change
+  *  a2ed422cf7 - add tool option shortcuts
+  *  8528946ce6 - no auto focus while restoring widget state
+  *  58dd8beb04 - add tool option shortcuts
+  *  8f07d86759 - add tool option shortcuts
+  *  7b5a38e3ec - add tool option shortcuts
+  *  0afbc6eca5 - add tool option shortcuts
+  *  05a66caf80 - update
+  *  1f1d2105c8 - add shortcuts for tool options
+  *  e67766265d - live preview of tool options
+  *  e958780ac4 - add shortcuts for tool options
+  *  3a704ac7ff - add live update of preview on tool option change
+  *  1e02d7e342 - add shortcuts for tool options
+  *  e0a5005b37 - clean up
+  *  6c30abf6d3 - update icon
+  *  a9b254df01 - fix auto focus on start of tool
+  *  205315b13b - add shortcuts for tool options
+  *  6b055d7838 - clean up
+  *  20a6e2a49f - update tool options
+  *  05053a1ff5 - update
+  *  8e4963de3a - move options toolbar init to OptionsToolBar class
+  *  9a40044799 - add shortcuts to tool options
+  *  78c1503493 - update tool options
+  *  2dc9d5fc0e - add support for RComboBox
+  *  519d996dd5 - fix potential exception
+  *  c4c2e22922 - update preview on parameter change
+  *  0af62a5c02 - port to Qt 6
+  *  0310ee4508 - add tool options shortcuts
+  *  ab80a8faa5 - add tool options shortcuts
+  *  cecca76afb - add tool options shortcuts
+  *  a33824bf11 - fix potential exception
+  *  9703505af2 - add tool options shortcuts
+  *  54c7c19763 - update icons (stronger lines)
+  *  35c4cd5c57 - add tool options shortcuts
+  *  628afae4e1 - update icons
+  *  afef242525 - avoid invalid aux preview with radius 0
+  *  39f8ffcf41 - fix potential exception
+  *  9ae1057979 - port to Qt 6
+  *  202d0480d0 - add ,1 ,2 ... shortcuts for tools with nine reference
+    points
+  *  2ebbbc509e - add tool options shortcuts
+  *  fe3fcc6c81 - add tool options shortcuts
+  *  0e30197f6b - update qrc
+  *  8489555f4f - clean up
+  *  e8fa3f5f0a - add tool options shortcuts
+  *  45429d638c - add aux preview of arc height
+  *  784c4718bc - add LeftClick tool to trigger left click by shortcut
+  *  e0641bc720 - use ,1 ,2 ... for options toolbar combobox shortcuts
+  *  0e0d41bf00 - add isQAction, clean up QButtonGroup on tool exit
+  *  bc7696bf07 - port to Qt 6
+  *  e038d1d65a - Merge branch 'master' of github.com:qcad/qcad
+  *  5503ef8384 - add tool options shortcuts
+  *  da4fae410e - add tool options shortcuts
+  *  076bfe0856 - Merge branch 'master' of github.com:qcad/qcad
+  *  6f7f8249e6 - fix signal calling when QButtonGroup shortcut is
+    triggered
+  *  6a009a9999 - add tool options shortcuts
+  *  abb57b3cee - add support for shortcuts that toggle buttons in tool
+    options button box
+  *  0ed6151d23 - add tool options shortcuts
+  *  5f41579777 - update preview when tool option changes
+  *  7752c847d7 - update tool options shortcuts
+  *  c992eed08f - support spin box for direct text entry
+  *  8c6cdd376d - add tool option shortcuts
+  *  bf30b10245 - Merge branch 'master' of github.com:qcad/qcad
+  *  c4aa97769a - handle keyboard navigation for options toolbar (tab,
+    enter)
+  *  85c2f6a29c - avoid tab focus in tool matrix widget search field
+  *  930b183827 - fix handing back of keyboard focus from options
+    toolbar widget
+  *  5ae6a10c75 - update string
+  *  042c6db1cf - install specialized event filter for tool options
+    widgets
+  *  7e74748ffe - add tool option event filter
+  *  75328929d9 - Merge branch 'master' of github.com:qcad/qcad
+  *  87d488eef9 - update
+  *  09d3df2c0b - update script bindings
+  *  267cfd3d9a - rename tab event filter to tool options event filter
+  *  0f1afca102 - add tool options shortcuts
+  *  71e49bbabf - update script bindings
+  *  8146cafce8 - add tab event filter to fix broken Qt tab navigation
+  *  c6bb2930b9 - clean up
+  *  c7df38ac41 - ignore tab key (allow tab to access tool options)
+  *  48411e4686 - add custom widget RComboBox
+  *  3dd2d4c5d0 - use tab to access tool options, return to clear focus
+  *  5479c69cfb - add shortcuts
+  *  534fd6d57f - add shortcuts for options
+  *  35ca051256 - add shortcuts for reference point
+  *  94f4c0368d - fix options toolbar input
+  *  b73993e782 - update script bindings
+  *  677a29221a - add RComboBox with returnPressed signal
+  *  40d22b0ea9 - update tool options shortcuts
+  *  76d0c8f264 - tool options shortcuts: enter releases focus
+  *  e5d8bb61db - add missing base class calls
+  *  5cb1cf22da - update tool tips, shortcuts
+  *  19d0f5e799 - improved support for shortcuts for options toolbar
+    widgets
+  *  6ba9029740 - update qrc
+  *  cd377b35e7 - fix FS#2571 - Draw > Line > Line from 2 Points: Close
+    sequence draws line to cursor
+  *  0f0d24f8a9 - update icons
+  *  78f837fa0f - Merge branch 'master' of github.com:qcad/qcad
+  *  5c5a7b102e - update icon
+  *  94f57367af - fix validators for Qt 6
+  *  8c4f91a3d4 - update qrc
+  *  25f6a5082c - set version to 3.29.6.4
+  *  78d38da22c - clean up
+  *  d608973897 - update script bindings
+  *  ff2e74359c - Merge branch 'master' of github.com:qcad/qcad
+  *  0ca6e86ede - allow override for disabling snap interruptions by
+    mouse moves
+  *  38a3944de9 - Merge branch 'master' of github.com:qcad/qcad
+  *  e9be6011e2 - fix FS#2570 - Tool Matrix: Wrong order of tool buttons
+    (M1/M2/M3)
+  *  99ab2f256f - fix typos
+  *  7e8205b4f0 - Merge branch 'master' of github.com:qcad/qcad
+  *  cd1500f05e - update icons
+  *  623a2826ed - merge changes from CVH
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 29 May 2024 20:33:33 +0000
+
 qcad (3.29.6.4+git10254-4585899fc8-1) unstable; urgency=medium
 
   * Compile
