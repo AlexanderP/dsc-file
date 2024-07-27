@@ -1,3 +1,100 @@
+qcad (3.30.1.1+git10509-2d5430a6e5-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 2d5430a6e5049aad7e472f6d8283c9edfd784c1b
+  * Date: 1719516325
+  * git changelog:
+  *  2d5430a6e5 - support arcs in exportPolylineFill
+  *  5dc01ae41d - update wipeout implementation
+  *  9edc6697fb - add setVertexAt
+  *  70d27d8643 - fix initState
+  *  577bf44661 - add wipeout entity support
+  *  b52a655277 - fix slot name collision with Qt 6 QQmlEngine
+  *  9adead23cc - rename WidgetFactory.connect to
+    WidgetFactory.connectSignal
+  *  bbd858b0b1 - update test data
+  *  aa1818f318 - add CSV exporter example script
+  *  f852788ba4 - set version to 3.30.1.1
+  *  5067327cff - set version to 3.30.1
+  *  e9f0953a85 - fi typo
+  *  d25565ceb7 - update user manual
+  *  f01f18037e - remove _debug postfix (Qt 6)
+  *  db9ef18f06 - tool preferences category based on path, not file
+    system
+  *  724dda32e5 - fix exception in tool bar preferences
+  *  fbbaa78d6a - clean up
+  *  b52606dea6 - fix FS#2575 - Shortcuts stop working after click into
+    layer / block list
+  *  0ccdabbcb7 - add comments
+  *  3bc90c9e68 - update translations
+  *  1158028d86 - update translations
+  *  6284a786ee - update user reference manual
+  *  7a14cc58be - clean up
+  *  3f71ea5cae - update
+  *  87d9731394 - clean up
+  *  81e855cb26 - clean up
+  *  2a7394d884 - change shortcuts with . to avoid conflict with line
+    edits
+  *  fa17d243e6 - tag extended shortcuts of snap tools
+  *  9aa4bbe19b - update
+  *  14f8bc4330 - add shortcut hint
+  *  21aa75c8eb - remove broken windows shortcuts
+  *  89e447dd0c - port to older gcc
+  *  aadc0a94c6 - fix border cases
+  *  1a1a771e33 - clean up
+  *  5304287065 - update user manual
+  *  7529144b27 - update user reference manual
+  *  d4228983a6 - fix idling and waiting for event with -no-show
+    argument
+  *  30c0668126 - update user manual
+  *  d012ff5d48 - update icons
+  *  b499890547 - update version number to 3.30
+  *  6d9547450f - update splash screens
+  *  5a256cdc08 - update translations
+  *  bc1327ef47 - update translations
+  *  cac8e8cb85 - update translations
+  *  c7c08acf52 - update translations
+  *  79107f08f1 - update translations
+  *  1727ef6b53 - remove manual shortcuts (genereate auto shortcuts)
+  *  8cfb04e581 - remove manual shortcuts (genereate auto shortcuts)
+  *  01f659c089 - remove manual shortcuts (genereate auto shortcuts)
+  *  44ceb728e0 - remove manual shortcuts (genereate auto shortcuts)
+  *  b2f7688a2c - update translations
+  *  ace6006c87 - clean up
+  *  f7bab87c5d - update
+  *  29d671f65f - remove manual shortcuts
+  *  7e4ad45760 - update translations
+  *  5754252d08 - update test data
+  *  4653e22f77 - fix default paramters
+  *  948a5380c1 - fix exception
+  *  395428831c - fix exception
+  *  beb927435d - add missing test data
+  *  ef7ad43f95 - clean up
+  *  b07c941d49 - update translations
+  *  62160e00cf - fix unit tests, clean up
+  *  0c1836e423 - update translations
+  *  e4ab125804 - don't handle release
+  *  941f6a3af2 - update options toolbar preferences
+  *  399b5951e1 - update tool options shortcuts
+  *  f34e2828f1 - fix input
+  *  734ae26932 - add translator comments
+  *  a37994485e - add translator comments
+  *  4c40d5b6a0 - allow entering comma in math line edit, e.g. pow(2,3)
+  *  a4dc41b714 - update shortcuts
+  *  615b4af032 - ignore shortcut input in RMathLineEdit
+  *  3b46e3fb20 - add tool options shortcuts
+  *  c998b927de - add tool options shortcuts
+  *  eae17732d6 - esc returns focus from options toolbar input field to
+    graphics view
+  *  29cf6b4f55 - Merge branch 'master' of github.com:qcad/qcad
+  *  4118c2d145 - set version to 3.30.0
+  *  f9a29d95f6 - Merge branch 'master' of github.com:qcad/qcad
+  *  b80231f9d7 - update
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 29 Jun 2024 18:42:40 +0000
+
 qcad (3.29.6.5+git10429-e075302d3f-1) unstable; urgency=medium
 
   * Compile
