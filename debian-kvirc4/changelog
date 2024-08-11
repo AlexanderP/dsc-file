@@ -1,3 +1,29 @@
+kvirc (4:5.2.4+git-7597-13a6fc319-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 13a6fc31983763aad65a3da4247776b046be8b78
+  * Date: 1722001062
+  * git changelog:
+  *  13a6fc319 - Win uninstaller: correctly remove the installed app
+    entry from registry on 64bit installs (#2670)
+  *  aee31bf6a - Work around macOS build failures in CI (#2671)
+  *  d169ba878 - Revert part of #2661 to fix the mainwindow icon (#2665)
+  *  03a8df165 - Add a comment about #2117
+  *  96c3a4b70 - Remove GTK Style flag; fix #2117. Default to Fusion
+    theme on Windows (#2664)
+  *  f20059243 - Add an option to let the user choose the qt style used
+    by the app (#2663)
+  *  e7f1affa1 - Force app_id to be set in more places (#2661)
+  *  3d794fb41 - update azzurra.org -> azzurra.chat (#2651)
+  *  23571493a - Never cleanup (unload) the spellchecker module since
+    reloading it could lead to a crash; fix #2645 (#2649)
+  *  cf26a2065 - Try to get a windows7 compatible build with Qt5 +
+    vs2019 (#2650)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 27 Jul 2024 14:18:21 +0000
+
 kvirc (4:5.2.4+git-7587-04f93acf5-1) unstable; urgency=medium
 
   * Compile
