@@ -1,0 +1,16 @@
+Source: freelib
+Section: x11
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper-compat (= 11), cmake, qtbase5-dev, libqt5sql5-sqlite, libquazip5-dev
+Standards-Version: 4.6.0
+Homepage: https://github.com/petrovvlad/freeLib
+Rules-Requires-Root: no
+
+Package: freelib
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Create your own collection of e-books
+ freelib - open source program which organizes a
+ home library (collection) of  an e-books in .fb2
+ format.

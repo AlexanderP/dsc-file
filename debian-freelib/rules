@@ -1,11 +1,29 @@
 #!/usr/bin/make -f
 
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+ifneq (,$(filter $(DEBIAN_CODENAME),buster bullseye focal jammy))
+	CONTROL = control.qt5
+else
+	CONTROL = control.qt6
+endif
+
 %:
 	dh $@
+
+override_dh_auto_configure:
+	cp debian/$(CONTROL) debian/control
+	dh_auto_configure
 
 override_dh_install:
 	rm -f $(CURDIR)/debian/freelib/usr/bin/kindlegen
 	dh_install
+
+override_dh_auto_clean:
+	cp debian/$(CONTROL) debian/control
+	dh_auto_clean
 
 override_dh_builddeb:
 	dh_builddeb -- -Zxz -z9
