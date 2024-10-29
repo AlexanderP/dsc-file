@@ -1,3 +1,52 @@
+smplayer (1:24.05.0+git10324-a9787218e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/smplayer-dev/smplayer.git
+  * Branch: master
+  * Commit: a9787218ea6f6d48a51c5c227565de589ce250db
+  * Date: 1728391543
+  * git changelog:
+  *  a9787218e - Enable the screensaver when the video is pause
+  *  c2156d3b9 - Change youtube-dl link
+  *  e565606b8 - Get titles from dvd and bluray
+  *  9a886c21f - Don't use '1' as default title for dvd and bluray
+  *  cf7c640d9 - Remove the option to open a dvd or bluray from a folder
+  *  fb83cf3f5 - Improve some texts
+  *  e030acb06 - Send pause if player is idle
+  *  6a0fff2da - Check for the correct device before
+    configureDiscDevices
+  *  01b5171cd - Don't check if the bluray device is a folder
+  *  445b606c2 - The buttons work
+  *  bd4b9b8f2 - Add buttons in prefdrives
+  *  30c8680f8 - Fix regexp
+  *  43cf03a38 - Get the mpv version
+  *  cc4ad3f9a - Don't log lines with bitrate changes
+  *  d35cbb7f6 - Use INFO_VIDEO_DSIZE
+  *  2481f7f17 - Parse chapter's names
+  *  0b42530f6 - Parse track info
+  *  7a540f0bd - Add media-title
+  *  704d7e782 - Get metadata
+  *  9e64e8a44 - Add var idle
+  *  f41da08ee - Get audio codec
+  *  0b5288bb6 - Change the regexp
+  *  e425badf7 - Create the command from a QStringList
+  *  3848ded20 - A few fixes
+  *  c31c1aa4a - Change the order of some functions
+  *  e5f168a80 - Fix video codec
+  *  81f56d170 - Get resolution
+  *  5cc56ec3a - Add fps and video format
+  *  b0315e8ce - Get duration, width and height
+  *  692d58d06 - Remove old code in mpvprocess.cpp and start to write a
+    new one
+  *  4fbeb91f8 - Get video-bitrate and audio-bitrate
+  *  07ea01c73 - Add IPC_STATUS
+  *  9cd75446d - Update build-ubuntu-packages.yml
+  *  1f18143d9 - Remove pause from the status pattern
+  *  3af05b32a - Add socketReadyRead
+  *  c26fc0c87 - Add webvtt to the list of subtitle extensions
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 08 Oct 2024 15:31:43 +0000
+
 smplayer (1:24.05.0+git10288-a39b4225f-1) unstable; urgency=medium
 
   * Compile

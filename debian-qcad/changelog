@@ -1,3 +1,62 @@
+qcad (3.31.1.2+git10631-31db2f18cc-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 31db2f18cc696440937e98650018374afbc98aca
+  * Date: 1728052947
+  * git changelog:
+  *  31db2f18cc - fix crashes in event loop on Qt 6 after dialogs are
+    closed
+  *  929ff918fe - implement getPolylines from ordered shape list
+  *  21e8735c56 - remove obsolete code
+  *  3f273f5538 - add stub for getPolylines
+  *  0dbb0b7d77 - fix typo
+  *  e98d5f6afe - add getCentroid
+  *  6ae14763c5 - fix rendering of %%d, %%p, %%c in subscript /
+    superscript
+  *  6be92a2733 - add getRotatedBoundingBox
+  *  4c032cb275 - add getRotatedBoundingBox
+  *  a56f9d81c4 - fix copyCustomPropertiesFrom
+  *  3876465565 - copy custom properties with attributes
+  *  9e7db74c54 - update user manual
+  *  5ac9fa6ca5 - remove pickEntity (fix selection issue)
+  *  c32306e469 - set version to 3.31.1.2
+  *  b98a163d25 - Merge branch 'master' of github.com:qcad/qcad
+  *  3a990796f2 - add support for circles
+  *  b94d5a8c98 - update text dialog size
+  *  622465f31e - update translations
+  *  8801b667f3 - update translations
+  *  e41713de37 - update translations
+  *  2ecc94c178 - set version to 3.31.1.1
+  *  ef3aa9d29a - clean up
+  *  6689f9b2cd - fix FS#2543 - Polygonal Area Tool (IR) exception when
+    drawing unit is set to Inch
+  *  ec6e34b00c - fix shortcut collision
+  *  f6886d7b52 - implement pickEntity to add entity to selection for
+    overriding actions
+  *  9238929274 - fix restoring transforms if text is skipped (-text-
+    threshold)
+  *  4eab984aa1 - Merge branch 'master' of github.com:qcad/qcad
+  *  c3873e437a - fix nl translation
+  *  94b214a6cf - update german translation
+  *  9dbb5a1cbf - set version to 3.31.1
+  *  e1bc8e230a - backport to older macOS
+  *  2f80bc1c03 - set version to 3.31.0.1
+  *  3d9bdc69db - set version to release version
+  *  17ef63cf9a - port to msvc
+  *  7fa148501d - clean up
+  *  a9e79c4c91 - update
+  *  d9d80fbab4 - import x ordiante dimension with horizontal text
+  *  6ad393d64c - disable properties that are not available in QCAD CE
+  *  a861bfc758 - update
+  *  250330b8b7 - update user manual
+  *  a2ecb7a93f - manual merge of changes from CVH
+  *  07ba1aee37 - update translations
+  *  417bcc5dca - update translations
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 06 Oct 2024 19:47:51 +0000
+
 qcad (3.30.1.3+git10588-cc07b346a3-1) unstable; urgency=medium
 
   * Compile
