@@ -1,3 +1,68 @@
+qcad (3.31.2.0+git10682-8683f16b2e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 8683f16b2e7b5660f9ff4af3be2ccbd5332ac8f9
+  * Date: 1731072516
+  * git changelog:
+  *  8683f16b2e - fix undo/redo for int value lists
+  *  6e2a25fa1a - remove reference to frozen layer if layer is remmoved
+  *  8c3fd07dbe - fix viewport content position
+  *  c8b6c1bb94 - update test data
+  *  faf84ebf23 - update viewport entity
+  *  8df22bf8f6 - update viewport data
+  *  2716bf5976 - add selection of viewport slightly outside viewport
+    boundary
+  *  9c5d13a754 - set version to 3.31.2.2
+  *  3048d28e72 - add setMember for int list
+  *  957daa9c05 - add ellipsis to menu text
+  *  68503a8ed2 - add ellipsis to menu text
+  *  34f89f264f - add ellipsis to menu text
+  *  86108fcc93 - add ellipsis to menu text
+  *  f781ded966 - add ellipsis to menu text
+  *  95a2bcd71c - various improvements to tangent circle algorithms
+    (CVH)
+  *  c628594c1e - fix encoding of result
+  *  281b853b61 - fix typo
+  *  d986146589 - Merge branch 'master' of github.com:qcad/qcad
+  *  62407dbecb - select tolerance field by clicking anywhere inside
+    field
+  *  ac931ca278 - fix potential exception on exit
+  *  669e66aed7 - set version to 3.31.2.1
+  *  bae1b88641 - Merge branch 'master' of github.com:qcad/qcad
+  *  380dd59980 - clean up
+  *  a07309f4e0 - back port to MSVC 2010
+  *  eb91530fef - port to Qt 6
+  *  8bb3e85606 - add failsafe for *Init.js files with init function
+  *  ff0c3f5ec7 - reduce arc quality of solid fills when zooming in
+  *  3a35761c66 - update resetting of settings
+  *  65837e6948 - update user manual
+  *  215f2c54bd - update translations
+  *  d6c5b163db - update strings
+  *  2d9b0faa53 - update translations
+  *  d2ee54ee86 - update translations
+  *  28192b1f5d - fix default value
+  *  36536f2621 - clean up
+  *  bd5ff65d4a - avoid shared pointers in result set
+  *  2a900e74af - add preference for maximum solid fill complexity
+  *  86b16c851e - port to MSVC
+  *  50fa4c7996 - force segment mode for parallel trhough tools
+  *  6f249c7a85 - port to Qt 5
+  *  744bf37f84 - add platform name to initial output
+  *  59c6ea8708 - update test data
+  *  e7e7a4d705 - fix inheritance for offset through point
+  *  a24b904878 - Merge branch 'master' of github.com:qcad/qcad
+  *  5350c9ebf0 - set version 3.31.2
+  *  5972d0dda9 - update script bindings
+  *  bf36bb0bd1 - add isCollinear
+  *  be2d954490 - change sprintf to snprintf
+  *  5b32c12af6 - update
+  *  0d59c82409 - add support for window printing
+  *  6fce8e7e59 - update
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Mon, 11 Nov 2024 10:05:38 +0000
+
 qcad (3.31.1.2+git10631-31db2f18cc-1) unstable; urgency=medium
 
   * Compile
