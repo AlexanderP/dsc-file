@@ -1,3 +1,49 @@
+freelib (6.1.0+git779-a5363fd-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/petrovvlad/freeLib.git
+  * Branch: master
+  * Commit: a5363fdfa4fb01e48da59a3795ae16554fed772c
+  * Date: 1734004979
+  * git changelog:
+  *  a5363fd - Merge pull request #185 from petrovvlad/develop
+  *  84d3b3c - fix: select new library
+  *  d176310 - fix: byte order marker in collection.info
+  *  d787428 - fix: выбор библиотеки при экспорте
+  *  20a5372 - fix: update book list after update library
+  *  2bd21af - fix: export author tags & genres to .inpx
+  *  9a35f70 - fix: update progress bar if only 1 .inp file in .inpx
+  *  c8361ae - fix: build on Qt<6.0
+  *  facfaa7 - feat: сохранение меток при пересоздании библиотеки
+  *  611ce0e - feat: установка меток во всех библиотеках
+  *  f5073c4 - feat: add buttons collapse/expand all #180
+  *  cb8569b - build: add gcc 10
+  *  88832d9 - feat: избранные языки #176
+  *  657eef9 - Merge pull request #177 from petrovvlad/develop
+  *  1c86181 - feat: учитывать расширение файла при поиске
+  *  30967f1 - feat: поиск по имени файла #174
+  *  bf1a78e - fix: build in FreeBSD
+  *  9c74b8b - doc: update help
+  *  e043d60 - refactor: замена pkg-config на which для проверки
+    kindlegen
+  *  6903de5 - perf: import lib: check exist book
+  *  360eacf - perf: http server: search Authors
+  *  68bd882 - feat: id книги в шаблоне имени файла
+  *  bb4c5db - fix: build in FreeBSD
+  *  09e8487 - feat: set server parametrs from cli
+  *  c6d5faf - refactor: nOpdsPort → nHttpPort
+  *  b9f9f9f - fix: постобработка без KIO
+  *  012cce5 - style: hide sequence if empty in annotation
+  *  f35e85c - fix: фильтр расширенного набора символов при экспорте
+  *  2594cf4 - fix: имя файла при постобработке
+  *  d9ae151 - fix: database path in non gui mode
+  *  ad9b1f2 - fix: перевод
+  *  b281d51 - choro: фильтр расширенного набора символов при экспорте
+  *  9f77fc9 - fix: постобработка
+  *  d1201f8 - fix: экспорт книг содержащих ? в названии
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 14 Dec 2024 14:11:03 +0000
+
 freelib (6.1.0+git745-651e6d6-1) unstable; urgency=medium
 
   * Compile

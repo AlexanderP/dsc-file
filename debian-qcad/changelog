@@ -1,3 +1,109 @@
+qcad (3.31.2.3+git10773-568ded5b8e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 568ded5b8ef090f4ddc12b8a80d14b78becd9e94
+  * Date: 1734102116
+  * git changelog:
+  *  568ded5b8e - implement blocks with ownership by reference
+  *  c5f6d21344 - fix layout
+  *  cdc34f08ec - add unit tests
+  *  a378b53477 - fix FS#2619 - Draw > Arc/Circle > Tangent, Point,
+    Radius: Only 2 of 4 solutions found
+  *  76464f1e24 - set version to 3.31.2.7
+  *  9075f2fcba - update gitignore
+  *  2b61b5f1e6 - add license name
+  *  448321b029 - Merge branch 'master' of github.com:qcad/qcad
+  *  ab771dd649 - add missing case for enum value
+  *  f81e238aff - Merge branch 'master' of github.com:qcad/qcad
+  *  97d3a14803 - update
+  *  4129182210 - update qrc
+  *  30f6e8dadc - make sure to return invalid ID if no subshape is found
+  *  8ccdb417c5 - add getClassName
+  *  109099aa49 - update API doc
+  *  424af4ba16 - refactor for deriving classes
+  *  835e86cb34 - clean up
+  *  b954a0ec24 - use destrDialog to delete dialog
+  *  630f80853a - Merge branch 'master' of github.com:qcad/qcad
+  *  93b7978578 - add option to stroke polygons in RPainterPathEngine
+  *  84fd6c6891 - fix Move/Rotate in dialog less mode
+  *  1aec835027 - add winding property for solid hatches (invisible)
+  *  900c5f3b4d - add requestResourceBlockEditing
+  *  17daf8aafb - add requestResourceBlockEditing
+  *  c69b334d28 - add length property, reverse
+  *  eb76857b26 - add reverse
+  *  a702285545 - add length property for leaders
+  *  84ba7274f2 - trim collinear lines
+  *  179d3cdef5 - add getPluginsLocation
+  *  8ef9047e38 - always load plugins from QCAD dir
+  *  ed4e77f746 - update
+  *  fde1c96aed - set version to 3.31.2.6
+  *  75f561c9fa - update script bindings
+  *  d0b6b40fd6 - always allow leader arrow head, save with XData
+  *  e1d77ba531 - remove global instance
+  *  eb5b1ff6bd - add forDialog parameter to initUiOptions
+  *  15082a80a7 - update script bindings
+  *  23f52b58c7 - add global shared instance for RToolOptionEventFilter
+  *  556842da33 - Merge branch 'master' of github.com:qcad/qcad
+  *  17a0392184 - set version to 3.31.2.5
+  *  d36a0f4427 - add startup class (for dock icon)
+  *  c9e54a6219 - port to linux/arm64
+  *  5759352b40 - fix qt 6.8 port
+  *  a70e77b67b - Merge branch 'master' of github.com:qcad/qcad
+  *  19fcdb0241 - respect plugin OverridePriority for app name
+  *  a090938d06 - always load local plugins from QCAD path, independed
+    of app name
+  *  dc38937927 - Merge branch 'master' of github.com:qcad/qcad
+  *  5ee48dd426 - add -Pic for linux
+  *  a6e88252dd - Merge branch 'master' of github.com:qcad/qcad
+  *  13efc4cb70 - port to Qt 6.8
+  *  34d0abd50e - set version to 3.31.2.4
+  *  43f6f5bbd4 - Merge branch 'master' of github.com:qcad/qcad
+  *  01efcddbbb - add support for local plugins in data dir
+  *  8e46e2b7fc - update test data
+  *  876d935431 - Merge branch 'master' of github.com:qcad/qcad
+  *  6ba084fa82 - update translations
+  *  dad96cc6f9 - update translations
+  *  26ec67651e - Merge branch 'master' of github.com:qcad/qcad
+  *  074ae29e66 - Merge branch 'master' of github.com:qcad/qcad
+  *  a213879b48 - port to linux arm64
+  *  53909648c4 - add support for RCC plugins
+  *  13aba3365d - all image allocation limit
+  *  5c0be64149 - add image allocation limit preference
+  *  53800029b2 - fix getPointOnShape for circles with center 0/0
+  *  ac6dc5c94e - update
+  *  7563736272 - add parameter to identify main script engine
+  *  50ccccbf50 - clean up old widget before replacing
+  *  55ebc82f06 - clean up
+  *  f4f1c3765c - update script bindings
+  *  b06a603d80 - Merge branch 'master' of github.com:qcad/qcad
+  *  e13a310677 - notify local block listeners when layout changes
+  *  8125ff335a - add blockId parameter to edit block with given id
+  *  c42e52d4e8 - add checkMinVersion
+  *  553b01bd94 - fix potential exception
+  *  d41235f4d0 - Merge branch 'master' of github.com:qcad/qcad
+  *  4e15509a2f - update text example script
+  *  13cf2a69bb - unitless dimscale property
+  *  bcb36e27a1 - add local block listeners (document level)
+  *  2636a5a4a1 - allow add-ons to register additional initialization
+    for MDI widgets
+  *  84910d17fe - notify block listeners
+  *  8838fa9a07 - Merge branch 'master' of github.com:qcad/qcad
+  *  8f56f0d0df - fix display of dimscale, dimlfac in property editor
+    without unit
+  *  eb0cb90676 - set version to 3.31.2.3
+  *  7a17b5b0d7 - update script bindings
+  *  633d47c13f - fix export of spline degree > 3
+  *  ffeaac631a - update user manual
+  *  04da139ca0 - keep on/off and frozen status while rendering
+    viewports
+  *  39166e6eeb - update translations
+  *  0c11643dd6 - update translations
+  *  ebc1096bfa - hide frozen layers property
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 14 Dec 2024 14:10:13 +0000
+
 qcad (3.31.2.0+git10682-8683f16b2e-1) unstable; urgency=medium
 
   * Compile

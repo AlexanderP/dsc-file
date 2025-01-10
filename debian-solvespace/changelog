@@ -1,3 +1,29 @@
+solvespace (3.1.0+git2034-30e42ca8-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 30e42ca889b20b6af65d601524085fd812c91662
+  * Date: 1733832470
+  * git changelog:
+  *  30e42ca8 - Extlib fixups and macOS framework finding fix (#1502)
+  *  bcf9bf7e - Hotfix for publishing wasmlib
+  *  a208201c - Stateful C library + Python bindings (using cython) and
+    JS bindings (using embind) (#1343)
+  *  33f9cf95 - Make the animation speed configurable (#1500)
+  *  8c4ac6ee - Update CHANGELOG.md
+  *  f4cfb60a - Make the skewed option for extrusions a check box
+  *  7d15f94c - Add skewed subtype for extrusion groups. Update the
+    textwindow radio buttons and equation generation.
+  *  eedfc653 - GUI: Allow ESC to finish drawing bezier curves instead
+    of deleting them.
+  *  d97b9bed - Allow tangent on arcs/lines/splines without coincident
+    endpoints.
+  *  dedc6d48 - Make pasting mirrored tangent entities independent of
+    end point knowledge
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 10 Dec 2024 19:01:57 +0000
+
 solvespace (3.1.0+git2024-bb160669-1) unstable; urgency=medium
 
   * Compile
