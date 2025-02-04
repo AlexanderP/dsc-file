@@ -1,3 +1,26 @@
+clementine-qt5 (1.4.1~git27-g658f34ec4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/clementine-player/Clementine.git
+  * Branch: master
+  * Commit: 658f34ec40dde09b473bdda3d90050455e724fad
+  * Date: 1736419420
+  * git changelog:
+  *  658f34ec4 - Support both taglib-1 and taglib-2
+  *  9549e2b79 - Fix usage of deprecated TagLib functions
+  *  c3daf0a77 - Apply clang-format patch manually, add comment
+  *  54ad1c8eb - Run clang-format
+  *  10feee4ba - Read system projectm presets from subdirs
+  *  fe3599cdd - Bump cmake version requirement and simplify C++
+    standard flags
+  *  e1d7f2011 - Still use FindProtobuf.cmake if one installed by
+    protobuf is not found
+  *  1a251ad72 - Depend on protobuf using its cmake config
+  *  d99e1c9ab - Use C++17
+  *  4ab6f35ec - Automatic merge of translations from Transifex
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 11 Jan 2025 13:48:03 +0000
+
 clementine-qt5 (1.4.1~git17-g4ea9d473a-1) unstable; urgency=medium
 
   * Compile

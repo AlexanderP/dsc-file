@@ -53,11 +53,6 @@ override_dh_dwz:
 	dh_dwz || true
 
 override_dh_auto_configure:
-ifneq (,$(filter $(DEBIAN_CODENAME),bullseye jammy))
-	sed '22d' -i plugins/generic/CMakeLists.txt
-else
-	echo ""
-endif
 	dh_auto_configure -B$(BUILDDIR1) -- $(CMAKEOPTS) $(OPTSSTEP1)
 	dh_auto_configure -B$(BUILDDIR2) -- $(CMAKEOPTS) $(OPTSSTEP2)
         ifeq ($(DEB_HOST_MULTIARCH), x86_64-linux-gnu)
