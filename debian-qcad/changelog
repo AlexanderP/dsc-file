@@ -1,3 +1,177 @@
+qcad (3.32.0.0+git10953-5ed80fcc13-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 5ed80fcc13dc6af889724e1c3166918ccc256cf3
+  * Date: 1739025141
+  * git changelog:
+  *  5ed80fcc13 - update script bindings
+  *  ae66d05bb4 - update
+  *  b01f226f53 - add RPolyline::insertVerticesAtSelfIntersections
+  *  272434f274 - update
+  *  909e7a1bdb - update
+  *  387dc6bb94 - update
+  *  93eab5e7f8 - update
+  *  5fdb24ff5f - update user manual
+  *  87cff355c3 - Merge branch 'master' of github.com:qcad/qcad
+  *  922cfef2d9 - update
+  *  bc1d899b45 - update translations
+  *  4d16963a72 - update dutch translation
+  *  4119e9b29a - update translations
+  *  d83669417e - fix crash when changing orientation with line entity
+    as base
+  *  f526c5b9de - update translations
+  *  7a967b416d - update translations
+  *  bf629b864c - update translations
+  *  22c70eb160 - update
+  *  7fad47d4b4 - don't attempt to load non existing translation files
+  *  d23507807c - update test
+  *  c7bb95bd59 - port to Qt 6
+  *  0243bf204c - port to Qt 6
+  *  f6285b7963 - Merge branch 'master' of github.com:qcad/qcad
+  *  8a970d66db - update translations
+  *  332be72643 - update
+  *  c99202d7f4 - update script bindings
+  *  6e4ff36c69 - update script bindings
+  *  799f5d814c - update script bindings
+  *  da28944c95 - update script bindings
+  *  1e3a762e48 - port to msvc
+  *  a6fa6dc7fa - port to msvc
+  *  c2a6dcb0e6 - port to msvc
+  *  681306459e - port to msvc
+  *  301a02433f - port to msvc
+  *  d258e89a9c - set version to 3.32.1
+  *  cdd681bdaf - prioritize user provided tranlations
+  *  0a32725d4d - back port to Qt 5
+  *  7621969e24 - update script bindings
+  *  78bea0deff - back port to Qt 5
+  *  cad13f7df9 - update script bindings
+  *  8725bedd12 - back port to Qt 5
+  *  a8f3c7b598 - update script bindings
+  *  0af2393613 - back port to Qt 5
+  *  2f857018e8 - update script bindings
+  *  a45f5b45c0 - back port to Qt 5
+  *  069d0eb9c4 - update script bindings
+  *  37773aa529 - back port to Qt 5
+  *  e725651f51 - update script bindings
+  *  63082968fe - back port to Qt 5
+  *  3905afa3e9 - update script bindings
+  *  969570f0ca - back port to qt 5
+  *  b543795e46 - update script bindings
+  *  f35126e42d - update script bindings
+  *  429d8b7489 - add forward declaration
+  *  b4e6aa46d7 - update script bindings
+  *  b1bec544e3 - back port to Qt 5
+  *  16f8594170 - add default value
+  *  e0f969b003 - update script bindings
+  *  2884969ffc - update support for custom entities
+  *  9b2a15e328 - set hatch timeout to 0 to disable hatch rendering
+  *  94ceaea73a - extend dockable widget workaround to Qt 6.6.0 - 6.8.1
+  *  12caa08f62 - add removeCoordinateListener
+  *  ef3d7512d0 - clean up
+  *  56df19facc - clean up
+  *  638940965b - fix FS#2637 - Crash when changing layout viewports
+  *  c91a2101f6 - perpendicular snap for circles / arcs
+  *  a6c19c9d78 - add isOfType, add RCustomEntity
+  *  a380b96454 - snap to both perpendicular points for circles
+  *  05f5e20f55 - fix includes
+  *  11240a88ed - revert some changes of pull request #52
+  *  0637da36ec - Merge pull request #52 from ahartmetz/build_time
+  *  05e80f8278 - add icon for flatpak
+  *  781823c73e - Remove RMouseEvent include from RSnap.h
+  *  29c53ccecb - A few more small include reductions
+  *  7c2f009979 - Remove RPolyline include from RExporter.h
+  *  4f563a6cdc - set version to 3.32.0.1
+  *  7a0f0c5f0c - update translations
+  *  6f731258dd - Merge branch 'master' of github.com:qcad/qcad
+  *  4b301efe34 - update translation
+  *  32f12da82d - never auto scale drawing when switching to layout
+  *  865fc753b5 - update
+  *  90238e99ec - update
+  *  4bc7014de9 - fix clipping of texts in viewports
+  *  a632ab6478 - windows: fix long wait on first start with ill
+    configured printer driver
+  *  5d23d88b54 - update qrc
+  *  6487c0674b - port to shared pointer API
+  *  71fe570b43 - add unit tests
+  *  8617ad0fe5 - port to qt 5
+  *  f8962b2329 - show all properties preference
+  *  51a03a1dea - fix return value
+  *  fbad117632 - update translations
+  *  099fad63c7 - update translations
+  *  5a518658d8 - fix typo
+  *  9a22d0413e - Merge branch 'master' of github.com:qcad/qcad
+  *  d372e2ee0c - update version
+  *  5486354b5b - set version to 3.32.0
+  *  dcc6f9e25e - update translations
+  *  8bfaa57ae2 - fix version check for Qt 6.0
+  *  a3e17d2ebf - update isNull
+  *  6e3916dffb - Remove RBox include from RDocument.h
+  *  45a57d0287 - Replace RLinetype and RUcs with forward decls in
+    RDocument.h
+  *  886a5a6ec3 - Remove the REntity include from RStorage.h
+  *  45f5b09a3c - Remove the RBlock include from RStorage.h
+  *  2e32dd6130 - Implement a few more iwyu suggestions
+  *  0124723a91 - More header cleanups, mostly iwyu suggestions
+  *  1edfa7a3a5 - Replace all {RBox, REntity, ...}::Id in headers with
+    RObject::Id
+  *  6bc8585e3c - Remove a few RDebug includes (+ a few small drive-by
+    changes)
+  *  6412a61ffb - Remove QDebug includes from headers as far as possible
+  *  7f55cc69ce - Remove QFileInfo from headers
+  *  05514bbabe - More forward-declarations in RDocument.h
+  *  434929a885 - Remove RDocument.h from ~all headers, also drive-bys
+  *  8948847166 - Remove RDocumentInterface.h include from all headers
+    where it's possible
+  *  73200298ed - Forward-declarations in RExporter.h
+  *  5deb4f1d1d - Reduce includes in *Data.h headers
+  *  c2fba56ae9 - Remove / forward declare includes in REntityData.h
+  *  f9485519c8 - Remove / forward declare includes in RArcData.h
+  *  c9d6793ab5 - Replace a bunch of includes with forward declarations
+    in RGraphicsScene.h
+  *  b68628960e - Forward declare RVector.h in RAction.h
+  *  77a6093e6e - Forward-declare RDocument in RViewportData.h
+  *  a0aa576cb4 - Replace RGlobal.h and RS.h includes with RSEnums.h
+    where possible
+  *  3097e98c9d - Turn RS into a namespace and split out RSEnums.h
+  *  544b9e3713 - Remove RBox.h include from RPainterPath.h
+  *  a8dca92915 - Now *make* the RDocument.h include unnecessary in
+    RDocumentInterface.h
+  *  c0d1099499 - Remove unnecessary includes from RImageData.h
+  *  b96637b06e - Remove unnecessary include from RTextData.h
+  *  75a11e9bf2 - Remove unnecessary includes from RGraphicsViewImage.h
+  *  40923baa4d - Remove unnecessary include from RDimensionData.h
+  *  59f4888aac - Remove unnecessary include from RTextBasedData.h
+  *  deab0fbfb2 - Remove unnecessary includes from RSettings
+  *  a691136b75 - Remove unnecessary includes from RLinetype.h
+  *  a84550d6e8 - Remove unnecessary include from RSnapEntityBase.h
+  *  2b7d935a8e - Remove unnecessary includes fro RGraphicsView.h
+  *  26f82303b7 - Remove unnecessary includes from RAction.h
+  *  e29197e661 - Remove unnecessary includes from RLayer.h
+  *  25fc051b85 - Remove unnecessary includes from RPropertyAttributes.h
+  *  1cd25488f4 - Remove unnecessary includes from RDebug.h
+  *  fc2aade569 - Remove unnecessary includes from RDocumentInterface.h
+  *  8b9ed94249 - Remove unnecessary includes from RExporter.h
+  *  555e989ccb - Remove unnecessary include from RLayout.h
+  *  4b7aba1f13 - Remove unnecessary include from RBlock.h
+  *  e55ebb5ba7 - Remove unnecessary include from RMath.h
+  *  7620e896ca - Remove unnecessary includes from RS.h
+  *  2dd025e7e2 - Remove unnecessary include from RBox.h
+  *  8dc887a918 - Remove unnecessary headers from RDocument.h
+  *  547155cb9d - Remove unnecesary headers from REntity.h
+  *  a664e85d52 - Remove unused headers in .cpp files (iwyu)
+  *  f4c26f2c70 - Fix potential crash due to missing return
+  *  d848daeaab - Merge branch 'master' of github.com:qcad/qcad
+  *  181589efb3 - fix size, 0,0 fails in some cases to minimize size
+  *  ebbe5a0597 - Update ExCsvExport.js
+  *  653e943123 - Merge branch 'master' of github.com:qcad/qcad
+  *  79d46966d1 - set version to 3.31.2.8
+  *  7bbe666bb3 - clean up
+  *  728ec01b63 - auto zoom to page for layout block without content
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 08 Feb 2025 15:40:12 +0000
+
 qcad (3.31.2.7+git10799-ed9e0932f0-1) unstable; urgency=medium
 
   * Compile
