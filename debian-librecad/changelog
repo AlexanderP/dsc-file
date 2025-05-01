@@ -1,3 +1,35 @@
+librecad (2.2.0+git5417-d57b53e75-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/LibreCAD/LibreCAD.git
+  * Branch: 2.2.1
+  * Commit: d57b53e75fb866b25cf33bbe3909e51e860e93ee
+  * Date: 1743059607
+  * git changelog:
+  *  d57b53e75 - Issue #2087: avoid print type mismatch
+  *  5ad9b9990 - Issue #2035: circle rendering precision
+  *  ffd951d6d - Command: evaluateOnSpace GUI consistence
+  *  6dc7ec369 - command: fraction processing for non-fraction
+  *  f09b61d68 - command: fraction processing for non-fraction
+  *  8cad41390 - Issue #2035: fixed visible segment detection
+  *  f30912cf6 - Issue #235: improved rendering error estimate
+  *  3e2e49cf0 - Revert Issue
+  *  b1531bbb0 - Issue #2034: backported fix from the 2.2.2 branch
+  *  b31946c56 - Issue #2035: improved rendering arcs with small total
+    angular length
+  *  75b62b52f - Issue #2030: RS_Solid detect internal points by
+    QPolygonF
+  *  1837fd354 - Issue #2030: fixed solid distance to point
+  *  3307a5afe - Issue #2030: avoid zero size arrows
+  *  a5e47b505 - Issue #2030: avoid zero size arrows
+  *  7ad94f443 - snapcraft: qt5 update
+  *  d5067d3fb - cmake: add ttf2lff
+  *  98bb67c1f - snapcraft: switched to cmake
+  *  399878877 - ActionHandler: fixed the cleanup logic
+  *  86b87e35b - Block: avoid renaming when pasting to the same graphic
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 29 Mar 2025 19:07:04 +0000
+
 librecad (2.2.0+git5398-49427bba-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,28 @@
+solvespace (3.1.0+git2066-cc871ab0-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: cc871ab0aea7928defeb7e33158211696312bec1
+  * Date: 1741993018
+  * git changelog:
+  *  cc871ab0 - FreeType: disable PNG compressed OpenType embedded
+    bitmaps.
+  *  bd7b6278 - freetype: update the vendored version to 2.13.3
+  *  f9e564cb - slvs: return a distinct value for  (#1542)
+  *  9aa4426b - solvespace.h: Quiet std::iterator is deprecated warnings
+    with C++17.
+  *  b4a79739 - clipboard.cpp: Fix GCC -Wimplicit-fallthrough= warning.
+  *  c9e52394 - dsc.h: Eliminate circular include of solvespace.h.
+  *  7377c500 - build: fix CMake system include directives
+  *  a5d40f81 - Fix PyPi publishing (#1534)
+  *  29f9a918 - Updated the Russian translation (#1528)
+  *  5bfa5ba2 - ci: update the  action to v2.22.0 (#1533)
+  *  da133cd9 - python: fix issues with type annotations in the Cython
+    bindings (#1530)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Tue, 25 Mar 2025 19:22:26 +0000
+
 solvespace (3.1.0+git2053-f09bbb96-1) unstable; urgency=medium
 
   * Compile

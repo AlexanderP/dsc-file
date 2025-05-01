@@ -1,3 +1,44 @@
+goaccess (1:1.9.2+git4287-b6190cff-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: b6190cff791165b9e4ab9e1ec527448524e052fc
+  * Date: 1743300631
+  * git changelog:
+  *  b6190cff - Add dynamic JWT fetching and refreshing for WebSocket
+    authentication.
+  *  213ccd8f - Display & toggle authentication status properly.
+  *  203b78c1 - Added an azimuthal (globe) projection to the HTML report
+    for geolocation.
+  *  95ca8551 - Added WebSocket authentication options --ws-auth and --
+    ws-auth-expire.
+  *  80568053 - For portability, create a mutable heap copy instead of
+    alloca(3).
+  *  6689bd5c - Added _GNU_SOURCE for GNU extensions like alloca and
+    strsep.
+  *  6b7c84d0 - Ensure we normalize mime types before adding them to the
+    strage.
+  *  e58be09c - Set <meta> theme color according to theme.
+  *  668907d2 - Fixed wrapping around panel titles/descriptions.
+  *  ae3f66d2 - Fixed navigation issues on small screens and resolved
+    regression from commit 6de2cb9.
+  *  5f751b91 - Updated map color scale.
+  *  9575a265 - Fixed the issue where panning the map would suddenly
+    skip or jump back.
+  *  d753eba3 - Update app.css to remove dup of article table
+    tbody.tbody-data tr.
+  *  f08daae8 - Fixed bug with incorrectly checked 4xx status codes when
+    flag is specified.
+  *  7319c07e - Don't swap bytes on big endian platforms
+  *  53949e8c - Include stdint.h
+  *  1b532d9b - Fixed the output file check issue introduced in
+    4c4e3b74.
+  *  b49d5798 - Update build-test.yml to use GITHUB_WORKSPACE
+  *  0245e489 - Update build-test.yml with valid paths
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 30 Mar 2025 09:08:48 +0000
+
 goaccess (1:1.9.2+git4268-167730f1-1) unstable; urgency=medium
 
   * Compile
