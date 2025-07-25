@@ -1,3 +1,69 @@
+solvespace (3.1.0+git2107-8b34a075-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 8b34a075fb72e0a2ec623fd209c17696e34b61be
+  * Date: 1748617665
+  * git changelog:
+  *  8b34a075 - STEP Export: round point coordinates to 5 decimal
+    places.
+  *  d1b52cd6 - Colour aware step export.
+  *  8c301f3a - Final polishing for the duplication check in
+    exportstep.cpp
+  *  a11a8f8e - Refactoring exportstep.cpp
+  *  af4dea68 - Code style and polishing for exportstep.cpp
+  *  bb6cc1a0 - upgraded exportstep.cpp
+  *  60d0dab0 - general: use the ParamList and EntityList type aliases
+  *  2602edcb - generate: add minor optimisation to request and
+    constraint pruning
+  *  9c3f489b - generate: change  and  to prune all items
+  *  322dbece - generate: avoid message box avalanche on Windows during
+    regeneration
+  *  2c5bb5d4 - Fix and arc creation error when linking IDF files. For
+    negative angles we need to use the absolute value of the angle. Also
+    simplify the formula for center distance calculation.
+  *  8042810d - build: fix link error when building on Windows with
+    Clang (not clang-cl) - Fix elseif from the previous commit.
+  *  0161026a - build: fix link error when building on Windows with
+    Clang (not clang-cl)
+  *  e1d7dc3c - build: clean up the workaround for building zlib in
+    Emscripten
+  *  8cff14a2 - expr: fix the value of
+  *  3527d41d - system: make  a local member
+  *  fb9dff15 - expr: convert ParamsUsedList() to std::unordered_set
+  *  0eb1a122 - system: convert dragged to std::unordered_set
+  *  8012e75e - slvs: avoid orphaning params in the sketch with the
+    sketch solving API
+  *  e8f6ea39 - freetype: update the submodule URL to the official
+    GitHub mirror
+  *  30da776a - build: fix MinGW build failures and update documentation
+  *  4b407943 - docs: minor correction to the contribution guide and
+    update references
+  *  ed5e0b43 - slvs: resolve GCC warning about unused variables
+  *  435309f5 - slvs: avoid Windows export/import directives when
+    compiling as a static lib
+  *  2e979914 - build: support getting git hash when imported as a
+    submodule
+  *  59ba8a5e - general: fix compiler warning about object construction
+    and assignment
+  *  cbcc5f58 - slvs: don't try to initially satisfy unsupported
+    constraints
+  *  27d1d119 - ci: fix the broken Python and WASM library builds
+    (#1565)
+  *  e539385e - Web, CMake: Fix the copying of resources into the build
+    directory
+  *  2a455285 - build: add a workaround for building zlib in Emscripten
+  *  3ac128d9 - emscripten: fix build issues and make the interface
+    functional
+  *  f6865acd - CDemo: re-enable the  example
+  *  0c667c72 - slvs: allow dragging more than 4 parameters
+  *  9bfe014f - slvs: remove the unused  member
+  *  7ceb7fac - slvs: extract the code and the CMake config out of the
+    main build
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 11 Jun 2025 19:57:30 +0000
+
 solvespace (3.1.0+git2066-cc871ab0-1) unstable; urgency=medium
 
   * Compile

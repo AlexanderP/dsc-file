@@ -5,7 +5,7 @@ Maintainer: KeePassXC Team <team@keepassxc.org>
 Build-Depends: asciidoctor,
                cmake,
                debhelper (>= 9),
-               libargon2-dev,
+               libargon2-0-dev | libargon2-dev,
                libbotan-2-dev (>=2.12.1),
                libusb-1.0-0-dev,
                libminizip-dev,
@@ -33,7 +33,6 @@ Standards-Version: 3.9.8
 Homepage: https://keepassxc.org/
 Vcs-Git: https://github.com/keepassxreboot/keepassxc.git
 Vcs-Browser: https://github.com/keepassxreboot/keepassxc
-Rules-Requires-Root: no
 
 Package: keepassxc
 Architecture: any

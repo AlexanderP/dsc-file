@@ -1,0 +1,29 @@
+Source: veracrypt
+Section: utils
+Priority: optional
+Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
+Build-Depends: debhelper (>= 9),
+ libgtk2.0-dev,
+ libfuse-dev,
+ dmsetup,
+ libsm6,
+ nasm,
+ makeself,
+ pkgconf | pkg-config, yasm,
+ libsm-dev, libglw1-mesa-dev, libwxgtk3.0-dev | libwxgtk3.0-gtk3-dev | libwxgtk3.2-dev, libpcsclite-dev
+Standards-Version: 4.4.1
+Homepage: https://www.veracrypt.fr/en/Home.html
+Rules-Requires-Root: no
+
+Package: veracrypt
+Architecture: any
+Depends: dmsetup, ${shlibs:Depends}, ${misc:Depends}
+Description: Free open-source disk encryption software
+ VeraCrypt is a software system for establishing and maintaining an
+ on-the-fly-encrypted volume (data storage device). On-the-fly encryption
+ means that data are automatically encrypted or decrypted right before they
+ are loaded or saved, without any user intervention. No data stored on an
+ encrypted volume can be read (decrypted) without using the correct
+ password/keyfile(s) or correct encryption keys. Entire file system is
+ encrypted (e.g., file names, folder names, contents of every file,
+ free space, meta data, etc).

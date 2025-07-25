@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+export DH_VERBOSE=1
+
+ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+endif
+
+ifeq (,$(NUMJOBS))
+	NUMJOBS = 1
+endif
+
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+
+
+%:
+	dh $@ --parallel
+
+override_dh_auto_build:
+	cd src && $(MAKE) -j$(NUMJOBS)
+
+override_dh_auto_clean:
+	cd src && test ! -f Makefile || $(MAKE) clean
+	dh_auto_clean

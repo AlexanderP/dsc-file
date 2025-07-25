@@ -1,3 +1,144 @@
+qcad (3.32.3.1+git11077-bcea4afe34-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: bcea4afe349efabad06646d7d5eaf352bdf52841
+  * Date: 1749740503
+  * git changelog:
+  *  bcea4afe34 - set version to 3.32.3.2
+  *  c4df98c92f - Merge branch 'master' of github.com:qcad/qcad
+  *  37539adb71 - add AAMA format features
+  *  2cebd0ced9 - Merge branch 'master' of github.com:qcad/qcad
+  *  713a6fc095 - update icon for flatpak
+  *  6f07685638 - fix dependency on opennurbs
+  *  e471b5e18b - add android_uuid folder for Linux
+  *  872583d6ef - set version to 3.32.3.1
+  *  e48a4366f5 - add pro files
+  *  b079d79114 - port to Qt 6
+  *  e3f7923174 - port to MSVC
+  *  86336207dd - fix Windows build
+  *  497bee0d0b - add Info.plist
+  *  2b4fb3bca8 - back port to pre-C++11
+  *  d034bbbbea - update translations
+  *  60622e5d78 - Merge branch 'master' of github.com:qcad/qcad
+  *  81851b5749 - fix break out gap for reversed arcs add sanity checks
+    for gaps near arc start / end point
+  *  c287021101 - fix FS#2668 - Modify > Break out Gap: break out gap at
+    start of line breaks undo
+  *  791252bc42 - Merge branch 'master' of github.com:qcad/qcad
+  *  3426821840 - add opennurbs legacy for older platforms
+  *  0c6b4ba68f - clean up
+  *  396bcee348 - update translations
+  *  37c39080d8 - update
+  *  26ae0bfc3a - update translations
+  *  4baef787f9 - update translations
+  *  5eb3e480b8 - update links to web site
+  *  2caf0162f7 - set version to 3.32.3
+  *  48318d96f4 - fix FS#2673 - Property Editor: Editing block
+    attributes leads to attributes not being saved
+  *  aabd9ccc74 - back port to Qt 5
+  *  5b5f5fcb9b - roll back optimizations not compatible with Qt 5.x
+  *  5fed024fe0 - update script bindings
+  *  d6bfda361a - Merge branch 'master' of github.com:qcad/qcad
+  *  86af1d707e - update
+  *  b540f657b9 - update
+  *  4338648baa - update
+  *  2fc6e50bbf - update
+  *  4313a0fffa - update script bindings
+  *  ee451e5845 - update
+  *  79c41db32e - update script bindings
+  *  01b131d41a - update unit tests
+  *  a6bfc6d0e6 - prevent exception if there is no solution
+  *  463085a7ef - add unit tests
+  *  205efaab80 - refactor polyline tool, add arc proxy
+  *  793bce53ef - port to OpenNURBS 8.18
+  *  938c974477 - Merge pull request #53 from KoopA-DA/optimize-file-
+    loading
+  *  35b3badab2 - update 3rd party opennurbs libraries
+  *  bd4e2dc4e6 - fix crash on exit [Qt 6.9 / QJSEngine], port to Qt 6.9
+  *  f06aeaf19e - fix include
+  *  2b56f4da45 - add RS::getFontFamilyFromFileName
+  *  4d8e362007 - update user manual
+  *  dd9c87c958 - update user manual refactor
+  *  b0c6b26cf5 - add autoRadius parameter
+  *  831abbda80 - Merge branch 'master' of github.com:qcad/qcad
+  *  871acc4032 - update Hungarian translations
+  *  f7866f7486 - fix native file dialog on macOS/Qt 6.9
+  *  cc7879cfaf - port to Qt 6.9: shortcuts
+  *  9642d731a0 - workaround for macOS native file dialog not working in
+    Qt 6.9
+  *  da9f0fb9da - port to Qt 6.9.0
+  *  78271c65a7 - update script bindings
+  *  788bfd8a4b - Optimize unicode character replacement
+  *  207a8e55c5 - Optimize DL_Dxf::toReal()
+  *  51a4444573 - Disable counting of entity objects
+  *  673278a80b - Do not allocate memory for each line
+  *  a073cf7ef0 - Use unordered_map to speed up entry insertion
+  *  87e8bbe781 - Use nonlocking stdio functions to speed up file access
+  *  291422359a - fix include
+  *  9965f5c6c2 - fix wipeout in black white mode
+  *  2a59d0116c - add getClosestSegment, insertVertexAt
+  *  b4bbb8875d - add topLevelEntity argument to endEntity
+  *  76bc2a2651 - handle pixel unit in DWG import/export
+  *  f5ca829e12 - Merge branch 'master' of github.com:qcad/qcad
+  *  8d7cc96550 - add casting to wipeout entity
+  *  515871efea - update hu ts
+  *  980bafc7e5 - Merge branch 'master' of github.com:qcad/qcad
+  *  3643f33dc7 - update test data
+  *  a064a5a117 - port to Qt < 5.6
+  *  6616def34b - clean up
+  *  781d033dc9 - fix loading of drawing files from resources
+  *  88510e0af9 - port to Qt 5.6
+  *  fa75351caf - update unit tests
+  *  1d41c790f8 - set version to 3.32.2
+  *  84b61d6c23 - Merge branch 'master' of github.com:qcad/qcad
+  *  0179a79a1b - set version to 3.32.1.1
+  *  82a937401a - update script bindings
+  *  36a4a400bd - update script bindings
+  *  e4fc3f4309 - update
+  *  c0957d501e - remove obsolete script bindings
+  *  bb3bee14ca - update gitignore
+  *  efc5031656 - update gitignore
+  *  3d77895ae3 - add support for choices stored by index
+  *  7648d0a740 - Merge branch 'master' of github.com:qcad/qcad
+  *  f99ddb50ae - update translations
+  *  3085e9deca - update translations
+  *  8ec9f20e3e - update translations
+  *  ca81af3b08 - fix FS#2644 - File > Print Window...: Button 'Page
+    Settings' unresponsive
+  *  98767dd9b9 - keep order of attribute choices (QSet -> QList)
+  *  6bc687905a - disable auto block update during undo/redo/import
+  *  09996f983e - add custom entity type registry
+  *  f441ca1323 - handle custom entities as block references
+  *  db6da3efdd - check if custom entity handler is found
+  *  a6e9f92b07 - fix enum value range
+  *  e9a6c8b52f - update
+  *  7b148ce6d3 - add getAutoUpdatesBlocked
+  *  4188e97e09 - add support for custom entity names
+  *  9f371ff7af - add autoRegen flag
+  *  1f7f09da62 - update
+  *  e716da337d - add credits for hu translation
+  *  81212069bd - clean up
+  *  a4f62cef75 - remove custom entity
+  *  d2fc8606b6 - remove custom entity
+  *  4200a31b20 - remove obsolete files
+  *  1717268da4 - allow for alternative operation initialization
+  *  0aab90feed - remove custom entity implementation
+  *  05a32605d0 - add data location to about dialog
+  *  ab889de6bc - update translations
+  *  f0d020fb54 - Merge branch 'master' of github.com:qcad/qcad
+  *  2489c1d249 - add disambiguation hints for translations
+  *  ab0e2ea800 - merge changes from forum topic 11433
+  *  6f931d6e29 - port to gcc
+  *  6007449d2b - Merge branch 'master' of github.com:qcad/qcad
+  *  f684718883 - back port to msvc
+  *  4fd01fd06a - back port to macOS 10.8
+  *  965977d29e - back port to msvc
+  *  68bd285c2e - back port to msvc
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Fri, 13 Jun 2025 10:32:29 +0000
+
 qcad (3.32.0.0+git10953-5ed80fcc13-1) unstable; urgency=medium
 
   * Compile

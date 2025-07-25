@@ -1,3 +1,71 @@
+goaccess (1:1.9.4+git4340-c71c6460-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: c71c6460a7c9465cf468c49ef296315cfc1a9e02
+  * Date: 1749076277
+  * git changelog:
+  *  c71c6460 - Delete .github/workflows/semgrep.yml
+  *  11ac167c - Replaced older deprecated __sync calls for atomic ones.
+  *  b089631d - ASN panel mention
+  *  fce96b1c - Make error messages more actionable.
+  *  037c6c23 - Update Japanese translation
+  *  b69fc786 - Better Chinese translation
+  *  cfabf0fd - Provide a hint about --invalid-requests whenever parser
+    fails
+  *  8239c61b - Removed FreeBSD build test due to inability to connect
+    to the hypervisor
+  *  fb4b0fd9 - Update build-test.yml
+  *  2543d0e5 - Use the FreeBSD GitHub Runner (vmactions/freebsd).
+  *  56a2d9ae - Added a FreeBSD build test to the runner.
+  *  a5e4ea4f - Update README.md
+  *  c353997f - Update README.md
+  *  5e7fd39f - Update README.md and added repology pkg status
+  *  d46ee431 - Update deb-packaging-buildx.yml
+  *  0e157308 - Update deb-packaging-buildx.yml
+  *  b8e2d0c7 - Update deb-packaging-buildx.yml
+  *  55ddfb1c - Update deb-packaging-buildx.yml
+  *  f62ba197 - Update deb-packaging-buildx.yml
+  *  f2ac610a - Create deb-packaging-buildx.yml
+  *  3817cd88 - Update deb-packaging.yml
+  *  93bbf4d4 - Attempt to test with the right arch via docker.
+  *  cd3632b8 - Removed 16.04 aarch64 due to dpkg sig11
+  *  ca42441e - Added deb package build test script
+  *  08bd1678 - Use the distro and arch to the artifact name to ensure
+    uniqueness
+  *  1b238556 - Update deb-packaging.yml
+  *  1ea3fe2d - Update deb-packaging.yml
+  *  c9c7c7e3 - Attempt to use dpkg-deb to build packages.
+  *  bb670aa8 - Update deb-packaging.yml
+  *  ae407b71 - Removed Ubuntu 16.04 aarch64
+  *  8398c03c - Update deb-packaging.yml
+  *  f79fb60d - Updated AUTHORS to reflect latest contributions.
+  *  c35c1627 - Year on source files bumped.
+  *  0db0e72d - Minor typo change.
+  *  65d017e1 - Added WS Auth to the config file.
+  *  4b3ce3ea - Version bumped to 1.9.4 and WS auth support.
+  *  d4467dc3 - Updated man page with auth changes.
+  *  2d669252 - Updated Changelog with latest changes v1.9.4.
+  *  6ff6aecb - Enhance JWT handling with CSRF token support.
+  *  7f115f8c - Removed unused function parameter.
+  *  a919d7cb - Ensure JS comments are on their own line to avoid issues
+    when minified.
+  *  5121d57c - Minor updates to indentation.
+  *  f1744a10 - Use snprintf to ensure the string is properly truncated
+    and null-terminated.
+  *  77a8cb71 - Use PNG as the app icon.
+  *  63aca9a3 - Updated app icon and minified.
+  *  b58b43ed - Added missing header for struct stat.
+  *  869c0310 - Added validation for path existence on CLI options.
+  *  951c3fe7 - Updated lang po files with latest changes.
+  *  74bff48a - Version bumped to 1.9.4.
+  *  620134fd - Version bumped to 1.9.4.
+  *  9e987fd8 - Version bumped to 1.9.4.
+  *  df35bcd5 - Updated list of browsers and operating systems.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Wed, 11 Jun 2025 19:54:20 +0000
+
 goaccess (1:1.9.2+git4287-b6190cff-1) unstable; urgency=medium
 
   * Compile
