@@ -1,3 +1,34 @@
+solvespace (3.1.0+git2122-960f08b3-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 960f08b34ca5f5db30c3981d1708897bac156c35
+  * Date: 1751546111
+  * git changelog:
+  *  960f08b3 - split: fix line splitting for lines intersecting at
+    their endpoints
+  *  454f620e - CI, Web: Build the Web (Emscripten) version...
+  *  0ec78f79 - emscripten: fix resource paths during packaging
+  *  14af3993 - Add links to the 64bit Windows versions in README.md
+  *  e19bdf81 - CI, Win32: Add x64 (64bit) binaries for Windows
+  *  910243b3 - Update CHANGELOG.md
+  *  fb42f1ba - slvs: support getting the bad constraints in the sketch
+    solving API
+  *  cbe18bb4 - slvs: bring back accidentally removed Emscripten binding
+    for uint32_t[4]
+  *  2989b9e3 - Win32: Make SolveSpace grea...static again
+  *  0df1ba74 - Fix typos
+  *  a2d9b799 - CI: Update the windows-2019 runner image to windows-2022
+  *  abb57142 - Set the version to 3.2 in CMakeLists.txt
+  *  ce3a7d14 - Update CHANGELOG.md
+  *  7be54118 - STEP export: fix broken export - s are properly
+    oriented.
+  *  de6e3d1d - STEP export: do not add unused  entities to exported
+    file.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 03 Aug 2025 08:02:20 +0000
+
 solvespace (3.1.0+git2107-8b34a075-1) unstable; urgency=medium
 
   * Compile

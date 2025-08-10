@@ -1,3 +1,33 @@
+goaccess (1:1.9.4+git4352-19e4fa98-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 19e4fa98e5c14f8c6786f1e1d9d5662a316b2b0c
+  * Date: 1753271480
+  * git changelog:
+  *  19e4fa98 - Fixed log format sniffing and processing with multiple
+    threads.
+  *  023a50f4 - Fixed typo on browsers.c (Crawlers).
+  *  a6d032af - Fix NULL pointer dereference in ws_start()
+  *  f977876f - Revert back to dynamic linking (see previous commits).
+  *  83f4de4d - Remove non-root user to restore file permission
+    compatibility.
+  *  bd025c76 - Implement partial static linking for GoAccess, keeping
+    OpenSSL dynamic.
+  *  4400e583 - Add ldd check in build stage to inspect GoAccess runtime
+    dependencies.
+  *  14553904 - Add gettext-libs to runtime image to resolve libintl
+    dependency.
+  *  ac336d7b - Switch to Alpine final stage with OpenSSL to support
+    SSL_CIPHER_standard_name().
+  *  2f6d4494 - Update Dockerfile
+  *  2b1789bb - Update Dockerfile to use openssl-dev for compatibility
+    with SSL_CIPHER_standard_name(3ssl)
+  *  c358f332 - Add OAI-SearchBot to Cralwers list
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 03 Aug 2025 07:59:27 +0000
+
 goaccess (1:1.9.4+git4340-c71c6460-1) unstable; urgency=medium
 
   * Compile

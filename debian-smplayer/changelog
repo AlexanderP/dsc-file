@@ -1,3 +1,33 @@
+smplayer (1:24.05.0+git10388-52d559957-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/smplayer-dev/smplayer.git
+  * Branch: master
+  * Commit: 52d55995717eb2d421fb2276631ebe29db21dbba
+  * Date: 1753268987
+  * git changelog:
+  *  52d559957 - Use Qt::SkipEmptyParts when using Qt >= 5.14
+  *  e39737455 - Use the old code to get the tracks count. This tries to
+    fix bug #1220
+  *  2963bd6ac - Use QString::SkipEmptyParts in Qt 4
+  *  8f10f87cd - Enclose the HTTP headers in quotes
+  *  721120152 - Try to get HTTP headers from extended URLs using the
+    '|' separator in m3u8 playlists
+  *  5d3a148ba - Add #include <QStringList> in powersaving.h. It should
+    fix #1211
+  *  8baf96b87 - Get the duration as soon as possible. Should fix bug
+    #1205
+  *  21d0103f4 - Use video-aspect-override if available. Fixes bug #1201
+  *  bb20767b4 - Disable the swayidle code if using qt 4
+  *  6305acb30 - Download yt-dlp_x86_win7.exe for Windows 32 bit.
+    Hopefully it will fix bug #1191
+  *  1ac419c0b - Add an option to turn on/off the secondary subtitles.
+    Based on pull request #564
+  *  d02dbf4b7 - Merge pull request #1154 from jimzrt/fix/playlist-
+    numbering
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 03 Aug 2025 07:59:42 +0000
+
 smplayer (1:24.05.0+git10375-2c1c7c81d-1) unstable; urgency=medium
 
   * Compile
