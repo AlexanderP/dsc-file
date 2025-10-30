@@ -1,0 +1,6 @@
+# Problem is in OTRL_INIT define in /usr/include/libotr/proto.h and it cannot
+# be fixed in libotrplugin due to specifics of usage of libotr...
+exit-in-shared-library usr/lib/psi-plus/plugins/libotrplugin.so
+
+# False positives:
+hardening-no-relro [usr/lib/psi-plus/plugins/*.so]

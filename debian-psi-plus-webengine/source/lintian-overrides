@@ -1,0 +1,15 @@
+# This lintian note never will be fixed by upstream developers: there are no
+# classical tarballs with "releases" at all, only automatically generated
+# tarballs from git tags exist.
+debian-watch-does-not-check-gpg-signature
+
+# Hide useless notes:
+very-long-line-length-in-source-file README.*
+very-long-line-length-in-source-file iris/src/jdns/include/jdns/qjdnsshared.h*
+very-long-line-length-in-source-file plugins/*.json*
+very-long-line-length-in-source-file qa/*.xml*
+very-long-line-length-in-source-file src/*.ui*
+maintainer-manual-page debian/psi-plus*.1
+
+# False positives:
+license-problem-non-free-RFC iris/3rdparty/stringprep/rfc3454.txt

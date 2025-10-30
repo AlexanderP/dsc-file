@@ -1,0 +1,80 @@
+#!/usr/bin/make -f
+# Uncomment this to turn on verbose mode.
+#DH_VERBOSE=1
+
+include /usr/share/dpkg/architecture.mk
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+BUILDDIR1 = $(CURDIR)/debian/builddir1
+BUILDDIR3 = $(CURDIR)/debian/builddir3
+DESTDIR   = $(CURDIR)/debian/tmp
+
+CMAKEOPTS = -DBUNDLED_IRIS=ON \
+            -DDEV_MODE=OFF \
+            -DONLY_BINARY=OFF \
+            -DONLY_PLUGINS=OFF \
+            -DINSTALL_EXTRA_FILES=ON \
+            -DINSTALL_PLUGINS_SDK=ON \
+            -DPRODUCTION=OFF \
+            -DUSE_ASPELL=OFF \
+            -DUSE_CCACHE=ON \
+            -DUSE_DBUS=ON \
+            -DUSE_ENCHANT=OFF \
+            -DUSE_HUNSPELL=ON \
+            -DUSE_KEYCHAIN=ON \
+            -DUSE_XSS=ON \
+            -DVERBOSE_PROGRAM_NAME=ON
+
+OPTSSTEP1 = -DCHAT_TYPE=BASIC \
+            -DENABLE_PLUGINS=ON \
+            -DBUILD_DEV_PLUGINS=ON \
+            -DBUILD_PSIMEDIA=ON
+
+OPTSSTEP3 = -DCHAT_TYPE=WEBENGINE \
+            -DENABLE_PLUGINS=OFF \
+            -DBUILD_PSIMEDIA=OFF
+
+DEBIAN_CODENAME = $(shell echo $$DIST)
+ifeq "$(DEBIAN_CODENAME)" ""
+	DEBIAN_CODENAME = $(shell dpkg-parsechangelog | awk '/^Distribution: / {print $$2}')
+endif
+
+
+%:
+	dh $@ --buildsystem=cmake
+
+override_dh_dwz:
+	dh_dwz || true
+
+override_dh_auto_configure:
+	dh_auto_configure -B$(BUILDDIR1) -- $(CMAKEOPTS) $(OPTSSTEP1)
+        ifeq ($(DEB_HOST_MULTIARCH), x86_64-linux-gnu)
+	    dh_auto_configure -B$(BUILDDIR3) -- $(CMAKEOPTS) $(OPTSSTEP3)
+        endif
+
+override_dh_auto_build:
+	dh_auto_build -B$(BUILDDIR1)
+        ifeq ($(DEB_HOST_MULTIARCH), x86_64-linux-gnu)
+	    dh_auto_build -B$(BUILDDIR3)
+        endif
+
+override_dh_auto_test:
+	dh_auto_test -B$(BUILDDIR1)
+        ifeq ($(DEB_HOST_MULTIARCH), x86_64-linux-gnu)
+	    dh_auto_test -B$(BUILDDIR3)
+        endif
+
+override_dh_auto_install:
+	dh_auto_install -B$(BUILDDIR1) --destdir=$(DESTDIR)
+        ifeq ($(DEB_HOST_MULTIARCH), x86_64-linux-gnu)
+	    cp -a $(BUILDDIR3)/psi/psi-plus-webengine $(DESTDIR)/usr/bin/
+	    cp -a $(BUILDDIR3)/src/psi-plus-webengine.desktop $(DESTDIR)/usr/share/applications/
+        endif
+	# Move psimedia plugin to separate package:
+	mkdir -p $(CURDIR)/debian/psi-plus-plugin-psimedia/usr/lib/psi-plus/plugins/
+	mv $(DESTDIR)/usr/lib/psi-plus/plugins/libmediaplugin.so \
+	   $(CURDIR)/debian/psi-plus-plugin-psimedia/usr/lib/psi-plus/plugins/
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -z9
