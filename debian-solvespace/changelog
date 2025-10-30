@@ -1,3 +1,30 @@
+solvespace (3.1.0+git2137-8f37db9c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 8f37db9ceca96bc24a1b8babccbaec7b1d4134e8
+  * Date: 1757417280
+  * git changelog:
+  *  8f37db9c - Translations: update Chinese translation.
+  *  74a13ef6 - tests: actually randomise the order of tests
+  *  2fd3989c - ci: enable building with ASan on Windows for testing
+  *  f5e500c6 - build: allow enabling ASan on Windows with MSVC
+  *  1bf11371 - mimalloc: add a hack to fix building for Emscripten
+  *  c34d2325 - mimalloc: downgrade to v2.2.2 to fix the Python build
+    issue on Linux
+  *  462140aa - slvs: don't mark  constraints as dragged
+  *  cb561ba5 - build: silence maybe uninitialised warnings
+  *  de634d93 - group: add an explicit assertion for too many entities
+  *  767935fe - libdxfrw: Update the submodule to the latest version
+    from LibreCAD
+  *  592edbdc - extlib: update libpng to v1.6.50
+  *  b9a9e268 - extlib: update mimalloc to v2.2.3
+  *  0bf9cbb7 - extlib: update zlib to v1.3.1
+  *  7627b859 - build: fix building with OpenMP on macOS
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 11 Sep 2025 09:22:22 +0000
+
 solvespace (3.1.0+git2123-1b5036a4-1) unstable; urgency=medium
 
   * Compile
