@@ -48,6 +48,7 @@ override_dh_dwz:
 	dh_dwz || true
 
 override_dh_auto_configure:
+	#sed '34,38d' -i plugins/generic/CMakeLists.txt
 	dh_auto_configure -B$(BUILDDIR1) -- $(CMAKEOPTS) $(OPTSSTEP1)
         ifeq ($(DEB_HOST_MULTIARCH), x86_64-linux-gnu)
 	    dh_auto_configure -B$(BUILDDIR3) -- $(CMAKEOPTS) $(OPTSSTEP3)

@@ -1,3 +1,25 @@
+solvespace (3.1.0+git2145-01f58b78-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 01f58b785d394a4f9e206457972218459fb85666
+  * Date: 1760870333
+  * git changelog:
+  *  01f58b78 - ci: use the Sequoia bottle tag for the macOS x86_64
+    build as well
+  *  fb81de85 - ci: fix the macOS CI build
+  *  ae82fdf0 - cairo: update to 1.18.4
+  *  76df625e - pixman: update to 0.46.4
+  *  1436d2c0 - tests: reduce dependence on  in order to reduce build
+    time
+  *  eb27cde8 - handle: extract handle-related code from dsc.h
+  *  88270d3d - general: rework the way files are included for better
+    maintainability
+  *  89aa5964 - add missing else statement in Slvs_MarkDragged_check
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 30 Oct 2025 19:12:19 +0000
+
 solvespace (3.1.0+git2137-8f37db9c-1) unstable; urgency=medium
 
   * Compile
