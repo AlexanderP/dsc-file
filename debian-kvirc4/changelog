@@ -1,3 +1,22 @@
+kvirc (4:5.2.8+git-7630-79b6e8fbe-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 79b6e8fbe5835c9e8767d67c989abdfe51abb350
+  * Date: 1762793500
+  * git changelog:
+  *  79b6e8fbe - Painter object fixes; fix #2494 (#2728)
+  *  67e62d597 - Grow the receive buffer from 1k to 16k to accomodate
+    max ssl packet size; fix #2691 (#2727)
+  *  148ad10ea - SSL: ignore SIGPIPE in SSL_connect(); fix #2701 (#2726)
+  *  9a725a299 - Support cap-notify; fix #2724 (#2725)
+  *  76430fe6a - Fix the Join KVIrc channel button if the Libera.chat
+    network is not defined. Partially fixes #2709 (#2723)
+  *  754d15930 - Add BRASnet IRC network. Fix #2721 (#2722)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 22 Nov 2025 15:34:35 +0000
+
 kvirc (4:5.2.8+git-7624-7fa7159ec-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,182 @@
+qcad (3.32.4.1+git11303-d6c1cb0974-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: d6c1cb0974671e5d70bb57627bf65b10bc6d7526
+  * Date: 1763758690
+  * git changelog:
+  *  d6c1cb0974 - Merge pull request #102 from qcad/copilot/correct-pl-
+    translations
+  *  acb872d0c8 - Complete all unfinished Polish translations
+  *  75040dfe81 - Merge pull request #100 from qcad/copilot/fix-nb-
+    translations-in-ts-directory
+  *  368f95d9f3 - Merge pull request #98 from qcad/copilot/correct-lv-
+    translations
+  *  1b77f5c3be - Correct Latvian translations: fix units, CAD terms,
+    and remove unfinished markers
+  *  e6f263129c - Merge pull request #95 from qcad/copilot/correct-
+    korean-translations
+  *  dd986bfedc - Merge pull request #93 from qcad/copilot/correct-
+    japanese-translations
+  *  cba1da8616 - Merge pull request #91 from qcad/copilot/correct-
+    croatian-translations
+  *  76f05bafdd - Merge branch 'master' into copilot/correct-croatian-
+    translations
+  *  34b0762eea - Merge pull request #86 from qcad/copilot/fix-
+    hungarian-translations
+  *  c2f1dbbf02 - Merge pull request #84 from qcad/copilot/correct-
+    finnish-translations
+  *  5a66a2034d - Merge pull request #80 from qcad/copilot/correct-
+    greek-translations-el
+  *  24d6096e4d - Merge pull request #82 from qcad/copilot/correct-
+    estonian-translations
+  *  d8327a8e2f - Merge pull request #78 from qcad/copilot/correct-
+    danish-translations
+  *  0bc3507301 - Changes before error encountered
+  *  b88e2dd67a - Changes before error encountered
+  *  88d26f032a - Changes before error encountered
+  *  ab8fc4ae9b - Fix Misc translation inconsistency
+  *  acc365f38c - Standardize CAD terminology across Japanese
+    translation files
+  *  87f7eb6472 - Correct and complete Korean translations - remove
+    type=unfinished and fix CAD terminology
+  *  c9b4180d62 - Complete translations for qcadcore, qcadentity, and
+    qcadgui - 100%!
+  *  c19e87d87d - Add more Croatian translations for scripts_hr.ts - 59
+    translations completed
+  *  281ffbcaac - Complete and mark all Norwegian Bokmål translations as
+    finished
+  *  de857eda13 - Mark completed Kehtetu (Invalid) translations as
+    finished for consistency
+  *  af04ed039c - Complete all Japanese translations in scripts_ja.ts
+    with style corrections
+  *  b03b7b7a11 - Add entity properties, text formatting, and linetype
+    translations
+  *  997bf7566a - Fix additional Estonian CAD terminology and validation
+    messages
+  *  721205ac1f - Complete Croatian translations for qcadgui,
+    qcadentity, and qcadcore
+  *  e5cb30800f - Complete unfinished translations and fix consistency
+    issues in Finnish
+  *  738d984ef6 - Complete translations for qcadcore, qcadentity, and
+    qcadgui Japanese files
+  *  0406dd129e - Fix CAD snap point terminology in Estonian
+    translations
+  *  48476da233 - Add geometric terms, operations, and menu items to
+    Greek translations
+  *  19432d9649 - Complete translations for qcadcore_hr.ts,
+    qcadentity_hr.ts, and qcadgui_hr.ts
+  *  f102b4bd00 - Initial plan
+  *  9664344ee3 - Initial plan
+  *  490e786535 - Complete Danish translations and fix incorrect
+    translations
+  *  a3b5bcab84 - Add basic Greek translations for common CAD terms and
+    units
+  *  591ffe5fd0 - Initial plan
+  *  f9716207a1 - Fix critical Estonian translation errors in CAD
+    terminology
+  *  872634f3fe - Initial plan
+  *  042f6ec3df - Initial plan
+  *  60a355ca91 - Initial plan
+  *  cb648d863b - Initial plan
+  *  0c2d6e0ec5 - Initial plan
+  *  cc5af77099 - Initial plan
+  *  1d83387b80 - Initial plan
+  *  12a40f59a6 - Initial plan
+  *  b0c5549004 - update
+  *  05896ecb25 - improve warning
+  *  4ef2e9b3c1 - getAngleToPlaneXY: fix range check
+  *  020eeb4344 - update qrc
+  *  9e815b84fb - WidgetFactory.initLayerCombo: optionally list no XRef
+    layers
+  *  b009e7c742 - override entity as shared pointer
+  *  7892c7afcb - update script bindings
+  *  72525fcf76 - Merge pull request #76 from qcad/copilot/correct-
+    czech-translations
+  *  a3ee99b9c3 - Complete and correct Czech translations in all *_cs.ts
+    files
+  *  f2bd3085c2 - Initial plan
+  *  32675aa1b0 - Merge pull request #74 from qcad/copilot/correct-
+    bulgarian-translations
+  *  bfe12c869f - Fix spelling consistency for hatching terminology
+  *  f9d2defb0b - Additional corrections for CAD terms and consistency
+  *  71629dd943 - Correct Bulgarian translations for units and CAD terms
+  *  370930984b - Initial plan
+  *  824216363c - fix potential crash with faulty transactions
+  *  4631de5605 - escape layer / block names for use in regexp
+  *  cc3c914f93 - add RMultiOperation
+  *  9495ac51be - only add transaction if undoable
+  *  9dbd0ec3cc - reload / unload XRefs when XRef block changes
+  *  f18d830863 - add unloadXRef
+  *  159b5e8b3e - clean up
+  *  ab0332c39e - allow editing of block that cannot be made current
+    block (XRef block)
+  *  48de61accd - update
+  *  0a038b29f1 - add todo
+  *  0e939c663c - update translations
+  *  38509bec28 - update translations
+  *  01714f439f - update translations
+  *  e7dc42942f - Merge pull request #72 from qcad/copilot/correct-
+    german-translations-another-one
+  *  6e5c08cc22 - Correct German translations: Bemassung → Bemaßung in
+    scripts_de.ts
+  *  91718ecd69 - Initial plan
+  *  5fac516d2d - Merge pull request #70 from qcad/copilot/correct-
+    german-translations-again
+  *  472dd10583 - Complete unfinished translations in German files
+  *  6202a74a40 - Complete ss->ß corrections in all German translation
+    files
+  *  20780ae68c - Correct ss->ß in qcadentity_de.ts and qcadcore_de.ts
+  *  28b4d2f055 - Initial plan
+  *  29d848126d - update translations
+  *  469e3bb6cb - Merge pull request #68 from qcad/copilot/correct-
+    dutch-translations
+  *  6020415aa4 - Merge pull request #66 from qcad/copilot/correct-
+    translations-spanish
+  *  1e041b1fd3 - Merge pull request #64 from qcad/copilot/correct-it-
+    translations
+  *  1999f6c533 - Merge pull request #62 from qcad/copilot/correct-
+    german-translations
+  *  90e4458e8b - Correct German translations: fix spelling, language
+    code, and CAD terminology
+  *  b92ae450a1 - Fix grammar and consistency issues in Italian
+    translations
+  *  e8a6d5e17f - Fix typo and capitalization in Dutch translations
+  *  7def749114 - Fix additional translation errors in Italian
+  *  e0520a7d5a - Fix mistranslations and typos in Spanish translations
+  *  1866e69a96 - Fix Dutch translation inconsistencies and errors
+  *  0525302fa2 - Fix critical translation errors in Italian
+    translations
+  *  3fc15b4e89 - Fix untranslated Spanish strings in translation files
+  *  9468c2d44d - Initial plan
+  *  aba9cc2907 - Initial plan
+  *  9de67592ff - Initial plan
+  *  dbd1ee376a - Initial plan
+  *  509949202e - Merge pull request #60 from qcad/copilot/correct-
+    french-translations
+  *  9750ae2b27 - Fix French translations: terminology consistency and
+    grammar corrections
+  *  75f42042c0 - Initial plan
+  *  03cf531460 - add icons
+  *  3c52b5a8c7 - disallow renaming of blocks from XRefs
+  *  bc481402ae - allow editing of XRef layers, disallow renaming
+  *  f48707072b - always store file name for deriving classes
+  *  e4d4e9e57f - fix limit checks
+  *  5410328934 - add XRef property
+  *  60f6ff7be0 - update
+  *  ed842de0f9 - add getXRefBlockNames, getXRefLayerNames
+  *  dd6643fd95 - add support for XRef blocks and dependend blocks
+  *  fedd8cbe59 - refactor for derived classes
+  *  e559b1f46c - prevent editing of XRef and XRef dependend blocks
+  *  972ca69b8d - avoid multiple calls to getDocument
+  *  3d2f10c0a4 - update qrc
+  *  3380b6f95b - return empty string instead of undefined from
+    autoIconPath
+  *  a67dba3362 - sort plugins by name / ID
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 22 Nov 2025 15:33:22 +0000
+
 qcad (3.32.4.0+git11185-0becd30705-1) unstable; urgency=medium
 
   * Compile
