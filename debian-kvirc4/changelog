@@ -1,3 +1,34 @@
+kvirc (4:5.2.10+git-7643-e6317d455-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: e6317d4552dd84c2551bbf63b08e55205e8c9f68
+  * Date: 1766400689
+  * git changelog:
+  *  e6317d455 - Add a spellchecker backend based on windows >=8
+    integrated spellchecker (#2743)
+  *  0628a6a40 - Windows builds: add libffi, too (#2742)
+  *  d16796241 - Winedows build: add libgobject, needed by libenchant
+    (#2741)
+  *  5fe88017e - Add .cache to ignore
+  *  292d260a9 - Fix windows build - mingw-w64-x86_64-enchant-2.8.14-1
+    renamed the dll to libenchant-2-2.dll (#2738)
+  *  da5185640 - Release 5.2.10 (#2737)
+  *  7d431d39b - Translation updates (#2735)
+  *  4922f79f9 - Add missing description for libera.chat modes (#2734)
+  *  48d1f8326 - Topic widget: make the read-only label as similar as
+    possible to the editable input editor (#2733)
+  *  7c264a177 - Update macOS runner version to macos-14
+  *  b85b55ce5 - Options dialog: when searching don't force text to be
+    black, on dark themes it's unreadable (#2732)
+  *  4731ec54a - Fix geometry sanity check to permit startup on
+    secondary monitors (#2731)
+  *  38b300837 - Revert Use floating point widths in KviIrcView: fixes
+    overlapping texts (#2730)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 27 Dec 2025 13:27:36 +0000
+
 kvirc (4:5.2.8+git-7630-79b6e8fbe-1) unstable; urgency=medium
 
   * Compile

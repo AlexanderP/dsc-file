@@ -1,3 +1,346 @@
+qcad (3.32.5.0+git11559-1b5487602e-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/qcad/qcad.git
+  * Branch: master
+  * Commit: 1b5487602ee020ad6db40954311777128fff1431
+  * Date: 1766780487
+  * git changelog:
+  *  1b5487602e - Merge branch 'master' of github.com:qcad/qcad
+  *  2184ac6772 - ignore collisions with unknown handles
+  *  ba3d8bd10a - Merge pull request #187 from Do-nt-Ukr/patch-28
+  *  4bca28f812 - Harmonize Ukrainian titles of top-level menu items
+  *  d6716a23f4 - Merge pull request #186 from Do-nt-Ukr/patch-27
+  *  2e2cea7bbc - Fix malformed translation tag in scripts_uk.ts (line
+    5362)
+  *  4b29bdf5a3 - Merge pull request #185 from Do-nt-Ukr/patch-26
+  *  5bf96d21f0 - Complete revision and harmonization of Ukrainian
+    translations in scripts_uk.ts
+  *  8a5c1cae21 - Merge pull request #184 from Do-nt-Ukr/patch-25
+  *  70460faa6f - Fix and harmonize Ukrainian translations in
+    scripts_uk.ts (11450)
+  *  66c45fe8fa - Merge pull request #183 from Do-nt-Ukr/patch-24
+  *  f48c6f5a59 - Fix and harmonize Ukrainian translations in
+    scripts_uk.ts (9221)
+  *  d9b303fa4c - Merge pull request #182 from Do-nt-Ukr/patch-23
+  *  de33c926c1 - Fix and harmonize Ukrainian translations in
+    scripts_uk.ts (up to line 7171)
+  *  c1ef27a9a3 - Merge pull request #181 from Do-nt-Ukr/patch-22
+  *  d6b9bb8bd3 - Fix and harmonize Ukrainian translations in
+    scripts_uk.ts (up to line 5261)
+  *  5fc4ecc96a - Merge pull request #180 from Do-nt-Ukr/patch-21
+  *  a26aa1115b - Fix and refine Ukrainian translations in scripts_uk.ts
+    (up to line 4088)
+  *  edc91d62e2 - Merge pull request #179 from Do-nt-Ukr/patch-20
+  *  6e98cd82cc - Fix Ukrainian translations in scripts_uk.ts (up to
+    line 2712)
+  *  cbdbd29877 - Merge pull request #178 from Do-nt-Ukr/patch-19
+  *  4bc8b4d5c3 - Fix Ukrainian translations in scripts_uk.ts (lines
+    676–1725)
+  *  d64a30b647 - Merge pull request #177 from Do-nt-Ukr/patch-18
+  *  a810302480 - Fix Ukrainian translations in scripts_uk.ts (lines
+    1–675)
+  *  d87b1a25ef - Merge pull request #176 from Do-nt-Ukr/patch-17
+  *  32a6102b35 - Repeat review and fix Ukrainian translations in
+    qcadentity_uk.ts
+  *  d4e7103832 - Merge pull request #175 from Do-nt-Ukr/patch-16
+  *  3e1a12c93f - Fix and harmonize Ukrainian translations in
+    qcadcore_uk.ts
+  *  1ee9bac98f - Merge pull request #171 from Do-nt-Ukr/patch-14
+  *  0ef22bff6a - Merge pull request #172 from Do-nt-Ukr/patch-15
+  *  5a538da1ae - Fix spline, ray, and geometry property translations
+  *  16503bb717 - Fix incorrect and inconsistent translations of
+    polyline and geometry properties
+  *  b503120d9c - Merge pull request #170 from Do-nt-Ukr/patch-13
+  *  f57c86f17a - Merge pull request #169 from Do-nt-Ukr/patch-12
+  *  515e881b7b - Merge pull request #168 from Do-nt-Ukr/patch-11
+  *  35d13a9395 - Fix Ukrainian translations for hatch entity properties
+  *  6d9f2c1513 - Normalize point-related geometry terms
+  *  794be60392 - Fix Ukrainian translations for ellipse and auto label
+    properties
+  *  b3d9af6971 - Merge pull request #167 from Do-nt-Ukr/patch-10
+  *  213dd45d06 - Fix Ukrainian translations for arrow and extension
+    line properties
+  *  64e706a98f - Merge pull request #166 from Do-nt-Ukr/patch-9
+  *  5454e7eb75 - Fix Ukrainian translations for dimension property
+    terms
+  *  b9064bac20 - Merge pull request #165 from Do-nt-Ukr/patch-8
+  *  89639ef003 - Fix Ukrainian translations for chord point properties
+  *  8780404727 - Merge pull request #164 from Do-nt-Ukr/patch-7
+  *  d9e2d6ee63 - Fix Ukrainian translations for extension point
+    properties
+  *  35cb6e5703 - Merge pull request #162 from Do-nt-Ukr/master
+  *  639fd22cec - Merge pull request #163 from Do-nt-Ukr/patch-6
+  *  68ab22c70a - Fix Ukrainian translations for chord point properties
+  *  e577aabcde - Fix spacing between numbers and units in Ukrainian
+    translation
+  *  d6019ece56 - update translations
+  *  0ee18a33b7 - Merge branch 'master' of github.com:qcad/qcad
+  *  64203b5f8a - fix deployment target
+  *  259a105841 - Merge pull request #161 from Do-nt-Ukr/patch-5
+  *  7c2f2c1bf3 - Improve Ukrainian translations for ISO line type names
+  *  3747b75ffa - Merge pull request #160 from Do-nt-Ukr/patch-4
+  *  11d0252912 - Improve Ukrainian translations for left and right
+    directions
+  *  42aabf6e95 - Merge pull request #159 from Do-nt-Ukr/patch-3
+  *  22f04ef40f - Improve Ukrainian translation for Parent Id
+  *  9f51e967eb - Merge pull request #158 from Do-nt-Ukr/patch-2
+  *  9111387f66 - Improve Ukrainian translations for rows and columns
+    parameters
+  *  871e8958b2 - Merge pull request #157 from Do-nt-Ukr/patch-1
+  *  bbe2fdf35c - Fix Ukrainian translation of Dark Cyan color
+  *  89d6b6b6c4 - set version to 3.32.5.1
+  *  ccafc01c1c - set minimum target before project(...)
+  *  ad10f93612 - update user manual
+  *  c007f1c937 - add macOS target version
+  *  345cc36b12 - Merge branch 'master' of github.com:qcad/qcad
+  *  6fed5d55bd - clean up
+  *  680c6df547 - Merge pull request #156 from qcad/copilot/refactor-
+    german-orthography-docs
+  *  ea1ae62e00 - attempt to port to MSVC
+  *  2e2d9e0edf - Fix incorrect Aussehen/Ausschnitt changes - keep ss
+    for short vowels
+  *  164cc5d577 - port to MSVC
+  *  a1eaf15ee6 - Fix compound word: Textgrösse to Textgröße
+  *  38cbd7c2d0 - Refactor German orthography: ss to ß in documentation
+  *  f184c617da - Initial plan
+  *  73068aadf1 - port to MSVC
+  *  853e6de079 - update user manual
+  *  bded28d32e - add UNKNOWN_HANDLE for default linetypes
+  *  947a9e71d8 - update
+  *  411e28dc3d - update translations
+  *  b616ee012d - fix ts files
+  *  f6bb6d6920 - line wrapping anywhere for Han/Hiragana/Katakana
+  *  27829a0571 - Merge pull request #154 from qcad/copilot/complete-hr-
+    th-translations
+  *  126cf9a205 - Complete Croatian and Thai translations for scripts
+    files
+  *  cf0e46ab00 - Analysis complete: Document scope of translation task
+  *  34406b1a6d - Initial plan
+  *  f24f0356d7 - update translations
+  *  021f166d27 - update translations
+  *  311e9640d0 - update translations
+  *  8b63066aa4 - Merge pull request #152 from qcad/copilot/review-ss-
+    vs-biss-usage
+  *  9cbd99a12e - Fix German translation: grosse → große (correct ß
+    usage)
+  *  3af65a7e3a - Initial plan
+  *  6cfa34b3c7 - set version to 3.32.5
+  *  737180c46b - fix complexity estimate of hatch
+  *  3517cbcf91 - clean up
+  *  2c19825f84 - lower default threshold for showing hatch length
+    automatically
+  *  2f188a08f1 - add addSolid
+  *  8604f42857 - fix double display of print preview options after
+    preferenced dialog
+  *  8284fc1011 - add preference to clear selection with esc
+  *  3b18d0c661 - update translations
+  *  7487985fc1 - Merge pull request #150 from qcad/copilot/correct-
+    translations-zh-cn-zh-tw
+  *  90b3613a0f - Merge branch 'master' into copilot/correct-
+    translations-zh-cn-zh-tw
+  *  243d2db3c1 - Correct translations in scripts_zh_TW.ts - fix
+    technical terms and CAD terminology
+  *  bec660af24 - update translations
+  *  74661e2e2d - Initial plan
+  *  3ef127f649 - Merge pull request #148 from qcad/copilot/correct-
+    translations-sv-th-tr-uk
+  *  08a0c0f48c - Fix 10 mixed English/Thai translations for better
+    quality
+  *  da9ddbb4ab - Add 197 Thai translations using CAD and UI terminology
+  *  a0414f7789 - Remove backup files
+  *  dc33a00bc6 - Fix empty plural forms for Thai, Turkish, and
+    Ukrainian translations
+  *  e40d5f02eb - Initial plan
+  *  84e78b7a27 - Merge pull request #146 from qcad/copilot/correct-
+    translations-ro-ru-sk-sl
+  *  a8094d9603 - add parseXml (moved from qtjsapi)
+  *  b2e0289343 - Fix HTML encoding and placeholder issues in
+    translations
+  *  2e007a392a - Fix XML encoding issue in Romanian translation
+  *  6a0c4a1d0f - Initial plan
+  *  4f5dec122b - Merge pull request #144 from qcad/copilot/correct-
+    translations-nb-nl-pl-pt
+  *  06ef48fe91 - Fix Polish and Portuguese translation inconsistencies
+    (40 total fixes)
+  *  2e1f221510 - Remove backup file
+  *  52e6bdc50a - Fix Dutch translation inconsistencies: grammar,
+    standardization (13 fixes)
+  *  d11fcbdac2 - Fix Portuguese capitalization: standardize Pelo bloco
+    and Escala do tipo de linha
+  *  a17d1d1ebc - Fix Norwegian snap point translation: Midten →
+    Midtpunkt
+  *  60ac474b46 - Initial plan
+  *  1041b57ebb - Merge pull request #142 from qcad/copilot/correct-
+    translations-ja-ko-lt-lv
+  *  095c433db1 - Correct translations for ja, ko, lt, lv - fix
+    placeholders and terminology
+  *  794ef7e45f - Fix placeholder issues and improve translations for
+    ja, ko, lt, lv
+  *  2d24e4da15 - Initial plan
+  *  795b7fa8ff - Merge pull request #140 from qcad/copilot/correct-
+    translations-hr-hu-id-it
+  *  1a3b8769de - Fix accelerator key character issues in Croatian
+    translations
+  *  f54c3ffa88 - Add 40 more Croatian translations to scripts_hr.ts
+    (55.1% -> 56.6%)
+  *  68e7fdc77f - Add 190 more Croatian translations to scripts_hr.ts
+    (49.3% -> 55.1%)
+  *  eed469395b - Add 440 verified Croatian translations to
+    scripts_hr.ts (30.7% -> 47.7%)
+  *  3c8e2e6d31 - Fill missing plural translations for Hungarian,
+    Indonesian, and Italian
+  *  ff941aba6c - Initial plan
+  *  43862bbc2c - Merge pull request #138 from qcad/copilot/correct-
+    translations-es-et-fi-fr
+  *  faebde5ce1 - Fix Finnish placeholder spacing error
+  *  0130dd3895 - Add missing keyboard shortcuts to French, Finnish, and
+    Estonian translations
+  *  bd8a1bcd21 - Fix Spanish translations: add missing keyboard
+    shortcuts and complete ellipsis
+  *  ce9dd50ee2 - Fix empty translation in Finnish scripts_fi.ts - on
+    preposition
+  *  d7d82cd61b - Initial plan
+  *  2bd17bce93 - Merge pull request #136 from qcad/copilot/correct-
+    translations-bg-cs-da-el
+  *  96851d75b7 - Fix CAD terminology in bg, cs, da, el translations
+  *  eea307490f - Initial plan
+  *  b1f8465da3 - Merge pull request #134 from qcad/copilot/correct-
+    norwegian-translations
+  *  6a1c33c255 - Complete Entity/Entitet and Property/Egenskap
+    corrections
+  *  b56f00228c - Fix Entity/Entitet translations - correct enhet to
+    entitet
+  *  fb8351e926 - Fix critical Norwegian translation errors
+  *  fd41b99c68 - Initial plan
+  *  86b602fe1b - update
+  *  6d88fdff38 - Merge branch 'master' of github.com:qcad/qcad
+  *  aaa84df9fe - remove file system watcher for deleted XRef
+  *  89ed75402f - Merge branch 'master' of github.com:qcad/qcad
+  *  b94caa7c7f - update
+  *  f05256805d - clean up
+  *  382c1d1db9 - fix block list context menu
+  *  1104212d7d - Merge pull request #131 from qcad/copilot/improve-
+    math-module-code
+  *  ebf25ec003 - Fix bugs and improve code quality in math module
+  *  d3268c7360 - Initial plan
+  *  d3f6ce446d - update translation
+  *  9137db3d81 - Merge pull request #129 from qcad/copilot/complete-
+    translations-files
+  *  42d706d3c4 - Add partial translations for Croatian and Thai script
+    files
+  *  3f8e99ebd4 - Complete translations for Indonesian, Italian,
+    Lithuanian, Latvian, Dutch, Portuguese, Russian, Slovak, Turkish,
+    Ukrainian scripts and partial Croatian translations
+  *  bafa22e0be - Complete translations for Hungarian, Turkish,
+    Ukrainian, Bulgarian, Greek, Spanish, Estonian, French files
+  *  0209cb9c6e - Initial plan
+  *  5a264f2379 - Merge pull request #127 from qcad/copilot/complete-ts-
+    translations
+  *  9fb0b3d9e1 - Complete translations in all script files
+  *  bcb5231762 - Complete translations in qcadcore, qcadentity, and
+    qcadgui files
+  *  cec7607185 - Complete translations in qcadcore files for major
+    languages
+  *  4f1b3dcd82 - Initial plan
+  *  421c7276a0 - update translations
+  *  73c8a07b80 - allow adding menus for XRef blocks only
+  *  29c0b9b589 - add missing ... to menu item text
+  *  3834022cae - update translations
+  *  a4e933f747 - Merge branch 'master' of github.com:qcad/qcad
+  *  e7b053a7c4 - set version to 3.32.4.4
+  *  ca1fb221cf - Merge pull request #119 from qcad/copilot/correct-
+    ukrainian-translations
+  *  c1666c7b2f - Merge branch 'master' into copilot/correct-ukrainian-
+    translations
+  *  33198404e9 - Merge pull request #121 from qcad/copilot/correct-
+    translations-zh-cn
+  *  bcffe4c286 - Merge branch 'master' into copilot/correct-
+    translations-zh-cn
+  *  70329f51c6 - Complete and correct Simplified Chinese translations
+  *  772df8aaa0 - Complete and correct Ukrainian translations in ts
+    directory
+  *  f5676808d2 - Merge pull request #123 from qcad/copilot/correct-zh-
+    tw-translations
+  *  81455797c3 - Merge branch 'master' into copilot/correct-zh-tw-
+    translations
+  *  2800c4a927 - Merge pull request #117 from qcad/copilot/correct-
+    turkish-translations
+  *  982a1252b4 - Merge branch 'master' into copilot/correct-turkish-
+    translations
+  *  4b602ebdfb - Merge pull request #115 from qcad/copilot/correct-
+    thai-translations
+  *  b59c0f9822 - Merge branch 'master' into copilot/correct-thai-
+    translations
+  *  5083b9805b - Continue Thai translations for scripts_th.ts (~47%
+    done)
+  *  c450cf05b6 - Continue Thai translations for scripts_th.ts (~43%
+    done)
+  *  6f19646bda - Complete Thai translations for all files except
+    scripts_th.ts (40% done)
+  *  d224158bab - Complete and correct Turkish translations in all ts
+    files
+  *  41f1cf8d66 - Complete Thai translations for qcadgui_th.ts,
+    qcadentity_th.ts, and qcadcore_th.ts
+  *  d44bc4af5e - Merge pull request #111 from qcad/copilot/correct-
+    slovenian-translations
+  *  8408faf889 - Merge branch 'master' into copilot/correct-slovenian-
+    translations
+  *  21782eb10b - Complete Slovenian translations in all ts files
+  *  8d1ceac809 - Merge pull request #113 from qcad/copilot/correct-
+    swedish-translations
+  *  085f874885 - Merge branch 'master' into copilot/correct-swedish-
+    translations
+  *  77426bb985 - Complete Swedish translations in ts directory
+  *  1ad2dd7b51 - update script bindings
+  *  f6136baa1a - port to Qt 5
+  *  5f7dcdd593 - update script bindings
+  *  1ba33bd665 - update qrc
+  *  79cbbe39f2 - port to Qt 5
+  *  79697681ce - update script bindings
+  *  72cfdcc83b - update icon size
+  *  4edc1ecca8 - update translation sources
+  *  0d2bd84f1a - update user manual
+  *  b09e496ae3 - add unit tests
+  *  5282106b3b - clean up
+  *  b48fbb7c75 - update user manual
+  *  51e9f32b1e - Merge pull request #106 from qcad/copilot/correct-ro-
+    translations
+  *  c4ef58437f - Merge pull request #125 from qcad/copilot/update-user-
+    manual-translations
+  *  8759ea53ab - Complete Romanian translations: fix errors, fill empty
+    strings, improve CAD terminology
+  *  22536162d5 - Fix Polish translation: correct terminology and
+    formatting
+  *  63582b53ac - Update InsertBlock user manual translations with array
+    feature and add missing languages
+  *  2dcae27ffb - Merge pull request #105 from qcad/copilot/correct-lt-
+    translations
+  *  c6bc11ea0a - Initial plan
+  *  cd3c964ad7 - update user manual
+  *  2ddb19c0ba - add XRef binding stubs
+  *  e87375ca72 - refactor ellipse bounding box
+  *  1d44ffc33f - add addEllipse
+  *  7b98674dbd - add command
+  *  6590d4d163 - Merge branch 'master' of github.com:qcad/qcad
+  *  f1ac67ad9b - clean up
+  *  77bf91fcd4 - watch XRef files for changes, notify user
+  *  7a2efed1db - update
+  *  b2157df1e3 - add loadXRefs
+  *  f44ff59e11 - add signal to ask user to reload XRefs
+  *  e8f4b6068b - make XRef paths absolute when copying an XRef block
+  *  0fb8b5d429 - make RCopyOperation more flexible
+  *  606f2299d7 - add loadXRef
+  *  1b260aea24 - update
+  *  e4a4d4fa33 - Complete zh_TW translations for scripts (2585
+    translations converted)
+  *  64e2a5da09 - Complete zh_TW translations for qcadcore
+  *  bc9c62f871 - Complete zh_TW translations for qcadgui and qcadentity
+  *  ec180764e5 - Complete Lithuanian translation corrections and
+    finalization
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 27 Dec 2025 13:19:39 +0000
+
 qcad (3.32.4.1+git11303-d6c1cb0974-1) unstable; urgency=medium
 
   * Compile

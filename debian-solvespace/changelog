@@ -1,3 +1,39 @@
+solvespace (3.1.0+git2163-de2c5fee-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: de2c5feec8824dd988c3ed382795031a58de8a5c
+  * Date: 1765894888
+  * git changelog:
+  *  de2c5fee - Add QT front end option for Linux builds
+  *  d8ca8e27 - Add thumbnailer
+  *  eaefb5d4 - Qt: Request a specific GL version so GLES doesn't get
+    used on Wayland.
+  *  7312dd75 - Qt: Force LC_NUMERIC locale so ReadFloatDecimal will
+    work everywhere.
+  *  c3becb1a - Update README for QT build
+  *  862026c5 - CMakeLists: Rename Qt binary to solvespace-qt.
+  *  aec7ee5b - Update build instructions in README to include QT front
+    end.
+  *  ab8c7b74 - Qt: Fix GCC 11 -Wmaybe-uninitialized warning.
+  *  edc20c42 - Qt: Fix mouse & key event modifiers.
+  *  e92e98ed - Qt: Fix pixel ratio handling in OpenGL widgets for
+    Wayland and Qt 6.
+  *  585a1bef - CMakeLists: Enable building with Qt 6.
+  *  b78e8013 - Fully implement Qt 5 & 6 backend for Linux.
+  *  6dedc4a4 - Added Qt port related files in src/platforms ( guiqt.cpp
+    and qglmainwindow.h
+  *  e3f21de9 - Implement dragging of extrude length by the end face.
+    Also allows circular surfaces create by Lathe or Revolve to drag the
+    previous group line that swept out the surface - this was unexpected
+    but cool. Dragging other faces will need investigation as indicated
+    in the comments.
+  *  0aa9131d - Fix IDF import when units are THOU by actually using the
+    scale specified in the file.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 27 Dec 2025 13:23:34 +0000
+
 solvespace (3.1.0+git2148-925a5273-1) unstable; urgency=medium
 
   * Compile
