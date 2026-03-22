@@ -1,3 +1,44 @@
+solvespace (3.1.0+git2179-02ec4e57-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 02ec4e57aa90f70052f6a312aa5c286a64a7ec90
+  * Date: 1770245809
+  * git changelog:
+  *  02ec4e57 - When extruding a line to face, use a point in new group
+    for the face. Using one from the previous group causes subsequent
+    translate groups to have undraggable faces and possibly other
+    problems.
+  *  e74c2eae - Update CHANGELOG.md
+  *  d14609fa - WASM lib: fix compilation with Emscripten
+  *  6c0273ff - Change CXX standard using property
+  *  457aec97 - Clean up some comments. Also use a point for extusion
+    side faces from the original line.
+  *  2ee0cc6b - update test suite with new versions of two slvs test
+    files.
+  *  1cec22f5 - Enable face dragging for translate groups. Add the
+    necessary handles for face dragging linked sketches. In mouse.cpp
+    StartDraggingByEntity needs some face types uncommented to enable
+    different face dragging options. All rotational face drags are
+    disabled because the points used for those faces are on-axis(I
+    think), this needs to be changed for those faces to be more useful.
+  *  37484dc1 - Set C++ standard based on EMSCRIPTEN condition (#1665)
+  *  619d6bde - Update the year to 2026 in the About dialog and Windows
+    version resource.
+  *  1fd9c075 - Qt: Enable fontconfig use.
+  *  47f1b079 - flatpak: Update SDK to 25.08 and update deps. Build
+    things as release or relwithdebinfo.
+  *  c4810067 - metainfo: Add developer_name tag, extend first line of
+    description
+  *  229ed497 - QT, Win32: The QT GUI now compiles on Windows and
+    loading/saving works...
+  *  ac932ab0 - CMake: fix CMake system include directives
+  *  fdb80e3e - Fix: macOS points not draggable
+  *  a509d662 - Fix: macOS test action not work
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 07 Feb 2026 19:52:41 +0000
+
 solvespace (3.1.0+git2163-de2c5fee-1) unstable; urgency=medium
 
   * Compile

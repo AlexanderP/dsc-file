@@ -1,3 +1,22 @@
+chiaki (2.1.0+git728-ab55cf4-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://git.sr.ht/~thestr4ng3r/chiaki
+  * Branch: master
+  * Commit: ab55cf4c95f7723faae08a546fbe14e0f6bddf45
+  * Date: 1767600393
+  * git changelog:
+  *  ab55cf4 - Rewrite switch host management
+  *  c524df4 - Switch build container updates
+  *  4086f36 - Require EGL only if building for real switch
+  *  7c012a8 - Remove call to deprecated/removed avcodec_close
+  *  a5268b9 - Fix build of unit tests on newer gcc
+  *  1cac996 - Raise minimum supported CMake to 3.5 for 4.0
+    compatibility
+  *  4b65204 - Make python3 command available in FreeBSD CI
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 07 Feb 2026 19:53:57 +0000
+
 chiaki (2.1.0+git721-a1fd418-1) unstable; urgency=medium
 
   * Compile

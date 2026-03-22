@@ -3,16 +3,33 @@ Section: graphics
 Priority: optional
 Maintainer: Alexander Pozdnyakov <almipo@mail.ru>
 Build-Depends: debhelper (>= 9),
-               cmake,
-               qttools5-dev (>=5.4),
-               qttools5-dev-tools (>=5.4),
-               qtbase5-dev (>=5.4),
-               libjpeg-dev,
-               libqt5opengl5-dev,
-               libpng-dev | libpng12-dev,
-               libtiff5-dev | libtiff4-dev,
-               libboost-test-dev,
-               libxrender-dev, libboost-all-dev, libcanberra-dev, libqt5svg5-dev, libexiv2-dev (>=0.26)
+                cmake (>=3.18.4),
+                gzip,
+                libboost-all-dev,
+                libboost-dev (>=1.35.0),
+                libboost-test-dev (>=1.35.0),
+                libc6 (>=2.14),
+                libcanberra-dev(>=0.30),
+                libexiv2-dev (>=0.26),
+                libgcc1 (>=1.3.0),
+                libgumbo-dev,
+                libharfbuzz-dev,
+                libjbig2dec-dev,
+                libjpeg-dev | libjpeg62-turbo-dev (>=2.1.5),
+                libmujs-dev,
+                libmupdf-dev (>= 1.25) | wget,
+                libopenjp2-7-dev (>=2.3),
+                libpng-dev | libpng12-dev,
+                libqt5opengl5-dev,
+                libqt5svg5-dev (>=5.4),
+                libstdc++6 (>=5.2),
+                libtiff5-dev | libtiff4-dev,
+                libxrender-dev,
+                pkg-config,
+                qtbase5-dev (>=5.4),
+                qttools5-dev (>=5.4),
+                qttools5-dev-tools (>=5.4),
+                zlib1g-dev
 Standards-Version: 4.1.3
 Homepage: https://github.com/trufanov-nok/scantailor
 Rules-Requires-Root: no

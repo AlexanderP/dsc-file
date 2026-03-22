@@ -1,3 +1,35 @@
+goaccess (1:1.9.4+git4378-dee34121-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: dee341212493bfd5d6debee4421a4942352060dc
+  * Date: 1770080555
+  * git changelog:
+  *  dee34121 - Added optional --with-zlib support for compressed log
+    files parsing.
+  *  5e5e7d25 - Updated spinner thread output to be more visual.
+  *  d8f63b34 - Fixed possible segfault on Ctrl+C with multiple
+    concurrent parsing jobs.
+  *  761317ec - Fixed ISO C90 mixed declarations and code warning.
+  *  5a6d80d7 - Removed -fsanitize=thread from Makefile.
+  *  50da0a90 - Fixed race conditions in multithreaded log parsing.
+  *  2f33baea - Ensure to reset stop_processing flag for new parse
+    attempt.
+  *  ed8cf63a - Fixed dry-run line counting in config dialog format
+    testing.
+  *  ff7084a5 - Updated code formatting.
+  *  a1447d98 - Updated code formatting.
+  *  d45d5a5a - Updated code formatting.
+  *  a7abc84b - Fixed inability to override date specificity from the
+    CLI.
+  *  863f7685 - Fix fgetline to handle empty reads when tailing logs
+  *  661379a5 - Revert Fixed log format sniffing and processing with
+    multiple threads.
+  *  927c5ba5 - Added the ability to sort panels in the HTML report.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 07 Feb 2026 19:49:20 +0000
+
 goaccess (1:1.9.4+git4363-4ab37d53-1) unstable; urgency=medium
 
   * Compile
