@@ -1,3 +1,24 @@
+solvespace (3.1.0+git2185-477d4c87-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 477d4c87ca51b9727fbc0765cbd94253c3968b8b
+  * Date: 1773685011
+  * git changelog:
+  *  477d4c87 - Update CHANGELOG.md
+  *  e82eb144 - Move and rename QT resources file
+  *  b7d13d73 - Embed window icon into executable using Qt resources
+  *  baf09930 - Windows 10/11: Fix the button click area in the property
+    browser shifting
+  *  cab7fd0c - For faces created by lathe and revolve, use a point in
+    the same group. We also need to check for draggability of face
+    points before adding them to the drag list.
+  *  1a98aa05 - check face point handles before doing remap. Older files
+    may not have the handle.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 22 Mar 2026 11:37:13 +0000
+
 solvespace (3.1.0+git2179-02ec4e57-1) unstable; urgency=medium
 
   * Compile

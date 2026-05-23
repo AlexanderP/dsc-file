@@ -1,3 +1,70 @@
+goaccess (1:1.10.1+git4424-03618c2c-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/allinurl/goaccess.git
+  * Branch: master
+  * Commit: 03618c2c3814129a16c9e859a777eeb851503b65
+  * Date: 1772584214
+  * git changelog:
+  *  03618c2c - Fixed a crash caused by invalid country/city parsing
+    from the GeoIP database.
+  *  7b66200d - Format build-test workflow
+  *  67f2ad36 - Fix typo in podcast list comment
+  *  7086089f - Removed broken translation link
+  *  2b42d90c - po: Add Georgian translation
+  *  dce88273 - po: Add Georgian translation
+  *  e7035787 - Updated lang po files with latest changes.
+  *  e6a0d4bf - Updated Changelog with latest changes.
+  *  988c30a6 - Version bumped to 1.10.1.
+  *  f1c3b8d1 - Version bumped to 1.10.1.
+  *  eff21e95 - Version bumped to 1.10.1.
+  *  721bde23 - Year on source files bumped.
+  *  75c6f618 - Version bumped to 1.10.1.
+  *  5f8ad242 - Fixed segfault when restoring persisted data with GEO
+    from <=v1.9.4 to >=v1.10.
+  *  6b7b1204 - Added missing change/deprecation in v1.10.
+  *  69bb20e2 - Updated deb-packaging-buildx.yml with latest distro
+    updates.
+  *  e8b08ae5 - Added missing cities-10m.json to dist_noinst_DATA.
+  *  136d5182 - Ensure we build with add -lm to goaccess_LDADD.
+  *  53801dbd - Updated README.md with latest changes.
+  *  c67c518b - Updated README.md with latest changes.
+  *  b7a404e3 - Updated man page with latest changes.
+  *  9c5551f1 - Updated default bar colors on monokai and config.
+  *  6be28484 - Update README.md for latest changes.
+  *  1089853f - Updated AUTHORS to reflect latest contributions.
+  *  6d011983 - Align holder and dashboard indices to avoid weird type
+    casting.
+  *  27f91164 - Fixed country->continent map leak introduced in
+    c3e51c5b.
+  *  56a77b80 - Ensure we properly cap to MAX_CHOICES_RT per level.
+  *  69563b57 - Version bumped to 1.10.
+  *  84bd7785 - Updated lang po files with latest changes.
+  *  9def6bd2 - Updated Changelog with latest changes.
+  *  4a402566 - Updated documentation for upcoming version.
+  *  e1c72aa3 - Updated documentation for upcoming version.
+  *  cef58d6c - Updated man page with latest changes.
+  *  1fa175ec - Updated .gitignore.
+  *  5c3f8c8e - Ensure we render the proper chars for subitems on TUI.
+  *  e60faa69 - Fixed tooltip TH font color on dark themes.
+  *  db9b85ac - Version bumped to 1.10.
+  *  73b2521d - Added the ability to expand/collapse subitems within a
+    panel (TUI).
+  *  c3e51c5b - Added support for displaying cities under the
+    GEOLOCATION panel.
+  *  0a24eb93 - Fixed data race in spinner by protecting glog->processed
+    with lock_spinner.
+  *  f1a7fd48 - Enhanced UI spinner: full-width bar in curses, smooth
+    bounce in terminal, clean layout.
+  *  fce4517d - Modernized HTML dashboard styling and theme visuals.
+  *  dfe3b686 - Split ui.c into dialogs.c to better organize curses
+    dialog interfaces.
+  *  332e6c41 - Added support for reordering panels in the TUI.
+  *  a72f9c65 - Added TX. Amount percent column to the TUI.
+  *  345d7cf7 - Added new bar charts to the terminal user interface.
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 22 Mar 2026 11:33:32 +0000
+
 goaccess (1:1.9.4+git4378-dee34121-1) unstable; urgency=medium
 
   * Compile

@@ -1,3 +1,21 @@
+kvirc (4:5.2.10+git-7644-1ce98bb4f-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/kvirc/KVIrc.git
+  * Branch: master
+  * Commit: 1ce98bb4fc6beb5934fd7057511d8b79e88563a6
+  * Date: 1771060022
+  * git changelog:
+  *  1ce98bb4f - KviSSL: add SSL_OP_IGNORE_UNEXPECTED_EOF option to
+    avoid unexpected eof while reading errors on SDCC completion. The
+    remote peer may close down the connection without sending the
+    mandatory close_notify alert on shutdown. Since OpenSSL3 this
+    reports an SSL error, but since we can already detect if the
+    transfer has been truncated, just restore the previous behavior and
+    ignore the error. (#2751)
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 22 Mar 2026 11:34:17 +0000
+
 kvirc (4:5.2.10+git-7643-e6317d455-1) unstable; urgency=medium
 
   * Compile

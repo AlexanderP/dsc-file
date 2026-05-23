@@ -1,3 +1,54 @@
+scantailor-advanced (1.0.19+git611-d1bac1b-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/ScanTailor-Advanced/scantailor-advanced
+  * Branch: master
+  * Commit: d1bac1b4211286792fbccd6e8892ec22b17d5cfa
+  * Date: 1773776981
+  * git changelog:
+  *  d1bac1b - Merge pull request #109 from ImageProcessing-
+    ElectronicPublications/master
+  *  6365ee0 - 1.1.1: fix Windows threshold overflow
+  *  48318d0 - Merge pull request #108 from pablogventura/master
+  *  7acd5c7 - Apply clang-format to source files and update cmake
+    workflow to upload-artifact v4
+  *  479632a - Update Dependencies compatibility logic and add unit test
+    for outline comparison
+  *  ba5bbc2 - Add Qt unit tests and update build configuration
+  *  9fa038d - Add unit tests and documentation for core components
+  *  26a978b - Refactor deskew and select content options handling
+  *  de9a685 - Remove ISSUES_REVIEW.md file, consolidating issue
+    tracking and review processes into a more streamlined format. This
+    change eliminates redundancy and focuses on active issue management.
+  *  1eb35d3 - fix(deskew): oblique Auto/Manual sync and shear formula
+    (PR #108 feedback)
+  *  f2de6fd - feat: add Fox and Window threshold methods (#106)
+  *  f431ad6 - feat: implement optional plan issues (#52, #82, #98, #99,
+    #97, #64, #37, #105)
+  *  3518b92 - Add ApplyMarginsDialog for margin adjustments in page
+    layout
+  *  d311ed5 - Enhance image transformation with oblique shear support
+  *  54d673c - Enhance build configuration and testing options
+  *  d40690b - Enhance file dialog and path handling in MainWindow
+  *  40ff44f - Fix imageproc tests: remove Boost::prg_exec_monitor (not
+    found by find_package)
+  *  fc53ae4 - Merge upstream ScanTailor-Advanced/master
+  *  5402bac - Enhance linting workflow to check formatting on changed
+    files only
+  *  1f29e26 - feat: update version to 1.1.1, add desktop entry
+    configuration, and implement CI workflows
+  *  08e8389 - feat: relative paths, top-edge deskew, batch fix and
+    select-content tip
+  *  71dabec - Update build-windows.sh script output paths for clarity
+  *  80ba773 - Add build-windows.sh script for cross-compiling to
+    Windows
+  *  bc1cdf1 - Update build-deb.sh to ensure proper build directory
+    handling
+  *  a512e9e - Add .gitignore and build script for Debian package
+    creation
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sun, 22 Mar 2026 11:33:39 +0000
+
 scantailor-advanced (1.0.19+git586-c50ec3e-1.1) unstable; urgency=medium
 
   * Rebuild
