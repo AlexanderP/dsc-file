@@ -1,3 +1,34 @@
+smplayer (1:24.05.0+git10419-f62655687-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/smplayer-dev/smplayer.git
+  * Branch: master
+  * Commit: f62655687bf4f151902b3eb151d99269c84487ef
+  * Date: 1781077756
+  * git changelog:
+  *  f62655687 - Add build-macos-qt6-intel.yml and build-macos-qt6-
+    arm64.yml
+  *  dd7cea344 - Use the bundled mpv in macos
+  *  74cc0e381 - Set CFBundleVersion and LSMinimumSystemVersion
+  *  26d1f2316 - Save the playlist positions to playlist.ini
+  *  739074cf2 - Update build-macos-qt5-x86_64.yml and build-macos-qt5-
+    arm64.yml
+  *  6144868c5 - Update enum in connectionbase.h
+  *  1ac167883 - The PR 1355 has been reverted. It causes a prompt
+    asking whether to save the list every time a file is opened.
+  *  de8e4950e - Add build-macos-arm64.yml and build-macos-x86_64.yml
+  *  0550556f3 - Update smplayer_en_GB.ts
+  *  12b208412 - Update smplayer_en_US.ts
+  *  16c104093 - Merge pull request #1355 from a-biad/feat-playlist-
+    position
+  *  4864bb1a2 - Update the translations in smplayer.desktop
+  *  5db4e6481 - Fix typo in smplayer.desktop
+  *  c1cfc60f7 - feat: playlist positions are remembered
+  *  1cbae9591 - Change comment in smplayer.desktop
+  *  7be2f226a - Get the icy-title
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 11 Jun 2026 17:32:41 +0000
+
 smplayer (1:24.05.0+git10403-ee7de7eeb-1) unstable; urgency=medium
 
   * Compile

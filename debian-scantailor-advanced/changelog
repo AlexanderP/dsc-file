@@ -1,3 +1,134 @@
+scantailor-advanced (1.2.1+git684-5eaac188-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/ScanTailor-Advanced/scantailor-advanced
+  * Branch: master
+  * Commit: 5eaac1884cdcabb6514bd632114f688631bd8dbc
+  * Date: 1779655464
+  * git changelog:
+  *  5eaac188 - release: bump version to 1.2.1
+  *  91f5ba1d - Merge pull request #153 from pablogventura/fix/deskew-
+    oblique-regression-145
+  *  c3831d05 - style(deskew): clang-format OptionsWidget
+  *  d710384a - fix(deskew): wire auto-oblique default and align handle
+    layout (#145)
+  *  c2e0222f - Merge pull request #152 from pablogventura/fix/p0-plan-
+    issues
+  *  5e1e345c - test(deskew): cover selective Apply To merge and
+    oblique-mode XML
+  *  c3043056 - fix(ci): use scantailor-advanced binary in release
+    packaging
+  *  e7446f09 - fix(deskew): restore DefaultParams include for auto-
+    oblique gating
+  *  6f619cdc - style(deskew): clang-format OptionsWidget after apply-to
+    trim wiring
+  *  9c347201 - fix: P0 plan — Wayland, multi-monitor menus, content
+    box, page order, deskew/oblique
+  *  fc165ca7 - chore(release): bump version to 1.2.0
+  *  39f3ded9 - 1.1.3: correct YML
+  *  54900dae - fix #146 : 1.1.3: renaming the executable file
+  *  9e0bc267 - feat(fix-orientation): manual per-image trim (#129)
+  *  7f210aee - feat(page_layout): inline source DPI in Margins panel
+    (#93)
+  *  9a7856cc - docs(fix_orientation): deskew external tool spike notes
+    (#116)
+  *  d9c5b144 - docs(page_split): scope note for extended offcut guides
+    (#91)
+  *  1f5c3bad - feat(page_layout): lock aggregate size for match-size
+    workflow (#85)
+  *  dc40f86e - feat(app): Ctrl+drag rubber band for thumbnail selection
+    (#67)
+  *  fe181440 - feat(app): pause automatic thumbnail reordering (#86)
+  *  a00c0282 - fix(page_layout): apply margins to current page in Apply
+    To selection (#144)
+  *  04cb7364 - Separate automatic oblique correction from Auto deskew
+    (fixes #113) (#114)
+  *  31015c08 - Merge pull request #141 from pablogventura/fix/issue-81-
+    freeze-dewarp-on-dpi-change
+  *  b092fcac - Merge pull request #142 from pablogventura/fix/p1-64-
+    105-distribution
+  *  99484733 - Fix Linux release packaging and document Flatpak (#64,
+    #105)
+  *  1e9dfc3b - feat(output): fill outside page box (#92) (#140)
+  *  d44439dd - fix(output): switch AUTO dewarp to MANUAL when output
+    DPI changes (#81)
+  *  d422646e - Merge pull request #132 from pablogventura/fix/issue-64-
+    linux-package-metadata
+  *  2b8372d7 - Merge pull request #118 from
+    pablogventura/feature/flatpak-manifest-ci-docs
+  *  fb3e1f66 - docs(readme): resolve Flatpak section merge with
+    upstream (#118)
+  *  c70dbb0c - merge upstream master
+  *  1c7d3967 - Merge pull request #115 from pablogventura/fix/issues-
+    51-and-84
+  *  cc5b6268 - test(imageproc): make SkewFinder test offline/chroot-
+    safe (#61)
+  *  f2e5be12 - build(deb): broaden jpeg fallback Depends; refresh
+    release workflow
+  *  c093aeac - merge upstream master into fix/issues-51-and-84
+  *  a8f876d1 - merge upstream master into feature/flatpak-manifest-ci-
+    docs
+  *  a1b7bb82 - Merge pull request #128 from vigri/fix/ci-ubuntu-noble
+  *  50f9c6bc - quote file paths + fix path for AppImage desktop file
+  *  adec0dc2 - use valid desktop entry spec version
+  *  ccb1661d - use absolute paths for AppImage package
+  *  32e3a044 - apt-get update added, libfuse2 replaced with libfuse2t64
+  *  1037db6d -  replace libtiff5 with libtiff6 and add -y flag to apt-
+    get install
+  *  cd626ef5 - Merge pull request #126 from vigri/fix/lint-workflow-
+    count-output-format
+  *  3e297083 - fix: resolve GITHUB_OUTPUT invalid format when no source
+    files changed
+  *  fc0c8517 - Merge pull request #124 from vigri/ci/upgrade-actions-
+    to-node24
+  *  c13e7251 - upgrade GitHub Actions to Node.js 24 compatible versions
+  *  e795eea9 - Merge pull request #121 from pablogventura/ci/remove-
+    redundant-clang-format-workflow
+  *  722a5c0c - Merge pull request #123 from pablogventura/fix/output-
+    reload-preserve-zoom-21
+  *  5669ab1c - Merge pull request #119 from
+    pablogventura/chore/improve-gitignore
+  *  60c2dba6 - Merge pull request #122 from pablogventura/docs/readme-
+    windows-vcredist-101
+  *  6dba21ff - fix(ui): preserve Output preview zoom across main-area
+    reload (#21)
+  *  6ecec692 - docs(readme): Windows VC++ redistributable and supported
+    OS (#101)
+  *  618aca7e - CI: remove redundant full-tree clang-format workflow
+  *  535d51ba - chore(gitignore): English-only comments, drop Python
+    ignores
+  *  f9194410 - chore: expand .gitignore (Flatpak, IDEs, Python, CMake)
+  *  441126f9 - flatpak: refresh KDE runtime, CI bundle on tags, Boost
+    without tests
+  *  99ecebea - fix(desktop): use spec Version=1.0; app release in X-
+    key for AppImage
+  *  c114a1a0 - ci: use generated scantailor.desktop for linuxdeploy
+    AppImage
+  *  a21d1800 - ci: fix Ubuntu 24.04 apt deps in cmake workflow; scope
+    clang-format-check
+  *  01bc32a5 - chore(deskew): drop unused iostream include
+  *  6e25aba9 - chore(scripts): helper to batch-post upstream issue
+    follow-ups
+  *  a592fb9c - fix(filters): document-order scopes for every-other
+    apply (#84)
+  *  78ecca8f - fix(ui): do not auto-enable Follow page from goToPage
+    (#51)
+  *  b064ad8e - Merge pull request #110 from pablogventura/dev
+  *  24f5b6e5 - Merge branch 'master' into dev
+  *  aeea05f4 - feat(deskew): add vertical lever for oblique adjustment
+    (PR #110)
+  *  dcd85450 - style(imageproc): fix clang-format in Binarize.cpp for
+    format-check CI
+  *  f343eb14 - style(deskew): fix clang-format for CI
+  *  7dc4fe86 - fix(deskew): weight oblique by skew confidence per PR
+    #110 feedback
+  *  dcd28931 - feat(deskew): find oblique on deskewed (horizontal) mask
+    per PR #110 feedback
+  *  17bbc3c2 - fix(deskew): only require s1 confidence in ObliqueFinder
+    per review
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Thu, 04 Jun 2026 17:03:25 +0000
+
 scantailor-advanced (1.0.19+git611-d1bac1b-1) unstable; urgency=medium
 
   * Compile

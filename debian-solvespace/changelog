@@ -1,3 +1,31 @@
+solvespace (3.1.0+git2198-08fdb359-1) unstable; urgency=medium
+
+  * Compile
+  * URL: https://github.com/solvespace/solvespace.git
+  * Branch: master
+  * Commit: 08fdb3596922dc93837578a8cd8cda32e3c83f23
+  * Date: 1775666434
+  * git changelog:
+  *  08fdb359 - Pass Ctrl-= through to browser in web version (fix
+    blocked Ctrl-plus)
+  *  289651e6 - Remove  and replace it with aggregate initialization
+  *  1b1ec830 - fix copy paste error in file.cpp
+  *  07017fd0 - Auto-select text in editor input box on web
+    (guihtml.cpp)
+  *  3e5873e6 - disable right-click on contect menu
+  *  5b2e41d4 - CI: Add ping step for solvespace.com in CD workflow
+  *  bc2bca8f - CI: Update two more actions we depend on
+  *  02458160 - Python: add python v3.14, drop python v3.7, bump
+    cibuildwheel
+  *  27b6a080 - fix windows single_core paths
+  *  6113e1e0 - CI deps update and add support python 3.14 and 3.15
+  *  d0b41770 - Windows CI path fixes (#1695)
+  *  0a811f31 - Add OIDC to wasmlib workflow
+  *  49fe81b3 - WASM action npm version handling + upgrading GH actions
+    to latest
+
+ -- Alexander Pozdnyakov <almipo@mail.ru>  Sat, 23 May 2026 19:25:31 +0000
+
 solvespace (3.1.0+git2185-477d4c87-1) unstable; urgency=medium
 
   * Compile
